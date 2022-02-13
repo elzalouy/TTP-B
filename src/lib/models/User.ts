@@ -1,0 +1,50 @@
+import { model, Schema, Model } from "mongoose";
+import { IUser } from "../types/model/User";
+
+const UserSchema: Schema = new Schema<IUser>(
+  {
+    name: {
+      type: String,
+      required: true,
+    },
+    email: {
+      type: String,
+      required: true,
+      unique: true,
+    },
+    password: {
+      type: String,
+      required: true,
+    },
+    role: {
+      type: String,
+      required: true,
+    },
+    image: {
+      type: String,
+      default: "",
+    },
+    trelloBoardId: {
+      type: String,
+      default: null,
+    },
+    trelloMemberId: {
+      type: String,
+      default: null,
+    },
+    userTeams: [ // remove this
+      {
+        type: Schema.Types.ObjectId,
+        ref: "teams",
+      },
+    ],
+  },
+  {
+    timestamps: true,
+    strict:false
+  }
+);
+
+const User: Model<IUser> = model("users", UserSchema);
+
+export default User;

@@ -1,0 +1,17 @@
+version: "3.9"
+services: 
+  backend:
+    # image: mohamednage/trello-backend:latest
+    build: 
+      context: ./ # file path
+      dockerfile: Dockerfile # file name
+    ports: 
+      - '6000:6000'
+    container_name: backend
+    volumes:
+      - type: bind
+        source: ./
+        target: /app
+      - /app/node_modules #anynames
+    env_file:
+      - ./.env

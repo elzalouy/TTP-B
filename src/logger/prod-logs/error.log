@@ -1,0 +1,49 @@
+{"level":"error","message":{"handleCreatUserError":{}},"service":"trello","timestamp":"2021-10-26T20:03:18.106Z"}
+{"level":"error","message":{"handleCreatUserError":{}},"service":"trello","timestamp":"2021-10-26T20:10:45.637Z"}
+{"level":"error","message":{"handleCreatUserError":{}},"service":"trello","timestamp":"2021-10-26T20:15:08.313Z"}
+{"level":"error","message":{"handleCreatUserError":{}},"service":"trello","timestamp":"2021-10-26T20:16:46.301Z"}
+{"level":"error","message":{"handleCreatUserError":{}},"service":"trello","timestamp":"2021-10-26T20:21:16.707Z"}
+{"level":"error","message":{"handleCreatUserError":{}},"service":"trello","timestamp":"2021-10-26T20:23:56.062Z"}
+{"level":"error","message":{"handleCreatUserError":{}},"service":"trello","timestamp":"2021-10-26T20:25:42.281Z"}
+{"level":"error","message":{"handleCreatUserError":{}},"service":"trello","timestamp":"2021-10-26T20:27:10.262Z"}
+{"level":"error","message":{"handleCreatUserError":{}},"service":"trello","timestamp":"2021-10-26T20:30:41.090Z"}
+{"level":"error","message":{"handleGetBoards":{}},"service":"trello","timestamp":"2021-10-29T07:29:04.093Z"}
+{"level":"error","message":{"handleGetBoards":{}},"service":"trello","timestamp":"2021-10-29T07:32:11.937Z"}
+{"level":"error","message":{"handleGetBoards":{}},"service":"trello","timestamp":"2021-10-29T07:32:51.364Z"}
+{"level":"error","message":{"handleGetBoards":{}},"service":"trello","timestamp":"2021-10-29T07:34:40.574Z"}
+{"level":"error","message":{"handleGetBoards":{}},"service":"trello","timestamp":"2021-10-29T07:36:44.015Z"}
+{"level":"error","message":{"handleGetBoards":{}},"service":"trello","timestamp":"2021-10-29T07:41:01.719Z"}
+{"level":"error","message":{"handleGetBoards":{}},"service":"trello","timestamp":"2021-10-29T07:43:30.333Z"}
+{"level":"error","message":{"handleGetBoards":{}},"service":"trello","timestamp":"2021-10-29T07:44:03.684Z"}
+{"level":"error","message":{"getTrelloBoardError":{"config":{"headers":{"Accept":"application/json","User-Agent":"axios/0.23.0"},"maxBodyLength":-1,"maxContentLength":-1,"method":"get","timeout":0,"transformRequest":[null],"transformResponse":[null],"transitional":{"clarifyTimeoutError":false,"forcedJSONParsing":true,"silentJSONParsing":true},"url":"https://api.trello.com/1/organizations/616576f83d71e71c6a961886/boards?fields=id,name&key=&token=","xsrfCookieName":"XSRF-TOKEN","xsrfHeaderName":"X-XSRF-TOKEN"},"message":"Request failed with status code 401","name":"Error","stack":"Error: Request failed with status code 401\n    at createError (E:\\trello-project\\unicode-trello-backend\\node_modules\\axios\\lib\\core\\createError.js:16:15)\n    at settle (E:\\trello-project\\unicode-trello-backend\\node_modules\\axios\\lib\\core\\settle.js:17:12)\n    at IncomingMessage.handleStreamEnd (E:\\trello-project\\unicode-trello-backend\\node_modules\\axios\\lib\\adapters\\http.js:293:11)\n    at IncomingMessage.emit (events.js:412:35)\n    at IncomingMessage.emit (domain.js:475:12)\n    at endReadableNT (internal/streams/readable.js:1334:12)\n    at processTicksAndRejections (internal/process/task_queues.js:82:21)","status":401}},"service":"trello","timestamp":"2021-10-29T07:46:54.704Z"}
+{"level":"error","message":{"handleGetBoards":{}},"service":"trello","timestamp":"2021-10-29T07:54:56.828Z"}
+{"level":"error","message":{"handleGetBoards":{}},"service":"trello","timestamp":"2021-10-29T07:55:48.649Z"}
+{"level":"error","message":{"handleGetBoards":{}},"service":"trello","timestamp":"2021-10-29T07:57:52.894Z"}
+{"level":"error","message":{"updateUserInfo":{}},"service":"trello","timestamp":"2021-10-29T10:22:55.397Z"}
+{"level":"error","message":{"updateUserInfo":{}},"service":"trello","timestamp":"2021-10-29T10:24:39.463Z"}
+{"level":"error","message":{"updateUserInfo":{}},"service":"trello","timestamp":"2021-10-29T10:27:29.997Z"}
+{"level":"error","message":{"updateUserInfo":{}},"service":"trello","timestamp":"2021-10-29T10:28:01.198Z"}
+{"level":"error","message":{"updateUserInfo":{}},"service":"trello","timestamp":"2021-10-29T10:33:52.235Z"}
+{"level":"error","message":{"updateUserInfo":{}},"service":"trello","timestamp":"2021-10-29T10:37:18.341Z"}
+{"level":"error","message":{"updateUserInfo":{}},"service":"trello","timestamp":"2021-10-29T10:39:38.343Z"}
+{"level":"error","message":{"updateUserInfo":{}},"service":"trello","timestamp":"2021-10-29T10:41:32.294Z"}
+{"level":"error","message":{"updateUserInfo":{}},"service":"trello","timestamp":"2021-10-29T10:42:44.315Z"}
+{"level":"error","message":{"updateUserInfo":{}},"service":"trello","timestamp":"2021-10-29T10:43:51.952Z"}
+{"level":"error","message":{"findUserError":{"kind":"ObjectId","message":"Cast to ObjectId failed for value \"{ email: 'abuqannam2@gmail.com' }\" (type Object) at path \"_id\" for model \"users\"","name":"CastError","path":"_id","reason":{},"stringValue":"\"{ email: 'abuqannam2@gmail.com' }\"","value":{"email":"abuqannam2@gmail.com"},"valueType":"Object"}},"service":"trello","timestamp":"2021-10-29T10:57:56.019Z"}
+{"level":"error","message":{"createUserError":{"code":11000,"index":0,"keyPattern":{"email":1},"keyValue":{"email":"abuqannam2@gmail.com"}}},"service":"trello","timestamp":"2021-10-29T10:57:56.217Z"}
+{"level":"error","message":{"findUserError":{"kind":"ObjectId","message":"Cast to ObjectId failed for value \"{ email: 'abuqannam2@gmail.com' }\" (type Object) at path \"_id\" for model \"users\"","name":"CastError","path":"_id","reason":{},"stringValue":"\"{ email: 'abuqannam2@gmail.com' }\"","value":{"email":"abuqannam2@gmail.com"},"valueType":"Object"}},"service":"trello","timestamp":"2021-10-29T10:59:13.703Z"}
+{"level":"error","message":{"findUserError":{"kind":"ObjectId","message":"Cast to ObjectId failed for value \"{ email: 'abuqannam2@gmail.com' }\" (type Object) at path \"_id\" for model \"users\"","name":"CastError","path":"_id","reason":{},"stringValue":"\"{ email: 'abuqannam2@gmail.com' }\"","value":{"email":"abuqannam2@gmail.com"},"valueType":"Object"}},"service":"trello","timestamp":"2021-10-29T10:59:44.268Z"}
+{"level":"error","message":{"createUserError":{"code":11000,"index":0,"keyPattern":{"email":1},"keyValue":{"email":"abuqannam2@gmail.com"}}},"service":"trello","timestamp":"2021-10-29T10:59:44.444Z"}
+{"level":"error","message":{"findUserById":{"kind":"ObjectId","message":"Cast to ObjectId failed for value \"{ id: '617bd4014410c3639ccff287' }\" (type Object) at path \"_id\" for model \"users\"","name":"CastError","path":"_id","reason":{},"stringValue":"\"{ id: '617bd4014410c3639ccff287' }\"","value":{"id":"617bd4014410c3639ccff287"},"valueType":"Object"}},"service":"trello","timestamp":"2021-10-29T11:08:58.387Z"}
+{"level":"error","message":{"updateUserInfo":{}},"service":"trello","timestamp":"2021-10-29T11:14:27.558Z"}
+{"level":"error","message":{"updateUserInfo":{}},"service":"trello","timestamp":"2021-10-29T11:15:46.259Z"}
+{"level":"error","message":{"updateUserInfo":{}},"service":"trello","timestamp":"2021-10-29T11:17:35.249Z"}
+{"level":"error","message":{"updateUserInfo1":{}},"service":"trello","timestamp":"2021-10-29T11:27:04.916Z"}
+{"level":"error","message":{"updateUserInfo1":{}},"service":"trello","timestamp":"2021-10-29T11:30:16.760Z"}
+{"level":"error","message":{"updateUserInfo1":{}},"service":"trello","timestamp":"2021-10-29T11:32:33.130Z"}
+{"level":"error","message":{"updateUserInfo1":{}},"service":"trello","timestamp":"2021-10-29T11:35:16.516Z"}
+{"level":"error","message":{"updateUserInfo1":{}},"service":"trello","timestamp":"2021-10-29T11:38:31.924Z"}
+{"level":"error","message":{"updateUserDataError":{"code":11000,"codeName":"DuplicateKey","keyPattern":{"email":1},"keyValue":{"email":"mohamednageh22@yahoo.com"},"ok":0}},"service":"trello","timestamp":"2021-10-30T07:27:27.333Z"}
+{"level":"error","message":{"updateUserDataError":{"code":11000,"codeName":"DuplicateKey","keyPattern":{"email":1},"keyValue":{"email":"mohamednageh22@yahoo.com"},"ok":0}},"service":"trello","timestamp":"2021-10-30T07:28:47.188Z"}
+{"level":"error","message":{"updateUserDataError":{"code":11000,"codeName":"DuplicateKey","keyPattern":{"email":1},"keyValue":{"email":"mohamednageh22@yahoo.com"},"ok":0}},"service":"trello","timestamp":"2021-10-30T07:35:49.492Z"}
+{"level":"error","message":{"updateUserDataError":{"code":11000,"codeName":"DuplicateKey","keyPattern":{"email":1},"keyValue":{"email":"mohamednageh22@yahoo.com"},"ok":0}},"service":"trello","timestamp":"2021-10-30T07:36:33.544Z"}
