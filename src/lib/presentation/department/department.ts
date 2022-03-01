@@ -1,4 +1,4 @@
-import { DepartmentInfo, DepartmentData } from '../../types/model/Department';
+import { UpdateDepartment, DepartmentData } from '../../types/model/Department';
 import { successMsg } from '../../utils/successMsg';
 import { customeError } from "../../utils/errorUtils";
 import { Request, Response } from "express";
@@ -22,7 +22,7 @@ const DepartmentReq = class DepartmentReq extends DepartmentController {
 
   static async handleUpdateDepartment(req: Request, res: Response) {
     try {
-      let departmentData:DepartmentData = req.body
+      let departmentData:UpdateDepartment = req.body
       if(!departmentData){
         return res.status(400).send(customeError("update_dep_error",400))
       }

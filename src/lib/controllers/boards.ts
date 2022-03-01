@@ -108,7 +108,9 @@ const BoardController = class BoardController {
           Accept: "application/json",
         },
       });
-      return board.json();
+      let borderData = board.json()
+      logger.info({borderData,createBoardApi})
+      return borderData;
     } catch (error) {
       logger.error({ createNewBoardError: error });
     }
@@ -119,7 +121,7 @@ const BoardController = class BoardController {
     try {
       logger.info({ file });
       let attachmentApi = trelloApi(
-        `cards/${cardId}/attachments?file=${file}&`
+        `cards/${cardId}/attachments?file=${file}&` 
       );
 
       let attachment = await fetch(attachmentApi, {

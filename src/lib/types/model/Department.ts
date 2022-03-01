@@ -30,12 +30,21 @@ export interface DepartmentData {
   doneListId?: string;
   notClearListId?: string;
   canceldListId?: string;
-  teams?:{id:string; name:string}[];
+  teamsId?:{idInTrello:string; idInDB:any}[];
+  teams?:{name:string; _id:any}[];
   mainBoard?:boolean|null;
-  // teamListIds?:string[];
-  // teamsIdInDB?:string[];
-  teamsId?:{
-    idInTrello:string;
-    idInDB:any;
-  }[]
+}
+
+export interface UpdateDepartment {
+  _id?: string;
+  name?: string,
+  boardId?: string,
+  color?: string,
+  mainBoard?:boolean|null;
+  teams?:string[];
+  removeTeam?:string[] | null;
+  addTeam?:{
+    _id:string;
+    name:string;
+  }[]|null
 }

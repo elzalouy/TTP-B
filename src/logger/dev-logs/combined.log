@@ -15515,3 +15515,2540 @@
   level: 'info',
   timestamp: '2022-01-24 00:20:37'
 }
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-02-23 21:30:54'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-02-23 21:34:35'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-02-28 20:42:40'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-02-28 20:56:51'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-02-28 21:00:52'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-02-28 21:15:45'
+}
+{
+  message: { data: { name: 'test team 21', color: 'sky', boardId: undefined } },
+  level: 'info',
+  timestamp: '2022-02-28 21:15:52'
+}
+{
+  message: {
+    createDepartmentError: Error: department validation failed: boardId: Path `boardId` is required.
+        at ValidationError.inspect (E:\trello-project\TTP-Back\node_modules\mongoose\lib\error\validation.js:48:26)
+        at formatValue (internal/util/inspect.js:745:19)
+        at formatProperty (internal/util/inspect.js:1660:11)
+        at formatRaw (internal/util/inspect.js:987:9)
+        at formatValue (internal/util/inspect.js:774:10)
+        at formatProperty (internal/util/inspect.js:1660:11)
+        at formatRaw (internal/util/inspect.js:987:9)
+        at formatValue (internal/util/inspect.js:774:10)
+        at inspect (internal/util/inspect.js:319:10)
+        at Format.transform (E:\trello-project\TTP-Back\node_modules\logform\pretty-print.js:27:19) {
+      errors: {
+        boardId: ValidatorError: Path `boardId` is required.
+            at validate (E:\trello-project\TTP-Back\node_modules\mongoose\lib\schematype.js:1277:13)
+            at E:\trello-project\TTP-Back\node_modules\mongoose\lib\schematype.js:1260:7
+            at Array.forEach (<anonymous>)
+            at SchemaString.SchemaType.doValidate (E:\trello-project\TTP-Back\node_modules\mongoose\lib\schematype.js:1210:14)
+            at E:\trello-project\TTP-Back\node_modules\mongoose\lib\document.js:2690:18
+            at processTicksAndRejections (internal/process/task_queues.js:77:11) {
+          properties: {
+            validator: [Function (anonymous)],
+            message: 'Path `boardId` is required.',
+            type: 'required',
+            path: 'boardId',
+            value: undefined
+          },
+          kind: 'required',
+          path: 'boardId',
+          value: undefined,
+          reason: undefined,
+          [Symbol(mongoose:validatorError)]: true
+        }
+      },
+      _message: 'department validation failed'
+    }
+  },
+  level: 'error',
+  timestamp: '2022-02-28 21:15:52'
+}
+{
+  message: {
+    createDepartmentError: FetchError: invalid json response body at https://api.trello.com/1/lists?name=done&idBoard=undefined&key=96b980af38094db6e5767718567af6ce&token=7f44a81ca5f903883e1b3a5720f89b70b8feacd4437d2cb893068b3b93455e5f reason: Unexpected token i in JSON at position 0
+        at E:\trello-project\TTP-Back\node_modules\node-fetch\lib\index.js:273:32
+        at processTicksAndRejections (internal/process/task_queues.js:95:5) {
+      type: 'invalid-json'
+    }
+  },
+  level: 'error',
+  timestamp: '2022-02-28 21:15:53'
+}
+{
+  message: { data: { name: 'test team 21', color: 'sky', boardId: undefined } },
+  level: 'info',
+  timestamp: '2022-02-28 21:16:17'
+}
+{
+  message: {
+    createDepartmentError: Error: department validation failed: boardId: Path `boardId` is required.
+        at ValidationError.inspect (E:\trello-project\TTP-Back\node_modules\mongoose\lib\error\validation.js:48:26)
+        at formatValue (internal/util/inspect.js:745:19)
+        at formatProperty (internal/util/inspect.js:1660:11)
+        at formatRaw (internal/util/inspect.js:987:9)
+        at formatValue (internal/util/inspect.js:774:10)
+        at formatProperty (internal/util/inspect.js:1660:11)
+        at formatRaw (internal/util/inspect.js:987:9)
+        at formatValue (internal/util/inspect.js:774:10)
+        at inspect (internal/util/inspect.js:319:10)
+        at Format.transform (E:\trello-project\TTP-Back\node_modules\logform\pretty-print.js:27:19) {
+      errors: {
+        boardId: ValidatorError: Path `boardId` is required.
+            at validate (E:\trello-project\TTP-Back\node_modules\mongoose\lib\schematype.js:1277:13)
+            at E:\trello-project\TTP-Back\node_modules\mongoose\lib\schematype.js:1260:7
+            at Array.forEach (<anonymous>)
+            at SchemaString.SchemaType.doValidate (E:\trello-project\TTP-Back\node_modules\mongoose\lib\schematype.js:1210:14)
+            at E:\trello-project\TTP-Back\node_modules\mongoose\lib\document.js:2690:18
+            at processTicksAndRejections (internal/process/task_queues.js:77:11) {
+          properties: {
+            validator: [Function (anonymous)],
+            message: 'Path `boardId` is required.',
+            type: 'required',
+            path: 'boardId',
+            value: undefined
+          },
+          kind: 'required',
+          path: 'boardId',
+          value: undefined,
+          reason: undefined,
+          [Symbol(mongoose:validatorError)]: true
+        }
+      },
+      _message: 'department validation failed'
+    }
+  },
+  level: 'error',
+  timestamp: '2022-02-28 21:16:17'
+}
+{
+  message: {
+    createDepartmentError: FetchError: invalid json response body at https://api.trello.com/1/lists?name=done&idBoard=undefined&key=96b980af38094db6e5767718567af6ce&token=7f44a81ca5f903883e1b3a5720f89b70b8feacd4437d2cb893068b3b93455e5f reason: Unexpected token i in JSON at position 0
+        at E:\trello-project\TTP-Back\node_modules\node-fetch\lib\index.js:273:32
+        at processTicksAndRejections (internal/process/task_queues.js:95:5) {
+      type: 'invalid-json'
+    }
+  },
+  level: 'error',
+  timestamp: '2022-02-28 21:16:17'
+}
+{
+  message: { data: { name: 'test team 21', color: 'sky', boardId: undefined } },
+  level: 'info',
+  timestamp: '2022-02-28 21:18:08'
+}
+{
+  message: {
+    createDepartmentError: Error: department validation failed: boardId: Path `boardId` is required.
+        at ValidationError.inspect (E:\trello-project\TTP-Back\node_modules\mongoose\lib\error\validation.js:48:26)
+        at formatValue (internal/util/inspect.js:745:19)
+        at formatProperty (internal/util/inspect.js:1660:11)
+        at formatRaw (internal/util/inspect.js:987:9)
+        at formatValue (internal/util/inspect.js:774:10)
+        at formatProperty (internal/util/inspect.js:1660:11)
+        at formatRaw (internal/util/inspect.js:987:9)
+        at formatValue (internal/util/inspect.js:774:10)
+        at inspect (internal/util/inspect.js:319:10)
+        at Format.transform (E:\trello-project\TTP-Back\node_modules\logform\pretty-print.js:27:19) {
+      errors: {
+        boardId: ValidatorError: Path `boardId` is required.
+            at validate (E:\trello-project\TTP-Back\node_modules\mongoose\lib\schematype.js:1277:13)
+            at E:\trello-project\TTP-Back\node_modules\mongoose\lib\schematype.js:1260:7
+            at Array.forEach (<anonymous>)
+            at SchemaString.SchemaType.doValidate (E:\trello-project\TTP-Back\node_modules\mongoose\lib\schematype.js:1210:14)
+            at E:\trello-project\TTP-Back\node_modules\mongoose\lib\document.js:2690:18
+            at processTicksAndRejections (internal/process/task_queues.js:77:11) {
+          properties: {
+            validator: [Function (anonymous)],
+            message: 'Path `boardId` is required.',
+            type: 'required',
+            path: 'boardId',
+            value: undefined
+          },
+          kind: 'required',
+          path: 'boardId',
+          value: undefined,
+          reason: undefined,
+          [Symbol(mongoose:validatorError)]: true
+        }
+      },
+      _message: 'department validation failed'
+    }
+  },
+  level: 'error',
+  timestamp: '2022-02-28 21:18:08'
+}
+{
+  message: {
+    createDepartmentError: FetchError: invalid json response body at https://api.trello.com/1/lists?name=done&idBoard=undefined&key=96b980af38094db6e5767718567af6ce&token=7f44a81ca5f903883e1b3a5720f89b70b8feacd4437d2cb893068b3b93455e5f reason: Unexpected token i in JSON at position 0
+        at E:\trello-project\TTP-Back\node_modules\node-fetch\lib\index.js:273:32
+        at processTicksAndRejections (internal/process/task_queues.js:95:5) {
+      type: 'invalid-json'
+    }
+  },
+  level: 'error',
+  timestamp: '2022-02-28 21:18:08'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-02-28 21:19:35'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-02-28 21:20:19'
+}
+{
+  message: { data: { name: 'test team 21', color: 'sky', boardId: undefined } },
+  level: 'info',
+  timestamp: '2022-02-28 21:20:28'
+}
+{
+  message: {
+    createDepartmentError: Error: department validation failed: boardId: Path `boardId` is required.
+        at ValidationError.inspect (E:\trello-project\TTP-Back\node_modules\mongoose\lib\error\validation.js:48:26)
+        at formatValue (internal/util/inspect.js:745:19)
+        at formatProperty (internal/util/inspect.js:1660:11)
+        at formatRaw (internal/util/inspect.js:987:9)
+        at formatValue (internal/util/inspect.js:774:10)
+        at formatProperty (internal/util/inspect.js:1660:11)
+        at formatRaw (internal/util/inspect.js:987:9)
+        at formatValue (internal/util/inspect.js:774:10)
+        at inspect (internal/util/inspect.js:319:10)
+        at Format.transform (E:\trello-project\TTP-Back\node_modules\logform\pretty-print.js:27:19) {
+      errors: {
+        boardId: ValidatorError: Path `boardId` is required.
+            at validate (E:\trello-project\TTP-Back\node_modules\mongoose\lib\schematype.js:1277:13)
+            at E:\trello-project\TTP-Back\node_modules\mongoose\lib\schematype.js:1260:7
+            at Array.forEach (<anonymous>)
+            at SchemaString.SchemaType.doValidate (E:\trello-project\TTP-Back\node_modules\mongoose\lib\schematype.js:1210:14)
+            at E:\trello-project\TTP-Back\node_modules\mongoose\lib\document.js:2690:18
+            at processTicksAndRejections (internal/process/task_queues.js:77:11) {
+          properties: {
+            validator: [Function (anonymous)],
+            message: 'Path `boardId` is required.',
+            type: 'required',
+            path: 'boardId',
+            value: undefined
+          },
+          kind: 'required',
+          path: 'boardId',
+          value: undefined,
+          reason: undefined,
+          [Symbol(mongoose:validatorError)]: true
+        }
+      },
+      _message: 'department validation failed'
+    }
+  },
+  level: 'error',
+  timestamp: '2022-02-28 21:20:28'
+}
+{
+  message: {
+    createDepartmentError: FetchError: invalid json response body at https://api.trello.com/1/lists?name=done&idBoard=undefined&key=96b980af38094db6e5767718567af6ce&token=7f44a81ca5f903883e1b3a5720f89b70b8feacd4437d2cb893068b3b93455e5f reason: Unexpected token i in JSON at position 0
+        at E:\trello-project\TTP-Back\node_modules\node-fetch\lib\index.js:273:32
+        at processTicksAndRejections (internal/process/task_queues.js:95:5) {
+      type: 'invalid-json'
+    }
+  },
+  level: 'error',
+  timestamp: '2022-02-28 21:20:29'
+}
+{
+  message: { data: { name: 'test team 21', color: 'sky', boardId: undefined } },
+  level: 'info',
+  timestamp: '2022-02-28 21:21:17'
+}
+{
+  message: {
+    createDepartmentError: Error: department validation failed: boardId: Path `boardId` is required.
+        at ValidationError.inspect (E:\trello-project\TTP-Back\node_modules\mongoose\lib\error\validation.js:48:26)
+        at formatValue (internal/util/inspect.js:745:19)
+        at formatProperty (internal/util/inspect.js:1660:11)
+        at formatRaw (internal/util/inspect.js:987:9)
+        at formatValue (internal/util/inspect.js:774:10)
+        at formatProperty (internal/util/inspect.js:1660:11)
+        at formatRaw (internal/util/inspect.js:987:9)
+        at formatValue (internal/util/inspect.js:774:10)
+        at inspect (internal/util/inspect.js:319:10)
+        at Format.transform (E:\trello-project\TTP-Back\node_modules\logform\pretty-print.js:27:19) {
+      errors: {
+        boardId: ValidatorError: Path `boardId` is required.
+            at validate (E:\trello-project\TTP-Back\node_modules\mongoose\lib\schematype.js:1277:13)
+            at E:\trello-project\TTP-Back\node_modules\mongoose\lib\schematype.js:1260:7
+            at Array.forEach (<anonymous>)
+            at SchemaString.SchemaType.doValidate (E:\trello-project\TTP-Back\node_modules\mongoose\lib\schematype.js:1210:14)
+            at E:\trello-project\TTP-Back\node_modules\mongoose\lib\document.js:2690:18
+            at processTicksAndRejections (internal/process/task_queues.js:77:11) {
+          properties: {
+            validator: [Function (anonymous)],
+            message: 'Path `boardId` is required.',
+            type: 'required',
+            path: 'boardId',
+            value: undefined
+          },
+          kind: 'required',
+          path: 'boardId',
+          value: undefined,
+          reason: undefined,
+          [Symbol(mongoose:validatorError)]: true
+        }
+      },
+      _message: 'department validation failed'
+    }
+  },
+  level: 'error',
+  timestamp: '2022-02-28 21:21:17'
+}
+{
+  message: {
+    createDepartmentError: FetchError: invalid json response body at https://api.trello.com/1/lists?name=done&idBoard=undefined&key=96b980af38094db6e5767718567af6ce&token=7f44a81ca5f903883e1b3a5720f89b70b8feacd4437d2cb893068b3b93455e5f reason: Unexpected token i in JSON at position 0
+        at E:\trello-project\TTP-Back\node_modules\node-fetch\lib\index.js:273:32
+        at processTicksAndRejections (internal/process/task_queues.js:95:5) {
+      type: 'invalid-json'
+    }
+  },
+  level: 'error',
+  timestamp: '2022-02-28 21:21:18'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-02-28 21:23:00'
+}
+{
+  message: {
+    boardData: { message: 'Board must be in a team — specify an idOrganization' }
+  },
+  level: 'info',
+  timestamp: '2022-02-28 21:23:12'
+}
+{
+  message: { data: { name: 'test team 21', color: 'sky', boardId: undefined } },
+  level: 'info',
+  timestamp: '2022-02-28 21:23:12'
+}
+{
+  message: {
+    createDepartmentError: Error: department validation failed: boardId: Path `boardId` is required.
+        at ValidationError.inspect (E:\trello-project\TTP-Back\node_modules\mongoose\lib\error\validation.js:48:26)
+        at formatValue (internal/util/inspect.js:745:19)
+        at formatProperty (internal/util/inspect.js:1660:11)
+        at formatRaw (internal/util/inspect.js:987:9)
+        at formatValue (internal/util/inspect.js:774:10)
+        at formatProperty (internal/util/inspect.js:1660:11)
+        at formatRaw (internal/util/inspect.js:987:9)
+        at formatValue (internal/util/inspect.js:774:10)
+        at inspect (internal/util/inspect.js:319:10)
+        at Format.transform (E:\trello-project\TTP-Back\node_modules\logform\pretty-print.js:27:19) {
+      errors: {
+        boardId: ValidatorError: Path `boardId` is required.
+            at validate (E:\trello-project\TTP-Back\node_modules\mongoose\lib\schematype.js:1277:13)
+            at E:\trello-project\TTP-Back\node_modules\mongoose\lib\schematype.js:1260:7
+            at Array.forEach (<anonymous>)
+            at SchemaString.SchemaType.doValidate (E:\trello-project\TTP-Back\node_modules\mongoose\lib\schematype.js:1210:14)
+            at E:\trello-project\TTP-Back\node_modules\mongoose\lib\document.js:2690:18
+            at processTicksAndRejections (internal/process/task_queues.js:77:11) {
+          properties: {
+            validator: [Function (anonymous)],
+            message: 'Path `boardId` is required.',
+            type: 'required',
+            path: 'boardId',
+            value: undefined
+          },
+          kind: 'required',
+          path: 'boardId',
+          value: undefined,
+          reason: undefined,
+          [Symbol(mongoose:validatorError)]: true
+        }
+      },
+      _message: 'department validation failed'
+    }
+  },
+  level: 'error',
+  timestamp: '2022-02-28 21:23:12'
+}
+{
+  message: {
+    createDepartmentError: FetchError: invalid json response body at https://api.trello.com/1/lists?name=done&idBoard=undefined&key=96b980af38094db6e5767718567af6ce&token=7f44a81ca5f903883e1b3a5720f89b70b8feacd4437d2cb893068b3b93455e5f reason: Unexpected token i in JSON at position 0
+        at E:\trello-project\TTP-Back\node_modules\node-fetch\lib\index.js:273:32
+        at processTicksAndRejections (internal/process/task_queues.js:95:5) {
+      type: 'invalid-json'
+    }
+  },
+  level: 'error',
+  timestamp: '2022-02-28 21:23:13'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-02-28 21:24:03'
+}
+{
+  message: {
+    createBoardApi: 'https://api.trello.com/1/boards/?name=test team 21&prefs_background=sky&defaultLists=false&key=96b980af38094db6e5767718567af6ce&token=7f44a81ca5f903883e1b3a5720f89b70b8feacd4437d2cb893068b3b93455e5f'
+  },
+  level: 'info',
+  timestamp: '2022-02-28 21:24:07'
+}
+{
+  message: {
+    boardData: { message: 'Board must be in a team — specify an idOrganization' }
+  },
+  level: 'info',
+  timestamp: '2022-02-28 21:24:09'
+}
+{
+  message: { data: { name: 'test team 21', color: 'sky', boardId: undefined } },
+  level: 'info',
+  timestamp: '2022-02-28 21:24:09'
+}
+{
+  message: {
+    createDepartmentError: Error: department validation failed: boardId: Path `boardId` is required.
+        at ValidationError.inspect (E:\trello-project\TTP-Back\node_modules\mongoose\lib\error\validation.js:48:26)
+        at formatValue (internal/util/inspect.js:745:19)
+        at formatProperty (internal/util/inspect.js:1660:11)
+        at formatRaw (internal/util/inspect.js:987:9)
+        at formatValue (internal/util/inspect.js:774:10)
+        at formatProperty (internal/util/inspect.js:1660:11)
+        at formatRaw (internal/util/inspect.js:987:9)
+        at formatValue (internal/util/inspect.js:774:10)
+        at inspect (internal/util/inspect.js:319:10)
+        at Format.transform (E:\trello-project\TTP-Back\node_modules\logform\pretty-print.js:27:19) {
+      errors: {
+        boardId: ValidatorError: Path `boardId` is required.
+            at validate (E:\trello-project\TTP-Back\node_modules\mongoose\lib\schematype.js:1277:13)
+            at E:\trello-project\TTP-Back\node_modules\mongoose\lib\schematype.js:1260:7
+            at Array.forEach (<anonymous>)
+            at SchemaString.SchemaType.doValidate (E:\trello-project\TTP-Back\node_modules\mongoose\lib\schematype.js:1210:14)
+            at E:\trello-project\TTP-Back\node_modules\mongoose\lib\document.js:2690:18
+            at processTicksAndRejections (internal/process/task_queues.js:77:11) {
+          properties: {
+            validator: [Function (anonymous)],
+            message: 'Path `boardId` is required.',
+            type: 'required',
+            path: 'boardId',
+            value: undefined
+          },
+          kind: 'required',
+          path: 'boardId',
+          value: undefined,
+          reason: undefined,
+          [Symbol(mongoose:validatorError)]: true
+        }
+      },
+      _message: 'department validation failed'
+    }
+  },
+  level: 'error',
+  timestamp: '2022-02-28 21:24:09'
+}
+{
+  message: {
+    createDepartmentError: FetchError: invalid json response body at https://api.trello.com/1/lists?name=done&idBoard=undefined&key=96b980af38094db6e5767718567af6ce&token=7f44a81ca5f903883e1b3a5720f89b70b8feacd4437d2cb893068b3b93455e5f reason: Unexpected token i in JSON at position 0
+        at E:\trello-project\TTP-Back\node_modules\node-fetch\lib\index.js:273:32
+        at processTicksAndRejections (internal/process/task_queues.js:95:5) {
+      type: 'invalid-json'
+    }
+  },
+  level: 'error',
+  timestamp: '2022-02-28 21:24:10'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-02-28 21:25:53'
+}
+{
+  message: {
+    createBoardApi: 'https://api.trello.com/1/boards/?name=test team 21&prefs_background=sky&defaultLists=false&key=96b980af38094db6e5767718567af6ce&token=7f44a81ca5f903883e1b3a5720f89b70b8feacd4437d2cb893068b3b93455e5f'
+  },
+  level: 'info',
+  timestamp: '2022-02-28 21:26:02'
+}
+{
+  message: {
+    createDepartmentError: TypeError: body used already for: https://api.trello.com/1/boards/?name=test%20team%2021&prefs_background=sky&defaultLists=false&key=96b980af38094db6e5767718567af6ce&token=7f44a81ca5f903883e1b3a5720f89b70b8feacd4437d2cb893068b3b93455e5f
+        at Response.consumeBody (E:\trello-project\TTP-Back\node_modules\node-fetch\lib\index.js:344:30)
+        at Response.json (E:\trello-project\TTP-Back\node_modules\node-fetch\lib\index.js:269:22)
+        at Function.<anonymous> (E:\trello-project\TTP-Back\src\lib\controllers\boards.ts:114:20)
+        at Generator.next (<anonymous>)
+        at fulfilled (E:\trello-project\TTP-Back\src\lib\controllers\boards.ts:5:58)
+        at processTicksAndRejections (internal/process/task_queues.js:95:5)
+  },
+  level: 'error',
+  timestamp: '2022-02-28 21:26:03'
+}
+{
+  message: {
+    createBoardApi: 'https://api.trello.com/1/boards/?name=test team 21&prefs_background=sky&defaultLists=false&key=96b980af38094db6e5767718567af6ce&token=7f44a81ca5f903883e1b3a5720f89b70b8feacd4437d2cb893068b3b93455e5f'
+  },
+  level: 'info',
+  timestamp: '2022-02-28 21:26:27'
+}
+{
+  message: {
+    createDepartmentError: TypeError: body used already for: https://api.trello.com/1/boards/?name=test%20team%2021&prefs_background=sky&defaultLists=false&key=96b980af38094db6e5767718567af6ce&token=7f44a81ca5f903883e1b3a5720f89b70b8feacd4437d2cb893068b3b93455e5f
+        at Response.consumeBody (E:\trello-project\TTP-Back\node_modules\node-fetch\lib\index.js:344:30)
+        at Response.json (E:\trello-project\TTP-Back\node_modules\node-fetch\lib\index.js:269:22)
+        at Function.<anonymous> (E:\trello-project\TTP-Back\src\lib\controllers\boards.ts:114:20)
+        at Generator.next (<anonymous>)
+        at fulfilled (E:\trello-project\TTP-Back\src\lib\controllers\boards.ts:5:58)
+        at processTicksAndRejections (internal/process/task_queues.js:95:5)
+  },
+  level: 'error',
+  timestamp: '2022-02-28 21:26:28'
+}
+{
+  message: {
+    createBoardApi: 'https://api.trello.com/1/boards/?name=test team 21&prefs_background=sky&defaultLists=false&key=96b980af38094db6e5767718567af6ce&token=7f44a81ca5f903883e1b3a5720f89b70b8feacd4437d2cb893068b3b93455e5f'
+  },
+  level: 'info',
+  timestamp: '2022-02-28 21:48:18'
+}
+{
+  message: {
+    createBoardApi: 'https://api.trello.com/1/boards/?name=test team 21&prefs_background=sky&defaultLists=false&key=96b980af38094db6e5767718567af6ce&token=7f44a81ca5f903883e1b3a5720f89b70b8feacd4437d2cb893068b3b93455e5f'
+  },
+  level: 'info',
+  timestamp: '2022-02-28 21:53:27'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-02-28 21:53:41'
+}
+{
+  message: {
+    board: Response {
+      size: 0,
+      timeout: 0,
+      [Symbol(Body internals)]: {
+        body: PassThrough {
+          _readableState: ReadableState {
+            objectMode: false,
+            highWaterMark: 16384,
+            buffer: BufferList { head: [Object], tail: [Object], length: 1 },
+            length: 67,
+            pipes: [],
+            flowing: null,
+            ended: true,
+            endEmitted: false,
+            reading: false,
+            sync: false,
+            needReadable: false,
+            emittedReadable: false,
+            readableListening: false,
+            resumeScheduled: false,
+            errorEmitted: false,
+            emitClose: true,
+            autoDestroy: true,
+            destroyed: false,
+            errored: null,
+            closed: false,
+            closeEmitted: false,
+            defaultEncoding: 'utf8',
+            awaitDrainWriters: null,
+            multiAwaitDrain: false,
+            readingMore: false,
+            dataEmitted: false,
+            decoder: null,
+            encoding: null,
+            [Symbol(kPaused)]: null
+          },
+          _events: [Object: null prototype] {
+            prefinish: [Function: prefinish],
+            error: [Function (anonymous)]
+          },
+          _eventsCount: 2,
+          _maxListeners: undefined,
+          _writableState: WritableState {
+            objectMode: false,
+            highWaterMark: 16384,
+            finalCalled: false,
+            needDrain: false,
+            ending: true,
+            ended: true,
+            finished: true,
+            destroyed: false,
+            decodeStrings: true,
+            defaultEncoding: 'utf8',
+            length: 0,
+            writing: false,
+            corked: 0,
+            sync: false,
+            bufferProcessing: false,
+            onwrite: [Function: bound onwrite],
+            writecb: null,
+            writelen: 0,
+            afterWriteTickInfo: null,
+            buffered: [],
+            bufferedIndex: 0,
+            allBuffers: true,
+            allNoop: true,
+            pendingcb: 0,
+            prefinished: true,
+            errorEmitted: false,
+            emitClose: true,
+            autoDestroy: true,
+            errored: null,
+            closed: false
+          },
+          allowHalfOpen: true,
+          [Symbol(kCapture)]: false,
+          [Symbol(kTransformState)]: {
+            afterTransform: [Function: bound afterTransform],
+            needTransform: false,
+            transforming: false,
+            writecb: null,
+            writechunk: null,
+            writeencoding: 'buffer'
+          }
+        },
+        disturbed: false,
+        error: null
+      },
+      [Symbol(Response internals)]: {
+        url: 'https://api.trello.com/1/boards/?name=test%20team%2021&prefs_background=sky&defaultLists=false&key=96b980af38094db6e5767718567af6ce&token=7f44a81ca5f903883e1b3a5720f89b70b8feacd4437d2cb893068b3b93455e5f',
+        status: 400,
+        statusText: 'Bad Request',
+        headers: Headers {
+          [Symbol(map)]: [Object: null prototype] {
+            'x-dns-prefetch-control': [ 'off' ],
+            'x-frame-options': [ 'DENY' ],
+            'x-download-options': [ 'noopen' ],
+            'x-permitted-cross-domain-policies': [ 'none' ],
+            'referrer-policy': [ 'strict-origin-when-cross-origin' ],
+            'surrogate-control': [ 'no-store' ],
+            'cache-control': [ 'no-store, no-cache, must-revalidate, proxy-revalidate' ],
+            pragma: [ 'no-cache' ],
+            expires: [ '0' ],
+            'x-trello-version': [ '1.116921.0' ],
+            'x-trello-environment': [ 'Production' ],
+            'access-control-allow-origin': [ '*' ],
+            'access-control-allow-methods': [ 'GET, PUT, POST, DELETE' ],
+            'access-control-allow-headers': [ 'Authorization, Accept, Content-Type' ],
+            'access-control-expose-headers': [
+              'x-rate-limit-api-key-interval-ms, x-rate-limit-api-key-max, x-rate-limit-api-key-remaining, x-rate-limit-api-token-interval-ms, x-rate-limit-api-token-max, x-rate-limit-api-token-remaining'
+            ],
+            'x-rate-limit-api-token-interval-ms': [ '10000' ],
+            'x-rate-limit-api-token-max': [ '100' ],
+            'x-rate-limit-api-token-remaining': [ '99' ],
+            'x-rate-limit-action-interval-ms': [ '3600000' ],
+            'x-rate-limit-action-max': [ '15000' ],
+            'x-rate-limit-action-remaining': [ '14999' ],
+            'x-rate-limit-api-key-interval-ms': [ '10000' ],
+            'x-rate-limit-api-key-max': [ '300' ],
+            'x-rate-limit-api-key-remaining': [ '299' ],
+            'x-rate-limit-member-interval-ms': [ '10000' ],
+            'x-rate-limit-member-max': [ '375' ],
+            'x-rate-limit-member-remaining': [ '374' ],
+            'content-type': [ 'application/json; charset=utf-8' ],
+            'content-length': [ '67' ],
+            date: [ 'Mon, 28 Feb 2022 18:53:50 GMT' ],
+            'x-envoy-upstream-service-time': [ '118' ],
+            'expect-ct': [
+              'report-uri="https://web-security-reports.services.atlassian.com/expect-ct-report/trello-edge", max-age=86400'
+            ],
+            'strict-transport-security': [ 'max-age=63072000; preload' ],
+            'x-content-type-options': [ 'nosniff' ],
+            'x-xss-protection': [ '1; mode=block' ],
+            'atl-traceid': [ 'a3264c69d0b572f4' ],
+            'report-to': [
+              '{"group": "endpoint-1", "max_age": 600, "endpoints": [{"url": "https://dj9s4kmieytgz.cloudfront.net"}], "include_subdomains": true}'
+            ],
+            nel: [
+              '{"report_to": "endpoint-1", "max_age": 600, "include_subdomains": true, "failure_fraction": 0.001}'
+            ],
+            server: [ 'globaledge-envoy' ],
+            connection: [ 'close' ]
+          }
+        },
+        counter: 0
+      }
+    }
+  },
+  level: 'info',
+  timestamp: '2022-02-28 21:53:50'
+}
+{
+  message: {
+    boardData: { message: 'Board must be in a team — specify an idOrganization' }
+  },
+  level: 'info',
+  timestamp: '2022-02-28 21:53:50'
+}
+{
+  message: { data: { name: 'test team 21', color: 'sky', boardId: undefined } },
+  level: 'info',
+  timestamp: '2022-02-28 21:53:50'
+}
+{
+  message: {
+    createDepartmentError: Error: department validation failed: boardId: Path `boardId` is required.
+        at ValidationError.inspect (E:\trello-project\TTP-Back\node_modules\mongoose\lib\error\validation.js:48:26)
+        at formatValue (internal/util/inspect.js:745:19)
+        at formatProperty (internal/util/inspect.js:1660:11)
+        at formatRaw (internal/util/inspect.js:987:9)
+        at formatValue (internal/util/inspect.js:774:10)
+        at formatProperty (internal/util/inspect.js:1660:11)
+        at formatRaw (internal/util/inspect.js:987:9)
+        at formatValue (internal/util/inspect.js:774:10)
+        at inspect (internal/util/inspect.js:319:10)
+        at Format.transform (E:\trello-project\TTP-Back\node_modules\logform\pretty-print.js:27:19) {
+      errors: {
+        boardId: ValidatorError: Path `boardId` is required.
+            at validate (E:\trello-project\TTP-Back\node_modules\mongoose\lib\schematype.js:1277:13)
+            at E:\trello-project\TTP-Back\node_modules\mongoose\lib\schematype.js:1260:7
+            at Array.forEach (<anonymous>)
+            at SchemaString.SchemaType.doValidate (E:\trello-project\TTP-Back\node_modules\mongoose\lib\schematype.js:1210:14)
+            at E:\trello-project\TTP-Back\node_modules\mongoose\lib\document.js:2690:18
+            at processTicksAndRejections (internal/process/task_queues.js:77:11) {
+          properties: {
+            validator: [Function (anonymous)],
+            message: 'Path `boardId` is required.',
+            type: 'required',
+            path: 'boardId',
+            value: undefined
+          },
+          kind: 'required',
+          path: 'boardId',
+          value: undefined,
+          reason: undefined,
+          [Symbol(mongoose:validatorError)]: true
+        }
+      },
+      _message: 'department validation failed'
+    }
+  },
+  level: 'error',
+  timestamp: '2022-02-28 21:53:50'
+}
+{
+  message: {
+    createDepartmentError: FetchError: invalid json response body at https://api.trello.com/1/lists?name=done&idBoard=undefined&key=96b980af38094db6e5767718567af6ce&token=7f44a81ca5f903883e1b3a5720f89b70b8feacd4437d2cb893068b3b93455e5f reason: Unexpected token i in JSON at position 0
+        at E:\trello-project\TTP-Back\node_modules\node-fetch\lib\index.js:273:32
+        at processTicksAndRejections (internal/process/task_queues.js:95:5) {
+      type: 'invalid-json'
+    }
+  },
+  level: 'error',
+  timestamp: '2022-02-28 21:53:51'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-02-28 21:54:34'
+}
+{
+  message: { board: Promise { <pending> } },
+  level: 'info',
+  timestamp: '2022-02-28 21:54:45'
+}
+{
+  message: {
+    createDepartmentError: TypeError: body used already for: https://api.trello.com/1/boards/?name=test%20team%2021&prefs_background=sky&defaultLists=false&key=96b980af38094db6e5767718567af6ce&token=7f44a81ca5f903883e1b3a5720f89b70b8feacd4437d2cb893068b3b93455e5f
+        at Response.consumeBody (E:\trello-project\TTP-Back\node_modules\node-fetch\lib\index.js:344:30)
+        at Response.json (E:\trello-project\TTP-Back\node_modules\node-fetch\lib\index.js:269:22)
+        at Function.<anonymous> (E:\trello-project\TTP-Back\src\lib\controllers\boards.ts:113:20)
+        at Generator.next (<anonymous>)
+        at fulfilled (E:\trello-project\TTP-Back\src\lib\controllers\boards.ts:5:58)
+        at processTicksAndRejections (internal/process/task_queues.js:95:5)
+  },
+  level: 'error',
+  timestamp: '2022-02-28 21:54:45'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-02-28 21:55:29'
+}
+{
+  message: {
+    board: { message: 'Board must be in a team — specify an idOrganization' }
+  },
+  level: 'info',
+  timestamp: '2022-02-28 21:55:47'
+}
+{
+  message: {
+    boardData: { message: 'Board must be in a team — specify an idOrganization' }
+  },
+  level: 'info',
+  timestamp: '2022-02-28 21:55:47'
+}
+{
+  message: { data: { name: 'test team 21', color: 'sky', boardId: undefined } },
+  level: 'info',
+  timestamp: '2022-02-28 21:55:47'
+}
+{
+  message: {
+    createDepartmentError: Error: department validation failed: boardId: Path `boardId` is required.
+        at ValidationError.inspect (E:\trello-project\TTP-Back\node_modules\mongoose\lib\error\validation.js:48:26)
+        at formatValue (internal/util/inspect.js:745:19)
+        at formatProperty (internal/util/inspect.js:1660:11)
+        at formatRaw (internal/util/inspect.js:987:9)
+        at formatValue (internal/util/inspect.js:774:10)
+        at formatProperty (internal/util/inspect.js:1660:11)
+        at formatRaw (internal/util/inspect.js:987:9)
+        at formatValue (internal/util/inspect.js:774:10)
+        at inspect (internal/util/inspect.js:319:10)
+        at Format.transform (E:\trello-project\TTP-Back\node_modules\logform\pretty-print.js:27:19) {
+      errors: {
+        boardId: ValidatorError: Path `boardId` is required.
+            at validate (E:\trello-project\TTP-Back\node_modules\mongoose\lib\schematype.js:1277:13)
+            at E:\trello-project\TTP-Back\node_modules\mongoose\lib\schematype.js:1260:7
+            at Array.forEach (<anonymous>)
+            at SchemaString.SchemaType.doValidate (E:\trello-project\TTP-Back\node_modules\mongoose\lib\schematype.js:1210:14)
+            at E:\trello-project\TTP-Back\node_modules\mongoose\lib\document.js:2690:18
+            at processTicksAndRejections (internal/process/task_queues.js:77:11) {
+          properties: {
+            validator: [Function (anonymous)],
+            message: 'Path `boardId` is required.',
+            type: 'required',
+            path: 'boardId',
+            value: undefined
+          },
+          kind: 'required',
+          path: 'boardId',
+          value: undefined,
+          reason: undefined,
+          [Symbol(mongoose:validatorError)]: true
+        }
+      },
+      _message: 'department validation failed'
+    }
+  },
+  level: 'error',
+  timestamp: '2022-02-28 21:55:47'
+}
+{
+  message: {
+    createDepartmentError: FetchError: invalid json response body at https://api.trello.com/1/lists?name=done&idBoard=undefined&key=96b980af38094db6e5767718567af6ce&token=7f44a81ca5f903883e1b3a5720f89b70b8feacd4437d2cb893068b3b93455e5f reason: Unexpected token i in JSON at position 0
+        at E:\trello-project\TTP-Back\node_modules\node-fetch\lib\index.js:273:32
+        at processTicksAndRejections (internal/process/task_queues.js:95:5) {
+      type: 'invalid-json'
+    }
+  },
+  level: 'error',
+  timestamp: '2022-02-28 21:55:47'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-02-28 21:58:04'
+}
+{
+  message: {
+    board: { message: 'Board must be in a team — specify an idOrganization' },
+    createBoardApi: 'https://api.trello.com/1/boards/?name=test team 21&prefs_background=sky&defaultLists=false&key=96b980af38094db6e5767718567af6ce&token=7f44a81ca5f903883e1b3a5720f89b70b8feacd4437d2cb893068b3b93455e5f'
+  },
+  level: 'info',
+  timestamp: '2022-02-28 21:58:12'
+}
+{
+  message: {
+    boardData: { message: 'Board must be in a team — specify an idOrganization' }
+  },
+  level: 'info',
+  timestamp: '2022-02-28 21:58:12'
+}
+{
+  message: { data: { name: 'test team 21', color: 'sky', boardId: undefined } },
+  level: 'info',
+  timestamp: '2022-02-28 21:58:12'
+}
+{
+  message: {
+    createDepartmentError: Error: department validation failed: boardId: Path `boardId` is required.
+        at ValidationError.inspect (E:\trello-project\TTP-Back\node_modules\mongoose\lib\error\validation.js:48:26)
+        at formatValue (internal/util/inspect.js:745:19)
+        at formatProperty (internal/util/inspect.js:1660:11)
+        at formatRaw (internal/util/inspect.js:987:9)
+        at formatValue (internal/util/inspect.js:774:10)
+        at formatProperty (internal/util/inspect.js:1660:11)
+        at formatRaw (internal/util/inspect.js:987:9)
+        at formatValue (internal/util/inspect.js:774:10)
+        at inspect (internal/util/inspect.js:319:10)
+        at Format.transform (E:\trello-project\TTP-Back\node_modules\logform\pretty-print.js:27:19) {
+      errors: {
+        boardId: ValidatorError: Path `boardId` is required.
+            at validate (E:\trello-project\TTP-Back\node_modules\mongoose\lib\schematype.js:1277:13)
+            at E:\trello-project\TTP-Back\node_modules\mongoose\lib\schematype.js:1260:7
+            at Array.forEach (<anonymous>)
+            at SchemaString.SchemaType.doValidate (E:\trello-project\TTP-Back\node_modules\mongoose\lib\schematype.js:1210:14)
+            at E:\trello-project\TTP-Back\node_modules\mongoose\lib\document.js:2690:18
+            at processTicksAndRejections (internal/process/task_queues.js:77:11) {
+          properties: {
+            validator: [Function (anonymous)],
+            message: 'Path `boardId` is required.',
+            type: 'required',
+            path: 'boardId',
+            value: undefined
+          },
+          kind: 'required',
+          path: 'boardId',
+          value: undefined,
+          reason: undefined,
+          [Symbol(mongoose:validatorError)]: true
+        }
+      },
+      _message: 'department validation failed'
+    }
+  },
+  level: 'error',
+  timestamp: '2022-02-28 21:58:12'
+}
+{
+  message: {
+    createDepartmentError: FetchError: invalid json response body at https://api.trello.com/1/lists?name=done&idBoard=undefined&key=96b980af38094db6e5767718567af6ce&token=7f44a81ca5f903883e1b3a5720f89b70b8feacd4437d2cb893068b3b93455e5f reason: Unexpected token i in JSON at position 0
+        at E:\trello-project\TTP-Back\node_modules\node-fetch\lib\index.js:273:32
+        at processTicksAndRejections (internal/process/task_queues.js:95:5) {
+      type: 'invalid-json'
+    }
+  },
+  level: 'error',
+  timestamp: '2022-02-28 21:58:12'
+}
+{
+  message: {
+    board: { message: 'Board must be in a team — specify an idOrganization' },
+    createBoardApi: 'https://api.trello.com/1/boards/?name=test&prefs_background=sky&defaultLists=false&key=96b980af38094db6e5767718567af6ce&token=7f44a81ca5f903883e1b3a5720f89b70b8feacd4437d2cb893068b3b93455e5f'
+  },
+  level: 'info',
+  timestamp: '2022-02-28 21:58:35'
+}
+{
+  message: {
+    boardData: { message: 'Board must be in a team — specify an idOrganization' }
+  },
+  level: 'info',
+  timestamp: '2022-02-28 21:58:35'
+}
+{
+  message: { data: { name: 'test', color: 'sky', boardId: undefined } },
+  level: 'info',
+  timestamp: '2022-02-28 21:58:35'
+}
+{
+  message: {
+    createDepartmentError: Error: department validation failed: boardId: Path `boardId` is required.
+        at ValidationError.inspect (E:\trello-project\TTP-Back\node_modules\mongoose\lib\error\validation.js:48:26)
+        at formatValue (internal/util/inspect.js:745:19)
+        at formatProperty (internal/util/inspect.js:1660:11)
+        at formatRaw (internal/util/inspect.js:987:9)
+        at formatValue (internal/util/inspect.js:774:10)
+        at formatProperty (internal/util/inspect.js:1660:11)
+        at formatRaw (internal/util/inspect.js:987:9)
+        at formatValue (internal/util/inspect.js:774:10)
+        at inspect (internal/util/inspect.js:319:10)
+        at Format.transform (E:\trello-project\TTP-Back\node_modules\logform\pretty-print.js:27:19) {
+      errors: {
+        boardId: ValidatorError: Path `boardId` is required.
+            at validate (E:\trello-project\TTP-Back\node_modules\mongoose\lib\schematype.js:1277:13)
+            at E:\trello-project\TTP-Back\node_modules\mongoose\lib\schematype.js:1260:7
+            at Array.forEach (<anonymous>)
+            at SchemaString.SchemaType.doValidate (E:\trello-project\TTP-Back\node_modules\mongoose\lib\schematype.js:1210:14)
+            at E:\trello-project\TTP-Back\node_modules\mongoose\lib\document.js:2690:18
+            at processTicksAndRejections (internal/process/task_queues.js:77:11) {
+          properties: {
+            validator: [Function (anonymous)],
+            message: 'Path `boardId` is required.',
+            type: 'required',
+            path: 'boardId',
+            value: undefined
+          },
+          kind: 'required',
+          path: 'boardId',
+          value: undefined,
+          reason: undefined,
+          [Symbol(mongoose:validatorError)]: true
+        }
+      },
+      _message: 'department validation failed'
+    }
+  },
+  level: 'error',
+  timestamp: '2022-02-28 21:58:35'
+}
+{
+  message: {
+    createDepartmentError: FetchError: invalid json response body at https://api.trello.com/1/lists?name=done&idBoard=undefined&key=96b980af38094db6e5767718567af6ce&token=7f44a81ca5f903883e1b3a5720f89b70b8feacd4437d2cb893068b3b93455e5f reason: Unexpected token i in JSON at position 0
+        at E:\trello-project\TTP-Back\node_modules\node-fetch\lib\index.js:273:32
+        at processTicksAndRejections (internal/process/task_queues.js:95:5) {
+      type: 'invalid-json'
+    }
+  },
+  level: 'error',
+  timestamp: '2022-02-28 21:58:35'
+}
+{
+  message: {
+    board: { message: 'Board must be in a team — specify an idOrganization' },
+    createBoardApi: 'https://api.trello.com/1/boards/?name=test&prefs_background=sky&defaultLists=false&key=96b980af38094db6e5767718567af6ce&token=7f44a81ca5f903883e1b3a5720f89b70b8feacd4437d2cb893068b3b93455e5f'
+  },
+  level: 'info',
+  timestamp: '2022-02-28 22:09:04'
+}
+{
+  message: {
+    boardData: { message: 'Board must be in a team — specify an idOrganization' }
+  },
+  level: 'info',
+  timestamp: '2022-02-28 22:09:04'
+}
+{
+  message: { data: { name: 'test', color: 'sky', boardId: undefined } },
+  level: 'info',
+  timestamp: '2022-02-28 22:09:04'
+}
+{
+  message: {
+    createDepartmentError: Error: department validation failed: boardId: Path `boardId` is required.
+        at ValidationError.inspect (E:\trello-project\TTP-Back\node_modules\mongoose\lib\error\validation.js:48:26)
+        at formatValue (internal/util/inspect.js:745:19)
+        at formatProperty (internal/util/inspect.js:1660:11)
+        at formatRaw (internal/util/inspect.js:987:9)
+        at formatValue (internal/util/inspect.js:774:10)
+        at formatProperty (internal/util/inspect.js:1660:11)
+        at formatRaw (internal/util/inspect.js:987:9)
+        at formatValue (internal/util/inspect.js:774:10)
+        at inspect (internal/util/inspect.js:319:10)
+        at Format.transform (E:\trello-project\TTP-Back\node_modules\logform\pretty-print.js:27:19) {
+      errors: {
+        boardId: ValidatorError: Path `boardId` is required.
+            at validate (E:\trello-project\TTP-Back\node_modules\mongoose\lib\schematype.js:1277:13)
+            at E:\trello-project\TTP-Back\node_modules\mongoose\lib\schematype.js:1260:7
+            at Array.forEach (<anonymous>)
+            at SchemaString.SchemaType.doValidate (E:\trello-project\TTP-Back\node_modules\mongoose\lib\schematype.js:1210:14)
+            at E:\trello-project\TTP-Back\node_modules\mongoose\lib\document.js:2690:18
+            at processTicksAndRejections (internal/process/task_queues.js:77:11) {
+          properties: {
+            validator: [Function (anonymous)],
+            message: 'Path `boardId` is required.',
+            type: 'required',
+            path: 'boardId',
+            value: undefined
+          },
+          kind: 'required',
+          path: 'boardId',
+          value: undefined,
+          reason: undefined,
+          [Symbol(mongoose:validatorError)]: true
+        }
+      },
+      _message: 'department validation failed'
+    }
+  },
+  level: 'error',
+  timestamp: '2022-02-28 22:09:04'
+}
+{
+  message: {
+    createDepartmentError: FetchError: invalid json response body at https://api.trello.com/1/lists?name=done&idBoard=undefined&key=96b980af38094db6e5767718567af6ce&token=7f44a81ca5f903883e1b3a5720f89b70b8feacd4437d2cb893068b3b93455e5f reason: Unexpected token i in JSON at position 0
+        at E:\trello-project\TTP-Back\node_modules\node-fetch\lib\index.js:273:32
+        at processTicksAndRejections (internal/process/task_queues.js:95:5) {
+      type: 'invalid-json'
+    }
+  },
+  level: 'error',
+  timestamp: '2022-02-28 22:09:05'
+}
+{
+  message: {
+    board: {
+      id: '621d1e16a4699d23f28e8cdf',
+      name: 'test',
+      desc: '',
+      descData: null,
+      closed: false,
+      idOrganization: '61e87201397f573cb99a0418',
+      idEnterprise: null,
+      pinned: false,
+      url: 'https://trello.com/b/fS0SI7HP/test',
+      shortUrl: 'https://trello.com/b/fS0SI7HP',
+      prefs: {
+        permissionLevel: 'private',
+        hideVotes: false,
+        voting: 'disabled',
+        comments: 'members',
+        invitations: 'members',
+        selfJoin: true,
+        cardCovers: true,
+        isTemplate: false,
+        cardAging: 'regular',
+        calendarFeedEnabled: false,
+        hiddenPluginBoardButtons: [],
+        background: 'sky',
+        backgroundColor: '#00AECC',
+        backgroundImage: null,
+        backgroundImageScaled: null,
+        backgroundTile: false,
+        backgroundBrightness: 'dark',
+        backgroundBottomColor: '#00AECC',
+        backgroundTopColor: '#00AECC',
+        canBePublic: true,
+        canBeEnterprise: true,
+        canBeOrg: true,
+        canBePrivate: true,
+        canInvite: true
+      },
+      labelNames: {
+        green: '',
+        yellow: '',
+        orange: '',
+        red: '',
+        purple: '',
+        blue: '',
+        sky: '',
+        lime: '',
+        pink: '',
+        black: ''
+      },
+      limits: {}
+    },
+    createBoardApi: 'https://api.trello.com/1/boards/?name=test&prefs_background=sky&defaultLists=false&key=96b980af38094db6e5767718567af6ce&token=7f44a81ca5f903883e1b3a5720f89b70b8feacd4437d2cb893068b3b93455e5f'
+  },
+  level: 'info',
+  timestamp: '2022-02-28 22:10:15'
+}
+{
+  message: {
+    boardData: {
+      id: '621d1e16a4699d23f28e8cdf',
+      name: 'test',
+      desc: '',
+      descData: null,
+      closed: false,
+      idOrganization: '61e87201397f573cb99a0418',
+      idEnterprise: null,
+      pinned: false,
+      url: 'https://trello.com/b/fS0SI7HP/test',
+      shortUrl: 'https://trello.com/b/fS0SI7HP',
+      prefs: {
+        permissionLevel: 'private',
+        hideVotes: false,
+        voting: 'disabled',
+        comments: 'members',
+        invitations: 'members',
+        selfJoin: true,
+        cardCovers: true,
+        isTemplate: false,
+        cardAging: 'regular',
+        calendarFeedEnabled: false,
+        hiddenPluginBoardButtons: [],
+        background: 'sky',
+        backgroundColor: '#00AECC',
+        backgroundImage: null,
+        backgroundImageScaled: null,
+        backgroundTile: false,
+        backgroundBrightness: 'dark',
+        backgroundBottomColor: '#00AECC',
+        backgroundTopColor: '#00AECC',
+        canBePublic: true,
+        canBeEnterprise: true,
+        canBeOrg: true,
+        canBePrivate: true,
+        canInvite: true
+      },
+      labelNames: {
+        green: '',
+        yellow: '',
+        orange: '',
+        red: '',
+        purple: '',
+        blue: '',
+        sky: '',
+        lime: '',
+        pink: '',
+        black: ''
+      },
+      limits: {}
+    }
+  },
+  level: 'info',
+  timestamp: '2022-02-28 22:10:15'
+}
+{
+  message: {
+    data: { name: 'test', color: 'sky', boardId: '621d1e16a4699d23f28e8cdf' }
+  },
+  level: 'info',
+  timestamp: '2022-02-28 22:10:15'
+}
+{
+  message: { teamData: '621d1e195a8b5a67f0c86b89' },
+  level: 'info',
+  timestamp: '2022-02-28 22:10:17'
+}
+{
+  message: { teamData: '621d1e1993d52a1113a1e74d' },
+  level: 'info',
+  timestamp: '2022-02-28 22:10:17'
+}
+{
+  message: {
+    updatedbDepartmentError: {
+      id: new ObjectId("621d1e1748e2f75ddb4475c4"),
+      defaultListId: '621d1e1a2b19a40593013abf',
+      sharedListID: '621d1e182bfdc74466b8dc8b',
+      doneListId: '621d1e1779f5fd8a32e92549',
+      reviewListId: '621d1e18a78fd6075ab01184',
+      notClearListId: '621d1e1ac7f62b3473081bfd',
+      canceldListId: '621d1e1c75562a7b5a12fc32',
+      teamsId: [
+        {
+          idInTrello: '621d1e195a8b5a67f0c86b89',
+          idInDB: '61eab832b41398d86474d4ac'
+        },
+        {
+          idInTrello: '621d1e1993d52a1113a1e74d',
+          idInDB: '61eac1ea6b95c7f7ed8be309'
+        }
+      ]
+    }
+  },
+  level: 'info',
+  timestamp: '2022-02-28 22:10:21'
+}
+{
+  message: { webhookCreateResult: 'webhook done' },
+  level: 'info',
+  timestamp: '2022-02-28 22:10:22'
+}
+{
+  message: {
+    board: {
+      id: '621d1e5b12e5d8865ae7d6c9',
+      name: 'test',
+      desc: '',
+      descData: null,
+      closed: false,
+      idOrganization: '61e87201397f573cb99a0418',
+      idEnterprise: null,
+      pinned: false,
+      url: 'https://trello.com/b/nIEqQLOJ/test',
+      shortUrl: 'https://trello.com/b/nIEqQLOJ',
+      prefs: {
+        permissionLevel: 'private',
+        hideVotes: false,
+        voting: 'disabled',
+        comments: 'members',
+        invitations: 'members',
+        selfJoin: true,
+        cardCovers: true,
+        isTemplate: false,
+        cardAging: 'regular',
+        calendarFeedEnabled: false,
+        hiddenPluginBoardButtons: [],
+        background: 'sky',
+        backgroundColor: '#00AECC',
+        backgroundImage: null,
+        backgroundImageScaled: null,
+        backgroundTile: false,
+        backgroundBrightness: 'dark',
+        backgroundBottomColor: '#00AECC',
+        backgroundTopColor: '#00AECC',
+        canBePublic: true,
+        canBeEnterprise: true,
+        canBeOrg: true,
+        canBePrivate: true,
+        canInvite: true
+      },
+      labelNames: {
+        green: '',
+        yellow: '',
+        orange: '',
+        red: '',
+        purple: '',
+        blue: '',
+        sky: '',
+        lime: '',
+        pink: '',
+        black: ''
+      },
+      limits: {}
+    },
+    createBoardApi: 'https://api.trello.com/1/boards/?name=test&prefs_background=sky&defaultLists=false&key=96b980af38094db6e5767718567af6ce&token=7f44a81ca5f903883e1b3a5720f89b70b8feacd4437d2cb893068b3b93455e5f'
+  },
+  level: 'info',
+  timestamp: '2022-02-28 22:11:24'
+}
+{
+  message: {
+    boardData: {
+      id: '621d1e5b12e5d8865ae7d6c9',
+      name: 'test',
+      desc: '',
+      descData: null,
+      closed: false,
+      idOrganization: '61e87201397f573cb99a0418',
+      idEnterprise: null,
+      pinned: false,
+      url: 'https://trello.com/b/nIEqQLOJ/test',
+      shortUrl: 'https://trello.com/b/nIEqQLOJ',
+      prefs: {
+        permissionLevel: 'private',
+        hideVotes: false,
+        voting: 'disabled',
+        comments: 'members',
+        invitations: 'members',
+        selfJoin: true,
+        cardCovers: true,
+        isTemplate: false,
+        cardAging: 'regular',
+        calendarFeedEnabled: false,
+        hiddenPluginBoardButtons: [],
+        background: 'sky',
+        backgroundColor: '#00AECC',
+        backgroundImage: null,
+        backgroundImageScaled: null,
+        backgroundTile: false,
+        backgroundBrightness: 'dark',
+        backgroundBottomColor: '#00AECC',
+        backgroundTopColor: '#00AECC',
+        canBePublic: true,
+        canBeEnterprise: true,
+        canBeOrg: true,
+        canBePrivate: true,
+        canInvite: true
+      },
+      labelNames: {
+        green: '',
+        yellow: '',
+        orange: '',
+        red: '',
+        purple: '',
+        blue: '',
+        sky: '',
+        lime: '',
+        pink: '',
+        black: ''
+      },
+      limits: {}
+    }
+  },
+  level: 'info',
+  timestamp: '2022-02-28 22:11:24'
+}
+{
+  message: {
+    data: { name: 'test', color: 'sky', boardId: '621d1e5b12e5d8865ae7d6c9' }
+  },
+  level: 'info',
+  timestamp: '2022-02-28 22:11:24'
+}
+{
+  message: { teamData: '621d1e5e3d37ea861ca23ead' },
+  level: 'info',
+  timestamp: '2022-02-28 22:11:26'
+}
+{
+  message: { teamData: '621d1e5e55b8f683295cba5f' },
+  level: 'info',
+  timestamp: '2022-02-28 22:11:26'
+}
+{
+  message: {
+    updatedbDepartmentError: {
+      id: new ObjectId("621d1e5c48e2f75ddb4475ca"),
+      defaultListId: '621d1e5f2074c9653e2b2700',
+      sharedListID: '621d1e5d5623803a3cf6520a',
+      doneListId: '621d1e5ca087f40f1a4b6754',
+      reviewListId: '621d1e5dc0fa831afffa2c4e',
+      notClearListId: '621d1e5f47918b1aba32bdae',
+      canceldListId: '621d1e600c32d540d626ff84',
+      teamsId: [
+        {
+          idInTrello: '621d1e5e3d37ea861ca23ead',
+          idInDB: '61eab832b41398d86474d4ac'
+        },
+        {
+          idInTrello: '621d1e5e55b8f683295cba5f',
+          idInDB: '61eac1ea6b95c7f7ed8be309'
+        }
+      ]
+    }
+  },
+  level: 'info',
+  timestamp: '2022-02-28 22:11:28'
+}
+{
+  message: { webhookCreateResult: 'webhook done' },
+  level: 'info',
+  timestamp: '2022-02-28 22:11:30'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-02-28 22:12:32'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-03-01 20:17:17'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-03-01 20:18:08'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-03-01 20:56:58'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-03-01 22:56:19'
+}
+{
+  message: {
+    updateDepartmentError: FetchError: invalid json response body at https://api.trello.com/1/boards/621d1e5b12e5d8865ae7d6c9/?name=test%20team%2018&prefs/background=pink&key=96b980af38094db6e5767718567af6ce&token=cf63168bc8ae2177b4c66314d126c0a417e6c7e26d9e3cf92c840f804cc9ffac reason: Unexpected token i in JSON at position 0
+        at E:\trello-project\TTP-Back\node_modules\node-fetch\lib\index.js:273:32
+        at processTicksAndRejections (internal/process/task_queues.js:95:5) {
+      type: 'invalid-json'
+    }
+  },
+  level: 'error',
+  timestamp: '2022-03-01 22:59:02'
+}
+{
+  message: {
+    updateDepartmentError: FetchError: invalid json response body at https://api.trello.com/1/boards/621d1e5b12e5d8865ae7d6c9/?name=test%20team%2018&prefs/background=pink&key=96b980af38094db6e5767718567af6ce&token=cf63168bc8ae2177b4c66314d126c0a417e6c7e26d9e3cf92c840f804cc9ffac reason: Unexpected token i in JSON at position 0
+        at E:\trello-project\TTP-Back\node_modules\node-fetch\lib\index.js:273:32
+        at processTicksAndRejections (internal/process/task_queues.js:95:5) {
+      type: 'invalid-json'
+    }
+  },
+  level: 'error',
+  timestamp: '2022-03-01 23:01:18'
+}
+{
+  message: {
+    createNewBoardError: FetchError: invalid json response body at https://api.trello.com/1/boards/?name=test&prefs_background=sky&defaultLists=false&key=96b980af38094db6e5767718567af6ce&token=cf63168bc8ae2177b4c66314d126c0a417e6c7e26d9e3cf92c840f804cc9ffac reason: Unexpected token i in JSON at position 0
+        at E:\trello-project\TTP-Back\node_modules\node-fetch\lib\index.js:273:32
+        at processTicksAndRejections (internal/process/task_queues.js:95:5) {
+      type: 'invalid-json'
+    }
+  },
+  level: 'error',
+  timestamp: '2022-03-01 23:01:30'
+}
+{
+  message: {
+    createDepartmentError: TypeError: Cannot read property 'id' of undefined
+        at Function.<anonymous> (E:\trello-project\TTP-Back\src\lib\controllers\department.ts:139:27)
+        at Generator.next (<anonymous>)
+        at fulfilled (E:\trello-project\TTP-Back\src\lib\controllers\department.ts:5:58)
+        at processTicksAndRejections (internal/process/task_queues.js:95:5)
+  },
+  level: 'error',
+  timestamp: '2022-03-01 23:01:30'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-03-01 23:04:55'
+}
+{
+  message: { data: { name: 'test', color: 'sky', boardId: undefined } },
+  level: 'info',
+  timestamp: '2022-03-01 23:05:02'
+}
+{
+  message: {
+    createDepartmentError: Error: department validation failed: boardId: Path `boardId` is required.
+        at ValidationError.inspect (E:\trello-project\TTP-Back\node_modules\mongoose\lib\error\validation.js:48:26)
+        at formatValue (internal/util/inspect.js:745:19)
+        at formatProperty (internal/util/inspect.js:1660:11)
+        at formatRaw (internal/util/inspect.js:987:9)
+        at formatValue (internal/util/inspect.js:774:10)
+        at formatProperty (internal/util/inspect.js:1660:11)
+        at formatRaw (internal/util/inspect.js:987:9)
+        at formatValue (internal/util/inspect.js:774:10)
+        at inspect (internal/util/inspect.js:319:10)
+        at Format.transform (E:\trello-project\TTP-Back\node_modules\logform\pretty-print.js:27:19) {
+      errors: {
+        boardId: ValidatorError: Path `boardId` is required.
+            at validate (E:\trello-project\TTP-Back\node_modules\mongoose\lib\schematype.js:1277:13)
+            at E:\trello-project\TTP-Back\node_modules\mongoose\lib\schematype.js:1260:7
+            at Array.forEach (<anonymous>)
+            at SchemaString.SchemaType.doValidate (E:\trello-project\TTP-Back\node_modules\mongoose\lib\schematype.js:1210:14)
+            at E:\trello-project\TTP-Back\node_modules\mongoose\lib\document.js:2690:18
+            at processTicksAndRejections (internal/process/task_queues.js:77:11) {
+          properties: {
+            validator: [Function (anonymous)],
+            message: 'Path `boardId` is required.',
+            type: 'required',
+            path: 'boardId',
+            value: undefined
+          },
+          kind: 'required',
+          path: 'boardId',
+          value: undefined,
+          reason: undefined,
+          [Symbol(mongoose:validatorError)]: true
+        }
+      },
+      _message: 'department validation failed'
+    }
+  },
+  level: 'error',
+  timestamp: '2022-03-01 23:05:02'
+}
+{
+  message: {
+    createDepartmentError: FetchError: invalid json response body at https://api.trello.com/1/lists?name=done&idBoard=undefined&key=96b980af38094db6e5767718567af6ce&token=cf63168bc8ae2177b4c66314d126c0a417e6c7e26d9e3cf92c840f804cc9ffac reason: Unexpected token i in JSON at position 0
+        at E:\trello-project\TTP-Back\node_modules\node-fetch\lib\index.js:273:32
+        at processTicksAndRejections (internal/process/task_queues.js:95:5) {
+      type: 'invalid-json'
+    }
+  },
+  level: 'error',
+  timestamp: '2022-03-01 23:05:02'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-03-01 23:06:11'
+}
+{
+  message: { boardData: 'invalid token' },
+  level: 'info',
+  timestamp: '2022-03-01 23:06:17'
+}
+{
+  message: { data: { name: 'test', color: 'sky', boardId: undefined } },
+  level: 'info',
+  timestamp: '2022-03-01 23:06:17'
+}
+{
+  message: {
+    createDepartmentError: Error: department validation failed: boardId: Path `boardId` is required.
+        at ValidationError.inspect (E:\trello-project\TTP-Back\node_modules\mongoose\lib\error\validation.js:48:26)
+        at formatValue (internal/util/inspect.js:745:19)
+        at formatProperty (internal/util/inspect.js:1660:11)
+        at formatRaw (internal/util/inspect.js:987:9)
+        at formatValue (internal/util/inspect.js:774:10)
+        at formatProperty (internal/util/inspect.js:1660:11)
+        at formatRaw (internal/util/inspect.js:987:9)
+        at formatValue (internal/util/inspect.js:774:10)
+        at inspect (internal/util/inspect.js:319:10)
+        at Format.transform (E:\trello-project\TTP-Back\node_modules\logform\pretty-print.js:27:19) {
+      errors: {
+        boardId: ValidatorError: Path `boardId` is required.
+            at validate (E:\trello-project\TTP-Back\node_modules\mongoose\lib\schematype.js:1277:13)
+            at E:\trello-project\TTP-Back\node_modules\mongoose\lib\schematype.js:1260:7
+            at Array.forEach (<anonymous>)
+            at SchemaString.SchemaType.doValidate (E:\trello-project\TTP-Back\node_modules\mongoose\lib\schematype.js:1210:14)
+            at E:\trello-project\TTP-Back\node_modules\mongoose\lib\document.js:2690:18
+            at processTicksAndRejections (internal/process/task_queues.js:77:11) {
+          properties: {
+            validator: [Function (anonymous)],
+            message: 'Path `boardId` is required.',
+            type: 'required',
+            path: 'boardId',
+            value: undefined
+          },
+          kind: 'required',
+          path: 'boardId',
+          value: undefined,
+          reason: undefined,
+          [Symbol(mongoose:validatorError)]: true
+        }
+      },
+      _message: 'department validation failed'
+    }
+  },
+  level: 'error',
+  timestamp: '2022-03-01 23:06:17'
+}
+{
+  message: {
+    createDepartmentError: FetchError: invalid json response body at https://api.trello.com/1/lists?name=done&idBoard=undefined&key=96b980af38094db6e5767718567af6ce&token=cf63168bc8ae2177b4c66314d126c0a417e6c7e26d9e3cf92c840f804cc9ffac reason: Unexpected token i in JSON at position 0
+        at E:\trello-project\TTP-Back\node_modules\node-fetch\lib\index.js:273:32
+        at processTicksAndRejections (internal/process/task_queues.js:95:5) {
+      type: 'invalid-json'
+    }
+  },
+  level: 'error',
+  timestamp: '2022-03-01 23:06:18'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-03-01 23:07:45'
+}
+{
+  message: {
+    board: Response {
+      size: 0,
+      timeout: 0,
+      [Symbol(Body internals)]: {
+        body: PassThrough {
+          _readableState: ReadableState {
+            objectMode: false,
+            highWaterMark: 16384,
+            buffer: BufferList { head: [Object], tail: [Object], length: 1 },
+            length: 13,
+            pipes: [],
+            flowing: null,
+            ended: true,
+            endEmitted: false,
+            reading: false,
+            sync: false,
+            needReadable: false,
+            emittedReadable: false,
+            readableListening: false,
+            resumeScheduled: false,
+            errorEmitted: false,
+            emitClose: true,
+            autoDestroy: true,
+            destroyed: false,
+            errored: null,
+            closed: false,
+            closeEmitted: false,
+            defaultEncoding: 'utf8',
+            awaitDrainWriters: null,
+            multiAwaitDrain: false,
+            readingMore: false,
+            dataEmitted: false,
+            decoder: null,
+            encoding: null,
+            [Symbol(kPaused)]: null
+          },
+          _events: [Object: null prototype] {
+            prefinish: [Function: prefinish],
+            error: [Function (anonymous)]
+          },
+          _eventsCount: 2,
+          _maxListeners: undefined,
+          _writableState: WritableState {
+            objectMode: false,
+            highWaterMark: 16384,
+            finalCalled: false,
+            needDrain: false,
+            ending: true,
+            ended: true,
+            finished: true,
+            destroyed: false,
+            decodeStrings: true,
+            defaultEncoding: 'utf8',
+            length: 0,
+            writing: false,
+            corked: 0,
+            sync: false,
+            bufferProcessing: false,
+            onwrite: [Function: bound onwrite],
+            writecb: null,
+            writelen: 0,
+            afterWriteTickInfo: null,
+            buffered: [],
+            bufferedIndex: 0,
+            allBuffers: true,
+            allNoop: true,
+            pendingcb: 0,
+            prefinished: true,
+            errorEmitted: false,
+            emitClose: true,
+            autoDestroy: true,
+            errored: null,
+            closed: false
+          },
+          allowHalfOpen: true,
+          [Symbol(kCapture)]: false,
+          [Symbol(kTransformState)]: {
+            afterTransform: [Function: bound afterTransform],
+            needTransform: false,
+            transforming: false,
+            writecb: null,
+            writechunk: null,
+            writeencoding: 'buffer'
+          }
+        },
+        disturbed: false,
+        error: null
+      },
+      [Symbol(Response internals)]: {
+        url: 'https://api.trello.com/1/boards/?name=test&prefs_background=sky&defaultLists=false&key=96b980af38094db6e5767718567af6ce&token=cf63168bc8ae2177b4c66314d126c0a417e6c7e26d9e3cf92c840f804cc9ffac',
+        status: 401,
+        statusText: 'Unauthorized',
+        headers: Headers {
+          [Symbol(map)]: [Object: null prototype] {
+            'x-dns-prefetch-control': [ 'off' ],
+            'x-frame-options': [ 'DENY' ],
+            'x-download-options': [ 'noopen' ],
+            'x-permitted-cross-domain-policies': [ 'none' ],
+            'referrer-policy': [ 'strict-origin-when-cross-origin' ],
+            'surrogate-control': [ 'no-store' ],
+            'cache-control': [ 'no-store, no-cache, must-revalidate, proxy-revalidate' ],
+            pragma: [ 'no-cache' ],
+            expires: [ '0' ],
+            'x-trello-version': [ '1.117198.0' ],
+            'x-trello-environment': [ 'Production' ],
+            'access-control-allow-origin': [ '*' ],
+            'access-control-allow-methods': [ 'GET, PUT, POST, DELETE' ],
+            'access-control-allow-headers': [ 'Authorization, Accept, Content-Type' ],
+            'access-control-expose-headers': [
+              'x-rate-limit-api-key-interval-ms, x-rate-limit-api-key-max, x-rate-limit-api-key-remaining, x-rate-limit-api-token-interval-ms, x-rate-limit-api-token-max, x-rate-limit-api-token-remaining'
+            ],
+            'x-rate-limit-api-token-interval-ms': [ '10000' ],
+            'x-rate-limit-api-token-max': [ '100' ],
+            'x-rate-limit-api-token-remaining': [ '99' ],
+            'x-rate-limit-action-interval-ms': [ '3600000' ],
+            'x-rate-limit-action-max': [ '15000' ],
+            'x-rate-limit-action-remaining': [ '14999' ],
+            'x-rate-limit-api-key-interval-ms': [ '10000' ],
+            'x-rate-limit-api-key-max': [ '300' ],
+            'x-rate-limit-api-key-remaining': [ '299' ],
+            'content-type': [ 'text/plain; charset=utf-8' ],
+            'content-length': [ '13' ],
+            date: [ 'Tue, 01 Mar 2022 20:07:51 GMT' ],
+            'x-envoy-upstream-service-time': [ '79' ],
+            'expect-ct': [
+              'report-uri="https://web-security-reports.services.atlassian.com/expect-ct-report/trello-edge", max-age=86400'
+            ],
+            'strict-transport-security': [ 'max-age=63072000; preload' ],
+            'x-content-type-options': [ 'nosniff' ],
+            'x-xss-protection': [ '1; mode=block' ],
+            'atl-traceid': [ '46a36daca84436bd' ],
+            'report-to': [
+              '{"group": "endpoint-1", "max_age": 600, "endpoints": [{"url": "https://dj9s4kmieytgz.cloudfront.net"}], "include_subdomains": true}'
+            ],
+            nel: [
+              '{"report_to": "endpoint-1", "max_age": 600, "include_subdomains": true, "failure_fraction": 0.001}'
+            ],
+            server: [ 'globaledge-envoy' ],
+            connection: [ 'close' ]
+          }
+        },
+        counter: 0
+      }
+    },
+    createBoardApi: 'https://api.trello.com/1/boards/?name=test&prefs_background=sky&defaultLists=false&key=96b980af38094db6e5767718567af6ce&token=cf63168bc8ae2177b4c66314d126c0a417e6c7e26d9e3cf92c840f804cc9ffac'
+  },
+  level: 'info',
+  timestamp: '2022-03-01 23:07:52'
+}
+{
+  message: {
+    createNewBoardError: TypeError: board.josin is not a function
+        at Function.<anonymous> (E:\trello-project\TTP-Back\src\lib\controllers\boards.ts:112:36)
+        at Generator.next (<anonymous>)
+        at fulfilled (E:\trello-project\TTP-Back\src\lib\controllers\boards.ts:5:58)
+        at processTicksAndRejections (internal/process/task_queues.js:95:5)
+  },
+  level: 'error',
+  timestamp: '2022-03-01 23:07:52'
+}
+{
+  message: { boardData: undefined },
+  level: 'info',
+  timestamp: '2022-03-01 23:07:52'
+}
+{
+  message: {
+    createDepartmentError: TypeError: Cannot read property 'id' of undefined
+        at Function.<anonymous> (E:\trello-project\TTP-Back\src\lib\controllers\department.ts:139:27)
+        at Generator.next (<anonymous>)
+        at fulfilled (E:\trello-project\TTP-Back\src\lib\controllers\department.ts:5:58)
+        at processTicksAndRejections (internal/process/task_queues.js:95:5)
+  },
+  level: 'error',
+  timestamp: '2022-03-01 23:07:52'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-03-01 23:08:21'
+}
+{
+  message: {
+    board: Response {
+      size: 0,
+      timeout: 0,
+      [Symbol(Body internals)]: {
+        body: PassThrough {
+          _readableState: ReadableState {
+            objectMode: false,
+            highWaterMark: 16384,
+            buffer: BufferList { head: [Object], tail: [Object], length: 1 },
+            length: 13,
+            pipes: [],
+            flowing: null,
+            ended: true,
+            endEmitted: false,
+            reading: false,
+            sync: false,
+            needReadable: false,
+            emittedReadable: false,
+            readableListening: false,
+            resumeScheduled: false,
+            errorEmitted: false,
+            emitClose: true,
+            autoDestroy: true,
+            destroyed: false,
+            errored: null,
+            closed: false,
+            closeEmitted: false,
+            defaultEncoding: 'utf8',
+            awaitDrainWriters: null,
+            multiAwaitDrain: false,
+            readingMore: false,
+            dataEmitted: false,
+            decoder: null,
+            encoding: null,
+            [Symbol(kPaused)]: null
+          },
+          _events: [Object: null prototype] {
+            prefinish: [Function: prefinish],
+            error: [Function (anonymous)]
+          },
+          _eventsCount: 2,
+          _maxListeners: undefined,
+          _writableState: WritableState {
+            objectMode: false,
+            highWaterMark: 16384,
+            finalCalled: false,
+            needDrain: false,
+            ending: true,
+            ended: true,
+            finished: true,
+            destroyed: false,
+            decodeStrings: true,
+            defaultEncoding: 'utf8',
+            length: 0,
+            writing: false,
+            corked: 0,
+            sync: false,
+            bufferProcessing: false,
+            onwrite: [Function: bound onwrite],
+            writecb: null,
+            writelen: 0,
+            afterWriteTickInfo: null,
+            buffered: [],
+            bufferedIndex: 0,
+            allBuffers: true,
+            allNoop: true,
+            pendingcb: 0,
+            prefinished: true,
+            errorEmitted: false,
+            emitClose: true,
+            autoDestroy: true,
+            errored: null,
+            closed: false
+          },
+          allowHalfOpen: true,
+          [Symbol(kCapture)]: false,
+          [Symbol(kTransformState)]: {
+            afterTransform: [Function: bound afterTransform],
+            needTransform: false,
+            transforming: false,
+            writecb: null,
+            writechunk: null,
+            writeencoding: 'buffer'
+          }
+        },
+        disturbed: false,
+        error: null
+      },
+      [Symbol(Response internals)]: {
+        url: 'https://api.trello.com/1/boards/?name=test&prefs_background=sky&defaultLists=false&key=96b980af38094db6e5767718567af6ce&token=cf63168bc8ae2177b4c66314d126c0a417e6c7e26d9e3cf92c840f804cc9ffac',
+        status: 401,
+        statusText: 'Unauthorized',
+        headers: Headers {
+          [Symbol(map)]: [Object: null prototype] {
+            'x-dns-prefetch-control': [ 'off' ],
+            'x-frame-options': [ 'DENY' ],
+            'x-download-options': [ 'noopen' ],
+            'x-permitted-cross-domain-policies': [ 'none' ],
+            'referrer-policy': [ 'strict-origin-when-cross-origin' ],
+            'surrogate-control': [ 'no-store' ],
+            'cache-control': [ 'no-store, no-cache, must-revalidate, proxy-revalidate' ],
+            pragma: [ 'no-cache' ],
+            expires: [ '0' ],
+            'x-trello-version': [ '1.117198.0' ],
+            'x-trello-environment': [ 'Production' ],
+            'access-control-allow-origin': [ '*' ],
+            'access-control-allow-methods': [ 'GET, PUT, POST, DELETE' ],
+            'access-control-allow-headers': [ 'Authorization, Accept, Content-Type' ],
+            'access-control-expose-headers': [
+              'x-rate-limit-api-key-interval-ms, x-rate-limit-api-key-max, x-rate-limit-api-key-remaining, x-rate-limit-api-token-interval-ms, x-rate-limit-api-token-max, x-rate-limit-api-token-remaining'
+            ],
+            'x-rate-limit-api-token-interval-ms': [ '10000' ],
+            'x-rate-limit-api-token-max': [ '100' ],
+            'x-rate-limit-api-token-remaining': [ '99' ],
+            'x-rate-limit-action-interval-ms': [ '3600000' ],
+            'x-rate-limit-action-max': [ '15000' ],
+            'x-rate-limit-action-remaining': [ '14999' ],
+            'x-rate-limit-api-key-interval-ms': [ '10000' ],
+            'x-rate-limit-api-key-max': [ '300' ],
+            'x-rate-limit-api-key-remaining': [ '299' ],
+            'content-type': [ 'text/plain; charset=utf-8' ],
+            'content-length': [ '13' ],
+            date: [ 'Tue, 01 Mar 2022 20:08:25 GMT' ],
+            'x-envoy-upstream-service-time': [ '79' ],
+            'expect-ct': [
+              'report-uri="https://web-security-reports.services.atlassian.com/expect-ct-report/trello-edge", max-age=86400'
+            ],
+            'strict-transport-security': [ 'max-age=63072000; preload' ],
+            'x-content-type-options': [ 'nosniff' ],
+            'x-xss-protection': [ '1; mode=block' ],
+            'atl-traceid': [ '3c8e360892bf5a12' ],
+            'report-to': [
+              '{"group": "endpoint-1", "max_age": 600, "endpoints": [{"url": "https://dj9s4kmieytgz.cloudfront.net"}], "include_subdomains": true}'
+            ],
+            nel: [
+              '{"report_to": "endpoint-1", "max_age": 600, "include_subdomains": true, "failure_fraction": 0.001}'
+            ],
+            server: [ 'globaledge-envoy' ],
+            connection: [ 'close' ]
+          }
+        },
+        counter: 0
+      }
+    },
+    createBoardApi: 'https://api.trello.com/1/boards/?name=test&prefs_background=sky&defaultLists=false&key=96b980af38094db6e5767718567af6ce&token=cf63168bc8ae2177b4c66314d126c0a417e6c7e26d9e3cf92c840f804cc9ffac'
+  },
+  level: 'info',
+  timestamp: '2022-03-01 23:08:26'
+}
+{
+  message: {
+    createNewBoardError: TypeError: board.josn is not a function
+        at Function.<anonymous> (E:\trello-project\TTP-Back\src\lib\controllers\boards.ts:112:36)
+        at Generator.next (<anonymous>)
+        at fulfilled (E:\trello-project\TTP-Back\src\lib\controllers\boards.ts:5:58)
+        at processTicksAndRejections (internal/process/task_queues.js:95:5)
+  },
+  level: 'error',
+  timestamp: '2022-03-01 23:08:26'
+}
+{
+  message: { boardData: undefined },
+  level: 'info',
+  timestamp: '2022-03-01 23:08:26'
+}
+{
+  message: {
+    createDepartmentError: TypeError: Cannot read property 'id' of undefined
+        at Function.<anonymous> (E:\trello-project\TTP-Back\src\lib\controllers\department.ts:139:27)
+        at Generator.next (<anonymous>)
+        at fulfilled (E:\trello-project\TTP-Back\src\lib\controllers\department.ts:5:58)
+        at processTicksAndRejections (internal/process/task_queues.js:95:5)
+  },
+  level: 'error',
+  timestamp: '2022-03-01 23:08:26'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-03-01 23:18:16'
+}
+{
+  message: {
+    board: Response {
+      size: 0,
+      timeout: 0,
+      [Symbol(Body internals)]: {
+        body: <ref *1> Gunzip {
+          _writeState: Uint32Array(2) [ 0, 0 ],
+          _readableState: ReadableState {
+            objectMode: false,
+            highWaterMark: 16384,
+            buffer: BufferList { head: null, tail: null, length: 0 },
+            length: 0,
+            pipes: [],
+            flowing: null,
+            ended: false,
+            endEmitted: false,
+            reading: false,
+            sync: false,
+            needReadable: false,
+            emittedReadable: false,
+            readableListening: false,
+            resumeScheduled: false,
+            errorEmitted: false,
+            emitClose: true,
+            autoDestroy: true,
+            destroyed: false,
+            errored: null,
+            closed: false,
+            closeEmitted: false,
+            defaultEncoding: 'utf8',
+            awaitDrainWriters: null,
+            multiAwaitDrain: false,
+            readingMore: false,
+            dataEmitted: false,
+            decoder: null,
+            encoding: null,
+            [Symbol(kPaused)]: null
+          },
+          _events: [Object: null prototype] {
+            prefinish: [Function: prefinish],
+            unpipe: [Function: onunpipe],
+            error: [ [Function: onerror], [Function (anonymous)] ],
+            close: [Function: bound onceWrapper] {
+              listener: [Function: onclose]
+            },
+            finish: [Function: bound onceWrapper] {
+              listener: [Function: onfinish]
+            }
+          },
+          _eventsCount: 5,
+          _maxListeners: undefined,
+          _writableState: WritableState {
+            objectMode: false,
+            highWaterMark: 16384,
+            finalCalled: false,
+            needDrain: false,
+            ending: true,
+            ended: true,
+            finished: false,
+            destroyed: false,
+            decodeStrings: true,
+            defaultEncoding: 'utf8',
+            length: 510,
+            writing: true,
+            corked: 0,
+            sync: false,
+            bufferProcessing: false,
+            onwrite: [Function: bound onwrite],
+            writecb: [Function: nop],
+            writelen: 510,
+            afterWriteTickInfo: null,
+            buffered: [],
+            bufferedIndex: 0,
+            allBuffers: true,
+            allNoop: true,
+            pendingcb: 1,
+            prefinished: false,
+            errorEmitted: false,
+            emitClose: true,
+            autoDestroy: true,
+            errored: null,
+            closed: false
+          },
+          allowHalfOpen: true,
+          bytesWritten: 0,
+          _handle: Zlib {
+            onerror: [Function: zlibOnError],
+            buffer: <Buffer 1f 8b 08 00 00 00 00 00 04 03 85 53 db 8e d3 40 0c fd 97 e1 b5 22 97 2d db cb db b6 2c d2 22 04 95 36 f0 00 e2 c1 49 9c 74 d4 b9 44 9e 49 d1 52 f5 df ... 460 more bytes>,
+            cb: [Function: bound afterTransform],
+            availOutBefore: 16384,
+            availInBefore: 510,
+            inOff: 0,
+            flushFlag: 2,
+            [Symbol(owner_symbol)]: [Circular *1]
+          },
+          _outBuffer: <Buffer 7b 22 69 64 22 3a 22 36 32 31 65 38 34 61 61 31 38 32 32 39 36 30 66 34 39 61 32 37 34 38 30 22 2c 22 6e 61 6d 65 22 3a 22 74 65 73 74 22 2c 22 64 65 ... 16334 more bytes>,
+          _outOffset: 0,
+          _chunkSize: 16384,
+          _defaultFlushFlag: 2,
+          _finishFlushFlag: 2,
+          _defaultFullFlushFlag: 3,
+          _info: undefined,
+          _maxOutputLength: 4294967295,
+          _level: -1,
+          _strategy: 0,
+          [Symbol(kCapture)]: false,
+          [Symbol(kTransformState)]: {
+            afterTransform: [Function: bound afterTransform],
+            needTransform: false,
+            transforming: true,
+            writecb: [Function: bound onwrite],
+            writechunk: <Buffer 1f 8b 08 00 00 00 00 00 04 03 85 53 db 8e d3 40 0c fd 97 e1 b5 22 97 2d db cb db b6 2c d2 22 04 95 36 f0 00 e2 c1 49 9c 74 d4 b9 44 9e 49 d1 52 f5 df ... 460 more bytes>,
+            writeencoding: 'buffer'
+          },
+          [Symbol(kError)]: null
+        },
+        disturbed: false,
+        error: null
+      },
+      [Symbol(Response internals)]: {
+        url: 'https://api.trello.com/1/boards/?name=test&prefs_background=sky&defaultLists=false&key=96b980af38094db6e5767718567af6ce&token=7f44a81ca5f903883e1b3a5720f89b70b8feacd4437d2cb893068b3b93455e5f',
+        status: 200,
+        statusText: 'OK',
+        headers: Headers {
+          [Symbol(map)]: [Object: null prototype] {
+            'x-dns-prefetch-control': [ 'off' ],
+            'x-frame-options': [ 'DENY' ],
+            'x-download-options': [ 'noopen' ],
+            'x-permitted-cross-domain-policies': [ 'none' ],
+            'referrer-policy': [ 'strict-origin-when-cross-origin' ],
+            'surrogate-control': [ 'no-store' ],
+            'cache-control': [ 'max-age=0, must-revalidate, no-cache, no-store' ],
+            pragma: [ 'no-cache' ],
+            expires: [ 'Thu, 01 Jan 1970 00:00:00' ],
+            'x-trello-version': [ '1.117198.0' ],
+            'x-trello-environment': [ 'Production' ],
+            'access-control-allow-origin': [ '*' ],
+            'access-control-allow-methods': [ 'GET, PUT, POST, DELETE' ],
+            'access-control-allow-headers': [ 'Authorization, Accept, Content-Type' ],
+            'access-control-expose-headers': [
+              'x-rate-limit-api-key-interval-ms, x-rate-limit-api-key-max, x-rate-limit-api-key-remaining, x-rate-limit-api-token-interval-ms, x-rate-limit-api-token-max, x-rate-limit-api-token-remaining'
+            ],
+            'x-rate-limit-api-token-interval-ms': [ '10000' ],
+            'x-rate-limit-api-token-max': [ '100' ],
+            'x-rate-limit-api-token-remaining': [ '99' ],
+            'x-rate-limit-action-interval-ms': [ '3600000' ],
+            'x-rate-limit-action-max': [ '15000' ],
+            'x-rate-limit-action-remaining': [ '14999' ],
+            'x-rate-limit-api-key-interval-ms': [ '10000' ],
+            'x-rate-limit-api-key-max': [ '300' ],
+            'x-rate-limit-api-key-remaining': [ '299' ],
+            'x-rate-limit-member-interval-ms': [ '10000' ],
+            'x-rate-limit-member-max': [ '375' ],
+            'x-rate-limit-member-remaining': [ '374' ],
+            'set-cookie': [
+              'preAuthProps=s%3A616576dc48190f7969f67b62%3AisEnterpriseAdmin%3Dfalse.lNjM%2BUzY2gNaEehg9jeuIo7C3effvwTC%2FffxsVgc3bk; Path=/; HttpOnly'
+            ],
+            'x-server-time': [ '1646167210140' ],
+            'x-trello-api-org-selected': [ 'true' ],
+            'content-type': [ 'application/json; charset=utf-8' ],
+            date: [ 'Tue, 01 Mar 2022 20:40:10 GMT' ],
+            'content-encoding': [ 'gzip' ],
+            'x-envoy-upstream-service-time': [ '230' ],
+            'expect-ct': [
+              'report-uri="https://web-security-reports.services.atlassian.com/expect-ct-report/trello-edge", max-age=86400'
+            ],
+            'strict-transport-security': [ 'max-age=63072000; preload' ],
+            'x-content-type-options': [ 'nosniff' ],
+            'x-xss-protection': [ '1; mode=block' ],
+            'atl-traceid': [ '29fe6680a7a750ee' ],
+            'report-to': [
+              '{"group": "endpoint-1", "max_age": 600, "endpoints": [{"url": "https://dj9s4kmieytgz.cloudfront.net"}], "include_subdomains": true}'
+            ],
+            nel: [
+              '{"report_to": "endpoint-1", "max_age": 600, "include_subdomains": true, "failure_fraction": 0.001}'
+            ],
+            server: [ 'globaledge-envoy' ],
+            connection: [ 'close' ],
+            'transfer-encoding': [ 'chunked' ]
+          }
+        },
+        counter: 0
+      }
+    },
+    createBoardApi: 'https://api.trello.com/1/boards/?name=test&prefs_background=sky&defaultLists=false&key=96b980af38094db6e5767718567af6ce&token=7f44a81ca5f903883e1b3a5720f89b70b8feacd4437d2cb893068b3b93455e5f'
+  },
+  level: 'info',
+  timestamp: '2022-03-01 23:40:11'
+}
+{
+  message: {
+    createNewBoardError: TypeError: board.josn is not a function
+        at Function.<anonymous> (E:\trello-project\TTP-Back\src\lib\controllers\boards.ts:112:36)
+        at Generator.next (<anonymous>)
+        at fulfilled (E:\trello-project\TTP-Back\src\lib\controllers\boards.ts:5:58)
+        at processTicksAndRejections (internal/process/task_queues.js:95:5)
+  },
+  level: 'error',
+  timestamp: '2022-03-01 23:40:11'
+}
+{
+  message: { boardData: undefined },
+  level: 'info',
+  timestamp: '2022-03-01 23:40:11'
+}
+{
+  message: {
+    createDepartmentError: TypeError: Cannot read property 'id' of undefined
+        at Function.<anonymous> (E:\trello-project\TTP-Back\src\lib\controllers\department.ts:139:27)
+        at Generator.next (<anonymous>)
+        at fulfilled (E:\trello-project\TTP-Back\src\lib\controllers\department.ts:5:58)
+        at processTicksAndRejections (internal/process/task_queues.js:95:5)
+  },
+  level: 'error',
+  timestamp: '2022-03-01 23:40:11'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-03-01 23:43:14'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-03-01 23:44:39'
+}
+{
+  message: {
+    createNewBoardError: TypeError: board.josn is not a function
+        at Function.<anonymous> (E:\trello-project\TTP-Back\src\lib\controllers\boards.ts:111:36)
+        at Generator.next (<anonymous>)
+        at fulfilled (E:\trello-project\TTP-Back\src\lib\controllers\boards.ts:5:58)
+        at processTicksAndRejections (internal/process/task_queues.js:95:5)
+  },
+  level: 'error',
+  timestamp: '2022-03-01 23:45:00'
+}
+{
+  message: { boardData: undefined },
+  level: 'info',
+  timestamp: '2022-03-01 23:45:00'
+}
+{
+  message: {
+    createDepartmentError: TypeError: Cannot read property 'id' of undefined
+        at Function.<anonymous> (E:\trello-project\TTP-Back\src\lib\controllers\department.ts:139:27)
+        at Generator.next (<anonymous>)
+        at fulfilled (E:\trello-project\TTP-Back\src\lib\controllers\department.ts:5:58)
+        at processTicksAndRejections (internal/process/task_queues.js:95:5)
+  },
+  level: 'error',
+  timestamp: '2022-03-01 23:45:00'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-03-01 23:45:55'
+}
+{
+  message: {
+    createNewBoardError: TypeError: board.josn is not a function
+        at Function.<anonymous> (E:\trello-project\TTP-Back\src\lib\controllers\boards.ts:111:30)
+        at Generator.next (<anonymous>)
+        at fulfilled (E:\trello-project\TTP-Back\src\lib\controllers\boards.ts:5:58)
+        at processTicksAndRejections (internal/process/task_queues.js:95:5)
+  },
+  level: 'error',
+  timestamp: '2022-03-01 23:46:10'
+}
+{
+  message: { boardData: undefined },
+  level: 'info',
+  timestamp: '2022-03-01 23:46:10'
+}
+{
+  message: {
+    createDepartmentError: TypeError: Cannot read property 'id' of undefined
+        at Function.<anonymous> (E:\trello-project\TTP-Back\src\lib\controllers\department.ts:139:27)
+        at Generator.next (<anonymous>)
+        at fulfilled (E:\trello-project\TTP-Back\src\lib\controllers\department.ts:5:58)
+        at processTicksAndRejections (internal/process/task_queues.js:95:5)
+  },
+  level: 'error',
+  timestamp: '2022-03-01 23:46:10'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-03-01 23:46:43'
+}
+{
+  message: {
+    borderData: Promise { <pending> },
+    createBoardApi: 'https://api.trello.com/1/boards/?name=test&prefs_background=sky&defaultLists=false&key=96b980af38094db6e5767718567af6ce&token=7f44a81ca5f903883e1b3a5720f89b70b8feacd4437d2cb893068b3b93455e5f'
+  },
+  level: 'info',
+  timestamp: '2022-03-01 23:59:24'
+}
+{
+  message: {
+    boardData: {
+      id: '621e892a142efc4992fc73e7',
+      name: 'test',
+      desc: '',
+      descData: null,
+      closed: false,
+      idOrganization: '61e87201397f573cb99a0418',
+      idEnterprise: null,
+      pinned: false,
+      url: 'https://trello.com/b/USWK8a4w/test',
+      shortUrl: 'https://trello.com/b/USWK8a4w',
+      prefs: {
+        permissionLevel: 'private',
+        hideVotes: false,
+        voting: 'disabled',
+        comments: 'members',
+        invitations: 'members',
+        selfJoin: true,
+        cardCovers: true,
+        isTemplate: false,
+        cardAging: 'regular',
+        calendarFeedEnabled: false,
+        hiddenPluginBoardButtons: [],
+        background: 'sky',
+        backgroundColor: '#00AECC',
+        backgroundImage: null,
+        backgroundImageScaled: null,
+        backgroundTile: false,
+        backgroundBrightness: 'dark',
+        backgroundBottomColor: '#00AECC',
+        backgroundTopColor: '#00AECC',
+        canBePublic: true,
+        canBeEnterprise: true,
+        canBeOrg: true,
+        canBePrivate: true,
+        canInvite: true
+      },
+      labelNames: {
+        green: '',
+        yellow: '',
+        orange: '',
+        red: '',
+        purple: '',
+        blue: '',
+        sky: '',
+        lime: '',
+        pink: '',
+        black: ''
+      },
+      limits: {}
+    }
+  },
+  level: 'info',
+  timestamp: '2022-03-01 23:59:24'
+}
+{
+  message: {
+    data: { name: 'test', color: 'sky', boardId: '621e892a142efc4992fc73e7' }
+  },
+  level: 'info',
+  timestamp: '2022-03-01 23:59:24'
+}
+{
+  message: { teamData: '621e892dbd32990dfc449558' },
+  level: 'info',
+  timestamp: '2022-03-01 23:59:27'
+}
+{
+  message: { teamData: '621e892d59f758489229a71d' },
+  level: 'info',
+  timestamp: '2022-03-01 23:59:27'
+}
+{
+  message: {
+    updatedbDepartmentError: {
+      _id: new ObjectId("621e892cdb7b50ebd5760f6e"),
+      defaultListId: '621e892ee623e62346306064',
+      sharedListID: '621e892cb24bd66232aa3133',
+      doneListId: '621e892bd6a8af6380a0f71e',
+      reviewListId: '621e892ca525573e4c4fece0',
+      notClearListId: '621e892e4fea1f775ad7bc3e',
+      canceldListId: '621e892fbd023e07baad97ff',
+      teamsId: [
+        {
+          idInTrello: '621e892dbd32990dfc449558',
+          idInDB: '61eab832b41398d86474d4ac'
+        },
+        {
+          idInTrello: '621e892d59f758489229a71d',
+          idInDB: '61eac1ea6b95c7f7ed8be309'
+        }
+      ]
+    }
+  },
+  level: 'info',
+  timestamp: '2022-03-01 23:59:29'
+}
+{
+  message: { webhookCreateResult: 'webhook done' },
+  level: 'info',
+  timestamp: '2022-03-01 23:59:30'
+}
+{
+  message: { updatedbDepartmentError: { name: 'test team 18', color: 'pink' } },
+  level: 'info',
+  timestamp: '2022-03-02 00:01:35'
+}
+{
+  message: {
+    updatedbDepartmentError: CastError: Cast to ObjectId failed for value "{ _id: undefined }" (type Object) at path "_id" for model "department"
+        at model.Query.exec (E:\trello-project\TTP-Back\node_modules\mongoose\lib\query.js:4545:21)
+        at model.Query.Query.then (E:\trello-project\TTP-Back\node_modules\mongoose\lib\query.js:4644:15)
+        at processTicksAndRejections (internal/process/task_queues.js:95:5) {
+      messageFormat: undefined,
+      stringValue: '"{ _id: undefined }"',
+      kind: 'ObjectId',
+      value: { _id: undefined },
+      path: '_id',
+      reason: TypeError: Argument passed in must be a Buffer or string of 12 bytes or a string of 24 hex characters
+          at new BSONTypeError (E:\trello-project\TTP-Back\node_modules\bson\lib\error.js:39:42)
+          at new ObjectId (E:\trello-project\TTP-Back\node_modules\bson\src\objectid.ts:88:15)
+          at castObjectId (E:\trello-project\TTP-Back\node_modules\mongoose\lib\cast\objectid.js:25:12)
+          at ObjectId.cast (E:\trello-project\TTP-Back\node_modules\mongoose\lib\schema\objectid.js:245:12)
+          at ObjectId.SchemaType.applySetters (E:\trello-project\TTP-Back\node_modules\mongoose\lib\schematype.js:1135:12)
+          at ObjectId.SchemaType._castForQuery (E:\trello-project\TTP-Back\node_modules\mongoose\lib\schematype.js:1567:15)
+          at ObjectId.SchemaType.castForQuery (E:\trello-project\TTP-Back\node_modules\mongoose\lib\schematype.js:1557:15)
+          at ObjectId.SchemaType.castForQueryWrapper (E:\trello-project\TTP-Back\node_modules\mongoose\lib\schematype.js:1534:20)
+          at cast (E:\trello-project\TTP-Back\node_modules\mongoose\lib\cast.js:280:34)
+          at model.Query.Query.cast (E:\trello-project\TTP-Back\node_modules\mongoose\lib\query.js:4968:12),
+      valueType: 'Object'
+    }
+  },
+  level: 'error',
+  timestamp: '2022-03-02 00:01:35'
+}
+{
+  message: {
+    updateDepartmentError: TypeError: Cannot read property 'map' of undefined
+        at Function.<anonymous> (E:\trello-project\TTP-Back\src\lib\controllers\department.ts:59:39)
+        at Generator.next (<anonymous>)
+        at fulfilled (E:\trello-project\TTP-Back\src\lib\controllers\department.ts:5:58)
+        at processTicksAndRejections (internal/process/task_queues.js:95:5)
+  },
+  level: 'error',
+  timestamp: '2022-03-02 00:01:35'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-03-02 00:03:59'
+}
+{
+  message: {
+    updatedbDepartmentError: {
+      _id: '621e892cdb7b50ebd5760f6e',
+      name: 'test team 18',
+      boardId: '621e892a142efc4992fc73e7',
+      color: 'pink'
+    }
+  },
+  level: 'info',
+  timestamp: '2022-03-02 00:04:30'
+}
+{
+  message: {
+    updateDepartmentError: TypeError: Cannot read property 'map' of undefined
+        at Function.<anonymous> (E:\trello-project\TTP-Back\src\lib\controllers\department.ts:59:39)
+        at Generator.next (<anonymous>)
+        at fulfilled (E:\trello-project\TTP-Back\src\lib\controllers\department.ts:5:58)
+        at processTicksAndRejections (internal/process/task_queues.js:95:5)
+  },
+  level: 'error',
+  timestamp: '2022-03-02 00:04:30'
+}
+{
+  message: {
+    updatedbDepartmentError: {
+      _id: '621e892cdb7b50ebd5760f6e',
+      name: 'test team 18',
+      boardId: '621e892a142efc4992fc73e7',
+      color: 'pink'
+    }
+  },
+  level: 'info',
+  timestamp: '2022-03-02 00:26:55'
+}
+{
+  message: {
+    updateDepartmentError: TypeError: Cannot read property 'map' of undefined
+        at Function.<anonymous> (E:\trello-project\TTP-Back\src\lib\controllers\department.ts:59:39)
+        at Generator.next (<anonymous>)
+        at fulfilled (E:\trello-project\TTP-Back\src\lib\controllers\department.ts:5:58)
+        at processTicksAndRejections (internal/process/task_queues.js:95:5)
+  },
+  level: 'error',
+  timestamp: '2022-03-02 00:26:55'
+}
+{
+  message: {
+    updatedbDepartmentError: {
+      _id: '621e892cdb7b50ebd5760f6e',
+      name: 'test team 18',
+      boardId: '621e892a142efc4992fc73e7',
+      color: 'pink'
+    }
+  },
+  level: 'info',
+  timestamp: '2022-03-02 00:27:17'
+}
+{
+  message: {
+    updateDepartmentError: TypeError: Cannot read property 'map' of undefined
+        at Function.<anonymous> (E:\trello-project\TTP-Back\src\lib\controllers\department.ts:59:39)
+        at Generator.next (<anonymous>)
+        at fulfilled (E:\trello-project\TTP-Back\src\lib\controllers\department.ts:5:58)
+        at processTicksAndRejections (internal/process/task_queues.js:95:5)
+  },
+  level: 'error',
+  timestamp: '2022-03-02 00:27:17'
+}
+{
+  message: {
+    updatedbDepartmentError: {
+      _id: '621e892cdb7b50ebd5760f6e',
+      name: 'test team 18',
+      boardId: '621e892a142efc4992fc73e7',
+      color: 'pink'
+    }
+  },
+  level: 'info',
+  timestamp: '2022-03-02 00:27:26'
+}
+{
+  message: {
+    updateDepartmentError: TypeError: Cannot read property 'map' of undefined
+        at Function.<anonymous> (E:\trello-project\TTP-Back\src\lib\controllers\department.ts:59:39)
+        at Generator.next (<anonymous>)
+        at fulfilled (E:\trello-project\TTP-Back\src\lib\controllers\department.ts:5:58)
+        at processTicksAndRejections (internal/process/task_queues.js:95:5)
+  },
+  level: 'error',
+  timestamp: '2022-03-02 00:27:26'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-03-02 00:28:09'
+}
+{
+  message: {
+    data: {
+      _id: '621e892cdb7b50ebd5760f6e',
+      name: 'test team 18',
+      boardId: '621e892a142efc4992fc73e7',
+      color: 'pink'
+    }
+  },
+  level: 'info',
+  timestamp: '2022-03-02 00:28:17'
+}
+{
+  message: {
+    updatedbDepartmentError: {
+      _id: '621e892cdb7b50ebd5760f6e',
+      name: 'test team 18',
+      boardId: '621e892a142efc4992fc73e7',
+      color: 'pink'
+    }
+  },
+  level: 'info',
+  timestamp: '2022-03-02 00:28:18'
+}
