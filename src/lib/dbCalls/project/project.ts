@@ -18,7 +18,15 @@ const ProjectDB = class ProjectDB {
   static async deleteProjectDB(id: string) {
     return await ProjectDB.__deleteProject(id);
   }
-
+  static async sortProjectsDB(sortBy: string) {
+    return await ProjectDB.__sortProjects(sortBy);
+  }
+  static async filterProjectsDB(filter: any) {
+    return await ProjectDB.__filterProjects(filter);
+  }
+  static async searchProjectsDB(searchStr: string) {
+    return await ProjectDB.__searchProjects(searchStr);
+  }
   static async __deleteProject(id: string) {
     try {
       let project = await Project.findByIdAndDelete({ _id: id });
@@ -31,8 +39,8 @@ const ProjectDB = class ProjectDB {
   static async __getProject(data: object) {
     try {
       let project = await Project.find(data)
-        .populate({path:"projectManager",select:'_id name'})
-        .populate({path:"teamsId",select:'_id name'})
+        .populate({ path: "projectManager", select: "_id name" })
+        .populate({ path: "teamsId", select: "_id name" })
         .lean();
       return project;
     } catch (error) {
@@ -62,6 +70,36 @@ const ProjectDB = class ProjectDB {
       return project;
     } catch (error) {
       logger.error({ createProjectDBError: error });
+    }
+  }
+  static async __sortProjects(sortBy: string) {
+    try {
+      let projects = await Project.find({}).sort(sortBy);
+      return projects;
+    } catch (error) {
+      logger.error({ sortProjectsDBError: error });
+    }
+  }
+  static async __filterProjects(filter: any) {
+    try {
+      let projects = await Project.find({
+        projectManager: filter.prjectManager,
+        projectStatus: filter.projectStatus,
+        clientId: filter.clientId,
+      });
+      if (projects) return projects;
+      else return null;
+    } catch (error) {
+      logger.error({ filterProjectsError: error });
+    }
+  }
+  static async __searchProjects(searchStr: string) {
+    try {
+      let projects = await Project.find({ name: searchStr }).sort("asc");
+      if (projects) return projects;
+      else return null;
+    } catch (error) {
+      logger.error({ searchProjectsError: error });
     }
   }
 };

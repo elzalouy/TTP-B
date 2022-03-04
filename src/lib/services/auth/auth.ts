@@ -50,5 +50,4 @@ export const jwtVerify = async (token: string) => {
     } catch (error) {
         return error
     }
-
 };

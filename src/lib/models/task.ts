@@ -43,7 +43,14 @@ const TaskSchema: Schema = new Schema<TaskInfo>(
     status: {
       type: String,
       default: "inProgress",
-      enum: ["inProgress", "shared", "delivered","late", "not clear", "cancled"],
+      enum: [
+        "inProgress",
+        "shared",
+        "delivered",
+        "late",
+        "not clear",
+        "cancled",
+      ],
     },
     start: {
       type: Date,

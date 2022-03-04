@@ -4,7 +4,7 @@ import logger from "../../../logger";
 
 config();
 
-const sendMail = async (email:string,token:string) => {
+const sendMail = async (email: string, token: string) => {
   try {
     const transporter = nodemailer.createTransport({
       host: "smtp.gmail.com",
