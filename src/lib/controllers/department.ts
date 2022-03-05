@@ -13,8 +13,8 @@ const DepartmentController = class DepartmentController extends DepartmentBD {
     return await DepartmentController.__updateDepartmentData(data);
   }
 
-  static async deleteDepartment(id: string) {
-    return await DepartmentController.__deleteDepartmentData(id);
+  static async deleteDepartment(data:{_id: string,listTrelloIds:string[],mainBoard:boolean,boardId:string}) {
+    return await DepartmentController.__deleteDepartmentData(data);
   }
 
   static async getDepartments(data: object) {
@@ -30,9 +30,23 @@ const DepartmentController = class DepartmentController extends DepartmentBD {
     }
   }
 
-  static async __deleteDepartmentData(id: string) {
+  static async __deleteDepartmentData(data:{_id: string,listTrelloIds:string[],mainBoard:boolean,boardId:string}) {
     try {
-      let deleteDepartment = await super.deleteDepartmentDB(id);
+      const {_id,listTrelloIds,mainBoard,boardId} = data
+      // if it was main Board remove the webhooks
+      if(mainBoard) {
+        let hookRemove = listTrelloIds.map(async (id) => {
+          return await BoardController.removeWebhook(id);
+        });
+        logger.info('third step')
+  
+        Promise.all(hookRemove).then((res) =>
+          logger.info({ removeWebhookSucced: "done" })
+        );
+      }
+
+      await BoardController.deleteBoard(boardId)
+      let deleteDepartment = await super.deleteDepartmentDB(_id);
       return deleteDepartment;
     } catch (error) {
       logger.error({ deleteDepartmentError: error });

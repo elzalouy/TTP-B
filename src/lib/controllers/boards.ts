@@ -43,6 +43,10 @@ const BoardController = class BoardController {
     return await BoardController.__addWebHook(idModel);
   }
 
+  static async deleteBoard(id:string){
+    return await BoardController.__deleteBoard(id)
+  }
+
   static async createCardInList(
     listId: string,
     cardName: string,
@@ -70,11 +74,30 @@ const BoardController = class BoardController {
     return await BoardController.__removeWebhook(id);
   }
 
+  static async __deleteBoard(id:string){
+    try {
+      let removeBoard = trelloApi(
+        `boards/${id}&`
+      );
+logger.info({removeBoard})
+      return await fetch(removeBoard, {
+          method: "DELETE",
+        }).then(res => logger.info('delete board done')).catch(err => logger.info('error in delete board',err))
+    } catch (error) {
+      logger.error({ deleteBoardError: error });
+    }
+  }
+
   static async __removeWebhook(id: string) {
     try {
-        return await fetch(`https://api.trello.com/1/webhooks/${id}`, {
+      let webhookApi = trelloApi(
+        `/webhooks/${id}&`
+      );
+
+      return await fetch(webhookApi, {
           method: "DELETE",
-        });
+        })
+
     } catch (error) {
       logger.error({ removeWebhookError: error });
     }
