@@ -41,42 +41,51 @@ const DepartmentController = class DepartmentController extends DepartmentBD {
 
   static async __updateDepartmentData(data: UpdateDepartment) {
     try {
-      logger.info({data})
-      let depUpdate:any
-      //todo update name and color
-      if (data.name && data.color) {
-        let value = {
-          name: data.name,
-          color: data.color,
-        };
-        await BoardController.updateBoard(data.boardId, value);
-         depUpdate = await super.updatedbDepartment(data);
-      }
-      //todo make mainBoard or not
-      
-      // if not null then there is an action needed
-      if (data.mainBoard) {
-        // if false => remove the webhook
-        if (!data.mainBoard) {
-          let hookRemove = data.teams.map(async (id) => {
-            return await BoardController.removeWebhook(id);
-          });
+      let depUpdate: any;
 
-          Promise.all(hookRemove).then((res) =>
-            logger.info({ removeWebhookSucced: "done" })
-          );
+        // update board color and name
+        if (data.name && data.color) {
+          logger.info('first step')
+          let boardData = {
+            name: data.name,
+            color: data.color,
+          };
+          await BoardController.updateBoard(data.boardId, boardData);
+          depUpdate = await super.updatedbDepartment(data);
         }
-        // if true => create the webhook
-        if (data.mainBoard) {
-          let hookAdd = data.teams.map(async (id) => {
-            return await BoardController.createWebHook(id);
-          });
 
-          Promise.all(hookAdd).then((res) =>
-            logger.info({ addWebhookSucced: "done" })
-          );
+        // if not undefine then there is an action needed
+        // make mainBoard or not
+        if (data.mainBoard !== undefined) {
+          logger.info('second step')
+
+          // if false => remove the webhook
+          if (!data.mainBoard && data.teams) {
+            let hookRemove = data.teams.map(async (id) => {
+              return await BoardController.removeWebhook(id);
+            });
+            logger.info('third step')
+            
+
+            Promise.all(hookRemove).then((res) =>
+              logger.info({ removeWebhookSucced: "done" })
+            );
+          }
+          // if true => create the webhook
+          if (data.mainBoard && data.teams) {
+          logger.info('fourth step')
+
+            let hookAdd = data.teams.map(async (id) => {
+              return await BoardController.createWebHook(id);
+            });
+
+            Promise.all(hookAdd).then((res) =>
+              logger.info({ addWebhookSucced: "done" })
+            );
+          }
         }
-      }
+  
+
       //todo add team or remove team
       // if remove team
       if (data.removeTeam) {
@@ -102,17 +111,21 @@ const DepartmentController = class DepartmentController extends DepartmentBD {
 
       // If add team
       if (data.addTeam) {
-        let teamListIds: { idInTrello: string; idInDB: any }[] = await DepartmentController.__createTeamWebhookAndList(data.addTeam,data.boardId,data.mainBoard);
-
-         // add team
-         depUpdate = super.updateNestedRecordDepDB(data._id, {
+        let teamListIds: { idInTrello: string; idInDB: any }[] =
+          await DepartmentController.__createTeamWebhookAndList(
+            data.addTeam,
+            data.boardId,
+            data.mainBoard
+          );
+            logger.info({title:'testing',teamListIds})
+        // add team
+        depUpdate = super.updateNestedRecordDepDB(data._id, {
           $push: {
-            teamsId: {
-              idInTrello: { $each: teamListIds },
-            },
+            teamsId:{ $each: teamListIds,$position:0 },
           },
         });
       }
+      logger.info({depUpdate})
       return depUpdate;
     } catch (error) {
       logger.error({ updateDepartmentError: error });
@@ -137,7 +150,7 @@ const DepartmentController = class DepartmentController extends DepartmentBD {
         data.name,
         data.color
       );
-        logger.info({boardData})
+      logger.info({ boardData });
       boardId = boardData.id;
       data = {
         name: data.name,
@@ -167,7 +180,12 @@ const DepartmentController = class DepartmentController extends DepartmentBD {
       reviewListId = review.id;
 
       // create list and webhook for the team
-      let teamListIds: { idInTrello: string; idInDB: any }[] = await DepartmentController.__createTeamWebhookAndList(teams,boardId,mainBoard);
+      let teamListIds: { idInTrello: string; idInDB: any }[] =
+        await DepartmentController.__createTeamWebhookAndList(
+          teams,
+          boardId,
+          mainBoard
+        );
 
       let defaultList: { id: string } = await BoardController.addListToBoard(
         boardId,
@@ -230,7 +248,6 @@ const DepartmentController = class DepartmentController extends DepartmentBD {
     }
   }
 
-
   // This update department ref in team record in db and update department record
   static async __createTeamList(
     teams: { _id: string; name: string }[],
@@ -251,29 +268,36 @@ const DepartmentController = class DepartmentController extends DepartmentBD {
   }
 
   // This create list for team in trello board and create webhook for that list if it was the mainboard
-  static async __createTeamWebhookAndList(teams: { name: string; _id: string }[],boardId:string,mainBoard:boolean) {
+  static async __createTeamWebhookAndList(
+    teams: { name: string; _id: string }[],
+    boardId: string,
+    mainBoard: boolean
+  ) {
     try {
       // create list for the team
       let teamListIds: { idInTrello: string; idInDB: any }[] = [];
       if (teams) {
-        let teamsList = teams.map( async (team) => {
+        let teamsList = teams.map(async (team) => {
           // create team list on board
-          let teamData: { id: string } =  await BoardController.addListToBoard(
+          let teamData: { id: string } = await BoardController.addListToBoard(
             boardId,
             team.name
           );
           if (mainBoard) {
             // create webhook for team list if it was the main board
-             BoardController.createWebHook(teamData.id);
+            BoardController.createWebHook(teamData.id);
           }
           logger.info({ teamData: teamData.id });
-          return teamListIds.push({ idInTrello: teamData.id, idInDB: team._id });
+          return teamListIds.push({
+            idInTrello: teamData.id,
+            idInDB: team._id,
+          });
         });
 
-        await Promise.all(teamsList);
+        await Promise.all(teamsList).then(res => logger.info({ removeWebhookSucced: "done" }));
       }
-
-      return teamListIds
+logger.info({teamListIds})
+      return teamListIds;
     } catch (error) {
       logger.error({ createTeamListError: error });
     }

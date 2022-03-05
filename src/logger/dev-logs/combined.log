@@ -18052,3 +18052,2256 @@
   level: 'info',
   timestamp: '2022-03-02 00:28:18'
 }
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-03-05 11:08:13'
+}
+{
+  message: {
+    data: {
+      _id: '621e892cdb7b50ebd5760f6e',
+      name: 'test team 19',
+      boardId: '621e892a142efc4992fc73e7',
+      color: 'lime'
+    }
+  },
+  level: 'info',
+  timestamp: '2022-03-05 11:12:21'
+}
+{
+  message: {
+    updatedbDepartmentError: {
+      _id: '621e892cdb7b50ebd5760f6e',
+      name: 'test team 19',
+      boardId: '621e892a142efc4992fc73e7',
+      color: 'lime'
+    }
+  },
+  level: 'info',
+  timestamp: '2022-03-05 11:12:22'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-03-05 11:21:48'
+}
+{
+  message: {
+    data: {
+      _id: '621e892cdb7b50ebd5760f6e',
+      mainBoard: false,
+      teams: [ '621e892dbd32990dfc449558' ]
+    }
+  },
+  level: 'info',
+  timestamp: '2022-03-05 11:22:00'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-03-05 11:23:13'
+}
+{
+  message: {
+    data: {
+      _id: '621e892cdb7b50ebd5760f6e',
+      mainBoard: false,
+      teams: [ '621e892dbd32990dfc449558' ]
+    }
+  },
+  level: 'info',
+  timestamp: '2022-03-05 11:23:19'
+}
+{
+  message: { removeWebhookSucced: 'done' },
+  level: 'info',
+  timestamp: '2022-03-05 11:23:20'
+}
+{
+  message: {
+    data: {
+      _id: '621e892cdb7b50ebd5760f6e',
+      name: 'test team 20',
+      boardId: '621e892a142efc4992fc73e7',
+      color: ''
+    }
+  },
+  level: 'info',
+  timestamp: '2022-03-05 11:35:38'
+}
+{
+  message: {
+    updateDepartmentError: TypeError: Cannot read property 'map' of undefined
+        at Function.<anonymous> (E:\trello-project\TTP-Back\src\lib\controllers\department.ts:62:39)
+        at Generator.next (<anonymous>)
+        at E:\trello-project\TTP-Back\src\lib\controllers\department.ts:8:71
+        at new Promise (<anonymous>)
+        at __awaiter (E:\trello-project\TTP-Back\src\lib\controllers\department.ts:4:12)
+        at Function.__updateDepartmentData (E:\trello-project\TTP-Back\src\lib\controllers\department.ts:73:16)
+        at E:\trello-project\TTP-Back\src\lib\controllers\department.ts:13:39
+        at Generator.next (<anonymous>)
+        at E:\trello-project\TTP-Back\src\lib\controllers\department.ts:8:71
+        at new Promise (<anonymous>)
+  },
+  level: 'error',
+  timestamp: '2022-03-05 11:35:38'
+}
+{
+  message: {
+    data: {
+      _id: '621e892cdb7b50ebd5760f6e',
+      name: 'test team 20',
+      boardId: '621e892a142efc4992fc73e7',
+      color: ''
+    }
+  },
+  level: 'info',
+  timestamp: '2022-03-05 11:37:55'
+}
+{
+  message: {
+    updateDepartmentError: TypeError: Cannot read property 'map' of undefined
+        at Function.<anonymous> (E:\trello-project\TTP-Back\src\lib\controllers\department.ts:62:39)
+        at Generator.next (<anonymous>)
+        at E:\trello-project\TTP-Back\src\lib\controllers\department.ts:8:71
+        at new Promise (<anonymous>)
+        at __awaiter (E:\trello-project\TTP-Back\src\lib\controllers\department.ts:4:12)
+        at Function.__updateDepartmentData (E:\trello-project\TTP-Back\src\lib\controllers\department.ts:73:16)
+        at E:\trello-project\TTP-Back\src\lib\controllers\department.ts:13:39
+        at Generator.next (<anonymous>)
+        at E:\trello-project\TTP-Back\src\lib\controllers\department.ts:8:71
+        at new Promise (<anonymous>)
+  },
+  level: 'error',
+  timestamp: '2022-03-05 11:37:55'
+}
+{
+  message: {
+    data: {
+      _id: '621e892cdb7b50ebd5760f6e',
+      name: 'test team 20',
+      boardId: '621e892a142efc4992fc73e7',
+      color: 'pink'
+    }
+  },
+  level: 'info',
+  timestamp: '2022-03-05 11:38:02'
+}
+{
+  message: {
+    updatedbDepartmentError: {
+      _id: '621e892cdb7b50ebd5760f6e',
+      name: 'test team 20',
+      boardId: '621e892a142efc4992fc73e7',
+      color: 'pink'
+    }
+  },
+  level: 'info',
+  timestamp: '2022-03-05 11:38:05'
+}
+{
+  message: {
+    updateDepartmentError: TypeError: Cannot read property 'map' of undefined
+        at Function.<anonymous> (E:\trello-project\TTP-Back\src\lib\controllers\department.ts:62:39)
+        at Generator.next (<anonymous>)
+        at fulfilled (E:\trello-project\TTP-Back\src\lib\controllers\department.ts:5:58)
+        at processTicksAndRejections (internal/process/task_queues.js:95:5)
+  },
+  level: 'error',
+  timestamp: '2022-03-05 11:38:05'
+}
+{
+  message: {
+    data: {
+      _id: '621e892cdb7b50ebd5760f6e',
+      name: 'test team 21',
+      boardId: '621e892a142efc4992fc73e7',
+      color: ''
+    }
+  },
+  level: 'info',
+  timestamp: '2022-03-05 11:38:23'
+}
+{
+  message: {
+    updateDepartmentError: TypeError: Cannot read property 'map' of undefined
+        at Function.<anonymous> (E:\trello-project\TTP-Back\src\lib\controllers\department.ts:62:39)
+        at Generator.next (<anonymous>)
+        at E:\trello-project\TTP-Back\src\lib\controllers\department.ts:8:71
+        at new Promise (<anonymous>)
+        at __awaiter (E:\trello-project\TTP-Back\src\lib\controllers\department.ts:4:12)
+        at Function.__updateDepartmentData (E:\trello-project\TTP-Back\src\lib\controllers\department.ts:73:16)
+        at E:\trello-project\TTP-Back\src\lib\controllers\department.ts:13:39
+        at Generator.next (<anonymous>)
+        at E:\trello-project\TTP-Back\src\lib\controllers\department.ts:8:71
+        at new Promise (<anonymous>)
+  },
+  level: 'error',
+  timestamp: '2022-03-05 11:38:23'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-03-05 11:39:43'
+}
+{
+  message: {
+    data: {
+      _id: '621e892cdb7b50ebd5760f6e',
+      mainBoard: false,
+      teams: [ '621e892dbd32990dfc449558' ]
+    }
+  },
+  level: 'info',
+  timestamp: '2022-03-05 11:39:49'
+}
+{
+  message: { removeWebhookSucced: 'done' },
+  level: 'info',
+  timestamp: '2022-03-05 11:39:50'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-03-05 11:44:25'
+}
+{
+  message: {
+    data: {
+      _id: '621e892cdb7b50ebd5760f6e',
+      mainBoard: false,
+      teams: [ '621e892dbd32990dfc449558' ]
+    }
+  },
+  level: 'info',
+  timestamp: '2022-03-05 11:44:32'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-03-05 11:45:43'
+}
+{
+  message: {
+    data: {
+      _id: '621e892cdb7b50ebd5760f6e',
+      mainBoard: false,
+      teams: [ '621e892dbd32990dfc449558' ]
+    }
+  },
+  level: 'info',
+  timestamp: '2022-03-05 11:46:08'
+}
+{
+  message: {
+    data: {
+      _id: '621e892cdb7b50ebd5760f6e',
+      mainBoard: false,
+      teams: [ '621e892dbd32990dfc449558' ]
+    }
+  },
+  level: 'info',
+  timestamp: '2022-03-05 11:50:21'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-03-05 11:52:14'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-03-05 11:55:04'
+}
+{
+  message: {
+    departmentData: {
+      _id: '621e892cdb7b50ebd5760f6e',
+      mainBoard: false,
+      teams: [ '621e892dbd32990dfc449558' ]
+    }
+  },
+  level: 'info',
+  timestamp: '2022-03-05 11:55:12'
+}
+{
+  message: { depUpdate: undefined },
+  level: 'info',
+  timestamp: '2022-03-05 11:55:12'
+}
+{
+  message: { department: undefined },
+  level: 'info',
+  timestamp: '2022-03-05 11:55:12'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-03-05 11:57:41'
+}
+{
+  message: {
+    departmentData: {
+      _id: '621e892cdb7b50ebd5760f6e',
+      mainBoard: false,
+      teams: [ '621e892dbd32990dfc449558' ]
+    }
+  },
+  level: 'info',
+  timestamp: '2022-03-05 11:58:04'
+}
+{
+  message: {
+    data: {
+      _id: '621e892cdb7b50ebd5760f6e',
+      mainBoard: false,
+      teams: [ '621e892dbd32990dfc449558' ]
+    }
+  },
+  level: 'info',
+  timestamp: '2022-03-05 11:58:04'
+}
+{
+  message: 'second step',
+  level: 'info',
+  timestamp: '2022-03-05 11:58:04'
+}
+{
+  message: 'third step',
+  level: 'info',
+  timestamp: '2022-03-05 11:58:04'
+}
+{
+  message: { done: 'yes it is done' },
+  level: 'info',
+  timestamp: '2022-03-05 11:58:04'
+}
+{
+  message: {
+    updatedbDepartmentError: {
+      _id: '621e892cdb7b50ebd5760f6e',
+      mainBoard: false,
+      teams: [ '621e892dbd32990dfc449558' ]
+    }
+  },
+  level: 'info',
+  timestamp: '2022-03-05 11:58:04'
+}
+{
+  message: {
+    depUpdate: {
+      _id: new ObjectId("621e892cdb7b50ebd5760f6e"),
+      name: 'test team 20',
+      boardId: '621e892a142efc4992fc73e7',
+      color: 'pink',
+      teamsId: [
+        {
+          idInTrello: '621e892dbd32990dfc449558',
+          idInDB: new ObjectId("61eab832b41398d86474d4ac"),
+          _id: new ObjectId("621e8931db7b50ebd5760f71")
+        },
+        {
+          idInTrello: '621e892d59f758489229a71d',
+          idInDB: new ObjectId("61eac1ea6b95c7f7ed8be309"),
+          _id: new ObjectId("621e8931db7b50ebd5760f72")
+        }
+      ],
+      createdAt: 2022-03-01T20:59:24.346Z,
+      updatedAt: 2022-03-05T08:58:04.414Z,
+      __v: 0,
+      canceldListId: '621e892fbd023e07baad97ff',
+      defaultListId: '621e892ee623e62346306064',
+      doneListId: '621e892bd6a8af6380a0f71e',
+      notClearListId: '621e892e4fea1f775ad7bc3e',
+      reviewListId: '621e892ca525573e4c4fece0',
+      sharedListID: '621e892cb24bd66232aa3133',
+      mainBoard: false,
+      teams: [ '621e892dbd32990dfc449558' ]
+    }
+  },
+  level: 'info',
+  timestamp: '2022-03-05 11:58:04'
+}
+{
+  message: {
+    department: {
+      _id: new ObjectId("621e892cdb7b50ebd5760f6e"),
+      name: 'test team 20',
+      boardId: '621e892a142efc4992fc73e7',
+      color: 'pink',
+      teamsId: [
+        {
+          idInTrello: '621e892dbd32990dfc449558',
+          idInDB: new ObjectId("61eab832b41398d86474d4ac"),
+          _id: new ObjectId("621e8931db7b50ebd5760f71")
+        },
+        {
+          idInTrello: '621e892d59f758489229a71d',
+          idInDB: new ObjectId("61eac1ea6b95c7f7ed8be309"),
+          _id: new ObjectId("621e8931db7b50ebd5760f72")
+        }
+      ],
+      createdAt: 2022-03-01T20:59:24.346Z,
+      updatedAt: 2022-03-05T08:58:04.414Z,
+      __v: 0,
+      canceldListId: '621e892fbd023e07baad97ff',
+      defaultListId: '621e892ee623e62346306064',
+      doneListId: '621e892bd6a8af6380a0f71e',
+      notClearListId: '621e892e4fea1f775ad7bc3e',
+      reviewListId: '621e892ca525573e4c4fece0',
+      sharedListID: '621e892cb24bd66232aa3133',
+      mainBoard: false,
+      teams: [ '621e892dbd32990dfc449558' ]
+    }
+  },
+  level: 'info',
+  timestamp: '2022-03-05 11:58:04'
+}
+{
+  message: { removeWebhookSucced: 'done' },
+  level: 'info',
+  timestamp: '2022-03-05 11:58:05'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-03-05 12:49:47'
+}
+{
+  message: {
+    departmentData: {
+      _id: '621e892cdb7b50ebd5760f6e',
+      mainBoard: true,
+      teams: [ '621e892dbd32990dfc449558' ]
+    }
+  },
+  level: 'info',
+  timestamp: '2022-03-05 12:50:15'
+}
+{
+  message: {
+    data: {
+      _id: '621e892cdb7b50ebd5760f6e',
+      mainBoard: true,
+      teams: [ '621e892dbd32990dfc449558' ]
+    }
+  },
+  level: 'info',
+  timestamp: '2022-03-05 12:50:15'
+}
+{
+  message: 'second step',
+  level: 'info',
+  timestamp: '2022-03-05 12:50:15'
+}
+{
+  message: 'fourth step',
+  level: 'info',
+  timestamp: '2022-03-05 12:50:15'
+}
+{
+  message: { done: 'yes it is done' },
+  level: 'info',
+  timestamp: '2022-03-05 12:50:15'
+}
+{
+  message: {
+    updatedbDepartmentError: {
+      _id: '621e892cdb7b50ebd5760f6e',
+      mainBoard: true,
+      teams: [ '621e892dbd32990dfc449558' ]
+    }
+  },
+  level: 'info',
+  timestamp: '2022-03-05 12:50:15'
+}
+{
+  message: {
+    depUpdate: {
+      _id: new ObjectId("621e892cdb7b50ebd5760f6e"),
+      name: 'test team 20',
+      boardId: '621e892a142efc4992fc73e7',
+      color: 'pink',
+      teamsId: [
+        {
+          idInTrello: '621e892dbd32990dfc449558',
+          idInDB: new ObjectId("61eab832b41398d86474d4ac"),
+          _id: new ObjectId("621e8931db7b50ebd5760f71")
+        },
+        {
+          idInTrello: '621e892d59f758489229a71d',
+          idInDB: new ObjectId("61eac1ea6b95c7f7ed8be309"),
+          _id: new ObjectId("621e8931db7b50ebd5760f72")
+        }
+      ],
+      createdAt: 2022-03-01T20:59:24.346Z,
+      updatedAt: 2022-03-05T09:50:15.968Z,
+      __v: 0,
+      canceldListId: '621e892fbd023e07baad97ff',
+      defaultListId: '621e892ee623e62346306064',
+      doneListId: '621e892bd6a8af6380a0f71e',
+      notClearListId: '621e892e4fea1f775ad7bc3e',
+      reviewListId: '621e892ca525573e4c4fece0',
+      sharedListID: '621e892cb24bd66232aa3133',
+      mainBoard: true,
+      teams: [ '621e892dbd32990dfc449558' ]
+    }
+  },
+  level: 'info',
+  timestamp: '2022-03-05 12:50:15'
+}
+{
+  message: {
+    department: {
+      _id: new ObjectId("621e892cdb7b50ebd5760f6e"),
+      name: 'test team 20',
+      boardId: '621e892a142efc4992fc73e7',
+      color: 'pink',
+      teamsId: [
+        {
+          idInTrello: '621e892dbd32990dfc449558',
+          idInDB: new ObjectId("61eab832b41398d86474d4ac"),
+          _id: new ObjectId("621e8931db7b50ebd5760f71")
+        },
+        {
+          idInTrello: '621e892d59f758489229a71d',
+          idInDB: new ObjectId("61eac1ea6b95c7f7ed8be309"),
+          _id: new ObjectId("621e8931db7b50ebd5760f72")
+        }
+      ],
+      createdAt: 2022-03-01T20:59:24.346Z,
+      updatedAt: 2022-03-05T09:50:15.968Z,
+      __v: 0,
+      canceldListId: '621e892fbd023e07baad97ff',
+      defaultListId: '621e892ee623e62346306064',
+      doneListId: '621e892bd6a8af6380a0f71e',
+      notClearListId: '621e892e4fea1f775ad7bc3e',
+      reviewListId: '621e892ca525573e4c4fece0',
+      sharedListID: '621e892cb24bd66232aa3133',
+      mainBoard: true,
+      teams: [ '621e892dbd32990dfc449558' ]
+    }
+  },
+  level: 'info',
+  timestamp: '2022-03-05 12:50:16'
+}
+{
+  message: { webhookUpdateData: {} },
+  level: 'info',
+  timestamp: '2022-03-05 12:50:17'
+}
+{
+  message: { addWebhookSucced: 'done' },
+  level: 'info',
+  timestamp: '2022-03-05 12:50:18'
+}
+{
+  message: {
+    webhookUpdateData: {
+      model: {
+        id: '621e892dbd32990dfc449558',
+        name: 'team name 1',
+        closed: false,
+        idBoard: '621e892a142efc4992fc73e7',
+        pos: 2048
+      },
+      action: {
+        id: '62233299c992d189712deda5',
+        idMemberCreator: '616576dc48190f7969f67b62',
+        data: {
+          card: {
+            idList: '621e892dbd32990dfc449558',
+            id: '621e9019bd8bf10f146d4eea',
+            name: 'asdad',
+            idShort: 1,
+            shortLink: 'IPZGRDMM'
+          },
+          old: { idList: '621e892d59f758489229a71d' },
+          board: {
+            id: '621e892a142efc4992fc73e7',
+            name: 'test team 20',
+            shortLink: 'USWK8a4w'
+          },
+          listBefore: { id: '621e892d59f758489229a71d', name: 'team name 1' },
+          listAfter: { id: '621e892dbd32990dfc449558', name: 'team name 1' }
+        },
+        appCreator: null,
+        type: 'updateCard',
+        date: '2022-03-05T09:51:21.159Z',
+        limits: {},
+        display: {
+          translationKey: 'action_move_card_from_list_to_list',
+          entities: {
+            card: {
+              type: 'card',
+              idList: '621e892dbd32990dfc449558',
+              id: '621e9019bd8bf10f146d4eea',
+              shortLink: 'IPZGRDMM',
+              text: 'asdad'
+            },
+            listBefore: {
+              type: 'list',
+              id: '621e892d59f758489229a71d',
+              text: 'team name 1'
+            },
+            listAfter: {
+              type: 'list',
+              id: '621e892dbd32990dfc449558',
+              text: 'team name 1'
+            },
+            memberCreator: {
+              type: 'member',
+              id: '616576dc48190f7969f67b62',
+              username: 'mohamednageh7',
+              text: 'mohamednageh7'
+            }
+          }
+        },
+        memberCreator: {
+          id: '616576dc48190f7969f67b62',
+          activityBlocked: false,
+          avatarHash: 'e5019bd1d553a6f4eb993ff74fa36ca3',
+          avatarUrl: 'https://trello-members.s3.amazonaws.com/616576dc48190f7969f67b62/e5019bd1d553a6f4eb993ff74fa36ca3',
+          fullName: 'mohamednageh7',
+          idMemberReferrer: null,
+          initials: 'M',
+          nonPublic: {},
+          nonPublicAvailable: true,
+          username: 'mohamednageh7'
+        }
+      }
+    }
+  },
+  level: 'info',
+  timestamp: '2022-03-05 12:51:22'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-03-05 13:13:48'
+}
+{
+  message: {
+    departmentData: {
+      _id: '621e892cdb7b50ebd5760f6e',
+      mainBoard: false,
+      teams: [ '621e892dbd32990dfc449558' ],
+      listIds: [
+        '621e892fbd023e07baad97ff',
+        '621e892ee623e62346306064',
+        '621e892bd6a8af6380a0f71e',
+        '621e892e4fea1f775ad7bc3e',
+        '621e892ca525573e4c4fece0',
+        '621e892cb24bd66232aa3133'
+      ]
+    }
+  },
+  level: 'info',
+  timestamp: '2022-03-05 13:13:58'
+}
+{
+  message: {
+    data: {
+      _id: '621e892cdb7b50ebd5760f6e',
+      mainBoard: false,
+      teams: [ '621e892dbd32990dfc449558' ],
+      listIds: [
+        '621e892fbd023e07baad97ff',
+        '621e892ee623e62346306064',
+        '621e892bd6a8af6380a0f71e',
+        '621e892e4fea1f775ad7bc3e',
+        '621e892ca525573e4c4fece0',
+        '621e892cb24bd66232aa3133'
+      ]
+    }
+  },
+  level: 'info',
+  timestamp: '2022-03-05 13:13:58'
+}
+{
+  message: 'second step',
+  level: 'info',
+  timestamp: '2022-03-05 13:13:58'
+}
+{
+  message: 'third step',
+  level: 'info',
+  timestamp: '2022-03-05 13:13:58'
+}
+{
+  message: { done: 'yes it is done' },
+  level: 'info',
+  timestamp: '2022-03-05 13:13:58'
+}
+{
+  message: {
+    updatedbDepartmentError: {
+      _id: '621e892cdb7b50ebd5760f6e',
+      mainBoard: false,
+      teams: [ '621e892dbd32990dfc449558' ],
+      listIds: [
+        '621e892fbd023e07baad97ff',
+        '621e892ee623e62346306064',
+        '621e892bd6a8af6380a0f71e',
+        '621e892e4fea1f775ad7bc3e',
+        '621e892ca525573e4c4fece0',
+        '621e892cb24bd66232aa3133'
+      ]
+    }
+  },
+  level: 'info',
+  timestamp: '2022-03-05 13:13:58'
+}
+{
+  message: { removeWebhookSucced: 'done' },
+  level: 'info',
+  timestamp: '2022-03-05 13:13:58'
+}
+{
+  message: {
+    depUpdate: {
+      _id: new ObjectId("621e892cdb7b50ebd5760f6e"),
+      name: 'test team 20',
+      boardId: '621e892a142efc4992fc73e7',
+      color: 'pink',
+      teamsId: [
+        {
+          idInTrello: '621e892dbd32990dfc449558',
+          idInDB: new ObjectId("61eab832b41398d86474d4ac"),
+          _id: new ObjectId("621e8931db7b50ebd5760f71")
+        },
+        {
+          idInTrello: '621e892d59f758489229a71d',
+          idInDB: new ObjectId("61eac1ea6b95c7f7ed8be309"),
+          _id: new ObjectId("621e8931db7b50ebd5760f72")
+        }
+      ],
+      createdAt: 2022-03-01T20:59:24.346Z,
+      updatedAt: 2022-03-05T10:13:58.846Z,
+      __v: 0,
+      canceldListId: '621e892fbd023e07baad97ff',
+      defaultListId: '621e892ee623e62346306064',
+      doneListId: '621e892bd6a8af6380a0f71e',
+      notClearListId: '621e892e4fea1f775ad7bc3e',
+      reviewListId: '621e892ca525573e4c4fece0',
+      sharedListID: '621e892cb24bd66232aa3133',
+      mainBoard: false,
+      teams: [ '621e892dbd32990dfc449558' ],
+      listIds: [
+        '621e892fbd023e07baad97ff',
+        '621e892ee623e62346306064',
+        '621e892bd6a8af6380a0f71e',
+        '621e892e4fea1f775ad7bc3e',
+        '621e892ca525573e4c4fece0',
+        '621e892cb24bd66232aa3133'
+      ]
+    }
+  },
+  level: 'info',
+  timestamp: '2022-03-05 13:13:58'
+}
+{
+  message: {
+    department: {
+      _id: new ObjectId("621e892cdb7b50ebd5760f6e"),
+      name: 'test team 20',
+      boardId: '621e892a142efc4992fc73e7',
+      color: 'pink',
+      teamsId: [
+        {
+          idInTrello: '621e892dbd32990dfc449558',
+          idInDB: new ObjectId("61eab832b41398d86474d4ac"),
+          _id: new ObjectId("621e8931db7b50ebd5760f71")
+        },
+        {
+          idInTrello: '621e892d59f758489229a71d',
+          idInDB: new ObjectId("61eac1ea6b95c7f7ed8be309"),
+          _id: new ObjectId("621e8931db7b50ebd5760f72")
+        }
+      ],
+      createdAt: 2022-03-01T20:59:24.346Z,
+      updatedAt: 2022-03-05T10:13:58.846Z,
+      __v: 0,
+      canceldListId: '621e892fbd023e07baad97ff',
+      defaultListId: '621e892ee623e62346306064',
+      doneListId: '621e892bd6a8af6380a0f71e',
+      notClearListId: '621e892e4fea1f775ad7bc3e',
+      reviewListId: '621e892ca525573e4c4fece0',
+      sharedListID: '621e892cb24bd66232aa3133',
+      mainBoard: false,
+      teams: [ '621e892dbd32990dfc449558' ],
+      listIds: [
+        '621e892fbd023e07baad97ff',
+        '621e892ee623e62346306064',
+        '621e892bd6a8af6380a0f71e',
+        '621e892e4fea1f775ad7bc3e',
+        '621e892ca525573e4c4fece0',
+        '621e892cb24bd66232aa3133'
+      ]
+    }
+  },
+  level: 'info',
+  timestamp: '2022-03-05 13:13:58'
+}
+{
+  message: {
+    departmentData: {
+      _id: '621e892cdb7b50ebd5760f6e',
+      mainBoard: true,
+      teams: [ '621e892dbd32990dfc449558' ],
+      listIds: [
+        '621e892fbd023e07baad97ff',
+        '621e892ee623e62346306064',
+        '621e892bd6a8af6380a0f71e',
+        '621e892e4fea1f775ad7bc3e',
+        '621e892ca525573e4c4fece0',
+        '621e892cb24bd66232aa3133'
+      ]
+    }
+  },
+  level: 'info',
+  timestamp: '2022-03-05 13:14:22'
+}
+{
+  message: {
+    data: {
+      _id: '621e892cdb7b50ebd5760f6e',
+      mainBoard: true,
+      teams: [ '621e892dbd32990dfc449558' ],
+      listIds: [
+        '621e892fbd023e07baad97ff',
+        '621e892ee623e62346306064',
+        '621e892bd6a8af6380a0f71e',
+        '621e892e4fea1f775ad7bc3e',
+        '621e892ca525573e4c4fece0',
+        '621e892cb24bd66232aa3133'
+      ]
+    }
+  },
+  level: 'info',
+  timestamp: '2022-03-05 13:14:22'
+}
+{
+  message: 'second step',
+  level: 'info',
+  timestamp: '2022-03-05 13:14:22'
+}
+{
+  message: 'fourth step',
+  level: 'info',
+  timestamp: '2022-03-05 13:14:22'
+}
+{
+  message: { done: 'yes it is done' },
+  level: 'info',
+  timestamp: '2022-03-05 13:14:23'
+}
+{
+  message: {
+    updatedbDepartmentError: {
+      _id: '621e892cdb7b50ebd5760f6e',
+      mainBoard: true,
+      teams: [ '621e892dbd32990dfc449558' ],
+      listIds: [
+        '621e892fbd023e07baad97ff',
+        '621e892ee623e62346306064',
+        '621e892bd6a8af6380a0f71e',
+        '621e892e4fea1f775ad7bc3e',
+        '621e892ca525573e4c4fece0',
+        '621e892cb24bd66232aa3133'
+      ]
+    }
+  },
+  level: 'info',
+  timestamp: '2022-03-05 13:14:23'
+}
+{
+  message: { addWebhookSucced: 'done' },
+  level: 'info',
+  timestamp: '2022-03-05 13:14:23'
+}
+{
+  message: {
+    depUpdate: {
+      _id: new ObjectId("621e892cdb7b50ebd5760f6e"),
+      name: 'test team 20',
+      boardId: '621e892a142efc4992fc73e7',
+      color: 'pink',
+      teamsId: [
+        {
+          idInTrello: '621e892dbd32990dfc449558',
+          idInDB: new ObjectId("61eab832b41398d86474d4ac"),
+          _id: new ObjectId("621e8931db7b50ebd5760f71")
+        },
+        {
+          idInTrello: '621e892d59f758489229a71d',
+          idInDB: new ObjectId("61eac1ea6b95c7f7ed8be309"),
+          _id: new ObjectId("621e8931db7b50ebd5760f72")
+        }
+      ],
+      createdAt: 2022-03-01T20:59:24.346Z,
+      updatedAt: 2022-03-05T10:14:23.044Z,
+      __v: 0,
+      canceldListId: '621e892fbd023e07baad97ff',
+      defaultListId: '621e892ee623e62346306064',
+      doneListId: '621e892bd6a8af6380a0f71e',
+      notClearListId: '621e892e4fea1f775ad7bc3e',
+      reviewListId: '621e892ca525573e4c4fece0',
+      sharedListID: '621e892cb24bd66232aa3133',
+      mainBoard: true,
+      teams: [ '621e892dbd32990dfc449558' ],
+      listIds: [
+        '621e892fbd023e07baad97ff',
+        '621e892ee623e62346306064',
+        '621e892bd6a8af6380a0f71e',
+        '621e892e4fea1f775ad7bc3e',
+        '621e892ca525573e4c4fece0',
+        '621e892cb24bd66232aa3133'
+      ]
+    }
+  },
+  level: 'info',
+  timestamp: '2022-03-05 13:14:23'
+}
+{
+  message: {
+    department: {
+      _id: new ObjectId("621e892cdb7b50ebd5760f6e"),
+      name: 'test team 20',
+      boardId: '621e892a142efc4992fc73e7',
+      color: 'pink',
+      teamsId: [
+        {
+          idInTrello: '621e892dbd32990dfc449558',
+          idInDB: new ObjectId("61eab832b41398d86474d4ac"),
+          _id: new ObjectId("621e8931db7b50ebd5760f71")
+        },
+        {
+          idInTrello: '621e892d59f758489229a71d',
+          idInDB: new ObjectId("61eac1ea6b95c7f7ed8be309"),
+          _id: new ObjectId("621e8931db7b50ebd5760f72")
+        }
+      ],
+      createdAt: 2022-03-01T20:59:24.346Z,
+      updatedAt: 2022-03-05T10:14:23.044Z,
+      __v: 0,
+      canceldListId: '621e892fbd023e07baad97ff',
+      defaultListId: '621e892ee623e62346306064',
+      doneListId: '621e892bd6a8af6380a0f71e',
+      notClearListId: '621e892e4fea1f775ad7bc3e',
+      reviewListId: '621e892ca525573e4c4fece0',
+      sharedListID: '621e892cb24bd66232aa3133',
+      mainBoard: true,
+      teams: [ '621e892dbd32990dfc449558' ],
+      listIds: [
+        '621e892fbd023e07baad97ff',
+        '621e892ee623e62346306064',
+        '621e892bd6a8af6380a0f71e',
+        '621e892e4fea1f775ad7bc3e',
+        '621e892ca525573e4c4fece0',
+        '621e892cb24bd66232aa3133'
+      ]
+    }
+  },
+  level: 'info',
+  timestamp: '2022-03-05 13:14:23'
+}
+{
+  message: { webhookUpdateData: {} },
+  level: 'info',
+  timestamp: '2022-03-05 13:14:24'
+}
+{
+  message: {
+    webhookUpdateData: {
+      model: {
+        id: '621e892dbd32990dfc449558',
+        name: 'team name 1',
+        closed: false,
+        idBoard: '621e892a142efc4992fc73e7',
+        pos: 2048
+      },
+      action: {
+        id: '62233811616b307c098d4b3e',
+        idMemberCreator: '616576dc48190f7969f67b62',
+        data: {
+          card: {
+            idList: '621e892e4fea1f775ad7bc3e',
+            id: '621e9019bd8bf10f146d4eea',
+            name: 'asdad',
+            idShort: 1,
+            shortLink: 'IPZGRDMM'
+          },
+          old: { idList: '621e892dbd32990dfc449558' },
+          board: {
+            id: '621e892a142efc4992fc73e7',
+            name: 'test team 20',
+            shortLink: 'USWK8a4w'
+          },
+          listBefore: { id: '621e892dbd32990dfc449558', name: 'team name 1' },
+          listAfter: { id: '621e892e4fea1f775ad7bc3e', name: 'Unclear brief' }
+        },
+        appCreator: null,
+        type: 'updateCard',
+        date: '2022-03-05T10:14:41.778Z',
+        limits: {},
+        display: {
+          translationKey: 'action_move_card_from_list_to_list',
+          entities: {
+            card: {
+              type: 'card',
+              idList: '621e892e4fea1f775ad7bc3e',
+              id: '621e9019bd8bf10f146d4eea',
+              shortLink: 'IPZGRDMM',
+              text: 'asdad'
+            },
+            listBefore: {
+              type: 'list',
+              id: '621e892dbd32990dfc449558',
+              text: 'team name 1'
+            },
+            listAfter: {
+              type: 'list',
+              id: '621e892e4fea1f775ad7bc3e',
+              text: 'Unclear brief'
+            },
+            memberCreator: {
+              type: 'member',
+              id: '616576dc48190f7969f67b62',
+              username: 'mohamednageh7',
+              text: 'mohamednageh7'
+            }
+          }
+        },
+        memberCreator: {
+          id: '616576dc48190f7969f67b62',
+          activityBlocked: false,
+          avatarHash: 'e5019bd1d553a6f4eb993ff74fa36ca3',
+          avatarUrl: 'https://trello-members.s3.amazonaws.com/616576dc48190f7969f67b62/e5019bd1d553a6f4eb993ff74fa36ca3',
+          fullName: 'mohamednageh7',
+          idMemberReferrer: null,
+          initials: 'M',
+          nonPublic: {},
+          nonPublicAvailable: true,
+          username: 'mohamednageh7'
+        }
+      }
+    }
+  },
+  level: 'info',
+  timestamp: '2022-03-05 13:14:42'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-03-05 13:20:59'
+}
+{
+  message: {
+    webhookUpdateData: {
+      model: {
+        id: '621e892dbd32990dfc449558',
+        name: 'team name 1',
+        closed: false,
+        idBoard: '621e892a142efc4992fc73e7',
+        pos: 2048
+      },
+      action: {
+        id: '622339c98963236354cb1552',
+        idMemberCreator: '616576dc48190f7969f67b62',
+        data: {
+          card: {
+            idList: '621e892dbd32990dfc449558',
+            id: '621e9019bd8bf10f146d4eea',
+            name: 'asdad',
+            idShort: 1,
+            shortLink: 'IPZGRDMM'
+          },
+          old: { idList: '621e892d59f758489229a71d' },
+          board: {
+            id: '621e892a142efc4992fc73e7',
+            name: 'test team 20',
+            shortLink: 'USWK8a4w'
+          },
+          listBefore: { id: '621e892d59f758489229a71d', name: 'team name 1' },
+          listAfter: { id: '621e892dbd32990dfc449558', name: 'team name 1' }
+        },
+        appCreator: null,
+        type: 'updateCard',
+        date: '2022-03-05T10:22:01.587Z',
+        limits: {},
+        display: {
+          translationKey: 'action_move_card_from_list_to_list',
+          entities: {
+            card: {
+              type: 'card',
+              idList: '621e892dbd32990dfc449558',
+              id: '621e9019bd8bf10f146d4eea',
+              shortLink: 'IPZGRDMM',
+              text: 'asdad'
+            },
+            listBefore: {
+              type: 'list',
+              id: '621e892d59f758489229a71d',
+              text: 'team name 1'
+            },
+            listAfter: {
+              type: 'list',
+              id: '621e892dbd32990dfc449558',
+              text: 'team name 1'
+            },
+            memberCreator: {
+              type: 'member',
+              id: '616576dc48190f7969f67b62',
+              username: 'mohamednageh7',
+              text: 'mohamednageh7'
+            }
+          }
+        },
+        memberCreator: {
+          id: '616576dc48190f7969f67b62',
+          activityBlocked: false,
+          avatarHash: 'e5019bd1d553a6f4eb993ff74fa36ca3',
+          avatarUrl: 'https://trello-members.s3.amazonaws.com/616576dc48190f7969f67b62/e5019bd1d553a6f4eb993ff74fa36ca3',
+          fullName: 'mohamednageh7',
+          idMemberReferrer: null,
+          initials: 'M',
+          nonPublic: {},
+          nonPublicAvailable: true,
+          username: 'mohamednageh7'
+        }
+      }
+    }
+  },
+  level: 'info',
+  timestamp: '2022-03-05 13:22:03'
+}
+{
+  message: {
+    webhookUpdateData: {
+      model: {
+        id: '621e892dbd32990dfc449558',
+        name: 'team name 1',
+        closed: false,
+        idBoard: '621e892a142efc4992fc73e7',
+        pos: 2048
+      },
+      action: {
+        id: '622339cf0195ce8e79a2a6fe',
+        idMemberCreator: '616576dc48190f7969f67b62',
+        data: {
+          card: {
+            idList: '621e892d59f758489229a71d',
+            id: '621e9019bd8bf10f146d4eea',
+            name: 'asdad',
+            idShort: 1,
+            shortLink: 'IPZGRDMM'
+          },
+          old: { idList: '621e892dbd32990dfc449558' },
+          board: {
+            id: '621e892a142efc4992fc73e7',
+            name: 'test team 20',
+            shortLink: 'USWK8a4w'
+          },
+          listBefore: { id: '621e892dbd32990dfc449558', name: 'team name 1' },
+          listAfter: { id: '621e892d59f758489229a71d', name: 'team name 1' }
+        },
+        appCreator: null,
+        type: 'updateCard',
+        date: '2022-03-05T10:22:07.431Z',
+        limits: {},
+        display: {
+          translationKey: 'action_move_card_from_list_to_list',
+          entities: {
+            card: {
+              type: 'card',
+              idList: '621e892d59f758489229a71d',
+              id: '621e9019bd8bf10f146d4eea',
+              shortLink: 'IPZGRDMM',
+              text: 'asdad'
+            },
+            listBefore: {
+              type: 'list',
+              id: '621e892dbd32990dfc449558',
+              text: 'team name 1'
+            },
+            listAfter: {
+              type: 'list',
+              id: '621e892d59f758489229a71d',
+              text: 'team name 1'
+            },
+            memberCreator: {
+              type: 'member',
+              id: '616576dc48190f7969f67b62',
+              username: 'mohamednageh7',
+              text: 'mohamednageh7'
+            }
+          }
+        },
+        memberCreator: {
+          id: '616576dc48190f7969f67b62',
+          activityBlocked: false,
+          avatarHash: 'e5019bd1d553a6f4eb993ff74fa36ca3',
+          avatarUrl: 'https://trello-members.s3.amazonaws.com/616576dc48190f7969f67b62/e5019bd1d553a6f4eb993ff74fa36ca3',
+          fullName: 'mohamednageh7',
+          idMemberReferrer: null,
+          initials: 'M',
+          nonPublic: {},
+          nonPublicAvailable: true,
+          username: 'mohamednageh7'
+        }
+      }
+    }
+  },
+  level: 'info',
+  timestamp: '2022-03-05 13:22:09'
+}
+{
+  message: {
+    webhookUpdateData: {
+      model: {
+        id: '621e892dbd32990dfc449558',
+        name: 'team name 1',
+        closed: false,
+        idBoard: '621e892a142efc4992fc73e7',
+        pos: 2048
+      },
+      action: {
+        id: '622339d27bd06665fbb87ebf',
+        idMemberCreator: '616576dc48190f7969f67b62',
+        data: {
+          card: {
+            idList: '621e892dbd32990dfc449558',
+            id: '621e9019bd8bf10f146d4eea',
+            name: 'asdad',
+            idShort: 1,
+            shortLink: 'IPZGRDMM'
+          },
+          old: { idList: '621e892d59f758489229a71d' },
+          board: {
+            id: '621e892a142efc4992fc73e7',
+            name: 'test team 20',
+            shortLink: 'USWK8a4w'
+          },
+          listBefore: { id: '621e892d59f758489229a71d', name: 'team name 1' },
+          listAfter: { id: '621e892dbd32990dfc449558', name: 'team name 1' }
+        },
+        appCreator: null,
+        type: 'updateCard',
+        date: '2022-03-05T10:22:10.060Z',
+        limits: {},
+        display: {
+          translationKey: 'action_move_card_from_list_to_list',
+          entities: {
+            card: {
+              type: 'card',
+              idList: '621e892dbd32990dfc449558',
+              id: '621e9019bd8bf10f146d4eea',
+              shortLink: 'IPZGRDMM',
+              text: 'asdad'
+            },
+            listBefore: {
+              type: 'list',
+              id: '621e892d59f758489229a71d',
+              text: 'team name 1'
+            },
+            listAfter: {
+              type: 'list',
+              id: '621e892dbd32990dfc449558',
+              text: 'team name 1'
+            },
+            memberCreator: {
+              type: 'member',
+              id: '616576dc48190f7969f67b62',
+              username: 'mohamednageh7',
+              text: 'mohamednageh7'
+            }
+          }
+        },
+        memberCreator: {
+          id: '616576dc48190f7969f67b62',
+          activityBlocked: false,
+          avatarHash: 'e5019bd1d553a6f4eb993ff74fa36ca3',
+          avatarUrl: 'https://trello-members.s3.amazonaws.com/616576dc48190f7969f67b62/e5019bd1d553a6f4eb993ff74fa36ca3',
+          fullName: 'mohamednageh7',
+          idMemberReferrer: null,
+          initials: 'M',
+          nonPublic: {},
+          nonPublicAvailable: true,
+          username: 'mohamednageh7'
+        }
+      }
+    }
+  },
+  level: 'info',
+  timestamp: '2022-03-05 13:22:11'
+}
+{
+  message: {
+    webhookUpdateData: {
+      model: {
+        id: '621e892dbd32990dfc449558',
+        name: 'team name 1',
+        closed: false,
+        idBoard: '621e892a142efc4992fc73e7',
+        pos: 2048
+      },
+      action: {
+        id: '622339d5646fd376bc493ac7',
+        idMemberCreator: '616576dc48190f7969f67b62',
+        data: {
+          card: {
+            idList: '621e892e4fea1f775ad7bc3e',
+            id: '621e9019bd8bf10f146d4eea',
+            name: 'asdad',
+            idShort: 1,
+            shortLink: 'IPZGRDMM'
+          },
+          old: { idList: '621e892dbd32990dfc449558' },
+          board: {
+            id: '621e892a142efc4992fc73e7',
+            name: 'test team 20',
+            shortLink: 'USWK8a4w'
+          },
+          listBefore: { id: '621e892dbd32990dfc449558', name: 'team name 1' },
+          listAfter: { id: '621e892e4fea1f775ad7bc3e', name: 'Unclear brief' }
+        },
+        appCreator: null,
+        type: 'updateCard',
+        date: '2022-03-05T10:22:13.533Z',
+        limits: {},
+        display: {
+          translationKey: 'action_move_card_from_list_to_list',
+          entities: {
+            card: {
+              type: 'card',
+              idList: '621e892e4fea1f775ad7bc3e',
+              id: '621e9019bd8bf10f146d4eea',
+              shortLink: 'IPZGRDMM',
+              text: 'asdad'
+            },
+            listBefore: {
+              type: 'list',
+              id: '621e892dbd32990dfc449558',
+              text: 'team name 1'
+            },
+            listAfter: {
+              type: 'list',
+              id: '621e892e4fea1f775ad7bc3e',
+              text: 'Unclear brief'
+            },
+            memberCreator: {
+              type: 'member',
+              id: '616576dc48190f7969f67b62',
+              username: 'mohamednageh7',
+              text: 'mohamednageh7'
+            }
+          }
+        },
+        memberCreator: {
+          id: '616576dc48190f7969f67b62',
+          activityBlocked: false,
+          avatarHash: 'e5019bd1d553a6f4eb993ff74fa36ca3',
+          avatarUrl: 'https://trello-members.s3.amazonaws.com/616576dc48190f7969f67b62/e5019bd1d553a6f4eb993ff74fa36ca3',
+          fullName: 'mohamednageh7',
+          idMemberReferrer: null,
+          initials: 'M',
+          nonPublic: {},
+          nonPublicAvailable: true,
+          username: 'mohamednageh7'
+        }
+      }
+    }
+  },
+  level: 'info',
+  timestamp: '2022-03-05 13:22:15'
+}
+{
+  message: {
+    departmentData: {
+      _id: '621e892cdb7b50ebd5760f6e',
+      addTeam: [ { _id: '621e892dbd32990dfc449552', name: 'team name 10 new' } ]
+    }
+  },
+  level: 'info',
+  timestamp: '2022-03-05 13:29:23'
+}
+{
+  message: {
+    createTeamListError: FetchError: invalid json response body at https://api.trello.com/1/lists?name=team%20name%2010%20new&idBoard=undefined&key=96b980af38094db6e5767718567af6ce&token=7f44a81ca5f903883e1b3a5720f89b70b8feacd4437d2cb893068b3b93455e5f reason: Unexpected token i in JSON at position 0
+        at E:\trello-project\TTP-Back\node_modules\node-fetch\lib\index.js:273:32
+        at processTicksAndRejections (internal/process/task_queues.js:95:5) {
+      type: 'invalid-json'
+    }
+  },
+  level: 'error',
+  timestamp: '2022-03-05 13:29:25'
+}
+{
+  message: { depUpdate: Promise { <pending> } },
+  level: 'info',
+  timestamp: '2022-03-05 13:29:25'
+}
+{
+  message: {
+    deleteNestedRecordDepDBError: CastError: Cast to embedded failed for value "{ idInTrello: { '$each': undefined } }" (type string) at path "teamsId"
+        at model.Query.exec (E:\trello-project\TTP-Back\node_modules\mongoose\lib\query.js:4545:21)
+        at model.Query.Query.then (E:\trello-project\TTP-Back\node_modules\mongoose\lib\query.js:4644:15)
+        at processTicksAndRejections (internal/process/task_queues.js:95:5) {
+      messageFormat: undefined,
+      stringValue: `"{ idInTrello: { '$each': undefined } }"`,
+      kind: 'embedded',
+      value: "{ idInTrello: { '$each': undefined } }",
+      path: 'teamsId',
+      reason: CastError: Cast to string failed for value "{ '$each': undefined }" (type Object) at path "idInTrello"
+          at SchemaString.cast (E:\trello-project\TTP-Back\node_modules\mongoose\lib\schema\string.js:603:11)
+          at SchemaString.SchemaType.applySetters (E:\trello-project\TTP-Back\node_modules\mongoose\lib\schematype.js:1135:12)
+          at EmbeddedDocument.$set (E:\trello-project\TTP-Back\node_modules\mongoose\lib\document.js:1407:20)
+          at EmbeddedDocument.$set (E:\trello-project\TTP-Back\node_modules\mongoose\lib\document.js:1161:14)
+          at EmbeddedDocument.Document (E:\trello-project\TTP-Back\node_modules\mongoose\lib\document.js:158:12)
+          at EmbeddedDocument.Subdocument (E:\trello-project\TTP-Back\node_modules\mongoose\lib\types\subdocument.js:28:12)
+          at EmbeddedDocument.ArraySubdocument [as constructor] (E:\trello-project\TTP-Back\node_modules\mongoose\lib\types\ArraySubdocument.js:36:15)
+          at new EmbeddedDocument (E:\trello-project\TTP-Back\node_modules\mongoose\lib\schema\documentarray.js:115:17)
+          at DocumentArrayPath.cast (E:\trello-project\TTP-Back\node_modules\mongoose\lib\schema\documentarray.js:477:22)
+          at DocumentArrayPath.SchemaType.applySetters (E:\trello-project\TTP-Back\node_modules\mongoose\lib\schematype.js:1135:12) {
+        stringValue: `"{ '$each': undefined }"`,
+        messageFormat: undefined,
+        kind: 'string',
+        value: { '$each': undefined },
+        path: 'idInTrello',
+        reason: null,
+        valueType: 'Object'
+      },
+      valueType: 'string'
+    }
+  },
+  level: 'error',
+  timestamp: '2022-03-05 13:29:25'
+}
+{
+  message: { department: undefined },
+  level: 'info',
+  timestamp: '2022-03-05 13:29:25'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-03-05 13:33:50'
+}
+{
+  message: {
+    departmentData: {
+      _id: '621e892cdb7b50ebd5760f6e',
+      boardId: '621e892a142efc4992fc73e7',
+      addTeam: [ { _id: '621e892dbd32990dfc449552', name: 'team name 10 new' } ]
+    }
+  },
+  level: 'info',
+  timestamp: '2022-03-05 13:34:54'
+}
+{
+  message: { teamData: '62233cce69097b85f922c451' },
+  level: 'info',
+  timestamp: '2022-03-05 13:34:55'
+}
+{
+  message: { removeWebhookSucced: 'done' },
+  level: 'info',
+  timestamp: '2022-03-05 13:34:55'
+}
+{
+  message: {
+    teamListIds: [
+      {
+        idInTrello: '62233cce69097b85f922c451',
+        idInDB: '621e892dbd32990dfc449552'
+      }
+    ]
+  },
+  level: 'info',
+  timestamp: '2022-03-05 13:34:55'
+}
+{
+  message: { depUpdate: Promise { <pending> } },
+  level: 'info',
+  timestamp: '2022-03-05 13:34:55'
+}
+{
+  message: {
+    deleteNestedRecordDepDBError: CastError: Cast to embedded failed for value "{ idInTrello: { '$each': [ [Object] ] } }" (type string) at path "teamsId"
+        at model.Query.exec (E:\trello-project\TTP-Back\node_modules\mongoose\lib\query.js:4545:21)
+        at model.Query.Query.then (E:\trello-project\TTP-Back\node_modules\mongoose\lib\query.js:4644:15)
+        at processTicksAndRejections (internal/process/task_queues.js:95:5) {
+      messageFormat: undefined,
+      stringValue: `"{ idInTrello: { '$each': [ [Object] ] } }"`,
+      kind: 'embedded',
+      value: "{ idInTrello: { '$each': [ [Object] ] } }",
+      path: 'teamsId',
+      reason: CastError: Cast to string failed for value "{
+        '$each': [
+          {
+            idInTrello: '62233cce69097b85f922c451',
+            idInDB: '621e892dbd32990dfc449552'
+          }
+        ]
+      }" (type Object) at path "idInTrello"
+          at SchemaString.cast (E:\trello-project\TTP-Back\node_modules\mongoose\lib\schema\string.js:603:11)
+          at SchemaString.SchemaType.applySetters (E:\trello-project\TTP-Back\node_modules\mongoose\lib\schematype.js:1135:12)
+          at EmbeddedDocument.$set (E:\trello-project\TTP-Back\node_modules\mongoose\lib\document.js:1407:20)
+          at EmbeddedDocument.$set (E:\trello-project\TTP-Back\node_modules\mongoose\lib\document.js:1161:14)
+          at EmbeddedDocument.Document (E:\trello-project\TTP-Back\node_modules\mongoose\lib\document.js:158:12)
+          at EmbeddedDocument.Subdocument (E:\trello-project\TTP-Back\node_modules\mongoose\lib\types\subdocument.js:28:12)
+          at EmbeddedDocument.ArraySubdocument [as constructor] (E:\trello-project\TTP-Back\node_modules\mongoose\lib\types\ArraySubdocument.js:36:15)
+          at new EmbeddedDocument (E:\trello-project\TTP-Back\node_modules\mongoose\lib\schema\documentarray.js:115:17)
+          at DocumentArrayPath.cast (E:\trello-project\TTP-Back\node_modules\mongoose\lib\schema\documentarray.js:477:22)
+          at DocumentArrayPath.SchemaType.applySetters (E:\trello-project\TTP-Back\node_modules\mongoose\lib\schematype.js:1135:12) {
+        stringValue: '"{\n' +
+          "  '$each': [\n" +
+          '    {\n' +
+          "      idInTrello: '62233cce69097b85f922c451',\n" +
+          "      idInDB: '621e892dbd32990dfc449552'\n" +
+          '    }\n' +
+          '  ]\n' +
+          '}"',
+        messageFormat: undefined,
+        kind: 'string',
+        value: {
+          '$each': [
+            {
+              idInTrello: '62233cce69097b85f922c451',
+              idInDB: '621e892dbd32990dfc449552'
+            }
+          ]
+        },
+        path: 'idInTrello',
+        reason: null,
+        valueType: 'Object'
+      },
+      valueType: 'string'
+    }
+  },
+  level: 'error',
+  timestamp: '2022-03-05 13:34:55'
+}
+{
+  message: { department: undefined },
+  level: 'info',
+  timestamp: '2022-03-05 13:34:55'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-03-05 13:43:16'
+}
+{
+  message: {
+    departmentData: {
+      _id: '621e892cdb7b50ebd5760f6e',
+      boardId: '621e892a142efc4992fc73e7',
+      addTeam: [ { _id: '621e892dbd32990dfc449552', name: 'team name 10 new' } ]
+    }
+  },
+  level: 'info',
+  timestamp: '2022-03-05 13:43:21'
+}
+{
+  message: { teamData: '62233ecaac012b4164014979' },
+  level: 'info',
+  timestamp: '2022-03-05 13:43:22'
+}
+{
+  message: { removeWebhookSucced: 'done' },
+  level: 'info',
+  timestamp: '2022-03-05 13:43:22'
+}
+{
+  message: {
+    teamListIds: [
+      {
+        idInTrello: '62233ecaac012b4164014979',
+        idInDB: '621e892dbd32990dfc449552'
+      }
+    ]
+  },
+  level: 'info',
+  timestamp: '2022-03-05 13:43:22'
+}
+{
+  message: {
+    teamListIds: [
+      {
+        idInTrello: '62233ecaac012b4164014979',
+        idInDB: '621e892dbd32990dfc449552'
+      }
+    ]
+  },
+  level: 'info',
+  timestamp: '2022-03-05 13:43:22'
+}
+{
+  message: { depUpdate: Promise { <pending> } },
+  level: 'info',
+  timestamp: '2022-03-05 13:43:22'
+}
+{
+  message: {
+    deleteNestedRecordDepDBError: CastError: Cast to embedded failed for value "{ idInTrello: { '$each': [ [Object] ], '$position': 0 } }" (type string) at path "teamsId"
+        at model.Query.exec (E:\trello-project\TTP-Back\node_modules\mongoose\lib\query.js:4545:21)
+        at model.Query.Query.then (E:\trello-project\TTP-Back\node_modules\mongoose\lib\query.js:4644:15)
+        at processTicksAndRejections (internal/process/task_queues.js:95:5) {
+      messageFormat: undefined,
+      stringValue: `"{ idInTrello: { '$each': [ [Object] ], '$position': 0 } }"`,
+      kind: 'embedded',
+      value: "{ idInTrello: { '$each': [ [Object] ], '$position': 0 } }",
+      path: 'teamsId',
+      reason: CastError: Cast to string failed for value "{
+        '$each': [
+          {
+            idInTrello: '62233ecaac012b4164014979',
+            idInDB: '621e892dbd32990dfc449552'
+          }
+        ],
+        '$position': 0
+      }" (type Object) at path "idInTrello"
+          at SchemaString.cast (E:\trello-project\TTP-Back\node_modules\mongoose\lib\schema\string.js:603:11)
+          at SchemaString.SchemaType.applySetters (E:\trello-project\TTP-Back\node_modules\mongoose\lib\schematype.js:1135:12)
+          at EmbeddedDocument.$set (E:\trello-project\TTP-Back\node_modules\mongoose\lib\document.js:1407:20)
+          at EmbeddedDocument.$set (E:\trello-project\TTP-Back\node_modules\mongoose\lib\document.js:1161:14)
+          at EmbeddedDocument.Document (E:\trello-project\TTP-Back\node_modules\mongoose\lib\document.js:158:12)
+          at EmbeddedDocument.Subdocument (E:\trello-project\TTP-Back\node_modules\mongoose\lib\types\subdocument.js:28:12)
+          at EmbeddedDocument.ArraySubdocument [as constructor] (E:\trello-project\TTP-Back\node_modules\mongoose\lib\types\ArraySubdocument.js:36:15)
+          at new EmbeddedDocument (E:\trello-project\TTP-Back\node_modules\mongoose\lib\schema\documentarray.js:115:17)
+          at DocumentArrayPath.cast (E:\trello-project\TTP-Back\node_modules\mongoose\lib\schema\documentarray.js:477:22)
+          at DocumentArrayPath.SchemaType.applySetters (E:\trello-project\TTP-Back\node_modules\mongoose\lib\schematype.js:1135:12) {
+        stringValue: '"{\n' +
+          "  '$each': [\n" +
+          '    {\n' +
+          "      idInTrello: '62233ecaac012b4164014979',\n" +
+          "      idInDB: '621e892dbd32990dfc449552'\n" +
+          '    }\n' +
+          '  ],\n' +
+          "  '$position': 0\n" +
+          '}"',
+        messageFormat: undefined,
+        kind: 'string',
+        value: {
+          '$each': [
+            {
+              idInTrello: '62233ecaac012b4164014979',
+              idInDB: '621e892dbd32990dfc449552'
+            }
+          ],
+          '$position': 0
+        },
+        path: 'idInTrello',
+        reason: null,
+        valueType: 'Object'
+      },
+      valueType: 'string'
+    }
+  },
+  level: 'error',
+  timestamp: '2022-03-05 13:43:22'
+}
+{
+  message: { department: undefined },
+  level: 'info',
+  timestamp: '2022-03-05 13:43:22'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-03-05 13:44:46'
+}
+{
+  message: {
+    departmentData: {
+      _id: '621e892cdb7b50ebd5760f6e',
+      boardId: '621e892a142efc4992fc73e7',
+      addTeam: [ { _id: '621e892dbd32990dfc449552', name: 'team name 10 new' } ]
+    }
+  },
+  level: 'info',
+  timestamp: '2022-03-05 13:45:19'
+}
+{
+  message: { teamData: '62233f3f5259ec7844825ce3' },
+  level: 'info',
+  timestamp: '2022-03-05 13:45:20'
+}
+{
+  message: { removeWebhookSucced: 'done' },
+  level: 'info',
+  timestamp: '2022-03-05 13:45:20'
+}
+{
+  message: {
+    teamListIds: [
+      {
+        idInTrello: '62233f3f5259ec7844825ce3',
+        idInDB: '621e892dbd32990dfc449552'
+      }
+    ]
+  },
+  level: 'info',
+  timestamp: '2022-03-05 13:45:20'
+}
+{
+  message: {
+    title: 'testing',
+    teamListIds: [
+      {
+        idInTrello: '62233f3f5259ec7844825ce3',
+        idInDB: '621e892dbd32990dfc449552'
+      }
+    ]
+  },
+  level: 'info',
+  timestamp: '2022-03-05 13:45:20'
+}
+{
+  message: { depUpdate: Promise { <pending> } },
+  level: 'info',
+  timestamp: '2022-03-05 13:45:20'
+}
+{
+  message: {
+    deleteNestedRecordDepDBError: CastError: Cast to embedded failed for value "{ idInTrello: { '$each': [ [Object] ], '$position': 0 } }" (type string) at path "teamsId"
+        at model.Query.exec (E:\trello-project\TTP-Back\node_modules\mongoose\lib\query.js:4545:21)
+        at model.Query.Query.then (E:\trello-project\TTP-Back\node_modules\mongoose\lib\query.js:4644:15)
+        at processTicksAndRejections (internal/process/task_queues.js:95:5) {
+      messageFormat: undefined,
+      stringValue: `"{ idInTrello: { '$each': [ [Object] ], '$position': 0 } }"`,
+      kind: 'embedded',
+      value: "{ idInTrello: { '$each': [ [Object] ], '$position': 0 } }",
+      path: 'teamsId',
+      reason: CastError: Cast to string failed for value "{
+        '$each': [
+          {
+            idInTrello: '62233f3f5259ec7844825ce3',
+            idInDB: '621e892dbd32990dfc449552'
+          }
+        ],
+        '$position': 0
+      }" (type Object) at path "idInTrello"
+          at SchemaString.cast (E:\trello-project\TTP-Back\node_modules\mongoose\lib\schema\string.js:603:11)
+          at SchemaString.SchemaType.applySetters (E:\trello-project\TTP-Back\node_modules\mongoose\lib\schematype.js:1135:12)
+          at EmbeddedDocument.$set (E:\trello-project\TTP-Back\node_modules\mongoose\lib\document.js:1407:20)
+          at EmbeddedDocument.$set (E:\trello-project\TTP-Back\node_modules\mongoose\lib\document.js:1161:14)
+          at EmbeddedDocument.Document (E:\trello-project\TTP-Back\node_modules\mongoose\lib\document.js:158:12)
+          at EmbeddedDocument.Subdocument (E:\trello-project\TTP-Back\node_modules\mongoose\lib\types\subdocument.js:28:12)
+          at EmbeddedDocument.ArraySubdocument [as constructor] (E:\trello-project\TTP-Back\node_modules\mongoose\lib\types\ArraySubdocument.js:36:15)
+          at new EmbeddedDocument (E:\trello-project\TTP-Back\node_modules\mongoose\lib\schema\documentarray.js:115:17)
+          at DocumentArrayPath.cast (E:\trello-project\TTP-Back\node_modules\mongoose\lib\schema\documentarray.js:477:22)
+          at DocumentArrayPath.SchemaType.applySetters (E:\trello-project\TTP-Back\node_modules\mongoose\lib\schematype.js:1135:12) {
+        stringValue: '"{\n' +
+          "  '$each': [\n" +
+          '    {\n' +
+          "      idInTrello: '62233f3f5259ec7844825ce3',\n" +
+          "      idInDB: '621e892dbd32990dfc449552'\n" +
+          '    }\n' +
+          '  ],\n' +
+          "  '$position': 0\n" +
+          '}"',
+        messageFormat: undefined,
+        kind: 'string',
+        value: {
+          '$each': [
+            {
+              idInTrello: '62233f3f5259ec7844825ce3',
+              idInDB: '621e892dbd32990dfc449552'
+            }
+          ],
+          '$position': 0
+        },
+        path: 'idInTrello',
+        reason: null,
+        valueType: 'Object'
+      },
+      valueType: 'string'
+    }
+  },
+  level: 'error',
+  timestamp: '2022-03-05 13:45:20'
+}
+{
+  message: { department: undefined },
+  level: 'info',
+  timestamp: '2022-03-05 13:45:20'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-03-05 13:47:10'
+}
+{
+  message: {
+    departmentData: {
+      _id: '621e892cdb7b50ebd5760f6e',
+      boardId: '621e892a142efc4992fc73e7',
+      addTeam: [ { _id: '621e892dbd32990dfc449552', name: 'team name 10 new' } ]
+    }
+  },
+  level: 'info',
+  timestamp: '2022-03-05 13:47:24'
+}
+{
+  message: { teamData: '62233fbc733e7e7e603663df' },
+  level: 'info',
+  timestamp: '2022-03-05 13:47:25'
+}
+{
+  message: { removeWebhookSucced: 'done' },
+  level: 'info',
+  timestamp: '2022-03-05 13:47:25'
+}
+{
+  message: {
+    teamListIds: [
+      {
+        idInTrello: '62233fbc733e7e7e603663df',
+        idInDB: '621e892dbd32990dfc449552'
+      }
+    ]
+  },
+  level: 'info',
+  timestamp: '2022-03-05 13:47:25'
+}
+{
+  message: {
+    title: 'testing',
+    teamListIds: [
+      {
+        idInTrello: '62233fbc733e7e7e603663df',
+        idInDB: '621e892dbd32990dfc449552'
+      }
+    ]
+  },
+  level: 'info',
+  timestamp: '2022-03-05 13:47:25'
+}
+{
+  message: { depUpdate: Promise { <pending> } },
+  level: 'info',
+  timestamp: '2022-03-05 13:47:25'
+}
+{
+  message: {
+    department: {
+      _id: new ObjectId("621e892cdb7b50ebd5760f6e"),
+      name: 'test team 20',
+      boardId: '621e892a142efc4992fc73e7',
+      color: 'pink',
+      teamsId: [
+        {
+          idInTrello: '621e892dbd32990dfc449558',
+          idInDB: new ObjectId("61eab832b41398d86474d4ac"),
+          _id: new ObjectId("621e8931db7b50ebd5760f71")
+        },
+        {
+          idInTrello: '621e892d59f758489229a71d',
+          idInDB: new ObjectId("61eac1ea6b95c7f7ed8be309"),
+          _id: new ObjectId("621e8931db7b50ebd5760f72")
+        }
+      ],
+      createdAt: 2022-03-01T20:59:24.346Z,
+      updatedAt: 2022-03-05T10:14:23.044Z,
+      __v: 0,
+      canceldListId: '621e892fbd023e07baad97ff',
+      defaultListId: '621e892ee623e62346306064',
+      doneListId: '621e892bd6a8af6380a0f71e',
+      notClearListId: '621e892e4fea1f775ad7bc3e',
+      reviewListId: '621e892ca525573e4c4fece0',
+      sharedListID: '621e892cb24bd66232aa3133',
+      mainBoard: true
+    }
+  },
+  level: 'info',
+  timestamp: '2022-03-05 13:47:25'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-03-05 13:56:35'
+}
+{
+  message: {
+    departmentData: {
+      _id: '621e892cdb7b50ebd5760f6e',
+      boardId: '621e892a142efc4992fc73e7',
+      removeTeam: [ '62233fbc733e7e7e603663df' ]
+    }
+  },
+  level: 'info',
+  timestamp: '2022-03-05 13:56:57'
+}
+{
+  message: { depUpdate: Promise { <pending> } },
+  level: 'info',
+  timestamp: '2022-03-05 13:56:57'
+}
+{
+  message: {
+    department: {
+      _id: new ObjectId("621e892cdb7b50ebd5760f6e"),
+      name: 'test team 20',
+      boardId: '621e892a142efc4992fc73e7',
+      color: 'pink',
+      teamsId: [
+        {
+          idInTrello: '62233fbc733e7e7e603663df',
+          idInDB: new ObjectId("621e892dbd32990dfc449552"),
+          _id: new ObjectId("62233fbdbf14444d0da885e8")
+        },
+        {
+          idInTrello: '621e892dbd32990dfc449558',
+          idInDB: new ObjectId("61eab832b41398d86474d4ac"),
+          _id: new ObjectId("621e8931db7b50ebd5760f71")
+        },
+        {
+          idInTrello: '621e892d59f758489229a71d',
+          idInDB: new ObjectId("61eac1ea6b95c7f7ed8be309"),
+          _id: new ObjectId("621e8931db7b50ebd5760f72")
+        }
+      ],
+      createdAt: 2022-03-01T20:59:24.346Z,
+      updatedAt: 2022-03-05T10:47:25.450Z,
+      __v: 0,
+      canceldListId: '621e892fbd023e07baad97ff',
+      defaultListId: '621e892ee623e62346306064',
+      doneListId: '621e892bd6a8af6380a0f71e',
+      notClearListId: '621e892e4fea1f775ad7bc3e',
+      reviewListId: '621e892ca525573e4c4fece0',
+      sharedListID: '621e892cb24bd66232aa3133',
+      mainBoard: true
+    }
+  },
+  level: 'info',
+  timestamp: '2022-03-05 13:56:57'
+}
+{
+  message: { removeListAndWebhookSucced: 'done' },
+  level: 'info',
+  timestamp: '2022-03-05 13:56:57'
+}
+{
+  message: {
+    departmentData: {
+      _id: '621e892cdb7b50ebd5760f6e',
+      boardId: '621e892a142efc4992fc73e7',
+      addTeam: [ { _id: '621e892dbd32990dfc449552', name: 'team name 10 new' } ]
+    }
+  },
+  level: 'info',
+  timestamp: '2022-03-05 13:57:46'
+}
+{
+  message: { teamData: '6223422a46526f3f1a53d017' },
+  level: 'info',
+  timestamp: '2022-03-05 13:57:47'
+}
+{
+  message: { removeWebhookSucced: 'done' },
+  level: 'info',
+  timestamp: '2022-03-05 13:57:47'
+}
+{
+  message: {
+    teamListIds: [
+      {
+        idInTrello: '6223422a46526f3f1a53d017',
+        idInDB: '621e892dbd32990dfc449552'
+      }
+    ]
+  },
+  level: 'info',
+  timestamp: '2022-03-05 13:57:47'
+}
+{
+  message: {
+    title: 'testing',
+    teamListIds: [
+      {
+        idInTrello: '6223422a46526f3f1a53d017',
+        idInDB: '621e892dbd32990dfc449552'
+      }
+    ]
+  },
+  level: 'info',
+  timestamp: '2022-03-05 13:57:47'
+}
+{
+  message: { depUpdate: Promise { <pending> } },
+  level: 'info',
+  timestamp: '2022-03-05 13:57:47'
+}
+{
+  message: {
+    department: {
+      _id: new ObjectId("621e892cdb7b50ebd5760f6e"),
+      name: 'test team 20',
+      boardId: '621e892a142efc4992fc73e7',
+      color: 'pink',
+      teamsId: [
+        {
+          idInTrello: '621e892dbd32990dfc449558',
+          idInDB: new ObjectId("61eab832b41398d86474d4ac"),
+          _id: new ObjectId("621e8931db7b50ebd5760f71")
+        },
+        {
+          idInTrello: '621e892d59f758489229a71d',
+          idInDB: new ObjectId("61eac1ea6b95c7f7ed8be309"),
+          _id: new ObjectId("621e8931db7b50ebd5760f72")
+        }
+      ],
+      createdAt: 2022-03-01T20:59:24.346Z,
+      updatedAt: 2022-03-05T10:56:57.102Z,
+      __v: 0,
+      canceldListId: '621e892fbd023e07baad97ff',
+      defaultListId: '621e892ee623e62346306064',
+      doneListId: '621e892bd6a8af6380a0f71e',
+      notClearListId: '621e892e4fea1f775ad7bc3e',
+      reviewListId: '621e892ca525573e4c4fece0',
+      sharedListID: '621e892cb24bd66232aa3133',
+      mainBoard: true
+    }
+  },
+  level: 'info',
+  timestamp: '2022-03-05 13:57:47'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-03-05 14:02:42'
+}
+{
+  message: {
+    departmentData: {
+      _id: '621e892cdb7b50ebd5760f6e',
+      boardId: '621e892a142efc4992fc73e7',
+      mainBoard: true,
+      addTeam: [ { _id: '621e892dbd32990dfc449552', name: 'team name 10 new' } ]
+    }
+  },
+  level: 'info',
+  timestamp: '2022-03-05 14:02:49'
+}
+{
+  message: 'second step',
+  level: 'info',
+  timestamp: '2022-03-05 14:02:49'
+}
+{
+  message: 'fourth step',
+  level: 'info',
+  timestamp: '2022-03-05 14:02:49'
+}
+{
+  message: {
+    updateDepartmentError: TypeError: Cannot read property 'map' of undefined
+        at Function.<anonymous> (E:\trello-project\TTP-Back\src\lib\controllers\department.ts:78:39)
+        at Generator.next (<anonymous>)
+        at E:\trello-project\TTP-Back\src\lib\controllers\department.ts:8:71
+        at new Promise (<anonymous>)
+        at __awaiter (E:\trello-project\TTP-Back\src\lib\controllers\department.ts:4:12)
+        at Function.__updateDepartmentData (E:\trello-project\TTP-Back\src\lib\controllers\department.ts:73:16)
+        at E:\trello-project\TTP-Back\src\lib\controllers\department.ts:13:39
+        at Generator.next (<anonymous>)
+        at E:\trello-project\TTP-Back\src\lib\controllers\department.ts:8:71
+        at new Promise (<anonymous>)
+  },
+  level: 'error',
+  timestamp: '2022-03-05 14:02:49'
+}
+{
+  message: { department: undefined },
+  level: 'info',
+  timestamp: '2022-03-05 14:02:49'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-03-05 14:03:57'
+}
+{
+  message: {
+    departmentData: {
+      _id: '621e892cdb7b50ebd5760f6e',
+      boardId: '621e892a142efc4992fc73e7',
+      mainBoard: true,
+      addTeam: [ { _id: '621e892dbd32990dfc449552', name: 'team name 10 new' } ]
+    }
+  },
+  level: 'info',
+  timestamp: '2022-03-05 14:04:04'
+}
+{
+  message: 'second step',
+  level: 'info',
+  timestamp: '2022-03-05 14:04:04'
+}
+{
+  message: { teamData: '622343a41c3d5c3f69272b94' },
+  level: 'info',
+  timestamp: '2022-03-05 14:04:05'
+}
+{
+  message: { removeWebhookSucced: 'done' },
+  level: 'info',
+  timestamp: '2022-03-05 14:04:05'
+}
+{
+  message: {
+    teamListIds: [
+      {
+        idInTrello: '622343a41c3d5c3f69272b94',
+        idInDB: '621e892dbd32990dfc449552'
+      }
+    ]
+  },
+  level: 'info',
+  timestamp: '2022-03-05 14:04:05'
+}
+{
+  message: {
+    title: 'testing',
+    teamListIds: [
+      {
+        idInTrello: '622343a41c3d5c3f69272b94',
+        idInDB: '621e892dbd32990dfc449552'
+      }
+    ]
+  },
+  level: 'info',
+  timestamp: '2022-03-05 14:04:05'
+}
+{
+  message: { depUpdate: Promise { <pending> } },
+  level: 'info',
+  timestamp: '2022-03-05 14:04:05'
+}
+{
+  message: {
+    department: {
+      _id: new ObjectId("621e892cdb7b50ebd5760f6e"),
+      name: 'test team 20',
+      boardId: '621e892a142efc4992fc73e7',
+      color: 'pink',
+      teamsId: [
+        {
+          idInTrello: '6223422a46526f3f1a53d017',
+          idInDB: new ObjectId("621e892dbd32990dfc449552"),
+          _id: new ObjectId("6223422b59795fd71c6c86b1")
+        },
+        {
+          idInTrello: '621e892dbd32990dfc449558',
+          idInDB: new ObjectId("61eab832b41398d86474d4ac"),
+          _id: new ObjectId("621e8931db7b50ebd5760f71")
+        },
+        {
+          idInTrello: '621e892d59f758489229a71d',
+          idInDB: new ObjectId("61eac1ea6b95c7f7ed8be309"),
+          _id: new ObjectId("621e8931db7b50ebd5760f72")
+        }
+      ],
+      createdAt: 2022-03-01T20:59:24.346Z,
+      updatedAt: 2022-03-05T10:57:47.440Z,
+      __v: 0,
+      canceldListId: '621e892fbd023e07baad97ff',
+      defaultListId: '621e892ee623e62346306064',
+      doneListId: '621e892bd6a8af6380a0f71e',
+      notClearListId: '621e892e4fea1f775ad7bc3e',
+      reviewListId: '621e892ca525573e4c4fece0',
+      sharedListID: '621e892cb24bd66232aa3133',
+      mainBoard: true
+    }
+  },
+  level: 'info',
+  timestamp: '2022-03-05 14:04:05'
+}
+{
+  message: { webhookUpdateData: {} },
+  level: 'info',
+  timestamp: '2022-03-05 14:04:06'
+}
+{
+  message: {
+    webhookUpdateData: {
+      model: {
+        id: '622343a41c3d5c3f69272b94',
+        name: 'team name 10 new',
+        closed: false,
+        idBoard: '621e892a142efc4992fc73e7',
+        pos: 32
+      },
+      action: {
+        id: '622343c586fab3108d868dc1',
+        idMemberCreator: '616576dc48190f7969f67b62',
+        data: {
+          card: {
+            idList: '622343a41c3d5c3f69272b94',
+            id: '621e9019bd8bf10f146d4eea',
+            name: 'asdad',
+            idShort: 1,
+            shortLink: 'IPZGRDMM'
+          },
+          old: { idList: '6223422a46526f3f1a53d017' },
+          board: {
+            id: '621e892a142efc4992fc73e7',
+            name: 'test team 20',
+            shortLink: 'USWK8a4w'
+          },
+          listBefore: { id: '6223422a46526f3f1a53d017', name: 'team name 10 new' },
+          listAfter: { id: '622343a41c3d5c3f69272b94', name: 'team name 10 new' }
+        },
+        appCreator: null,
+        type: 'updateCard',
+        date: '2022-03-05T11:04:37.130Z',
+        limits: {},
+        display: {
+          translationKey: 'action_move_card_from_list_to_list',
+          entities: {
+            card: {
+              type: 'card',
+              idList: '622343a41c3d5c3f69272b94',
+              id: '621e9019bd8bf10f146d4eea',
+              shortLink: 'IPZGRDMM',
+              text: 'asdad'
+            },
+            listBefore: {
+              type: 'list',
+              id: '6223422a46526f3f1a53d017',
+              text: 'team name 10 new'
+            },
+            listAfter: {
+              type: 'list',
+              id: '622343a41c3d5c3f69272b94',
+              text: 'team name 10 new'
+            },
+            memberCreator: {
+              type: 'member',
+              id: '616576dc48190f7969f67b62',
+              username: 'mohamednageh7',
+              text: 'mohamednageh7'
+            }
+          }
+        },
+        memberCreator: {
+          id: '616576dc48190f7969f67b62',
+          activityBlocked: false,
+          avatarHash: 'e5019bd1d553a6f4eb993ff74fa36ca3',
+          avatarUrl: 'https://trello-members.s3.amazonaws.com/616576dc48190f7969f67b62/e5019bd1d553a6f4eb993ff74fa36ca3',
+          fullName: 'mohamednageh7',
+          idMemberReferrer: null,
+          initials: 'M',
+          nonPublic: {},
+          nonPublicAvailable: true,
+          username: 'mohamednageh7'
+        }
+      }
+    }
+  },
+  level: 'info',
+  timestamp: '2022-03-05 14:04:38'
+}
