@@ -49,18 +49,19 @@ const DepartmentController = class DepartmentController extends DepartmentBD {
           let boardData = {
             name: data.name,
             color: data.color,
+            _id:data._id
           };
           await BoardController.updateBoard(data.boardId, boardData);
-          depUpdate = await super.updatedbDepartment(data);
+          depUpdate = await super.updatedbDepartment(boardData);
         }
 
         // if not undefine then there is an action needed
         // make mainBoard or not
-        if (data.mainBoard !== undefined) {
+        if (data.mainBoard !== undefined && data.teams) {
           logger.info('second step')
 
           // if false => remove the webhook
-          if (!data.mainBoard && data.teams) {
+          if (!data.mainBoard) {
             let hookRemove = data.teams.map(async (id) => {
               return await BoardController.removeWebhook(id);
             });
@@ -72,7 +73,7 @@ const DepartmentController = class DepartmentController extends DepartmentBD {
             );
           }
           // if true => create the webhook
-          if (data.mainBoard && data.teams) {
+          if (data.mainBoard) {
           logger.info('fourth step')
 
             let hookAdd = data.teams.map(async (id) => {

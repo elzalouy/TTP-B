@@ -4407,3 +4407,31 @@
   level: 'error',
   timestamp: '2022-03-05 14:02:49'
 }
+{
+  message: {
+    updatedbDepartmentError: CastError: Cast to ObjectId failed for value "{ _id: undefined }" (type Object) at path "_id" for model "department"
+        at model.Query.exec (E:\trello-project\TTP-Back\node_modules\mongoose\lib\query.js:4545:21)
+        at model.Query.Query.then (E:\trello-project\TTP-Back\node_modules\mongoose\lib\query.js:4644:15)
+        at processTicksAndRejections (internal/process/task_queues.js:95:5) {
+      messageFormat: undefined,
+      stringValue: '"{ _id: undefined }"',
+      kind: 'ObjectId',
+      value: { _id: undefined },
+      path: '_id',
+      reason: TypeError: Argument passed in must be a Buffer or string of 12 bytes or a string of 24 hex characters
+          at new BSONTypeError (E:\trello-project\TTP-Back\node_modules\bson\lib\error.js:39:42)
+          at new ObjectId (E:\trello-project\TTP-Back\node_modules\bson\src\objectid.ts:88:15)
+          at castObjectId (E:\trello-project\TTP-Back\node_modules\mongoose\lib\cast\objectid.js:25:12)
+          at ObjectId.cast (E:\trello-project\TTP-Back\node_modules\mongoose\lib\schema\objectid.js:245:12)
+          at ObjectId.SchemaType.applySetters (E:\trello-project\TTP-Back\node_modules\mongoose\lib\schematype.js:1135:12)
+          at ObjectId.SchemaType._castForQuery (E:\trello-project\TTP-Back\node_modules\mongoose\lib\schematype.js:1567:15)
+          at ObjectId.SchemaType.castForQuery (E:\trello-project\TTP-Back\node_modules\mongoose\lib\schematype.js:1557:15)
+          at ObjectId.SchemaType.castForQueryWrapper (E:\trello-project\TTP-Back\node_modules\mongoose\lib\schematype.js:1534:20)
+          at cast (E:\trello-project\TTP-Back\node_modules\mongoose\lib\cast.js:280:34)
+          at model.Query.Query.cast (E:\trello-project\TTP-Back\node_modules\mongoose\lib\query.js:4968:12),
+      valueType: 'Object'
+    }
+  },
+  level: 'error',
+  timestamp: '2022-03-05 22:54:54'
+}
