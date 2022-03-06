@@ -79,7 +79,7 @@ const BoardController = class BoardController {
       let removeBoard = trelloApi(
         `boards/${id}&`
       );
-logger.info({removeBoard})
+
       return await fetch(removeBoard, {
           method: "DELETE",
         }).then(res => logger.info('delete board done')).catch(err => logger.info('error in delete board',err))

@@ -21277,3 +21277,287 @@
   level: 'info',
   timestamp: '2022-03-06 00:28:07'
 }
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-03-06 23:58:37'
+}
+{
+  message: {
+    borderData: Promise { <pending> },
+    createBoardApi: 'https://api.trello.com/1/boards/?name=test 31&prefs_background=sky&defaultLists=false&key=96b980af38094db6e5767718567af6ce&token=7f44a81ca5f903883e1b3a5720f89b70b8feacd4437d2cb893068b3b93455e5f'
+  },
+  level: 'info',
+  timestamp: '2022-03-07 00:00:53'
+}
+{
+  message: {
+    boardData: {
+      id: '62252103296ae55fc92146cd',
+      name: 'test 31',
+      desc: '',
+      descData: null,
+      closed: false,
+      idOrganization: '61e87201397f573cb99a0418',
+      idEnterprise: null,
+      pinned: false,
+      url: 'https://trello.com/b/XCvZRV72/test-31',
+      shortUrl: 'https://trello.com/b/XCvZRV72',
+      prefs: {
+        permissionLevel: 'private',
+        hideVotes: false,
+        voting: 'disabled',
+        comments: 'members',
+        invitations: 'members',
+        selfJoin: true,
+        cardCovers: true,
+        isTemplate: false,
+        cardAging: 'regular',
+        calendarFeedEnabled: false,
+        hiddenPluginBoardButtons: [],
+        background: 'sky',
+        backgroundColor: '#00AECC',
+        backgroundImage: null,
+        backgroundImageScaled: null,
+        backgroundTile: false,
+        backgroundBrightness: 'dark',
+        backgroundBottomColor: '#00AECC',
+        backgroundTopColor: '#00AECC',
+        canBePublic: true,
+        canBeEnterprise: true,
+        canBeOrg: true,
+        canBePrivate: true,
+        canInvite: true
+      },
+      labelNames: {
+        green: '',
+        yellow: '',
+        orange: '',
+        red: '',
+        purple: '',
+        blue: '',
+        sky: '',
+        lime: '',
+        pink: '',
+        black: ''
+      },
+      limits: {}
+    }
+  },
+  level: 'info',
+  timestamp: '2022-03-07 00:00:53'
+}
+{
+  message: {
+    data: {
+      name: 'test 31',
+      color: 'sky',
+      boardId: '62252103296ae55fc92146cd'
+    }
+  },
+  level: 'info',
+  timestamp: '2022-03-07 00:00:53'
+}
+{
+  message: { teamData: '6225210603e32241b36fe175' },
+  level: 'info',
+  timestamp: '2022-03-07 00:00:55'
+}
+{
+  message: { teamData: '622521061c0f304232f108ae' },
+  level: 'info',
+  timestamp: '2022-03-07 00:00:55'
+}
+{
+  message: { removeWebhookSucced: 'done' },
+  level: 'info',
+  timestamp: '2022-03-07 00:00:55'
+}
+{
+  message: {
+    teamListIds: [
+      {
+        idInTrello: '6225210603e32241b36fe175',
+        idInDB: '61eab832b41398d86474d4ac'
+      },
+      {
+        idInTrello: '622521061c0f304232f108ae',
+        idInDB: '61eac1ea6b95c7f7ed8be309'
+      }
+    ]
+  },
+  level: 'info',
+  timestamp: '2022-03-07 00:00:55'
+}
+{
+  message: {
+    updatedbDepartmentError: {
+      _id: new ObjectId("62252105cfb3133da968d608"),
+      defaultListId: '62252107155044643ad1469e',
+      sharedListID: '622521053acb0e8e059f9545',
+      doneListId: '62252104e85de950ef358d47',
+      reviewListId: '62252106fbe16a3d5e6ec94b',
+      notClearListId: '62252107ba6ed784dd115563',
+      canceldListId: '62252108ee29d55ea0b90b76',
+      teamsId: [
+        {
+          idInTrello: '6225210603e32241b36fe175',
+          idInDB: '61eab832b41398d86474d4ac'
+        },
+        {
+          idInTrello: '622521061c0f304232f108ae',
+          idInDB: '61eac1ea6b95c7f7ed8be309'
+        }
+      ]
+    }
+  },
+  level: 'info',
+  timestamp: '2022-03-07 00:00:57'
+}
+{
+  message: { webhookCreateResult: 'webhook done' },
+  level: 'info',
+  timestamp: '2022-03-07 00:00:59'
+}
+{
+  message: {
+    borderData: Promise { <pending> },
+    createBoardApi: 'https://api.trello.com/1/boards/?name=test 32&prefs_background=pink&defaultLists=false&key=96b980af38094db6e5767718567af6ce&token=7f44a81ca5f903883e1b3a5720f89b70b8feacd4437d2cb893068b3b93455e5f'
+  },
+  level: 'info',
+  timestamp: '2022-03-07 00:03:00'
+}
+{
+  message: {
+    boardData: {
+      id: '6225218381a0ee6a0f856b6d',
+      name: 'test 32',
+      desc: '',
+      descData: null,
+      closed: false,
+      idOrganization: '61e87201397f573cb99a0418',
+      idEnterprise: null,
+      pinned: false,
+      url: 'https://trello.com/b/HcecjsG2/test-32',
+      shortUrl: 'https://trello.com/b/HcecjsG2',
+      prefs: {
+        permissionLevel: 'private',
+        hideVotes: false,
+        voting: 'disabled',
+        comments: 'members',
+        invitations: 'members',
+        selfJoin: true,
+        cardCovers: true,
+        isTemplate: false,
+        cardAging: 'regular',
+        calendarFeedEnabled: false,
+        hiddenPluginBoardButtons: [],
+        background: 'pink',
+        backgroundColor: '#CD5A91',
+        backgroundImage: null,
+        backgroundImageScaled: null,
+        backgroundTile: false,
+        backgroundBrightness: 'dark',
+        backgroundBottomColor: '#CD5A91',
+        backgroundTopColor: '#CD5A91',
+        canBePublic: true,
+        canBeEnterprise: true,
+        canBeOrg: true,
+        canBePrivate: true,
+        canInvite: true
+      },
+      labelNames: {
+        green: '',
+        yellow: '',
+        orange: '',
+        red: '',
+        purple: '',
+        blue: '',
+        sky: '',
+        lime: '',
+        pink: '',
+        black: ''
+      },
+      limits: {}
+    }
+  },
+  level: 'info',
+  timestamp: '2022-03-07 00:03:00'
+}
+{
+  message: {
+    data: {
+      name: 'test 32',
+      color: 'pink',
+      boardId: '6225218381a0ee6a0f856b6d'
+    }
+  },
+  level: 'info',
+  timestamp: '2022-03-07 00:03:00'
+}
+{
+  message: { teamData: '622521876028ff41548d1e5c' },
+  level: 'info',
+  timestamp: '2022-03-07 00:03:04'
+}
+{
+  message: { teamData: '622521879058227d84a8e43e' },
+  level: 'info',
+  timestamp: '2022-03-07 00:03:04'
+}
+{
+  message: { removeWebhookSucced: 'done' },
+  level: 'info',
+  timestamp: '2022-03-07 00:03:04'
+}
+{
+  message: {
+    teamListIds: [
+      {
+        idInTrello: '622521876028ff41548d1e5c',
+        idInDB: '61eab832b41398d86474d4ac'
+      },
+      {
+        idInTrello: '622521879058227d84a8e43e',
+        idInDB: '61eac1ea6b95c7f7ed8be309'
+      }
+    ]
+  },
+  level: 'info',
+  timestamp: '2022-03-07 00:03:05'
+}
+{
+  message: {
+    updatedbDepartmentError: {
+      _id: new ObjectId("62252184cfb3133da968d60f"),
+      defaultListId: '62252188055cb3873cd8a36d',
+      sharedListID: '6225218586d79e8131fe0f51',
+      doneListId: '622521843b737845e3fc00be',
+      reviewListId: '622521862d2a6c0d81f7e9c3',
+      notClearListId: '62252189c629bc121f1a7ac6',
+      canceldListId: '6225218a1c14ca50e9ed2303',
+      teamsId: [
+        {
+          idInTrello: '622521876028ff41548d1e5c',
+          idInDB: '61eab832b41398d86474d4ac'
+        },
+        {
+          idInTrello: '622521879058227d84a8e43e',
+          idInDB: '61eac1ea6b95c7f7ed8be309'
+        }
+      ]
+    }
+  },
+  level: 'info',
+  timestamp: '2022-03-07 00:03:07'
+}
+{
+  message: { webhookCreateResult: 'webhook done' },
+  level: 'info',
+  timestamp: '2022-03-07 00:03:09'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-03-07 00:04:39'
+}
