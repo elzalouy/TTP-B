@@ -45,7 +45,7 @@ const DepartmentReq = class DepartmentReq extends DepartmentController {
   static async handleDeleteDepartment(req: Request, res: Response) {
     try {
       let {_id,listTrelloIds,mainBoard,boardId}= req.body
-      if(!_id || !listTrelloIds || !mainBoard || !boardId){
+      if(!_id || !listTrelloIds || mainBoard === undefined || !boardId){
         return res.status(400).send(customeError("delete_dep_error",400))
       }
 

@@ -4452,3 +4452,20 @@
   level: 'error',
   timestamp: '2022-03-06 00:13:23'
 }
+{
+  message: {
+    handleDeletDepartmentDataError: TypeError: logger_1.default.inf0 is not a function
+        at E:\trello-project\TTP-Back\src\lib\presentation\department\department.ts:48:14
+        at Generator.next (<anonymous>)
+        at E:\trello-project\TTP-Back\src\lib\presentation\department\department.ts:8:71
+        at new Promise (<anonymous>)
+        at __awaiter (E:\trello-project\TTP-Back\src\lib\presentation\department\department.ts:4:12)
+        at handleDeleteDepartment (E:\trello-project\TTP-Back\src\lib\presentation\department\department.ts:70:16)
+        at Layer.handle [as handle_request] (E:\trello-project\TTP-Back\node_modules\express\lib\router\layer.js:95:5)
+        at next (E:\trello-project\TTP-Back\node_modules\express\lib\router\route.js:137:13)
+        at Route.dispatch (E:\trello-project\TTP-Back\node_modules\express\lib\router\route.js:112:3)
+        at Layer.handle [as handle_request] (E:\trello-project\TTP-Back\node_modules\express\lib\router\layer.js:95:5)
+  },
+  level: 'error',
+  timestamp: '2022-03-07 00:15:45'
+}

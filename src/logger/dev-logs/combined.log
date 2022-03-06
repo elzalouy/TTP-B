@@ -21561,3 +21561,161 @@
   level: 'info',
   timestamp: '2022-03-07 00:04:39'
 }
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-03-07 00:12:02'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-03-07 00:13:30'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-03-07 00:15:36'
+}
+{
+  message: {
+    handleDeletDepartmentDataError: TypeError: logger_1.default.inf0 is not a function
+        at E:\trello-project\TTP-Back\src\lib\presentation\department\department.ts:48:14
+        at Generator.next (<anonymous>)
+        at E:\trello-project\TTP-Back\src\lib\presentation\department\department.ts:8:71
+        at new Promise (<anonymous>)
+        at __awaiter (E:\trello-project\TTP-Back\src\lib\presentation\department\department.ts:4:12)
+        at handleDeleteDepartment (E:\trello-project\TTP-Back\src\lib\presentation\department\department.ts:70:16)
+        at Layer.handle [as handle_request] (E:\trello-project\TTP-Back\node_modules\express\lib\router\layer.js:95:5)
+        at next (E:\trello-project\TTP-Back\node_modules\express\lib\router\route.js:137:13)
+        at Route.dispatch (E:\trello-project\TTP-Back\node_modules\express\lib\router\route.js:112:3)
+        at Layer.handle [as handle_request] (E:\trello-project\TTP-Back\node_modules\express\lib\router\layer.js:95:5)
+  },
+  level: 'error',
+  timestamp: '2022-03-07 00:15:45'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-03-07 00:16:55'
+}
+{
+  message: {
+    body: {
+      _id: '62252105cfb3133da968d608',
+      boardId: '62252103296ae55fc92146cd',
+      listTrelloIds: [
+        '6225210603e32241b36fe175',
+        '622521061c0f304232f108ae',
+        '62252108ee29d55ea0b90b76',
+        '62252107155044643ad1469e',
+        '62252104e85de950ef358d47',
+        '62252107ba6ed784dd115563',
+        '62252106fbe16a3d5e6ec94b',
+        '622521053acb0e8e059f9545'
+      ],
+      mainBoard: false
+    },
+    check: true
+  },
+  level: 'info',
+  timestamp: '2022-03-07 00:17:04'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-03-07 00:20:18'
+}
+{
+  message: {
+    body: {
+      _id: '62252105cfb3133da968d608',
+      boardId: '62252103296ae55fc92146cd',
+      listTrelloIds: [
+        '6225210603e32241b36fe175',
+        '622521061c0f304232f108ae',
+        '62252108ee29d55ea0b90b76',
+        '62252107155044643ad1469e',
+        '62252104e85de950ef358d47',
+        '62252107ba6ed784dd115563',
+        '62252106fbe16a3d5e6ec94b',
+        '622521053acb0e8e059f9545'
+      ],
+      mainBoard: false
+    },
+    check: false,
+    check2: false,
+    check3: true,
+    check4: false
+  },
+  level: 'info',
+  timestamp: '2022-03-07 00:20:38'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-03-07 00:21:52'
+}
+{
+  message: {
+    body: {
+      _id: '62252105cfb3133da968d608',
+      boardId: '62252103296ae55fc92146cd',
+      listTrelloIds: [
+        '6225210603e32241b36fe175',
+        '622521061c0f304232f108ae',
+        '62252108ee29d55ea0b90b76',
+        '62252107155044643ad1469e',
+        '62252104e85de950ef358d47',
+        '62252107ba6ed784dd115563',
+        '62252106fbe16a3d5e6ec94b',
+        '622521053acb0e8e059f9545'
+      ],
+      mainBoard: false
+    },
+    check: false,
+    check2: false,
+    check3: false,
+    check4: false
+  },
+  level: 'info',
+  timestamp: '2022-03-07 00:22:01'
+}
+{
+  message: 'delete board done',
+  level: 'info',
+  timestamp: '2022-03-07 00:22:03'
+}
+{
+  message: {
+    department: {
+      _id: new ObjectId("62252105cfb3133da968d608"),
+      name: 'test 31',
+      boardId: '62252103296ae55fc92146cd',
+      color: 'sky',
+      mainBoard: false,
+      teamsId: [
+        {
+          idInTrello: '6225210603e32241b36fe175',
+          idInDB: new ObjectId("61eab832b41398d86474d4ac"),
+          _id: new ObjectId("62252109cfb3133da968d60b")
+        },
+        {
+          idInTrello: '622521061c0f304232f108ae',
+          idInDB: new ObjectId("61eac1ea6b95c7f7ed8be309"),
+          _id: new ObjectId("62252109cfb3133da968d60c")
+        }
+      ],
+      createdAt: 2022-03-06T21:00:53.218Z,
+      updatedAt: 2022-03-06T21:00:57.867Z,
+      __v: 0,
+      canceldListId: '62252108ee29d55ea0b90b76',
+      defaultListId: '62252107155044643ad1469e',
+      doneListId: '62252104e85de950ef358d47',
+      notClearListId: '62252107ba6ed784dd115563',
+      reviewListId: '62252106fbe16a3d5e6ec94b',
+      sharedListID: '622521053acb0e8e059f9545'
+    }
+  },
+  level: 'info',
+  timestamp: '2022-03-07 00:22:03'
+}
