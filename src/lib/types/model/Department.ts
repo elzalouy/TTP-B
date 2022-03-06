@@ -11,8 +11,7 @@ export interface DepartmentInfo extends Document {
   notClearListId: string;
   canceldListId: string;
   color:string;
-  // teamListIds:string[];
-  // teamsIdInDB:ObjectId[];
+  mainBoard:boolean;
   teamsId:{
     idInTrello:string;
     idInDB:any;
@@ -46,5 +45,6 @@ export interface UpdateDepartment {
   addTeam?:{
     _id:string;
     name:string;
-  }[]|null
+  }[]|null;
+  listIds?:string[]|null
 }

@@ -33,13 +33,17 @@ const DepartmentSchema: Schema = new Schema<DepartmentInfo>( // department
     reviewListId: {
       type: String,
     },
+    mainBoard:{
+      type:Boolean,
+      default:false
+    },
     teamsId: [
       {
         idInTrello: String,
         idInDB: {
           type: Schema.Types.ObjectId,
           ref: "teams",
-        },
+        }
       },
     ],
   },

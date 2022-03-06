@@ -9,3 +9,368 @@
   level: 'error',
   timestamp: '2022-03-04 14:39:12'
 }
+{
+  message: {
+    updateDepartmentError: TypeError: Cannot read property 'map' of undefined
+        at Function.<anonymous> (E:\trello-project\TTP-Back\src\lib\controllers\department.ts:62:39)
+        at Generator.next (<anonymous>)
+        at E:\trello-project\TTP-Back\src\lib\controllers\department.ts:8:71
+        at new Promise (<anonymous>)
+        at __awaiter (E:\trello-project\TTP-Back\src\lib\controllers\department.ts:4:12)
+        at Function.__updateDepartmentData (E:\trello-project\TTP-Back\src\lib\controllers\department.ts:73:16)
+        at E:\trello-project\TTP-Back\src\lib\controllers\department.ts:13:39
+        at Generator.next (<anonymous>)
+        at E:\trello-project\TTP-Back\src\lib\controllers\department.ts:8:71
+        at new Promise (<anonymous>)
+  },
+  level: 'error',
+  timestamp: '2022-03-05 11:35:38'
+}
+{
+  message: {
+    updateDepartmentError: TypeError: Cannot read property 'map' of undefined
+        at Function.<anonymous> (E:\trello-project\TTP-Back\src\lib\controllers\department.ts:62:39)
+        at Generator.next (<anonymous>)
+        at E:\trello-project\TTP-Back\src\lib\controllers\department.ts:8:71
+        at new Promise (<anonymous>)
+        at __awaiter (E:\trello-project\TTP-Back\src\lib\controllers\department.ts:4:12)
+        at Function.__updateDepartmentData (E:\trello-project\TTP-Back\src\lib\controllers\department.ts:73:16)
+        at E:\trello-project\TTP-Back\src\lib\controllers\department.ts:13:39
+        at Generator.next (<anonymous>)
+        at E:\trello-project\TTP-Back\src\lib\controllers\department.ts:8:71
+        at new Promise (<anonymous>)
+  },
+  level: 'error',
+  timestamp: '2022-03-05 11:37:55'
+}
+{
+  message: {
+    updateDepartmentError: TypeError: Cannot read property 'map' of undefined
+        at Function.<anonymous> (E:\trello-project\TTP-Back\src\lib\controllers\department.ts:62:39)
+        at Generator.next (<anonymous>)
+        at fulfilled (E:\trello-project\TTP-Back\src\lib\controllers\department.ts:5:58)
+        at processTicksAndRejections (internal/process/task_queues.js:95:5)
+  },
+  level: 'error',
+  timestamp: '2022-03-05 11:38:05'
+}
+{
+  message: {
+    updateDepartmentError: TypeError: Cannot read property 'map' of undefined
+        at Function.<anonymous> (E:\trello-project\TTP-Back\src\lib\controllers\department.ts:62:39)
+        at Generator.next (<anonymous>)
+        at E:\trello-project\TTP-Back\src\lib\controllers\department.ts:8:71
+        at new Promise (<anonymous>)
+        at __awaiter (E:\trello-project\TTP-Back\src\lib\controllers\department.ts:4:12)
+        at Function.__updateDepartmentData (E:\trello-project\TTP-Back\src\lib\controllers\department.ts:73:16)
+        at E:\trello-project\TTP-Back\src\lib\controllers\department.ts:13:39
+        at Generator.next (<anonymous>)
+        at E:\trello-project\TTP-Back\src\lib\controllers\department.ts:8:71
+        at new Promise (<anonymous>)
+  },
+  level: 'error',
+  timestamp: '2022-03-05 11:38:23'
+}
+{
+  message: {
+    createTeamListError: FetchError: invalid json response body at https://api.trello.com/1/lists?name=team%20name%2010%20new&idBoard=undefined&key=96b980af38094db6e5767718567af6ce&token=7f44a81ca5f903883e1b3a5720f89b70b8feacd4437d2cb893068b3b93455e5f reason: Unexpected token i in JSON at position 0
+        at E:\trello-project\TTP-Back\node_modules\node-fetch\lib\index.js:273:32
+        at processTicksAndRejections (internal/process/task_queues.js:95:5) {
+      type: 'invalid-json'
+    }
+  },
+  level: 'error',
+  timestamp: '2022-03-05 13:29:25'
+}
+{
+  message: {
+    deleteNestedRecordDepDBError: CastError: Cast to embedded failed for value "{ idInTrello: { '$each': undefined } }" (type string) at path "teamsId"
+        at model.Query.exec (E:\trello-project\TTP-Back\node_modules\mongoose\lib\query.js:4545:21)
+        at model.Query.Query.then (E:\trello-project\TTP-Back\node_modules\mongoose\lib\query.js:4644:15)
+        at processTicksAndRejections (internal/process/task_queues.js:95:5) {
+      messageFormat: undefined,
+      stringValue: `"{ idInTrello: { '$each': undefined } }"`,
+      kind: 'embedded',
+      value: "{ idInTrello: { '$each': undefined } }",
+      path: 'teamsId',
+      reason: CastError: Cast to string failed for value "{ '$each': undefined }" (type Object) at path "idInTrello"
+          at SchemaString.cast (E:\trello-project\TTP-Back\node_modules\mongoose\lib\schema\string.js:603:11)
+          at SchemaString.SchemaType.applySetters (E:\trello-project\TTP-Back\node_modules\mongoose\lib\schematype.js:1135:12)
+          at EmbeddedDocument.$set (E:\trello-project\TTP-Back\node_modules\mongoose\lib\document.js:1407:20)
+          at EmbeddedDocument.$set (E:\trello-project\TTP-Back\node_modules\mongoose\lib\document.js:1161:14)
+          at EmbeddedDocument.Document (E:\trello-project\TTP-Back\node_modules\mongoose\lib\document.js:158:12)
+          at EmbeddedDocument.Subdocument (E:\trello-project\TTP-Back\node_modules\mongoose\lib\types\subdocument.js:28:12)
+          at EmbeddedDocument.ArraySubdocument [as constructor] (E:\trello-project\TTP-Back\node_modules\mongoose\lib\types\ArraySubdocument.js:36:15)
+          at new EmbeddedDocument (E:\trello-project\TTP-Back\node_modules\mongoose\lib\schema\documentarray.js:115:17)
+          at DocumentArrayPath.cast (E:\trello-project\TTP-Back\node_modules\mongoose\lib\schema\documentarray.js:477:22)
+          at DocumentArrayPath.SchemaType.applySetters (E:\trello-project\TTP-Back\node_modules\mongoose\lib\schematype.js:1135:12) {
+        stringValue: `"{ '$each': undefined }"`,
+        messageFormat: undefined,
+        kind: 'string',
+        value: { '$each': undefined },
+        path: 'idInTrello',
+        reason: null,
+        valueType: 'Object'
+      },
+      valueType: 'string'
+    }
+  },
+  level: 'error',
+  timestamp: '2022-03-05 13:29:25'
+}
+{
+  message: {
+    deleteNestedRecordDepDBError: CastError: Cast to embedded failed for value "{ idInTrello: { '$each': [ [Object] ] } }" (type string) at path "teamsId"
+        at model.Query.exec (E:\trello-project\TTP-Back\node_modules\mongoose\lib\query.js:4545:21)
+        at model.Query.Query.then (E:\trello-project\TTP-Back\node_modules\mongoose\lib\query.js:4644:15)
+        at processTicksAndRejections (internal/process/task_queues.js:95:5) {
+      messageFormat: undefined,
+      stringValue: `"{ idInTrello: { '$each': [ [Object] ] } }"`,
+      kind: 'embedded',
+      value: "{ idInTrello: { '$each': [ [Object] ] } }",
+      path: 'teamsId',
+      reason: CastError: Cast to string failed for value "{
+        '$each': [
+          {
+            idInTrello: '62233cce69097b85f922c451',
+            idInDB: '621e892dbd32990dfc449552'
+          }
+        ]
+      }" (type Object) at path "idInTrello"
+          at SchemaString.cast (E:\trello-project\TTP-Back\node_modules\mongoose\lib\schema\string.js:603:11)
+          at SchemaString.SchemaType.applySetters (E:\trello-project\TTP-Back\node_modules\mongoose\lib\schematype.js:1135:12)
+          at EmbeddedDocument.$set (E:\trello-project\TTP-Back\node_modules\mongoose\lib\document.js:1407:20)
+          at EmbeddedDocument.$set (E:\trello-project\TTP-Back\node_modules\mongoose\lib\document.js:1161:14)
+          at EmbeddedDocument.Document (E:\trello-project\TTP-Back\node_modules\mongoose\lib\document.js:158:12)
+          at EmbeddedDocument.Subdocument (E:\trello-project\TTP-Back\node_modules\mongoose\lib\types\subdocument.js:28:12)
+          at EmbeddedDocument.ArraySubdocument [as constructor] (E:\trello-project\TTP-Back\node_modules\mongoose\lib\types\ArraySubdocument.js:36:15)
+          at new EmbeddedDocument (E:\trello-project\TTP-Back\node_modules\mongoose\lib\schema\documentarray.js:115:17)
+          at DocumentArrayPath.cast (E:\trello-project\TTP-Back\node_modules\mongoose\lib\schema\documentarray.js:477:22)
+          at DocumentArrayPath.SchemaType.applySetters (E:\trello-project\TTP-Back\node_modules\mongoose\lib\schematype.js:1135:12) {
+        stringValue: '"{\n' +
+          "  '$each': [\n" +
+          '    {\n' +
+          "      idInTrello: '62233cce69097b85f922c451',\n" +
+          "      idInDB: '621e892dbd32990dfc449552'\n" +
+          '    }\n' +
+          '  ]\n' +
+          '}"',
+        messageFormat: undefined,
+        kind: 'string',
+        value: {
+          '$each': [
+            {
+              idInTrello: '62233cce69097b85f922c451',
+              idInDB: '621e892dbd32990dfc449552'
+            }
+          ]
+        },
+        path: 'idInTrello',
+        reason: null,
+        valueType: 'Object'
+      },
+      valueType: 'string'
+    }
+  },
+  level: 'error',
+  timestamp: '2022-03-05 13:34:55'
+}
+{
+  message: {
+    deleteNestedRecordDepDBError: CastError: Cast to embedded failed for value "{ idInTrello: { '$each': [ [Object] ], '$position': 0 } }" (type string) at path "teamsId"
+        at model.Query.exec (E:\trello-project\TTP-Back\node_modules\mongoose\lib\query.js:4545:21)
+        at model.Query.Query.then (E:\trello-project\TTP-Back\node_modules\mongoose\lib\query.js:4644:15)
+        at processTicksAndRejections (internal/process/task_queues.js:95:5) {
+      messageFormat: undefined,
+      stringValue: `"{ idInTrello: { '$each': [ [Object] ], '$position': 0 } }"`,
+      kind: 'embedded',
+      value: "{ idInTrello: { '$each': [ [Object] ], '$position': 0 } }",
+      path: 'teamsId',
+      reason: CastError: Cast to string failed for value "{
+        '$each': [
+          {
+            idInTrello: '62233ecaac012b4164014979',
+            idInDB: '621e892dbd32990dfc449552'
+          }
+        ],
+        '$position': 0
+      }" (type Object) at path "idInTrello"
+          at SchemaString.cast (E:\trello-project\TTP-Back\node_modules\mongoose\lib\schema\string.js:603:11)
+          at SchemaString.SchemaType.applySetters (E:\trello-project\TTP-Back\node_modules\mongoose\lib\schematype.js:1135:12)
+          at EmbeddedDocument.$set (E:\trello-project\TTP-Back\node_modules\mongoose\lib\document.js:1407:20)
+          at EmbeddedDocument.$set (E:\trello-project\TTP-Back\node_modules\mongoose\lib\document.js:1161:14)
+          at EmbeddedDocument.Document (E:\trello-project\TTP-Back\node_modules\mongoose\lib\document.js:158:12)
+          at EmbeddedDocument.Subdocument (E:\trello-project\TTP-Back\node_modules\mongoose\lib\types\subdocument.js:28:12)
+          at EmbeddedDocument.ArraySubdocument [as constructor] (E:\trello-project\TTP-Back\node_modules\mongoose\lib\types\ArraySubdocument.js:36:15)
+          at new EmbeddedDocument (E:\trello-project\TTP-Back\node_modules\mongoose\lib\schema\documentarray.js:115:17)
+          at DocumentArrayPath.cast (E:\trello-project\TTP-Back\node_modules\mongoose\lib\schema\documentarray.js:477:22)
+          at DocumentArrayPath.SchemaType.applySetters (E:\trello-project\TTP-Back\node_modules\mongoose\lib\schematype.js:1135:12) {
+        stringValue: '"{\n' +
+          "  '$each': [\n" +
+          '    {\n' +
+          "      idInTrello: '62233ecaac012b4164014979',\n" +
+          "      idInDB: '621e892dbd32990dfc449552'\n" +
+          '    }\n' +
+          '  ],\n' +
+          "  '$position': 0\n" +
+          '}"',
+        messageFormat: undefined,
+        kind: 'string',
+        value: {
+          '$each': [
+            {
+              idInTrello: '62233ecaac012b4164014979',
+              idInDB: '621e892dbd32990dfc449552'
+            }
+          ],
+          '$position': 0
+        },
+        path: 'idInTrello',
+        reason: null,
+        valueType: 'Object'
+      },
+      valueType: 'string'
+    }
+  },
+  level: 'error',
+  timestamp: '2022-03-05 13:43:22'
+}
+{
+  message: {
+    deleteNestedRecordDepDBError: CastError: Cast to embedded failed for value "{ idInTrello: { '$each': [ [Object] ], '$position': 0 } }" (type string) at path "teamsId"
+        at model.Query.exec (E:\trello-project\TTP-Back\node_modules\mongoose\lib\query.js:4545:21)
+        at model.Query.Query.then (E:\trello-project\TTP-Back\node_modules\mongoose\lib\query.js:4644:15)
+        at processTicksAndRejections (internal/process/task_queues.js:95:5) {
+      messageFormat: undefined,
+      stringValue: `"{ idInTrello: { '$each': [ [Object] ], '$position': 0 } }"`,
+      kind: 'embedded',
+      value: "{ idInTrello: { '$each': [ [Object] ], '$position': 0 } }",
+      path: 'teamsId',
+      reason: CastError: Cast to string failed for value "{
+        '$each': [
+          {
+            idInTrello: '62233f3f5259ec7844825ce3',
+            idInDB: '621e892dbd32990dfc449552'
+          }
+        ],
+        '$position': 0
+      }" (type Object) at path "idInTrello"
+          at SchemaString.cast (E:\trello-project\TTP-Back\node_modules\mongoose\lib\schema\string.js:603:11)
+          at SchemaString.SchemaType.applySetters (E:\trello-project\TTP-Back\node_modules\mongoose\lib\schematype.js:1135:12)
+          at EmbeddedDocument.$set (E:\trello-project\TTP-Back\node_modules\mongoose\lib\document.js:1407:20)
+          at EmbeddedDocument.$set (E:\trello-project\TTP-Back\node_modules\mongoose\lib\document.js:1161:14)
+          at EmbeddedDocument.Document (E:\trello-project\TTP-Back\node_modules\mongoose\lib\document.js:158:12)
+          at EmbeddedDocument.Subdocument (E:\trello-project\TTP-Back\node_modules\mongoose\lib\types\subdocument.js:28:12)
+          at EmbeddedDocument.ArraySubdocument [as constructor] (E:\trello-project\TTP-Back\node_modules\mongoose\lib\types\ArraySubdocument.js:36:15)
+          at new EmbeddedDocument (E:\trello-project\TTP-Back\node_modules\mongoose\lib\schema\documentarray.js:115:17)
+          at DocumentArrayPath.cast (E:\trello-project\TTP-Back\node_modules\mongoose\lib\schema\documentarray.js:477:22)
+          at DocumentArrayPath.SchemaType.applySetters (E:\trello-project\TTP-Back\node_modules\mongoose\lib\schematype.js:1135:12) {
+        stringValue: '"{\n' +
+          "  '$each': [\n" +
+          '    {\n' +
+          "      idInTrello: '62233f3f5259ec7844825ce3',\n" +
+          "      idInDB: '621e892dbd32990dfc449552'\n" +
+          '    }\n' +
+          '  ],\n' +
+          "  '$position': 0\n" +
+          '}"',
+        messageFormat: undefined,
+        kind: 'string',
+        value: {
+          '$each': [
+            {
+              idInTrello: '62233f3f5259ec7844825ce3',
+              idInDB: '621e892dbd32990dfc449552'
+            }
+          ],
+          '$position': 0
+        },
+        path: 'idInTrello',
+        reason: null,
+        valueType: 'Object'
+      },
+      valueType: 'string'
+    }
+  },
+  level: 'error',
+  timestamp: '2022-03-05 13:45:20'
+}
+{
+  message: {
+    updateDepartmentError: TypeError: Cannot read property 'map' of undefined
+        at Function.<anonymous> (E:\trello-project\TTP-Back\src\lib\controllers\department.ts:78:39)
+        at Generator.next (<anonymous>)
+        at E:\trello-project\TTP-Back\src\lib\controllers\department.ts:8:71
+        at new Promise (<anonymous>)
+        at __awaiter (E:\trello-project\TTP-Back\src\lib\controllers\department.ts:4:12)
+        at Function.__updateDepartmentData (E:\trello-project\TTP-Back\src\lib\controllers\department.ts:73:16)
+        at E:\trello-project\TTP-Back\src\lib\controllers\department.ts:13:39
+        at Generator.next (<anonymous>)
+        at E:\trello-project\TTP-Back\src\lib\controllers\department.ts:8:71
+        at new Promise (<anonymous>)
+  },
+  level: 'error',
+  timestamp: '2022-03-05 14:02:49'
+}
+{
+  message: {
+    updatedbDepartmentError: CastError: Cast to ObjectId failed for value "{ _id: undefined }" (type Object) at path "_id" for model "department"
+        at model.Query.exec (E:\trello-project\TTP-Back\node_modules\mongoose\lib\query.js:4545:21)
+        at model.Query.Query.then (E:\trello-project\TTP-Back\node_modules\mongoose\lib\query.js:4644:15)
+        at processTicksAndRejections (internal/process/task_queues.js:95:5) {
+      messageFormat: undefined,
+      stringValue: '"{ _id: undefined }"',
+      kind: 'ObjectId',
+      value: { _id: undefined },
+      path: '_id',
+      reason: TypeError: Argument passed in must be a Buffer or string of 12 bytes or a string of 24 hex characters
+          at new BSONTypeError (E:\trello-project\TTP-Back\node_modules\bson\lib\error.js:39:42)
+          at new ObjectId (E:\trello-project\TTP-Back\node_modules\bson\src\objectid.ts:88:15)
+          at castObjectId (E:\trello-project\TTP-Back\node_modules\mongoose\lib\cast\objectid.js:25:12)
+          at ObjectId.cast (E:\trello-project\TTP-Back\node_modules\mongoose\lib\schema\objectid.js:245:12)
+          at ObjectId.SchemaType.applySetters (E:\trello-project\TTP-Back\node_modules\mongoose\lib\schematype.js:1135:12)
+          at ObjectId.SchemaType._castForQuery (E:\trello-project\TTP-Back\node_modules\mongoose\lib\schematype.js:1567:15)
+          at ObjectId.SchemaType.castForQuery (E:\trello-project\TTP-Back\node_modules\mongoose\lib\schematype.js:1557:15)
+          at ObjectId.SchemaType.castForQueryWrapper (E:\trello-project\TTP-Back\node_modules\mongoose\lib\schematype.js:1534:20)
+          at cast (E:\trello-project\TTP-Back\node_modules\mongoose\lib\cast.js:280:34)
+          at model.Query.Query.cast (E:\trello-project\TTP-Back\node_modules\mongoose\lib\query.js:4968:12),
+      valueType: 'Object'
+    }
+  },
+  level: 'error',
+  timestamp: '2022-03-05 22:54:54'
+}
+{
+  message: {
+    handleDeletDepartmentDataError: TypeError: Cannot destructure property '_id' of 'req.body.id' as it is undefined.
+        at E:\trello-project\TTP-Back\src\lib\presentation\department\department.ts:47:12
+        at Generator.next (<anonymous>)
+        at E:\trello-project\TTP-Back\src\lib\presentation\department\department.ts:8:71
+        at new Promise (<anonymous>)
+        at __awaiter (E:\trello-project\TTP-Back\src\lib\presentation\department\department.ts:4:12)
+        at handleDeleteDepartment (E:\trello-project\TTP-Back\src\lib\presentation\department\department.ts:70:16)
+        at Layer.handle [as handle_request] (E:\trello-project\TTP-Back\node_modules\express\lib\router\layer.js:95:5)
+        at next (E:\trello-project\TTP-Back\node_modules\express\lib\router\route.js:137:13)
+        at Route.dispatch (E:\trello-project\TTP-Back\node_modules\express\lib\router\route.js:112:3)
+        at Layer.handle [as handle_request] (E:\trello-project\TTP-Back\node_modules\express\lib\router\layer.js:95:5)
+  },
+  level: 'error',
+  timestamp: '2022-03-06 00:13:23'
+}
+{
+  message: {
+    handleDeletDepartmentDataError: TypeError: logger_1.default.inf0 is not a function
+        at E:\trello-project\TTP-Back\src\lib\presentation\department\department.ts:48:14
+        at Generator.next (<anonymous>)
+        at E:\trello-project\TTP-Back\src\lib\presentation\department\department.ts:8:71
+        at new Promise (<anonymous>)
+        at __awaiter (E:\trello-project\TTP-Back\src\lib\presentation\department\department.ts:4:12)
+        at handleDeleteDepartment (E:\trello-project\TTP-Back\src\lib\presentation\department\department.ts:70:16)
+        at Layer.handle [as handle_request] (E:\trello-project\TTP-Back\node_modules\express\lib\router\layer.js:95:5)
+        at next (E:\trello-project\TTP-Back\node_modules\express\lib\router\route.js:137:13)
+        at Route.dispatch (E:\trello-project\TTP-Back\node_modules\express\lib\router\route.js:112:3)
+        at Layer.handle [as handle_request] (E:\trello-project\TTP-Back\node_modules\express\lib\router\layer.js:95:5)
+  },
+  level: 'error',
+  timestamp: '2022-03-07 00:15:45'
+}

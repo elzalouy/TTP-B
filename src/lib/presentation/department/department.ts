@@ -23,11 +23,14 @@ const DepartmentReq = class DepartmentReq extends DepartmentController {
   static async handleUpdateDepartment(req: Request, res: Response) {
     try {
       let departmentData:UpdateDepartment = req.body
+      logger.info({departmentData})
       if(!departmentData){
         return res.status(400).send(customeError("update_dep_error",400))
       }
 
        let department = await super.updateDepartment(departmentData);
+      logger.info({department})
+
       if (department) {
         return res.status(200).send(department);
       } else {
@@ -41,12 +44,12 @@ const DepartmentReq = class DepartmentReq extends DepartmentController {
 
   static async handleDeleteDepartment(req: Request, res: Response) {
     try {
-      let id:string = req.body.id
-      if(!id){
+      let {_id,listTrelloIds,mainBoard,boardId}= req.body
+      if(!_id || !listTrelloIds || mainBoard === undefined || !boardId){
         return res.status(400).send(customeError("delete_dep_error",400))
       }
 
-       let department = await super.deleteDepartment(id);
+       let department = await super.deleteDepartment({_id,listTrelloIds,mainBoard,boardId});
       if (department) {
         return res.status(200).send(successMsg("delete_dep_success",200));
       } else {
