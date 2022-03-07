@@ -15,7 +15,7 @@ const ProjectSchema: Schema = new Schema<ProjectInfo>(
     teamsId: [
       {
         type: Schema.Types.ObjectId,
-        ref: 'teams',
+        ref: "teams",
       },
     ],
     numberOfTasks: {
@@ -40,7 +40,7 @@ const ProjectSchema: Schema = new Schema<ProjectInfo>(
     },
     projectStatus: {
       type: String,
-       default: "inProgress",
+      default: "inProgress",
       enum: [
         "inProgress",
         "deliver on time",
