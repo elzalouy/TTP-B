@@ -3806,3 +3806,3255 @@
   level: 'info',
   timestamp: '2022-03-07 00:22:03'
 }
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-02-26 11:02:58'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-02-26 11:13:06'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-02-26 11:52:10'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-02-26 11:52:20'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-02-26 13:04:52'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-02-26 13:04:59'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-02-26 13:13:32'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-02-26 13:20:37'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-02-26 13:21:13'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-02-26 13:21:48'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-02-26 13:23:34'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-02-26 13:23:54'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-02-26 13:27:28'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-02-26 14:06:17'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-02-26 14:06:45'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-02-26 14:16:27'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-02-26 14:19:23'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-02-26 14:19:44'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-02-26 14:21:09'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-02-26 19:11:10'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-02-26 19:14:54'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-02-26 19:22:42'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-02-26 19:24:18'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-02-26 19:24:48'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-02-26 19:24:57'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-02-26 19:29:50'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-02-26 19:31:47'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-02-26 19:35:53'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-02-26 19:37:02'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-02-26 19:38:40'
+}
+{
+  message: {
+    handleCreateCategoryErrors: TypeError: Cannot read property 'length' of undefined
+        at /Users/saudalmutawa/TTP-BACK/TTP-Back/src/lib/presentation/category/category.ts:18:25
+        at Generator.next (<anonymous>)
+        at /Users/saudalmutawa/TTP-BACK/TTP-Back/src/lib/presentation/category/category.ts:8:71
+        at new Promise (<anonymous>)
+        at __awaiter (/Users/saudalmutawa/TTP-BACK/TTP-Back/src/lib/presentation/category/category.ts:4:12)
+        at handleCreateCategoryAndSubcategory (/Users/saudalmutawa/TTP-BACK/TTP-Back/src/lib/presentation/category/category.ts:24:16)
+        at Layer.handle [as handle_request] (/Users/saudalmutawa/TTP-BACK/TTP-Back/node_modules/express/lib/router/layer.js:95:5)
+        at next (/Users/saudalmutawa/TTP-BACK/TTP-Back/node_modules/express/lib/router/route.js:137:13)
+        at Route.dispatch (/Users/saudalmutawa/TTP-BACK/TTP-Back/node_modules/express/lib/router/route.js:112:3)
+        at Layer.handle [as handle_request] (/Users/saudalmutawa/TTP-BACK/TTP-Back/node_modules/express/lib/router/layer.js:95:5)
+  },
+  level: 'error',
+  timestamp: '2022-02-26 19:38:46'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-02-26 19:39:27'
+}
+{
+  message: {
+    createCategoryDBError: MongooseError: Operation `categories.insertOne()` buffering timed out after 10000ms
+        at Timeout.<anonymous> (/Users/saudalmutawa/TTP-BACK/TTP-Back/node_modules/mongoose/lib/drivers/node-mongodb-native/collection.js:151:23)
+        at listOnTimeout (internal/timers.js:557:17)
+        at processTimers (internal/timers.js:500:7)
+  },
+  level: 'error',
+  timestamp: '2022-02-26 19:39:45'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-02-26 19:39:50'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-02-26 19:40:24'
+}
+{
+  message: {
+    createCategoryDBError: MongooseError: Operation `categories.insertOne()` buffering timed out after 10000ms
+        at Timeout.<anonymous> (/Users/saudalmutawa/TTP-BACK/TTP-Back/node_modules/mongoose/lib/drivers/node-mongodb-native/collection.js:151:23)
+        at listOnTimeout (internal/timers.js:557:17)
+        at processTimers (internal/timers.js:500:7)
+  },
+  level: 'error',
+  timestamp: '2022-02-26 19:40:37'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-02-26 19:41:55'
+}
+{
+  message: {
+    createCategoryDBError: MongooseError: Operation `categories.insertOne()` buffering timed out after 10000ms
+        at Timeout.<anonymous> (/Users/saudalmutawa/TTP-BACK/TTP-Back/node_modules/mongoose/lib/drivers/node-mongodb-native/collection.js:151:23)
+        at listOnTimeout (internal/timers.js:557:17)
+        at processTimers (internal/timers.js:500:7)
+  },
+  level: 'error',
+  timestamp: '2022-02-26 19:42:13'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-02-26 19:48:05'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-02-26 19:48:48'
+}
+{
+  message: {
+    createSubcategoryDBError: MongooseError: Operation `subcategories.insertOne()` buffering timed out after 10000ms
+        at Timeout.<anonymous> (/Users/saudalmutawa/TTP-BACK/TTP-Back/node_modules/mongoose/lib/drivers/node-mongodb-native/collection.js:151:23)
+        at listOnTimeout (internal/timers.js:557:17)
+        at processTimers (internal/timers.js:500:7)
+  },
+  level: 'error',
+  timestamp: '2022-02-26 19:49:07'
+}
+{
+  message: {
+    createCategoryDBError: MongooseError: Operation `categories.insertOne()` buffering timed out after 10000ms
+        at Timeout.<anonymous> (/Users/saudalmutawa/TTP-BACK/TTP-Back/node_modules/mongoose/lib/drivers/node-mongodb-native/collection.js:151:23)
+        at listOnTimeout (internal/timers.js:557:17)
+        at processTimers (internal/timers.js:500:7)
+  },
+  level: 'error',
+  timestamp: '2022-02-26 19:49:07'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-02-26 20:02:35'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-02-26 20:03:17'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-02-26 20:04:05'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-02-26 20:10:43'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-02-26 20:11:51'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-02-26 20:13:39'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-02-26 20:40:56'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-02-26 20:41:32'
+}
+{
+  message: {
+    addNewUserError: Error: data must be a string or Buffer and salt must either be a salt string or a number of rounds
+        at Object.hash (/Users/saudalmutawa/TTP-BACK/TTP-Back/node_modules/bcrypt/bcrypt.js:144:17)
+        at /Users/saudalmutawa/TTP-BACK/TTP-Back/node_modules/bcrypt/promises.js:29:12
+        at new Promise (<anonymous>)
+        at Object.module.exports.promise (/Users/saudalmutawa/TTP-BACK/TTP-Back/node_modules/bcrypt/promises.js:20:12)
+        at Object.hash (/Users/saudalmutawa/TTP-BACK/TTP-Back/node_modules/bcrypt/bcrypt.js:133:25)
+        at /Users/saudalmutawa/TTP-BACK/TTP-Back/src/lib/services/auth/auth.ts:15:36
+        at Generator.next (<anonymous>)
+        at fulfilled (/Users/saudalmutawa/TTP-BACK/TTP-Back/src/lib/services/auth/auth.ts:5:58)
+  },
+  level: 'error',
+  timestamp: '2022-02-26 21:47:27'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-02-27 07:34:51'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-02-27 07:35:14'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-02-27 07:39:52'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-02-27 07:47:07'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-02-27 07:51:04'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-02-27 07:53:06'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-02-27 07:57:19'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-02-27 09:58:14'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-02-27 09:59:53'
+}
+{
+  message: {
+    createCategoryDBError: ObjectParameterError: Parameter "obj" to Document() must be an object, got GTEST
+        at model.Document (/Users/saudalmutawa/TTP-BACK/TTP-Back/node_modules/mongoose/lib/document.js:105:11)
+        at model.Model (/Users/saudalmutawa/TTP-BACK/TTP-Back/node_modules/mongoose/lib/model.js:114:12)
+        at new model (/Users/saudalmutawa/TTP-BACK/TTP-Back/node_modules/mongoose/lib/model.js:4819:15)
+        at Function.<anonymous> (/Users/saudalmutawa/TTP-BACK/TTP-Back/src/lib/dbCalls/category/category.ts:19:32)
+        at Generator.next (<anonymous>)
+        at /Users/saudalmutawa/TTP-BACK/TTP-Back/src/lib/dbCalls/category/category.ts:8:71
+        at new Promise (<anonymous>)
+        at __awaiter (/Users/saudalmutawa/TTP-BACK/TTP-Back/src/lib/dbCalls/category/category.ts:4:12)
+        at Function.__createCategory (/Users/saudalmutawa/TTP-BACK/TTP-Back/src/lib/dbCalls/category/category.ts:35:16)
+        at Function.<anonymous> (/Users/saudalmutawa/TTP-BACK/TTP-Back/src/lib/dbCalls/category/category.ts:9:29)
+  },
+  level: 'error',
+  timestamp: '2022-02-27 10:00:02'
+}
+{
+  message: {
+    handleCreateCategoryErrors: TypeError: Cannot read property '_id' of undefined
+        at /Users/saudalmutawa/TTP-BACK/TTP-Back/src/lib/presentation/category/category.ts:14:41
+        at Generator.next (<anonymous>)
+        at fulfilled (/Users/saudalmutawa/TTP-BACK/TTP-Back/src/lib/presentation/category/category.ts:5:58)
+        at processTicksAndRejections (internal/process/task_queues.js:95:5)
+  },
+  level: 'error',
+  timestamp: '2022-02-27 10:00:02'
+}
+{
+  message: {
+    createCategoryDBError: ObjectParameterError: Parameter "obj" to Document() must be an object, got JSJ
+        at model.Document (/Users/saudalmutawa/TTP-BACK/TTP-Back/node_modules/mongoose/lib/document.js:105:11)
+        at model.Model (/Users/saudalmutawa/TTP-BACK/TTP-Back/node_modules/mongoose/lib/model.js:114:12)
+        at new model (/Users/saudalmutawa/TTP-BACK/TTP-Back/node_modules/mongoose/lib/model.js:4819:15)
+        at Function.<anonymous> (/Users/saudalmutawa/TTP-BACK/TTP-Back/src/lib/dbCalls/category/category.ts:19:32)
+        at Generator.next (<anonymous>)
+        at /Users/saudalmutawa/TTP-BACK/TTP-Back/src/lib/dbCalls/category/category.ts:8:71
+        at new Promise (<anonymous>)
+        at __awaiter (/Users/saudalmutawa/TTP-BACK/TTP-Back/src/lib/dbCalls/category/category.ts:4:12)
+        at Function.__createCategory (/Users/saudalmutawa/TTP-BACK/TTP-Back/src/lib/dbCalls/category/category.ts:35:16)
+        at Function.<anonymous> (/Users/saudalmutawa/TTP-BACK/TTP-Back/src/lib/dbCalls/category/category.ts:9:29)
+  },
+  level: 'error',
+  timestamp: '2022-02-27 10:01:26'
+}
+{
+  message: {
+    handleCreateCategoryErrors: TypeError: Cannot read property '_id' of undefined
+        at /Users/saudalmutawa/TTP-BACK/TTP-Back/src/lib/presentation/category/category.ts:14:41
+        at Generator.next (<anonymous>)
+        at fulfilled (/Users/saudalmutawa/TTP-BACK/TTP-Back/src/lib/presentation/category/category.ts:5:58)
+        at processTicksAndRejections (internal/process/task_queues.js:95:5)
+  },
+  level: 'error',
+  timestamp: '2022-02-27 10:01:26'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-02-27 10:02:02'
+}
+{
+  message: {
+    createCategoryDBError: ObjectParameterError: Parameter "obj" to Document() must be an object, got JSJ
+        at model.Document (/Users/saudalmutawa/TTP-BACK/TTP-Back/node_modules/mongoose/lib/document.js:105:11)
+        at model.Model (/Users/saudalmutawa/TTP-BACK/TTP-Back/node_modules/mongoose/lib/model.js:114:12)
+        at new model (/Users/saudalmutawa/TTP-BACK/TTP-Back/node_modules/mongoose/lib/model.js:4819:15)
+        at Function.<anonymous> (/Users/saudalmutawa/TTP-BACK/TTP-Back/src/lib/dbCalls/category/category.ts:19:32)
+        at Generator.next (<anonymous>)
+        at /Users/saudalmutawa/TTP-BACK/TTP-Back/src/lib/dbCalls/category/category.ts:8:71
+        at new Promise (<anonymous>)
+        at __awaiter (/Users/saudalmutawa/TTP-BACK/TTP-Back/src/lib/dbCalls/category/category.ts:4:12)
+        at Function.__createCategory (/Users/saudalmutawa/TTP-BACK/TTP-Back/src/lib/dbCalls/category/category.ts:35:16)
+        at Function.<anonymous> (/Users/saudalmutawa/TTP-BACK/TTP-Back/src/lib/dbCalls/category/category.ts:9:29)
+  },
+  level: 'error',
+  timestamp: '2022-02-27 10:02:05'
+}
+{
+  message: {
+    handleCreateCategoryErrors: TypeError: Cannot read property '_id' of undefined
+        at /Users/saudalmutawa/TTP-BACK/TTP-Back/src/lib/presentation/category/category.ts:14:41
+        at Generator.next (<anonymous>)
+        at fulfilled (/Users/saudalmutawa/TTP-BACK/TTP-Back/src/lib/presentation/category/category.ts:5:58)
+        at processTicksAndRejections (internal/process/task_queues.js:95:5)
+  },
+  level: 'error',
+  timestamp: '2022-02-27 10:02:06'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-02-27 10:04:02'
+}
+{
+  message: {
+    createCategoryDBError: ObjectParameterError: Parameter "obj" to Document() must be an object, got JSJ
+        at model.Document (/Users/saudalmutawa/TTP-BACK/TTP-Back/node_modules/mongoose/lib/document.js:105:11)
+        at model.Model (/Users/saudalmutawa/TTP-BACK/TTP-Back/node_modules/mongoose/lib/model.js:114:12)
+        at new model (/Users/saudalmutawa/TTP-BACK/TTP-Back/node_modules/mongoose/lib/model.js:4819:15)
+        at Function.<anonymous> (/Users/saudalmutawa/TTP-BACK/TTP-Back/src/lib/dbCalls/category/category.ts:19:32)
+        at Generator.next (<anonymous>)
+        at /Users/saudalmutawa/TTP-BACK/TTP-Back/src/lib/dbCalls/category/category.ts:8:71
+        at new Promise (<anonymous>)
+        at __awaiter (/Users/saudalmutawa/TTP-BACK/TTP-Back/src/lib/dbCalls/category/category.ts:4:12)
+        at Function.__createCategory (/Users/saudalmutawa/TTP-BACK/TTP-Back/src/lib/dbCalls/category/category.ts:35:16)
+        at Function.<anonymous> (/Users/saudalmutawa/TTP-BACK/TTP-Back/src/lib/dbCalls/category/category.ts:9:29)
+  },
+  level: 'error',
+  timestamp: '2022-02-27 10:04:05'
+}
+{
+  message: {
+    handleCreateCategoryErrors: TypeError: Cannot read property '_id' of undefined
+        at /Users/saudalmutawa/TTP-BACK/TTP-Back/src/lib/presentation/category/category.ts:14:41
+        at Generator.next (<anonymous>)
+        at fulfilled (/Users/saudalmutawa/TTP-BACK/TTP-Back/src/lib/presentation/category/category.ts:5:58)
+        at processTicksAndRejections (internal/process/task_queues.js:95:5)
+  },
+  level: 'error',
+  timestamp: '2022-02-27 10:04:05'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-02-27 10:04:37'
+}
+{
+  message: {
+    createCategoryDBError: ObjectParameterError: Parameter "obj" to Document() must be an object, got JSJ
+        at model.Document (/Users/saudalmutawa/TTP-BACK/TTP-Back/node_modules/mongoose/lib/document.js:105:11)
+        at model.Model (/Users/saudalmutawa/TTP-BACK/TTP-Back/node_modules/mongoose/lib/model.js:114:12)
+        at new model (/Users/saudalmutawa/TTP-BACK/TTP-Back/node_modules/mongoose/lib/model.js:4819:15)
+        at Function.<anonymous> (/Users/saudalmutawa/TTP-BACK/TTP-Back/src/lib/dbCalls/category/category.ts:19:32)
+        at Generator.next (<anonymous>)
+        at /Users/saudalmutawa/TTP-BACK/TTP-Back/src/lib/dbCalls/category/category.ts:8:71
+        at new Promise (<anonymous>)
+        at __awaiter (/Users/saudalmutawa/TTP-BACK/TTP-Back/src/lib/dbCalls/category/category.ts:4:12)
+        at Function.__createCategory (/Users/saudalmutawa/TTP-BACK/TTP-Back/src/lib/dbCalls/category/category.ts:35:16)
+        at Function.<anonymous> (/Users/saudalmutawa/TTP-BACK/TTP-Back/src/lib/dbCalls/category/category.ts:9:29)
+  },
+  level: 'error',
+  timestamp: '2022-02-27 10:04:42'
+}
+{
+  message: {
+    handleCreateCategoryErrors: TypeError: Cannot read property '_id' of undefined
+        at /Users/saudalmutawa/TTP-BACK/TTP-Back/src/lib/presentation/category/category.ts:14:41
+        at Generator.next (<anonymous>)
+        at fulfilled (/Users/saudalmutawa/TTP-BACK/TTP-Back/src/lib/presentation/category/category.ts:5:58)
+        at processTicksAndRejections (internal/process/task_queues.js:95:5)
+  },
+  level: 'error',
+  timestamp: '2022-02-27 10:04:42'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-02-27 10:04:55'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-02-27 10:08:48'
+}
+{
+  message: {
+    createCategoryDBError: ObjectParameterError: Parameter "obj" to Document() must be an object, got JSJ
+        at model.Document (/Users/saudalmutawa/TTP-BACK/TTP-Back/node_modules/mongoose/lib/document.js:105:11)
+        at model.Model (/Users/saudalmutawa/TTP-BACK/TTP-Back/node_modules/mongoose/lib/model.js:114:12)
+        at new model (/Users/saudalmutawa/TTP-BACK/TTP-Back/node_modules/mongoose/lib/model.js:4819:15)
+        at Function.<anonymous> (/Users/saudalmutawa/TTP-BACK/TTP-Back/src/lib/dbCalls/category/category.ts:19:32)
+        at Generator.next (<anonymous>)
+        at /Users/saudalmutawa/TTP-BACK/TTP-Back/src/lib/dbCalls/category/category.ts:8:71
+        at new Promise (<anonymous>)
+        at __awaiter (/Users/saudalmutawa/TTP-BACK/TTP-Back/src/lib/dbCalls/category/category.ts:4:12)
+        at Function.__createCategory (/Users/saudalmutawa/TTP-BACK/TTP-Back/src/lib/dbCalls/category/category.ts:35:16)
+        at Function.<anonymous> (/Users/saudalmutawa/TTP-BACK/TTP-Back/src/lib/dbCalls/category/category.ts:9:29)
+  },
+  level: 'error',
+  timestamp: '2022-02-27 10:09:02'
+}
+{
+  message: {
+    handleCreateCategoryErrors: TypeError: Cannot read property '_id' of undefined
+        at /Users/saudalmutawa/TTP-BACK/TTP-Back/src/lib/presentation/category/category.ts:14:41
+        at Generator.next (<anonymous>)
+        at fulfilled (/Users/saudalmutawa/TTP-BACK/TTP-Back/src/lib/presentation/category/category.ts:5:58)
+        at processTicksAndRejections (internal/process/task_queues.js:95:5)
+  },
+  level: 'error',
+  timestamp: '2022-02-27 10:09:02'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-02-27 10:09:41'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-02-27 10:11:26'
+}
+{
+  message: {
+    createCategoryDBError: ObjectParameterError: Parameter "obj" to Document() must be an object, got JSJ
+        at model.Document (/Users/saudalmutawa/TTP-BACK/TTP-Back/node_modules/mongoose/lib/document.js:105:11)
+        at model.Model (/Users/saudalmutawa/TTP-BACK/TTP-Back/node_modules/mongoose/lib/model.js:114:12)
+        at new model (/Users/saudalmutawa/TTP-BACK/TTP-Back/node_modules/mongoose/lib/model.js:4819:15)
+        at Function.<anonymous> (/Users/saudalmutawa/TTP-BACK/TTP-Back/src/lib/dbCalls/category/category.ts:19:32)
+        at Generator.next (<anonymous>)
+        at /Users/saudalmutawa/TTP-BACK/TTP-Back/src/lib/dbCalls/category/category.ts:8:71
+        at new Promise (<anonymous>)
+        at __awaiter (/Users/saudalmutawa/TTP-BACK/TTP-Back/src/lib/dbCalls/category/category.ts:4:12)
+        at Function.__createCategory (/Users/saudalmutawa/TTP-BACK/TTP-Back/src/lib/dbCalls/category/category.ts:35:16)
+        at Function.<anonymous> (/Users/saudalmutawa/TTP-BACK/TTP-Back/src/lib/dbCalls/category/category.ts:9:29)
+  },
+  level: 'error',
+  timestamp: '2022-02-27 10:11:30'
+}
+{
+  message: {
+    handleCreateCategoryErrors: TypeError: Cannot read property '_id' of undefined
+        at /Users/saudalmutawa/TTP-BACK/TTP-Back/src/lib/presentation/category/category.ts:14:41
+        at Generator.next (<anonymous>)
+        at fulfilled (/Users/saudalmutawa/TTP-BACK/TTP-Back/src/lib/presentation/category/category.ts:5:58)
+        at processTicksAndRejections (internal/process/task_queues.js:95:5)
+  },
+  level: 'error',
+  timestamp: '2022-02-27 10:11:30'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-02-27 10:11:51'
+}
+{
+  message: {
+    createCategoryDBError: ObjectParameterError: Parameter "obj" to Document() must be an object, got JSJ
+        at model.Document (/Users/saudalmutawa/TTP-BACK/TTP-Back/node_modules/mongoose/lib/document.js:105:11)
+        at model.Model (/Users/saudalmutawa/TTP-BACK/TTP-Back/node_modules/mongoose/lib/model.js:114:12)
+        at new model (/Users/saudalmutawa/TTP-BACK/TTP-Back/node_modules/mongoose/lib/model.js:4819:15)
+        at Function.<anonymous> (/Users/saudalmutawa/TTP-BACK/TTP-Back/src/lib/dbCalls/category/category.ts:19:32)
+        at Generator.next (<anonymous>)
+        at /Users/saudalmutawa/TTP-BACK/TTP-Back/src/lib/dbCalls/category/category.ts:8:71
+        at new Promise (<anonymous>)
+        at __awaiter (/Users/saudalmutawa/TTP-BACK/TTP-Back/src/lib/dbCalls/category/category.ts:4:12)
+        at Function.__createCategory (/Users/saudalmutawa/TTP-BACK/TTP-Back/src/lib/dbCalls/category/category.ts:35:16)
+        at Function.<anonymous> (/Users/saudalmutawa/TTP-BACK/TTP-Back/src/lib/dbCalls/category/category.ts:9:29)
+  },
+  level: 'error',
+  timestamp: '2022-02-27 10:11:53'
+}
+{
+  message: {
+    handleCreateCategoryErrors: TypeError: Cannot read property '_id' of undefined
+        at /Users/saudalmutawa/TTP-BACK/TTP-Back/src/lib/presentation/category/category.ts:14:41
+        at Generator.next (<anonymous>)
+        at fulfilled (/Users/saudalmutawa/TTP-BACK/TTP-Back/src/lib/presentation/category/category.ts:5:58)
+        at processTicksAndRejections (internal/process/task_queues.js:95:5)
+  },
+  level: 'error',
+  timestamp: '2022-02-27 10:11:53'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-02-27 10:12:47'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-02-27 10:12:57'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-02-27 10:13:27'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-02-27 10:16:48'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-02-27 10:17:16'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-02-27 10:17:47'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-02-27 10:21:57'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-02-27 10:22:24'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-02-27 10:23:41'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-02-27 10:25:16'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-02-27 10:25:25'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-02-27 10:25:37'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-02-27 10:43:24'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-02-27 10:45:13'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-02-27 10:48:15'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-02-27 10:49:45'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-02-27 10:49:52'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-02-27 10:50:46'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-02-27 10:52:58'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-02-27 10:53:43'
+}
+{
+  message: {
+    createCategoryDBError: ObjectParameterError: Parameter "obj" to Document() must be an object, got JJ
+        at model.Document (/Users/saudalmutawa/TTP-BACK/TTP-Back/node_modules/mongoose/lib/document.js:105:11)
+        at model.Model (/Users/saudalmutawa/TTP-BACK/TTP-Back/node_modules/mongoose/lib/model.js:114:12)
+        at new model (/Users/saudalmutawa/TTP-BACK/TTP-Back/node_modules/mongoose/lib/model.js:4819:15)
+        at Function.<anonymous> (/Users/saudalmutawa/TTP-BACK/TTP-Back/src/lib/dbCalls/category/category.ts:19:32)
+        at Generator.next (<anonymous>)
+        at /Users/saudalmutawa/TTP-BACK/TTP-Back/src/lib/dbCalls/category/category.ts:8:71
+        at new Promise (<anonymous>)
+        at __awaiter (/Users/saudalmutawa/TTP-BACK/TTP-Back/src/lib/dbCalls/category/category.ts:4:12)
+        at Function.__createCategory (/Users/saudalmutawa/TTP-BACK/TTP-Back/src/lib/dbCalls/category/category.ts:35:16)
+        at Function.<anonymous> (/Users/saudalmutawa/TTP-BACK/TTP-Back/src/lib/dbCalls/category/category.ts:9:29)
+  },
+  level: 'error',
+  timestamp: '2022-02-27 10:53:51'
+}
+{
+  message: {
+    handleCreateCategoryErrors: TypeError: Cannot read property '_id' of undefined
+        at /Users/saudalmutawa/TTP-BACK/TTP-Back/src/lib/presentation/category/category.ts:14:41
+        at Generator.next (<anonymous>)
+        at fulfilled (/Users/saudalmutawa/TTP-BACK/TTP-Back/src/lib/presentation/category/category.ts:5:58)
+        at processTicksAndRejections (internal/process/task_queues.js:95:5)
+  },
+  level: 'error',
+  timestamp: '2022-02-27 10:53:51'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-02-27 10:56:10'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-02-27 10:58:58'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-02-27 10:59:10'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-02-27 11:00:36'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-02-27 11:02:37'
+}
+{
+  message: {
+    handleCreateCategoryErrors: TypeError: Cannot create property 'subCategoriesId' on string 'JJ'
+        at /Users/saudalmutawa/TTP-BACK/TTP-Back/src/lib/presentation/category/category.ts:13:35
+        at Generator.next (<anonymous>)
+        at /Users/saudalmutawa/TTP-BACK/TTP-Back/src/lib/presentation/category/category.ts:8:71
+        at new Promise (<anonymous>)
+        at __awaiter (/Users/saudalmutawa/TTP-BACK/TTP-Back/src/lib/presentation/category/category.ts:4:12)
+        at handleCreateCategoryAndSubcategory (/Users/saudalmutawa/TTP-BACK/TTP-Back/src/lib/presentation/category/category.ts:25:16)
+        at Layer.handle [as handle_request] (/Users/saudalmutawa/TTP-BACK/TTP-Back/node_modules/express/lib/router/layer.js:95:5)
+        at next (/Users/saudalmutawa/TTP-BACK/TTP-Back/node_modules/express/lib/router/route.js:137:13)
+        at Route.dispatch (/Users/saudalmutawa/TTP-BACK/TTP-Back/node_modules/express/lib/router/route.js:112:3)
+        at Layer.handle [as handle_request] (/Users/saudalmutawa/TTP-BACK/TTP-Back/node_modules/express/lib/router/layer.js:95:5)
+  },
+  level: 'error',
+  timestamp: '2022-02-27 11:02:46'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-02-27 11:06:45'
+}
+{
+  message: {
+    handleCreateCategoryErrors: TypeError: Cannot create property 'subCategoriesId' on string 'JJ'
+        at /Users/saudalmutawa/TTP-BACK/TTP-Back/src/lib/presentation/category/category.ts:13:35
+        at Generator.next (<anonymous>)
+        at /Users/saudalmutawa/TTP-BACK/TTP-Back/src/lib/presentation/category/category.ts:8:71
+        at new Promise (<anonymous>)
+        at __awaiter (/Users/saudalmutawa/TTP-BACK/TTP-Back/src/lib/presentation/category/category.ts:4:12)
+        at handleCreateCategoryAndSubcategory (/Users/saudalmutawa/TTP-BACK/TTP-Back/src/lib/presentation/category/category.ts:25:16)
+        at Layer.handle [as handle_request] (/Users/saudalmutawa/TTP-BACK/TTP-Back/node_modules/express/lib/router/layer.js:95:5)
+        at next (/Users/saudalmutawa/TTP-BACK/TTP-Back/node_modules/express/lib/router/route.js:137:13)
+        at Route.dispatch (/Users/saudalmutawa/TTP-BACK/TTP-Back/node_modules/express/lib/router/route.js:112:3)
+        at Layer.handle [as handle_request] (/Users/saudalmutawa/TTP-BACK/TTP-Back/node_modules/express/lib/router/layer.js:95:5)
+  },
+  level: 'error',
+  timestamp: '2022-02-27 11:06:49'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-02-27 11:07:14'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-02-27 11:08:33'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-02-27 11:09:02'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-02-27 11:09:47'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-02-27 11:09:59'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-02-27 11:20:16'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-02-27 11:20:42'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-02-27 11:21:31'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-02-27 11:23:29'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-02-27 11:28:08'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-02-27 11:28:23'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-02-27 11:28:31'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-02-27 11:30:22'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-02-27 11:33:18'
+}
+{
+  message: {
+    createSubcategoryDBError: MongoServerError: E11000 duplicate key error collection: TTP.subcategories index: subCategory_1 dup key: { subCategory: "sub1" }
+        at /Users/saudalmutawa/TTP-BACK/TTP-Back/node_modules/mongoose/node_modules/mongodb/src/operations/insert.ts:75:25
+        at /Users/saudalmutawa/TTP-BACK/TTP-Back/node_modules/mongoose/node_modules/mongodb/src/cmap/connection_pool.ts:482:13
+        at handleOperationResult (/Users/saudalmutawa/TTP-BACK/TTP-Back/node_modules/mongoose/node_modules/mongodb/src/sdam/server.ts:610:5)
+        at MessageStream.messageHandler (/Users/saudalmutawa/TTP-BACK/TTP-Back/node_modules/mongoose/node_modules/mongodb/src/cmap/connection.ts:765:5)
+        at MessageStream.emit (events.js:400:28)
+        at MessageStream.emit (domain.js:475:12)
+        at processIncomingData (/Users/saudalmutawa/TTP-BACK/TTP-Back/node_modules/mongoose/node_modules/mongodb/src/cmap/message_stream.ts:168:12)
+        at MessageStream._write (/Users/saudalmutawa/TTP-BACK/TTP-Back/node_modules/mongoose/node_modules/mongodb/src/cmap/message_stream.ts:65:5)
+        at writeOrBuffer (internal/streams/writable.js:358:12)
+        at MessageStream.Writable.write (internal/streams/writable.js:303:10) {
+      index: 0,
+      code: 11000,
+      keyPattern: { subCategory: 1 },
+      keyValue: { subCategory: 'sub1' }
+    }
+  },
+  level: 'error',
+  timestamp: '2022-02-27 11:33:54'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-02-27 11:36:05'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-02-27 11:37:21'
+}
+{
+  message: {
+    createCategoryDBError: MongoServerError: E11000 duplicate key error collection: TTP.categories index: category_1 dup key: { category: "Main1" }
+        at /Users/saudalmutawa/TTP-BACK/TTP-Back/node_modules/mongoose/node_modules/mongodb/src/operations/insert.ts:75:25
+        at /Users/saudalmutawa/TTP-BACK/TTP-Back/node_modules/mongoose/node_modules/mongodb/src/cmap/connection_pool.ts:482:13
+        at handleOperationResult (/Users/saudalmutawa/TTP-BACK/TTP-Back/node_modules/mongoose/node_modules/mongodb/src/sdam/server.ts:610:5)
+        at MessageStream.messageHandler (/Users/saudalmutawa/TTP-BACK/TTP-Back/node_modules/mongoose/node_modules/mongodb/src/cmap/connection.ts:765:5)
+        at MessageStream.emit (events.js:400:28)
+        at MessageStream.emit (domain.js:475:12)
+        at processIncomingData (/Users/saudalmutawa/TTP-BACK/TTP-Back/node_modules/mongoose/node_modules/mongodb/src/cmap/message_stream.ts:168:12)
+        at MessageStream._write (/Users/saudalmutawa/TTP-BACK/TTP-Back/node_modules/mongoose/node_modules/mongodb/src/cmap/message_stream.ts:65:5)
+        at writeOrBuffer (internal/streams/writable.js:358:12)
+        at MessageStream.Writable.write (internal/streams/writable.js:303:10) {
+      index: 0,
+      code: 11000,
+      keyPattern: { category: 1 },
+      keyValue: { category: 'Main1' }
+    }
+  },
+  level: 'error',
+  timestamp: '2022-02-27 11:37:25'
+}
+{
+  message: {
+    handleCreateCategoryErrors: TypeError: Cannot read property '_id' of undefined
+        at /Users/saudalmutawa/TTP-BACK/TTP-Back/src/lib/presentation/category/category.ts:16:41
+        at Generator.next (<anonymous>)
+        at fulfilled (/Users/saudalmutawa/TTP-BACK/TTP-Back/src/lib/presentation/category/category.ts:5:58)
+        at processTicksAndRejections (internal/process/task_queues.js:95:5)
+  },
+  level: 'error',
+  timestamp: '2022-02-27 11:37:25'
+}
+{
+  message: {
+    createSubcategoryDBError: MongoServerError: E11000 duplicate key error collection: TTP.subcategories index: subCategory_1 dup key: { subCategory: "sub1" }
+        at /Users/saudalmutawa/TTP-BACK/TTP-Back/node_modules/mongoose/node_modules/mongodb/src/operations/insert.ts:75:25
+        at /Users/saudalmutawa/TTP-BACK/TTP-Back/node_modules/mongoose/node_modules/mongodb/src/cmap/connection_pool.ts:482:13
+        at handleOperationResult (/Users/saudalmutawa/TTP-BACK/TTP-Back/node_modules/mongoose/node_modules/mongodb/src/sdam/server.ts:610:5)
+        at MessageStream.messageHandler (/Users/saudalmutawa/TTP-BACK/TTP-Back/node_modules/mongoose/node_modules/mongodb/src/cmap/connection.ts:765:5)
+        at MessageStream.emit (events.js:400:28)
+        at MessageStream.emit (domain.js:475:12)
+        at processIncomingData (/Users/saudalmutawa/TTP-BACK/TTP-Back/node_modules/mongoose/node_modules/mongodb/src/cmap/message_stream.ts:168:12)
+        at MessageStream._write (/Users/saudalmutawa/TTP-BACK/TTP-Back/node_modules/mongoose/node_modules/mongodb/src/cmap/message_stream.ts:65:5)
+        at writeOrBuffer (internal/streams/writable.js:358:12)
+        at MessageStream.Writable.write (internal/streams/writable.js:303:10) {
+      index: 0,
+      code: 11000,
+      keyPattern: { subCategory: 1 },
+      keyValue: { subCategory: 'sub1' }
+    }
+  },
+  level: 'error',
+  timestamp: '2022-02-27 11:38:27'
+}
+{
+  message: {
+    createSubcategoryDBError: MongoServerError: E11000 duplicate key error collection: TTP.subcategories index: subCategory_1 dup key: { subCategory: "sub1" }
+        at /Users/saudalmutawa/TTP-BACK/TTP-Back/node_modules/mongoose/node_modules/mongodb/src/operations/insert.ts:75:25
+        at /Users/saudalmutawa/TTP-BACK/TTP-Back/node_modules/mongoose/node_modules/mongodb/src/cmap/connection_pool.ts:482:13
+        at handleOperationResult (/Users/saudalmutawa/TTP-BACK/TTP-Back/node_modules/mongoose/node_modules/mongodb/src/sdam/server.ts:610:5)
+        at MessageStream.messageHandler (/Users/saudalmutawa/TTP-BACK/TTP-Back/node_modules/mongoose/node_modules/mongodb/src/cmap/connection.ts:765:5)
+        at MessageStream.emit (events.js:400:28)
+        at MessageStream.emit (domain.js:475:12)
+        at processIncomingData (/Users/saudalmutawa/TTP-BACK/TTP-Back/node_modules/mongoose/node_modules/mongodb/src/cmap/message_stream.ts:168:12)
+        at MessageStream._write (/Users/saudalmutawa/TTP-BACK/TTP-Back/node_modules/mongoose/node_modules/mongodb/src/cmap/message_stream.ts:65:5)
+        at writeOrBuffer (internal/streams/writable.js:358:12)
+        at MessageStream.Writable.write (internal/streams/writable.js:303:10) {
+      index: 0,
+      code: 11000,
+      keyPattern: { subCategory: 1 },
+      keyValue: { subCategory: 'sub1' }
+    }
+  },
+  level: 'error',
+  timestamp: '2022-02-27 11:38:27'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-02-27 11:38:34'
+}
+{
+  message: {
+    createCategoryDBError: MongoServerError: E11000 duplicate key error collection: TTP.categories index: category_1 dup key: { category: "Main12" }
+        at /Users/saudalmutawa/TTP-BACK/TTP-Back/node_modules/mongoose/node_modules/mongodb/src/operations/insert.ts:75:25
+        at /Users/saudalmutawa/TTP-BACK/TTP-Back/node_modules/mongoose/node_modules/mongodb/src/cmap/connection_pool.ts:482:13
+        at handleOperationResult (/Users/saudalmutawa/TTP-BACK/TTP-Back/node_modules/mongoose/node_modules/mongodb/src/sdam/server.ts:610:5)
+        at MessageStream.messageHandler (/Users/saudalmutawa/TTP-BACK/TTP-Back/node_modules/mongoose/node_modules/mongodb/src/cmap/connection.ts:765:5)
+        at MessageStream.emit (events.js:400:28)
+        at MessageStream.emit (domain.js:475:12)
+        at processIncomingData (/Users/saudalmutawa/TTP-BACK/TTP-Back/node_modules/mongoose/node_modules/mongodb/src/cmap/message_stream.ts:168:12)
+        at MessageStream._write (/Users/saudalmutawa/TTP-BACK/TTP-Back/node_modules/mongoose/node_modules/mongodb/src/cmap/message_stream.ts:65:5)
+        at writeOrBuffer (internal/streams/writable.js:358:12)
+        at MessageStream.Writable.write (internal/streams/writable.js:303:10) {
+      index: 0,
+      code: 11000,
+      keyPattern: { category: 1 },
+      keyValue: { category: 'Main12' }
+    }
+  },
+  level: 'error',
+  timestamp: '2022-02-27 11:43:18'
+}
+{
+  message: {
+    handleCreateCategoryErrors: TypeError: Cannot read property '_id' of undefined
+        at /Users/saudalmutawa/TTP-BACK/TTP-Back/src/lib/presentation/category/category.ts:16:41
+        at Generator.next (<anonymous>)
+        at fulfilled (/Users/saudalmutawa/TTP-BACK/TTP-Back/src/lib/presentation/category/category.ts:5:58)
+        at processTicksAndRejections (internal/process/task_queues.js:95:5)
+  },
+  level: 'error',
+  timestamp: '2022-02-27 11:43:18'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-02-27 11:46:05'
+}
+{
+  message: {
+    createSubcategoryDBError: MongoServerError: E11000 duplicate key error collection: TTP.subcategories index: subCategory_1 dup key: { subCategory: "sub1" }
+        at /Users/saudalmutawa/TTP-BACK/TTP-Back/node_modules/mongoose/node_modules/mongodb/src/operations/insert.ts:75:25
+        at /Users/saudalmutawa/TTP-BACK/TTP-Back/node_modules/mongoose/node_modules/mongodb/src/cmap/connection_pool.ts:482:13
+        at handleOperationResult (/Users/saudalmutawa/TTP-BACK/TTP-Back/node_modules/mongoose/node_modules/mongodb/src/sdam/server.ts:610:5)
+        at MessageStream.messageHandler (/Users/saudalmutawa/TTP-BACK/TTP-Back/node_modules/mongoose/node_modules/mongodb/src/cmap/connection.ts:765:5)
+        at MessageStream.emit (events.js:400:28)
+        at MessageStream.emit (domain.js:475:12)
+        at processIncomingData (/Users/saudalmutawa/TTP-BACK/TTP-Back/node_modules/mongoose/node_modules/mongodb/src/cmap/message_stream.ts:168:12)
+        at MessageStream._write (/Users/saudalmutawa/TTP-BACK/TTP-Back/node_modules/mongoose/node_modules/mongodb/src/cmap/message_stream.ts:65:5)
+        at writeOrBuffer (internal/streams/writable.js:358:12)
+        at MessageStream.Writable.write (internal/streams/writable.js:303:10) {
+      index: 0,
+      code: 11000,
+      keyPattern: { subCategory: 1 },
+      keyValue: { subCategory: 'sub1' }
+    }
+  },
+  level: 'error',
+  timestamp: '2022-02-27 11:46:33'
+}
+{
+  message: {
+    createSubcategoryDBError: MongoServerError: E11000 duplicate key error collection: TTP.subcategories index: subCategory_1 dup key: { subCategory: "sub1" }
+        at /Users/saudalmutawa/TTP-BACK/TTP-Back/node_modules/mongoose/node_modules/mongodb/src/operations/insert.ts:75:25
+        at /Users/saudalmutawa/TTP-BACK/TTP-Back/node_modules/mongoose/node_modules/mongodb/src/cmap/connection_pool.ts:482:13
+        at handleOperationResult (/Users/saudalmutawa/TTP-BACK/TTP-Back/node_modules/mongoose/node_modules/mongodb/src/sdam/server.ts:610:5)
+        at MessageStream.messageHandler (/Users/saudalmutawa/TTP-BACK/TTP-Back/node_modules/mongoose/node_modules/mongodb/src/cmap/connection.ts:765:5)
+        at MessageStream.emit (events.js:400:28)
+        at MessageStream.emit (domain.js:475:12)
+        at processIncomingData (/Users/saudalmutawa/TTP-BACK/TTP-Back/node_modules/mongoose/node_modules/mongodb/src/cmap/message_stream.ts:168:12)
+        at MessageStream._write (/Users/saudalmutawa/TTP-BACK/TTP-Back/node_modules/mongoose/node_modules/mongodb/src/cmap/message_stream.ts:65:5)
+        at writeOrBuffer (internal/streams/writable.js:358:12)
+        at MessageStream.Writable.write (internal/streams/writable.js:303:10) {
+      index: 0,
+      code: 11000,
+      keyPattern: { subCategory: 1 },
+      keyValue: { subCategory: 'sub1' }
+    }
+  },
+  level: 'error',
+  timestamp: '2022-02-27 11:46:33'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-02-27 11:47:51'
+}
+{
+  message: {
+    createSubcategoryDBError: MongoServerError: E11000 duplicate key error collection: TTP.subcategories index: subCategory_1 dup key: { subCategory: "sub1" }
+        at /Users/saudalmutawa/TTP-BACK/TTP-Back/node_modules/mongoose/node_modules/mongodb/src/operations/insert.ts:75:25
+        at /Users/saudalmutawa/TTP-BACK/TTP-Back/node_modules/mongoose/node_modules/mongodb/src/cmap/connection_pool.ts:482:13
+        at handleOperationResult (/Users/saudalmutawa/TTP-BACK/TTP-Back/node_modules/mongoose/node_modules/mongodb/src/sdam/server.ts:610:5)
+        at MessageStream.messageHandler (/Users/saudalmutawa/TTP-BACK/TTP-Back/node_modules/mongoose/node_modules/mongodb/src/cmap/connection.ts:765:5)
+        at MessageStream.emit (events.js:400:28)
+        at MessageStream.emit (domain.js:475:12)
+        at processIncomingData (/Users/saudalmutawa/TTP-BACK/TTP-Back/node_modules/mongoose/node_modules/mongodb/src/cmap/message_stream.ts:168:12)
+        at MessageStream._write (/Users/saudalmutawa/TTP-BACK/TTP-Back/node_modules/mongoose/node_modules/mongodb/src/cmap/message_stream.ts:65:5)
+        at writeOrBuffer (internal/streams/writable.js:358:12)
+        at MessageStream.Writable.write (internal/streams/writable.js:303:10) {
+      index: 0,
+      code: 11000,
+      keyPattern: { subCategory: 1 },
+      keyValue: { subCategory: 'sub1' }
+    }
+  },
+  level: 'error',
+  timestamp: '2022-02-27 11:47:58'
+}
+{
+  message: {
+    createSubcategoryDBError: MongoServerError: E11000 duplicate key error collection: TTP.subcategories index: subCategory_1 dup key: { subCategory: "sub1" }
+        at /Users/saudalmutawa/TTP-BACK/TTP-Back/node_modules/mongoose/node_modules/mongodb/src/operations/insert.ts:75:25
+        at /Users/saudalmutawa/TTP-BACK/TTP-Back/node_modules/mongoose/node_modules/mongodb/src/cmap/connection_pool.ts:482:13
+        at handleOperationResult (/Users/saudalmutawa/TTP-BACK/TTP-Back/node_modules/mongoose/node_modules/mongodb/src/sdam/server.ts:610:5)
+        at MessageStream.messageHandler (/Users/saudalmutawa/TTP-BACK/TTP-Back/node_modules/mongoose/node_modules/mongodb/src/cmap/connection.ts:765:5)
+        at MessageStream.emit (events.js:400:28)
+        at MessageStream.emit (domain.js:475:12)
+        at processIncomingData (/Users/saudalmutawa/TTP-BACK/TTP-Back/node_modules/mongoose/node_modules/mongodb/src/cmap/message_stream.ts:168:12)
+        at MessageStream._write (/Users/saudalmutawa/TTP-BACK/TTP-Back/node_modules/mongoose/node_modules/mongodb/src/cmap/message_stream.ts:65:5)
+        at writeOrBuffer (internal/streams/writable.js:358:12)
+        at MessageStream.Writable.write (internal/streams/writable.js:303:10) {
+      index: 0,
+      code: 11000,
+      keyPattern: { subCategory: 1 },
+      keyValue: { subCategory: 'sub1' }
+    }
+  },
+  level: 'error',
+  timestamp: '2022-02-27 11:47:58'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-02-27 11:48:06'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-02-27 11:48:24'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-02-27 14:15:27'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-02-27 14:18:27'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-02-27 14:20:21'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-02-27 14:24:25'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-02-27 14:26:09'
+}
+{
+  message: {
+    createSubcategoryDBError: MongoServerError: E11000 duplicate key error collection: TTP.subcategories index: subCategory_1 dup key: { subCategory: "ss" }
+        at /Users/saudalmutawa/TTP-BACK/TTP-Back/node_modules/mongoose/node_modules/mongodb/src/operations/insert.ts:75:25
+        at /Users/saudalmutawa/TTP-BACK/TTP-Back/node_modules/mongoose/node_modules/mongodb/src/cmap/connection_pool.ts:482:13
+        at handleOperationResult (/Users/saudalmutawa/TTP-BACK/TTP-Back/node_modules/mongoose/node_modules/mongodb/src/sdam/server.ts:610:5)
+        at MessageStream.messageHandler (/Users/saudalmutawa/TTP-BACK/TTP-Back/node_modules/mongoose/node_modules/mongodb/src/cmap/connection.ts:765:5)
+        at MessageStream.emit (events.js:400:28)
+        at MessageStream.emit (domain.js:475:12)
+        at processIncomingData (/Users/saudalmutawa/TTP-BACK/TTP-Back/node_modules/mongoose/node_modules/mongodb/src/cmap/message_stream.ts:168:12)
+        at MessageStream._write (/Users/saudalmutawa/TTP-BACK/TTP-Back/node_modules/mongoose/node_modules/mongodb/src/cmap/message_stream.ts:65:5)
+        at writeOrBuffer (internal/streams/writable.js:358:12)
+        at MessageStream.Writable.write (internal/streams/writable.js:303:10) {
+      index: 0,
+      code: 11000,
+      keyPattern: { subCategory: 1 },
+      keyValue: { subCategory: 'ss' }
+    }
+  },
+  level: 'error',
+  timestamp: '2022-02-27 14:26:19'
+}
+{
+  message: {
+    createSubcategoryDBError: MongoServerError: E11000 duplicate key error collection: TTP.subcategories index: subCategory_1 dup key: { subCategory: "ss" }
+        at /Users/saudalmutawa/TTP-BACK/TTP-Back/node_modules/mongoose/node_modules/mongodb/src/operations/insert.ts:75:25
+        at /Users/saudalmutawa/TTP-BACK/TTP-Back/node_modules/mongoose/node_modules/mongodb/src/cmap/connection_pool.ts:482:13
+        at handleOperationResult (/Users/saudalmutawa/TTP-BACK/TTP-Back/node_modules/mongoose/node_modules/mongodb/src/sdam/server.ts:610:5)
+        at MessageStream.messageHandler (/Users/saudalmutawa/TTP-BACK/TTP-Back/node_modules/mongoose/node_modules/mongodb/src/cmap/connection.ts:765:5)
+        at MessageStream.emit (events.js:400:28)
+        at MessageStream.emit (domain.js:475:12)
+        at processIncomingData (/Users/saudalmutawa/TTP-BACK/TTP-Back/node_modules/mongoose/node_modules/mongodb/src/cmap/message_stream.ts:168:12)
+        at MessageStream._write (/Users/saudalmutawa/TTP-BACK/TTP-Back/node_modules/mongoose/node_modules/mongodb/src/cmap/message_stream.ts:65:5)
+        at writeOrBuffer (internal/streams/writable.js:358:12)
+        at MessageStream.Writable.write (internal/streams/writable.js:303:10) {
+      index: 0,
+      code: 11000,
+      keyPattern: { subCategory: 1 },
+      keyValue: { subCategory: 'ss' }
+    }
+  },
+  level: 'error',
+  timestamp: '2022-02-27 14:26:20'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-02-27 14:26:56'
+}
+{
+  message: {
+    createCategoryDBError: MongoServerError: E11000 duplicate key error collection: TTP.categories index: category_1 dup key: { category: "Main13222" }
+        at /Users/saudalmutawa/TTP-BACK/TTP-Back/node_modules/mongoose/node_modules/mongodb/src/operations/insert.ts:75:25
+        at /Users/saudalmutawa/TTP-BACK/TTP-Back/node_modules/mongoose/node_modules/mongodb/src/cmap/connection_pool.ts:482:13
+        at handleOperationResult (/Users/saudalmutawa/TTP-BACK/TTP-Back/node_modules/mongoose/node_modules/mongodb/src/sdam/server.ts:610:5)
+        at MessageStream.messageHandler (/Users/saudalmutawa/TTP-BACK/TTP-Back/node_modules/mongoose/node_modules/mongodb/src/cmap/connection.ts:765:5)
+        at MessageStream.emit (events.js:400:28)
+        at MessageStream.emit (domain.js:475:12)
+        at processIncomingData (/Users/saudalmutawa/TTP-BACK/TTP-Back/node_modules/mongoose/node_modules/mongodb/src/cmap/message_stream.ts:168:12)
+        at MessageStream._write (/Users/saudalmutawa/TTP-BACK/TTP-Back/node_modules/mongoose/node_modules/mongodb/src/cmap/message_stream.ts:65:5)
+        at writeOrBuffer (internal/streams/writable.js:358:12)
+        at MessageStream.Writable.write (internal/streams/writable.js:303:10) {
+      index: 0,
+      code: 11000,
+      keyPattern: { category: 1 },
+      keyValue: { category: 'Main13222' }
+    }
+  },
+  level: 'error',
+  timestamp: '2022-02-27 14:27:06'
+}
+{
+  message: {
+    handleCreateCategoryErrors: TypeError: Cannot read property '_id' of undefined
+        at /Users/saudalmutawa/TTP-BACK/TTP-Back/src/lib/presentation/category/category.ts:15:41
+        at Generator.next (<anonymous>)
+        at fulfilled (/Users/saudalmutawa/TTP-BACK/TTP-Back/src/lib/presentation/category/category.ts:5:58)
+        at processTicksAndRejections (internal/process/task_queues.js:95:5)
+  },
+  level: 'error',
+  timestamp: '2022-02-27 14:27:06'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-02-27 14:28:09'
+}
+{
+  message: {
+    createCategoryDBError: MongoServerError: E11000 duplicate key error collection: TTP.categories index: category_1 dup key: { category: "Main13222" }
+        at /Users/saudalmutawa/TTP-BACK/TTP-Back/node_modules/mongoose/node_modules/mongodb/src/operations/insert.ts:75:25
+        at /Users/saudalmutawa/TTP-BACK/TTP-Back/node_modules/mongoose/node_modules/mongodb/src/cmap/connection_pool.ts:482:13
+        at handleOperationResult (/Users/saudalmutawa/TTP-BACK/TTP-Back/node_modules/mongoose/node_modules/mongodb/src/sdam/server.ts:610:5)
+        at MessageStream.messageHandler (/Users/saudalmutawa/TTP-BACK/TTP-Back/node_modules/mongoose/node_modules/mongodb/src/cmap/connection.ts:765:5)
+        at MessageStream.emit (events.js:400:28)
+        at MessageStream.emit (domain.js:475:12)
+        at processIncomingData (/Users/saudalmutawa/TTP-BACK/TTP-Back/node_modules/mongoose/node_modules/mongodb/src/cmap/message_stream.ts:168:12)
+        at MessageStream._write (/Users/saudalmutawa/TTP-BACK/TTP-Back/node_modules/mongoose/node_modules/mongodb/src/cmap/message_stream.ts:65:5)
+        at writeOrBuffer (internal/streams/writable.js:358:12)
+        at MessageStream.Writable.write (internal/streams/writable.js:303:10) {
+      index: 0,
+      code: 11000,
+      keyPattern: { category: 1 },
+      keyValue: { category: 'Main13222' }
+    }
+  },
+  level: 'error',
+  timestamp: '2022-02-27 14:28:13'
+}
+{
+  message: {
+    createCategoryDBError: Error: category validation failed: category: Path `category` is required.
+        at ValidationError.inspect (/Users/saudalmutawa/TTP-BACK/TTP-Back/node_modules/mongoose/lib/error/validation.js:48:26)
+        at formatValue (internal/util/inspect.js:745:19)
+        at formatProperty (internal/util/inspect.js:1660:11)
+        at formatRaw (internal/util/inspect.js:987:9)
+        at formatValue (internal/util/inspect.js:774:10)
+        at formatProperty (internal/util/inspect.js:1660:11)
+        at formatRaw (internal/util/inspect.js:987:9)
+        at formatValue (internal/util/inspect.js:774:10)
+        at inspect (internal/util/inspect.js:319:10)
+        at Format.transform (/Users/saudalmutawa/TTP-BACK/TTP-Back/node_modules/logform/pretty-print.js:27:19) {
+      errors: {
+        category: ValidatorError: Path `category` is required.
+            at validate (/Users/saudalmutawa/TTP-BACK/TTP-Back/node_modules/mongoose/lib/schematype.js:1320:13)
+            at SchemaString.SchemaType.doValidate (/Users/saudalmutawa/TTP-BACK/TTP-Back/node_modules/mongoose/lib/schematype.js:1304:7)
+            at /Users/saudalmutawa/TTP-BACK/TTP-Back/node_modules/mongoose/lib/document.js:2723:18
+            at processTicksAndRejections (internal/process/task_queues.js:77:11) {
+          properties: {
+            validator: [Function (anonymous)],
+            message: 'Path `category` is required.',
+            type: 'required',
+            path: 'category',
+            value: ''
+          },
+          kind: 'required',
+          path: 'category',
+          value: '',
+          reason: undefined,
+          [Symbol(mongoose:validatorError)]: true
+        }
+      },
+      _message: 'category validation failed'
+    }
+  },
+  level: 'error',
+  timestamp: '2022-02-27 14:28:27'
+}
+{
+  message: {
+    createCategoryDBError: Error: category validation failed: category: Path `category` is required.
+        at ValidationError.inspect (/Users/saudalmutawa/TTP-BACK/TTP-Back/node_modules/mongoose/lib/error/validation.js:48:26)
+        at formatValue (internal/util/inspect.js:745:19)
+        at formatProperty (internal/util/inspect.js:1660:11)
+        at formatRaw (internal/util/inspect.js:987:9)
+        at formatValue (internal/util/inspect.js:774:10)
+        at formatProperty (internal/util/inspect.js:1660:11)
+        at formatRaw (internal/util/inspect.js:987:9)
+        at formatValue (internal/util/inspect.js:774:10)
+        at inspect (internal/util/inspect.js:319:10)
+        at Format.transform (/Users/saudalmutawa/TTP-BACK/TTP-Back/node_modules/logform/pretty-print.js:27:19) {
+      errors: {
+        category: ValidatorError: Path `category` is required.
+            at validate (/Users/saudalmutawa/TTP-BACK/TTP-Back/node_modules/mongoose/lib/schematype.js:1320:13)
+            at SchemaString.SchemaType.doValidate (/Users/saudalmutawa/TTP-BACK/TTP-Back/node_modules/mongoose/lib/schematype.js:1304:7)
+            at /Users/saudalmutawa/TTP-BACK/TTP-Back/node_modules/mongoose/lib/document.js:2723:18
+            at processTicksAndRejections (internal/process/task_queues.js:77:11) {
+          properties: {
+            validator: [Function (anonymous)],
+            message: 'Path `category` is required.',
+            type: 'required',
+            path: 'category',
+            value: undefined
+          },
+          kind: 'required',
+          path: 'category',
+          value: undefined,
+          reason: undefined,
+          [Symbol(mongoose:validatorError)]: true
+        }
+      },
+      _message: 'category validation failed'
+    }
+  },
+  level: 'error',
+  timestamp: '2022-02-27 14:28:39'
+}
+{
+  message: {
+    createCategoryDBError: MongoServerError: E11000 duplicate key error collection: TTP.categories index: category_1 dup key: { category: "Main13222" }
+        at /Users/saudalmutawa/TTP-BACK/TTP-Back/node_modules/mongoose/node_modules/mongodb/src/operations/insert.ts:75:25
+        at /Users/saudalmutawa/TTP-BACK/TTP-Back/node_modules/mongoose/node_modules/mongodb/src/cmap/connection_pool.ts:482:13
+        at handleOperationResult (/Users/saudalmutawa/TTP-BACK/TTP-Back/node_modules/mongoose/node_modules/mongodb/src/sdam/server.ts:610:5)
+        at MessageStream.messageHandler (/Users/saudalmutawa/TTP-BACK/TTP-Back/node_modules/mongoose/node_modules/mongodb/src/cmap/connection.ts:765:5)
+        at MessageStream.emit (events.js:400:28)
+        at MessageStream.emit (domain.js:475:12)
+        at processIncomingData (/Users/saudalmutawa/TTP-BACK/TTP-Back/node_modules/mongoose/node_modules/mongodb/src/cmap/message_stream.ts:168:12)
+        at MessageStream._write (/Users/saudalmutawa/TTP-BACK/TTP-Back/node_modules/mongoose/node_modules/mongodb/src/cmap/message_stream.ts:65:5)
+        at writeOrBuffer (internal/streams/writable.js:358:12)
+        at MessageStream.Writable.write (internal/streams/writable.js:303:10) {
+      index: 0,
+      code: 11000,
+      keyPattern: { category: 1 },
+      keyValue: { category: 'Main13222' }
+    }
+  },
+  level: 'error',
+  timestamp: '2022-02-27 14:29:03'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-02-27 14:30:24'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-02-27 14:31:06'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-02-27 14:31:23'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-02-27 14:32:02'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-02-27 14:32:08'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-02-27 14:32:27'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-02-27 14:32:50'
+}
+{
+  message: {
+    createSubcategoryDBError: MongoServerError: E11000 duplicate key error collection: TTP.subcategories index: subCategory_1 dup key: { subCategory: "ss" }
+        at /Users/saudalmutawa/TTP-BACK/TTP-Back/node_modules/mongoose/node_modules/mongodb/src/operations/insert.ts:75:25
+        at /Users/saudalmutawa/TTP-BACK/TTP-Back/node_modules/mongoose/node_modules/mongodb/src/cmap/connection_pool.ts:482:13
+        at handleOperationResult (/Users/saudalmutawa/TTP-BACK/TTP-Back/node_modules/mongoose/node_modules/mongodb/src/sdam/server.ts:610:5)
+        at MessageStream.messageHandler (/Users/saudalmutawa/TTP-BACK/TTP-Back/node_modules/mongoose/node_modules/mongodb/src/cmap/connection.ts:765:5)
+        at MessageStream.emit (events.js:400:28)
+        at MessageStream.emit (domain.js:475:12)
+        at processIncomingData (/Users/saudalmutawa/TTP-BACK/TTP-Back/node_modules/mongoose/node_modules/mongodb/src/cmap/message_stream.ts:168:12)
+        at MessageStream._write (/Users/saudalmutawa/TTP-BACK/TTP-Back/node_modules/mongoose/node_modules/mongodb/src/cmap/message_stream.ts:65:5)
+        at writeOrBuffer (internal/streams/writable.js:358:12)
+        at MessageStream.Writable.write (internal/streams/writable.js:303:10) {
+      index: 0,
+      code: 11000,
+      keyPattern: { subCategory: 1 },
+      keyValue: { subCategory: 'ss' }
+    }
+  },
+  level: 'error',
+  timestamp: '2022-02-27 14:33:01'
+}
+{
+  message: {
+    createSubcategoryDBError: MongoServerError: E11000 duplicate key error collection: TTP.subcategories index: subCategory_1 dup key: { subCategory: "ss" }
+        at /Users/saudalmutawa/TTP-BACK/TTP-Back/node_modules/mongoose/node_modules/mongodb/src/operations/insert.ts:75:25
+        at /Users/saudalmutawa/TTP-BACK/TTP-Back/node_modules/mongoose/node_modules/mongodb/src/cmap/connection_pool.ts:482:13
+        at handleOperationResult (/Users/saudalmutawa/TTP-BACK/TTP-Back/node_modules/mongoose/node_modules/mongodb/src/sdam/server.ts:610:5)
+        at MessageStream.messageHandler (/Users/saudalmutawa/TTP-BACK/TTP-Back/node_modules/mongoose/node_modules/mongodb/src/cmap/connection.ts:765:5)
+        at MessageStream.emit (events.js:400:28)
+        at MessageStream.emit (domain.js:475:12)
+        at processIncomingData (/Users/saudalmutawa/TTP-BACK/TTP-Back/node_modules/mongoose/node_modules/mongodb/src/cmap/message_stream.ts:168:12)
+        at MessageStream._write (/Users/saudalmutawa/TTP-BACK/TTP-Back/node_modules/mongoose/node_modules/mongodb/src/cmap/message_stream.ts:65:5)
+        at writeOrBuffer (internal/streams/writable.js:358:12)
+        at MessageStream.Writable.write (internal/streams/writable.js:303:10) {
+      index: 0,
+      code: 11000,
+      keyPattern: { subCategory: 1 },
+      keyValue: { subCategory: 'ss' }
+    }
+  },
+  level: 'error',
+  timestamp: '2022-02-27 14:33:02'
+}
+{
+  message: {
+    createSubcategoryDBError: MongoServerError: E11000 duplicate key error collection: TTP.subcategories index: subCategory_1 dup key: { subCategory: "ss" }
+        at /Users/saudalmutawa/TTP-BACK/TTP-Back/node_modules/mongoose/node_modules/mongodb/src/operations/insert.ts:75:25
+        at /Users/saudalmutawa/TTP-BACK/TTP-Back/node_modules/mongoose/node_modules/mongodb/src/cmap/connection_pool.ts:482:13
+        at handleOperationResult (/Users/saudalmutawa/TTP-BACK/TTP-Back/node_modules/mongoose/node_modules/mongodb/src/sdam/server.ts:610:5)
+        at MessageStream.messageHandler (/Users/saudalmutawa/TTP-BACK/TTP-Back/node_modules/mongoose/node_modules/mongodb/src/cmap/connection.ts:765:5)
+        at MessageStream.emit (events.js:400:28)
+        at MessageStream.emit (domain.js:475:12)
+        at processIncomingData (/Users/saudalmutawa/TTP-BACK/TTP-Back/node_modules/mongoose/node_modules/mongodb/src/cmap/message_stream.ts:168:12)
+        at MessageStream._write (/Users/saudalmutawa/TTP-BACK/TTP-Back/node_modules/mongoose/node_modules/mongodb/src/cmap/message_stream.ts:65:5)
+        at writeOrBuffer (internal/streams/writable.js:358:12)
+        at MessageStream.Writable.write (internal/streams/writable.js:303:10) {
+      index: 0,
+      code: 11000,
+      keyPattern: { subCategory: 1 },
+      keyValue: { subCategory: 'ss' }
+    }
+  },
+  level: 'error',
+  timestamp: '2022-02-27 14:33:02'
+}
+{
+  message: {
+    createSubcategoryDBError: MongoServerError: E11000 duplicate key error collection: TTP.subcategories index: subCategory_1 dup key: { subCategory: "ss" }
+        at /Users/saudalmutawa/TTP-BACK/TTP-Back/node_modules/mongoose/node_modules/mongodb/src/operations/insert.ts:75:25
+        at /Users/saudalmutawa/TTP-BACK/TTP-Back/node_modules/mongoose/node_modules/mongodb/src/cmap/connection_pool.ts:482:13
+        at handleOperationResult (/Users/saudalmutawa/TTP-BACK/TTP-Back/node_modules/mongoose/node_modules/mongodb/src/sdam/server.ts:610:5)
+        at MessageStream.messageHandler (/Users/saudalmutawa/TTP-BACK/TTP-Back/node_modules/mongoose/node_modules/mongodb/src/cmap/connection.ts:765:5)
+        at MessageStream.emit (events.js:400:28)
+        at MessageStream.emit (domain.js:475:12)
+        at processIncomingData (/Users/saudalmutawa/TTP-BACK/TTP-Back/node_modules/mongoose/node_modules/mongodb/src/cmap/message_stream.ts:168:12)
+        at MessageStream._write (/Users/saudalmutawa/TTP-BACK/TTP-Back/node_modules/mongoose/node_modules/mongodb/src/cmap/message_stream.ts:65:5)
+        at writeOrBuffer (internal/streams/writable.js:358:12)
+        at MessageStream.Writable.write (internal/streams/writable.js:303:10) {
+      index: 0,
+      code: 11000,
+      keyPattern: { subCategory: 1 },
+      keyValue: { subCategory: 'ss' }
+    }
+  },
+  level: 'error',
+  timestamp: '2022-02-27 14:33:03'
+}
+{
+  message: {
+    createSubcategoryDBError: MongoServerError: E11000 duplicate key error collection: TTP.subcategories index: subCategory_1 dup key: { subCategory: "ss" }
+        at /Users/saudalmutawa/TTP-BACK/TTP-Back/node_modules/mongoose/node_modules/mongodb/src/operations/insert.ts:75:25
+        at /Users/saudalmutawa/TTP-BACK/TTP-Back/node_modules/mongoose/node_modules/mongodb/src/cmap/connection_pool.ts:482:13
+        at handleOperationResult (/Users/saudalmutawa/TTP-BACK/TTP-Back/node_modules/mongoose/node_modules/mongodb/src/sdam/server.ts:610:5)
+        at MessageStream.messageHandler (/Users/saudalmutawa/TTP-BACK/TTP-Back/node_modules/mongoose/node_modules/mongodb/src/cmap/connection.ts:765:5)
+        at MessageStream.emit (events.js:400:28)
+        at MessageStream.emit (domain.js:475:12)
+        at processIncomingData (/Users/saudalmutawa/TTP-BACK/TTP-Back/node_modules/mongoose/node_modules/mongodb/src/cmap/message_stream.ts:168:12)
+        at MessageStream._write (/Users/saudalmutawa/TTP-BACK/TTP-Back/node_modules/mongoose/node_modules/mongodb/src/cmap/message_stream.ts:65:5)
+        at writeOrBuffer (internal/streams/writable.js:358:12)
+        at MessageStream.Writable.write (internal/streams/writable.js:303:10) {
+      index: 0,
+      code: 11000,
+      keyPattern: { subCategory: 1 },
+      keyValue: { subCategory: 'ss' }
+    }
+  },
+  level: 'error',
+  timestamp: '2022-02-27 14:33:03'
+}
+{
+  message: {
+    createSubcategoryDBError: MongoServerError: E11000 duplicate key error collection: TTP.subcategories index: subCategory_1 dup key: { subCategory: "ss" }
+        at /Users/saudalmutawa/TTP-BACK/TTP-Back/node_modules/mongoose/node_modules/mongodb/src/operations/insert.ts:75:25
+        at /Users/saudalmutawa/TTP-BACK/TTP-Back/node_modules/mongoose/node_modules/mongodb/src/cmap/connection_pool.ts:482:13
+        at handleOperationResult (/Users/saudalmutawa/TTP-BACK/TTP-Back/node_modules/mongoose/node_modules/mongodb/src/sdam/server.ts:610:5)
+        at MessageStream.messageHandler (/Users/saudalmutawa/TTP-BACK/TTP-Back/node_modules/mongoose/node_modules/mongodb/src/cmap/connection.ts:765:5)
+        at MessageStream.emit (events.js:400:28)
+        at MessageStream.emit (domain.js:475:12)
+        at processIncomingData (/Users/saudalmutawa/TTP-BACK/TTP-Back/node_modules/mongoose/node_modules/mongodb/src/cmap/message_stream.ts:168:12)
+        at MessageStream._write (/Users/saudalmutawa/TTP-BACK/TTP-Back/node_modules/mongoose/node_modules/mongodb/src/cmap/message_stream.ts:65:5)
+        at writeOrBuffer (internal/streams/writable.js:358:12)
+        at MessageStream.Writable.write (internal/streams/writable.js:303:10) {
+      index: 0,
+      code: 11000,
+      keyPattern: { subCategory: 1 },
+      keyValue: { subCategory: 'ss' }
+    }
+  },
+  level: 'error',
+  timestamp: '2022-02-27 14:33:04'
+}
+{
+  message: {
+    createCategoryDBError: Error: category validation failed: category: Path `category` is required.
+        at ValidationError.inspect (/Users/saudalmutawa/TTP-BACK/TTP-Back/node_modules/mongoose/lib/error/validation.js:48:26)
+        at formatValue (internal/util/inspect.js:745:19)
+        at formatProperty (internal/util/inspect.js:1660:11)
+        at formatRaw (internal/util/inspect.js:987:9)
+        at formatValue (internal/util/inspect.js:774:10)
+        at formatProperty (internal/util/inspect.js:1660:11)
+        at formatRaw (internal/util/inspect.js:987:9)
+        at formatValue (internal/util/inspect.js:774:10)
+        at inspect (internal/util/inspect.js:319:10)
+        at Format.transform (/Users/saudalmutawa/TTP-BACK/TTP-Back/node_modules/logform/pretty-print.js:27:19) {
+      errors: {
+        category: ValidatorError: Path `category` is required.
+            at validate (/Users/saudalmutawa/TTP-BACK/TTP-Back/node_modules/mongoose/lib/schematype.js:1320:13)
+            at SchemaString.SchemaType.doValidate (/Users/saudalmutawa/TTP-BACK/TTP-Back/node_modules/mongoose/lib/schematype.js:1304:7)
+            at /Users/saudalmutawa/TTP-BACK/TTP-Back/node_modules/mongoose/lib/document.js:2723:18
+            at processTicksAndRejections (internal/process/task_queues.js:77:11) {
+          properties: {
+            validator: [Function (anonymous)],
+            message: 'Path `category` is required.',
+            type: 'required',
+            path: 'category',
+            value: undefined
+          },
+          kind: 'required',
+          path: 'category',
+          value: undefined,
+          reason: undefined,
+          [Symbol(mongoose:validatorError)]: true
+        }
+      },
+      _message: 'category validation failed'
+    }
+  },
+  level: 'error',
+  timestamp: '2022-02-27 14:33:30'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-02-27 14:34:57'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-02-27 14:35:06'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-02-27 14:35:37'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-02-27 14:38:24'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-02-27 14:59:47'
+}
+{
+  message: {
+    createCategoryDBError: Error: category validation failed: category: Path `category` is required.
+        at ValidationError.inspect (/Users/saudalmutawa/TTP-BACK/TTP-Back/node_modules/mongoose/lib/error/validation.js:48:26)
+        at formatValue (internal/util/inspect.js:745:19)
+        at formatProperty (internal/util/inspect.js:1660:11)
+        at formatRaw (internal/util/inspect.js:987:9)
+        at formatValue (internal/util/inspect.js:774:10)
+        at formatProperty (internal/util/inspect.js:1660:11)
+        at formatRaw (internal/util/inspect.js:987:9)
+        at formatValue (internal/util/inspect.js:774:10)
+        at inspect (internal/util/inspect.js:319:10)
+        at Format.transform (/Users/saudalmutawa/TTP-BACK/TTP-Back/node_modules/logform/pretty-print.js:27:19) {
+      errors: {
+        category: ValidatorError: Path `category` is required.
+            at validate (/Users/saudalmutawa/TTP-BACK/TTP-Back/node_modules/mongoose/lib/schematype.js:1320:13)
+            at SchemaString.SchemaType.doValidate (/Users/saudalmutawa/TTP-BACK/TTP-Back/node_modules/mongoose/lib/schematype.js:1304:7)
+            at /Users/saudalmutawa/TTP-BACK/TTP-Back/node_modules/mongoose/lib/document.js:2723:18
+            at processTicksAndRejections (internal/process/task_queues.js:77:11) {
+          properties: {
+            validator: [Function (anonymous)],
+            message: 'Path `category` is required.',
+            type: 'required',
+            path: 'category',
+            value: undefined
+          },
+          kind: 'required',
+          path: 'category',
+          value: undefined,
+          reason: undefined,
+          [Symbol(mongoose:validatorError)]: true
+        }
+      },
+      _message: 'category validation failed'
+    }
+  },
+  level: 'error',
+  timestamp: '2022-02-27 15:40:30'
+}
+{
+  message: {
+    createCategoryDBError: Error: category validation failed: category: Path `category` is required.
+        at ValidationError.inspect (/Users/saudalmutawa/TTP-BACK/TTP-Back/node_modules/mongoose/lib/error/validation.js:48:26)
+        at formatValue (internal/util/inspect.js:745:19)
+        at formatProperty (internal/util/inspect.js:1660:11)
+        at formatRaw (internal/util/inspect.js:987:9)
+        at formatValue (internal/util/inspect.js:774:10)
+        at formatProperty (internal/util/inspect.js:1660:11)
+        at formatRaw (internal/util/inspect.js:987:9)
+        at formatValue (internal/util/inspect.js:774:10)
+        at inspect (internal/util/inspect.js:319:10)
+        at Format.transform (/Users/saudalmutawa/TTP-BACK/TTP-Back/node_modules/logform/pretty-print.js:27:19) {
+      errors: {
+        category: ValidatorError: Path `category` is required.
+            at validate (/Users/saudalmutawa/TTP-BACK/TTP-Back/node_modules/mongoose/lib/schematype.js:1320:13)
+            at SchemaString.SchemaType.doValidate (/Users/saudalmutawa/TTP-BACK/TTP-Back/node_modules/mongoose/lib/schematype.js:1304:7)
+            at /Users/saudalmutawa/TTP-BACK/TTP-Back/node_modules/mongoose/lib/document.js:2723:18
+            at processTicksAndRejections (internal/process/task_queues.js:77:11) {
+          properties: {
+            validator: [Function (anonymous)],
+            message: 'Path `category` is required.',
+            type: 'required',
+            path: 'category',
+            value: undefined
+          },
+          kind: 'required',
+          path: 'category',
+          value: undefined,
+          reason: undefined,
+          [Symbol(mongoose:validatorError)]: true
+        }
+      },
+      _message: 'category validation failed'
+    }
+  },
+  level: 'error',
+  timestamp: '2022-02-27 15:41:48'
+}
+{
+  message: {
+    createCategoryDBError: Error: category validation failed: category: Path `category` is required.
+        at ValidationError.inspect (/Users/saudalmutawa/TTP-BACK/TTP-Back/node_modules/mongoose/lib/error/validation.js:48:26)
+        at formatValue (internal/util/inspect.js:745:19)
+        at formatProperty (internal/util/inspect.js:1660:11)
+        at formatRaw (internal/util/inspect.js:987:9)
+        at formatValue (internal/util/inspect.js:774:10)
+        at formatProperty (internal/util/inspect.js:1660:11)
+        at formatRaw (internal/util/inspect.js:987:9)
+        at formatValue (internal/util/inspect.js:774:10)
+        at inspect (internal/util/inspect.js:319:10)
+        at Format.transform (/Users/saudalmutawa/TTP-BACK/TTP-Back/node_modules/logform/pretty-print.js:27:19) {
+      errors: {
+        category: ValidatorError: Path `category` is required.
+            at validate (/Users/saudalmutawa/TTP-BACK/TTP-Back/node_modules/mongoose/lib/schematype.js:1320:13)
+            at SchemaString.SchemaType.doValidate (/Users/saudalmutawa/TTP-BACK/TTP-Back/node_modules/mongoose/lib/schematype.js:1304:7)
+            at /Users/saudalmutawa/TTP-BACK/TTP-Back/node_modules/mongoose/lib/document.js:2723:18
+            at processTicksAndRejections (internal/process/task_queues.js:77:11) {
+          properties: {
+            validator: [Function (anonymous)],
+            message: 'Path `category` is required.',
+            type: 'required',
+            path: 'category',
+            value: undefined
+          },
+          kind: 'required',
+          path: 'category',
+          value: undefined,
+          reason: undefined,
+          [Symbol(mongoose:validatorError)]: true
+        }
+      },
+      _message: 'category validation failed'
+    }
+  },
+  level: 'error',
+  timestamp: '2022-02-27 15:42:48'
+}
+{
+  message: {
+    createCategoryDBError: Error: category validation failed: category: Path `category` is required.
+        at ValidationError.inspect (/Users/saudalmutawa/TTP-BACK/TTP-Back/node_modules/mongoose/lib/error/validation.js:48:26)
+        at formatValue (internal/util/inspect.js:745:19)
+        at formatProperty (internal/util/inspect.js:1660:11)
+        at formatRaw (internal/util/inspect.js:987:9)
+        at formatValue (internal/util/inspect.js:774:10)
+        at formatProperty (internal/util/inspect.js:1660:11)
+        at formatRaw (internal/util/inspect.js:987:9)
+        at formatValue (internal/util/inspect.js:774:10)
+        at inspect (internal/util/inspect.js:319:10)
+        at Format.transform (/Users/saudalmutawa/TTP-BACK/TTP-Back/node_modules/logform/pretty-print.js:27:19) {
+      errors: {
+        category: ValidatorError: Path `category` is required.
+            at validate (/Users/saudalmutawa/TTP-BACK/TTP-Back/node_modules/mongoose/lib/schematype.js:1320:13)
+            at SchemaString.SchemaType.doValidate (/Users/saudalmutawa/TTP-BACK/TTP-Back/node_modules/mongoose/lib/schematype.js:1304:7)
+            at /Users/saudalmutawa/TTP-BACK/TTP-Back/node_modules/mongoose/lib/document.js:2723:18
+            at processTicksAndRejections (internal/process/task_queues.js:77:11) {
+          properties: {
+            validator: [Function (anonymous)],
+            message: 'Path `category` is required.',
+            type: 'required',
+            path: 'category',
+            value: undefined
+          },
+          kind: 'required',
+          path: 'category',
+          value: undefined,
+          reason: undefined,
+          [Symbol(mongoose:validatorError)]: true
+        }
+      },
+      _message: 'category validation failed'
+    }
+  },
+  level: 'error',
+  timestamp: '2022-02-27 15:48:28'
+}
+{
+  message: {
+    createCategoryDBError: Error: category validation failed: category: Path `category` is required.
+        at ValidationError.inspect (/Users/saudalmutawa/TTP-BACK/TTP-Back/node_modules/mongoose/lib/error/validation.js:48:26)
+        at formatValue (internal/util/inspect.js:745:19)
+        at formatProperty (internal/util/inspect.js:1660:11)
+        at formatRaw (internal/util/inspect.js:987:9)
+        at formatValue (internal/util/inspect.js:774:10)
+        at formatProperty (internal/util/inspect.js:1660:11)
+        at formatRaw (internal/util/inspect.js:987:9)
+        at formatValue (internal/util/inspect.js:774:10)
+        at inspect (internal/util/inspect.js:319:10)
+        at Format.transform (/Users/saudalmutawa/TTP-BACK/TTP-Back/node_modules/logform/pretty-print.js:27:19) {
+      errors: {
+        category: ValidatorError: Path `category` is required.
+            at validate (/Users/saudalmutawa/TTP-BACK/TTP-Back/node_modules/mongoose/lib/schematype.js:1320:13)
+            at SchemaString.SchemaType.doValidate (/Users/saudalmutawa/TTP-BACK/TTP-Back/node_modules/mongoose/lib/schematype.js:1304:7)
+            at /Users/saudalmutawa/TTP-BACK/TTP-Back/node_modules/mongoose/lib/document.js:2723:18
+            at processTicksAndRejections (internal/process/task_queues.js:77:11) {
+          properties: {
+            validator: [Function (anonymous)],
+            message: 'Path `category` is required.',
+            type: 'required',
+            path: 'category',
+            value: undefined
+          },
+          kind: 'required',
+          path: 'category',
+          value: undefined,
+          reason: undefined,
+          [Symbol(mongoose:validatorError)]: true
+        }
+      },
+      _message: 'category validation failed'
+    }
+  },
+  level: 'error',
+  timestamp: '2022-02-27 15:48:30'
+}
+{
+  message: {
+    createCategoryDBError: Error: category validation failed: category: Path `category` is required.
+        at ValidationError.inspect (/Users/saudalmutawa/TTP-BACK/TTP-Back/node_modules/mongoose/lib/error/validation.js:48:26)
+        at formatValue (internal/util/inspect.js:745:19)
+        at formatProperty (internal/util/inspect.js:1660:11)
+        at formatRaw (internal/util/inspect.js:987:9)
+        at formatValue (internal/util/inspect.js:774:10)
+        at formatProperty (internal/util/inspect.js:1660:11)
+        at formatRaw (internal/util/inspect.js:987:9)
+        at formatValue (internal/util/inspect.js:774:10)
+        at inspect (internal/util/inspect.js:319:10)
+        at Format.transform (/Users/saudalmutawa/TTP-BACK/TTP-Back/node_modules/logform/pretty-print.js:27:19) {
+      errors: {
+        category: ValidatorError: Path `category` is required.
+            at validate (/Users/saudalmutawa/TTP-BACK/TTP-Back/node_modules/mongoose/lib/schematype.js:1320:13)
+            at SchemaString.SchemaType.doValidate (/Users/saudalmutawa/TTP-BACK/TTP-Back/node_modules/mongoose/lib/schematype.js:1304:7)
+            at /Users/saudalmutawa/TTP-BACK/TTP-Back/node_modules/mongoose/lib/document.js:2723:18
+            at processTicksAndRejections (internal/process/task_queues.js:77:11) {
+          properties: {
+            validator: [Function (anonymous)],
+            message: 'Path `category` is required.',
+            type: 'required',
+            path: 'category',
+            value: undefined
+          },
+          kind: 'required',
+          path: 'category',
+          value: undefined,
+          reason: undefined,
+          [Symbol(mongoose:validatorError)]: true
+        }
+      },
+      _message: 'category validation failed'
+    }
+  },
+  level: 'error',
+  timestamp: '2022-02-27 15:49:09'
+}
+{
+  message: {
+    createCategoryDBError: Error: category validation failed: category: Path `category` is required.
+        at ValidationError.inspect (/Users/saudalmutawa/TTP-BACK/TTP-Back/node_modules/mongoose/lib/error/validation.js:48:26)
+        at formatValue (internal/util/inspect.js:745:19)
+        at formatProperty (internal/util/inspect.js:1660:11)
+        at formatRaw (internal/util/inspect.js:987:9)
+        at formatValue (internal/util/inspect.js:774:10)
+        at formatProperty (internal/util/inspect.js:1660:11)
+        at formatRaw (internal/util/inspect.js:987:9)
+        at formatValue (internal/util/inspect.js:774:10)
+        at inspect (internal/util/inspect.js:319:10)
+        at Format.transform (/Users/saudalmutawa/TTP-BACK/TTP-Back/node_modules/logform/pretty-print.js:27:19) {
+      errors: {
+        category: ValidatorError: Path `category` is required.
+            at validate (/Users/saudalmutawa/TTP-BACK/TTP-Back/node_modules/mongoose/lib/schematype.js:1320:13)
+            at SchemaString.SchemaType.doValidate (/Users/saudalmutawa/TTP-BACK/TTP-Back/node_modules/mongoose/lib/schematype.js:1304:7)
+            at /Users/saudalmutawa/TTP-BACK/TTP-Back/node_modules/mongoose/lib/document.js:2723:18
+            at processTicksAndRejections (internal/process/task_queues.js:77:11) {
+          properties: {
+            validator: [Function (anonymous)],
+            message: 'Path `category` is required.',
+            type: 'required',
+            path: 'category',
+            value: undefined
+          },
+          kind: 'required',
+          path: 'category',
+          value: undefined,
+          reason: undefined,
+          [Symbol(mongoose:validatorError)]: true
+        }
+      },
+      _message: 'category validation failed'
+    }
+  },
+  level: 'error',
+  timestamp: '2022-02-27 15:51:24'
+}
+{
+  message: {
+    createCategoryDBError: Error: category validation failed: category: Path `category` is required.
+        at ValidationError.inspect (/Users/saudalmutawa/TTP-BACK/TTP-Back/node_modules/mongoose/lib/error/validation.js:48:26)
+        at formatValue (internal/util/inspect.js:745:19)
+        at formatProperty (internal/util/inspect.js:1660:11)
+        at formatRaw (internal/util/inspect.js:987:9)
+        at formatValue (internal/util/inspect.js:774:10)
+        at formatProperty (internal/util/inspect.js:1660:11)
+        at formatRaw (internal/util/inspect.js:987:9)
+        at formatValue (internal/util/inspect.js:774:10)
+        at inspect (internal/util/inspect.js:319:10)
+        at Format.transform (/Users/saudalmutawa/TTP-BACK/TTP-Back/node_modules/logform/pretty-print.js:27:19) {
+      errors: {
+        category: ValidatorError: Path `category` is required.
+            at validate (/Users/saudalmutawa/TTP-BACK/TTP-Back/node_modules/mongoose/lib/schematype.js:1320:13)
+            at SchemaString.SchemaType.doValidate (/Users/saudalmutawa/TTP-BACK/TTP-Back/node_modules/mongoose/lib/schematype.js:1304:7)
+            at /Users/saudalmutawa/TTP-BACK/TTP-Back/node_modules/mongoose/lib/document.js:2723:18
+            at processTicksAndRejections (internal/process/task_queues.js:77:11) {
+          properties: {
+            validator: [Function (anonymous)],
+            message: 'Path `category` is required.',
+            type: 'required',
+            path: 'category',
+            value: undefined
+          },
+          kind: 'required',
+          path: 'category',
+          value: undefined,
+          reason: undefined,
+          [Symbol(mongoose:validatorError)]: true
+        }
+      },
+      _message: 'category validation failed'
+    }
+  },
+  level: 'error',
+  timestamp: '2022-02-27 15:55:38'
+}
+{
+  message: {
+    createCategoryDBError: Error: category validation failed: category: Path `category` is required.
+        at ValidationError.inspect (/Users/saudalmutawa/TTP-BACK/TTP-Back/node_modules/mongoose/lib/error/validation.js:48:26)
+        at formatValue (internal/util/inspect.js:745:19)
+        at formatProperty (internal/util/inspect.js:1660:11)
+        at formatRaw (internal/util/inspect.js:987:9)
+        at formatValue (internal/util/inspect.js:774:10)
+        at formatProperty (internal/util/inspect.js:1660:11)
+        at formatRaw (internal/util/inspect.js:987:9)
+        at formatValue (internal/util/inspect.js:774:10)
+        at inspect (internal/util/inspect.js:319:10)
+        at Format.transform (/Users/saudalmutawa/TTP-BACK/TTP-Back/node_modules/logform/pretty-print.js:27:19) {
+      errors: {
+        category: ValidatorError: Path `category` is required.
+            at validate (/Users/saudalmutawa/TTP-BACK/TTP-Back/node_modules/mongoose/lib/schematype.js:1320:13)
+            at SchemaString.SchemaType.doValidate (/Users/saudalmutawa/TTP-BACK/TTP-Back/node_modules/mongoose/lib/schematype.js:1304:7)
+            at /Users/saudalmutawa/TTP-BACK/TTP-Back/node_modules/mongoose/lib/document.js:2723:18
+            at processTicksAndRejections (internal/process/task_queues.js:77:11) {
+          properties: {
+            validator: [Function (anonymous)],
+            message: 'Path `category` is required.',
+            type: 'required',
+            path: 'category',
+            value: undefined
+          },
+          kind: 'required',
+          path: 'category',
+          value: undefined,
+          reason: undefined,
+          [Symbol(mongoose:validatorError)]: true
+        }
+      },
+      _message: 'category validation failed'
+    }
+  },
+  level: 'error',
+  timestamp: '2022-02-27 15:56:47'
+}
+{
+  message: {
+    createCategoryDBError: Error: category validation failed: category: Path `category` is required.
+        at ValidationError.inspect (/Users/saudalmutawa/TTP-BACK/TTP-Back/node_modules/mongoose/lib/error/validation.js:48:26)
+        at formatValue (internal/util/inspect.js:745:19)
+        at formatProperty (internal/util/inspect.js:1660:11)
+        at formatRaw (internal/util/inspect.js:987:9)
+        at formatValue (internal/util/inspect.js:774:10)
+        at formatProperty (internal/util/inspect.js:1660:11)
+        at formatRaw (internal/util/inspect.js:987:9)
+        at formatValue (internal/util/inspect.js:774:10)
+        at inspect (internal/util/inspect.js:319:10)
+        at Format.transform (/Users/saudalmutawa/TTP-BACK/TTP-Back/node_modules/logform/pretty-print.js:27:19) {
+      errors: {
+        category: ValidatorError: Path `category` is required.
+            at validate (/Users/saudalmutawa/TTP-BACK/TTP-Back/node_modules/mongoose/lib/schematype.js:1320:13)
+            at SchemaString.SchemaType.doValidate (/Users/saudalmutawa/TTP-BACK/TTP-Back/node_modules/mongoose/lib/schematype.js:1304:7)
+            at /Users/saudalmutawa/TTP-BACK/TTP-Back/node_modules/mongoose/lib/document.js:2723:18
+            at processTicksAndRejections (internal/process/task_queues.js:77:11) {
+          properties: {
+            validator: [Function (anonymous)],
+            message: 'Path `category` is required.',
+            type: 'required',
+            path: 'category',
+            value: undefined
+          },
+          kind: 'required',
+          path: 'category',
+          value: undefined,
+          reason: undefined,
+          [Symbol(mongoose:validatorError)]: true
+        }
+      },
+      _message: 'category validation failed'
+    }
+  },
+  level: 'error',
+  timestamp: '2022-02-27 15:57:07'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-02-27 16:00:25'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-02-27 16:01:24'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-02-27 16:15:08'
+}
+{
+  message: {
+    createCategoryDBError: Error: category validation failed: category: Path `category` is required.
+        at ValidationError.inspect (/Users/saudalmutawa/TTP-BACK/TTP-Back/node_modules/mongoose/lib/error/validation.js:48:26)
+        at formatValue (internal/util/inspect.js:745:19)
+        at formatProperty (internal/util/inspect.js:1660:11)
+        at formatRaw (internal/util/inspect.js:987:9)
+        at formatValue (internal/util/inspect.js:774:10)
+        at formatProperty (internal/util/inspect.js:1660:11)
+        at formatRaw (internal/util/inspect.js:987:9)
+        at formatValue (internal/util/inspect.js:774:10)
+        at inspect (internal/util/inspect.js:319:10)
+        at Format.transform (/Users/saudalmutawa/TTP-BACK/TTP-Back/node_modules/logform/pretty-print.js:27:19) {
+      errors: {
+        category: ValidatorError: Path `category` is required.
+            at validate (/Users/saudalmutawa/TTP-BACK/TTP-Back/node_modules/mongoose/lib/schematype.js:1320:13)
+            at SchemaString.SchemaType.doValidate (/Users/saudalmutawa/TTP-BACK/TTP-Back/node_modules/mongoose/lib/schematype.js:1304:7)
+            at /Users/saudalmutawa/TTP-BACK/TTP-Back/node_modules/mongoose/lib/document.js:2723:18
+            at processTicksAndRejections (internal/process/task_queues.js:77:11) {
+          properties: {
+            validator: [Function (anonymous)],
+            message: 'Path `category` is required.',
+            type: 'required',
+            path: 'category',
+            value: ''
+          },
+          kind: 'required',
+          path: 'category',
+          value: '',
+          reason: undefined,
+          [Symbol(mongoose:validatorError)]: true
+        }
+      },
+      _message: 'category validation failed'
+    }
+  },
+  level: 'error',
+  timestamp: '2022-02-27 16:15:24'
+}
+{
+  message: {
+    createCategoryDBError: MongoServerError: E11000 duplicate key error collection: TTP.categories index: category_1 dup key: { category: "Main1" }
+        at /Users/saudalmutawa/TTP-BACK/TTP-Back/node_modules/mongoose/node_modules/mongodb/src/operations/insert.ts:75:25
+        at /Users/saudalmutawa/TTP-BACK/TTP-Back/node_modules/mongoose/node_modules/mongodb/src/cmap/connection_pool.ts:482:13
+        at handleOperationResult (/Users/saudalmutawa/TTP-BACK/TTP-Back/node_modules/mongoose/node_modules/mongodb/src/sdam/server.ts:610:5)
+        at MessageStream.messageHandler (/Users/saudalmutawa/TTP-BACK/TTP-Back/node_modules/mongoose/node_modules/mongodb/src/cmap/connection.ts:765:5)
+        at MessageStream.emit (events.js:400:28)
+        at MessageStream.emit (domain.js:475:12)
+        at processIncomingData (/Users/saudalmutawa/TTP-BACK/TTP-Back/node_modules/mongoose/node_modules/mongodb/src/cmap/message_stream.ts:168:12)
+        at MessageStream._write (/Users/saudalmutawa/TTP-BACK/TTP-Back/node_modules/mongoose/node_modules/mongodb/src/cmap/message_stream.ts:65:5)
+        at writeOrBuffer (internal/streams/writable.js:358:12)
+        at MessageStream.Writable.write (internal/streams/writable.js:303:10) {
+      index: 0,
+      code: 11000,
+      keyPattern: { category: 1 },
+      keyValue: { category: 'Main1' }
+    }
+  },
+  level: 'error',
+  timestamp: '2022-02-27 16:16:07'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-02-27 16:16:22'
+}
+{
+  message: {
+    createCategoryDBError: Error: category validation failed: category: Path `category` is required.
+        at ValidationError.inspect (/Users/saudalmutawa/TTP-BACK/TTP-Back/node_modules/mongoose/lib/error/validation.js:48:26)
+        at formatValue (internal/util/inspect.js:745:19)
+        at formatProperty (internal/util/inspect.js:1660:11)
+        at formatRaw (internal/util/inspect.js:987:9)
+        at formatValue (internal/util/inspect.js:774:10)
+        at formatProperty (internal/util/inspect.js:1660:11)
+        at formatRaw (internal/util/inspect.js:987:9)
+        at formatValue (internal/util/inspect.js:774:10)
+        at inspect (internal/util/inspect.js:319:10)
+        at Format.transform (/Users/saudalmutawa/TTP-BACK/TTP-Back/node_modules/logform/pretty-print.js:27:19) {
+      errors: {
+        category: ValidatorError: Path `category` is required.
+            at validate (/Users/saudalmutawa/TTP-BACK/TTP-Back/node_modules/mongoose/lib/schematype.js:1320:13)
+            at SchemaString.SchemaType.doValidate (/Users/saudalmutawa/TTP-BACK/TTP-Back/node_modules/mongoose/lib/schematype.js:1304:7)
+            at /Users/saudalmutawa/TTP-BACK/TTP-Back/node_modules/mongoose/lib/document.js:2723:18
+            at processTicksAndRejections (internal/process/task_queues.js:77:11) {
+          properties: {
+            validator: [Function (anonymous)],
+            message: 'Path `category` is required.',
+            type: 'required',
+            path: 'category',
+            value: ''
+          },
+          kind: 'required',
+          path: 'category',
+          value: '',
+          reason: undefined,
+          [Symbol(mongoose:validatorError)]: true
+        }
+      },
+      _message: 'category validation failed'
+    }
+  },
+  level: 'error',
+  timestamp: '2022-02-27 16:17:43'
+}
+{
+  message: {
+    createCategoryDBError: Error: category validation failed: category: Path `category` is required.
+        at ValidationError.inspect (/Users/saudalmutawa/TTP-BACK/TTP-Back/node_modules/mongoose/lib/error/validation.js:48:26)
+        at formatValue (internal/util/inspect.js:745:19)
+        at formatProperty (internal/util/inspect.js:1660:11)
+        at formatRaw (internal/util/inspect.js:987:9)
+        at formatValue (internal/util/inspect.js:774:10)
+        at formatProperty (internal/util/inspect.js:1660:11)
+        at formatRaw (internal/util/inspect.js:987:9)
+        at formatValue (internal/util/inspect.js:774:10)
+        at inspect (internal/util/inspect.js:319:10)
+        at Format.transform (/Users/saudalmutawa/TTP-BACK/TTP-Back/node_modules/logform/pretty-print.js:27:19) {
+      errors: {
+        category: ValidatorError: Path `category` is required.
+            at validate (/Users/saudalmutawa/TTP-BACK/TTP-Back/node_modules/mongoose/lib/schematype.js:1320:13)
+            at SchemaString.SchemaType.doValidate (/Users/saudalmutawa/TTP-BACK/TTP-Back/node_modules/mongoose/lib/schematype.js:1304:7)
+            at /Users/saudalmutawa/TTP-BACK/TTP-Back/node_modules/mongoose/lib/document.js:2723:18
+            at processTicksAndRejections (internal/process/task_queues.js:77:11) {
+          properties: {
+            validator: [Function (anonymous)],
+            message: 'Path `category` is required.',
+            type: 'required',
+            path: 'category',
+            value: ''
+          },
+          kind: 'required',
+          path: 'category',
+          value: '',
+          reason: undefined,
+          [Symbol(mongoose:validatorError)]: true
+        }
+      },
+      _message: 'category validation failed'
+    }
+  },
+  level: 'error',
+  timestamp: '2022-02-27 16:18:14'
+}
+{
+  message: {
+    createCategoryDBError: Error: category validation failed: category: Path `category` is required.
+        at ValidationError.inspect (/Users/saudalmutawa/TTP-BACK/TTP-Back/node_modules/mongoose/lib/error/validation.js:48:26)
+        at formatValue (internal/util/inspect.js:745:19)
+        at formatProperty (internal/util/inspect.js:1660:11)
+        at formatRaw (internal/util/inspect.js:987:9)
+        at formatValue (internal/util/inspect.js:774:10)
+        at formatProperty (internal/util/inspect.js:1660:11)
+        at formatRaw (internal/util/inspect.js:987:9)
+        at formatValue (internal/util/inspect.js:774:10)
+        at inspect (internal/util/inspect.js:319:10)
+        at Format.transform (/Users/saudalmutawa/TTP-BACK/TTP-Back/node_modules/logform/pretty-print.js:27:19) {
+      errors: {
+        category: ValidatorError: Path `category` is required.
+            at validate (/Users/saudalmutawa/TTP-BACK/TTP-Back/node_modules/mongoose/lib/schematype.js:1320:13)
+            at SchemaString.SchemaType.doValidate (/Users/saudalmutawa/TTP-BACK/TTP-Back/node_modules/mongoose/lib/schematype.js:1304:7)
+            at /Users/saudalmutawa/TTP-BACK/TTP-Back/node_modules/mongoose/lib/document.js:2723:18
+            at processTicksAndRejections (internal/process/task_queues.js:77:11) {
+          properties: {
+            validator: [Function (anonymous)],
+            message: 'Path `category` is required.',
+            type: 'required',
+            path: 'category',
+            value: ''
+          },
+          kind: 'required',
+          path: 'category',
+          value: '',
+          reason: undefined,
+          [Symbol(mongoose:validatorError)]: true
+        }
+      },
+      _message: 'category validation failed'
+    }
+  },
+  level: 'error',
+  timestamp: '2022-02-27 16:21:27'
+}
+{
+  message: {
+    createCategoryDBError: Error: category validation failed: category: Path `category` is required.
+        at ValidationError.inspect (/Users/saudalmutawa/TTP-BACK/TTP-Back/node_modules/mongoose/lib/error/validation.js:48:26)
+        at formatValue (internal/util/inspect.js:745:19)
+        at formatProperty (internal/util/inspect.js:1660:11)
+        at formatRaw (internal/util/inspect.js:987:9)
+        at formatValue (internal/util/inspect.js:774:10)
+        at formatProperty (internal/util/inspect.js:1660:11)
+        at formatRaw (internal/util/inspect.js:987:9)
+        at formatValue (internal/util/inspect.js:774:10)
+        at inspect (internal/util/inspect.js:319:10)
+        at Format.transform (/Users/saudalmutawa/TTP-BACK/TTP-Back/node_modules/logform/pretty-print.js:27:19) {
+      errors: {
+        category: ValidatorError: Path `category` is required.
+            at validate (/Users/saudalmutawa/TTP-BACK/TTP-Back/node_modules/mongoose/lib/schematype.js:1320:13)
+            at SchemaString.SchemaType.doValidate (/Users/saudalmutawa/TTP-BACK/TTP-Back/node_modules/mongoose/lib/schematype.js:1304:7)
+            at /Users/saudalmutawa/TTP-BACK/TTP-Back/node_modules/mongoose/lib/document.js:2723:18
+            at processTicksAndRejections (internal/process/task_queues.js:77:11) {
+          properties: {
+            validator: [Function (anonymous)],
+            message: 'Path `category` is required.',
+            type: 'required',
+            path: 'category',
+            value: ''
+          },
+          kind: 'required',
+          path: 'category',
+          value: '',
+          reason: undefined,
+          [Symbol(mongoose:validatorError)]: true
+        }
+      },
+      _message: 'category validation failed'
+    }
+  },
+  level: 'error',
+  timestamp: '2022-02-27 16:21:33'
+}
+{
+  message: {
+    createCategoryDBError: Error: category validation failed: category: Path `category` is required.
+        at ValidationError.inspect (/Users/saudalmutawa/TTP-BACK/TTP-Back/node_modules/mongoose/lib/error/validation.js:48:26)
+        at formatValue (internal/util/inspect.js:745:19)
+        at formatProperty (internal/util/inspect.js:1660:11)
+        at formatRaw (internal/util/inspect.js:987:9)
+        at formatValue (internal/util/inspect.js:774:10)
+        at formatProperty (internal/util/inspect.js:1660:11)
+        at formatRaw (internal/util/inspect.js:987:9)
+        at formatValue (internal/util/inspect.js:774:10)
+        at inspect (internal/util/inspect.js:319:10)
+        at Format.transform (/Users/saudalmutawa/TTP-BACK/TTP-Back/node_modules/logform/pretty-print.js:27:19) {
+      errors: {
+        category: ValidatorError: Path `category` is required.
+            at validate (/Users/saudalmutawa/TTP-BACK/TTP-Back/node_modules/mongoose/lib/schematype.js:1320:13)
+            at SchemaString.SchemaType.doValidate (/Users/saudalmutawa/TTP-BACK/TTP-Back/node_modules/mongoose/lib/schematype.js:1304:7)
+            at /Users/saudalmutawa/TTP-BACK/TTP-Back/node_modules/mongoose/lib/document.js:2723:18
+            at processTicksAndRejections (internal/process/task_queues.js:77:11) {
+          properties: {
+            validator: [Function (anonymous)],
+            message: 'Path `category` is required.',
+            type: 'required',
+            path: 'category',
+            value: ''
+          },
+          kind: 'required',
+          path: 'category',
+          value: '',
+          reason: undefined,
+          [Symbol(mongoose:validatorError)]: true
+        }
+      },
+      _message: 'category validation failed'
+    }
+  },
+  level: 'error',
+  timestamp: '2022-02-27 16:21:33'
+}
+{
+  message: {
+    createCategoryDBError: MongoServerError: E11000 duplicate key error collection: TTP.categories index: category_1 dup key: { category: "Main1" }
+        at /Users/saudalmutawa/TTP-BACK/TTP-Back/node_modules/mongoose/node_modules/mongodb/src/operations/insert.ts:75:25
+        at /Users/saudalmutawa/TTP-BACK/TTP-Back/node_modules/mongoose/node_modules/mongodb/src/cmap/connection_pool.ts:482:13
+        at handleOperationResult (/Users/saudalmutawa/TTP-BACK/TTP-Back/node_modules/mongoose/node_modules/mongodb/src/sdam/server.ts:610:5)
+        at MessageStream.messageHandler (/Users/saudalmutawa/TTP-BACK/TTP-Back/node_modules/mongoose/node_modules/mongodb/src/cmap/connection.ts:765:5)
+        at MessageStream.emit (events.js:400:28)
+        at MessageStream.emit (domain.js:475:12)
+        at processIncomingData (/Users/saudalmutawa/TTP-BACK/TTP-Back/node_modules/mongoose/node_modules/mongodb/src/cmap/message_stream.ts:168:12)
+        at MessageStream._write (/Users/saudalmutawa/TTP-BACK/TTP-Back/node_modules/mongoose/node_modules/mongodb/src/cmap/message_stream.ts:65:5)
+        at writeOrBuffer (internal/streams/writable.js:358:12)
+        at MessageStream.Writable.write (internal/streams/writable.js:303:10) {
+      index: 0,
+      code: 11000,
+      keyPattern: { category: 1 },
+      keyValue: { category: 'Main1' }
+    }
+  },
+  level: 'error',
+  timestamp: '2022-02-27 16:21:45'
+}
+{
+  message: {
+    createCategoryDBError: MongoServerError: E11000 duplicate key error collection: TTP.categories index: category_1 dup key: { category: "Main2" }
+        at /Users/saudalmutawa/TTP-BACK/TTP-Back/node_modules/mongoose/node_modules/mongodb/src/operations/insert.ts:75:25
+        at /Users/saudalmutawa/TTP-BACK/TTP-Back/node_modules/mongoose/node_modules/mongodb/src/cmap/connection_pool.ts:482:13
+        at handleOperationResult (/Users/saudalmutawa/TTP-BACK/TTP-Back/node_modules/mongoose/node_modules/mongodb/src/sdam/server.ts:610:5)
+        at MessageStream.messageHandler (/Users/saudalmutawa/TTP-BACK/TTP-Back/node_modules/mongoose/node_modules/mongodb/src/cmap/connection.ts:765:5)
+        at MessageStream.emit (events.js:400:28)
+        at MessageStream.emit (domain.js:475:12)
+        at processIncomingData (/Users/saudalmutawa/TTP-BACK/TTP-Back/node_modules/mongoose/node_modules/mongodb/src/cmap/message_stream.ts:168:12)
+        at MessageStream._write (/Users/saudalmutawa/TTP-BACK/TTP-Back/node_modules/mongoose/node_modules/mongodb/src/cmap/message_stream.ts:65:5)
+        at writeOrBuffer (internal/streams/writable.js:358:12)
+        at MessageStream.Writable.write (internal/streams/writable.js:303:10) {
+      index: 0,
+      code: 11000,
+      keyPattern: { category: 1 },
+      keyValue: { category: 'Main2' }
+    }
+  },
+  level: 'error',
+  timestamp: '2022-02-27 16:21:59'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-02-27 16:29:13'
+}
+{
+  message: {
+    createCategoryDBError: Error: category validation failed: category: Path `category` is required.
+        at ValidationError.inspect (/Users/saudalmutawa/TTP-BACK/TTP-Back/node_modules/mongoose/lib/error/validation.js:48:26)
+        at formatValue (internal/util/inspect.js:745:19)
+        at formatProperty (internal/util/inspect.js:1660:11)
+        at formatRaw (internal/util/inspect.js:987:9)
+        at formatValue (internal/util/inspect.js:774:10)
+        at formatProperty (internal/util/inspect.js:1660:11)
+        at formatRaw (internal/util/inspect.js:987:9)
+        at formatValue (internal/util/inspect.js:774:10)
+        at inspect (internal/util/inspect.js:319:10)
+        at Format.transform (/Users/saudalmutawa/TTP-BACK/TTP-Back/node_modules/logform/pretty-print.js:27:19) {
+      errors: {
+        category: ValidatorError: Path `category` is required.
+            at validate (/Users/saudalmutawa/TTP-BACK/TTP-Back/node_modules/mongoose/lib/schematype.js:1320:13)
+            at SchemaString.SchemaType.doValidate (/Users/saudalmutawa/TTP-BACK/TTP-Back/node_modules/mongoose/lib/schematype.js:1304:7)
+            at /Users/saudalmutawa/TTP-BACK/TTP-Back/node_modules/mongoose/lib/document.js:2723:18
+            at processTicksAndRejections (internal/process/task_queues.js:77:11) {
+          properties: {
+            validator: [Function (anonymous)],
+            message: 'Path `category` is required.',
+            type: 'required',
+            path: 'category',
+            value: ''
+          },
+          kind: 'required',
+          path: 'category',
+          value: '',
+          reason: undefined,
+          [Symbol(mongoose:validatorError)]: true
+        }
+      },
+      _message: 'category validation failed'
+    }
+  },
+  level: 'error',
+  timestamp: '2022-02-27 16:30:13'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-02-27 16:31:24'
+}
+{
+  message: { createCategoryDBError: 'Duplicate category error' },
+  level: 'error',
+  timestamp: '2022-02-27 16:31:33'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-02-27 16:32:03'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-02-27 16:33:24'
+}
+{
+  message: {
+    createCategoryDBError: Error: category validation failed: category: Path `category` is required.
+        at ValidationError.inspect (/Users/saudalmutawa/TTP-BACK/TTP-Back/node_modules/mongoose/lib/error/validation.js:48:26)
+        at formatValue (internal/util/inspect.js:745:19)
+        at formatProperty (internal/util/inspect.js:1660:11)
+        at formatRaw (internal/util/inspect.js:987:9)
+        at formatValue (internal/util/inspect.js:774:10)
+        at formatProperty (internal/util/inspect.js:1660:11)
+        at formatRaw (internal/util/inspect.js:987:9)
+        at formatValue (internal/util/inspect.js:774:10)
+        at inspect (internal/util/inspect.js:319:10)
+        at Format.transform (/Users/saudalmutawa/TTP-BACK/TTP-Back/node_modules/logform/pretty-print.js:27:19) {
+      errors: {
+        category: ValidatorError: Path `category` is required.
+            at validate (/Users/saudalmutawa/TTP-BACK/TTP-Back/node_modules/mongoose/lib/schematype.js:1320:13)
+            at SchemaString.SchemaType.doValidate (/Users/saudalmutawa/TTP-BACK/TTP-Back/node_modules/mongoose/lib/schematype.js:1304:7)
+            at /Users/saudalmutawa/TTP-BACK/TTP-Back/node_modules/mongoose/lib/document.js:2723:18
+            at processTicksAndRejections (internal/process/task_queues.js:77:11) {
+          properties: {
+            validator: [Function (anonymous)],
+            message: 'Path `category` is required.',
+            type: 'required',
+            path: 'category',
+            value: ''
+          },
+          kind: 'required',
+          path: 'category',
+          value: '',
+          reason: undefined,
+          [Symbol(mongoose:validatorError)]: true
+        }
+      },
+      _message: 'category validation failed'
+    }
+  },
+  level: 'error',
+  timestamp: '2022-02-27 16:33:32'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-02-27 16:33:37'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-02-27 16:33:58'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-02-27 16:34:30'
+}
+{
+  message: {
+    createCategoryDBError: Error: category validation failed: category: Path `category` is required.
+        at ValidationError.inspect (/Users/saudalmutawa/TTP-BACK/TTP-Back/node_modules/mongoose/lib/error/validation.js:48:26)
+        at formatValue (internal/util/inspect.js:745:19)
+        at formatProperty (internal/util/inspect.js:1660:11)
+        at formatRaw (internal/util/inspect.js:987:9)
+        at formatValue (internal/util/inspect.js:774:10)
+        at formatProperty (internal/util/inspect.js:1660:11)
+        at formatRaw (internal/util/inspect.js:987:9)
+        at formatValue (internal/util/inspect.js:774:10)
+        at inspect (internal/util/inspect.js:319:10)
+        at Format.transform (/Users/saudalmutawa/TTP-BACK/TTP-Back/node_modules/logform/pretty-print.js:27:19) {
+      errors: {
+        category: ValidatorError: Path `category` is required.
+            at validate (/Users/saudalmutawa/TTP-BACK/TTP-Back/node_modules/mongoose/lib/schematype.js:1320:13)
+            at SchemaString.SchemaType.doValidate (/Users/saudalmutawa/TTP-BACK/TTP-Back/node_modules/mongoose/lib/schematype.js:1304:7)
+            at /Users/saudalmutawa/TTP-BACK/TTP-Back/node_modules/mongoose/lib/document.js:2723:18
+            at processTicksAndRejections (internal/process/task_queues.js:77:11) {
+          properties: {
+            validator: [Function (anonymous)],
+            message: 'Path `category` is required.',
+            type: 'required',
+            path: 'category',
+            value: ''
+          },
+          kind: 'required',
+          path: 'category',
+          value: '',
+          reason: undefined,
+          [Symbol(mongoose:validatorError)]: true
+        }
+      },
+      _message: 'category validation failed'
+    }
+  },
+  level: 'error',
+  timestamp: '2022-02-27 16:34:34'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-02-27 16:35:06'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-02-27 16:37:35'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-02-27 16:38:56'
+}
+{
+  message: {
+    createCategoryDBError: Error: category validation failed: category: Path `category` is required.
+        at ValidationError.inspect (/Users/saudalmutawa/TTP-BACK/TTP-Back/node_modules/mongoose/lib/error/validation.js:48:26)
+        at formatValue (internal/util/inspect.js:745:19)
+        at formatProperty (internal/util/inspect.js:1660:11)
+        at formatRaw (internal/util/inspect.js:987:9)
+        at formatValue (internal/util/inspect.js:774:10)
+        at formatProperty (internal/util/inspect.js:1660:11)
+        at formatRaw (internal/util/inspect.js:987:9)
+        at formatValue (internal/util/inspect.js:774:10)
+        at inspect (internal/util/inspect.js:319:10)
+        at Format.transform (/Users/saudalmutawa/TTP-BACK/TTP-Back/node_modules/logform/pretty-print.js:27:19) {
+      errors: {
+        category: ValidatorError: Path `category` is required.
+            at validate (/Users/saudalmutawa/TTP-BACK/TTP-Back/node_modules/mongoose/lib/schematype.js:1320:13)
+            at SchemaString.SchemaType.doValidate (/Users/saudalmutawa/TTP-BACK/TTP-Back/node_modules/mongoose/lib/schematype.js:1304:7)
+            at /Users/saudalmutawa/TTP-BACK/TTP-Back/node_modules/mongoose/lib/document.js:2723:18
+            at processTicksAndRejections (internal/process/task_queues.js:77:11) {
+          properties: {
+            validator: [Function (anonymous)],
+            message: 'Path `category` is required.',
+            type: 'required',
+            path: 'category',
+            value: ''
+          },
+          kind: 'required',
+          path: 'category',
+          value: '',
+          reason: undefined,
+          [Symbol(mongoose:validatorError)]: true
+        }
+      },
+      _message: 'category validation failed'
+    }
+  },
+  level: 'error',
+  timestamp: '2022-02-27 16:39:10'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-02-27 16:39:28'
+}
+{
+  message: {
+    createCategoryDBError: Error: category validation failed: category: Path `category` is required.
+        at ValidationError.inspect (/Users/saudalmutawa/TTP-BACK/TTP-Back/node_modules/mongoose/lib/error/validation.js:48:26)
+        at formatValue (internal/util/inspect.js:745:19)
+        at formatProperty (internal/util/inspect.js:1660:11)
+        at formatRaw (internal/util/inspect.js:987:9)
+        at formatValue (internal/util/inspect.js:774:10)
+        at formatProperty (internal/util/inspect.js:1660:11)
+        at formatRaw (internal/util/inspect.js:987:9)
+        at formatValue (internal/util/inspect.js:774:10)
+        at inspect (internal/util/inspect.js:319:10)
+        at Format.transform (/Users/saudalmutawa/TTP-BACK/TTP-Back/node_modules/logform/pretty-print.js:27:19) {
+      errors: {
+        category: ValidatorError: Path `category` is required.
+            at validate (/Users/saudalmutawa/TTP-BACK/TTP-Back/node_modules/mongoose/lib/schematype.js:1320:13)
+            at SchemaString.SchemaType.doValidate (/Users/saudalmutawa/TTP-BACK/TTP-Back/node_modules/mongoose/lib/schematype.js:1304:7)
+            at /Users/saudalmutawa/TTP-BACK/TTP-Back/node_modules/mongoose/lib/document.js:2723:18
+            at processTicksAndRejections (internal/process/task_queues.js:77:11) {
+          properties: {
+            validator: [Function (anonymous)],
+            message: 'Path `category` is required.',
+            type: 'required',
+            path: 'category',
+            value: ''
+          },
+          kind: 'required',
+          path: 'category',
+          value: '',
+          reason: undefined,
+          [Symbol(mongoose:validatorError)]: true
+        }
+      },
+      _message: 'category validation failed'
+    }
+  },
+  level: 'error',
+  timestamp: '2022-02-27 16:41:45'
+}
+{
+  message: {
+    createCategoryDBError: Error: category validation failed: category: Path `category` is required.
+        at ValidationError.inspect (/Users/saudalmutawa/TTP-BACK/TTP-Back/node_modules/mongoose/lib/error/validation.js:48:26)
+        at formatValue (internal/util/inspect.js:745:19)
+        at formatProperty (internal/util/inspect.js:1660:11)
+        at formatRaw (internal/util/inspect.js:987:9)
+        at formatValue (internal/util/inspect.js:774:10)
+        at formatProperty (internal/util/inspect.js:1660:11)
+        at formatRaw (internal/util/inspect.js:987:9)
+        at formatValue (internal/util/inspect.js:774:10)
+        at inspect (internal/util/inspect.js:319:10)
+        at Format.transform (/Users/saudalmutawa/TTP-BACK/TTP-Back/node_modules/logform/pretty-print.js:27:19) {
+      errors: {
+        category: ValidatorError: Path `category` is required.
+            at validate (/Users/saudalmutawa/TTP-BACK/TTP-Back/node_modules/mongoose/lib/schematype.js:1320:13)
+            at SchemaString.SchemaType.doValidate (/Users/saudalmutawa/TTP-BACK/TTP-Back/node_modules/mongoose/lib/schematype.js:1304:7)
+            at /Users/saudalmutawa/TTP-BACK/TTP-Back/node_modules/mongoose/lib/document.js:2723:18
+            at processTicksAndRejections (internal/process/task_queues.js:77:11) {
+          properties: {
+            validator: [Function (anonymous)],
+            message: 'Path `category` is required.',
+            type: 'required',
+            path: 'category',
+            value: ''
+          },
+          kind: 'required',
+          path: 'category',
+          value: '',
+          reason: undefined,
+          [Symbol(mongoose:validatorError)]: true
+        }
+      },
+      _message: 'category validation failed'
+    }
+  },
+  level: 'error',
+  timestamp: '2022-02-27 16:48:58'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-03-01 13:38:21'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-03-01 13:38:52'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-03-01 14:04:39'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-03-01 14:05:26'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-03-01 14:05:35'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-03-01 14:13:58'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-03-01 14:14:18'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-03-01 14:46:21'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-03-01 15:04:14'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-03-01 15:28:42'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-03-01 15:29:27'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-03-01 15:29:55'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-03-01 15:32:36'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-03-01 15:33:45'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-03-01 15:36:10'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-03-01 15:37:37'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-03-01 15:37:46'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-03-01 15:39:18'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-03-01 15:43:51'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-03-01 15:44:40'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-03-01 15:45:04'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-03-01 16:05:46'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-03-02 13:20:02'
+}
+{
+  message: {
+    createclientDBError: Error: clients validation failed: clientName: Path `clientName` is required.
+        at ValidationError.inspect (/Users/saudalmutawa/TTP-BACK/TTP-Back/node_modules/mongoose/lib/error/validation.js:48:26)
+        at formatValue (internal/util/inspect.js:745:19)
+        at formatProperty (internal/util/inspect.js:1660:11)
+        at formatRaw (internal/util/inspect.js:987:9)
+        at formatValue (internal/util/inspect.js:774:10)
+        at formatProperty (internal/util/inspect.js:1660:11)
+        at formatRaw (internal/util/inspect.js:987:9)
+        at formatValue (internal/util/inspect.js:774:10)
+        at inspect (internal/util/inspect.js:319:10)
+        at Format.transform (/Users/saudalmutawa/TTP-BACK/TTP-Back/node_modules/logform/pretty-print.js:27:19) {
+      errors: {
+        clientName: ValidatorError: Path `clientName` is required.
+            at validate (/Users/saudalmutawa/TTP-BACK/TTP-Back/node_modules/mongoose/lib/schematype.js:1320:13)
+            at SchemaString.SchemaType.doValidate (/Users/saudalmutawa/TTP-BACK/TTP-Back/node_modules/mongoose/lib/schematype.js:1304:7)
+            at /Users/saudalmutawa/TTP-BACK/TTP-Back/node_modules/mongoose/lib/document.js:2723:18
+            at processTicksAndRejections (internal/process/task_queues.js:77:11) {
+          properties: {
+            validator: [Function (anonymous)],
+            message: 'Path `clientName` is required.',
+            type: 'required',
+            path: 'clientName',
+            value: undefined
+          },
+          kind: 'required',
+          path: 'clientName',
+          value: undefined,
+          reason: undefined,
+          [Symbol(mongoose:validatorError)]: true
+        }
+      },
+      _message: 'clients validation failed'
+    }
+  },
+  level: 'error',
+  timestamp: '2022-03-02 13:49:48'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-03-02 13:49:54'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-03-02 15:58:43'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-03-02 15:58:51'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-03-02 16:15:32'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-03-02 16:15:39'
+}
+{
+  message: {
+    getclientDBError: MongooseError: Cannot populate path `tasksId` because it is not in your schema. Set the `strictPopulate` option to false to override.
+        at getModelsMapForPopulate (/Users/saudalmutawa/TTP-BACK/TTP-Back/node_modules/mongoose/lib/helpers/populate/getModelsMapForPopulate.js:47:12)
+        at populate (/Users/saudalmutawa/TTP-BACK/TTP-Back/node_modules/mongoose/lib/model.js:4485:21)
+        at _populate (/Users/saudalmutawa/TTP-BACK/TTP-Back/node_modules/mongoose/lib/model.js:4445:5)
+        at /Users/saudalmutawa/TTP-BACK/TTP-Back/node_modules/mongoose/lib/model.js:4423:5
+        at promiseOrCallback (/Users/saudalmutawa/TTP-BACK/TTP-Back/node_modules/mongoose/lib/helpers/promiseOrCallback.js:10:12)
+        at Mongoose._promiseOrCallback (/Users/saudalmutawa/TTP-BACK/TTP-Back/node_modules/mongoose/lib/index.js:1140:10)
+        at Function.Model.populate (/Users/saudalmutawa/TTP-BACK/TTP-Back/node_modules/mongoose/lib/model.js:4421:23)
+        at cb (/Users/saudalmutawa/TTP-BACK/TTP-Back/node_modules/mongoose/lib/query.js:2216:26)
+        at /Users/saudalmutawa/TTP-BACK/TTP-Back/node_modules/mongoose/node_modules/mongodb/src/utils.ts:624:5
+        at /Users/saudalmutawa/TTP-BACK/TTP-Back/node_modules/mongoose/node_modules/mongodb/src/cursor/abstract_cursor.ts:417:35
+  },
+  level: 'error',
+  timestamp: '2022-03-02 16:15:41'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-03-02 16:15:45'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-03-02 16:16:21'
+}
+{
+  message: {
+    createclientDBError: Error: clients validation failed: clientName: Path `clientName` is required.
+        at ValidationError.inspect (/Users/saudalmutawa/TTP-BACK/TTP-Back/node_modules/mongoose/lib/error/validation.js:48:26)
+        at formatValue (internal/util/inspect.js:745:19)
+        at formatProperty (internal/util/inspect.js:1660:11)
+        at formatRaw (internal/util/inspect.js:987:9)
+        at formatValue (internal/util/inspect.js:774:10)
+        at formatProperty (internal/util/inspect.js:1660:11)
+        at formatRaw (internal/util/inspect.js:987:9)
+        at formatValue (internal/util/inspect.js:774:10)
+        at inspect (internal/util/inspect.js:319:10)
+        at Format.transform (/Users/saudalmutawa/TTP-BACK/TTP-Back/node_modules/logform/pretty-print.js:27:19) {
+      errors: {
+        clientName: ValidatorError: Path `clientName` is required.
+            at validate (/Users/saudalmutawa/TTP-BACK/TTP-Back/node_modules/mongoose/lib/schematype.js:1320:13)
+            at SchemaString.SchemaType.doValidate (/Users/saudalmutawa/TTP-BACK/TTP-Back/node_modules/mongoose/lib/schematype.js:1304:7)
+            at /Users/saudalmutawa/TTP-BACK/TTP-Back/node_modules/mongoose/lib/document.js:2723:18
+            at processTicksAndRejections (internal/process/task_queues.js:77:11) {
+          properties: {
+            validator: [Function (anonymous)],
+            message: 'Path `clientName` is required.',
+            type: 'required',
+            path: 'clientName',
+            value: ''
+          },
+          kind: 'required',
+          path: 'clientName',
+          value: '',
+          reason: undefined,
+          [Symbol(mongoose:validatorError)]: true
+        }
+      },
+      _message: 'clients validation failed'
+    }
+  },
+  level: 'error',
+  timestamp: '2022-03-02 16:17:12'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-03-02 16:23:26'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-03-02 16:35:32'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-03-03 10:56:47'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-03-03 10:57:58'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-03-03 11:04:35'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-03-03 11:04:52'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-03-03 11:32:30'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-03-03 11:38:40'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-03-03 13:50:33'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-03-03 13:50:41'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-03-03 13:58:09'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-03-03 15:09:36'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-03-03 15:41:27'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-03-04 13:15:45'
+}
+{
+  message: {
+    updateClientDBError: CastError: Cast to ObjectId failed for value "{ _id: undefined }" (type Object) at path "_id" for model "clients"
+        at model.Query.exec (/Users/saudalmutawa/TTP-BACK/TTP-Back/node_modules/mongoose/lib/query.js:4650:21)
+        at model.Query.Query.then (/Users/saudalmutawa/TTP-BACK/TTP-Back/node_modules/mongoose/lib/query.js:4749:15)
+        at processTicksAndRejections (internal/process/task_queues.js:95:5) {
+      messageFormat: undefined,
+      stringValue: '"{ _id: undefined }"',
+      kind: 'ObjectId',
+      value: { _id: undefined },
+      path: '_id',
+      reason: BSONTypeError: Argument passed in must be a string of 12 bytes or a string of 24 hex characters
+          at new BSONTypeError (/Users/saudalmutawa/TTP-BACK/TTP-Back/node_modules/bson/src/error.ts:16:5)
+          at new ObjectId (/Users/saudalmutawa/TTP-BACK/TTP-Back/node_modules/bson/src/objectid.ts:86:15)
+          at castObjectId (/Users/saudalmutawa/TTP-BACK/TTP-Back/node_modules/mongoose/lib/cast/objectid.js:24:12)
+          at ObjectId.cast (/Users/saudalmutawa/TTP-BACK/TTP-Back/node_modules/mongoose/lib/schema/objectid.js:247:12)
+          at ObjectId.SchemaType.applySetters (/Users/saudalmutawa/TTP-BACK/TTP-Back/node_modules/mongoose/lib/schematype.js:1179:12)
+          at ObjectId.SchemaType._castForQuery (/Users/saudalmutawa/TTP-BACK/TTP-Back/node_modules/mongoose/lib/schematype.js:1613:15)
+          at ObjectId.SchemaType.castForQuery (/Users/saudalmutawa/TTP-BACK/TTP-Back/node_modules/mongoose/lib/schematype.js:1603:15)
+          at ObjectId.SchemaType.castForQueryWrapper (/Users/saudalmutawa/TTP-BACK/TTP-Back/node_modules/mongoose/lib/schematype.js:1580:20)
+          at cast (/Users/saudalmutawa/TTP-BACK/TTP-Back/node_modules/mongoose/lib/cast.js:288:34)
+          at model.Query.Query.cast (/Users/saudalmutawa/TTP-BACK/TTP-Back/node_modules/mongoose/lib/query.js:5085:12),
+      valueType: 'Object'
+    }
+  },
+  level: 'error',
+  timestamp: '2022-03-04 13:57:11'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-03-04 13:57:16'
+}
+{
+  message: {
+    updateClientDBError: CastError: Cast to ObjectId failed for value "{ _id: undefined }" (type Object) at path "_id" for model "clients"
+        at model.Query.exec (/Users/saudalmutawa/TTP-BACK/TTP-Back/node_modules/mongoose/lib/query.js:4650:21)
+        at model.Query.Query.then (/Users/saudalmutawa/TTP-BACK/TTP-Back/node_modules/mongoose/lib/query.js:4749:15)
+        at processTicksAndRejections (internal/process/task_queues.js:95:5) {
+      messageFormat: undefined,
+      stringValue: '"{ _id: undefined }"',
+      kind: 'ObjectId',
+      value: { _id: undefined },
+      path: '_id',
+      reason: BSONTypeError: Argument passed in must be a string of 12 bytes or a string of 24 hex characters
+          at new BSONTypeError (/Users/saudalmutawa/TTP-BACK/TTP-Back/node_modules/bson/src/error.ts:16:5)
+          at new ObjectId (/Users/saudalmutawa/TTP-BACK/TTP-Back/node_modules/bson/src/objectid.ts:86:15)
+          at castObjectId (/Users/saudalmutawa/TTP-BACK/TTP-Back/node_modules/mongoose/lib/cast/objectid.js:24:12)
+          at ObjectId.cast (/Users/saudalmutawa/TTP-BACK/TTP-Back/node_modules/mongoose/lib/schema/objectid.js:247:12)
+          at ObjectId.SchemaType.applySetters (/Users/saudalmutawa/TTP-BACK/TTP-Back/node_modules/mongoose/lib/schematype.js:1179:12)
+          at ObjectId.SchemaType._castForQuery (/Users/saudalmutawa/TTP-BACK/TTP-Back/node_modules/mongoose/lib/schematype.js:1613:15)
+          at ObjectId.SchemaType.castForQuery (/Users/saudalmutawa/TTP-BACK/TTP-Back/node_modules/mongoose/lib/schematype.js:1603:15)
+          at ObjectId.SchemaType.castForQueryWrapper (/Users/saudalmutawa/TTP-BACK/TTP-Back/node_modules/mongoose/lib/schematype.js:1580:20)
+          at cast (/Users/saudalmutawa/TTP-BACK/TTP-Back/node_modules/mongoose/lib/cast.js:288:34)
+          at model.Query.Query.cast (/Users/saudalmutawa/TTP-BACK/TTP-Back/node_modules/mongoose/lib/query.js:5085:12),
+      valueType: 'Object'
+    }
+  },
+  level: 'error',
+  timestamp: '2022-03-04 13:58:47'
+}
+{
+  message: {
+    updateClientDBError: CastError: Cast to ObjectId failed for value "{ _id: undefined }" (type Object) at path "_id" for model "clients"
+        at model.Query.exec (/Users/saudalmutawa/TTP-BACK/TTP-Back/node_modules/mongoose/lib/query.js:4650:21)
+        at model.Query.Query.then (/Users/saudalmutawa/TTP-BACK/TTP-Back/node_modules/mongoose/lib/query.js:4749:15)
+        at processTicksAndRejections (internal/process/task_queues.js:95:5) {
+      messageFormat: undefined,
+      stringValue: '"{ _id: undefined }"',
+      kind: 'ObjectId',
+      value: { _id: undefined },
+      path: '_id',
+      reason: BSONTypeError: Argument passed in must be a string of 12 bytes or a string of 24 hex characters
+          at new BSONTypeError (/Users/saudalmutawa/TTP-BACK/TTP-Back/node_modules/bson/src/error.ts:16:5)
+          at new ObjectId (/Users/saudalmutawa/TTP-BACK/TTP-Back/node_modules/bson/src/objectid.ts:86:15)
+          at castObjectId (/Users/saudalmutawa/TTP-BACK/TTP-Back/node_modules/mongoose/lib/cast/objectid.js:24:12)
+          at ObjectId.cast (/Users/saudalmutawa/TTP-BACK/TTP-Back/node_modules/mongoose/lib/schema/objectid.js:247:12)
+          at ObjectId.SchemaType.applySetters (/Users/saudalmutawa/TTP-BACK/TTP-Back/node_modules/mongoose/lib/schematype.js:1179:12)
+          at ObjectId.SchemaType._castForQuery (/Users/saudalmutawa/TTP-BACK/TTP-Back/node_modules/mongoose/lib/schematype.js:1613:15)
+          at ObjectId.SchemaType.castForQuery (/Users/saudalmutawa/TTP-BACK/TTP-Back/node_modules/mongoose/lib/schematype.js:1603:15)
+          at ObjectId.SchemaType.castForQueryWrapper (/Users/saudalmutawa/TTP-BACK/TTP-Back/node_modules/mongoose/lib/schematype.js:1580:20)
+          at cast (/Users/saudalmutawa/TTP-BACK/TTP-Back/node_modules/mongoose/lib/cast.js:288:34)
+          at model.Query.Query.cast (/Users/saudalmutawa/TTP-BACK/TTP-Back/node_modules/mongoose/lib/query.js:5085:12),
+      valueType: 'Object'
+    }
+  },
+  level: 'error',
+  timestamp: '2022-03-04 14:01:42'
+}
+{
+  message: {
+    updateClientDBError: CastError: Cast to ObjectId failed for value "{ _id: undefined }" (type Object) at path "_id" for model "clients"
+        at model.Query.exec (/Users/saudalmutawa/TTP-BACK/TTP-Back/node_modules/mongoose/lib/query.js:4650:21)
+        at model.Query.Query.then (/Users/saudalmutawa/TTP-BACK/TTP-Back/node_modules/mongoose/lib/query.js:4749:15)
+        at processTicksAndRejections (internal/process/task_queues.js:95:5) {
+      messageFormat: undefined,
+      stringValue: '"{ _id: undefined }"',
+      kind: 'ObjectId',
+      value: { _id: undefined },
+      path: '_id',
+      reason: BSONTypeError: Argument passed in must be a string of 12 bytes or a string of 24 hex characters
+          at new BSONTypeError (/Users/saudalmutawa/TTP-BACK/TTP-Back/node_modules/bson/src/error.ts:16:5)
+          at new ObjectId (/Users/saudalmutawa/TTP-BACK/TTP-Back/node_modules/bson/src/objectid.ts:86:15)
+          at castObjectId (/Users/saudalmutawa/TTP-BACK/TTP-Back/node_modules/mongoose/lib/cast/objectid.js:24:12)
+          at ObjectId.cast (/Users/saudalmutawa/TTP-BACK/TTP-Back/node_modules/mongoose/lib/schema/objectid.js:247:12)
+          at ObjectId.SchemaType.applySetters (/Users/saudalmutawa/TTP-BACK/TTP-Back/node_modules/mongoose/lib/schematype.js:1179:12)
+          at ObjectId.SchemaType._castForQuery (/Users/saudalmutawa/TTP-BACK/TTP-Back/node_modules/mongoose/lib/schematype.js:1613:15)
+          at ObjectId.SchemaType.castForQuery (/Users/saudalmutawa/TTP-BACK/TTP-Back/node_modules/mongoose/lib/schematype.js:1603:15)
+          at ObjectId.SchemaType.castForQueryWrapper (/Users/saudalmutawa/TTP-BACK/TTP-Back/node_modules/mongoose/lib/schematype.js:1580:20)
+          at cast (/Users/saudalmutawa/TTP-BACK/TTP-Back/node_modules/mongoose/lib/cast.js:288:34)
+          at model.Query.Query.cast (/Users/saudalmutawa/TTP-BACK/TTP-Back/node_modules/mongoose/lib/query.js:5085:12),
+      valueType: 'Object'
+    }
+  },
+  level: 'error',
+  timestamp: '2022-03-04 14:02:49'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-03-04 14:04:46'
+}
+{
+  message: {
+    updateClientDBError: CastError: Cast to ObjectId failed for value "{ _id: undefined }" (type Object) at path "_id" for model "clients"
+        at model.Query.exec (/Users/saudalmutawa/TTP-BACK/TTP-Back/node_modules/mongoose/lib/query.js:4650:21)
+        at model.Query.Query.then (/Users/saudalmutawa/TTP-BACK/TTP-Back/node_modules/mongoose/lib/query.js:4749:15)
+        at processTicksAndRejections (internal/process/task_queues.js:95:5) {
+      messageFormat: undefined,
+      stringValue: '"{ _id: undefined }"',
+      kind: 'ObjectId',
+      value: { _id: undefined },
+      path: '_id',
+      reason: BSONTypeError: Argument passed in must be a string of 12 bytes or a string of 24 hex characters
+          at new BSONTypeError (/Users/saudalmutawa/TTP-BACK/TTP-Back/node_modules/bson/src/error.ts:16:5)
+          at new ObjectId (/Users/saudalmutawa/TTP-BACK/TTP-Back/node_modules/bson/src/objectid.ts:86:15)
+          at castObjectId (/Users/saudalmutawa/TTP-BACK/TTP-Back/node_modules/mongoose/lib/cast/objectid.js:24:12)
+          at ObjectId.cast (/Users/saudalmutawa/TTP-BACK/TTP-Back/node_modules/mongoose/lib/schema/objectid.js:247:12)
+          at ObjectId.SchemaType.applySetters (/Users/saudalmutawa/TTP-BACK/TTP-Back/node_modules/mongoose/lib/schematype.js:1179:12)
+          at ObjectId.SchemaType._castForQuery (/Users/saudalmutawa/TTP-BACK/TTP-Back/node_modules/mongoose/lib/schematype.js:1613:15)
+          at ObjectId.SchemaType.castForQuery (/Users/saudalmutawa/TTP-BACK/TTP-Back/node_modules/mongoose/lib/schematype.js:1603:15)
+          at ObjectId.SchemaType.castForQueryWrapper (/Users/saudalmutawa/TTP-BACK/TTP-Back/node_modules/mongoose/lib/schematype.js:1580:20)
+          at cast (/Users/saudalmutawa/TTP-BACK/TTP-Back/node_modules/mongoose/lib/cast.js:288:34)
+          at model.Query.Query.cast (/Users/saudalmutawa/TTP-BACK/TTP-Back/node_modules/mongoose/lib/query.js:5085:12),
+      valueType: 'Object'
+    }
+  },
+  level: 'error',
+  timestamp: '2022-03-04 14:05:05'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-03-04 14:05:22'
+}
+{
+  message: {
+    updateClientDBError: CastError: Cast to ObjectId failed for value "{ _id: undefined }" (type Object) at path "_id" for model "clients"
+        at model.Query.exec (/Users/saudalmutawa/TTP-BACK/TTP-Back/node_modules/mongoose/lib/query.js:4650:21)
+        at model.Query.Query.then (/Users/saudalmutawa/TTP-BACK/TTP-Back/node_modules/mongoose/lib/query.js:4749:15)
+        at processTicksAndRejections (internal/process/task_queues.js:95:5) {
+      messageFormat: undefined,
+      stringValue: '"{ _id: undefined }"',
+      kind: 'ObjectId',
+      value: { _id: undefined },
+      path: '_id',
+      reason: BSONTypeError: Argument passed in must be a string of 12 bytes or a string of 24 hex characters
+          at new BSONTypeError (/Users/saudalmutawa/TTP-BACK/TTP-Back/node_modules/bson/src/error.ts:16:5)
+          at new ObjectId (/Users/saudalmutawa/TTP-BACK/TTP-Back/node_modules/bson/src/objectid.ts:86:15)
+          at castObjectId (/Users/saudalmutawa/TTP-BACK/TTP-Back/node_modules/mongoose/lib/cast/objectid.js:24:12)
+          at ObjectId.cast (/Users/saudalmutawa/TTP-BACK/TTP-Back/node_modules/mongoose/lib/schema/objectid.js:247:12)
+          at ObjectId.SchemaType.applySetters (/Users/saudalmutawa/TTP-BACK/TTP-Back/node_modules/mongoose/lib/schematype.js:1179:12)
+          at ObjectId.SchemaType._castForQuery (/Users/saudalmutawa/TTP-BACK/TTP-Back/node_modules/mongoose/lib/schematype.js:1613:15)
+          at ObjectId.SchemaType.castForQuery (/Users/saudalmutawa/TTP-BACK/TTP-Back/node_modules/mongoose/lib/schematype.js:1603:15)
+          at ObjectId.SchemaType.castForQueryWrapper (/Users/saudalmutawa/TTP-BACK/TTP-Back/node_modules/mongoose/lib/schematype.js:1580:20)
+          at cast (/Users/saudalmutawa/TTP-BACK/TTP-Back/node_modules/mongoose/lib/cast.js:288:34)
+          at model.Query.Query.cast (/Users/saudalmutawa/TTP-BACK/TTP-Back/node_modules/mongoose/lib/query.js:5085:12),
+      valueType: 'Object'
+    }
+  },
+  level: 'error',
+  timestamp: '2022-03-04 14:05:45'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-03-04 14:08:07'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-03-04 14:08:32'
+}
+{
+  message: {
+    updateClientDBError: CastError: Cast to ObjectId failed for value "{ _id: undefined }" (type Object) at path "_id" for model "clients"
+        at model.Query.exec (/Users/saudalmutawa/TTP-BACK/TTP-Back/node_modules/mongoose/lib/query.js:4650:21)
+        at model.Query.Query.then (/Users/saudalmutawa/TTP-BACK/TTP-Back/node_modules/mongoose/lib/query.js:4749:15)
+        at processTicksAndRejections (internal/process/task_queues.js:95:5) {
+      messageFormat: undefined,
+      stringValue: '"{ _id: undefined }"',
+      kind: 'ObjectId',
+      value: { _id: undefined },
+      path: '_id',
+      reason: BSONTypeError: Argument passed in must be a string of 12 bytes or a string of 24 hex characters
+          at new BSONTypeError (/Users/saudalmutawa/TTP-BACK/TTP-Back/node_modules/bson/src/error.ts:16:5)
+          at new ObjectId (/Users/saudalmutawa/TTP-BACK/TTP-Back/node_modules/bson/src/objectid.ts:86:15)
+          at castObjectId (/Users/saudalmutawa/TTP-BACK/TTP-Back/node_modules/mongoose/lib/cast/objectid.js:24:12)
+          at ObjectId.cast (/Users/saudalmutawa/TTP-BACK/TTP-Back/node_modules/mongoose/lib/schema/objectid.js:247:12)
+          at ObjectId.SchemaType.applySetters (/Users/saudalmutawa/TTP-BACK/TTP-Back/node_modules/mongoose/lib/schematype.js:1179:12)
+          at ObjectId.SchemaType._castForQuery (/Users/saudalmutawa/TTP-BACK/TTP-Back/node_modules/mongoose/lib/schematype.js:1613:15)
+          at ObjectId.SchemaType.castForQuery (/Users/saudalmutawa/TTP-BACK/TTP-Back/node_modules/mongoose/lib/schematype.js:1603:15)
+          at ObjectId.SchemaType.castForQueryWrapper (/Users/saudalmutawa/TTP-BACK/TTP-Back/node_modules/mongoose/lib/schematype.js:1580:20)
+          at cast (/Users/saudalmutawa/TTP-BACK/TTP-Back/node_modules/mongoose/lib/cast.js:288:34)
+          at model.Query.Query.cast (/Users/saudalmutawa/TTP-BACK/TTP-Back/node_modules/mongoose/lib/query.js:5085:12),
+      valueType: 'Object'
+    }
+  },
+  level: 'error',
+  timestamp: '2022-03-04 14:08:35'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-03-04 14:09:08'
+}
+{
+  message: {
+    updateClientDBError: CastError: Cast to ObjectId failed for value "{ _id: undefined }" (type Object) at path "_id" for model "clients"
+        at model.Query.exec (/Users/saudalmutawa/TTP-BACK/TTP-Back/node_modules/mongoose/lib/query.js:4650:21)
+        at model.Query.Query.then (/Users/saudalmutawa/TTP-BACK/TTP-Back/node_modules/mongoose/lib/query.js:4749:15)
+        at processTicksAndRejections (internal/process/task_queues.js:95:5) {
+      messageFormat: undefined,
+      stringValue: '"{ _id: undefined }"',
+      kind: 'ObjectId',
+      value: { _id: undefined },
+      path: '_id',
+      reason: BSONTypeError: Argument passed in must be a string of 12 bytes or a string of 24 hex characters
+          at new BSONTypeError (/Users/saudalmutawa/TTP-BACK/TTP-Back/node_modules/bson/src/error.ts:16:5)
+          at new ObjectId (/Users/saudalmutawa/TTP-BACK/TTP-Back/node_modules/bson/src/objectid.ts:86:15)
+          at castObjectId (/Users/saudalmutawa/TTP-BACK/TTP-Back/node_modules/mongoose/lib/cast/objectid.js:24:12)
+          at ObjectId.cast (/Users/saudalmutawa/TTP-BACK/TTP-Back/node_modules/mongoose/lib/schema/objectid.js:247:12)
+          at ObjectId.SchemaType.applySetters (/Users/saudalmutawa/TTP-BACK/TTP-Back/node_modules/mongoose/lib/schematype.js:1179:12)
+          at ObjectId.SchemaType._castForQuery (/Users/saudalmutawa/TTP-BACK/TTP-Back/node_modules/mongoose/lib/schematype.js:1613:15)
+          at ObjectId.SchemaType.castForQuery (/Users/saudalmutawa/TTP-BACK/TTP-Back/node_modules/mongoose/lib/schematype.js:1603:15)
+          at ObjectId.SchemaType.castForQueryWrapper (/Users/saudalmutawa/TTP-BACK/TTP-Back/node_modules/mongoose/lib/schematype.js:1580:20)
+          at cast (/Users/saudalmutawa/TTP-BACK/TTP-Back/node_modules/mongoose/lib/cast.js:288:34)
+          at model.Query.Query.cast (/Users/saudalmutawa/TTP-BACK/TTP-Back/node_modules/mongoose/lib/query.js:5085:12),
+      valueType: 'Object'
+    }
+  },
+  level: 'error',
+  timestamp: '2022-03-04 14:09:11'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-03-04 14:09:40'
+}
+{
+  message: {
+    updateClientDBError: CastError: Cast to ObjectId failed for value "{ _id: undefined }" (type Object) at path "_id" for model "clients"
+        at model.Query.exec (/Users/saudalmutawa/TTP-BACK/TTP-Back/node_modules/mongoose/lib/query.js:4650:21)
+        at model.Query.Query.then (/Users/saudalmutawa/TTP-BACK/TTP-Back/node_modules/mongoose/lib/query.js:4749:15)
+        at processTicksAndRejections (internal/process/task_queues.js:95:5) {
+      messageFormat: undefined,
+      stringValue: '"{ _id: undefined }"',
+      kind: 'ObjectId',
+      value: { _id: undefined },
+      path: '_id',
+      reason: BSONTypeError: Argument passed in must be a string of 12 bytes or a string of 24 hex characters
+          at new BSONTypeError (/Users/saudalmutawa/TTP-BACK/TTP-Back/node_modules/bson/src/error.ts:16:5)
+          at new ObjectId (/Users/saudalmutawa/TTP-BACK/TTP-Back/node_modules/bson/src/objectid.ts:86:15)
+          at castObjectId (/Users/saudalmutawa/TTP-BACK/TTP-Back/node_modules/mongoose/lib/cast/objectid.js:24:12)
+          at ObjectId.cast (/Users/saudalmutawa/TTP-BACK/TTP-Back/node_modules/mongoose/lib/schema/objectid.js:247:12)
+          at ObjectId.SchemaType.applySetters (/Users/saudalmutawa/TTP-BACK/TTP-Back/node_modules/mongoose/lib/schematype.js:1179:12)
+          at ObjectId.SchemaType._castForQuery (/Users/saudalmutawa/TTP-BACK/TTP-Back/node_modules/mongoose/lib/schematype.js:1613:15)
+          at ObjectId.SchemaType.castForQuery (/Users/saudalmutawa/TTP-BACK/TTP-Back/node_modules/mongoose/lib/schematype.js:1603:15)
+          at ObjectId.SchemaType.castForQueryWrapper (/Users/saudalmutawa/TTP-BACK/TTP-Back/node_modules/mongoose/lib/schematype.js:1580:20)
+          at cast (/Users/saudalmutawa/TTP-BACK/TTP-Back/node_modules/mongoose/lib/cast.js:288:34)
+          at model.Query.Query.cast (/Users/saudalmutawa/TTP-BACK/TTP-Back/node_modules/mongoose/lib/query.js:5085:12),
+      valueType: 'Object'
+    }
+  },
+  level: 'error',
+  timestamp: '2022-03-04 14:09:53'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-03-04 14:12:49'
+}
+{
+  message: {
+    updateClientDBError: CastError: Cast to ObjectId failed for value "{ _id: undefined }" (type Object) at path "_id" for model "clients"
+        at model.Query.exec (/Users/saudalmutawa/TTP-BACK/TTP-Back/node_modules/mongoose/lib/query.js:4650:21)
+        at model.Query.Query.then (/Users/saudalmutawa/TTP-BACK/TTP-Back/node_modules/mongoose/lib/query.js:4749:15)
+        at processTicksAndRejections (internal/process/task_queues.js:95:5) {
+      messageFormat: undefined,
+      stringValue: '"{ _id: undefined }"',
+      kind: 'ObjectId',
+      value: { _id: undefined },
+      path: '_id',
+      reason: BSONTypeError: Argument passed in must be a string of 12 bytes or a string of 24 hex characters
+          at new BSONTypeError (/Users/saudalmutawa/TTP-BACK/TTP-Back/node_modules/bson/src/error.ts:16:5)
+          at new ObjectId (/Users/saudalmutawa/TTP-BACK/TTP-Back/node_modules/bson/src/objectid.ts:86:15)
+          at castObjectId (/Users/saudalmutawa/TTP-BACK/TTP-Back/node_modules/mongoose/lib/cast/objectid.js:24:12)
+          at ObjectId.cast (/Users/saudalmutawa/TTP-BACK/TTP-Back/node_modules/mongoose/lib/schema/objectid.js:247:12)
+          at ObjectId.SchemaType.applySetters (/Users/saudalmutawa/TTP-BACK/TTP-Back/node_modules/mongoose/lib/schematype.js:1179:12)
+          at ObjectId.SchemaType._castForQuery (/Users/saudalmutawa/TTP-BACK/TTP-Back/node_modules/mongoose/lib/schematype.js:1613:15)
+          at ObjectId.SchemaType.castForQuery (/Users/saudalmutawa/TTP-BACK/TTP-Back/node_modules/mongoose/lib/schematype.js:1603:15)
+          at ObjectId.SchemaType.castForQueryWrapper (/Users/saudalmutawa/TTP-BACK/TTP-Back/node_modules/mongoose/lib/schematype.js:1580:20)
+          at cast (/Users/saudalmutawa/TTP-BACK/TTP-Back/node_modules/mongoose/lib/cast.js:288:34)
+          at model.Query.Query.cast (/Users/saudalmutawa/TTP-BACK/TTP-Back/node_modules/mongoose/lib/query.js:5085:12),
+      valueType: 'Object'
+    }
+  },
+  level: 'error',
+  timestamp: '2022-03-04 14:12:57'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-03-04 14:15:27'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-03-04 14:15:39'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-03-04 14:16:42'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-03-04 15:02:11'
+}
