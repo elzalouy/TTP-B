@@ -10,7 +10,7 @@ export interface ProjectInfo extends Document {
     projectDeadline:Date;
     startDate?:Date|number;
     completedDate?:Date;
-    // projectStatus?:'inProgress'|"deliver on time"|"late"|"deliver defore deadline"|"delivered after deadline";
+    projectStatus?:'inProgress'|"deliver on time"|"late"|"deliver defore deadline"|"delivered after deadline";
   }
 
   export interface ProjectData{
@@ -23,5 +23,5 @@ export interface ProjectInfo extends Document {
     projectDeadline:Date;
     startDate?:Date|number;
     completedDate?:Date;
-    // projectStatus?:'inProgress'|"deliver on time"|"late"|"deliver defore deadline"|"delivered after deadline";
+    projectStatus?:'inProgress'|"deliver on time"|"late"|"deliver defore deadline"|"delivered after deadline";
   }

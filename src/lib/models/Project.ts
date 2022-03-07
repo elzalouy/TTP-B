@@ -1,5 +1,5 @@
-import { ProjectInfo } from "./../types/model/Project";
-import { model, Schema, Model } from "mongoose";
+import { ProjectInfo } from './../types/model/Project';
+import { model, Schema, Model } from 'mongoose';
 
 const ProjectSchema: Schema = new Schema<ProjectInfo>(
   {
@@ -9,14 +9,14 @@ const ProjectSchema: Schema = new Schema<ProjectInfo>(
     },
     projectManager: {
       type: Schema.Types.ObjectId,
-      ref: "users",
+      ref: 'users',
       required: true,
     },
-    teamsId:[
+    teamsId: [
       {
         type: Schema.Types.ObjectId,
-        ref: "teams",
-      }
+        ref: 'teams',
+      },
     ],
     numberOfTasks: {
       type: Number,
@@ -26,7 +26,7 @@ const ProjectSchema: Schema = new Schema<ProjectInfo>(
       type: Number,
       default: 0,
     },
-    projectDeadline: { 
+    projectDeadline: {
       type: Date,
       default: null,
     },
@@ -38,24 +38,24 @@ const ProjectSchema: Schema = new Schema<ProjectInfo>(
       type: Date,
       default: null,
     },
-    // projectStatus: {
-    //   type: String,
-    //   default: "inProgress",
-    //   enum: [
-    //     "inProgress",
-    //     "deliver on time",
-    //     "late",
-    //     "deliver defore deadline",
-    //     "delivered after deadline",
-    //   ],
-    // },
+    projectStatus: {
+      type: String,
+      default: 'inProgress',
+      enum: [
+        'inProgress',
+        'deliver on time',
+        'late',
+        'deliver defore deadline',
+        'delivered after deadline',
+      ],
+    },
   },
   {
     timestamps: true,
-    strict:false
+    strict: false,
   }
 );
 
-const Project: Model<ProjectInfo> = model("projects", ProjectSchema);
+const Project: Model<ProjectInfo> = model('projects', ProjectSchema);
 
 export default Project;
