@@ -40,14 +40,19 @@ const ProjectSchema: Schema = new Schema<ProjectInfo>(
     },
     projectStatus: {
       type: String,
-      default: 'inProgress',
+       default: "inProgress",
       enum: [
-        'inProgress',
-        'deliver on time',
-        'late',
-        'deliver defore deadline',
-        'delivered after deadline',
+        "inProgress",
+        "deliver on time",
+        "late",
+        "deliver defore deadline",
+        "delivered after deadline",
       ],
+    },
+    clientId: {
+      type: Schema.Types.ObjectId,
+      required: true,
+      ref: "clients",
     },
   },
   {
