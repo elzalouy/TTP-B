@@ -5,6 +5,7 @@ export interface TaskInfo extends Document {
   name: string;
   projectId: ObjectId;
   categoryId: ObjectId;
+  subCategoryId: ObjectId;
   teamId: ObjectId;
   countNotClear?: number;
   countShared?: number;
@@ -16,8 +17,9 @@ export interface TaskInfo extends Document {
   turnoverTime?: number;
   attachedFiles?: string;
   attachedCard?: string;
-  cardId?:string;
-  boardId?:string;
+  cardId?: string;
+  boardId?: string;
+  description: String;
 }
 
 export interface TaskData {
@@ -25,6 +27,7 @@ export interface TaskData {
   name: string;
   projectId: string;
   categoryId: string; //todo creat category list
+  subCategoryId: string;
   teamId: string;
   countNotClear?: number;
   countShared?: number;
@@ -36,8 +39,9 @@ export interface TaskData {
   turnoverTime?: number;
   attachedFiles?: string;
   attachedCard?: string;
-  listId?:string;
-  cardId?:string;
-  boardId?:string;
-  file?:object
+  listId?: string;
+  cardId?: string;
+  boardId?: string;
+  file?: object;
+  description: string;
 }

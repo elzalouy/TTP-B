@@ -17,6 +17,7 @@ export interface ProjectInfo extends Document {
     | "deliver defore deadline"
     | "delivered after deadline";
   clientId: ObjectId;
+  description: String;
 }
 
 export interface ProjectData {
@@ -36,4 +37,5 @@ export interface ProjectData {
     | "deliver defore deadline"
     | "delivered after deadline";
   clientId: string;
+  description: string;
 }
