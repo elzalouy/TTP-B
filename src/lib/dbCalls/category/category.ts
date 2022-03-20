@@ -1,8 +1,8 @@
-import logger from '../../../logger';
-import Categories from '../../models/Category';
-import SubCategories from '../../models/Subcategory';
-import { CategoryData, Category } from '../../types/model/Category';
-import { SubcategoryData, Subcategory } from '../../types/model/Subcategory';
+import logger from "../../../logger";
+import Categories from "../../models/Category";
+import SubCategories from "../../models/Subcategory";
+import { CategoryData, Category } from "../../types/model/Category";
+import { SubcategoryData, Subcategory } from "../../types/model/Subcategory";
 
 const CategoyDB = class CategoryDB {
   static async createCategory(data: CategoryData) {
@@ -13,6 +13,9 @@ const CategoyDB = class CategoryDB {
   }
   static async updateCategoryWithSubcategoriesId(data: CategoryData) {
     return await CategoryDB.__updateCategoryWithSubcategoriesId(data);
+  }
+  static async getAllCategoriesDB() {
+    return await this.__getAllCategories();
   }
   static async __createCategory(data: CategoryData) {
     try {
@@ -42,6 +45,14 @@ const CategoyDB = class CategoryDB {
         { new: true }
       );
       return category;
+    } catch (error) {
+      logger.error({ updateCategoryDBError: error });
+    }
+  }
+  static async __getAllCategories() {
+    try {
+      let cats = await Categories.find({}).lean();
+      return cats.values;
     } catch (error) {
       logger.error({ updateCategoryDBError: error });
     }

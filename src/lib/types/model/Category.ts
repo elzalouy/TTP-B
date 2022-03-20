@@ -1,4 +1,4 @@
-import { Document } from 'mongoose';
+import { Document } from "mongoose";
 
 export interface Category extends Document {
   category: string;
@@ -8,6 +8,6 @@ export interface Category extends Document {
 export interface CategoryData {
   id?: string;
   category: string;
-  subCategories?:string[];
+  subCategories?: string[];
   subCategoriesId?: string[];
 }

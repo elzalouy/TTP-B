@@ -35,6 +35,21 @@ const ProjectController = class ProjectController extends project_1.default {
             return yield ProjectController.__deleteProjectData(id);
         });
     }
+    static sortProjects(sortBy) {
+        return __awaiter(this, void 0, void 0, function* () {
+            return yield ProjectController.__sortProjects(sortBy);
+        });
+    }
+    static filterProjects(filter) {
+        return __awaiter(this, void 0, void 0, function* () {
+            return yield ProjectController.__filterProjects(filter);
+        });
+    }
+    static searchProjects(searchStr) {
+        return __awaiter(this, void 0, void 0, function* () {
+            return yield ProjectController.__searchProjects(searchStr);
+        });
+    }
     static __deleteProjectData(id) {
         const _super = Object.create(null, {
             deleteProjectDB: { get: () => super.deleteProjectDB }
@@ -88,6 +103,52 @@ const ProjectController = class ProjectController extends project_1.default {
             }
             catch (error) {
                 logger_1.default.error({ getTeamsError: error });
+            }
+        });
+    }
+    static __sortProjects(sortBy) {
+        const _super = Object.create(null, {
+            sortProjectsDB: { get: () => super.sortProjectsDB }
+        });
+        return __awaiter(this, void 0, void 0, function* () {
+            try {
+                let projects = yield _super.sortProjectsDB.call(this, sortBy);
+                return projects;
+            }
+            catch (error) {
+                logger_1.default.error({ sortProjectsError: error });
+            }
+        });
+    }
+    static __filterProjects(filter) {
+        const _super = Object.create(null, {
+            filterProjectsDB: { get: () => super.filterProjectsDB }
+        });
+        return __awaiter(this, void 0, void 0, function* () {
+            try {
+                let projects = yield _super.filterProjectsDB.call(this, filter);
+                if (projects)
+                    return projects;
+            }
+            catch (error) {
+                logger_1.default.error({ flterProjectsError: error });
+            }
+        });
+    }
+    static __searchProjects(searchStr) {
+        const _super = Object.create(null, {
+            searchProjectsDB: { get: () => super.searchProjectsDB }
+        });
+        return __awaiter(this, void 0, void 0, function* () {
+            try {
+                let projects = yield _super.searchProjectsDB.call(this, searchStr);
+                if (projects)
+                    return projects;
+                else
+                    return null;
+            }
+            catch (error) {
+                logger_1.default.console.error({ searchPrjectsError: error });
             }
         });
     }

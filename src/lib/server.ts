@@ -1,36 +1,36 @@
-import express, { Application, Request, Response, NextFunction } from 'express';
-import morgan from 'morgan';
-import cors from 'cors';
-import mongoDB from './db/dbConnect';
-import { createServer } from 'http';
-import { Server } from 'socket.io';
-import cookieParser from 'cookie-parser';
+import express, { Application, Request, Response, NextFunction } from "express";
+import morgan from "morgan";
+import cors from "cors";
+import mongoDB from "./db/dbConnect";
+import { createServer } from "http";
+import { Server } from "socket.io";
+import cookieParser from "cookie-parser";
 
-import i18n from './i18n/config';
-const ngrok = require('ngrok');
-
+import i18n from "./i18n/config";
+const ngrok = require("ngrok");
+//DB
 //Routes
-import userRoutes from './routes/user/userRoute';
-import boardRoutes from './routes/board/boardRoute';
-import techMemberRoute from './routes/techMember/techMemberRoute';
-import authRoute from './routes/auth/authRoute';
-import depRoute from './routes/department/depRoute';
-import projectRoute from './routes/project/projectRoute';
-import taskRoute from './routes/task/taskRoute';
-import categoryRoute from './routes/category/categoryRoute';
-import clientRoute from './routes/client/clientRoute';
+import userRoutes from "./routes/user/userRoute";
+import boardRoutes from "./routes/board/boardRoute";
+import techMemberRoute from "./routes/techMember/techMemberRoute";
+import authRoute from "./routes/auth/authRoute";
+import depRoute from "./routes/department/depRoute";
+import projectRoute from "./routes/project/projectRoute";
+import taskRoute from "./routes/task/taskRoute";
+import categoryRoute from "./routes/category/categoryRoute";
+import clientRoute from "./routes/client/clientRoute";
 
-import { jwtVerify } from './services/auth/auth';
-import { customeError } from './utils/errorUtils';
-import { JwtPayload } from 'jsonwebtoken';
-import UserDB from './dbCalls/user/user';
-import logger from '../logger';
+import { jwtVerify } from "./services/auth/auth";
+import { customeError } from "./utils/errorUtils";
+import { JwtPayload } from "jsonwebtoken";
+import UserDB from "./dbCalls/user/user";
+import logger from "../logger";
 
 const app: Application = express();
 export const http = createServer(app);
 export const io = new Server(http, {
   cors: {
-    origin: '*',
+    origin: "*",
     credentials: true,
   },
 });
@@ -38,7 +38,7 @@ export const io = new Server(http, {
 app.use(cookieParser());
 
 // middlewares
-app.use(morgan('dev'));
+app.use(morgan("dev"));
 
 // for parsing application/json
 app.use(express.json());
@@ -46,7 +46,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(
   cors({
-    origin: '*',
+    origin: "*",
     credentials: true,
   })
 );
@@ -66,26 +66,26 @@ app.use(i18n.init);
 // })
 
 // Ngrok init
-if (process.env.NODE_ENV === 'development') {
+if (process.env.NODE_ENV === "development") {
   ngrok.connect(
     {
-      proto: 'http',
+      proto: "http",
       addr: process.env.PORT,
     },
     (err: any) => {
       if (err) {
-        console.error('Error while connecting Ngrok', err);
-        return new Error('Ngrok Failed');
+        console.error("Error while connecting Ngrok", err);
+        return new Error("Ngrok Failed");
       }
     }
   );
 }
 
 // auth route
-app.use('/api', authRoute);
+app.use("/api", authRoute);
 
 // task route
-app.use('/api', taskRoute);
+app.use("/api", taskRoute);
 
 // Authenticate User
 // app.use(async (req:Request,res:Response,next:NextFunction) => {
@@ -104,18 +104,18 @@ app.use('/api', taskRoute);
 // })
 
 //routes
-app.use('/api', userRoutes);
-app.use('/api', boardRoutes);
-app.use('/api', techMemberRoute);
-app.use('/api', depRoute);
-app.use('/api', projectRoute);
-app.use('/api', categoryRoute);
-app.use('/api', clientRoute);
+app.use("/api", userRoutes);
+app.use("/api", boardRoutes);
+app.use("/api", techMemberRoute);
+app.use("/api", depRoute);
+app.use("/api", projectRoute);
+app.use("/api", categoryRoute);
+app.use("/api", clientRoute);
 
-app.disable('etag');
+app.disable("etag");
 
 // connect to socket io
-io.on('connection', (socket: any) => {
-  console.log('Client connected');
-  socket.on('disconnect', () => console.log('Client disconnected'));
+io.on("connection", (socket: any) => {
+  console.log("Client connected");
+  socket.on("disconnect", () => console.log("Client disconnected"));
 });

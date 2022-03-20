@@ -6,10 +6,10 @@ export interface TaskInfo extends Document {
   projectId: ObjectId;
   categoryId: ObjectId;
   subCategoryId: ObjectId;
-  teamId: ObjectId;
+  memberId: ObjectId;
   countNotClear?: number;
   countShared?: number;
-  status?: "inProgress" | "deliver on time" | "late" | "no clear" | "cancled";
+  status?: "inProgress" | "delivered on time" | "late" | "no clear" | "cancled";
   start?: Date | number;
   deadline?: Date | number;
   deliveryDate?: Date;
@@ -28,10 +28,9 @@ export interface TaskData {
   projectId: string;
   categoryId: string; //todo creat category list
   subCategoryId: string;
-  teamId: string;
   countNotClear?: number;
   countShared?: number;
-  status?: "inProgress" | "deliver on time" | "late" | "no clear" | "cancled";
+  status?: "inProgress" | "delivered on time" | "late" | "no clear" | "cancled";
   start?: Date | number;
   deadline?: Date | number;
   deliveryDate?: Date;
@@ -39,6 +38,7 @@ export interface TaskData {
   turnoverTime?: number;
   attachedFiles?: string;
   attachedCard?: string;
+  memberId: string;
   listId?: string;
   cardId?: string;
   boardId?: string;

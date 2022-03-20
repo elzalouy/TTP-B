@@ -15,7 +15,7 @@ const ProjectSchema = new mongoose_1.Schema({
         {
             type: mongoose_1.Schema.Types.ObjectId,
             ref: "teams",
-        }
+        },
     ],
     numberOfTasks: {
         type: Number,
@@ -37,20 +37,25 @@ const ProjectSchema = new mongoose_1.Schema({
         type: Date,
         default: null,
     },
-    // projectStatus: {
-    //   type: String,
-    //   default: "inProgress",
-    //   enum: [
-    //     "inProgress",
-    //     "deliver on time",
-    //     "late",
-    //     "deliver defore deadline",
-    //     "delivered after deadline",
-    //   ],
-    // },
+    projectStatus: {
+        type: String,
+        default: "inProgress",
+        enum: [
+            "inProgress",
+            "deliver on time",
+            "late",
+            "deliver defore deadline",
+            "delivered after deadline",
+        ],
+    },
+    clientId: {
+        type: mongoose_1.Schema.Types.ObjectId,
+        required: true,
+        ref: "clients",
+    },
 }, {
     timestamps: true,
-    strict: false
+    strict: false,
 });
 const Project = (0, mongoose_1.model)("projects", ProjectSchema);
 exports.default = Project;

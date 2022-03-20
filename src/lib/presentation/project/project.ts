@@ -117,7 +117,6 @@ const ProjectReq = class ProjectReq extends ProjectController {
       return res.status(500).send(customeError("server_error", 500));
     }
   }
-
 };
 
 export default ProjectReq;

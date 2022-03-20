@@ -11,11 +11,11 @@ const TechMemberSchema: Schema = new Schema<ITech>(
       type: Schema.Types.ObjectId,
       ref: "departments",
       required: true,
-    }
+    },
   },
   {
     timestamps: true,
-    strict:false
+    strict: false,
   }
 );
 

@@ -35,6 +35,21 @@ const ProjectDB = class ProjectDB {
             return yield ProjectDB.__deleteProject(id);
         });
     }
+    static sortProjectsDB(sortBy) {
+        return __awaiter(this, void 0, void 0, function* () {
+            return yield ProjectDB.__sortProjects(sortBy);
+        });
+    }
+    static filterProjectsDB(filter) {
+        return __awaiter(this, void 0, void 0, function* () {
+            return yield ProjectDB.__filterProjects(filter);
+        });
+    }
+    static searchProjectsDB(searchStr) {
+        return __awaiter(this, void 0, void 0, function* () {
+            return yield ProjectDB.__searchProjects(searchStr);
+        });
+    }
     static __deleteProject(id) {
         return __awaiter(this, void 0, void 0, function* () {
             try {
@@ -50,8 +65,8 @@ const ProjectDB = class ProjectDB {
         return __awaiter(this, void 0, void 0, function* () {
             try {
                 let project = yield Project_1.default.find(data)
-                    .populate({ path: "projectManager", select: '_id name' })
-                    .populate({ path: "teamsId", select: '_id name' })
+                    .populate({ path: "projectManager", select: "_id name" })
+                    .populate({ path: "teamsId", select: "_id name" })
                     .lean();
                 return project;
             }
@@ -65,7 +80,10 @@ const ProjectDB = class ProjectDB {
             try {
                 let id = data.id;
                 delete data.id;
-                let project = yield Project_1.default.findByIdAndUpdate({ _id: id }, Object.assign({}, data), { new: true, lean: true });
+                let project = yield Project_1.default.findByIdAndUpdate({ _id: id }, { data }, {
+                    new: true,
+                    lean: true,
+                });
                 return project;
             }
             catch (error) {
@@ -82,6 +100,50 @@ const ProjectDB = class ProjectDB {
             }
             catch (error) {
                 logger_1.default.error({ createProjectDBError: error });
+            }
+        });
+    }
+    static __sortProjects(sortBy) {
+        return __awaiter(this, void 0, void 0, function* () {
+            try {
+                let projects = yield Project_1.default.find({}).sort(sortBy);
+                return projects;
+            }
+            catch (error) {
+                logger_1.default.error({ sortProjectsDBError: error });
+            }
+        });
+    }
+    static __filterProjects(filter) {
+        return __awaiter(this, void 0, void 0, function* () {
+            try {
+                let projects = yield Project_1.default.find({
+                    projectManager: filter.prjectManager,
+                    projectStatus: filter.projectStatus,
+                })
+                    .where("clientId")
+                    .in(filter.clientId);
+                if (projects)
+                    return projects;
+                else
+                    return null;
+            }
+            catch (error) {
+                logger_1.default.error({ filterProjectsError: error });
+            }
+        });
+    }
+    static __searchProjects(searchStr) {
+        return __awaiter(this, void 0, void 0, function* () {
+            try {
+                let projects = yield Project_1.default.find({ name: searchStr }).sort("asc");
+                if (projects)
+                    return projects;
+                else
+                    return null;
+            }
+            catch (error) {
+                logger_1.default.error({ searchProjectsError: error });
             }
         });
     }

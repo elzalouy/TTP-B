@@ -10,18 +10,18 @@ export interface DepartmentInfo extends Document {
   doneListId: string;
   notClearListId: string;
   canceldListId: string;
-  color:string;
-  mainBoard:boolean;
-  teamsId:{
-    idInTrello:string;
-    idInDB:any;
-  }[]
+  color: string;
+  mainBoard: boolean;
+  teamsId: {
+    idInTrello: string;
+    idInDB: any;
+  }[];
 }
 
 export interface DepartmentData {
   id?: string;
   name?: string;
-  color?:string;
+  color?: string;
   boardId?: string;
   defaultListId?: string;
   reviewListId?: string;
@@ -29,22 +29,24 @@ export interface DepartmentData {
   doneListId?: string;
   notClearListId?: string;
   canceldListId?: string;
-  teamsId?:{idInTrello:string; idInDB:any}[];
-  teams?:{name:string; _id:any}[];
-  mainBoard?:boolean|null;
+  teamsId?: { idInTrello: string; idInDB: any }[];
+  teams?: { name: string; _id: any }[];
+  mainBoard?: boolean | null;
 }
 
 export interface UpdateDepartment {
   _id?: string;
-  name?: string,
-  boardId?: string,
-  color?: string,
-  mainBoard?:boolean|null;
-  teams?:string[];
-  removeTeam?:string[] | null;
-  addTeam?:{
-    _id:string;
-    name:string;
-  }[]|null;
-  listIds?:string[]|null
+  name?: string;
+  boardId?: string;
+  color?: string;
+  mainBoard?: boolean | null;
+  teams?: string[];
+  removeTeam?: string[] | null;
+  addTeam?:
+    | {
+        _id: string;
+        name: string;
+      }[]
+    | null;
+  listIds?: string[] | null;
 }

@@ -1,6 +1,10 @@
 import { ObjectId } from "bson";
 
-import { DepartmentInfo, DepartmentData, UpdateDepartment } from "../../types/model/Department";
+import {
+  DepartmentInfo,
+  DepartmentData,
+  UpdateDepartment,
+} from "../../types/model/Department";
 import logger from "../../../logger";
 import Department from "../../models/Department";
 
@@ -28,7 +32,9 @@ const DepartmentBD = class DepartmentBD {
   static async __updateNestedRecordDepDB(DepId: string, Recordupdate: object) {
     try {
       let department = await Department.findOneAndUpdate(
-        { _id: new ObjectId(DepId) },Recordupdate);
+        { _id: new ObjectId(DepId) },
+        Recordupdate
+      );
 
       return department;
     } catch (error) {
@@ -56,7 +62,6 @@ const DepartmentBD = class DepartmentBD {
 
   static async __updateDepartment(data: UpdateDepartment) {
     try {
-      logger.info({ updatedbDepartmentError: data });
       let id = data._id;
       delete data._id;
       let department = await Department.findByIdAndUpdate(

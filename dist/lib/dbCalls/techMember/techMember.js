@@ -30,6 +30,24 @@ const TechMemberDB = class TechMemberDB {
             return yield TechMemberDB.__getTechMmber(data);
         });
     }
+    static updateTechMembersDB(data) {
+        return __awaiter(this, void 0, void 0, function* () {
+            return yield TechMemberDB.__updateTechMembersDB(data);
+        });
+    }
+    static __updateTechMembersDB(data) {
+        return __awaiter(this, void 0, void 0, function* () {
+            try {
+                let ids = data.ids;
+                delete data.ids;
+                let techMembers = yield TechMeber_1.default.updateMany({ id: { $in: ids } }, Object.assign({}, data), { multi: true });
+                return techMembers;
+            }
+            catch (error) {
+                logger_1.default.error({ updateTechMembersDBDBError: error });
+            }
+        });
+    }
     static __getTechMmber(data) {
         return __awaiter(this, void 0, void 0, function* () {
             try {

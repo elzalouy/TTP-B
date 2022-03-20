@@ -28,6 +28,7 @@ const ProjectController = class ProjectController extends ProjectDB {
   static async searchProjects(searchStr: string) {
     return await ProjectController.__searchProjects(searchStr);
   }
+
   static async __deleteProjectData(id: string) {
     try {
       let project = await super.deleteProjectDB(id);
@@ -63,6 +64,7 @@ const ProjectController = class ProjectController extends ProjectDB {
       logger.error({ getTeamsError: error });
     }
   }
+
   static async __sortProjects(sortBy: string) {
     try {
       let projects = await super.sortProjectsDB(sortBy);
@@ -71,6 +73,7 @@ const ProjectController = class ProjectController extends ProjectDB {
       logger.error({ sortProjectsError: error });
     }
   }
+
   static async __filterProjects(filter: any) {
     try {
       let projects = await super.filterProjectsDB(filter);
@@ -79,6 +82,7 @@ const ProjectController = class ProjectController extends ProjectDB {
       logger.error({ flterProjectsError: error });
     }
   }
+
   static async __searchProjects(searchStr: string) {
     try {
       let projects = await super.searchProjectsDB(searchStr);

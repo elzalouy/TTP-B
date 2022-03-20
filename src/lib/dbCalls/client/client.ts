@@ -1,6 +1,6 @@
-import Clients from '../../models/Client';
-import logger from '../../../logger';
-import { Client, ClientData } from '../../types/model/Client';
+import Clients from "../../models/Client";
+import logger from "../../../logger";
+import { Client, ClientData } from "../../types/model/Client";
 
 const ClientDB = class ClientDB {
   static async createClientDB(data: ClientData) {
@@ -31,18 +31,18 @@ const ClientDB = class ClientDB {
     try {
       let client = await Clients.find()
         .populate({
-          path: 'projectsId',
-          select: 'numberOfTasks',
+          path: "projectsId",
+          select: "numberOfTasks",
         })
         .populate({
-          path: 'projectsId',
-          select: 'name -_id',
+          path: "projectsId",
+          select: "name -_id",
           match: {
             projectStatus:
-              'inProgress' ||
-              'deliver on time' ||
-              'deliver defore deadline' ||
-              'delivered after deadline',
+              "inProgress" ||
+              "deliver on time" ||
+              "deliver defore deadline" ||
+              "delivered after deadline",
           },
         })
         .lean();

@@ -51,7 +51,10 @@ const AuthController = class AuthController extends user_1.default {
                     return (0, errorUtils_1.customeError)("password_length", 400);
                 }
                 let cryptPassword = yield (0, auth_1.hashBassword)(password);
-                let user = yield _super.updateUser.call(this, { id: verifyToken.user.id, password: cryptPassword });
+                let user = yield _super.updateUser.call(this, {
+                    id: verifyToken.user.id,
+                    password: cryptPassword,
+                });
                 return { user, status: 200 };
             }
             catch (error) {

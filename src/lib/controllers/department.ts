@@ -13,7 +13,12 @@ const DepartmentController = class DepartmentController extends DepartmentBD {
     return await DepartmentController.__updateDepartmentData(data);
   }
 
-  static async deleteDepartment(data:{_id: string,listTrelloIds:string[],mainBoard:boolean,boardId:string}) {
+  static async deleteDepartment(data: {
+    _id: string;
+    listTrelloIds: string[];
+    mainBoard: boolean;
+    boardId: string;
+  }) {
     return await DepartmentController.__deleteDepartmentData(data);
   }
 
@@ -30,22 +35,27 @@ const DepartmentController = class DepartmentController extends DepartmentBD {
     }
   }
 
-  static async __deleteDepartmentData(data:{_id: string,listTrelloIds:string[],mainBoard:boolean,boardId:string}) {
+  static async __deleteDepartmentData(data: {
+    _id: string;
+    listTrelloIds: string[];
+    mainBoard: boolean;
+    boardId: string;
+  }) {
     try {
-      const {_id,listTrelloIds,mainBoard,boardId} = data
+      const { _id, listTrelloIds, mainBoard, boardId } = data;
       // if it was main Board remove the webhooks
-      if(mainBoard) {
+      if (mainBoard) {
         let hookRemove = listTrelloIds.map(async (id) => {
           return await BoardController.removeWebhook(id);
         });
-        logger.info('third step')
-  
+        logger.info("third step");
+
         Promise.all(hookRemove).then((res) =>
           logger.info({ removeWebhookSucced: "done" })
         );
       }
 
-      await BoardController.deleteBoard(boardId)
+      await BoardController.deleteBoard(boardId);
       let deleteDepartment = await super.deleteDepartmentDB(_id);
       return deleteDepartment;
     } catch (error) {
@@ -57,49 +67,47 @@ const DepartmentController = class DepartmentController extends DepartmentBD {
     try {
       let depUpdate: any;
 
-        // update board color and name
-        if (data.name && data.color) {
-          logger.info('first step')
-          let boardData = {
-            name: data.name,
-            color: data.color,
-            _id:data._id
-          };
-          await BoardController.updateBoard(data.boardId, boardData);
-          depUpdate = await super.updatedbDepartment(boardData);
+      // update board color and name
+      if (data.name && data.color) {
+        logger.info("first step");
+        let boardData = {
+          name: data.name,
+          color: data.color,
+          _id: data._id,
+        };
+        await BoardController.updateBoard(data.boardId, boardData);
+        depUpdate = await super.updatedbDepartment(boardData);
+      }
+
+      // if not undefine then there is an action needed
+      // make mainBoard or not
+      if (data.mainBoard !== undefined && data.teams) {
+        logger.info("second step");
+
+        // if false => remove the webhook
+        if (!data.mainBoard) {
+          let hookRemove = data.teams.map(async (id) => {
+            return await BoardController.removeWebhook(id);
+          });
+          logger.info("third step");
+
+          Promise.all(hookRemove).then((res) =>
+            logger.info({ removeWebhookSucced: "done" })
+          );
         }
+        // if true => create the webhook
+        if (data.mainBoard) {
+          logger.info("fourth step");
 
-        // if not undefine then there is an action needed
-        // make mainBoard or not
-        if (data.mainBoard !== undefined && data.teams) {
-          logger.info('second step')
+          let hookAdd = data.teams.map(async (id) => {
+            return await BoardController.createWebHook(id);
+          });
 
-          // if false => remove the webhook
-          if (!data.mainBoard) {
-            let hookRemove = data.teams.map(async (id) => {
-              return await BoardController.removeWebhook(id);
-            });
-            logger.info('third step')
-            
-
-            Promise.all(hookRemove).then((res) =>
-              logger.info({ removeWebhookSucced: "done" })
-            );
-          }
-          // if true => create the webhook
-          if (data.mainBoard) {
-          logger.info('fourth step')
-
-            let hookAdd = data.teams.map(async (id) => {
-              return await BoardController.createWebHook(id);
-            });
-
-            Promise.all(hookAdd).then((res) =>
-              logger.info({ addWebhookSucced: "done" })
-            );
-          }
+          Promise.all(hookAdd).then((res) =>
+            logger.info({ addWebhookSucced: "done" })
+          );
         }
-  
+      }
 
       //todo add team or remove team
       // if remove team
@@ -132,15 +140,15 @@ const DepartmentController = class DepartmentController extends DepartmentBD {
             data.boardId,
             data.mainBoard
           );
-            logger.info({title:'testing',teamListIds})
+        logger.info({ title: "testing", teamListIds });
         // add team
         depUpdate = super.updateNestedRecordDepDB(data._id, {
           $push: {
-            teamsId:{ $each: teamListIds,$position:0 },
+            teamsId: { $each: teamListIds, $position: 0 },
           },
         });
       }
-      logger.info({depUpdate})
+      logger.info({ depUpdate });
       return depUpdate;
     } catch (error) {
       logger.error({ updateDepartmentError: error });
@@ -159,7 +167,6 @@ const DepartmentController = class DepartmentController extends DepartmentBD {
       let reviewListId: string = "";
       let notClearListId: string = "";
       let canceldListId: string = "";
-
       // create board
       let boardData: any = await BoardController.createNewBoard(
         data.name,
@@ -201,7 +208,6 @@ const DepartmentController = class DepartmentController extends DepartmentBD {
           boardId,
           mainBoard
         );
-
       let defaultList: { id: string } = await BoardController.addListToBoard(
         boardId,
         "Tasks Board"
@@ -309,9 +315,11 @@ const DepartmentController = class DepartmentController extends DepartmentBD {
           });
         });
 
-        await Promise.all(teamsList).then(res => logger.info({ removeWebhookSucced: "done" }));
+        await Promise.all(teamsList).then((res) =>
+          logger.info({ removeWebhookSucced: "done" })
+        );
       }
-logger.info({teamListIds})
+      logger.info({ teamListIds });
       return teamListIds;
     } catch (error) {
       logger.error({ createTeamListError: error });

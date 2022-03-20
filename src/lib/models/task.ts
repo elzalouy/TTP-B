@@ -14,12 +14,12 @@ const TaskSchema: Schema = new Schema<TaskInfo>(
     },
     categoryId: {
       type: Schema.Types.ObjectId,
-      ref: "categorys",
-      required: true,
+      ref: "categories",
+      default: null,
     },
-    teamId: {
+    memberId: {
       type: Schema.Types.ObjectId,
-      ref: "teams",
+      ref: "techMembers",
       required: true,
     },
     cardId: {
@@ -42,7 +42,6 @@ const TaskSchema: Schema = new Schema<TaskInfo>(
     },
     status: {
       type: String,
-      default: "inProgress",
       enum: [
         "inProgress",
         "shared",

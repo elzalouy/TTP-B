@@ -26,6 +26,22 @@ const TaskController = class TaskController extends tasks_1.default {
             return yield TaskController.__updateTaskData(data);
         });
     }
+    static webhookUpdate(data) {
+        return __awaiter(this, void 0, void 0, function* () {
+            return yield TaskController.__webhookUpdate(data);
+        });
+    }
+    static __webhookUpdate(data) {
+        return __awaiter(this, void 0, void 0, function* () {
+            try {
+                logger_1.default.info({ webhookUpdateData: data });
+                return;
+            }
+            catch (error) {
+                logger_1.default.error({ webhookUpdateError: error });
+            }
+        });
+    }
     static __updateTaskData(data) {
         const _super = Object.create(null, {
             updateTaskDB: { get: () => super.updateTaskDB }

@@ -1,4 +1,4 @@
-import { GetUserData } from './../../types/controller/user';
+import { GetUserData } from "./../../types/controller/user";
 import { successMsg } from "./../../utils/successMsg";
 import UserController from "../../controllers/user";
 import { Request, Response } from "express";
@@ -87,7 +87,7 @@ const UserReq = class UserReq extends UserController {
 
   static async handleGetUserPmOrSA(req: Request, res: Response) {
     try {
-      let userData:GetUserData = req.query; 
+      let userData: GetUserData = req.query;
       if (userData) {
         let user = await super.getUsersPmOrSA(userData);
         if (user) {

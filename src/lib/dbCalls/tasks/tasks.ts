@@ -2,6 +2,7 @@ import { TaskInfo } from "./../../types/model/tasks";
 import logger from "../../../logger";
 import Tasks from "../../models/task";
 import { TaskData } from "../../types/model/tasks";
+import ProjectDB from "../project/project";
 
 const TaskDB = class TaskDB {
   static async createTaskDB(data: TaskData) {
@@ -19,7 +20,6 @@ const TaskDB = class TaskDB {
   static async getTaskDB(data: object) {
     return await TaskDB.__getTask(data);
   }
-
   static async __getTask(data: object) {
     try {
       let tasks = await Tasks.find(data).lean();
@@ -28,7 +28,6 @@ const TaskDB = class TaskDB {
       logger.error({ updateTaskDBError: error });
     }
   }
-
   static async __deleteTask(id: string) {
     try {
       let task = await Tasks.findByIdAndDelete({ _id: id });
@@ -37,7 +36,6 @@ const TaskDB = class TaskDB {
       logger.error({ deleteTaskDBError: error });
     }
   }
-
   static async __updateTask(data: any) {
     try {
       let id = data.id;
@@ -52,11 +50,16 @@ const TaskDB = class TaskDB {
       logger.error({ updateTaskDBError: error });
     }
   }
-
   static async __createTask(data: TaskData) {
     try {
       let task: TaskInfo = new Tasks(data);
-      await task.save();
+      task = await task.save();
+      let projectId = task.projectId.toString();
+      let tasks = await (await Tasks.find({ projectId: projectId })).length;
+      await ProjectDB.updateProjectDB({
+        id: projectId,
+        numberOfTasks: tasks,
+      });
       return task;
     } catch (error) {
       logger.error({ createTaskDBError: error });

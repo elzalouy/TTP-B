@@ -23,8 +23,6 @@ const TaskReq = class TaskReq extends task_1.default {
         return __awaiter(this, void 0, void 0, function* () {
             try {
                 let TaskData = req.body;
-                // logger.info({TaskData:req.file})
-                // TaskData.file = req.file
                 let task = yield _super.createTask.call(this, TaskData, req.file);
                 if (task) {
                     return res.send(task);
@@ -34,12 +32,12 @@ const TaskReq = class TaskReq extends task_1.default {
                 }
             }
             catch (error) {
-                logger_1.default.error({ handleGetBoards: error });
+                logger_1.default.error({ handleCreateCardError: error });
                 return res.status(500).send((0, errorUtils_1.customeError)("server_error", 500));
             }
         });
     }
-    static handleUpsateCard(req, res) {
+    static handleUpdateCard(req, res) {
         const _super = Object.create(null, {
             updateTask: { get: () => super.updateTask }
         });
@@ -56,7 +54,23 @@ const TaskReq = class TaskReq extends task_1.default {
                 }
             }
             catch (error) {
-                logger_1.default.error({ handleGetBoards: error });
+                logger_1.default.error({ handleUpdateCardError: error });
+                return res.status(500).send((0, errorUtils_1.customeError)("server_error", 500));
+            }
+        });
+    }
+    static handleWebhookUpdateCard(req, res) {
+        const _super = Object.create(null, {
+            webhookUpdate: { get: () => super.webhookUpdate }
+        });
+        return __awaiter(this, void 0, void 0, function* () {
+            try {
+                let trelloData = req.body;
+                let task = yield _super.webhookUpdate.call(this, trelloData);
+                return res.status(200).send(task);
+            }
+            catch (error) {
+                logger_1.default.error({ handleWebhookUpdateCardError: error });
                 return res.status(500).send((0, errorUtils_1.customeError)("server_error", 500));
             }
         });

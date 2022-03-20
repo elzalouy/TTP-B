@@ -1,8 +1,8 @@
-import { Category, CategoryData } from './../types/model/Category';
-import { SubcategoryData } from './../types/model/Subcategory';
-import { customeError } from './../utils/errorUtils';
-import logger from '../../logger';
-import CategoryDB from '../dbCalls/category/category';
+import { Category, CategoryData } from "./../types/model/Category";
+import { SubcategoryData } from "./../types/model/Subcategory";
+import { customeError } from "./../utils/errorUtils";
+import logger from "../../logger";
+import CategoryDB from "../dbCalls/category/category";
 
 const CategoryController = class CategoryController extends CategoryDB {
   static async createCategory(data: CategoryData) {
@@ -15,7 +15,9 @@ const CategoryController = class CategoryController extends CategoryDB {
   static async updateCategoryWithSubcategoriesId(data: any) {
     return await CategoryController.__updateCategoryWithSubcategoriesId(data);
   }
-
+  static async getCategories() {
+    return await CategoryController.__getAllCategories();
+  }
   static async __createNewCategory(data: CategoryData) {
     try {
       let category = await super.createCategory(data);
@@ -40,6 +42,14 @@ const CategoryController = class CategoryController extends CategoryDB {
       return category;
     } catch (error) {
       logger.error({ updateCategoryError: error });
+    }
+  }
+  static async __getAllCategories() {
+    try {
+      let categories = await super.getAllCategoriesDB();
+      return categories;
+    } catch (error) {
+      logger.error({ getAllCategories: error });
     }
   }
 };

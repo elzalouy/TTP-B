@@ -1,16 +1,15 @@
-import { Subcategory } from './../types/model/Subcategory';
-import { model, Schema, Model } from 'mongoose';
+import { Subcategory } from "./../types/model/Subcategory";
+import { model, Schema, Model } from "mongoose";
 
 const SubcategorySchema: Schema = new Schema<Subcategory>(
   {
     subCategory: {
       type: String,
-      
     },
 
     categoryId: {
       type: Schema.Types.ObjectId,
-      ref: 'category',
+      ref: "category",
     },
   },
   {
@@ -20,7 +19,7 @@ const SubcategorySchema: Schema = new Schema<Subcategory>(
 );
 
 const SubCategories: Model<Subcategory> = model(
-  'subcategories',
+  "subcategories",
   SubcategorySchema
 );
 

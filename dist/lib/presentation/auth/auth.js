@@ -27,36 +27,36 @@ const AuthReq = class AuthReq extends auth_1.default {
                     let user = yield _super.signInUser.call(this, userData);
                     if (user.userData) {
                         const { token, userData } = user;
-                        res.cookie('token', `Bearer ${token}`, {
+                        res.cookie("token", `Bearer ${token}`, {
                             httpOnly: true,
                             // maxAge:24 * 60 * 60,
-                            secure: process.env.NODE_ENV === 'development' ? false : true
+                            secure: process.env.NODE_ENV === "development" ? false : true,
                         });
                         return res.status(200).send(userData);
                     }
                     else {
-                        return res.status(400).send((0, errorUtils_1.customeError)('credential_error', 400));
+                        return res.status(400).send((0, errorUtils_1.customeError)("credential_error", 400));
                     }
                 }
                 else {
-                    return res.status(400).send((0, errorUtils_1.customeError)('credential_error', 400));
+                    return res.status(400).send((0, errorUtils_1.customeError)("credential_error", 400));
                 }
             }
             catch (error) {
                 logger_1.default.error({ handleSignInUserError: error });
-                return res.status(500).send((0, errorUtils_1.customeError)('server_error', 500));
+                return res.status(500).send((0, errorUtils_1.customeError)("server_error", 500));
             }
         });
     }
     static handleLogoutUser(req, res) {
         return __awaiter(this, void 0, void 0, function* () {
             try {
-                res.clearCookie('token');
+                res.clearCookie("token");
                 return res.status(200).send();
             }
             catch (error) {
                 logger_1.default.error({ handleLogoutUserError: error });
-                return res.status(500).send((0, errorUtils_1.customeError)('server_error', 500));
+                return res.status(500).send((0, errorUtils_1.customeError)("server_error", 500));
             }
         });
     }
@@ -77,12 +77,12 @@ const AuthReq = class AuthReq extends auth_1.default {
                     }
                 }
                 else {
-                    return res.status(400).send((0, errorUtils_1.customeError)('credential_error', 400));
+                    return res.status(400).send((0, errorUtils_1.customeError)("credential_error", 400));
                 }
             }
             catch (error) {
                 logger_1.default.error({ handleUserForgetPasswordError: error });
-                return res.status(500).send((0, errorUtils_1.customeError)('server_error', 500));
+                return res.status(500).send((0, errorUtils_1.customeError)("server_error", 500));
             }
         });
     }
@@ -104,12 +104,12 @@ const AuthReq = class AuthReq extends auth_1.default {
                     }
                 }
                 else {
-                    return res.status(400).send((0, errorUtils_1.customeError)('credential_error', 400));
+                    return res.status(400).send((0, errorUtils_1.customeError)("credential_error", 400));
                 }
             }
             catch (error) {
                 logger_1.default.error({ handleUpdateUserPasswordError: error });
-                return res.status(500).send((0, errorUtils_1.customeError)('server_error', 500));
+                return res.status(500).send((0, errorUtils_1.customeError)("server_error", 500));
             }
         });
     }

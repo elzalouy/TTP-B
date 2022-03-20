@@ -1,11 +1,10 @@
-import { ListOfBoard } from './../types/controller/techMembers';
+import { ListOfBoard } from "./../types/controller/techMembers";
 import logger from "../../logger";
 import TechMemberDB from "../dbCalls/techMember/techMember";
-import { ITech,TechMemberData } from "../types/model/Team";
+import { ITech, TechMemberData } from "../types/model/Team";
 import { customeError } from "../utils/errorUtils";
 import { localize } from "../utils/msgLocalize";
 import BoardController from "./boards";
-
 
 const TechMemberController = class TechMemberController extends TechMemberDB {
   static async createNewMember(data: TechMemberData) {
@@ -16,14 +15,14 @@ const TechMemberController = class TechMemberController extends TechMemberDB {
     return await TechMemberController.__updateMember(data);
   }
 
-  static async getTechMember(data:object){
-    return await TechMemberController.__getTechMmber(data)
+  static async getTechMember(data: object) {
+    return await TechMemberController.__getTechMmber(data);
   }
 
-  static async __getTechMmber(data:object){
+  static async __getTechMmber(data: object) {
     try {
-      let techMember = await super.getTechMemberDB(data)
-      return techMember
+      let techMember = await super.getTechMemberDB(data);
+      return techMember;
     } catch (error) {
       logger.error({ getTechMemberError: error });
     }
@@ -45,8 +44,9 @@ const TechMemberController = class TechMemberController extends TechMemberDB {
 
       // I want to move member from board to another
       if (newBoardId && newBoardId !== boardId) {
-        let checkExsit: boolean = await TechMemberController.__checkBoardListName(newBoardId,name);
-        logger.info({checkExsit})
+        let checkExsit: boolean =
+          await TechMemberController.__checkBoardListName(newBoardId, name);
+        logger.info({ checkExsit });
         if (checkExsit) {
           return;
         }
@@ -83,18 +83,18 @@ const TechMemberController = class TechMemberController extends TechMemberDB {
   static async __createMember(data: TechMemberData) {
     try {
       const { boardId, name, trelloMemberId } = data;
-;
-      let checkExsit:boolean = await TechMemberController.__checkBoardListName(boardId,name);
-
+      let checkExsit: boolean = await TechMemberController.__checkBoardListName(
+        boardId,
+        name
+      );
 
       if (checkExsit) {
         return customeError("list_already_exsit", 400);
       }
 
-      // add this member to board
-      BoardController.addMemberToBoard(boardId, trelloMemberId, "normal");
+      // // add this member to board
+      // BoardController.addMemberToBoard(boardId, trelloMemberId, "normal");
 
-      // Create a list for this member in board
       let list = await BoardController.addListToBoard(boardId, name);
       let techMember = await super.createTechMember({
         ...data,
@@ -145,4 +145,4 @@ const TechMemberController = class TechMemberController extends TechMemberDB {
   }
 };
 
-export default TechMemberController
+export default TechMemberController;

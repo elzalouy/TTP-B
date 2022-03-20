@@ -1,5 +1,5 @@
-import { ProjectInfo } from './../types/model/Project';
-import { model, Schema, Model } from 'mongoose';
+import { ProjectInfo } from "./../types/model/Project";
+import { model, Schema, Model } from "mongoose";
 
 const ProjectSchema: Schema = new Schema<ProjectInfo>(
   {
@@ -9,13 +9,13 @@ const ProjectSchema: Schema = new Schema<ProjectInfo>(
     },
     projectManager: {
       type: Schema.Types.ObjectId,
-      ref: 'users',
+      ref: "users",
       required: true,
     },
-    teamsId: [
+    membersId: [
       {
         type: Schema.Types.ObjectId,
-        ref: "teams",
+        ref: "techMembers",
       },
     ],
     numberOfTasks: {
@@ -43,9 +43,9 @@ const ProjectSchema: Schema = new Schema<ProjectInfo>(
       default: "inProgress",
       enum: [
         "inProgress",
-        "deliver on time",
         "late",
-        "deliver defore deadline",
+        "delivered on time",
+        "delivered defore deadline",
         "delivered after deadline",
       ],
     },
@@ -61,6 +61,6 @@ const ProjectSchema: Schema = new Schema<ProjectInfo>(
   }
 );
 
-const Project: Model<ProjectInfo> = model('projects', ProjectSchema);
+const Project: Model<ProjectInfo> = model("projects", ProjectSchema);
 
 export default Project;

@@ -1,9 +1,9 @@
-import CategoryReq from '../../presentation/category/category';
-import { Router } from 'express';
-import apiRoute from './apis';
+import CategoryReq from "../../presentation/category/category";
+import { Router } from "express";
+import apiRoute from "./apis";
 
 const router = Router();
-const { CREATE_CAT} = apiRoute;
+const { CREATE_CAT, GET_CATS } = apiRoute;
 
 const { handleCreateCategoryAndSubcategory } = CategoryReq;
 

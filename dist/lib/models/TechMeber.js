@@ -6,23 +6,11 @@ const TechMemberSchema = new mongoose_1.Schema({
         type: String,
         required: true,
     },
-    listId: {
-        type: String,
+    departmentId: {
+        type: mongoose_1.Schema.Types.ObjectId,
+        ref: "departments",
         required: true,
-    },
-    trelloMemberId: {
-        type: String,
-        required: true,
-    },
-    department: {
-        type: String,
-        default: null
-    },
-    boardId: {
-        type: String,
-        required: true,
-        unique: true,
-    },
+    }
 }, {
     timestamps: true,
     strict: false

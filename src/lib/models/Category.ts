@@ -1,5 +1,5 @@
-import { Category } from './../types/model/Category';
-import { model, Schema, Model } from 'mongoose';
+import { Category } from "./../types/model/Category";
+import { model, Schema, Model } from "mongoose";
 
 const CategorySchema: Schema = new Schema<Category>(
   {
@@ -12,7 +12,7 @@ const CategorySchema: Schema = new Schema<Category>(
     subCategoriesId: [
       {
         type: Schema.Types.ObjectId,
-        ref: 'subcategories',
+        ref: "subcategories",
       },
     ],
   },
@@ -22,6 +22,6 @@ const CategorySchema: Schema = new Schema<Category>(
   }
 );
 
-const Categories: Model<Category> = model('category', CategorySchema);
+const Categories: Model<Category> = model("category", CategorySchema);
 
 export default Categories;

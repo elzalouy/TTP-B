@@ -110,5 +110,69 @@ const ProjectReq = class ProjectReq extends project_1.default {
             }
         });
     }
+    static handleSortProjects(req, res) {
+        const _super = Object.create(null, {
+            sortProjects: { get: () => super.sortProjects }
+        });
+        return __awaiter(this, void 0, void 0, function* () {
+            try {
+                let sortBy = req.body.sortBy;
+                if (!sortBy)
+                    return res
+                        .status(400)
+                        .send((0, errorUtils_1.customeError)("sort_projects_params_empty", 400));
+                let projects = yield _super.sortProjects.call(this, sortBy);
+                if (projects)
+                    return res.status(200).send(projects);
+            }
+            catch (error) {
+                logger_1.default.error({ sortProjectsError: error });
+                return res.status(500).send((0, errorUtils_1.customeError)("server_error", 500));
+            }
+        });
+    }
+    static handleFilterProjects(req, res) {
+        const _super = Object.create(null, {
+            filterProjects: { get: () => super.filterProjects }
+        });
+        return __awaiter(this, void 0, void 0, function* () {
+            try {
+                let filter = req.body;
+                let projects = yield _super.filterProjects.call(this, filter);
+                if (projects.length > 0)
+                    return res.status(200).send({ result: projects });
+                else
+                    return res
+                        .status(400)
+                        .send((0, errorUtils_1.customeError)("filter_projects_result_empty", 400));
+            }
+            catch (error) {
+                logger_1.default.error({ filterProjectsError: error });
+                return res.status(500).send((0, errorUtils_1.customeError)("server_error", 500));
+            }
+        });
+    }
+    static handleSearchPorjects(req, res) {
+        const _super = Object.create(null, {
+            searchProjects: { get: () => super.searchProjects }
+        });
+        var _a;
+        return __awaiter(this, void 0, void 0, function* () {
+            try {
+                let search = (_a = req === null || req === void 0 ? void 0 : req.params) === null || _a === void 0 ? void 0 : _a.searchStr;
+                let result = yield _super.searchProjects.call(this, search);
+                if (result.length > 0)
+                    return res.status(200).send(result);
+                else
+                    return res
+                        .status(400)
+                        .send((0, errorUtils_1.customeError)("search_Proejcts_result_null", 400));
+            }
+            catch (error) {
+                logger_1.default.error({ filterProjectsError: error });
+                return res.status(500).send((0, errorUtils_1.customeError)("server_error", 500));
+            }
+        });
+    }
 };
 exports.default = ProjectReq;

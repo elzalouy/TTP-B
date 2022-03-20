@@ -1,4 +1,4 @@
-import { successMsg } from './../../utils/successMsg';
+import { successMsg } from "./../../utils/successMsg";
 import { customeError } from "./../../utils/errorUtils";
 import { Request, Response } from "express";
 import logger from "../../../logger";
@@ -9,7 +9,7 @@ const TechMemberReq = class TechMemberReq extends TechMemberController {
   static async handleCreatMember(req: Request, res: Response) {
     try {
       let member = await super.createNewMember(req.body);
-      if (member.status === 200 ) {
+      if (member.status === 200) {
         return res.status(200).send(member);
       } else {
         return res.status(400).send(member);
@@ -24,9 +24,11 @@ const TechMemberReq = class TechMemberReq extends TechMemberController {
     try {
       let member = await super.updateTechMember(req.body);
       if (member) {
-        return res.status(200).send(successMsg('tec_member_updated',200));
+        return res.status(200).send(successMsg("tec_member_updated", 200));
       } else {
-        return res.status(400).send(customeError("tec_member_update_error", 400));
+        return res
+          .status(400)
+          .send(customeError("tec_member_update_error", 400));
       }
     } catch (error) {
       logger.error({ handleGetBoards: error });

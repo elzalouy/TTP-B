@@ -7,7 +7,7 @@ import { TaskData } from "../../types/model/tasks";
 const TaskReq = class TaskReq extends TaskController {
   static async handleCreateCard(req: Request, res: Response) {
     try {
-      let TaskData: TaskData = req.body
+      let TaskData: TaskData = req.body;
       let task = await super.createTask(TaskData, req.file);
       if (task) {
         return res.send(task);
@@ -22,7 +22,7 @@ const TaskReq = class TaskReq extends TaskController {
 
   static async handleUpdateCard(req: Request, res: Response) {
     try {
-      let TaskData: any = req.body
+      let TaskData: any = req.body;
       // TaskData.file = req.file
       let task = await super.updateTask(TaskData);
       if (task) {
@@ -38,16 +38,14 @@ const TaskReq = class TaskReq extends TaskController {
 
   static async handleWebhookUpdateCard(req: Request, res: Response) {
     try {
-      let trelloData: any = req.body
-      let task: any = await super.webhookUpdate(trelloData)
+      let trelloData: any = req.body;
+      let task: any = await super.webhookUpdate(trelloData);
       return res.status(200).send(task);
     } catch (error) {
       logger.error({ handleWebhookUpdateCardError: error });
       return res.status(500).send(customeError("server_error", 500));
     }
   }
-
-}
-
+};
 
 export default TaskReq;

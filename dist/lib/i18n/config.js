@@ -7,7 +7,7 @@ const i18n_1 = __importDefault(require("i18n"));
 const path_1 = __importDefault(require("path"));
 i18n_1.default.configure({
     defaultLocale: "ar",
-    directory: path_1.default.join(__dirname, '/locales'),
+    directory: path_1.default.join(__dirname, "/locales"),
     locales: ["en", "ar"],
 });
 exports.default = i18n_1.default;

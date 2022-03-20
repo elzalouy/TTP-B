@@ -44,7 +44,7 @@ const BoardController = class BoardController {
   }
 
   static async deleteBoard(id: string) {
-    return await BoardController.__deleteBoard(id)
+    return await BoardController.__deleteBoard(id);
   }
 
   static async createCardInList(
@@ -76,13 +76,13 @@ const BoardController = class BoardController {
 
   static async __deleteBoard(id: string) {
     try {
-      let removeBoard = trelloApi(
-        `boards/${id}&`
-      );
+      let removeBoard = trelloApi(`boards/${id}&`);
 
       return await fetch(removeBoard, {
         method: "DELETE",
-      }).then(res => logger.info('delete board done')).catch(err => logger.info('error in delete board', err))
+      })
+        .then((res) => logger.info("delete board done"))
+        .catch((err) => logger.info("error in delete board", err));
     } catch (error) {
       logger.error({ deleteBoardError: error });
     }
@@ -90,14 +90,11 @@ const BoardController = class BoardController {
 
   static async __removeWebhook(id: string) {
     try {
-      let webhookApi = trelloApi(
-        `/webhooks/${id}&`
-      );
+      let webhookApi = trelloApi(`/webhooks/${id}&`);
 
       return await fetch(webhookApi, {
         method: "DELETE",
-      })
-
+      });
     } catch (error) {
       logger.error({ removeWebhookError: error });
     }
@@ -131,8 +128,8 @@ const BoardController = class BoardController {
           Accept: "application/json",
         },
       });
-      let borderData = board.json()
-      logger.info({ borderData, createBoardApi })
+      let borderData = board.json();
+      logger.info({ borderData, createBoardApi });
       return borderData;
     } catch (error) {
       logger.error({ createNewBoardError: error });
@@ -168,14 +165,12 @@ const BoardController = class BoardController {
       let cardCreateApi = trelloApi(
         `cards?idList=${listId}&name=${cardName}&attachments=true&`
       );
-
       let cardResult = await fetch(cardCreateApi, {
         method: "POST",
         headers: {
           Accept: "application/json",
         },
       });
-
       return cardResult.json();
     } catch (error) {
       logger.error({ createCardInListError: error });

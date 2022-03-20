@@ -18,26 +18,28 @@ const userRoute_1 = __importDefault(require("./routes/user/userRoute"));
 const boardRoute_1 = __importDefault(require("./routes/board/boardRoute"));
 const techMemberRoute_1 = __importDefault(require("./routes/techMember/techMemberRoute"));
 const authRoute_1 = __importDefault(require("./routes/auth/authRoute"));
-const teamRoute_1 = __importDefault(require("./routes/team/teamRoute"));
+const depRoute_1 = __importDefault(require("./routes/department/depRoute"));
 const projectRoute_1 = __importDefault(require("./routes/project/projectRoute"));
 const taskRoute_1 = __importDefault(require("./routes/task/taskRoute"));
+const categoryRoute_1 = __importDefault(require("./routes/category/categoryRoute"));
+const clientRoute_1 = __importDefault(require("./routes/client/clientRoute"));
 const app = (0, express_1.default)();
 exports.http = (0, http_1.createServer)(app);
 exports.io = new socket_io_1.Server(exports.http, {
     cors: {
-        origin: "*",
+        origin: '*',
         credentials: true,
     },
 });
 app.use((0, cookie_parser_1.default)());
 // middlewares
-app.use((0, morgan_1.default)("dev"));
+app.use((0, morgan_1.default)('dev'));
 // for parsing application/json
 app.use(express_1.default.json());
 // for parsing application/x-www-form-urlencoded
 app.use(express_1.default.urlencoded({ extended: false }));
 app.use((0, cors_1.default)({
-    origin: "*",
+    origin: '*',
     credentials: true,
 }));
 // MongoDB init
@@ -51,7 +53,7 @@ app.use(config_1.default.init);
 //   // logger.info(trelloApi('card'))
 //   res.send(i18n.__('key'))
 // })
-// Ngrok init 
+// Ngrok init
 if (process.env.NODE_ENV === 'development') {
     ngrok.connect({
         proto: 'http',
@@ -70,7 +72,7 @@ app.use('/api', taskRoute_1.default);
 // Authenticate User
 // app.use(async (req:Request,res:Response,next:NextFunction) => {
 //   let checkToken:string | JwtPayload = await jwtVerify(req.cookies.token)
-//   if(checkToken.user){ 
+//   if(checkToken.user){
 //     const{user}=checkToken
 //     let findUser = await UserDB.findUserById(user.id)
 //     if(findUser){
@@ -86,10 +88,13 @@ app.use('/api', taskRoute_1.default);
 app.use('/api', userRoute_1.default);
 app.use('/api', boardRoute_1.default);
 app.use('/api', techMemberRoute_1.default);
-app.use('/api', teamRoute_1.default);
+app.use('/api', depRoute_1.default);
 app.use('/api', projectRoute_1.default);
+app.use('/api', categoryRoute_1.default);
+app.use('/api', clientRoute_1.default);
+app.disable('etag');
 // connect to socket io
-exports.io.on("connection", (socket) => {
-    console.log("Client connected");
-    socket.on("disconnect", () => console.log("Client disconnected"));
+exports.io.on('connection', (socket) => {
+    console.log('Client connected');
+    socket.on('disconnect', () => console.log('Client disconnected'));
 });

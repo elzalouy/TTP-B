@@ -40,7 +40,7 @@ const ProjectDB = class ProjectDB {
     try {
       let project = await Project.find(data)
         .populate({ path: "projectManager", select: "_id name" })
-        .populate({ path: "teamsId", select: "_id name" })
+        .populate({ path: "membersId", select: "_id name" })
         .lean();
       return project;
     } catch (error) {
@@ -52,11 +52,12 @@ const ProjectDB = class ProjectDB {
     try {
       let id = data.id;
       delete data.id;
-      let project = await Project.findByIdAndUpdate(
-        { _id: id },
-        { ...data },
-        { new: true, lean: true }
-      );
+      let query: any = data;
+      let project = await Project.findByIdAndUpdate({ _id: id }, query, {
+        new: true,
+        lean: true,
+      });
+      console.log("update after added task", project);
       return project;
     } catch (error) {
       logger.error({ updateProjectDBError: error });
@@ -85,8 +86,9 @@ const ProjectDB = class ProjectDB {
       let projects = await Project.find({
         projectManager: filter.prjectManager,
         projectStatus: filter.projectStatus,
-        clientId: filter.clientId,
-      });
+      })
+        .where("clientId")
+        .in(filter.clientId);
       if (projects) return projects;
       else return null;
     } catch (error) {

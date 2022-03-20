@@ -31,17 +31,19 @@ const mongoDB = () => __awaiter(void 0, void 0, void 0, function* () {
         yield (0, mongoose_1.connect)(db, options);
         console.log("Mongo DB connected");
         // adding superAdmin in db if not exists
-        const userInfo = yield user_1.default.findUser({ email: process.env.SUPER_ADMIN_EMAIL });
+        const userInfo = yield user_1.default.findUser({
+            email: process.env.SUPER_ADMIN_EMAIL,
+        });
         if (!userInfo) {
             let passwordHash = yield (0, auth_1.hashBassword)(process.env.SUPER_ADMIN_PASSWORD);
             const data = {
                 name: "abdulaziz qannam",
                 email: process.env.SUPER_ADMIN_EMAIL,
                 password: passwordHash,
-                role: 'superAdmin'
+                role: "superAdmin",
             };
             yield user_1.default.createUser(data);
-            console.log('Done');
+            console.log("Done");
         }
     }
     catch (error) {

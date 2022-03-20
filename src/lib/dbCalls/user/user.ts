@@ -1,4 +1,4 @@
-import { GetUserData } from './../../types/controller/user';
+import { GetUserData } from "./../../types/controller/user";
 import { IUser, UserData } from "../../types/model/User";
 import logger from "../../../logger";
 import User from "../../models/User";
@@ -20,27 +20,27 @@ const UserDB = class UserDB {
     return await this.__findById(id);
   }
 
-  static async deleteUser(id:string){
-    return await this.__deleteUserData(id)
+  static async deleteUser(id: string) {
+    return await this.__deleteUserData(id);
   }
 
-  static async getUsers(data:GetUserData){
-    return await this.__getUsersData(data)
+  static async getUsers(data: GetUserData) {
+    return await this.__getUsersData(data);
   }
 
-  static async __getUsersData(data:GetUserData){
+  static async __getUsersData(data: GetUserData) {
     try {
-      let user = await User.find(data).lean()
-      return user
+      let user = await User.find(data).lean();
+      return user;
     } catch (error) {
       logger.error({ getUserError: error });
     }
   }
 
-  static async __deleteUserData(id:string){
+  static async __deleteUserData(id: string) {
     try {
-        let deleteUser = await User.findOneAndDelete({_id:id})
-        return deleteUser
+      let deleteUser = await User.findOneAndDelete({ _id: id });
+      return deleteUser;
     } catch (error) {
       logger.error({ deleteUserError: error });
     }
