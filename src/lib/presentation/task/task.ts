@@ -57,6 +57,22 @@ const TaskReq = class TaskReq extends TaskController {
       return res.status(500).send(customeError("server_error", 500));
     }
   }
+
+  static async handleMoveCard(req: Request, res: Response) {
+    try {
+      let { cardId, listId, status }: any = req.body;
+      // TaskData.file = req.file
+      let task = await super.moveTaskOnTrello(cardId, listId, status);
+      if (task) {
+        return res.send(task);
+      } else {
+        return res.status(400).send(customeError("update_task_error", 400));
+      }
+    } catch (error) {
+      logger.error({ handleMoveCardError: error });
+      return res.status(500).send(customeError("server_error", 500));
+    }
+  }
 };
 
 export default TaskReq;
