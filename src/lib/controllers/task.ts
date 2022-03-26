@@ -5,6 +5,9 @@ import TaskDB from "../dbCalls/tasks/tasks";
 import BoardController from "./boards";
 
 const TaskController = class TaskController extends TaskDB {
+  static async getTasks(data: TaskData) {
+    return await TaskController.__getTasks(data);
+  }
   static async createTask(data: TaskData, file: any) {
     return await TaskController.__CreateNewTask(data, file);
   }
@@ -57,6 +60,14 @@ const TaskController = class TaskController extends TaskDB {
       return { task, createdCard, attachment };
     } catch (error) {
       logger.error({ getTeamsError: error });
+    }
+  }
+  static async __getTasks(data: TaskData) {
+    try {
+      let tasks = await super.getTasksDB(data);
+      return tasks;
+    } catch (error) {
+      logger.error({ getTasksError: error });
     }
   }
 };

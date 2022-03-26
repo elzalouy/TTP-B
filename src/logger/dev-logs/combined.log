@@ -1,2596 +1,555 @@
 {
   message: { db: 'mongodb://localhost:27017/TTP' },
   level: 'info',
-  timestamp: '2022-03-11 16:10:43'
+  timestamp: '2022-03-22 10:46:01'
 }
 {
   message: { db: 'mongodb://localhost:27017/TTP' },
   level: 'info',
-  timestamp: '2022-03-11 16:18:08'
+  timestamp: '2022-03-22 10:49:05'
 }
 {
   message: { db: 'mongodb://localhost:27017/TTP' },
   level: 'info',
-  timestamp: '2022-03-11 17:19:31'
+  timestamp: '2022-03-22 10:49:55'
 }
 {
   message: { db: 'mongodb://localhost:27017/TTP' },
   level: 'info',
-  timestamp: '2022-03-12 06:31:18'
+  timestamp: '2022-03-22 10:50:11'
 }
 {
   message: { db: 'mongodb://localhost:27017/TTP' },
   level: 'info',
-  timestamp: '2022-03-12 06:36:18'
+  timestamp: '2022-03-22 10:50:37'
 }
 {
   message: { db: 'mongodb://localhost:27017/TTP' },
   level: 'info',
-  timestamp: '2022-03-12 06:43:41'
+  timestamp: '2022-03-22 10:51:06'
 }
 {
   message: { db: 'mongodb://localhost:27017/TTP' },
   level: 'info',
-  timestamp: '2022-03-12 06:48:42'
+  timestamp: '2022-03-22 10:51:33'
 }
 {
   message: { db: 'mongodb://localhost:27017/TTP' },
   level: 'info',
-  timestamp: '2022-03-12 08:28:58'
-}
-{
-  message: { db: 'mongodb://localhost:27017/TTP' },
-  level: 'info',
-  timestamp: '2022-03-12 08:30:18'
-}
-{
-  message: { db: 'mongodb://localhost:27017/TTP' },
-  level: 'info',
-  timestamp: '2022-03-12 08:30:30'
-}
-{
-  message: { db: 'mongodb://localhost:27017/TTP' },
-  level: 'info',
-  timestamp: '2022-03-12 08:34:22'
-}
-{
-  message: { db: 'mongodb://localhost:27017/TTP' },
-  level: 'info',
-  timestamp: '2022-03-12 09:51:02'
-}
-{
-  message: { db: 'mongodb://localhost:27017/TTP' },
-  level: 'info',
-  timestamp: '2022-03-12 09:51:24'
-}
-{
-  message: { db: 'mongodb://localhost:27017/TTP' },
-  level: 'info',
-  timestamp: '2022-03-12 09:51:54'
-}
-{
-  message: { db: 'mongodb://localhost:27017/TTP' },
-  level: 'info',
-  timestamp: '2022-03-12 09:57:56'
-}
-{
-  message: { db: 'mongodb://localhost:27017/TTP' },
-  level: 'info',
-  timestamp: '2022-03-12 10:01:20'
-}
-{
-  message: { db: 'mongodb://localhost:27017/TTP' },
-  level: 'info',
-  timestamp: '2022-03-12 10:02:01'
-}
-{
-  message: { db: 'mongodb://localhost:27017/TTP' },
-  level: 'info',
-  timestamp: '2022-03-13 08:07:59'
-}
-{
-  message: { db: 'mongodb://localhost:27017/TTP' },
-  level: 'info',
-  timestamp: '2022-03-13 08:21:38'
-}
-{
-  message: { db: 'mongodb://localhost:27017/TTP' },
-  level: 'info',
-  timestamp: '2022-03-13 09:16:01'
-}
-{
-  message: { db: 'mongodb://localhost:27017/TTP' },
-  level: 'info',
-  timestamp: '2022-03-15 06:02:50'
+  timestamp: '2022-03-22 19:24:44'
 }
 {
   message: {
-    createProjectDBError: Error: projects validation failed: projectManager: Cast to ObjectId failed for value "0" (type string) at path "projectManager", clientId: Cast to ObjectId failed for value "0" (type string) at path "clientId", projectStatus: `` is not a valid enum value for path `projectStatus`.
-        at ValidationError.inspect (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/error/validation.js:48:26)
-        at formatValue (node:internal/util/inspect:780:19)
-        at formatProperty (node:internal/util/inspect:1817:11)
-        at formatRaw (node:internal/util/inspect:1028:9)
-        at formatValue (node:internal/util/inspect:815:10)
-        at formatProperty (node:internal/util/inspect:1817:11)
-        at formatRaw (node:internal/util/inspect:1028:9)
-        at formatValue (node:internal/util/inspect:815:10)
-        at inspect (node:internal/util/inspect:345:10)
-        at Format.transform (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/logform/pretty-print.js:27:19) {
-      errors: {
-        projectManager: CastError: Cast to ObjectId failed for value "0" (type string) at path "projectManager"
-            at ObjectId.cast (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/schema/objectid.js:247:11)
-            at ObjectId.SchemaType.applySetters (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/schematype.js:1135:12)
-            at model.$set (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/document.js:1407:20)
-            at model.$set (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/document.js:1161:14)
-            at model.Document (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/document.js:158:12)
-            at model.Model (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/model.js:106:12)
-            at new model (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/model.js:4755:15)
-            at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/dbCalls/project/project.ts:68:34)
-            at Generator.next (<anonymous>)
-            at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/dbCalls/project/project.ts:8:71 {
-          stringValue: '"0"',
-          messageFormat: undefined,
-          kind: 'ObjectId',
-          value: '0',
-          path: 'projectManager',
-          reason: TypeError: Argument passed in must be a Buffer or string of 12 bytes or a string of 24 hex characters
-              at new BSONTypeError (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/bson/lib/error.js:39:42)
-              at new ObjectId (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/bson/src/objectid.ts:88:15)
-              at castObjectId (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/cast/objectid.js:25:12)
-              at ObjectId.cast (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/schema/objectid.js:245:12)
-              at ObjectId.SchemaType.applySetters (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/schematype.js:1135:12)
-              at model.$set (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/document.js:1407:20)
-              at model.$set (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/document.js:1161:14)
-              at model.Document (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/document.js:158:12)
-              at model.Model (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/model.js:106:12)
-              at new model (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/model.js:4755:15),
-          valueType: 'string'
-        },
-        clientId: CastError: Cast to ObjectId failed for value "0" (type string) at path "clientId"
-            at ObjectId.cast (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/schema/objectid.js:247:11)
-            at ObjectId.SchemaType.applySetters (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/schematype.js:1135:12)
-            at model.$set (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/document.js:1407:20)
-            at model.$set (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/document.js:1161:14)
-            at model.Document (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/document.js:158:12)
-            at model.Model (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/model.js:106:12)
-            at new model (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/model.js:4755:15)
-            at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/dbCalls/project/project.ts:68:34)
-            at Generator.next (<anonymous>)
-            at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/dbCalls/project/project.ts:8:71 {
-          stringValue: '"0"',
-          messageFormat: undefined,
-          kind: 'ObjectId',
-          value: '0',
-          path: 'clientId',
-          reason: TypeError: Argument passed in must be a Buffer or string of 12 bytes or a string of 24 hex characters
-              at new BSONTypeError (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/bson/lib/error.js:39:42)
-              at new ObjectId (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/bson/src/objectid.ts:88:15)
-              at castObjectId (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/cast/objectid.js:25:12)
-              at ObjectId.cast (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/schema/objectid.js:245:12)
-              at ObjectId.SchemaType.applySetters (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/schematype.js:1135:12)
-              at model.$set (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/document.js:1407:20)
-              at model.$set (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/document.js:1161:14)
-              at model.Document (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/document.js:158:12)
-              at model.Model (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/model.js:106:12)
-              at new model (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/model.js:4755:15),
-          valueType: 'string'
-        },
-        projectStatus: ValidatorError: `` is not a valid enum value for path `projectStatus`.
-            at validate (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/schematype.js:1277:13)
-            at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/schematype.js:1260:7
-            at Array.forEach (<anonymous>)
-            at SchemaString.SchemaType.doValidate (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/schematype.js:1210:14)
-            at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/document.js:2690:18
-            at processTicksAndRejections (node:internal/process/task_queues:78:11) {
-          properties: {
-            validator: [Function (anonymous)],
-            message: '`` is not a valid enum value for path `projectStatus`.',
-            type: 'enum',
-            enumValues: [
-              'inProgress',
-              'deliver on time',
-              'late',
-              'deliver defore deadline',
-              'delivered after deadline'
-            ],
-            path: 'projectStatus',
-            value: ''
-          },
-          kind: 'enum',
-          path: 'projectStatus',
-          value: '',
-          reason: undefined,
-          [Symbol(mongoose:validatorError)]: true
-        }
-      },
-      _message: 'projects validation failed'
-    }
-  },
-  level: 'error',
-  timestamp: '2022-03-15 06:07:46'
-}
-{
-  message: { db: 'mongodb://localhost:27017/TTP' },
-  level: 'info',
-  timestamp: '2022-03-15 06:53:20'
-}
-{
-  message: { db: 'mongodb://localhost:27017/TTP' },
-  level: 'info',
-  timestamp: '2022-03-15 14:19:05'
-}
-{
-  message: { db: 'mongodb://localhost:27017/TTP' },
-  level: 'info',
-  timestamp: '2022-03-15 14:50:31'
-}
-{
-  message: { db: 'mongodb://localhost:27017/TTP' },
-  level: 'info',
-  timestamp: '2022-03-15 15:16:22'
-}
-{
-  message: { db: 'mongodb://localhost:27017/TTP' },
-  level: 'info',
-  timestamp: '2022-03-15 15:51:16'
-}
-{
-  message: { db: 'mongodb://localhost:27017/TTP' },
-  level: 'info',
-  timestamp: '2022-03-15 15:56:18'
-}
-{
-  message: { db: 'mongodb://localhost:27017/TTP' },
-  level: 'info',
-  timestamp: '2022-03-15 16:00:07'
-}
-{
-  message: { db: 'mongodb://localhost:27017/TTP' },
-  level: 'info',
-  timestamp: '2022-03-15 16:03:38'
-}
-{
-  message: { db: 'mongodb://localhost:27017/TTP' },
-  level: 'info',
-  timestamp: '2022-03-15 16:04:37'
-}
-{
-  message: {
-    borderData: Promise { <pending> },
-    createBoardApi: 'https://api.trello.com/1/boards/?name=test team 5&prefs_background=purple&defaultLists=false&key=96b980af38094db6e5767718567af6ce&token=7f44a81ca5f903883e1b3a5720f89b70b8feacd4437d2cb893068b3b93455e5f'
-  },
-  level: 'info',
-  timestamp: '2022-03-15 16:11:05'
-}
-{
-  message: {
-    boardData: {
-      id: '62309e79302e607dee1c0577',
-      name: 'test team 5',
-      desc: '',
-      descData: null,
-      closed: false,
-      idOrganization: '61e87201397f573cb99a0418',
-      idEnterprise: null,
-      pinned: false,
-      url: 'https://trello.com/b/Q3Zwi52y/test-team-5',
-      shortUrl: 'https://trello.com/b/Q3Zwi52y',
-      prefs: {
-        permissionLevel: 'private',
-        hideVotes: false,
-        voting: 'disabled',
-        comments: 'members',
-        invitations: 'members',
-        selfJoin: true,
-        cardCovers: true,
-        isTemplate: false,
-        cardAging: 'regular',
-        calendarFeedEnabled: false,
-        hiddenPluginBoardButtons: [],
-        background: 'purple',
-        backgroundColor: '#89609E',
-        backgroundImage: null,
-        backgroundImageScaled: null,
-        backgroundTile: false,
-        backgroundBrightness: 'dark',
-        backgroundBottomColor: '#89609E',
-        backgroundTopColor: '#89609E',
-        canBePublic: true,
-        canBeEnterprise: true,
-        canBeOrg: true,
-        canBePrivate: true,
-        canInvite: true
-      },
-      labelNames: {
-        green: '',
-        yellow: '',
-        orange: '',
-        red: '',
-        purple: '',
-        blue: '',
-        sky: '',
-        lime: '',
-        pink: '',
-        black: ''
-      },
-      limits: {}
-    }
-  },
-  level: 'info',
-  timestamp: '2022-03-15 16:11:05'
-}
-{
-  message: {
-    data: {
-      name: 'test team 5',
-      color: 'purple',
-      boardId: '62309e79302e607dee1c0577'
-    }
-  },
-  level: 'info',
-  timestamp: '2022-03-15 16:11:05'
-}
-{
-  message: { teamListIds: [] },
-  level: 'info',
-  timestamp: '2022-03-15 16:11:06'
-}
-{
-  message: {
-    createTeamListError: TypeError: Cannot read properties of null (reading 'map')
-        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/department.ts:273:33)
-        at Generator.next (<anonymous>)
-        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/department.ts:8:71
-        at new Promise (<anonymous>)
-        at __awaiter (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/department.ts:4:12)
-        at Function.__createTeamList (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/department.ts:235:16)
-        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/department.ts:250:51)
-        at Generator.next (<anonymous>)
-        at fulfilled (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/department.ts:5:58)
-        at processTicksAndRejections (node:internal/process/task_queues:96:5)
-  },
-  level: 'error',
-  timestamp: '2022-03-15 16:11:08'
-}
-{
-  message: { webhookCreateResult: 'webhook done' },
-  level: 'info',
-  timestamp: '2022-03-15 16:11:12'
-}
-{
-  message: {
-    borderData: Promise { <pending> },
-    createBoardApi: 'https://api.trello.com/1/boards/?name=test team 5&prefs_background=purple&defaultLists=false&key=96b980af38094db6e5767718567af6ce&token=7f44a81ca5f903883e1b3a5720f89b70b8feacd4437d2cb893068b3b93455e5f'
-  },
-  level: 'info',
-  timestamp: '2022-03-15 16:11:37'
-}
-{
-  message: {
-    boardData: {
-      id: '62309e9898a9ba6e67ffca3e',
-      name: 'test team 5',
-      desc: '',
-      descData: null,
-      closed: false,
-      idOrganization: '61e87201397f573cb99a0418',
-      idEnterprise: null,
-      pinned: false,
-      url: 'https://trello.com/b/eUFB337o/test-team-5',
-      shortUrl: 'https://trello.com/b/eUFB337o',
-      prefs: {
-        permissionLevel: 'private',
-        hideVotes: false,
-        voting: 'disabled',
-        comments: 'members',
-        invitations: 'members',
-        selfJoin: true,
-        cardCovers: true,
-        isTemplate: false,
-        cardAging: 'regular',
-        calendarFeedEnabled: false,
-        hiddenPluginBoardButtons: [],
-        background: 'purple',
-        backgroundColor: '#89609E',
-        backgroundImage: null,
-        backgroundImageScaled: null,
-        backgroundTile: false,
-        backgroundBrightness: 'dark',
-        backgroundBottomColor: '#89609E',
-        backgroundTopColor: '#89609E',
-        canBePublic: true,
-        canBeEnterprise: true,
-        canBeOrg: true,
-        canBePrivate: true,
-        canInvite: true
-      },
-      labelNames: {
-        green: '',
-        yellow: '',
-        orange: '',
-        red: '',
-        purple: '',
-        blue: '',
-        sky: '',
-        lime: '',
-        pink: '',
-        black: ''
-      },
-      limits: {}
-    }
-  },
-  level: 'info',
-  timestamp: '2022-03-15 16:11:37'
-}
-{
-  message: {
-    data: {
-      name: 'test team 5',
-      color: 'purple',
-      boardId: '62309e9898a9ba6e67ffca3e'
-    }
-  },
-  level: 'info',
-  timestamp: '2022-03-15 16:11:37'
-}
-{
-  message: { removeWebhookSucced: 'done' },
-  level: 'info',
-  timestamp: '2022-03-15 16:11:38'
-}
-{
-  message: { teamListIds: [] },
-  level: 'info',
-  timestamp: '2022-03-15 16:11:38'
-}
-{
-  message: {
-    updatedbDepartmentError: {
-      _id: new ObjectId("62309e99b28c561156eb5fb5"),
-      defaultListId: '62309e9ab65eb36073e85853',
-      sharedListID: '62309e99fb42181f1ea6f66c',
-      doneListId: '62309e99fd34617767da769c',
-      reviewListId: '62309e9ab4d6778b44f5d076',
-      notClearListId: '62309e9befe75c326815e231',
-      canceldListId: '62309e9bbc90720d0585876c',
-      teamsId: []
-    }
-  },
-  level: 'info',
-  timestamp: '2022-03-15 16:11:39'
-}
-{
-  message: { webhookCreateResult: 'webhook done' },
-  level: 'info',
-  timestamp: '2022-03-15 16:11:40'
-}
-{
-  message: { db: 'mongodb://localhost:27017/TTP' },
-  level: 'info',
-  timestamp: '2022-03-15 16:15:14'
-}
-{
-  message: { db: 'mongodb://localhost:27017/TTP' },
-  level: 'info',
-  timestamp: '2022-03-15 17:32:02'
-}
-{
-  message: { db: 'mongodb://localhost:27017/TTP' },
-  level: 'info',
-  timestamp: '2022-03-15 17:33:11'
-}
-{
-  message: { db: 'mongodb://localhost:27017/TTP' },
-  level: 'info',
-  timestamp: '2022-03-15 17:35:39'
-}
-{
-  message: { db: 'mongodb://localhost:27017/TTP' },
-  level: 'info',
-  timestamp: '2022-03-16 04:43:57'
-}
-{
-  message: { db: 'mongodb://localhost:27017/TTP' },
-  level: 'info',
-  timestamp: '2022-03-16 04:44:21'
-}
-{
-  message: { db: 'mongodb://localhost:27017/TTP' },
-  level: 'info',
-  timestamp: '2022-03-16 04:45:43'
-}
-{
-  message: { db: 'mongodb://localhost:27017/TTP' },
-  level: 'info',
-  timestamp: '2022-03-16 04:46:30'
-}
-{
-  message: { db: 'mongodb://localhost:27017/TTP' },
-  level: 'info',
-  timestamp: '2022-03-16 04:46:56'
-}
-{
-  message: { db: 'mongodb://localhost:27017/TTP' },
-  level: 'info',
-  timestamp: '2022-03-16 04:48:00'
-}
-{
-  message: { db: 'mongodb://localhost:27017/TTP' },
-  level: 'info',
-  timestamp: '2022-03-16 04:49:57'
-}
-{
-  message: { db: 'mongodb://localhost:27017/TTP' },
-  level: 'info',
-  timestamp: '2022-03-16 04:50:54'
-}
-{
-  message: {
-    createCategoryDBError: MongoServerError: E11000 duplicate key error collection: TTP.categories index: category_1 dup key: { category: "Design" }
-        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/node_modules/mongodb/src/operations/insert.ts:75:25
-        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/node_modules/mongodb/src/cmap/connection_pool.ts:469:13
-        at handleOperationResult (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/node_modules/mongodb/src/sdam/server.ts:600:5)
-        at MessageStream.messageHandler (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/node_modules/mongodb/src/cmap/connection.ts:752:5)
-        at MessageStream.emit (node:events:520:28)
-        at MessageStream.emit (node:domain:475:12)
-        at processIncomingData (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/node_modules/mongodb/src/cmap/message_stream.ts:167:12)
-        at MessageStream._write (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/node_modules/mongodb/src/cmap/message_stream.ts:64:5)
-        at writeOrBuffer (node:internal/streams/writable:389:12)
-        at _write (node:internal/streams/writable:330:10) {
-      index: 0,
-      code: 11000,
-      keyPattern: { category: 1 },
-      keyValue: { category: 'Design' }
-    }
-  },
-  level: 'error',
-  timestamp: '2022-03-16 06:35:23'
-}
-{
-  message: { db: 'mongodb://localhost:27017/TTP' },
-  level: 'info',
-  timestamp: '2022-03-16 06:35:30'
-}
-{
-  message: {
-    createCategoryDBError: MongoServerError: E11000 duplicate key error collection: TTP.categories index: category_1 dup key: { category: "Design" }
-        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/node_modules/mongodb/src/operations/insert.ts:75:25
-        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/node_modules/mongodb/src/cmap/connection_pool.ts:469:13
-        at handleOperationResult (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/node_modules/mongodb/src/sdam/server.ts:600:5)
-        at MessageStream.messageHandler (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/node_modules/mongodb/src/cmap/connection.ts:752:5)
-        at MessageStream.emit (node:events:520:28)
-        at MessageStream.emit (node:domain:475:12)
-        at processIncomingData (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/node_modules/mongodb/src/cmap/message_stream.ts:167:12)
-        at MessageStream._write (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/node_modules/mongodb/src/cmap/message_stream.ts:64:5)
-        at writeOrBuffer (node:internal/streams/writable:389:12)
-        at _write (node:internal/streams/writable:330:10) {
-      index: 0,
-      code: 11000,
-      keyPattern: { category: 1 },
-      keyValue: { category: 'Design' }
-    }
-  },
-  level: 'error',
-  timestamp: '2022-03-16 06:35:51'
-}
-{
-  message: { db: 'mongodb://localhost:27017/TTP' },
-  level: 'info',
-  timestamp: '2022-03-16 06:38:26'
-}
-{
-  message: { db: 'mongodb://localhost:27017/TTP' },
-  level: 'info',
-  timestamp: '2022-03-16 06:39:27'
-}
-{
-  message: { db: 'mongodb://localhost:27017/TTP' },
-  level: 'info',
-  timestamp: '2022-03-16 07:04:06'
-}
-{
-  message: { db: 'mongodb://localhost:27017/TTP' },
-  level: 'info',
-  timestamp: '2022-03-16 07:04:54'
-}
-{
-  message: { db: 'mongodb://localhost:27017/TTP' },
-  level: 'info',
-  timestamp: '2022-03-16 07:05:59'
-}
-{
-  message: { db: 'mongodb://localhost:27017/TTP' },
-  level: 'info',
-  timestamp: '2022-03-16 07:11:17'
-}
-{
-  message: { db: 'mongodb://localhost:27017/TTP' },
-  level: 'info',
-  timestamp: '2022-03-16 07:21:02'
-}
-{
-  message: { db: 'mongodb://localhost:27017/TTP' },
-  level: 'info',
-  timestamp: '2022-03-16 07:21:25'
-}
-{
-  message: { db: 'mongodb://localhost:27017/TTP' },
-  level: 'info',
-  timestamp: '2022-03-16 07:22:14'
-}
-{
-  message: { db: 'mongodb://localhost:27017/TTP' },
-  level: 'info',
-  timestamp: '2022-03-16 08:07:29'
-}
-{
-  message: { db: 'mongodb://localhost:27017/TTP' },
-  level: 'info',
-  timestamp: '2022-03-16 08:29:28'
-}
-{
-  message: { db: 'mongodb://localhost:27017/TTP' },
-  level: 'info',
-  timestamp: '2022-03-16 08:30:14'
-}
-{
-  message: { db: 'mongodb://localhost:27017/TTP' },
-  level: 'info',
-  timestamp: '2022-03-16 08:39:56'
-}
-{
-  message: { db: 'mongodb://localhost:27017/TTP' },
-  level: 'info',
-  timestamp: '2022-03-16 08:41:28'
-}
-{
-  message: { db: 'mongodb://localhost:27017/TTP' },
-  level: 'info',
-  timestamp: '2022-03-16 08:41:49'
-}
-{
-  message: {
-    createProjectDBError: Error: projects validation failed: projectStatus: `` is not a valid enum value for path `projectStatus`.
-        at ValidationError.inspect (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/error/validation.js:48:26)
-        at formatValue (node:internal/util/inspect:780:19)
-        at formatProperty (node:internal/util/inspect:1817:11)
-        at formatRaw (node:internal/util/inspect:1028:9)
-        at formatValue (node:internal/util/inspect:815:10)
-        at formatProperty (node:internal/util/inspect:1817:11)
-        at formatRaw (node:internal/util/inspect:1028:9)
-        at formatValue (node:internal/util/inspect:815:10)
-        at inspect (node:internal/util/inspect:345:10)
-        at Format.transform (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/logform/pretty-print.js:27:19) {
-      errors: {
-        projectStatus: ValidatorError: `` is not a valid enum value for path `projectStatus`.
-            at validate (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/schematype.js:1277:13)
-            at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/schematype.js:1260:7
-            at Array.forEach (<anonymous>)
-            at SchemaString.SchemaType.doValidate (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/schematype.js:1210:14)
-            at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/document.js:2690:18
-            at processTicksAndRejections (node:internal/process/task_queues:78:11) {
-          properties: {
-            validator: [Function (anonymous)],
-            message: '`` is not a valid enum value for path `projectStatus`.',
-            type: 'enum',
-            enumValues: [
-              'inProgress',
-              'deliver on time',
-              'late',
-              'deliver defore deadline',
-              'delivered after deadline'
-            ],
-            path: 'projectStatus',
-            value: ''
-          },
-          kind: 'enum',
-          path: 'projectStatus',
-          value: '',
-          reason: undefined,
-          [Symbol(mongoose:validatorError)]: true
-        }
-      },
-      _message: 'projects validation failed'
-    }
-  },
-  level: 'error',
-  timestamp: '2022-03-16 08:42:40'
-}
-{
-  message: { db: 'mongodb://localhost:27017/TTP' },
-  level: 'info',
-  timestamp: '2022-03-16 09:17:11'
-}
-{
-  message: { db: 'mongodb://localhost:27017/TTP' },
-  level: 'info',
-  timestamp: '2022-03-16 09:17:22'
-}
-{
-  message: { db: 'mongodb://localhost:27017/TTP' },
-  level: 'info',
-  timestamp: '2022-03-16 09:30:39'
-}
-{
-  message: { db: 'mongodb://localhost:27017/TTP' },
-  level: 'info',
-  timestamp: '2022-03-16 09:41:40'
-}
-{
-  message: { db: 'mongodb://localhost:27017/TTP' },
-  level: 'info',
-  timestamp: '2022-03-16 09:43:35'
-}
-{
-  message: { db: 'mongodb://localhost:27017/TTP' },
-  level: 'info',
-  timestamp: '2022-03-18 10:43:05'
-}
-{
-  message: {
-    getTeamsError: FetchError: invalid json response body at https://api.trello.com/1/cards?idList=null&name=Task&attachments=true&key=96b980af38094db6e5767718567af6ce&token=7f44a81ca5f903883e1b3a5720f89b70b8feacd4437d2cb893068b3b93455e5f reason: Unexpected token i in JSON at position 0
-        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/node-fetch/lib/index.js:273:32
+    filterProjectsError: CastError: Cast to ObjectId failed for value "" (type string) at path "clientId" for model "projects"
+        at model.Query.exec (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/query.js:4545:21)
+        at model.Query.Query.then (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/query.js:4644:15)
         at processTicksAndRejections (node:internal/process/task_queues:96:5) {
-      type: 'invalid-json'
+      messageFormat: undefined,
+      stringValue: '""',
+      kind: 'ObjectId',
+      value: '',
+      path: 'clientId',
+      reason: TypeError: Argument passed in must be a Buffer or string of 12 bytes or a string of 24 hex characters
+          at new BSONTypeError (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/bson/lib/error.js:39:42)
+          at new ObjectId (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/bson/src/objectid.ts:88:15)
+          at castObjectId (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/cast/objectid.js:25:12)
+          at ObjectId.cast (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/schema/objectid.js:245:12)
+          at ObjectId.SchemaType.applySetters (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/schematype.js:1135:12)
+          at ObjectId.SchemaType._castForQuery (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/schematype.js:1567:15)
+          at ObjectId.SchemaType.castForQuery (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/schematype.js:1557:15)
+          at ObjectId.SchemaType.castForQueryWrapper (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/schematype.js:1534:20)
+          at cast (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/cast.js:336:32)
+          at model.Query.Query.cast (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/query.js:4968:12),
+      valueType: 'string'
     }
   },
   level: 'error',
-  timestamp: '2022-03-18 10:50:17'
+  timestamp: '2022-03-22 19:35:20'
 }
 {
   message: {
-    getTeamsError: FetchError: invalid json response body at https://api.trello.com/1/cards?idList=null&name=Task&attachments=true&key=96b980af38094db6e5767718567af6ce&token=7f44a81ca5f903883e1b3a5720f89b70b8feacd4437d2cb893068b3b93455e5f reason: Unexpected token i in JSON at position 0
-        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/node-fetch/lib/index.js:273:32
+    filterProjectsError: CastError: Cast to ObjectId failed for value "" (type string) at path "clientId" for model "projects"
+        at model.Query.exec (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/query.js:4545:21)
+        at model.Query.Query.then (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/query.js:4644:15)
         at processTicksAndRejections (node:internal/process/task_queues:96:5) {
-      type: 'invalid-json'
+      messageFormat: undefined,
+      stringValue: '""',
+      kind: 'ObjectId',
+      value: '',
+      path: 'clientId',
+      reason: TypeError: Argument passed in must be a Buffer or string of 12 bytes or a string of 24 hex characters
+          at new BSONTypeError (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/bson/lib/error.js:39:42)
+          at new ObjectId (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/bson/src/objectid.ts:88:15)
+          at castObjectId (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/cast/objectid.js:25:12)
+          at ObjectId.cast (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/schema/objectid.js:245:12)
+          at ObjectId.SchemaType.applySetters (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/schematype.js:1135:12)
+          at ObjectId.SchemaType._castForQuery (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/schematype.js:1567:15)
+          at ObjectId.SchemaType.castForQuery (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/schematype.js:1557:15)
+          at ObjectId.SchemaType.castForQueryWrapper (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/schematype.js:1534:20)
+          at cast (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/cast.js:336:32)
+          at model.Query.Query.cast (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/query.js:4968:12),
+      valueType: 'string'
     }
   },
   level: 'error',
-  timestamp: '2022-03-18 10:50:17'
+  timestamp: '2022-03-22 19:35:20'
 }
 {
   message: {
-    getTeamsError: FetchError: invalid json response body at https://api.trello.com/1/cards?idList=null&name=Task&attachments=true&key=96b980af38094db6e5767718567af6ce&token=7f44a81ca5f903883e1b3a5720f89b70b8feacd4437d2cb893068b3b93455e5f reason: Unexpected token i in JSON at position 0
-        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/node-fetch/lib/index.js:273:32
+    filterProjectsError: CastError: Cast to ObjectId failed for value "" (type string) at path "clientId" for model "projects"
+        at model.Query.exec (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/query.js:4545:21)
+        at model.Query.Query.then (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/query.js:4644:15)
         at processTicksAndRejections (node:internal/process/task_queues:96:5) {
-      type: 'invalid-json'
+      messageFormat: undefined,
+      stringValue: '""',
+      kind: 'ObjectId',
+      value: '',
+      path: 'clientId',
+      reason: TypeError: Argument passed in must be a Buffer or string of 12 bytes or a string of 24 hex characters
+          at new BSONTypeError (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/bson/lib/error.js:39:42)
+          at new ObjectId (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/bson/src/objectid.ts:88:15)
+          at castObjectId (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/cast/objectid.js:25:12)
+          at ObjectId.cast (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/schema/objectid.js:245:12)
+          at ObjectId.SchemaType.applySetters (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/schematype.js:1135:12)
+          at ObjectId.SchemaType._castForQuery (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/schematype.js:1567:15)
+          at ObjectId.SchemaType.castForQuery (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/schematype.js:1557:15)
+          at ObjectId.SchemaType.castForQueryWrapper (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/schematype.js:1534:20)
+          at cast (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/cast.js:336:32)
+          at model.Query.Query.cast (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/query.js:4968:12),
+      valueType: 'string'
     }
   },
   level: 'error',
-  timestamp: '2022-03-18 10:58:25'
-}
-{
-  message: { db: 'mongodb://localhost:27017/TTP' },
-  level: 'info',
-  timestamp: '2022-03-18 11:02:05'
-}
-{
-  message: { db: 'mongodb://localhost:27017/TTP' },
-  level: 'info',
-  timestamp: '2022-03-18 11:11:17'
+  timestamp: '2022-03-22 19:35:20'
 }
 {
   message: {
-    getTeamsError: FetchError: invalid json response body at https://api.trello.com/1/cards?idList=null&name=Task&attachments=true&key=96b980af38094db6e5767718567af6ce&token=7f44a81ca5f903883e1b3a5720f89b70b8feacd4437d2cb893068b3b93455e5f reason: Unexpected token i in JSON at position 0
-        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/node-fetch/lib/index.js:273:32
+    filterProjectsError: CastError: Cast to ObjectId failed for value "" (type string) at path "clientId" for model "projects"
+        at model.Query.exec (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/query.js:4545:21)
+        at model.Query.Query.then (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/query.js:4644:15)
         at processTicksAndRejections (node:internal/process/task_queues:96:5) {
-      type: 'invalid-json'
+      messageFormat: undefined,
+      stringValue: '""',
+      kind: 'ObjectId',
+      value: '',
+      path: 'clientId',
+      reason: TypeError: Argument passed in must be a Buffer or string of 12 bytes or a string of 24 hex characters
+          at new BSONTypeError (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/bson/lib/error.js:39:42)
+          at new ObjectId (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/bson/src/objectid.ts:88:15)
+          at castObjectId (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/cast/objectid.js:25:12)
+          at ObjectId.cast (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/schema/objectid.js:245:12)
+          at ObjectId.SchemaType.applySetters (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/schematype.js:1135:12)
+          at ObjectId.SchemaType._castForQuery (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/schematype.js:1567:15)
+          at ObjectId.SchemaType.castForQuery (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/schematype.js:1557:15)
+          at ObjectId.SchemaType.castForQueryWrapper (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/schematype.js:1534:20)
+          at cast (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/cast.js:336:32)
+          at model.Query.Query.cast (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/query.js:4968:12),
+      valueType: 'string'
     }
   },
   level: 'error',
-  timestamp: '2022-03-18 11:18:41'
+  timestamp: '2022-03-22 19:35:20'
 }
 {
   message: {
-    getTeamsError: FetchError: invalid json response body at https://api.trello.com/1/cards?idList=null&name=Task&attachments=true&key=96b980af38094db6e5767718567af6ce&token=7f44a81ca5f903883e1b3a5720f89b70b8feacd4437d2cb893068b3b93455e5f reason: Unexpected token i in JSON at position 0
-        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/node-fetch/lib/index.js:273:32
+    filterProjectsError: CastError: Cast to ObjectId failed for value "" (type string) at path "clientId" for model "projects"
+        at model.Query.exec (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/query.js:4545:21)
+        at model.Query.Query.then (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/query.js:4644:15)
         at processTicksAndRejections (node:internal/process/task_queues:96:5) {
-      type: 'invalid-json'
+      messageFormat: undefined,
+      stringValue: '""',
+      kind: 'ObjectId',
+      value: '',
+      path: 'clientId',
+      reason: TypeError: Argument passed in must be a Buffer or string of 12 bytes or a string of 24 hex characters
+          at new BSONTypeError (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/bson/lib/error.js:39:42)
+          at new ObjectId (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/bson/src/objectid.ts:88:15)
+          at castObjectId (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/cast/objectid.js:25:12)
+          at ObjectId.cast (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/schema/objectid.js:245:12)
+          at ObjectId.SchemaType.applySetters (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/schematype.js:1135:12)
+          at ObjectId.SchemaType._castForQuery (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/schematype.js:1567:15)
+          at ObjectId.SchemaType.castForQuery (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/schematype.js:1557:15)
+          at ObjectId.SchemaType.castForQueryWrapper (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/schematype.js:1534:20)
+          at cast (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/cast.js:336:32)
+          at model.Query.Query.cast (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/query.js:4968:12),
+      valueType: 'string'
     }
   },
   level: 'error',
-  timestamp: '2022-03-18 11:21:20'
+  timestamp: '2022-03-22 19:35:21'
 }
 {
   message: {
-    getTeamsError: FetchError: invalid json response body at https://api.trello.com/1/cards?idList=null&name=Task&attachments=true&key=96b980af38094db6e5767718567af6ce&token=7f44a81ca5f903883e1b3a5720f89b70b8feacd4437d2cb893068b3b93455e5f reason: Unexpected token i in JSON at position 0
-        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/node-fetch/lib/index.js:273:32
+    filterProjectsError: CastError: Cast to ObjectId failed for value "" (type string) at path "clientId" for model "projects"
+        at model.Query.exec (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/query.js:4545:21)
+        at model.Query.Query.then (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/query.js:4644:15)
         at processTicksAndRejections (node:internal/process/task_queues:96:5) {
-      type: 'invalid-json'
+      messageFormat: undefined,
+      stringValue: '""',
+      kind: 'ObjectId',
+      value: '',
+      path: 'clientId',
+      reason: TypeError: Argument passed in must be a Buffer or string of 12 bytes or a string of 24 hex characters
+          at new BSONTypeError (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/bson/lib/error.js:39:42)
+          at new ObjectId (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/bson/src/objectid.ts:88:15)
+          at castObjectId (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/cast/objectid.js:25:12)
+          at ObjectId.cast (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/schema/objectid.js:245:12)
+          at ObjectId.SchemaType.applySetters (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/schematype.js:1135:12)
+          at ObjectId.SchemaType._castForQuery (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/schematype.js:1567:15)
+          at ObjectId.SchemaType.castForQuery (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/schematype.js:1557:15)
+          at ObjectId.SchemaType.castForQueryWrapper (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/schematype.js:1534:20)
+          at cast (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/cast.js:336:32)
+          at model.Query.Query.cast (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/query.js:4968:12),
+      valueType: 'string'
     }
   },
   level: 'error',
-  timestamp: '2022-03-18 11:33:24'
-}
-{
-  message: { db: 'mongodb://localhost:27017/TTP' },
-  level: 'info',
-  timestamp: '2022-03-18 11:35:48'
+  timestamp: '2022-03-22 19:35:33'
 }
 {
   message: {
-    getTeamsError: FetchError: invalid json response body at https://api.trello.com/1/cards?idList=null&name=Task&attachments=true&key=96b980af38094db6e5767718567af6ce&token=7f44a81ca5f903883e1b3a5720f89b70b8feacd4437d2cb893068b3b93455e5f reason: Unexpected token i in JSON at position 0
-        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/node-fetch/lib/index.js:273:32
+    filterProjectsError: CastError: Cast to ObjectId failed for value "" (type string) at path "clientId" for model "projects"
+        at model.Query.exec (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/query.js:4545:21)
+        at model.Query.Query.then (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/query.js:4644:15)
         at processTicksAndRejections (node:internal/process/task_queues:96:5) {
-      type: 'invalid-json'
+      messageFormat: undefined,
+      stringValue: '""',
+      kind: 'ObjectId',
+      value: '',
+      path: 'clientId',
+      reason: TypeError: Argument passed in must be a Buffer or string of 12 bytes or a string of 24 hex characters
+          at new BSONTypeError (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/bson/lib/error.js:39:42)
+          at new ObjectId (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/bson/src/objectid.ts:88:15)
+          at castObjectId (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/cast/objectid.js:25:12)
+          at ObjectId.cast (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/schema/objectid.js:245:12)
+          at ObjectId.SchemaType.applySetters (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/schematype.js:1135:12)
+          at ObjectId.SchemaType._castForQuery (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/schematype.js:1567:15)
+          at ObjectId.SchemaType.castForQuery (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/schematype.js:1557:15)
+          at ObjectId.SchemaType.castForQueryWrapper (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/schematype.js:1534:20)
+          at cast (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/cast.js:336:32)
+          at model.Query.Query.cast (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/query.js:4968:12),
+      valueType: 'string'
     }
   },
   level: 'error',
-  timestamp: '2022-03-18 11:35:58'
-}
-{
-  message: { db: 'mongodb://localhost:27017/TTP' },
-  level: 'info',
-  timestamp: '2022-03-18 11:36:35'
+  timestamp: '2022-03-22 19:35:33'
 }
 {
   message: {
-    getTeamsError: FetchError: invalid json response body at https://api.trello.com/1/cards?idList=null&name=Task&attachments=true&key=96b980af38094db6e5767718567af6ce&token=7f44a81ca5f903883e1b3a5720f89b70b8feacd4437d2cb893068b3b93455e5f reason: Unexpected token i in JSON at position 0
-        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/node-fetch/lib/index.js:273:32
+    filterProjectsError: CastError: Cast to ObjectId failed for value "" (type string) at path "clientId" for model "projects"
+        at model.Query.exec (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/query.js:4545:21)
+        at model.Query.Query.then (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/query.js:4644:15)
         at processTicksAndRejections (node:internal/process/task_queues:96:5) {
-      type: 'invalid-json'
+      messageFormat: undefined,
+      stringValue: '""',
+      kind: 'ObjectId',
+      value: '',
+      path: 'clientId',
+      reason: TypeError: Argument passed in must be a Buffer or string of 12 bytes or a string of 24 hex characters
+          at new BSONTypeError (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/bson/lib/error.js:39:42)
+          at new ObjectId (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/bson/src/objectid.ts:88:15)
+          at castObjectId (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/cast/objectid.js:25:12)
+          at ObjectId.cast (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/schema/objectid.js:245:12)
+          at ObjectId.SchemaType.applySetters (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/schematype.js:1135:12)
+          at ObjectId.SchemaType._castForQuery (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/schematype.js:1567:15)
+          at ObjectId.SchemaType.castForQuery (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/schematype.js:1557:15)
+          at ObjectId.SchemaType.castForQueryWrapper (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/schematype.js:1534:20)
+          at cast (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/cast.js:336:32)
+          at model.Query.Query.cast (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/query.js:4968:12),
+      valueType: 'string'
     }
   },
   level: 'error',
-  timestamp: '2022-03-18 11:36:59'
-}
-{
-  message: { db: 'mongodb://localhost:27017/TTP' },
-  level: 'info',
-  timestamp: '2022-03-18 11:39:14'
-}
-{
-  message: { db: 'mongodb://localhost:27017/TTP' },
-  level: 'info',
-  timestamp: '2022-03-18 11:39:38'
+  timestamp: '2022-03-22 19:35:33'
 }
 {
   message: {
-    getTeamsError: FetchError: invalid json response body at https://api.trello.com/1/cards?idList=null&name=Task&attachments=true&key=96b980af38094db6e5767718567af6ce&token=7f44a81ca5f903883e1b3a5720f89b70b8feacd4437d2cb893068b3b93455e5f reason: Unexpected token i in JSON at position 0
-        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/node-fetch/lib/index.js:273:32
+    filterProjectsError: CastError: Cast to ObjectId failed for value "" (type string) at path "clientId" for model "projects"
+        at model.Query.exec (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/query.js:4545:21)
+        at model.Query.Query.then (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/query.js:4644:15)
         at processTicksAndRejections (node:internal/process/task_queues:96:5) {
-      type: 'invalid-json'
+      messageFormat: undefined,
+      stringValue: '""',
+      kind: 'ObjectId',
+      value: '',
+      path: 'clientId',
+      reason: TypeError: Argument passed in must be a Buffer or string of 12 bytes or a string of 24 hex characters
+          at new BSONTypeError (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/bson/lib/error.js:39:42)
+          at new ObjectId (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/bson/src/objectid.ts:88:15)
+          at castObjectId (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/cast/objectid.js:25:12)
+          at ObjectId.cast (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/schema/objectid.js:245:12)
+          at ObjectId.SchemaType.applySetters (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/schematype.js:1135:12)
+          at ObjectId.SchemaType._castForQuery (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/schematype.js:1567:15)
+          at ObjectId.SchemaType.castForQuery (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/schematype.js:1557:15)
+          at ObjectId.SchemaType.castForQueryWrapper (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/schematype.js:1534:20)
+          at cast (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/cast.js:336:32)
+          at model.Query.Query.cast (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/query.js:4968:12),
+      valueType: 'string'
     }
   },
   level: 'error',
-  timestamp: '2022-03-18 11:44:11'
-}
-{
-  message: { db: 'mongodb://localhost:27017/TTP' },
-  level: 'info',
-  timestamp: '2022-03-18 11:48:24'
-}
-{
-  message: { db: 'mongodb://localhost:27017/TTP' },
-  level: 'info',
-  timestamp: '2022-03-18 11:49:31'
+  timestamp: '2022-03-22 19:35:34'
 }
 {
   message: {
-    handleCreateCardError: SyntaxError: Unexpected token o in JSON at position 1
-        at JSON.parse (<anonymous>)
-        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/presentation/task/task.ts:10:24
-        at Generator.next (<anonymous>)
-        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/presentation/task/task.ts:8:71
-        at new Promise (<anonymous>)
-        at __awaiter (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/presentation/task/task.ts:4:12)
-        at handleCreateCard (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/presentation/task/task.ts:23:16)
-        at Layer.handle [as handle_request] (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/express/lib/router/layer.js:95:5)
-        at next (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/express/lib/router/route.js:137:13)
-        at multerMiddleware (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/multer/lib/make-middleware.js:18:41)
-  },
-  level: 'error',
-  timestamp: '2022-03-18 11:49:35'
-}
-{
-  message: { db: 'mongodb://localhost:27017/TTP' },
-  level: 'info',
-  timestamp: '2022-03-18 11:50:15'
-}
-{
-  message: { db: 'mongodb://localhost:27017/TTP' },
-  level: 'info',
-  timestamp: '2022-03-18 11:50:33'
-}
-{
-  message: {
-    handleCreateCardError: SyntaxError: Unexpected token o in JSON at position 1
-        at JSON.parse (<anonymous>)
-        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/presentation/task/task.ts:10:34
-        at Generator.next (<anonymous>)
-        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/presentation/task/task.ts:8:71
-        at new Promise (<anonymous>)
-        at __awaiter (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/presentation/task/task.ts:4:12)
-        at handleCreateCard (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/presentation/task/task.ts:23:16)
-        at Layer.handle [as handle_request] (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/express/lib/router/layer.js:95:5)
-        at next (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/express/lib/router/route.js:137:13)
-        at multerMiddleware (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/multer/lib/make-middleware.js:18:41)
-  },
-  level: 'error',
-  timestamp: '2022-03-18 11:51:09'
-}
-{
-  message: { db: 'mongodb://localhost:27017/TTP' },
-  level: 'info',
-  timestamp: '2022-03-18 11:51:52'
-}
-{
-  message: {
-    handleCreateCardError: SyntaxError: Unexpected token o in JSON at position 1
-        at JSON.parse (<anonymous>)
-        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/presentation/task/task.ts:10:34
-        at Generator.next (<anonymous>)
-        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/presentation/task/task.ts:8:71
-        at new Promise (<anonymous>)
-        at __awaiter (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/presentation/task/task.ts:4:12)
-        at handleCreateCard (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/presentation/task/task.ts:23:16)
-        at Layer.handle [as handle_request] (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/express/lib/router/layer.js:95:5)
-        at next (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/express/lib/router/route.js:137:13)
-        at multerMiddleware (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/multer/lib/make-middleware.js:18:41)
-  },
-  level: 'error',
-  timestamp: '2022-03-18 11:51:58'
-}
-{
-  message: {
-    handleCreateCardError: SyntaxError: Unexpected token o in JSON at position 1
-        at JSON.parse (<anonymous>)
-        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/presentation/task/task.ts:10:34
-        at Generator.next (<anonymous>)
-        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/presentation/task/task.ts:8:71
-        at new Promise (<anonymous>)
-        at __awaiter (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/presentation/task/task.ts:4:12)
-        at handleCreateCard (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/presentation/task/task.ts:23:16)
-        at Layer.handle [as handle_request] (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/express/lib/router/layer.js:95:5)
-        at next (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/express/lib/router/route.js:137:13)
-        at multerMiddleware (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/multer/lib/make-middleware.js:18:41)
-  },
-  level: 'error',
-  timestamp: '2022-03-18 11:52:30'
-}
-{
-  message: {
-    handleCreateCardError: SyntaxError: Unexpected token o in JSON at position 1
-        at JSON.parse (<anonymous>)
-        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/presentation/task/task.ts:10:34
-        at Generator.next (<anonymous>)
-        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/presentation/task/task.ts:8:71
-        at new Promise (<anonymous>)
-        at __awaiter (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/presentation/task/task.ts:4:12)
-        at handleCreateCard (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/presentation/task/task.ts:23:16)
-        at Layer.handle [as handle_request] (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/express/lib/router/layer.js:95:5)
-        at next (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/express/lib/router/route.js:137:13)
-        at multerMiddleware (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/multer/lib/make-middleware.js:18:41)
-  },
-  level: 'error',
-  timestamp: '2022-03-18 11:52:33'
-}
-{
-  message: {
-    handleCreateCardError: SyntaxError: Unexpected token o in JSON at position 1
-        at JSON.parse (<anonymous>)
-        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/presentation/task/task.ts:10:34
-        at Generator.next (<anonymous>)
-        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/presentation/task/task.ts:8:71
-        at new Promise (<anonymous>)
-        at __awaiter (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/presentation/task/task.ts:4:12)
-        at handleCreateCard (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/presentation/task/task.ts:23:16)
-        at Layer.handle [as handle_request] (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/express/lib/router/layer.js:95:5)
-        at next (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/express/lib/router/route.js:137:13)
-        at multerMiddleware (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/multer/lib/make-middleware.js:18:41)
-  },
-  level: 'error',
-  timestamp: '2022-03-18 11:55:24'
-}
-{
-  message: {
-    handleCreateCardError: SyntaxError: Unexpected token o in JSON at position 1
-        at JSON.parse (<anonymous>)
-        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/presentation/task/task.ts:10:34
-        at Generator.next (<anonymous>)
-        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/presentation/task/task.ts:8:71
-        at new Promise (<anonymous>)
-        at __awaiter (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/presentation/task/task.ts:4:12)
-        at handleCreateCard (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/presentation/task/task.ts:23:16)
-        at Layer.handle [as handle_request] (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/express/lib/router/layer.js:95:5)
-        at next (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/express/lib/router/route.js:137:13)
-        at multerMiddleware (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/multer/lib/make-middleware.js:18:41)
-  },
-  level: 'error',
-  timestamp: '2022-03-18 11:55:31'
-}
-{
-  message: { db: 'mongodb://localhost:27017/TTP' },
-  level: 'info',
-  timestamp: '2022-03-18 11:56:23'
-}
-{
-  message: {
-    getTeamsError: FetchError: invalid json response body at https://api.trello.com/1/cards?idList=null&name=Task&attachments=true&key=96b980af38094db6e5767718567af6ce&token=7f44a81ca5f903883e1b3a5720f89b70b8feacd4437d2cb893068b3b93455e5f reason: Unexpected token i in JSON at position 0
-        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/node-fetch/lib/index.js:273:32
+    filterProjectsError: CastError: Cast to ObjectId failed for value "" (type string) at path "clientId" for model "projects"
+        at model.Query.exec (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/query.js:4545:21)
+        at model.Query.Query.then (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/query.js:4644:15)
         at processTicksAndRejections (node:internal/process/task_queues:96:5) {
-      type: 'invalid-json'
+      messageFormat: undefined,
+      stringValue: '""',
+      kind: 'ObjectId',
+      value: '',
+      path: 'clientId',
+      reason: TypeError: Argument passed in must be a Buffer or string of 12 bytes or a string of 24 hex characters
+          at new BSONTypeError (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/bson/lib/error.js:39:42)
+          at new ObjectId (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/bson/src/objectid.ts:88:15)
+          at castObjectId (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/cast/objectid.js:25:12)
+          at ObjectId.cast (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/schema/objectid.js:245:12)
+          at ObjectId.SchemaType.applySetters (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/schematype.js:1135:12)
+          at ObjectId.SchemaType._castForQuery (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/schematype.js:1567:15)
+          at ObjectId.SchemaType.castForQuery (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/schematype.js:1557:15)
+          at ObjectId.SchemaType.castForQueryWrapper (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/schematype.js:1534:20)
+          at cast (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/cast.js:336:32)
+          at model.Query.Query.cast (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/query.js:4968:12),
+      valueType: 'string'
     }
   },
   level: 'error',
-  timestamp: '2022-03-18 11:57:02'
+  timestamp: '2022-03-22 19:35:34'
 }
 {
-  message: {
-    getProjectDBError: MissingSchemaError: Schema hasn't been registered for model "teams".
-    Use mongoose.model(name, schema)
-        at NativeConnection.Connection.model (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/connection.js:1133:11)
-        at addModelNamesToMap (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/helpers/populate/getModelsMapForPopulate.js:470:28)
-        at getModelsMapForPopulate (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/helpers/populate/getModelsMapForPopulate.js:174:7)
-        at populate (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/model.js:4437:21)
-        at _populate (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/model.js:4408:5)
-        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/model.js:4385:5
-        at promiseOrCallback (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/helpers/promiseOrCallback.js:10:12)
-        at Mongoose._promiseOrCallback (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/index.js:1151:10)
-        at Function.Model.populate (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/model.js:4383:23)
-        at cb (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/query.js:2129:26)
-  },
-  level: 'error',
-  timestamp: '2022-03-18 12:06:17'
-}
-{
-  message: { db: 'mongodb://localhost:27017/TTP' },
-  level: 'info',
-  timestamp: '2022-03-18 12:57:22'
-}
-{
-  message: {
-    getProjectDBError: MissingSchemaError: Schema hasn't been registered for model "teams".
-    Use mongoose.model(name, schema)
-        at NativeConnection.Connection.model (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/connection.js:1133:11)
-        at addModelNamesToMap (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/helpers/populate/getModelsMapForPopulate.js:470:28)
-        at getModelsMapForPopulate (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/helpers/populate/getModelsMapForPopulate.js:174:7)
-        at populate (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/model.js:4437:21)
-        at _populate (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/model.js:4408:5)
-        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/model.js:4385:5
-        at promiseOrCallback (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/helpers/promiseOrCallback.js:10:12)
-        at Mongoose._promiseOrCallback (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/index.js:1151:10)
-        at Function.Model.populate (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/model.js:4383:23)
-        at cb (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/query.js:2129:26)
-  },
-  level: 'error',
-  timestamp: '2022-03-18 13:08:17'
-}
-{
-  message: { db: 'mongodb://localhost:27017/TTP' },
-  level: 'info',
-  timestamp: '2022-03-18 13:44:52'
-}
-{
-  message: { db: 'mongodb://localhost:27017/TTP' },
-  level: 'info',
-  timestamp: '2022-03-18 13:45:25'
-}
-{
-  message: { db: 'mongodb://localhost:27017/TTP' },
-  level: 'info',
-  timestamp: '2022-03-18 13:55:48'
-}
-{
-  message: { db: 'mongodb://localhost:27017/TTP' },
-  level: 'info',
-  timestamp: '2022-03-18 14:00:16'
-}
-{
-  message: { db: 'mongodb://localhost:27017/TTP' },
-  level: 'info',
-  timestamp: '2022-03-18 14:10:09'
-}
-{
-  message: { db: 'mongodb://localhost:27017/TTP' },
-  level: 'info',
-  timestamp: '2022-03-18 14:11:26'
-}
-{
-  message: {
-    getProjectDBError: MissingSchemaError: Schema hasn't been registered for model "teams".
-    Use mongoose.model(name, schema)
-        at NativeConnection.Connection.model (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/connection.js:1133:11)
-        at addModelNamesToMap (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/helpers/populate/getModelsMapForPopulate.js:470:28)
-        at getModelsMapForPopulate (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/helpers/populate/getModelsMapForPopulate.js:174:7)
-        at populate (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/model.js:4437:21)
-        at _populate (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/model.js:4408:5)
-        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/model.js:4385:5
-        at promiseOrCallback (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/helpers/promiseOrCallback.js:10:12)
-        at Mongoose._promiseOrCallback (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/index.js:1151:10)
-        at Function.Model.populate (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/model.js:4383:23)
-        at cb (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/query.js:2129:26)
-  },
-  level: 'error',
-  timestamp: '2022-03-18 14:12:04'
-}
-{
-  message: { db: 'mongodb://localhost:27017/TTP' },
-  level: 'info',
-  timestamp: '2022-03-18 14:13:26'
-}
-{
-  message: {
-    getProjectDBError: MissingSchemaError: Schema hasn't been registered for model "teams".
-    Use mongoose.model(name, schema)
-        at NativeConnection.Connection.model (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/connection.js:1133:11)
-        at addModelNamesToMap (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/helpers/populate/getModelsMapForPopulate.js:470:28)
-        at getModelsMapForPopulate (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/helpers/populate/getModelsMapForPopulate.js:174:7)
-        at populate (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/model.js:4437:21)
-        at _populate (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/model.js:4408:5)
-        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/model.js:4385:5
-        at promiseOrCallback (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/helpers/promiseOrCallback.js:10:12)
-        at Mongoose._promiseOrCallback (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/index.js:1151:10)
-        at Function.Model.populate (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/model.js:4383:23)
-        at cb (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/query.js:2129:26)
-  },
-  level: 'error',
-  timestamp: '2022-03-18 14:16:44'
-}
-{
-  message: {
-    getProjectDBError: MissingSchemaError: Schema hasn't been registered for model "teams".
-    Use mongoose.model(name, schema)
-        at NativeConnection.Connection.model (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/connection.js:1133:11)
-        at addModelNamesToMap (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/helpers/populate/getModelsMapForPopulate.js:470:28)
-        at getModelsMapForPopulate (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/helpers/populate/getModelsMapForPopulate.js:174:7)
-        at populate (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/model.js:4437:21)
-        at _populate (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/model.js:4408:5)
-        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/model.js:4385:5
-        at promiseOrCallback (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/helpers/promiseOrCallback.js:10:12)
-        at Mongoose._promiseOrCallback (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/index.js:1151:10)
-        at Function.Model.populate (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/model.js:4383:23)
-        at cb (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/query.js:2129:26)
-  },
-  level: 'error',
-  timestamp: '2022-03-18 14:20:51'
-}
-{
-  message: {
-    getProjectDBError: MissingSchemaError: Schema hasn't been registered for model "teams".
-    Use mongoose.model(name, schema)
-        at NativeConnection.Connection.model (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/connection.js:1133:11)
-        at addModelNamesToMap (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/helpers/populate/getModelsMapForPopulate.js:470:28)
-        at getModelsMapForPopulate (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/helpers/populate/getModelsMapForPopulate.js:174:7)
-        at populate (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/model.js:4437:21)
-        at _populate (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/model.js:4408:5)
-        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/model.js:4385:5
-        at promiseOrCallback (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/helpers/promiseOrCallback.js:10:12)
-        at Mongoose._promiseOrCallback (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/index.js:1151:10)
-        at Function.Model.populate (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/model.js:4383:23)
-        at cb (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/query.js:2129:26)
-  },
-  level: 'error',
-  timestamp: '2022-03-18 14:23:54'
-}
-{
-  message: {
-    getProjectDBError: MissingSchemaError: Schema hasn't been registered for model "teams".
-    Use mongoose.model(name, schema)
-        at NativeConnection.Connection.model (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/connection.js:1133:11)
-        at addModelNamesToMap (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/helpers/populate/getModelsMapForPopulate.js:470:28)
-        at getModelsMapForPopulate (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/helpers/populate/getModelsMapForPopulate.js:174:7)
-        at populate (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/model.js:4437:21)
-        at _populate (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/model.js:4408:5)
-        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/model.js:4385:5
-        at promiseOrCallback (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/helpers/promiseOrCallback.js:10:12)
-        at Mongoose._promiseOrCallback (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/index.js:1151:10)
-        at Function.Model.populate (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/model.js:4383:23)
-        at cb (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/query.js:2129:26)
-  },
-  level: 'error',
-  timestamp: '2022-03-18 14:24:34'
-}
-{
-  message: {
-    getProjectDBError: MissingSchemaError: Schema hasn't been registered for model "teams".
-    Use mongoose.model(name, schema)
-        at NativeConnection.Connection.model (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/connection.js:1133:11)
-        at addModelNamesToMap (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/helpers/populate/getModelsMapForPopulate.js:470:28)
-        at getModelsMapForPopulate (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/helpers/populate/getModelsMapForPopulate.js:174:7)
-        at populate (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/model.js:4437:21)
-        at _populate (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/model.js:4408:5)
-        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/model.js:4385:5
-        at promiseOrCallback (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/helpers/promiseOrCallback.js:10:12)
-        at Mongoose._promiseOrCallback (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/index.js:1151:10)
-        at Function.Model.populate (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/model.js:4383:23)
-        at cb (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/query.js:2129:26)
-  },
-  level: 'error',
-  timestamp: '2022-03-18 14:24:42'
-}
-{
-  message: {
-    getProjectDBError: MissingSchemaError: Schema hasn't been registered for model "teams".
-    Use mongoose.model(name, schema)
-        at NativeConnection.Connection.model (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/connection.js:1133:11)
-        at addModelNamesToMap (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/helpers/populate/getModelsMapForPopulate.js:470:28)
-        at getModelsMapForPopulate (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/helpers/populate/getModelsMapForPopulate.js:174:7)
-        at populate (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/model.js:4437:21)
-        at _populate (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/model.js:4408:5)
-        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/model.js:4385:5
-        at promiseOrCallback (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/helpers/promiseOrCallback.js:10:12)
-        at Mongoose._promiseOrCallback (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/index.js:1151:10)
-        at Function.Model.populate (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/model.js:4383:23)
-        at cb (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/query.js:2129:26)
-  },
-  level: 'error',
-  timestamp: '2022-03-18 14:25:33'
-}
-{
-  message: { db: 'mongodb://localhost:27017/TTP' },
-  level: 'info',
-  timestamp: '2022-03-18 14:26:07'
-}
-{
-  message: {
-    getProjectDBError: MissingSchemaError: Schema hasn't been registered for model "teams".
-    Use mongoose.model(name, schema)
-        at NativeConnection.Connection.model (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/connection.js:1133:11)
-        at addModelNamesToMap (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/helpers/populate/getModelsMapForPopulate.js:470:28)
-        at getModelsMapForPopulate (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/helpers/populate/getModelsMapForPopulate.js:174:7)
-        at populate (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/model.js:4437:21)
-        at _populate (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/model.js:4408:5)
-        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/model.js:4385:5
-        at promiseOrCallback (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/helpers/promiseOrCallback.js:10:12)
-        at Mongoose._promiseOrCallback (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/index.js:1151:10)
-        at Function.Model.populate (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/model.js:4383:23)
-        at cb (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/query.js:2129:26)
-  },
-  level: 'error',
-  timestamp: '2022-03-18 14:45:51'
-}
-{
-  message: { db: 'mongodb://localhost:27017/TTP' },
-  level: 'info',
-  timestamp: '2022-03-18 14:59:02'
-}
-{
-  message: {
-    borderData: Promise { <pending> },
-    createBoardApi: 'https://api.trello.com/1/boards/?name=UI/UX&prefs_background=purple&defaultLists=false&key=96b980af38094db6e5767718567af6ce&token=7f44a81ca5f903883e1b3a5720f89b70b8feacd4437d2cb893068b3b93455e5f'
-  },
-  level: 'info',
-  timestamp: '2022-03-18 15:00:25'
-}
-{
-  message: {
-    boardData: {
-      id: '623482681f18ef3c082dbebb',
-      name: 'UI/UX',
-      desc: '',
-      descData: null,
-      closed: false,
-      idOrganization: '61e87201397f573cb99a0418',
-      idEnterprise: null,
-      pinned: false,
-      url: 'https://trello.com/b/KCzTNwL9/ui-ux',
-      shortUrl: 'https://trello.com/b/KCzTNwL9',
-      prefs: {
-        permissionLevel: 'private',
-        hideVotes: false,
-        voting: 'disabled',
-        comments: 'members',
-        invitations: 'members',
-        selfJoin: true,
-        cardCovers: true,
-        isTemplate: false,
-        cardAging: 'regular',
-        calendarFeedEnabled: false,
-        hiddenPluginBoardButtons: [],
-        background: 'purple',
-        backgroundColor: '#89609E',
-        backgroundImage: null,
-        backgroundImageScaled: null,
-        backgroundTile: false,
-        backgroundBrightness: 'dark',
-        backgroundBottomColor: '#89609E',
-        backgroundTopColor: '#89609E',
-        canBePublic: true,
-        canBeEnterprise: true,
-        canBeOrg: true,
-        canBePrivate: true,
-        canInvite: true
-      },
-      labelNames: {
-        green: '',
-        yellow: '',
-        orange: '',
-        red: '',
-        purple: '',
-        blue: '',
-        sky: '',
-        lime: '',
-        pink: '',
-        black: ''
-      },
-      limits: {}
-    }
-  },
-  level: 'info',
-  timestamp: '2022-03-18 15:00:25'
-}
-{
-  message: {
-    data: {
-      name: 'UI/UX',
-      color: 'purple',
-      boardId: '623482681f18ef3c082dbebb'
-    }
-  },
-  level: 'info',
-  timestamp: '2022-03-18 15:00:25'
-}
-{
-  message: { teamData: '6234826a39a2217b4e6d869a' },
-  level: 'info',
-  timestamp: '2022-03-18 15:00:27'
-}
-{
-  message: { teamData: '6234826bc274934ea3925bd6' },
-  level: 'info',
-  timestamp: '2022-03-18 15:00:27'
-}
-{
-  message: { removeWebhookSucced: 'done' },
-  level: 'info',
-  timestamp: '2022-03-18 15:00:27'
-}
-{
-  message: {
-    teamListIds: [
-      { idInTrello: '6234826a39a2217b4e6d869a', idInDB: undefined },
-      { idInTrello: '6234826bc274934ea3925bd6', idInDB: undefined }
-    ]
-  },
-  level: 'info',
-  timestamp: '2022-03-18 15:00:27'
-}
-{
-  message: {
-    updatedbDepartmentError: {
-      _id: new ObjectId("62348269b8288ed1d5483e47"),
-      defaultListId: '6234826bad2da847a5884654',
-      sharedListID: '62348269ae0d3e70a31bada9',
-      doneListId: '6234826981d11a214115f3f3',
-      reviewListId: '6234826a0ff3916b9c4f961d',
-      notClearListId: '6234826cd4c1ea8def1995a9',
-      canceldListId: '6234826c7cb67d6ca69e3ed7',
-      teamsId: [
-        { idInTrello: '6234826a39a2217b4e6d869a', idInDB: undefined },
-        { idInTrello: '6234826bc274934ea3925bd6', idInDB: undefined }
-      ]
-    }
-  },
-  level: 'info',
-  timestamp: '2022-03-18 15:00:28'
-}
-{
-  message: { webhookCreateResult: 'webhook done' },
-  level: 'info',
-  timestamp: '2022-03-18 15:00:29'
-}
-{
-  message: { db: 'mongodb://localhost:27017/TTP' },
-  level: 'info',
-  timestamp: '2022-03-18 15:19:24'
-}
-{
-  message: { db: 'mongodb://localhost:27017/TTP' },
-  level: 'info',
-  timestamp: '2022-03-18 15:19:44'
-}
-{
-  message: {
-    getProjectDBError: MissingSchemaError: Schema hasn't been registered for model "teams".
-    Use mongoose.model(name, schema)
-        at NativeConnection.Connection.model (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/connection.js:1133:11)
-        at addModelNamesToMap (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/helpers/populate/getModelsMapForPopulate.js:470:28)
-        at getModelsMapForPopulate (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/helpers/populate/getModelsMapForPopulate.js:174:7)
-        at populate (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/model.js:4437:21)
-        at _populate (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/model.js:4408:5)
-        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/model.js:4385:5
-        at promiseOrCallback (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/helpers/promiseOrCallback.js:10:12)
-        at Mongoose._promiseOrCallback (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/index.js:1151:10)
-        at Function.Model.populate (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/model.js:4383:23)
-        at cb (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/query.js:2129:26)
-  },
-  level: 'error',
-  timestamp: '2022-03-18 15:20:43'
-}
-{
-  message: { db: 'mongodb://localhost:27017/TTP' },
-  level: 'info',
-  timestamp: '2022-03-18 15:22:12'
-}
-{
-  message: { db: 'mongodb://localhost:27017/TTP' },
-  level: 'info',
-  timestamp: '2022-03-18 15:34:21'
-}
-{
-  message: { db: 'mongodb://localhost:27017/TTP' },
-  level: 'info',
-  timestamp: '2022-03-18 15:39:17'
-}
-{
-  message: { db: 'mongodb://localhost:27017/TTP' },
-  level: 'info',
-  timestamp: '2022-03-18 15:39:47'
-}
-{
-  message: { db: 'mongodb://localhost:27017/TTP' },
-  level: 'info',
-  timestamp: '2022-03-18 15:40:24'
-}
-{
-  message: { db: 'mongodb://localhost:27017/TTP' },
-  level: 'info',
-  timestamp: '2022-03-18 15:46:43'
-}
-{
-  message: { db: 'mongodb://localhost:27017/TTP' },
-  level: 'info',
-  timestamp: '2022-03-18 15:46:57'
-}
-{
-  message: {
-    borderData: Promise { <pending> },
-    createBoardApi: 'https://api.trello.com/1/boards/?name=UI/UX&prefs_background=purple&defaultLists=false&key=96b980af38094db6e5767718567af6ce&token=7f44a81ca5f903883e1b3a5720f89b70b8feacd4437d2cb893068b3b93455e5f'
-  },
-  level: 'info',
-  timestamp: '2022-03-18 15:47:11'
-}
-{
-  message: {
-    boardData: {
-      id: '62348d5f391b6229626accd7',
-      name: 'UI/UX',
-      desc: '',
-      descData: null,
-      closed: false,
-      idOrganization: '61e87201397f573cb99a0418',
-      idEnterprise: null,
-      pinned: false,
-      url: 'https://trello.com/b/GUYlgpNb/ui-ux',
-      shortUrl: 'https://trello.com/b/GUYlgpNb',
-      prefs: {
-        permissionLevel: 'private',
-        hideVotes: false,
-        voting: 'disabled',
-        comments: 'members',
-        invitations: 'members',
-        selfJoin: true,
-        cardCovers: true,
-        isTemplate: false,
-        cardAging: 'regular',
-        calendarFeedEnabled: false,
-        hiddenPluginBoardButtons: [],
-        background: 'purple',
-        backgroundColor: '#89609E',
-        backgroundImage: null,
-        backgroundImageScaled: null,
-        backgroundTile: false,
-        backgroundBrightness: 'dark',
-        backgroundBottomColor: '#89609E',
-        backgroundTopColor: '#89609E',
-        canBePublic: true,
-        canBeEnterprise: true,
-        canBeOrg: true,
-        canBePrivate: true,
-        canInvite: true
-      },
-      labelNames: {
-        green: '',
-        yellow: '',
-        orange: '',
-        red: '',
-        purple: '',
-        blue: '',
-        sky: '',
-        lime: '',
-        pink: '',
-        black: ''
-      },
-      limits: {}
-    }
-  },
-  level: 'info',
-  timestamp: '2022-03-18 15:47:11'
-}
-{
-  message: {
-    data: {
-      name: 'UI/UX',
-      color: 'purple',
-      boardId: '62348d5f391b6229626accd7'
-    }
-  },
-  level: 'info',
-  timestamp: '2022-03-18 15:47:11'
-}
-{
-  message: { teamData: '62348d617c41d5855dd31785' },
-  level: 'info',
-  timestamp: '2022-03-18 15:47:13'
-}
-{
-  message: { teamData: '62348d610d0aab63649e5e49' },
-  level: 'info',
-  timestamp: '2022-03-18 15:47:13'
-}
-{
-  message: { removeWebhookSucced: 'done' },
-  level: 'info',
-  timestamp: '2022-03-18 15:47:13'
-}
-{
-  message: {
-    teamListIds: [
-      { idInTrello: '62348d617c41d5855dd31785', idInDB: undefined },
-      { idInTrello: '62348d610d0aab63649e5e49', idInDB: undefined }
-    ]
-  },
-  level: 'info',
-  timestamp: '2022-03-18 15:47:13'
-}
-{
-  message: {
-    updatedbDepartmentError: {
-      _id: new ObjectId("62348d5ff0729e7a40f4ecb2"),
-      defaultListId: '62348d617a84f451b308881e',
-      sharedListID: '62348d602086de7e65df8177',
-      doneListId: '62348d5fca893d2369d32ebb',
-      reviewListId: '62348d6010f9e18ed4ad302d',
-      notClearListId: '62348d627eb7902b5d4abed2',
-      canceldListId: '62348d622dfb9f72d995bc95',
-      teamsId: [
-        { idInTrello: '62348d617c41d5855dd31785', idInDB: undefined },
-        { idInTrello: '62348d610d0aab63649e5e49', idInDB: undefined }
-      ]
-    }
-  },
-  level: 'info',
-  timestamp: '2022-03-18 15:47:15'
-}
-{
-  message: { webhookCreateResult: 'webhook done' },
-  level: 'info',
-  timestamp: '2022-03-18 15:47:15'
-}
-{
-  message: { db: 'mongodb://localhost:27017/TTP' },
-  level: 'info',
-  timestamp: '2022-03-18 15:48:46'
-}
-{
-  message: { db: 'mongodb://localhost:27017/TTP' },
-  level: 'info',
-  timestamp: '2022-03-18 16:07:52'
-}
-{
-  message: {
-    getProjectDBError: MissingSchemaError: Schema hasn't been registered for model "teams".
-    Use mongoose.model(name, schema)
-        at NativeConnection.Connection.model (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/connection.js:1133:11)
-        at addModelNamesToMap (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/helpers/populate/getModelsMapForPopulate.js:470:28)
-        at getModelsMapForPopulate (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/helpers/populate/getModelsMapForPopulate.js:174:7)
-        at populate (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/model.js:4437:21)
-        at _populate (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/model.js:4408:5)
-        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/model.js:4385:5
-        at promiseOrCallback (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/helpers/promiseOrCallback.js:10:12)
-        at Mongoose._promiseOrCallback (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/index.js:1151:10)
-        at Function.Model.populate (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/model.js:4383:23)
-        at cb (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/query.js:2129:26)
-  },
-  level: 'error',
-  timestamp: '2022-03-18 16:14:54'
-}
-{
-  message: {
-    getProjectDBError: MissingSchemaError: Schema hasn't been registered for model "teams".
-    Use mongoose.model(name, schema)
-        at NativeConnection.Connection.model (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/connection.js:1133:11)
-        at addModelNamesToMap (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/helpers/populate/getModelsMapForPopulate.js:470:28)
-        at getModelsMapForPopulate (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/helpers/populate/getModelsMapForPopulate.js:174:7)
-        at populate (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/model.js:4437:21)
-        at _populate (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/model.js:4408:5)
-        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/model.js:4385:5
-        at promiseOrCallback (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/helpers/promiseOrCallback.js:10:12)
-        at Mongoose._promiseOrCallback (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/index.js:1151:10)
-        at Function.Model.populate (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/model.js:4383:23)
-        at cb (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/query.js:2129:26)
-  },
-  level: 'error',
-  timestamp: '2022-03-18 16:15:49'
-}
-{
-  message: {
-    getProjectDBError: MissingSchemaError: Schema hasn't been registered for model "teams".
-    Use mongoose.model(name, schema)
-        at NativeConnection.Connection.model (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/connection.js:1133:11)
-        at addModelNamesToMap (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/helpers/populate/getModelsMapForPopulate.js:470:28)
-        at getModelsMapForPopulate (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/helpers/populate/getModelsMapForPopulate.js:174:7)
-        at populate (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/model.js:4437:21)
-        at _populate (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/model.js:4408:5)
-        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/model.js:4385:5
-        at promiseOrCallback (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/helpers/promiseOrCallback.js:10:12)
-        at Mongoose._promiseOrCallback (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/index.js:1151:10)
-        at Function.Model.populate (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/model.js:4383:23)
-        at cb (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/query.js:2129:26)
-  },
-  level: 'error',
-  timestamp: '2022-03-18 16:16:31'
-}
-{
-  message: {
-    getProjectDBError: MissingSchemaError: Schema hasn't been registered for model "teams".
-    Use mongoose.model(name, schema)
-        at NativeConnection.Connection.model (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/connection.js:1133:11)
-        at addModelNamesToMap (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/helpers/populate/getModelsMapForPopulate.js:470:28)
-        at getModelsMapForPopulate (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/helpers/populate/getModelsMapForPopulate.js:174:7)
-        at populate (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/model.js:4437:21)
-        at _populate (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/model.js:4408:5)
-        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/model.js:4385:5
-        at promiseOrCallback (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/helpers/promiseOrCallback.js:10:12)
-        at Mongoose._promiseOrCallback (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/index.js:1151:10)
-        at Function.Model.populate (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/model.js:4383:23)
-        at cb (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/query.js:2129:26)
-  },
-  level: 'error',
-  timestamp: '2022-03-18 16:16:57'
-}
-{
-  message: {
-    getProjectDBError: MissingSchemaError: Schema hasn't been registered for model "teams".
-    Use mongoose.model(name, schema)
-        at NativeConnection.Connection.model (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/connection.js:1133:11)
-        at addModelNamesToMap (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/helpers/populate/getModelsMapForPopulate.js:470:28)
-        at getModelsMapForPopulate (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/helpers/populate/getModelsMapForPopulate.js:174:7)
-        at populate (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/model.js:4437:21)
-        at _populate (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/model.js:4408:5)
-        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/model.js:4385:5
-        at promiseOrCallback (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/helpers/promiseOrCallback.js:10:12)
-        at Mongoose._promiseOrCallback (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/index.js:1151:10)
-        at Function.Model.populate (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/model.js:4383:23)
-        at cb (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/query.js:2129:26)
-  },
-  level: 'error',
-  timestamp: '2022-03-18 16:16:59'
-}
-{
-  message: {
-    getProjectDBError: MissingSchemaError: Schema hasn't been registered for model "teams".
-    Use mongoose.model(name, schema)
-        at NativeConnection.Connection.model (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/connection.js:1133:11)
-        at addModelNamesToMap (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/helpers/populate/getModelsMapForPopulate.js:470:28)
-        at getModelsMapForPopulate (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/helpers/populate/getModelsMapForPopulate.js:174:7)
-        at populate (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/model.js:4437:21)
-        at _populate (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/model.js:4408:5)
-        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/model.js:4385:5
-        at promiseOrCallback (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/helpers/promiseOrCallback.js:10:12)
-        at Mongoose._promiseOrCallback (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/index.js:1151:10)
-        at Function.Model.populate (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/model.js:4383:23)
-        at cb (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/query.js:2129:26)
-  },
-  level: 'error',
-  timestamp: '2022-03-18 16:17:24'
-}
-{
-  message: { db: 'mongodb://localhost:27017/TTP' },
-  level: 'info',
-  timestamp: '2022-03-19 10:36:01'
-}
-{
-  message: {
-    getProjectDBError: MissingSchemaError: Schema hasn't been registered for model "teams".
-    Use mongoose.model(name, schema)
-        at NativeConnection.Connection.model (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/connection.js:1133:11)
-        at addModelNamesToMap (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/helpers/populate/getModelsMapForPopulate.js:470:28)
-        at getModelsMapForPopulate (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/helpers/populate/getModelsMapForPopulate.js:174:7)
-        at populate (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/model.js:4437:21)
-        at _populate (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/model.js:4408:5)
-        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/model.js:4385:5
-        at promiseOrCallback (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/helpers/promiseOrCallback.js:10:12)
-        at Mongoose._promiseOrCallback (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/index.js:1151:10)
-        at Function.Model.populate (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/model.js:4383:23)
-        at cb (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/query.js:2129:26)
-  },
-  level: 'error',
-  timestamp: '2022-03-19 10:38:47'
-}
-{
-  message: {
-    getProjectDBError: MissingSchemaError: Schema hasn't been registered for model "teams".
-    Use mongoose.model(name, schema)
-        at NativeConnection.Connection.model (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/connection.js:1133:11)
-        at addModelNamesToMap (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/helpers/populate/getModelsMapForPopulate.js:470:28)
-        at getModelsMapForPopulate (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/helpers/populate/getModelsMapForPopulate.js:174:7)
-        at populate (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/model.js:4437:21)
-        at _populate (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/model.js:4408:5)
-        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/model.js:4385:5
-        at promiseOrCallback (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/helpers/promiseOrCallback.js:10:12)
-        at Mongoose._promiseOrCallback (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/index.js:1151:10)
-        at Function.Model.populate (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/model.js:4383:23)
-        at cb (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/query.js:2129:26)
-  },
-  level: 'error',
-  timestamp: '2022-03-19 11:07:46'
-}
-{
-  message: { db: 'mongodb://localhost:27017/TTP' },
-  level: 'info',
-  timestamp: '2022-03-19 11:09:19'
-}
-{
-  message: { db: 'mongodb://localhost:27017/TTP' },
-  level: 'info',
-  timestamp: '2022-03-19 11:09:32'
-}
-{
-  message: {
-    getProjectDBError: MissingSchemaError: Schema hasn't been registered for model "teams".
-    Use mongoose.model(name, schema)
-        at NativeConnection.Connection.model (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/connection.js:1133:11)
-        at addModelNamesToMap (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/helpers/populate/getModelsMapForPopulate.js:470:28)
-        at getModelsMapForPopulate (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/helpers/populate/getModelsMapForPopulate.js:174:7)
-        at populate (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/model.js:4437:21)
-        at _populate (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/model.js:4408:5)
-        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/model.js:4385:5
-        at promiseOrCallback (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/helpers/promiseOrCallback.js:10:12)
-        at Mongoose._promiseOrCallback (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/index.js:1151:10)
-        at Function.Model.populate (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/model.js:4383:23)
-        at cb (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/query.js:2129:26)
-  },
-  level: 'error',
-  timestamp: '2022-03-19 11:22:14'
-}
-{
-  message: {
-    getProjectDBError: MissingSchemaError: Schema hasn't been registered for model "teams".
-    Use mongoose.model(name, schema)
-        at NativeConnection.Connection.model (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/connection.js:1133:11)
-        at addModelNamesToMap (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/helpers/populate/getModelsMapForPopulate.js:470:28)
-        at getModelsMapForPopulate (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/helpers/populate/getModelsMapForPopulate.js:174:7)
-        at populate (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/model.js:4437:21)
-        at _populate (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/model.js:4408:5)
-        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/model.js:4385:5
-        at promiseOrCallback (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/helpers/promiseOrCallback.js:10:12)
-        at Mongoose._promiseOrCallback (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/index.js:1151:10)
-        at Function.Model.populate (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/model.js:4383:23)
-        at cb (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/query.js:2129:26)
-  },
-  level: 'error',
-  timestamp: '2022-03-19 11:22:21'
-}
-{
-  message: { db: 'mongodb://localhost:27017/TTP' },
-  level: 'info',
-  timestamp: '2022-03-19 12:19:04'
-}
-{
-  message: { db: 'mongodb://localhost:27017/TTP' },
-  level: 'info',
-  timestamp: '2022-03-19 12:20:14'
-}
-{
-  message: { db: 'mongodb://localhost:27017/TTP' },
-  level: 'info',
-  timestamp: '2022-03-19 12:20:41'
-}
-{
   message: { db: 'mongodb://localhost:27017/TTP' },
   level: 'info',
-  timestamp: '2022-03-19 12:22:52'
+  timestamp: '2022-03-22 19:37:10'
 }
 {
   message: { db: 'mongodb://localhost:27017/TTP' },
   level: 'info',
-  timestamp: '2022-03-19 12:24:09'
+  timestamp: '2022-03-22 19:40:51'
 }
 {
   message: { db: 'mongodb://localhost:27017/TTP' },
   level: 'info',
-  timestamp: '2022-03-19 12:25:09'
+  timestamp: '2022-03-22 19:41:04'
 }
 {
   message: { db: 'mongodb://localhost:27017/TTP' },
   level: 'info',
-  timestamp: '2022-03-19 12:56:13'
+  timestamp: '2022-03-22 19:41:24'
 }
 {
   message: { db: 'mongodb://localhost:27017/TTP' },
   level: 'info',
-  timestamp: '2022-03-19 13:22:50'
+  timestamp: '2022-03-22 19:43:05'
 }
 {
   message: { db: 'mongodb://localhost:27017/TTP' },
   level: 'info',
-  timestamp: '2022-03-19 13:23:07'
+  timestamp: '2022-03-22 19:43:32'
 }
 {
   message: { db: 'mongodb://localhost:27017/TTP' },
   level: 'info',
-  timestamp: '2022-03-19 13:24:55'
+  timestamp: '2022-03-22 19:43:51'
 }
 {
   message: { db: 'mongodb://localhost:27017/TTP' },
   level: 'info',
-  timestamp: '2022-03-19 13:25:46'
+  timestamp: '2022-03-22 19:46:28'
 }
 {
   message: { db: 'mongodb://localhost:27017/TTP' },
   level: 'info',
-  timestamp: '2022-03-19 13:28:35'
+  timestamp: '2022-03-22 19:47:15'
 }
 {
   message: { db: 'mongodb://localhost:27017/TTP' },
   level: 'info',
-  timestamp: '2022-03-19 13:35:13'
+  timestamp: '2022-03-22 19:58:48'
 }
 {
   message: { db: 'mongodb://localhost:27017/TTP' },
   level: 'info',
-  timestamp: '2022-03-19 13:52:28'
-}
-{
-  message: { db: 'mongodb://localhost:27017/TTP' },
-  level: 'info',
-  timestamp: '2022-03-19 13:58:40'
-}
-{
-  message: { db: 'mongodb://localhost:27017/TTP' },
-  level: 'info',
-  timestamp: '2022-03-19 14:01:21'
-}
-{
-  message: {
-    __checkBoardListNameError: FetchError: invalid json response body at https://api.trello.com/1/boards/62348d5f391b6229626accd7/lists?key=96b980af38094db6e5767718567af6ce&token=7f44a81ca5f903883e1b3a5720f89b70b8feacd4437d2cb893068b3b93455e5f reason: Unexpected token T in JSON at position 0
-        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/node-fetch/lib/index.js:273:32
-        at processTicksAndRejections (node:internal/process/task_queues:96:5) {
-      type: 'invalid-json'
-    }
-  },
-  level: 'error',
-  timestamp: '2022-03-19 14:04:28'
-}
-{
-  message: {
-    createMemberError: FetchError: invalid json response body at https://api.trello.com/1/lists?name=Ezzat%20UI/UX%20member&idBoard=62348d5f391b6229626accd7&key=96b980af38094db6e5767718567af6ce&token=7f44a81ca5f903883e1b3a5720f89b70b8feacd4437d2cb893068b3b93455e5f reason: Unexpected token u in JSON at position 0
-        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/node-fetch/lib/index.js:273:32
-        at processTicksAndRejections (node:internal/process/task_queues:96:5) {
-      type: 'invalid-json'
-    }
-  },
-  level: 'error',
-  timestamp: '2022-03-19 14:04:28'
-}
-{
-  message: {
-    handleGetBoards: TypeError: Cannot read properties of undefined (reading 'status')
-        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/presentation/techMember/techMember.ts:12:18
-        at Generator.next (<anonymous>)
-        at fulfilled (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/presentation/techMember/techMember.ts:5:58)
-        at processTicksAndRejections (node:internal/process/task_queues:96:5)
-  },
-  level: 'error',
-  timestamp: '2022-03-19 14:04:28'
+  timestamp: '2022-03-22 21:09:07'
 }
 {
   message: { db: 'mongodb://localhost:27017/TTP' },
   level: 'info',
-  timestamp: '2022-03-19 14:08:42'
+  timestamp: '2022-03-22 21:09:45'
 }
 {
   message: { db: 'mongodb://localhost:27017/TTP' },
   level: 'info',
-  timestamp: '2022-03-19 14:09:49'
+  timestamp: '2022-03-22 21:10:59'
 }
 {
   message: { db: 'mongodb://localhost:27017/TTP' },
   level: 'info',
-  timestamp: '2022-03-19 14:10:16'
+  timestamp: '2022-03-22 21:11:32'
 }
 {
   message: { db: 'mongodb://localhost:27017/TTP' },
   level: 'info',
-  timestamp: '2022-03-19 14:11:49'
+  timestamp: '2022-03-22 21:11:45'
 }
 {
   message: { db: 'mongodb://localhost:27017/TTP' },
   level: 'info',
-  timestamp: '2022-03-19 14:12:51'
+  timestamp: '2022-03-22 21:12:16'
 }
 {
   message: { db: 'mongodb://localhost:27017/TTP' },
   level: 'info',
-  timestamp: '2022-03-19 14:13:11'
+  timestamp: '2022-03-22 21:13:11'
 }
 {
   message: { db: 'mongodb://localhost:27017/TTP' },
   level: 'info',
-  timestamp: '2022-03-19 14:13:39'
-}
-{
-  message: {
-    getProjectDBError: MongooseError: Cannot populate path `teamsId` because it is not in your schema. Set the `strictPopulate` option to false to override.
-        at getModelsMapForPopulate (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/helpers/populate/getModelsMapForPopulate.js:47:12)
-        at populate (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/model.js:4437:21)
-        at _populate (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/model.js:4408:5)
-        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/model.js:4385:5
-        at promiseOrCallback (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/helpers/promiseOrCallback.js:10:12)
-        at Mongoose._promiseOrCallback (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/index.js:1151:10)
-        at Function.Model.populate (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/model.js:4383:23)
-        at cb (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/query.js:2129:26)
-        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/node_modules/mongodb/src/utils.ts:649:5
-        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/node_modules/mongodb/src/cursor/abstract_cursor.ts:415:35
-  },
-  level: 'error',
-  timestamp: '2022-03-19 14:13:43'
+  timestamp: '2022-03-22 21:14:02'
 }
 {
   message: { db: 'mongodb://localhost:27017/TTP' },
   level: 'info',
-  timestamp: '2022-03-19 14:14:36'
+  timestamp: '2022-03-22 21:14:21'
 }
 {
-  message: {
-    getProjectDBError: MongooseError: Cannot populate path `techMembers` because it is not in your schema. Set the `strictPopulate` option to false to override.
-        at getModelsMapForPopulate (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/helpers/populate/getModelsMapForPopulate.js:47:12)
-        at populate (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/model.js:4437:21)
-        at _populate (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/model.js:4408:5)
-        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/model.js:4385:5
-        at promiseOrCallback (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/helpers/promiseOrCallback.js:10:12)
-        at Mongoose._promiseOrCallback (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/index.js:1151:10)
-        at Function.Model.populate (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/model.js:4383:23)
-        at cb (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/query.js:2129:26)
-        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/node_modules/mongodb/src/utils.ts:649:5
-        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/node_modules/mongodb/src/cursor/abstract_cursor.ts:415:35
-  },
-  level: 'error',
-  timestamp: '2022-03-19 14:14:44'
-}
-{
   message: { db: 'mongodb://localhost:27017/TTP' },
   level: 'info',
-  timestamp: '2022-03-19 14:16:00'
+  timestamp: '2022-03-22 21:22:57'
 }
 {
   message: { db: 'mongodb://localhost:27017/TTP' },
   level: 'info',
-  timestamp: '2022-03-19 14:16:14'
+  timestamp: '2022-03-22 21:25:06'
 }
 {
-  message: {
-    getProjectDBError: MongooseError: Cannot populate path `techMembers` because it is not in your schema. Set the `strictPopulate` option to false to override.
-        at getModelsMapForPopulate (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/helpers/populate/getModelsMapForPopulate.js:47:12)
-        at populate (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/model.js:4437:21)
-        at _populate (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/model.js:4408:5)
-        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/model.js:4385:5
-        at promiseOrCallback (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/helpers/promiseOrCallback.js:10:12)
-        at Mongoose._promiseOrCallback (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/index.js:1151:10)
-        at Function.Model.populate (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/model.js:4383:23)
-        at cb (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/query.js:2129:26)
-        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/node_modules/mongodb/src/utils.ts:649:5
-        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/node_modules/mongodb/src/cursor/abstract_cursor.ts:415:35
-  },
-  level: 'error',
-  timestamp: '2022-03-19 14:16:18'
-}
-{
   message: { db: 'mongodb://localhost:27017/TTP' },
   level: 'info',
-  timestamp: '2022-03-19 14:17:41'
-}
-{
-  message: {
-    getProjectDBError: MongooseError: Cannot populate path `techmembers` because it is not in your schema. Set the `strictPopulate` option to false to override.
-        at getModelsMapForPopulate (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/helpers/populate/getModelsMapForPopulate.js:47:12)
-        at populate (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/model.js:4437:21)
-        at _populate (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/model.js:4408:5)
-        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/model.js:4385:5
-        at promiseOrCallback (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/helpers/promiseOrCallback.js:10:12)
-        at Mongoose._promiseOrCallback (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/index.js:1151:10)
-        at Function.Model.populate (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/model.js:4383:23)
-        at cb (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/query.js:2129:26)
-        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/node_modules/mongodb/src/utils.ts:649:5
-        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/node_modules/mongodb/src/cursor/abstract_cursor.ts:415:35
-  },
-  level: 'error',
-  timestamp: '2022-03-19 14:17:56'
+  timestamp: '2022-03-22 21:27:07'
 }
 {
   message: { db: 'mongodb://localhost:27017/TTP' },
   level: 'info',
-  timestamp: '2022-03-19 14:20:45'
+  timestamp: '2022-03-22 21:51:54'
 }
 {
   message: { db: 'mongodb://localhost:27017/TTP' },
   level: 'info',
-  timestamp: '2022-03-19 17:44:46'
-}
-{
-  message: {
-    getProjectDBError: MissingSchemaError: Schema hasn't been registered for model "techmembers".
-    Use mongoose.model(name, schema)
-        at NativeConnection.Connection.model (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/connection.js:1133:11)
-        at addModelNamesToMap (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/helpers/populate/getModelsMapForPopulate.js:470:28)
-        at getModelsMapForPopulate (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/helpers/populate/getModelsMapForPopulate.js:174:7)
-        at populate (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/model.js:4437:21)
-        at _populate (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/model.js:4408:5)
-        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/model.js:4385:5
-        at promiseOrCallback (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/helpers/promiseOrCallback.js:10:12)
-        at Mongoose._promiseOrCallback (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/index.js:1151:10)
-        at Function.Model.populate (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/model.js:4383:23)
-        at cb (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/query.js:2129:26)
-  },
-  level: 'error',
-  timestamp: '2022-03-19 18:45:56'
-}
-{
-  message: {
-    getProjectDBError: MissingSchemaError: Schema hasn't been registered for model "techmembers".
-    Use mongoose.model(name, schema)
-        at NativeConnection.Connection.model (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/connection.js:1133:11)
-        at addModelNamesToMap (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/helpers/populate/getModelsMapForPopulate.js:470:28)
-        at getModelsMapForPopulate (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/helpers/populate/getModelsMapForPopulate.js:174:7)
-        at populate (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/model.js:4437:21)
-        at _populate (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/model.js:4408:5)
-        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/model.js:4385:5
-        at promiseOrCallback (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/helpers/promiseOrCallback.js:10:12)
-        at Mongoose._promiseOrCallback (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/index.js:1151:10)
-        at Function.Model.populate (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/model.js:4383:23)
-        at cb (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/query.js:2129:26)
-  },
-  level: 'error',
-  timestamp: '2022-03-19 18:45:59'
+  timestamp: '2022-03-22 21:52:49'
 }
 {
-  message: {
-    getProjectDBError: MissingSchemaError: Schema hasn't been registered for model "techmembers".
-    Use mongoose.model(name, schema)
-        at NativeConnection.Connection.model (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/connection.js:1133:11)
-        at addModelNamesToMap (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/helpers/populate/getModelsMapForPopulate.js:470:28)
-        at getModelsMapForPopulate (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/helpers/populate/getModelsMapForPopulate.js:174:7)
-        at populate (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/model.js:4437:21)
-        at _populate (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/model.js:4408:5)
-        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/model.js:4385:5
-        at promiseOrCallback (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/helpers/promiseOrCallback.js:10:12)
-        at Mongoose._promiseOrCallback (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/index.js:1151:10)
-        at Function.Model.populate (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/model.js:4383:23)
-        at cb (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/query.js:2129:26)
-  },
-  level: 'error',
-  timestamp: '2022-03-19 18:46:12'
-}
-{
-  message: {
-    getProjectDBError: MissingSchemaError: Schema hasn't been registered for model "techmembers".
-    Use mongoose.model(name, schema)
-        at NativeConnection.Connection.model (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/connection.js:1133:11)
-        at addModelNamesToMap (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/helpers/populate/getModelsMapForPopulate.js:470:28)
-        at getModelsMapForPopulate (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/helpers/populate/getModelsMapForPopulate.js:174:7)
-        at populate (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/model.js:4437:21)
-        at _populate (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/model.js:4408:5)
-        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/model.js:4385:5
-        at promiseOrCallback (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/helpers/promiseOrCallback.js:10:12)
-        at Mongoose._promiseOrCallback (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/index.js:1151:10)
-        at Function.Model.populate (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/model.js:4383:23)
-        at cb (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/query.js:2129:26)
-  },
-  level: 'error',
-  timestamp: '2022-03-19 18:46:20'
-}
-{
   message: { db: 'mongodb://localhost:27017/TTP' },
   level: 'info',
-  timestamp: '2022-03-19 18:46:33'
-}
-{
-  message: {
-    getProjectDBError: MissingSchemaError: Schema hasn't been registered for model "techmembers".
-    Use mongoose.model(name, schema)
-        at NativeConnection.Connection.model (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/connection.js:1133:11)
-        at addModelNamesToMap (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/helpers/populate/getModelsMapForPopulate.js:470:28)
-        at getModelsMapForPopulate (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/helpers/populate/getModelsMapForPopulate.js:174:7)
-        at populate (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/model.js:4437:21)
-        at _populate (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/model.js:4408:5)
-        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/model.js:4385:5
-        at promiseOrCallback (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/helpers/promiseOrCallback.js:10:12)
-        at Mongoose._promiseOrCallback (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/index.js:1151:10)
-        at Function.Model.populate (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/model.js:4383:23)
-        at cb (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/query.js:2129:26)
-  },
-  level: 'error',
-  timestamp: '2022-03-19 18:46:37'
+  timestamp: '2022-03-22 21:55:22'
 }
 {
   message: { db: 'mongodb://localhost:27017/TTP' },
   level: 'info',
-  timestamp: '2022-03-19 18:46:52'
+  timestamp: '2022-03-22 21:55:43'
 }
 {
   message: { db: 'mongodb://localhost:27017/TTP' },
   level: 'info',
-  timestamp: '2022-03-19 18:47:26'
+  timestamp: '2022-03-22 21:56:03'
 }
 {
   message: { db: 'mongodb://localhost:27017/TTP' },
   level: 'info',
-  timestamp: '2022-03-19 18:55:20'
+  timestamp: '2022-03-22 21:56:55'
 }
 {
   message: { db: 'mongodb://localhost:27017/TTP' },
   level: 'info',
-  timestamp: '2022-03-19 19:02:16'
+  timestamp: '2022-03-22 21:57:35'
 }
 {
   message: { db: 'mongodb://localhost:27017/TTP' },
   level: 'info',
-  timestamp: '2022-03-19 19:03:16'
+  timestamp: '2022-03-22 21:58:05'
 }
 {
   message: { db: 'mongodb://localhost:27017/TTP' },
   level: 'info',
-  timestamp: '2022-03-19 19:03:36'
+  timestamp: '2022-03-22 22:21:08'
 }
 {
   message: { db: 'mongodb://localhost:27017/TTP' },
   level: 'info',
-  timestamp: '2022-03-19 19:06:56'
+  timestamp: '2022-03-22 22:21:22'
 }
 {
-  message: {
-    createProjectDBError: Error: projects validation failed: name: Path `name` is required.
-        at ValidationError.inspect (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/error/validation.js:48:26)
-        at formatValue (node:internal/util/inspect:780:19)
-        at formatProperty (node:internal/util/inspect:1817:11)
-        at formatRaw (node:internal/util/inspect:1028:9)
-        at formatValue (node:internal/util/inspect:815:10)
-        at formatProperty (node:internal/util/inspect:1817:11)
-        at formatRaw (node:internal/util/inspect:1028:9)
-        at formatValue (node:internal/util/inspect:815:10)
-        at inspect (node:internal/util/inspect:345:10)
-        at Format.transform (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/logform/pretty-print.js:27:19) {
-      errors: {
-        name: ValidatorError: Path `name` is required.
-            at validate (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/schematype.js:1277:13)
-            at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/schematype.js:1260:7
-            at Array.forEach (<anonymous>)
-            at SchemaString.SchemaType.doValidate (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/schematype.js:1210:14)
-            at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/document.js:2690:18
-            at processTicksAndRejections (node:internal/process/task_queues:78:11) {
-          properties: {
-            validator: [Function (anonymous)],
-            message: 'Path `name` is required.',
-            type: 'required',
-            path: 'name',
-            value: ''
-          },
-          kind: 'required',
-          path: 'name',
-          value: '',
-          reason: undefined,
-          [Symbol(mongoose:validatorError)]: true
-        }
-      },
-      _message: 'projects validation failed'
-    }
-  },
-  level: 'error',
-  timestamp: '2022-03-19 19:35:42'
-}
-{
   message: { db: 'mongodb://localhost:27017/TTP' },
   level: 'info',
-  timestamp: '2022-03-19 19:36:12'
-}
-{
-  message: {
-    getTeamsError: FetchError: invalid json response body at https://api.trello.com/1/cards?idList=undefined&name=undefined&attachments=true&key=96b980af38094db6e5767718567af6ce&token=7f44a81ca5f903883e1b3a5720f89b70b8feacd4437d2cb893068b3b93455e5f reason: Unexpected token i in JSON at position 0
-        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/node-fetch/lib/index.js:273:32
-        at runMicrotasks (<anonymous>)
-        at processTicksAndRejections (node:internal/process/task_queues:96:5) {
-      type: 'invalid-json'
-    }
-  },
-  level: 'error',
-  timestamp: '2022-03-19 20:10:58'
-}
-{
-  message: {
-    getTeamsError: FetchError: invalid json response body at https://api.trello.com/1/cards?idList=undefined&name=undefined&attachments=true&key=96b980af38094db6e5767718567af6ce&token=7f44a81ca5f903883e1b3a5720f89b70b8feacd4437d2cb893068b3b93455e5f reason: Unexpected token i in JSON at position 0
-        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/node-fetch/lib/index.js:273:32
-        at processTicksAndRejections (node:internal/process/task_queues:96:5) {
-      type: 'invalid-json'
-    }
-  },
-  level: 'error',
-  timestamp: '2022-03-19 20:16:54'
-}
-{
-  message: {
-    createProjectDBError: Error: projects validation failed: name: Path `name` is required.
-        at ValidationError.inspect (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/error/validation.js:48:26)
-        at formatValue (node:internal/util/inspect:780:19)
-        at formatProperty (node:internal/util/inspect:1817:11)
-        at formatRaw (node:internal/util/inspect:1028:9)
-        at formatValue (node:internal/util/inspect:815:10)
-        at formatProperty (node:internal/util/inspect:1817:11)
-        at formatRaw (node:internal/util/inspect:1028:9)
-        at formatValue (node:internal/util/inspect:815:10)
-        at inspect (node:internal/util/inspect:345:10)
-        at Format.transform (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/logform/pretty-print.js:27:19) {
-      errors: {
-        name: ValidatorError: Path `name` is required.
-            at validate (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/schematype.js:1277:13)
-            at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/schematype.js:1260:7
-            at Array.forEach (<anonymous>)
-            at SchemaString.SchemaType.doValidate (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/schematype.js:1210:14)
-            at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/document.js:2690:18
-            at processTicksAndRejections (node:internal/process/task_queues:78:11) {
-          properties: {
-            validator: [Function (anonymous)],
-            message: 'Path `name` is required.',
-            type: 'required',
-            path: 'name',
-            value: ''
-          },
-          kind: 'required',
-          path: 'name',
-          value: '',
-          reason: undefined,
-          [Symbol(mongoose:validatorError)]: true
-        }
-      },
-      _message: 'projects validation failed'
-    }
-  },
-  level: 'error',
-  timestamp: '2022-03-19 20:18:58'
-}
-{
-  message: {
-    getTeamsError: FetchError: invalid json response body at https://api.trello.com/1/cards?idList=undefined&name=undefined&attachments=true&key=96b980af38094db6e5767718567af6ce&token=7f44a81ca5f903883e1b3a5720f89b70b8feacd4437d2cb893068b3b93455e5f reason: Unexpected token i in JSON at position 0
-        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/node-fetch/lib/index.js:273:32
-        at processTicksAndRejections (node:internal/process/task_queues:96:5) {
-      type: 'invalid-json'
-    }
-  },
-  level: 'error',
-  timestamp: '2022-03-19 20:19:46'
-}
-{
-  message: {
-    createProjectDBError: Error: projects validation failed: name: Path `name` is required.
-        at ValidationError.inspect (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/error/validation.js:48:26)
-        at formatValue (node:internal/util/inspect:780:19)
-        at formatProperty (node:internal/util/inspect:1817:11)
-        at formatRaw (node:internal/util/inspect:1028:9)
-        at formatValue (node:internal/util/inspect:815:10)
-        at formatProperty (node:internal/util/inspect:1817:11)
-        at formatRaw (node:internal/util/inspect:1028:9)
-        at formatValue (node:internal/util/inspect:815:10)
-        at inspect (node:internal/util/inspect:345:10)
-        at Format.transform (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/logform/pretty-print.js:27:19) {
-      errors: {
-        name: ValidatorError: Path `name` is required.
-            at validate (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/schematype.js:1277:13)
-            at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/schematype.js:1260:7
-            at Array.forEach (<anonymous>)
-            at SchemaString.SchemaType.doValidate (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/schematype.js:1210:14)
-            at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/document.js:2690:18
-            at processTicksAndRejections (node:internal/process/task_queues:78:11) {
-          properties: {
-            validator: [Function (anonymous)],
-            message: 'Path `name` is required.',
-            type: 'required',
-            path: 'name',
-            value: ''
-          },
-          kind: 'required',
-          path: 'name',
-          value: '',
-          reason: undefined,
-          [Symbol(mongoose:validatorError)]: true
-        }
-      },
-      _message: 'projects validation failed'
-    }
-  },
-  level: 'error',
-  timestamp: '2022-03-19 20:20:57'
+  timestamp: '2022-03-22 22:27:21'
 }
 {
   message: { db: 'mongodb://localhost:27017/TTP' },
   level: 'info',
-  timestamp: '2022-03-19 20:35:44'
-}
-{
-  message: {
-    createTaskDBError: Error: tasks validation failed: categoryId: Cast to ObjectId failed for value "" (type string) at path "categoryId"
-        at ValidationError.inspect (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/error/validation.js:48:26)
-        at formatValue (node:internal/util/inspect:780:19)
-        at formatProperty (node:internal/util/inspect:1817:11)
-        at formatRaw (node:internal/util/inspect:1028:9)
-        at formatValue (node:internal/util/inspect:815:10)
-        at formatProperty (node:internal/util/inspect:1817:11)
-        at formatRaw (node:internal/util/inspect:1028:9)
-        at formatValue (node:internal/util/inspect:815:10)
-        at inspect (node:internal/util/inspect:345:10)
-        at Format.transform (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/logform/pretty-print.js:27:19) {
-      errors: {
-        categoryId: CastError: Cast to ObjectId failed for value "" (type string) at path "categoryId"
-            at ObjectId.cast (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/schema/objectid.js:247:11)
-            at ObjectId.SchemaType.applySetters (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/schematype.js:1135:12)
-            at model.$set (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/document.js:1407:20)
-            at model.$set (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/document.js:1161:14)
-            at model.Document (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/document.js:158:12)
-            at model.Model (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/model.js:106:12)
-            at new model (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/model.js:4755:15)
-            at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/dbCalls/tasks/tasks.ts:54:28)
-            at Generator.next (<anonymous>)
-            at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/dbCalls/tasks/tasks.ts:8:71 {
-          stringValue: '""',
-          messageFormat: undefined,
-          kind: 'ObjectId',
-          value: '',
-          path: 'categoryId',
-          reason: TypeError: Argument passed in must be a Buffer or string of 12 bytes or a string of 24 hex characters
-              at new BSONTypeError (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/bson/lib/error.js:39:42)
-              at new ObjectId (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/bson/src/objectid.ts:88:15)
-              at castObjectId (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/cast/objectid.js:25:12)
-              at ObjectId.cast (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/schema/objectid.js:245:12)
-              at ObjectId.SchemaType.applySetters (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/schematype.js:1135:12)
-              at model.$set (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/document.js:1407:20)
-              at model.$set (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/document.js:1161:14)
-              at model.Document (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/document.js:158:12)
-              at model.Model (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/model.js:106:12)
-              at new model (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/model.js:4755:15),
-          valueType: 'string'
-        }
-      },
-      _message: 'tasks validation failed'
-    }
-  },
-  level: 'error',
-  timestamp: '2022-03-19 20:50:27'
-}
-{
-  message: {
-    createTaskDBError: Error: tasks validation failed: categoryId: Cast to ObjectId failed for value "" (type string) at path "categoryId"
-        at ValidationError.inspect (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/error/validation.js:48:26)
-        at formatValue (node:internal/util/inspect:780:19)
-        at formatProperty (node:internal/util/inspect:1817:11)
-        at formatRaw (node:internal/util/inspect:1028:9)
-        at formatValue (node:internal/util/inspect:815:10)
-        at formatProperty (node:internal/util/inspect:1817:11)
-        at formatRaw (node:internal/util/inspect:1028:9)
-        at formatValue (node:internal/util/inspect:815:10)
-        at inspect (node:internal/util/inspect:345:10)
-        at Format.transform (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/logform/pretty-print.js:27:19) {
-      errors: {
-        categoryId: CastError: Cast to ObjectId failed for value "" (type string) at path "categoryId"
-            at ObjectId.cast (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/schema/objectid.js:247:11)
-            at ObjectId.SchemaType.applySetters (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/schematype.js:1135:12)
-            at model.$set (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/document.js:1407:20)
-            at model.$set (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/document.js:1161:14)
-            at model.Document (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/document.js:158:12)
-            at model.Model (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/model.js:106:12)
-            at new model (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/model.js:4755:15)
-            at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/dbCalls/tasks/tasks.ts:54:28)
-            at Generator.next (<anonymous>)
-            at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/dbCalls/tasks/tasks.ts:8:71 {
-          stringValue: '""',
-          messageFormat: undefined,
-          kind: 'ObjectId',
-          value: '',
-          path: 'categoryId',
-          reason: TypeError: Argument passed in must be a Buffer or string of 12 bytes or a string of 24 hex characters
-              at new BSONTypeError (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/bson/lib/error.js:39:42)
-              at new ObjectId (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/bson/src/objectid.ts:88:15)
-              at castObjectId (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/cast/objectid.js:25:12)
-              at ObjectId.cast (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/schema/objectid.js:245:12)
-              at ObjectId.SchemaType.applySetters (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/schematype.js:1135:12)
-              at model.$set (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/document.js:1407:20)
-              at model.$set (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/document.js:1161:14)
-              at model.Document (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/document.js:158:12)
-              at model.Model (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/model.js:106:12)
-              at new model (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/model.js:4755:15),
-          valueType: 'string'
-        }
-      },
-      _message: 'tasks validation failed'
-    }
-  },
-  level: 'error',
-  timestamp: '2022-03-19 20:52:58'
+  timestamp: '2022-03-22 22:28:19'
 }
 {
   message: { db: 'mongodb://localhost:27017/TTP' },
   level: 'info',
-  timestamp: '2022-03-19 20:55:21'
+  timestamp: '2022-03-22 22:34:03'
 }
 {
   message: { db: 'mongodb://localhost:27017/TTP' },
   level: 'info',
-  timestamp: '2022-03-19 20:55:41'
+  timestamp: '2022-03-22 22:34:55'
 }
 {
-  message: {
-    createTaskDBError: Error: tasks validation failed: categoryId: Path `categoryId` is required.
-        at ValidationError.inspect (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/error/validation.js:48:26)
-        at formatValue (node:internal/util/inspect:780:19)
-        at formatProperty (node:internal/util/inspect:1817:11)
-        at formatRaw (node:internal/util/inspect:1028:9)
-        at formatValue (node:internal/util/inspect:815:10)
-        at formatProperty (node:internal/util/inspect:1817:11)
-        at formatRaw (node:internal/util/inspect:1028:9)
-        at formatValue (node:internal/util/inspect:815:10)
-        at inspect (node:internal/util/inspect:345:10)
-        at Format.transform (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/logform/pretty-print.js:27:19) {
-      errors: {
-        categoryId: ValidatorError: Path `categoryId` is required.
-            at validate (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/schematype.js:1277:13)
-            at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/schematype.js:1260:7
-            at Array.forEach (<anonymous>)
-            at ObjectId.SchemaType.doValidate (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/schematype.js:1210:14)
-            at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/document.js:2690:18
-            at processTicksAndRejections (node:internal/process/task_queues:78:11) {
-          properties: {
-            validator: [Function (anonymous)],
-            message: 'Path `categoryId` is required.',
-            type: 'required',
-            path: 'categoryId',
-            value: null
-          },
-          kind: 'required',
-          path: 'categoryId',
-          value: null,
-          reason: undefined,
-          [Symbol(mongoose:validatorError)]: true
-        }
-      },
-      _message: 'tasks validation failed'
-    }
-  },
-  level: 'error',
-  timestamp: '2022-03-19 20:59:34'
-}
-{
   message: { db: 'mongodb://localhost:27017/TTP' },
   level: 'info',
-  timestamp: '2022-03-19 21:00:15'
+  timestamp: '2022-03-25 10:26:27'
 }
 {
   message: { db: 'mongodb://localhost:27017/TTP' },
   level: 'info',
-  timestamp: '2022-03-19 21:07:38'
-}
-{
-  message: {
-    createProjectDBError: Error: projects validation failed: name: Path `name` is required.
-        at ValidationError.inspect (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/error/validation.js:48:26)
-        at formatValue (node:internal/util/inspect:780:19)
-        at formatProperty (node:internal/util/inspect:1817:11)
-        at formatRaw (node:internal/util/inspect:1028:9)
-        at formatValue (node:internal/util/inspect:815:10)
-        at formatProperty (node:internal/util/inspect:1817:11)
-        at formatRaw (node:internal/util/inspect:1028:9)
-        at formatValue (node:internal/util/inspect:815:10)
-        at inspect (node:internal/util/inspect:345:10)
-        at Format.transform (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/logform/pretty-print.js:27:19) {
-      errors: {
-        name: ValidatorError: Path `name` is required.
-            at validate (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/schematype.js:1277:13)
-            at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/schematype.js:1260:7
-            at Array.forEach (<anonymous>)
-            at SchemaString.SchemaType.doValidate (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/schematype.js:1210:14)
-            at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/document.js:2690:18
-            at processTicksAndRejections (node:internal/process/task_queues:78:11) {
-          properties: {
-            validator: [Function (anonymous)],
-            message: 'Path `name` is required.',
-            type: 'required',
-            path: 'name',
-            value: ''
-          },
-          kind: 'required',
-          path: 'name',
-          value: '',
-          reason: undefined,
-          [Symbol(mongoose:validatorError)]: true
-        }
-      },
-      _message: 'projects validation failed'
-    }
-  },
-  level: 'error',
-  timestamp: '2022-03-19 21:33:55'
-}
-{
-  message: {
-    createTaskDBError: Error: tasks validation failed: projectId: Path `projectId` is required.
-        at ValidationError.inspect (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/error/validation.js:48:26)
-        at formatValue (node:internal/util/inspect:780:19)
-        at formatProperty (node:internal/util/inspect:1817:11)
-        at formatRaw (node:internal/util/inspect:1028:9)
-        at formatValue (node:internal/util/inspect:815:10)
-        at formatProperty (node:internal/util/inspect:1817:11)
-        at formatRaw (node:internal/util/inspect:1028:9)
-        at formatValue (node:internal/util/inspect:815:10)
-        at inspect (node:internal/util/inspect:345:10)
-        at Format.transform (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/logform/pretty-print.js:27:19) {
-      errors: {
-        projectId: ValidatorError: Path `projectId` is required.
-            at validate (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/schematype.js:1277:13)
-            at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/schematype.js:1260:7
-            at Array.forEach (<anonymous>)
-            at ObjectId.SchemaType.doValidate (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/schematype.js:1210:14)
-            at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/document.js:2690:18
-            at processTicksAndRejections (node:internal/process/task_queues:78:11) {
-          properties: {
-            validator: [Function (anonymous)],
-            message: 'Path `projectId` is required.',
-            type: 'required',
-            path: 'projectId',
-            value: undefined
-          },
-          kind: 'required',
-          path: 'projectId',
-          value: undefined,
-          reason: undefined,
-          [Symbol(mongoose:validatorError)]: true
-        }
-      },
-      _message: 'tasks validation failed'
-    }
-  },
-  level: 'error',
-  timestamp: '2022-03-19 21:34:10'
+  timestamp: '2022-03-25 10:28:25'
 }
 {
   message: { db: 'mongodb://localhost:27017/TTP' },
   level: 'info',
-  timestamp: '2022-03-19 21:36:05'
+  timestamp: '2022-03-25 10:31:05'
 }
 {
   message: { db: 'mongodb://localhost:27017/TTP' },
   level: 'info',
-  timestamp: '2022-03-20 20:20:13'
+  timestamp: '2022-03-25 10:54:26'
 }
 {
   message: { db: 'mongodb://localhost:27017/TTP' },
   level: 'info',
-  timestamp: '2022-03-20 22:04:52'
+  timestamp: '2022-03-25 10:54:35'
 }
 {
   message: { db: 'mongodb://localhost:27017/TTP' },
   level: 'info',
-  timestamp: '2022-03-20 22:11:27'
+  timestamp: '2022-03-25 11:26:45'
 }
 {
   message: { db: 'mongodb://localhost:27017/TTP' },
   level: 'info',
-  timestamp: '2022-03-20 22:11:47'
+  timestamp: '2022-03-25 11:27:57'
 }
 {
   message: { db: 'mongodb://localhost:27017/TTP' },
   level: 'info',
-  timestamp: '2022-03-20 22:13:22'
+  timestamp: '2022-03-25 14:19:31'
 }
 {
   message: { db: 'mongodb://localhost:27017/TTP' },
   level: 'info',
-  timestamp: '2022-03-20 22:14:33'
+  timestamp: '2022-03-25 14:19:48'
 }
 {
   message: { db: 'mongodb://localhost:27017/TTP' },
   level: 'info',
-  timestamp: '2022-03-20 22:15:16'
+  timestamp: '2022-03-25 14:20:04'
 }
 {
   message: { db: 'mongodb://localhost:27017/TTP' },
   level: 'info',
-  timestamp: '2022-03-20 22:18:44'
+  timestamp: '2022-03-25 14:20:17'
 }

@@ -57,7 +57,6 @@ const ProjectDB = class ProjectDB {
         new: true,
         lean: true,
       });
-      console.log("update after added task", project);
       return project;
     } catch (error) {
       logger.error({ updateProjectDBError: error });
@@ -83,14 +82,12 @@ const ProjectDB = class ProjectDB {
   }
   static async __filterProjects(filter: any) {
     try {
-      let projects = await Project.find({
-        projectManager: filter.prjectManager,
-        projectStatus: filter.projectStatus,
-      })
-        .where("clientId")
-        .in(filter.clientId);
-      if (projects) return projects;
-      else return null;
+      let filters: any = {};
+      if (filter.projectManager) filters.projectManager = filter.projectManager;
+      if (filter.projectStatus) filters.projectStatus = filter.projectStatus;
+      if (filter.clientId) filters.clientId = filter.clientId;
+      let projects = await Project.find(filters);
+      return projects;
     } catch (error) {
       logger.error({ filterProjectsError: error });
     }

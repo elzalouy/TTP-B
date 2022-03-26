@@ -92,8 +92,7 @@ const ProjectReq = class ProjectReq extends ProjectController {
     try {
       let filter = req.body;
       let projects = await super.filterProjects(filter);
-      if (projects.length > 0)
-        return res.status(200).send({ result: projects });
+      if (projects) return res.status(200).send({ result: projects });
       else
         return res
           .status(400)
@@ -107,7 +106,7 @@ const ProjectReq = class ProjectReq extends ProjectController {
     try {
       let search = req?.params?.searchStr;
       let result = await super.searchProjects(search);
-      if (result.length > 0) return res.status(200).send(result);
+      if (result) return res.status(200).send(result);
       else
         return res
           .status(400)

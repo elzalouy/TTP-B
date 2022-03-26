@@ -9,7 +9,12 @@ export interface TaskInfo extends Document {
   memberId: ObjectId;
   countNotClear?: number;
   countShared?: number;
-  status?: "inProgress" | "delivered on time" | "late" | "no clear" | "cancled";
+  status?:
+    | "inProgress"
+    | "delivered on time"
+    | "late"
+    | "not clear"
+    | "cancled";
   start?: Date | number;
   deadline?: Date | number;
   deliveryDate?: Date;
@@ -24,13 +29,18 @@ export interface TaskInfo extends Document {
 
 export interface TaskData {
   id?: string;
-  name: string;
-  projectId: string;
-  categoryId: string; //todo creat category list
-  subCategoryId: string;
+  name?: string;
+  projectId?: string;
+  categoryId?: string; //todo creat category list
+  subCategoryId?: string;
   countNotClear?: number;
   countShared?: number;
-  status?: "inProgress" | "delivered on time" | "late" | "no clear" | "cancled";
+  status?:
+    | "inProgress"
+    | "delivered on time"
+    | "late"
+    | "not clear"
+    | "cancled";
   start?: Date | number;
   deadline?: Date | number;
   deliveryDate?: Date;
@@ -38,10 +48,10 @@ export interface TaskData {
   turnoverTime?: number;
   attachedFiles?: string;
   attachedCard?: string;
-  memberId: string;
+  memberId?: string;
   listId?: string;
   cardId?: string;
   boardId?: string;
   file?: object;
-  description: string;
+  description?: string;
 }

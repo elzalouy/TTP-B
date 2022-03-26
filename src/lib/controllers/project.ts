@@ -77,7 +77,7 @@ const ProjectController = class ProjectController extends ProjectDB {
   static async __filterProjects(filter: any) {
     try {
       let projects = await super.filterProjectsDB(filter);
-      if (projects) return projects;
+      return projects;
     } catch (error) {
       logger.error({ flterProjectsError: error });
     }

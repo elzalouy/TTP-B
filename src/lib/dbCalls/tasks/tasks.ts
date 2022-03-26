@@ -17,10 +17,10 @@ const TaskDB = class TaskDB {
     return await TaskDB.__deleteTask(id);
   }
 
-  static async getTaskDB(data: object) {
-    return await TaskDB.__getTask(data);
+  static async getTasksDB(data: object) {
+    return await TaskDB.__getTasks(data);
   }
-  static async __getTask(data: object) {
+  static async __getTasks(data: object) {
     try {
       let tasks = await Tasks.find(data).lean();
       return tasks;

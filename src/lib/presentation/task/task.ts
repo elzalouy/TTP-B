@@ -46,6 +46,17 @@ const TaskReq = class TaskReq extends TaskController {
       return res.status(500).send(customeError("server_error", 500));
     }
   }
+  static async handleGetTasks(req: Request, res: Response) {
+    try {
+      let data: TaskData = req.query;
+      let tasks = await super.getTasks(data);
+      if (tasks) return res.status(200).send(tasks);
+      else res.status(400).send(customeError("get_tasks_error", 400));
+    } catch (error) {
+      logger.error({ handleGetTasksError: error });
+      return res.status(500).send(customeError("server_error", 500));
+    }
+  }
 };
 
 export default TaskReq;
