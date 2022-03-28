@@ -22,10 +22,67 @@ const TaskController = class TaskController extends TaskDB {
     return await TaskController.__filterTasksDB(data);
   }
 
-  static async __webhookUpdate(data: object) {
+  static async moveTaskOnTrello(
+    cardId: string,
+    listId: string,
+    status: string
+  ) {
+    return await TaskController.__moveTaskOnTrello(cardId, listId, status);
+  }
+
+  static async __moveTaskOnTrello(
+    cardId: string,
+    listId: string,
+    status: string
+  ) {
     try {
-      logger.info({ webhookUpdateData: data });
-      return;
+      await BoardController.moveTaskToDiffList(cardId, listId);
+      let task = await TaskDB.updateOneTaskDB(
+        {
+          cardId,
+        },
+        {
+          status,
+        }
+      );
+      return task;
+    } catch (error) {
+      logger.error({ moveTaskOnTrelloError: error });
+    }
+  }
+  static async __webhookUpdate(data: any) {
+    try {
+      // This action fro removing card
+      logger.info({ webhookUpdate: data });
+      let targetTask;
+      const targetList = [
+        "done",
+        "Shared",
+        "Review",
+        "Tasks Board",
+        "Unclear brief",
+        "cancel",
+      ];
+      if (targetList.includes(data.action.display.listAfter.text)) {
+        targetTask = await TaskDB.updateOneTaskDB(
+          {
+            cardId: data.action.display.entities.card.id,
+          },
+          {
+            status: data.action.display.listAfter.text,
+          }
+        );
+      } else {
+        targetTask = await TaskDB.updateOneTaskDB(
+          {
+            cardId: data.action.display.entities.card.id,
+          },
+          {
+            status: "In Progress",
+          }
+        );
+      }
+      return targetTask;
     } catch (error) {
       logger.error({ webhookUpdateError: error });
     }

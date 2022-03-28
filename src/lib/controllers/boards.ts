@@ -74,6 +74,26 @@ const BoardController = class BoardController {
     return await BoardController.__removeWebhook(id);
   }
 
+  static async moveTaskToDiffList(cardId: string, listId: string) {
+    return await BoardController.__moveTaskToDiffList(cardId, listId);
+  }
+
+  static async __moveTaskToDiffList(cardId: string, listId: string) {
+    try {
+      let moveTask = trelloApi(`cards/${cardId}&idList=${listId}`);
+      return await fetch(moveTask, {
+        method: "PUT",
+        headers: {
+          Accept: "application/json",
+        },
+      })
+        .then((res) => logger.info("move board done"))
+        .catch((err) => logger.info("error in moving board", err));
+    } catch (error) {
+      logger.error({ moveTaskToDiffListError: error });
+    }
+  }
+
   static async __deleteBoard(id: string) {
     try {
       let removeBoard = trelloApi(`boards/${id}&`);

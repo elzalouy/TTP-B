@@ -17,6 +17,22 @@ const TaskDB = class TaskDB {
     return await TaskDB.__deleteTask(id);
   }
 
+  static async updateOneTaskDB(data: object, value: object) {
+    return await TaskDB.__updateOneTaskDB(data, value);
+  }
+
+  static async __updateOneTaskDB(data: object, value: object) {
+    try {
+      let task = await Tasks.updateOne(
+        { ...data },
+        { value },
+        { new: true, lean: true }
+      );
+      return task;
+    } catch (error) {
+      logger.error({ updateMultiTaskDBError: error });
+    }
+  }
   static async getTasksDB(data: object) {
     return await TaskDB.__getTasks(data);
   }
