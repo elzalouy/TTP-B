@@ -18,6 +18,9 @@ const TaskController = class TaskController extends TaskDB {
   static async webhookUpdate(data: object) {
     return await TaskController.__webhookUpdate(data);
   }
+  static async filterTasks(data: any) {
+    return await TaskController.__filterTasksDB(data);
+  }
 
   static async __webhookUpdate(data: object) {
     try {

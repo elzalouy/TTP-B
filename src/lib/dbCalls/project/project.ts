@@ -50,8 +50,8 @@ const ProjectDB = class ProjectDB {
 
   static async __updateProject(data: ProjectData) {
     try {
-      let id = data.id;
-      delete data.id;
+      let id = data._id;
+      delete data._id;
       let query: any = data;
       let project = await Project.findByIdAndUpdate({ _id: id }, query, {
         new: true,

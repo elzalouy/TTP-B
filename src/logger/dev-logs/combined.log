@@ -553,3 +553,337 @@
   level: 'info',
   timestamp: '2022-03-25 14:20:17'
 }
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-03-26 16:26:28'
+}
+{
+  message: {
+    getProjectDBError: MissingSchemaError: Schema hasn't been registered for model "teams".
+    Use mongoose.model(name, schema)
+        at NativeConnection.Connection.model (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/connection.js:1133:11)
+        at addModelNamesToMap (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/helpers/populate/getModelsMapForPopulate.js:470:28)
+        at getModelsMapForPopulate (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/helpers/populate/getModelsMapForPopulate.js:174:7)
+        at populate (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/model.js:4437:21)
+        at _populate (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/model.js:4408:5)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/model.js:4385:5
+        at promiseOrCallback (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/helpers/promiseOrCallback.js:10:12)
+        at Mongoose._promiseOrCallback (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/index.js:1151:10)
+        at Function.Model.populate (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/model.js:4383:23)
+        at cb (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/query.js:2129:26)
+  },
+  level: 'error',
+  timestamp: '2022-03-26 16:31:02'
+}
+{
+  message: {
+    getProjectDBError: MissingSchemaError: Schema hasn't been registered for model "teams".
+    Use mongoose.model(name, schema)
+        at NativeConnection.Connection.model (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/connection.js:1133:11)
+        at addModelNamesToMap (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/helpers/populate/getModelsMapForPopulate.js:470:28)
+        at getModelsMapForPopulate (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/helpers/populate/getModelsMapForPopulate.js:174:7)
+        at populate (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/model.js:4437:21)
+        at _populate (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/model.js:4408:5)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/model.js:4385:5
+        at promiseOrCallback (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/helpers/promiseOrCallback.js:10:12)
+        at Mongoose._promiseOrCallback (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/index.js:1151:10)
+        at Function.Model.populate (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/model.js:4383:23)
+        at cb (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/query.js:2129:26)
+  },
+  level: 'error',
+  timestamp: '2022-03-26 16:31:27'
+}
+{
+  message: {
+    getProjectDBError: MissingSchemaError: Schema hasn't been registered for model "teams".
+    Use mongoose.model(name, schema)
+        at NativeConnection.Connection.model (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/connection.js:1133:11)
+        at addModelNamesToMap (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/helpers/populate/getModelsMapForPopulate.js:470:28)
+        at getModelsMapForPopulate (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/helpers/populate/getModelsMapForPopulate.js:174:7)
+        at populate (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/model.js:4437:21)
+        at _populate (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/model.js:4408:5)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/model.js:4385:5
+        at promiseOrCallback (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/helpers/promiseOrCallback.js:10:12)
+        at Mongoose._promiseOrCallback (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/index.js:1151:10)
+        at Function.Model.populate (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/model.js:4383:23)
+        at cb (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/query.js:2129:26)
+  },
+  level: 'error',
+  timestamp: '2022-03-26 16:31:40'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-03-26 16:32:16'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-03-26 16:43:19'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-03-26 17:06:36'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-03-26 18:02:46'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-03-26 22:35:18'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-03-26 22:35:33'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-03-26 22:37:34'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-03-26 23:33:43'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-03-27 00:08:29'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-03-27 16:47:08'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-03-28 06:03:58'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-03-28 06:31:25'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-03-28 06:35:06'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-03-28 10:30:39'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-03-28 10:30:58'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-03-28 10:34:44'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-03-28 11:12:50'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-03-28 11:13:15'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-03-28 11:15:23'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-03-28 11:16:54'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-03-28 11:17:17'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-03-28 11:20:54'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-03-28 11:21:54'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-03-28 11:22:07'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-03-28 11:22:28'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-03-28 11:23:24'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-03-28 11:30:19'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-03-28 11:32:23'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-03-28 11:36:15'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-03-28 11:36:30'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-03-28 11:37:08'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-03-28 11:37:23'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-03-28 12:29:00'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-03-28 12:29:33'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-03-28 12:29:47'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-03-28 12:30:29'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-03-28 12:32:02'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-03-28 12:32:24'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-03-28 12:33:18'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-03-28 12:34:22'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-03-28 12:34:47'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-03-28 12:35:30'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-03-28 19:00:34'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-03-28 20:12:46'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-03-28 20:13:19'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-03-28 20:14:41'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-03-28 20:15:06'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-03-28 20:16:04'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-03-28 20:16:35'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-03-28 20:49:49'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-03-28 20:50:33'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-03-28 21:09:29'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-03-28 21:09:45'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-03-28 21:09:59'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-03-28 21:10:37'
+}

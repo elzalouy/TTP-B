@@ -278,3 +278,57 @@
   level: 'error',
   timestamp: '2022-03-22 19:35:34'
 }
+{
+  message: {
+    getProjectDBError: MissingSchemaError: Schema hasn't been registered for model "teams".
+    Use mongoose.model(name, schema)
+        at NativeConnection.Connection.model (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/connection.js:1133:11)
+        at addModelNamesToMap (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/helpers/populate/getModelsMapForPopulate.js:470:28)
+        at getModelsMapForPopulate (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/helpers/populate/getModelsMapForPopulate.js:174:7)
+        at populate (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/model.js:4437:21)
+        at _populate (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/model.js:4408:5)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/model.js:4385:5
+        at promiseOrCallback (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/helpers/promiseOrCallback.js:10:12)
+        at Mongoose._promiseOrCallback (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/index.js:1151:10)
+        at Function.Model.populate (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/model.js:4383:23)
+        at cb (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/query.js:2129:26)
+  },
+  level: 'error',
+  timestamp: '2022-03-26 16:31:02'
+}
+{
+  message: {
+    getProjectDBError: MissingSchemaError: Schema hasn't been registered for model "teams".
+    Use mongoose.model(name, schema)
+        at NativeConnection.Connection.model (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/connection.js:1133:11)
+        at addModelNamesToMap (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/helpers/populate/getModelsMapForPopulate.js:470:28)
+        at getModelsMapForPopulate (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/helpers/populate/getModelsMapForPopulate.js:174:7)
+        at populate (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/model.js:4437:21)
+        at _populate (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/model.js:4408:5)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/model.js:4385:5
+        at promiseOrCallback (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/helpers/promiseOrCallback.js:10:12)
+        at Mongoose._promiseOrCallback (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/index.js:1151:10)
+        at Function.Model.populate (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/model.js:4383:23)
+        at cb (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/query.js:2129:26)
+  },
+  level: 'error',
+  timestamp: '2022-03-26 16:31:27'
+}
+{
+  message: {
+    getProjectDBError: MissingSchemaError: Schema hasn't been registered for model "teams".
+    Use mongoose.model(name, schema)
+        at NativeConnection.Connection.model (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/connection.js:1133:11)
+        at addModelNamesToMap (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/helpers/populate/getModelsMapForPopulate.js:470:28)
+        at getModelsMapForPopulate (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/helpers/populate/getModelsMapForPopulate.js:174:7)
+        at populate (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/model.js:4437:21)
+        at _populate (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/model.js:4408:5)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/model.js:4385:5
+        at promiseOrCallback (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/helpers/promiseOrCallback.js:10:12)
+        at Mongoose._promiseOrCallback (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/index.js:1151:10)
+        at Function.Model.populate (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/model.js:4383:23)
+        at cb (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/query.js:2129:26)
+  },
+  level: 'error',
+  timestamp: '2022-03-26 16:31:40'
+}

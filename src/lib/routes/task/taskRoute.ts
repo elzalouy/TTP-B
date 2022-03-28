@@ -6,12 +6,14 @@ import multer from "multer";
 let upload = multer();
 
 const router = Router();
-const { CREATE_TASK, UPDATE_TASK, WEBHOOK_UPDATES, GET_TASKS } = apiRoute;
+const { CREATE_TASK, UPDATE_TASK, WEBHOOK_UPDATES, GET_TASKS, FILTER_TASKS } =
+  apiRoute;
 const {
   handleCreateCard,
   handleUpdateCard,
   handleWebhookUpdateCard,
   handleGetTasks,
+  handleFilterTasks,
 } = TaskReq;
 
 router.post(`${CREATE_TASK}`, upload.single("file"), handleCreateCard);
@@ -19,4 +21,5 @@ router.post(`${UPDATE_TASK}`, upload.single("file"), handleUpdateCard);
 router.post(`${WEBHOOK_UPDATES}`, handleWebhookUpdateCard);
 router.get(`${WEBHOOK_UPDATES}`, handleWebhookUpdateCard);
 router.get(`${GET_TASKS}`, handleGetTasks);
+router.post(`${FILTER_TASKS}`, handleFilterTasks);
 export default router;
