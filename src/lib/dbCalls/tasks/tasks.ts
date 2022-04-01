@@ -36,6 +36,7 @@ const TaskDB = class TaskDB {
   static async getTasksDB(data: object) {
     return await TaskDB.__getTasks(data);
   }
+
   static async __getTasks(data: object) {
     try {
       let tasks = await Tasks.find(data).lean();
@@ -73,7 +74,7 @@ const TaskDB = class TaskDB {
       let projectId = task.projectId.toString();
       let tasks = await (await Tasks.find({ projectId: projectId })).length;
       await ProjectDB.updateProjectDB({
-        id: projectId,
+        _id: projectId,
         numberOfTasks: tasks,
       });
       return task;
@@ -81,6 +82,25 @@ const TaskDB = class TaskDB {
       logger.error({ createTaskDBError: error });
     }
   }
+  static async __filterTasksDB(data: {
+    projectId: string;
+    memberId: string;
+    status: string;
+    clientId: string;
+    projectManager: string;
+  }) {
+    try {
+      let filter: any = {};
+      if (data.projectId) filter.projectId = data.projectId;
+      if (data.memberId) filter.memberId = data.memberId;
+      if (data.status) filter.status = data.status;
+      console.log(data);
+      let tasks = await Tasks.find(filter);
+      console.log(tasks);
+      return tasks;
+    } catch (error) {
+      logger.error({ filterTasksError: error });
+    }
+  }
 };
-
 export default TaskDB;

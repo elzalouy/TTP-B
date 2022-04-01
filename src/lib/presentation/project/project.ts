@@ -27,7 +27,7 @@ const ProjectReq = class ProjectReq extends ProjectController {
   static async handleUpdateProject(req: Request, res: Response) {
     try {
       let projectData: ProjectData = req.body;
-      if (!projectData.id) {
+      if (!projectData._id) {
         return res.status(400).send(customeError("project_missing_data", 400));
       }
       let project = await super.updateProject(projectData);
@@ -44,7 +44,7 @@ const ProjectReq = class ProjectReq extends ProjectController {
 
   static async handleGetProject(req: Request, res: Response) {
     try {
-      let projectData: ProjectData = req.body.query;
+      let projectData: ProjectData = req.query;
       let project = await super.getProject(projectData);
       if (project) {
         return res.status(200).send(project);

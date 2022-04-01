@@ -19,7 +19,7 @@ export interface ProjectInfo extends Document {
   description: String;
 }
 export interface ProjectData {
-  id?: string;
+  _id?: string;
   name?: string;
   projectManager?: string;
   membersId?: string[];

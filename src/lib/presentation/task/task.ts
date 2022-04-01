@@ -57,6 +57,17 @@ const TaskReq = class TaskReq extends TaskController {
       return res.status(500).send(customeError("server_error", 500));
     }
   }
+  static async handleFilterTasks(req: Request, res: Response) {
+    try {
+      let data: any = req.body;
+      let tasks = await super.filterTasks(data);
+      if (tasks) return res.status(200).send(tasks);
+      else res.status(400).send(customeError("get_tasks_error", 400));
+    } catch (error) {
+      logger.error({ handleGetTasksError: error });
+      return res.status(500).send(customeError("server_error", 500));
+    }
+  }
 
   static async handleMoveCard(req: Request, res: Response) {
     try {
@@ -70,7 +81,6 @@ const TaskReq = class TaskReq extends TaskController {
       }
     } catch (error) {
       logger.error({ handleMoveCardError: error });
-      return res.status(500).send(customeError("server_error", 500));
     }
   }
 };
