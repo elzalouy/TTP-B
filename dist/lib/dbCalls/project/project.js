@@ -66,7 +66,7 @@ const ProjectDB = class ProjectDB {
             try {
                 let project = yield Project_1.default.find(data)
                     .populate({ path: "projectManager", select: "_id name" })
-                    .populate({ path: "teamsId", select: "_id name" })
+                    .populate({ path: "membersId", select: "_id name" })
                     .lean();
                 return project;
             }
@@ -78,9 +78,10 @@ const ProjectDB = class ProjectDB {
     static __updateProject(data) {
         return __awaiter(this, void 0, void 0, function* () {
             try {
-                let id = data.id;
-                delete data.id;
-                let project = yield Project_1.default.findByIdAndUpdate({ _id: id }, { data }, {
+                let id = data._id;
+                delete data._id;
+                let query = data;
+                let project = yield Project_1.default.findByIdAndUpdate({ _id: id }, query, {
                     new: true,
                     lean: true,
                 });
@@ -117,16 +118,15 @@ const ProjectDB = class ProjectDB {
     static __filterProjects(filter) {
         return __awaiter(this, void 0, void 0, function* () {
             try {
-                let projects = yield Project_1.default.find({
-                    projectManager: filter.prjectManager,
-                    projectStatus: filter.projectStatus,
-                })
-                    .where("clientId")
-                    .in(filter.clientId);
-                if (projects)
-                    return projects;
-                else
-                    return null;
+                let filters = {};
+                if (filter.projectManager)
+                    filters.projectManager = filter.projectManager;
+                if (filter.projectStatus)
+                    filters.projectStatus = filter.projectStatus;
+                if (filter.clientId)
+                    filters.clientId = filter.clientId;
+                let projects = yield Project_1.default.find(filters);
+                return projects;
             }
             catch (error) {
                 logger_1.default.error({ filterProjectsError: error });

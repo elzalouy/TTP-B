@@ -127,8 +127,7 @@ const ProjectController = class ProjectController extends project_1.default {
         return __awaiter(this, void 0, void 0, function* () {
             try {
                 let projects = yield _super.filterProjectsDB.call(this, filter);
-                if (projects)
-                    return projects;
+                return projects;
             }
             catch (error) {
                 logger_1.default.error({ flterProjectsError: error });

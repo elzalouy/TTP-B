@@ -102,7 +102,7 @@ const UserReq = class UserReq extends user_1.default {
         });
         return __awaiter(this, void 0, void 0, function* () {
             try {
-                let userId = req.body.id;
+                let userId = req.body;
                 if (userId) {
                     let user = yield _super.deleteUserInfo.call(this, userId);
                     if (user) {

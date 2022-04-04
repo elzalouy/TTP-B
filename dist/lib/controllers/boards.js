@@ -88,6 +88,29 @@ const BoardController = class BoardController {
             return yield BoardController.__removeWebhook(id);
         });
     }
+    static moveTaskToDiffList(cardId, listId) {
+        return __awaiter(this, void 0, void 0, function* () {
+            return yield BoardController.__moveTaskToDiffList(cardId, listId);
+        });
+    }
+    static __moveTaskToDiffList(cardId, listId) {
+        return __awaiter(this, void 0, void 0, function* () {
+            try {
+                let moveTask = (0, trelloApi_1.trelloApi)(`cards/${cardId}&idList=${listId}`);
+                return yield (0, node_fetch_1.default)(moveTask, {
+                    method: "PUT",
+                    headers: {
+                        Accept: "application/json",
+                    },
+                })
+                    .then((res) => logger_1.default.info("move board done"))
+                    .catch((err) => logger_1.default.info("error in moving board", err));
+            }
+            catch (error) {
+                logger_1.default.error({ moveTaskToDiffListError: error });
+            }
+        });
+    }
     static __deleteBoard(id) {
         return __awaiter(this, void 0, void 0, function* () {
             try {

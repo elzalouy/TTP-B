@@ -63,7 +63,7 @@ const DepartmentController = class DepartmentController extends department_1.def
                     let hookRemove = listTrelloIds.map((id) => __awaiter(this, void 0, void 0, function* () {
                         return yield boards_1.default.removeWebhook(id);
                     }));
-                    logger_1.default.info('third step');
+                    logger_1.default.info("third step");
                     Promise.all(hookRemove).then((res) => logger_1.default.info({ removeWebhookSucced: "done" }));
                 }
                 yield boards_1.default.deleteBoard(boardId);
@@ -85,11 +85,11 @@ const DepartmentController = class DepartmentController extends department_1.def
                 let depUpdate;
                 // update board color and name
                 if (data.name && data.color) {
-                    logger_1.default.info('first step');
+                    logger_1.default.info("first step");
                     let boardData = {
                         name: data.name,
                         color: data.color,
-                        _id: data._id
+                        _id: data._id,
                     };
                     yield boards_1.default.updateBoard(data.boardId, boardData);
                     depUpdate = yield _super.updatedbDepartment.call(this, boardData);
@@ -97,18 +97,18 @@ const DepartmentController = class DepartmentController extends department_1.def
                 // if not undefine then there is an action needed
                 // make mainBoard or not
                 if (data.mainBoard !== undefined && data.teams) {
-                    logger_1.default.info('second step');
+                    logger_1.default.info("second step");
                     // if false => remove the webhook
                     if (!data.mainBoard) {
                         let hookRemove = data.teams.map((id) => __awaiter(this, void 0, void 0, function* () {
                             return yield boards_1.default.removeWebhook(id);
                         }));
-                        logger_1.default.info('third step');
+                        logger_1.default.info("third step");
                         Promise.all(hookRemove).then((res) => logger_1.default.info({ removeWebhookSucced: "done" }));
                     }
                     // if true => create the webhook
                     if (data.mainBoard) {
-                        logger_1.default.info('fourth step');
+                        logger_1.default.info("fourth step");
                         let hookAdd = data.teams.map((id) => __awaiter(this, void 0, void 0, function* () {
                             return yield boards_1.default.createWebHook(id);
                         }));
@@ -137,7 +137,7 @@ const DepartmentController = class DepartmentController extends department_1.def
                 // If add team
                 if (data.addTeam) {
                     let teamListIds = yield DepartmentController.__createTeamWebhookAndList(data.addTeam, data.boardId, data.mainBoard);
-                    logger_1.default.info({ title: 'testing', teamListIds });
+                    logger_1.default.info({ title: "testing", teamListIds });
                     // add team
                     depUpdate = _super.updateNestedRecordDepDB.call(this, data._id, {
                         $push: {
@@ -265,7 +265,7 @@ const DepartmentController = class DepartmentController extends department_1.def
                             idInDB: team._id,
                         });
                     }));
-                    yield Promise.all(teamsList).then(res => logger_1.default.info({ removeWebhookSucced: "done" }));
+                    yield Promise.all(teamsList).then((res) => logger_1.default.info({ removeWebhookSucced: "done" }));
                 }
                 logger_1.default.info({ teamListIds });
                 return teamListIds;

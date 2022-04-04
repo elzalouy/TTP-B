@@ -45,10 +45,12 @@ const TechMemberReq = class TechMemberReq extends techMember_1.default {
             try {
                 let member = yield _super.updateTechMember.call(this, req.body);
                 if (member) {
-                    return res.status(200).send((0, successMsg_1.successMsg)('tec_member_updated', 200));
+                    return res.status(200).send((0, successMsg_1.successMsg)("tec_member_updated", 200));
                 }
                 else {
-                    return res.status(400).send((0, errorUtils_1.customeError)("tec_member_update_error", 400));
+                    return res
+                        .status(400)
+                        .send((0, errorUtils_1.customeError)("tec_member_update_error", 400));
                 }
             }
             catch (error) {

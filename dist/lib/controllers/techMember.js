@@ -90,14 +90,12 @@ const TechMemberController = class TechMemberController extends techMember_1.def
         return __awaiter(this, void 0, void 0, function* () {
             try {
                 const { boardId, name, trelloMemberId } = data;
-                ;
                 let checkExsit = yield TechMemberController.__checkBoardListName(boardId, name);
                 if (checkExsit) {
                     return (0, errorUtils_1.customeError)("list_already_exsit", 400);
                 }
-                // add this member to board
-                boards_1.default.addMemberToBoard(boardId, trelloMemberId, "normal");
-                // Create a list for this member in board
+                // // add this member to board
+                // BoardController.addMemberToBoard(boardId, trelloMemberId, "normal");
                 let list = yield boards_1.default.addListToBoard(boardId, name);
                 let techMember = yield _super.createTechMember.call(this, Object.assign(Object.assign({}, data), { listId: list.id }));
                 return { techMember, status: 200 };

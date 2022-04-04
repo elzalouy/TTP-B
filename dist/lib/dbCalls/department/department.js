@@ -77,7 +77,6 @@ const DepartmentBD = class DepartmentBD {
     static __updateDepartment(data) {
         return __awaiter(this, void 0, void 0, function* () {
             try {
-                logger_1.default.info({ updatedbDepartmentError: data });
                 let id = data._id;
                 delete data._id;
                 let department = yield Department_1.default.findByIdAndUpdate({ _id: id }, Object.assign({}, data), { new: true, lean: true });

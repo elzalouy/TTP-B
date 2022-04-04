@@ -11,10 +11,10 @@ const ProjectSchema = new mongoose_1.Schema({
         ref: "users",
         required: true,
     },
-    teamsId: [
+    membersId: [
         {
             type: mongoose_1.Schema.Types.ObjectId,
-            ref: "teams",
+            ref: "techMembers",
         },
     ],
     numberOfTasks: {
@@ -42,9 +42,9 @@ const ProjectSchema = new mongoose_1.Schema({
         default: "inProgress",
         enum: [
             "inProgress",
-            "deliver on time",
             "late",
-            "deliver defore deadline",
+            "delivered on time",
+            "delivered defore deadline",
             "delivered after deadline",
         ],
     },

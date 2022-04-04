@@ -14,6 +14,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 Object.defineProperty(exports, "__esModule", { value: true });
 const logger_1 = __importDefault(require("../../../logger"));
 const task_1 = __importDefault(require("../../models/task"));
+const project_1 = __importDefault(require("../project/project"));
 const TaskDB = class TaskDB {
     static createTaskDB(data) {
         return __awaiter(this, void 0, void 0, function* () {
@@ -30,12 +31,28 @@ const TaskDB = class TaskDB {
             return yield TaskDB.__deleteTask(id);
         });
     }
-    static getTaskDB(data) {
+    static updateOneTaskDB(data, value) {
         return __awaiter(this, void 0, void 0, function* () {
-            return yield TaskDB.__getTask(data);
+            return yield TaskDB.__updateOneTaskDB(data, value);
         });
     }
-    static __getTask(data) {
+    static __updateOneTaskDB(data, value) {
+        return __awaiter(this, void 0, void 0, function* () {
+            try {
+                let task = yield task_1.default.updateOne(Object.assign({}, data), { value }, { new: true, lean: true });
+                return task;
+            }
+            catch (error) {
+                logger_1.default.error({ updateMultiTaskDBError: error });
+            }
+        });
+    }
+    static getTasksDB(data) {
+        return __awaiter(this, void 0, void 0, function* () {
+            return yield TaskDB.__getTasks(data);
+        });
+    }
+    static __getTasks(data) {
         return __awaiter(this, void 0, void 0, function* () {
             try {
                 let tasks = yield task_1.default.find(data).lean();
@@ -74,11 +91,37 @@ const TaskDB = class TaskDB {
         return __awaiter(this, void 0, void 0, function* () {
             try {
                 let task = new task_1.default(data);
-                yield task.save();
+                task = yield task.save();
+                let projectId = task.projectId.toString();
+                let tasks = yield (yield task_1.default.find({ projectId: projectId })).length;
+                yield project_1.default.updateProjectDB({
+                    _id: projectId,
+                    numberOfTasks: tasks,
+                });
                 return task;
             }
             catch (error) {
                 logger_1.default.error({ createTaskDBError: error });
+            }
+        });
+    }
+    static __filterTasksDB(data) {
+        return __awaiter(this, void 0, void 0, function* () {
+            try {
+                let filter = {};
+                if (data.projectId)
+                    filter.projectId = data.projectId;
+                if (data.memberId)
+                    filter.memberId = data.memberId;
+                if (data.status)
+                    filter.status = data.status;
+                console.log(data);
+                let tasks = yield task_1.default.find(filter);
+                console.log(tasks);
+                return tasks;
+            }
+            catch (error) {
+                logger_1.default.error({ filterTasksError: error });
             }
         });
     }
