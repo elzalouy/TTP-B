@@ -10,10 +10,10 @@ const TechMemberSchema = new mongoose_1.Schema({
         type: mongoose_1.Schema.Types.ObjectId,
         ref: "departments",
         required: true,
-    }
+    },
 }, {
     timestamps: true,
-    strict: false
+    strict: false,
 });
 const TechMember = (0, mongoose_1.model)("techMembers", TechMemberSchema);
 exports.default = TechMember;

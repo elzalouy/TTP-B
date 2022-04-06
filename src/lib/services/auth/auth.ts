@@ -12,7 +12,7 @@ export const hashBassword: (password: string) => Promise<string> = async (
 ) => {
   const saltRound: number = 10;
   const salt = await bcrypt.genSalt(saltRound);
-  const hash:string = await bcrypt.hash(password, salt);
+  const hash: string = await bcrypt.hash(password, salt);
   return hash;
 };
 
@@ -24,7 +24,7 @@ export const comparePassword: (
   return validPassword;
 };
 
-export const createJwtToken:(id:string) => string = (id: string) => {
+export const createJwtToken: (id: string) => string = (id: string) => {
   let jwtGenerate = jwt.sign(
     {
       user: { id },
@@ -40,14 +40,18 @@ export const createJwtToken:(id:string) => string = (id: string) => {
 };
 
 export const jwtVerify = async (token: string) => {
-    try {
-        token = token.split(" ")[1];
-        let jwtVerify:string | JwtPayload  = await jwt.verify(token, process.env.JWT_SECRETE, {
-          audience: process.env.JWT_AUDIENCE,
-          issuer: process.env.JWT_ISSUE,
-        });
-        return jwtVerify;
-    } catch (error) {
-        return error
-    }
+  try {
+    token = token.split(" ")[1];
+    let jwtVerify: string | JwtPayload = await jwt.verify(
+      token,
+      process.env.JWT_SECRETE,
+      {
+        audience: process.env.JWT_AUDIENCE,
+        issuer: process.env.JWT_ISSUE,
+      }
+    );
+    return jwtVerify;
+  } catch (error) {
+    return error;
+  }
 };

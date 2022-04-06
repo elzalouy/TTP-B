@@ -73,7 +73,12 @@ const DepartmentReq = class DepartmentReq extends department_1.default {
                 if (!_id || !listTrelloIds || mainBoard === undefined || !boardId) {
                     return res.status(400).send((0, errorUtils_1.customeError)("delete_dep_error", 400));
                 }
-                let department = yield _super.deleteDepartment.call(this, { _id, listTrelloIds, mainBoard, boardId });
+                let department = yield _super.deleteDepartment.call(this, {
+                    _id,
+                    listTrelloIds,
+                    mainBoard,
+                    boardId,
+                });
                 if (department) {
                     return res.status(200).send((0, successMsg_1.successMsg)("delete_dep_success", 200));
                 }

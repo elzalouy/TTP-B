@@ -13,12 +13,12 @@ const TaskSchema = new mongoose_1.Schema({
     },
     categoryId: {
         type: mongoose_1.Schema.Types.ObjectId,
-        ref: "categorys",
-        required: true,
+        ref: "categories",
+        default: null,
     },
-    teamId: {
+    memberId: {
         type: mongoose_1.Schema.Types.ObjectId,
-        ref: "teams",
+        ref: "techMembers",
         required: true,
     },
     cardId: {
@@ -41,7 +41,6 @@ const TaskSchema = new mongoose_1.Schema({
     },
     status: {
         type: String,
-        default: "inProgress",
         enum: [
             "inProgress",
             "shared",

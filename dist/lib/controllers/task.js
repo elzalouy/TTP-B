@@ -16,6 +16,11 @@ const logger_1 = __importDefault(require("../../logger"));
 const tasks_1 = __importDefault(require("../dbCalls/tasks/tasks"));
 const boards_1 = __importDefault(require("./boards"));
 const TaskController = class TaskController extends tasks_1.default {
+    static getTasks(data) {
+        return __awaiter(this, void 0, void 0, function* () {
+            return yield TaskController.__getTasks(data);
+        });
+    }
     static createTask(data, file) {
         return __awaiter(this, void 0, void 0, function* () {
             return yield TaskController.__CreateNewTask(data, file);
@@ -31,11 +36,61 @@ const TaskController = class TaskController extends tasks_1.default {
             return yield TaskController.__webhookUpdate(data);
         });
     }
+    static filterTasks(data) {
+        return __awaiter(this, void 0, void 0, function* () {
+            return yield TaskController.__filterTasksDB(data);
+        });
+    }
+    static moveTaskOnTrello(cardId, listId, status) {
+        return __awaiter(this, void 0, void 0, function* () {
+            return yield TaskController.__moveTaskOnTrello(cardId, listId, status);
+        });
+    }
+    static __moveTaskOnTrello(cardId, listId, status) {
+        return __awaiter(this, void 0, void 0, function* () {
+            try {
+                yield boards_1.default.moveTaskToDiffList(cardId, listId);
+                let task = yield tasks_1.default.updateOneTaskDB({
+                    cardId,
+                }, {
+                    status,
+                });
+                return task;
+            }
+            catch (error) {
+                logger_1.default.error({ moveTaskOnTrelloError: error });
+            }
+        });
+    }
     static __webhookUpdate(data) {
         return __awaiter(this, void 0, void 0, function* () {
             try {
-                logger_1.default.info({ webhookUpdateData: data });
-                return;
+                // This action fro removing card
+                logger_1.default.info({ webhookUpdate: data });
+                let targetTask;
+                const targetList = [
+                    "done",
+                    "Shared",
+                    "Review",
+                    "Tasks Board",
+                    "Unclear brief",
+                    "cancel",
+                ];
+                if (targetList.includes(data.action.display.listAfter.text)) {
+                    targetTask = yield tasks_1.default.updateOneTaskDB({
+                        cardId: data.action.display.entities.card.id,
+                    }, {
+                        status: data.action.display.listAfter.text,
+                    });
+                }
+                else {
+                    targetTask = yield tasks_1.default.updateOneTaskDB({
+                        cardId: data.action.display.entities.card.id,
+                    }, {
+                        status: "In Progress",
+                    });
+                }
+                return targetTask;
             }
             catch (error) {
                 logger_1.default.error({ webhookUpdateError: error });
@@ -82,6 +137,20 @@ const TaskController = class TaskController extends tasks_1.default {
             }
             catch (error) {
                 logger_1.default.error({ getTeamsError: error });
+            }
+        });
+    }
+    static __getTasks(data) {
+        const _super = Object.create(null, {
+            getTasksDB: { get: () => super.getTasksDB }
+        });
+        return __awaiter(this, void 0, void 0, function* () {
+            try {
+                let tasks = yield _super.getTasksDB.call(this, data);
+                return tasks;
+            }
+            catch (error) {
+                logger_1.default.error({ getTasksError: error });
             }
         });
     }

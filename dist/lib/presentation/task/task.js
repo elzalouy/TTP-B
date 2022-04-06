@@ -75,5 +75,64 @@ const TaskReq = class TaskReq extends task_1.default {
             }
         });
     }
+    static handleGetTasks(req, res) {
+        const _super = Object.create(null, {
+            getTasks: { get: () => super.getTasks }
+        });
+        return __awaiter(this, void 0, void 0, function* () {
+            try {
+                let data = req.query;
+                let tasks = yield _super.getTasks.call(this, data);
+                if (tasks)
+                    return res.status(200).send(tasks);
+                else
+                    res.status(400).send((0, errorUtils_1.customeError)("get_tasks_error", 400));
+            }
+            catch (error) {
+                logger_1.default.error({ handleGetTasksError: error });
+                return res.status(500).send((0, errorUtils_1.customeError)("server_error", 500));
+            }
+        });
+    }
+    static handleFilterTasks(req, res) {
+        const _super = Object.create(null, {
+            filterTasks: { get: () => super.filterTasks }
+        });
+        return __awaiter(this, void 0, void 0, function* () {
+            try {
+                let data = req.body;
+                let tasks = yield _super.filterTasks.call(this, data);
+                if (tasks)
+                    return res.status(200).send(tasks);
+                else
+                    res.status(400).send((0, errorUtils_1.customeError)("get_tasks_error", 400));
+            }
+            catch (error) {
+                logger_1.default.error({ handleGetTasksError: error });
+                return res.status(500).send((0, errorUtils_1.customeError)("server_error", 500));
+            }
+        });
+    }
+    static handleMoveCard(req, res) {
+        const _super = Object.create(null, {
+            moveTaskOnTrello: { get: () => super.moveTaskOnTrello }
+        });
+        return __awaiter(this, void 0, void 0, function* () {
+            try {
+                let { cardId, listId, status } = req.body;
+                // TaskData.file = req.file
+                let task = yield _super.moveTaskOnTrello.call(this, cardId, listId, status);
+                if (task) {
+                    return res.send(task);
+                }
+                else {
+                    return res.status(400).send((0, errorUtils_1.customeError)("update_task_error", 400));
+                }
+            }
+            catch (error) {
+                logger_1.default.error({ handleMoveCardError: error });
+            }
+        });
+    }
 };
 exports.default = TaskReq;

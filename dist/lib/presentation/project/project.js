@@ -48,7 +48,7 @@ const ProjectReq = class ProjectReq extends project_1.default {
         return __awaiter(this, void 0, void 0, function* () {
             try {
                 let projectData = req.body;
-                if (!projectData.id) {
+                if (!projectData._id) {
                     return res.status(400).send((0, errorUtils_1.customeError)("project_missing_data", 400));
                 }
                 let project = yield _super.updateProject.call(this, projectData);
@@ -71,7 +71,7 @@ const ProjectReq = class ProjectReq extends project_1.default {
         });
         return __awaiter(this, void 0, void 0, function* () {
             try {
-                let projectData = req.body.query;
+                let projectData = req.query;
                 let project = yield _super.getProject.call(this, projectData);
                 if (project) {
                     return res.status(200).send(project);
@@ -139,7 +139,7 @@ const ProjectReq = class ProjectReq extends project_1.default {
             try {
                 let filter = req.body;
                 let projects = yield _super.filterProjects.call(this, filter);
-                if (projects.length > 0)
+                if (projects)
                     return res.status(200).send({ result: projects });
                 else
                     return res
@@ -161,7 +161,7 @@ const ProjectReq = class ProjectReq extends project_1.default {
             try {
                 let search = (_a = req === null || req === void 0 ? void 0 : req.params) === null || _a === void 0 ? void 0 : _a.searchStr;
                 let result = yield _super.searchProjects.call(this, search);
-                if (result.length > 0)
+                if (result)
                     return res.status(200).send(result);
                 else
                     return res
