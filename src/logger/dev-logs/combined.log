@@ -663,3 +663,512 @@
   level: 'info',
   timestamp: '2022-04-07 11:38:40'
 }
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-04-07 23:08:31'
+}
+{
+  message: {
+    s3File: {
+      fieldname: 'image',
+      originalname: '983794168.jpg',
+      encoding: '7bit',
+      mimetype: 'image/jpeg'
+    }
+  },
+  level: 'info',
+  timestamp: '2022-04-07 23:14:35'
+}
+{
+  message: {
+    handleCreateClient: [Object: null prototype] { clientName: 'test 17' }
+  },
+  level: 'info',
+  timestamp: '2022-04-07 23:14:37'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-04-07 23:15:40'
+}
+{
+  message: {
+    s3File: {
+      fieldname: 'image',
+      originalname: '983794168.jpg',
+      encoding: '7bit',
+      mimetype: 'image/jpeg'
+    }
+  },
+  level: 'info',
+  timestamp: '2022-04-07 23:15:47'
+}
+{
+  message: {
+    handleCreateClient: [Object: null prototype] { clientName: 'test 18' },
+    file: [Object: null prototype] {
+      image: [
+        {
+          fieldname: 'image',
+          originalname: '983794168.jpg',
+          encoding: '7bit',
+          mimetype: 'image/jpeg',
+          size: 98468,
+          bucket: 'bucketttp',
+          key: '983794168-1649362547523.jpg',
+          acl: 'public-read',
+          contentType: 'application/octet-stream',
+          contentDisposition: null,
+          contentEncoding: null,
+          storageClass: 'STANDARD',
+          serverSideEncryption: null,
+          metadata: null,
+          location: 'https://bucketttp.s3.me-south-1.amazonaws.com/983794168-1649362547523.jpg',
+          etag: '"ebbdec1d2fccf423281273e325d69655"',
+          versionId: 'vpa_2igIi8nHsq2A6T4Uy7EhCvT0doqf'
+        }
+      ]
+    }
+  },
+  level: 'info',
+  timestamp: '2022-04-07 23:15:48'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-04-07 23:18:59'
+}
+{
+  message: {
+    s3File: {
+      fieldname: 'image',
+      originalname: '983794168.jpg',
+      encoding: '7bit',
+      mimetype: 'image/jpeg'
+    }
+  },
+  level: 'info',
+  timestamp: '2022-04-07 23:19:05'
+}
+{
+  message: {
+    s3File: {
+      fieldname: 'image',
+      originalname: '983794168.jpg',
+      encoding: '7bit',
+      mimetype: 'image/jpeg'
+    }
+  },
+  level: 'info',
+  timestamp: '2022-04-07 23:23:07'
+}
+{
+  message: {
+    s3File: {
+      fieldname: 'image',
+      originalname: 'field-6574455__340.webp',
+      encoding: '7bit',
+      mimetype: 'image/webp'
+    }
+  },
+  level: 'info',
+  timestamp: '2022-04-07 23:31:55'
+}
+{
+  message: {
+    s3File: {
+      fieldname: 'image',
+      originalname: 'istockphoto-1093110112-612x612.jpg',
+      encoding: '7bit',
+      mimetype: 'image/jpeg'
+    }
+  },
+  level: 'info',
+  timestamp: '2022-04-07 23:53:45'
+}
+{
+  message: {
+    updateClientDBError: CastError: Cast to ObjectId failed for value "{ _id: undefined }" (type Object) at path "_id" for model "clients"
+        at model.Query.exec (D:\projects\unicode\ttp\TTP-Back\node_modules\mongoose\lib\query.js:4650:21)
+        at model.Query.Query.then (D:\projects\unicode\ttp\TTP-Back\node_modules\mongoose\lib\query.js:4749:15)
+        at runMicrotasks (<anonymous>)
+        at processTicksAndRejections (internal/process/task_queues.js:95:5) {
+      messageFormat: undefined,
+      stringValue: '"{ _id: undefined }"',
+      kind: 'ObjectId',
+      value: { _id: undefined },
+      path: '_id',
+      reason: BSONTypeError: Argument passed in must be a string of 12 bytes or a string of 24 hex characters
+          at new BSONTypeError (D:\projects\unicode\ttp\TTP-Back\node_modules\bson\src\error.ts:16:5)
+          at new ObjectId (D:\projects\unicode\ttp\TTP-Back\node_modules\bson\src\objectid.ts:86:15)
+          at castObjectId (D:\projects\unicode\ttp\TTP-Back\node_modules\mongoose\lib\cast\objectid.js:24:12)
+          at ObjectId.cast (D:\projects\unicode\ttp\TTP-Back\node_modules\mongoose\lib\schema\objectid.js:247:12)
+          at ObjectId.SchemaType.applySetters (D:\projects\unicode\ttp\TTP-Back\node_modules\mongoose\lib\schematype.js:1179:12)
+          at ObjectId.SchemaType._castForQuery (D:\projects\unicode\ttp\TTP-Back\node_modules\mongoose\lib\schematype.js:1613:15)
+          at ObjectId.SchemaType.castForQuery (D:\projects\unicode\ttp\TTP-Back\node_modules\mongoose\lib\schematype.js:1603:15)
+          at ObjectId.SchemaType.castForQueryWrapper (D:\projects\unicode\ttp\TTP-Back\node_modules\mongoose\lib\schematype.js:1580:20)
+          at cast (D:\projects\unicode\ttp\TTP-Back\node_modules\mongoose\lib\cast.js:288:34)
+          at model.Query.Query.cast (D:\projects\unicode\ttp\TTP-Back\node_modules\mongoose\lib\query.js:5085:12),
+      valueType: 'Object'
+    }
+  },
+  level: 'error',
+  timestamp: '2022-04-07 23:53:46'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-04-07 23:53:50'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-04-07 23:55:12'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-04-07 23:56:36'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-04-07 23:57:20'
+}
+{
+  message: {
+    clientData: [Object: null prototype] {
+      clientName: 'client 3',
+      image: 'https://bucketttp.s3.me-south-1.amazonaws.com/983794168-1649362987893.jpg',
+      _id: '624f482cac1e43c450fb3c26'
+    }
+  },
+  level: 'info',
+  timestamp: '2022-04-07 23:58:30'
+}
+{
+  message: {
+    s3File: {
+      fieldname: 'image',
+      originalname: 'photo-1453728013993-6d66e9c9123a.jpg',
+      encoding: '7bit',
+      mimetype: 'image/jpeg'
+    }
+  },
+  level: 'info',
+  timestamp: '2022-04-07 23:59:32'
+}
+{
+  message: {
+    clientData: [Object: null prototype] {
+      clientName: 'client 1',
+      _id: '624f482cac1e43c450fb3c26',
+      image: 'https://bucketttp.s3.me-south-1.amazonaws.com/photo-1453728013993-6d66e9c9123a-1649365172788.jpg'
+    }
+  },
+  level: 'info',
+  timestamp: '2022-04-07 23:59:33'
+}
+{
+  message: {
+    clientData: [Object: null prototype] {
+      clientName: 'client 2',
+      image: 'https://bucketttp.s3.me-south-1.amazonaws.com/photo-1453728013993-6d66e9c9123a-1649365172788.jpg',
+      _id: '624f482cac1e43c450fb3c26'
+    }
+  },
+  level: 'info',
+  timestamp: '2022-04-08 00:03:01'
+}
+{
+  message: {
+    updateClientDBError: MongoServerError: Plan executor error during findAndModify :: caused by :: E11000 duplicate key error collection: TTP.clients index: clientName_1 dup key: { clientName: "client 2" }
+        at MessageStream.messageHandler (D:\projects\unicode\ttp\TTP-Back\node_modules\mongoose\node_modules\mongodb\src\cmap\connection.ts:753:20)
+        at MessageStream.emit (events.js:400:28)
+        at MessageStream.emit (domain.js:475:12)
+        at processIncomingData (D:\projects\unicode\ttp\TTP-Back\node_modules\mongoose\node_modules\mongodb\src\cmap\message_stream.ts:168:12)
+        at MessageStream._write (D:\projects\unicode\ttp\TTP-Back\node_modules\mongoose\node_modules\mongodb\src\cmap\message_stream.ts:65:5)
+        at writeOrBuffer (internal/streams/writable.js:358:12)
+        at MessageStream.Writable.write (internal/streams/writable.js:303:10)
+        at TLSSocket.ondata (internal/streams/readable.js:731:22)
+        at TLSSocket.emit (events.js:400:28)
+        at TLSSocket.emit (domain.js:475:12) {
+      ok: 0,
+      code: 11000,
+      codeName: 'DuplicateKey',
+      keyPattern: { clientName: 1 },
+      keyValue: { clientName: 'client 2' },
+      '$clusterTime': {
+        clusterTime: new Timestamp({ t: 1649365382, i: 10 }),
+        signature: {
+          hash: new Binary(Buffer.from("a9e00177328b447229728ff6f3a43798a2264419", "hex"), 0),
+          keyId: new Long("7057499658175643652")
+        }
+      },
+      operationTime: new Timestamp({ t: 1649365382, i: 10 })
+    }
+  },
+  level: 'error',
+  timestamp: '2022-04-08 00:03:01'
+}
+{
+  message: {
+    clientData: [Object: null prototype] {
+      clientName: 'client 3',
+      image: 'https://bucketttp.s3.me-south-1.amazonaws.com/photo-1453728013993-6d66e9c9123a-1649365172788.jpg',
+      _id: '624f482cac1e43c450fb3c26'
+    }
+  },
+  level: 'info',
+  timestamp: '2022-04-08 00:04:04'
+}
+{
+  message: {
+    clientData: [Object: null prototype] {
+      clientName: 'client 1',
+      image: 'https://bucketttp.s3.me-south-1.amazonaws.com/photo-1453728013993-6d66e9c9123a-1649365172788.jpg',
+      _id: '624f482cac1e43c450fb3c26'
+    }
+  },
+  level: 'info',
+  timestamp: '2022-04-08 00:09:14'
+}
+{
+  message: {
+    clientData: [Object: null prototype] {
+      clientName: 'client 3',
+      image: 'https://bucketttp.s3.me-south-1.amazonaws.com/photo-1453728013993-6d66e9c9123a-1649365172788.jpg',
+      _id: '624f482cac1e43c450fb3c26'
+    }
+  },
+  level: 'info',
+  timestamp: '2022-04-08 00:17:42'
+}
+{
+  message: {
+    clientData: [Object: null prototype] {
+      clientName: 'client 5',
+      image: 'https://bucketttp.s3.me-south-1.amazonaws.com/photo-1453728013993-6d66e9c9123a-1649365172788.jpg',
+      _id: '624f482cac1e43c450fb3c26'
+    }
+  },
+  level: 'info',
+  timestamp: '2022-04-08 00:21:45'
+}
+{
+  message: {
+    clientData: [Object: null prototype] {
+      clientName: 'client 1',
+      image: 'https://bucketttp.s3.me-south-1.amazonaws.com/photo-1453728013993-6d66e9c9123a-1649365172788.jpg',
+      _id: '624f482cac1e43c450fb3c26'
+    }
+  },
+  level: 'info',
+  timestamp: '2022-04-08 00:24:48'
+}
+{
+  message: {
+    s3File: {
+      fieldname: 'image',
+      originalname: '983794168.jpg',
+      encoding: '7bit',
+      mimetype: 'image/jpeg'
+    }
+  },
+  level: 'info',
+  timestamp: '2022-04-08 00:24:57'
+}
+{
+  message: {
+    clientData: [Object: null prototype] {
+      clientName: 'client 1',
+      _id: '624f482cac1e43c450fb3c26',
+      image: 'https://bucketttp.s3.me-south-1.amazonaws.com/983794168-1649366697876.jpg'
+    }
+  },
+  level: 'info',
+  timestamp: '2022-04-08 00:24:58'
+}
+{
+  message: {
+    s3File: {
+      fieldname: 'image',
+      originalname: 'pexels-photo-302743.jpeg',
+      encoding: '7bit',
+      mimetype: 'image/jpeg'
+    }
+  },
+  level: 'info',
+  timestamp: '2022-04-08 00:34:23'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-04-08 00:34:39'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-04-08 00:39:27'
+}
+{
+  message: { id: undefined },
+  level: 'info',
+  timestamp: '2022-04-08 00:39:41'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-04-08 00:40:20'
+}
+{
+  message: { id: undefined, body: {} },
+  level: 'info',
+  timestamp: '2022-04-08 00:40:30'
+}
+{
+  message: { id: undefined, body: {} },
+  level: 'info',
+  timestamp: '2022-04-08 00:41:31'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-04-08 00:47:37'
+}
+{
+  message: { id: '624f58dff0493de03a3419e2', body: {} },
+  level: 'info',
+  timestamp: '2022-04-08 00:48:15'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-04-08 00:48:19'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-04-08 00:48:30'
+}
+{
+  message: {
+    s3File: {
+      fieldname: 'image',
+      originalname: 'pexels-photo-302743.jpeg',
+      encoding: '7bit',
+      mimetype: 'image/jpeg'
+    }
+  },
+  level: 'info',
+  timestamp: '2022-04-08 00:48:38'
+}
+{
+  message: {
+    s3File: {
+      fieldname: 'image',
+      originalname: '983794168.jpg',
+      encoding: '7bit',
+      mimetype: 'image/jpeg'
+    }
+  },
+  level: 'info',
+  timestamp: '2022-04-08 00:50:28'
+}
+{
+  message: {
+    s3File: {
+      fieldname: 'image',
+      originalname: 'field-6574455__340.webp',
+      encoding: '7bit',
+      mimetype: 'image/webp'
+    }
+  },
+  level: 'info',
+  timestamp: '2022-04-08 00:52:01'
+}
+{
+  message: {
+    s3File: {
+      fieldname: 'image',
+      originalname: 'photo-1453728013993-6d66e9c9123a.jpg',
+      encoding: '7bit',
+      mimetype: 'image/jpeg'
+    }
+  },
+  level: 'info',
+  timestamp: '2022-04-08 00:55:05'
+}
+{
+  message: {
+    s3File: {
+      fieldname: 'image',
+      originalname: '983794168.jpg',
+      encoding: '7bit',
+      mimetype: 'image/jpeg'
+    }
+  },
+  level: 'info',
+  timestamp: '2022-04-08 00:56:18'
+}
+{
+  message: {
+    createclientDBError: MongoServerError: E11000 duplicate key error collection: TTP.clients index: clientName_1 dup key: { clientName: "client 5" }
+        at D:\projects\unicode\ttp\TTP-Back\node_modules\mongoose\node_modules\mongodb\src\operations\insert.ts:75:25
+        at D:\projects\unicode\ttp\TTP-Back\node_modules\mongoose\node_modules\mongodb\src\cmap\connection_pool.ts:482:13
+        at handleOperationResult (D:\projects\unicode\ttp\TTP-Back\node_modules\mongoose\node_modules\mongodb\src\sdam\server.ts:610:5)
+        at MessageStream.messageHandler (D:\projects\unicode\ttp\TTP-Back\node_modules\mongoose\node_modules\mongodb\src\cmap\connection.ts:765:5)
+        at MessageStream.emit (events.js:400:28)
+        at MessageStream.emit (domain.js:475:12)
+        at processIncomingData (D:\projects\unicode\ttp\TTP-Back\node_modules\mongoose\node_modules\mongodb\src\cmap\message_stream.ts:168:12)
+        at MessageStream._write (D:\projects\unicode\ttp\TTP-Back\node_modules\mongoose\node_modules\mongodb\src\cmap\message_stream.ts:65:5)
+        at writeOrBuffer (internal/streams/writable.js:358:12)
+        at MessageStream.Writable.write (internal/streams/writable.js:303:10) {
+      index: 0,
+      code: 11000,
+      keyPattern: { clientName: 1 },
+      keyValue: { clientName: 'client 5' }
+    }
+  },
+  level: 'error',
+  timestamp: '2022-04-08 00:56:20'
+}
+{
+  message: {
+    s3File: {
+      fieldname: 'image',
+      originalname: '983794168.jpg',
+      encoding: '7bit',
+      mimetype: 'image/jpeg'
+    }
+  },
+  level: 'info',
+  timestamp: '2022-04-08 00:57:47'
+}

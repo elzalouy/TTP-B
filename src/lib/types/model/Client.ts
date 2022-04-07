@@ -9,7 +9,7 @@ export interface Client extends Document {
 }
 
 export interface ClientData {
-  id?: string;
+  _id?: string;
   clientName: string;
   image?: string | any;
   doneProject?: ObjectId[];

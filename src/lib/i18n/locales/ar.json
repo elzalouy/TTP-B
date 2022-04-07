@@ -42,5 +42,8 @@
 	"create_category_error": "هناك خطا اثناء الادخال",
 	"get_tasks_error": "نعتذر على عدم المقدرة للبحث عن المهام خاصتكم",
 	"create_client_error": "create_client_error",
-	"get_client_error": "get_client_error"
+	"get_client_error": "get_client_error",
+	"update_client_error": "update_client_error",
+	"delete_client_error": "delete_client_error",
+	"delete_client_success": "delete_client_success"
 }

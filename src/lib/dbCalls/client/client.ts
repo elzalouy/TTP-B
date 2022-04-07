@@ -38,8 +38,8 @@ const ClientDB = class ClientDB {
 
   static async __updateClient(data: ClientData) {
     try {
-      let id = data.id;
-      delete data.id;
+      let id = data._id;
+      delete data._id;
       let client = await Clients.findByIdAndUpdate(
         { _id: id },
         { ...data },
