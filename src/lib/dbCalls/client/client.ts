@@ -29,23 +29,7 @@ const ClientDB = class ClientDB {
 
   static async __getAllClients() {
     try {
-      let client = await Clients.find()
-        .populate({
-          path: "projectsId",
-          select: "numberOfTasks",
-        })
-        .populate({
-          path: "projectsId",
-          select: "name -_id",
-          match: {
-            projectStatus:
-              "inProgress" ||
-              "deliver on time" ||
-              "deliver defore deadline" ||
-              "delivered after deadline",
-          },
-        })
-        .lean();
+      let client = await Clients.find().lean();
       return client;
     } catch (error) {
       logger.error({ getclientDBError: error });

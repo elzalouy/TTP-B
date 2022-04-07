@@ -1,0 +1,381 @@
+{
+  message: {
+    createclientDBError: MongoServerError: E11000 duplicate key error collection: TTP.clients index: clientName_1 dup key: { clientName: "Nawaf" }
+        at D:\projects\unicode\ttp\TTP-Back\node_modules\mongoose\node_modules\mongodb\src\operations\insert.ts:75:25
+        at D:\projects\unicode\ttp\TTP-Back\node_modules\mongoose\node_modules\mongodb\src\cmap\connection_pool.ts:482:13
+        at handleOperationResult (D:\projects\unicode\ttp\TTP-Back\node_modules\mongoose\node_modules\mongodb\src\sdam\server.ts:610:5)
+        at MessageStream.messageHandler (D:\projects\unicode\ttp\TTP-Back\node_modules\mongoose\node_modules\mongodb\src\cmap\connection.ts:765:5)
+        at MessageStream.emit (events.js:400:28)
+        at MessageStream.emit (domain.js:475:12)
+        at processIncomingData (D:\projects\unicode\ttp\TTP-Back\node_modules\mongoose\node_modules\mongodb\src\cmap\message_stream.ts:168:12)
+        at MessageStream._write (D:\projects\unicode\ttp\TTP-Back\node_modules\mongoose\node_modules\mongodb\src\cmap\message_stream.ts:65:5)
+        at writeOrBuffer (internal/streams/writable.js:358:12)
+        at MessageStream.Writable.write (internal/streams/writable.js:303:10) {
+      index: 0,
+      code: 11000,
+      keyPattern: { clientName: 1 },
+      keyValue: { clientName: 'Nawaf' }
+    }
+  },
+  level: 'error',
+  timestamp: '2022-04-06 22:39:53'
+}
+{
+  message: {
+    getclientDBError: MongooseError: Cannot populate path `projectsId` because it is not in your schema. Set the `strictPopulate` option to false to override.
+        at getModelsMapForPopulate (D:\projects\unicode\ttp\TTP-Back\node_modules\mongoose\lib\helpers\populate\getModelsMapForPopulate.js:47:12)
+        at populate (D:\projects\unicode\ttp\TTP-Back\node_modules\mongoose\lib\model.js:4485:21)
+        at _populate (D:\projects\unicode\ttp\TTP-Back\node_modules\mongoose\lib\model.js:4445:5)
+        at D:\projects\unicode\ttp\TTP-Back\node_modules\mongoose\lib\model.js:4423:5
+        at promiseOrCallback (D:\projects\unicode\ttp\TTP-Back\node_modules\mongoose\lib\helpers\promiseOrCallback.js:10:12)
+        at Mongoose._promiseOrCallback (D:\projects\unicode\ttp\TTP-Back\node_modules\mongoose\lib\index.js:1140:10)
+        at Function.Model.populate (D:\projects\unicode\ttp\TTP-Back\node_modules\mongoose\lib\model.js:4421:23)
+        at cb (D:\projects\unicode\ttp\TTP-Back\node_modules\mongoose\lib\query.js:2216:26)
+        at D:\projects\unicode\ttp\TTP-Back\node_modules\mongoose\node_modules\mongodb\src\utils.ts:624:5
+        at D:\projects\unicode\ttp\TTP-Back\node_modules\mongoose\node_modules\mongodb\src\cursor\abstract_cursor.ts:417:35
+  },
+  level: 'error',
+  timestamp: '2022-04-06 22:44:30'
+}
+{
+  message: {
+    getclientDBError: MongooseError: Cannot populate path `projectsId` because it is not in your schema. Set the `strictPopulate` option to false to override.
+        at getModelsMapForPopulate (D:\projects\unicode\ttp\TTP-Back\node_modules\mongoose\lib\helpers\populate\getModelsMapForPopulate.js:47:12)
+        at populate (D:\projects\unicode\ttp\TTP-Back\node_modules\mongoose\lib\model.js:4485:21)
+        at _populate (D:\projects\unicode\ttp\TTP-Back\node_modules\mongoose\lib\model.js:4445:5)
+        at D:\projects\unicode\ttp\TTP-Back\node_modules\mongoose\lib\model.js:4423:5
+        at promiseOrCallback (D:\projects\unicode\ttp\TTP-Back\node_modules\mongoose\lib\helpers\promiseOrCallback.js:10:12)
+        at Mongoose._promiseOrCallback (D:\projects\unicode\ttp\TTP-Back\node_modules\mongoose\lib\index.js:1140:10)
+        at Function.Model.populate (D:\projects\unicode\ttp\TTP-Back\node_modules\mongoose\lib\model.js:4421:23)
+        at cb (D:\projects\unicode\ttp\TTP-Back\node_modules\mongoose\lib\query.js:2216:26)
+        at D:\projects\unicode\ttp\TTP-Back\node_modules\mongoose\node_modules\mongodb\src\utils.ts:624:5
+        at D:\projects\unicode\ttp\TTP-Back\node_modules\mongoose\node_modules\mongodb\src\cursor\abstract_cursor.ts:417:35
+  },
+  level: 'error',
+  timestamp: '2022-04-06 22:45:50'
+}
+{
+  message: {
+    createclientDBError: MongoServerError: E11000 duplicate key error collection: TTP.clients index: clientName_1 dup key: { clientName: "test" }
+        at D:\projects\unicode\ttp\TTP-Back\node_modules\mongoose\node_modules\mongodb\src\operations\insert.ts:75:25
+        at D:\projects\unicode\ttp\TTP-Back\node_modules\mongoose\node_modules\mongodb\src\cmap\connection_pool.ts:482:13
+        at handleOperationResult (D:\projects\unicode\ttp\TTP-Back\node_modules\mongoose\node_modules\mongodb\src\sdam\server.ts:610:5)
+        at MessageStream.messageHandler (D:\projects\unicode\ttp\TTP-Back\node_modules\mongoose\node_modules\mongodb\src\cmap\connection.ts:765:5)
+        at MessageStream.emit (events.js:400:28)
+        at MessageStream.emit (domain.js:475:12)
+        at processIncomingData (D:\projects\unicode\ttp\TTP-Back\node_modules\mongoose\node_modules\mongodb\src\cmap\message_stream.ts:168:12)
+        at MessageStream._write (D:\projects\unicode\ttp\TTP-Back\node_modules\mongoose\node_modules\mongodb\src\cmap\message_stream.ts:65:5)
+        at writeOrBuffer (internal/streams/writable.js:358:12)
+        at MessageStream.Writable.write (internal/streams/writable.js:303:10) {
+      index: 0,
+      code: 11000,
+      keyPattern: { clientName: 1 },
+      keyValue: { clientName: 'test' }
+    }
+  },
+  level: 'error',
+  timestamp: '2022-04-06 22:45:52'
+}
+{
+  message: {
+    getclientDBError: MongooseError: Cannot populate path `projectsId` because it is not in your schema. Set the `strictPopulate` option to false to override.
+        at getModelsMapForPopulate (D:\projects\unicode\ttp\TTP-Back\node_modules\mongoose\lib\helpers\populate\getModelsMapForPopulate.js:47:12)
+        at populate (D:\projects\unicode\ttp\TTP-Back\node_modules\mongoose\lib\model.js:4485:21)
+        at _populate (D:\projects\unicode\ttp\TTP-Back\node_modules\mongoose\lib\model.js:4445:5)
+        at D:\projects\unicode\ttp\TTP-Back\node_modules\mongoose\lib\model.js:4423:5
+        at promiseOrCallback (D:\projects\unicode\ttp\TTP-Back\node_modules\mongoose\lib\helpers\promiseOrCallback.js:10:12)
+        at Mongoose._promiseOrCallback (D:\projects\unicode\ttp\TTP-Back\node_modules\mongoose\lib\index.js:1140:10)
+        at Function.Model.populate (D:\projects\unicode\ttp\TTP-Back\node_modules\mongoose\lib\model.js:4421:23)
+        at cb (D:\projects\unicode\ttp\TTP-Back\node_modules\mongoose\lib\query.js:2216:26)
+        at D:\projects\unicode\ttp\TTP-Back\node_modules\mongoose\node_modules\mongodb\src\utils.ts:624:5
+        at D:\projects\unicode\ttp\TTP-Back\node_modules\mongoose\node_modules\mongodb\src\cursor\abstract_cursor.ts:417:35
+  },
+  level: 'error',
+  timestamp: '2022-04-06 22:45:57'
+}
+{
+  message: {
+    getclientDBError: MongooseError: Cannot populate path `projectsId` because it is not in your schema. Set the `strictPopulate` option to false to override.
+        at getModelsMapForPopulate (D:\projects\unicode\ttp\TTP-Back\node_modules\mongoose\lib\helpers\populate\getModelsMapForPopulate.js:47:12)
+        at populate (D:\projects\unicode\ttp\TTP-Back\node_modules\mongoose\lib\model.js:4485:21)
+        at _populate (D:\projects\unicode\ttp\TTP-Back\node_modules\mongoose\lib\model.js:4445:5)
+        at D:\projects\unicode\ttp\TTP-Back\node_modules\mongoose\lib\model.js:4423:5
+        at promiseOrCallback (D:\projects\unicode\ttp\TTP-Back\node_modules\mongoose\lib\helpers\promiseOrCallback.js:10:12)
+        at Mongoose._promiseOrCallback (D:\projects\unicode\ttp\TTP-Back\node_modules\mongoose\lib\index.js:1140:10)
+        at Function.Model.populate (D:\projects\unicode\ttp\TTP-Back\node_modules\mongoose\lib\model.js:4421:23)
+        at cb (D:\projects\unicode\ttp\TTP-Back\node_modules\mongoose\lib\query.js:2216:26)
+        at D:\projects\unicode\ttp\TTP-Back\node_modules\mongoose\node_modules\mongodb\src\utils.ts:624:5
+        at D:\projects\unicode\ttp\TTP-Back\node_modules\mongoose\node_modules\mongodb\src\cursor\abstract_cursor.ts:417:35
+  },
+  level: 'error',
+  timestamp: '2022-04-06 22:49:14'
+}
+{
+  message: {
+    getclientDBError: MongooseError: Cannot populate path `projectsId` because it is not in your schema. Set the `strictPopulate` option to false to override.
+        at getModelsMapForPopulate (D:\projects\unicode\ttp\TTP-Back\node_modules\mongoose\lib\helpers\populate\getModelsMapForPopulate.js:47:12)
+        at populate (D:\projects\unicode\ttp\TTP-Back\node_modules\mongoose\lib\model.js:4485:21)
+        at _populate (D:\projects\unicode\ttp\TTP-Back\node_modules\mongoose\lib\model.js:4445:5)
+        at D:\projects\unicode\ttp\TTP-Back\node_modules\mongoose\lib\model.js:4423:5
+        at promiseOrCallback (D:\projects\unicode\ttp\TTP-Back\node_modules\mongoose\lib\helpers\promiseOrCallback.js:10:12)
+        at Mongoose._promiseOrCallback (D:\projects\unicode\ttp\TTP-Back\node_modules\mongoose\lib\index.js:1140:10)
+        at Function.Model.populate (D:\projects\unicode\ttp\TTP-Back\node_modules\mongoose\lib\model.js:4421:23)
+        at cb (D:\projects\unicode\ttp\TTP-Back\node_modules\mongoose\lib\query.js:2216:26)
+        at D:\projects\unicode\ttp\TTP-Back\node_modules\mongoose\node_modules\mongodb\src\utils.ts:624:5
+        at D:\projects\unicode\ttp\TTP-Back\node_modules\mongoose\node_modules\mongodb\src\cursor\abstract_cursor.ts:417:35
+  },
+  level: 'error',
+  timestamp: '2022-04-06 22:49:14'
+}
+{
+  message: {
+    getclientDBError: MongooseError: Cannot populate path `projectsId` because it is not in your schema. Set the `strictPopulate` option to false to override.
+        at getModelsMapForPopulate (D:\projects\unicode\ttp\TTP-Back\node_modules\mongoose\lib\helpers\populate\getModelsMapForPopulate.js:47:12)
+        at populate (D:\projects\unicode\ttp\TTP-Back\node_modules\mongoose\lib\model.js:4485:21)
+        at _populate (D:\projects\unicode\ttp\TTP-Back\node_modules\mongoose\lib\model.js:4445:5)
+        at D:\projects\unicode\ttp\TTP-Back\node_modules\mongoose\lib\model.js:4423:5
+        at promiseOrCallback (D:\projects\unicode\ttp\TTP-Back\node_modules\mongoose\lib\helpers\promiseOrCallback.js:10:12)
+        at Mongoose._promiseOrCallback (D:\projects\unicode\ttp\TTP-Back\node_modules\mongoose\lib\index.js:1140:10)
+        at Function.Model.populate (D:\projects\unicode\ttp\TTP-Back\node_modules\mongoose\lib\model.js:4421:23)
+        at cb (D:\projects\unicode\ttp\TTP-Back\node_modules\mongoose\lib\query.js:2216:26)
+        at D:\projects\unicode\ttp\TTP-Back\node_modules\mongoose\node_modules\mongodb\src\utils.ts:624:5
+        at D:\projects\unicode\ttp\TTP-Back\node_modules\mongoose\node_modules\mongodb\src\cursor\abstract_cursor.ts:417:35
+  },
+  level: 'error',
+  timestamp: '2022-04-06 22:56:20'
+}
+{
+  message: {
+    createclientDBError: MongoServerError: E11000 duplicate key error collection: TTP.clients index: clientName_1 dup key: { clientName: "test 2" }
+        at D:\projects\unicode\ttp\TTP-Back\node_modules\mongoose\node_modules\mongodb\src\operations\insert.ts:75:25
+        at D:\projects\unicode\ttp\TTP-Back\node_modules\mongoose\node_modules\mongodb\src\cmap\connection_pool.ts:482:13
+        at handleOperationResult (D:\projects\unicode\ttp\TTP-Back\node_modules\mongoose\node_modules\mongodb\src\sdam\server.ts:610:5)
+        at MessageStream.messageHandler (D:\projects\unicode\ttp\TTP-Back\node_modules\mongoose\node_modules\mongodb\src\cmap\connection.ts:765:5)
+        at MessageStream.emit (events.js:400:28)
+        at MessageStream.emit (domain.js:475:12)
+        at processIncomingData (D:\projects\unicode\ttp\TTP-Back\node_modules\mongoose\node_modules\mongodb\src\cmap\message_stream.ts:168:12)
+        at MessageStream._write (D:\projects\unicode\ttp\TTP-Back\node_modules\mongoose\node_modules\mongodb\src\cmap\message_stream.ts:65:5)
+        at writeOrBuffer (internal/streams/writable.js:358:12)
+        at MessageStream.Writable.write (internal/streams/writable.js:303:10) {
+      index: 0,
+      code: 11000,
+      keyPattern: { clientName: 1 },
+      keyValue: { clientName: 'test 2' }
+    }
+  },
+  level: 'error',
+  timestamp: '2022-04-06 22:56:31'
+}
+{
+  message: {
+    getclientDBError: MongooseError: Cannot populate path `projectsId` because it is not in your schema. Set the `strictPopulate` option to false to override.
+        at getModelsMapForPopulate (D:\projects\unicode\ttp\TTP-Back\node_modules\mongoose\lib\helpers\populate\getModelsMapForPopulate.js:47:12)
+        at populate (D:\projects\unicode\ttp\TTP-Back\node_modules\mongoose\lib\model.js:4485:21)
+        at _populate (D:\projects\unicode\ttp\TTP-Back\node_modules\mongoose\lib\model.js:4445:5)
+        at D:\projects\unicode\ttp\TTP-Back\node_modules\mongoose\lib\model.js:4423:5
+        at promiseOrCallback (D:\projects\unicode\ttp\TTP-Back\node_modules\mongoose\lib\helpers\promiseOrCallback.js:10:12)
+        at Mongoose._promiseOrCallback (D:\projects\unicode\ttp\TTP-Back\node_modules\mongoose\lib\index.js:1140:10)
+        at Function.Model.populate (D:\projects\unicode\ttp\TTP-Back\node_modules\mongoose\lib\model.js:4421:23)
+        at cb (D:\projects\unicode\ttp\TTP-Back\node_modules\mongoose\lib\query.js:2216:26)
+        at D:\projects\unicode\ttp\TTP-Back\node_modules\mongoose\node_modules\mongodb\src\utils.ts:624:5
+        at D:\projects\unicode\ttp\TTP-Back\node_modules\mongoose\node_modules\mongodb\src\cursor\abstract_cursor.ts:417:35
+  },
+  level: 'error',
+  timestamp: '2022-04-06 22:57:17'
+}
+{
+  message: {
+    createclientDBError: MongoServerError: E11000 duplicate key error collection: TTP.clients index: clientName_1 dup key: { clientName: "test 3" }
+        at D:\projects\unicode\ttp\TTP-Back\node_modules\mongoose\node_modules\mongodb\src\operations\insert.ts:75:25
+        at D:\projects\unicode\ttp\TTP-Back\node_modules\mongoose\node_modules\mongodb\src\cmap\connection_pool.ts:482:13
+        at handleOperationResult (D:\projects\unicode\ttp\TTP-Back\node_modules\mongoose\node_modules\mongodb\src\sdam\server.ts:610:5)
+        at MessageStream.messageHandler (D:\projects\unicode\ttp\TTP-Back\node_modules\mongoose\node_modules\mongodb\src\cmap\connection.ts:765:5)
+        at MessageStream.emit (events.js:400:28)
+        at MessageStream.emit (domain.js:475:12)
+        at processIncomingData (D:\projects\unicode\ttp\TTP-Back\node_modules\mongoose\node_modules\mongodb\src\cmap\message_stream.ts:168:12)
+        at MessageStream._write (D:\projects\unicode\ttp\TTP-Back\node_modules\mongoose\node_modules\mongodb\src\cmap\message_stream.ts:65:5)
+        at writeOrBuffer (internal/streams/writable.js:358:12)
+        at MessageStream.Writable.write (internal/streams/writable.js:303:10) {
+      index: 0,
+      code: 11000,
+      keyPattern: { clientName: 1 },
+      keyValue: { clientName: 'test 3' }
+    }
+  },
+  level: 'error',
+  timestamp: '2022-04-06 22:57:23'
+}
+{
+  message: {
+    getclientDBError: MongooseError: Cannot populate path `projectsId` because it is not in your schema. Set the `strictPopulate` option to false to override.
+        at getModelsMapForPopulate (D:\projects\unicode\ttp\TTP-Back\node_modules\mongoose\lib\helpers\populate\getModelsMapForPopulate.js:47:12)
+        at populate (D:\projects\unicode\ttp\TTP-Back\node_modules\mongoose\lib\model.js:4485:21)
+        at _populate (D:\projects\unicode\ttp\TTP-Back\node_modules\mongoose\lib\model.js:4445:5)
+        at D:\projects\unicode\ttp\TTP-Back\node_modules\mongoose\lib\model.js:4423:5
+        at promiseOrCallback (D:\projects\unicode\ttp\TTP-Back\node_modules\mongoose\lib\helpers\promiseOrCallback.js:10:12)
+        at Mongoose._promiseOrCallback (D:\projects\unicode\ttp\TTP-Back\node_modules\mongoose\lib\index.js:1140:10)
+        at Function.Model.populate (D:\projects\unicode\ttp\TTP-Back\node_modules\mongoose\lib\model.js:4421:23)
+        at cb (D:\projects\unicode\ttp\TTP-Back\node_modules\mongoose\lib\query.js:2216:26)
+        at D:\projects\unicode\ttp\TTP-Back\node_modules\mongoose\node_modules\mongodb\src\utils.ts:624:5
+        at D:\projects\unicode\ttp\TTP-Back\node_modules\mongoose\node_modules\mongodb\src\cursor\abstract_cursor.ts:417:35
+  },
+  level: 'error',
+  timestamp: '2022-04-06 22:59:21'
+}
+{
+  message: {
+    getclientDBError: MongooseError: Cannot populate path `projectsId` because it is not in your schema. Set the `strictPopulate` option to false to override.
+        at getModelsMapForPopulate (D:\projects\unicode\ttp\TTP-Back\node_modules\mongoose\lib\helpers\populate\getModelsMapForPopulate.js:47:12)
+        at populate (D:\projects\unicode\ttp\TTP-Back\node_modules\mongoose\lib\model.js:4485:21)
+        at _populate (D:\projects\unicode\ttp\TTP-Back\node_modules\mongoose\lib\model.js:4445:5)
+        at D:\projects\unicode\ttp\TTP-Back\node_modules\mongoose\lib\model.js:4423:5
+        at promiseOrCallback (D:\projects\unicode\ttp\TTP-Back\node_modules\mongoose\lib\helpers\promiseOrCallback.js:10:12)
+        at Mongoose._promiseOrCallback (D:\projects\unicode\ttp\TTP-Back\node_modules\mongoose\lib\index.js:1140:10)
+        at Function.Model.populate (D:\projects\unicode\ttp\TTP-Back\node_modules\mongoose\lib\model.js:4421:23)
+        at cb (D:\projects\unicode\ttp\TTP-Back\node_modules\mongoose\lib\query.js:2216:26)
+        at D:\projects\unicode\ttp\TTP-Back\node_modules\mongoose\node_modules\mongodb\src\utils.ts:624:5
+        at D:\projects\unicode\ttp\TTP-Back\node_modules\mongoose\node_modules\mongodb\src\cursor\abstract_cursor.ts:417:35
+  },
+  level: 'error',
+  timestamp: '2022-04-06 23:00:33'
+}
+{
+  message: {
+    getclientDBError: MongooseError: Cannot populate path `projectsId` because it is not in your schema. Set the `strictPopulate` option to false to override.
+        at getModelsMapForPopulate (D:\projects\unicode\ttp\TTP-Back\node_modules\mongoose\lib\helpers\populate\getModelsMapForPopulate.js:47:12)
+        at populate (D:\projects\unicode\ttp\TTP-Back\node_modules\mongoose\lib\model.js:4485:21)
+        at _populate (D:\projects\unicode\ttp\TTP-Back\node_modules\mongoose\lib\model.js:4445:5)
+        at D:\projects\unicode\ttp\TTP-Back\node_modules\mongoose\lib\model.js:4423:5
+        at promiseOrCallback (D:\projects\unicode\ttp\TTP-Back\node_modules\mongoose\lib\helpers\promiseOrCallback.js:10:12)
+        at Mongoose._promiseOrCallback (D:\projects\unicode\ttp\TTP-Back\node_modules\mongoose\lib\index.js:1140:10)
+        at Function.Model.populate (D:\projects\unicode\ttp\TTP-Back\node_modules\mongoose\lib\model.js:4421:23)
+        at cb (D:\projects\unicode\ttp\TTP-Back\node_modules\mongoose\lib\query.js:2216:26)
+        at D:\projects\unicode\ttp\TTP-Back\node_modules\mongoose\node_modules\mongodb\src\utils.ts:624:5
+        at D:\projects\unicode\ttp\TTP-Back\node_modules\mongoose\node_modules\mongodb\src\cursor\abstract_cursor.ts:417:35
+  },
+  level: 'error',
+  timestamp: '2022-04-06 23:02:19'
+}
+{
+  message: {
+    createclientDBError: MongoServerError: E11000 duplicate key error collection: TTP.clients index: clientName_1 dup key: { clientName: "test 11" }
+        at D:\projects\unicode\ttp\TTP-Back\node_modules\mongoose\node_modules\mongodb\src\operations\insert.ts:75:25
+        at D:\projects\unicode\ttp\TTP-Back\node_modules\mongoose\node_modules\mongodb\src\cmap\connection_pool.ts:482:13
+        at handleOperationResult (D:\projects\unicode\ttp\TTP-Back\node_modules\mongoose\node_modules\mongodb\src\sdam\server.ts:610:5)
+        at MessageStream.messageHandler (D:\projects\unicode\ttp\TTP-Back\node_modules\mongoose\node_modules\mongodb\src\cmap\connection.ts:765:5)
+        at MessageStream.emit (events.js:400:28)
+        at MessageStream.emit (domain.js:475:12)
+        at processIncomingData (D:\projects\unicode\ttp\TTP-Back\node_modules\mongoose\node_modules\mongodb\src\cmap\message_stream.ts:168:12)
+        at MessageStream._write (D:\projects\unicode\ttp\TTP-Back\node_modules\mongoose\node_modules\mongodb\src\cmap\message_stream.ts:65:5)
+        at writeOrBuffer (internal/streams/writable.js:358:12)
+        at MessageStream.Writable.write (internal/streams/writable.js:303:10) {
+      index: 0,
+      code: 11000,
+      keyPattern: { clientName: 1 },
+      keyValue: { clientName: 'test 11' }
+    }
+  },
+  level: 'error',
+  timestamp: '2022-04-06 23:05:02'
+}
+{
+  message: {
+    getclientDBError: MongooseError: Cannot populate path `projectsId` because it is not in your schema. Set the `strictPopulate` option to false to override.
+        at getModelsMapForPopulate (D:\projects\unicode\ttp\TTP-Back\node_modules\mongoose\lib\helpers\populate\getModelsMapForPopulate.js:47:12)
+        at populate (D:\projects\unicode\ttp\TTP-Back\node_modules\mongoose\lib\model.js:4485:21)
+        at _populate (D:\projects\unicode\ttp\TTP-Back\node_modules\mongoose\lib\model.js:4445:5)
+        at D:\projects\unicode\ttp\TTP-Back\node_modules\mongoose\lib\model.js:4423:5
+        at promiseOrCallback (D:\projects\unicode\ttp\TTP-Back\node_modules\mongoose\lib\helpers\promiseOrCallback.js:10:12)
+        at Mongoose._promiseOrCallback (D:\projects\unicode\ttp\TTP-Back\node_modules\mongoose\lib\index.js:1140:10)
+        at Function.Model.populate (D:\projects\unicode\ttp\TTP-Back\node_modules\mongoose\lib\model.js:4421:23)
+        at cb (D:\projects\unicode\ttp\TTP-Back\node_modules\mongoose\lib\query.js:2216:26)
+        at D:\projects\unicode\ttp\TTP-Back\node_modules\mongoose\node_modules\mongodb\src\utils.ts:624:5
+        at D:\projects\unicode\ttp\TTP-Back\node_modules\mongoose\node_modules\mongodb\src\cursor\abstract_cursor.ts:417:35
+  },
+  level: 'error',
+  timestamp: '2022-04-06 23:05:08'
+}
+{
+  message: {
+    createclientDBError: MongoServerError: E11000 duplicate key error collection: TTP.clients index: clientName_1 dup key: { clientName: "test 13" }
+        at D:\projects\unicode\ttp\TTP-Back\node_modules\mongoose\node_modules\mongodb\src\operations\insert.ts:75:25
+        at D:\projects\unicode\ttp\TTP-Back\node_modules\mongoose\node_modules\mongodb\src\cmap\connection_pool.ts:482:13
+        at handleOperationResult (D:\projects\unicode\ttp\TTP-Back\node_modules\mongoose\node_modules\mongodb\src\sdam\server.ts:610:5)
+        at MessageStream.messageHandler (D:\projects\unicode\ttp\TTP-Back\node_modules\mongoose\node_modules\mongodb\src\cmap\connection.ts:765:5)
+        at MessageStream.emit (events.js:400:28)
+        at MessageStream.emit (domain.js:475:12)
+        at processIncomingData (D:\projects\unicode\ttp\TTP-Back\node_modules\mongoose\node_modules\mongodb\src\cmap\message_stream.ts:168:12)
+        at MessageStream._write (D:\projects\unicode\ttp\TTP-Back\node_modules\mongoose\node_modules\mongodb\src\cmap\message_stream.ts:65:5)
+        at writeOrBuffer (internal/streams/writable.js:358:12)
+        at MessageStream.Writable.write (internal/streams/writable.js:303:10) {
+      index: 0,
+      code: 11000,
+      keyPattern: { clientName: 1 },
+      keyValue: { clientName: 'test 13' }
+    }
+  },
+  level: 'error',
+  timestamp: '2022-04-06 23:10:46'
+}
+{
+  message: {
+    createclientDBError: Error: clients validation failed: image: Cast to string failed for value "{}" (type Object) at path "image"
+        at ValidationError.inspect (D:\projects\unicode\ttp\TTP-Back\node_modules\mongoose\lib\error\validation.js:48:26)
+        at formatValue (internal/util/inspect.js:745:19)
+        at formatProperty (internal/util/inspect.js:1660:11)
+        at formatRaw (internal/util/inspect.js:987:9)
+        at formatValue (internal/util/inspect.js:774:10)
+        at formatProperty (internal/util/inspect.js:1660:11)
+        at formatRaw (internal/util/inspect.js:987:9)
+        at formatValue (internal/util/inspect.js:774:10)
+        at inspect (internal/util/inspect.js:319:10)
+        at Format.transform (D:\projects\unicode\ttp\TTP-Back\node_modules\logform\pretty-print.js:27:19) {
+      errors: {
+        image: CastError: Cast to string failed for value "{}" (type Object) at path "image"
+            at SchemaString.cast (D:\projects\unicode\ttp\TTP-Back\node_modules\mongoose\lib\schema\string.js:603:11)
+            at SchemaString.SchemaType.applySetters (D:\projects\unicode\ttp\TTP-Back\node_modules\mongoose\lib\schematype.js:1179:12)
+            at model.$set (D:\projects\unicode\ttp\TTP-Back\node_modules\mongoose\lib\document.js:1411:20)
+            at model.$set (D:\projects\unicode\ttp\TTP-Back\node_modules\mongoose\lib\document.js:1156:14)
+            at model.Document (D:\projects\unicode\ttp\TTP-Back\node_modules\mongoose\lib\document.js:162:12)
+            at model.Model (D:\projects\unicode\ttp\TTP-Back\node_modules\mongoose\lib\model.js:114:12)
+            at new model (D:\projects\unicode\ttp\TTP-Back\node_modules\mongoose\lib\model.js:4819:15)
+            at Function.<anonymous> (D:\projects\unicode\ttp\TTP-Back\src\lib\dbCalls\client\client.ts:56:28)
+            at Generator.next (<anonymous>)
+            at D:\projects\unicode\ttp\TTP-Back\src\lib\dbCalls\client\client.ts:8:71 {
+          stringValue: '"{}"',
+          messageFormat: undefined,
+          kind: 'string',
+          value: {},
+          path: 'image',
+          reason: null,
+          valueType: 'Object'
+        }
+      },
+      _message: 'clients validation failed'
+    }
+  },
+  level: 'error',
+  timestamp: '2022-04-06 23:53:32'
+}
+{
+  message: {
+    createclientDBError: MongoServerError: E11000 duplicate key error collection: TTP.clients index: clientName_1 dup key: { clientName: "test 14" }
+        at D:\projects\unicode\ttp\TTP-Back\node_modules\mongoose\node_modules\mongodb\src\operations\insert.ts:75:25
+        at D:\projects\unicode\ttp\TTP-Back\node_modules\mongoose\node_modules\mongodb\src\cmap\connection_pool.ts:482:13
+        at handleOperationResult (D:\projects\unicode\ttp\TTP-Back\node_modules\mongoose\node_modules\mongodb\src\sdam\server.ts:610:5)
+        at MessageStream.messageHandler (D:\projects\unicode\ttp\TTP-Back\node_modules\mongoose\node_modules\mongodb\src\cmap\connection.ts:765:5)
+        at MessageStream.emit (events.js:400:28)
+        at MessageStream.emit (domain.js:475:12)
+        at processIncomingData (D:\projects\unicode\ttp\TTP-Back\node_modules\mongoose\node_modules\mongodb\src\cmap\message_stream.ts:168:12)
+        at MessageStream._write (D:\projects\unicode\ttp\TTP-Back\node_modules\mongoose\node_modules\mongodb\src\cmap\message_stream.ts:65:5)
+        at writeOrBuffer (internal/streams/writable.js:358:12)
+        at MessageStream.Writable.write (internal/streams/writable.js:303:10) {
+      index: 0,
+      code: 11000,
+      keyPattern: { clientName: 1 },
+      keyValue: { clientName: 'test 14' }
+    }
+  },
+  level: 'error',
+  timestamp: '2022-04-07 00:33:10'
+}

@@ -1,14 +1,18 @@
-import { Document } from "mongoose";
+import { Document, ObjectId } from "mongoose";
 
 export interface Client extends Document {
   clientName: string;
-  projectsId?: string[];
-  image: string;
+  image: string | any;
+  doneProject: ObjectId[];
+  inProgressProject: ObjectId[];
+  inProgressTask: ObjectId[];
 }
 
 export interface ClientData {
   id?: string;
   clientName: string;
-  projectsId?: string[];
-  image?: string;
+  image?: string | any;
+  doneProject?: ObjectId[];
+  inProgressProject?: ObjectId[];
+  inProgressTask?: ObjectId[];
 }

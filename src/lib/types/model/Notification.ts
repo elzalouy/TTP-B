@@ -8,7 +8,7 @@ export interface NotificationInfo extends Document {
   title: string;
   projectID: ObjectId;
   clientName: string;
-  adminUserID: ObjectId[];
+  adminUserID: ObjectId;
 }
 
 export interface NotificationData {
@@ -19,5 +19,5 @@ export interface NotificationData {
   title?: string;
   projectID?: string;
   clientName?: string;
-  adminUserID?: string[];
+  adminUserID?: string;
 }

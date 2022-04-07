@@ -28,14 +28,12 @@ const NotificationSchema: Schema = new Schema<NotificationInfo>(
       type: String,
       require: true,
     },
-    adminUserID: [
-      {
-        idInDB: {
-          type: Schema.Types.ObjectId,
-          ref: "users",
-        },
+    adminUserID: {
+      idInDB: {
+        type: Schema.Types.ObjectId,
+        ref: "users",
       },
-    ],
+    },
   },
   {
     timestamps: true,

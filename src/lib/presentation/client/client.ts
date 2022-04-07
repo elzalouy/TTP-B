@@ -8,6 +8,7 @@ import logger from "../../../logger";
 const ClientReq = class ClientReq extends ClientController {
   static async handleCreateClient(req: Request, res: Response) {
     try {
+      logger.info({ handleCreateClient: req.body });
       let Client = await super.createClient(req.body);
       if (Client) {
         return res.status(200).send(Client);
