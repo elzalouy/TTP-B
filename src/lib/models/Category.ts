@@ -15,10 +15,16 @@ const CategorySchema: Schema = new Schema<Category>(
         ref: "subcategories",
       },
     ],
+    selectedSubCategory: [
+      {
+        type: Schema.Types.ObjectId,
+        ref: "subcategories",
+      },
+    ],
   },
   {
     timestamps: true,
-    strict: false,
+    strict: true,
   }
 );
 

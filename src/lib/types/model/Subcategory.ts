@@ -1,9 +1,8 @@
-import { ObjectId } from 'bson';
-import { Document } from 'mongoose';
+import { ObjectId } from "bson";
+import { Document } from "mongoose";
 
 export interface Subcategory extends Document {
-  subCategory?: string;
-  categoryId?: ObjectId;
+  subCategory: string;
 }
 
 export interface SubcategoryData {

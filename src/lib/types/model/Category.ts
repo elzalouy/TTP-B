@@ -2,7 +2,8 @@ import { Document } from "mongoose";
 
 export interface Category extends Document {
   category: string;
-  subCategoriesId?: string[];
+  subCategoriesId: string[];
+  selectedSubCategory: string[];
 }
 
 export interface CategoryData {
@@ -10,4 +11,5 @@ export interface CategoryData {
   category: string;
   subCategories?: string[];
   subCategoriesId?: string[];
+  selectedSubCategory?: string[];
 }
