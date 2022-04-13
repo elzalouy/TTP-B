@@ -40,8 +40,9 @@ const ClientDB = class ClientDB {
           match: {
             projectStatus:
               "inProgress" ||
-              "deliver on time" ||
-              "deliver defore deadline" ||
+              "late" ||
+              "delivered on time" ||
+              "delivered defore deadline" ||
               "delivered after deadline",
           },
         })
