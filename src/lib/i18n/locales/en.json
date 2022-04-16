@@ -40,5 +40,6 @@
   "sort_projects_params_empty": "Please set the element to sort projects by",
   "filter_projects_result_empty": "No projects found with your filter values",
   "search_Proejcts_result_null": "Projects with this name was not found",
-  "get_tasks_error": "Sorry for being not able to get the tasks you need."
+  "get_tasks_error": "Sorry for being not able to get the tasks you need.",
+  "department_missing":"Please select a department"
 }

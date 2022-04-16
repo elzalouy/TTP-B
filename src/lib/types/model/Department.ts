@@ -16,6 +16,7 @@ export interface DepartmentInfo extends Document {
     idInTrello: string;
     idInDB: any;
   }[];
+  tasks: string[];
 }
 
 export interface DepartmentData {
@@ -32,6 +33,7 @@ export interface DepartmentData {
   teamsId?: { idInTrello: string; idInDB: any }[];
   teams?: { name: string; _id: any }[];
   mainBoard?: boolean | null;
+  tasks?: string[];
 }
 
 export interface UpdateDepartment {

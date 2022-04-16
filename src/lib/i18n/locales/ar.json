@@ -45,5 +45,6 @@
 	"get_client_error": "get_client_error",
 	"update_client_error": "update_client_error",
 	"delete_client_error": "delete_client_error",
-	"delete_client_success": "delete_client_success"
+	"delete_client_success": "delete_client_success",
+	"department_missing":"يجب اختيار قسم"
 }

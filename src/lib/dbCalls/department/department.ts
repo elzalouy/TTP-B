@@ -13,7 +13,7 @@ const DepartmentBD = class DepartmentBD {
     return await DepartmentBD.__addNewDepartment(data);
   }
 
-  static async updatedbDepartment(data: UpdateDepartment) {
+  static async updatedbDepartment(data: any) {
     return await DepartmentBD.__updateDepartment(data);
   }
 
@@ -44,7 +44,70 @@ const DepartmentBD = class DepartmentBD {
 
   static async __getDepartment(data: object) {
     try {
-      let department = await Department.find(data).lean();
+      let department: any = await Department.aggregate([
+        { $match: { $and: [data] } },
+        {
+          $lookup: {
+            from: "tasks",
+            localField: "tasks",
+            foreignField: "_id",
+            as: "tasks",
+          },
+        },
+        {
+          $lookup: {
+            from: "techmembers",
+            localField: "teamsId.idInDB",
+            foreignField: "_id",
+            as: "teamsId",
+          },
+        },
+        {
+          $addFields: {
+            totalInProgress: {
+              $filter: {
+                input: "$tasks",
+                as: "task",
+                cond: { $eq: ["$$task.status", "inProgress"] },
+              },
+            },
+            totalDone: {
+              $filter: {
+                input: "$tasks",
+                as: "task",
+                cond: { $eq: ["$$task.status", "done"] },
+              },
+            },
+          },
+        },
+        {
+          $project: {
+            _id: 1,
+            name: 1,
+            boardId: 1,
+            color: 1,
+            mainBoard: 1,
+            teamsId: 1,
+            canceldListId: 1,
+            defaultListId: 1,
+            doneListId: 1,
+            notClearListId: 1,
+            reviewListId: 1,
+            sharedListID: 1,
+            totalInProgress: {
+              $size: "$totalInProgress",
+            },
+            totalDone: {
+              $size: "$totalDone",
+              // $map: {
+              //   input: "$totalDone",
+              //   as: "task",
+              //   in: { _id: "$$task._id", status: "$$task.status" },
+              // },
+            },
+          },
+        },
+      ]);
       return department;
     } catch (error) {
       logger.error({ getDepartmentDataError: error });
@@ -60,7 +123,7 @@ const DepartmentBD = class DepartmentBD {
     }
   }
 
-  static async __updateDepartment(data: UpdateDepartment) {
+  static async __updateDepartment(data: any) {
     try {
       let id = data._id;
       delete data._id;

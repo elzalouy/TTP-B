@@ -6,16 +6,21 @@ const TechMemberSchema: Schema = new Schema<ITech>(
     name: {
       type: String,
       required: true,
+      unique: true,
     },
     departmentId: {
       type: Schema.Types.ObjectId,
       ref: "departments",
-      required: true,
+      default: null,
+    },
+    listId: {
+      type: String,
+      default: null,
     },
   },
   {
     timestamps: true,
-    strict: false,
+    strict: true,
   }
 );
 
