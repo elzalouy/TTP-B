@@ -3,6 +3,7 @@ import logger from "../../../logger";
 import Tasks from "../../models/task";
 import { TaskData } from "../../types/model/tasks";
 import ProjectDB from "../project/project";
+import { ObjectId } from "mongoose/node_modules/mongodb";
 
 const TaskDB = class TaskDB {
   static async createTaskDB(data: TaskData) {
@@ -19,6 +20,57 @@ const TaskDB = class TaskDB {
 
   static async updateOneTaskDB(data: object, value: object) {
     return await TaskDB.__updateOneTaskDB(data, value);
+  }
+
+  static async getTaskDepartmentDB(depId: string) {
+    return await TaskDB.__getTaskDepartment(depId);
+  }
+
+  static async __getTaskDepartment(depId: string) {
+    try {
+      let taskCount = await Tasks.aggregate([
+        {
+          $facet: {
+            inProgressTasks: [
+              {
+                $match: {
+                  marchentID: new ObjectId(depId),
+                  status: "inProgress",
+                },
+              },
+              {
+                $group: {
+                  _id: null,
+                  count: {
+                    $sum: 1,
+                  },
+                },
+              },
+            ],
+            doneTasks: [
+              {
+                $match: {
+                  marchentID: new ObjectId(depId),
+                  status: "delivered",
+                },
+              },
+              {
+                $group: {
+                  _id: null,
+                  count: {
+                    $sum: 1,
+                  },
+                },
+              },
+            ],
+          },
+        },
+      ]);
+
+      return taskCount;
+    } catch (error) {
+      logger.error({ getTaskDepartmentDBError: error });
+    }
   }
 
   static async __updateOneTaskDB(data: object, value: object) {

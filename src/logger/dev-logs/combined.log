@@ -2028,3 +2028,2585 @@
   level: 'info',
   timestamp: '2022-04-09 16:53:50'
 }
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-04-10 21:52:30'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-04-10 21:58:21'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-04-10 22:26:48'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-04-10 22:33:54'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-04-10 22:36:40'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-04-10 22:47:23'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-04-10 22:53:47'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-04-10 22:54:06'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-04-11 09:37:29'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-04-11 09:39:36'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-04-11 09:39:58'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-04-11 09:41:14'
+}
+{
+  message: {
+    addTechMemberError: MongoServerError: E11000 duplicate key error collection: TTP.techmembers index: name_1 dup key: { name: "mohamed_nageh_3" }
+        at D:\projects\unicode\ttp\TTP-Back\node_modules\mongoose\node_modules\mongodb\src\operations\insert.ts:75:25
+        at D:\projects\unicode\ttp\TTP-Back\node_modules\mongoose\node_modules\mongodb\src\cmap\connection_pool.ts:482:13
+        at handleOperationResult (D:\projects\unicode\ttp\TTP-Back\node_modules\mongoose\node_modules\mongodb\src\sdam\server.ts:610:5)
+        at MessageStream.messageHandler (D:\projects\unicode\ttp\TTP-Back\node_modules\mongoose\node_modules\mongodb\src\cmap\connection.ts:765:5)
+        at MessageStream.emit (events.js:400:28)
+        at MessageStream.emit (domain.js:475:12)
+        at processIncomingData (D:\projects\unicode\ttp\TTP-Back\node_modules\mongoose\node_modules\mongodb\src\cmap\message_stream.ts:168:12)
+        at MessageStream._write (D:\projects\unicode\ttp\TTP-Back\node_modules\mongoose\node_modules\mongodb\src\cmap\message_stream.ts:65:5)
+        at writeOrBuffer (internal/streams/writable.js:358:12)
+        at MessageStream.Writable.write (internal/streams/writable.js:303:10) {
+      index: 0,
+      code: 11000,
+      keyPattern: { name: 1 },
+      keyValue: { name: 'mohamed_nageh_3' }
+    }
+  },
+  level: 'error',
+  timestamp: '2022-04-11 09:43:51'
+}
+{
+  message: {
+    addTechMemberError: Error: techMembers validation failed: departmentId: Cast to ObjectId failed for value "" (type string) at path "departmentId"
+        at ValidationError.inspect (D:\projects\unicode\ttp\TTP-Back\node_modules\mongoose\lib\error\validation.js:48:26)
+        at formatValue (internal/util/inspect.js:745:19)
+        at formatProperty (internal/util/inspect.js:1660:11)
+        at formatRaw (internal/util/inspect.js:987:9)
+        at formatValue (internal/util/inspect.js:774:10)
+        at formatProperty (internal/util/inspect.js:1660:11)
+        at formatRaw (internal/util/inspect.js:987:9)
+        at formatValue (internal/util/inspect.js:774:10)
+        at inspect (internal/util/inspect.js:319:10)
+        at Format.transform (D:\projects\unicode\ttp\TTP-Back\node_modules\logform\pretty-print.js:27:19) {
+      errors: {
+        departmentId: CastError: Cast to ObjectId failed for value "" (type string) at path "departmentId"
+            at ObjectId.cast (D:\projects\unicode\ttp\TTP-Back\node_modules\mongoose\lib\schema\objectid.js:249:11)
+            at ObjectId.SchemaType.applySetters (D:\projects\unicode\ttp\TTP-Back\node_modules\mongoose\lib\schematype.js:1179:12)
+            at model.$set (D:\projects\unicode\ttp\TTP-Back\node_modules\mongoose\lib\document.js:1411:20)
+            at model.$set (D:\projects\unicode\ttp\TTP-Back\node_modules\mongoose\lib\document.js:1144:16)
+            at model.Document (D:\projects\unicode\ttp\TTP-Back\node_modules\mongoose\lib\document.js:162:12)
+            at model.Model (D:\projects\unicode\ttp\TTP-Back\node_modules\mongoose\lib\model.js:114:12)
+            at new model (D:\projects\unicode\ttp\TTP-Back\node_modules\mongoose\lib\model.js:4819:15)
+            at Function.<anonymous> (D:\projects\unicode\ttp\TTP-Back\src\lib\dbCalls\techMember\techMember.ts:65:30)
+            at Generator.next (<anonymous>)
+            at D:\projects\unicode\ttp\TTP-Back\src\lib\dbCalls\techMember\techMember.ts:8:71 {
+          stringValue: '""',
+          messageFormat: undefined,
+          kind: 'ObjectId',
+          value: '',
+          path: 'departmentId',
+          reason: BSONTypeError: Argument passed in must be a string of 12 bytes or a string of 24 hex characters
+              at new BSONTypeError (D:\projects\unicode\ttp\TTP-Back\node_modules\bson\src\error.ts:16:5)
+              at new ObjectId (D:\projects\unicode\ttp\TTP-Back\node_modules\bson\src\objectid.ts:86:15)
+              at castObjectId (D:\projects\unicode\ttp\TTP-Back\node_modules\mongoose\lib\cast\objectid.js:24:12)
+              at ObjectId.cast (D:\projects\unicode\ttp\TTP-Back\node_modules\mongoose\lib\schema\objectid.js:247:12)
+              at ObjectId.SchemaType.applySetters (D:\projects\unicode\ttp\TTP-Back\node_modules\mongoose\lib\schematype.js:1179:12)
+              at model.$set (D:\projects\unicode\ttp\TTP-Back\node_modules\mongoose\lib\document.js:1411:20)
+              at model.$set (D:\projects\unicode\ttp\TTP-Back\node_modules\mongoose\lib\document.js:1144:16)
+              at model.Document (D:\projects\unicode\ttp\TTP-Back\node_modules\mongoose\lib\document.js:162:12)
+              at model.Model (D:\projects\unicode\ttp\TTP-Back\node_modules\mongoose\lib\model.js:114:12)
+              at new model (D:\projects\unicode\ttp\TTP-Back\node_modules\mongoose\lib\model.js:4819:15),
+          valueType: 'string'
+        }
+      },
+      _message: 'techMembers validation failed'
+    }
+  },
+  level: 'error',
+  timestamp: '2022-04-11 10:02:38'
+}
+{
+  message: {
+    addTechMemberError: Error: techMembers validation failed: departmentId: Cast to ObjectId failed for value "" (type string) at path "departmentId"
+        at ValidationError.inspect (D:\projects\unicode\ttp\TTP-Back\node_modules\mongoose\lib\error\validation.js:48:26)
+        at formatValue (internal/util/inspect.js:745:19)
+        at formatProperty (internal/util/inspect.js:1660:11)
+        at formatRaw (internal/util/inspect.js:987:9)
+        at formatValue (internal/util/inspect.js:774:10)
+        at formatProperty (internal/util/inspect.js:1660:11)
+        at formatRaw (internal/util/inspect.js:987:9)
+        at formatValue (internal/util/inspect.js:774:10)
+        at inspect (internal/util/inspect.js:319:10)
+        at Format.transform (D:\projects\unicode\ttp\TTP-Back\node_modules\logform\pretty-print.js:27:19) {
+      errors: {
+        departmentId: CastError: Cast to ObjectId failed for value "" (type string) at path "departmentId"
+            at ObjectId.cast (D:\projects\unicode\ttp\TTP-Back\node_modules\mongoose\lib\schema\objectid.js:249:11)
+            at ObjectId.SchemaType.applySetters (D:\projects\unicode\ttp\TTP-Back\node_modules\mongoose\lib\schematype.js:1179:12)
+            at model.$set (D:\projects\unicode\ttp\TTP-Back\node_modules\mongoose\lib\document.js:1411:20)
+            at model.$set (D:\projects\unicode\ttp\TTP-Back\node_modules\mongoose\lib\document.js:1144:16)
+            at model.Document (D:\projects\unicode\ttp\TTP-Back\node_modules\mongoose\lib\document.js:162:12)
+            at model.Model (D:\projects\unicode\ttp\TTP-Back\node_modules\mongoose\lib\model.js:114:12)
+            at new model (D:\projects\unicode\ttp\TTP-Back\node_modules\mongoose\lib\model.js:4819:15)
+            at Function.<anonymous> (D:\projects\unicode\ttp\TTP-Back\src\lib\dbCalls\techMember\techMember.ts:65:30)
+            at Generator.next (<anonymous>)
+            at D:\projects\unicode\ttp\TTP-Back\src\lib\dbCalls\techMember\techMember.ts:8:71 {
+          stringValue: '""',
+          messageFormat: undefined,
+          kind: 'ObjectId',
+          value: '',
+          path: 'departmentId',
+          reason: BSONTypeError: Argument passed in must be a string of 12 bytes or a string of 24 hex characters
+              at new BSONTypeError (D:\projects\unicode\ttp\TTP-Back\node_modules\bson\src\error.ts:16:5)
+              at new ObjectId (D:\projects\unicode\ttp\TTP-Back\node_modules\bson\src\objectid.ts:86:15)
+              at castObjectId (D:\projects\unicode\ttp\TTP-Back\node_modules\mongoose\lib\cast\objectid.js:24:12)
+              at ObjectId.cast (D:\projects\unicode\ttp\TTP-Back\node_modules\mongoose\lib\schema\objectid.js:247:12)
+              at ObjectId.SchemaType.applySetters (D:\projects\unicode\ttp\TTP-Back\node_modules\mongoose\lib\schematype.js:1179:12)
+              at model.$set (D:\projects\unicode\ttp\TTP-Back\node_modules\mongoose\lib\document.js:1411:20)
+              at model.$set (D:\projects\unicode\ttp\TTP-Back\node_modules\mongoose\lib\document.js:1144:16)
+              at model.Document (D:\projects\unicode\ttp\TTP-Back\node_modules\mongoose\lib\document.js:162:12)
+              at model.Model (D:\projects\unicode\ttp\TTP-Back\node_modules\mongoose\lib\model.js:114:12)
+              at new model (D:\projects\unicode\ttp\TTP-Back\node_modules\mongoose\lib\model.js:4819:15),
+          valueType: 'string'
+        }
+      },
+      _message: 'techMembers validation failed'
+    }
+  },
+  level: 'error',
+  timestamp: '2022-04-11 10:11:44'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-04-11 10:21:12'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-04-12 10:00:58'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-04-13 09:55:58'
+}
+{
+  message: {
+    createProjectDBError: Error: projects validation failed: name: Path `name` is required.
+        at ValidationError.inspect (D:\projects\unicode\ttp\TTP-Back\node_modules\mongoose\lib\error\validation.js:48:26)
+        at formatValue (node:internal/util/inspect:782:19)
+        at formatProperty (node:internal/util/inspect:1819:11)
+        at formatRaw (node:internal/util/inspect:1030:9)
+        at formatValue (node:internal/util/inspect:817:10)
+        at formatProperty (node:internal/util/inspect:1819:11)
+        at formatRaw (node:internal/util/inspect:1030:9)
+        at formatValue (node:internal/util/inspect:817:10)
+        at inspect (node:internal/util/inspect:347:10)
+        at Format.transform (D:\projects\unicode\ttp\TTP-Back\node_modules\logform\pretty-print.js:27:19) {
+      errors: {
+        name: ValidatorError: Path `name` is required.
+            at validate (D:\projects\unicode\ttp\TTP-Back\node_modules\mongoose\lib\schematype.js:1320:13)
+            at SchemaString.SchemaType.doValidate (D:\projects\unicode\ttp\TTP-Back\node_modules\mongoose\lib\schematype.js:1304:7)
+            at D:\projects\unicode\ttp\TTP-Back\node_modules\mongoose\lib\document.js:2723:18
+            at processTicksAndRejections (node:internal/process/task_queues:78:11) {
+          properties: {
+            validator: [Function (anonymous)],
+            message: 'Path `name` is required.',
+            type: 'required',
+            path: 'name',
+            value: ''
+          },
+          kind: 'required',
+          path: 'name',
+          value: '',
+          reason: undefined,
+          [Symbol(mongoose:validatorError)]: true
+        }
+      },
+      _message: 'projects validation failed'
+    }
+  },
+  level: 'error',
+  timestamp: '2022-04-13 10:10:54'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-04-13 10:24:34'
+}
+{
+  message: {
+    borderData: Promise { <pending> },
+    createBoardApi: 'https://api.trello.com/1/boards/?name=test me web 1&prefs_background=green&defaultLists=false&key=96b980af38094db6e5767718567af6ce&token=7f44a81ca5f903883e1b3a5720f89b70b8feacd4437d2cb893068b3b93455e5f'
+  },
+  level: 'info',
+  timestamp: '2022-04-13 10:33:27'
+}
+{
+  message: {
+    boardData: {
+      id: '62567cc7b710cf7809bbe974',
+      name: 'test me web 1',
+      desc: '',
+      descData: null,
+      closed: false,
+      idOrganization: '61e87201397f573cb99a0418',
+      idEnterprise: null,
+      pinned: false,
+      url: 'https://trello.com/b/8pQ9b9vp/test-me-web-1',
+      shortUrl: 'https://trello.com/b/8pQ9b9vp',
+      prefs: {
+        permissionLevel: 'private',
+        hideVotes: false,
+        voting: 'disabled',
+        comments: 'members',
+        invitations: 'members',
+        selfJoin: true,
+        cardCovers: true,
+        isTemplate: false,
+        cardAging: 'regular',
+        calendarFeedEnabled: false,
+        hiddenPluginBoardButtons: [],
+        background: 'green',
+        backgroundColor: '#519839',
+        backgroundImage: null,
+        backgroundImageScaled: null,
+        backgroundTile: false,
+        backgroundBrightness: 'dark',
+        backgroundBottomColor: '#519839',
+        backgroundTopColor: '#519839',
+        canBePublic: true,
+        canBeEnterprise: true,
+        canBeOrg: true,
+        canBePrivate: true,
+        canInvite: true
+      },
+      labelNames: {
+        green: '',
+        yellow: '',
+        orange: '',
+        red: '',
+        purple: '',
+        blue: '',
+        sky: '',
+        lime: '',
+        pink: '',
+        black: ''
+      },
+      limits: {}
+    }
+  },
+  level: 'info',
+  timestamp: '2022-04-13 10:33:27'
+}
+{
+  message: {
+    data: {
+      name: 'test me web 1',
+      color: 'green',
+      boardId: '62567cc7b710cf7809bbe974'
+    }
+  },
+  level: 'info',
+  timestamp: '2022-04-13 10:33:27'
+}
+{
+  message: { teamData: '62567ccb4fd7394086ea109d' },
+  level: 'info',
+  timestamp: '2022-04-13 10:33:31'
+}
+{
+  message: { teamData: '62567ccbca98085080ea1ea1' },
+  level: 'info',
+  timestamp: '2022-04-13 10:33:31'
+}
+{
+  message: { removeWebhookSucced: 'done' },
+  level: 'info',
+  timestamp: '2022-04-13 10:33:31'
+}
+{
+  message: {
+    teamListIds: [
+      {
+        idInTrello: '62567ccb4fd7394086ea109d',
+        idInDB: '624acd96ce5fbb5ce20df2dd'
+      },
+      {
+        idInTrello: '62567ccbca98085080ea1ea1',
+        idInDB: '6253ce2f2753632ee7b36bb1'
+      }
+    ]
+  },
+  level: 'info',
+  timestamp: '2022-04-13 10:33:31'
+}
+{
+  message: { webhookCreateResult: 'webhook done' },
+  level: 'info',
+  timestamp: '2022-04-13 10:33:34'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-04-13 10:41:32'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-04-13 10:42:05'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-04-13 10:47:13'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-04-13 10:49:30'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-04-14 10:28:03'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-04-14 10:35:31'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-04-14 10:52:23'
+}
+{
+  message: {
+    borderData: Promise { <pending> },
+    createBoardApi: 'https://api.trello.com/1/boards/?name=test 6&prefs_background=pink&defaultLists=false&key=96b980af38094db6e5767718567af6ce&token=7f44a81ca5f903883e1b3a5720f89b70b8feacd4437d2cb893068b3b93455e5f'
+  },
+  level: 'info',
+  timestamp: '2022-04-14 10:53:17'
+}
+{
+  message: {
+    boardData: {
+      id: '6257d2ec95bef2660bda18ab',
+      name: 'test 6',
+      desc: '',
+      descData: null,
+      closed: false,
+      idOrganization: '61e87201397f573cb99a0418',
+      idEnterprise: null,
+      pinned: false,
+      url: 'https://trello.com/b/vAgC4WZQ/test-6',
+      shortUrl: 'https://trello.com/b/vAgC4WZQ',
+      prefs: {
+        permissionLevel: 'private',
+        hideVotes: false,
+        voting: 'disabled',
+        comments: 'members',
+        invitations: 'members',
+        selfJoin: true,
+        cardCovers: true,
+        isTemplate: false,
+        cardAging: 'regular',
+        calendarFeedEnabled: false,
+        hiddenPluginBoardButtons: [],
+        background: 'pink',
+        backgroundColor: '#CD5A91',
+        backgroundImage: null,
+        backgroundImageScaled: null,
+        backgroundTile: false,
+        backgroundBrightness: 'dark',
+        backgroundBottomColor: '#CD5A91',
+        backgroundTopColor: '#CD5A91',
+        canBePublic: true,
+        canBeEnterprise: true,
+        canBeOrg: true,
+        canBePrivate: true,
+        canInvite: true
+      },
+      labelNames: {
+        green: '',
+        yellow: '',
+        orange: '',
+        red: '',
+        purple: '',
+        blue: '',
+        sky: '',
+        lime: '',
+        pink: '',
+        black: ''
+      },
+      limits: {}
+    }
+  },
+  level: 'info',
+  timestamp: '2022-04-14 10:53:17'
+}
+{
+  message: {
+    data: {
+      name: 'test 6',
+      color: 'pink',
+      boardId: '6257d2ec95bef2660bda18ab'
+    }
+  },
+  level: 'info',
+  timestamp: '2022-04-14 10:53:17'
+}
+{
+  message: { teamData: '6257d2ef1695db78c7afc59d' },
+  level: 'info',
+  timestamp: '2022-04-14 10:53:19'
+}
+{
+  message: { teamData: '6257d2ef665aa81513a98301' },
+  level: 'info',
+  timestamp: '2022-04-14 10:53:19'
+}
+{
+  message: { removeWebhookSucced: 'done' },
+  level: 'info',
+  timestamp: '2022-04-14 10:53:19'
+}
+{
+  message: {
+    teamListIds: [
+      {
+        idInTrello: '6257d2ef1695db78c7afc59d',
+        idInDB: '61eab832b41398d86474d4ac'
+      },
+      {
+        idInTrello: '6257d2ef665aa81513a98301',
+        idInDB: '61eac1ea6b95c7f7ed8be309'
+      }
+    ]
+  },
+  level: 'info',
+  timestamp: '2022-04-14 10:53:19'
+}
+{
+  message: { webhookCreateResult: 'webhook done' },
+  level: 'info',
+  timestamp: '2022-04-14 10:53:23'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-04-14 10:58:24'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-04-14 10:59:13'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-04-14 11:00:21'
+}
+{
+  message: {
+    getDepartmentDataError: MongoServerError: unknown top level operator: $tasks.status. If you have a field name that starts with a '$' symbol, consider using $getField or $setField.
+        at MessageStream.messageHandler (D:\projects\unicode\ttp\TTP-Back\node_modules\mongoose\node_modules\mongodb\src\cmap\connection.ts:753:20)
+        at MessageStream.emit (node:events:526:28)
+        at MessageStream.emit (node:domain:475:12)
+        at processIncomingData (D:\projects\unicode\ttp\TTP-Back\node_modules\mongoose\node_modules\mongodb\src\cmap\message_stream.ts:168:12)
+        at MessageStream._write (D:\projects\unicode\ttp\TTP-Back\node_modules\mongoose\node_modules\mongodb\src\cmap\message_stream.ts:65:5)
+        at writeOrBuffer (node:internal/streams/writable:389:12)
+        at _write (node:internal/streams/writable:330:10)
+        at MessageStream.Writable.write (node:internal/streams/writable:334:10)
+        at TLSSocket.ondata (node:internal/streams/readable:754:22)
+        at TLSSocket.emit (node:events:526:28) {
+      ok: 0,
+      code: 2,
+      codeName: 'BadValue',
+      '$clusterTime': {
+        clusterTime: new Timestamp({ t: 1649923230, i: 1 }),
+        signature: {
+          hash: new Binary(Buffer.from("afa3e918d39a67e30fe8941ebb95f4c2c344e485", "hex"), 0),
+          keyId: new Long("7057499658175643652")
+        }
+      },
+      operationTime: new Timestamp({ t: 1649923230, i: 1 })
+    }
+  },
+  level: 'error',
+  timestamp: '2022-04-14 11:00:31'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-04-14 11:00:48'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-04-14 11:01:25'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-04-14 11:02:05'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-04-14 11:14:50'
+}
+{
+  message: {
+    getDepartmentDataError: MongoServerError: unknown top level operator: $tasks.status. If you have a field name that starts with a '$' symbol, consider using $getField or $setField.
+        at MessageStream.messageHandler (D:\projects\unicode\ttp\TTP-Back\node_modules\mongoose\node_modules\mongodb\src\cmap\connection.ts:753:20)
+        at MessageStream.emit (node:events:526:28)
+        at MessageStream.emit (node:domain:475:12)
+        at processIncomingData (D:\projects\unicode\ttp\TTP-Back\node_modules\mongoose\node_modules\mongodb\src\cmap\message_stream.ts:168:12)
+        at MessageStream._write (D:\projects\unicode\ttp\TTP-Back\node_modules\mongoose\node_modules\mongodb\src\cmap\message_stream.ts:65:5)
+        at writeOrBuffer (node:internal/streams/writable:389:12)
+        at _write (node:internal/streams/writable:330:10)
+        at MessageStream.Writable.write (node:internal/streams/writable:334:10)
+        at TLSSocket.ondata (node:internal/streams/readable:754:22)
+        at TLSSocket.emit (node:events:526:28) {
+      ok: 0,
+      code: 2,
+      codeName: 'BadValue',
+      '$clusterTime': {
+        clusterTime: new Timestamp({ t: 1649924143, i: 2 }),
+        signature: {
+          hash: new Binary(Buffer.from("86e9408ad5907168280cf1ec867bfd3773955aa7", "hex"), 0),
+          keyId: new Long("7057499658175643652")
+        }
+      },
+      operationTime: new Timestamp({ t: 1649924143, i: 2 })
+    }
+  },
+  level: 'error',
+  timestamp: '2022-04-14 11:15:43'
+}
+{
+  message: {
+    getDepartmentDataError: MongoServerError: unknown top level operator: $tasks.status. If you have a field name that starts with a '$' symbol, consider using $getField or $setField.
+        at MessageStream.messageHandler (D:\projects\unicode\ttp\TTP-Back\node_modules\mongoose\node_modules\mongodb\src\cmap\connection.ts:753:20)
+        at MessageStream.emit (node:events:526:28)
+        at MessageStream.emit (node:domain:475:12)
+        at processIncomingData (D:\projects\unicode\ttp\TTP-Back\node_modules\mongoose\node_modules\mongodb\src\cmap\message_stream.ts:168:12)
+        at MessageStream._write (D:\projects\unicode\ttp\TTP-Back\node_modules\mongoose\node_modules\mongodb\src\cmap\message_stream.ts:65:5)
+        at writeOrBuffer (node:internal/streams/writable:389:12)
+        at _write (node:internal/streams/writable:330:10)
+        at MessageStream.Writable.write (node:internal/streams/writable:334:10)
+        at TLSSocket.ondata (node:internal/streams/readable:754:22)
+        at TLSSocket.emit (node:events:526:28) {
+      ok: 0,
+      code: 2,
+      codeName: 'BadValue',
+      '$clusterTime': {
+        clusterTime: new Timestamp({ t: 1649924143, i: 2 }),
+        signature: {
+          hash: new Binary(Buffer.from("86e9408ad5907168280cf1ec867bfd3773955aa7", "hex"), 0),
+          keyId: new Long("7057499658175643652")
+        }
+      },
+      operationTime: new Timestamp({ t: 1649924143, i: 2 })
+    }
+  },
+  level: 'error',
+  timestamp: '2022-04-14 11:15:43'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-04-14 11:24:03'
+}
+{
+  message: {
+    getDepartmentDataError: MongoServerError: PlanExecutor error during aggregation :: caused by :: input to $filter must be an array not string
+        at MessageStream.messageHandler (D:\projects\unicode\ttp\TTP-Back\node_modules\mongoose\node_modules\mongodb\src\cmap\connection.ts:753:20)
+        at MessageStream.emit (node:events:526:28)
+        at MessageStream.emit (node:domain:475:12)
+        at processIncomingData (D:\projects\unicode\ttp\TTP-Back\node_modules\mongoose\node_modules\mongodb\src\cmap\message_stream.ts:168:12)
+        at MessageStream._write (D:\projects\unicode\ttp\TTP-Back\node_modules\mongoose\node_modules\mongodb\src\cmap\message_stream.ts:65:5)
+        at writeOrBuffer (node:internal/streams/writable:389:12)
+        at _write (node:internal/streams/writable:330:10)
+        at MessageStream.Writable.write (node:internal/streams/writable:334:10)
+        at TLSSocket.ondata (node:internal/streams/readable:754:22)
+        at TLSSocket.emit (node:events:526:28) {
+      ok: 0,
+      code: 28651,
+      codeName: 'Location28651',
+      '$clusterTime': {
+        clusterTime: new Timestamp({ t: 1649924651, i: 1 }),
+        signature: {
+          hash: new Binary(Buffer.from("8156d02403c72b0accffdcc18c8b4a29da01eb36", "hex"), 0),
+          keyId: new Long("7057499658175643652")
+        }
+      },
+      operationTime: new Timestamp({ t: 1649924651, i: 1 })
+    }
+  },
+  level: 'error',
+  timestamp: '2022-04-14 11:24:11'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-04-14 11:24:33'
+}
+{
+  message: {
+    getDepartmentDataError: MongoServerError: PlanExecutor error during aggregation :: caused by :: input to $filter must be an array not object
+        at MessageStream.messageHandler (D:\projects\unicode\ttp\TTP-Back\node_modules\mongoose\node_modules\mongodb\src\cmap\connection.ts:753:20)
+        at MessageStream.emit (node:events:526:28)
+        at MessageStream.emit (node:domain:475:12)
+        at processIncomingData (D:\projects\unicode\ttp\TTP-Back\node_modules\mongoose\node_modules\mongodb\src\cmap\message_stream.ts:168:12)
+        at MessageStream._write (D:\projects\unicode\ttp\TTP-Back\node_modules\mongoose\node_modules\mongodb\src\cmap\message_stream.ts:65:5)
+        at writeOrBuffer (node:internal/streams/writable:389:12)
+        at _write (node:internal/streams/writable:330:10)
+        at MessageStream.Writable.write (node:internal/streams/writable:334:10)
+        at TLSSocket.ondata (node:internal/streams/readable:754:22)
+        at TLSSocket.emit (node:events:526:28) {
+      ok: 0,
+      code: 28651,
+      codeName: 'Location28651',
+      '$clusterTime': {
+        clusterTime: new Timestamp({ t: 1649924713, i: 20 }),
+        signature: {
+          hash: new Binary(Buffer.from("79c196db6fbf978d631245a9ff09db3798bc6b3e", "hex"), 0),
+          keyId: new Long("7057499658175643652")
+        }
+      },
+      operationTime: new Timestamp({ t: 1649924713, i: 20 })
+    }
+  },
+  level: 'error',
+  timestamp: '2022-04-14 11:25:13'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-04-14 11:28:10'
+}
+{
+  message: {
+    getDepartmentDataError: MongoServerError: unknown top level operator: $tasks.status. If you have a field name that starts with a '$' symbol, consider using $getField or $setField.
+        at MessageStream.messageHandler (D:\projects\unicode\ttp\TTP-Back\node_modules\mongoose\node_modules\mongodb\src\cmap\connection.ts:753:20)
+        at MessageStream.emit (node:events:526:28)
+        at MessageStream.emit (node:domain:475:12)
+        at processIncomingData (D:\projects\unicode\ttp\TTP-Back\node_modules\mongoose\node_modules\mongodb\src\cmap\message_stream.ts:168:12)
+        at MessageStream._write (D:\projects\unicode\ttp\TTP-Back\node_modules\mongoose\node_modules\mongodb\src\cmap\message_stream.ts:65:5)
+        at writeOrBuffer (node:internal/streams/writable:389:12)
+        at _write (node:internal/streams/writable:330:10)
+        at MessageStream.Writable.write (node:internal/streams/writable:334:10)
+        at TLSSocket.ondata (node:internal/streams/readable:754:22)
+        at TLSSocket.emit (node:events:526:28) {
+      ok: 0,
+      code: 2,
+      codeName: 'BadValue',
+      '$clusterTime': {
+        clusterTime: new Timestamp({ t: 1649924911, i: 1 }),
+        signature: {
+          hash: new Binary(Buffer.from("61a2f0876ec7ebedb537c83484dee9bc49b7d6f5", "hex"), 0),
+          keyId: new Long("7057499658175643652")
+        }
+      },
+      operationTime: new Timestamp({ t: 1649924911, i: 1 })
+    }
+  },
+  level: 'error',
+  timestamp: '2022-04-14 11:28:31'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-04-14 11:34:42'
+}
+{
+  message: {
+    getDepartmentDataError: MongoServerError: unknown top level operator: $tasks.status. If you have a field name that starts with a '$' symbol, consider using $getField or $setField.
+        at MessageStream.messageHandler (D:\projects\unicode\ttp\TTP-Back\node_modules\mongoose\node_modules\mongodb\src\cmap\connection.ts:753:20)
+        at MessageStream.emit (node:events:526:28)
+        at MessageStream.emit (node:domain:475:12)
+        at processIncomingData (D:\projects\unicode\ttp\TTP-Back\node_modules\mongoose\node_modules\mongodb\src\cmap\message_stream.ts:168:12)
+        at MessageStream._write (D:\projects\unicode\ttp\TTP-Back\node_modules\mongoose\node_modules\mongodb\src\cmap\message_stream.ts:65:5)
+        at writeOrBuffer (node:internal/streams/writable:389:12)
+        at _write (node:internal/streams/writable:330:10)
+        at MessageStream.Writable.write (node:internal/streams/writable:334:10)
+        at TLSSocket.ondata (node:internal/streams/readable:754:22)
+        at TLSSocket.emit (node:events:526:28) {
+      ok: 0,
+      code: 2,
+      codeName: 'BadValue',
+      '$clusterTime': {
+        clusterTime: new Timestamp({ t: 1649925294, i: 1 }),
+        signature: {
+          hash: new Binary(Buffer.from("b442de12d3e056a2d9208f955996f48c01bf0e23", "hex"), 0),
+          keyId: new Long("7057499658175643652")
+        }
+      },
+      operationTime: new Timestamp({ t: 1649925294, i: 1 })
+    }
+  },
+  level: 'error',
+  timestamp: '2022-04-14 11:34:54'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-04-14 11:35:29'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-04-14 11:36:49'
+}
+{
+  message: {
+    getDepartmentDataError: MongoServerError: PlanExecutor error during aggregation :: caused by :: input to $filter must be an array not object
+        at MessageStream.messageHandler (D:\projects\unicode\ttp\TTP-Back\node_modules\mongoose\node_modules\mongodb\src\cmap\connection.ts:753:20)
+        at MessageStream.emit (node:events:526:28)
+        at MessageStream.emit (node:domain:475:12)
+        at processIncomingData (D:\projects\unicode\ttp\TTP-Back\node_modules\mongoose\node_modules\mongodb\src\cmap\message_stream.ts:168:12)
+        at MessageStream._write (D:\projects\unicode\ttp\TTP-Back\node_modules\mongoose\node_modules\mongodb\src\cmap\message_stream.ts:65:5)
+        at writeOrBuffer (node:internal/streams/writable:389:12)
+        at _write (node:internal/streams/writable:330:10)
+        at MessageStream.Writable.write (node:internal/streams/writable:334:10)
+        at TLSSocket.ondata (node:internal/streams/readable:754:22)
+        at TLSSocket.emit (node:events:526:28) {
+      ok: 0,
+      code: 28651,
+      codeName: 'Location28651',
+      '$clusterTime': {
+        clusterTime: new Timestamp({ t: 1649925418, i: 7 }),
+        signature: {
+          hash: new Binary(Buffer.from("18b7b73a73fd9cf34977a0147339679f4e962c3a", "hex"), 0),
+          keyId: new Long("7057499658175643652")
+        }
+      },
+      operationTime: new Timestamp({ t: 1649925418, i: 7 })
+    }
+  },
+  level: 'error',
+  timestamp: '2022-04-14 11:36:58'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-04-14 11:50:23'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-04-14 12:03:23'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-04-14 12:03:34'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-04-14 21:40:02'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-04-14 21:40:57'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-04-14 21:43:09'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-04-14 21:47:34'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-04-14 21:53:42'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-04-14 21:54:16'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp2:i2Bbpfua1Qtqb5E6@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-04-14 21:59:05'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp2:i2Bbpfua1Qtqb5E6@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-04-14 21:59:41'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp2:i2Bbpfua1Qtqb5E6@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-04-14 22:00:30'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp2:i2Bbpfua1Qtqb5E6@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-04-14 22:03:23'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-04-14 22:04:05'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-04-14 22:23:15'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-04-14 22:29:45'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-04-14 22:34:29'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-04-14 22:55:03'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-04-14 23:03:51'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-04-14 23:15:18'
+}
+{
+  message: {
+    db: 'mongodb://unicodettp:YFTt2Opqu5Wd2d1C@cluster0-shard-00-00.oeari.mongodb.net:27017,cluster0-shard-00-01.oeari.mongodb.net:27017,cluster0-shard-00-02.oeari.mongodb.net:27017/myFirstDatabase?ssl=true&replicaSet=atlas-80ye5b-shard-0&authSource=admin&retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-04-15 01:10:22'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-04-15 01:11:13'
+}
+{
+  message: {
+    db: 'mongodb://unicodettp:YFTt2Opqu5Wd2d1C@cluster0-shard-00-00.oeari.mongodb.net:27017,cluster0-shard-00-01.oeari.mongodb.net:27017,cluster0-shard-00-02.oeari.mongodb.net:27017/myFirstDatabase?ssl=true&replicaSet=atlas-80ye5b-shard-0&authSource=admin&retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-04-15 01:14:38'
+}
+{
+  message: {
+    db: 'mongodb://unicodettp:YFTt2Opqu5Wd2d1C@cluster0-shard-00-00.oeari.mongodb.net:27017,cluster0-shard-00-01.oeari.mongodb.net:27017,cluster0-shard-00-02.oeari.mongodb.net:27017/myFirstDatabase?ssl=true&replicaSet=atlas-80ye5b-shard-0&authSource=admin&retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-04-15 01:21:52'
+}
+{
+  message: {
+    db: 'mongodb://unicodettp:YFTt2Opqu5Wd2d1C@cluster0-shard-00-00.oeari.mongodb.net:27017,cluster0-shard-00-01.oeari.mongodb.net:27017,cluster0-shard-00-02.oeari.mongodb.net:27017/myFirstDatabase?ssl=true&replicaSet=atlas-80ye5b-shard-0&authSource=admin&retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-04-15 01:22:40'
+}
+{
+  message: {
+    db: 'mongodb://unicodettp:YFTt2Opqu5Wd2d1C@cluster0-shard-00-00.oeari.mongodb.net:27017,cluster0-shard-00-01.oeari.mongodb.net:27017,cluster0-shard-00-02.oeari.mongodb.net:27017/myFirstDatabase?ssl=true&replicaSet=atlas-80ye5b-shard-0&authSource=admin&retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-04-15 01:23:32'
+}
+{
+  message: {
+    db: 'mongodb://unicodettp:YFTt2Opqu5Wd2d1C@cluster0-shard-00-00.oeari.mongodb.net:27017,cluster0-shard-00-01.oeari.mongodb.net:27017,cluster0-shard-00-02.oeari.mongodb.net:27017/myFirstDatabase?ssl=true&replicaSet=atlas-80ye5b-shard-0&authSource=admin&retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-04-15 01:23:46'
+}
+{
+  message: 'getting data',
+  level: 'info',
+  timestamp: '2022-04-15 01:23:56'
+}
+{
+  message: {
+    db: 'mongodb://unicodettp:YFTt2Opqu5Wd2d1C@cluster0-shard-00-00.oeari.mongodb.net:27017,cluster0-shard-00-01.oeari.mongodb.net:27017,cluster0-shard-00-02.oeari.mongodb.net:27017/myFirstDatabase?ssl=true&replicaSet=atlas-80ye5b-shard-0&authSource=admin&retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-04-15 01:24:55'
+}
+{
+  message: 'getting data',
+  level: 'info',
+  timestamp: '2022-04-15 01:25:08'
+}
+{
+  message: 'getting data',
+  level: 'info',
+  timestamp: '2022-04-15 01:25:11'
+}
+{
+  message: {
+    db: 'mongodb://unicodettp:YFTt2Opqu5Wd2d1C@cluster0-shard-00-00.oeari.mongodb.net:27017,cluster0-shard-00-01.oeari.mongodb.net:27017,cluster0-shard-00-02.oeari.mongodb.net:27017/myFirstDatabase?ssl=true&replicaSet=atlas-80ye5b-shard-0&authSource=admin&retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-04-15 01:25:26'
+}
+{
+  message: {
+    db: 'mongodb://unicodettp:YFTt2Opqu5Wd2d1C@cluster0-shard-00-00.oeari.mongodb.net:27017,cluster0-shard-00-01.oeari.mongodb.net:27017,cluster0-shard-00-02.oeari.mongodb.net:27017/TTP?ssl=true&replicaSet=atlas-80ye5b-shard-0&authSource=admin&retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-04-15 01:26:04'
+}
+{
+  message: 'getting data',
+  level: 'info',
+  timestamp: '2022-04-15 01:26:20'
+}
+{
+  message: {
+    db: 'mongodb://unicodettp:YFTt2Opqu5Wd2d1C@cluster0-shard-00-00.oeari.mongodb.net:27017,cluster0-shard-00-01.oeari.mongodb.net:27017,cluster0-shard-00-02.oeari.mongodb.net:27017/TTP?ssl=true&replicaSet=atlas-80ye5b-shard-0&authSource=admin&retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-04-15 01:26:59'
+}
+{
+  message: 'getting data',
+  level: 'info',
+  timestamp: '2022-04-15 01:27:08'
+}
+{
+  message: {
+    borderData: Promise { <pending> },
+    createBoardApi: 'https://api.trello.com/1/boards/?name=test 7&prefs_background=pink&defaultLists=false&key=96b980af38094db6e5767718567af6ce&token=7f44a81ca5f903883e1b3a5720f89b70b8feacd4437d2cb893068b3b93455e5f'
+  },
+  level: 'info',
+  timestamp: '2022-04-15 01:27:30'
+}
+{
+  message: {
+    boardData: {
+      id: '62589fd39655ee147460b7a7',
+      name: 'test 7',
+      desc: '',
+      descData: null,
+      closed: false,
+      idOrganization: '61e87201397f573cb99a0418',
+      idEnterprise: null,
+      pinned: false,
+      url: 'https://trello.com/b/Q5wQWf9S/test-7',
+      shortUrl: 'https://trello.com/b/Q5wQWf9S',
+      prefs: {
+        permissionLevel: 'private',
+        hideVotes: false,
+        voting: 'disabled',
+        comments: 'members',
+        invitations: 'members',
+        selfJoin: true,
+        cardCovers: true,
+        isTemplate: false,
+        cardAging: 'regular',
+        calendarFeedEnabled: false,
+        hiddenPluginBoardButtons: [],
+        background: 'pink',
+        backgroundColor: '#CD5A91',
+        backgroundImage: null,
+        backgroundImageScaled: null,
+        backgroundTile: false,
+        backgroundBrightness: 'dark',
+        backgroundBottomColor: '#CD5A91',
+        backgroundTopColor: '#CD5A91',
+        canBePublic: true,
+        canBeEnterprise: true,
+        canBeOrg: true,
+        canBePrivate: true,
+        canInvite: true
+      },
+      labelNames: {
+        green: '',
+        yellow: '',
+        orange: '',
+        red: '',
+        purple: '',
+        blue: '',
+        sky: '',
+        lime: '',
+        pink: '',
+        black: ''
+      },
+      limits: {}
+    }
+  },
+  level: 'info',
+  timestamp: '2022-04-15 01:27:30'
+}
+{
+  message: {
+    data: {
+      name: 'test 7',
+      color: 'pink',
+      boardId: '62589fd39655ee147460b7a7'
+    }
+  },
+  level: 'info',
+  timestamp: '2022-04-15 01:27:30'
+}
+{
+  message: { teamData: '62589fd5c0dd950c259972b7' },
+  level: 'info',
+  timestamp: '2022-04-15 01:27:32'
+}
+{
+  message: { teamData: '62589fd5942c6a01c223110f' },
+  level: 'info',
+  timestamp: '2022-04-15 01:27:32'
+}
+{
+  message: { removeWebhookSucced: 'done' },
+  level: 'info',
+  timestamp: '2022-04-15 01:27:32'
+}
+{
+  message: {
+    teamListIds: [
+      {
+        idInTrello: '62589fd5c0dd950c259972b7',
+        idInDB: '61eac1ea6b95c7f7ed8be309'
+      },
+      {
+        idInTrello: '62589fd5942c6a01c223110f',
+        idInDB: '61eab832b41398d86474d4ac'
+      }
+    ]
+  },
+  level: 'info',
+  timestamp: '2022-04-15 01:27:32'
+}
+{
+  message: { webhookCreateResult: 'webhook done' },
+  level: 'info',
+  timestamp: '2022-04-15 01:27:37'
+}
+{
+  message: 'getting data',
+  level: 'info',
+  timestamp: '2022-04-15 01:28:01'
+}
+{
+  message: {
+    db: 'mongodb://unicodettp:YFTt2Opqu5Wd2d1C@cluster0-shard-00-00.oeari.mongodb.net:27017,cluster0-shard-00-01.oeari.mongodb.net:27017,cluster0-shard-00-02.oeari.mongodb.net:27017/TTP?ssl=true&replicaSet=atlas-80ye5b-shard-0&authSource=admin&retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-04-15 01:29:01'
+}
+{
+  message: 'getting data',
+  level: 'info',
+  timestamp: '2022-04-15 01:29:09'
+}
+{
+  message: {
+    getDepartmentDataError: MongoServerError: Invalid $project :: caused by :: FieldPath field names may not start with '$'. Consider using $getField or $setField.
+        at MessageStream.messageHandler (D:\projects\unicode\ttp\TTP-Back\node_modules\mongoose\node_modules\mongodb\src\cmap\connection.ts:753:20)
+        at MessageStream.emit (node:events:526:28)
+        at MessageStream.emit (node:domain:475:12)
+        at processIncomingData (D:\projects\unicode\ttp\TTP-Back\node_modules\mongoose\node_modules\mongodb\src\cmap\message_stream.ts:168:12)
+        at MessageStream._write (D:\projects\unicode\ttp\TTP-Back\node_modules\mongoose\node_modules\mongodb\src\cmap\message_stream.ts:65:5)
+        at writeOrBuffer (node:internal/streams/writable:389:12)
+        at _write (node:internal/streams/writable:330:10)
+        at MessageStream.Writable.write (node:internal/streams/writable:334:10)
+        at TLSSocket.ondata (node:internal/streams/readable:754:22)
+        at TLSSocket.emit (node:events:526:28) {
+      ok: 0,
+      code: 16410,
+      codeName: 'Location16410',
+      '$clusterTime': {
+        clusterTime: new Timestamp({ t: 1649975351, i: 15 }),
+        signature: {
+          hash: new Binary(Buffer.from("d10c6df371fb2501301633bddb37817fd530d436", "hex"), 0),
+          keyId: new Long("7057499658175643652")
+        }
+      },
+      operationTime: new Timestamp({ t: 1649975351, i: 15 })
+    }
+  },
+  level: 'error',
+  timestamp: '2022-04-15 01:29:10'
+}
+{
+  message: {
+    db: 'mongodb://unicodettp:YFTt2Opqu5Wd2d1C@cluster0-shard-00-00.oeari.mongodb.net:27017,cluster0-shard-00-01.oeari.mongodb.net:27017,cluster0-shard-00-02.oeari.mongodb.net:27017/TTP?ssl=true&replicaSet=atlas-80ye5b-shard-0&authSource=admin&retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-04-15 01:33:51'
+}
+{
+  message: {
+    db: 'mongodb://unicodettp:YFTt2Opqu5Wd2d1C@cluster0-shard-00-00.oeari.mongodb.net:27017,cluster0-shard-00-01.oeari.mongodb.net:27017,cluster0-shard-00-02.oeari.mongodb.net:27017/TTP?ssl=true&replicaSet=atlas-80ye5b-shard-0&authSource=admin&retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-04-15 01:34:23'
+}
+{
+  message: 'getting data',
+  level: 'info',
+  timestamp: '2022-04-15 01:34:33'
+}
+{
+  message: {
+    getDepartmentDataError: MongoServerError: Invalid $addFields :: caused by :: an expression specification must contain exactly one field, the name of the expression. Found 2 fields in { $filter: { input: "$tasks", as: "task", cond: { $eq: [ "$$task.status", "inProgress" ] } }, $group: { _id: null, count: { $sum: 1 } } }, while parsing object { totalInProgress: { tasks: { $filter: { input: "$tasks", as: "task", cond: { $eq: [ "$$task.status", "inProgress" ] } }, $group: { _id: null, count: { $sum: 1 } } } } }
+        at MessageStream.messageHandler (D:\projects\unicode\ttp\TTP-Back\node_modules\mongoose\node_modules\mongodb\src\cmap\connection.ts:753:20)
+        at MessageStream.emit (node:events:526:28)
+        at MessageStream.emit (node:domain:475:12)
+        at processIncomingData (D:\projects\unicode\ttp\TTP-Back\node_modules\mongoose\node_modules\mongodb\src\cmap\message_stream.ts:168:12)
+        at MessageStream._write (D:\projects\unicode\ttp\TTP-Back\node_modules\mongoose\node_modules\mongodb\src\cmap\message_stream.ts:65:5)
+        at writeOrBuffer (node:internal/streams/writable:389:12)
+        at _write (node:internal/streams/writable:330:10)
+        at MessageStream.Writable.write (node:internal/streams/writable:334:10)
+        at TLSSocket.ondata (node:internal/streams/readable:754:22)
+        at TLSSocket.emit (node:events:526:28) {
+      ok: 0,
+      code: 40181,
+      codeName: 'Location40181',
+      '$clusterTime': {
+        clusterTime: new Timestamp({ t: 1649975674, i: 1 }),
+        signature: {
+          hash: new Binary(Buffer.from("622703b825ea9b5aaf9debb4eb8f4e7aa7d54fb5", "hex"), 0),
+          keyId: new Long("7057499658175643652")
+        }
+      },
+      operationTime: new Timestamp({ t: 1649975674, i: 1 })
+    }
+  },
+  level: 'error',
+  timestamp: '2022-04-15 01:34:33'
+}
+{
+  message: {
+    db: 'mongodb://unicodettp:YFTt2Opqu5Wd2d1C@cluster0-shard-00-00.oeari.mongodb.net:27017,cluster0-shard-00-01.oeari.mongodb.net:27017,cluster0-shard-00-02.oeari.mongodb.net:27017/TTP?ssl=true&replicaSet=atlas-80ye5b-shard-0&authSource=admin&retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-04-15 01:35:45'
+}
+{
+  message: 'getting data',
+  level: 'info',
+  timestamp: '2022-04-15 01:35:54'
+}
+{
+  message: {
+    db: 'mongodb://unicodettp:YFTt2Opqu5Wd2d1C@cluster0-shard-00-00.oeari.mongodb.net:27017,cluster0-shard-00-01.oeari.mongodb.net:27017,cluster0-shard-00-02.oeari.mongodb.net:27017/TTP?ssl=true&replicaSet=atlas-80ye5b-shard-0&authSource=admin&retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-04-15 01:37:14'
+}
+{
+  message: 'getting data',
+  level: 'info',
+  timestamp: '2022-04-15 01:37:24'
+}
+{
+  message: {
+    db: 'mongodb://unicodettp:YFTt2Opqu5Wd2d1C@cluster0-shard-00-00.oeari.mongodb.net:27017,cluster0-shard-00-01.oeari.mongodb.net:27017,cluster0-shard-00-02.oeari.mongodb.net:27017/TTP?ssl=true&replicaSet=atlas-80ye5b-shard-0&authSource=admin&retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-04-15 01:38:15'
+}
+{
+  message: 'getting data',
+  level: 'info',
+  timestamp: '2022-04-15 01:38:24'
+}
+{
+  message: {
+    getDepartmentDataError: MongoServerError: Invalid $addFields :: caused by :: an expression specification must contain exactly one field, the name of the expression. Found 2 fields in { $filter: { input: "$tasks", as: "task", cond: { $eq: [ "$$task.status", "inProgress" ] } }, $group: { _id: null, count: { $sum: 1 } } }, while parsing object { totalInProgress: { $filter: { input: "$tasks", as: "task", cond: { $eq: [ "$$task.status", "inProgress" ] } }, $group: { _id: null, count: { $sum: 1 } } } }
+        at MessageStream.messageHandler (D:\projects\unicode\ttp\TTP-Back\node_modules\mongoose\node_modules\mongodb\src\cmap\connection.ts:753:20)
+        at MessageStream.emit (node:events:526:28)
+        at MessageStream.emit (node:domain:475:12)
+        at processIncomingData (D:\projects\unicode\ttp\TTP-Back\node_modules\mongoose\node_modules\mongodb\src\cmap\message_stream.ts:168:12)
+        at MessageStream._write (D:\projects\unicode\ttp\TTP-Back\node_modules\mongoose\node_modules\mongodb\src\cmap\message_stream.ts:65:5)
+        at writeOrBuffer (node:internal/streams/writable:389:12)
+        at _write (node:internal/streams/writable:330:10)
+        at MessageStream.Writable.write (node:internal/streams/writable:334:10)
+        at TLSSocket.ondata (node:internal/streams/readable:754:22)
+        at TLSSocket.emit (node:events:526:28) {
+      ok: 0,
+      code: 40181,
+      codeName: 'Location40181',
+      '$clusterTime': {
+        clusterTime: new Timestamp({ t: 1649975906, i: 1 }),
+        signature: {
+          hash: new Binary(Buffer.from("4aa14058e86ddf52ab976a06ff2fd16e5f69d3ee", "hex"), 0),
+          keyId: new Long("7057499658175643652")
+        }
+      },
+      operationTime: new Timestamp({ t: 1649975906, i: 1 })
+    }
+  },
+  level: 'error',
+  timestamp: '2022-04-15 01:38:25'
+}
+{
+  message: {
+    db: 'mongodb://unicodettp:YFTt2Opqu5Wd2d1C@cluster0-shard-00-00.oeari.mongodb.net:27017,cluster0-shard-00-01.oeari.mongodb.net:27017,cluster0-shard-00-02.oeari.mongodb.net:27017/TTP?ssl=true&replicaSet=atlas-80ye5b-shard-0&authSource=admin&retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-04-15 01:38:50'
+}
+{
+  message: 'getting data',
+  level: 'info',
+  timestamp: '2022-04-15 01:39:01'
+}
+{
+  message: {
+    db: 'mongodb://unicodettp:YFTt2Opqu5Wd2d1C@cluster0-shard-00-00.oeari.mongodb.net:27017,cluster0-shard-00-01.oeari.mongodb.net:27017,cluster0-shard-00-02.oeari.mongodb.net:27017/TTP?ssl=true&replicaSet=atlas-80ye5b-shard-0&authSource=admin&retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-04-15 01:43:23'
+}
+{
+  message: 'getting data',
+  level: 'info',
+  timestamp: '2022-04-15 01:43:33'
+}
+{
+  message: {
+    db: 'mongodb://unicodettp:YFTt2Opqu5Wd2d1C@cluster0-shard-00-00.oeari.mongodb.net:27017,cluster0-shard-00-01.oeari.mongodb.net:27017,cluster0-shard-00-02.oeari.mongodb.net:27017/TTP?ssl=true&replicaSet=atlas-80ye5b-shard-0&authSource=admin&retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-04-15 01:45:01'
+}
+{
+  message: 'getting data',
+  level: 'info',
+  timestamp: '2022-04-15 01:45:11'
+}
+{
+  message: {
+    getDepartmentDataError: MongoServerError: Invalid $project :: caused by :: Cannot do exclusion on field tasks in inclusion projection
+        at MessageStream.messageHandler (D:\projects\unicode\ttp\TTP-Back\node_modules\mongoose\node_modules\mongodb\src\cmap\connection.ts:753:20)
+        at MessageStream.emit (node:events:526:28)
+        at MessageStream.emit (node:domain:475:12)
+        at processIncomingData (D:\projects\unicode\ttp\TTP-Back\node_modules\mongoose\node_modules\mongodb\src\cmap\message_stream.ts:168:12)
+        at MessageStream._write (D:\projects\unicode\ttp\TTP-Back\node_modules\mongoose\node_modules\mongodb\src\cmap\message_stream.ts:65:5)
+        at writeOrBuffer (node:internal/streams/writable:389:12)
+        at _write (node:internal/streams/writable:330:10)
+        at MessageStream.Writable.write (node:internal/streams/writable:334:10)
+        at TLSSocket.ondata (node:internal/streams/readable:754:22)
+        at TLSSocket.emit (node:events:526:28) {
+      ok: 0,
+      code: 31254,
+      codeName: 'Location31254',
+      '$clusterTime': {
+        clusterTime: new Timestamp({ t: 1649976313, i: 2 }),
+        signature: {
+          hash: new Binary(Buffer.from("d3f1e477ec24b484554e4e159ce8c88d1bb83c09", "hex"), 0),
+          keyId: new Long("7057499658175643652")
+        }
+      },
+      operationTime: new Timestamp({ t: 1649976313, i: 2 })
+    }
+  },
+  level: 'error',
+  timestamp: '2022-04-15 01:45:11'
+}
+{
+  message: {
+    db: 'mongodb://unicodettp:YFTt2Opqu5Wd2d1C@cluster0-shard-00-00.oeari.mongodb.net:27017,cluster0-shard-00-01.oeari.mongodb.net:27017,cluster0-shard-00-02.oeari.mongodb.net:27017/TTP?ssl=true&replicaSet=atlas-80ye5b-shard-0&authSource=admin&retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-04-15 01:45:39'
+}
+{
+  message: 'getting data',
+  level: 'info',
+  timestamp: '2022-04-15 01:45:49'
+}
+{
+  message: {
+    db: 'mongodb://unicodettp:YFTt2Opqu5Wd2d1C@cluster0-shard-00-00.oeari.mongodb.net:27017,cluster0-shard-00-01.oeari.mongodb.net:27017,cluster0-shard-00-02.oeari.mongodb.net:27017/TTP?ssl=true&replicaSet=atlas-80ye5b-shard-0&authSource=admin&retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-04-15 01:46:47'
+}
+{
+  message: 'getting data',
+  level: 'info',
+  timestamp: '2022-04-15 01:46:57'
+}
+{
+  message: {
+    getDepartmentDataError: MongoServerError: Invalid $project :: caused by :: Unknown expression $each
+        at MessageStream.messageHandler (D:\projects\unicode\ttp\TTP-Back\node_modules\mongoose\node_modules\mongodb\src\cmap\connection.ts:753:20)
+        at MessageStream.emit (node:events:526:28)
+        at MessageStream.emit (node:domain:475:12)
+        at processIncomingData (D:\projects\unicode\ttp\TTP-Back\node_modules\mongoose\node_modules\mongodb\src\cmap\message_stream.ts:168:12)
+        at MessageStream._write (D:\projects\unicode\ttp\TTP-Back\node_modules\mongoose\node_modules\mongodb\src\cmap\message_stream.ts:65:5)
+        at writeOrBuffer (node:internal/streams/writable:389:12)
+        at _write (node:internal/streams/writable:330:10)
+        at MessageStream.Writable.write (node:internal/streams/writable:334:10)
+        at TLSSocket.ondata (node:internal/streams/readable:754:22)
+        at TLSSocket.emit (node:events:526:28) {
+      ok: 0,
+      code: 31325,
+      codeName: 'Location31325',
+      '$clusterTime': {
+        clusterTime: new Timestamp({ t: 1649976418, i: 2 }),
+        signature: {
+          hash: new Binary(Buffer.from("58c518eb17b33631f7cd7697d2159051a69500ec", "hex"), 0),
+          keyId: new Long("7057499658175643652")
+        }
+      },
+      operationTime: new Timestamp({ t: 1649976418, i: 2 })
+    }
+  },
+  level: 'error',
+  timestamp: '2022-04-15 01:46:57'
+}
+{
+  message: {
+    db: 'mongodb://unicodettp:YFTt2Opqu5Wd2d1C@cluster0-shard-00-00.oeari.mongodb.net:27017,cluster0-shard-00-01.oeari.mongodb.net:27017,cluster0-shard-00-02.oeari.mongodb.net:27017/TTP?ssl=true&replicaSet=atlas-80ye5b-shard-0&authSource=admin&retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-04-15 01:57:19'
+}
+{
+  message: 'getting data',
+  level: 'info',
+  timestamp: '2022-04-15 01:57:31'
+}
+{
+  message: {
+    getDepartmentDataError: MongoServerError: Invalid $addFields :: caused by :: an expression specification must contain exactly one field, the name of the expression. Found 2 fields in { $filter: { input: "$tasks", as: "task", cond: { $eq: [ "$$task.status", "inProgress" ] } }, $map: { input: "$tasks", as: "task", in: { _id: "$$task._id" } } }, while parsing object { totalInProgress: { $filter: { input: "$tasks", as: "task", cond: { $eq: [ "$$task.status", "inProgress" ] } }, $map: { input: "$tasks", as: "task", in: { _id: "$$task._id" } } } }
+        at MessageStream.messageHandler (D:\projects\unicode\ttp\TTP-Back\node_modules\mongoose\node_modules\mongodb\src\cmap\connection.ts:753:20)
+        at MessageStream.emit (node:events:526:28)
+        at MessageStream.emit (node:domain:475:12)
+        at processIncomingData (D:\projects\unicode\ttp\TTP-Back\node_modules\mongoose\node_modules\mongodb\src\cmap\message_stream.ts:168:12)
+        at MessageStream._write (D:\projects\unicode\ttp\TTP-Back\node_modules\mongoose\node_modules\mongodb\src\cmap\message_stream.ts:65:5)
+        at writeOrBuffer (node:internal/streams/writable:389:12)
+        at _write (node:internal/streams/writable:330:10)
+        at MessageStream.Writable.write (node:internal/streams/writable:334:10)
+        at TLSSocket.ondata (node:internal/streams/readable:754:22)
+        at TLSSocket.emit (node:events:526:28) {
+      ok: 0,
+      code: 40181,
+      codeName: 'Location40181',
+      '$clusterTime': {
+        clusterTime: new Timestamp({ t: 1649977052, i: 9 }),
+        signature: {
+          hash: new Binary(Buffer.from("1b350fa7f5b342e6e388d8d6dcc9983a8db6e754", "hex"), 0),
+          keyId: new Long("7057499658175643652")
+        }
+      },
+      operationTime: new Timestamp({ t: 1649977052, i: 9 })
+    }
+  },
+  level: 'error',
+  timestamp: '2022-04-15 01:57:31'
+}
+{
+  message: {
+    db: 'mongodb://unicodettp:YFTt2Opqu5Wd2d1C@cluster0-shard-00-00.oeari.mongodb.net:27017,cluster0-shard-00-01.oeari.mongodb.net:27017,cluster0-shard-00-02.oeari.mongodb.net:27017/TTP?ssl=true&replicaSet=atlas-80ye5b-shard-0&authSource=admin&retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-04-15 01:58:15'
+}
+{
+  message: 'getting data',
+  level: 'info',
+  timestamp: '2022-04-15 01:58:28'
+}
+{
+  message: {
+    db: 'mongodb://unicodettp:YFTt2Opqu5Wd2d1C@cluster0-shard-00-00.oeari.mongodb.net:27017,cluster0-shard-00-01.oeari.mongodb.net:27017,cluster0-shard-00-02.oeari.mongodb.net:27017/TTP?ssl=true&replicaSet=atlas-80ye5b-shard-0&authSource=admin&retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-04-15 01:59:12'
+}
+{
+  message: 'getting data',
+  level: 'info',
+  timestamp: '2022-04-15 01:59:24'
+}
+{
+  message: {
+    db: 'mongodb://unicodettp:YFTt2Opqu5Wd2d1C@cluster0-shard-00-00.oeari.mongodb.net:27017,cluster0-shard-00-01.oeari.mongodb.net:27017,cluster0-shard-00-02.oeari.mongodb.net:27017/TTP?ssl=true&replicaSet=atlas-80ye5b-shard-0&authSource=admin&retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-04-15 02:00:02'
+}
+{
+  message: 'getting data',
+  level: 'info',
+  timestamp: '2022-04-15 02:00:11'
+}
+{
+  message: {
+    db: 'mongodb://unicodettp:YFTt2Opqu5Wd2d1C@cluster0-shard-00-00.oeari.mongodb.net:27017,cluster0-shard-00-01.oeari.mongodb.net:27017,cluster0-shard-00-02.oeari.mongodb.net:27017/TTP?ssl=true&replicaSet=atlas-80ye5b-shard-0&authSource=admin&retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-04-15 02:00:44'
+}
+{
+  message: 'getting data',
+  level: 'info',
+  timestamp: '2022-04-15 02:00:53'
+}
+{
+  message: {
+    db: 'mongodb://unicodettp:YFTt2Opqu5Wd2d1C@cluster0-shard-00-00.oeari.mongodb.net:27017,cluster0-shard-00-01.oeari.mongodb.net:27017,cluster0-shard-00-02.oeari.mongodb.net:27017/TTP?ssl=true&replicaSet=atlas-80ye5b-shard-0&authSource=admin&retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-04-15 02:02:30'
+}
+{
+  message: 'getting data',
+  level: 'info',
+  timestamp: '2022-04-15 02:02:41'
+}
+{
+  message: {
+    getDepartmentDataError: MongoServerError: Invalid $project :: caused by :: Unknown expression $group
+        at MessageStream.messageHandler (D:\projects\unicode\ttp\TTP-Back\node_modules\mongoose\node_modules\mongodb\src\cmap\connection.ts:753:20)
+        at MessageStream.emit (node:events:526:28)
+        at MessageStream.emit (node:domain:475:12)
+        at processIncomingData (D:\projects\unicode\ttp\TTP-Back\node_modules\mongoose\node_modules\mongodb\src\cmap\message_stream.ts:168:12)
+        at MessageStream._write (D:\projects\unicode\ttp\TTP-Back\node_modules\mongoose\node_modules\mongodb\src\cmap\message_stream.ts:65:5)
+        at writeOrBuffer (node:internal/streams/writable:389:12)
+        at _write (node:internal/streams/writable:330:10)
+        at MessageStream.Writable.write (node:internal/streams/writable:334:10)
+        at TLSSocket.ondata (node:internal/streams/readable:754:22)
+        at TLSSocket.emit (node:events:526:28) {
+      ok: 0,
+      code: 31325,
+      codeName: 'Location31325',
+      '$clusterTime': {
+        clusterTime: new Timestamp({ t: 1649977363, i: 1 }),
+        signature: {
+          hash: new Binary(Buffer.from("67f9d0e3d243bd775159e723f9596a62f6284c40", "hex"), 0),
+          keyId: new Long("7057499658175643652")
+        }
+      },
+      operationTime: new Timestamp({ t: 1649977363, i: 1 })
+    }
+  },
+  level: 'error',
+  timestamp: '2022-04-15 02:02:41'
+}
+{
+  message: {
+    db: 'mongodb://unicodettp:YFTt2Opqu5Wd2d1C@cluster0-shard-00-00.oeari.mongodb.net:27017,cluster0-shard-00-01.oeari.mongodb.net:27017,cluster0-shard-00-02.oeari.mongodb.net:27017/TTP?ssl=true&replicaSet=atlas-80ye5b-shard-0&authSource=admin&retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-04-15 02:03:49'
+}
+{
+  message: 'getting data',
+  level: 'info',
+  timestamp: '2022-04-15 02:03:58'
+}
+{
+  message: {
+    getDepartmentDataError: MongoServerError: Invalid $project :: caused by :: FieldPath field names may not start with '$'. Consider using $getField or $setField.
+        at MessageStream.messageHandler (D:\projects\unicode\ttp\TTP-Back\node_modules\mongoose\node_modules\mongodb\src\cmap\connection.ts:753:20)
+        at MessageStream.emit (node:events:526:28)
+        at MessageStream.emit (node:domain:475:12)
+        at processIncomingData (D:\projects\unicode\ttp\TTP-Back\node_modules\mongoose\node_modules\mongodb\src\cmap\message_stream.ts:168:12)
+        at MessageStream._write (D:\projects\unicode\ttp\TTP-Back\node_modules\mongoose\node_modules\mongodb\src\cmap\message_stream.ts:65:5)
+        at writeOrBuffer (node:internal/streams/writable:389:12)
+        at _write (node:internal/streams/writable:330:10)
+        at MessageStream.Writable.write (node:internal/streams/writable:334:10)
+        at TLSSocket.ondata (node:internal/streams/readable:754:22)
+        at TLSSocket.emit (node:events:526:28) {
+      ok: 0,
+      code: 16410,
+      codeName: 'Location16410',
+      '$clusterTime': {
+        clusterTime: new Timestamp({ t: 1649977440, i: 4 }),
+        signature: {
+          hash: new Binary(Buffer.from("b0938d4e6be393d6a29df1c5e48fd88ee5521347", "hex"), 0),
+          keyId: new Long("7057499658175643652")
+        }
+      },
+      operationTime: new Timestamp({ t: 1649977440, i: 4 })
+    }
+  },
+  level: 'error',
+  timestamp: '2022-04-15 02:03:58'
+}
+{
+  message: {
+    db: 'mongodb://unicodettp:YFTt2Opqu5Wd2d1C@cluster0-shard-00-00.oeari.mongodb.net:27017,cluster0-shard-00-01.oeari.mongodb.net:27017,cluster0-shard-00-02.oeari.mongodb.net:27017/TTP?ssl=true&replicaSet=atlas-80ye5b-shard-0&authSource=admin&retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-04-15 02:05:31'
+}
+{
+  message: 'getting data',
+  level: 'info',
+  timestamp: '2022-04-15 02:05:45'
+}
+{
+  message: {
+    getDepartmentDataError: MongoServerError: Invalid $project :: caused by :: Unrecognized expression '$match'
+        at MessageStream.messageHandler (D:\projects\unicode\ttp\TTP-Back\node_modules\mongoose\node_modules\mongodb\src\cmap\connection.ts:753:20)
+        at MessageStream.emit (node:events:526:28)
+        at MessageStream.emit (node:domain:475:12)
+        at processIncomingData (D:\projects\unicode\ttp\TTP-Back\node_modules\mongoose\node_modules\mongodb\src\cmap\message_stream.ts:168:12)
+        at MessageStream._write (D:\projects\unicode\ttp\TTP-Back\node_modules\mongoose\node_modules\mongodb\src\cmap\message_stream.ts:65:5)
+        at writeOrBuffer (node:internal/streams/writable:389:12)
+        at _write (node:internal/streams/writable:330:10)
+        at MessageStream.Writable.write (node:internal/streams/writable:334:10)
+        at TLSSocket.ondata (node:internal/streams/readable:754:22)
+        at TLSSocket.emit (node:events:526:28) {
+      ok: 0,
+      code: 168,
+      codeName: 'InvalidPipelineOperator',
+      '$clusterTime': {
+        clusterTime: new Timestamp({ t: 1649977547, i: 2 }),
+        signature: {
+          hash: new Binary(Buffer.from("babad5f51251cb80731d8c63c84386618a2c350b", "hex"), 0),
+          keyId: new Long("7057499658175643652")
+        }
+      },
+      operationTime: new Timestamp({ t: 1649977547, i: 2 })
+    }
+  },
+  level: 'error',
+  timestamp: '2022-04-15 02:05:45'
+}
+{
+  message: {
+    db: 'mongodb://unicodettp:YFTt2Opqu5Wd2d1C@cluster0-shard-00-00.oeari.mongodb.net:27017,cluster0-shard-00-01.oeari.mongodb.net:27017,cluster0-shard-00-02.oeari.mongodb.net:27017/TTP?ssl=true&replicaSet=atlas-80ye5b-shard-0&authSource=admin&retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-04-15 02:06:57'
+}
+{
+  message: 'getting data',
+  level: 'info',
+  timestamp: '2022-04-15 02:07:08'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-04-15 14:12:40'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-04-16 12:30:19'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-04-16 12:42:23'
+}
+{
+  message: {
+    getDepartmentDataError: TypeError: Cannot read properties of undefined (reading 'length')
+        at Function.<anonymous> (D:\projects\unicode\ttp\TTP-Back\src\lib\dbCalls\department\department.ts:108:53)
+        at Generator.next (<anonymous>)
+        at fulfilled (D:\projects\unicode\ttp\TTP-Back\src\lib\dbCalls\department\department.ts:5:58)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5)
+  },
+  level: 'error',
+  timestamp: '2022-04-16 12:42:46'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-04-16 12:43:13'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-04-16 12:44:42'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-04-16 12:45:10'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-04-16 12:45:50'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-04-16 12:46:39'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-04-16 12:58:51'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-04-16 13:01:11'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-04-16 13:01:44'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-04-16 13:06:57'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-04-16 13:11:14'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-04-16 13:13:39'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-04-16 13:27:00'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-04-16 13:30:22'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-04-16 13:33:47'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-04-16 13:34:14'
+}
+{
+  message: {
+    getDepartmentDataError: MongoServerError: a group specification must include an _id
+        at MessageStream.messageHandler (D:\projects\unicode\ttp\TTP-Back\node_modules\mongoose\node_modules\mongodb\src\cmap\connection.ts:753:20)
+        at MessageStream.emit (node:events:526:28)
+        at MessageStream.emit (node:domain:475:12)
+        at processIncomingData (D:\projects\unicode\ttp\TTP-Back\node_modules\mongoose\node_modules\mongodb\src\cmap\message_stream.ts:168:12)
+        at MessageStream._write (D:\projects\unicode\ttp\TTP-Back\node_modules\mongoose\node_modules\mongodb\src\cmap\message_stream.ts:65:5)
+        at writeOrBuffer (node:internal/streams/writable:389:12)
+        at _write (node:internal/streams/writable:330:10)
+        at MessageStream.Writable.write (node:internal/streams/writable:334:10)
+        at TLSSocket.ondata (node:internal/streams/readable:754:22)
+        at TLSSocket.emit (node:events:526:28) {
+      ok: 0,
+      code: 15955,
+      codeName: 'Location15955',
+      '$clusterTime': {
+        clusterTime: new Timestamp({ t: 1650105280, i: 2 }),
+        signature: {
+          hash: new Binary(Buffer.from("24e196c54be12a7d6120f5b8bc3726ca1fba4fac", "hex"), 0),
+          keyId: new Long("7057499658175643652")
+        }
+      },
+      operationTime: new Timestamp({ t: 1650105280, i: 2 })
+    }
+  },
+  level: 'error',
+  timestamp: '2022-04-16 13:34:39'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-04-16 13:35:48'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-04-16 13:36:42'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-04-16 13:38:09'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-04-16 13:39:10'
+}
+{
+  message: {
+    borderData: Promise { <pending> },
+    createBoardApi: 'https://api.trello.com/1/boards/?name=test 8&prefs_background=red&defaultLists=false&key=96b980af38094db6e5767718567af6ce&token=7f44a81ca5f903883e1b3a5720f89b70b8feacd4437d2cb893068b3b93455e5f'
+  },
+  level: 'info',
+  timestamp: '2022-04-16 13:48:24'
+}
+{
+  message: {
+    boardData: {
+      id: '625a9ef9027049149bdfe9e7',
+      name: 'test 8',
+      desc: '',
+      descData: null,
+      closed: false,
+      idOrganization: '61e87201397f573cb99a0418',
+      idEnterprise: null,
+      pinned: false,
+      url: 'https://trello.com/b/7K4ZvJK0/test-8',
+      shortUrl: 'https://trello.com/b/7K4ZvJK0',
+      prefs: {
+        permissionLevel: 'private',
+        hideVotes: false,
+        voting: 'disabled',
+        comments: 'members',
+        invitations: 'members',
+        selfJoin: true,
+        cardCovers: true,
+        isTemplate: false,
+        cardAging: 'regular',
+        calendarFeedEnabled: false,
+        hiddenPluginBoardButtons: [],
+        background: 'red',
+        backgroundColor: '#B04632',
+        backgroundImage: null,
+        backgroundImageScaled: null,
+        backgroundTile: false,
+        backgroundBrightness: 'dark',
+        backgroundBottomColor: '#B04632',
+        backgroundTopColor: '#B04632',
+        canBePublic: true,
+        canBeEnterprise: true,
+        canBeOrg: true,
+        canBePrivate: true,
+        canInvite: true
+      },
+      labelNames: {
+        green: '',
+        yellow: '',
+        orange: '',
+        red: '',
+        purple: '',
+        blue: '',
+        sky: '',
+        lime: '',
+        pink: '',
+        black: ''
+      },
+      limits: {}
+    }
+  },
+  level: 'info',
+  timestamp: '2022-04-16 13:48:24'
+}
+{
+  message: {
+    data: {
+      name: 'test 8',
+      color: 'red',
+      boardId: '625a9ef9027049149bdfe9e7'
+    }
+  },
+  level: 'info',
+  timestamp: '2022-04-16 13:48:24'
+}
+{
+  message: { teamData: '625a9efbd628b680354b8742' },
+  level: 'info',
+  timestamp: '2022-04-16 13:48:26'
+}
+{
+  message: { teamData: '625a9efc56c41f113803a403' },
+  level: 'info',
+  timestamp: '2022-04-16 13:48:26'
+}
+{
+  message: { teamData: '625a9efcaa43368a6d54917f' },
+  level: 'info',
+  timestamp: '2022-04-16 13:48:26'
+}
+{
+  message: { removeWebhookSucced: 'done' },
+  level: 'info',
+  timestamp: '2022-04-16 13:48:26'
+}
+{
+  message: {
+    teamListIds: [
+      {
+        idInTrello: '625a9efbd628b680354b8742',
+        idInDB: '6253ce2f2753632ee7b36bb1'
+      },
+      {
+        idInTrello: '625a9efc56c41f113803a403',
+        idInDB: '62533454e70f984753d923f3'
+      },
+      {
+        idInTrello: '625a9efcaa43368a6d54917f',
+        idInDB: '6253df2064dfd2535bf4c177'
+      }
+    ]
+  },
+  level: 'info',
+  timestamp: '2022-04-16 13:48:26'
+}
+{
+  message: { webhookCreateResult: 'webhook done' },
+  level: 'info',
+  timestamp: '2022-04-16 13:48:37'
+}
+{
+  message: {
+    borderData: Promise { <pending> },
+    createBoardApi: 'https://api.trello.com/1/boards/?name=test 9&prefs_background=green&defaultLists=false&key=96b980af38094db6e5767718567af6ce&token=7f44a81ca5f903883e1b3a5720f89b70b8feacd4437d2cb893068b3b93455e5f'
+  },
+  level: 'info',
+  timestamp: '2022-04-16 14:02:45'
+}
+{
+  message: {
+    boardData: {
+      id: '625aa257d3594f26b854d89a',
+      name: 'test 9',
+      desc: '',
+      descData: null,
+      closed: false,
+      idOrganization: '61e87201397f573cb99a0418',
+      idEnterprise: null,
+      pinned: false,
+      url: 'https://trello.com/b/f0e56JY3/test-9',
+      shortUrl: 'https://trello.com/b/f0e56JY3',
+      prefs: {
+        permissionLevel: 'private',
+        hideVotes: false,
+        voting: 'disabled',
+        comments: 'members',
+        invitations: 'members',
+        selfJoin: true,
+        cardCovers: true,
+        isTemplate: false,
+        cardAging: 'regular',
+        calendarFeedEnabled: false,
+        hiddenPluginBoardButtons: [],
+        background: 'green',
+        backgroundColor: '#519839',
+        backgroundImage: null,
+        backgroundImageScaled: null,
+        backgroundTile: false,
+        backgroundBrightness: 'dark',
+        backgroundBottomColor: '#519839',
+        backgroundTopColor: '#519839',
+        canBePublic: true,
+        canBeEnterprise: true,
+        canBeOrg: true,
+        canBePrivate: true,
+        canInvite: true
+      },
+      labelNames: {
+        green: '',
+        yellow: '',
+        orange: '',
+        red: '',
+        purple: '',
+        blue: '',
+        sky: '',
+        lime: '',
+        pink: '',
+        black: ''
+      },
+      limits: {}
+    }
+  },
+  level: 'info',
+  timestamp: '2022-04-16 14:02:45'
+}
+{
+  message: {
+    data: {
+      name: 'test 9',
+      color: 'green',
+      boardId: '625aa257d3594f26b854d89a'
+    }
+  },
+  level: 'info',
+  timestamp: '2022-04-16 14:02:45'
+}
+{
+  message: { teamData: '625aa2592f2a2a24e7d4cea4' },
+  level: 'info',
+  timestamp: '2022-04-16 14:02:48'
+}
+{
+  message: { teamData: '625aa25963018c670f765922' },
+  level: 'info',
+  timestamp: '2022-04-16 14:02:48'
+}
+{
+  message: { teamData: '625aa259913fdc2f01b6c37b' },
+  level: 'info',
+  timestamp: '2022-04-16 14:02:48'
+}
+{
+  message: { teamData: '625aa2598bd50137aade948f' },
+  level: 'info',
+  timestamp: '2022-04-16 14:02:48'
+}
+{
+  message: { removeWebhookSucced: 'done' },
+  level: 'info',
+  timestamp: '2022-04-16 14:02:48'
+}
+{
+  message: {
+    teamListIds: [
+      {
+        idInTrello: '625aa2592f2a2a24e7d4cea4',
+        idInDB: '6253ce2f2753632ee7b36bb1'
+      },
+      {
+        idInTrello: '625aa25963018c670f765922',
+        idInDB: '62533454e70f984753d923f3'
+      },
+      {
+        idInTrello: '625aa259913fdc2f01b6c37b',
+        idInDB: '6253df2064dfd2535bf4c177'
+      },
+      {
+        idInTrello: '625aa2598bd50137aade948f',
+        idInDB: '624acd96ce5fbb5ce20df2dd'
+      }
+    ]
+  },
+  level: 'info',
+  timestamp: '2022-04-16 14:02:48'
+}
+{
+  message: { webhookCreateResult: 'webhook done' },
+  level: 'info',
+  timestamp: '2022-04-16 14:02:51'
+}
+{
+  message: {
+    borderData: Promise { <pending> },
+    createBoardApi: 'https://api.trello.com/1/boards/?name=test 10&prefs_background=orange&defaultLists=false&key=96b980af38094db6e5767718567af6ce&token=7f44a81ca5f903883e1b3a5720f89b70b8feacd4437d2cb893068b3b93455e5f'
+  },
+  level: 'info',
+  timestamp: '2022-04-16 14:10:37'
+}
+{
+  message: {
+    boardData: {
+      id: '625aa42e4a4fc42eef2394bf',
+      name: 'test 10',
+      desc: '',
+      descData: null,
+      closed: false,
+      idOrganization: '61e87201397f573cb99a0418',
+      idEnterprise: null,
+      pinned: false,
+      url: 'https://trello.com/b/5NYM7Hkw/test-10',
+      shortUrl: 'https://trello.com/b/5NYM7Hkw',
+      prefs: {
+        permissionLevel: 'private',
+        hideVotes: false,
+        voting: 'disabled',
+        comments: 'members',
+        invitations: 'members',
+        selfJoin: true,
+        cardCovers: true,
+        isTemplate: false,
+        cardAging: 'regular',
+        calendarFeedEnabled: false,
+        hiddenPluginBoardButtons: [],
+        background: 'orange',
+        backgroundColor: '#D29034',
+        backgroundImage: null,
+        backgroundImageScaled: null,
+        backgroundTile: false,
+        backgroundBrightness: 'dark',
+        backgroundBottomColor: '#D29034',
+        backgroundTopColor: '#D29034',
+        canBePublic: true,
+        canBeEnterprise: true,
+        canBeOrg: true,
+        canBePrivate: true,
+        canInvite: true
+      },
+      labelNames: {
+        green: '',
+        yellow: '',
+        orange: '',
+        red: '',
+        purple: '',
+        blue: '',
+        sky: '',
+        lime: '',
+        pink: '',
+        black: ''
+      },
+      limits: {}
+    }
+  },
+  level: 'info',
+  timestamp: '2022-04-16 14:10:37'
+}
+{
+  message: {
+    data: {
+      name: 'test 10',
+      color: 'orange',
+      boardId: '625aa42e4a4fc42eef2394bf'
+    }
+  },
+  level: 'info',
+  timestamp: '2022-04-16 14:10:37'
+}
+{
+  message: { teamData: '625aa4316f75d0201a09a381' },
+  level: 'info',
+  timestamp: '2022-04-16 14:10:40'
+}
+{
+  message: { teamData: '625aa4312cadcb77d7bcfff9' },
+  level: 'info',
+  timestamp: '2022-04-16 14:10:40'
+}
+{
+  message: { teamData: '625aa4319b4cce1351e946cc' },
+  level: 'info',
+  timestamp: '2022-04-16 14:10:40'
+}
+{
+  message: { removeWebhookSucced: 'done' },
+  level: 'info',
+  timestamp: '2022-04-16 14:10:40'
+}
+{
+  message: {
+    teamListIds: [
+      {
+        idInTrello: '625aa4316f75d0201a09a381',
+        idInDB: '624acd96ce5fbb5ce20df2dd'
+      },
+      {
+        idInTrello: '625aa4312cadcb77d7bcfff9',
+        idInDB: '62533454e70f984753d923f3'
+      },
+      {
+        idInTrello: '625aa4319b4cce1351e946cc',
+        idInDB: '6253ce2f2753632ee7b36bb1'
+      }
+    ]
+  },
+  level: 'info',
+  timestamp: '2022-04-16 14:10:40'
+}
+{
+  message: { webhookCreateResult: 'webhook done' },
+  level: 'info',
+  timestamp: '2022-04-16 14:10:50'
+}
+{
+  message: {
+    __checkBoardListNameError: FetchError: invalid json response body at https://api.trello.com/1/boards/undefined/lists?key=96b980af38094db6e5767718567af6ce&token=7f44a81ca5f903883e1b3a5720f89b70b8feacd4437d2cb893068b3b93455e5f reason: Unexpected token i in JSON at position 0
+        at D:\projects\unicode\ttp\TTP-Back\node_modules\node-fetch\lib\index.js:273:32
+        at runMicrotasks (<anonymous>)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+      type: 'invalid-json'
+    }
+  },
+  level: 'error',
+  timestamp: '2022-04-16 14:12:31'
+}
+{
+  message: {
+    createMemberError: FetchError: invalid json response body at https://api.trello.com/1/lists?name=mohamed8&idBoard=undefined&key=96b980af38094db6e5767718567af6ce&token=7f44a81ca5f903883e1b3a5720f89b70b8feacd4437d2cb893068b3b93455e5f reason: Unexpected token i in JSON at position 0
+        at D:\projects\unicode\ttp\TTP-Back\node_modules\node-fetch\lib\index.js:273:32
+        at runMicrotasks (<anonymous>)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+      type: 'invalid-json'
+    }
+  },
+  level: 'error',
+  timestamp: '2022-04-16 14:12:32'
+}
+{
+  message: {
+    handleGetBoards: TypeError: Cannot read properties of undefined (reading 'status')
+        at D:\projects\unicode\ttp\TTP-Back\src\lib\presentation\techMember\techMember.ts:12:18
+        at Generator.next (<anonymous>)
+        at fulfilled (D:\projects\unicode\ttp\TTP-Back\src\lib\presentation\techMember\techMember.ts:5:58)
+        at runMicrotasks (<anonymous>)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5)
+  },
+  level: 'error',
+  timestamp: '2022-04-16 14:12:32'
+}
+{
+  message: {
+    borderData: Promise { <pending> },
+    createBoardApi: 'https://api.trello.com/1/boards/?name=test 11&prefs_background=pink&defaultLists=false&key=96b980af38094db6e5767718567af6ce&token=7f44a81ca5f903883e1b3a5720f89b70b8feacd4437d2cb893068b3b93455e5f'
+  },
+  level: 'info',
+  timestamp: '2022-04-16 14:14:38'
+}
+{
+  message: {
+    boardData: {
+      id: '625aa52085dd01123c2f825a',
+      name: 'test 11',
+      desc: '',
+      descData: null,
+      closed: false,
+      idOrganization: '61e87201397f573cb99a0418',
+      idEnterprise: null,
+      pinned: false,
+      url: 'https://trello.com/b/N6SbJzXN/test-11',
+      shortUrl: 'https://trello.com/b/N6SbJzXN',
+      prefs: {
+        permissionLevel: 'private',
+        hideVotes: false,
+        voting: 'disabled',
+        comments: 'members',
+        invitations: 'members',
+        selfJoin: true,
+        cardCovers: true,
+        isTemplate: false,
+        cardAging: 'regular',
+        calendarFeedEnabled: false,
+        hiddenPluginBoardButtons: [],
+        background: 'pink',
+        backgroundColor: '#CD5A91',
+        backgroundImage: null,
+        backgroundImageScaled: null,
+        backgroundTile: false,
+        backgroundBrightness: 'dark',
+        backgroundBottomColor: '#CD5A91',
+        backgroundTopColor: '#CD5A91',
+        canBePublic: true,
+        canBeEnterprise: true,
+        canBeOrg: true,
+        canBePrivate: true,
+        canInvite: true
+      },
+      labelNames: {
+        green: '',
+        yellow: '',
+        orange: '',
+        red: '',
+        purple: '',
+        blue: '',
+        sky: '',
+        lime: '',
+        pink: '',
+        black: ''
+      },
+      limits: {}
+    }
+  },
+  level: 'info',
+  timestamp: '2022-04-16 14:14:38'
+}
+{
+  message: {
+    data: {
+      name: 'test 11',
+      color: 'pink',
+      boardId: '625aa52085dd01123c2f825a'
+    }
+  },
+  level: 'info',
+  timestamp: '2022-04-16 14:14:38'
+}
+{
+  message: { teamData: '625aa522df167040ffc93344' },
+  level: 'info',
+  timestamp: '2022-04-16 14:14:41'
+}
+{
+  message: { teamData: '625aa522762ec748848fce63' },
+  level: 'info',
+  timestamp: '2022-04-16 14:14:41'
+}
+{
+  message: { teamData: '625aa522b97ee465a1415065' },
+  level: 'info',
+  timestamp: '2022-04-16 14:14:41'
+}
+{
+  message: { teamData: '625aa522ed11828fb95040c6' },
+  level: 'info',
+  timestamp: '2022-04-16 14:14:41'
+}
+{
+  message: { teamData: '625aa5220e2afe6bfb69f7f7' },
+  level: 'info',
+  timestamp: '2022-04-16 14:14:41'
+}
+{
+  message: { removeWebhookSucced: 'done' },
+  level: 'info',
+  timestamp: '2022-04-16 14:14:41'
+}
+{
+  message: {
+    teamListIds: [
+      {
+        idInTrello: '625aa522df167040ffc93344',
+        idInDB: '624acd96ce5fbb5ce20df2dd'
+      },
+      {
+        idInTrello: '625aa522762ec748848fce63',
+        idInDB: '6253ce2f2753632ee7b36bb1'
+      },
+      {
+        idInTrello: '625aa522b97ee465a1415065',
+        idInDB: '6253df2064dfd2535bf4c177'
+      },
+      {
+        idInTrello: '625aa522ed11828fb95040c6',
+        idInDB: '625aa4bf45f774378bfedff8'
+      },
+      {
+        idInTrello: '625aa5220e2afe6bfb69f7f7',
+        idInDB: '62533454e70f984753d923f3'
+      }
+    ]
+  },
+  level: 'info',
+  timestamp: '2022-04-16 14:14:41'
+}
+{
+  message: { webhookCreateResult: 'webhook done' },
+  level: 'info',
+  timestamp: '2022-04-16 14:14:51'
+}
+{
+  message: {
+    createMemberError: FetchError: invalid json response body at https://api.trello.com/1/lists?name=&idBoard=625aa257d3594f26b854d89a&key=96b980af38094db6e5767718567af6ce&token=7f44a81ca5f903883e1b3a5720f89b70b8feacd4437d2cb893068b3b93455e5f reason: Unexpected token i in JSON at position 0
+        at D:\projects\unicode\ttp\TTP-Back\node_modules\node-fetch\lib\index.js:273:32
+        at runMicrotasks (<anonymous>)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+      type: 'invalid-json'
+    }
+  },
+  level: 'error',
+  timestamp: '2022-04-16 14:26:42'
+}
+{
+  message: {
+    handleGetBoards: TypeError: Cannot read properties of undefined (reading 'status')
+        at D:\projects\unicode\ttp\TTP-Back\src\lib\presentation\techMember\techMember.ts:12:18
+        at Generator.next (<anonymous>)
+        at fulfilled (D:\projects\unicode\ttp\TTP-Back\src\lib\presentation\techMember\techMember.ts:5:58)
+        at runMicrotasks (<anonymous>)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5)
+  },
+  level: 'error',
+  timestamp: '2022-04-16 14:26:42'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-04-16 14:52:57'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-04-16 14:53:39'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-04-16 15:17:59'
+}
+{
+  message: {
+    addTechMemberError: Error: techMembers validation failed: departmentId: Cast to ObjectId failed for value "" (type string) at path "departmentId"
+        at ValidationError.inspect (D:\projects\unicode\ttp\TTP-Back\node_modules\mongoose\lib\error\validation.js:48:26)
+        at formatValue (node:internal/util/inspect:782:19)
+        at formatProperty (node:internal/util/inspect:1819:11)
+        at formatRaw (node:internal/util/inspect:1030:9)
+        at formatValue (node:internal/util/inspect:817:10)
+        at formatProperty (node:internal/util/inspect:1819:11)
+        at formatRaw (node:internal/util/inspect:1030:9)
+        at formatValue (node:internal/util/inspect:817:10)
+        at inspect (node:internal/util/inspect:347:10)
+        at Format.transform (D:\projects\unicode\ttp\TTP-Back\node_modules\logform\pretty-print.js:27:19) {
+      errors: {
+        departmentId: CastError: Cast to ObjectId failed for value "" (type string) at path "departmentId"
+            at ObjectId.cast (D:\projects\unicode\ttp\TTP-Back\node_modules\mongoose\lib\schema\objectid.js:249:11)
+            at ObjectId.SchemaType.applySetters (D:\projects\unicode\ttp\TTP-Back\node_modules\mongoose\lib\schematype.js:1179:12)
+            at model.$set (D:\projects\unicode\ttp\TTP-Back\node_modules\mongoose\lib\document.js:1411:20)
+            at model.$set (D:\projects\unicode\ttp\TTP-Back\node_modules\mongoose\lib\document.js:1144:16)
+            at model.Document (D:\projects\unicode\ttp\TTP-Back\node_modules\mongoose\lib\document.js:162:12)
+            at model.Model (D:\projects\unicode\ttp\TTP-Back\node_modules\mongoose\lib\model.js:114:12)
+            at new model (D:\projects\unicode\ttp\TTP-Back\node_modules\mongoose\lib\model.js:4819:15)
+            at Function.<anonymous> (D:\projects\unicode\ttp\TTP-Back\src\lib\dbCalls\techMember\techMember.ts:64:24)
+            at Generator.next (<anonymous>)
+            at D:\projects\unicode\ttp\TTP-Back\src\lib\dbCalls\techMember\techMember.ts:8:71 {
+          stringValue: '""',
+          messageFormat: undefined,
+          kind: 'ObjectId',
+          value: '',
+          path: 'departmentId',
+          reason: BSONTypeError: Argument passed in must be a string of 12 bytes or a string of 24 hex characters
+              at new BSONTypeError (D:\projects\unicode\ttp\TTP-Back\node_modules\bson\src\error.ts:16:5)
+              at new ObjectId (D:\projects\unicode\ttp\TTP-Back\node_modules\bson\src\objectid.ts:86:15)
+              at castObjectId (D:\projects\unicode\ttp\TTP-Back\node_modules\mongoose\lib\cast\objectid.js:24:12)
+              at ObjectId.cast (D:\projects\unicode\ttp\TTP-Back\node_modules\mongoose\lib\schema\objectid.js:247:12)
+              at ObjectId.SchemaType.applySetters (D:\projects\unicode\ttp\TTP-Back\node_modules\mongoose\lib\schematype.js:1179:12)
+              at model.$set (D:\projects\unicode\ttp\TTP-Back\node_modules\mongoose\lib\document.js:1411:20)
+              at model.$set (D:\projects\unicode\ttp\TTP-Back\node_modules\mongoose\lib\document.js:1144:16)
+              at model.Document (D:\projects\unicode\ttp\TTP-Back\node_modules\mongoose\lib\document.js:162:12)
+              at model.Model (D:\projects\unicode\ttp\TTP-Back\node_modules\mongoose\lib\model.js:114:12)
+              at new model (D:\projects\unicode\ttp\TTP-Back\node_modules\mongoose\lib\model.js:4819:15),
+          valueType: 'string'
+        }
+      },
+      _message: 'techMembers validation failed'
+    }
+  },
+  level: 'error',
+  timestamp: '2022-04-16 15:24:46'
+}
+{
+  message: {
+    createMemberError: TypeError: Cannot read properties of null (reading 'id')
+        at Function.<anonymous> (D:\projects\unicode\ttp\TTP-Back\src\lib\controllers\techMember.ts:109:41)
+        at Generator.next (<anonymous>)
+        at fulfilled (D:\projects\unicode\ttp\TTP-Back\src\lib\controllers\techMember.ts:5:58)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5)
+  },
+  level: 'error',
+  timestamp: '2022-04-16 15:24:46'
+}
+{
+  message: {
+    handleGetBoards: TypeError: Cannot read properties of undefined (reading 'status')
+        at D:\projects\unicode\ttp\TTP-Back\src\lib\presentation\techMember\techMember.ts:12:18
+        at Generator.next (<anonymous>)
+        at fulfilled (D:\projects\unicode\ttp\TTP-Back\src\lib\presentation\techMember\techMember.ts:5:58)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5)
+  },
+  level: 'error',
+  timestamp: '2022-04-16 15:24:46'
+}

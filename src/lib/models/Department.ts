@@ -33,9 +33,9 @@ const DepartmentSchema: Schema = new Schema<DepartmentInfo>( // department
     reviewListId: {
       type: String,
     },
-    mainBoard:{
-      type:Boolean,
-      default:false
+    mainBoard: {
+      type: Boolean,
+      default: false,
     },
     teamsId: [
       {
@@ -43,7 +43,13 @@ const DepartmentSchema: Schema = new Schema<DepartmentInfo>( // department
         idInDB: {
           type: Schema.Types.ObjectId,
           ref: "teams",
-        }
+        },
+      },
+    ],
+    tasks: [
+      {
+        type: Schema.Types.ObjectId,
+        ref: "tasks",
       },
     ],
   },

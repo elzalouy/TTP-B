@@ -25,7 +25,7 @@ const {
 
 router.post(`${CREATE_TASK}`, upload.single("file"), handleCreateCard);
 router.post(`${UPDATE_TASK}`, upload.single("file"), handleUpdateCard);
-router.post(`${MOVE_TASK}`, handleMoveCard);
+router.put(`${MOVE_TASK}`, handleMoveCard);
 router.post(`${WEBHOOK_UPDATES}`, handleWebhookUpdateCard);
 router.get(`${WEBHOOK_UPDATES}`, handleWebhookUpdateCard);
 router.get(`${GET_TASKS}`, handleGetTasks);

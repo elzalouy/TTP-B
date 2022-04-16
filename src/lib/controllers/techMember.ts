@@ -5,6 +5,7 @@ import { ITech, TechMemberData } from "../types/model/Team";
 import { customeError } from "../utils/errorUtils";
 import { localize } from "../utils/msgLocalize";
 import BoardController from "./boards";
+import DepartmentBD from "../dbCalls/department/department";
 
 const TechMemberController = class TechMemberController extends TechMemberDB {
   static async createNewMember(data: TechMemberData) {
@@ -82,23 +83,31 @@ const TechMemberController = class TechMemberController extends TechMemberDB {
 
   static async __createMember(data: TechMemberData) {
     try {
-      const { boardId, name, trelloMemberId } = data;
-      let checkExsit: boolean = await TechMemberController.__checkBoardListName(
-        boardId,
-        name
-      );
+      const { name, boardId, departmentId } = data;
+      if (!departmentId) customeError("department_missing", 400);
+      let listId: { id: string } | null = null;
+      if (boardId) {
+        let checkExsit: boolean =
+          await TechMemberController.__checkBoardListName(boardId, name);
 
-      if (checkExsit) {
-        return customeError("list_already_exsit", 400);
+        if (checkExsit) {
+          return customeError("list_already_exsit", 400);
+        }
+        listId = await BoardController.addListToBoard(boardId, name);
+
+        if (data.mainBaord) {
+          return await BoardController.createWebHook(listId.id);
+        }
       }
-
-      // // add this member to board
-      // BoardController.addMemberToBoard(boardId, trelloMemberId, "normal");
-
-      let list = await BoardController.addListToBoard(boardId, name);
       let techMember = await super.createTechMember({
         ...data,
-        listId: list.id,
+        listId: listId?.id,
+      });
+      DepartmentBD.updatedbDepartment({
+        _id: data.departmentId,
+        $push: {
+          teamsId: { idInTrello: listId.id, idInDB: techMember._id },
+        },
       });
       return { techMember, status: 200 };
     } catch (error) {

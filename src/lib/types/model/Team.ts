@@ -4,6 +4,7 @@ import { ObjectId } from "bson";
 export interface ITech extends Document {
   name: string;
   departmentId: ObjectId;
+  listId: string | null;
 }
 
 export interface TechMemberData {
@@ -14,6 +15,7 @@ export interface TechMemberData {
   trelloMemberId?: string;
   listId?: string;
   newBoardId?: string;
+  mainBaord?: null | boolean;
 }
 
 export interface DataUpdate {
