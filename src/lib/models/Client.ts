@@ -1,5 +1,5 @@
-import { Client } from './../types/model/Client';
-import { model, Schema, Model } from 'mongoose';
+import { Client } from "./../types/model/Client";
+import { model, Schema, Model } from "mongoose";
 
 const ClientSchema: Schema = new Schema<Client>(
   {
@@ -9,10 +9,12 @@ const ClientSchema: Schema = new Schema<Client>(
       unique: true,
     },
     image: {
-      type: String,
-      default: '',
+      type: Object,
+      default: {},
     },
-    projectsId: [{ type: Schema.Types.ObjectId, ref: 'projects' }],
+    doneProject: [{ type: Schema.Types.ObjectId, ref: "projects" }],
+    inProgressProject: [{ type: Schema.Types.ObjectId, ref: "projects" }],
+    inProgressTask: [{ type: Schema.Types.ObjectId, ref: "projects" }],
   },
   {
     timestamps: true,
@@ -20,6 +22,6 @@ const ClientSchema: Schema = new Schema<Client>(
   }
 );
 
-const Clients: Model<Client> = model('clients', ClientSchema);
+const Clients: Model<Client> = model("clients", ClientSchema);
 
 export default Clients;

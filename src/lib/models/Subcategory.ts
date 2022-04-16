@@ -6,15 +6,10 @@ const SubcategorySchema: Schema = new Schema<Subcategory>(
     subCategory: {
       type: String,
     },
-
-    categoryId: {
-      type: Schema.Types.ObjectId,
-      ref: "category",
-    },
   },
   {
     timestamps: true,
-    strict: false,
+    strict: true,
   }
 );
 

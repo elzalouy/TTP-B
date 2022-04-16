@@ -55,7 +55,7 @@ const TaskController = class TaskController extends TaskDB {
       // This action fro removing card
       logger.info({ webhookUpdate: data });
       let targetTask;
-      const targetList = [
+      const targetList: any = [
         "done",
         "Shared",
         "Review",

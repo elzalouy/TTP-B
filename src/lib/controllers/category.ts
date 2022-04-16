@@ -3,31 +3,63 @@ import { SubcategoryData } from "./../types/model/Subcategory";
 import { customeError } from "./../utils/errorUtils";
 import logger from "../../logger";
 import CategoryDB from "../dbCalls/category/category";
+import CategoyDB from "../dbCalls/category/category";
 
 const CategoryController = class CategoryController extends CategoryDB {
   static async createCategory(data: CategoryData) {
     return await CategoryController.__createNewCategory(data);
   }
-  static async createSubcategory(data: SubcategoryData) {
+  static async createSubcategory(data: string) {
     return await CategoryController.__createNewSubcategory(data);
   }
 
-  static async updateCategoryWithSubcategoriesId(data: any) {
-    return await CategoryController.__updateCategoryWithSubcategoriesId(data);
+  static async updateCategory(data: any) {
+    return await CategoryController.__updateCategory(data);
   }
   static async getCategories() {
     return await CategoryController.__getAllCategories();
   }
+
+  static async deleteCategory(id: string) {
+    return await CategoryController.__deleteCategory(id);
+  }
+
+  static async __deleteCategory(id: string) {
+    try {
+      const deletedCategory = await super.deleteCategoryDB(id);
+      return deletedCategory;
+    } catch (error) {
+      logger.error({ deleteCategoryError: error });
+    }
+  }
   static async __createNewCategory(data: CategoryData) {
     try {
-      let category = await super.createCategory(data);
+      const { subCategories } = data;
+      let subCategoryIds = [];
+      // create sunCategory if exsit
+      if (data.subCategories.length > 0) {
+        for (let i = 0; i < subCategories.length; i++) {
+          let subCategory = await CategoryController.createSubcategory(
+            subCategories[i]
+          );
+          subCategoryIds.push(subCategory._id);
+        }
+      }
+
+      // create category
+      let category = await super.createCategory({
+        ...data,
+        subCategoriesId: subCategoryIds,
+        selectedSubCategory: subCategoryIds,
+      });
+
       return category;
     } catch (error) {
       logger.error({ createCategoryError: error });
     }
   }
 
-  static async __createNewSubcategory(data: SubcategoryData) {
+  static async __createNewSubcategory(data: string) {
     try {
       let subCategory = await super.createSubcategory(data);
       return subCategory;
@@ -36,9 +68,20 @@ const CategoryController = class CategoryController extends CategoryDB {
     }
   }
 
-  static async __updateCategoryWithSubcategoriesId(data: any) {
+  static async __updateCategory(data: any) {
     try {
-      let category = await super.updateCategoryWithSubcategoriesId(data);
+      // add new subcategory then update data
+      if (data.newSubCategory) {
+        for (let i = 0; i < data.newSubCategory.length; i++) {
+          let subCategory = await CategoryController.createSubcategory(
+            data.newSubCategory[i]
+          );
+          logger.info({ subCategory });
+          data.subCategoriesId = [...data.subCategoriesId, subCategory._id];
+        }
+      }
+
+      let category = await super.updateCategoryDB(data);
       return category;
     } catch (error) {
       logger.error({ updateCategoryError: error });

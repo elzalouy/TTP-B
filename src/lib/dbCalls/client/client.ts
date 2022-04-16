@@ -29,24 +29,7 @@ const ClientDB = class ClientDB {
 
   static async __getAllClients() {
     try {
-      let client = await Clients.find()
-        .populate({
-          path: "projectsId",
-          select: "numberOfTasks",
-        })
-        .populate({
-          path: "projectsId",
-          select: "name -_id",
-          match: {
-            projectStatus:
-              "inProgress" ||
-              "late" ||
-              "delivered on time" ||
-              "delivered defore deadline" ||
-              "delivered after deadline",
-          },
-        })
-        .lean();
+      let client = await Clients.find().lean();
       return client;
     } catch (error) {
       logger.error({ getclientDBError: error });
@@ -55,8 +38,8 @@ const ClientDB = class ClientDB {
 
   static async __updateClient(data: ClientData) {
     try {
-      let id = data.id;
-      delete data.id;
+      let id = data._id;
+      delete data._id;
       let client = await Clients.findByIdAndUpdate(
         { _id: id },
         { ...data },

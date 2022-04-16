@@ -8,6 +8,8 @@ import logger from "../../../logger";
 const ClientReq = class ClientReq extends ClientController {
   static async handleCreateClient(req: Request, res: Response) {
     try {
+      let file: { image: { location: string }[] } | any = req.files;
+      req.body.image = file.image[0].location;
       let Client = await super.createClient(req.body);
       if (Client) {
         return res.status(200).send(Client);
@@ -23,6 +25,11 @@ const ClientReq = class ClientReq extends ClientController {
   static async handleUpdateClient(req: Request, res: Response) {
     try {
       let clientData: ClientData = req.body;
+      let file: { image: { location: string }[] } | any = req.files;
+      if (file.image && file.image[0]) {
+        clientData.image = file.image[0].location;
+      }
+      logger.info({ clientData });
       if (!clientData) {
         return res.status(400).send(customeError("update_client_error", 400));
       }
@@ -41,7 +48,7 @@ const ClientReq = class ClientReq extends ClientController {
 
   static async handleDeleteClient(req: Request, res: Response) {
     try {
-      let id: string = req.body.id;
+      let id: any = req.query.id;
       if (!id) {
         return res.status(400).send(customeError("delete_client_error", 400));
       }

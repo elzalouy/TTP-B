@@ -1,6 +1,6 @@
-import ClientDB from '../dbCalls/client/client';
-import { Client, ClientData } from './../types/model/Client';
-import logger from '../../logger';
+import ClientDB from "../dbCalls/client/client";
+import { Client, ClientData } from "./../types/model/Client";
+import logger from "../../logger";
 
 const ClientController = class ClientController extends ClientDB {
   static async createClient(data: ClientData) {
@@ -39,7 +39,6 @@ const ClientController = class ClientController extends ClientDB {
   static async __updateClient(data: ClientData) {
     try {
       let client = await super.updateClientDB(data);
-
       return client;
     } catch (error) {
       logger.error({ updateClientControllerError: error });
