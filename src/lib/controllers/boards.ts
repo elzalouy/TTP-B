@@ -96,12 +96,16 @@ const BoardController = class BoardController {
 
   static async __deleteBoard(id: string) {
     try {
-      let removeBoard = trelloApi(`boards/${id}&`);
-
+      let removeBoard = trelloApi(`boards/${id}?response_type=token&`);
+      logger.info({ removeBoard });
       return await fetch(removeBoard, {
         method: "DELETE",
       })
-        .then((res) => logger.info("delete board done"))
+        .then((response) => {
+          console.log(`Response: ${response.status} ${response.statusText}`);
+          return response.text();
+        })
+        .then((text) => console.log(text))
         .catch((err) => logger.info("error in delete board", err));
     } catch (error) {
       logger.error({ deleteBoardError: error });

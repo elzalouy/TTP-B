@@ -1583,3 +1583,340 @@
   level: 'error',
   timestamp: '2022-04-16 15:24:46'
 }
+{
+  message: {
+    getDepartmentDataError: TypeError: Cannot read properties of undefined (reading 'map')
+        at Function.<anonymous> (D:\projects\unicode\ttp\TTP-Back\src\lib\dbCalls\department\department.ts:116:57)
+        at Generator.next (<anonymous>)
+        at fulfilled (D:\projects\unicode\ttp\TTP-Back\src\lib\dbCalls\department\department.ts:5:58)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5)
+  },
+  level: 'error',
+  timestamp: '2022-04-17 01:55:37'
+}
+{
+  message: {
+    getDepartmentDataError: TypeError: Cannot read properties of undefined (reading 'teamData')
+        at Function.<anonymous> (D:\projects\unicode\ttp\TTP-Back\src\lib\dbCalls\department\department.ts:116:56)
+        at Generator.next (<anonymous>)
+        at fulfilled (D:\projects\unicode\ttp\TTP-Back\src\lib\dbCalls\department\department.ts:5:58)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5)
+  },
+  level: 'error',
+  timestamp: '2022-04-17 01:56:50'
+}
+{
+  message: {
+    getDepartmentDataError: MongoServerError: PlanExecutor error during aggregation :: caused by :: $mergeObjects requires object inputs, but input [{_id: 624acd96ce5fbb5ce20df2dd, boardId: "623353aa60ebf534828be159", listId: "6235c740dfeccd5abacf570e", name: "Ezzat UI/UX member", departmentId: 625abc968c02c7029fa920e6, createdAt: 2022-03-19T12:06:24.526Z, updatedAt: 2022-04-16T12:54:49.167Z, __v: 0}, {_id: 6253ce2f2753632ee7b36bb1, name: "mohamed_nageh_4", departmentId: 625abc968c02c7029fa920e6, listId: "6253ce309c2eb42945ae6ba4", createdAt: 2022-04-11T06:43:59.777Z, updatedAt: 2022-04-16T12:54:49.167Z, __v: 0}, {_id: 625aa8c345f774378bfee023, name: "mohamed 1", departmentId: 625abc968c02c7029fa920e6, listId: "625aa8c4049f764041e504f5", createdAt: 2022-04-16T11:30:11.231Z, updatedAt: 2022-04-16T12:54:49.167Z, __v: 0}, {_id: 625aaeb5b3ba756bfde500d4, name: "mohamed 12", departmentId: 625abc968c02c7029fa920e6, listId: "625aaeb72bba1b2f73477515", createdAt: 2022-04-16T11:55:33.761Z, updatedAt: 2022-04-16T12:54:49.167Z, __v: 0}] is of type array
+        at MessageStream.messageHandler (D:\projects\unicode\ttp\TTP-Back\node_modules\mongoose\node_modules\mongodb\src\cmap\connection.ts:753:20)
+        at MessageStream.emit (node:events:526:28)
+        at MessageStream.emit (node:domain:475:12)
+        at processIncomingData (D:\projects\unicode\ttp\TTP-Back\node_modules\mongoose\node_modules\mongodb\src\cmap\message_stream.ts:168:12)
+        at MessageStream._write (D:\projects\unicode\ttp\TTP-Back\node_modules\mongoose\node_modules\mongodb\src\cmap\message_stream.ts:65:5)
+        at writeOrBuffer (node:internal/streams/writable:389:12)
+        at _write (node:internal/streams/writable:330:10)
+        at MessageStream.Writable.write (node:internal/streams/writable:334:10)
+        at TLSSocket.ondata (node:internal/streams/readable:754:22)
+        at TLSSocket.emit (node:events:526:28) {
+      ok: 0,
+      code: 40400,
+      codeName: 'Location40400',
+      '$clusterTime': {
+        clusterTime: new Timestamp({ t: 1650150101, i: 2 }),
+        signature: {
+          hash: new Binary(Buffer.from("129d06ebd4d44f8ac744f3383a683092e4cb4980", "hex"), 0),
+          keyId: new Long("7057499658175643652")
+        }
+      },
+      operationTime: new Timestamp({ t: 1650150101, i: 2 })
+    }
+  },
+  level: 'error',
+  timestamp: '2022-04-17 02:01:41'
+}
+{
+  message: {
+    getDepartmentDataError: MongoServerError: Invalid $project :: caused by :: Unrecognized expression '$push'
+        at MessageStream.messageHandler (D:\projects\unicode\ttp\TTP-Back\node_modules\mongoose\node_modules\mongodb\src\cmap\connection.ts:753:20)
+        at MessageStream.emit (node:events:526:28)
+        at MessageStream.emit (node:domain:475:12)
+        at processIncomingData (D:\projects\unicode\ttp\TTP-Back\node_modules\mongoose\node_modules\mongodb\src\cmap\message_stream.ts:168:12)
+        at MessageStream._write (D:\projects\unicode\ttp\TTP-Back\node_modules\mongoose\node_modules\mongodb\src\cmap\message_stream.ts:65:5)
+        at writeOrBuffer (node:internal/streams/writable:389:12)
+        at _write (node:internal/streams/writable:330:10)
+        at MessageStream.Writable.write (node:internal/streams/writable:334:10)
+        at TLSSocket.ondata (node:internal/streams/readable:754:22)
+        at TLSSocket.emit (node:events:526:28) {
+      ok: 0,
+      code: 168,
+      codeName: 'InvalidPipelineOperator',
+      '$clusterTime': {
+        clusterTime: new Timestamp({ t: 1650150356, i: 2 }),
+        signature: {
+          hash: new Binary(Buffer.from("0d47408dae5d6ab2dcbd9f074992b0f3f63c7097", "hex"), 0),
+          keyId: new Long("7057499658175643652")
+        }
+      },
+      operationTime: new Timestamp({ t: 1650150356, i: 2 })
+    }
+  },
+  level: 'error',
+  timestamp: '2022-04-17 02:05:56'
+}
+{
+  message: {
+    getDepartmentDataError: MongoServerError: Invalid $project :: caused by :: Unrecognized expression '$push'
+        at MessageStream.messageHandler (D:\projects\unicode\ttp\TTP-Back\node_modules\mongoose\node_modules\mongodb\src\cmap\connection.ts:753:20)
+        at MessageStream.emit (node:events:526:28)
+        at MessageStream.emit (node:domain:475:12)
+        at processIncomingData (D:\projects\unicode\ttp\TTP-Back\node_modules\mongoose\node_modules\mongodb\src\cmap\message_stream.ts:168:12)
+        at MessageStream._write (D:\projects\unicode\ttp\TTP-Back\node_modules\mongoose\node_modules\mongodb\src\cmap\message_stream.ts:65:5)
+        at writeOrBuffer (node:internal/streams/writable:389:12)
+        at _write (node:internal/streams/writable:330:10)
+        at MessageStream.Writable.write (node:internal/streams/writable:334:10)
+        at TLSSocket.ondata (node:internal/streams/readable:754:22)
+        at TLSSocket.emit (node:events:526:28) {
+      ok: 0,
+      code: 168,
+      codeName: 'InvalidPipelineOperator',
+      '$clusterTime': {
+        clusterTime: new Timestamp({ t: 1650150442, i: 15 }),
+        signature: {
+          hash: new Binary(Buffer.from("0b831e8aa2b94f7db5998ef5be667dd08ac046c1", "hex"), 0),
+          keyId: new Long("7057499658175643652")
+        }
+      },
+      operationTime: new Timestamp({ t: 1650150442, i: 15 })
+    }
+  },
+  level: 'error',
+  timestamp: '2022-04-17 02:07:23'
+}
+{
+  message: {
+    getDepartmentDataError: MongoServerError: Invalid $addFields :: caused by :: Unrecognized expression '$push'
+        at MessageStream.messageHandler (D:\projects\unicode\ttp\TTP-Back\node_modules\mongoose\node_modules\mongodb\src\cmap\connection.ts:753:20)
+        at MessageStream.emit (node:events:526:28)
+        at MessageStream.emit (node:domain:475:12)
+        at processIncomingData (D:\projects\unicode\ttp\TTP-Back\node_modules\mongoose\node_modules\mongodb\src\cmap\message_stream.ts:168:12)
+        at MessageStream._write (D:\projects\unicode\ttp\TTP-Back\node_modules\mongoose\node_modules\mongodb\src\cmap\message_stream.ts:65:5)
+        at writeOrBuffer (node:internal/streams/writable:389:12)
+        at _write (node:internal/streams/writable:330:10)
+        at MessageStream.Writable.write (node:internal/streams/writable:334:10)
+        at TLSSocket.ondata (node:internal/streams/readable:754:22)
+        at TLSSocket.emit (node:events:526:28) {
+      ok: 0,
+      code: 168,
+      codeName: 'InvalidPipelineOperator',
+      '$clusterTime': {
+        clusterTime: new Timestamp({ t: 1650150644, i: 2 }),
+        signature: {
+          hash: new Binary(Buffer.from("741733b859da9b25484dc05cac297fc4eccb95e8", "hex"), 0),
+          keyId: new Long("7057499658175643652")
+        }
+      },
+      operationTime: new Timestamp({ t: 1650150644, i: 2 })
+    }
+  },
+  level: 'error',
+  timestamp: '2022-04-17 02:10:45'
+}
+{
+  message: {
+    getDepartmentDataError: MongoServerError: PlanExecutor error during aggregation :: caused by :: $add only supports numeric or date types, not array
+        at MessageStream.messageHandler (D:\projects\unicode\ttp\TTP-Back\node_modules\mongoose\node_modules\mongodb\src\cmap\connection.ts:753:20)
+        at MessageStream.emit (node:events:526:28)
+        at MessageStream.emit (node:domain:475:12)
+        at processIncomingData (D:\projects\unicode\ttp\TTP-Back\node_modules\mongoose\node_modules\mongodb\src\cmap\message_stream.ts:168:12)
+        at MessageStream._write (D:\projects\unicode\ttp\TTP-Back\node_modules\mongoose\node_modules\mongodb\src\cmap\message_stream.ts:65:5)
+        at writeOrBuffer (node:internal/streams/writable:389:12)
+        at _write (node:internal/streams/writable:330:10)
+        at MessageStream.Writable.write (node:internal/streams/writable:334:10)
+        at TLSSocket.ondata (node:internal/streams/readable:754:22)
+        at TLSSocket.emit (node:events:526:28) {
+      ok: 0,
+      code: 16554,
+      codeName: 'Location16554',
+      '$clusterTime': {
+        clusterTime: new Timestamp({ t: 1650150686, i: 1 }),
+        signature: {
+          hash: new Binary(Buffer.from("c3764ebcbd252754c9546d78f600a5d318763bbb", "hex"), 0),
+          keyId: new Long("7057499658175643652")
+        }
+      },
+      operationTime: new Timestamp({ t: 1650150686, i: 1 })
+    }
+  },
+  level: 'error',
+  timestamp: '2022-04-17 02:11:26'
+}
+{
+  message: {
+    getDepartmentDataError: MongoServerError: PlanExecutor error during aggregation :: caused by :: $mergeObjects requires object inputs, but input [{idInTrello: "625b4244c7f2106175fc34d3", idInDB: 625aa8c345f774378bfee023, _id: 625b4245f97cef1c0fc51cdd}, {idInTrello: "625b42446a579b4cb3e3a969", idInDB: 625aaeb5b3ba756bfde500d4, _id: 625b4245f97cef1c0fc51cde}, {idInTrello: "625b422b195cf51b5421abc9", idInDB: 6253ce2f2753632ee7b36bb1, _id: 625b422cf97cef1c0fc51cd8}, {_id: 625aa199be6f5534af55bee6, idInDB: 624acd96ce5fbb5ce20df2dd, idInTrello: "6257d2ef665aa81513a98301"}] is of type array
+        at MessageStream.messageHandler (D:\projects\unicode\ttp\TTP-Back\node_modules\mongoose\node_modules\mongodb\src\cmap\connection.ts:753:20)
+        at MessageStream.emit (node:events:526:28)
+        at MessageStream.emit (node:domain:475:12)
+        at processIncomingData (D:\projects\unicode\ttp\TTP-Back\node_modules\mongoose\node_modules\mongodb\src\cmap\message_stream.ts:168:12)
+        at MessageStream._write (D:\projects\unicode\ttp\TTP-Back\node_modules\mongoose\node_modules\mongodb\src\cmap\message_stream.ts:65:5)
+        at writeOrBuffer (node:internal/streams/writable:389:12)
+        at _write (node:internal/streams/writable:330:10)
+        at MessageStream.Writable.write (node:internal/streams/writable:334:10)
+        at TLSSocket.ondata (node:internal/streams/readable:754:22)
+        at TLSSocket.emit (node:events:526:28) {
+      ok: 0,
+      code: 40400,
+      codeName: 'Location40400',
+      '$clusterTime': {
+        clusterTime: new Timestamp({ t: 1650150867, i: 7 }),
+        signature: {
+          hash: new Binary(Buffer.from("343be421bc4cf43af7fbabef07a9fdb550f02ec5", "hex"), 0),
+          keyId: new Long("7057499658175643652")
+        }
+      },
+      operationTime: new Timestamp({ t: 1650150867, i: 7 })
+    }
+  },
+  level: 'error',
+  timestamp: '2022-04-17 02:14:28'
+}
+{
+  message: {
+    getDepartmentDataError: MongoServerError: PlanExecutor error during aggregation :: caused by :: $mergeObjects requires object inputs, but input "team" is of type string
+        at MessageStream.messageHandler (D:\projects\unicode\ttp\TTP-Back\node_modules\mongoose\node_modules\mongodb\src\cmap\connection.ts:753:20)
+        at MessageStream.emit (node:events:526:28)
+        at MessageStream.emit (node:domain:475:12)
+        at processIncomingData (D:\projects\unicode\ttp\TTP-Back\node_modules\mongoose\node_modules\mongodb\src\cmap\message_stream.ts:168:12)
+        at MessageStream._write (D:\projects\unicode\ttp\TTP-Back\node_modules\mongoose\node_modules\mongodb\src\cmap\message_stream.ts:65:5)
+        at writeOrBuffer (node:internal/streams/writable:389:12)
+        at _write (node:internal/streams/writable:330:10)
+        at MessageStream.Writable.write (node:internal/streams/writable:334:10)
+        at TLSSocket.ondata (node:internal/streams/readable:754:22)
+        at TLSSocket.emit (node:events:526:28) {
+      ok: 0,
+      code: 40400,
+      codeName: 'Location40400',
+      '$clusterTime': {
+        clusterTime: new Timestamp({ t: 1650151064, i: 5 }),
+        signature: {
+          hash: new Binary(Buffer.from("58bf0c0c09525185bdc418659e09fe4280500808", "hex"), 0),
+          keyId: new Long("7057499658175643652")
+        }
+      },
+      operationTime: new Timestamp({ t: 1650151064, i: 5 })
+    }
+  },
+  level: 'error',
+  timestamp: '2022-04-17 02:17:44'
+}
+{
+  message: {
+    getDepartmentDataError: TypeError: Cannot read properties of undefined (reading 'map')
+        at Function.<anonymous> (D:\projects\unicode\ttp\TTP-Back\src\lib\dbCalls\department\department.ts:109:73)
+        at Generator.next (<anonymous>)
+        at fulfilled (D:\projects\unicode\ttp\TTP-Back\src\lib\dbCalls\department\department.ts:5:58)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5)
+  },
+  level: 'error',
+  timestamp: '2022-04-17 02:19:23'
+}
+{
+  message: {
+    getDepartmentDataError: TypeError: Cannot read properties of undefined (reading 'map')
+        at Function.<anonymous> (D:\projects\unicode\ttp\TTP-Back\src\lib\dbCalls\department\department.ts:112:73)
+        at Generator.next (<anonymous>)
+        at fulfilled (D:\projects\unicode\ttp\TTP-Back\src\lib\dbCalls\department\department.ts:5:58)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5)
+  },
+  level: 'error',
+  timestamp: '2022-04-17 02:21:36'
+}
+{
+  message: {
+    getDepartmentDataError: TypeError: Cannot read properties of undefined (reading '0')
+        at D:\projects\unicode\ttp\TTP-Back\src\lib\dbCalls\department\department.ts:114:51
+        at Array.map (<anonymous>)
+        at Function.<anonymous> (D:\projects\unicode\ttp\TTP-Back\src\lib\dbCalls\department\department.ts:110:55)
+        at Generator.next (<anonymous>)
+        at fulfilled (D:\projects\unicode\ttp\TTP-Back\src\lib\dbCalls\department\department.ts:5:58)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5)
+  },
+  level: 'error',
+  timestamp: '2022-04-17 02:26:38'
+}
+{
+  message: {
+    getDepartmentDataError: TypeError: Cannot read properties of undefined (reading '0')
+        at D:\projects\unicode\ttp\TTP-Back\src\lib\dbCalls\department\department.ts:115:51
+        at Array.map (<anonymous>)
+        at Function.<anonymous> (D:\projects\unicode\ttp\TTP-Back\src\lib\dbCalls\department\department.ts:110:55)
+        at Generator.next (<anonymous>)
+        at fulfilled (D:\projects\unicode\ttp\TTP-Back\src\lib\dbCalls\department\department.ts:5:58)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5)
+  },
+  level: 'error',
+  timestamp: '2022-04-17 02:28:30'
+}
+{
+  message: {
+    getDepartmentDataError: TypeError: Cannot read properties of undefined (reading '0')
+        at D:\projects\unicode\ttp\TTP-Back\src\lib\dbCalls\department\department.ts:115:52
+        at Array.map (<anonymous>)
+        at Function.<anonymous> (D:\projects\unicode\ttp\TTP-Back\src\lib\dbCalls\department\department.ts:110:55)
+        at Generator.next (<anonymous>)
+        at fulfilled (D:\projects\unicode\ttp\TTP-Back\src\lib\dbCalls\department\department.ts:5:58)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5)
+  },
+  level: 'error',
+  timestamp: '2022-04-17 02:29:26'
+}
+{
+  message: {
+    deleteNestedRecordDepDBError: MongoServerError: Plan executor error during findAndModify :: caused by :: Cannot use the part (idInTrello) of (teamsId.idInTrello) to traverse the element ({teamsId: [ { idInTrello: "625b5cc9b45436681f83f73c", idInDB: ObjectId('625aa4bf45f774378bfedff8'), _id: ObjectId('625b5cc9125e1f9369fbfc70') }, { idInTrello: "625b5cc971c74c57c7b9ea18", idInDB: ObjectId('625aa8c345f774378bfee023'), _id: ObjectId('625b5cc9125e1f9369fbfc71') }, { idInTrello: "625b5c96c33aa415dbf303e7", idInDB: ObjectId('624acd96ce5fbb5ce20df2dd'), _id: ObjectId('625b5c96125e1f9369fbfc66') } ]})
+        at MessageStream.messageHandler (D:\projects\unicode\ttp\TTP-Back\node_modules\mongoose\node_modules\mongodb\src\cmap\connection.ts:753:20)
+        at MessageStream.emit (node:events:526:28)
+        at MessageStream.emit (node:domain:475:12)
+        at processIncomingData (D:\projects\unicode\ttp\TTP-Back\node_modules\mongoose\node_modules\mongodb\src\cmap\message_stream.ts:168:12)
+        at MessageStream._write (D:\projects\unicode\ttp\TTP-Back\node_modules\mongoose\node_modules\mongodb\src\cmap\message_stream.ts:65:5)
+        at writeOrBuffer (node:internal/streams/writable:389:12)
+        at _write (node:internal/streams/writable:330:10)
+        at MessageStream.Writable.write (node:internal/streams/writable:334:10)
+        at TLSSocket.ondata (node:internal/streams/readable:754:22)
+        at TLSSocket.emit (node:events:526:28) {
+      ok: 0,
+      code: 28,
+      codeName: 'PathNotViable',
+      '$clusterTime': {
+        clusterTime: new Timestamp({ t: 1650155014, i: 6 }),
+        signature: {
+          hash: new Binary(Buffer.from("16cb5bad86a29401d423d9c0afa1bbb9d9ae8128", "hex"), 0),
+          keyId: new Long("7057499658175643652")
+        }
+      },
+      operationTime: new Timestamp({ t: 1650155014, i: 6 })
+    }
+  },
+  level: 'error',
+  timestamp: '2022-04-17 03:23:35'
+}
+{
+  message: {
+    createDepartmentError: FetchError: invalid json response body at https://api.trello.com/1/boards/?name=test%20_1&prefs_background=&defaultLists=false&key=96b980af38094db6e5767718567af6ce&token=cf63168bc8ae2177b4c66314d126c0a417e6c7e26d9e3cf92c840f804cc9ffac reason: Unexpected token i in JSON at position 0
+        at D:\projects\unicode\ttp\TTP-Back\node_modules\node-fetch\lib\index.js:273:32
+        at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+      type: 'invalid-json'
+    }
+  },
+  level: 'error',
+  timestamp: '2022-04-17 11:02:29'
+}
+{
+  message: {
+    createDepartmentError: FetchError: invalid json response body at https://api.trello.com/1/boards/?name=test%201&prefs_background=purple&defaultLists=false&key=96b980af38094db6e5767718567af6ce&token=cf63168bc8ae2177b4c66314d126c0a417e6c7e26d9e3cf92c840f804cc9ffac reason: Unexpected token i in JSON at position 0
+        at D:\projects\unicode\ttp\TTP-Back\node_modules\node-fetch\lib\index.js:273:32
+        at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+      type: 'invalid-json'
+    }
+  },
+  level: 'error',
+  timestamp: '2022-04-17 11:04:22'
+}
