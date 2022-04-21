@@ -142,12 +142,9 @@ class TaskDB {
   static async __deleteTasks(ids: string[]) {
     try {
       let tasks = await Tasks.find({ _id: { $in: ids } }).lean();
-      console.log(tasks);
-      let tasksUnique = _.uniqBy(tasks, (item) => item.projectId);
-      console.log(tasksUnique);
-      let projects = tasksUnique.map((item) => item.projectId);
-      console.log(projects);
-      projects.forEach(async (id) => {
+      let tasksUnique = _.uniqBy(tasks, (item: any) => item.projectId);
+      let projects = tasksUnique.map((item: any) => item.projectId);
+      projects.forEach(async (id: any) => {
         let done = tasks.filter(
           (item) => item.projectId === id && item.status === "done"
         ).length;
