@@ -1,6 +1,5 @@
 import { config } from "dotenv";
 import { http } from "./lib/server";
-
 // .env
 config();
 const port = process.env.PORT || 3000;
