@@ -13,12 +13,7 @@ const DepartmentController = class DepartmentController extends DepartmentBD {
     return await DepartmentController.__updateDepartmentData(data);
   }
 
-  static async deleteDepartment(data: {
-    _id: string;
-    listTrelloIds: string[];
-    mainBoard: boolean;
-    boardId: string;
-  }) {
+  static async deleteDepartment(data: { _id: any }) {
     return await DepartmentController.__deleteDepartmentData(data);
   }
 
@@ -35,16 +30,29 @@ const DepartmentController = class DepartmentController extends DepartmentBD {
     }
   }
 
-  static async __deleteDepartmentData(data: {
-    _id: string;
-    listTrelloIds: string[];
-    mainBoard: boolean;
-    boardId: string;
-  }) {
+  static async __deleteDepartmentData(data: { _id: any }) {
     try {
-      const { _id, listTrelloIds, mainBoard, boardId } = data;
+      const { _id } = data;
+      let myDepartment = await super.findDepByIdDB(_id);
+
+      let teamId: string[] = [];
+      if (myDepartment?.mainBoard) {
+        myDepartment.teamsId.map((team: any) => {
+          return teamId.push(team.idInTrello);
+        });
+      }
+      let listTrelloIds = [
+        myDepartment?.canceldListId,
+        myDepartment?.defaultListId,
+        myDepartment?.doneListId,
+        myDepartment?.notClearListId,
+        myDepartment?.reviewListId,
+        myDepartment?.sharedListID,
+        ...teamId,
+      ];
+
       // if it was main Board remove the webhooks
-      if (mainBoard) {
+      if (myDepartment.mainBoard) {
         let hookRemove = listTrelloIds.map(async (id) => {
           return await BoardController.removeWebhook(id);
         });
@@ -54,8 +62,8 @@ const DepartmentController = class DepartmentController extends DepartmentBD {
           logger.info({ removeWebhookSucced: "done" })
         );
       }
-
-      await BoardController.deleteBoard(boardId);
+      logger.info({ boardId: myDepartment?.boardId, myDepartment });
+      await BoardController.deleteBoard(myDepartment?.boardId);
       let deleteDepartment = await super.deleteDepartmentDB(_id);
       return deleteDepartment;
     } catch (error) {
@@ -114,16 +122,16 @@ const DepartmentController = class DepartmentController extends DepartmentBD {
       if (data.removeTeam) {
         let hookListremove = data.removeTeam.map(async (id) => {
           // remove team list
-          BoardController.addListToArchieve(id);
+          await BoardController.addListToArchieve(id);
           // remove webhook
           return await BoardController.removeWebhook(id);
         });
         Promise.all(hookListremove).then((res) =>
           logger.info({ removeListAndWebhookSucced: "done" })
         );
-
+        logger.info({ removeTeam: data.removeTeam });
         // remove team
-        depUpdate = super.updateNestedRecordDepDB(data._id, {
+        depUpdate = await super.updateNestedRecordDepDB(data._id, {
           $pull: {
             teamsId: {
               idInTrello: { $in: data.removeTeam },
@@ -142,7 +150,7 @@ const DepartmentController = class DepartmentController extends DepartmentBD {
           );
         logger.info({ title: "testing", teamListIds });
         // add team
-        depUpdate = super.updateNestedRecordDepDB(data._id, {
+        depUpdate = await super.updateNestedRecordDepDB(data._id, {
           $push: {
             teamsId: { $each: teamListIds, $position: 0 },
           },

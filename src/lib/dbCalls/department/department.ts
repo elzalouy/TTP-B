@@ -29,11 +29,24 @@ const DepartmentBD = class DepartmentBD {
     return await DepartmentBD.__updateNestedRecordDepDB(DepId, Recordupdate);
   }
 
+  static async findDepByIdDB(id: string) {
+    return await DepartmentBD.__findDepByIdDB(id);
+  }
+
+  static async __findDepByIdDB(id: string) {
+    try {
+      let department = await Department.findById(id).lean();
+      return department;
+    } catch (error) {
+      logger.error({ findDepByIdDBDBError: error });
+    }
+  }
   static async __updateNestedRecordDepDB(DepId: string, Recordupdate: object) {
     try {
       let department = await Department.findOneAndUpdate(
         { _id: new ObjectId(DepId) },
-        Recordupdate
+        Recordupdate,
+        { new: true, lean: true, populate: "teamsId" }
       );
 
       return department;
@@ -59,7 +72,7 @@ const DepartmentBD = class DepartmentBD {
             from: "techmembers",
             localField: "teamsId.idInDB",
             foreignField: "_id",
-            as: "teamsId",
+            as: "teamData",
           },
         },
         {
@@ -87,7 +100,8 @@ const DepartmentBD = class DepartmentBD {
             boardId: 1,
             color: 1,
             mainBoard: 1,
-            teamsId: 1,
+            teamsId: "$teamData",
+            teamOrigin: "$teamsId",
             canceldListId: 1,
             defaultListId: 1,
             doneListId: 1,
@@ -99,15 +113,23 @@ const DepartmentBD = class DepartmentBD {
             },
             totalDone: {
               $size: "$totalDone",
-              // $map: {
-              //   input: "$totalDone",
-              //   as: "task",
-              //   in: { _id: "$$task._id", status: "$$task.status" },
-              // },
             },
           },
         },
       ]);
+      // format my data
+      for (let i = 0; i < department.length; i++) {
+        department[i].teamsId = department[i].teamsId.map(
+          (team: any, j: number) => {
+            // logger.info({ teamOrigin: department[i].teamOrigin });
+            return {
+              ...team,
+              idInTrello: department[i]?.teamOrigin[j]?.idInTrello,
+            };
+          }
+        );
+        delete department[i]?.teamOrigin;
+      }
       return department;
     } catch (error) {
       logger.error({ getDepartmentDataError: error });
@@ -130,7 +152,7 @@ const DepartmentBD = class DepartmentBD {
       let department = await Department.findByIdAndUpdate(
         { _id: id },
         { ...data },
-        { new: true, lean: true }
+        { new: true, lean: true, populate: "teamsId" }
       );
       return department;
     } catch (error) {
