@@ -12,7 +12,7 @@ export interface NotificationInfo extends Document {
 }
 
 export interface NotificationData {
-  id?: string;
+  _id?: string;
   description?: string;
   projectManagerID?: ObjectId;
   viewed?: boolean;

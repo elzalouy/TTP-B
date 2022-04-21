@@ -59,4 +59,16 @@ app.disable("etag");
 io.on("connection", (socket: any) => {
   console.log("Client connected");
   socket.on("disconnect", () => console.log("Client disconnected"));
+
+  //* this for admin role only
+  socket.on("joined admin", (data: any) => {
+    // logger.info({ data });
+    return socket.join("admin room");
+  });
+
+  //* this for project manager role only
+  socket.on("joined manager", (data: any) => {
+    // logger.info({ data });
+    return socket.join("manager room");
+  });
 });

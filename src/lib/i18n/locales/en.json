@@ -41,5 +41,20 @@
   "filter_projects_result_empty": "No projects found with your filter values",
   "search_Proejcts_result_null": "Projects with this name was not found",
   "get_tasks_error": "Sorry for being not able to get the tasks you need.",
-  "department_missing":"Please select a department"
+  "department_missing":"Please select a department",
+
+  "// client error //":"",
+	"create_client_error": "create_client_error",
+	"get_client_error": "get_client_error",
+	"update_client_error": "update_client_error",
+	"delete_client_error": "delete_client_error",
+	"delete_client_success": "delete_client_success",
+
+  "// notification error":"",
+  "create_notifi_error": "create_notifi_error",
+	"get_notifi_error": "get_notifi_error",
+	"update_notifi_error": "update_notifi_error",
+	"delete_notifi_error": "delete_notifi_error",
+	"delete_notifi_success": "delete_notifi_success"
+
 }
