@@ -40,7 +40,6 @@ const ProjectDB = class ProjectDB {
     try {
       let project = await Project.find(data)
         .populate({ path: "projectManager", select: "_id name" })
-        .populate({ path: "membersId", select: "_id name" })
         .lean();
       return project;
     } catch (error) {
@@ -86,8 +85,11 @@ const ProjectDB = class ProjectDB {
       if (filter.projectManager) filters.projectManager = filter.projectManager;
       if (filter.projectStatus) filters.projectStatus = filter.projectStatus;
       if (filter.clientId) filters.clientId = filter.clientId;
-      let projects = await Project.find(filters);
-      return projects;
+      if (filter.name) filters.name = { $regex: filter.name };
+      let project = await Project.find(filters)
+        .populate({ path: "projectManager", select: "_id name" })
+        .lean();
+      return project;
     } catch (error) {
       logger.error({ filterProjectsError: error });
     }

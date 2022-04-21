@@ -42,14 +42,8 @@ const TaskSchema: Schema = new Schema<TaskInfo>(
     },
     status: {
       type: String,
-      enum: [
-        "inProgress",
-        "shared",
-        "delivered",
-        "late",
-        "not clear",
-        "cancled",
-      ],
+      default: "inProgress",
+      enum: ["inProgress", "shared", "done", "not clear", "cancled", "review"],
     },
     start: {
       type: Date,
@@ -68,7 +62,6 @@ const TaskSchema: Schema = new Schema<TaskInfo>(
       default: null,
     },
     turnoverTime: {
-      // number of day the task late after deadline
       type: Number,
       default: 0,
     },

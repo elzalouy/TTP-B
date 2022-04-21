@@ -1,5 +1,4 @@
-export const trelloApi= (service:string):string => {
-    let url = `https://api.trello.com/1/${service}key=${process.env.TRELLO_KEY}&token=${process.env.TRELLO_TOKEN}`
-    return url
-}
-
+export const trelloApi = (service: string): string => {
+  let url = `https://api.trello.com/1/${service}key=${process.env.TRELLO_TEST_KEY}&token=${process.env.TRELLO_TEST_TOKEN}`;
+  return url;
+};

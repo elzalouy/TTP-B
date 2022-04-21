@@ -1,11 +1,8 @@
-import { ObjectId } from "bson";
+import { ObjectID, ObjectId } from "bson";
 import { Document } from "mongoose";
 export interface ProjectInfo extends Document {
   name: string;
   projectManager: ObjectId;
-  membersId?: string[];
-  numberOfTasks?: number;
-  numberOfFinshedTasks?: number;
   projectDeadline: Date;
   startDate?: Date | number;
   completedDate?: Date;
@@ -16,15 +13,13 @@ export interface ProjectInfo extends Document {
     | "deliver before deadline"
     | "delivered after deadline";
   clientId: ObjectId;
-  description: String;
+  numberOfTasks: number;
+  numberOfFinishedTasks: number;
 }
 export interface ProjectData {
-  _id?: string;
+  _id?: string | ObjectID;
   name?: string;
   projectManager?: string;
-  membersId?: string[];
-  numberOfTasks?: number;
-  numberOfFinshedTasks?: number;
   projectDeadline?: Date;
   startDate?: Date | number;
   completedDate?: Date;
@@ -35,5 +30,6 @@ export interface ProjectData {
     | "deliver defore deadline"
     | "delivered after deadline";
   clientId?: string;
-  description?: string;
+  numberOfTasks?: number;
+  numberOfFinishedTasks?: number;
 }
