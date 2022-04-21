@@ -11,10 +11,11 @@ export interface TaskInfo extends Document {
   countShared?: number;
   status?:
     | "inProgress"
-    | "delivered on time"
-    | "late"
+    | "done"
+    | "shared"
     | "not clear"
-    | "cancled";
+    | "cancled"
+    | "review";
   start?: Date | number;
   deadline?: Date | number;
   deliveryDate?: Date;
@@ -26,9 +27,14 @@ export interface TaskInfo extends Document {
   boardId?: string;
   description: String;
 }
-
+export interface TasksStatistics {
+  id?: ObjectId;
+  numberOfTasks: number | null;
+  numberOfFinishedTasks: number | null;
+  progress: number | null;
+}
 export interface TaskData {
-  id?: string;
+  _id?: string;
   name?: string;
   projectId?: string;
   categoryId?: string; //todo creat category list
@@ -37,10 +43,11 @@ export interface TaskData {
   countShared?: number;
   status?:
     | "inProgress"
-    | "delivered on time"
-    | "late"
+    | "done"
+    | "shared"
     | "not clear"
-    | "cancled";
+    | "cancled"
+    | "review";
   start?: Date | number;
   deadline?: Date | number;
   deliveryDate?: Date;

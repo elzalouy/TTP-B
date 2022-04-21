@@ -2,8 +2,9 @@ import { config } from "dotenv";
 import { http } from "./lib/server";
 
 // .env
-config(); 
+config();
+const port = process.env.PORT || 3000;
 
-http.listen(process.env.PORT, function () {
+http.listen(port, function () {
   console.log("server listen to port " + process.env.PORT);
 });

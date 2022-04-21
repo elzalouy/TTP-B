@@ -2,6 +2,7 @@ import { ProjectData } from "./../types/model/Project";
 import { customeError } from "./../utils/errorUtils";
 import logger from "../../logger";
 import ProjectDB from "../dbCalls/project/project";
+import Tasks from "../models/task";
 
 const ProjectController = class ProjectController extends ProjectDB {
   static async createProject(data: ProjectData) {

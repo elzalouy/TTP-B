@@ -6,7 +6,7 @@ import { config } from "dotenv";
 
 config();
 
-const BoardController = class BoardController {
+class BoardController {
   static async getBoardsInTrello() {
     return await BoardController.__getTrelloBoards();
   }
@@ -46,7 +46,9 @@ const BoardController = class BoardController {
   static async deleteBoard(id: string) {
     return await BoardController.__deleteBoard(id);
   }
-
+  static async deleteCard(id: string) {
+    return await BoardController.__deleteCard(id);
+  }
   static async createCardInList(
     listId: string,
     cardName: string,
@@ -167,7 +169,6 @@ const BoardController = class BoardController {
       let attachmentApi = trelloApi(
         `cards/${cardId}/attachments?file=${file}&`
       );
-
       let attachment = await fetch(attachmentApi, {
         method: "POST",
         headers: {
@@ -179,7 +180,6 @@ const BoardController = class BoardController {
       logger.error({ createAttachmentOnCardError: error });
     }
   }
-
   static async __createCard(
     listId: string,
     cardName: string,
@@ -200,7 +200,20 @@ const BoardController = class BoardController {
       logger.error({ createCardInListError: error });
     }
   }
-
+  static async __deleteCard(id: string) {
+    try {
+      let deleteCartApi = trelloApi(`cards/${id}?`);
+      let deleteRessult = await fetch(deleteCartApi, {
+        method: "DELETE",
+        headers: {
+          Accept: "application/json",
+        },
+      });
+      return deleteRessult.json();
+    } catch (error) {
+      logger.error({ deleteTasksError: error });
+    }
+  }
   static async __addWebHook(idModel: string) {
     try {
       let webhookApi = trelloApi(
@@ -213,7 +226,6 @@ const BoardController = class BoardController {
           Accept: "application/json",
         },
       });
-
       return webhookResult;
     } catch (error) {
       logger.error({ createWebHookError: error });
@@ -247,7 +259,6 @@ const BoardController = class BoardController {
   static async __addList(boardId: string, listName: string) {
     try {
       let addListApi = trelloApi(`lists?name=${listName}&idBoard=${boardId}&`);
-
       let newList = await fetch(addListApi, {
         method: "POST",
         headers: {
@@ -284,7 +295,7 @@ const BoardController = class BoardController {
   static async __getAllMembers() {
     try {
       let boardApi = trelloApi(
-        `organizations/${process.env.ORGANIZATION_ID}/members?`
+        `organizations/${process.env.TEST_ORGANIZATION_ID}/members?`
       );
       let members = await fetch(boardApi, {
         method: "GET",
@@ -297,7 +308,7 @@ const BoardController = class BoardController {
   static async __getTrelloBoards() {
     try {
       let boardsApi = trelloApi(
-        `organizations/${process.env.ORGANIZATION_ID}/boards?fields=id,name&`
+        `organizations/${process.env.TEST_ORGANIZATION_ID}/boards?fields=id,name&`
       );
       let boards = await fetch(boardsApi, {
         method: "GET",
@@ -319,6 +330,6 @@ const BoardController = class BoardController {
       logger.error({ singleBoardError: error });
     }
   }
-};
+}
 
 export default BoardController;

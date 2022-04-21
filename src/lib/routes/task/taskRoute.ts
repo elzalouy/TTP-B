@@ -13,6 +13,11 @@ const {
   GET_TASKS,
   FILTER_TASKS,
   MOVE_TASK,
+  DELETE_TASKS,
+  DELETE_TASKS_BY_PROJECT_ID,
+  DELETE_TASK,
+  GET_TASKS_STATISTICS,
+  GET_ALL_TASKS_STATISTICS,
 } = apiRoute;
 const {
   handleCreateCard,
@@ -21,6 +26,9 @@ const {
   handleGetTasks,
   handleFilterTasks,
   handleMoveCard,
+  handleDeleteTasks,
+  handleDeleteTasksByProjectId,
+  handleDeleteTask,
 } = TaskReq;
 
 router.post(`${CREATE_TASK}`, upload.single("file"), handleCreateCard);
@@ -30,4 +38,7 @@ router.post(`${WEBHOOK_UPDATES}`, handleWebhookUpdateCard);
 router.get(`${WEBHOOK_UPDATES}`, handleWebhookUpdateCard);
 router.get(`${GET_TASKS}`, handleGetTasks);
 router.post(`${FILTER_TASKS}`, handleFilterTasks);
+router.delete(`${DELETE_TASKS}`, handleDeleteTasks);
+router.delete(`${DELETE_TASKS_BY_PROJECT_ID}`, handleDeleteTasksByProjectId);
+router.delete(`${DELETE_TASK}`, handleDeleteTask);
 export default router;
