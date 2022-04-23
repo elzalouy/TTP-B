@@ -120,7 +120,7 @@ const UserController = class UserController extends UserDB {
       //      BoardController.addMemberToBoard(trelloBoardId,trelloMemberId,type)
       // }
       
-      return await super.createUser({ ...data, /* password: passwordHash  */});
+      return await super.createUser({ ...data /* password: passwordHash  */});
     } catch (error) {
       logger.error({ addNewUserError: error });
     }
