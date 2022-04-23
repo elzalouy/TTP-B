@@ -60,15 +60,20 @@ io.on("connection", (socket: any) => {
   console.log("Client connected");
   socket.on("disconnect", () => console.log("Client disconnected"));
 
-  //* this for admin role only
-  socket.on("joined admin", (data: any) => {
+  //* this for admins role only
+  socket.on("joined admin", () => {
     // logger.info({ data });
     return socket.join("admin room");
   });
 
-  //* this for project manager role only
-  socket.on("joined manager", (data: any) => {
+  //* this for project managers role only
+  socket.on("joined manager", () => {
     // logger.info({ data });
     return socket.join("manager room");
   });
+
+  //* this is for specific user
+  socket.on('joined user',(data:any) => {
+    return socket.join(`user-${data.id}`)
+  })
 });

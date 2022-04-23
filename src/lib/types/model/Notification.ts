@@ -14,7 +14,7 @@ export interface NotificationInfo extends Document {
 export interface NotificationData {
   _id?: string;
   description?: string;
-  projectManagerID?: ObjectId;
+  projectManagerID?: string;
   viewed?: boolean;
   title?: string;
   projectID?: string;

@@ -3,6 +3,8 @@ import { customeError } from "./../utils/errorUtils";
 import logger from "../../logger";
 import ProjectDB from "../dbCalls/project/project";
 import Tasks from "../models/task";
+import { io } from "../server";
+import NotificationController from "./notification";
 
 const ProjectController = class ProjectController extends ProjectDB {
   static async createProject(data: ProjectData) {
@@ -48,8 +50,19 @@ const ProjectController = class ProjectController extends ProjectDB {
     }
   }
 
+
   static async __updateProjectData(data: ProjectData) {
     try {
+      // if porject status update to done
+      if(data.projectStatus && ["delivered on time","delivered defore deadline"].includes(data.projectStatus)){
+        let createNotifi = await NotificationController.createNotification({
+          title:`أنتهاء مشروع`,
+          projectManagerID:data.projectManager,
+          description:`تم الانتها من مشروع ${data.name}`,
+          clientName:data.clientId
+        })
+        // io.to('joined admin').emit()
+      }
       let project = await super.updateProjectDB(data);
       return project;
     } catch (error) {
