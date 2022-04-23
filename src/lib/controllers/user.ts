@@ -20,7 +20,7 @@ const UserController = class UserController extends UserDB {
     return await UserController.__updateUserPassword(data);
   }
 
-  static async deleteUserInfo(id: string) {
+  static async deleteUserInfo(id:string) {
     return await UserController.__deleteUserDoc(id);
   }
 
@@ -37,7 +37,7 @@ const UserController = class UserController extends UserDB {
     }
   }
 
-  static async __deleteUserDoc(id: string) {
+  static async __deleteUserDoc(id:string) {
     try {
       let deletedUser = await super.deleteUser(id);
       return deletedUser;

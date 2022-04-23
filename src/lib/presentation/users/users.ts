@@ -74,7 +74,7 @@ const UserReq = class UserReq extends UserController {
         if (user) {
           return res.status(200).send(successMsg("delete_success", 200));
         } else {
-          res.status(409).send(customeError("user_not_exist", 409));
+          res.status(400).send(customeError("user_not_exist", 409));
         }
       } else {
         return res.status(400).send(customeError("missing_data", 400));
