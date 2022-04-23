@@ -12,20 +12,6 @@ const ProjectSchema: Schema = new Schema<ProjectInfo>(
       ref: "users",
       required: true,
     },
-    membersId: [
-      {
-        type: Schema.Types.ObjectId,
-        ref: "techMembers",
-      },
-    ],
-    numberOfTasks: {
-      type: Number,
-      default: 0,
-    },
-    numberOfFinshedTasks: {
-      type: Number,
-      default: 0,
-    },
     projectDeadline: {
       type: Date,
       default: null,

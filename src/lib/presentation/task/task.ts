@@ -83,6 +83,35 @@ const TaskReq = class TaskReq extends TaskController {
       logger.error({ handleMoveCardError: error });
     }
   }
+  static async handleDeleteTasksByProjectId(req: Request, res: Response) {
+    try {
+      let id = req.body.id;
+      let deleteResult = await super.deleteTasksByProjectId(id);
+      if (deleteResult?.deletedCount) return res.status(200).send(deleteResult);
+    } catch (error) {
+      logger.error({ handleDeleteTasksByProjectIdError: error });
+    }
+  }
+  static async handleDeleteTasks(req: Request, res: Response) {
+    try {
+      let ids = req.body.ids;
+      let deleteResult = await super.deleteTasks(ids);
+      if (deleteResult?.deletedCount) return res.status(200).send(deleteResult);
+      else res.status(400).send(customeError("delete_task_error", 400));
+    } catch (error) {
+      logger.error({ handleDeleteTasksError: error });
+    }
+  }
+  static async handleDeleteTask(req: Request, res: Response) {
+    try {
+      let id = req.body.id;
+      let deleteResult = await super.deleteTask(id);
+      if (deleteResult._id) return res.status(200).send(deleteResult);
+      else res.status(400).send(customeError("delete_task_error", 400));
+    } catch (error) {
+      logger.error({ handleDeleteTasksError: error });
+    }
+  }
 };
 
 export default TaskReq;

@@ -4,6 +4,7 @@ import { ProjectData } from "./../../types/model/Project";
 import { Request, Response } from "express";
 import logger from "../../../logger";
 import ProjectController from "../../controllers/project";
+import mongoose from "mongoose";
 
 const ProjectReq = class ProjectReq extends ProjectController {
   static async handleCreateProject(req: Request, res: Response) {
@@ -45,6 +46,8 @@ const ProjectReq = class ProjectReq extends ProjectController {
   static async handleGetProject(req: Request, res: Response) {
     try {
       let projectData: ProjectData = req.query;
+      if (projectData._id)
+        projectData._id = new mongoose.Types.ObjectId(projectData._id);
       let project = await super.getProject(projectData);
       if (project) {
         return res.status(200).send(project);

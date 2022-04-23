@@ -1,10 +1,11 @@
-import { TaskData } from "./../types/model/tasks";
+import { TaskData, TaskInfo } from "./../types/model/tasks";
 import { customeError } from "./../utils/errorUtils";
 import logger from "../../logger";
 import TaskDB from "../dbCalls/tasks/tasks";
 import BoardController from "./boards";
+import Project from "../models/Project";
 
-const TaskController = class TaskController extends TaskDB {
+class TaskController extends TaskDB {
   static async getTasks(data: TaskData) {
     return await TaskController.__getTasks(data);
   }
@@ -14,12 +15,20 @@ const TaskController = class TaskController extends TaskDB {
   static async updateTask(data: object) {
     return await TaskController.__updateTaskData(data);
   }
-
   static async webhookUpdate(data: object) {
     return await TaskController.__webhookUpdate(data);
   }
   static async filterTasks(data: any) {
     return await TaskController.__filterTasksDB(data);
+  }
+  static async deleteTask(id: string) {
+    return await TaskController.__deleteTask(id);
+  }
+  static async deleteTasksByProjectId(id: string) {
+    return await TaskController.__deleteTasksByProjectId(id);
+  }
+  static async deleteTasks(ids: string[]) {
+    return await TaskController.__deleteTasks(ids);
   }
 
   static async moveTaskOnTrello(
@@ -52,7 +61,7 @@ const TaskController = class TaskController extends TaskDB {
   }
   static async __webhookUpdate(data: any) {
     try {
-      // This action fro removing card
+      // This action for updating card
       logger.info({ webhookUpdate: data });
       let targetTask;
       const targetList: any = [
@@ -130,6 +139,38 @@ const TaskController = class TaskController extends TaskDB {
       logger.error({ getTasksError: error });
     }
   }
-};
-
+  static async __deleteTasksByProjectId(id: string) {
+    try {
+      let tasks = await super.getTasksDB({
+        projectId: id,
+      });
+      tasks.forEach(async (item) => {
+        await BoardController.deleteCard(item.cardId);
+      });
+      return await super.deleteTasksByProjectIdDB(id);
+    } catch (error) {
+      logger.error({ DeleteTasksByProjectId: error });
+    }
+  }
+  static async __deleteTasks(ids: string[]) {
+    try {
+      let tasks = await super.getTasksByIdsDB(ids);
+      tasks.forEach(async (item) => {
+        await BoardController.deleteCard(item.cardId);
+      });
+      return await super.deleteTasksDB(ids);
+    } catch (error) {
+      logger.error({ DeleteTasksByProjectId: error });
+    }
+  }
+  static async __deleteTask(id: string) {
+    try {
+      let task = await super.getTaskDB(id);
+      await BoardController.deleteCard(task.cardId);
+      return await super.deleteTaskDB(id);
+    } catch (error) {
+      logger.error({ DeleteTasksByProjectId: error });
+    }
+  }
+}
 export default TaskController;

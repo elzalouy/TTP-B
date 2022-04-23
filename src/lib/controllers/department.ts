@@ -180,7 +180,6 @@ const DepartmentController = class DepartmentController extends DepartmentBD {
         data.name,
         data.color
       );
-      logger.info({ boardData });
       boardId = boardData.id;
       data = {
         name: data.name,
@@ -250,7 +249,6 @@ const DepartmentController = class DepartmentController extends DepartmentBD {
       Promise.all(webhookCreate).then((res) =>
         logger.info({ webhookCreateResult: "webhook done" })
       );
-
       data = {
         defaultListId,
         sharedListID,
@@ -260,7 +258,6 @@ const DepartmentController = class DepartmentController extends DepartmentBD {
         canceldListId,
         teamsId: teamListIds,
       };
-
       let department = await DepartmentController.__createTeamList(
         teams,
         departmentCreate._id,
@@ -270,7 +267,6 @@ const DepartmentController = class DepartmentController extends DepartmentBD {
       if (!department) {
         return null;
       }
-
       return department;
     } catch (error) {
       logger.error({ createDepartmentError: error });
@@ -296,27 +292,22 @@ const DepartmentController = class DepartmentController extends DepartmentBD {
     }
   }
 
-  // This create list for team in trello board and create webhook for that list if it was the mainboard
   static async __createTeamWebhookAndList(
     teams: { name: string; _id: string }[],
     boardId: string,
     mainBoard: boolean
   ) {
     try {
-      // create list for the team
       let teamListIds: { idInTrello: string; idInDB: any }[] = [];
       if (teams) {
         let teamsList = teams.map(async (team) => {
-          // create team list on board
           let teamData: { id: string } = await BoardController.addListToBoard(
             boardId,
             team.name
           );
           if (mainBoard) {
-            // create webhook for team list if it was the main board
             BoardController.createWebHook(teamData.id);
           }
-          logger.info({ teamData: teamData.id });
           return teamListIds.push({
             idInTrello: teamData.id,
             idInDB: team._id,
