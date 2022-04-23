@@ -1,4 +1,4 @@
-import { GetUserData,GetDeleteID } from "./../../types/controller/user";
+import { GetUserData } from "./../../types/controller/user";
 import { successMsg } from "./../../utils/successMsg";
 import UserController from "../../controllers/user";
 import { Request, Response } from "express";
