@@ -2,7 +2,6 @@ import { TaskInfo, TasksStatistics } from "./../../types/model/tasks";
 import logger from "../../../logger";
 import Tasks from "../../models/task";
 import { TaskData } from "../../types/model/tasks";
-import { ObjectId } from "mongoose/node_modules/mongodb";
 import Project from "../../models/Project";
 import _ from "lodash";
 import mongoose from "mongoose";
@@ -52,7 +51,7 @@ class TaskDB {
             inProgressTasks: [
               {
                 $match: {
-                  marchentID: new ObjectId(depId),
+                  marchentID: new mongoose.Types.ObjectId(depId),
                   status: "inProgress",
                 },
               },
@@ -68,7 +67,7 @@ class TaskDB {
             doneTasks: [
               {
                 $match: {
-                  marchentID: new ObjectId(depId),
+                  marchentID: new mongoose.Types.ObjectId(depId),
                   status: "delivered",
                 },
               },
