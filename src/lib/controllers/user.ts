@@ -56,7 +56,7 @@ const UserController = class UserController extends UserDB {
 
       let findUser = await super.findUserById(id);
       if (!findUser) {
-        return customeError("user_not_exsit", 409);
+        return customeError("user_not_exist", 409);
       }
 
       let oldPasswordCheck = await comparePassword(oldPassword,findUser.password)
@@ -93,11 +93,11 @@ const UserController = class UserController extends UserDB {
     status: number;
 } | IUser> { 
     try {
-      const { email, password ,trelloBoardId,trelloMemberId,type='admin'} = data;
+      const { email/*  password ,trelloBoardId,trelloMemberId,type='admin' */} = data;
 
-      if (passwordCheck(password)) {
-        return customeError("password_length", 400);
-      }
+      // if (passwordCheck(password)) {
+      //   return customeError("password_length", 400);
+      // }
 
       if (!emailCheck(email)) {
         return customeError("email_error", 400);
@@ -105,18 +105,18 @@ const UserController = class UserController extends UserDB {
 
       let findUser = await super.findUser({ email: email });
       if (findUser) {
-        return customeError("user_already_exsit", 409);
+        return customeError("user_already_exist", 409);
       }
       // hash password
-      let passwordHash: string = await hashBassword(password);
+      // let passwordHash: string = await hashBassword(password);
 
 
       // add project manager to specific board
-      if(trelloBoardId &&trelloMemberId && type){
-           BoardController.addMemberToBoard(trelloBoardId,trelloMemberId,type)
-      }
+      // if(trelloBoardId &&trelloMemberId && type){
+      //      BoardController.addMemberToBoard(trelloBoardId,trelloMemberId,type)
+      // }
       
-      return await super.createUser({ ...data, password: passwordHash });
+      return await super.createUser({ ...data, /* password: passwordHash  */});
     } catch (error) {
       logger.error({ addNewUserError: error });
     }

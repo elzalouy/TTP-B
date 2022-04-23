@@ -7,3 +7,4 @@ export const emailCheck = (email: string) => {
     /^([0-9]|[a-z])+\.?([0-9]|[a-z])+@([0-9]|[a-z])(\.?[a-z]?)+\.[a-z]{2,}$/g;
   return rgx.test(email);
 };
+
