@@ -1,4 +1,4 @@
-import { GetUserData } from "./../../types/controller/user";
+import { GetUserData,GetDeleteID } from "./../../types/controller/user";
 import { successMsg } from "./../../utils/successMsg";
 import UserController from "../../controllers/user";
 import { Request, Response } from "express";
@@ -68,9 +68,9 @@ const UserReq = class UserReq extends UserController {
 
   static async handleDeleteUser(req: Request, res: Response) {
     try {
-      let userId: string = req.body;
-      if (userId) {
-        let user = await super.deleteUserInfo(userId);
+      let userData: GetDeleteID = req.body;
+      if (userData) {
+        let user = await super.deleteUserInfo(userData._id);
         if (user) {
           return res.status(200).send(successMsg("delete_success", 200));
         } else {
