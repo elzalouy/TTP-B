@@ -68,13 +68,13 @@ const UserReq = class UserReq extends UserController {
 
   static async handleDeleteUser(req: Request, res: Response) {
     try {
-      let userData: GetDeleteID = req.body;
-      if (userData) {
-        let user = await super.deleteUserInfo(userData._id);
+      let _id: string = req.body;
+      if (_id) {
+        let user = await super.deleteUserInfo(_id);
         if (user) {
           return res.status(200).send(successMsg("delete_success", 200));
         } else {
-          res.status(400).send(customeError("user_not_exist", 409));
+          res.status(400).send(customeError("user_not_exist", 400));
         }
       } else {
         return res.status(400).send(customeError("missing_data", 400));
