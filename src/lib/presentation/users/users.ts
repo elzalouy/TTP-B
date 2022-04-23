@@ -68,9 +68,9 @@ const UserReq = class UserReq extends UserController {
 
   static async handleDeleteUser(req: Request, res: Response) {
     try {
-      let _id: string = req.body;
-      if (_id) {
-        let user = await super.deleteUserInfo(_id);
+      let id:string = req.body._id;
+      if (id) {
+        let user = await super.deleteUserInfo(id);
         if (user) {
           return res.status(200).send(successMsg("delete_success", 200));
         } else {
