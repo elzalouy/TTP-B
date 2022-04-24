@@ -56,12 +56,13 @@ const AuthController = class AuthController extends UserDB {
         return customeError("no_user_found", 400);
       }
       let token = await createJwtToken(user._id.toString());
-      await sendMail(
-        user.email,
-        token,
-        "forgetPassword",
-        "Forget Password TTP"
-      );
+      await sendMail({
+        token:token,
+        email:email,
+        body:"",
+        subject:"Forgot Password",
+        path:"forgotPassword"
+      });
       return successMsg("email_sent", 200);
     } catch (error) {
       logger.error({ forgetUserPasswordError: error });

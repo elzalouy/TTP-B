@@ -14,8 +14,8 @@ const NotificationDB = class NotificationDB {
     return await NotificationDB.__updateNotification(data);
   }
 
-  static async getAllNotificationsDB() {
-    return await NotificationDB.__getAllNotifications();
+  static async getAllNotificationsDB(data:object) {
+    return await NotificationDB.__getAllNotifications(data);
   }
   static async deleteNotificationDB(id: string) {
     return await NotificationDB.__deleteNotification(id);
@@ -30,9 +30,9 @@ const NotificationDB = class NotificationDB {
     }
   }
 
-  static async __getAllNotifications() {
+  static async __getAllNotifications(data:object={}) {
     try {
-      let notification = await Notification.find().lean();
+      let notification = await Notification.find(data).lean();
       return notification;
     } catch (error) {
       logger.error({ getNotificationDBError: error });

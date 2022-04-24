@@ -11,8 +11,8 @@ const NotificationController = class NotificationController extends Notification
     return await NotificationController.__updateNotification(data);
   }
 
-  static async getAllNotifications() {
-    return await NotificationController.__getAllNotifications();
+  static async getAllNotifications(data:object) {
+    return await NotificationController.__getAllNotifications(data);
   }
   static async deleteNotification(id: string) {
     return await NotificationController.__deleteNotification(id);
@@ -27,9 +27,9 @@ const NotificationController = class NotificationController extends Notification
     }
   }
 
-  static async __getAllNotifications() {
+  static async __getAllNotifications(data:object) {
     try {
-      let notification = await super.getAllNotificationsDB();
+      let notification = await super.getAllNotificationsDB(data);
       return notification;
     } catch (error) {
       logger.error({ getNotificationControllerError: error });

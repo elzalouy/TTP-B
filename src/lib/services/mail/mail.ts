@@ -4,12 +4,15 @@ import logger from "../../../logger";
 
 config();
 
-const sendMail = async (
-  email: string,
-  token: string,
-  page: string,
-  subject: string
-) => {
+interface Data {
+  email:string;
+  path:string;
+  token:string;
+  subject:string;
+  body:string;
+}
+
+const sendMail = async (data:Data) => {
   try {
     const transporter = nodemailer.createTransport({
       host: "smtp.gmail.com",
@@ -24,11 +27,11 @@ const sendMail = async (
 
     const mailOptions = {
       from: process.env.EMAIL_ADDRESS,
-      to: email,
-      subject: subject,
-      text: `Click this link to continue ${process.env.FRONT_END_URL}${page}/${token}`,
+      to: data.email,
+      subject: `${data.subject} TTP`,
+      text: `${data.body} http://localhost:3000/${data.path}/${data.token}`,
       html: `<h1>
-      <a href="${process.env.FRONT_END_URL}${page}/${token}">
+      <a href="http://localhost:3000/${data.path}/${data.token}">
         click here
       </a>
       </h1>`,

@@ -32,4 +32,6 @@ export interface ProjectData {
   clientId?: string;
   numberOfTasks?: number;
   numberOfFinishedTasks?: number;
+  projectManagerName?:string;
+  adminName?:string
 }

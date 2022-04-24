@@ -60,7 +60,8 @@ const NotificationReq = class NotificationReq extends NotificationController {
 
   static async handleGetAllNotifications(req: Request, res: Response) {
     try {
-      let Notification = await super.getAllNotifications();
+      let id:any = req.query.id
+      let Notification = await super.getAllNotifications({_id:id});
       if (Notification) {
         return res.status(200).send(Notification);
       } else {

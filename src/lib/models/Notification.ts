@@ -10,9 +10,13 @@ const NotificationSchema: Schema = new Schema<NotificationInfo>(
     projectManagerID: {
       type: Schema.Types.ObjectId,
       ref: "users",
-      required: true,
+      // required: true,
     },
-    viewed: {
+    adminViewed: {
+      type: Boolean,
+      default: false,
+    },
+    projectManagerViewed:{
       type: Boolean,
       default: false,
     },
@@ -22,11 +26,11 @@ const NotificationSchema: Schema = new Schema<NotificationInfo>(
     projectID: {
       type: Schema.Types.ObjectId,
       ref: "projects",
-      required: true,
+      // required: true,
     },
     clientName: {
       type: String,
-      require: true,
+      // require: true,
     },
     adminUserID: {
       idInDB: {

@@ -24,10 +24,6 @@ const UserSchema: Schema = new Schema<IUser>(
       type: String,
       default: "",
     },
-    trelloBoardId: {
-      type: String,
-      default: null,
-    },
     trelloMemberId: {
       type: String,
       default: null,

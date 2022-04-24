@@ -7,6 +7,7 @@ import { Server } from "socket.io";
 import cookieParser from "cookie-parser";
 
 import i18n from "./i18n/config";
+
 const ngrok = require("ngrok");
 
 const app: Application = express();
@@ -39,22 +40,25 @@ mongoDB();
 // i18n init
 app.use(i18n.init);
 
-if (process.env.NODE_ENV === "development") {
-  ngrok.connect(
-    {
-      proto: "http",
-      addr: process.env.PORT,
-    },
-    (err: any) => {
-      if (err) {
-        console.error("Error while connecting Ngrok", err);
-        return new Error("Ngrok Failed");
-      }
-    }
-  );
-}
+// if (process.env.NODE_ENV === "development") {
+//   ngrok.connect(
+//     {
+//       proto: "http",
+//       addr: process.env.PORT,
+//     },
+//     (err: any) => {
+//       if (err) {
+//         console.error("Error while connecting Ngrok", err);
+//         return new Error("Ngrok Failed");
+//       }
+//     }
+//   );
+// }
 require("./startup/routes")(app);
 app.disable("etag");
+
+// start my notification cron job
+require("./services/cronJobNotifi/cronJobNotifi");
 
 io.on("connection", (socket: any) => {
   console.log("Client connected");

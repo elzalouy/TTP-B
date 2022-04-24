@@ -56,12 +56,16 @@ const ProjectController = class ProjectController extends ProjectDB {
       // if porject status update to done
       if(data.projectStatus && ["delivered on time","delivered defore deadline"].includes(data.projectStatus)){
         let createNotifi = await NotificationController.createNotification({
-          title:`أنتهاء مشروع`,
+          title:`${data.name} project is done! Congratulations!`,
           projectManagerID:data.projectManager,
-          description:`تم الانتها من مشروع ${data.name}`,
+          description:`${data.name} project is done! Thank you for your hard work`,
           clientName:data.clientId
         })
-        // io.to('joined admin').emit()
+        // send notification to all admin
+        io.to("admin room").emit('notification update',createNotifi)
+
+          // send notification to specific project manager
+      io.to(`user-${data.projectManager}`).emit("notification update", createNotifi)
       }
       let project = await super.updateProjectDB(data);
       return project;
@@ -73,6 +77,16 @@ const ProjectController = class ProjectController extends ProjectDB {
   static async __createNewProject(data: ProjectData) {
     try {
       let project = await super.createProjectDB(data);
+
+      let createNotifi = await NotificationController.createNotification({
+        title: `${data.projectManagerName} project has been assigend to you`,
+        description: `${data.name} has been assigend to you by ${data.adminName}`,
+        projectManagerID: data.projectManager,
+      });
+
+      // send notification to specific project manager
+      io.to(`user-${data.projectManager}`).emit("notification update", createNotifi)
+
       return project;
     } catch (error) {
       logger.error({ getTeamsError: error });

@@ -4,7 +4,8 @@ import { Document } from "mongoose";
 export interface NotificationInfo extends Document {
   description: string;
   projectManagerID: ObjectId;
-  viewed: boolean;
+  adminViewed:boolean
+  projectManagerViewed:boolean
   title: string;
   projectID: ObjectId;
   clientName: string;
@@ -20,4 +21,6 @@ export interface NotificationData {
   projectID?: string;
   clientName?: string;
   adminUserID?: string;
+  adminViewed?:boolean
+  projectManagerViewed?:boolean
 }
