@@ -1,11 +1,12 @@
 import { GetUserData } from "./../types/controller/user";
-import { hashBassword, comparePassword } from "./../services/auth/auth";
+import { hashBassword, comparePassword, createJwtToken } from "./../services/auth/auth";
 import { passwordCheck, emailCheck } from "./../utils/validation";
 import logger from "../../logger";
 import UserDB from "../dbCalls/user/user";
 import { IUser, PasswordUpdate, UserData } from "../types/model/User";
 import { customeError } from "../utils/errorUtils";
 import BoardController from "./boards";
+import sendMail from "../services/mail/mail";
 
 const UserController = class UserController extends UserDB {
   static async addUser(data: UserData) {
@@ -20,7 +21,7 @@ const UserController = class UserController extends UserDB {
     return await UserController.__updateUserPassword(data);
   }
 
-  static async deleteUserInfo(id:string) {
+  static async deleteUserInfo(id: string) {
     return await UserController.__deleteUserDoc(id);
   }
 
@@ -37,7 +38,7 @@ const UserController = class UserController extends UserDB {
     }
   }
 
-  static async __deleteUserDoc(id:string) {
+  static async __deleteUserDoc(id: string) {
     try {
       let deletedUser = await super.deleteUser(id);
       return deletedUser;
@@ -93,13 +94,13 @@ const UserController = class UserController extends UserDB {
 
   static async __addNewUser(data: UserData): Promise<
     | {
-        msg: string;
-        status: number;
-      }
+      msg: string;
+      status: number;
+    }
     | IUser
   > {
     try {
-      const { email/*  password ,trelloBoardId,trelloMemberId,type='admin' */} = data;
+      const { email/*  password ,trelloBoardId,trelloMemberId,type='admin' */ } = data;
       // if (passwordCheck(password)) {
       //   return customeError("password_length", 400);
       // }
@@ -119,8 +120,21 @@ const UserController = class UserController extends UserDB {
       // if(trelloBoardId &&trelloMemberId && type){
       //      BoardController.addMemberToBoard(trelloBoardId,trelloMemberId,type)
       // }
-      
-      return await super.createUser({ ...data /* password: passwordHash  */});
+
+
+      let newUser = await super.createUser({ ...data /* password: passwordHash  */ });
+
+      let token = await createJwtToken(newUser._id.toString());
+
+      await sendMail({
+        email: email,
+        subject: "Update Password",
+        token:token,
+        path: "newPassword",
+        body: "Please set your new password using this link to start using your account"
+      })
+
+      return newUser;
     } catch (error) {
       logger.error({ addNewUserError: error });
     }
