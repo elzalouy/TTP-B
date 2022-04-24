@@ -14,19 +14,15 @@ const UserSchema: Schema = new Schema<IUser>(
     },
     password: {
       type: String,
-      required: true,
+      required: false,
     },
     role: {
       type: String,
-      required: true,
+      required: false,
     },
     image: {
       type: String,
       default: "",
-    },
-    trelloBoardId: {
-      type: String,
-      default: null,
     },
     trelloMemberId: {
       type: String,

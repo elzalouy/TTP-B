@@ -4,7 +4,15 @@ import logger from "../../../logger";
 
 config();
 
-const sendMail = async (email: string, token: string) => {
+interface Data {
+  email:string;
+  path:string;
+  token:string;
+  subject:string;
+  body:string;
+}
+
+const sendMail = async (data:Data) => {
   try {
     const transporter = nodemailer.createTransport({
       host: "smtp.gmail.com",
@@ -19,11 +27,11 @@ const sendMail = async (email: string, token: string) => {
 
     const mailOptions = {
       from: process.env.EMAIL_ADDRESS,
-      to: email,
-      subject: "Forget Password TTP",
-      text: `Click this link to continue http://localhost:3000/forgetPassword/${token}`,
+      to: data.email,
+      subject: `${data.subject} TTP`,
+      text: `${data.body} http://localhost:3000/${data.path}/${data.token}`,
       html: `<h1>
-      <a href="http://localhost:3000/forgetPassword/${token}">
+      <a href="http://localhost:3000/${data.path}/${data.token}">
         click here
       </a>
       </h1>`,

@@ -1,11 +1,12 @@
 import { GetUserData } from "./../types/controller/user";
-import { hashBassword, comparePassword } from "./../services/auth/auth";
+import { hashBassword, comparePassword, createJwtToken } from "./../services/auth/auth";
 import { passwordCheck, emailCheck } from "./../utils/validation";
 import logger from "../../logger";
 import UserDB from "../dbCalls/user/user";
 import { IUser, PasswordUpdate, UserData } from "../types/model/User";
 import { customeError } from "../utils/errorUtils";
 import BoardController from "./boards";
+import sendMail from "../services/mail/mail";
 
 const UserController = class UserController extends UserDB {
   static async addUser(data: UserData) {
@@ -56,7 +57,7 @@ const UserController = class UserController extends UserDB {
 
       let findUser = await super.findUserById(id);
       if (!findUser) {
-        return customeError("user_not_exsit", 409);
+        return customeError("user_not_exist", 409);
       }
 
       let oldPasswordCheck = await comparePassword(
@@ -78,7 +79,7 @@ const UserController = class UserController extends UserDB {
 
   static async __updateUserData(data: UserData) {
     try {
-      const { id, email } = data;
+      const { id } = data;
       let findUser = await super.findUserById(id);
 
       if (!findUser) {
@@ -93,23 +94,16 @@ const UserController = class UserController extends UserDB {
 
   static async __addNewUser(data: UserData): Promise<
     | {
-        msg: string;
-        status: number;
-      }
+      msg: string;
+      status: number;
+    }
     | IUser
   > {
     try {
-      const {
-        email,
-        password,
-        trelloBoardId,
-        trelloMemberId,
-        type = "admin",
-      } = data;
-
-      if (passwordCheck(password)) {
-        return customeError("password_length", 400);
-      }
+      const { email/*  password ,trelloBoardId,trelloMemberId,type='admin' */ } = data;
+      // if (passwordCheck(password)) {
+      //   return customeError("password_length", 400);
+      // }
 
       if (!emailCheck(email)) {
         return customeError("email_error", 400);
@@ -117,17 +111,30 @@ const UserController = class UserController extends UserDB {
 
       let findUser = await super.findUser({ email: email });
       if (findUser) {
-        return customeError("user_already_exsit", 409);
+        return customeError("user_already_exist", 400);
       }
       // hash password
-      let passwordHash: string = await hashBassword(password);
+      // let passwordHash: string = await hashBassword(password);
 
       // add project manager to specific board
-      if (trelloBoardId && trelloMemberId && type) {
-        BoardController.addMemberToBoard(trelloBoardId, trelloMemberId, type);
-      }
+      // if(trelloBoardId &&trelloMemberId && type){
+      //      BoardController.addMemberToBoard(trelloBoardId,trelloMemberId,type)
+      // }
 
-      return await super.createUser({ ...data, password: passwordHash });
+
+      let newUser = await super.createUser({ ...data /* password: passwordHash  */ });
+
+      let token = await createJwtToken(newUser._id.toString());
+
+      await sendMail({
+        email: email,
+        subject: "Update Password",
+        token:token,
+        path: "newPassword",
+        body: "Please set your new password using this link to start using your account"
+      })
+
+      return newUser;
     } catch (error) {
       logger.error({ addNewUserError: error });
     }
