@@ -12,6 +12,16 @@ const ProjectSchema: Schema = new Schema<ProjectInfo>(
       ref: "users",
       required: true,
     },
+    projectManagerName: {
+      type: String,
+      required: true,
+    },
+    adminId: {
+      type: Schema.Types.ObjectId,
+      ref: "users",
+      required: true,
+    },
+
     projectDeadline: {
       type: Date,
       default: null,

@@ -92,11 +92,7 @@ class TaskDB {
 
   static async __updateOneTaskDB(data: object, value: object) {
     try {
-      let task = await Tasks.updateOne(
-        { ...data },
-        { value },
-        { new: true, lean: true }
-      );
+      let task = await Tasks.updateOne(data, value, { new: true, lean: true });
       return task;
     } catch (error) {
       logger.error({ updateMultiTaskDBError: error });
@@ -148,7 +144,6 @@ class TaskDB {
           (item) => item.projectId === id && item.status === "done"
         ).length;
         let notDone = tasks.filter((item) => item.projectId === id).length;
-        console.log(done, notDone);
         await Project.findByIdAndUpdate(id, {
           $inc: {
             numberOfTasks: -notDone,
@@ -230,7 +225,6 @@ class TaskDB {
       var statistics: TasksStatistics[] = [];
       let project = await Project.find({}).select("_id");
       await project.forEach(async (element, index) => {
-        console.log(index);
         let finishedtasks = await Tasks.find({
           projectId: element._id,
           status: "done",

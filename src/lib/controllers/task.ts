@@ -48,10 +48,10 @@ class TaskController extends TaskDB {
       await BoardController.moveTaskToDiffList(cardId, listId);
       let task = await TaskDB.updateOneTaskDB(
         {
-          cardId,
+          cardId: cardId,
         },
         {
-          status,
+          status: status,
         }
       );
       return task;

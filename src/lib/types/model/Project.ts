@@ -15,6 +15,8 @@ export interface ProjectInfo extends Document {
   clientId: ObjectId;
   numberOfTasks: number;
   numberOfFinishedTasks: number;
+  adminId: ObjectId;
+  projectManagerName: string;
 }
 export interface ProjectData {
   _id?: string | ObjectID;
@@ -32,4 +34,6 @@ export interface ProjectData {
   clientId?: string;
   numberOfTasks?: number;
   numberOfFinishedTasks?: number;
+  adminId?: ObjectId;
+  projectManagerName?: string;
 }
