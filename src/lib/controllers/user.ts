@@ -78,7 +78,7 @@ const UserController = class UserController extends UserDB {
 
   static async __updateUserData(data: UserData) {
     try {
-      const { id, email } = data;
+      const { id } = data;
       let findUser = await super.findUserById(id);
 
       if (!findUser) {
@@ -110,7 +110,7 @@ const UserController = class UserController extends UserDB {
 
       let findUser = await super.findUser({ email: email });
       if (findUser) {
-        return customeError("user_already_exist", 409);
+        return customeError("user_already_exist", 400);
       }
       // hash password
       // let passwordHash: string = await hashBassword(password);
