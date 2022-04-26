@@ -35,7 +35,7 @@ const DepartmentSchema = new mongoose_1.Schema(// department
     },
     mainBoard: {
         type: Boolean,
-        default: false
+        default: false,
     },
     teamsId: [
         {
@@ -43,7 +43,13 @@ const DepartmentSchema = new mongoose_1.Schema(// department
             idInDB: {
                 type: mongoose_1.Schema.Types.ObjectId,
                 ref: "teams",
-            }
+            },
+        },
+    ],
+    tasks: [
+        {
+            type: mongoose_1.Schema.Types.ObjectId,
+            ref: "tasks",
         },
     ],
 }, {

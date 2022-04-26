@@ -23,6 +23,8 @@ const ClientReq = class ClientReq extends client_1.default {
         });
         return __awaiter(this, void 0, void 0, function* () {
             try {
+                let file = req.files;
+                req.body.image = file.image[0].location;
                 let Client = yield _super.createClient.call(this, req.body);
                 if (Client) {
                     return res.status(200).send(Client);
@@ -44,6 +46,11 @@ const ClientReq = class ClientReq extends client_1.default {
         return __awaiter(this, void 0, void 0, function* () {
             try {
                 let clientData = req.body;
+                let file = req.files;
+                if (file.image && file.image[0]) {
+                    clientData.image = file.image[0].location;
+                }
+                logger_1.default.info({ clientData });
                 if (!clientData) {
                     return res.status(400).send((0, errorUtils_1.customeError)("update_client_error", 400));
                 }
@@ -67,7 +74,7 @@ const ClientReq = class ClientReq extends client_1.default {
         });
         return __awaiter(this, void 0, void 0, function* () {
             try {
-                let id = req.body.id;
+                let id = req.query.id;
                 if (!id) {
                     return res.status(400).send((0, errorUtils_1.customeError)("delete_client_error", 400));
                 }

@@ -25,14 +25,33 @@ const CategoryController = class CategoryController extends category_1.default {
             return yield CategoryController.__createNewSubcategory(data);
         });
     }
-    static updateCategoryWithSubcategoriesId(data) {
+    static updateCategory(data) {
         return __awaiter(this, void 0, void 0, function* () {
-            return yield CategoryController.__updateCategoryWithSubcategoriesId(data);
+            return yield CategoryController.__updateCategory(data);
         });
     }
     static getCategories() {
         return __awaiter(this, void 0, void 0, function* () {
             return yield CategoryController.__getAllCategories();
+        });
+    }
+    static deleteCategory(id) {
+        return __awaiter(this, void 0, void 0, function* () {
+            return yield CategoryController.__deleteCategory(id);
+        });
+    }
+    static __deleteCategory(id) {
+        const _super = Object.create(null, {
+            deleteCategoryDB: { get: () => super.deleteCategoryDB }
+        });
+        return __awaiter(this, void 0, void 0, function* () {
+            try {
+                const deletedCategory = yield _super.deleteCategoryDB.call(this, id);
+                return deletedCategory;
+            }
+            catch (error) {
+                logger_1.default.error({ deleteCategoryError: error });
+            }
         });
     }
     static __createNewCategory(data) {
@@ -41,7 +60,17 @@ const CategoryController = class CategoryController extends category_1.default {
         });
         return __awaiter(this, void 0, void 0, function* () {
             try {
-                let category = yield _super.createCategory.call(this, data);
+                const { subCategories } = data;
+                let subCategoryIds = [];
+                // create sunCategory if exsit
+                if (data.subCategories.length > 0) {
+                    for (let i = 0; i < subCategories.length; i++) {
+                        let subCategory = yield CategoryController.createSubcategory(subCategories[i]);
+                        subCategoryIds.push(subCategory._id);
+                    }
+                }
+                // create category
+                let category = yield _super.createCategory.call(this, Object.assign(Object.assign({}, data), { subCategoriesId: subCategoryIds, selectedSubCategory: subCategoryIds }));
                 return category;
             }
             catch (error) {
@@ -63,13 +92,21 @@ const CategoryController = class CategoryController extends category_1.default {
             }
         });
     }
-    static __updateCategoryWithSubcategoriesId(data) {
+    static __updateCategory(data) {
         const _super = Object.create(null, {
-            updateCategoryWithSubcategoriesId: { get: () => super.updateCategoryWithSubcategoriesId }
+            updateCategoryDB: { get: () => super.updateCategoryDB }
         });
         return __awaiter(this, void 0, void 0, function* () {
             try {
-                let category = yield _super.updateCategoryWithSubcategoriesId.call(this, data);
+                // add new subcategory then update data
+                if (data.newSubCategory) {
+                    for (let i = 0; i < data.newSubCategory.length; i++) {
+                        let subCategory = yield CategoryController.createSubcategory(data.newSubCategory[i]);
+                        logger_1.default.info({ subCategory });
+                        data.subCategoriesId = [...data.subCategoriesId, subCategory._id];
+                    }
+                }
+                let category = yield _super.updateCategoryDB.call(this, data);
                 return category;
             }
             catch (error) {

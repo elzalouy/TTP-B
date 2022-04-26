@@ -14,8 +14,10 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 Object.defineProperty(exports, "__esModule", { value: true });
 const logger_1 = __importDefault(require("../../../logger"));
 const task_1 = __importDefault(require("../../models/task"));
-const project_1 = __importDefault(require("../project/project"));
-const TaskDB = class TaskDB {
+const Project_1 = __importDefault(require("../../models/Project"));
+const lodash_1 = __importDefault(require("lodash"));
+const mongoose_1 = __importDefault(require("mongoose"));
+class TaskDB {
     static createTaskDB(data) {
         return __awaiter(this, void 0, void 0, function* () {
             return yield TaskDB.__createTask(data);
@@ -31,15 +33,94 @@ const TaskDB = class TaskDB {
             return yield TaskDB.__deleteTask(id);
         });
     }
+    static deleteTasksDB(ids) {
+        return __awaiter(this, void 0, void 0, function* () {
+            return yield TaskDB.__deleteTasks(ids);
+        });
+    }
     static updateOneTaskDB(data, value) {
         return __awaiter(this, void 0, void 0, function* () {
             return yield TaskDB.__updateOneTaskDB(data, value);
         });
     }
+    static getTaskDepartmentDB(depId) {
+        return __awaiter(this, void 0, void 0, function* () {
+            return yield TaskDB.__getTaskDepartment(depId);
+        });
+    }
+    static deleteTasksByProjectIdDB(id) {
+        return __awaiter(this, void 0, void 0, function* () {
+            return yield TaskDB.__deleteTasksByProjectId(id);
+        });
+    }
+    static getTaskDB(id) {
+        return __awaiter(this, void 0, void 0, function* () {
+            return yield TaskDB.__getTask(id);
+        });
+    }
+    static __getTask(id) {
+        return __awaiter(this, void 0, void 0, function* () {
+            try {
+                let task = yield task_1.default.findById(id).lean();
+                return task;
+            }
+            catch (error) {
+                logger_1.default.error({ updateTaskDBError: error });
+            }
+        });
+    }
+    static __getTaskDepartment(depId) {
+        return __awaiter(this, void 0, void 0, function* () {
+            try {
+                let taskCount = yield task_1.default.aggregate([
+                    {
+                        $facet: {
+                            inProgressTasks: [
+                                {
+                                    $match: {
+                                        marchentID: new mongoose_1.default.Types.ObjectId(depId),
+                                        status: "inProgress",
+                                    },
+                                },
+                                {
+                                    $group: {
+                                        _id: null,
+                                        count: {
+                                            $sum: 1,
+                                        },
+                                    },
+                                },
+                            ],
+                            doneTasks: [
+                                {
+                                    $match: {
+                                        marchentID: new mongoose_1.default.Types.ObjectId(depId),
+                                        status: "delivered",
+                                    },
+                                },
+                                {
+                                    $group: {
+                                        _id: null,
+                                        count: {
+                                            $sum: 1,
+                                        },
+                                    },
+                                },
+                            ],
+                        },
+                    },
+                ]);
+                return taskCount;
+            }
+            catch (error) {
+                logger_1.default.error({ getTaskDepartmentDBError: error });
+            }
+        });
+    }
     static __updateOneTaskDB(data, value) {
         return __awaiter(this, void 0, void 0, function* () {
             try {
-                let task = yield task_1.default.updateOne(Object.assign({}, data), { value }, { new: true, lean: true });
+                let task = yield task_1.default.updateOne(data, value, { new: true, lean: true });
                 return task;
             }
             catch (error) {
@@ -50,6 +131,22 @@ const TaskDB = class TaskDB {
     static getTasksDB(data) {
         return __awaiter(this, void 0, void 0, function* () {
             return yield TaskDB.__getTasks(data);
+        });
+    }
+    static getTasksByIdsDB(ids) {
+        return __awaiter(this, void 0, void 0, function* () {
+            return yield TaskDB.__getTasksByIds(ids);
+        });
+    }
+    static __getTasksByIds(ids) {
+        return __awaiter(this, void 0, void 0, function* () {
+            try {
+                let tasks = yield task_1.default.find({ _id: { $in: ids } }).lean();
+                return tasks;
+            }
+            catch (error) {
+                logger_1.default.error({ updateTaskDBError: error });
+            }
         });
     }
     static __getTasks(data) {
@@ -63,10 +160,57 @@ const TaskDB = class TaskDB {
             }
         });
     }
+    static __deleteTasksByProjectId(id) {
+        return __awaiter(this, void 0, void 0, function* () {
+            try {
+                let deleteResult = yield task_1.default.deleteMany({ projectId: id });
+                yield Project_1.default.findByIdAndUpdate(id, {
+                    numberOfTasks: 0,
+                    numberOfFinishedTasks: 0,
+                });
+                return deleteResult;
+            }
+            catch (error) {
+                logger_1.default.error({ deleteTasksByProject: error });
+            }
+        });
+    }
+    static __deleteTasks(ids) {
+        return __awaiter(this, void 0, void 0, function* () {
+            try {
+                let tasks = yield task_1.default.find({ _id: { $in: ids } }).lean();
+                let tasksUnique = lodash_1.default.uniqBy(tasks, (item) => item.projectId);
+                let projects = tasksUnique.map((item) => item.projectId);
+                projects.forEach((id) => __awaiter(this, void 0, void 0, function* () {
+                    let done = tasks.filter((item) => item.projectId === id && item.status === "done").length;
+                    let notDone = tasks.filter((item) => item.projectId === id).length;
+                    yield Project_1.default.findByIdAndUpdate(id, {
+                        $inc: {
+                            numberOfTasks: -notDone,
+                            numberOfFinishedTasks: -done,
+                        },
+                    });
+                }));
+                let deleteResult = yield task_1.default.deleteMany({ _id: { $in: ids } });
+                return deleteResult;
+            }
+            catch (error) {
+                logger_1.default.error({ deleteTasksError: error });
+            }
+        });
+    }
     static __deleteTask(id) {
         return __awaiter(this, void 0, void 0, function* () {
             try {
-                let task = yield task_1.default.findByIdAndDelete({ _id: id });
+                let task = yield task_1.default.findByIdAndDelete(id);
+                if (task.status === "done")
+                    yield Project_1.default.findByIdAndUpdate(task.projectId, {
+                        $inc: { numberOfTasks: -1, numberOfFinishedTasks: -1 },
+                    });
+                else
+                    yield Project_1.default.findByIdAndUpdate(task.projectId, {
+                        $inc: { numberOfTasks: -1 },
+                    });
                 return task;
             }
             catch (error) {
@@ -91,13 +235,10 @@ const TaskDB = class TaskDB {
         return __awaiter(this, void 0, void 0, function* () {
             try {
                 let task = new task_1.default(data);
-                task = yield task.save();
-                let projectId = task.projectId.toString();
-                let tasks = yield (yield task_1.default.find({ projectId: projectId })).length;
-                yield project_1.default.updateProjectDB({
-                    _id: projectId,
-                    numberOfTasks: tasks,
+                yield Project_1.default.findByIdAndUpdate(task.projectId, {
+                    $inc: { numberOfTasks: 1, numberOfFinishedTasks: 0 },
                 });
+                task = yield task.save();
                 return task;
             }
             catch (error) {
@@ -115,9 +256,9 @@ const TaskDB = class TaskDB {
                     filter.memberId = data.memberId;
                 if (data.status)
                     filter.status = data.status;
-                console.log(data);
+                if (data.name)
+                    filter.name = { $regex: data.name };
                 let tasks = yield task_1.default.find(filter);
-                console.log(tasks);
                 return tasks;
             }
             catch (error) {
@@ -125,5 +266,32 @@ const TaskDB = class TaskDB {
             }
         });
     }
-};
+    static __getAllTasksStatistics() {
+        return __awaiter(this, void 0, void 0, function* () {
+            try {
+                var statistics = [];
+                let project = yield Project_1.default.find({}).select("_id");
+                yield project.forEach((element, index) => __awaiter(this, void 0, void 0, function* () {
+                    let finishedtasks = yield task_1.default.find({
+                        projectId: element._id,
+                        status: "done",
+                    });
+                    let tasks = yield task_1.default.find({ projectId: element._id });
+                    let NoOfFinished = finishedtasks.length;
+                    let NoOfTasks = tasks.length;
+                    statistics.push({
+                        id: element._id,
+                        numberOfFinishedTasks: NoOfFinished,
+                        numberOfTasks: NoOfTasks,
+                        progress: (NoOfFinished / NoOfTasks) * 100,
+                    });
+                }));
+                return statistics;
+            }
+            catch (error) {
+                logger_1.default.error({ AllTasksStatistics: error });
+            }
+        });
+    }
+}
 exports.default = TaskDB;

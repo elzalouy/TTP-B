@@ -120,7 +120,6 @@ const TaskReq = class TaskReq extends task_1.default {
         return __awaiter(this, void 0, void 0, function* () {
             try {
                 let { cardId, listId, status } = req.body;
-                // TaskData.file = req.file
                 let task = yield _super.moveTaskOnTrello.call(this, cardId, listId, status);
                 if (task) {
                     return res.send(task);
@@ -131,6 +130,58 @@ const TaskReq = class TaskReq extends task_1.default {
             }
             catch (error) {
                 logger_1.default.error({ handleMoveCardError: error });
+            }
+        });
+    }
+    static handleDeleteTasksByProjectId(req, res) {
+        const _super = Object.create(null, {
+            deleteTasksByProjectId: { get: () => super.deleteTasksByProjectId }
+        });
+        return __awaiter(this, void 0, void 0, function* () {
+            try {
+                let id = req.body.id;
+                let deleteResult = yield _super.deleteTasksByProjectId.call(this, id);
+                if (deleteResult === null || deleteResult === void 0 ? void 0 : deleteResult.deletedCount)
+                    return res.status(200).send(deleteResult);
+            }
+            catch (error) {
+                logger_1.default.error({ handleDeleteTasksByProjectIdError: error });
+            }
+        });
+    }
+    static handleDeleteTasks(req, res) {
+        const _super = Object.create(null, {
+            deleteTasks: { get: () => super.deleteTasks }
+        });
+        return __awaiter(this, void 0, void 0, function* () {
+            try {
+                let ids = req.body.ids;
+                let deleteResult = yield _super.deleteTasks.call(this, ids);
+                if (deleteResult === null || deleteResult === void 0 ? void 0 : deleteResult.deletedCount)
+                    return res.status(200).send(deleteResult);
+                else
+                    res.status(400).send((0, errorUtils_1.customeError)("delete_task_error", 400));
+            }
+            catch (error) {
+                logger_1.default.error({ handleDeleteTasksError: error });
+            }
+        });
+    }
+    static handleDeleteTask(req, res) {
+        const _super = Object.create(null, {
+            deleteTask: { get: () => super.deleteTask }
+        });
+        return __awaiter(this, void 0, void 0, function* () {
+            try {
+                let id = req.body.id;
+                let deleteResult = yield _super.deleteTask.call(this, id);
+                if (deleteResult._id)
+                    return res.status(200).send(deleteResult);
+                else
+                    res.status(400).send((0, errorUtils_1.customeError)("delete_task_error", 400));
+            }
+            catch (error) {
+                logger_1.default.error({ handleDeleteTasksError: error });
             }
         });
     }

@@ -49,22 +49,7 @@ const ClientDB = class ClientDB {
     static __getAllClients() {
         return __awaiter(this, void 0, void 0, function* () {
             try {
-                let client = yield Client_1.default.find()
-                    .populate({
-                    path: "projectsId",
-                    select: "numberOfTasks",
-                })
-                    .populate({
-                    path: "projectsId",
-                    select: "name -_id",
-                    match: {
-                        projectStatus: "inProgress" ||
-                            "deliver on time" ||
-                            "deliver defore deadline" ||
-                            "delivered after deadline",
-                    },
-                })
-                    .lean();
+                let client = yield Client_1.default.find().lean();
                 return client;
             }
             catch (error) {
@@ -75,8 +60,8 @@ const ClientDB = class ClientDB {
     static __updateClient(data) {
         return __awaiter(this, void 0, void 0, function* () {
             try {
-                let id = data.id;
-                delete data.id;
+                let id = data._id;
+                delete data._id;
                 let client = yield Client_1.default.findByIdAndUpdate({ _id: id }, Object.assign({}, data), { new: true });
                 return client;
             }

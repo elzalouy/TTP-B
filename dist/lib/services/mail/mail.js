@@ -16,7 +16,7 @@ const dotenv_1 = require("dotenv");
 const nodemailer_1 = __importDefault(require("nodemailer"));
 const logger_1 = __importDefault(require("../../../logger"));
 (0, dotenv_1.config)();
-const sendMail = (email, token) => __awaiter(void 0, void 0, void 0, function* () {
+const sendMail = (data) => __awaiter(void 0, void 0, void 0, function* () {
     try {
         const transporter = nodemailer_1.default.createTransport({
             host: "smtp.gmail.com",
@@ -30,11 +30,11 @@ const sendMail = (email, token) => __awaiter(void 0, void 0, void 0, function* (
         });
         const mailOptions = {
             from: process.env.EMAIL_ADDRESS,
-            to: email,
-            subject: "Forget Password TTP",
-            text: `Click this link to continue http://localhost:3000/forgetPassword/${token}`,
+            to: data.email,
+            subject: `${data.subject} TTP`,
+            text: `${data.body} http://localhost:3000/${data.path}/${data.token}`,
             html: `<h1>
-      <a href="http://localhost:3000/forgetPassword/${token}">
+      <a href="http://localhost:3000/${data.path}/${data.token}">
         click here
       </a>
       </h1>`,

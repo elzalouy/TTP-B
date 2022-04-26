@@ -41,14 +41,8 @@ const TaskSchema = new mongoose_1.Schema({
     },
     status: {
         type: String,
-        enum: [
-            "inProgress",
-            "shared",
-            "delivered",
-            "late",
-            "not clear",
-            "cancled",
-        ],
+        default: "inProgress",
+        enum: ["inProgress", "shared", "done", "not clear", "cancled", "review"],
     },
     start: {
         type: Date,
@@ -67,7 +61,6 @@ const TaskSchema = new mongoose_1.Schema({
         default: null,
     },
     turnoverTime: {
-        // number of day the task late after deadline
         type: Number,
         default: 0,
     },

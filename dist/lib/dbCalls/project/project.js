@@ -66,7 +66,6 @@ const ProjectDB = class ProjectDB {
             try {
                 let project = yield Project_1.default.find(data)
                     .populate({ path: "projectManager", select: "_id name" })
-                    .populate({ path: "membersId", select: "_id name" })
                     .lean();
                 return project;
             }
@@ -125,8 +124,12 @@ const ProjectDB = class ProjectDB {
                     filters.projectStatus = filter.projectStatus;
                 if (filter.clientId)
                     filters.clientId = filter.clientId;
-                let projects = yield Project_1.default.find(filters);
-                return projects;
+                if (filter.name)
+                    filters.name = { $regex: filter.name };
+                let project = yield Project_1.default.find(filters)
+                    .populate({ path: "projectManager", select: "_id name" })
+                    .lean();
+                return project;
             }
             catch (error) {
                 logger_1.default.error({ filterProjectsError: error });

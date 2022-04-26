@@ -16,6 +16,7 @@ const successMsg_1 = require("./../../utils/successMsg");
 const errorUtils_1 = require("./../../utils/errorUtils");
 const logger_1 = __importDefault(require("../../../logger"));
 const project_1 = __importDefault(require("../../controllers/project"));
+const mongoose_1 = __importDefault(require("mongoose"));
 const ProjectReq = class ProjectReq extends project_1.default {
     static handleCreateProject(req, res) {
         const _super = Object.create(null, {
@@ -72,6 +73,8 @@ const ProjectReq = class ProjectReq extends project_1.default {
         return __awaiter(this, void 0, void 0, function* () {
             try {
                 let projectData = req.query;
+                if (projectData._id)
+                    projectData._id = new mongoose_1.default.Types.ObjectId(projectData._id);
                 let project = yield _super.getProject.call(this, projectData);
                 if (project) {
                     return res.status(200).send(project);

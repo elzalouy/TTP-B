@@ -13,9 +13,15 @@ const CategorySchema = new mongoose_1.Schema({
             ref: "subcategories",
         },
     ],
+    selectedSubCategory: [
+        {
+            type: mongoose_1.Schema.Types.ObjectId,
+            ref: "subcategories",
+        },
+    ],
 }, {
     timestamps: true,
-    strict: false,
+    strict: true,
 });
 const Categories = (0, mongoose_1.model)("category", CategorySchema);
 exports.default = Categories;

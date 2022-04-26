@@ -16,6 +16,7 @@ const logger_1 = __importDefault(require("../../logger"));
 const techMember_1 = __importDefault(require("../dbCalls/techMember/techMember"));
 const errorUtils_1 = require("../utils/errorUtils");
 const boards_1 = __importDefault(require("./boards"));
+const department_1 = __importDefault(require("../dbCalls/department/department"));
 const TechMemberController = class TechMemberController extends techMember_1.default {
     static createNewMember(data) {
         return __awaiter(this, void 0, void 0, function* () {
@@ -89,15 +90,27 @@ const TechMemberController = class TechMemberController extends techMember_1.def
         });
         return __awaiter(this, void 0, void 0, function* () {
             try {
-                const { boardId, name, trelloMemberId } = data;
-                let checkExsit = yield TechMemberController.__checkBoardListName(boardId, name);
-                if (checkExsit) {
-                    return (0, errorUtils_1.customeError)("list_already_exsit", 400);
+                const { name, boardId, departmentId } = data;
+                if (!departmentId)
+                    (0, errorUtils_1.customeError)("department_missing", 400);
+                let listId = null;
+                if (boardId) {
+                    let checkExsit = yield TechMemberController.__checkBoardListName(boardId, name);
+                    if (checkExsit) {
+                        return (0, errorUtils_1.customeError)("list_already_exsit", 400);
+                    }
+                    listId = yield boards_1.default.addListToBoard(boardId, name);
+                    if (data.mainBaord) {
+                        return yield boards_1.default.createWebHook(listId.id);
+                    }
                 }
-                // // add this member to board
-                // BoardController.addMemberToBoard(boardId, trelloMemberId, "normal");
-                let list = yield boards_1.default.addListToBoard(boardId, name);
-                let techMember = yield _super.createTechMember.call(this, Object.assign(Object.assign({}, data), { listId: list.id }));
+                let techMember = yield _super.createTechMember.call(this, Object.assign(Object.assign({}, data), { listId: listId === null || listId === void 0 ? void 0 : listId.id }));
+                department_1.default.updatedbDepartment({
+                    _id: data.departmentId,
+                    $push: {
+                        teamsId: { idInTrello: listId.id, idInDB: techMember._id },
+                    },
+                });
                 return { techMember, status: 200 };
             }
             catch (error) {

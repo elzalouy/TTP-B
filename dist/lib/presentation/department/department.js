@@ -69,15 +69,13 @@ const DepartmentReq = class DepartmentReq extends department_1.default {
         });
         return __awaiter(this, void 0, void 0, function* () {
             try {
-                let { _id, listTrelloIds, mainBoard, boardId } = req.body;
-                if (!_id || !listTrelloIds || mainBoard === undefined || !boardId) {
+                let { _id } = req.query;
+                logger_1.default.info({ body: req.body });
+                if (!_id) {
                     return res.status(400).send((0, errorUtils_1.customeError)("delete_dep_error", 400));
                 }
                 let department = yield _super.deleteDepartment.call(this, {
                     _id,
-                    listTrelloIds,
-                    mainBoard,
-                    boardId,
                 });
                 if (department) {
                     return res.status(200).send((0, successMsg_1.successMsg)("delete_dep_success", 200));

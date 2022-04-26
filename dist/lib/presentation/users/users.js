@@ -56,7 +56,7 @@ const UserReq = class UserReq extends user_1.default {
                         return res.send(user);
                     }
                     else {
-                        res.status(409).send((0, errorUtils_1.customeError)("user_not_exsit", 409));
+                        res.status(409).send((0, errorUtils_1.customeError)("user_not_exist", 409));
                     }
                 }
                 else {
@@ -83,7 +83,7 @@ const UserReq = class UserReq extends user_1.default {
                         return res.send(user);
                     }
                     else {
-                        res.status(409).send((0, errorUtils_1.customeError)("user_not_exsit", 409));
+                        res.status(409).send((0, errorUtils_1.customeError)("user_not_exist", 409));
                     }
                 }
                 else {
@@ -102,14 +102,14 @@ const UserReq = class UserReq extends user_1.default {
         });
         return __awaiter(this, void 0, void 0, function* () {
             try {
-                let userId = req.body;
-                if (userId) {
-                    let user = yield _super.deleteUserInfo.call(this, userId);
+                let _id = req.query._id;
+                if (_id && typeof _id === "string") {
+                    let user = yield _super.deleteUserInfo.call(this, _id);
                     if (user) {
                         return res.status(200).send((0, successMsg_1.successMsg)("delete_success", 200));
                     }
                     else {
-                        res.status(409).send((0, errorUtils_1.customeError)("user_not_exsit", 409));
+                        res.status(400).send((0, errorUtils_1.customeError)("user_not_exist", 400));
                     }
                 }
                 else {
@@ -135,7 +135,7 @@ const UserReq = class UserReq extends user_1.default {
                         return res.status(200).send(user);
                     }
                     else {
-                        res.status(409).send((0, errorUtils_1.customeError)("user_not_exsit", 409));
+                        res.status(409).send((0, errorUtils_1.customeError)("user_not_exist", 409));
                     }
                 }
                 else {

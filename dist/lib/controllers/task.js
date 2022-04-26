@@ -15,7 +15,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const logger_1 = __importDefault(require("../../logger"));
 const tasks_1 = __importDefault(require("../dbCalls/tasks/tasks"));
 const boards_1 = __importDefault(require("./boards"));
-const TaskController = class TaskController extends tasks_1.default {
+class TaskController extends tasks_1.default {
     static getTasks(data) {
         return __awaiter(this, void 0, void 0, function* () {
             return yield TaskController.__getTasks(data);
@@ -41,6 +41,21 @@ const TaskController = class TaskController extends tasks_1.default {
             return yield TaskController.__filterTasksDB(data);
         });
     }
+    static deleteTask(id) {
+        return __awaiter(this, void 0, void 0, function* () {
+            return yield TaskController.__deleteTask(id);
+        });
+    }
+    static deleteTasksByProjectId(id) {
+        return __awaiter(this, void 0, void 0, function* () {
+            return yield TaskController.__deleteTasksByProjectId(id);
+        });
+    }
+    static deleteTasks(ids) {
+        return __awaiter(this, void 0, void 0, function* () {
+            return yield TaskController.__deleteTasks(ids);
+        });
+    }
     static moveTaskOnTrello(cardId, listId, status) {
         return __awaiter(this, void 0, void 0, function* () {
             return yield TaskController.__moveTaskOnTrello(cardId, listId, status);
@@ -51,9 +66,9 @@ const TaskController = class TaskController extends tasks_1.default {
             try {
                 yield boards_1.default.moveTaskToDiffList(cardId, listId);
                 let task = yield tasks_1.default.updateOneTaskDB({
-                    cardId,
+                    cardId: cardId,
                 }, {
-                    status,
+                    status: status,
                 });
                 return task;
             }
@@ -65,7 +80,7 @@ const TaskController = class TaskController extends tasks_1.default {
     static __webhookUpdate(data) {
         return __awaiter(this, void 0, void 0, function* () {
             try {
-                // This action fro removing card
+                // This action for updating card
                 logger_1.default.info({ webhookUpdate: data });
                 let targetTask;
                 const targetList = [
@@ -154,5 +169,59 @@ const TaskController = class TaskController extends tasks_1.default {
             }
         });
     }
-};
+    static __deleteTasksByProjectId(id) {
+        const _super = Object.create(null, {
+            getTasksDB: { get: () => super.getTasksDB },
+            deleteTasksByProjectIdDB: { get: () => super.deleteTasksByProjectIdDB }
+        });
+        return __awaiter(this, void 0, void 0, function* () {
+            try {
+                let tasks = yield _super.getTasksDB.call(this, {
+                    projectId: id,
+                });
+                tasks.forEach((item) => __awaiter(this, void 0, void 0, function* () {
+                    yield boards_1.default.deleteCard(item.cardId);
+                }));
+                return yield _super.deleteTasksByProjectIdDB.call(this, id);
+            }
+            catch (error) {
+                logger_1.default.error({ DeleteTasksByProjectId: error });
+            }
+        });
+    }
+    static __deleteTasks(ids) {
+        const _super = Object.create(null, {
+            getTasksByIdsDB: { get: () => super.getTasksByIdsDB },
+            deleteTasksDB: { get: () => super.deleteTasksDB }
+        });
+        return __awaiter(this, void 0, void 0, function* () {
+            try {
+                let tasks = yield _super.getTasksByIdsDB.call(this, ids);
+                tasks.forEach((item) => __awaiter(this, void 0, void 0, function* () {
+                    yield boards_1.default.deleteCard(item.cardId);
+                }));
+                return yield _super.deleteTasksDB.call(this, ids);
+            }
+            catch (error) {
+                logger_1.default.error({ DeleteTasksByProjectId: error });
+            }
+        });
+    }
+    static __deleteTask(id) {
+        const _super = Object.create(null, {
+            getTaskDB: { get: () => super.getTaskDB },
+            deleteTaskDB: { get: () => super.deleteTaskDB }
+        });
+        return __awaiter(this, void 0, void 0, function* () {
+            try {
+                let task = yield _super.getTaskDB.call(this, id);
+                yield boards_1.default.deleteCard(task.cardId);
+                return yield _super.deleteTaskDB.call(this, id);
+            }
+            catch (error) {
+                logger_1.default.error({ DeleteTasksByProjectId: error });
+            }
+        });
+    }
+}
 exports.default = TaskController;

@@ -41,10 +41,26 @@ const DepartmentBD = class DepartmentBD {
             return yield DepartmentBD.__updateNestedRecordDepDB(DepId, Recordupdate);
         });
     }
+    static findDepByIdDB(id) {
+        return __awaiter(this, void 0, void 0, function* () {
+            return yield DepartmentBD.__findDepByIdDB(id);
+        });
+    }
+    static __findDepByIdDB(id) {
+        return __awaiter(this, void 0, void 0, function* () {
+            try {
+                let department = yield Department_1.default.findById(id).lean();
+                return department;
+            }
+            catch (error) {
+                logger_1.default.error({ findDepByIdDBDBError: error });
+            }
+        });
+    }
     static __updateNestedRecordDepDB(DepId, Recordupdate) {
         return __awaiter(this, void 0, void 0, function* () {
             try {
-                let department = yield Department_1.default.findOneAndUpdate({ _id: new bson_1.ObjectId(DepId) }, Recordupdate);
+                let department = yield Department_1.default.findOneAndUpdate({ _id: new bson_1.ObjectId(DepId) }, Recordupdate, { new: true, lean: true, populate: "teamsId" });
                 return department;
             }
             catch (error) {
@@ -53,9 +69,78 @@ const DepartmentBD = class DepartmentBD {
         });
     }
     static __getDepartment(data) {
+        var _a;
         return __awaiter(this, void 0, void 0, function* () {
             try {
-                let department = yield Department_1.default.find(data).lean();
+                let department = yield Department_1.default.aggregate([
+                    { $match: { $and: [data] } },
+                    {
+                        $lookup: {
+                            from: "tasks",
+                            localField: "tasks",
+                            foreignField: "_id",
+                            as: "tasks",
+                        },
+                    },
+                    {
+                        $lookup: {
+                            from: "techmembers",
+                            localField: "teamsId.idInDB",
+                            foreignField: "_id",
+                            as: "teamData",
+                        },
+                    },
+                    {
+                        $addFields: {
+                            totalInProgress: {
+                                $filter: {
+                                    input: "$tasks",
+                                    as: "task",
+                                    cond: { $eq: ["$$task.status", "inProgress"] },
+                                },
+                            },
+                            totalDone: {
+                                $filter: {
+                                    input: "$tasks",
+                                    as: "task",
+                                    cond: { $eq: ["$$task.status", "done"] },
+                                },
+                            },
+                        },
+                    },
+                    {
+                        $project: {
+                            _id: 1,
+                            name: 1,
+                            boardId: 1,
+                            color: 1,
+                            mainBoard: 1,
+                            teamsId: "$teamData",
+                            teamOrigin: "$teamsId",
+                            canceldListId: 1,
+                            defaultListId: 1,
+                            doneListId: 1,
+                            notClearListId: 1,
+                            reviewListId: 1,
+                            sharedListID: 1,
+                            totalInProgress: {
+                                $size: "$totalInProgress",
+                            },
+                            totalDone: {
+                                $size: "$totalDone",
+                            },
+                        },
+                    },
+                ]);
+                // format my data
+                for (let i = 0; i < department.length; i++) {
+                    department[i].teamsId = department[i].teamsId.map((team, j) => {
+                        var _a, _b;
+                        // logger.info({ teamOrigin: department[i].teamOrigin });
+                        return Object.assign(Object.assign({}, team), { idInTrello: (_b = (_a = department[i]) === null || _a === void 0 ? void 0 : _a.teamOrigin[j]) === null || _b === void 0 ? void 0 : _b.idInTrello });
+                    });
+                    (_a = department[i]) === null || _a === void 0 ? true : delete _a.teamOrigin;
+                }
                 return department;
             }
             catch (error) {
@@ -79,7 +164,7 @@ const DepartmentBD = class DepartmentBD {
             try {
                 let id = data._id;
                 delete data._id;
-                let department = yield Department_1.default.findByIdAndUpdate({ _id: id }, Object.assign({}, data), { new: true, lean: true });
+                let department = yield Department_1.default.findByIdAndUpdate({ _id: id }, Object.assign({}, data), { new: true, lean: true, populate: "teamsId" });
                 return department;
             }
             catch (error) {

@@ -16,56 +16,74 @@ const errorUtils_1 = require("./../../utils/errorUtils");
 const logger_1 = __importDefault(require("../../../logger"));
 const category_1 = __importDefault(require("../../controllers/category"));
 const CategoryReq = class CategoryReq extends category_1.default {
-    // static async getCategories(req: Request, res: Response) {
-    //   try {
-    //     let body = req.body;
-    //     let cats = await super.getCategories();
-    //     return res.status(200).send(cats);
-    //   } catch (error) {
-    //     logger.error({ handleCreateCategoryErrors: error });
-    //     return res.status(500).send(customeError("server_error", 500));
-    //   }
-    // }
-    static handleCreateCategoryAndSubcategory(req, res) {
+    static handleGetCategories(req, res) {
         const _super = Object.create(null, {
-            createCategory: { get: () => super.createCategory },
-            createSubcategory: { get: () => super.createSubcategory },
-            updateCategoryWithSubcategoriesId: { get: () => super.updateCategoryWithSubcategoriesId }
+            getCategories: { get: () => super.getCategories }
+        });
+        return __awaiter(this, void 0, void 0, function* () {
+            try {
+                let cats = yield _super.getCategories.call(this);
+                return res.status(200).send(cats);
+            }
+            catch (error) {
+                logger_1.default.error({ handleCreateCategoryErrors: error });
+                return res.status(500).send((0, errorUtils_1.customeError)("server_error", 500));
+            }
+        });
+    }
+    static handleCreateCategory(req, res) {
+        const _super = Object.create(null, {
+            createCategory: { get: () => super.createCategory }
         });
         return __awaiter(this, void 0, void 0, function* () {
             try {
                 let categoryData = req.body;
-                let subCategories = req.body.subCategories;
                 let category = yield _super.createCategory.call(this, categoryData);
-                let subcategory;
                 if (!categoryData) {
                     return res.status(400).send((0, errorUtils_1.customeError)("category_missing_data", 400));
                 }
-                if (category) {
-                    let categoryId = category._id;
-                    if (subCategories && !subCategories.includes("")) {
-                        var finalCategory;
-                        subCategories.map((subcat) => __awaiter(this, void 0, void 0, function* () {
-                            let subCategoryData = {
-                                subCategory: subcat,
-                                categoryId: categoryId,
-                            };
-                            subcategory = yield _super.createSubcategory.call(this, subCategoryData);
-                            finalCategory = yield _super.updateCategoryWithSubcategoriesId.call(this, {
-                                id: categoryId,
-                                subCategoriesId: subcategory._id,
-                            });
-                        }));
-                        return res.status(200).send(category);
-                    }
-                    return res.status(200).send(category);
-                }
-                else {
-                    return res.status(400).send((0, errorUtils_1.customeError)("create_category_error", 400));
-                }
+                return res.status(200).send(category);
             }
             catch (error) {
                 logger_1.default.error({ handleCreateCategoryErrors: error });
+                return res.status(500).send((0, errorUtils_1.customeError)("server_error", 500));
+            }
+        });
+    }
+    static handleUpdateCategory(req, res) {
+        const _super = Object.create(null, {
+            updateCategory: { get: () => super.updateCategory }
+        });
+        return __awaiter(this, void 0, void 0, function* () {
+            try {
+                let categoryData = req.body;
+                let category = yield _super.updateCategory.call(this, categoryData);
+                if (!categoryData) {
+                    return res.status(400).send((0, errorUtils_1.customeError)("category_missing_data", 400));
+                }
+                return res.status(200).send(category);
+            }
+            catch (error) {
+                logger_1.default.error({ handleUpdateCategoryErrors: error });
+                return res.status(500).send((0, errorUtils_1.customeError)("server_error", 500));
+            }
+        });
+    }
+    static handleDeleteCategory(req, res) {
+        const _super = Object.create(null, {
+            updateCategory: { get: () => super.updateCategory }
+        });
+        return __awaiter(this, void 0, void 0, function* () {
+            try {
+                let categoryId = req.query.id;
+                let category = yield _super.updateCategory.call(this, categoryId);
+                if (!category) {
+                    return res.status(400).send((0, errorUtils_1.customeError)("category_missing_data", 400));
+                }
+                return res.status(200).send(category);
+            }
+            catch (error) {
+                logger_1.default.error({ handleDeleteCategoryErrors: error });
                 return res.status(500).send((0, errorUtils_1.customeError)("server_error", 500));
             }
         });

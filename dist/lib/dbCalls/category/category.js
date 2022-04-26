@@ -26,14 +26,30 @@ const CategoyDB = class CategoryDB {
             return yield CategoryDB.__createSubcategory(data);
         });
     }
-    static updateCategoryWithSubcategoriesId(data) {
+    static updateCategoryDB(data) {
         return __awaiter(this, void 0, void 0, function* () {
-            return yield CategoryDB.__updateCategoryWithSubcategoriesId(data);
+            return yield CategoryDB.__updateCategory(data);
         });
     }
     static getAllCategoriesDB() {
         return __awaiter(this, void 0, void 0, function* () {
-            return yield this.__getAllCategories();
+            return yield CategoryDB.__getAllCategories();
+        });
+    }
+    static deleteCategoryDB(id) {
+        return __awaiter(this, void 0, void 0, function* () {
+            return yield CategoryDB.__deleteCategoryDB(id);
+        });
+    }
+    static __deleteCategoryDB(id) {
+        return __awaiter(this, void 0, void 0, function* () {
+            try {
+                let category = yield Category_1.default.findByIdAndDelete({ _id: id });
+                return category;
+            }
+            catch (error) {
+                logger_1.default.error({ deletCategoryDBError: error });
+            }
         });
     }
     static __createCategory(data) {
@@ -52,7 +68,7 @@ const CategoyDB = class CategoryDB {
     static __createSubcategory(data) {
         return __awaiter(this, void 0, void 0, function* () {
             try {
-                let subcategory = new Subcategory_1.default(data);
+                let subcategory = new Subcategory_1.default({ subCategory: data });
                 yield subcategory.save();
                 return subcategory;
             }
@@ -61,10 +77,12 @@ const CategoyDB = class CategoryDB {
             }
         });
     }
-    static __updateCategoryWithSubcategoriesId(data) {
+    static __updateCategory(data) {
         return __awaiter(this, void 0, void 0, function* () {
             try {
-                let category = yield Category_1.default.findByIdAndUpdate({ _id: data.id }, { $push: { subCategoriesId: data.subCategoriesId } }, { new: true });
+                let category = yield Category_1.default.findByIdAndUpdate({ _id: data._id }, Object.assign({}, data), { new: true, lean: true })
+                    .populate("selectedSubCategory")
+                    .populate("subCategoriesId");
                 return category;
             }
             catch (error) {
@@ -75,8 +93,11 @@ const CategoyDB = class CategoryDB {
     static __getAllCategories() {
         return __awaiter(this, void 0, void 0, function* () {
             try {
-                let cats = yield Category_1.default.find({}).lean();
-                return cats.values;
+                let cats = yield Category_1.default.find({})
+                    .populate("selectedSubCategory")
+                    .populate("subCategoriesId")
+                    .lean();
+                return cats;
             }
             catch (error) {
                 logger_1.default.error({ updateCategoryDBError: error });

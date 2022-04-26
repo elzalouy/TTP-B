@@ -17,7 +17,7 @@ const validation_1 = require("./../utils/validation");
 const logger_1 = __importDefault(require("../../logger"));
 const user_1 = __importDefault(require("../dbCalls/user/user"));
 const errorUtils_1 = require("../utils/errorUtils");
-const boards_1 = __importDefault(require("./boards"));
+const mail_1 = __importDefault(require("../services/mail/mail"));
 const UserController = class UserController extends user_1.default {
     static addUser(data) {
         return __awaiter(this, void 0, void 0, function* () {
@@ -85,7 +85,7 @@ const UserController = class UserController extends user_1.default {
                 }
                 let findUser = yield _super.findUserById.call(this, id);
                 if (!findUser) {
-                    return (0, errorUtils_1.customeError)("user_not_exsit", 409);
+                    return (0, errorUtils_1.customeError)("user_not_exist", 409);
                 }
                 let oldPasswordCheck = yield (0, auth_1.comparePassword)(oldPassword, findUser.password);
                 if (!oldPasswordCheck) {
@@ -108,7 +108,7 @@ const UserController = class UserController extends user_1.default {
         });
         return __awaiter(this, void 0, void 0, function* () {
             try {
-                const { id, email } = data;
+                const { id } = data;
                 let findUser = yield _super.findUserById.call(this, id);
                 if (!findUser) {
                     return null;
@@ -127,24 +127,33 @@ const UserController = class UserController extends user_1.default {
         });
         return __awaiter(this, void 0, void 0, function* () {
             try {
-                const { email, password, trelloBoardId, trelloMemberId, type = 'admin' } = data;
-                if ((0, validation_1.passwordCheck)(password)) {
-                    return (0, errorUtils_1.customeError)("password_length", 400);
-                }
+                const { email /*  password ,trelloBoardId,trelloMemberId,type='admin' */ } = data;
+                // if (passwordCheck(password)) {
+                //   return customeError("password_length", 400);
+                // }
                 if (!(0, validation_1.emailCheck)(email)) {
                     return (0, errorUtils_1.customeError)("email_error", 400);
                 }
                 let findUser = yield _super.findUser.call(this, { email: email });
                 if (findUser) {
-                    return (0, errorUtils_1.customeError)("user_already_exsit", 409);
+                    return (0, errorUtils_1.customeError)("user_already_exist", 400);
                 }
                 // hash password
-                let passwordHash = yield (0, auth_1.hashBassword)(password);
+                // let passwordHash: string = await hashBassword(password);
                 // add project manager to specific board
-                if (trelloBoardId && trelloMemberId && type) {
-                    boards_1.default.addMemberToBoard(trelloBoardId, trelloMemberId, type);
-                }
-                return yield _super.createUser.call(this, Object.assign(Object.assign({}, data), { password: passwordHash }));
+                // if(trelloBoardId &&trelloMemberId && type){
+                //      BoardController.addMemberToBoard(trelloBoardId,trelloMemberId,type)
+                // }
+                let newUser = yield _super.createUser.call(this, Object.assign({}, data /* password: passwordHash  */));
+                let token = yield (0, auth_1.createJwtToken)(newUser._id.toString());
+                yield (0, mail_1.default)({
+                    email: email,
+                    subject: "Update Password",
+                    token: token,
+                    path: "newPassword",
+                    body: "Please set your new password using this link to start using your account"
+                });
+                return newUser;
             }
             catch (error) {
                 logger_1.default.error({ addNewUserError: error });

@@ -17,7 +17,7 @@ const logger_1 = __importDefault(require("../../logger"));
 const node_fetch_1 = __importDefault(require("node-fetch"));
 const dotenv_1 = require("dotenv");
 (0, dotenv_1.config)();
-const BoardController = class BoardController {
+class BoardController {
     static getBoardsInTrello() {
         return __awaiter(this, void 0, void 0, function* () {
             return yield BoardController.__getTrelloBoards();
@@ -63,6 +63,11 @@ const BoardController = class BoardController {
             return yield BoardController.__deleteBoard(id);
         });
     }
+    static deleteCard(id) {
+        return __awaiter(this, void 0, void 0, function* () {
+            return yield BoardController.__deleteCard(id);
+        });
+    }
     static createCardInList(listId, cardName, file) {
         return __awaiter(this, void 0, void 0, function* () {
             return yield BoardController.__createCard(listId, cardName, file);
@@ -96,14 +101,14 @@ const BoardController = class BoardController {
     static __moveTaskToDiffList(cardId, listId) {
         return __awaiter(this, void 0, void 0, function* () {
             try {
-                let moveTask = (0, trelloApi_1.trelloApi)(`cards/${cardId}&idList=${listId}`);
+                let moveTask = (0, trelloApi_1.trelloApi)(`cards/${cardId}?idList=${listId}&`);
                 return yield (0, node_fetch_1.default)(moveTask, {
                     method: "PUT",
                     headers: {
                         Accept: "application/json",
                     },
                 })
-                    .then((res) => logger_1.default.info("move board done"))
+                    .then((res) => logger_1.default.info("move board done", res))
                     .catch((err) => logger_1.default.info("error in moving board", err));
             }
             catch (error) {
@@ -114,11 +119,16 @@ const BoardController = class BoardController {
     static __deleteBoard(id) {
         return __awaiter(this, void 0, void 0, function* () {
             try {
-                let removeBoard = (0, trelloApi_1.trelloApi)(`boards/${id}&`);
+                let removeBoard = (0, trelloApi_1.trelloApi)(`boards/${id}?response_type=token&`);
+                logger_1.default.info({ removeBoard });
                 return yield (0, node_fetch_1.default)(removeBoard, {
                     method: "DELETE",
                 })
-                    .then((res) => logger_1.default.info("delete board done"))
+                    .then((response) => {
+                    console.log(`Response: ${response.status} ${response.statusText}`);
+                    return response.text();
+                })
+                    .then((text) => console.log(text))
                     .catch((err) => logger_1.default.info("error in delete board", err));
             }
             catch (error) {
@@ -209,6 +219,23 @@ const BoardController = class BoardController {
             }
         });
     }
+    static __deleteCard(id) {
+        return __awaiter(this, void 0, void 0, function* () {
+            try {
+                let deleteCartApi = (0, trelloApi_1.trelloApi)(`cards/${id}?`);
+                let deleteRessult = yield (0, node_fetch_1.default)(deleteCartApi, {
+                    method: "DELETE",
+                    headers: {
+                        Accept: "application/json",
+                    },
+                });
+                return deleteRessult.json();
+            }
+            catch (error) {
+                logger_1.default.error({ deleteTasksError: error });
+            }
+        });
+    }
     static __addWebHook(idModel) {
         return __awaiter(this, void 0, void 0, function* () {
             try {
@@ -289,7 +316,7 @@ const BoardController = class BoardController {
     static __getAllMembers() {
         return __awaiter(this, void 0, void 0, function* () {
             try {
-                let boardApi = (0, trelloApi_1.trelloApi)(`organizations/${process.env.ORGANIZATION_ID}/members?`);
+                let boardApi = (0, trelloApi_1.trelloApi)(`organizations/${process.env.TEST_ORGANIZATION_ID}/members?`);
                 let members = yield (0, node_fetch_1.default)(boardApi, {
                     method: "GET",
                 });
@@ -303,7 +330,7 @@ const BoardController = class BoardController {
     static __getTrelloBoards() {
         return __awaiter(this, void 0, void 0, function* () {
             try {
-                let boardsApi = (0, trelloApi_1.trelloApi)(`organizations/${process.env.ORGANIZATION_ID}/boards?fields=id,name&`);
+                let boardsApi = (0, trelloApi_1.trelloApi)(`organizations/${process.env.TEST_ORGANIZATION_ID}/boards?fields=id,name&`);
                 let boards = yield (0, node_fetch_1.default)(boardsApi, {
                     method: "GET",
                 });
@@ -328,5 +355,5 @@ const BoardController = class BoardController {
             }
         });
     }
-};
+}
 exports.default = BoardController;

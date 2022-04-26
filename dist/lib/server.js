@@ -13,17 +13,6 @@ const socket_io_1 = require("socket.io");
 const cookie_parser_1 = __importDefault(require("cookie-parser"));
 const config_1 = __importDefault(require("./i18n/config"));
 const ngrok = require("ngrok");
-//DB
-//Routes
-const userRoute_1 = __importDefault(require("./routes/user/userRoute"));
-const boardRoute_1 = __importDefault(require("./routes/board/boardRoute"));
-const techMemberRoute_1 = __importDefault(require("./routes/techMember/techMemberRoute"));
-const authRoute_1 = __importDefault(require("./routes/auth/authRoute"));
-const depRoute_1 = __importDefault(require("./routes/department/depRoute"));
-const projectRoute_1 = __importDefault(require("./routes/project/projectRoute"));
-const taskRoute_1 = __importDefault(require("./routes/task/taskRoute"));
-const categoryRoute_1 = __importDefault(require("./routes/category/categoryRoute"));
-const clientRoute_1 = __importDefault(require("./routes/client/clientRoute"));
 const app = (0, express_1.default)();
 exports.http = (0, http_1.createServer)(app);
 exports.io = new socket_io_1.Server(exports.http, {
@@ -47,14 +36,6 @@ app.use((0, cors_1.default)({
 (0, dbConnect_1.default)();
 // i18n init
 app.use(config_1.default.init);
-// app.get('/api/creatUser',(req,res) => {
-//   // let definedUrl = trelloApi('webhooks')
-//   // i18n.setLocale('en')
-// // "idBoard": "616577753fa7db4ef1e715ea",
-//   // logger.info(trelloApi('card'))
-//   res.send(i18n.__('key'))
-// })
-// Ngrok init
 if (process.env.NODE_ENV === "development") {
     ngrok.connect({
         proto: "http",
@@ -66,35 +47,8 @@ if (process.env.NODE_ENV === "development") {
         }
     });
 }
-// auth route
-app.use("/api", authRoute_1.default);
-// task route
-app.use("/api", taskRoute_1.default);
-// Authenticate User
-// app.use(async (req:Request,res:Response,next:NextFunction) => {
-//   let checkToken:string | JwtPayload = await jwtVerify(req.cookies.token)
-//   if(checkToken.user){
-//     const{user}=checkToken
-//     let findUser = await UserDB.findUserById(user.id)
-//     if(findUser){
-//       next()
-//     } else {
-//       return res.status(401).send(customeError('user_not_exsit',401))
-//     }
-//   }else {
-//     return res.status(401).send(customeError('user_not_exsit',401))
-//   }
-// })
-//routes
-app.use("/api", userRoute_1.default);
-app.use("/api", boardRoute_1.default);
-app.use("/api", techMemberRoute_1.default);
-app.use("/api", depRoute_1.default);
-app.use("/api", projectRoute_1.default);
-app.use("/api", categoryRoute_1.default);
-app.use("/api", clientRoute_1.default);
+require("./startup/routes")(app);
 app.disable("etag");
-// connect to socket io
 exports.io.on("connection", (socket) => {
     console.log("Client connected");
     socket.on("disconnect", () => console.log("Client disconnected"));

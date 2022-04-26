@@ -11,19 +11,14 @@ const ProjectSchema = new mongoose_1.Schema({
         ref: "users",
         required: true,
     },
-    membersId: [
-        {
-            type: mongoose_1.Schema.Types.ObjectId,
-            ref: "techMembers",
-        },
-    ],
-    numberOfTasks: {
-        type: Number,
-        default: 0,
+    projectManagerName: {
+        type: String,
+        required: true,
     },
-    numberOfFinshedTasks: {
-        type: Number,
-        default: 0,
+    adminId: {
+        type: mongoose_1.Schema.Types.ObjectId,
+        ref: "users",
+        required: true,
     },
     projectDeadline: {
         type: Date,

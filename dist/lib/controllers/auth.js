@@ -73,7 +73,13 @@ const AuthController = class AuthController extends user_1.default {
                     return (0, errorUtils_1.customeError)("no_user_found", 400);
                 }
                 let token = yield (0, auth_1.createJwtToken)(user._id.toString());
-                yield (0, mail_1.default)(user.email, token);
+                yield (0, mail_1.default)({
+                    token: token,
+                    email: email,
+                    body: "",
+                    subject: "Forgot Password",
+                    path: "forgotPassword"
+                });
                 return (0, successMsg_1.successMsg)("email_sent", 200);
             }
             catch (error) {

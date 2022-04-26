@@ -5,15 +5,20 @@ const TechMemberSchema = new mongoose_1.Schema({
     name: {
         type: String,
         required: true,
+        unique: true,
     },
     departmentId: {
         type: mongoose_1.Schema.Types.ObjectId,
         ref: "departments",
-        required: true,
+        default: null,
+    },
+    listId: {
+        type: String,
+        default: null,
     },
 }, {
     timestamps: true,
-    strict: false,
+    strict: true,
 });
 const TechMember = (0, mongoose_1.model)("techMembers", TechMemberSchema);
 exports.default = TechMember;

@@ -13,25 +13,22 @@ const UserSchema = new mongoose_1.Schema({
     },
     password: {
         type: String,
-        required: true,
+        required: false,
     },
     role: {
         type: String,
-        required: true,
+        required: false,
     },
     image: {
         type: String,
         default: "",
-    },
-    trelloBoardId: {
-        type: String,
-        default: null,
     },
     trelloMemberId: {
         type: String,
         default: null,
     },
     userTeams: [
+        // remove this
         {
             type: mongoose_1.Schema.Types.ObjectId,
             ref: "teams",
@@ -39,7 +36,7 @@ const UserSchema = new mongoose_1.Schema({
     ],
 }, {
     timestamps: true,
-    strict: false
+    strict: false,
 });
 const User = (0, mongoose_1.model)("users", UserSchema);
 exports.default = User;

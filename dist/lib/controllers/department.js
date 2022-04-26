@@ -53,20 +53,38 @@ const DepartmentController = class DepartmentController extends department_1.def
     }
     static __deleteDepartmentData(data) {
         const _super = Object.create(null, {
+            findDepByIdDB: { get: () => super.findDepByIdDB },
             deleteDepartmentDB: { get: () => super.deleteDepartmentDB }
         });
         return __awaiter(this, void 0, void 0, function* () {
             try {
-                const { _id, listTrelloIds, mainBoard, boardId } = data;
+                const { _id } = data;
+                let myDepartment = yield _super.findDepByIdDB.call(this, _id);
+                let teamId = [];
+                if (myDepartment === null || myDepartment === void 0 ? void 0 : myDepartment.mainBoard) {
+                    myDepartment.teamsId.map((team) => {
+                        return teamId.push(team.idInTrello);
+                    });
+                }
+                let listTrelloIds = [
+                    myDepartment === null || myDepartment === void 0 ? void 0 : myDepartment.canceldListId,
+                    myDepartment === null || myDepartment === void 0 ? void 0 : myDepartment.defaultListId,
+                    myDepartment === null || myDepartment === void 0 ? void 0 : myDepartment.doneListId,
+                    myDepartment === null || myDepartment === void 0 ? void 0 : myDepartment.notClearListId,
+                    myDepartment === null || myDepartment === void 0 ? void 0 : myDepartment.reviewListId,
+                    myDepartment === null || myDepartment === void 0 ? void 0 : myDepartment.sharedListID,
+                    ...teamId,
+                ];
                 // if it was main Board remove the webhooks
-                if (mainBoard) {
+                if (myDepartment.mainBoard) {
                     let hookRemove = listTrelloIds.map((id) => __awaiter(this, void 0, void 0, function* () {
                         return yield boards_1.default.removeWebhook(id);
                     }));
                     logger_1.default.info("third step");
                     Promise.all(hookRemove).then((res) => logger_1.default.info({ removeWebhookSucced: "done" }));
                 }
-                yield boards_1.default.deleteBoard(boardId);
+                logger_1.default.info({ boardId: myDepartment === null || myDepartment === void 0 ? void 0 : myDepartment.boardId, myDepartment });
+                yield boards_1.default.deleteBoard(myDepartment === null || myDepartment === void 0 ? void 0 : myDepartment.boardId);
                 let deleteDepartment = yield _super.deleteDepartmentDB.call(this, _id);
                 return deleteDepartment;
             }
@@ -120,13 +138,14 @@ const DepartmentController = class DepartmentController extends department_1.def
                 if (data.removeTeam) {
                     let hookListremove = data.removeTeam.map((id) => __awaiter(this, void 0, void 0, function* () {
                         // remove team list
-                        boards_1.default.addListToArchieve(id);
+                        yield boards_1.default.addListToArchieve(id);
                         // remove webhook
                         return yield boards_1.default.removeWebhook(id);
                     }));
                     Promise.all(hookListremove).then((res) => logger_1.default.info({ removeListAndWebhookSucced: "done" }));
+                    logger_1.default.info({ removeTeam: data.removeTeam });
                     // remove team
-                    depUpdate = _super.updateNestedRecordDepDB.call(this, data._id, {
+                    depUpdate = yield _super.updateNestedRecordDepDB.call(this, data._id, {
                         $pull: {
                             teamsId: {
                                 idInTrello: { $in: data.removeTeam },
@@ -139,7 +158,7 @@ const DepartmentController = class DepartmentController extends department_1.def
                     let teamListIds = yield DepartmentController.__createTeamWebhookAndList(data.addTeam, data.boardId, data.mainBoard);
                     logger_1.default.info({ title: "testing", teamListIds });
                     // add team
-                    depUpdate = _super.updateNestedRecordDepDB.call(this, data._id, {
+                    depUpdate = yield _super.updateNestedRecordDepDB.call(this, data._id, {
                         $push: {
                             teamsId: { $each: teamListIds, $position: 0 },
                         },
@@ -171,7 +190,6 @@ const DepartmentController = class DepartmentController extends department_1.def
                 let canceldListId = "";
                 // create board
                 let boardData = yield boards_1.default.createNewBoard(data.name, data.color);
-                logger_1.default.info({ boardData });
                 boardId = boardData.id;
                 data = {
                     name: data.name,
@@ -245,21 +263,16 @@ const DepartmentController = class DepartmentController extends department_1.def
             }
         });
     }
-    // This create list for team in trello board and create webhook for that list if it was the mainboard
     static __createTeamWebhookAndList(teams, boardId, mainBoard) {
         return __awaiter(this, void 0, void 0, function* () {
             try {
-                // create list for the team
                 let teamListIds = [];
                 if (teams) {
                     let teamsList = teams.map((team) => __awaiter(this, void 0, void 0, function* () {
-                        // create team list on board
                         let teamData = yield boards_1.default.addListToBoard(boardId, team.name);
                         if (mainBoard) {
-                            // create webhook for team list if it was the main board
                             boards_1.default.createWebHook(teamData.id);
                         }
-                        logger_1.default.info({ teamData: teamData.id });
                         return teamListIds.push({
                             idInTrello: teamData.id,
                             idInDB: team._id,

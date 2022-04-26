@@ -8,13 +8,15 @@ const ClientSchema = new mongoose_1.Schema({
         unique: true,
     },
     image: {
-        type: String,
-        default: '',
+        type: Object,
+        default: {},
     },
-    projectsId: [{ type: mongoose_1.Schema.Types.ObjectId, ref: 'projects' }],
+    doneProject: [{ type: mongoose_1.Schema.Types.ObjectId, ref: "projects" }],
+    inProgressProject: [{ type: mongoose_1.Schema.Types.ObjectId, ref: "projects" }],
+    inProgressTask: [{ type: mongoose_1.Schema.Types.ObjectId, ref: "projects" }],
 }, {
     timestamps: true,
     strict: false,
 });
-const Clients = (0, mongoose_1.model)('clients', ClientSchema);
+const Clients = (0, mongoose_1.model)("clients", ClientSchema);
 exports.default = Clients;
