@@ -59,7 +59,9 @@ const ProjectController = class ProjectController extends ProjectDB {
           title:`${data.name} project is done! Congratulations!`,
           projectManagerID:data.projectManager,
           description:`${data.name} project is done! Thank you for your hard work`,
-          clientName:data.clientId
+          clientName:data.clientId,
+          projectID:data._id,
+          adminUserID:data.adminId
         })
         // send notification to all admin
         io.to("admin room").emit('notification update',createNotifi)
@@ -82,6 +84,8 @@ const ProjectController = class ProjectController extends ProjectDB {
         title: `${data.projectManagerName} project has been assigend to you`,
         description: `${data.name} has been assigend to you by ${data.adminName}`,
         projectManagerID: data.projectManager,
+        projectID:data._id,
+        adminUserID:data.adminId
       });
 
       // send notification to specific project manager

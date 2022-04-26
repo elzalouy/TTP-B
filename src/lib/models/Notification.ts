@@ -33,10 +33,8 @@ const NotificationSchema: Schema = new Schema<NotificationInfo>(
       // require: true,
     },
     adminUserID: {
-      idInDB: {
         type: Schema.Types.ObjectId,
         ref: "users",
-      },
     },
   },
   {

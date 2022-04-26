@@ -72,7 +72,6 @@ const TaskReq = class TaskReq extends TaskController {
   static async handleMoveCard(req: Request, res: Response) {
     try {
       let { cardId, listId, status }: any = req.body;
-      // TaskData.file = req.file
       let task = await super.moveTaskOnTrello(cardId, listId, status);
       if (task) {
         return res.send(task);

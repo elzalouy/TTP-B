@@ -51,10 +51,10 @@ class TaskController extends TaskDB {
       await BoardController.moveTaskToDiffList(cardId, listId);
       let task = await TaskDB.updateOneTaskDB(
         {
-          cardId,
+          cardId: cardId,
         },
         {
-          status,
+          status: status,
         }
       );
       return task;
@@ -98,6 +98,8 @@ class TaskController extends TaskDB {
             title: `${cardName} status has been changed to Shared`,
             description: `${cardName} status has been changed to shared by ${userName}`,
             projectManagerID: projectData.projectManager,
+            projectID:targetTask.projectId,
+            adminUserID:projectData.adminId
           });
 
           // send notification to all the admin

@@ -28,7 +28,8 @@ const UserSchema: Schema = new Schema<IUser>(
       type: String,
       default: null,
     },
-    userTeams: [ // remove this
+    userTeams: [
+      // remove this
       {
         type: Schema.Types.ObjectId,
         ref: "teams",
@@ -37,7 +38,7 @@ const UserSchema: Schema = new Schema<IUser>(
   },
   {
     timestamps: true,
-    strict:false
+    strict: false,
   }
 );
 

@@ -7,11 +7,11 @@ const NotificationController = class NotificationController extends Notification
     return await NotificationController.__createNotification(data);
   }
 
-  static async updateNotification(data: NotificationData) {
-    return await NotificationController.__updateNotification(data);
+  static async updateNotification(data: any,value:object) {
+    return await NotificationController.__updateNotification(data,value);
   }
 
-  static async getAllNotifications(data:object) {
+  static async getAllNotifications(data:{id:string}) {
     return await NotificationController.__getAllNotifications(data);
   }
   static async deleteNotification(id: string) {
@@ -27,7 +27,7 @@ const NotificationController = class NotificationController extends Notification
     }
   }
 
-  static async __getAllNotifications(data:object) {
+  static async __getAllNotifications(data:{id:string}) {
     try {
       let notification = await super.getAllNotificationsDB(data);
       return notification;
@@ -36,9 +36,9 @@ const NotificationController = class NotificationController extends Notification
     }
   }
 
-  static async __updateNotification(data: NotificationData) {
+  static async __updateNotification(data: any,value:object) {
     try {
-      let notification = await super.updateNotificationDB(data);
+      let notification = await super.updateNotificationDB(data,value);
       return notification;
     } catch (error) {
       logger.error({ updateNotificationControllerError: error });

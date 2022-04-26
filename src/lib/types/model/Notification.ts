@@ -15,12 +15,13 @@ export interface NotificationInfo extends Document {
 export interface NotificationData {
   _id?: string;
   description?: string;
-  projectManagerID?: string;
+  projectManagerID?: string|ObjectId;
   viewed?: boolean;
   title?: string;
-  projectID?: string;
-  clientName?: string;
-  adminUserID?: string;
+  projectID?: string | ObjectId;
+  clientName?: string|ObjectId;
+  adminUserID?:string| ObjectId;
   adminViewed?:boolean
-  projectManagerViewed?:boolean
+  projectManagerViewed?:boolean;
+  role?:string;
 }

@@ -4,6 +4,7 @@ import { customeError } from "../../utils/errorUtils";
 import { Request, Response } from "express";
 import logger from "../../../logger";
 import NotificationController from "../../controllers/notification";
+import { ObjectId } from "mongodb";
 
 const NotificationReq = class NotificationReq extends NotificationController {
   static async handleCreateNotification(req: Request, res: Response) {
@@ -26,8 +27,16 @@ const NotificationReq = class NotificationReq extends NotificationController {
       if (!notificationData) {
         return res.status(400).send(customeError("update_notifi_error", 400));
       }
+      let Notification
+      if(notificationData.role === 'project manager' ){
 
-      let Notification = await super.updateNotification(notificationData);
+        Notification = await super.updateNotification({projectManagerID:new ObjectId(notificationData._id)},{projectManagerViewed:true});
+      } 
+
+      if(notificationData.role === 'Operation manager'){
+        Notification = await super.updateNotification({adminUserID:new ObjectId(notificationData._id)},{adminViewed:true});
+      }
+
       if (Notification) {
         return res.status(200).send(Notification);
       } else {
@@ -61,7 +70,7 @@ const NotificationReq = class NotificationReq extends NotificationController {
   static async handleGetAllNotifications(req: Request, res: Response) {
     try {
       let id:any = req.query.id
-      let Notification = await super.getAllNotifications({_id:id});
+      let Notification = await super.getAllNotifications({id});
       if (Notification) {
         return res.status(200).send(Notification);
       } else {
