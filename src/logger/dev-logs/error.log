@@ -13588,6 +13588,228 @@
   level: 'error',
   timestamp: '2022-04-24 16:38:49'
 }
+<<<<<<< HEAD
+{
+  message: {
+    updatePasswordError: Error: data and hash arguments required
+        at Object.compare (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\bcrypt\bcrypt.js:208:17)
+        at C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\bcrypt\promises.js:29:12
+        at new Promise (<anonymous>)
+        at Object.module.exports.promise (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\bcrypt\promises.js:20:12)
+        at Object.compare (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\bcrypt\bcrypt.js:204:25)
+        at C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\src\lib\services\auth\auth.ts:23:38
+        at Generator.next (<anonymous>)
+        at C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\src\lib\services\auth\auth.ts:8:71
+        at new Promise (<anonymous>)
+        at __awaiter (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\src\lib\services\auth\auth.ts:4:12)
+  },
+  level: 'error',
+  timestamp: '2022-04-27 07:40:58'
+}
+{
+  message: {
+    updatePasswordError: Error: data and hash arguments required
+        at Object.compare (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\bcrypt\bcrypt.js:208:17)
+        at C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\bcrypt\promises.js:29:12
+        at new Promise (<anonymous>)
+        at Object.module.exports.promise (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\bcrypt\promises.js:20:12)
+        at Object.compare (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\bcrypt\bcrypt.js:204:25)
+        at C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\src\lib\services\auth\auth.ts:23:38
+        at Generator.next (<anonymous>)
+        at C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\src\lib\services\auth\auth.ts:8:71
+        at new Promise (<anonymous>)
+        at __awaiter (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\src\lib\services\auth\auth.ts:4:12)
+  },
+  level: 'error',
+  timestamp: '2022-04-27 07:41:29'
+}
+{
+  message: {
+    updatePasswordError: Error: data and hash arguments required
+        at Object.compare (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\bcrypt\bcrypt.js:208:17)
+        at C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\bcrypt\promises.js:29:12
+        at new Promise (<anonymous>)
+        at Object.module.exports.promise (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\bcrypt\promises.js:20:12)
+        at Object.compare (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\bcrypt\bcrypt.js:204:25)
+        at C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\src\lib\services\auth\auth.ts:23:38
+        at Generator.next (<anonymous>)
+        at C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\src\lib\services\auth\auth.ts:8:71
+        at new Promise (<anonymous>)
+        at __awaiter (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\src\lib\services\auth\auth.ts:4:12)
+  },
+  level: 'error',
+  timestamp: '2022-04-27 07:41:31'
+}
+{
+  message: {
+    updatePasswordError: Error: data and hash arguments required
+        at Object.compare (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\bcrypt\bcrypt.js:208:17)
+        at C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\bcrypt\promises.js:29:12
+        at new Promise (<anonymous>)
+        at Object.module.exports.promise (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\bcrypt\promises.js:20:12)
+        at Object.compare (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\bcrypt\bcrypt.js:204:25)
+        at C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\src\lib\services\auth\auth.ts:23:38
+        at Generator.next (<anonymous>)
+        at C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\src\lib\services\auth\auth.ts:8:71
+        at new Promise (<anonymous>)
+        at __awaiter (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\src\lib\services\auth\auth.ts:4:12)
+  },
+  level: 'error',
+  timestamp: '2022-04-27 07:42:13'
+}
+{
+  message: {
+    updatePasswordError: Error: data and hash arguments required
+        at Object.compare (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\bcrypt\bcrypt.js:208:17)
+        at C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\bcrypt\promises.js:29:12
+        at new Promise (<anonymous>)
+        at Object.module.exports.promise (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\bcrypt\promises.js:20:12)
+        at Object.compare (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\bcrypt\bcrypt.js:204:25)
+        at C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\src\lib\services\auth\auth.ts:23:38
+        at Generator.next (<anonymous>)
+        at C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\src\lib\services\auth\auth.ts:8:71
+        at new Promise (<anonymous>)
+        at __awaiter (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\src\lib\services\auth\auth.ts:4:12)
+  },
+  level: 'error',
+  timestamp: '2022-04-27 07:43:26'
+}
+{
+  message: {
+    findUserById: CastError: Cast to ObjectId failed for value "{
+      _id: 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjI2OThlMThmZDQ0ZmZhMTgxYjVlNDBiIn0sImlhdCI6MTY1MTA4NjgzNSwiZXhwIjoxNjUxMTczMjM1LCJhdWQiOiJ0cmVsbG90b2tlbjp0cmVsbG9hdWRpZW5jZSIsImlzcyI6InRyZWxsb3Rva2VuOnRyZWxsb2lzdXVlciJ9.r8XxniNebrfvYWqXbsiY-y8m3dduIcY2o2cbRjg6ZRg'
+    }" (type Object) at path "_id" for model "users"
+        at model.Query.exec (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\mongoose\lib\query.js:4715:21)
+        at model.Query.Query.then (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\mongoose\lib\query.js:4814:15)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+      messageFormat: undefined,
+      stringValue: '"{\n' +
+        "  _id: 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjI2OThlMThmZDQ0ZmZhMTgxYjVlNDBiIn0sImlhdCI6MTY1MTA4NjgzNSwiZXhwIjoxNjUxMTczMjM1LCJhdWQiOiJ0cmVsbG90b2tlbjp0cmVsbG9hdWRpZW5jZSIsImlzcyI6InRyZWxsb3Rva2VuOnRyZWxsb2lzdXVlciJ9.r8XxniNebrfvYWqXbsiY-y8m3dduIcY2o2cbRjg6ZRg'\n" +
+        '}"',
+      kind: 'ObjectId',
+      value: {
+        _id: 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjI2OThlMThmZDQ0ZmZhMTgxYjVlNDBiIn0sImlhdCI6MTY1MTA4NjgzNSwiZXhwIjoxNjUxMTczMjM1LCJhdWQiOiJ0cmVsbG90b2tlbjp0cmVsbG9hdWRpZW5jZSIsImlzcyI6InRyZWxsb3Rva2VuOnRyZWxsb2lzdXVlciJ9.r8XxniNebrfvYWqXbsiY-y8m3dduIcY2o2cbRjg6ZRg'
+      },
+      path: '_id',
+      reason: BSONTypeError: Argument passed in must be a string of 12 bytes or a string of 24 hex characters or an integer
+          at new BSONTypeError (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\bson\src\error.ts:16:5)
+          at new ObjectId (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\bson\src\objectid.ts:87:15)
+          at castObjectId (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\mongoose\lib\cast\objectid.js:19:14)
+          at ObjectId.cast (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\mongoose\lib\schema\objectid.js:247:12)
+          at ObjectId.SchemaType.applySetters (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\mongoose\lib\schematype.js:1189:12)
+          at ObjectId.SchemaType._castForQuery (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\mongoose\lib\schematype.js:1623:15)
+          at ObjectId.SchemaType.castForQuery (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\mongoose\lib\schematype.js:1613:15)
+          at ObjectId.SchemaType.castForQueryWrapper (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\mongoose\lib\schematype.js:1590:20)
+          at cast (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\mongoose\lib\cast.js:288:34)
+          at model.Query.Query.cast (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\mongoose\lib\query.js:5137:12),
+      valueType: 'Object'
+    }
+  },
+  level: 'error',
+  timestamp: '2022-04-27 22:15:35'
+}
+{
+  message: {
+    findUserById: CastError: Cast to ObjectId failed for value "{
+      _id: 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjI2OThlMThmZDQ0ZmZhMTgxYjVlNDBiIn0sImlhdCI6MTY1MTA4NzExNCwiZXhwIjoxNjUxMTczNTE0LCJhdWQiOiJ0cmVsbG90b2tlbjp0cmVsbG9hdWRpZW5jZSIsImlzcyI6InRyZWxsb3Rva2VuOnRyZWxsb2lzdXVlciJ9.N-Wd-cZUFwVgCM3sPyfz93_JDK6fWxNEycDFLve8664'
+    }" (type Object) at path "_id" for model "users"
+        at model.Query.exec (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\mongoose\lib\query.js:4715:21)
+        at model.Query.Query.then (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\mongoose\lib\query.js:4814:15)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+      messageFormat: undefined,
+      stringValue: '"{\n' +
+        "  _id: 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjI2OThlMThmZDQ0ZmZhMTgxYjVlNDBiIn0sImlhdCI6MTY1MTA4NzExNCwiZXhwIjoxNjUxMTczNTE0LCJhdWQiOiJ0cmVsbG90b2tlbjp0cmVsbG9hdWRpZW5jZSIsImlzcyI6InRyZWxsb3Rva2VuOnRyZWxsb2lzdXVlciJ9.N-Wd-cZUFwVgCM3sPyfz93_JDK6fWxNEycDFLve8664'\n" +
+        '}"',
+      kind: 'ObjectId',
+      value: {
+        _id: 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjI2OThlMThmZDQ0ZmZhMTgxYjVlNDBiIn0sImlhdCI6MTY1MTA4NzExNCwiZXhwIjoxNjUxMTczNTE0LCJhdWQiOiJ0cmVsbG90b2tlbjp0cmVsbG9hdWRpZW5jZSIsImlzcyI6InRyZWxsb3Rva2VuOnRyZWxsb2lzdXVlciJ9.N-Wd-cZUFwVgCM3sPyfz93_JDK6fWxNEycDFLve8664'
+      },
+      path: '_id',
+      reason: BSONTypeError: Argument passed in must be a string of 12 bytes or a string of 24 hex characters or an integer
+          at new BSONTypeError (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\bson\src\error.ts:16:5)
+          at new ObjectId (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\bson\src\objectid.ts:87:15)
+          at castObjectId (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\mongoose\lib\cast\objectid.js:19:14)
+          at ObjectId.cast (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\mongoose\lib\schema\objectid.js:247:12)
+          at ObjectId.SchemaType.applySetters (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\mongoose\lib\schematype.js:1189:12)
+          at ObjectId.SchemaType._castForQuery (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\mongoose\lib\schematype.js:1623:15)
+          at ObjectId.SchemaType.castForQuery (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\mongoose\lib\schematype.js:1613:15)
+          at ObjectId.SchemaType.castForQueryWrapper (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\mongoose\lib\schematype.js:1590:20)
+          at cast (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\mongoose\lib\cast.js:288:34)
+          at model.Query.Query.cast (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\mongoose\lib\query.js:5137:12),
+      valueType: 'Object'
+    }
+  },
+  level: 'error',
+  timestamp: '2022-04-27 22:19:14'
+}
+{
+  message: {
+    findUserById: CastError: Cast to ObjectId failed for value "{
+      _id: 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjI2OThlMThmZDQ0ZmZhMTgxYjVlNDBiIn0sImlhdCI6MTY1MTA4NzI1NSwiZXhwIjoxNjUxMTczNjU1LCJhdWQiOiJ0cmVsbG90b2tlbjp0cmVsbG9hdWRpZW5jZSIsImlzcyI6InRyZWxsb3Rva2VuOnRyZWxsb2lzdXVlciJ9.9N8l3tw_0ojcpkcrgpgdcS-nlN4D-pGlZHUHOHhkS8c'
+    }" (type Object) at path "_id" for model "users"
+        at model.Query.exec (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\mongoose\lib\query.js:4715:21)
+        at model.Query.Query.then (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\mongoose\lib\query.js:4814:15)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+      messageFormat: undefined,
+      stringValue: '"{\n' +
+        "  _id: 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjI2OThlMThmZDQ0ZmZhMTgxYjVlNDBiIn0sImlhdCI6MTY1MTA4NzI1NSwiZXhwIjoxNjUxMTczNjU1LCJhdWQiOiJ0cmVsbG90b2tlbjp0cmVsbG9hdWRpZW5jZSIsImlzcyI6InRyZWxsb3Rva2VuOnRyZWxsb2lzdXVlciJ9.9N8l3tw_0ojcpkcrgpgdcS-nlN4D-pGlZHUHOHhkS8c'\n" +
+        '}"',
+      kind: 'ObjectId',
+      value: {
+        _id: 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjI2OThlMThmZDQ0ZmZhMTgxYjVlNDBiIn0sImlhdCI6MTY1MTA4NzI1NSwiZXhwIjoxNjUxMTczNjU1LCJhdWQiOiJ0cmVsbG90b2tlbjp0cmVsbG9hdWRpZW5jZSIsImlzcyI6InRyZWxsb3Rva2VuOnRyZWxsb2lzdXVlciJ9.9N8l3tw_0ojcpkcrgpgdcS-nlN4D-pGlZHUHOHhkS8c'
+      },
+      path: '_id',
+      reason: BSONTypeError: Argument passed in must be a string of 12 bytes or a string of 24 hex characters or an integer
+          at new BSONTypeError (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\bson\src\error.ts:16:5)
+          at new ObjectId (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\bson\src\objectid.ts:87:15)
+          at castObjectId (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\mongoose\lib\cast\objectid.js:19:14)
+          at ObjectId.cast (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\mongoose\lib\schema\objectid.js:247:12)
+          at ObjectId.SchemaType.applySetters (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\mongoose\lib\schematype.js:1189:12)
+          at ObjectId.SchemaType._castForQuery (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\mongoose\lib\schematype.js:1623:15)
+          at ObjectId.SchemaType.castForQuery (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\mongoose\lib\schematype.js:1613:15)
+          at ObjectId.SchemaType.castForQueryWrapper (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\mongoose\lib\schematype.js:1590:20)
+          at cast (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\mongoose\lib\cast.js:288:34)
+          at model.Query.Query.cast (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\mongoose\lib\query.js:5137:12),
+      valueType: 'Object'
+    }
+  },
+  level: 'error',
+  timestamp: '2022-04-27 22:22:11'
+}
+{
+  message: {
+    findUserById: CastError: Cast to ObjectId failed for value "{
+      _id: 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjI2OThlMThmZDQ0ZmZhMTgxYjVlNDBiIn0sImlhdCI6MTY1MTA4NzQxMSwiZXhwIjoxNjUxMTczODExLCJhdWQiOiJ0cmVsbG90b2tlbjp0cmVsbG9hdWRpZW5jZSIsImlzcyI6InRyZWxsb3Rva2VuOnRyZWxsb2lzdXVlciJ9.5Ee6yxkeuHSaSASlrsTiUwHl9BNooWUM15dzp48Vp6k'
+    }" (type Object) at path "_id" for model "users"
+        at model.Query.exec (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\mongoose\lib\query.js:4715:21)
+        at model.Query.Query.then (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\mongoose\lib\query.js:4814:15)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+      messageFormat: undefined,
+      stringValue: '"{\n' +
+        "  _id: 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjI2OThlMThmZDQ0ZmZhMTgxYjVlNDBiIn0sImlhdCI6MTY1MTA4NzQxMSwiZXhwIjoxNjUxMTczODExLCJhdWQiOiJ0cmVsbG90b2tlbjp0cmVsbG9hdWRpZW5jZSIsImlzcyI6InRyZWxsb3Rva2VuOnRyZWxsb2lzdXVlciJ9.5Ee6yxkeuHSaSASlrsTiUwHl9BNooWUM15dzp48Vp6k'\n" +
+        '}"',
+      kind: 'ObjectId',
+      value: {
+        _id: 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjI2OThlMThmZDQ0ZmZhMTgxYjVlNDBiIn0sImlhdCI6MTY1MTA4NzQxMSwiZXhwIjoxNjUxMTczODExLCJhdWQiOiJ0cmVsbG90b2tlbjp0cmVsbG9hdWRpZW5jZSIsImlzcyI6InRyZWxsb3Rva2VuOnRyZWxsb2lzdXVlciJ9.5Ee6yxkeuHSaSASlrsTiUwHl9BNooWUM15dzp48Vp6k'
+      },
+      path: '_id',
+      reason: BSONTypeError: Argument passed in must be a string of 12 bytes or a string of 24 hex characters or an integer
+          at new BSONTypeError (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\bson\src\error.ts:16:5)
+          at new ObjectId (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\bson\src\objectid.ts:87:15)
+          at castObjectId (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\mongoose\lib\cast\objectid.js:19:14)
+          at ObjectId.cast (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\mongoose\lib\schema\objectid.js:247:12)
+          at ObjectId.SchemaType.applySetters (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\mongoose\lib\schematype.js:1189:12)
+          at ObjectId.SchemaType._castForQuery (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\mongoose\lib\schematype.js:1623:15)
+          at ObjectId.SchemaType.castForQuery (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\mongoose\lib\schematype.js:1613:15)
+          at ObjectId.SchemaType.castForQueryWrapper (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\mongoose\lib\schematype.js:1590:20)
+          at cast (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\mongoose\lib\cast.js:288:34)
+          at model.Query.Query.cast (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\mongoose\lib\query.js:5137:12),
+      valueType: 'Object'
+    }
+  },
+  level: 'error',
+  timestamp: '2022-04-27 22:24:09'
+=======
 >>>>>>> a019e6ed20a5e6f15ac728c1d45ce6c547da056f
 {
   message: {
@@ -13628,4 +13850,5 @@
   },
   level: 'error',
   timestamp: '2022-04-27 00:33:06'
+>>>>>>> 4c1e017f05c85855606c68fd879835995ce3e1ab
 }
