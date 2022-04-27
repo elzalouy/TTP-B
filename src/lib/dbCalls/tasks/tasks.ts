@@ -35,6 +35,19 @@ class TaskDB {
     return await TaskDB.__getTask(id);
   }
 
+  static async getAllTasksDB(data:any) {
+    return await TaskDB.__getAllTasks(data)
+  }
+
+  static async __getAllTasks(data:any) {
+    try {
+      let tasks = Tasks.find(data).populate('memberId')
+      return tasks
+    } catch (error) {
+      logger.error({ getAllTasksDBError: error });
+    }
+  }
+
   static async __getTask(id: string) {
     try {
       let task = await Tasks.findById(id).lean();
