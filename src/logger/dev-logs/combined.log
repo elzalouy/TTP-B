@@ -46506,3 +46506,1291 @@
   level: 'info',
   timestamp: '2022-04-24 17:19:29'
 }
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-04-26 21:28:54'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-04-26 21:33:38'
+}
+{
+  message: {
+    sendMailError: Error: invalid_grant: Bad Request
+        at C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\nodemailer\lib\xoauth2\index.js:272:33
+        at PassThrough.<anonymous> (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\nodemailer\lib\xoauth2\index.js:341:20)
+        at Object.onceWrapper (node:events:639:28)
+        at PassThrough.emit (node:events:520:28)
+        at PassThrough.emit (node:domain:475:12)
+        at endReadableNT (node:internal/streams/readable:1346:12)
+        at processTicksAndRejections (node:internal/process/task_queues:83:21) {
+      code: 'EAUTH',
+      command: 'AUTH XOAUTH2'
+    }
+  },
+  level: 'info',
+  timestamp: '2022-04-26 21:35:22'
+}
+{
+  message: {
+    user: {
+      _id: new ObjectId("62683b695a272de2b1bbd34f"),
+      type: 'admin',
+      trelloBoardId: '616577753fa7db4ef1e715ea',
+      name: 'mohamed nageh-testing',
+      email: '123@yahoo.com',
+      password: '123',
+      role: 'project manager',
+      image: '',
+      trelloMemberId: '5cd742d89b200d471e827fc8',
+      userTeams: [],
+      createdAt: 2022-04-26T18:35:21.696Z,
+      updatedAt: 2022-04-26T18:35:21.696Z,
+      __v: 0
+    }
+  },
+  level: 'info',
+  timestamp: '2022-04-26 21:36:03'
+}
+{
+  message: {
+    user: {
+      _id: new ObjectId("62683b695a272de2b1bbd34f"),
+      type: 'admin',
+      trelloBoardId: '616577753fa7db4ef1e715ea',
+      name: 'mohamed nageh-testing',
+      email: '123@yahoo.com',
+      password: '123',
+      role: 'project manager',
+      image: '',
+      trelloMemberId: '5cd742d89b200d471e827fc8',
+      userTeams: [],
+      createdAt: 2022-04-26T18:35:21.696Z,
+      updatedAt: 2022-04-26T18:35:21.696Z,
+      __v: 0
+    }
+  },
+  level: 'info',
+  timestamp: '2022-04-26 22:22:14'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-04-26 22:59:18'
+}
+{
+  message: {
+    sendMailError: Error: invalid_grant: Bad Request
+        at C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\nodemailer\lib\xoauth2\index.js:272:33
+        at PassThrough.<anonymous> (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\nodemailer\lib\xoauth2\index.js:341:20)
+        at Object.onceWrapper (node:events:639:28)
+        at PassThrough.emit (node:events:520:28)
+        at PassThrough.emit (node:domain:475:12)
+        at endReadableNT (node:internal/streams/readable:1346:12)
+        at processTicksAndRejections (node:internal/process/task_queues:83:21) {
+      code: 'EAUTH',
+      command: 'AUTH XOAUTH2'
+    }
+  },
+  level: 'info',
+  timestamp: '2022-04-26 22:59:56'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-04-26 23:01:59'
+}
+{
+  message: {
+    sendMailError: Error: invalid_grant: Bad Request
+        at C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\nodemailer\lib\xoauth2\index.js:272:33
+        at PassThrough.<anonymous> (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\nodemailer\lib\xoauth2\index.js:341:20)
+        at Object.onceWrapper (node:events:639:28)
+        at PassThrough.emit (node:events:520:28)
+        at PassThrough.emit (node:domain:475:12)
+        at endReadableNT (node:internal/streams/readable:1346:12)
+        at processTicksAndRejections (node:internal/process/task_queues:83:21) {
+      code: 'EAUTH',
+      command: 'AUTH XOAUTH2'
+    }
+  },
+  level: 'info',
+  timestamp: '2022-04-26 23:02:27'
+}
+{
+  message: {
+    sendMailError: Error: invalid_grant: Bad Request
+        at C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\nodemailer\lib\xoauth2\index.js:272:33
+        at PassThrough.<anonymous> (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\nodemailer\lib\xoauth2\index.js:341:20)
+        at Object.onceWrapper (node:events:639:28)
+        at PassThrough.emit (node:events:520:28)
+        at PassThrough.emit (node:domain:475:12)
+        at endReadableNT (node:internal/streams/readable:1346:12)
+        at processTicksAndRejections (node:internal/process/task_queues:83:21) {
+      code: 'EAUTH',
+      command: 'AUTH XOAUTH2'
+    }
+  },
+  level: 'info',
+  timestamp: '2022-04-26 23:03:13'
+}
+{
+  message: {
+    sendMailError: Error: invalid_grant: Bad Request
+        at C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\nodemailer\lib\xoauth2\index.js:272:33
+        at PassThrough.<anonymous> (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\nodemailer\lib\xoauth2\index.js:341:20)
+        at Object.onceWrapper (node:events:639:28)
+        at PassThrough.emit (node:events:520:28)
+        at PassThrough.emit (node:domain:475:12)
+        at endReadableNT (node:internal/streams/readable:1346:12)
+        at processTicksAndRejections (node:internal/process/task_queues:83:21) {
+      code: 'EAUTH',
+      command: 'AUTH XOAUTH2'
+    }
+  },
+  level: 'info',
+  timestamp: '2022-04-26 23:06:47'
+}
+{
+  message: {
+    sendMailError: Error: invalid_grant: Bad Request
+        at C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\nodemailer\lib\xoauth2\index.js:272:33
+        at PassThrough.<anonymous> (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\nodemailer\lib\xoauth2\index.js:341:20)
+        at Object.onceWrapper (node:events:639:28)
+        at PassThrough.emit (node:events:520:28)
+        at PassThrough.emit (node:domain:475:12)
+        at endReadableNT (node:internal/streams/readable:1346:12)
+        at processTicksAndRejections (node:internal/process/task_queues:83:21) {
+      code: 'EAUTH',
+      command: 'AUTH XOAUTH2'
+    }
+  },
+  level: 'info',
+  timestamp: '2022-04-26 23:07:26'
+}
+{
+  message: {
+    sendMailError: Error: invalid_grant: Bad Request
+        at C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\nodemailer\lib\xoauth2\index.js:272:33
+        at PassThrough.<anonymous> (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\nodemailer\lib\xoauth2\index.js:341:20)
+        at Object.onceWrapper (node:events:639:28)
+        at PassThrough.emit (node:events:520:28)
+        at PassThrough.emit (node:domain:475:12)
+        at endReadableNT (node:internal/streams/readable:1346:12)
+        at processTicksAndRejections (node:internal/process/task_queues:83:21) {
+      code: 'EAUTH',
+      command: 'AUTH XOAUTH2'
+    }
+  },
+  level: 'info',
+  timestamp: '2022-04-26 23:07:55'
+}
+{
+  message: {
+    sendMailError: Error: invalid_grant: Bad Request
+        at C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\nodemailer\lib\xoauth2\index.js:272:33
+        at PassThrough.<anonymous> (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\nodemailer\lib\xoauth2\index.js:341:20)
+        at Object.onceWrapper (node:events:639:28)
+        at PassThrough.emit (node:events:520:28)
+        at PassThrough.emit (node:domain:475:12)
+        at endReadableNT (node:internal/streams/readable:1346:12)
+        at processTicksAndRejections (node:internal/process/task_queues:83:21) {
+      code: 'EAUTH',
+      command: 'AUTH XOAUTH2'
+    }
+  },
+  level: 'info',
+  timestamp: '2022-04-26 23:08:50'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-04-26 23:10:46'
+}
+{
+  message: {
+    user: {
+      _id: new ObjectId("6268c780144d0fb6306b17c9"),
+      type: 'admin',
+      trelloBoardId: '616577753fa7db4ef1e715ea',
+      name: 'mohamed nageh-testing',
+      email: 'test.dev@gmail.com',
+      password: '123456789',
+      role: 'project manager',
+      image: '',
+      trelloMemberId: '5cd742d89b200d471e827fc8',
+      userTeams: [],
+      createdAt: 2022-04-27T04:33:04.090Z,
+      updatedAt: 2022-04-27T04:33:04.090Z,
+      __v: 0
+    }
+  },
+  level: 'info',
+  timestamp: '2022-04-27 07:33:25'
+}
+{
+  message: {
+    user: {
+      _id: new ObjectId("6268c780144d0fb6306b17c9"),
+      type: 'admin',
+      trelloBoardId: '616577753fa7db4ef1e715ea',
+      name: 'mohamed nageh-testing',
+      email: 'test.dev@gmail.com',
+      password: '123456789',
+      role: 'project manager',
+      image: '',
+      trelloMemberId: '5cd742d89b200d471e827fc8',
+      userTeams: [],
+      createdAt: 2022-04-27T04:33:04.090Z,
+      updatedAt: 2022-04-27T04:33:04.090Z,
+      __v: 0
+    }
+  },
+  level: 'info',
+  timestamp: '2022-04-27 07:33:26'
+}
+{
+  message: {
+    user: {
+      _id: new ObjectId("6268c780144d0fb6306b17c9"),
+      type: 'admin',
+      trelloBoardId: '616577753fa7db4ef1e715ea',
+      name: 'mohamed nageh-testing',
+      email: 'test.dev@gmail.com',
+      password: '123456789',
+      role: 'project manager',
+      image: '',
+      trelloMemberId: '5cd742d89b200d471e827fc8',
+      userTeams: [],
+      createdAt: 2022-04-27T04:33:04.090Z,
+      updatedAt: 2022-04-27T04:33:04.090Z,
+      __v: 0
+    }
+  },
+  level: 'info',
+  timestamp: '2022-04-27 07:33:27'
+}
+{
+  message: {
+    userData: {
+      id: '626851f8144d0fb6306b17c3',
+      password: '123',
+      oldPassword: '123456789'
+    }
+  },
+  level: 'info',
+  timestamp: '2022-04-27 07:36:44'
+}
+{
+  message: {
+    userData: {
+      id: '626851f8144d0fb6306b17c3',
+      password: '123456789',
+      oldPassword: '123'
+    }
+  },
+  level: 'info',
+  timestamp: '2022-04-27 07:36:57'
+}
+{
+  message: {
+    userData: {
+      id: '626851f8144d0fb6306b17c3',
+      password: '123456789',
+      oldPassword: ''
+    }
+  },
+  level: 'info',
+  timestamp: '2022-04-27 07:37:35'
+}
+{
+  message: {
+    user: {
+      _id: new ObjectId("62662912a86a7d5f90a1ff99"),
+      name: 'abdulaziz qannam',
+      email: 'abuqannam2@gmail.com',
+      password: '$2b$10$SWTShwZm6exErqVNNXq3tOBki/RW69CN4BPNintNykQpwTvhpzuUS',
+      role: 'Operation manager',
+      image: '',
+      trelloMemberId: null,
+      userTeams: [],
+      createdAt: 2022-04-25T04:52:34.821Z,
+      updatedAt: 2022-04-25T04:52:34.821Z,
+      __v: 0
+    }
+  },
+  level: 'info',
+  timestamp: '2022-04-27 07:39:08'
+}
+{
+  message: {
+    user: {
+      _id: new ObjectId("62662912a86a7d5f90a1ff99"),
+      name: 'abdulaziz qannam',
+      email: 'abuqannam2@gmail.com',
+      password: '$2b$10$SWTShwZm6exErqVNNXq3tOBki/RW69CN4BPNintNykQpwTvhpzuUS',
+      role: 'Operation manager',
+      image: '',
+      trelloMemberId: null,
+      userTeams: [],
+      createdAt: 2022-04-25T04:52:34.821Z,
+      updatedAt: 2022-04-25T04:52:34.821Z,
+      __v: 0
+    }
+  },
+  level: 'info',
+  timestamp: '2022-04-27 07:39:09'
+}
+{
+  message: {
+    userData: {
+      id: '6268c93e0b9f6cdb369770bc',
+      password: '123456789',
+      oldPassword: ''
+    }
+  },
+  level: 'info',
+  timestamp: '2022-04-27 07:40:58'
+}
+{
+  message: {
+    updatePasswordError: Error: data and hash arguments required
+        at Object.compare (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\bcrypt\bcrypt.js:208:17)
+        at C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\bcrypt\promises.js:29:12
+        at new Promise (<anonymous>)
+        at Object.module.exports.promise (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\bcrypt\promises.js:20:12)
+        at Object.compare (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\bcrypt\bcrypt.js:204:25)
+        at C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\src\lib\services\auth\auth.ts:23:38
+        at Generator.next (<anonymous>)
+        at C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\src\lib\services\auth\auth.ts:8:71
+        at new Promise (<anonymous>)
+        at __awaiter (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\src\lib\services\auth\auth.ts:4:12)
+  },
+  level: 'error',
+  timestamp: '2022-04-27 07:40:58'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-04-27 07:41:08'
+}
+{
+  message: {
+    userData: {
+      id: '6268c93e0b9f6cdb369770bc',
+      password: '123456789',
+      oldPassword: ''
+    }
+  },
+  level: 'info',
+  timestamp: '2022-04-27 07:41:29'
+}
+{
+  message: {
+    updatePasswordError: Error: data and hash arguments required
+        at Object.compare (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\bcrypt\bcrypt.js:208:17)
+        at C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\bcrypt\promises.js:29:12
+        at new Promise (<anonymous>)
+        at Object.module.exports.promise (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\bcrypt\promises.js:20:12)
+        at Object.compare (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\bcrypt\bcrypt.js:204:25)
+        at C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\src\lib\services\auth\auth.ts:23:38
+        at Generator.next (<anonymous>)
+        at C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\src\lib\services\auth\auth.ts:8:71
+        at new Promise (<anonymous>)
+        at __awaiter (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\src\lib\services\auth\auth.ts:4:12)
+  },
+  level: 'error',
+  timestamp: '2022-04-27 07:41:29'
+}
+{
+  message: {
+    userData: {
+      id: '6268c93e0b9f6cdb369770bc',
+      password: '123456789',
+      oldPassword: ''
+    }
+  },
+  level: 'info',
+  timestamp: '2022-04-27 07:41:31'
+}
+{
+  message: {
+    updatePasswordError: Error: data and hash arguments required
+        at Object.compare (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\bcrypt\bcrypt.js:208:17)
+        at C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\bcrypt\promises.js:29:12
+        at new Promise (<anonymous>)
+        at Object.module.exports.promise (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\bcrypt\promises.js:20:12)
+        at Object.compare (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\bcrypt\bcrypt.js:204:25)
+        at C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\src\lib\services\auth\auth.ts:23:38
+        at Generator.next (<anonymous>)
+        at C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\src\lib\services\auth\auth.ts:8:71
+        at new Promise (<anonymous>)
+        at __awaiter (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\src\lib\services\auth\auth.ts:4:12)
+  },
+  level: 'error',
+  timestamp: '2022-04-27 07:41:31'
+}
+{
+  message: {
+    userData: {
+      id: '6268c93e0b9f6cdb369770bc',
+      password: '123456789',
+      oldPassword: ''
+    }
+  },
+  level: 'info',
+  timestamp: '2022-04-27 07:42:13'
+}
+{
+  message: {
+    updatePasswordError: Error: data and hash arguments required
+        at Object.compare (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\bcrypt\bcrypt.js:208:17)
+        at C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\bcrypt\promises.js:29:12
+        at new Promise (<anonymous>)
+        at Object.module.exports.promise (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\bcrypt\promises.js:20:12)
+        at Object.compare (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\bcrypt\bcrypt.js:204:25)
+        at C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\src\lib\services\auth\auth.ts:23:38
+        at Generator.next (<anonymous>)
+        at C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\src\lib\services\auth\auth.ts:8:71
+        at new Promise (<anonymous>)
+        at __awaiter (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\src\lib\services\auth\auth.ts:4:12)
+  },
+  level: 'error',
+  timestamp: '2022-04-27 07:42:13'
+}
+{
+  message: {
+    userData: {
+      id: '6268c93e0b9f6cdb369770bc',
+      password: '123456789',
+      oldPassword: ''
+    }
+  },
+  level: 'info',
+  timestamp: '2022-04-27 07:43:26'
+}
+{
+  message: {
+    updatePasswordError: Error: data and hash arguments required
+        at Object.compare (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\bcrypt\bcrypt.js:208:17)
+        at C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\bcrypt\promises.js:29:12
+        at new Promise (<anonymous>)
+        at Object.module.exports.promise (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\bcrypt\promises.js:20:12)
+        at Object.compare (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\bcrypt\bcrypt.js:204:25)
+        at C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\src\lib\services\auth\auth.ts:23:38
+        at Generator.next (<anonymous>)
+        at C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\src\lib\services\auth\auth.ts:8:71
+        at new Promise (<anonymous>)
+        at __awaiter (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\src\lib\services\auth\auth.ts:4:12)
+  },
+  level: 'error',
+  timestamp: '2022-04-27 07:43:26'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-04-27 07:52:35'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-04-27 07:53:46'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-04-27 07:57:41'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-04-27 07:58:33'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-04-27 07:58:42'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-04-27 07:59:42'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-04-27 08:14:30'
+}
+{
+  message: {
+    user: {
+      _id: new ObjectId("62694cae16402fd86a3aab4b"),
+      type: 'admin',
+      trelloBoardId: '616577753fa7db4ef1e715ea',
+      name: 'mohamed nageh-testing',
+      email: 'test@gmail.com',
+      password: '123456789',
+      role: 'project manager',
+      image: '',
+      trelloMemberId: '5cd742d89b200d471e827fc8',
+      userTeams: [],
+      createdAt: 2022-04-27T14:01:18.095Z,
+      updatedAt: 2022-04-27T14:01:18.095Z,
+      __v: 0
+    }
+  },
+  level: 'info',
+  timestamp: '2022-04-27 17:01:45'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-04-27 17:07:52'
+}
+{
+  message: {
+    user: {
+      _id: new ObjectId("62694e5fd46a35dc2d098b44"),
+      type: 'admin',
+      trelloBoardId: '616577753fa7db4ef1e715ea',
+      name: 'mohamed nageh-testing',
+      email: 'somebody@gmail.com',
+      password: '$2b$10$IKKuOV7vwtacyXZsdZOxjem6igcLQ2jVgdvZzWc6UP.wJ79KP2mTG',
+      role: 'project manager',
+      image: '',
+      trelloMemberId: '5cd742d89b200d471e827fc8',
+      userTeams: [],
+      createdAt: 2022-04-27T14:08:31.844Z,
+      updatedAt: 2022-04-27T14:08:31.844Z,
+      __v: 0
+    }
+  },
+  level: 'info',
+  timestamp: '2022-04-27 17:08:51'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-04-27 17:10:47'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-04-27 21:11:29'
+}
+{
+  message: {
+    verifyToken: JsonWebTokenError: jwt must be provided
+        at Object.module.exports [as verify] (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\jsonwebtoken\verify.js:53:17)
+        at C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\src\lib\services\auth\auth.ts:45:52
+        at Generator.next (<anonymous>)
+        at C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\src\lib\services\auth\auth.ts:8:71
+        at new Promise (<anonymous>)
+        at __awaiter (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\src\lib\services\auth\auth.ts:4:12)
+        at jwtVerify (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\src\lib\services\auth\auth.ts:42:50)
+        at Function.<anonymous> (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\src\lib\controllers\auth.ts:33:52)
+        at Generator.next (<anonymous>)
+        at C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\src\lib\controllers\auth.ts:8:71
+  },
+  level: 'info',
+  timestamp: '2022-04-27 21:13:19'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-04-27 21:15:26'
+}
+{
+  message: {
+    verifyToken: JsonWebTokenError: jwt must be provided
+        at Object.module.exports [as verify] (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\jsonwebtoken\verify.js:53:17)
+        at C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\src\lib\services\auth\auth.ts:45:52
+        at Generator.next (<anonymous>)
+        at C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\src\lib\services\auth\auth.ts:8:71
+        at new Promise (<anonymous>)
+        at __awaiter (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\src\lib\services\auth\auth.ts:4:12)
+        at jwtVerify (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\src\lib\services\auth\auth.ts:42:50)
+        at Function.<anonymous> (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\src\lib\controllers\auth.ts:33:52)
+        at Generator.next (<anonymous>)
+        at C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\src\lib\controllers\auth.ts:8:71
+  },
+  level: 'info',
+  timestamp: '2022-04-27 21:15:32'
+}
+{
+  message: {
+    verifyToken: JsonWebTokenError: jwt must be provided
+        at Object.module.exports [as verify] (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\jsonwebtoken\verify.js:53:17)
+        at C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\src\lib\services\auth\auth.ts:45:52
+        at Generator.next (<anonymous>)
+        at C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\src\lib\services\auth\auth.ts:8:71
+        at new Promise (<anonymous>)
+        at __awaiter (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\src\lib\services\auth\auth.ts:4:12)
+        at jwtVerify (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\src\lib\services\auth\auth.ts:42:50)
+        at Function.<anonymous> (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\src\lib\controllers\auth.ts:33:52)
+        at Generator.next (<anonymous>)
+        at C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\src\lib\controllers\auth.ts:8:71
+  },
+  level: 'info',
+  timestamp: '2022-04-27 21:17:59'
+}
+{
+  message: {
+    verifyToken: TokenExpiredError: jwt expired
+        at C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\jsonwebtoken\verify.js:152:21
+        at getSecret (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\jsonwebtoken\verify.js:90:14)
+        at Object.module.exports [as verify] (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\jsonwebtoken\verify.js:94:10)
+        at C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\src\lib\services\auth\auth.ts:45:52
+        at Generator.next (<anonymous>)
+        at C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\src\lib\services\auth\auth.ts:8:71
+        at new Promise (<anonymous>)
+        at __awaiter (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\src\lib\services\auth\auth.ts:4:12)
+        at jwtVerify (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\src\lib\services\auth\auth.ts:42:50)
+        at Function.<anonymous> (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\src\lib\controllers\auth.ts:33:52) {
+      expiredAt: 2021-11-05T18:13:15.000Z
+    }
+  },
+  level: 'info',
+  timestamp: '2022-04-27 21:18:28'
+}
+{
+  message: {
+    verifyToken: TokenExpiredError: jwt expired
+        at C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\jsonwebtoken\verify.js:152:21
+        at getSecret (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\jsonwebtoken\verify.js:90:14)
+        at Object.module.exports [as verify] (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\jsonwebtoken\verify.js:94:10)
+        at C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\src\lib\services\auth\auth.ts:45:52
+        at Generator.next (<anonymous>)
+        at C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\src\lib\services\auth\auth.ts:8:71
+        at new Promise (<anonymous>)
+        at __awaiter (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\src\lib\services\auth\auth.ts:4:12)
+        at jwtVerify (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\src\lib\services\auth\auth.ts:42:50)
+        at Function.<anonymous> (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\src\lib\controllers\auth.ts:33:52) {
+      expiredAt: 2021-11-05T18:13:15.000Z
+    }
+  },
+  level: 'info',
+  timestamp: '2022-04-27 21:18:32'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-04-27 21:20:21'
+}
+{
+  message: {
+    verifyToken: JsonWebTokenError: jwt must be provided
+        at Object.module.exports [as verify] (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\jsonwebtoken\verify.js:53:17)
+        at C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\src\lib\services\auth\auth.ts:45:52
+        at Generator.next (<anonymous>)
+        at C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\src\lib\services\auth\auth.ts:8:71
+        at new Promise (<anonymous>)
+        at __awaiter (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\src\lib\services\auth\auth.ts:4:12)
+        at jwtVerify (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\src\lib\services\auth\auth.ts:42:50)
+        at Function.<anonymous> (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\src\lib\controllers\auth.ts:33:52)
+        at Generator.next (<anonymous>)
+        at C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\src\lib\controllers\auth.ts:8:71
+  },
+  level: 'info',
+  timestamp: '2022-04-27 21:25:42'
+}
+{
+  message: {
+    verifyToken: JsonWebTokenError: jwt must be provided
+        at Object.module.exports [as verify] (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\jsonwebtoken\verify.js:53:17)
+        at C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\src\lib\services\auth\auth.ts:45:52
+        at Generator.next (<anonymous>)
+        at C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\src\lib\services\auth\auth.ts:8:71
+        at new Promise (<anonymous>)
+        at __awaiter (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\src\lib\services\auth\auth.ts:4:12)
+        at jwtVerify (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\src\lib\services\auth\auth.ts:42:50)
+        at Function.<anonymous> (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\src\lib\controllers\auth.ts:33:52)
+        at Generator.next (<anonymous>)
+        at C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\src\lib\controllers\auth.ts:8:71
+  },
+  level: 'info',
+  timestamp: '2022-04-27 21:27:47'
+}
+{
+  message: {
+    verifyToken: JsonWebTokenError: jwt must be provided
+        at Object.module.exports [as verify] (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\jsonwebtoken\verify.js:53:17)
+        at C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\src\lib\services\auth\auth.ts:45:52
+        at Generator.next (<anonymous>)
+        at C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\src\lib\services\auth\auth.ts:8:71
+        at new Promise (<anonymous>)
+        at __awaiter (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\src\lib\services\auth\auth.ts:4:12)
+        at jwtVerify (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\src\lib\services\auth\auth.ts:42:50)
+        at Function.<anonymous> (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\src\lib\controllers\auth.ts:33:52)
+        at Generator.next (<anonymous>)
+        at C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\src\lib\controllers\auth.ts:8:71
+  },
+  level: 'info',
+  timestamp: '2022-04-27 21:30:15'
+}
+{
+  message: {
+    verifyToken: JsonWebTokenError: jwt must be provided
+        at Object.module.exports [as verify] (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\jsonwebtoken\verify.js:53:17)
+        at C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\src\lib\services\auth\auth.ts:45:52
+        at Generator.next (<anonymous>)
+        at C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\src\lib\services\auth\auth.ts:8:71
+        at new Promise (<anonymous>)
+        at __awaiter (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\src\lib\services\auth\auth.ts:4:12)
+        at jwtVerify (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\src\lib\services\auth\auth.ts:42:50)
+        at Function.<anonymous> (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\src\lib\controllers\auth.ts:33:52)
+        at Generator.next (<anonymous>)
+        at C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\src\lib\controllers\auth.ts:8:71
+  },
+  level: 'info',
+  timestamp: '2022-04-27 21:31:19'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-04-27 21:34:21'
+}
+{
+  message: {
+    verifyToken: JsonWebTokenError: jwt must be provided
+        at Object.module.exports [as verify] (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\jsonwebtoken\verify.js:53:17)
+        at C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\src\lib\services\auth\auth.ts:45:52
+        at Generator.next (<anonymous>)
+        at C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\src\lib\services\auth\auth.ts:8:71
+        at new Promise (<anonymous>)
+        at __awaiter (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\src\lib\services\auth\auth.ts:4:12)
+        at jwtVerify (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\src\lib\services\auth\auth.ts:42:50)
+        at Function.<anonymous> (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\src\lib\controllers\auth.ts:33:52)
+        at Generator.next (<anonymous>)
+        at C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\src\lib\controllers\auth.ts:8:71
+  },
+  level: 'info',
+  timestamp: '2022-04-27 21:34:27'
+}
+{
+  message: {
+    verifyToken: JsonWebTokenError: jwt must be provided
+        at Object.module.exports [as verify] (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\jsonwebtoken\verify.js:53:17)
+        at C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\src\lib\services\auth\auth.ts:45:52
+        at Generator.next (<anonymous>)
+        at C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\src\lib\services\auth\auth.ts:8:71
+        at new Promise (<anonymous>)
+        at __awaiter (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\src\lib\services\auth\auth.ts:4:12)
+        at jwtVerify (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\src\lib\services\auth\auth.ts:42:50)
+        at Function.<anonymous> (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\src\lib\controllers\auth.ts:33:52)
+        at Generator.next (<anonymous>)
+        at C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\src\lib\controllers\auth.ts:8:71
+  },
+  level: 'info',
+  timestamp: '2022-04-27 21:34:27'
+}
+{
+  message: {
+    verifyToken: JsonWebTokenError: jwt must be provided
+        at Object.module.exports [as verify] (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\jsonwebtoken\verify.js:53:17)
+        at C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\src\lib\services\auth\auth.ts:45:52
+        at Generator.next (<anonymous>)
+        at C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\src\lib\services\auth\auth.ts:8:71
+        at new Promise (<anonymous>)
+        at __awaiter (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\src\lib\services\auth\auth.ts:4:12)
+        at jwtVerify (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\src\lib\services\auth\auth.ts:42:50)
+        at Function.<anonymous> (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\src\lib\controllers\auth.ts:33:52)
+        at Generator.next (<anonymous>)
+        at C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\src\lib\controllers\auth.ts:8:71
+  },
+  level: 'info',
+  timestamp: '2022-04-27 21:34:31'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-04-27 21:34:54'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-04-27 21:35:18'
+}
+{
+  message: {
+    verifyToken: JsonWebTokenError: jwt must be provided
+        at Object.module.exports [as verify] (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\jsonwebtoken\verify.js:53:17)
+        at C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\src\lib\services\auth\auth.ts:45:52
+        at Generator.next (<anonymous>)
+        at C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\src\lib\services\auth\auth.ts:8:71
+        at new Promise (<anonymous>)
+        at __awaiter (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\src\lib\services\auth\auth.ts:4:12)
+        at jwtVerify (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\src\lib\services\auth\auth.ts:42:50)
+        at Function.<anonymous> (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\src\lib\controllers\auth.ts:34:52)
+        at Generator.next (<anonymous>)
+        at C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\src\lib\controllers\auth.ts:8:71
+  },
+  level: 'info',
+  timestamp: '2022-04-27 21:35:24'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-04-27 21:35:52'
+}
+{
+  message: {
+    user: {
+      _id: new ObjectId("62698e18fd44ffa181b5e40b"),
+      name: 'zedan',
+      email: 'zed.saheer5@gmail.com',
+      image: '',
+      trelloMemberId: null,
+      userTeams: [],
+      createdAt: 2022-04-27T18:40:24.852Z,
+      updatedAt: 2022-04-27T18:42:45.202Z,
+      __v: 0,
+      password: '$2b$10$/iyffHCbCL2Pg7QF6HHDPul9hM24V8yLnCpdUiofYCpmQVLV0GYHa'
+    }
+  },
+  level: 'info',
+  timestamp: '2022-04-27 21:49:06'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-04-27 21:58:56'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-04-27 22:04:49'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-04-27 22:06:41'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-04-27 22:06:58'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-04-27 22:07:09'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-04-27 22:08:08'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-04-27 22:09:14'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-04-27 22:10:20'
+}
+{
+  message: {
+    userData: {
+      id: 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjI2OThlMThmZDQ0ZmZhMTgxYjVlNDBiIn0sImlhdCI6MTY1MTA4NjgzNSwiZXhwIjoxNjUxMTczMjM1LCJhdWQiOiJ0cmVsbG90b2tlbjp0cmVsbG9hdWRpZW5jZSIsImlzcyI6InRyZWxsb3Rva2VuOnRyZWxsb2lzdXVlciJ9.r8XxniNebrfvYWqXbsiY-y8m3dduIcY2o2cbRjg6ZRg',
+      password: 'zedan123',
+      oldPassword: '12345678'
+    }
+  },
+  level: 'info',
+  timestamp: '2022-04-27 22:15:35'
+}
+{
+  message: {
+    findUserById: CastError: Cast to ObjectId failed for value "{
+      _id: 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjI2OThlMThmZDQ0ZmZhMTgxYjVlNDBiIn0sImlhdCI6MTY1MTA4NjgzNSwiZXhwIjoxNjUxMTczMjM1LCJhdWQiOiJ0cmVsbG90b2tlbjp0cmVsbG9hdWRpZW5jZSIsImlzcyI6InRyZWxsb3Rva2VuOnRyZWxsb2lzdXVlciJ9.r8XxniNebrfvYWqXbsiY-y8m3dduIcY2o2cbRjg6ZRg'
+    }" (type Object) at path "_id" for model "users"
+        at model.Query.exec (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\mongoose\lib\query.js:4715:21)
+        at model.Query.Query.then (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\mongoose\lib\query.js:4814:15)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+      messageFormat: undefined,
+      stringValue: '"{\n' +
+        "  _id: 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjI2OThlMThmZDQ0ZmZhMTgxYjVlNDBiIn0sImlhdCI6MTY1MTA4NjgzNSwiZXhwIjoxNjUxMTczMjM1LCJhdWQiOiJ0cmVsbG90b2tlbjp0cmVsbG9hdWRpZW5jZSIsImlzcyI6InRyZWxsb3Rva2VuOnRyZWxsb2lzdXVlciJ9.r8XxniNebrfvYWqXbsiY-y8m3dduIcY2o2cbRjg6ZRg'\n" +
+        '}"',
+      kind: 'ObjectId',
+      value: {
+        _id: 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjI2OThlMThmZDQ0ZmZhMTgxYjVlNDBiIn0sImlhdCI6MTY1MTA4NjgzNSwiZXhwIjoxNjUxMTczMjM1LCJhdWQiOiJ0cmVsbG90b2tlbjp0cmVsbG9hdWRpZW5jZSIsImlzcyI6InRyZWxsb3Rva2VuOnRyZWxsb2lzdXVlciJ9.r8XxniNebrfvYWqXbsiY-y8m3dduIcY2o2cbRjg6ZRg'
+      },
+      path: '_id',
+      reason: BSONTypeError: Argument passed in must be a string of 12 bytes or a string of 24 hex characters or an integer
+          at new BSONTypeError (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\bson\src\error.ts:16:5)
+          at new ObjectId (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\bson\src\objectid.ts:87:15)
+          at castObjectId (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\mongoose\lib\cast\objectid.js:19:14)
+          at ObjectId.cast (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\mongoose\lib\schema\objectid.js:247:12)
+          at ObjectId.SchemaType.applySetters (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\mongoose\lib\schematype.js:1189:12)
+          at ObjectId.SchemaType._castForQuery (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\mongoose\lib\schematype.js:1623:15)
+          at ObjectId.SchemaType.castForQuery (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\mongoose\lib\schematype.js:1613:15)
+          at ObjectId.SchemaType.castForQueryWrapper (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\mongoose\lib\schematype.js:1590:20)
+          at cast (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\mongoose\lib\cast.js:288:34)
+          at model.Query.Query.cast (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\mongoose\lib\query.js:5137:12),
+      valueType: 'Object'
+    }
+  },
+  level: 'error',
+  timestamp: '2022-04-27 22:15:35'
+}
+{
+  message: {
+    user: {
+      _id: new ObjectId("62698e18fd44ffa181b5e40b"),
+      name: 'zedan',
+      email: 'zed.saheer5@gmail.com',
+      image: '',
+      trelloMemberId: null,
+      userTeams: [],
+      createdAt: 2022-04-27T18:40:24.852Z,
+      updatedAt: 2022-04-27T18:42:45.202Z,
+      __v: 0,
+      password: '$2b$10$/iyffHCbCL2Pg7QF6HHDPul9hM24V8yLnCpdUiofYCpmQVLV0GYHa'
+    }
+  },
+  level: 'info',
+  timestamp: '2022-04-27 22:16:30'
+}
+{
+  message: {
+    user: {
+      _id: new ObjectId("62698e18fd44ffa181b5e40b"),
+      name: 'zedan',
+      email: 'zed.saheer5@gmail.com',
+      image: '',
+      trelloMemberId: null,
+      userTeams: [],
+      createdAt: 2022-04-27T18:40:24.852Z,
+      updatedAt: 2022-04-27T18:42:45.202Z,
+      __v: 0,
+      password: '$2b$10$/iyffHCbCL2Pg7QF6HHDPul9hM24V8yLnCpdUiofYCpmQVLV0GYHa'
+    }
+  },
+  level: 'info',
+  timestamp: '2022-04-27 22:17:02'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-04-27 22:18:27'
+}
+{
+  message: {
+    userData: {
+      id: 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjI2OThlMThmZDQ0ZmZhMTgxYjVlNDBiIn0sImlhdCI6MTY1MTA4NzExNCwiZXhwIjoxNjUxMTczNTE0LCJhdWQiOiJ0cmVsbG90b2tlbjp0cmVsbG9hdWRpZW5jZSIsImlzcyI6InRyZWxsb3Rva2VuOnRyZWxsb2lzdXVlciJ9.N-Wd-cZUFwVgCM3sPyfz93_JDK6fWxNEycDFLve8664',
+      password: '123456789',
+      oldPassword: '12345678'
+    }
+  },
+  level: 'info',
+  timestamp: '2022-04-27 22:19:14'
+}
+{
+  message: {
+    findUserById: CastError: Cast to ObjectId failed for value "{
+      _id: 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjI2OThlMThmZDQ0ZmZhMTgxYjVlNDBiIn0sImlhdCI6MTY1MTA4NzExNCwiZXhwIjoxNjUxMTczNTE0LCJhdWQiOiJ0cmVsbG90b2tlbjp0cmVsbG9hdWRpZW5jZSIsImlzcyI6InRyZWxsb3Rva2VuOnRyZWxsb2lzdXVlciJ9.N-Wd-cZUFwVgCM3sPyfz93_JDK6fWxNEycDFLve8664'
+    }" (type Object) at path "_id" for model "users"
+        at model.Query.exec (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\mongoose\lib\query.js:4715:21)
+        at model.Query.Query.then (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\mongoose\lib\query.js:4814:15)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+      messageFormat: undefined,
+      stringValue: '"{\n' +
+        "  _id: 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjI2OThlMThmZDQ0ZmZhMTgxYjVlNDBiIn0sImlhdCI6MTY1MTA4NzExNCwiZXhwIjoxNjUxMTczNTE0LCJhdWQiOiJ0cmVsbG90b2tlbjp0cmVsbG9hdWRpZW5jZSIsImlzcyI6InRyZWxsb3Rva2VuOnRyZWxsb2lzdXVlciJ9.N-Wd-cZUFwVgCM3sPyfz93_JDK6fWxNEycDFLve8664'\n" +
+        '}"',
+      kind: 'ObjectId',
+      value: {
+        _id: 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjI2OThlMThmZDQ0ZmZhMTgxYjVlNDBiIn0sImlhdCI6MTY1MTA4NzExNCwiZXhwIjoxNjUxMTczNTE0LCJhdWQiOiJ0cmVsbG90b2tlbjp0cmVsbG9hdWRpZW5jZSIsImlzcyI6InRyZWxsb3Rva2VuOnRyZWxsb2lzdXVlciJ9.N-Wd-cZUFwVgCM3sPyfz93_JDK6fWxNEycDFLve8664'
+      },
+      path: '_id',
+      reason: BSONTypeError: Argument passed in must be a string of 12 bytes or a string of 24 hex characters or an integer
+          at new BSONTypeError (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\bson\src\error.ts:16:5)
+          at new ObjectId (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\bson\src\objectid.ts:87:15)
+          at castObjectId (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\mongoose\lib\cast\objectid.js:19:14)
+          at ObjectId.cast (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\mongoose\lib\schema\objectid.js:247:12)
+          at ObjectId.SchemaType.applySetters (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\mongoose\lib\schematype.js:1189:12)
+          at ObjectId.SchemaType._castForQuery (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\mongoose\lib\schematype.js:1623:15)
+          at ObjectId.SchemaType.castForQuery (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\mongoose\lib\schematype.js:1613:15)
+          at ObjectId.SchemaType.castForQueryWrapper (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\mongoose\lib\schematype.js:1590:20)
+          at cast (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\mongoose\lib\cast.js:288:34)
+          at model.Query.Query.cast (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\mongoose\lib\query.js:5137:12),
+      valueType: 'Object'
+    }
+  },
+  level: 'error',
+  timestamp: '2022-04-27 22:19:14'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-04-27 22:20:23'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-04-27 22:20:48'
+}
+{
+  message: {
+    userData: {
+      id: 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjI2OThlMThmZDQ0ZmZhMTgxYjVlNDBiIn0sImlhdCI6MTY1MTA4NzI1NSwiZXhwIjoxNjUxMTczNjU1LCJhdWQiOiJ0cmVsbG90b2tlbjp0cmVsbG9hdWRpZW5jZSIsImlzcyI6InRyZWxsb3Rva2VuOnRyZWxsb2lzdXVlciJ9.9N8l3tw_0ojcpkcrgpgdcS-nlN4D-pGlZHUHOHhkS8c',
+      password: '123456789',
+      oldPassword: '12345678'
+    }
+  },
+  level: 'info',
+  timestamp: '2022-04-27 22:22:11'
+}
+{
+  message: {
+    findUserById: CastError: Cast to ObjectId failed for value "{
+      _id: 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjI2OThlMThmZDQ0ZmZhMTgxYjVlNDBiIn0sImlhdCI6MTY1MTA4NzI1NSwiZXhwIjoxNjUxMTczNjU1LCJhdWQiOiJ0cmVsbG90b2tlbjp0cmVsbG9hdWRpZW5jZSIsImlzcyI6InRyZWxsb3Rva2VuOnRyZWxsb2lzdXVlciJ9.9N8l3tw_0ojcpkcrgpgdcS-nlN4D-pGlZHUHOHhkS8c'
+    }" (type Object) at path "_id" for model "users"
+        at model.Query.exec (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\mongoose\lib\query.js:4715:21)
+        at model.Query.Query.then (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\mongoose\lib\query.js:4814:15)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+      messageFormat: undefined,
+      stringValue: '"{\n' +
+        "  _id: 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjI2OThlMThmZDQ0ZmZhMTgxYjVlNDBiIn0sImlhdCI6MTY1MTA4NzI1NSwiZXhwIjoxNjUxMTczNjU1LCJhdWQiOiJ0cmVsbG90b2tlbjp0cmVsbG9hdWRpZW5jZSIsImlzcyI6InRyZWxsb3Rva2VuOnRyZWxsb2lzdXVlciJ9.9N8l3tw_0ojcpkcrgpgdcS-nlN4D-pGlZHUHOHhkS8c'\n" +
+        '}"',
+      kind: 'ObjectId',
+      value: {
+        _id: 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjI2OThlMThmZDQ0ZmZhMTgxYjVlNDBiIn0sImlhdCI6MTY1MTA4NzI1NSwiZXhwIjoxNjUxMTczNjU1LCJhdWQiOiJ0cmVsbG90b2tlbjp0cmVsbG9hdWRpZW5jZSIsImlzcyI6InRyZWxsb3Rva2VuOnRyZWxsb2lzdXVlciJ9.9N8l3tw_0ojcpkcrgpgdcS-nlN4D-pGlZHUHOHhkS8c'
+      },
+      path: '_id',
+      reason: BSONTypeError: Argument passed in must be a string of 12 bytes or a string of 24 hex characters or an integer
+          at new BSONTypeError (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\bson\src\error.ts:16:5)
+          at new ObjectId (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\bson\src\objectid.ts:87:15)
+          at castObjectId (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\mongoose\lib\cast\objectid.js:19:14)
+          at ObjectId.cast (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\mongoose\lib\schema\objectid.js:247:12)
+          at ObjectId.SchemaType.applySetters (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\mongoose\lib\schematype.js:1189:12)
+          at ObjectId.SchemaType._castForQuery (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\mongoose\lib\schematype.js:1623:15)
+          at ObjectId.SchemaType.castForQuery (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\mongoose\lib\schematype.js:1613:15)
+          at ObjectId.SchemaType.castForQueryWrapper (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\mongoose\lib\schematype.js:1590:20)
+          at cast (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\mongoose\lib\cast.js:288:34)
+          at model.Query.Query.cast (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\mongoose\lib\query.js:5137:12),
+      valueType: 'Object'
+    }
+  },
+  level: 'error',
+  timestamp: '2022-04-27 22:22:11'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-04-27 22:22:48'
+}
+{
+  message: {
+    userData: {
+      id: 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjI2OThlMThmZDQ0ZmZhMTgxYjVlNDBiIn0sImlhdCI6MTY1MTA4NzQxMSwiZXhwIjoxNjUxMTczODExLCJhdWQiOiJ0cmVsbG90b2tlbjp0cmVsbG9hdWRpZW5jZSIsImlzcyI6InRyZWxsb3Rva2VuOnRyZWxsb2lzdXVlciJ9.5Ee6yxkeuHSaSASlrsTiUwHl9BNooWUM15dzp48Vp6k',
+      password: '123456789',
+      oldPassword: '12345678'
+    }
+  },
+  level: 'info',
+  timestamp: '2022-04-27 22:24:09'
+}
+{
+  message: {
+    findUserById: CastError: Cast to ObjectId failed for value "{
+      _id: 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjI2OThlMThmZDQ0ZmZhMTgxYjVlNDBiIn0sImlhdCI6MTY1MTA4NzQxMSwiZXhwIjoxNjUxMTczODExLCJhdWQiOiJ0cmVsbG90b2tlbjp0cmVsbG9hdWRpZW5jZSIsImlzcyI6InRyZWxsb3Rva2VuOnRyZWxsb2lzdXVlciJ9.5Ee6yxkeuHSaSASlrsTiUwHl9BNooWUM15dzp48Vp6k'
+    }" (type Object) at path "_id" for model "users"
+        at model.Query.exec (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\mongoose\lib\query.js:4715:21)
+        at model.Query.Query.then (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\mongoose\lib\query.js:4814:15)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+      messageFormat: undefined,
+      stringValue: '"{\n' +
+        "  _id: 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjI2OThlMThmZDQ0ZmZhMTgxYjVlNDBiIn0sImlhdCI6MTY1MTA4NzQxMSwiZXhwIjoxNjUxMTczODExLCJhdWQiOiJ0cmVsbG90b2tlbjp0cmVsbG9hdWRpZW5jZSIsImlzcyI6InRyZWxsb3Rva2VuOnRyZWxsb2lzdXVlciJ9.5Ee6yxkeuHSaSASlrsTiUwHl9BNooWUM15dzp48Vp6k'\n" +
+        '}"',
+      kind: 'ObjectId',
+      value: {
+        _id: 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjI2OThlMThmZDQ0ZmZhMTgxYjVlNDBiIn0sImlhdCI6MTY1MTA4NzQxMSwiZXhwIjoxNjUxMTczODExLCJhdWQiOiJ0cmVsbG90b2tlbjp0cmVsbG9hdWRpZW5jZSIsImlzcyI6InRyZWxsb3Rva2VuOnRyZWxsb2lzdXVlciJ9.5Ee6yxkeuHSaSASlrsTiUwHl9BNooWUM15dzp48Vp6k'
+      },
+      path: '_id',
+      reason: BSONTypeError: Argument passed in must be a string of 12 bytes or a string of 24 hex characters or an integer
+          at new BSONTypeError (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\bson\src\error.ts:16:5)
+          at new ObjectId (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\bson\src\objectid.ts:87:15)
+          at castObjectId (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\mongoose\lib\cast\objectid.js:19:14)
+          at ObjectId.cast (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\mongoose\lib\schema\objectid.js:247:12)
+          at ObjectId.SchemaType.applySetters (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\mongoose\lib\schematype.js:1189:12)
+          at ObjectId.SchemaType._castForQuery (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\mongoose\lib\schematype.js:1623:15)
+          at ObjectId.SchemaType.castForQuery (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\mongoose\lib\schematype.js:1613:15)
+          at ObjectId.SchemaType.castForQueryWrapper (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\mongoose\lib\schematype.js:1590:20)
+          at cast (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\mongoose\lib\cast.js:288:34)
+          at model.Query.Query.cast (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\mongoose\lib\query.js:5137:12),
+      valueType: 'Object'
+    }
+  },
+  level: 'error',
+  timestamp: '2022-04-27 22:24:09'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-04-27 22:24:43'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-04-27 22:25:15'
+}
+{
+  message: {
+    userData: {
+      id: 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjI2OThlMThmZDQ0ZmZhMTgxYjVlNDBiIn0sImlhdCI6MTY1MTA4NzUyOSwiZXhwIjoxNjUxMTczOTI5LCJhdWQiOiJ0cmVsbG90b2tlbjp0cmVsbG9hdWRpZW5jZSIsImlzcyI6InRyZWxsb3Rva2VuOnRyZWxsb2lzdXVlciJ9.LKEM9BQu3xsmX3g8az0lGb_0PPvMZLTYWvm-wRNHng8',
+      password: '123456789',
+      oldPassword: '12345678'
+    }
+  },
+  level: 'info',
+  timestamp: '2022-04-27 22:25:50'
+}
+{
+  message: {
+    user: {
+      _id: new ObjectId("62698e18fd44ffa181b5e40b"),
+      name: 'zedan',
+      email: 'zed.saheer5@gmail.com',
+      image: '',
+      trelloMemberId: null,
+      userTeams: [],
+      createdAt: 2022-04-27T18:40:24.852Z,
+      updatedAt: 2022-04-27T19:25:50.400Z,
+      __v: 0,
+      password: '$2b$10$fK/RXeozqK38WL3qXeHmxO2DpxzXXvBDXLmgMwbgDiQBC6ddtOw2S'
+    }
+  },
+  level: 'info',
+  timestamp: '2022-04-27 22:26:16'
+}
+{
+  message: {
+    user: {
+      _id: new ObjectId("62698e18fd44ffa181b5e40b"),
+      name: 'zedan',
+      email: 'zed.saheer5@gmail.com',
+      image: '',
+      trelloMemberId: null,
+      userTeams: [],
+      createdAt: 2022-04-27T18:40:24.852Z,
+      updatedAt: 2022-04-27T19:25:50.400Z,
+      __v: 0,
+      password: '$2b$10$fK/RXeozqK38WL3qXeHmxO2DpxzXXvBDXLmgMwbgDiQBC6ddtOw2S'
+    }
+  },
+  level: 'info',
+  timestamp: '2022-04-27 22:26:20'
+}
+{
+  message: {
+    user: {
+      _id: new ObjectId("62698e18fd44ffa181b5e40b"),
+      name: 'zedan',
+      email: 'zed.saheer5@gmail.com',
+      image: '',
+      trelloMemberId: null,
+      userTeams: [],
+      createdAt: 2022-04-27T18:40:24.852Z,
+      updatedAt: 2022-04-27T19:25:50.400Z,
+      __v: 0,
+      password: '$2b$10$fK/RXeozqK38WL3qXeHmxO2DpxzXXvBDXLmgMwbgDiQBC6ddtOw2S'
+    }
+  },
+  level: 'info',
+  timestamp: '2022-04-27 22:26:58'
+}
+{
+  message: {
+    user: {
+      _id: new ObjectId("62698e18fd44ffa181b5e40b"),
+      name: 'zedan',
+      email: 'zed.saheer5@gmail.com',
+      image: '',
+      trelloMemberId: null,
+      userTeams: [],
+      createdAt: 2022-04-27T18:40:24.852Z,
+      updatedAt: 2022-04-27T19:25:50.400Z,
+      __v: 0,
+      password: '$2b$10$fK/RXeozqK38WL3qXeHmxO2DpxzXXvBDXLmgMwbgDiQBC6ddtOw2S'
+    }
+  },
+  level: 'info',
+  timestamp: '2022-04-27 22:28:21'
+}

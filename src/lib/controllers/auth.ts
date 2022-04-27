@@ -59,9 +59,9 @@ const AuthController = class AuthController extends UserDB {
       await sendMail({
         token:token,
         email:email,
-        body:"",
+        body:"Please click on this link to reset your password",
         subject:"Forgot Password",
-        path:"forgotPassword"
+        path:"resetPassword"
       });
       return successMsg("email_sent", 200);
     } catch (error) {
