@@ -1,3 +1,5 @@
+<<<<<<< HEAD
+=======
 {
   message: {
     getUserError: MongooseServerSelectionError: Could not connect to any servers in your MongoDB Atlas cluster. One common reason is that you're trying to access the database from an IP that isn't whitelisted. Make sure your current IP address is on your Atlas cluster's IP whitelist: https://docs.atlas.mongodb.com/security-whitelist/
@@ -13586,6 +13588,7 @@
   level: 'error',
   timestamp: '2022-04-24 16:38:49'
 }
+<<<<<<< HEAD
 {
   message: {
     updatePasswordError: Error: data and hash arguments required
@@ -13806,4 +13809,46 @@
   },
   level: 'error',
   timestamp: '2022-04-27 22:24:09'
+=======
+>>>>>>> a019e6ed20a5e6f15ac728c1d45ce6c547da056f
+{
+  message: {
+    createNotificationDBError: Error: notification validation failed: adminUserID: Cast to Object failed for value "62662912a86a7d5f90a1ff99" (type string) at path "adminUserID"
+        at ValidationError.inspect (D:\projects\unicode\ttp\TTP-Back\node_modules\mongoose\lib\error\validation.js:48:26)
+        at formatValue (node:internal/util/inspect:782:19)
+        at formatProperty (node:internal/util/inspect:1819:11)
+        at formatRaw (node:internal/util/inspect:1030:9)
+        at formatValue (node:internal/util/inspect:817:10)
+        at formatProperty (node:internal/util/inspect:1819:11)
+        at formatRaw (node:internal/util/inspect:1030:9)
+        at formatValue (node:internal/util/inspect:817:10)
+        at inspect (node:internal/util/inspect:347:10)
+        at Format.transform (D:\projects\unicode\ttp\TTP-Back\node_modules\logform\pretty-print.js:27:19) {
+      errors: {
+        adminUserID: CastError: Cast to Object failed for value "62662912a86a7d5f90a1ff99" (type string) at path "adminUserID"
+            at model.$set (D:\projects\unicode\ttp\TTP-Back\node_modules\mongoose\lib\document.js:1225:27)
+            at model.$set (D:\projects\unicode\ttp\TTP-Back\node_modules\mongoose\lib\document.js:1149:14)
+            at model.Document (D:\projects\unicode\ttp\TTP-Back\node_modules\mongoose\lib\document.js:161:12)
+            at model.Model (D:\projects\unicode\ttp\TTP-Back\node_modules\mongoose\lib\model.js:115:12)
+            at new model (D:\projects\unicode\ttp\TTP-Back\node_modules\mongoose\lib\model.js:4827:15)
+            at Function.<anonymous> (D:\projects\unicode\ttp\TTP-Back\src\lib\dbCalls\notification\notification.ts:59:44)
+            at Generator.next (<anonymous>)
+            at D:\projects\unicode\ttp\TTP-Back\src\lib\dbCalls\notification\notification.ts:8:71
+            at new Promise (<anonymous>)
+            at __awaiter (D:\projects\unicode\ttp\TTP-Back\src\lib\dbCalls\notification\notification.ts:4:12) {
+          stringValue: '"62662912a86a7d5f90a1ff99"',
+          messageFormat: undefined,
+          kind: 'Object',
+          value: '62662912a86a7d5f90a1ff99',
+          path: 'adminUserID',
+          reason: undefined,
+          valueType: 'string'
+        }
+      },
+      _message: 'notification validation failed'
+    }
+  },
+  level: 'error',
+  timestamp: '2022-04-27 00:33:06'
+>>>>>>> 4c1e017f05c85855606c68fd879835995ce3e1ab
 }

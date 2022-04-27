@@ -4,6 +4,9 @@ import logger from "../../logger";
 import TaskDB from "../dbCalls/tasks/tasks";
 import BoardController from "./boards";
 import Project from "../models/Project";
+import NotificationController from "./notification";
+import { io } from "../server";
+import ProjectDB from "../dbCalls/project/project";
 
 class TaskController extends TaskDB {
   static async getTasks(data: TaskData) {
@@ -63,7 +66,7 @@ class TaskController extends TaskDB {
     try {
       // This action for updating card
       logger.info({ webhookUpdate: data });
-      let targetTask;
+      let targetTask: any;
       const targetList: any = [
         "done",
         "Shared",
@@ -72,7 +75,7 @@ class TaskController extends TaskDB {
         "Unclear brief",
         "cancel",
       ];
-      if (targetList.includes(data.action.display.listAfter.text)) {
+      if (targetList.includes(data.action.display.entities.listAfter.text)) {
         targetTask = await TaskDB.updateOneTaskDB(
           {
             cardId: data.action.display.entities.card.id,
@@ -81,6 +84,30 @@ class TaskController extends TaskDB {
             status: data.action.display.listAfter.text,
           }
         );
+
+        // if task status update to shared send notification
+        if (data.action.display.entities.listAfter.text === "Shared") {
+          let projectData: any = await ProjectDB.getProjectDB({
+            _id: targetTask.projectId,
+          });
+          let userName: string =
+            data.action.display.entities.memberCreator.username;
+          let cardName: string = data.action.display.entities.card.text;
+
+          let createNotifi = await NotificationController.createNotification({
+            title: `${cardName} status has been changed to Shared`,
+            description: `${cardName} status has been changed to shared by ${userName}`,
+            projectManagerID: projectData.projectManager,
+            projectID:targetTask.projectId,
+            adminUserID:projectData.adminId
+          });
+
+          // send notification to all the admin
+          io.to("admin room").emit("notification update", createNotifi);
+
+          // send notification to specific project manager
+          io.to(`user-${projectData.projectManager}`).emit("notification update", createNotifi)
+        }
       } else {
         targetTask = await TaskDB.updateOneTaskDB(
           {

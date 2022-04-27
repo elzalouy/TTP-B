@@ -38,7 +38,7 @@ const mongoDB: () => Promise<void> = async () => {
         name: "abdulaziz qannam",
         email: process.env.SUPER_ADMIN_EMAIL,
         password: passwordHash,
-        role: "superAdmin",
+        role: "Operation manager",
       };
       await UserDB.createUser(data);
 

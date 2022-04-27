@@ -9,6 +9,7 @@ import projectRoute from "../routes/project/projectRoute";
 import taskRoute from "../routes/task/taskRoute";
 import categoryRoute from "../routes/category/categoryRoute";
 import clientRoute from "../routes/client/clientRoute";
+import notifiRoute from "../routes/notification/notifiRoute";
 
 module.exports = function (app: Application) {
   app.use(function (req, res, next) {
@@ -39,4 +40,5 @@ module.exports = function (app: Application) {
   app.use("/api", projectRoute);
   app.use("/api", categoryRoute);
   app.use("/api", clientRoute);
+  app.use("/api", notifiRoute);
 };
