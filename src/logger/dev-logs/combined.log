@@ -29044,3 +29044,64 @@
   level: 'info',
   timestamp: '2022-04-28 04:19:46'
 }
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-04-28 04:24:14'
+}
+{
+  message: {
+    user: {
+      _id: new ObjectId("62698e18fd44ffa181b5e40b"),
+      name: 'zedan',
+      email: 'zed.saheer5@gmail.com',
+      image: '',
+      trelloMemberId: null,
+      userTeams: [],
+      createdAt: 2022-04-27T18:40:24.852Z,
+      updatedAt: 2022-04-27T19:25:50.400Z,
+      __v: 0,
+      password: '$2b$10$fK/RXeozqK38WL3qXeHmxO2DpxzXXvBDXLmgMwbgDiQBC6ddtOw2S'
+    }
+  },
+  level: 'info',
+  timestamp: '2022-04-28 04:27:48'
+}
+{
+  message: {
+    user: {
+      _id: new ObjectId("62698e18fd44ffa181b5e40b"),
+      name: 'zedan',
+      email: 'zed.saheer5@gmail.com',
+      image: '',
+      trelloMemberId: null,
+      userTeams: [],
+      createdAt: 2022-04-27T18:40:24.852Z,
+      updatedAt: 2022-04-27T19:25:50.400Z,
+      __v: 0,
+      password: '$2b$10$fK/RXeozqK38WL3qXeHmxO2DpxzXXvBDXLmgMwbgDiQBC6ddtOw2S'
+    }
+  },
+  level: 'info',
+  timestamp: '2022-04-28 04:31:25'
+}
+{
+  message: {
+    user: {
+      _id: new ObjectId("62698e18fd44ffa181b5e40b"),
+      name: 'zedan',
+      email: 'zed.saheer5@gmail.com',
+      image: '',
+      trelloMemberId: null,
+      userTeams: [],
+      createdAt: 2022-04-27T18:40:24.852Z,
+      updatedAt: 2022-04-27T19:25:50.400Z,
+      __v: 0,
+      password: '$2b$10$fK/RXeozqK38WL3qXeHmxO2DpxzXXvBDXLmgMwbgDiQBC6ddtOw2S'
+    }
+  },
+  level: 'info',
+  timestamp: '2022-04-28 04:32:49'
+}
