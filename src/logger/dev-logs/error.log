@@ -13880,3 +13880,31 @@
   level: 'error',
   timestamp: '2022-04-28 02:50:08'
 }
+{
+  message: {
+    signInError: Error: data and hash arguments required
+        at Object.compare (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\bcrypt\bcrypt.js:208:17)
+        at C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\bcrypt\promises.js:29:12
+        at new Promise (<anonymous>)
+        at Object.module.exports.promise (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\bcrypt\promises.js:20:12)
+        at Object.compare (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\bcrypt\bcrypt.js:204:25)
+        at C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\src\lib\services\auth\auth.ts:23:38
+        at Generator.next (<anonymous>)
+        at C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\src\lib\services\auth\auth.ts:8:71
+        at new Promise (<anonymous>)
+        at __awaiter (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\src\lib\services\auth\auth.ts:4:12)
+  },
+  level: 'error',
+  timestamp: '2022-04-28 14:48:39'
+}
+{
+  message: {
+    handleSignInUserError: TypeError: Cannot read properties of undefined (reading 'userData')
+        at C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\src\lib\presentation\auth\auth.ts:14:18
+        at Generator.next (<anonymous>)
+        at fulfilled (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\src\lib\presentation\auth\auth.ts:5:58)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5)
+  },
+  level: 'error',
+  timestamp: '2022-04-28 14:48:39'
+}
