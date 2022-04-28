@@ -8,6 +8,19 @@ import { localize } from "../../utils/msgLocalize";
 import { customeError } from "../../utils/errorUtils";
 
 const UserReq = class UserReq extends UserController {
+
+  static async handleGetUserInfo(req: any, res: Response) {
+    try {
+      let id: string = req.query.id;
+      let userData = await super.getUserById(id);
+      return res.status(200).send(userData);
+    } catch (error) {
+      logger.error({ handleGetUserInfoError: error });
+      return res.status(500).send(customeError("server_error", 500));
+    }
+  }
+
+
   static async handleCreatUser(req: Request, res: Response) {
     try {
       let userData: UserData = req.body;

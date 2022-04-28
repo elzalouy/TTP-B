@@ -30,6 +30,19 @@ const UserController = class UserController extends UserDB {
     return await UserController.__getUsersInfo(data);
   }
 
+  static async getUserById(id: string) {
+    return await UserController.__getUser(id);
+  }
+
+  static async __getUser(id: string) {
+    try {
+      let user = await super.findUserById(id);
+      return user;
+    } catch (error) {
+      logger.error({ getUsers : error });
+    }
+  }
+
   static async __getUsersInfo(data: GetUserData) {
     try {
       let findUsers = await super.getUsers(data);
