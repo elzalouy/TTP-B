@@ -9,9 +9,13 @@ const NotificationSchema = new mongoose_1.Schema({
     projectManagerID: {
         type: mongoose_1.Schema.Types.ObjectId,
         ref: "users",
-        required: true,
+        // required: true,
     },
-    viewed: {
+    adminViewed: {
+        type: Boolean,
+        default: false,
+    },
+    projectManagerViewed: {
         type: Boolean,
         default: false,
     },
@@ -21,17 +25,15 @@ const NotificationSchema = new mongoose_1.Schema({
     projectID: {
         type: mongoose_1.Schema.Types.ObjectId,
         ref: "projects",
-        required: true,
+        // required: true,
     },
     clientName: {
         type: String,
-        require: true,
+        // require: true,
     },
     adminUserID: {
-        idInDB: {
-            type: mongoose_1.Schema.Types.ObjectId,
-            ref: "users",
-        },
+        type: mongoose_1.Schema.Types.ObjectId,
+        ref: "users",
     },
 }, {
     timestamps: true,

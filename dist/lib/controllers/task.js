@@ -15,6 +15,9 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const logger_1 = __importDefault(require("../../logger"));
 const tasks_1 = __importDefault(require("../dbCalls/tasks/tasks"));
 const boards_1 = __importDefault(require("./boards"));
+const notification_1 = __importDefault(require("./notification"));
+const server_1 = require("../server");
+const project_1 = __importDefault(require("../dbCalls/project/project"));
 class TaskController extends tasks_1.default {
     static getTasks(data) {
         return __awaiter(this, void 0, void 0, function* () {
@@ -91,12 +94,31 @@ class TaskController extends tasks_1.default {
                     "Unclear brief",
                     "cancel",
                 ];
-                if (targetList.includes(data.action.display.listAfter.text)) {
+                if (targetList.includes(data.action.display.entities.listAfter.text)) {
                     targetTask = yield tasks_1.default.updateOneTaskDB({
                         cardId: data.action.display.entities.card.id,
                     }, {
                         status: data.action.display.listAfter.text,
                     });
+                    // if task status update to shared send notification
+                    if (data.action.display.entities.listAfter.text === "Shared") {
+                        let projectData = yield project_1.default.getProjectDB({
+                            _id: targetTask.projectId,
+                        });
+                        let userName = data.action.display.entities.memberCreator.username;
+                        let cardName = data.action.display.entities.card.text;
+                        let createNotifi = yield notification_1.default.createNotification({
+                            title: `${cardName} status has been changed to Shared`,
+                            description: `${cardName} status has been changed to shared by ${userName}`,
+                            projectManagerID: projectData.projectManager,
+                            projectID: targetTask.projectId,
+                            adminUserID: projectData.adminId
+                        });
+                        // send notification to all the admin
+                        server_1.io.to("admin room").emit("notification update", createNotifi);
+                        // send notification to specific project manager
+                        server_1.io.to(`user-${projectData.projectManager}`).emit("notification update", createNotifi);
+                    }
                 }
                 else {
                     targetTask = yield tasks_1.default.updateOneTaskDB({

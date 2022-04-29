@@ -44,6 +44,25 @@ const UserController = class UserController extends user_1.default {
             return yield UserController.__getUsersInfo(data);
         });
     }
+    static getUserById(id) {
+        return __awaiter(this, void 0, void 0, function* () {
+            return yield UserController.__getUser(id);
+        });
+    }
+    static __getUser(id) {
+        const _super = Object.create(null, {
+            findUserById: { get: () => super.findUserById }
+        });
+        return __awaiter(this, void 0, void 0, function* () {
+            try {
+                let user = yield _super.findUserById.call(this, id);
+                return user;
+            }
+            catch (error) {
+                logger_1.default.error({ getUsers: error });
+            }
+        });
+    }
     static __getUsersInfo(data) {
         const _super = Object.create(null, {
             getUsers: { get: () => super.getUsers }
@@ -80,10 +99,14 @@ const UserController = class UserController extends user_1.default {
         return __awaiter(this, void 0, void 0, function* () {
             try {
                 const { id, password, oldPassword } = data;
+                const token = yield (0, auth_1.jwtVerify)(id);
+                if (!token.user) {
+                    return (0, errorUtils_1.customeError)("not_valid_token", 400);
+                }
                 if ((0, validation_1.passwordCheck)(password)) {
                     return (0, errorUtils_1.customeError)("password_length", 400);
                 }
-                let findUser = yield _super.findUserById.call(this, id);
+                let findUser = yield _super.findUserById.call(this, token.user.id);
                 if (!findUser) {
                     return (0, errorUtils_1.customeError)("user_not_exist", 409);
                 }
@@ -93,7 +116,7 @@ const UserController = class UserController extends user_1.default {
                 }
                 // hash password
                 let passwordHash = yield (0, auth_1.hashBassword)(password);
-                let user = yield _super.updateUser.call(this, { id, password: passwordHash });
+                let user = yield _super.updateUser.call(this, { id: token.user.id, password: passwordHash });
                 return user;
             }
             catch (error) {
@@ -127,7 +150,7 @@ const UserController = class UserController extends user_1.default {
         });
         return __awaiter(this, void 0, void 0, function* () {
             try {
-                const { email /*  password ,trelloBoardId,trelloMemberId,type='admin' */ } = data;
+                const { email /* ,trelloBoardId,trelloMemberId,type='admin' */ } = data;
                 // if (passwordCheck(password)) {
                 //   return customeError("password_length", 400);
                 // }
@@ -139,7 +162,7 @@ const UserController = class UserController extends user_1.default {
                     return (0, errorUtils_1.customeError)("user_already_exist", 400);
                 }
                 // hash password
-                // let passwordHash: string = await hashBassword(password);
+                /* let passwordHash: string = await hashBassword(password); */
                 // add project manager to specific board
                 // if(trelloBoardId &&trelloMemberId && type){
                 //      BoardController.addMemberToBoard(trelloBoardId,trelloMemberId,type)

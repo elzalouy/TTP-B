@@ -17,6 +17,22 @@ const user_1 = __importDefault(require("../../controllers/user"));
 const logger_1 = __importDefault(require("../../../logger"));
 const errorUtils_1 = require("../../utils/errorUtils");
 const UserReq = class UserReq extends user_1.default {
+    static handleGetUserInfo(req, res) {
+        const _super = Object.create(null, {
+            getUserById: { get: () => super.getUserById }
+        });
+        return __awaiter(this, void 0, void 0, function* () {
+            try {
+                let id = req.query.id;
+                let userData = yield _super.getUserById.call(this, id);
+                return res.status(200).send(userData);
+            }
+            catch (error) {
+                logger_1.default.error({ handleGetUserInfoError: error });
+                return res.status(500).send((0, errorUtils_1.customeError)("server_error", 500));
+            }
+        });
+    }
     static handleCreatUser(req, res) {
         const _super = Object.create(null, {
             addUser: { get: () => super.addUser }

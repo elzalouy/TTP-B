@@ -12,6 +12,7 @@ const projectRoute_1 = __importDefault(require("../routes/project/projectRoute")
 const taskRoute_1 = __importDefault(require("../routes/task/taskRoute"));
 const categoryRoute_1 = __importDefault(require("../routes/category/categoryRoute"));
 const clientRoute_1 = __importDefault(require("../routes/client/clientRoute"));
+const notifiRoute_1 = __importDefault(require("../routes/notification/notifiRoute"));
 module.exports = function (app) {
     app.use(function (req, res, next) {
         let allowedOrigins = [
@@ -35,4 +36,5 @@ module.exports = function (app) {
     app.use("/api", projectRoute_1.default);
     app.use("/api", categoryRoute_1.default);
     app.use("/api", clientRoute_1.default);
+    app.use("/api", notifiRoute_1.default);
 };

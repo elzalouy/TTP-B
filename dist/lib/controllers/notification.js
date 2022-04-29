@@ -12,87 +12,84 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
+const notification_1 = __importDefault(require("../dbCalls/notification/notification"));
 const logger_1 = __importDefault(require("../../logger"));
-const team_1 = __importDefault(require("../dbCalls/teams/team"));
-const TeamController = class TeamController extends team_1.default {
-    static createTeam(data) {
+const NotificationController = class NotificationController extends notification_1.default {
+    static createNotification(data) {
         return __awaiter(this, void 0, void 0, function* () {
-            return yield TeamController.__createNewTeam(data);
+            return yield NotificationController.__createNotification(data);
         });
     }
-    static updateTeam(data) {
+    static updateNotification(data, value) {
         return __awaiter(this, void 0, void 0, function* () {
-            return yield TeamController.__updateTeamData(data);
+            return yield NotificationController.__updateNotification(data, value);
         });
     }
-    static deleteTeam(id) {
+    static getAllNotifications(data) {
         return __awaiter(this, void 0, void 0, function* () {
-            return yield TeamController.__deleteTeamData(id);
+            return yield NotificationController.__getAllNotifications(data);
         });
     }
-    static getTeams(data) {
+    static deleteNotification(id) {
         return __awaiter(this, void 0, void 0, function* () {
-            return yield TeamController.__getTeamData(data);
+            return yield NotificationController.__deleteNotification(id);
         });
     }
-    static __getTeamData(data) {
+    static __deleteNotification(id) {
         const _super = Object.create(null, {
-            getTeamData: { get: () => super.getTeamData }
+            deleteNotificationDB: { get: () => super.deleteNotificationDB }
         });
         return __awaiter(this, void 0, void 0, function* () {
             try {
-                let teams = yield _super.getTeamData.call(this, data);
-                return teams;
+                let notification = yield _super.deleteNotificationDB.call(this, id);
+                return notification;
             }
             catch (error) {
-                logger_1.default.error({ getTeamsError: error });
+                logger_1.default.error({ deletNotificationControllerError: error });
             }
         });
     }
-    static __deleteTeamData(id) {
+    static __getAllNotifications(data) {
         const _super = Object.create(null, {
-            deleteTeamDB: { get: () => super.deleteTeamDB }
+            getAllNotificationsDB: { get: () => super.getAllNotificationsDB }
         });
         return __awaiter(this, void 0, void 0, function* () {
             try {
-                let deleteTeam = yield _super.deleteTeamDB.call(this, id);
-                return deleteTeam;
+                let notification = yield _super.getAllNotificationsDB.call(this, data);
+                return notification;
             }
             catch (error) {
-                logger_1.default.error({ deleteTeamError: error });
+                logger_1.default.error({ getNotificationControllerError: error });
             }
         });
     }
-    static __updateTeamData(data) {
+    static __updateNotification(data, value) {
         const _super = Object.create(null, {
-            updatedbTeam: { get: () => super.updatedbTeam }
+            updateNotificationDB: { get: () => super.updateNotificationDB }
         });
         return __awaiter(this, void 0, void 0, function* () {
             try {
-                let teamUpdate = yield _super.updatedbTeam.call(this, data);
-                return teamUpdate;
+                let notification = yield _super.updateNotificationDB.call(this, data, value);
+                return notification;
             }
             catch (error) {
-                logger_1.default.error({ updateTeamError: error });
+                logger_1.default.error({ updateNotificationControllerError: error });
             }
         });
     }
-    static __createNewTeam(data) {
+    static __createNotification(data) {
         const _super = Object.create(null, {
-            createdbTeam: { get: () => super.createdbTeam }
+            createNotificationDB: { get: () => super.createNotificationDB }
         });
         return __awaiter(this, void 0, void 0, function* () {
             try {
-                let team = yield _super.createdbTeam.call(this, data);
-                if (!team) {
-                    return null;
-                }
-                return team;
+                let notification = _super.createNotificationDB.call(this, data);
+                return notification;
             }
             catch (error) {
-                logger_1.default.error({ createTeamError: error });
+                logger_1.default.error({ createNotificationError: error });
             }
         });
     }
 };
-exports.default = TeamController;
+exports.default = NotificationController;

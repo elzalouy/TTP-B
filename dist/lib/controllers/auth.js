@@ -76,9 +76,9 @@ const AuthController = class AuthController extends user_1.default {
                 yield (0, mail_1.default)({
                     token: token,
                     email: email,
-                    body: "",
+                    body: "Please click on this link to reset your password",
                     subject: "Forgot Password",
-                    path: "forgotPassword"
+                    path: "resetPassword"
                 });
                 return (0, successMsg_1.successMsg)("email_sent", 200);
             }

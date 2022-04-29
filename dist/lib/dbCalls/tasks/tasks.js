@@ -58,6 +58,22 @@ class TaskDB {
             return yield TaskDB.__getTask(id);
         });
     }
+    static getAllTasksDB(data) {
+        return __awaiter(this, void 0, void 0, function* () {
+            return yield TaskDB.__getAllTasks(data);
+        });
+    }
+    static __getAllTasks(data) {
+        return __awaiter(this, void 0, void 0, function* () {
+            try {
+                let tasks = task_1.default.find(data).populate('memberId');
+                return tasks;
+            }
+            catch (error) {
+                logger_1.default.error({ getAllTasksDBError: error });
+            }
+        });
+    }
     static __getTask(id) {
         return __awaiter(this, void 0, void 0, function* () {
             try {

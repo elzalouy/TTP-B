@@ -35,7 +35,7 @@ const sendMail = (data) => __awaiter(void 0, void 0, void 0, function* () {
             text: `${data.body} http://localhost:3000/${data.path}/${data.token}`,
             html: `<h1>
       <a href="http://localhost:3000/${data.path}/${data.token}">
-        click here
+      ${data.body}
       </a>
       </h1>`,
             auth: {
