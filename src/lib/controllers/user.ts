@@ -22,6 +22,10 @@ const UserController = class UserController extends UserDB {
     return await UserController.__updateUserPassword(data);
   }
 
+  static async resetPassword(data: PasswordUpdate) {
+    return await UserController.__resetUserPassword(data);
+  }
+
   static async deleteUserInfo(id: string) {
     return await UserController.__deleteUserDoc(id);
   }
@@ -87,6 +91,35 @@ const UserController = class UserController extends UserDB {
       if (!oldPasswordCheck) {
         return customeError("wrong_old_password", 409);
       }
+      // hash password
+      let passwordHash: string = await hashBassword(password);
+
+      let user = await super.updateUser({ id : token.user.id , password: passwordHash });
+      return user;
+    } catch (error) {
+      logger.error({ updatePasswordError: error });
+    }
+  }
+  
+  static async __resetUserPassword(data: PasswordUpdate) {
+    try {
+      const { id, password } = data;
+
+      const token: JwtPayload = await jwtVerify(id);
+
+      if (!token.user) {
+        return customeError("not_valid_token", 400);
+      }
+
+      if (passwordCheck(password)) {
+        return customeError("password_length", 400);
+      }
+
+      let findUser = await super.findUserById(token.user.id);
+      if (!findUser) {
+        return customeError("user_not_exist", 409);
+      }
+
       // hash password
       let passwordHash: string = await hashBassword(password);
 

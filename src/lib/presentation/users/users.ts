@@ -79,6 +79,26 @@ const UserReq = class UserReq extends UserController {
     }
   }
 
+  static async handleResetPassword(req: Request, res: Response) {
+    try {
+      let userData: PasswordUpdate = req.body;
+      logger.info({ userData });
+      if (userData) {
+        let user = await super.resetPassword(userData);
+        if (user) {
+          return res.send(user);
+        } else {
+          res.status(409).send(customeError("user_not_exist", 409));
+        }
+      } else {
+        return res.status(400).send(customeError("missing_data", 400));
+      }
+    } catch (error) {
+      logger.error({ handleUpdatePassword: error });
+      return res.status(500).send(customeError("server_error", 500));
+    }
+  }
+
   static async handleDeleteUser(req: Request, res: Response) {
     try {
       let _id = req.query._id;
