@@ -11,8 +11,8 @@ const NotificationDB = class NotificationDB {
     return await NotificationDB.__createNotification(data);
   }
 
-  static async updateNotificationDB(query:object,value:object) {
-    return await NotificationDB.__updateNotification(query,value);
+  static async updateNotificationDB(query: object, value: object) {
+    return await NotificationDB.__updateNotification(query, value);
   }
 
   static async getAllNotificationsDB(data: { id: string }) {
@@ -21,7 +21,6 @@ const NotificationDB = class NotificationDB {
   static async deleteNotificationDB(id: string) {
     return await NotificationDB.__deleteNotification(id);
   }
-
 
   static async __deleteNotification(id: string) {
     try {
@@ -36,8 +35,7 @@ const NotificationDB = class NotificationDB {
 
   static async __getAllNotifications(data: { id: string } = { id: "" }) {
     try {
-      console.log({ data });
-      let notification = await Notification.aggregate([
+      let notification: any = await Notification.aggregate([
         {
           $match: {
             $or: [
@@ -62,8 +60,25 @@ const NotificationDB = class NotificationDB {
             as: "adminUserID",
           },
         },
-        { $unwind: { path: '$projectManagerID', "preserveNullAndEmptyArrays": true } },
-        { $unwind: { path: '$adminUserID', "preserveNullAndEmptyArrays": true } },
+        { $unwind: { path: "$adminUserID", preserveNullAndEmptyArrays: true } },
+        {
+          $unwind: {
+            path: "$projectManagerID",
+            preserveNullAndEmptyArrays: true,
+          },
+        },
+        {
+          $project: {
+            _id: 1,
+            description: 1,
+            projectManagerID: 1,
+            adminViewed: 1,
+            projectManagerViewed: 1,
+            title: 1,
+            adminUserID:1,
+            createdAt:1
+          },
+        },
       ]);
       return notification;
     } catch (error) {
@@ -71,15 +86,16 @@ const NotificationDB = class NotificationDB {
     }
   }
 
-  static async __updateNotification(query:object,value:object) {
+  static async __updateNotification(query: object, value: object) {
     try {
-
-      let notification = await Notification.updateMany(query,value)
+      console.log({query,value})
+      let notification = await Notification.updateMany(query, value);
       // let notification = await Notification.findByIdAndUpdate(
       //   { _id: new ObjectID(id) },
       //   { ...data },
       //   { new: true }
       // );
+      console.log({notification})
       return notification;
     } catch (error) {
       logger.error({ updateNotificationDBError: error });

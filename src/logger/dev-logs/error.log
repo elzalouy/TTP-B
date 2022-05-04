@@ -13852,3 +13852,20 @@
   timestamp: '2022-04-27 00:33:06'
 >>>>>>> 4c1e017f05c85855606c68fd879835995ce3e1ab
 }
+{
+  message: {
+    getNotificationDBError: BSONTypeError: Argument passed in must be a string of 12 bytes or a string of 24 hex characters or an integer
+        at new BSONTypeError (D:\projects\unicode\ttp\TTP-Back\node_modules\bson\src\error.ts:16:5)
+        at new ObjectId (D:\projects\unicode\ttp\TTP-Back\node_modules\bson\src\objectid.ts:87:15)
+        at Function.<anonymous> (D:\projects\unicode\ttp\TTP-Back\src\lib\dbCalls\notification\notification.ts:42:35)
+        at Generator.next (<anonymous>)
+        at D:\projects\unicode\ttp\TTP-Back\src\lib\dbCalls\notification\notification.ts:8:71
+        at new Promise (<anonymous>)
+        at __awaiter (D:\projects\unicode\ttp\TTP-Back\src\lib\dbCalls\notification\notification.ts:4:12)
+        at Function.__getAllNotifications (D:\projects\unicode\ttp\TTP-Back\src\lib\dbCalls\notification\notification.ts:53:16)
+        at Function.<anonymous> (D:\projects\unicode\ttp\TTP-Back\src\lib\dbCalls\notification\notification.ts:19:33)
+        at Generator.next (<anonymous>)
+  },
+  level: 'error',
+  timestamp: '2022-05-04 22:33:59'
+}

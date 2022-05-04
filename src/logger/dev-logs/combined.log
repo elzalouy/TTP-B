@@ -21134,3 +21134,223 @@
   level: 'info',
   timestamp: '2022-04-27 19:21:09'
 }
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-05-04 18:10:41'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-05-04 18:13:05'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-05-04 19:13:04'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-05-04 20:03:32'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-05-04 20:09:00'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-05-04 20:12:00'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-05-04 20:16:11'
+}
+{
+  message: {
+    user: {
+      _id: new ObjectId("626b5dc63a4cc06bad3ef20f"),
+      name: 'zedan',
+      email: 'zed.saheer5@gmail.com',
+      password: '$2b$10$FecZxMKaZekkH.JsfO3O2.PsVA3G6nc36cFVvtZ6IaG6l6htmUd1S',
+      role: 'OM',
+      image: '',
+      trelloMemberId: '5cd742d89b200d471e827fc8',
+      userTeams: [],
+      type: 'admin',
+      trelloBoardId: '616577753fa7db4ef1e715ea',
+      createdAt: 2022-04-29T03:38:46.978Z,
+      updatedAt: 2022-05-01T14:02:53.850Z,
+      __v: 0
+    }
+  },
+  level: 'info',
+  timestamp: '2022-05-04 20:22:24'
+}
+{
+  message: {
+    user: {
+      _id: new ObjectId("626b5dc63a4cc06bad3ef20f"),
+      name: 'zedan',
+      email: 'zed.saheer5@gmail.com',
+      password: '$2b$10$FecZxMKaZekkH.JsfO3O2.PsVA3G6nc36cFVvtZ6IaG6l6htmUd1S',
+      role: 'OM',
+      image: '',
+      trelloMemberId: '5cd742d89b200d471e827fc8',
+      userTeams: [],
+      type: 'admin',
+      trelloBoardId: '616577753fa7db4ef1e715ea',
+      createdAt: 2022-04-29T03:38:46.978Z,
+      updatedAt: 2022-05-01T14:02:53.850Z,
+      __v: 0
+    }
+  },
+  level: 'info',
+  timestamp: '2022-05-04 22:22:29'
+}
+{
+  message: {
+    user: {
+      _id: new ObjectId("626b5dc63a4cc06bad3ef20f"),
+      name: 'zedan',
+      email: 'zed.saheer5@gmail.com',
+      password: '$2b$10$FecZxMKaZekkH.JsfO3O2.PsVA3G6nc36cFVvtZ6IaG6l6htmUd1S',
+      role: 'OM',
+      image: '',
+      trelloMemberId: '5cd742d89b200d471e827fc8',
+      userTeams: [],
+      type: 'admin',
+      trelloBoardId: '616577753fa7db4ef1e715ea',
+      createdAt: 2022-04-29T03:38:46.978Z,
+      updatedAt: 2022-05-01T14:02:53.850Z,
+      __v: 0
+    }
+  },
+  level: 'info',
+  timestamp: '2022-05-04 22:22:30'
+}
+{
+  message: {
+    user: {
+      _id: new ObjectId("626b5dc63a4cc06bad3ef20f"),
+      name: 'zedan',
+      email: 'zed.saheer5@gmail.com',
+      password: '$2b$10$FecZxMKaZekkH.JsfO3O2.PsVA3G6nc36cFVvtZ6IaG6l6htmUd1S',
+      role: 'OM',
+      image: '',
+      trelloMemberId: '5cd742d89b200d471e827fc8',
+      userTeams: [],
+      type: 'admin',
+      trelloBoardId: '616577753fa7db4ef1e715ea',
+      createdAt: 2022-04-29T03:38:46.978Z,
+      updatedAt: 2022-05-01T14:02:53.850Z,
+      __v: 0
+    }
+  },
+  level: 'info',
+  timestamp: '2022-05-04 22:22:58'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-05-04 22:24:24'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-05-04 22:25:15'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-05-04 22:26:53'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-05-04 22:31:56'
+}
+{
+  message: {
+    getNotificationDBError: BSONTypeError: Argument passed in must be a string of 12 bytes or a string of 24 hex characters or an integer
+        at new BSONTypeError (D:\projects\unicode\ttp\TTP-Back\node_modules\bson\src\error.ts:16:5)
+        at new ObjectId (D:\projects\unicode\ttp\TTP-Back\node_modules\bson\src\objectid.ts:87:15)
+        at Function.<anonymous> (D:\projects\unicode\ttp\TTP-Back\src\lib\dbCalls\notification\notification.ts:42:35)
+        at Generator.next (<anonymous>)
+        at D:\projects\unicode\ttp\TTP-Back\src\lib\dbCalls\notification\notification.ts:8:71
+        at new Promise (<anonymous>)
+        at __awaiter (D:\projects\unicode\ttp\TTP-Back\src\lib\dbCalls\notification\notification.ts:4:12)
+        at Function.__getAllNotifications (D:\projects\unicode\ttp\TTP-Back\src\lib\dbCalls\notification\notification.ts:53:16)
+        at Function.<anonymous> (D:\projects\unicode\ttp\TTP-Back\src\lib\dbCalls\notification\notification.ts:19:33)
+        at Generator.next (<anonymous>)
+  },
+  level: 'error',
+  timestamp: '2022-05-04 22:33:59'
+}
+{
+  message: {
+    user: {
+      _id: new ObjectId("626b5dc63a4cc06bad3ef20f"),
+      name: 'zedan',
+      email: 'zed.saheer5@gmail.com',
+      password: '$2b$10$FecZxMKaZekkH.JsfO3O2.PsVA3G6nc36cFVvtZ6IaG6l6htmUd1S',
+      role: 'OM',
+      image: '',
+      trelloMemberId: '5cd742d89b200d471e827fc8',
+      userTeams: [],
+      type: 'admin',
+      trelloBoardId: '616577753fa7db4ef1e715ea',
+      createdAt: 2022-04-29T03:38:46.978Z,
+      updatedAt: 2022-05-01T14:02:53.850Z,
+      __v: 0
+    }
+  },
+  level: 'info',
+  timestamp: '2022-05-04 22:36:22'
+}
+{
+  message: {
+    user: {
+      _id: new ObjectId("626b5dc63a4cc06bad3ef20f"),
+      name: 'zedan',
+      email: 'zed.saheer5@gmail.com',
+      password: '$2b$10$FecZxMKaZekkH.JsfO3O2.PsVA3G6nc36cFVvtZ6IaG6l6htmUd1S',
+      role: 'OM',
+      image: '',
+      trelloMemberId: '5cd742d89b200d471e827fc8',
+      userTeams: [],
+      type: 'admin',
+      trelloBoardId: '616577753fa7db4ef1e715ea',
+      createdAt: 2022-04-29T03:38:46.978Z,
+      updatedAt: 2022-05-01T14:02:53.850Z,
+      __v: 0
+    }
+  },
+  level: 'info',
+  timestamp: '2022-05-04 22:38:58'
+}
