@@ -30,9 +30,9 @@ const sendMail = async (data: Data) => {
       from: process.env.EMAIL_ADDRESS,
       to: data.email,
       subject: `${data.subject} TTP`,
-      text: `${data.body} http://localhost:3000/${data.path}/${data.token}`,
+      text: `${data.body} ${process.env.FRONT_END_URL}/${data.path}/${data.token}`,
       html: `<h1>
-      <a href="http://localhost:3000/${data.path}/${data.token}">
+      <a href="${process.env.FRONT_END_URL}/${data.path}/${data.token}">
       ${data.body}
       </a>
       </h1>`,

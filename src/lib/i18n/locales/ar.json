@@ -41,19 +41,19 @@
 	"search_Proejcts_result_null": "لا يوجد مشاريع بهذا الاسم",
 	"create_category_error": "هناك خطا اثناء الادخال",
 	"get_tasks_error": "نعتذر على عدم المقدرة للبحث عن المهام خاصتكم",
-	"department_missing":"يجب اختيار قسم",
-	
-	"// client error //":"",
+	"department_missing": "يجب اختيار قسم",
+	"// client error //": "",
 	"create_client_error": "create_client_error",
 	"get_client_error": "get_client_error",
 	"update_client_error": "update_client_error",
 	"delete_client_error": "delete_client_error",
 	"delete_client_success": "delete_client_success",
-
-  "// notification error":"",
-  "create_notifi_error": "create_notifi_error",
+	"// notification error": "",
+	"create_notifi_error": "create_notifi_error",
 	"get_notifi_error": "get_notifi_error",
 	"update_notifi_error": "update_notifi_error",
 	"delete_notifi_error": "delete_notifi_error",
-	"delete_notifi_success": "delete_notifi_success"
+	"delete_notifi_success": "delete_notifi_success",
+	"user_already_exist": "user_already_exist",
+	"user_not_exist": "user_not_exist"
 }

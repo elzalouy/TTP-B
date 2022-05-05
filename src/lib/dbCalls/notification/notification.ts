@@ -15,7 +15,11 @@ const NotificationDB = class NotificationDB {
     return await NotificationDB.__updateNotification(query, value);
   }
 
-  static async getAllNotificationsDB(data: { id: string }) {
+  static async getAllNotificationsDB(data: {
+    id: string;
+    skip?: string;
+    limit?: string;
+  }) {
     return await NotificationDB.__getAllNotifications(data);
   }
   static async deleteNotificationDB(id: string) {
@@ -33,8 +37,11 @@ const NotificationDB = class NotificationDB {
     }
   }
 
-  static async __getAllNotifications(data: { id: string } = { id: "" }) {
+  static async __getAllNotifications(
+    data: { id: string; skip?: string; limit?: string } = { id: "" }
+  ) {
     try {
+      logger.info({ data });
       let notification: any = await Notification.aggregate([
         {
           $match: {
@@ -68,6 +75,9 @@ const NotificationDB = class NotificationDB {
           },
         },
         {
+          $sort: { createdAt: 1 },
+        },
+        {
           $project: {
             _id: 1,
             description: 1,
@@ -75,9 +85,15 @@ const NotificationDB = class NotificationDB {
             adminViewed: 1,
             projectManagerViewed: 1,
             title: 1,
-            adminUserID:1,
-            createdAt:1
+            adminUserID: 1,
+            createdAt: 1,
           },
+        },
+        {
+          $skip: data.skip ? Number(data.skip) : 0,
+        },
+        {
+          $limit: data.limit ? Number(data.limit) : 10,
         },
       ]);
       return notification;
@@ -88,14 +104,14 @@ const NotificationDB = class NotificationDB {
 
   static async __updateNotification(query: object, value: object) {
     try {
-      console.log({query,value})
+      console.log({ query, value });
       let notification = await Notification.updateMany(query, value);
       // let notification = await Notification.findByIdAndUpdate(
       //   { _id: new ObjectID(id) },
       //   { ...data },
       //   { new: true }
       // );
-      console.log({notification})
+      console.log({ notification });
       return notification;
     } catch (error) {
       logger.error({ updateNotificationDBError: error });
