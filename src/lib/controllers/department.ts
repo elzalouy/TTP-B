@@ -175,6 +175,7 @@ const DepartmentController = class DepartmentController extends DepartmentBD {
       let reviewListId: string = "";
       let notClearListId: string = "";
       let canceldListId: string = "";
+      let departmentWindowId:string=""
       // create board
       let boardData: any = await BoardController.createNewBoard(
         data.name,
@@ -190,6 +191,12 @@ const DepartmentController = class DepartmentController extends DepartmentBD {
       let departmentCreate = await super.createdbDepartment(data);
 
       // create main list on board
+      let cancel: { id: string } = await BoardController.addListToBoard(
+        boardId,
+        "cancel"
+      );
+      canceldListId = cancel.id;
+
       let done: { id: string } = await BoardController.addListToBoard(
         boardId,
         "done"
@@ -221,17 +228,19 @@ const DepartmentController = class DepartmentController extends DepartmentBD {
       );
       defaultListId = defaultList.id;
 
+      let departmentWindow: { id: string } = await BoardController.addListToBoard(
+        boardId,
+        "Department window"
+      );
+      departmentWindowId = departmentWindow.id;
+
       let unClear: { id: string } = await BoardController.addListToBoard(
         boardId,
         "Unclear brief"
       );
       notClearListId = unClear.id;
 
-      let cancel: { id: string } = await BoardController.addListToBoard(
-        boardId,
-        "cancel"
-      );
-      canceldListId = cancel.id;
+   
 
       // create webhook for list
       const listId: string[] = [
@@ -241,6 +250,7 @@ const DepartmentController = class DepartmentController extends DepartmentBD {
         reviewListId,
         notClearListId,
         canceldListId,
+        departmentWindowId
       ];
 
       let webhookCreate = listId.map(async (id) => {
@@ -256,6 +266,7 @@ const DepartmentController = class DepartmentController extends DepartmentBD {
         reviewListId,
         notClearListId,
         canceldListId,
+        departmentWindowId,
         teamsId: teamListIds,
       };
       let department = await DepartmentController.__createTeamList(
