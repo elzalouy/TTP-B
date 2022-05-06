@@ -9,6 +9,17 @@ import { customeError } from "../../utils/errorUtils";
 
 const UserReq = class UserReq extends UserController {
 
+  static async handleResendMail(req: any, res: Response) {
+    try {
+      let {id} = req.body;
+      await super.resendNewUserMail(id);
+      return res.status(200).send();
+    } catch (error) {
+      logger.error({ handleGetUserInfoError: error });
+      return res.status(500).send(customeError("server_error", 500));
+    }
+  }
+
   static async handleGetUserInfo(req: any, res: Response) {
     try {
       let id: string = req.query.id;
@@ -19,7 +30,6 @@ const UserReq = class UserReq extends UserController {
       return res.status(500).send(customeError("server_error", 500));
     }
   }
-
 
   static async handleCreatUser(req: Request, res: Response) {
     try {
