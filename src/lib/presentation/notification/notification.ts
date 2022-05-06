@@ -24,18 +24,20 @@ const NotificationReq = class NotificationReq extends NotificationController {
   static async handleUpdateNotification(req: Request, res: Response) {
     try {
       let notificationData: NotificationData = req.body;
+      logger.info({notificationData})
       if (!notificationData) {
         return res.status(400).send(customeError("update_notifi_error", 400));
       }
       let Notification
-      if(notificationData.role === 'project manager' ){
+      if(notificationData.role === 'PM' ){
 
         Notification = await super.updateNotification({projectManagerID:new ObjectId(notificationData._id)},{projectManagerViewed:true});
       } 
 
-      if(notificationData.role === 'Operation manager'){
+      if(notificationData.role === 'OM'){
         Notification = await super.updateNotification({adminUserID:new ObjectId(notificationData._id)},{adminViewed:true});
       }
+      logger.info({Notification})
 
       if (Notification) {
         return res.status(200).send(Notification);
@@ -69,8 +71,8 @@ const NotificationReq = class NotificationReq extends NotificationController {
 
   static async handleGetAllNotifications(req: Request, res: Response) {
     try {
-      let id:any = req.query.id
-      let Notification = await super.getAllNotifications({id});
+      let {id,skip,limit}:any = req.query
+      let Notification = await super.getAllNotifications({id,skip,limit});
       if (Notification) {
         return res.status(200).send(Notification);
       } else {
