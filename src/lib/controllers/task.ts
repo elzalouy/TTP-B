@@ -98,15 +98,18 @@ class TaskController extends TaskDB {
             title: `${cardName} status has been changed to Shared`,
             description: `${cardName} status has been changed to shared by ${userName}`,
             projectManagerID: projectData.projectManager,
-            projectID:targetTask.projectId,
-            adminUserID:projectData.adminId
+            projectID: targetTask.projectId,
+            adminUserID: projectData.adminId,
           });
 
           // send notification to all the admin
           io.to("admin room").emit("notification update", createNotifi);
 
           // send notification to specific project manager
-          io.to(`user-${projectData.projectManager}`).emit("notification update", createNotifi)
+          io.to(`user-${projectData.projectManager}`).emit(
+            "notification update",
+            createNotifi
+          );
         }
       } else {
         targetTask = await TaskDB.updateOneTaskDB(
