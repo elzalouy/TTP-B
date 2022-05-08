@@ -9,6 +9,17 @@ import { customeError } from "../../utils/errorUtils";
 
 const UserReq = class UserReq extends UserController {
 
+  static async handleResendMail(req: any, res: Response) {
+    try {
+      let {id} = req.body;
+      await super.resendNewUserMail(id);
+      return res.status(200).send();
+    } catch (error) {
+      logger.error({ handleGetUserInfoError: error });
+      return res.status(500).send(customeError("server_error", 500));
+    }
+  }
+
   static async handleGetUserInfo(req: any, res: Response) {
     try {
       let id: string = req.query.id;
@@ -19,7 +30,6 @@ const UserReq = class UserReq extends UserController {
       return res.status(500).send(customeError("server_error", 500));
     }
   }
-
 
   static async handleCreatUser(req: Request, res: Response) {
     try {
@@ -65,6 +75,26 @@ const UserReq = class UserReq extends UserController {
       logger.info({ userData });
       if (userData) {
         let user = await super.updatePassword(userData);
+        if (user) {
+          return res.send(user);
+        } else {
+          res.status(409).send(customeError("user_not_exist", 409));
+        }
+      } else {
+        return res.status(400).send(customeError("missing_data", 400));
+      }
+    } catch (error) {
+      logger.error({ handleUpdatePassword: error });
+      return res.status(500).send(customeError("server_error", 500));
+    }
+  }
+
+  static async handleResetPassword(req: Request, res: Response) {
+    try {
+      let userData: PasswordUpdate = req.body;
+      logger.info({ userData });
+      if (userData) {
+        let user = await super.resetPassword(userData);
         if (user) {
           return res.send(user);
         } else {

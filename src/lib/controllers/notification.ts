@@ -11,7 +11,7 @@ const NotificationController = class NotificationController extends Notification
     return await NotificationController.__updateNotification(data,value);
   }
 
-  static async getAllNotifications(data:{id:string}) {
+  static async getAllNotifications(data:{id:string,skip?:string,limit?:string}) {
     return await NotificationController.__getAllNotifications(data);
   }
   static async deleteNotification(id: string) {
@@ -27,7 +27,7 @@ const NotificationController = class NotificationController extends Notification
     }
   }
 
-  static async __getAllNotifications(data:{id:string}) {
+  static async __getAllNotifications(data:{id:string,skip?:string,limit?:string}) {
     try {
       let notification = await super.getAllNotificationsDB(data);
       return notification;

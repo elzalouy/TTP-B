@@ -1,145 +1,127 @@
 {
   message: {
-    updateTaskDBError: CastError: Cast to ObjectId failed for value "{ _id: undefined }" (type Object) at path "_id" for model "tasks"
-        at model.Query.exec (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/query.js:4715:21)
-        at model.Query.Query.then (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/query.js:4814:15)
-        at runMicrotasks (<anonymous>)
+    DeleteTasksByProjectId: FetchError: invalid json response body at https://api.trello.com/1/cards/62727d700061a92a83447b5c?key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68 reason: Unexpected token T in JSON at position 0
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/node-fetch/lib/index.js:273:32
         at processTicksAndRejections (node:internal/process/task_queues:96:5) {
-      messageFormat: undefined,
-      stringValue: '"{ _id: undefined }"',
-      kind: 'ObjectId',
-      value: { _id: undefined },
-      path: '_id',
-      reason: BSONTypeError: Argument passed in must be a string of 12 bytes or a string of 24 hex characters or an integer
-          at new BSONTypeError (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/bson/src/error.ts:16:5)
-          at new ObjectId (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/bson/src/objectid.ts:87:15)
-          at castObjectId (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/cast/objectid.js:24:12)
-          at ObjectId.cast (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/schema/objectid.js:247:12)
-          at ObjectId.SchemaType.applySetters (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/schematype.js:1189:12)
-          at ObjectId.SchemaType._castForQuery (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/schematype.js:1623:15)
-          at ObjectId.SchemaType.castForQuery (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/schematype.js:1613:15)
-          at ObjectId.SchemaType.castForQueryWrapper (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/schematype.js:1590:20)
-          at cast (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/cast.js:288:34)
-          at model.Query.Query.cast (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/query.js:5137:12),
-      valueType: 'Object'
+      type: 'invalid-json'
     }
   },
   level: 'error',
-  timestamp: '2022-05-04 08:42:59'
+  timestamp: '2022-05-07 16:57:54'
 }
 {
   message: {
-    updateTaskDBError: CastError: Cast to ObjectId failed for value "{ _id: undefined }" (type Object) at path "_id" for model "tasks"
-        at model.Query.exec (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/query.js:4715:21)
-        at model.Query.Query.then (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/query.js:4814:15)
-        at runMicrotasks (<anonymous>)
-        at processTicksAndRejections (node:internal/process/task_queues:96:5) {
-      messageFormat: undefined,
-      stringValue: '"{ _id: undefined }"',
-      kind: 'ObjectId',
-      value: { _id: undefined },
-      path: '_id',
-      reason: BSONTypeError: Argument passed in must be a string of 12 bytes or a string of 24 hex characters or an integer
-          at new BSONTypeError (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/bson/src/error.ts:16:5)
-          at new ObjectId (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/bson/src/objectid.ts:87:15)
-          at castObjectId (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/cast/objectid.js:24:12)
-          at ObjectId.cast (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/schema/objectid.js:247:12)
-          at ObjectId.SchemaType.applySetters (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/schematype.js:1189:12)
-          at ObjectId.SchemaType._castForQuery (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/schematype.js:1623:15)
-          at ObjectId.SchemaType.castForQuery (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/schematype.js:1613:15)
-          at ObjectId.SchemaType.castForQueryWrapper (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/schematype.js:1590:20)
-          at cast (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/cast.js:288:34)
-          at model.Query.Query.cast (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/query.js:5137:12),
-      valueType: 'Object'
-    }
+    handleDeleteTasksError: TypeError: Cannot read properties of undefined (reading '_id')
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/presentation/task/task.ts:108:24
+        at Generator.next (<anonymous>)
+        at fulfilled (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/presentation/task/task.ts:5:58)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5)
   },
   level: 'error',
-  timestamp: '2022-05-04 08:56:09'
+  timestamp: '2022-05-07 16:57:54'
 }
 {
   message: {
-    updateTaskDBError: CastError: Cast to ObjectId failed for value "{ _id: undefined }" (type Object) at path "_id" for model "tasks"
-        at model.Query.exec (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/query.js:4715:21)
-        at model.Query.Query.then (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/query.js:4814:15)
-        at runMicrotasks (<anonymous>)
+    DeleteTasksByProjectId: FetchError: invalid json response body at https://api.trello.com/1/cards/62727d700061a92a83447b5c?key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68 reason: Unexpected token T in JSON at position 0
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/node-fetch/lib/index.js:273:32
         at processTicksAndRejections (node:internal/process/task_queues:96:5) {
-      messageFormat: undefined,
-      stringValue: '"{ _id: undefined }"',
-      kind: 'ObjectId',
-      value: { _id: undefined },
-      path: '_id',
-      reason: BSONTypeError: Argument passed in must be a string of 12 bytes or a string of 24 hex characters or an integer
-          at new BSONTypeError (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/bson/src/error.ts:16:5)
-          at new ObjectId (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/bson/src/objectid.ts:87:15)
-          at castObjectId (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/cast/objectid.js:24:12)
-          at ObjectId.cast (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/schema/objectid.js:247:12)
-          at ObjectId.SchemaType.applySetters (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/schematype.js:1189:12)
-          at ObjectId.SchemaType._castForQuery (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/schematype.js:1623:15)
-          at ObjectId.SchemaType.castForQuery (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/schematype.js:1613:15)
-          at ObjectId.SchemaType.castForQueryWrapper (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/schematype.js:1590:20)
-          at cast (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/cast.js:288:34)
-          at model.Query.Query.cast (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/query.js:5137:12),
-      valueType: 'Object'
+      type: 'invalid-json'
     }
   },
   level: 'error',
-  timestamp: '2022-05-04 09:01:14'
+  timestamp: '2022-05-07 16:58:12'
 }
 {
   message: {
-    updateTaskDBError: CastError: Cast to ObjectId failed for value "{ _id: undefined }" (type Object) at path "_id" for model "tasks"
-        at model.Query.exec (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/query.js:4715:21)
-        at model.Query.Query.then (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/query.js:4814:15)
-        at runMicrotasks (<anonymous>)
-        at processTicksAndRejections (node:internal/process/task_queues:96:5) {
-      messageFormat: undefined,
-      stringValue: '"{ _id: undefined }"',
-      kind: 'ObjectId',
-      value: { _id: undefined },
-      path: '_id',
-      reason: BSONTypeError: Argument passed in must be a string of 12 bytes or a string of 24 hex characters or an integer
-          at new BSONTypeError (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/bson/src/error.ts:16:5)
-          at new ObjectId (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/bson/src/objectid.ts:87:15)
-          at castObjectId (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/cast/objectid.js:24:12)
-          at ObjectId.cast (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/schema/objectid.js:247:12)
-          at ObjectId.SchemaType.applySetters (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/schematype.js:1189:12)
-          at ObjectId.SchemaType._castForQuery (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/schematype.js:1623:15)
-          at ObjectId.SchemaType.castForQuery (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/schematype.js:1613:15)
-          at ObjectId.SchemaType.castForQueryWrapper (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/schematype.js:1590:20)
-          at cast (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/cast.js:288:34)
-          at model.Query.Query.cast (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/query.js:5137:12),
-      valueType: 'Object'
-    }
+    handleDeleteTasksError: TypeError: Cannot read properties of undefined (reading '_id')
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/presentation/task/task.ts:108:24
+        at Generator.next (<anonymous>)
+        at fulfilled (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/presentation/task/task.ts:5:58)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5)
   },
   level: 'error',
-  timestamp: '2022-05-04 09:03:02'
+  timestamp: '2022-05-07 16:58:12'
 }
 {
   message: {
-    updateTaskDBError: CastError: Cast to ObjectId failed for value "{ _id: undefined }" (type Object) at path "_id" for model "tasks"
-        at model.Query.exec (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/query.js:4715:21)
-        at model.Query.Query.then (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/query.js:4814:15)
-        at runMicrotasks (<anonymous>)
+    getTeamsError: FetchError: invalid json response body at https://api.trello.com/1/cards?idList=6265e5cb84eb1b4debcbed9e&name=UI/UX%20TASK&attachments=true&key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68 reason: Unexpected token c in JSON at position 0
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/node-fetch/lib/index.js:273:32
         at processTicksAndRejections (node:internal/process/task_queues:96:5) {
-      messageFormat: undefined,
-      stringValue: '"{ _id: undefined }"',
-      kind: 'ObjectId',
-      value: { _id: undefined },
-      path: '_id',
-      reason: BSONTypeError: Argument passed in must be a string of 12 bytes or a string of 24 hex characters or an integer
-          at new BSONTypeError (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/bson/src/error.ts:16:5)
-          at new ObjectId (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/bson/src/objectid.ts:87:15)
-          at castObjectId (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/cast/objectid.js:24:12)
-          at ObjectId.cast (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/schema/objectid.js:247:12)
-          at ObjectId.SchemaType.applySetters (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/schematype.js:1189:12)
-          at ObjectId.SchemaType._castForQuery (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/schematype.js:1623:15)
-          at ObjectId.SchemaType.castForQuery (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/schematype.js:1613:15)
-          at ObjectId.SchemaType.castForQueryWrapper (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/schematype.js:1590:20)
-          at cast (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/cast.js:288:34)
-          at model.Query.Query.cast (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/query.js:5137:12),
-      valueType: 'Object'
+      type: 'invalid-json'
     }
   },
   level: 'error',
-  timestamp: '2022-05-04 09:03:52'
+  timestamp: '2022-05-08 11:30:56'
+}
+{
+  message: {
+    getTeamsError: FetchError: invalid json response body at https://api.trello.com/1/cards?idList=6265e5cb84eb1b4debcbed9e&name=New%20Task&attachments=true&key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68 reason: Unexpected token c in JSON at position 0
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/node-fetch/lib/index.js:273:32
+        at runMicrotasks (<anonymous>)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+      type: 'invalid-json'
+    }
+  },
+  level: 'error',
+  timestamp: '2022-05-08 11:44:47'
+}
+{
+  message: {
+    getTeamsError: FetchError: invalid json response body at https://api.trello.com/1/cards?idList=6265e5cb84eb1b4debcbed9e&name=Task%201&attachments=true&key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68 reason: Unexpected token c in JSON at position 0
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/node-fetch/lib/index.js:273:32
+        at runMicrotasks (<anonymous>)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+      type: 'invalid-json'
+    }
+  },
+  level: 'error',
+  timestamp: '2022-05-08 11:48:46'
+}
+{
+  message: {
+    getTeamsError: FetchError: invalid json response body at https://api.trello.com/1/cards?idList=6265e5cb84eb1b4debcbed9e&name=Task%201&attachments=true&key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68 reason: Unexpected token c in JSON at position 0
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/node-fetch/lib/index.js:273:32
+        at runMicrotasks (<anonymous>)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+      type: 'invalid-json'
+    }
+  },
+  level: 'error',
+  timestamp: '2022-05-08 11:50:48'
+}
+{
+  message: {
+    getTeamsError: FetchError: invalid json response body at https://api.trello.com/1/cards?idList=6265e5cb84eb1b4debcbed9e&name=New%20Tasj&attachments=true&key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68 reason: Unexpected token c in JSON at position 0
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/node-fetch/lib/index.js:273:32
+        at runMicrotasks (<anonymous>)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+      type: 'invalid-json'
+    }
+  },
+  level: 'error',
+  timestamp: '2022-05-08 11:53:59'
+}
+{
+  message: {
+    getTeamsError: FetchError: invalid json response body at https://api.trello.com/1/cards?idList=6265e5cb84eb1b4debcbed9e&name=New%20Task&attachments=true&key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68 reason: Unexpected token c in JSON at position 0
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/node-fetch/lib/index.js:273:32
+        at runMicrotasks (<anonymous>)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+      type: 'invalid-json'
+    }
+  },
+  level: 'error',
+  timestamp: '2022-05-08 12:05:54'
+}
+{
+  message: {
+    getTeamsError: FetchError: invalid json response body at https://api.trello.com/1/cards?idList=6265e5cb84eb1b4debcbed9e&name=New%20Task&attachments=true&key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68 reason: Unexpected token c in JSON at position 0
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/node-fetch/lib/index.js:273:32
+        at runMicrotasks (<anonymous>)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+      type: 'invalid-json'
+    }
+  },
+  level: 'error',
+  timestamp: '2022-05-08 12:06:00'
 }

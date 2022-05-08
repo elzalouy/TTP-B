@@ -186,7 +186,7 @@ class TaskController extends TaskDB {
     try {
       let tasks = await super.getTasksByIdsDB(ids);
       tasks.forEach(async (item) => {
-        await BoardController.deleteCard(item.cardId);
+        BoardController.deleteCard(item.cardId);
       });
       return await super.deleteTasksDB(ids);
     } catch (error) {

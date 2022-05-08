@@ -33,6 +33,9 @@ const DepartmentSchema: Schema = new Schema<DepartmentInfo>( // department
     reviewListId: {
       type: String,
     },
+    departmentWindowId:{
+      type:String
+    },
     mainBoard: {
       type: Boolean,
       default: false,
