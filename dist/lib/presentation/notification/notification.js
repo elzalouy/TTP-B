@@ -45,16 +45,18 @@ const NotificationReq = class NotificationReq extends notification_1.default {
         return __awaiter(this, void 0, void 0, function* () {
             try {
                 let notificationData = req.body;
+                logger_1.default.info({ notificationData });
                 if (!notificationData) {
                     return res.status(400).send((0, errorUtils_1.customeError)("update_notifi_error", 400));
                 }
                 let Notification;
-                if (notificationData.role === 'project manager') {
+                if (notificationData.role === 'PM') {
                     Notification = yield _super.updateNotification.call(this, { projectManagerID: new mongodb_1.ObjectId(notificationData._id) }, { projectManagerViewed: true });
                 }
-                if (notificationData.role === 'Operation manager') {
+                if (notificationData.role === 'OM') {
                     Notification = yield _super.updateNotification.call(this, { adminUserID: new mongodb_1.ObjectId(notificationData._id) }, { adminViewed: true });
                 }
+                logger_1.default.info({ Notification });
                 if (Notification) {
                     return res.status(200).send(Notification);
                 }
@@ -98,8 +100,8 @@ const NotificationReq = class NotificationReq extends notification_1.default {
         });
         return __awaiter(this, void 0, void 0, function* () {
             try {
-                let id = req.query.id;
-                let Notification = yield _super.getAllNotifications.call(this, { id });
+                let { id, skip, limit } = req.query;
+                let Notification = yield _super.getAllNotifications.call(this, { id, skip, limit });
                 if (Notification) {
                     return res.status(200).send(Notification);
                 }

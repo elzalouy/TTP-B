@@ -33,6 +33,9 @@ const DepartmentSchema = new mongoose_1.Schema(// department
     reviewListId: {
         type: String,
     },
+    departmentWindowId: {
+        type: String
+    },
     mainBoard: {
         type: Boolean,
         default: false,

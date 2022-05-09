@@ -40,7 +40,7 @@ const mongoDB = () => __awaiter(void 0, void 0, void 0, function* () {
                 name: "abdulaziz qannam",
                 email: process.env.SUPER_ADMIN_EMAIL,
                 password: passwordHash,
-                role: "Operation manager",
+                role: "OM",
             };
             yield user_1.default.createUser(data);
             console.log("Done");

@@ -28,7 +28,6 @@ const TechMemberController = class TechMemberController extends TechMemberDB {
       logger.error({ getTechMemberError: error });
     }
   }
-
   static async __updateMember(data: TechMemberData) {
     try {
       const { boardId, trelloMemberId, listId, newBoardId, name } = data;
@@ -51,6 +50,7 @@ const TechMemberController = class TechMemberController extends TechMemberDB {
         if (checkExsit) {
           return;
         }
+
         await TechMemberController.__removeMemberAndList(
           listId,
           boardId,
@@ -70,6 +70,7 @@ const TechMemberController = class TechMemberController extends TechMemberDB {
       if (!newBoardId) {
         listIdValue = listId;
       }
+
       // Set list id to null
       data.listId = listIdValue;
       delete data.newBoardId;
@@ -89,7 +90,6 @@ const TechMemberController = class TechMemberController extends TechMemberDB {
       if (boardId) {
         let checkExsit: boolean =
           await TechMemberController.__checkBoardListName(boardId, name);
-
         if (checkExsit) {
           return customeError("list_already_exsit", 400);
         }

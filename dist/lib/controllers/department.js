@@ -188,6 +188,7 @@ const DepartmentController = class DepartmentController extends department_1.def
                 let reviewListId = "";
                 let notClearListId = "";
                 let canceldListId = "";
+                let departmentWindowId = "";
                 // create board
                 let boardData = yield boards_1.default.createNewBoard(data.name, data.color);
                 boardId = boardData.id;
@@ -198,6 +199,8 @@ const DepartmentController = class DepartmentController extends department_1.def
                 };
                 let departmentCreate = yield _super.createdbDepartment.call(this, data);
                 // create main list on board
+                let cancel = yield boards_1.default.addListToBoard(boardId, "cancel");
+                canceldListId = cancel.id;
                 let done = yield boards_1.default.addListToBoard(boardId, "done");
                 doneListId = done.id;
                 let shared = yield boards_1.default.addListToBoard(boardId, "Shared");
@@ -208,10 +211,10 @@ const DepartmentController = class DepartmentController extends department_1.def
                 let teamListIds = yield DepartmentController.__createTeamWebhookAndList(teams, boardId, mainBoard);
                 let defaultList = yield boards_1.default.addListToBoard(boardId, "Tasks Board");
                 defaultListId = defaultList.id;
+                let departmentWindow = yield boards_1.default.addListToBoard(boardId, "Department window");
+                departmentWindowId = departmentWindow.id;
                 let unClear = yield boards_1.default.addListToBoard(boardId, "Unclear brief");
                 notClearListId = unClear.id;
-                let cancel = yield boards_1.default.addListToBoard(boardId, "cancel");
-                canceldListId = cancel.id;
                 // create webhook for list
                 const listId = [
                     defaultListId,
@@ -220,6 +223,7 @@ const DepartmentController = class DepartmentController extends department_1.def
                     reviewListId,
                     notClearListId,
                     canceldListId,
+                    departmentWindowId
                 ];
                 let webhookCreate = listId.map((id) => __awaiter(this, void 0, void 0, function* () {
                     return yield boards_1.default.createWebHook(id);
@@ -232,6 +236,7 @@ const DepartmentController = class DepartmentController extends department_1.def
                     reviewListId,
                     notClearListId,
                     canceldListId,
+                    departmentWindowId,
                     teamsId: teamListIds,
                 };
                 let department = yield DepartmentController.__createTeamList(teams, departmentCreate._id, data);

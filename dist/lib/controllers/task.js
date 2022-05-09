@@ -112,7 +112,7 @@ class TaskController extends tasks_1.default {
                             description: `${cardName} status has been changed to shared by ${userName}`,
                             projectManagerID: projectData.projectManager,
                             projectID: targetTask.projectId,
-                            adminUserID: projectData.adminId
+                            adminUserID: projectData.adminId,
                         });
                         // send notification to all the admin
                         server_1.io.to("admin room").emit("notification update", createNotifi);
@@ -220,7 +220,7 @@ class TaskController extends tasks_1.default {
             try {
                 let tasks = yield _super.getTasksByIdsDB.call(this, ids);
                 tasks.forEach((item) => __awaiter(this, void 0, void 0, function* () {
-                    yield boards_1.default.deleteCard(item.cardId);
+                    boards_1.default.deleteCard(item.cardId);
                 }));
                 return yield _super.deleteTasksDB.call(this, ids);
             }

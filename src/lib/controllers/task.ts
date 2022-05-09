@@ -144,19 +144,21 @@ class TaskController extends TaskDB {
       // Add task to the list
       let createdCard: { id: string } | any =
         await BoardController.createCardInList(data.listId, data.name, file);
-      data.cardId = createdCard.id;
-      // Check if there is attachment
-      let attachment;
-      if (file) {
-        attachment = await BoardController.createAttachmentOnCard(
-          createdCard.id,
-          file
-        );
-      }
-      // Add task to DB
-      delete data.listId;
-      let task = await super.createTaskDB(data);
-      return { task, createdCard, attachment };
+      if (createdCard) {
+        data.cardId = createdCard.id;
+        // Check if there is attachment
+        let attachment;
+        if (file) {
+          attachment = await BoardController.createAttachmentOnCard(
+            createdCard.id,
+            file
+          );
+        }
+        // Add task to DB
+        delete data.listId;
+        let task = await super.createTaskDB(data);
+        return { task, createdCard, attachment };
+      } else throw "Error while creating Card in Trello";
     } catch (error) {
       logger.error({ getTeamsError: error });
     }

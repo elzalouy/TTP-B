@@ -52,7 +52,7 @@ const NotificationDB = class NotificationDB {
     static __getAllNotifications(data = { id: "" }) {
         return __awaiter(this, void 0, void 0, function* () {
             try {
-                console.log({ data });
+                logger_1.default.info({ data });
                 let notification = yield Notification_1.default.aggregate([
                     {
                         $match: {
@@ -78,8 +78,34 @@ const NotificationDB = class NotificationDB {
                             as: "adminUserID",
                         },
                     },
-                    { $unwind: { path: '$projectManagerID', "preserveNullAndEmptyArrays": true } },
-                    { $unwind: { path: '$adminUserID', "preserveNullAndEmptyArrays": true } },
+                    { $unwind: { path: "$adminUserID", preserveNullAndEmptyArrays: true } },
+                    {
+                        $unwind: {
+                            path: "$projectManagerID",
+                            preserveNullAndEmptyArrays: true,
+                        },
+                    },
+                    {
+                        $sort: { createdAt: 1 },
+                    },
+                    {
+                        $project: {
+                            _id: 1,
+                            description: 1,
+                            projectManagerID: 1,
+                            adminViewed: 1,
+                            projectManagerViewed: 1,
+                            title: 1,
+                            adminUserID: 1,
+                            createdAt: 1,
+                        },
+                    },
+                    {
+                        $skip: data.skip ? Number(data.skip) : 0,
+                    },
+                    {
+                        $limit: data.limit ? Number(data.limit) : 10,
+                    },
                 ]);
                 return notification;
             }
@@ -91,12 +117,14 @@ const NotificationDB = class NotificationDB {
     static __updateNotification(query, value) {
         return __awaiter(this, void 0, void 0, function* () {
             try {
+                console.log({ query, value });
                 let notification = yield Notification_1.default.updateMany(query, value);
                 // let notification = await Notification.findByIdAndUpdate(
                 //   { _id: new ObjectID(id) },
                 //   { ...data },
                 //   { new: true }
                 // );
+                console.log({ notification });
                 return notification;
             }
             catch (error) {

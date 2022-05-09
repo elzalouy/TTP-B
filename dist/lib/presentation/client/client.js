@@ -45,6 +45,7 @@ const ClientReq = class ClientReq extends client_1.default {
         });
         return __awaiter(this, void 0, void 0, function* () {
             try {
+                console.log(req.body, req.files, req.file);
                 let clientData = req.body;
                 let file = req.files;
                 if (file.image && file.image[0]) {

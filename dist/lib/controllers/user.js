@@ -34,6 +34,11 @@ const UserController = class UserController extends user_1.default {
             return yield UserController.__updateUserPassword(data);
         });
     }
+    static resetPassword(data) {
+        return __awaiter(this, void 0, void 0, function* () {
+            return yield UserController.__resetUserPassword(data);
+        });
+    }
     static deleteUserInfo(id) {
         return __awaiter(this, void 0, void 0, function* () {
             return yield UserController.__deleteUserDoc(id);
@@ -47,6 +52,32 @@ const UserController = class UserController extends user_1.default {
     static getUserById(id) {
         return __awaiter(this, void 0, void 0, function* () {
             return yield UserController.__getUser(id);
+        });
+    }
+    static resendNewUserMail(id) {
+        return __awaiter(this, void 0, void 0, function* () {
+            return yield UserController.__resendNewUserMail(id);
+        });
+    }
+    static __resendNewUserMail(id) {
+        const _super = Object.create(null, {
+            findUserById: { get: () => super.findUserById }
+        });
+        return __awaiter(this, void 0, void 0, function* () {
+            try {
+                let user = yield _super.findUserById.call(this, id);
+                let token = yield (0, auth_1.createJwtToken)(user._id.toString());
+                yield (0, mail_1.default)({
+                    email: user.email,
+                    subject: "This is a reminder to set a New Password for your TTP account",
+                    token: token,
+                    path: "newPassword",
+                    body: "Please set your new password using this link to start using your account"
+                });
+            }
+            catch (error) {
+                logger_1.default.error({ getUsers: error });
+            }
         });
     }
     static __getUser(id) {
@@ -113,6 +144,35 @@ const UserController = class UserController extends user_1.default {
                 let oldPasswordCheck = yield (0, auth_1.comparePassword)(oldPassword, findUser.password);
                 if (!oldPasswordCheck) {
                     return (0, errorUtils_1.customeError)("wrong_old_password", 409);
+                }
+                // hash password
+                let passwordHash = yield (0, auth_1.hashBassword)(password);
+                let user = yield _super.updateUser.call(this, { id: token.user.id, password: passwordHash });
+                return user;
+            }
+            catch (error) {
+                logger_1.default.error({ updatePasswordError: error });
+            }
+        });
+    }
+    static __resetUserPassword(data) {
+        const _super = Object.create(null, {
+            findUserById: { get: () => super.findUserById },
+            updateUser: { get: () => super.updateUser }
+        });
+        return __awaiter(this, void 0, void 0, function* () {
+            try {
+                const { id, password } = data;
+                const token = yield (0, auth_1.jwtVerify)(id);
+                if (!token.user) {
+                    return (0, errorUtils_1.customeError)("not_valid_token", 400);
+                }
+                if ((0, validation_1.passwordCheck)(password)) {
+                    return (0, errorUtils_1.customeError)("password_length", 400);
+                }
+                let findUser = yield _super.findUserById.call(this, token.user.id);
+                if (!findUser) {
+                    return (0, errorUtils_1.customeError)("user_not_exist", 409);
                 }
                 // hash password
                 let passwordHash = yield (0, auth_1.hashBassword)(password);

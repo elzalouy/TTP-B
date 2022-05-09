@@ -17,6 +17,22 @@ const user_1 = __importDefault(require("../../controllers/user"));
 const logger_1 = __importDefault(require("../../../logger"));
 const errorUtils_1 = require("../../utils/errorUtils");
 const UserReq = class UserReq extends user_1.default {
+    static handleResendMail(req, res) {
+        const _super = Object.create(null, {
+            resendNewUserMail: { get: () => super.resendNewUserMail }
+        });
+        return __awaiter(this, void 0, void 0, function* () {
+            try {
+                let { id } = req.body;
+                yield _super.resendNewUserMail.call(this, id);
+                return res.status(200).send();
+            }
+            catch (error) {
+                logger_1.default.error({ handleGetUserInfoError: error });
+                return res.status(500).send((0, errorUtils_1.customeError)("server_error", 500));
+            }
+        });
+    }
     static handleGetUserInfo(req, res) {
         const _super = Object.create(null, {
             getUserById: { get: () => super.getUserById }
@@ -95,6 +111,33 @@ const UserReq = class UserReq extends user_1.default {
                 logger_1.default.info({ userData });
                 if (userData) {
                     let user = yield _super.updatePassword.call(this, userData);
+                    if (user) {
+                        return res.send(user);
+                    }
+                    else {
+                        res.status(409).send((0, errorUtils_1.customeError)("user_not_exist", 409));
+                    }
+                }
+                else {
+                    return res.status(400).send((0, errorUtils_1.customeError)("missing_data", 400));
+                }
+            }
+            catch (error) {
+                logger_1.default.error({ handleUpdatePassword: error });
+                return res.status(500).send((0, errorUtils_1.customeError)("server_error", 500));
+            }
+        });
+    }
+    static handleResetPassword(req, res) {
+        const _super = Object.create(null, {
+            resetPassword: { get: () => super.resetPassword }
+        });
+        return __awaiter(this, void 0, void 0, function* () {
+            try {
+                let userData = req.body;
+                logger_1.default.info({ userData });
+                if (userData) {
+                    let user = yield _super.resetPassword.call(this, userData);
                     if (user) {
                         return res.send(user);
                     }

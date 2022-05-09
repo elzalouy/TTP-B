@@ -3,216 +3,565 @@
     db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
   },
   level: 'info',
-  timestamp: '2022-05-07 14:54:20'
+  timestamp: '2022-05-09 11:39:08'
+}
+{
+  size: 0,
+  timeout: 0,
+  level: 'info',
+  message: 'move board done',
+  timestamp: '2022-05-09 12:14:33',
+  [Symbol(Body internals)]: {
+    body: <ref *1> Gunzip {
+      _writeState: Uint32Array(2) [ 0, 0 ],
+      _readableState: ReadableState {
+        objectMode: false,
+        highWaterMark: 16384,
+        buffer: BufferList { head: null, tail: null, length: 0 },
+        length: 0,
+        pipes: [],
+        flowing: null,
+        ended: false,
+        endEmitted: false,
+        reading: false,
+        constructed: true,
+        sync: false,
+        needReadable: false,
+        emittedReadable: false,
+        readableListening: false,
+        resumeScheduled: false,
+        errorEmitted: false,
+        emitClose: true,
+        autoDestroy: true,
+        destroyed: false,
+        errored: null,
+        closed: false,
+        closeEmitted: false,
+        defaultEncoding: 'utf8',
+        awaitDrainWriters: null,
+        multiAwaitDrain: false,
+        readingMore: false,
+        dataEmitted: false,
+        decoder: null,
+        encoding: null,
+        [Symbol(kPaused)]: null
+      },
+      _events: [Object: null prototype] {
+        prefinish: [Function: prefinish],
+        unpipe: [Function: onunpipe],
+        error: [ [Function: onerror], [Function (anonymous)] ],
+        close: [Function: bound onceWrapper] { listener: [Function: onclose] },
+        finish: [Function: bound onceWrapper] { listener: [Function: onfinish] }
+      },
+      _eventsCount: 5,
+      _maxListeners: undefined,
+      _writableState: WritableState {
+        objectMode: false,
+        highWaterMark: 16384,
+        finalCalled: false,
+        needDrain: false,
+        ending: true,
+        ended: true,
+        finished: false,
+        destroyed: false,
+        decodeStrings: true,
+        defaultEncoding: 'utf8',
+        length: 571,
+        writing: true,
+        corked: 0,
+        sync: false,
+        bufferProcessing: false,
+        onwrite: [Function: bound onwrite],
+        writecb: [Function: nop],
+        writelen: 571,
+        afterWriteTickInfo: null,
+        buffered: [],
+        bufferedIndex: 0,
+        allBuffers: true,
+        allNoop: true,
+        pendingcb: 1,
+        constructed: true,
+        prefinished: false,
+        errorEmitted: false,
+        emitClose: true,
+        autoDestroy: true,
+        errored: null,
+        closed: false,
+        closeEmitted: false,
+        [Symbol(kOnFinished)]: []
+      },
+      allowHalfOpen: true,
+      bytesWritten: 0,
+      _handle: Zlib {
+        onerror: [Function: zlibOnError],
+        buffer: <Buffer 1f 8b 08 00 00 00 00 00 04 03 85 53 c1 8e da 30 10 fd 95 ca 67 58 12 02 06 72 03 b6 87 4a ac 54 ed b2 3d 6c d5 c3 c4 9e 04 17 27 8e 6c 87 15 8b f6 df ... 521 more bytes>,
+        cb: [Function (anonymous)],
+        availOutBefore: 16384,
+        availInBefore: 571,
+        inOff: 0,
+        flushFlag: 2,
+        [Symbol(owner_symbol)]: [Circular *1]
+      },
+      _outBuffer: <Buffer 7b 22 69 64 22 3a 22 36 32 37 38 65 31 38 66 66 33 62 31 36 66 32 38 66 63 33 31 62 31 64 35 22 2c 22 62 61 64 67 65 73 22 3a 7b 22 61 74 74 61 63 68 ... 16334 more bytes>,
+      _outOffset: 0,
+      _chunkSize: 16384,
+      _defaultFlushFlag: 2,
+      _finishFlushFlag: 2,
+      _defaultFullFlushFlag: 3,
+      _info: undefined,
+      _maxOutputLength: 4294967296,
+      _level: -1,
+      _strategy: 0,
+      [Symbol(kCapture)]: false,
+      [Symbol(kCallback)]: null,
+      [Symbol(kError)]: null
+    },
+    disturbed: false,
+    error: null
+  },
+  [Symbol(Response internals)]: {
+    url: 'https://api.trello.com/1/cards/6278e18ff3b16f28fc31b1d5?idList=6277d8b5e63d6c638936a746&key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68',
+    status: 200,
+    statusText: 'OK',
+    headers: Headers {
+      [Symbol(map)]: [Object: null prototype] {
+        'x-dns-prefetch-control': [ 'off' ],
+        'x-frame-options': [ 'DENY' ],
+        'x-download-options': [ 'noopen' ],
+        'x-permitted-cross-domain-policies': [ 'none' ],
+        'referrer-policy': [ 'strict-origin-when-cross-origin' ],
+        'surrogate-control': [ 'no-store' ],
+        'cache-control': [ 'max-age=0, must-revalidate, no-cache, no-store' ],
+        pragma: [ 'no-cache' ],
+        expires: [ 'Thu, 01 Jan 1970 00:00:00' ],
+        'x-trello-version': [ '1.130659.0' ],
+        'x-trello-environment': [ 'Production' ],
+        'access-control-allow-origin': [ '*' ],
+        'access-control-allow-methods': [ 'GET, PUT, POST, DELETE' ],
+        'access-control-allow-headers': [ 'Authorization, Accept, Content-Type' ],
+        'access-control-expose-headers': [
+          'x-rate-limit-api-key-interval-ms, x-rate-limit-api-key-max, x-rate-limit-api-key-remaining, x-rate-limit-api-token-interval-ms, x-rate-limit-api-token-max, x-rate-limit-api-token-remaining'
+        ],
+        'x-rate-limit-api-token-interval-ms': [ '10000' ],
+        'x-rate-limit-api-token-max': [ '100' ],
+        'x-rate-limit-api-token-remaining': [ '99' ],
+        'x-rate-limit-action-interval-ms': [ '3600000' ],
+        'x-rate-limit-action-max': [ '15000' ],
+        'x-rate-limit-action-remaining': [ '14999' ],
+        'x-rate-limit-api-key-interval-ms': [ '10000' ],
+        'x-rate-limit-api-key-max': [ '300' ],
+        'x-rate-limit-api-key-remaining': [ '299' ],
+        'x-rate-limit-member-interval-ms': [ '10000' ],
+        'x-rate-limit-member-max': [ '375' ],
+        'x-rate-limit-member-remaining': [ '374' ],
+        'set-cookie': [
+          'preAuthProps=s%3A625c6c7c6fc2b45763b718dc%3AisEnterpriseAdmin%3Dfalse.crCyu7YmgTEAI4IzUnC3R6X8sJ4FR%2FMkJwWc6IkKxO4; Path=/; HttpOnly'
+        ],
+        'x-server-time': [ '1652091273059' ],
+        'content-type': [ 'application/json; charset=utf-8' ],
+        date: [ 'Mon, 09 May 2022 10:14:33 GMT' ],
+        'content-encoding': [ 'gzip' ],
+        'x-envoy-upstream-service-time': [ '220' ],
+        'expect-ct': [
+          'report-uri="https://web-security-reports.services.atlassian.com/expect-ct-report/trello-edge", max-age=86400'
+        ],
+        'strict-transport-security': [ 'max-age=63072000; preload' ],
+        'x-content-type-options': [ 'nosniff' ],
+        'x-xss-protection': [ '1; mode=block' ],
+        'atl-traceid': [ '763efe6e3dfdcd96' ],
+        'report-to': [
+          '{"group": "endpoint-1", "max_age": 600, "endpoints": [{"url": "https://dj9s4kmieytgz.cloudfront.net"}], "include_subdomains": true}'
+        ],
+        nel: [
+          '{"report_to": "endpoint-1", "max_age": 600, "include_subdomains": true, "failure_fraction": 0.001}'
+        ],
+        server: [ 'globaledge-envoy' ],
+        connection: [ 'close' ],
+        'transfer-encoding': [ 'chunked' ]
+      }
+    },
+    counter: 0
+  }
+}
+{
+  size: 0,
+  timeout: 0,
+  level: 'info',
+  message: 'move board done',
+  timestamp: '2022-05-09 12:20:13',
+  [Symbol(Body internals)]: {
+    body: <ref *1> Gunzip {
+      _writeState: Uint32Array(2) [ 0, 0 ],
+      _readableState: ReadableState {
+        objectMode: false,
+        highWaterMark: 16384,
+        buffer: BufferList { head: null, tail: null, length: 0 },
+        length: 0,
+        pipes: [],
+        flowing: null,
+        ended: false,
+        endEmitted: false,
+        reading: false,
+        constructed: true,
+        sync: false,
+        needReadable: false,
+        emittedReadable: false,
+        readableListening: false,
+        resumeScheduled: false,
+        errorEmitted: false,
+        emitClose: true,
+        autoDestroy: true,
+        destroyed: false,
+        errored: null,
+        closed: false,
+        closeEmitted: false,
+        defaultEncoding: 'utf8',
+        awaitDrainWriters: null,
+        multiAwaitDrain: false,
+        readingMore: false,
+        dataEmitted: false,
+        decoder: null,
+        encoding: null,
+        [Symbol(kPaused)]: null
+      },
+      _events: [Object: null prototype] {
+        prefinish: [Function: prefinish],
+        unpipe: [Function: onunpipe],
+        error: [ [Function: onerror], [Function (anonymous)] ],
+        close: [Function: bound onceWrapper] { listener: [Function: onclose] },
+        finish: [Function: bound onceWrapper] { listener: [Function: onfinish] }
+      },
+      _eventsCount: 5,
+      _maxListeners: undefined,
+      _writableState: WritableState {
+        objectMode: false,
+        highWaterMark: 16384,
+        finalCalled: false,
+        needDrain: false,
+        ending: true,
+        ended: true,
+        finished: false,
+        destroyed: false,
+        decodeStrings: true,
+        defaultEncoding: 'utf8',
+        length: 571,
+        writing: true,
+        corked: 0,
+        sync: false,
+        bufferProcessing: false,
+        onwrite: [Function: bound onwrite],
+        writecb: [Function: nop],
+        writelen: 571,
+        afterWriteTickInfo: null,
+        buffered: [],
+        bufferedIndex: 0,
+        allBuffers: true,
+        allNoop: true,
+        pendingcb: 1,
+        constructed: true,
+        prefinished: false,
+        errorEmitted: false,
+        emitClose: true,
+        autoDestroy: true,
+        errored: null,
+        closed: false,
+        closeEmitted: false,
+        [Symbol(kOnFinished)]: []
+      },
+      allowHalfOpen: true,
+      bytesWritten: 0,
+      _handle: Zlib {
+        onerror: [Function: zlibOnError],
+        buffer: <Buffer 1f 8b 08 00 00 00 00 00 04 03 85 53 4d 8f da 30 10 fd 2b 95 cf b0 c4 09 98 90 1b b0 3d 54 62 a5 6a 97 ed 61 ab 1e fc 95 e0 62 c7 91 ed b0 62 d1 fe f7 ... 521 more bytes>,
+        cb: [Function (anonymous)],
+        availOutBefore: 16384,
+        availInBefore: 571,
+        inOff: 0,
+        flushFlag: 2,
+        [Symbol(owner_symbol)]: [Circular *1]
+      },
+      _outBuffer: <Buffer 7b 22 69 64 22 3a 22 36 32 37 38 65 31 38 66 66 33 62 31 36 66 32 38 66 63 33 31 62 31 64 35 22 2c 22 62 61 64 67 65 73 22 3a 7b 22 61 74 74 61 63 68 ... 16334 more bytes>,
+      _outOffset: 0,
+      _chunkSize: 16384,
+      _defaultFlushFlag: 2,
+      _finishFlushFlag: 2,
+      _defaultFullFlushFlag: 3,
+      _info: undefined,
+      _maxOutputLength: 4294967296,
+      _level: -1,
+      _strategy: 0,
+      [Symbol(kCapture)]: false,
+      [Symbol(kCallback)]: null,
+      [Symbol(kError)]: null
+    },
+    disturbed: false,
+    error: null
+  },
+  [Symbol(Response internals)]: {
+    url: 'https://api.trello.com/1/cards/6278e18ff3b16f28fc31b1d5?idList=6277d8b66bcbb68d19d18d4b&key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68',
+    status: 200,
+    statusText: 'OK',
+    headers: Headers {
+      [Symbol(map)]: [Object: null prototype] {
+        'x-dns-prefetch-control': [ 'off' ],
+        'x-frame-options': [ 'DENY' ],
+        'x-download-options': [ 'noopen' ],
+        'x-permitted-cross-domain-policies': [ 'none' ],
+        'referrer-policy': [ 'strict-origin-when-cross-origin' ],
+        'surrogate-control': [ 'no-store' ],
+        'cache-control': [ 'max-age=0, must-revalidate, no-cache, no-store' ],
+        pragma: [ 'no-cache' ],
+        expires: [ 'Thu, 01 Jan 1970 00:00:00' ],
+        'x-trello-version': [ '1.130659.0' ],
+        'x-trello-environment': [ 'Production' ],
+        'access-control-allow-origin': [ '*' ],
+        'access-control-allow-methods': [ 'GET, PUT, POST, DELETE' ],
+        'access-control-allow-headers': [ 'Authorization, Accept, Content-Type' ],
+        'access-control-expose-headers': [
+          'x-rate-limit-api-key-interval-ms, x-rate-limit-api-key-max, x-rate-limit-api-key-remaining, x-rate-limit-api-token-interval-ms, x-rate-limit-api-token-max, x-rate-limit-api-token-remaining'
+        ],
+        'x-rate-limit-api-token-interval-ms': [ '10000' ],
+        'x-rate-limit-api-token-max': [ '100' ],
+        'x-rate-limit-api-token-remaining': [ '99' ],
+        'x-rate-limit-action-interval-ms': [ '3600000' ],
+        'x-rate-limit-action-max': [ '15000' ],
+        'x-rate-limit-action-remaining': [ '14999' ],
+        'x-rate-limit-api-key-interval-ms': [ '10000' ],
+        'x-rate-limit-api-key-max': [ '300' ],
+        'x-rate-limit-api-key-remaining': [ '299' ],
+        'x-rate-limit-member-interval-ms': [ '10000' ],
+        'x-rate-limit-member-max': [ '375' ],
+        'x-rate-limit-member-remaining': [ '374' ],
+        'set-cookie': [
+          'preAuthProps=s%3A625c6c7c6fc2b45763b718dc%3AisEnterpriseAdmin%3Dfalse.crCyu7YmgTEAI4IzUnC3R6X8sJ4FR%2FMkJwWc6IkKxO4; Path=/; HttpOnly'
+        ],
+        'x-server-time': [ '1652091613109' ],
+        'content-type': [ 'application/json; charset=utf-8' ],
+        date: [ 'Mon, 09 May 2022 10:20:13 GMT' ],
+        'content-encoding': [ 'gzip' ],
+        'x-envoy-upstream-service-time': [ '202' ],
+        'expect-ct': [
+          'report-uri="https://web-security-reports.services.atlassian.com/expect-ct-report/trello-edge", max-age=86400'
+        ],
+        'strict-transport-security': [ 'max-age=63072000; preload' ],
+        'x-content-type-options': [ 'nosniff' ],
+        'x-xss-protection': [ '1; mode=block' ],
+        'atl-traceid': [ 'f8eae6e241f256e3' ],
+        'report-to': [
+          '{"group": "endpoint-1", "max_age": 600, "endpoints": [{"url": "https://dj9s4kmieytgz.cloudfront.net"}], "include_subdomains": true}'
+        ],
+        nel: [
+          '{"report_to": "endpoint-1", "max_age": 600, "include_subdomains": true, "failure_fraction": 0.001}'
+        ],
+        server: [ 'globaledge-envoy' ],
+        connection: [ 'close' ],
+        'transfer-encoding': [ 'chunked' ]
+      }
+    },
+    counter: 0
+  }
 }
 {
   message: {
     db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
   },
   level: 'info',
-  timestamp: '2022-05-07 15:03:31'
+  timestamp: '2022-05-09 13:40:39'
+}
+{
+  size: 0,
+  timeout: 0,
+  level: 'info',
+  message: 'move board done',
+  timestamp: '2022-05-09 14:51:18',
+  [Symbol(Body internals)]: {
+    body: <ref *1> Gunzip {
+      _writeState: Uint32Array(2) [ 0, 0 ],
+      _readableState: ReadableState {
+        objectMode: false,
+        highWaterMark: 16384,
+        buffer: BufferList { head: null, tail: null, length: 0 },
+        length: 0,
+        pipes: [],
+        flowing: null,
+        ended: false,
+        endEmitted: false,
+        reading: false,
+        constructed: true,
+        sync: false,
+        needReadable: false,
+        emittedReadable: false,
+        readableListening: false,
+        resumeScheduled: false,
+        errorEmitted: false,
+        emitClose: true,
+        autoDestroy: true,
+        destroyed: false,
+        errored: null,
+        closed: false,
+        closeEmitted: false,
+        defaultEncoding: 'utf8',
+        awaitDrainWriters: null,
+        multiAwaitDrain: false,
+        readingMore: false,
+        dataEmitted: false,
+        decoder: null,
+        encoding: null,
+        [Symbol(kPaused)]: null
+      },
+      _events: [Object: null prototype] {
+        prefinish: [Function: prefinish],
+        unpipe: [Function: onunpipe],
+        error: [ [Function: onerror], [Function (anonymous)] ],
+        close: [Function: bound onceWrapper] { listener: [Function: onclose] },
+        finish: [Function: bound onceWrapper] { listener: [Function: onfinish] }
+      },
+      _eventsCount: 5,
+      _maxListeners: undefined,
+      _writableState: WritableState {
+        objectMode: false,
+        highWaterMark: 16384,
+        finalCalled: false,
+        needDrain: false,
+        ending: true,
+        ended: true,
+        finished: false,
+        destroyed: false,
+        decodeStrings: true,
+        defaultEncoding: 'utf8',
+        length: 571,
+        writing: true,
+        corked: 0,
+        sync: false,
+        bufferProcessing: false,
+        onwrite: [Function: bound onwrite],
+        writecb: [Function: nop],
+        writelen: 571,
+        afterWriteTickInfo: null,
+        buffered: [],
+        bufferedIndex: 0,
+        allBuffers: true,
+        allNoop: true,
+        pendingcb: 1,
+        constructed: true,
+        prefinished: false,
+        errorEmitted: false,
+        emitClose: true,
+        autoDestroy: true,
+        errored: null,
+        closed: false,
+        closeEmitted: false,
+        [Symbol(kOnFinished)]: []
+      },
+      allowHalfOpen: true,
+      bytesWritten: 0,
+      _handle: Zlib {
+        onerror: [Function: zlibOnError],
+        buffer: <Buffer 1f 8b 08 00 00 00 00 00 04 03 85 53 c1 8e da 30 10 fd 95 ca 67 58 70 42 4c c8 0d d8 1e 2a b1 52 b5 cb f6 b0 55 0f 8e 3d 09 2e 4e 1c d9 0e 2b 16 ed bf ... 521 more bytes>,
+        cb: [Function (anonymous)],
+        availOutBefore: 16384,
+        availInBefore: 571,
+        inOff: 0,
+        flushFlag: 2,
+        [Symbol(owner_symbol)]: [Circular *1]
+      },
+      _outBuffer: <Buffer 7b 22 69 64 22 3a 22 36 32 37 38 65 31 38 66 66 33 62 31 36 66 32 38 66 63 33 31 62 31 64 35 22 2c 22 62 61 64 67 65 73 22 3a 7b 22 61 74 74 61 63 68 ... 16334 more bytes>,
+      _outOffset: 0,
+      _chunkSize: 16384,
+      _defaultFlushFlag: 2,
+      _finishFlushFlag: 2,
+      _defaultFullFlushFlag: 3,
+      _info: undefined,
+      _maxOutputLength: 4294967296,
+      _level: -1,
+      _strategy: 0,
+      [Symbol(kCapture)]: false,
+      [Symbol(kCallback)]: null,
+      [Symbol(kError)]: null
+    },
+    disturbed: false,
+    error: null
+  },
+  [Symbol(Response internals)]: {
+    url: 'https://api.trello.com/1/cards/6278e18ff3b16f28fc31b1d5?idList=6277d8b5e63d6c638936a746&key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68',
+    status: 200,
+    statusText: 'OK',
+    headers: Headers {
+      [Symbol(map)]: [Object: null prototype] {
+        'x-dns-prefetch-control': [ 'off' ],
+        'x-frame-options': [ 'DENY' ],
+        'x-download-options': [ 'noopen' ],
+        'x-permitted-cross-domain-policies': [ 'none' ],
+        'referrer-policy': [ 'strict-origin-when-cross-origin' ],
+        'surrogate-control': [ 'no-store' ],
+        'cache-control': [ 'max-age=0, must-revalidate, no-cache, no-store' ],
+        pragma: [ 'no-cache' ],
+        expires: [ 'Thu, 01 Jan 1970 00:00:00' ],
+        'x-trello-version': [ '1.130659.0' ],
+        'x-trello-environment': [ 'Production' ],
+        'access-control-allow-origin': [ '*' ],
+        'access-control-allow-methods': [ 'GET, PUT, POST, DELETE' ],
+        'access-control-allow-headers': [ 'Authorization, Accept, Content-Type' ],
+        'access-control-expose-headers': [
+          'x-rate-limit-api-key-interval-ms, x-rate-limit-api-key-max, x-rate-limit-api-key-remaining, x-rate-limit-api-token-interval-ms, x-rate-limit-api-token-max, x-rate-limit-api-token-remaining'
+        ],
+        'x-rate-limit-api-token-interval-ms': [ '10000' ],
+        'x-rate-limit-api-token-max': [ '100' ],
+        'x-rate-limit-api-token-remaining': [ '99' ],
+        'x-rate-limit-action-interval-ms': [ '3600000' ],
+        'x-rate-limit-action-max': [ '15000' ],
+        'x-rate-limit-action-remaining': [ '14999' ],
+        'x-rate-limit-api-key-interval-ms': [ '10000' ],
+        'x-rate-limit-api-key-max': [ '300' ],
+        'x-rate-limit-api-key-remaining': [ '299' ],
+        'x-rate-limit-member-interval-ms': [ '10000' ],
+        'x-rate-limit-member-max': [ '375' ],
+        'x-rate-limit-member-remaining': [ '374' ],
+        'set-cookie': [
+          'preAuthProps=s%3A625c6c7c6fc2b45763b718dc%3AisEnterpriseAdmin%3Dfalse.crCyu7YmgTEAI4IzUnC3R6X8sJ4FR%2FMkJwWc6IkKxO4; Path=/; HttpOnly'
+        ],
+        'x-server-time': [ '1652100678511' ],
+        'content-type': [ 'application/json; charset=utf-8' ],
+        date: [ 'Mon, 09 May 2022 12:51:18 GMT' ],
+        'content-encoding': [ 'gzip' ],
+        'x-envoy-upstream-service-time': [ '274' ],
+        'expect-ct': [
+          'report-uri="https://web-security-reports.services.atlassian.com/expect-ct-report/trello-edge", max-age=86400'
+        ],
+        'strict-transport-security': [ 'max-age=63072000; preload' ],
+        'x-content-type-options': [ 'nosniff' ],
+        'x-xss-protection': [ '1; mode=block' ],
+        'atl-traceid': [ '6e2171ac503c4d93' ],
+        'report-to': [
+          '{"group": "endpoint-1", "max_age": 600, "endpoints": [{"url": "https://dj9s4kmieytgz.cloudfront.net"}], "include_subdomains": true}'
+        ],
+        nel: [
+          '{"report_to": "endpoint-1", "max_age": 600, "include_subdomains": true, "failure_fraction": 0.001}'
+        ],
+        server: [ 'globaledge-envoy' ],
+        connection: [ 'close' ],
+        'transfer-encoding': [ 'chunked' ]
+      }
+    },
+    counter: 0
+  }
 }
 {
   message: {
     db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
   },
   level: 'info',
-  timestamp: '2022-05-07 16:41:37'
+  timestamp: '2022-05-09 14:59:08'
 }
 {
   message: {
-    DeleteTasksByProjectId: FetchError: invalid json response body at https://api.trello.com/1/cards/62727d700061a92a83447b5c?key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68 reason: Unexpected token T in JSON at position 0
-        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/node-fetch/lib/index.js:273:32
-        at processTicksAndRejections (node:internal/process/task_queues:96:5) {
-      type: 'invalid-json'
-    }
-  },
-  level: 'error',
-  timestamp: '2022-05-07 16:57:54'
-}
-{
-  message: {
-    handleDeleteTasksError: TypeError: Cannot read properties of undefined (reading '_id')
-        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/presentation/task/task.ts:108:24
-        at Generator.next (<anonymous>)
-        at fulfilled (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/presentation/task/task.ts:5:58)
-        at processTicksAndRejections (node:internal/process/task_queues:96:5)
-  },
-  level: 'error',
-  timestamp: '2022-05-07 16:57:54'
-}
-{
-  message: {
-    DeleteTasksByProjectId: FetchError: invalid json response body at https://api.trello.com/1/cards/62727d700061a92a83447b5c?key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68 reason: Unexpected token T in JSON at position 0
-        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/node-fetch/lib/index.js:273:32
-        at processTicksAndRejections (node:internal/process/task_queues:96:5) {
-      type: 'invalid-json'
-    }
-  },
-  level: 'error',
-  timestamp: '2022-05-07 16:58:12'
-}
-{
-  message: {
-    handleDeleteTasksError: TypeError: Cannot read properties of undefined (reading '_id')
-        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/presentation/task/task.ts:108:24
-        at Generator.next (<anonymous>)
-        at fulfilled (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/presentation/task/task.ts:5:58)
-        at processTicksAndRejections (node:internal/process/task_queues:96:5)
-  },
-  level: 'error',
-  timestamp: '2022-05-07 16:58:12'
-}
-{
-  message: {
-    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
-  },
-  level: 'info',
-  timestamp: '2022-05-07 17:00:32'
-}
-{
-  message: {
-    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
-  },
-  level: 'info',
-  timestamp: '2022-05-07 17:31:22'
-}
-{
-  message: {
-    user: {
-      _id: new ObjectId("62746010736e8ea96f53ea54"),
-      name: 'mohamed nageh-testing',
-      email: 'zed.saheer5@gmail.com',
-      password: '$2b$10$R98TejfqWHil472vWY/nlOX8x2O5NuDJzPaR43IlUhATvE1C1CRie',
-      role: 'OM',
-      image: '',
-      trelloMemberId: '5cd742d89b200d471e827fc8',
-      userTeams: [],
-      type: 'admin',
-      trelloBoardId: '616577753fa7db4ef1e715ea',
-      createdAt: 2022-05-05T23:38:56.005Z,
-      updatedAt: 2022-05-05T23:40:13.790Z,
-      __v: 0
+    clientData: [Object: null prototype] {
+      _id: '625ea6d3778208436cde83cd',
+      clientName: 'Ezzat Elzalouy',
+      image: 'https://bucketttp.s3.me-south-1.amazonaws.com/Logo-11-1651766921759.png',
+      createdAt: '2022-04-19T12:10:59.153Z'
     }
   },
   level: 'info',
-  timestamp: '2022-05-07 17:32:20'
-}
-{
-  message: {
-    user: {
-      _id: new ObjectId("62746010736e8ea96f53ea54"),
-      name: 'mohamed nageh-testing',
-      email: 'zed.saheer5@gmail.com',
-      password: '$2b$10$R98TejfqWHil472vWY/nlOX8x2O5NuDJzPaR43IlUhATvE1C1CRie',
-      role: 'OM',
-      image: '',
-      trelloMemberId: '5cd742d89b200d471e827fc8',
-      userTeams: [],
-      type: 'admin',
-      trelloBoardId: '616577753fa7db4ef1e715ea',
-      createdAt: 2022-05-05T23:38:56.005Z,
-      updatedAt: 2022-05-05T23:40:13.790Z,
-      __v: 0
-    }
-  },
-  level: 'info',
-  timestamp: '2022-05-07 17:35:53'
-}
-{
-  message: {
-    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
-  },
-  level: 'info',
-  timestamp: '2022-05-08 11:27:28'
-}
-{
-  message: {
-    getTeamsError: FetchError: invalid json response body at https://api.trello.com/1/cards?idList=6265e5cb84eb1b4debcbed9e&name=UI/UX%20TASK&attachments=true&key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68 reason: Unexpected token c in JSON at position 0
-        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/node-fetch/lib/index.js:273:32
-        at processTicksAndRejections (node:internal/process/task_queues:96:5) {
-      type: 'invalid-json'
-    }
-  },
-  level: 'error',
-  timestamp: '2022-05-08 11:30:56'
-}
-{
-  message: {
-    getTeamsError: FetchError: invalid json response body at https://api.trello.com/1/cards?idList=6265e5cb84eb1b4debcbed9e&name=New%20Task&attachments=true&key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68 reason: Unexpected token c in JSON at position 0
-        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/node-fetch/lib/index.js:273:32
-        at runMicrotasks (<anonymous>)
-        at processTicksAndRejections (node:internal/process/task_queues:96:5) {
-      type: 'invalid-json'
-    }
-  },
-  level: 'error',
-  timestamp: '2022-05-08 11:44:47'
-}
-{
-  message: {
-    getTeamsError: FetchError: invalid json response body at https://api.trello.com/1/cards?idList=6265e5cb84eb1b4debcbed9e&name=Task%201&attachments=true&key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68 reason: Unexpected token c in JSON at position 0
-        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/node-fetch/lib/index.js:273:32
-        at runMicrotasks (<anonymous>)
-        at processTicksAndRejections (node:internal/process/task_queues:96:5) {
-      type: 'invalid-json'
-    }
-  },
-  level: 'error',
-  timestamp: '2022-05-08 11:48:46'
-}
-{
-  message: {
-    getTeamsError: FetchError: invalid json response body at https://api.trello.com/1/cards?idList=6265e5cb84eb1b4debcbed9e&name=Task%201&attachments=true&key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68 reason: Unexpected token c in JSON at position 0
-        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/node-fetch/lib/index.js:273:32
-        at runMicrotasks (<anonymous>)
-        at processTicksAndRejections (node:internal/process/task_queues:96:5) {
-      type: 'invalid-json'
-    }
-  },
-  level: 'error',
-  timestamp: '2022-05-08 11:50:48'
-}
-{
-  message: {
-    getTeamsError: FetchError: invalid json response body at https://api.trello.com/1/cards?idList=6265e5cb84eb1b4debcbed9e&name=New%20Tasj&attachments=true&key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68 reason: Unexpected token c in JSON at position 0
-        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/node-fetch/lib/index.js:273:32
-        at runMicrotasks (<anonymous>)
-        at processTicksAndRejections (node:internal/process/task_queues:96:5) {
-      type: 'invalid-json'
-    }
-  },
-  level: 'error',
-  timestamp: '2022-05-08 11:53:59'
-}
-{
-  message: {
-    getTeamsError: FetchError: invalid json response body at https://api.trello.com/1/cards?idList=6265e5cb84eb1b4debcbed9e&name=New%20Task&attachments=true&key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68 reason: Unexpected token c in JSON at position 0
-        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/node-fetch/lib/index.js:273:32
-        at runMicrotasks (<anonymous>)
-        at processTicksAndRejections (node:internal/process/task_queues:96:5) {
-      type: 'invalid-json'
-    }
-  },
-  level: 'error',
-  timestamp: '2022-05-08 12:05:54'
-}
-{
-  message: {
-    getTeamsError: FetchError: invalid json response body at https://api.trello.com/1/cards?idList=6265e5cb84eb1b4debcbed9e&name=New%20Task&attachments=true&key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68 reason: Unexpected token c in JSON at position 0
-        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/node-fetch/lib/index.js:273:32
-        at runMicrotasks (<anonymous>)
-        at processTicksAndRejections (node:internal/process/task_queues:96:5) {
-      type: 'invalid-json'
-    }
-  },
-  level: 'error',
-  timestamp: '2022-05-08 12:06:00'
-}
-{
-  message: {
-    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
-  },
-  level: 'info',
-  timestamp: '2022-05-08 12:20:31'
+  timestamp: '2022-05-09 15:02:26'
 }
