@@ -47,21 +47,16 @@ exports.default = node_cron_1.default.schedule("* * * * * *", () => __awaiter(vo
     });
     if (tasks.length > 1) {
         for (let i = 0; i < tasks.length; i++) {
-            // let createNotifi = await NotificationController.createNotification({
-            //   title: `${tasks[i].name} Overdue`,
-            //   projectManagerID: tasks[i].projectManager,
-            //   description: `${tasks[i].name} project Due date ${moment(
-            //     tasks[i].projectDeadline
-            //   ).format("dd/mm/yyyy")}`,
-            //   clientName: tasks[i].clientId,
-            // });
+            let createNotifi = yield notification_1.default.createNotification({
+                title: `${tasks[i].name} Overdue`,
+                projectManagerID: tasks[i].projectManager,
+                description: `${tasks[i].name} project Due date ${(0, moment_1.default)(tasks[i].projectDeadline).format("dd/mm/yyyy")}`,
+                clientName: tasks[i].clientId,
+            });
             // send notification to all admin
-            // io.to("admin room").emit("notification update", createNotifi);
+            server_1.io.to("admin room").emit("notification update", createNotifi);
             // send notification to specific project manager
-            // io.to(`user-${projects[i].projectManager}`).emit(
-            //   "notification update",
-            //   createNotifi
-            // );
+            server_1.io.to(`user-${projects[i].projectManager}`).emit("notification update", createNotifi);
         }
     }
 }));

@@ -35,6 +35,11 @@ const ClientController = class ClientController extends client_1.default {
             return yield ClientController.__deleteClient(id);
         });
     }
+    static updateCleintProcedure(id) {
+        return __awaiter(this, void 0, void 0, function* () {
+            return yield ClientController.__updateClientProcedure(id);
+        });
+    }
     static __deleteClient(id) {
         const _super = Object.create(null, {
             deleteClientDB: { get: () => super.deleteClientDB }
@@ -88,6 +93,19 @@ const ClientController = class ClientController extends client_1.default {
             }
             catch (error) {
                 logger_1.default.error({ createClientError: error });
+            }
+        });
+    }
+    static __updateClientProcedure(_id) {
+        const _super = Object.create(null, {
+            updateClientProcedure: { get: () => super.updateClientProcedure }
+        });
+        return __awaiter(this, void 0, void 0, function* () {
+            try {
+                return yield _super.updateClientProcedure.call(this, _id);
+            }
+            catch (error) {
+                logger_1.default.error({ updateClientProcedure: error });
             }
         });
     }

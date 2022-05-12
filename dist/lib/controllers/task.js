@@ -161,16 +161,20 @@ class TaskController extends tasks_1.default {
             try {
                 // Add task to the list
                 let createdCard = yield boards_1.default.createCardInList(data.listId, data.name, file);
-                data.cardId = createdCard.id;
-                // Check if there is attachment
-                let attachment;
-                if (file) {
-                    attachment = yield boards_1.default.createAttachmentOnCard(createdCard.id, file);
+                if (createdCard) {
+                    data.cardId = createdCard.id;
+                    // Check if there is attachment
+                    let attachment;
+                    if (file) {
+                        attachment = yield boards_1.default.createAttachmentOnCard(createdCard.id, file);
+                    }
+                    // Add task to DB
+                    delete data.listId;
+                    let task = yield _super.createTaskDB.call(this, data);
+                    return { task, createdCard, attachment };
                 }
-                // Add task to DB
-                delete data.listId;
-                let task = yield _super.createTaskDB.call(this, data);
-                return { task, createdCard, attachment };
+                else
+                    throw "Error while creating Card in Trello";
             }
             catch (error) {
                 logger_1.default.error({ getTeamsError: error });

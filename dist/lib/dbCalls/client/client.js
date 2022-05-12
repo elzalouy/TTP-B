@@ -14,6 +14,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 Object.defineProperty(exports, "__esModule", { value: true });
 const Client_1 = __importDefault(require("../../models/Client"));
 const logger_1 = __importDefault(require("../../../logger"));
+const Project_1 = __importDefault(require("../../models/Project"));
 const ClientDB = class ClientDB {
     static createClientDB(data) {
         return __awaiter(this, void 0, void 0, function* () {
@@ -33,6 +34,11 @@ const ClientDB = class ClientDB {
     static deleteClientDB(id) {
         return __awaiter(this, void 0, void 0, function* () {
             return yield ClientDB.__deleteClient(id);
+        });
+    }
+    static updateClientProcedure(id) {
+        return __awaiter(this, void 0, void 0, function* () {
+            return yield ClientDB.__updateClientProcedureDB(id);
         });
     }
     static __deleteClient(id) {
@@ -79,6 +85,31 @@ const ClientDB = class ClientDB {
             }
             catch (error) {
                 logger_1.default.error({ createclientDBError: error });
+            }
+        });
+    }
+    static __updateClientProcedureDB(id) {
+        return __awaiter(this, void 0, void 0, function* () {
+            try {
+                let client = yield Client_1.default.findById(id);
+                console.log(client);
+                if (client) {
+                    let projects = yield Project_1.default.find({ clientId: id }).lean();
+                    if (projects) {
+                        let inProgress = projects.filter((item) => item.projectStatus === "inProgress").length;
+                        let done = projects.filter((item) => item.projectStatus === "deliver before deadline" ||
+                            item.projectStatus === "deliver on time" ||
+                            item.projectStatus === "delivered after deadline").length;
+                        client.inProgressProject = inProgress;
+                        client.doneProject = done;
+                        return yield client.save();
+                    }
+                    return null;
+                }
+                return null;
+            }
+            catch (error) {
+                logger_1.default.error({ updateClientProcedureError: error });
             }
         });
     }

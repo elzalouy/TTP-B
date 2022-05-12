@@ -16,6 +16,7 @@ const successMsg_1 = require("./../../utils/successMsg");
 const errorUtils_1 = require("./../../utils/errorUtils");
 const logger_1 = __importDefault(require("../../../logger"));
 const project_1 = __importDefault(require("../../controllers/project"));
+const client_1 = __importDefault(require("../../controllers/client"));
 const mongoose_1 = __importDefault(require("mongoose"));
 const ProjectReq = class ProjectReq extends project_1.default {
     static handleCreateProject(req, res) {
@@ -30,6 +31,7 @@ const ProjectReq = class ProjectReq extends project_1.default {
                 }
                 let project = yield _super.createProject.call(this, projectData);
                 if (project) {
+                    yield client_1.default.updateClientProcedure(projectData.clientId);
                     return res.status(200).send(project);
                 }
                 else {
@@ -54,6 +56,7 @@ const ProjectReq = class ProjectReq extends project_1.default {
                 }
                 let project = yield _super.updateProject.call(this, projectData);
                 if (project) {
+                    yield client_1.default.updateClientProcedure(project.clientId);
                     return res.status(200).send(project);
                 }
                 else {
@@ -101,6 +104,7 @@ const ProjectReq = class ProjectReq extends project_1.default {
                 }
                 let project = yield _super.deleteProject.call(this, projectId);
                 if (project) {
+                    yield client_1.default.updateClientProcedure(project.clientId);
                     return res.status(200).send((0, successMsg_1.successMsg)("project_deleted", 200));
                 }
                 else {

@@ -223,7 +223,7 @@ const DepartmentController = class DepartmentController extends department_1.def
                     reviewListId,
                     notClearListId,
                     canceldListId,
-                    departmentWindowId
+                    departmentWindowId,
                 ];
                 let webhookCreate = listId.map((id) => __awaiter(this, void 0, void 0, function* () {
                     return yield boards_1.default.createWebHook(id);

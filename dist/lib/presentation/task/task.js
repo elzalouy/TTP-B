@@ -157,7 +157,7 @@ const TaskReq = class TaskReq extends task_1.default {
             try {
                 let ids = req.body.ids;
                 let deleteResult = yield _super.deleteTasks.call(this, ids);
-                if (deleteResult === null || deleteResult === void 0 ? void 0 : deleteResult.deletedCount)
+                if (deleteResult)
                     return res.status(200).send(deleteResult);
                 else
                     res.status(400).send((0, errorUtils_1.customeError)("delete_task_error", 400));

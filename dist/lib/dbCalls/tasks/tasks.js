@@ -15,7 +15,6 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const logger_1 = __importDefault(require("../../../logger"));
 const task_1 = __importDefault(require("../../models/task"));
 const Project_1 = __importDefault(require("../../models/Project"));
-const lodash_1 = __importDefault(require("lodash"));
 const mongoose_1 = __importDefault(require("mongoose"));
 class TaskDB {
     static createTaskDB(data) {
@@ -66,7 +65,7 @@ class TaskDB {
     static __getAllTasks(data) {
         return __awaiter(this, void 0, void 0, function* () {
             try {
-                let tasks = task_1.default.find(data).populate('memberId');
+                let tasks = task_1.default.find(data).populate("memberId");
                 return tasks;
             }
             catch (error) {
@@ -194,21 +193,28 @@ class TaskDB {
     static __deleteTasks(ids) {
         return __awaiter(this, void 0, void 0, function* () {
             try {
-                let tasks = yield task_1.default.find({ _id: { $in: ids } }).lean();
-                let tasksUnique = lodash_1.default.uniqBy(tasks, (item) => item.projectId);
-                let projects = tasksUnique.map((item) => item.projectId);
-                projects.forEach((id) => __awaiter(this, void 0, void 0, function* () {
-                    let done = tasks.filter((item) => item.projectId === id && item.status === "done").length;
-                    let notDone = tasks.filter((item) => item.projectId === id).length;
-                    yield Project_1.default.findByIdAndUpdate(id, {
-                        $inc: {
-                            numberOfTasks: -notDone,
-                            numberOfFinishedTasks: -done,
-                        },
-                    });
-                }));
+                // let tasks = await Tasks.find({ _id: { $in: ids } }).lean();
+                // let tasksUnique = _.uniqBy(tasks, (item: any) => item.projectId);
+                // let projects = tasksUnique.map((item: any) => item.projectId);
+                // projects.forEach(async (id: any) => {
+                //   let done = tasks.filter(
+                //     (item) => item.projectId === id && item.status === "done"
+                //   ).length;
+                //   let notDone = tasks.filter((item) => item.projectId === id).length;
+                //   await Project.findByIdAndUpdate(id, {
+                //     $inc: {
+                //       numberOfTasks: -notDone,
+                //       numberOfFinishedTasks: -done,
+                //     },
+                //   });
+                // });
                 let deleteResult = yield task_1.default.deleteMany({ _id: { $in: ids } });
-                return deleteResult;
+                if (deleteResult) {
+                    let remaind = yield task_1.default.find({});
+                    return remaind;
+                }
+                else
+                    throw "Error while deleting tasks";
             }
             catch (error) {
                 logger_1.default.error({ deleteTasksError: error });

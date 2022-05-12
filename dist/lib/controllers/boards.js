@@ -212,6 +212,9 @@ class BoardController {
                         Accept: "application/json",
                     },
                 });
+                if (cardResult.status !== 200 && cardResult.status !== 201) {
+                    console.log(cardResult);
+                }
                 return cardResult.json();
             }
             catch (error) {

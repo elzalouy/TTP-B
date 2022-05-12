@@ -87,17 +87,18 @@ const ProjectController = class ProjectController extends project_1.default {
         return __awaiter(this, void 0, void 0, function* () {
             try {
                 // if porject status update to done
-                if (data.projectStatus && ["delivered on time", "delivered defore deadline"].includes(data.projectStatus)) {
+                if (data.projectStatus &&
+                    ["delivered on time", "delivered defore deadline"].includes(data.projectStatus)) {
                     let createNotifi = yield notification_1.default.createNotification({
                         title: `${data.name} project is done! Congratulations!`,
                         projectManagerID: data.projectManager,
                         description: `${data.name} project is done! Thank you for your hard work`,
                         clientName: data.clientId,
                         projectID: data._id,
-                        adminUserID: data.adminId
+                        adminUserID: data.adminId,
                     });
                     // send notification to all admin
-                    server_1.io.to("admin room").emit('notification update', createNotifi);
+                    server_1.io.to("admin room").emit("notification update", createNotifi);
                     // send notification to specific project manager
                     server_1.io.to(`user-${data.projectManager}`).emit("notification update", createNotifi);
                 }
@@ -121,7 +122,7 @@ const ProjectController = class ProjectController extends project_1.default {
                     description: `${data.name} has been assigend to you by ${data.adminName}`,
                     projectManagerID: data.projectManager,
                     projectID: data._id,
-                    adminUserID: data.adminId
+                    adminUserID: data.adminId,
                 });
                 // send notification to specific project manager
                 server_1.io.to(`user-${data.projectManager}`).emit("notification update", createNotifi);
