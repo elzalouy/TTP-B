@@ -66,6 +66,7 @@ const ClientDB = class ClientDB {
   static async __updateClientProcedureDB(id: any) {
     try {
       let client = await Clients.findById(id);
+      console.log(client);
       if (client) {
         let projects = await Project.find({ clientId: id }).lean();
         if (projects) {
@@ -78,7 +79,6 @@ const ClientDB = class ClientDB {
               item.projectStatus === "deliver on time" ||
               item.projectStatus === "delivered after deadline"
           ).length;
-          console.log(done);
           client.inProgressProject = inProgress;
           client.doneProject = done;
           return await client.save();

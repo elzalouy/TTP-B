@@ -95,7 +95,7 @@ const TaskReq = class TaskReq extends TaskController {
     try {
       let ids = req.body.ids;
       let deleteResult = await super.deleteTasks(ids);
-      if (deleteResult?.deletedCount) return res.status(200).send(deleteResult);
+      if (deleteResult) return res.status(200).send(deleteResult);
       else res.status(400).send(customeError("delete_task_error", 400));
     } catch (error) {
       logger.error({ handleDeleteTasksError: error });

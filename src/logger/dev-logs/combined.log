@@ -1,0 +1,3035 @@
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-05-11 14:13:18'
+}
+{
+  message: {
+    getTeamsError: FetchError: invalid json response body at https://api.trello.com/1/cards?idList=627810af1a711f229c73a267&name=New%20task&attachments=true&key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68 reason: Unexpected token c in JSON at position 0
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/node-fetch/lib/index.js:273:32
+        at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+      type: 'invalid-json'
+    }
+  },
+  level: 'error',
+  timestamp: '2022-05-11 14:20:40'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-05-11 14:33:46'
+}
+{
+  message: {
+    user: {
+      _id: new ObjectId("62746010736e8ea96f53ea54"),
+      name: 'mohamed nageh-testing',
+      email: 'zed.saheer5@gmail.com',
+      password: '$2b$10$R98TejfqWHil472vWY/nlOX8x2O5NuDJzPaR43IlUhATvE1C1CRie',
+      role: 'OM',
+      image: '',
+      trelloMemberId: '5cd742d89b200d471e827fc8',
+      userTeams: [],
+      type: 'admin',
+      trelloBoardId: '616577753fa7db4ef1e715ea',
+      createdAt: 2022-05-05T23:38:56.005Z,
+      updatedAt: 2022-05-05T23:40:13.790Z,
+      __v: 0
+    }
+  },
+  level: 'info',
+  timestamp: '2022-05-11 14:36:43'
+}
+{
+  message: {
+    borderData: Promise { <pending> },
+    createBoardApi: 'https://api.trello.com/1/boards/?name=Development&prefs_background=orange&defaultLists=false&key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68'
+  },
+  level: 'info',
+  timestamp: '2022-05-11 14:38:38'
+}
+{
+  message: {
+    data: {
+      name: 'Development',
+      color: 'orange',
+      boardId: '627bae4eb9669e4e5d92110b'
+    }
+  },
+  level: 'info',
+  timestamp: '2022-05-11 14:38:38'
+}
+{
+  message: { removeWebhookSucced: 'done' },
+  level: 'info',
+  timestamp: '2022-05-11 14:38:41'
+}
+{
+  message: { teamListIds: [] },
+  level: 'info',
+  timestamp: '2022-05-11 14:38:41'
+}
+{
+  message: { webhookCreateResult: 'webhook done' },
+  level: 'info',
+  timestamp: '2022-05-11 14:38:43'
+}
+{
+  message: {
+    __checkBoardListNameError: FetchError: invalid json response body at https://api.trello.com/1/boards/undefined/lists?key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68 reason: Unexpected token i in JSON at position 0
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/node-fetch/lib/index.js:273:32
+        at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+      type: 'invalid-json'
+    }
+  },
+  level: 'error',
+  timestamp: '2022-05-11 14:39:09'
+}
+{
+  message: {
+    createMemberError: FetchError: invalid json response body at https://api.trello.com/1/lists?name=Ezzat%20Developer&idBoard=undefined&key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68 reason: Unexpected token i in JSON at position 0
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/node-fetch/lib/index.js:273:32
+        at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+      type: 'invalid-json'
+    }
+  },
+  level: 'error',
+  timestamp: '2022-05-11 14:39:09'
+}
+{
+  message: {
+    handleGetBoards: TypeError: Cannot read properties of undefined (reading 'status')
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/dist/lib/presentation/techMember/techMember.js:27:28
+        at Generator.next (<anonymous>)
+        at fulfilled (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/dist/lib/presentation/techMember/techMember.js:5:58)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5)
+  },
+  level: 'error',
+  timestamp: '2022-05-11 14:39:09'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-05-11 15:50:56'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-05-11 15:53:16'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-05-11 15:53:46'
+}
+{
+  message: {
+    getProjectDBError: MongooseServerSelectionError: connection <monitor> to 15.184.3.169:27017 closed
+        at Function.Model.$wrapCallback (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/model.js:5017:32)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/query.js:4732:21
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/helpers/promiseOrCallback.js:32:5
+        at new Promise (<anonymous>)
+        at promiseOrCallback (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/helpers/promiseOrCallback.js:31:10)
+        at model.Query.exec (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/query.js:4731:10)
+        at model.Query.Query.then (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/query.js:4814:15) {
+      reason: TopologyDescription {
+        type: 'ReplicaSetNoPrimary',
+        servers: Map(3) {
+          'cluster0-shard-00-02.oeari.mongodb.net:27017' => ServerDescription {
+            _hostAddress: new HostAddress('cluster0-shard-00-02.oeari.mongodb.net:27017'),
+            address: 'cluster0-shard-00-02.oeari.mongodb.net:27017',
+            type: 'RSSecondary',
+            hosts: [
+              'cluster0-shard-00-00.oeari.mongodb.net:27017',
+              'cluster0-shard-00-01.oeari.mongodb.net:27017',
+              'cluster0-shard-00-02.oeari.mongodb.net:27017'
+            ],
+            passives: [],
+            arbiters: [],
+            tags: {
+              workloadType: 'OPERATIONAL',
+              region: 'ME_SOUTH_1',
+              nodeType: 'ELECTABLE',
+              provider: 'AWS'
+            },
+            minWireVersion: 0,
+            maxWireVersion: 13,
+            roundTripTime: 6.728862733339587e-85,
+            lastUpdateTime: 43299338,
+            lastWriteDate: 2022-05-11T22:14:11.000Z,
+            topologyVersion: {
+              processId: new ObjectId("627005674ff1ac271a85c1f3"),
+              counter: 3
+            },
+            primary: 'cluster0-shard-00-01.oeari.mongodb.net:27017',
+            me: 'cluster0-shard-00-02.oeari.mongodb.net:27017',
+            setName: 'atlas-80ye5b-shard-0',
+            setVersion: 2,
+            logicalSessionTimeoutMinutes: 30,
+            '$clusterTime': {
+              clusterTime: new Timestamp({ t: 1652307251, i: 4 }),
+              signature: {
+                hash: new Binary(Buffer.from("b114d8b5c45e2a8912672f9c6697bc0cd833a8f7", "hex"), 0),
+                keyId: new Long("7057499658175643653")
+              }
+            }
+          },
+          'cluster0-shard-00-00.oeari.mongodb.net:27017' => ServerDescription {
+            _hostAddress: new HostAddress('cluster0-shard-00-00.oeari.mongodb.net:27017'),
+            address: 'cluster0-shard-00-00.oeari.mongodb.net:27017',
+            type: 'RSSecondary',
+            hosts: [
+              'cluster0-shard-00-00.oeari.mongodb.net:27017',
+              'cluster0-shard-00-01.oeari.mongodb.net:27017',
+              'cluster0-shard-00-02.oeari.mongodb.net:27017'
+            ],
+            passives: [],
+            arbiters: [],
+            tags: {
+              provider: 'AWS',
+              region: 'ME_SOUTH_1',
+              workloadType: 'OPERATIONAL',
+              nodeType: 'ELECTABLE'
+            },
+            minWireVersion: 0,
+            maxWireVersion: 13,
+            roundTripTime: 6.7549534147706e-85,
+            lastUpdateTime: 43299322,
+            lastWriteDate: 2022-05-11T22:14:11.000Z,
+            topologyVersion: {
+              processId: new ObjectId("6270042ae8ff18065f7eb95c"),
+              counter: 4
+            },
+            primary: 'cluster0-shard-00-01.oeari.mongodb.net:27017',
+            me: 'cluster0-shard-00-00.oeari.mongodb.net:27017',
+            setName: 'atlas-80ye5b-shard-0',
+            setVersion: 2,
+            logicalSessionTimeoutMinutes: 30,
+            '$clusterTime': {
+              clusterTime: new Timestamp({ t: 1652307251, i: 4 }),
+              signature: {
+                hash: new Binary(Buffer.from("b114d8b5c45e2a8912672f9c6697bc0cd833a8f7", "hex"), 0),
+                keyId: new Long("7057499658175643653")
+              }
+            }
+          },
+          'cluster0-shard-00-01.oeari.mongodb.net:27017' => ServerDescription {
+            _hostAddress: new HostAddress('cluster0-shard-00-01.oeari.mongodb.net:27017'),
+            address: 'cluster0-shard-00-01.oeari.mongodb.net:27017',
+            type: 'Unknown',
+            hosts: [],
+            passives: [],
+            arbiters: [],
+            tags: {},
+            minWireVersion: 0,
+            maxWireVersion: 0,
+            roundTripTime: -1,
+            lastUpdateTime: 43276673,
+            lastWriteDate: 0,
+            topologyVersion: {
+              processId: new ObjectId("627004bf4c96c67a5085af66"),
+              counter: 6
+            },
+            error: MongoNetworkError: connection <monitor> to 15.184.3.169:27017 closed
+                at Connection.onClose (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongodb/src/cmap/connection.ts:355:13)
+                at TLSSocket.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongodb/src/cmap/connection.ts:269:42)
+                at TLSSocket.emit (node:events:539:35)
+                at TLSSocket.emit (node:domain:475:12)
+                at node:net:709:12
+                at TCP.done (node:_tls_wrap:582:7) {
+              [Symbol(errorLabels)]: Set(0) {}
+            }
+          }
+        },
+        stale: false,
+        compatible: true,
+        heartbeatFrequencyMS: 10000,
+        localThresholdMS: 15,
+        setName: 'atlas-80ye5b-shard-0',
+        maxSetVersion: 2,
+        maxElectionId: new ObjectId("7fffffff000000000000000a"),
+        commonWireVersion: 13,
+        logicalSessionTimeoutMinutes: 30
+      },
+      code: undefined
+    }
+  },
+  level: 'error',
+  timestamp: '2022-05-12 00:14:19'
+}
+{
+  message: {
+    createNotificationDBError: MongooseServerSelectionError: connection <monitor> to 15.184.3.169:27017 closed
+        at Function.Model.$wrapCallback (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/model.js:5017:32)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/model.js:510:27
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/helpers/promiseOrCallback.js:32:5
+        at new Promise (<anonymous>)
+        at promiseOrCallback (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/helpers/promiseOrCallback.js:31:10)
+        at Mongoose._promiseOrCallback (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/index.js:1181:10)
+        at model.Model.save (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/model.js:509:35)
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/dbCalls/notification/notification.ts:124:26)
+        at Generator.next (<anonymous>)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/dbCalls/notification/notification.ts:8:71 {
+      reason: TopologyDescription {
+        type: 'ReplicaSetNoPrimary',
+        servers: Map(3) {
+          'cluster0-shard-00-02.oeari.mongodb.net:27017' => ServerDescription {
+            _hostAddress: new HostAddress('cluster0-shard-00-02.oeari.mongodb.net:27017'),
+            address: 'cluster0-shard-00-02.oeari.mongodb.net:27017',
+            type: 'RSSecondary',
+            hosts: [
+              'cluster0-shard-00-00.oeari.mongodb.net:27017',
+              'cluster0-shard-00-01.oeari.mongodb.net:27017',
+              'cluster0-shard-00-02.oeari.mongodb.net:27017'
+            ],
+            passives: [],
+            arbiters: [],
+            tags: {
+              workloadType: 'OPERATIONAL',
+              region: 'ME_SOUTH_1',
+              nodeType: 'ELECTABLE',
+              provider: 'AWS'
+            },
+            minWireVersion: 0,
+            maxWireVersion: 13,
+            roundTripTime: 6.728862733339587e-85,
+            lastUpdateTime: 43299338,
+            lastWriteDate: 2022-05-11T22:14:11.000Z,
+            topologyVersion: {
+              processId: new ObjectId("627005674ff1ac271a85c1f3"),
+              counter: 3
+            },
+            primary: 'cluster0-shard-00-01.oeari.mongodb.net:27017',
+            me: 'cluster0-shard-00-02.oeari.mongodb.net:27017',
+            setName: 'atlas-80ye5b-shard-0',
+            setVersion: 2,
+            logicalSessionTimeoutMinutes: 30,
+            '$clusterTime': {
+              clusterTime: new Timestamp({ t: 1652307251, i: 4 }),
+              signature: {
+                hash: new Binary(Buffer.from("b114d8b5c45e2a8912672f9c6697bc0cd833a8f7", "hex"), 0),
+                keyId: new Long("7057499658175643653")
+              }
+            }
+          },
+          'cluster0-shard-00-00.oeari.mongodb.net:27017' => ServerDescription {
+            _hostAddress: new HostAddress('cluster0-shard-00-00.oeari.mongodb.net:27017'),
+            address: 'cluster0-shard-00-00.oeari.mongodb.net:27017',
+            type: 'RSSecondary',
+            hosts: [
+              'cluster0-shard-00-00.oeari.mongodb.net:27017',
+              'cluster0-shard-00-01.oeari.mongodb.net:27017',
+              'cluster0-shard-00-02.oeari.mongodb.net:27017'
+            ],
+            passives: [],
+            arbiters: [],
+            tags: {
+              provider: 'AWS',
+              region: 'ME_SOUTH_1',
+              workloadType: 'OPERATIONAL',
+              nodeType: 'ELECTABLE'
+            },
+            minWireVersion: 0,
+            maxWireVersion: 13,
+            roundTripTime: 6.7549534147706e-85,
+            lastUpdateTime: 43299322,
+            lastWriteDate: 2022-05-11T22:14:11.000Z,
+            topologyVersion: {
+              processId: new ObjectId("6270042ae8ff18065f7eb95c"),
+              counter: 4
+            },
+            primary: 'cluster0-shard-00-01.oeari.mongodb.net:27017',
+            me: 'cluster0-shard-00-00.oeari.mongodb.net:27017',
+            setName: 'atlas-80ye5b-shard-0',
+            setVersion: 2,
+            logicalSessionTimeoutMinutes: 30,
+            '$clusterTime': {
+              clusterTime: new Timestamp({ t: 1652307251, i: 4 }),
+              signature: {
+                hash: new Binary(Buffer.from("b114d8b5c45e2a8912672f9c6697bc0cd833a8f7", "hex"), 0),
+                keyId: new Long("7057499658175643653")
+              }
+            }
+          },
+          'cluster0-shard-00-01.oeari.mongodb.net:27017' => ServerDescription {
+            _hostAddress: new HostAddress('cluster0-shard-00-01.oeari.mongodb.net:27017'),
+            address: 'cluster0-shard-00-01.oeari.mongodb.net:27017',
+            type: 'Unknown',
+            hosts: [],
+            passives: [],
+            arbiters: [],
+            tags: {},
+            minWireVersion: 0,
+            maxWireVersion: 0,
+            roundTripTime: -1,
+            lastUpdateTime: 43276673,
+            lastWriteDate: 0,
+            topologyVersion: {
+              processId: new ObjectId("627004bf4c96c67a5085af66"),
+              counter: 6
+            },
+            error: MongoNetworkError: connection <monitor> to 15.184.3.169:27017 closed
+                at Connection.onClose (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongodb/src/cmap/connection.ts:355:13)
+                at TLSSocket.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongodb/src/cmap/connection.ts:269:42)
+                at TLSSocket.emit (node:events:539:35)
+                at TLSSocket.emit (node:domain:475:12)
+                at node:net:709:12
+                at TCP.done (node:_tls_wrap:582:7) {
+              [Symbol(errorLabels)]: Set(0) {}
+            }
+          }
+        },
+        stale: false,
+        compatible: true,
+        heartbeatFrequencyMS: 10000,
+        localThresholdMS: 15,
+        setName: 'atlas-80ye5b-shard-0',
+        maxSetVersion: 2,
+        maxElectionId: new ObjectId("7fffffff000000000000000a"),
+        commonWireVersion: 13,
+        logicalSessionTimeoutMinutes: 30
+      },
+      code: undefined
+    }
+  },
+  level: 'error',
+  timestamp: '2022-05-12 00:14:19'
+}
+{
+  message: {
+    createNotificationDBError: MongooseServerSelectionError: connection <monitor> to 15.184.3.169:27017 closed
+        at Function.Model.$wrapCallback (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/model.js:5017:32)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/model.js:510:27
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/helpers/promiseOrCallback.js:32:5
+        at new Promise (<anonymous>)
+        at promiseOrCallback (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/helpers/promiseOrCallback.js:31:10)
+        at Mongoose._promiseOrCallback (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/index.js:1181:10)
+        at model.Model.save (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/model.js:509:35)
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/dbCalls/notification/notification.ts:124:26)
+        at Generator.next (<anonymous>)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/dbCalls/notification/notification.ts:8:71 {
+      reason: TopologyDescription {
+        type: 'ReplicaSetNoPrimary',
+        servers: Map(3) {
+          'cluster0-shard-00-02.oeari.mongodb.net:27017' => ServerDescription {
+            _hostAddress: new HostAddress('cluster0-shard-00-02.oeari.mongodb.net:27017'),
+            address: 'cluster0-shard-00-02.oeari.mongodb.net:27017',
+            type: 'RSSecondary',
+            hosts: [
+              'cluster0-shard-00-00.oeari.mongodb.net:27017',
+              'cluster0-shard-00-01.oeari.mongodb.net:27017',
+              'cluster0-shard-00-02.oeari.mongodb.net:27017'
+            ],
+            passives: [],
+            arbiters: [],
+            tags: {
+              workloadType: 'OPERATIONAL',
+              region: 'ME_SOUTH_1',
+              nodeType: 'ELECTABLE',
+              provider: 'AWS'
+            },
+            minWireVersion: 0,
+            maxWireVersion: 13,
+            roundTripTime: 6.728862733339587e-85,
+            lastUpdateTime: 43299338,
+            lastWriteDate: 2022-05-11T22:14:11.000Z,
+            topologyVersion: {
+              processId: new ObjectId("627005674ff1ac271a85c1f3"),
+              counter: 3
+            },
+            primary: 'cluster0-shard-00-01.oeari.mongodb.net:27017',
+            me: 'cluster0-shard-00-02.oeari.mongodb.net:27017',
+            setName: 'atlas-80ye5b-shard-0',
+            setVersion: 2,
+            logicalSessionTimeoutMinutes: 30,
+            '$clusterTime': {
+              clusterTime: new Timestamp({ t: 1652307251, i: 4 }),
+              signature: {
+                hash: new Binary(Buffer.from("b114d8b5c45e2a8912672f9c6697bc0cd833a8f7", "hex"), 0),
+                keyId: new Long("7057499658175643653")
+              }
+            }
+          },
+          'cluster0-shard-00-00.oeari.mongodb.net:27017' => ServerDescription {
+            _hostAddress: new HostAddress('cluster0-shard-00-00.oeari.mongodb.net:27017'),
+            address: 'cluster0-shard-00-00.oeari.mongodb.net:27017',
+            type: 'RSSecondary',
+            hosts: [
+              'cluster0-shard-00-00.oeari.mongodb.net:27017',
+              'cluster0-shard-00-01.oeari.mongodb.net:27017',
+              'cluster0-shard-00-02.oeari.mongodb.net:27017'
+            ],
+            passives: [],
+            arbiters: [],
+            tags: {
+              provider: 'AWS',
+              region: 'ME_SOUTH_1',
+              workloadType: 'OPERATIONAL',
+              nodeType: 'ELECTABLE'
+            },
+            minWireVersion: 0,
+            maxWireVersion: 13,
+            roundTripTime: 6.7549534147706e-85,
+            lastUpdateTime: 43299322,
+            lastWriteDate: 2022-05-11T22:14:11.000Z,
+            topologyVersion: {
+              processId: new ObjectId("6270042ae8ff18065f7eb95c"),
+              counter: 4
+            },
+            primary: 'cluster0-shard-00-01.oeari.mongodb.net:27017',
+            me: 'cluster0-shard-00-00.oeari.mongodb.net:27017',
+            setName: 'atlas-80ye5b-shard-0',
+            setVersion: 2,
+            logicalSessionTimeoutMinutes: 30,
+            '$clusterTime': {
+              clusterTime: new Timestamp({ t: 1652307251, i: 4 }),
+              signature: {
+                hash: new Binary(Buffer.from("b114d8b5c45e2a8912672f9c6697bc0cd833a8f7", "hex"), 0),
+                keyId: new Long("7057499658175643653")
+              }
+            }
+          },
+          'cluster0-shard-00-01.oeari.mongodb.net:27017' => ServerDescription {
+            _hostAddress: new HostAddress('cluster0-shard-00-01.oeari.mongodb.net:27017'),
+            address: 'cluster0-shard-00-01.oeari.mongodb.net:27017',
+            type: 'Unknown',
+            hosts: [],
+            passives: [],
+            arbiters: [],
+            tags: {},
+            minWireVersion: 0,
+            maxWireVersion: 0,
+            roundTripTime: -1,
+            lastUpdateTime: 43276673,
+            lastWriteDate: 0,
+            topologyVersion: {
+              processId: new ObjectId("627004bf4c96c67a5085af66"),
+              counter: 6
+            },
+            error: MongoNetworkError: connection <monitor> to 15.184.3.169:27017 closed
+                at Connection.onClose (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongodb/src/cmap/connection.ts:355:13)
+                at TLSSocket.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongodb/src/cmap/connection.ts:269:42)
+                at TLSSocket.emit (node:events:539:35)
+                at TLSSocket.emit (node:domain:475:12)
+                at node:net:709:12
+                at TCP.done (node:_tls_wrap:582:7) {
+              [Symbol(errorLabels)]: Set(0) {}
+            }
+          }
+        },
+        stale: false,
+        compatible: true,
+        heartbeatFrequencyMS: 10000,
+        localThresholdMS: 15,
+        setName: 'atlas-80ye5b-shard-0',
+        maxSetVersion: 2,
+        maxElectionId: new ObjectId("7fffffff000000000000000a"),
+        commonWireVersion: 13,
+        logicalSessionTimeoutMinutes: 30
+      },
+      code: undefined
+    }
+  },
+  level: 'error',
+  timestamp: '2022-05-12 00:14:19'
+}
+{
+  message: {
+    getProjectDBError: MongooseServerSelectionError: connection <monitor> to 15.184.3.169:27017 closed
+        at Function.Model.$wrapCallback (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/model.js:5017:32)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/query.js:4732:21
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/helpers/promiseOrCallback.js:32:5
+        at new Promise (<anonymous>)
+        at promiseOrCallback (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/helpers/promiseOrCallback.js:31:10)
+        at model.Query.exec (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/query.js:4731:10)
+        at model.Query.Query.then (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/query.js:4814:15) {
+      reason: TopologyDescription {
+        type: 'ReplicaSetNoPrimary',
+        servers: Map(3) {
+          'cluster0-shard-00-02.oeari.mongodb.net:27017' => ServerDescription {
+            _hostAddress: new HostAddress('cluster0-shard-00-02.oeari.mongodb.net:27017'),
+            address: 'cluster0-shard-00-02.oeari.mongodb.net:27017',
+            type: 'RSSecondary',
+            hosts: [
+              'cluster0-shard-00-00.oeari.mongodb.net:27017',
+              'cluster0-shard-00-01.oeari.mongodb.net:27017',
+              'cluster0-shard-00-02.oeari.mongodb.net:27017'
+            ],
+            passives: [],
+            arbiters: [],
+            tags: {
+              workloadType: 'OPERATIONAL',
+              region: 'ME_SOUTH_1',
+              nodeType: 'ELECTABLE',
+              provider: 'AWS'
+            },
+            minWireVersion: 0,
+            maxWireVersion: 13,
+            roundTripTime: 6.728862733339587e-85,
+            lastUpdateTime: 43299338,
+            lastWriteDate: 2022-05-11T22:14:11.000Z,
+            topologyVersion: {
+              processId: new ObjectId("627005674ff1ac271a85c1f3"),
+              counter: 3
+            },
+            primary: 'cluster0-shard-00-01.oeari.mongodb.net:27017',
+            me: 'cluster0-shard-00-02.oeari.mongodb.net:27017',
+            setName: 'atlas-80ye5b-shard-0',
+            setVersion: 2,
+            logicalSessionTimeoutMinutes: 30,
+            '$clusterTime': {
+              clusterTime: new Timestamp({ t: 1652307251, i: 4 }),
+              signature: {
+                hash: new Binary(Buffer.from("b114d8b5c45e2a8912672f9c6697bc0cd833a8f7", "hex"), 0),
+                keyId: new Long("7057499658175643653")
+              }
+            }
+          },
+          'cluster0-shard-00-00.oeari.mongodb.net:27017' => ServerDescription {
+            _hostAddress: new HostAddress('cluster0-shard-00-00.oeari.mongodb.net:27017'),
+            address: 'cluster0-shard-00-00.oeari.mongodb.net:27017',
+            type: 'RSSecondary',
+            hosts: [
+              'cluster0-shard-00-00.oeari.mongodb.net:27017',
+              'cluster0-shard-00-01.oeari.mongodb.net:27017',
+              'cluster0-shard-00-02.oeari.mongodb.net:27017'
+            ],
+            passives: [],
+            arbiters: [],
+            tags: {
+              provider: 'AWS',
+              region: 'ME_SOUTH_1',
+              workloadType: 'OPERATIONAL',
+              nodeType: 'ELECTABLE'
+            },
+            minWireVersion: 0,
+            maxWireVersion: 13,
+            roundTripTime: 6.7549534147706e-85,
+            lastUpdateTime: 43299322,
+            lastWriteDate: 2022-05-11T22:14:11.000Z,
+            topologyVersion: {
+              processId: new ObjectId("6270042ae8ff18065f7eb95c"),
+              counter: 4
+            },
+            primary: 'cluster0-shard-00-01.oeari.mongodb.net:27017',
+            me: 'cluster0-shard-00-00.oeari.mongodb.net:27017',
+            setName: 'atlas-80ye5b-shard-0',
+            setVersion: 2,
+            logicalSessionTimeoutMinutes: 30,
+            '$clusterTime': {
+              clusterTime: new Timestamp({ t: 1652307251, i: 4 }),
+              signature: {
+                hash: new Binary(Buffer.from("b114d8b5c45e2a8912672f9c6697bc0cd833a8f7", "hex"), 0),
+                keyId: new Long("7057499658175643653")
+              }
+            }
+          },
+          'cluster0-shard-00-01.oeari.mongodb.net:27017' => ServerDescription {
+            _hostAddress: new HostAddress('cluster0-shard-00-01.oeari.mongodb.net:27017'),
+            address: 'cluster0-shard-00-01.oeari.mongodb.net:27017',
+            type: 'Unknown',
+            hosts: [],
+            passives: [],
+            arbiters: [],
+            tags: {},
+            minWireVersion: 0,
+            maxWireVersion: 0,
+            roundTripTime: -1,
+            lastUpdateTime: 43276673,
+            lastWriteDate: 0,
+            topologyVersion: {
+              processId: new ObjectId("627004bf4c96c67a5085af66"),
+              counter: 6
+            },
+            error: MongoNetworkError: connection <monitor> to 15.184.3.169:27017 closed
+                at Connection.onClose (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongodb/src/cmap/connection.ts:355:13)
+                at TLSSocket.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongodb/src/cmap/connection.ts:269:42)
+                at TLSSocket.emit (node:events:539:35)
+                at TLSSocket.emit (node:domain:475:12)
+                at node:net:709:12
+                at TCP.done (node:_tls_wrap:582:7) {
+              [Symbol(errorLabels)]: Set(0) {}
+            }
+          }
+        },
+        stale: false,
+        compatible: true,
+        heartbeatFrequencyMS: 10000,
+        localThresholdMS: 15,
+        setName: 'atlas-80ye5b-shard-0',
+        maxSetVersion: 2,
+        maxElectionId: new ObjectId("7fffffff000000000000000a"),
+        commonWireVersion: 13,
+        logicalSessionTimeoutMinutes: 30
+      },
+      code: undefined
+    }
+  },
+  level: 'error',
+  timestamp: '2022-05-12 00:14:20'
+}
+{
+  message: {
+    getProjectDBError: MongooseServerSelectionError: connection <monitor> to 15.184.3.169:27017 closed
+        at Function.Model.$wrapCallback (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/model.js:5017:32)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/query.js:4732:21
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/helpers/promiseOrCallback.js:32:5
+        at new Promise (<anonymous>)
+        at promiseOrCallback (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/helpers/promiseOrCallback.js:31:10)
+        at model.Query.exec (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/query.js:4731:10)
+        at model.Query.Query.then (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/query.js:4814:15) {
+      reason: TopologyDescription {
+        type: 'ReplicaSetNoPrimary',
+        servers: Map(3) {
+          'cluster0-shard-00-02.oeari.mongodb.net:27017' => ServerDescription {
+            _hostAddress: new HostAddress('cluster0-shard-00-02.oeari.mongodb.net:27017'),
+            address: 'cluster0-shard-00-02.oeari.mongodb.net:27017',
+            type: 'RSSecondary',
+            hosts: [
+              'cluster0-shard-00-00.oeari.mongodb.net:27017',
+              'cluster0-shard-00-01.oeari.mongodb.net:27017',
+              'cluster0-shard-00-02.oeari.mongodb.net:27017'
+            ],
+            passives: [],
+            arbiters: [],
+            tags: {
+              workloadType: 'OPERATIONAL',
+              region: 'ME_SOUTH_1',
+              nodeType: 'ELECTABLE',
+              provider: 'AWS'
+            },
+            minWireVersion: 0,
+            maxWireVersion: 13,
+            roundTripTime: 6.728862733339587e-85,
+            lastUpdateTime: 43299338,
+            lastWriteDate: 2022-05-11T22:14:11.000Z,
+            topologyVersion: {
+              processId: new ObjectId("627005674ff1ac271a85c1f3"),
+              counter: 3
+            },
+            primary: 'cluster0-shard-00-01.oeari.mongodb.net:27017',
+            me: 'cluster0-shard-00-02.oeari.mongodb.net:27017',
+            setName: 'atlas-80ye5b-shard-0',
+            setVersion: 2,
+            logicalSessionTimeoutMinutes: 30,
+            '$clusterTime': {
+              clusterTime: new Timestamp({ t: 1652307251, i: 4 }),
+              signature: {
+                hash: new Binary(Buffer.from("b114d8b5c45e2a8912672f9c6697bc0cd833a8f7", "hex"), 0),
+                keyId: new Long("7057499658175643653")
+              }
+            }
+          },
+          'cluster0-shard-00-00.oeari.mongodb.net:27017' => ServerDescription {
+            _hostAddress: new HostAddress('cluster0-shard-00-00.oeari.mongodb.net:27017'),
+            address: 'cluster0-shard-00-00.oeari.mongodb.net:27017',
+            type: 'RSSecondary',
+            hosts: [
+              'cluster0-shard-00-00.oeari.mongodb.net:27017',
+              'cluster0-shard-00-01.oeari.mongodb.net:27017',
+              'cluster0-shard-00-02.oeari.mongodb.net:27017'
+            ],
+            passives: [],
+            arbiters: [],
+            tags: {
+              provider: 'AWS',
+              region: 'ME_SOUTH_1',
+              workloadType: 'OPERATIONAL',
+              nodeType: 'ELECTABLE'
+            },
+            minWireVersion: 0,
+            maxWireVersion: 13,
+            roundTripTime: 6.7549534147706e-85,
+            lastUpdateTime: 43299322,
+            lastWriteDate: 2022-05-11T22:14:11.000Z,
+            topologyVersion: {
+              processId: new ObjectId("6270042ae8ff18065f7eb95c"),
+              counter: 4
+            },
+            primary: 'cluster0-shard-00-01.oeari.mongodb.net:27017',
+            me: 'cluster0-shard-00-00.oeari.mongodb.net:27017',
+            setName: 'atlas-80ye5b-shard-0',
+            setVersion: 2,
+            logicalSessionTimeoutMinutes: 30,
+            '$clusterTime': {
+              clusterTime: new Timestamp({ t: 1652307251, i: 4 }),
+              signature: {
+                hash: new Binary(Buffer.from("b114d8b5c45e2a8912672f9c6697bc0cd833a8f7", "hex"), 0),
+                keyId: new Long("7057499658175643653")
+              }
+            }
+          },
+          'cluster0-shard-00-01.oeari.mongodb.net:27017' => ServerDescription {
+            _hostAddress: new HostAddress('cluster0-shard-00-01.oeari.mongodb.net:27017'),
+            address: 'cluster0-shard-00-01.oeari.mongodb.net:27017',
+            type: 'Unknown',
+            hosts: [],
+            passives: [],
+            arbiters: [],
+            tags: {},
+            minWireVersion: 0,
+            maxWireVersion: 0,
+            roundTripTime: -1,
+            lastUpdateTime: 43276673,
+            lastWriteDate: 0,
+            topologyVersion: {
+              processId: new ObjectId("627004bf4c96c67a5085af66"),
+              counter: 6
+            },
+            error: MongoNetworkError: connection <monitor> to 15.184.3.169:27017 closed
+                at Connection.onClose (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongodb/src/cmap/connection.ts:355:13)
+                at TLSSocket.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongodb/src/cmap/connection.ts:269:42)
+                at TLSSocket.emit (node:events:539:35)
+                at TLSSocket.emit (node:domain:475:12)
+                at node:net:709:12
+                at TCP.done (node:_tls_wrap:582:7) {
+              [Symbol(errorLabels)]: Set(0) {}
+            }
+          }
+        },
+        stale: false,
+        compatible: true,
+        heartbeatFrequencyMS: 10000,
+        localThresholdMS: 15,
+        setName: 'atlas-80ye5b-shard-0',
+        maxSetVersion: 2,
+        maxElectionId: new ObjectId("7fffffff000000000000000a"),
+        commonWireVersion: 13,
+        logicalSessionTimeoutMinutes: 30
+      },
+      code: undefined
+    }
+  },
+  level: 'error',
+  timestamp: '2022-05-12 00:14:21'
+}
+{
+  message: {
+    getProjectDBError: MongooseServerSelectionError: connection <monitor> to 15.184.3.169:27017 closed
+        at Function.Model.$wrapCallback (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/model.js:5017:32)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/query.js:4732:21
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/helpers/promiseOrCallback.js:32:5
+        at new Promise (<anonymous>)
+        at promiseOrCallback (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/helpers/promiseOrCallback.js:31:10)
+        at model.Query.exec (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/query.js:4731:10)
+        at model.Query.Query.then (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/query.js:4814:15) {
+      reason: TopologyDescription {
+        type: 'ReplicaSetNoPrimary',
+        servers: Map(3) {
+          'cluster0-shard-00-02.oeari.mongodb.net:27017' => ServerDescription {
+            _hostAddress: new HostAddress('cluster0-shard-00-02.oeari.mongodb.net:27017'),
+            address: 'cluster0-shard-00-02.oeari.mongodb.net:27017',
+            type: 'RSSecondary',
+            hosts: [
+              'cluster0-shard-00-00.oeari.mongodb.net:27017',
+              'cluster0-shard-00-01.oeari.mongodb.net:27017',
+              'cluster0-shard-00-02.oeari.mongodb.net:27017'
+            ],
+            passives: [],
+            arbiters: [],
+            tags: {
+              workloadType: 'OPERATIONAL',
+              region: 'ME_SOUTH_1',
+              nodeType: 'ELECTABLE',
+              provider: 'AWS'
+            },
+            minWireVersion: 0,
+            maxWireVersion: 13,
+            roundTripTime: 6.728862733339587e-85,
+            lastUpdateTime: 43299338,
+            lastWriteDate: 2022-05-11T22:14:11.000Z,
+            topologyVersion: {
+              processId: new ObjectId("627005674ff1ac271a85c1f3"),
+              counter: 3
+            },
+            primary: 'cluster0-shard-00-01.oeari.mongodb.net:27017',
+            me: 'cluster0-shard-00-02.oeari.mongodb.net:27017',
+            setName: 'atlas-80ye5b-shard-0',
+            setVersion: 2,
+            logicalSessionTimeoutMinutes: 30,
+            '$clusterTime': {
+              clusterTime: new Timestamp({ t: 1652307251, i: 4 }),
+              signature: {
+                hash: new Binary(Buffer.from("b114d8b5c45e2a8912672f9c6697bc0cd833a8f7", "hex"), 0),
+                keyId: new Long("7057499658175643653")
+              }
+            }
+          },
+          'cluster0-shard-00-00.oeari.mongodb.net:27017' => ServerDescription {
+            _hostAddress: new HostAddress('cluster0-shard-00-00.oeari.mongodb.net:27017'),
+            address: 'cluster0-shard-00-00.oeari.mongodb.net:27017',
+            type: 'RSSecondary',
+            hosts: [
+              'cluster0-shard-00-00.oeari.mongodb.net:27017',
+              'cluster0-shard-00-01.oeari.mongodb.net:27017',
+              'cluster0-shard-00-02.oeari.mongodb.net:27017'
+            ],
+            passives: [],
+            arbiters: [],
+            tags: {
+              provider: 'AWS',
+              region: 'ME_SOUTH_1',
+              workloadType: 'OPERATIONAL',
+              nodeType: 'ELECTABLE'
+            },
+            minWireVersion: 0,
+            maxWireVersion: 13,
+            roundTripTime: 6.7549534147706e-85,
+            lastUpdateTime: 43299322,
+            lastWriteDate: 2022-05-11T22:14:11.000Z,
+            topologyVersion: {
+              processId: new ObjectId("6270042ae8ff18065f7eb95c"),
+              counter: 4
+            },
+            primary: 'cluster0-shard-00-01.oeari.mongodb.net:27017',
+            me: 'cluster0-shard-00-00.oeari.mongodb.net:27017',
+            setName: 'atlas-80ye5b-shard-0',
+            setVersion: 2,
+            logicalSessionTimeoutMinutes: 30,
+            '$clusterTime': {
+              clusterTime: new Timestamp({ t: 1652307251, i: 4 }),
+              signature: {
+                hash: new Binary(Buffer.from("b114d8b5c45e2a8912672f9c6697bc0cd833a8f7", "hex"), 0),
+                keyId: new Long("7057499658175643653")
+              }
+            }
+          },
+          'cluster0-shard-00-01.oeari.mongodb.net:27017' => ServerDescription {
+            _hostAddress: new HostAddress('cluster0-shard-00-01.oeari.mongodb.net:27017'),
+            address: 'cluster0-shard-00-01.oeari.mongodb.net:27017',
+            type: 'Unknown',
+            hosts: [],
+            passives: [],
+            arbiters: [],
+            tags: {},
+            minWireVersion: 0,
+            maxWireVersion: 0,
+            roundTripTime: -1,
+            lastUpdateTime: 43276673,
+            lastWriteDate: 0,
+            topologyVersion: {
+              processId: new ObjectId("627004bf4c96c67a5085af66"),
+              counter: 6
+            },
+            error: MongoNetworkError: connection <monitor> to 15.184.3.169:27017 closed
+                at Connection.onClose (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongodb/src/cmap/connection.ts:355:13)
+                at TLSSocket.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongodb/src/cmap/connection.ts:269:42)
+                at TLSSocket.emit (node:events:539:35)
+                at TLSSocket.emit (node:domain:475:12)
+                at node:net:709:12
+                at TCP.done (node:_tls_wrap:582:7) {
+              [Symbol(errorLabels)]: Set(0) {}
+            }
+          }
+        },
+        stale: false,
+        compatible: true,
+        heartbeatFrequencyMS: 10000,
+        localThresholdMS: 15,
+        setName: 'atlas-80ye5b-shard-0',
+        maxSetVersion: 2,
+        maxElectionId: new ObjectId("7fffffff000000000000000a"),
+        commonWireVersion: 13,
+        logicalSessionTimeoutMinutes: 30
+      },
+      code: undefined
+    }
+  },
+  level: 'error',
+  timestamp: '2022-05-12 00:14:22'
+}
+{
+  message: {
+    getProjectDBError: MongooseServerSelectionError: connection <monitor> to 15.184.3.169:27017 closed
+        at Function.Model.$wrapCallback (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/model.js:5017:32)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/query.js:4732:21
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/helpers/promiseOrCallback.js:32:5
+        at new Promise (<anonymous>)
+        at promiseOrCallback (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/helpers/promiseOrCallback.js:31:10)
+        at model.Query.exec (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/query.js:4731:10)
+        at model.Query.Query.then (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/query.js:4814:15) {
+      reason: TopologyDescription {
+        type: 'ReplicaSetNoPrimary',
+        servers: Map(3) {
+          'cluster0-shard-00-02.oeari.mongodb.net:27017' => ServerDescription {
+            _hostAddress: new HostAddress('cluster0-shard-00-02.oeari.mongodb.net:27017'),
+            address: 'cluster0-shard-00-02.oeari.mongodb.net:27017',
+            type: 'RSSecondary',
+            hosts: [
+              'cluster0-shard-00-00.oeari.mongodb.net:27017',
+              'cluster0-shard-00-01.oeari.mongodb.net:27017',
+              'cluster0-shard-00-02.oeari.mongodb.net:27017'
+            ],
+            passives: [],
+            arbiters: [],
+            tags: {
+              workloadType: 'OPERATIONAL',
+              region: 'ME_SOUTH_1',
+              nodeType: 'ELECTABLE',
+              provider: 'AWS'
+            },
+            minWireVersion: 0,
+            maxWireVersion: 13,
+            roundTripTime: 5.383090186671669e-85,
+            lastUpdateTime: 43309221,
+            lastWriteDate: 2022-05-11T22:14:21.000Z,
+            topologyVersion: {
+              processId: new ObjectId("627005674ff1ac271a85c1f3"),
+              counter: 3
+            },
+            primary: 'cluster0-shard-00-01.oeari.mongodb.net:27017',
+            me: 'cluster0-shard-00-02.oeari.mongodb.net:27017',
+            setName: 'atlas-80ye5b-shard-0',
+            setVersion: 2,
+            logicalSessionTimeoutMinutes: 30,
+            '$clusterTime': {
+              clusterTime: new Timestamp({ t: 1652307261, i: 4 }),
+              signature: {
+                hash: new Binary(Buffer.from("e000856bc95badabe637da73482caf100a753864", "hex"), 0),
+                keyId: new Long("7057499658175643653")
+              }
+            }
+          },
+          'cluster0-shard-00-00.oeari.mongodb.net:27017' => ServerDescription {
+            _hostAddress: new HostAddress('cluster0-shard-00-00.oeari.mongodb.net:27017'),
+            address: 'cluster0-shard-00-00.oeari.mongodb.net:27017',
+            type: 'RSSecondary',
+            hosts: [
+              'cluster0-shard-00-00.oeari.mongodb.net:27017',
+              'cluster0-shard-00-01.oeari.mongodb.net:27017',
+              'cluster0-shard-00-02.oeari.mongodb.net:27017'
+            ],
+            passives: [],
+            arbiters: [],
+            tags: {
+              provider: 'AWS',
+              region: 'ME_SOUTH_1',
+              workloadType: 'OPERATIONAL',
+              nodeType: 'ELECTABLE'
+            },
+            minWireVersion: 0,
+            maxWireVersion: 13,
+            roundTripTime: 5.40396273181648e-85,
+            lastUpdateTime: 43309220,
+            lastWriteDate: 2022-05-11T22:14:21.000Z,
+            topologyVersion: {
+              processId: new ObjectId("6270042ae8ff18065f7eb95c"),
+              counter: 4
+            },
+            primary: 'cluster0-shard-00-01.oeari.mongodb.net:27017',
+            me: 'cluster0-shard-00-00.oeari.mongodb.net:27017',
+            setName: 'atlas-80ye5b-shard-0',
+            setVersion: 2,
+            logicalSessionTimeoutMinutes: 30,
+            '$clusterTime': {
+              clusterTime: new Timestamp({ t: 1652307261, i: 4 }),
+              signature: {
+                hash: new Binary(Buffer.from("e000856bc95badabe637da73482caf100a753864", "hex"), 0),
+                keyId: new Long("7057499658175643653")
+              }
+            }
+          },
+          'cluster0-shard-00-01.oeari.mongodb.net:27017' => ServerDescription {
+            _hostAddress: new HostAddress('cluster0-shard-00-01.oeari.mongodb.net:27017'),
+            address: 'cluster0-shard-00-01.oeari.mongodb.net:27017',
+            type: 'Unknown',
+            hosts: [],
+            passives: [],
+            arbiters: [],
+            tags: {},
+            minWireVersion: 0,
+            maxWireVersion: 0,
+            roundTripTime: -1,
+            lastUpdateTime: 43276673,
+            lastWriteDate: 0,
+            topologyVersion: {
+              processId: new ObjectId("627004bf4c96c67a5085af66"),
+              counter: 6
+            },
+            error: MongoNetworkError: connection <monitor> to 15.184.3.169:27017 closed
+                at Connection.onClose (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongodb/src/cmap/connection.ts:355:13)
+                at TLSSocket.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongodb/src/cmap/connection.ts:269:42)
+                at TLSSocket.emit (node:events:539:35)
+                at TLSSocket.emit (node:domain:475:12)
+                at node:net:709:12
+                at TCP.done (node:_tls_wrap:582:7) {
+              [Symbol(errorLabels)]: Set(0) {}
+            }
+          }
+        },
+        stale: false,
+        compatible: true,
+        heartbeatFrequencyMS: 10000,
+        localThresholdMS: 15,
+        setName: 'atlas-80ye5b-shard-0',
+        maxSetVersion: 2,
+        maxElectionId: new ObjectId("7fffffff000000000000000a"),
+        commonWireVersion: 13,
+        logicalSessionTimeoutMinutes: 30
+      },
+      code: undefined
+    }
+  },
+  level: 'error',
+  timestamp: '2022-05-12 00:14:23'
+}
+{
+  message: {
+    getProjectDBError: MongooseServerSelectionError: connection timed out
+        at Function.Model.$wrapCallback (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/model.js:5017:32)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/query.js:4732:21
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/helpers/promiseOrCallback.js:32:5
+        at new Promise (<anonymous>)
+        at promiseOrCallback (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/helpers/promiseOrCallback.js:31:10)
+        at model.Query.exec (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/query.js:4731:10)
+        at model.Query.Query.then (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/query.js:4814:15) {
+      reason: TopologyDescription {
+        type: 'ReplicaSetNoPrimary',
+        servers: Map(3) {
+          'cluster0-shard-00-02.oeari.mongodb.net:27017' => ServerDescription {
+            _hostAddress: new HostAddress('cluster0-shard-00-02.oeari.mongodb.net:27017'),
+            address: 'cluster0-shard-00-02.oeari.mongodb.net:27017',
+            type: 'RSSecondary',
+            hosts: [
+              'cluster0-shard-00-00.oeari.mongodb.net:27017',
+              'cluster0-shard-00-01.oeari.mongodb.net:27017',
+              'cluster0-shard-00-02.oeari.mongodb.net:27017'
+            ],
+            passives: [],
+            arbiters: [],
+            tags: {
+              workloadType: 'OPERATIONAL',
+              region: 'ME_SOUTH_1',
+              nodeType: 'ELECTABLE',
+              provider: 'AWS'
+            },
+            minWireVersion: 0,
+            maxWireVersion: 13,
+            roundTripTime: 5.383090186671669e-85,
+            lastUpdateTime: 43309221,
+            lastWriteDate: 2022-05-11T22:14:21.000Z,
+            topologyVersion: {
+              processId: new ObjectId("627005674ff1ac271a85c1f3"),
+              counter: 3
+            },
+            primary: 'cluster0-shard-00-01.oeari.mongodb.net:27017',
+            me: 'cluster0-shard-00-02.oeari.mongodb.net:27017',
+            setName: 'atlas-80ye5b-shard-0',
+            setVersion: 2,
+            logicalSessionTimeoutMinutes: 30,
+            '$clusterTime': {
+              clusterTime: new Timestamp({ t: 1652307261, i: 4 }),
+              signature: {
+                hash: new Binary(Buffer.from("e000856bc95badabe637da73482caf100a753864", "hex"), 0),
+                keyId: new Long("7057499658175643653")
+              }
+            }
+          },
+          'cluster0-shard-00-00.oeari.mongodb.net:27017' => ServerDescription {
+            _hostAddress: new HostAddress('cluster0-shard-00-00.oeari.mongodb.net:27017'),
+            address: 'cluster0-shard-00-00.oeari.mongodb.net:27017',
+            type: 'RSSecondary',
+            hosts: [
+              'cluster0-shard-00-00.oeari.mongodb.net:27017',
+              'cluster0-shard-00-01.oeari.mongodb.net:27017',
+              'cluster0-shard-00-02.oeari.mongodb.net:27017'
+            ],
+            passives: [],
+            arbiters: [],
+            tags: {
+              provider: 'AWS',
+              region: 'ME_SOUTH_1',
+              workloadType: 'OPERATIONAL',
+              nodeType: 'ELECTABLE'
+            },
+            minWireVersion: 0,
+            maxWireVersion: 13,
+            roundTripTime: 5.40396273181648e-85,
+            lastUpdateTime: 43309220,
+            lastWriteDate: 2022-05-11T22:14:21.000Z,
+            topologyVersion: {
+              processId: new ObjectId("6270042ae8ff18065f7eb95c"),
+              counter: 4
+            },
+            primary: 'cluster0-shard-00-01.oeari.mongodb.net:27017',
+            me: 'cluster0-shard-00-00.oeari.mongodb.net:27017',
+            setName: 'atlas-80ye5b-shard-0',
+            setVersion: 2,
+            logicalSessionTimeoutMinutes: 30,
+            '$clusterTime': {
+              clusterTime: new Timestamp({ t: 1652307261, i: 4 }),
+              signature: {
+                hash: new Binary(Buffer.from("e000856bc95badabe637da73482caf100a753864", "hex"), 0),
+                keyId: new Long("7057499658175643653")
+              }
+            }
+          },
+          'cluster0-shard-00-01.oeari.mongodb.net:27017' => ServerDescription {
+            _hostAddress: new HostAddress('cluster0-shard-00-01.oeari.mongodb.net:27017'),
+            address: 'cluster0-shard-00-01.oeari.mongodb.net:27017',
+            type: 'Unknown',
+            hosts: [],
+            passives: [],
+            arbiters: [],
+            tags: {},
+            minWireVersion: 0,
+            maxWireVersion: 0,
+            roundTripTime: -1,
+            lastUpdateTime: 43310916,
+            lastWriteDate: 0,
+            topologyVersion: {
+              processId: new ObjectId("627004bf4c96c67a5085af66"),
+              counter: 6
+            },
+            error: MongoNetworkTimeoutError: connection timed out
+                at connectionFailureError (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongodb/src/cmap/connect.ts:498:14)
+                at TLSSocket.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongodb/src/cmap/connect.ts:394:16)
+                at Object.onceWrapper (node:events:641:28)
+                at TLSSocket.emit (node:events:527:28)
+                at TLSSocket.emit (node:domain:475:12)
+                at TLSSocket.Socket._onTimeout (node:net:516:8)
+                at listOnTimeout (node:internal/timers:559:17)
+                at processTimers (node:internal/timers:502:7) {
+              [Symbol(errorLabels)]: Set(0) {}
+            }
+          }
+        },
+        stale: false,
+        compatible: true,
+        heartbeatFrequencyMS: 10000,
+        localThresholdMS: 15,
+        setName: 'atlas-80ye5b-shard-0',
+        maxSetVersion: 2,
+        maxElectionId: new ObjectId("7fffffff000000000000000a"),
+        commonWireVersion: 13,
+        logicalSessionTimeoutMinutes: 30
+      },
+      code: undefined
+    }
+  },
+  level: 'error',
+  timestamp: '2022-05-12 00:14:24'
+}
+{
+  message: {
+    getProjectDBError: MongooseServerSelectionError: connection timed out
+        at Function.Model.$wrapCallback (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/model.js:5017:32)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/query.js:4732:21
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/helpers/promiseOrCallback.js:32:5
+        at new Promise (<anonymous>)
+        at promiseOrCallback (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/helpers/promiseOrCallback.js:31:10)
+        at model.Query.exec (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/query.js:4731:10)
+        at model.Query.Query.then (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/query.js:4814:15) {
+      reason: TopologyDescription {
+        type: 'ReplicaSetNoPrimary',
+        servers: Map(3) {
+          'cluster0-shard-00-02.oeari.mongodb.net:27017' => ServerDescription {
+            _hostAddress: new HostAddress('cluster0-shard-00-02.oeari.mongodb.net:27017'),
+            address: 'cluster0-shard-00-02.oeari.mongodb.net:27017',
+            type: 'RSSecondary',
+            hosts: [
+              'cluster0-shard-00-00.oeari.mongodb.net:27017',
+              'cluster0-shard-00-01.oeari.mongodb.net:27017',
+              'cluster0-shard-00-02.oeari.mongodb.net:27017'
+            ],
+            passives: [],
+            arbiters: [],
+            tags: {
+              workloadType: 'OPERATIONAL',
+              region: 'ME_SOUTH_1',
+              nodeType: 'ELECTABLE',
+              provider: 'AWS'
+            },
+            minWireVersion: 0,
+            maxWireVersion: 13,
+            roundTripTime: 5.383090186671669e-85,
+            lastUpdateTime: 43309221,
+            lastWriteDate: 2022-05-11T22:14:21.000Z,
+            topologyVersion: {
+              processId: new ObjectId("627005674ff1ac271a85c1f3"),
+              counter: 3
+            },
+            primary: 'cluster0-shard-00-01.oeari.mongodb.net:27017',
+            me: 'cluster0-shard-00-02.oeari.mongodb.net:27017',
+            setName: 'atlas-80ye5b-shard-0',
+            setVersion: 2,
+            logicalSessionTimeoutMinutes: 30,
+            '$clusterTime': {
+              clusterTime: new Timestamp({ t: 1652307261, i: 4 }),
+              signature: {
+                hash: new Binary(Buffer.from("e000856bc95badabe637da73482caf100a753864", "hex"), 0),
+                keyId: new Long("7057499658175643653")
+              }
+            }
+          },
+          'cluster0-shard-00-00.oeari.mongodb.net:27017' => ServerDescription {
+            _hostAddress: new HostAddress('cluster0-shard-00-00.oeari.mongodb.net:27017'),
+            address: 'cluster0-shard-00-00.oeari.mongodb.net:27017',
+            type: 'RSSecondary',
+            hosts: [
+              'cluster0-shard-00-00.oeari.mongodb.net:27017',
+              'cluster0-shard-00-01.oeari.mongodb.net:27017',
+              'cluster0-shard-00-02.oeari.mongodb.net:27017'
+            ],
+            passives: [],
+            arbiters: [],
+            tags: {
+              provider: 'AWS',
+              region: 'ME_SOUTH_1',
+              workloadType: 'OPERATIONAL',
+              nodeType: 'ELECTABLE'
+            },
+            minWireVersion: 0,
+            maxWireVersion: 13,
+            roundTripTime: 5.40396273181648e-85,
+            lastUpdateTime: 43309220,
+            lastWriteDate: 2022-05-11T22:14:21.000Z,
+            topologyVersion: {
+              processId: new ObjectId("6270042ae8ff18065f7eb95c"),
+              counter: 4
+            },
+            primary: 'cluster0-shard-00-01.oeari.mongodb.net:27017',
+            me: 'cluster0-shard-00-00.oeari.mongodb.net:27017',
+            setName: 'atlas-80ye5b-shard-0',
+            setVersion: 2,
+            logicalSessionTimeoutMinutes: 30,
+            '$clusterTime': {
+              clusterTime: new Timestamp({ t: 1652307261, i: 4 }),
+              signature: {
+                hash: new Binary(Buffer.from("e000856bc95badabe637da73482caf100a753864", "hex"), 0),
+                keyId: new Long("7057499658175643653")
+              }
+            }
+          },
+          'cluster0-shard-00-01.oeari.mongodb.net:27017' => ServerDescription {
+            _hostAddress: new HostAddress('cluster0-shard-00-01.oeari.mongodb.net:27017'),
+            address: 'cluster0-shard-00-01.oeari.mongodb.net:27017',
+            type: 'Unknown',
+            hosts: [],
+            passives: [],
+            arbiters: [],
+            tags: {},
+            minWireVersion: 0,
+            maxWireVersion: 0,
+            roundTripTime: -1,
+            lastUpdateTime: 43310916,
+            lastWriteDate: 0,
+            topologyVersion: {
+              processId: new ObjectId("627004bf4c96c67a5085af66"),
+              counter: 6
+            },
+            error: MongoNetworkTimeoutError: connection timed out
+                at connectionFailureError (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongodb/src/cmap/connect.ts:498:14)
+                at TLSSocket.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongodb/src/cmap/connect.ts:394:16)
+                at Object.onceWrapper (node:events:641:28)
+                at TLSSocket.emit (node:events:527:28)
+                at TLSSocket.emit (node:domain:475:12)
+                at TLSSocket.Socket._onTimeout (node:net:516:8)
+                at listOnTimeout (node:internal/timers:559:17)
+                at processTimers (node:internal/timers:502:7) {
+              [Symbol(errorLabels)]: Set(0) {}
+            }
+          }
+        },
+        stale: false,
+        compatible: true,
+        heartbeatFrequencyMS: 10000,
+        localThresholdMS: 15,
+        setName: 'atlas-80ye5b-shard-0',
+        maxSetVersion: 2,
+        maxElectionId: new ObjectId("7fffffff000000000000000a"),
+        commonWireVersion: 13,
+        logicalSessionTimeoutMinutes: 30
+      },
+      code: undefined
+    }
+  },
+  level: 'error',
+  timestamp: '2022-05-12 00:14:25'
+}
+{
+  message: {
+    createNotificationDBError: MongoNetworkError: connection 33 to 15.184.3.169:27017 closed
+        at Connection.onClose (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongodb/src/cmap/connection.ts:355:13)
+        at TLSSocket.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongodb/src/cmap/connection.ts:269:42)
+        at TLSSocket.emit (node:events:527:28)
+        at TLSSocket.emit (node:domain:475:12)
+        at node:net:709:12
+        at TCP.done (node:_tls_wrap:582:7) {
+      [Symbol(errorLabels)]: Set(0) {}
+    }
+  },
+  level: 'error',
+  timestamp: '2022-05-12 00:14:52'
+}
+{
+  message: {
+    getProjectDBError: MongoNetworkTimeoutError: connection timed out
+        at connectionFailureError (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongodb/src/cmap/connect.ts:498:14)
+        at TLSSocket.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongodb/src/cmap/connect.ts:394:16)
+        at Object.onceWrapper (node:events:641:28)
+        at TLSSocket.emit (node:events:527:28)
+        at TLSSocket.emit (node:domain:475:12)
+        at TLSSocket.Socket._onTimeout (node:net:516:8)
+        at listOnTimeout (node:internal/timers:559:17)
+        at processTimers (node:internal/timers:502:7) {
+      [Symbol(errorLabels)]: Set(0) {}
+    }
+  },
+  level: 'error',
+  timestamp: '2022-05-12 00:17:28'
+}
+{
+  message: {
+    createNotificationDBError: MongoNetworkTimeoutError: connection timed out
+        at connectionFailureError (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongodb/src/cmap/connect.ts:498:14)
+        at TLSSocket.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongodb/src/cmap/connect.ts:394:16)
+        at Object.onceWrapper (node:events:641:28)
+        at TLSSocket.emit (node:events:527:28)
+        at TLSSocket.emit (node:domain:475:12)
+        at TLSSocket.Socket._onTimeout (node:net:516:8)
+        at listOnTimeout (node:internal/timers:559:17)
+        at processTimers (node:internal/timers:502:7) {
+      [Symbol(errorLabels)]: Set(0) {}
+    }
+  },
+  level: 'error',
+  timestamp: '2022-05-12 00:21:59'
+}
+{
+  message: {
+    createNotificationDBError: MongoNetworkTimeoutError: connection timed out
+        at connectionFailureError (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongodb/src/cmap/connect.ts:498:14)
+        at TLSSocket.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongodb/src/cmap/connect.ts:394:16)
+        at Object.onceWrapper (node:events:641:28)
+        at TLSSocket.emit (node:events:527:28)
+        at TLSSocket.emit (node:domain:475:12)
+        at TLSSocket.Socket._onTimeout (node:net:516:8)
+        at listOnTimeout (node:internal/timers:559:17)
+        at processTimers (node:internal/timers:502:7) {
+      [Symbol(errorLabels)]: Set(0) {}
+    }
+  },
+  level: 'error',
+  timestamp: '2022-05-12 00:23:56'
+}
+{
+  message: {
+    createNotificationDBError: MongoNetworkTimeoutError: connection timed out
+        at connectionFailureError (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongodb/src/cmap/connect.ts:498:14)
+        at TLSSocket.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongodb/src/cmap/connect.ts:394:16)
+        at Object.onceWrapper (node:events:641:28)
+        at TLSSocket.emit (node:events:527:28)
+        at TLSSocket.emit (node:domain:475:12)
+        at TLSSocket.Socket._onTimeout (node:net:516:8)
+        at listOnTimeout (node:internal/timers:559:17)
+        at processTimers (node:internal/timers:502:7) {
+      [Symbol(errorLabels)]: Set(0) {}
+    }
+  },
+  level: 'error',
+  timestamp: '2022-05-12 00:25:01'
+}
+{
+  message: {
+    createNotificationDBError: MongoNetworkTimeoutError: connection timed out
+        at connectionFailureError (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongodb/src/cmap/connect.ts:498:14)
+        at TLSSocket.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongodb/src/cmap/connect.ts:394:16)
+        at Object.onceWrapper (node:events:641:28)
+        at TLSSocket.emit (node:events:527:28)
+        at TLSSocket.emit (node:domain:475:12)
+        at TLSSocket.Socket._onTimeout (node:net:516:8)
+        at listOnTimeout (node:internal/timers:559:17)
+        at processTimers (node:internal/timers:502:7) {
+      [Symbol(errorLabels)]: Set(0) {}
+    }
+  },
+  level: 'error',
+  timestamp: '2022-05-12 00:27:40'
+}
+{
+  message: {
+    updateProjectDBError: CastError: Cast to ObjectId failed for value "Zedan" (type string) at path "projectManager" because of "BSONTypeError"
+        at model.Query.exec (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/query.js:4715:21)
+        at model.Query.Query.then (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/query.js:4814:15)
+        at runMicrotasks (<anonymous>)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+      messageFormat: undefined,
+      stringValue: '"Zedan"',
+      kind: 'ObjectId',
+      value: 'Zedan',
+      path: 'projectManager',
+      reason: BSONTypeError: Argument passed in must be a string of 12 bytes or a string of 24 hex characters or an integer
+          at new BSONTypeError (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/bson/src/error.ts:16:5)
+          at new ObjectId (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/bson/src/objectid.ts:87:15)
+          at castObjectId (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/cast/objectid.js:24:12)
+          at ObjectId.cast (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/schema/objectid.js:247:12)
+          at ObjectId.SchemaType.applySetters (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/schematype.js:1189:12)
+          at ObjectId.SchemaType._castForQuery (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/schematype.js:1623:15)
+          at ObjectId.SchemaType.castForQuery (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/schematype.js:1613:15)
+          at ObjectId.SchemaType.castForQueryWrapper (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/schematype.js:1590:20)
+          at castUpdateVal (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/helpers/query/castUpdate.js:544:19)
+          at walkUpdatePath (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/helpers/query/castUpdate.js:359:24),
+      valueType: 'string'
+    }
+  },
+  level: 'error',
+  timestamp: '2022-05-12 12:42:24'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-05-12 12:42:45'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-05-12 13:41:44'
+}
+{
+  message: {
+    data: { id: '62746010736e8ea96f53ea54', skip: '0', limit: undefined }
+  },
+  level: 'info',
+  timestamp: '2022-05-12 14:08:07'
+}
+{
+  message: { notificationData: { _id: '62746010736e8ea96f53ea54', role: 'OM' } },
+  level: 'info',
+  timestamp: '2022-05-12 14:08:07'
+}
+{
+  message: {
+    Notification: {
+      acknowledged: true,
+      modifiedCount: 70,
+      upsertedId: null,
+      upsertedCount: 0,
+      matchedCount: 70
+    }
+  },
+  level: 'info',
+  timestamp: '2022-05-12 14:08:08'
+}
+{
+  message: {
+    data: { id: '62746010736e8ea96f53ea54', skip: '0', limit: undefined }
+  },
+  level: 'info',
+  timestamp: '2022-05-12 14:08:14'
+}
+{
+  message: { notificationData: { _id: '62746010736e8ea96f53ea54', role: 'OM' } },
+  level: 'info',
+  timestamp: '2022-05-12 14:08:14'
+}
+{
+  message: {
+    Notification: {
+      acknowledged: true,
+      modifiedCount: 70,
+      upsertedId: null,
+      upsertedCount: 0,
+      matchedCount: 70
+    }
+  },
+  level: 'info',
+  timestamp: '2022-05-12 14:08:15'
+}
+{
+  message: {
+    data: { id: '62746010736e8ea96f53ea54', skip: '0', limit: undefined }
+  },
+  level: 'info',
+  timestamp: '2022-05-12 14:08:18'
+}
+{
+  message: { notificationData: { _id: '62746010736e8ea96f53ea54', role: 'OM' } },
+  level: 'info',
+  timestamp: '2022-05-12 14:08:18'
+}
+{
+  message: {
+    Notification: {
+      acknowledged: true,
+      modifiedCount: 70,
+      upsertedId: null,
+      upsertedCount: 0,
+      matchedCount: 70
+    }
+  },
+  level: 'info',
+  timestamp: '2022-05-12 14:08:19'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-05-12 14:39:29'
+}
+{
+  message: {
+    departmentData: {
+      _id: '627bae4e0e5b7f94d54e388a',
+      boardId: '627bae4eb9669e4e5d92110b',
+      name: 'Development dep',
+      color: 'green',
+      mainBoard: false,
+      addTeam: [],
+      removeTeam: []
+    }
+  },
+  level: 'info',
+  timestamp: '2022-05-12 16:29:22'
+}
+{
+  message: 'first step',
+  level: 'info',
+  timestamp: '2022-05-12 16:29:22'
+}
+{
+  message: { removeTeam: [] },
+  level: 'info',
+  timestamp: '2022-05-12 16:29:23'
+}
+{
+  message: { removeListAndWebhookSucced: 'done' },
+  level: 'info',
+  timestamp: '2022-05-12 16:29:23'
+}
+{
+  message: { removeWebhookSucced: 'done' },
+  level: 'info',
+  timestamp: '2022-05-12 16:29:23'
+}
+{
+  message: { teamListIds: [] },
+  level: 'info',
+  timestamp: '2022-05-12 16:29:23'
+}
+{
+  message: { title: 'testing', teamListIds: [] },
+  level: 'info',
+  timestamp: '2022-05-12 16:29:23'
+}
+{
+  message: {
+    depUpdate: {
+      _id: new ObjectId("627bae4e0e5b7f94d54e388a"),
+      name: 'Development dep',
+      boardId: '627bae4eb9669e4e5d92110b',
+      color: 'green',
+      mainBoard: false,
+      tasks: [],
+      teamsId: [
+        {
+          idInTrello: '627bae94251eee35cba98d89',
+          idInDB: new ObjectId("627bae940e5b7f94d54e3928"),
+          _id: new ObjectId("627bae950e5b7f94d54e392a")
+        },
+        {
+          idInTrello: '627cf9b14537ae43b079decc',
+          idInDB: new ObjectId("627cf9b20c1583656d3fbbdb"),
+          _id: new ObjectId("627cf9b20c1583656d3fbbdd")
+        },
+        {
+          idInTrello: '627cfda8018d8c8eddb5776a',
+          idInDB: new ObjectId("627cfda80c1583656d3fc4ad"),
+          _id: new ObjectId("627cfda80c1583656d3fc4af")
+        }
+      ],
+      createdAt: 2022-05-11T12:38:38.776Z,
+      updatedAt: 2022-05-12T14:29:23.921Z,
+      __v: 0,
+      canceldListId: '627bae4f4bbd7b6c2ab704a0',
+      defaultListId: '627bae51d0dfea78d5dd804e',
+      departmentWindowId: '627bae52ccd1c15481685a6b',
+      doneListId: '627bae4ff978eb61f8278988',
+      notClearListId: '627bae52edd8ea3929600d29',
+      reviewListId: '627bae50aeeafa66eef0627f',
+      sharedListID: '627bae5003b1782f3edeef20'
+    }
+  },
+  level: 'info',
+  timestamp: '2022-05-12 16:29:24'
+}
+{
+  message: {
+    department: {
+      _id: new ObjectId("627bae4e0e5b7f94d54e388a"),
+      name: 'Development dep',
+      boardId: '627bae4eb9669e4e5d92110b',
+      color: 'green',
+      mainBoard: false,
+      tasks: [],
+      teamsId: [
+        {
+          idInTrello: '627bae94251eee35cba98d89',
+          idInDB: new ObjectId("627bae940e5b7f94d54e3928"),
+          _id: new ObjectId("627bae950e5b7f94d54e392a")
+        },
+        {
+          idInTrello: '627cf9b14537ae43b079decc',
+          idInDB: new ObjectId("627cf9b20c1583656d3fbbdb"),
+          _id: new ObjectId("627cf9b20c1583656d3fbbdd")
+        },
+        {
+          idInTrello: '627cfda8018d8c8eddb5776a',
+          idInDB: new ObjectId("627cfda80c1583656d3fc4ad"),
+          _id: new ObjectId("627cfda80c1583656d3fc4af")
+        }
+      ],
+      createdAt: 2022-05-11T12:38:38.776Z,
+      updatedAt: 2022-05-12T14:29:23.921Z,
+      __v: 0,
+      canceldListId: '627bae4f4bbd7b6c2ab704a0',
+      defaultListId: '627bae51d0dfea78d5dd804e',
+      departmentWindowId: '627bae52ccd1c15481685a6b',
+      doneListId: '627bae4ff978eb61f8278988',
+      notClearListId: '627bae52edd8ea3929600d29',
+      reviewListId: '627bae50aeeafa66eef0627f',
+      sharedListID: '627bae5003b1782f3edeef20'
+    }
+  },
+  level: 'info',
+  timestamp: '2022-05-12 16:29:24'
+}
+{
+  message: {
+    departmentData: {
+      _id: '627bae4e0e5b7f94d54e388a',
+      boardId: '627bae4eb9669e4e5d92110b',
+      name: 'Development dep',
+      color: 'blue',
+      mainBoard: false,
+      addTeam: [],
+      removeTeam: []
+    }
+  },
+  level: 'info',
+  timestamp: '2022-05-12 16:30:54'
+}
+{
+  message: 'first step',
+  level: 'info',
+  timestamp: '2022-05-12 16:30:54'
+}
+{
+  message: { removeTeam: [] },
+  level: 'info',
+  timestamp: '2022-05-12 16:30:55'
+}
+{
+  message: { removeListAndWebhookSucced: 'done' },
+  level: 'info',
+  timestamp: '2022-05-12 16:30:55'
+}
+{
+  message: { removeWebhookSucced: 'done' },
+  level: 'info',
+  timestamp: '2022-05-12 16:30:55'
+}
+{
+  message: { teamListIds: [] },
+  level: 'info',
+  timestamp: '2022-05-12 16:30:55'
+}
+{
+  message: { title: 'testing', teamListIds: [] },
+  level: 'info',
+  timestamp: '2022-05-12 16:30:55'
+}
+{
+  message: {
+    depUpdate: {
+      _id: new ObjectId("627bae4e0e5b7f94d54e388a"),
+      name: 'Development dep',
+      boardId: '627bae4eb9669e4e5d92110b',
+      color: 'blue',
+      mainBoard: false,
+      tasks: [],
+      teamsId: [
+        {
+          idInTrello: '627bae94251eee35cba98d89',
+          idInDB: new ObjectId("627bae940e5b7f94d54e3928"),
+          _id: new ObjectId("627bae950e5b7f94d54e392a")
+        },
+        {
+          idInTrello: '627cf9b14537ae43b079decc',
+          idInDB: new ObjectId("627cf9b20c1583656d3fbbdb"),
+          _id: new ObjectId("627cf9b20c1583656d3fbbdd")
+        },
+        {
+          idInTrello: '627cfda8018d8c8eddb5776a',
+          idInDB: new ObjectId("627cfda80c1583656d3fc4ad"),
+          _id: new ObjectId("627cfda80c1583656d3fc4af")
+        }
+      ],
+      createdAt: 2022-05-11T12:38:38.776Z,
+      updatedAt: 2022-05-12T14:30:55.678Z,
+      __v: 0,
+      canceldListId: '627bae4f4bbd7b6c2ab704a0',
+      defaultListId: '627bae51d0dfea78d5dd804e',
+      departmentWindowId: '627bae52ccd1c15481685a6b',
+      doneListId: '627bae4ff978eb61f8278988',
+      notClearListId: '627bae52edd8ea3929600d29',
+      reviewListId: '627bae50aeeafa66eef0627f',
+      sharedListID: '627bae5003b1782f3edeef20'
+    }
+  },
+  level: 'info',
+  timestamp: '2022-05-12 16:30:55'
+}
+{
+  message: {
+    department: {
+      _id: new ObjectId("627bae4e0e5b7f94d54e388a"),
+      name: 'Development dep',
+      boardId: '627bae4eb9669e4e5d92110b',
+      color: 'blue',
+      mainBoard: false,
+      tasks: [],
+      teamsId: [
+        {
+          idInTrello: '627bae94251eee35cba98d89',
+          idInDB: new ObjectId("627bae940e5b7f94d54e3928"),
+          _id: new ObjectId("627bae950e5b7f94d54e392a")
+        },
+        {
+          idInTrello: '627cf9b14537ae43b079decc',
+          idInDB: new ObjectId("627cf9b20c1583656d3fbbdb"),
+          _id: new ObjectId("627cf9b20c1583656d3fbbdd")
+        },
+        {
+          idInTrello: '627cfda8018d8c8eddb5776a',
+          idInDB: new ObjectId("627cfda80c1583656d3fc4ad"),
+          _id: new ObjectId("627cfda80c1583656d3fc4af")
+        }
+      ],
+      createdAt: 2022-05-11T12:38:38.776Z,
+      updatedAt: 2022-05-12T14:30:55.678Z,
+      __v: 0,
+      canceldListId: '627bae4f4bbd7b6c2ab704a0',
+      defaultListId: '627bae51d0dfea78d5dd804e',
+      departmentWindowId: '627bae52ccd1c15481685a6b',
+      doneListId: '627bae4ff978eb61f8278988',
+      notClearListId: '627bae52edd8ea3929600d29',
+      reviewListId: '627bae50aeeafa66eef0627f',
+      sharedListID: '627bae5003b1782f3edeef20'
+    }
+  },
+  level: 'info',
+  timestamp: '2022-05-12 16:30:55'
+}
+{
+  message: {
+    departmentData: {
+      _id: '627bae4e0e5b7f94d54e388a',
+      boardId: '627bae4eb9669e4e5d92110b',
+      name: 'Development dep',
+      color: 'green',
+      mainBoard: false,
+      addTeam: [],
+      removeTeam: []
+    }
+  },
+  level: 'info',
+  timestamp: '2022-05-12 16:33:12'
+}
+{
+  message: 'first step',
+  level: 'info',
+  timestamp: '2022-05-12 16:33:12'
+}
+{
+  message: { removeTeam: [] },
+  level: 'info',
+  timestamp: '2022-05-12 16:33:13'
+}
+{
+  message: { removeListAndWebhookSucced: 'done' },
+  level: 'info',
+  timestamp: '2022-05-12 16:33:13'
+}
+{
+  message: { removeWebhookSucced: 'done' },
+  level: 'info',
+  timestamp: '2022-05-12 16:33:13'
+}
+{
+  message: { teamListIds: [] },
+  level: 'info',
+  timestamp: '2022-05-12 16:33:13'
+}
+{
+  message: { title: 'testing', teamListIds: [] },
+  level: 'info',
+  timestamp: '2022-05-12 16:33:13'
+}
+{
+  message: {
+    depUpdate: {
+      _id: new ObjectId("627bae4e0e5b7f94d54e388a"),
+      name: 'Development dep',
+      boardId: '627bae4eb9669e4e5d92110b',
+      color: 'green',
+      mainBoard: false,
+      tasks: [],
+      teamsId: [
+        {
+          idInTrello: '627bae94251eee35cba98d89',
+          idInDB: new ObjectId("627bae940e5b7f94d54e3928"),
+          _id: new ObjectId("627bae950e5b7f94d54e392a")
+        },
+        {
+          idInTrello: '627cf9b14537ae43b079decc',
+          idInDB: new ObjectId("627cf9b20c1583656d3fbbdb"),
+          _id: new ObjectId("627cf9b20c1583656d3fbbdd")
+        },
+        {
+          idInTrello: '627cfda8018d8c8eddb5776a',
+          idInDB: new ObjectId("627cfda80c1583656d3fc4ad"),
+          _id: new ObjectId("627cfda80c1583656d3fc4af")
+        }
+      ],
+      createdAt: 2022-05-11T12:38:38.776Z,
+      updatedAt: 2022-05-12T14:33:13.191Z,
+      __v: 0,
+      canceldListId: '627bae4f4bbd7b6c2ab704a0',
+      defaultListId: '627bae51d0dfea78d5dd804e',
+      departmentWindowId: '627bae52ccd1c15481685a6b',
+      doneListId: '627bae4ff978eb61f8278988',
+      notClearListId: '627bae52edd8ea3929600d29',
+      reviewListId: '627bae50aeeafa66eef0627f',
+      sharedListID: '627bae5003b1782f3edeef20'
+    }
+  },
+  level: 'info',
+  timestamp: '2022-05-12 16:33:13'
+}
+{
+  message: {
+    department: {
+      _id: new ObjectId("627bae4e0e5b7f94d54e388a"),
+      name: 'Development dep',
+      boardId: '627bae4eb9669e4e5d92110b',
+      color: 'green',
+      mainBoard: false,
+      tasks: [],
+      teamsId: [
+        {
+          idInTrello: '627bae94251eee35cba98d89',
+          idInDB: new ObjectId("627bae940e5b7f94d54e3928"),
+          _id: new ObjectId("627bae950e5b7f94d54e392a")
+        },
+        {
+          idInTrello: '627cf9b14537ae43b079decc',
+          idInDB: new ObjectId("627cf9b20c1583656d3fbbdb"),
+          _id: new ObjectId("627cf9b20c1583656d3fbbdd")
+        },
+        {
+          idInTrello: '627cfda8018d8c8eddb5776a',
+          idInDB: new ObjectId("627cfda80c1583656d3fc4ad"),
+          _id: new ObjectId("627cfda80c1583656d3fc4af")
+        }
+      ],
+      createdAt: 2022-05-11T12:38:38.776Z,
+      updatedAt: 2022-05-12T14:33:13.191Z,
+      __v: 0,
+      canceldListId: '627bae4f4bbd7b6c2ab704a0',
+      defaultListId: '627bae51d0dfea78d5dd804e',
+      departmentWindowId: '627bae52ccd1c15481685a6b',
+      doneListId: '627bae4ff978eb61f8278988',
+      notClearListId: '627bae52edd8ea3929600d29',
+      reviewListId: '627bae50aeeafa66eef0627f',
+      sharedListID: '627bae5003b1782f3edeef20'
+    }
+  },
+  level: 'info',
+  timestamp: '2022-05-12 16:33:13'
+}
+{
+  message: {
+    departmentData: {
+      _id: '627bae4e0e5b7f94d54e388a',
+      boardId: '627bae4eb9669e4e5d92110b',
+      name: 'Development',
+      color: 'green',
+      mainBoard: false,
+      addTeam: [],
+      removeTeam: []
+    }
+  },
+  level: 'info',
+  timestamp: '2022-05-12 16:35:11'
+}
+{
+  message: 'first step',
+  level: 'info',
+  timestamp: '2022-05-12 16:35:11'
+}
+{
+  message: { removeTeam: [] },
+  level: 'info',
+  timestamp: '2022-05-12 16:35:12'
+}
+{
+  message: { removeListAndWebhookSucced: 'done' },
+  level: 'info',
+  timestamp: '2022-05-12 16:35:12'
+}
+{
+  message: { removeWebhookSucced: 'done' },
+  level: 'info',
+  timestamp: '2022-05-12 16:35:12'
+}
+{
+  message: { teamListIds: [] },
+  level: 'info',
+  timestamp: '2022-05-12 16:35:12'
+}
+{
+  message: { title: 'testing', teamListIds: [] },
+  level: 'info',
+  timestamp: '2022-05-12 16:35:12'
+}
+{
+  message: {
+    depUpdate: {
+      _id: new ObjectId("627bae4e0e5b7f94d54e388a"),
+      name: 'Development',
+      boardId: '627bae4eb9669e4e5d92110b',
+      color: 'green',
+      mainBoard: false,
+      tasks: [],
+      teamsId: [
+        {
+          idInTrello: '627bae94251eee35cba98d89',
+          idInDB: new ObjectId("627bae940e5b7f94d54e3928"),
+          _id: new ObjectId("627bae950e5b7f94d54e392a")
+        },
+        {
+          idInTrello: '627cf9b14537ae43b079decc',
+          idInDB: new ObjectId("627cf9b20c1583656d3fbbdb"),
+          _id: new ObjectId("627cf9b20c1583656d3fbbdd")
+        },
+        {
+          idInTrello: '627cfda8018d8c8eddb5776a',
+          idInDB: new ObjectId("627cfda80c1583656d3fc4ad"),
+          _id: new ObjectId("627cfda80c1583656d3fc4af")
+        }
+      ],
+      createdAt: 2022-05-11T12:38:38.776Z,
+      updatedAt: 2022-05-12T14:35:12.305Z,
+      __v: 0,
+      canceldListId: '627bae4f4bbd7b6c2ab704a0',
+      defaultListId: '627bae51d0dfea78d5dd804e',
+      departmentWindowId: '627bae52ccd1c15481685a6b',
+      doneListId: '627bae4ff978eb61f8278988',
+      notClearListId: '627bae52edd8ea3929600d29',
+      reviewListId: '627bae50aeeafa66eef0627f',
+      sharedListID: '627bae5003b1782f3edeef20'
+    }
+  },
+  level: 'info',
+  timestamp: '2022-05-12 16:35:12'
+}
+{
+  message: {
+    department: {
+      _id: new ObjectId("627bae4e0e5b7f94d54e388a"),
+      name: 'Development',
+      boardId: '627bae4eb9669e4e5d92110b',
+      color: 'green',
+      mainBoard: false,
+      tasks: [],
+      teamsId: [
+        {
+          idInTrello: '627bae94251eee35cba98d89',
+          idInDB: new ObjectId("627bae940e5b7f94d54e3928"),
+          _id: new ObjectId("627bae950e5b7f94d54e392a")
+        },
+        {
+          idInTrello: '627cf9b14537ae43b079decc',
+          idInDB: new ObjectId("627cf9b20c1583656d3fbbdb"),
+          _id: new ObjectId("627cf9b20c1583656d3fbbdd")
+        },
+        {
+          idInTrello: '627cfda8018d8c8eddb5776a',
+          idInDB: new ObjectId("627cfda80c1583656d3fc4ad"),
+          _id: new ObjectId("627cfda80c1583656d3fc4af")
+        }
+      ],
+      createdAt: 2022-05-11T12:38:38.776Z,
+      updatedAt: 2022-05-12T14:35:12.305Z,
+      __v: 0,
+      canceldListId: '627bae4f4bbd7b6c2ab704a0',
+      defaultListId: '627bae51d0dfea78d5dd804e',
+      departmentWindowId: '627bae52ccd1c15481685a6b',
+      doneListId: '627bae4ff978eb61f8278988',
+      notClearListId: '627bae52edd8ea3929600d29',
+      reviewListId: '627bae50aeeafa66eef0627f',
+      sharedListID: '627bae5003b1782f3edeef20'
+    }
+  },
+  level: 'info',
+  timestamp: '2022-05-12 16:35:12'
+}
+{
+  message: {
+    departmentData: {
+      _id: '627bae4e0e5b7f94d54e388a',
+      boardId: '627bae4eb9669e4e5d92110b',
+      name: 'Development dep',
+      color: 'green',
+      mainBoard: false,
+      addTeam: [],
+      removeTeam: []
+    }
+  },
+  level: 'info',
+  timestamp: '2022-05-12 16:38:12'
+}
+{
+  message: 'first step',
+  level: 'info',
+  timestamp: '2022-05-12 16:38:12'
+}
+{
+  message: { removeTeam: [] },
+  level: 'info',
+  timestamp: '2022-05-12 16:38:13'
+}
+{
+  message: { removeListAndWebhookSucced: 'done' },
+  level: 'info',
+  timestamp: '2022-05-12 16:38:13'
+}
+{
+  message: { removeWebhookSucced: 'done' },
+  level: 'info',
+  timestamp: '2022-05-12 16:38:13'
+}
+{
+  message: { teamListIds: [] },
+  level: 'info',
+  timestamp: '2022-05-12 16:38:13'
+}
+{
+  message: { title: 'testing', teamListIds: [] },
+  level: 'info',
+  timestamp: '2022-05-12 16:38:13'
+}
+{
+  message: {
+    depUpdate: {
+      _id: new ObjectId("627bae4e0e5b7f94d54e388a"),
+      name: 'Development dep',
+      boardId: '627bae4eb9669e4e5d92110b',
+      color: 'green',
+      mainBoard: false,
+      tasks: [],
+      teamsId: [
+        {
+          idInTrello: '627bae94251eee35cba98d89',
+          idInDB: new ObjectId("627bae940e5b7f94d54e3928"),
+          _id: new ObjectId("627bae950e5b7f94d54e392a")
+        },
+        {
+          idInTrello: '627cf9b14537ae43b079decc',
+          idInDB: new ObjectId("627cf9b20c1583656d3fbbdb"),
+          _id: new ObjectId("627cf9b20c1583656d3fbbdd")
+        },
+        {
+          idInTrello: '627cfda8018d8c8eddb5776a',
+          idInDB: new ObjectId("627cfda80c1583656d3fc4ad"),
+          _id: new ObjectId("627cfda80c1583656d3fc4af")
+        }
+      ],
+      createdAt: 2022-05-11T12:38:38.776Z,
+      updatedAt: 2022-05-12T14:38:13.341Z,
+      __v: 0,
+      canceldListId: '627bae4f4bbd7b6c2ab704a0',
+      defaultListId: '627bae51d0dfea78d5dd804e',
+      departmentWindowId: '627bae52ccd1c15481685a6b',
+      doneListId: '627bae4ff978eb61f8278988',
+      notClearListId: '627bae52edd8ea3929600d29',
+      reviewListId: '627bae50aeeafa66eef0627f',
+      sharedListID: '627bae5003b1782f3edeef20'
+    }
+  },
+  level: 'info',
+  timestamp: '2022-05-12 16:38:13'
+}
+{
+  message: {
+    department: {
+      _id: new ObjectId("627bae4e0e5b7f94d54e388a"),
+      name: 'Development dep',
+      boardId: '627bae4eb9669e4e5d92110b',
+      color: 'green',
+      mainBoard: false,
+      tasks: [],
+      teamsId: [
+        {
+          idInTrello: '627bae94251eee35cba98d89',
+          idInDB: new ObjectId("627bae940e5b7f94d54e3928"),
+          _id: new ObjectId("627bae950e5b7f94d54e392a")
+        },
+        {
+          idInTrello: '627cf9b14537ae43b079decc',
+          idInDB: new ObjectId("627cf9b20c1583656d3fbbdb"),
+          _id: new ObjectId("627cf9b20c1583656d3fbbdd")
+        },
+        {
+          idInTrello: '627cfda8018d8c8eddb5776a',
+          idInDB: new ObjectId("627cfda80c1583656d3fc4ad"),
+          _id: new ObjectId("627cfda80c1583656d3fc4af")
+        }
+      ],
+      createdAt: 2022-05-11T12:38:38.776Z,
+      updatedAt: 2022-05-12T14:38:13.341Z,
+      __v: 0,
+      canceldListId: '627bae4f4bbd7b6c2ab704a0',
+      defaultListId: '627bae51d0dfea78d5dd804e',
+      departmentWindowId: '627bae52ccd1c15481685a6b',
+      doneListId: '627bae4ff978eb61f8278988',
+      notClearListId: '627bae52edd8ea3929600d29',
+      reviewListId: '627bae50aeeafa66eef0627f',
+      sharedListID: '627bae5003b1782f3edeef20'
+    }
+  },
+  level: 'info',
+  timestamp: '2022-05-12 16:38:13'
+}
+{
+  message: {
+    borderData: Promise { <pending> },
+    createBoardApi: 'https://api.trello.com/1/boards/?name=Marketing&prefs_background=purple&defaultLists=false&key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68'
+  },
+  level: 'info',
+  timestamp: '2022-05-12 16:38:58'
+}
+{
+  message: {
+    data: {
+      name: 'Marketing',
+      color: 'purple',
+      boardId: '627d1c02faa0967af340edbd'
+    }
+  },
+  level: 'info',
+  timestamp: '2022-05-12 16:38:58'
+}
+{
+  message: { removeWebhookSucced: 'done' },
+  level: 'info',
+  timestamp: '2022-05-12 16:39:01'
+}
+{
+  message: { teamListIds: [] },
+  level: 'info',
+  timestamp: '2022-05-12 16:39:01'
+}
+{
+  message: { webhookCreateResult: 'webhook done' },
+  level: 'info',
+  timestamp: '2022-05-12 16:39:03'
+}
+{
+  message: {
+    __checkBoardListNameError: FetchError: invalid json response body at https://api.trello.com/1/boards/undefined/lists?key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68 reason: Unexpected token i in JSON at position 0
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/node-fetch/lib/index.js:273:32
+        at runMicrotasks (<anonymous>)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+      type: 'invalid-json'
+    }
+  },
+  level: 'error',
+  timestamp: '2022-05-12 16:40:28'
+}
+{
+  message: {
+    createMemberError: FetchError: invalid json response body at https://api.trello.com/1/lists?name=TM%20&idBoard=undefined&key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68 reason: Unexpected token i in JSON at position 0
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/node-fetch/lib/index.js:273:32
+        at runMicrotasks (<anonymous>)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+      type: 'invalid-json'
+    }
+  },
+  level: 'error',
+  timestamp: '2022-05-12 16:40:29'
+}
+{
+  message: {
+    handleGetBoards: TypeError: Cannot read properties of undefined (reading 'status')
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/presentation/techMember/techMember.ts:12:18
+        at Generator.next (<anonymous>)
+        at fulfilled (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/presentation/techMember/techMember.ts:5:58)
+        at runMicrotasks (<anonymous>)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5)
+  },
+  level: 'error',
+  timestamp: '2022-05-12 16:40:29'
+}
+{
+  message: {
+    borderData: Promise { <pending> },
+    createBoardApi: 'https://api.trello.com/1/boards/?name=New&prefs_background=red&defaultLists=false&key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68'
+  },
+  level: 'info',
+  timestamp: '2022-05-12 16:44:20'
+}
+{
+  message: {
+    data: { name: 'New', color: 'red', boardId: '627d1d447ae0e2058d15d197' }
+  },
+  level: 'info',
+  timestamp: '2022-05-12 16:44:20'
+}
+{
+  message: { removeWebhookSucced: 'done' },
+  level: 'info',
+  timestamp: '2022-05-12 16:44:23'
+}
+{
+  message: {
+    teamListIds: [
+      {
+        idInTrello: '627d1d47bb84ac4702cc1e77',
+        idInDB: '627d1befa8fdfeaa37e3a832'
+      }
+    ]
+  },
+  level: 'info',
+  timestamp: '2022-05-12 16:44:23'
+}
+{
+  message: { webhookCreateResult: 'webhook done' },
+  level: 'info',
+  timestamp: '2022-05-12 16:44:26'
+}
+{
+  message: { body: {} },
+  level: 'info',
+  timestamp: '2022-05-12 16:45:05'
+}
+{
+  message: {
+    boardId: '627d1d447ae0e2058d15d197',
+    myDepartment: {
+      _id: new ObjectId("627d1d44a8fdfeaa37e3ab2b"),
+      name: 'New',
+      boardId: '627d1d447ae0e2058d15d197',
+      color: 'red',
+      mainBoard: false,
+      tasks: [],
+      teamsId: [
+        {
+          idInTrello: '627d1d47bb84ac4702cc1e77',
+          idInDB: new ObjectId("627d1befa8fdfeaa37e3a832"),
+          _id: new ObjectId("627d1d49a8fdfeaa37e3ab37")
+        }
+      ],
+      createdAt: 2022-05-12T14:44:20.848Z,
+      updatedAt: 2022-05-12T14:44:25.622Z,
+      __v: 0,
+      canceldListId: '627d1d45a857fb23fa04f194',
+      defaultListId: '627d1d48db34f476344b6541',
+      departmentWindowId: '627d1d48c1881a888f673cfe',
+      doneListId: '627d1d45ca48f34725a0355d',
+      notClearListId: '627d1d491579e27a521540bc',
+      reviewListId: '627d1d47314f668b1fa4029d',
+      sharedListID: '627d1d46f4881b055dfd00b6'
+    }
+  },
+  level: 'info',
+  timestamp: '2022-05-12 16:45:05'
+}
+{
+  message: {
+    removeBoard: 'https://api.trello.com/1/boards/627d1d447ae0e2058d15d197?response_type=token&key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68'
+  },
+  level: 'info',
+  timestamp: '2022-05-12 16:45:05'
+}
+{
+  message: {
+    borderData: Promise { <pending> },
+    createBoardApi: 'https://api.trello.com/1/boards/?name=Social Media&prefs_background=purple&defaultLists=false&key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68'
+  },
+  level: 'info',
+  timestamp: '2022-05-12 17:50:15'
+}
+{
+  message: {
+    data: {
+      name: 'Social Media',
+      color: 'purple',
+      boardId: '627d2cb6f10b650b91637ee9'
+    }
+  },
+  level: 'info',
+  timestamp: '2022-05-12 17:50:15'
+}
+{
+  message: { removeWebhookSucced: 'done' },
+  level: 'info',
+  timestamp: '2022-05-12 17:50:17'
+}
+{
+  message: {
+    teamListIds: [
+      {
+        idInTrello: '627d2cb9b49061886f16f719',
+        idInDB: '627d1c77a8fdfeaa37e3a95c'
+      }
+    ]
+  },
+  level: 'info',
+  timestamp: '2022-05-12 17:50:17'
+}
+{
+  message: { webhookCreateResult: 'webhook done' },
+  level: 'info',
+  timestamp: '2022-05-12 17:50:20'
+}
+{
+  message: {
+    departmentData: {
+      _id: '627bae4e0e5b7f94d54e388a',
+      boardId: '627bae4eb9669e4e5d92110b',
+      name: 'Development 1',
+      color: 'green',
+      mainBoard: false,
+      addTeam: [],
+      removeTeam: []
+    }
+  },
+  level: 'info',
+  timestamp: '2022-05-12 17:52:46'
+}
+{
+  message: 'first step',
+  level: 'info',
+  timestamp: '2022-05-12 17:52:46'
+}
+{
+  message: { removeTeam: [] },
+  level: 'info',
+  timestamp: '2022-05-12 17:52:47'
+}
+{
+  message: { removeListAndWebhookSucced: 'done' },
+  level: 'info',
+  timestamp: '2022-05-12 17:52:47'
+}
+{
+  message: { removeWebhookSucced: 'done' },
+  level: 'info',
+  timestamp: '2022-05-12 17:52:47'
+}
+{
+  message: { teamListIds: [] },
+  level: 'info',
+  timestamp: '2022-05-12 17:52:47'
+}
+{
+  message: { title: 'testing', teamListIds: [] },
+  level: 'info',
+  timestamp: '2022-05-12 17:52:47'
+}
+{
+  message: {
+    depUpdate: {
+      _id: new ObjectId("627bae4e0e5b7f94d54e388a"),
+      name: 'Development 1',
+      boardId: '627bae4eb9669e4e5d92110b',
+      color: 'green',
+      mainBoard: false,
+      tasks: [],
+      teamsId: [
+        {
+          idInTrello: '627bae94251eee35cba98d89',
+          idInDB: new ObjectId("627bae940e5b7f94d54e3928"),
+          _id: new ObjectId("627bae950e5b7f94d54e392a")
+        },
+        {
+          idInTrello: '627cf9b14537ae43b079decc',
+          idInDB: new ObjectId("627cf9b20c1583656d3fbbdb"),
+          _id: new ObjectId("627cf9b20c1583656d3fbbdd")
+        },
+        {
+          idInTrello: '627cfda8018d8c8eddb5776a',
+          idInDB: new ObjectId("627cfda80c1583656d3fc4ad"),
+          _id: new ObjectId("627cfda80c1583656d3fc4af")
+        },
+        {
+          idInTrello: '627d1bef5c52942694d5cb71',
+          idInDB: new ObjectId("627d1befa8fdfeaa37e3a832"),
+          _id: new ObjectId("627d1befa8fdfeaa37e3a835")
+        }
+      ],
+      createdAt: 2022-05-11T12:38:38.776Z,
+      updatedAt: 2022-05-12T15:52:47.797Z,
+      __v: 0,
+      canceldListId: '627bae4f4bbd7b6c2ab704a0',
+      defaultListId: '627bae51d0dfea78d5dd804e',
+      departmentWindowId: '627bae52ccd1c15481685a6b',
+      doneListId: '627bae4ff978eb61f8278988',
+      notClearListId: '627bae52edd8ea3929600d29',
+      reviewListId: '627bae50aeeafa66eef0627f',
+      sharedListID: '627bae5003b1782f3edeef20'
+    }
+  },
+  level: 'info',
+  timestamp: '2022-05-12 17:52:47'
+}
+{
+  message: {
+    department: {
+      _id: new ObjectId("627bae4e0e5b7f94d54e388a"),
+      name: 'Development 1',
+      boardId: '627bae4eb9669e4e5d92110b',
+      color: 'green',
+      mainBoard: false,
+      tasks: [],
+      teamsId: [
+        {
+          idInTrello: '627bae94251eee35cba98d89',
+          idInDB: new ObjectId("627bae940e5b7f94d54e3928"),
+          _id: new ObjectId("627bae950e5b7f94d54e392a")
+        },
+        {
+          idInTrello: '627cf9b14537ae43b079decc',
+          idInDB: new ObjectId("627cf9b20c1583656d3fbbdb"),
+          _id: new ObjectId("627cf9b20c1583656d3fbbdd")
+        },
+        {
+          idInTrello: '627cfda8018d8c8eddb5776a',
+          idInDB: new ObjectId("627cfda80c1583656d3fc4ad"),
+          _id: new ObjectId("627cfda80c1583656d3fc4af")
+        },
+        {
+          idInTrello: '627d1bef5c52942694d5cb71',
+          idInDB: new ObjectId("627d1befa8fdfeaa37e3a832"),
+          _id: new ObjectId("627d1befa8fdfeaa37e3a835")
+        }
+      ],
+      createdAt: 2022-05-11T12:38:38.776Z,
+      updatedAt: 2022-05-12T15:52:47.797Z,
+      __v: 0,
+      canceldListId: '627bae4f4bbd7b6c2ab704a0',
+      defaultListId: '627bae51d0dfea78d5dd804e',
+      departmentWindowId: '627bae52ccd1c15481685a6b',
+      doneListId: '627bae4ff978eb61f8278988',
+      notClearListId: '627bae52edd8ea3929600d29',
+      reviewListId: '627bae50aeeafa66eef0627f',
+      sharedListID: '627bae5003b1782f3edeef20'
+    }
+  },
+  level: 'info',
+  timestamp: '2022-05-12 17:52:47'
+}
+{
+  message: {
+    departmentData: {
+      _id: '627d2cb7a8fdfeaa37e3cae1',
+      boardId: '627d2cb6f10b650b91637ee9',
+      name: 'Social Media team 1',
+      color: 'purple',
+      mainBoard: false,
+      addTeam: [],
+      removeTeam: []
+    }
+  },
+  level: 'info',
+  timestamp: '2022-05-12 17:53:04'
+}
+{
+  message: 'first step',
+  level: 'info',
+  timestamp: '2022-05-12 17:53:04'
+}
+{
+  message: { removeTeam: [] },
+  level: 'info',
+  timestamp: '2022-05-12 17:53:05'
+}
+{
+  message: { removeListAndWebhookSucced: 'done' },
+  level: 'info',
+  timestamp: '2022-05-12 17:53:05'
+}
+{
+  message: { removeWebhookSucced: 'done' },
+  level: 'info',
+  timestamp: '2022-05-12 17:53:05'
+}
+{
+  message: { teamListIds: [] },
+  level: 'info',
+  timestamp: '2022-05-12 17:53:05'
+}
+{
+  message: { title: 'testing', teamListIds: [] },
+  level: 'info',
+  timestamp: '2022-05-12 17:53:05'
+}
+{
+  message: {
+    depUpdate: {
+      _id: new ObjectId("627d2cb7a8fdfeaa37e3cae1"),
+      name: 'Social Media team 1',
+      boardId: '627d2cb6f10b650b91637ee9',
+      color: 'purple',
+      mainBoard: false,
+      tasks: [],
+      teamsId: [
+        {
+          idInTrello: '627d2cb9b49061886f16f719',
+          idInDB: new ObjectId("627d1c77a8fdfeaa37e3a95c"),
+          _id: new ObjectId("627d2cbba8fdfeaa37e3caee")
+        }
+      ],
+      createdAt: 2022-05-12T15:50:15.128Z,
+      updatedAt: 2022-05-12T15:53:05.427Z,
+      __v: 0,
+      canceldListId: '627d2cb7a9291d58eeb8f8e7',
+      defaultListId: '627d2cba55ea5d57090ac362',
+      departmentWindowId: '627d2cbacb6382195e9a868f',
+      doneListId: '627d2cb800d52548d65819dd',
+      notClearListId: '627d2cbbb92a1c519b47945f',
+      reviewListId: '627d2cb91f61411bec95461b',
+      sharedListID: '627d2cb8219f2e5a2d2d98cf'
+    }
+  },
+  level: 'info',
+  timestamp: '2022-05-12 17:53:05'
+}
+{
+  message: {
+    department: {
+      _id: new ObjectId("627d2cb7a8fdfeaa37e3cae1"),
+      name: 'Social Media team 1',
+      boardId: '627d2cb6f10b650b91637ee9',
+      color: 'purple',
+      mainBoard: false,
+      tasks: [],
+      teamsId: [
+        {
+          idInTrello: '627d2cb9b49061886f16f719',
+          idInDB: new ObjectId("627d1c77a8fdfeaa37e3a95c"),
+          _id: new ObjectId("627d2cbba8fdfeaa37e3caee")
+        }
+      ],
+      createdAt: 2022-05-12T15:50:15.128Z,
+      updatedAt: 2022-05-12T15:53:05.427Z,
+      __v: 0,
+      canceldListId: '627d2cb7a9291d58eeb8f8e7',
+      defaultListId: '627d2cba55ea5d57090ac362',
+      departmentWindowId: '627d2cbacb6382195e9a868f',
+      doneListId: '627d2cb800d52548d65819dd',
+      notClearListId: '627d2cbbb92a1c519b47945f',
+      reviewListId: '627d2cb91f61411bec95461b',
+      sharedListID: '627d2cb8219f2e5a2d2d98cf'
+    }
+  },
+  level: 'info',
+  timestamp: '2022-05-12 17:53:05'
+}
+{
+  size: 0,
+  timeout: 0,
+  level: 'info',
+  message: 'move board done',
+  timestamp: '2022-05-12 17:58:47',
+  [Symbol(Body internals)]: {
+    body: PassThrough {
+      _readableState: ReadableState {
+        objectMode: false,
+        highWaterMark: 16384,
+        buffer: BufferList { head: [Object], tail: [Object], length: 1 },
+        length: 78,
+        pipes: [],
+        flowing: null,
+        ended: true,
+        endEmitted: false,
+        reading: false,
+        constructed: true,
+        sync: false,
+        needReadable: false,
+        emittedReadable: false,
+        readableListening: false,
+        resumeScheduled: false,
+        errorEmitted: false,
+        emitClose: true,
+        autoDestroy: true,
+        destroyed: false,
+        errored: null,
+        closed: false,
+        closeEmitted: false,
+        defaultEncoding: 'utf8',
+        awaitDrainWriters: null,
+        multiAwaitDrain: false,
+        readingMore: false,
+        dataEmitted: false,
+        decoder: null,
+        encoding: null,
+        [Symbol(kPaused)]: null
+      },
+      _events: [Object: null prototype] {
+        prefinish: [Function: prefinish],
+        error: [Function (anonymous)]
+      },
+      _eventsCount: 2,
+      _maxListeners: undefined,
+      _writableState: WritableState {
+        objectMode: false,
+        highWaterMark: 16384,
+        finalCalled: true,
+        needDrain: false,
+        ending: true,
+        ended: true,
+        finished: true,
+        destroyed: false,
+        decodeStrings: true,
+        defaultEncoding: 'utf8',
+        length: 0,
+        writing: false,
+        corked: 0,
+        sync: false,
+        bufferProcessing: false,
+        onwrite: [Function: bound onwrite],
+        writecb: null,
+        writelen: 0,
+        afterWriteTickInfo: null,
+        buffered: [],
+        bufferedIndex: 0,
+        allBuffers: true,
+        allNoop: true,
+        pendingcb: 0,
+        constructed: true,
+        prefinished: true,
+        errorEmitted: false,
+        emitClose: true,
+        autoDestroy: true,
+        errored: null,
+        closed: false,
+        closeEmitted: false,
+        [Symbol(kOnFinished)]: []
+      },
+      allowHalfOpen: true,
+      [Symbol(kCapture)]: false,
+      [Symbol(kCallback)]: null
+    },
+    disturbed: false,
+    error: null
+  },
+  [Symbol(Response internals)]: {
+    url: 'https://api.trello.com/1/cards/627d2d32b5ec7133f9ec2805?idList=627d2cb91f61411bec95461b&key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68',
+    status: 404,
+    statusText: 'Not Found',
+    headers: Headers {
+      [Symbol(map)]: [Object: null prototype] {
+        'x-dns-prefetch-control': [ 'off' ],
+        'x-frame-options': [ 'DENY' ],
+        'x-download-options': [ 'noopen' ],
+        'x-permitted-cross-domain-policies': [ 'none' ],
+        'referrer-policy': [ 'strict-origin-when-cross-origin' ],
+        'surrogate-control': [ 'no-store' ],
+        'cache-control': [ 'no-store, no-cache, must-revalidate, proxy-revalidate' ],
+        pragma: [ 'no-cache' ],
+        expires: [ '0' ],
+        'x-trello-version': [ '1.131492.0' ],
+        'x-trello-environment': [ 'Production' ],
+        'access-control-allow-origin': [ '*' ],
+        'access-control-allow-methods': [ 'GET, PUT, POST, DELETE' ],
+        'access-control-allow-headers': [ 'Authorization, Accept, Content-Type' ],
+        'access-control-expose-headers': [
+          'x-rate-limit-api-key-interval-ms, x-rate-limit-api-key-max, x-rate-limit-api-key-remaining, x-rate-limit-api-token-interval-ms, x-rate-limit-api-token-max, x-rate-limit-api-token-remaining'
+        ],
+        'x-rate-limit-api-token-interval-ms': [ '10000' ],
+        'x-rate-limit-api-token-max': [ '100' ],
+        'x-rate-limit-api-token-remaining': [ '99' ],
+        'x-rate-limit-action-interval-ms': [ '3600000' ],
+        'x-rate-limit-action-max': [ '15000' ],
+        'x-rate-limit-action-remaining': [ '14999' ],
+        'x-rate-limit-api-key-interval-ms': [ '10000' ],
+        'x-rate-limit-api-key-max': [ '300' ],
+        'x-rate-limit-api-key-remaining': [ '299' ],
+        'x-rate-limit-member-interval-ms': [ '10000' ],
+        'x-rate-limit-member-max': [ '375' ],
+        'x-rate-limit-member-remaining': [ '374' ],
+        'content-type': [ 'text/plain; charset=utf-8' ],
+        'content-length': [ '78' ],
+        date: [ 'Thu, 12 May 2022 15:58:47 GMT' ],
+        'x-envoy-upstream-service-time': [ '128' ],
+        'expect-ct': [
+          'report-uri="https://web-security-reports.services.atlassian.com/expect-ct-report/trello-edge", max-age=86400'
+        ],
+        'strict-transport-security': [ 'max-age=63072000; preload' ],
+        'x-content-type-options': [ 'nosniff' ],
+        'x-xss-protection': [ '1; mode=block' ],
+        'atl-traceid': [ '6ef6fa8e751aa3b8' ],
+        'report-to': [
+          '{"group": "endpoint-1", "max_age": 600, "endpoints": [{"url": "https://dj9s4kmieytgz.cloudfront.net"}], "include_subdomains": true}'
+        ],
+        nel: [
+          '{"report_to": "endpoint-1", "max_age": 600, "include_subdomains": true, "failure_fraction": 0.001}'
+        ],
+        server: [ 'globaledge-envoy' ],
+        connection: [ 'close' ]
+      }
+    },
+    counter: 0
+  }
+}
+{
+  size: 0,
+  timeout: 0,
+  level: 'info',
+  message: 'move board done',
+  timestamp: '2022-05-12 17:58:52',
+  [Symbol(Body internals)]: {
+    body: PassThrough {
+      _readableState: ReadableState {
+        objectMode: false,
+        highWaterMark: 16384,
+        buffer: BufferList { head: [Object], tail: [Object], length: 1 },
+        length: 78,
+        pipes: [],
+        flowing: null,
+        ended: true,
+        endEmitted: false,
+        reading: false,
+        constructed: true,
+        sync: false,
+        needReadable: false,
+        emittedReadable: false,
+        readableListening: false,
+        resumeScheduled: false,
+        errorEmitted: false,
+        emitClose: true,
+        autoDestroy: true,
+        destroyed: false,
+        errored: null,
+        closed: false,
+        closeEmitted: false,
+        defaultEncoding: 'utf8',
+        awaitDrainWriters: null,
+        multiAwaitDrain: false,
+        readingMore: false,
+        dataEmitted: false,
+        decoder: null,
+        encoding: null,
+        [Symbol(kPaused)]: null
+      },
+      _events: [Object: null prototype] {
+        prefinish: [Function: prefinish],
+        error: [Function (anonymous)]
+      },
+      _eventsCount: 2,
+      _maxListeners: undefined,
+      _writableState: WritableState {
+        objectMode: false,
+        highWaterMark: 16384,
+        finalCalled: true,
+        needDrain: false,
+        ending: true,
+        ended: true,
+        finished: true,
+        destroyed: false,
+        decodeStrings: true,
+        defaultEncoding: 'utf8',
+        length: 0,
+        writing: false,
+        corked: 0,
+        sync: false,
+        bufferProcessing: false,
+        onwrite: [Function: bound onwrite],
+        writecb: null,
+        writelen: 0,
+        afterWriteTickInfo: null,
+        buffered: [],
+        bufferedIndex: 0,
+        allBuffers: true,
+        allNoop: true,
+        pendingcb: 0,
+        constructed: true,
+        prefinished: true,
+        errorEmitted: false,
+        emitClose: true,
+        autoDestroy: true,
+        errored: null,
+        closed: false,
+        closeEmitted: false,
+        [Symbol(kOnFinished)]: []
+      },
+      allowHalfOpen: true,
+      [Symbol(kCapture)]: false,
+      [Symbol(kCallback)]: null
+    },
+    disturbed: false,
+    error: null
+  },
+  [Symbol(Response internals)]: {
+    url: 'https://api.trello.com/1/cards/627d2d32b5ec7133f9ec2805?idList=627d2cba55ea5d57090ac362&key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68',
+    status: 404,
+    statusText: 'Not Found',
+    headers: Headers {
+      [Symbol(map)]: [Object: null prototype] {
+        'x-dns-prefetch-control': [ 'off' ],
+        'x-frame-options': [ 'DENY' ],
+        'x-download-options': [ 'noopen' ],
+        'x-permitted-cross-domain-policies': [ 'none' ],
+        'referrer-policy': [ 'strict-origin-when-cross-origin' ],
+        'surrogate-control': [ 'no-store' ],
+        'cache-control': [ 'no-store, no-cache, must-revalidate, proxy-revalidate' ],
+        pragma: [ 'no-cache' ],
+        expires: [ '0' ],
+        'x-trello-version': [ '1.131492.0' ],
+        'x-trello-environment': [ 'Production' ],
+        'access-control-allow-origin': [ '*' ],
+        'access-control-allow-methods': [ 'GET, PUT, POST, DELETE' ],
+        'access-control-allow-headers': [ 'Authorization, Accept, Content-Type' ],
+        'access-control-expose-headers': [
+          'x-rate-limit-api-key-interval-ms, x-rate-limit-api-key-max, x-rate-limit-api-key-remaining, x-rate-limit-api-token-interval-ms, x-rate-limit-api-token-max, x-rate-limit-api-token-remaining'
+        ],
+        'x-rate-limit-api-token-interval-ms': [ '10000' ],
+        'x-rate-limit-api-token-max': [ '100' ],
+        'x-rate-limit-api-token-remaining': [ '99' ],
+        'x-rate-limit-action-interval-ms': [ '3600000' ],
+        'x-rate-limit-action-max': [ '15000' ],
+        'x-rate-limit-action-remaining': [ '14999' ],
+        'x-rate-limit-api-key-interval-ms': [ '10000' ],
+        'x-rate-limit-api-key-max': [ '300' ],
+        'x-rate-limit-api-key-remaining': [ '299' ],
+        'x-rate-limit-member-interval-ms': [ '10000' ],
+        'x-rate-limit-member-max': [ '375' ],
+        'x-rate-limit-member-remaining': [ '374' ],
+        'content-type': [ 'text/plain; charset=utf-8' ],
+        'content-length': [ '78' ],
+        date: [ 'Thu, 12 May 2022 15:58:52 GMT' ],
+        'x-envoy-upstream-service-time': [ '125' ],
+        'expect-ct': [
+          'report-uri="https://web-security-reports.services.atlassian.com/expect-ct-report/trello-edge", max-age=86400'
+        ],
+        'strict-transport-security': [ 'max-age=63072000; preload' ],
+        'x-content-type-options': [ 'nosniff' ],
+        'x-xss-protection': [ '1; mode=block' ],
+        'atl-traceid': [ '992524b518682269' ],
+        'report-to': [
+          '{"group": "endpoint-1", "max_age": 600, "endpoints": [{"url": "https://dj9s4kmieytgz.cloudfront.net"}], "include_subdomains": true}'
+        ],
+        nel: [
+          '{"report_to": "endpoint-1", "max_age": 600, "include_subdomains": true, "failure_fraction": 0.001}'
+        ],
+        server: [ 'globaledge-envoy' ],
+        connection: [ 'close' ]
+      }
+    },
+    counter: 0
+  }
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-05-12 18:02:47'
+}
+{
+  message: {
+    createTaskDBError: Error: tasks validation failed: projectId: Path `projectId` is required.
+        at ValidationError.inspect (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/error/validation.js:48:26)
+        at formatValue (node:internal/util/inspect:782:19)
+        at formatProperty (node:internal/util/inspect:1819:11)
+        at formatRaw (node:internal/util/inspect:1030:9)
+        at formatValue (node:internal/util/inspect:817:10)
+        at formatProperty (node:internal/util/inspect:1819:11)
+        at formatRaw (node:internal/util/inspect:1030:9)
+        at formatValue (node:internal/util/inspect:817:10)
+        at inspect (node:internal/util/inspect:347:10)
+        at Format.transform (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/logform/pretty-print.js:27:19) {
+      errors: {
+        projectId: ValidatorError: Path `projectId` is required.
+            at validate (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/schematype.js:1330:13)
+            at ObjectId.SchemaType.doValidate (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/schematype.js:1314:7)
+            at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/document.js:2751:18
+            at processTicksAndRejections (node:internal/process/task_queues:78:11) {
+          properties: {
+            validator: [Function (anonymous)],
+            message: 'Path `projectId` is required.',
+            type: 'required',
+            path: 'projectId',
+            value: undefined
+          },
+          kind: 'required',
+          path: 'projectId',
+          value: undefined,
+          reason: undefined,
+          [Symbol(mongoose:validatorError)]: true
+        }
+      },
+      _message: 'tasks validation failed'
+    }
+  },
+  level: 'error',
+  timestamp: '2022-05-12 18:38:54'
+}
+{
+  message: {
+    clientData: [Object: null prototype] {
+      _id: '625ea6d3778208436cde83cd',
+      clientName: 'Ezzat Elzalouy',
+      image: 'https://bucketttp.s3.me-south-1.amazonaws.com/Logo-11-1651766921759.png',
+      createdAt: '2022-04-19T12:10:59.153Z'
+    }
+  },
+  level: 'info',
+  timestamp: '2022-05-12 19:14:37'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-05-12 19:19:18'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-05-12 19:21:17'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-05-12 19:28:05'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-05-12 19:29:03'
+}
