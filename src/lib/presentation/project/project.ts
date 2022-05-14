@@ -4,6 +4,7 @@ import { ProjectData } from "./../../types/model/Project";
 import { Request, Response } from "express";
 import logger from "../../../logger";
 import ProjectController from "../../controllers/project";
+import Client from "../../controllers/client";
 import mongoose from "mongoose";
 
 const ProjectReq = class ProjectReq extends ProjectController {
@@ -15,6 +16,7 @@ const ProjectReq = class ProjectReq extends ProjectController {
       }
       let project = await super.createProject(projectData);
       if (project) {
+        await Client.updateClientProcedure(projectData.clientId);
         return res.status(200).send(project);
       } else {
         return res.status(400).send(customeError("create_project_error", 400));
@@ -33,6 +35,7 @@ const ProjectReq = class ProjectReq extends ProjectController {
       }
       let project = await super.updateProject(projectData);
       if (project) {
+        await Client.updateClientProcedure(project.clientId);
         return res.status(200).send(project);
       } else {
         return res.status(400).send(customeError("update_project_error", 400));
@@ -68,6 +71,7 @@ const ProjectReq = class ProjectReq extends ProjectController {
       }
       let project = await super.deleteProject(projectId);
       if (project) {
+        await Client.updateClientProcedure(project.clientId);
         return res.status(200).send(successMsg("project_deleted", 200));
       } else {
         return res.status(400).send(customeError("delete_project_error", 400));

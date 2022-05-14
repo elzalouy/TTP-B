@@ -24,6 +24,7 @@ const ClientReq = class ClientReq extends ClientController {
 
   static async handleUpdateClient(req: Request, res: Response) {
     try {
+      console.log(req.body, req.files, req.file);
       let clientData: ClientData = req.body;
       let file: { image: { location: string }[] } | any = req.files;
       if (file.image && file.image[0]) {

@@ -49,7 +49,6 @@ const DepartmentReq = class DepartmentReq extends DepartmentController {
       if (!_id) {
         return res.status(400).send(customeError("delete_dep_error", 400));
       }
-
       let department = await super.deleteDepartment({
         _id,
       });
