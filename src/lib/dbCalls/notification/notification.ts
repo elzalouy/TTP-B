@@ -67,7 +67,16 @@ const NotificationDB = class NotificationDB {
             as: "adminUserID",
           },
         },
+        {
+          $lookup: {
+            from: "projects",
+            localField: "projectID",
+            foreignField: "_id",
+            as: "projectID",
+          },
+        },
         { $unwind: { path: "$adminUserID", preserveNullAndEmptyArrays: true } },
+        { $unwind: { path: "$projectID", preserveNullAndEmptyArrays: true } },
         {
           $unwind: {
             path: "$projectManagerID",
@@ -87,6 +96,7 @@ const NotificationDB = class NotificationDB {
             title: 1,
             adminUserID: 1,
             createdAt: 1,
+            projectID:1
           },
         },
         {
