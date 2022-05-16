@@ -13,6 +13,7 @@ export interface TaskInfo extends Document {
     | "inProgress"
     | "done"
     | "shared"
+    | "not started"
     | "not clear"
     | "cancled"
     | "review";
