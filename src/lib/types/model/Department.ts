@@ -10,7 +10,8 @@ export interface DepartmentInfo extends Document {
   doneListId: string;
   notClearListId: string;
   canceldListId: string;
-  departmentWindowId:string;
+  departmentWindowId: string;
+  notStartedListId: string;
   color: string;
   mainBoard: boolean;
   teamsId: {
@@ -31,7 +32,8 @@ export interface DepartmentData {
   doneListId?: string;
   notClearListId?: string;
   canceldListId?: string;
-  departmentWindowId?:string
+  departmentWindowId?: string;
+  notStartedListId?: string;
   teamsId?: { idInTrello: string; idInDB: any }[];
   teams?: { name: string; _id: any }[];
   mainBoard?: boolean | null;

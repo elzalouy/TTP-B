@@ -36,6 +36,9 @@ const DepartmentSchema: Schema = new Schema<DepartmentInfo>( // department
     departmentWindowId:{
       type:String
     },
+    notStartedListId:{
+      type:String
+    },
     mainBoard: {
       type: Boolean,
       default: false,
