@@ -175,7 +175,7 @@ const DepartmentController = class DepartmentController extends DepartmentBD {
       let reviewListId: string = "";
       let notClearListId: string = "";
       let canceldListId: string = "";
-      let departmentWindowId:string=""
+      let departmentWindowId: string = "";
       // create board
       let boardData: any = await BoardController.createNewBoard(
         data.name,
@@ -228,10 +228,8 @@ const DepartmentController = class DepartmentController extends DepartmentBD {
       );
       defaultListId = defaultList.id;
 
-      let departmentWindow: { id: string } = await BoardController.addListToBoard(
-        boardId,
-        "Department window"
-      );
+      let departmentWindow: { id: string } =
+        await BoardController.addListToBoard(boardId, "Department window");
       departmentWindowId = departmentWindow.id;
 
       let unClear: { id: string } = await BoardController.addListToBoard(
@@ -239,8 +237,6 @@ const DepartmentController = class DepartmentController extends DepartmentBD {
         "Unclear brief"
       );
       notClearListId = unClear.id;
-
-   
 
       // create webhook for list
       const listId: string[] = [
@@ -250,7 +246,7 @@ const DepartmentController = class DepartmentController extends DepartmentBD {
         reviewListId,
         notClearListId,
         canceldListId,
-        departmentWindowId
+        departmentWindowId,
       ];
 
       let webhookCreate = listId.map(async (id) => {

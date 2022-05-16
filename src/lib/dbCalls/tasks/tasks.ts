@@ -35,14 +35,14 @@ class TaskDB {
     return await TaskDB.__getTask(id);
   }
 
-  static async getAllTasksDB(data:any) {
-    return await TaskDB.__getAllTasks(data)
+  static async getAllTasksDB(data: any) {
+    return await TaskDB.__getAllTasks(data);
   }
 
-  static async __getAllTasks(data:any) {
+  static async __getAllTasks(data: any) {
     try {
-      let tasks = Tasks.find(data).populate('memberId')
-      return tasks
+      let tasks = Tasks.find(data).populate("memberId");
+      return tasks;
     } catch (error) {
       logger.error({ getAllTasksDBError: error });
     }
@@ -149,23 +149,26 @@ class TaskDB {
 
   static async __deleteTasks(ids: string[]) {
     try {
-      let tasks = await Tasks.find({ _id: { $in: ids } }).lean();
-      let tasksUnique = _.uniqBy(tasks, (item: any) => item.projectId);
-      let projects = tasksUnique.map((item: any) => item.projectId);
-      projects.forEach(async (id: any) => {
-        let done = tasks.filter(
-          (item) => item.projectId === id && item.status === "done"
-        ).length;
-        let notDone = tasks.filter((item) => item.projectId === id).length;
-        await Project.findByIdAndUpdate(id, {
-          $inc: {
-            numberOfTasks: -notDone,
-            numberOfFinishedTasks: -done,
-          },
-        });
-      });
+      // let tasks = await Tasks.find({ _id: { $in: ids } }).lean();
+      // let tasksUnique = _.uniqBy(tasks, (item: any) => item.projectId);
+      // let projects = tasksUnique.map((item: any) => item.projectId);
+      // projects.forEach(async (id: any) => {
+      //   let done = tasks.filter(
+      //     (item) => item.projectId === id && item.status === "done"
+      //   ).length;
+      //   let notDone = tasks.filter((item) => item.projectId === id).length;
+      //   await Project.findByIdAndUpdate(id, {
+      //     $inc: {
+      //       numberOfTasks: -notDone,
+      //       numberOfFinishedTasks: -done,
+      //     },
+      //   });
+      // });
       let deleteResult = await Tasks.deleteMany({ _id: { $in: ids } });
-      return deleteResult;
+      if (deleteResult) {
+        let remaind = await Tasks.find({});
+        return remaind;
+      } else throw "Error while deleting tasks";
     } catch (error) {
       logger.error({ deleteTasksError: error });
     }

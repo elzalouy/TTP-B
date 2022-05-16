@@ -93,7 +93,7 @@ const NotificationDB = class NotificationDB {
           $skip: data.skip ? Number(data.skip) : 0,
         },
         {
-          $limit: data.limit ? Number(data.limit) : 10,
+          $limit: data.limit ? Number(data.limit) : 4,
         },
       ]);
       return notification;

@@ -98,15 +98,18 @@ class TaskController extends TaskDB {
             title: `${cardName} status has been changed to Shared`,
             description: `${cardName} status has been changed to shared by ${userName}`,
             projectManagerID: projectData.projectManager,
-            projectID:targetTask.projectId,
-            adminUserID:projectData.adminId
+            projectID: targetTask.projectId,
+            adminUserID: projectData.adminId,
           });
 
           // send notification to all the admin
           io.to("admin room").emit("notification update", createNotifi);
 
           // send notification to specific project manager
-          io.to(`user-${projectData.projectManager}`).emit("notification update", createNotifi)
+          io.to(`user-${projectData.projectManager}`).emit(
+            "notification update",
+            createNotifi
+          );
         }
       } else {
         targetTask = await TaskDB.updateOneTaskDB(
@@ -141,19 +144,21 @@ class TaskController extends TaskDB {
       // Add task to the list
       let createdCard: { id: string } | any =
         await BoardController.createCardInList(data.listId, data.name, file);
-      data.cardId = createdCard.id;
-      // Check if there is attachment
-      let attachment;
-      if (file) {
-        attachment = await BoardController.createAttachmentOnCard(
-          createdCard.id,
-          file
-        );
-      }
-      // Add task to DB
-      delete data.listId;
-      let task = await super.createTaskDB(data);
-      return { task, createdCard, attachment };
+      if (createdCard) {
+        data.cardId = createdCard.id;
+        // Check if there is attachment
+        let attachment;
+        if (file) {
+          attachment = await BoardController.createAttachmentOnCard(
+            createdCard.id,
+            file
+          );
+        }
+        // Add task to DB
+        delete data.listId;
+        let task = await super.createTaskDB(data);
+        return { task, createdCard, attachment };
+      } else throw "Error while creating Card in Trello";
     } catch (error) {
       logger.error({ getTeamsError: error });
     }
@@ -183,7 +188,7 @@ class TaskController extends TaskDB {
     try {
       let tasks = await super.getTasksByIdsDB(ids);
       tasks.forEach(async (item) => {
-        await BoardController.deleteCard(item.cardId);
+        BoardController.deleteCard(item.cardId);
       });
       return await super.deleteTasksDB(ids);
     } catch (error) {

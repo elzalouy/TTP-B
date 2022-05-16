@@ -12,9 +12,8 @@ const ClientSchema: Schema = new Schema<Client>(
       type: Object,
       default: {},
     },
-    doneProject: [{ type: Schema.Types.ObjectId, ref: "projects" }],
-    inProgressProject: [{ type: Schema.Types.ObjectId, ref: "projects" }],
-    inProgressTask: [{ type: Schema.Types.ObjectId, ref: "projects" }],
+    doneProject: { type: Number, default: 0 },
+    inProgressProject: { type: Number, default: 0 },
   },
   {
     timestamps: true,

@@ -17,6 +17,9 @@ const ClientController = class ClientController extends ClientDB {
   static async deleteClient(id: string) {
     return await ClientController.__deleteClient(id);
   }
+  static async updateCleintProcedure(id: any) {
+    return await ClientController.__updateClientProcedure(id);
+  }
 
   static async __deleteClient(id: string) {
     try {
@@ -51,6 +54,13 @@ const ClientController = class ClientController extends ClientDB {
       return client;
     } catch (error) {
       logger.error({ createClientError: error });
+    }
+  }
+  static async __updateClientProcedure(_id: any) {
+    try {
+      return await super.updateClientProcedure(_id);
+    } catch (error) {
+      logger.error({ updateClientProcedure: error });
     }
   }
 };
