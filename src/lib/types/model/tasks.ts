@@ -46,6 +46,7 @@ export interface TaskData {
     | "done"
     | "shared"
     | "not clear"
+    | "not started"
     | "cancled"
     | "review";
   start?: Date | number;
