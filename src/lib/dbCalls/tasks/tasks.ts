@@ -230,6 +230,7 @@ class TaskDB {
       if (data.memberId) filter.memberId = data.memberId;
       if (data.status) filter.status = data.status;
       if (data.name) filter.name = { $regex: data.name };
+      if (data.projectManager) filter.projectManager = {$regex : data.projectManager};
       let tasks = await Tasks.find(filter);
       return tasks;
     } catch (error) {
