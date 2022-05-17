@@ -76,7 +76,8 @@ class TaskController extends TaskDB {
         "Unclear brief",
         "cancel",
       ];
-      if (targetList.includes(data.action.display.entities.listAfter.text)) {
+      logger.info({afterList:data?.action?.display?.entities?.listAfter?.text})
+      if (targetList.includes(data?.action?.display?.entities?.listAfter?.text)) {
         targetTask = await TaskDB.updateOneTaskDB(
           {
             cardId: data.action.display.entities.card.id,
