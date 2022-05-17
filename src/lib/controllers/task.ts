@@ -69,11 +69,11 @@ class TaskController extends TaskDB {
       let targetTask: any;
       const targetList: any = [
         "Not Started",
-        "done",
+        "Done",
         "Shared",
         "Review",
-        "Unclear brief",
-        "cancel",
+        "Not Clear",
+        "Cancel",
       ];
       logger.info({afterList:data?.action?.display?.entities?.listAfter?.text})
       if (targetList.includes(data?.action?.display?.entities?.listAfter?.text)) {
@@ -118,7 +118,7 @@ class TaskController extends TaskDB {
             cardId: data.action.display.entities.card.id,
           },
           {
-            status: "In Progress",
+            status: "inProgress",
           }
         );
       }

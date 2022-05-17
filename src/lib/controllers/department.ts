@@ -200,19 +200,19 @@ const DepartmentController = class DepartmentController extends DepartmentBD {
 
       let cancel: { id: string } = await BoardController.addListToBoard(
         boardId,
-        "cancel"
+        "Cancel"
       );
       canceldListId = cancel.id;
 
       let unClear: { id: string } = await BoardController.addListToBoard(
         boardId,
-        "Unclear brief"
+        "Not Clear"
       );
       notClearListId = unClear.id;
 
       let done: { id: string } = await BoardController.addListToBoard(
         boardId,
-        "done"
+        "Done"
       );
       doneListId = done.id;
 
