@@ -72,7 +72,6 @@ class TaskController extends TaskDB {
         "done",
         "Shared",
         "Review",
-        "Tasks Board",
         "Unclear brief",
         "cancel",
       ];
@@ -83,7 +82,7 @@ class TaskController extends TaskDB {
             cardId: data.action.display.entities.card.id,
           },
           {
-            status: data?.action?.display?.entities?.listAfter?.text,
+            status:  data?.action?.display?.entities?.listAfter?.text,
           }
         );
 
