@@ -48,6 +48,7 @@ const DepartmentController = class DepartmentController extends DepartmentBD {
         myDepartment?.notClearListId,
         myDepartment?.reviewListId,
         myDepartment?.sharedListID,
+        myDepartment?.notStartedListId,
         ...teamId,
       ];
 
@@ -273,6 +274,7 @@ const DepartmentController = class DepartmentController extends DepartmentBD {
         notClearListId,
         canceldListId,
         departmentWindowId,
+        notStartedListId,
         teamsId: teamListIds,
       };
       let department = await DepartmentController.__createTeamList(
