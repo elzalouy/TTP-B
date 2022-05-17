@@ -83,18 +83,18 @@ class TaskController extends TaskDB {
             cardId: data.action.display.entities.card.id,
           },
           {
-            status: data.action.display.listAfter.text,
+            status: data?.action?.display?.entities?.listAfter?.text,
           }
         );
 
         // if task status update to shared send notification
-        if (data.action.display.entities.listAfter.text === "Shared") {
+        if (data?.action?.display?.entities?.listAfter?.text === "Shared") {
           let projectData: any = await ProjectDB.getProjectDB({
             _id: targetTask.projectId,
           });
           let userName: string =
-            data.action.display.entities.memberCreator.username;
-          let cardName: string = data.action.display.entities.card.text;
+            data?.action?.display?.entities?.memberCreator?.username;
+          let cardName: string = data?.action?.display?.entities?.card?.text;
 
           let createNotifi = await NotificationController.createNotification({
             title: `${cardName} status has been changed to Shared`,
