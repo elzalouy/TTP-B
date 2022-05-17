@@ -68,6 +68,7 @@ class TaskController extends TaskDB {
       logger.info({ webhookUpdate: data });
       let targetTask: any;
       const targetList: any = [
+        "Not Started",
         "done",
         "Shared",
         "Review",
