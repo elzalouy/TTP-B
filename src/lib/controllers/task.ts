@@ -141,6 +141,7 @@ class TaskController extends TaskDB {
 
   static async __CreateNewTask(data: TaskData, file: string) {
     try {
+      logger.info({__CreateNewTask:data})
       // Add task to the list
       let createdCard: { id: string } | any =
         await BoardController.createCardInList(data.listId, data.name, file);
