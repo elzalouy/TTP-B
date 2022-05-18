@@ -18,7 +18,9 @@ const TechMemberDB = class TechMemberDB {
   static async updateTechMembersDB(data: DataUpdate) {
     return await TechMemberDB.__updateTechMembersDB(data);
   }
-
+  static async deleteTechMemberDB(data: TechMemberData) {
+    return await TechMemberDB.__deleteTechMemberDB(data);
+  }
   static async __updateTechMembersDB(data: DataUpdate) {
     try {
       let ids = data.ids;
@@ -66,6 +68,15 @@ const TechMemberDB = class TechMemberDB {
       return techMember;
     } catch (error) {
       logger.error({ addTechMemberError: error });
+    }
+  }
+  static async __deleteTechMemberDB(data: TechMemberData) {
+    try {
+      let deleteResult = await TechMember.deleteMany(data);
+      if (deleteResult && deleteResult.deletedCount > 0) return deleteResult;
+      else return "Delete result is 0 document";
+    } catch (error) {
+      logger.error({ deleteTechMemberError: error });
     }
   }
 };

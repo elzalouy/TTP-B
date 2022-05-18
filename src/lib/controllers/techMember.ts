@@ -19,7 +19,9 @@ const TechMemberController = class TechMemberController extends TechMemberDB {
   static async getTechMember(data: object) {
     return await TechMemberController.__getTechMmber(data);
   }
-
+  static async deleteTechMemberWhere(data: TechMemberData) {
+    return await TechMemberController.__deleteTechMember(data);
+  }
   static async __getTechMmber(data: object) {
     try {
       let techMember = await super.getTechMemberDB(data);
@@ -94,7 +96,6 @@ const TechMemberController = class TechMemberController extends TechMemberDB {
           return customeError("list_already_exsit", 400);
         }
         listId = await BoardController.addListToBoard(boardId, name);
-
         if (data.mainBaord) {
           return await BoardController.createWebHook(listId.id);
         }
@@ -150,6 +151,13 @@ const TechMemberController = class TechMemberController extends TechMemberDB {
       return check;
     } catch (error) {
       logger.error({ __checkBoardListNameError: error });
+    }
+  }
+  static async __deleteTechMember(data: any) {
+    try {
+      return await TechMemberController.deleteTechMemberDB(data);
+    } catch (error) {
+      logger.error({ __deleteTechMemberError: error });
     }
   }
 };

@@ -9,8 +9,8 @@ export interface ITech extends Document {
 
 export interface TechMemberData {
   id?: string;
-  name: string;
-  departmentId: string;
+  name?: string;
+  departmentId?: string;
   boardId?: string;
   trelloMemberId?: string;
   listId?: string;

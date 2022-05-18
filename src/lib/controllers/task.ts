@@ -33,7 +33,9 @@ class TaskController extends TaskDB {
   static async deleteTasks(ids: string[]) {
     return await TaskController.__deleteTasks(ids);
   }
-
+  static async deleteTasksWhere(data: TaskData) {
+    return await TaskController.__deleteTasksWhere(data);
+  }
   static async moveTaskOnTrello(
     cardId: string,
     listId: string,
@@ -182,6 +184,16 @@ class TaskController extends TaskDB {
       return await super.deleteTasksByProjectIdDB(id);
     } catch (error) {
       logger.error({ DeleteTasksByProjectId: error });
+    }
+  }
+  static async __deleteTasksWhere(data: TaskData) {
+    try {
+      // let tasks = await super.getTasksByIdsDB;
+      let deleteResult = await super.deleteTasksWhereDB(data);
+      if (deleteResult) return deleteResult;
+      else throw "Error hapenned while deleting tasks";
+    } catch (error) {
+      logger.error({ DeleteTasksWhereError: error });
     }
   }
   static async __deleteTasks(ids: string[]) {

@@ -45,7 +45,6 @@ const DepartmentReq = class DepartmentReq extends DepartmentController {
   static async handleDeleteDepartment(req: Request, res: Response) {
     try {
       let { _id } = req.query;
-      logger.info({ body: req.body });
       if (!_id) {
         return res.status(400).send(customeError("delete_dep_error", 400));
       }

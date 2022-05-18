@@ -57,11 +57,11 @@ const AuthController = class AuthController extends UserDB {
       }
       let token = await createJwtToken(user._id.toString());
       await sendMail({
-        token:token,
-        email:email,
-        body:"Please click on this link to reset your password",
-        subject:"Forgot Password",
-        path:"resetPassword"
+        token: token,
+        email: email,
+        body: "Please click on this link to reset your password",
+        subject: "Forgot Password",
+        path: "resetPassword",
       });
       return successMsg("email_sent", 200);
     } catch (error) {
@@ -78,12 +78,10 @@ const AuthController = class AuthController extends UserDB {
       }
       logger.info({ user });
       let passwordCheck = await comparePassword(password, user.password);
-
       if (!passwordCheck) {
         return { userData: false, token: false };
       }
       let getToken = createJwtToken(user._id.toString());
-
       return { userData: user, token: getToken };
     } catch (error) {
       logger.error({ signInError: error });

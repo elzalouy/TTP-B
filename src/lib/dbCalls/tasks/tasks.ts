@@ -38,7 +38,9 @@ class TaskDB {
   static async getAllTasksDB(data: any) {
     return await TaskDB.__getAllTasks(data);
   }
-
+  static async deleteTasksWhereDB(data: TaskData) {
+    return await TaskDB.__deleteTasksWhereDB(data);
+  }
   static async __getAllTasks(data: any) {
     try {
       let tasks = Tasks.find(data).populate("memberId");
@@ -96,7 +98,6 @@ class TaskDB {
           },
         },
       ]);
-
       return taskCount;
     } catch (error) {
       logger.error({ getTaskDepartmentDBError: error });
@@ -125,7 +126,15 @@ class TaskDB {
       logger.error({ updateTaskDBError: error });
     }
   }
-
+  static async __deleteTasksWhereDB(data: TaskData) {
+    try {
+      let result = await Tasks.deleteMany(data);
+      if (result) return result;
+      throw "Tasks not found";
+    } catch (error) {
+      logger.error({ deleteTasksWhereError: error });
+    }
+  }
   static async __getTasks(data: TaskData) {
     try {
       let tasks = await Tasks.find(data).lean();
@@ -149,21 +158,6 @@ class TaskDB {
 
   static async __deleteTasks(ids: string[]) {
     try {
-      // let tasks = await Tasks.find({ _id: { $in: ids } }).lean();
-      // let tasksUnique = _.uniqBy(tasks, (item: any) => item.projectId);
-      // let projects = tasksUnique.map((item: any) => item.projectId);
-      // projects.forEach(async (id: any) => {
-      //   let done = tasks.filter(
-      //     (item) => item.projectId === id && item.status === "done"
-      //   ).length;
-      //   let notDone = tasks.filter((item) => item.projectId === id).length;
-      //   await Project.findByIdAndUpdate(id, {
-      //     $inc: {
-      //       numberOfTasks: -notDone,
-      //       numberOfFinishedTasks: -done,
-      //     },
-      //   });
-      // });
       let deleteResult = await Tasks.deleteMany({ _id: { $in: ids } });
       if (deleteResult) {
         let remaind = await Tasks.find({});

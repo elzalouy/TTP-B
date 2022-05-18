@@ -1,4 +1,5 @@
 import logger from "../../logger";
+import Procedures from "../db/procedures";
 import DepartmentBD from "../dbCalls/department/department";
 import TechMemberDB from "../dbCalls/techMember/techMember";
 import { UpdateDepartment, DepartmentData } from "../types/model/Department";
@@ -65,7 +66,10 @@ const DepartmentController = class DepartmentController extends DepartmentBD {
       logger.info({ boardId: myDepartment?.boardId, myDepartment });
       await BoardController.deleteBoard(myDepartment?.boardId);
       let deleteDepartment = await super.deleteDepartmentDB(_id);
-      return deleteDepartment;
+      if (deleteDepartment?._id) {
+        Procedures.deleteDepartmentProcedure(deleteDepartment);
+        return deleteDepartment;
+      } else throw "Department With this id not existed";
     } catch (error) {
       logger.error({ deleteDepartmentError: error });
     }
