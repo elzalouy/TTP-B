@@ -6,6 +6,7 @@ const DepartmentSchema: Schema = new Schema<DepartmentInfo>( // department
     name: {
       type: String,
       required: true,
+      unique:true
     },
     boardId: {
       type: String,
