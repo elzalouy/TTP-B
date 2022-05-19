@@ -52,7 +52,8 @@ class TaskDB {
 
   static async __getTask(id: string) {
     try {
-      let task = await Tasks.findById(id).lean();
+      let task = await Tasks.findOne({ _id: id });
+      console.log(task, id);
       return task;
     } catch (error) {
       logger.error({ updateTaskDBError: error });
@@ -67,7 +68,9 @@ class TaskDB {
               {
                 $match: {
                   marchentID: new mongoose.Types.ObjectId(depId),
-                  status: "inProgress",
+                  status: {
+                    $in: ["inProgress", "shared", "not clear", "review"],
+                  },
                 },
               },
               {
@@ -224,6 +227,8 @@ class TaskDB {
       if (data.memberId) filter.memberId = data.memberId;
       if (data.status) filter.status = data.status;
       if (data.name) filter.name = { $regex: data.name };
+      if (data.projectManager)
+        filter.projectManager = { $regex: data.projectManager };
       let tasks = await Tasks.find(filter);
       return tasks;
     } catch (error) {

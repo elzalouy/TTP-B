@@ -67,7 +67,16 @@ const NotificationDB = class NotificationDB {
             as: "adminUserID",
           },
         },
+        {
+          $lookup: {
+            from: "projects",
+            localField: "projectID",
+            foreignField: "_id",
+            as: "projectID",
+          },
+        },
         { $unwind: { path: "$adminUserID", preserveNullAndEmptyArrays: true } },
+        { $unwind: { path: "$projectID", preserveNullAndEmptyArrays: true } },
         {
           $unwind: {
             path: "$projectManagerID",
@@ -87,13 +96,14 @@ const NotificationDB = class NotificationDB {
             title: 1,
             adminUserID: 1,
             createdAt: 1,
+            projectID:1
           },
         },
         {
           $skip: data.skip ? Number(data.skip) : 0,
         },
         {
-          $limit: data.limit ? Number(data.limit) : 10,
+          $limit: data.limit ? Number(data.limit) : 4,
         },
       ]);
       return notification;

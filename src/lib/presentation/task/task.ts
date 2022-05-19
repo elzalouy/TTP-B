@@ -104,6 +104,7 @@ const TaskReq = class TaskReq extends TaskController {
   static async handleDeleteTask(req: Request, res: Response) {
     try {
       let id = req.body.id;
+      console.log(req.body, req.query);
       let deleteResult = await super.deleteTask(id);
       if (deleteResult._id) return res.status(200).send(deleteResult);
       else res.status(400).send(customeError("delete_task_error", 400));

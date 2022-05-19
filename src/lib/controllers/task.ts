@@ -70,31 +70,36 @@ class TaskController extends TaskDB {
       logger.info({ webhookUpdate: data });
       let targetTask: any;
       const targetList: any = [
-        "done",
+        "Not Started",
+        "Done",
         "Shared",
         "Review",
-        "Tasks Board",
-        "Unclear brief",
-        "cancel",
+        "Not Clear",
+        "Cancel",
       ];
-      if (targetList.includes(data.action.display.entities.listAfter.text)) {
+      logger.info({
+        afterList: data?.action?.display?.entities?.listAfter?.text,
+      });
+      if (
+        targetList.includes(data?.action?.display?.entities?.listAfter?.text)
+      ) {
         targetTask = await TaskDB.updateOneTaskDB(
           {
             cardId: data.action.display.entities.card.id,
           },
           {
-            status: data.action.display.listAfter.text,
+            status: data?.action?.display?.entities?.listAfter?.text,
           }
         );
 
         // if task status update to shared send notification
-        if (data.action.display.entities.listAfter.text === "Shared") {
+        if (data?.action?.display?.entities?.listAfter?.text === "Shared") {
           let projectData: any = await ProjectDB.getProjectDB({
             _id: targetTask.projectId,
           });
           let userName: string =
-            data.action.display.entities.memberCreator.username;
-          let cardName: string = data.action.display.entities.card.text;
+            data?.action?.display?.entities?.memberCreator?.username;
+          let cardName: string = data?.action?.display?.entities?.card?.text;
 
           let createNotifi = await NotificationController.createNotification({
             title: `${cardName} status has been changed to Shared`,
@@ -119,7 +124,7 @@ class TaskController extends TaskDB {
             cardId: data.action.display.entities.card.id,
           },
           {
-            status: "In Progress",
+            status: "inProgress",
           }
         );
       }
@@ -143,6 +148,7 @@ class TaskController extends TaskDB {
 
   static async __CreateNewTask(data: TaskData, file: string) {
     try {
+      logger.info({ __CreateNewTask: data });
       // Add task to the list
       let createdCard: { id: string } | any =
         await BoardController.createCardInList(data.listId, data.name, file);
@@ -210,10 +216,14 @@ class TaskController extends TaskDB {
   static async __deleteTask(id: string) {
     try {
       let task = await super.getTaskDB(id);
-      await BoardController.deleteCard(task.cardId);
-      return await super.deleteTaskDB(id);
+      console.log(task);
+      if (task) {
+        await BoardController.deleteCard(task?.cardId);
+        return await super.deleteTaskDB(id);
+      }
+      throw "Task not existed";
     } catch (error) {
-      logger.error({ DeleteTasksByProjectId: error });
+      logger.error({ deleteTaskError: error });
     }
   }
 }

@@ -49,6 +49,7 @@ const DepartmentController = class DepartmentController extends DepartmentBD {
         myDepartment?.notClearListId,
         myDepartment?.reviewListId,
         myDepartment?.sharedListID,
+        myDepartment?.notStartedListId,
         ...teamId,
       ];
 
@@ -174,6 +175,7 @@ const DepartmentController = class DepartmentController extends DepartmentBD {
       // define the board and list variable
       let boardId: string = "";
       let defaultListId: string = "";
+      let notStartedListId: string = "";
       let sharedListID: string = "";
       let doneListId: string = "";
       let reviewListId: string = "";
@@ -195,15 +197,26 @@ const DepartmentController = class DepartmentController extends DepartmentBD {
       let departmentCreate = await super.createdbDepartment(data);
 
       // create main list on board
+
+      let departmentWindow: { id: string } =
+        await BoardController.addListToBoard(boardId, "Department window");
+      departmentWindowId = departmentWindow.id;
+
       let cancel: { id: string } = await BoardController.addListToBoard(
         boardId,
-        "cancel"
+        "Cancel"
       );
       canceldListId = cancel.id;
 
+      let unClear: { id: string } = await BoardController.addListToBoard(
+        boardId,
+        "Not Clear"
+      );
+      notClearListId = unClear.id;
+
       let done: { id: string } = await BoardController.addListToBoard(
         boardId,
-        "done"
+        "Done"
       );
       doneListId = done.id;
 
@@ -226,21 +239,18 @@ const DepartmentController = class DepartmentController extends DepartmentBD {
           boardId,
           mainBoard
         );
+
       let defaultList: { id: string } = await BoardController.addListToBoard(
         boardId,
         "Tasks Board"
       );
       defaultListId = defaultList.id;
 
-      let departmentWindow: { id: string } =
-        await BoardController.addListToBoard(boardId, "Department window");
-      departmentWindowId = departmentWindow.id;
-
-      let unClear: { id: string } = await BoardController.addListToBoard(
+      let notStarted: { id: string } = await BoardController.addListToBoard(
         boardId,
-        "Unclear brief"
+        "Not Started"
       );
-      notClearListId = unClear.id;
+      notStartedListId = notStarted.id;
 
       // create webhook for list
       const listId: string[] = [
@@ -251,6 +261,7 @@ const DepartmentController = class DepartmentController extends DepartmentBD {
         notClearListId,
         canceldListId,
         departmentWindowId,
+        notStartedListId,
       ];
 
       let webhookCreate = listId.map(async (id) => {
@@ -267,6 +278,7 @@ const DepartmentController = class DepartmentController extends DepartmentBD {
         notClearListId,
         canceldListId,
         departmentWindowId,
+        notStartedListId,
         teamsId: teamListIds,
       };
       let department = await DepartmentController.__createTeamList(

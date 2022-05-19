@@ -108,6 +108,7 @@ const DepartmentBD = class DepartmentBD {
             notClearListId: 1,
             reviewListId: 1,
             sharedListID: 1,
+            notStartedListId:1,
             totalInProgress: {
               $size: "$totalInProgress",
             },
