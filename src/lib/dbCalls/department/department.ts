@@ -88,7 +88,7 @@ const DepartmentBD = class DepartmentBD {
               $filter: {
                 input: "$tasks",
                 as: "task",
-                cond: { $eq: ["$$task.status", "done"] },
+                cond: { $eq: ["$$task.status", "Done"] },
               },
             },
           },
