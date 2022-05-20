@@ -84,7 +84,7 @@ const NotificationDB = class NotificationDB {
           },
         },
         {
-          $sort: { createdAt: 1 },
+          $sort: { createdAt: -1 },
         },
         {
           $project: {
