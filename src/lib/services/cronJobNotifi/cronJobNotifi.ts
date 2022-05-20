@@ -8,7 +8,7 @@ import TaskDB from "../../dbCalls/tasks/tasks";
 
 // '0 0 0 1-31 0-7'
 //todo update notification cron job
-export default cron.schedule("* * * * * *", async () => {
+export default cron.schedule("* * 23 * * *", async () => {
   //todo check if project is passed the deadline
   let projects = await ProjectDB.getProjectDB({
     projectStatus: { $in: ["inProgress", "late"] },
