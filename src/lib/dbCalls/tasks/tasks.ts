@@ -5,6 +5,7 @@ import { TaskData } from "../../types/model/tasks";
 import Project from "../../models/Project";
 import _ from "lodash";
 import mongoose from "mongoose";
+import Department from "../../models/Department";
 class TaskDB {
   static async createTaskDB(data: TaskData) {
     return await TaskDB.__createTask(data);
@@ -208,6 +209,16 @@ class TaskDB {
         $inc: { numberOfTasks: 1, numberOfFinishedTasks: 0 },
       });
       task = await task.save();
+      console.log(task);
+      let department = await Department.findOneAndUpdate(
+        { boardId: data.boardId },
+        {
+          $push: {
+            tasks: task._id,
+          },
+        }
+      );
+      console.log(department);
       return task;
     } catch (error) {
       logger.error({ createTaskDBError: error });

@@ -167,3 +167,93 @@
   level: 'error',
   timestamp: '2022-05-18 17:06:55'
 }
+{
+  message: {
+    createTaskDBError: MongoServerError: The argument to $each in $push must be an array but it was of type: objectId
+        at Connection.onMessage (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongodb/src/cmap/connection.ts:440:20)
+        at MessageStream.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongodb/src/cmap/connection.ts:267:56)
+        at MessageStream.emit (node:events:527:28)
+        at MessageStream.emit (node:domain:475:12)
+        at processIncomingData (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongodb/src/cmap/message_stream.ts:168:12)
+        at MessageStream._write (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongodb/src/cmap/message_stream.ts:65:5)
+        at writeOrBuffer (node:internal/streams/writable:389:12)
+        at _write (node:internal/streams/writable:330:10)
+        at MessageStream.Writable.write (node:internal/streams/writable:334:10)
+        at TLSSocket.ondata (node:internal/streams/readable:754:22) {
+      ok: 0,
+      code: 2,
+      codeName: 'BadValue',
+      '$clusterTime': {
+        clusterTime: new Timestamp({ t: 1652996026, i: 11 }),
+        signature: {
+          hash: new Binary(Buffer.from("5c723429cf2844060749265b22efb9f282d94e42", "hex"), 0),
+          keyId: new Long("7057499658175643653")
+        }
+      },
+      operationTime: new Timestamp({ t: 1652996026, i: 11 }),
+      [Symbol(errorLabels)]: Set(0) {}
+    }
+  },
+  level: 'error',
+  timestamp: '2022-05-19 23:33:47'
+}
+{
+  message: {
+    getDepartmentDataError: MongoServerError: PlanExecutor error during aggregation :: caused by :: $in requires an array as a second argument, found: string
+        at Connection.onMessage (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongodb/src/cmap/connection.ts:440:20)
+        at MessageStream.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongodb/src/cmap/connection.ts:267:56)
+        at MessageStream.emit (node:events:527:28)
+        at MessageStream.emit (node:domain:475:12)
+        at processIncomingData (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongodb/src/cmap/message_stream.ts:168:12)
+        at MessageStream._write (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongodb/src/cmap/message_stream.ts:65:5)
+        at writeOrBuffer (node:internal/streams/writable:389:12)
+        at _write (node:internal/streams/writable:330:10)
+        at MessageStream.Writable.write (node:internal/streams/writable:334:10)
+        at TLSSocket.ondata (node:internal/streams/readable:754:22) {
+      ok: 0,
+      code: 40081,
+      codeName: 'Location40081',
+      '$clusterTime': {
+        clusterTime: new Timestamp({ t: 1652998167, i: 7 }),
+        signature: {
+          hash: new Binary(Buffer.from("d0a954f808fbe48e8135512b0e47c2c3e704be02", "hex"), 0),
+          keyId: new Long("7057499658175643653")
+        }
+      },
+      operationTime: new Timestamp({ t: 1652998167, i: 7 }),
+      [Symbol(errorLabels)]: Set(0) {}
+    }
+  },
+  level: 'error',
+  timestamp: '2022-05-20 00:09:27'
+}
+{
+  message: {
+    getDepartmentDataError: MongoServerError: PlanExecutor error during aggregation :: caused by :: $in requires an array as a second argument, found: string
+        at Connection.onMessage (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongodb/src/cmap/connection.ts:440:20)
+        at MessageStream.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongodb/src/cmap/connection.ts:267:56)
+        at MessageStream.emit (node:events:527:28)
+        at MessageStream.emit (node:domain:475:12)
+        at processIncomingData (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongodb/src/cmap/message_stream.ts:168:12)
+        at MessageStream._write (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongodb/src/cmap/message_stream.ts:65:5)
+        at writeOrBuffer (node:internal/streams/writable:389:12)
+        at _write (node:internal/streams/writable:330:10)
+        at MessageStream.Writable.write (node:internal/streams/writable:334:10)
+        at TLSSocket.ondata (node:internal/streams/readable:754:22) {
+      ok: 0,
+      code: 40081,
+      codeName: 'Location40081',
+      '$clusterTime': {
+        clusterTime: new Timestamp({ t: 1652998177, i: 5 }),
+        signature: {
+          hash: new Binary(Buffer.from("96ba7466c7de5474b59ef3356308559de3f774d9", "hex"), 0),
+          keyId: new Long("7057499658175643653")
+        }
+      },
+      operationTime: new Timestamp({ t: 1652998177, i: 5 }),
+      [Symbol(errorLabels)]: Set(0) {}
+    }
+  },
+  level: 'error',
+  timestamp: '2022-05-20 00:09:38'
+}
