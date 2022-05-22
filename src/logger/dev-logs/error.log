@@ -257,3 +257,428 @@
   level: 'error',
   timestamp: '2022-05-20 00:09:38'
 }
+{
+  message: {
+    createTaskDBError: Error: tasks validation failed: memberId: Path `memberId` is required.
+        at ValidationError.inspect (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/error/validation.js:48:26)
+        at formatValue (node:internal/util/inspect:782:19)
+        at formatProperty (node:internal/util/inspect:1819:11)
+        at formatRaw (node:internal/util/inspect:1030:9)
+        at formatValue (node:internal/util/inspect:817:10)
+        at formatProperty (node:internal/util/inspect:1819:11)
+        at formatRaw (node:internal/util/inspect:1030:9)
+        at formatValue (node:internal/util/inspect:817:10)
+        at inspect (node:internal/util/inspect:347:10)
+        at Format.transform (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/logform/pretty-print.js:27:19) {
+      errors: {
+        memberId: ValidatorError: Path `memberId` is required.
+            at validate (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/schematype.js:1330:13)
+            at ObjectId.SchemaType.doValidate (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/schematype.js:1314:7)
+            at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/document.js:2751:18
+            at processTicksAndRejections (node:internal/process/task_queues:78:11) {
+          properties: {
+            validator: [Function (anonymous)],
+            message: 'Path `memberId` is required.',
+            type: 'required',
+            path: 'memberId',
+            value: undefined
+          },
+          kind: 'required',
+          path: 'memberId',
+          value: undefined,
+          reason: undefined,
+          [Symbol(mongoose:validatorError)]: true
+        }
+      },
+      _message: 'tasks validation failed'
+    }
+  },
+  level: 'error',
+  timestamp: '2022-05-22 07:30:41'
+}
+{
+  message: {
+    createAttachmentOnCardError: TypeError [ERR_INVALID_CALLBACK]: Callback must be a function. Received null
+        at maybeCallback (node:fs:177:3)
+        at Object.readFile (node:fs:374:14)
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/boards.ts:172:20)
+        at Generator.next (<anonymous>)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/boards.ts:8:71
+        at new Promise (<anonymous>)
+        at __awaiter (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/boards.ts:4:12)
+        at Function.__createAttachment (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/boards.ts:189:16)
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/boards.ts:57:34)
+        at Generator.next (<anonymous>) {
+      code: 'ERR_INVALID_CALLBACK'
+    }
+  },
+  level: 'error',
+  timestamp: '2022-05-22 09:49:12'
+}
+{
+  message: {
+    findUserError: MongooseServerSelectionError: Could not connect to any servers in your MongoDB Atlas cluster. One common reason is that you're trying to access the database from an IP that isn't whitelisted. Make sure your current IP address is on your Atlas cluster's IP whitelist: https://docs.atlas.mongodb.com/security-whitelist/
+        at Function.Model.$wrapCallback (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/model.js:5017:32)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/query.js:4732:21
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/helpers/promiseOrCallback.js:32:5
+        at new Promise (<anonymous>)
+        at promiseOrCallback (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/helpers/promiseOrCallback.js:31:10)
+        at model.Query.exec (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/query.js:4731:10)
+        at model.Query.Query.then (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/query.js:4814:15)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+      reason: TopologyDescription {
+        type: 'ReplicaSetNoPrimary',
+        servers: Map(3) {
+          'cluster0-shard-00-00.oeari.mongodb.net:27017' => ServerDescription {
+            _hostAddress: new HostAddress('cluster0-shard-00-00.oeari.mongodb.net:27017'),
+            address: 'cluster0-shard-00-00.oeari.mongodb.net:27017',
+            type: 'Unknown',
+            hosts: [],
+            passives: [],
+            arbiters: [],
+            tags: {},
+            minWireVersion: 0,
+            maxWireVersion: 0,
+            roundTripTime: -1,
+            lastUpdateTime: 177028083,
+            lastWriteDate: 0,
+            topologyVersion: {
+              processId: new ObjectId("6270042ae8ff18065f7eb95c"),
+              counter: 4
+            },
+            error: MongoNetworkError: getaddrinfo EAI_AGAIN cluster0-shard-00-00.oeari.mongodb.net
+                at connectionFailureError (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongodb/src/cmap/connect.ts:496:14)
+                at TLSSocket.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongodb/src/cmap/connect.ts:394:16)
+                at Object.onceWrapper (node:events:642:26)
+                at TLSSocket.emit (node:events:527:28)
+                at TLSSocket.emit (node:domain:475:12)
+                at emitErrorNT (node:internal/streams/destroy:157:8)
+                at emitErrorCloseNT (node:internal/streams/destroy:122:3)
+                at processTicksAndRejections (node:internal/process/task_queues:83:21) {
+              [Symbol(errorLabels)]: Set(0) {}
+            }
+          },
+          'cluster0-shard-00-01.oeari.mongodb.net:27017' => ServerDescription {
+            _hostAddress: new HostAddress('cluster0-shard-00-01.oeari.mongodb.net:27017'),
+            address: 'cluster0-shard-00-01.oeari.mongodb.net:27017',
+            type: 'Unknown',
+            hosts: [],
+            passives: [],
+            arbiters: [],
+            tags: {},
+            minWireVersion: 0,
+            maxWireVersion: 0,
+            roundTripTime: -1,
+            lastUpdateTime: 177028088,
+            lastWriteDate: 0,
+            topologyVersion: {
+              processId: new ObjectId("627004bf4c96c67a5085af66"),
+              counter: 6
+            },
+            error: MongoNetworkError: getaddrinfo EAI_AGAIN cluster0-shard-00-01.oeari.mongodb.net
+                at connectionFailureError (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongodb/src/cmap/connect.ts:496:14)
+                at TLSSocket.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongodb/src/cmap/connect.ts:394:16)
+                at Object.onceWrapper (node:events:642:26)
+                at TLSSocket.emit (node:events:527:28)
+                at TLSSocket.emit (node:domain:475:12)
+                at emitErrorNT (node:internal/streams/destroy:157:8)
+                at emitErrorCloseNT (node:internal/streams/destroy:122:3)
+                at processTicksAndRejections (node:internal/process/task_queues:83:21) {
+              [Symbol(errorLabels)]: Set(0) {}
+            }
+          },
+          'cluster0-shard-00-02.oeari.mongodb.net:27017' => ServerDescription {
+            _hostAddress: new HostAddress('cluster0-shard-00-02.oeari.mongodb.net:27017'),
+            address: 'cluster0-shard-00-02.oeari.mongodb.net:27017',
+            type: 'Unknown',
+            hosts: [],
+            passives: [],
+            arbiters: [],
+            tags: {},
+            minWireVersion: 0,
+            maxWireVersion: 0,
+            roundTripTime: -1,
+            lastUpdateTime: 177028201,
+            lastWriteDate: 0,
+            topologyVersion: {
+              processId: new ObjectId("627005674ff1ac271a85c1f3"),
+              counter: 3
+            },
+            error: MongoNetworkError: getaddrinfo EAI_AGAIN cluster0-shard-00-02.oeari.mongodb.net
+                at connectionFailureError (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongodb/src/cmap/connect.ts:496:14)
+                at TLSSocket.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongodb/src/cmap/connect.ts:394:16)
+                at Object.onceWrapper (node:events:642:26)
+                at TLSSocket.emit (node:events:527:28)
+                at TLSSocket.emit (node:domain:475:12)
+                at emitErrorNT (node:internal/streams/destroy:157:8)
+                at emitErrorCloseNT (node:internal/streams/destroy:122:3)
+                at processTicksAndRejections (node:internal/process/task_queues:83:21) {
+              [Symbol(errorLabels)]: Set(0) {}
+            }
+          }
+        },
+        stale: false,
+        compatible: true,
+        heartbeatFrequencyMS: 10000,
+        localThresholdMS: 15,
+        setName: 'atlas-80ye5b-shard-0',
+        maxSetVersion: 2,
+        maxElectionId: new ObjectId("7fffffff000000000000000a"),
+        commonWireVersion: 13,
+        logicalSessionTimeoutMinutes: undefined
+      },
+      code: undefined
+    }
+  },
+  level: 'error',
+  timestamp: '2022-05-22 12:12:12'
+}
+{
+  message: {
+    createUserError: MongooseServerSelectionError: Could not connect to any servers in your MongoDB Atlas cluster. One common reason is that you're trying to access the database from an IP that isn't whitelisted. Make sure your current IP address is on your Atlas cluster's IP whitelist: https://docs.atlas.mongodb.com/security-whitelist/
+        at Function.Model.$wrapCallback (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/model.js:5017:32)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/model.js:510:27
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/helpers/promiseOrCallback.js:32:5
+        at new Promise (<anonymous>)
+        at promiseOrCallback (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/helpers/promiseOrCallback.js:31:10)
+        at Mongoose._promiseOrCallback (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/index.js:1181:10)
+        at model.Model.save (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/model.js:509:35)
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/dbCalls/user/user.ts:85:18)
+        at Generator.next (<anonymous>)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/dbCalls/user/user.ts:8:71 {
+      reason: TopologyDescription {
+        type: 'ReplicaSetNoPrimary',
+        servers: Map(3) {
+          'cluster0-shard-00-00.oeari.mongodb.net:27017' => ServerDescription {
+            _hostAddress: new HostAddress('cluster0-shard-00-00.oeari.mongodb.net:27017'),
+            address: 'cluster0-shard-00-00.oeari.mongodb.net:27017',
+            type: 'Unknown',
+            hosts: [],
+            passives: [],
+            arbiters: [],
+            tags: {},
+            minWireVersion: 0,
+            maxWireVersion: 0,
+            roundTripTime: -1,
+            lastUpdateTime: 177058302,
+            lastWriteDate: 0,
+            topologyVersion: {
+              processId: new ObjectId("6270042ae8ff18065f7eb95c"),
+              counter: 4
+            },
+            error: MongoNetworkError: getaddrinfo EAI_AGAIN cluster0-shard-00-00.oeari.mongodb.net
+                at connectionFailureError (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongodb/src/cmap/connect.ts:496:14)
+                at TLSSocket.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongodb/src/cmap/connect.ts:394:16)
+                at Object.onceWrapper (node:events:642:26)
+                at TLSSocket.emit (node:events:527:28)
+                at TLSSocket.emit (node:domain:475:12)
+                at emitErrorNT (node:internal/streams/destroy:157:8)
+                at emitErrorCloseNT (node:internal/streams/destroy:122:3)
+                at processTicksAndRejections (node:internal/process/task_queues:83:21) {
+              [Symbol(errorLabels)]: Set(0) {}
+            }
+          },
+          'cluster0-shard-00-01.oeari.mongodb.net:27017' => ServerDescription {
+            _hostAddress: new HostAddress('cluster0-shard-00-01.oeari.mongodb.net:27017'),
+            address: 'cluster0-shard-00-01.oeari.mongodb.net:27017',
+            type: 'Unknown',
+            hosts: [],
+            passives: [],
+            arbiters: [],
+            tags: {},
+            minWireVersion: 0,
+            maxWireVersion: 0,
+            roundTripTime: -1,
+            lastUpdateTime: 177058306,
+            lastWriteDate: 0,
+            topologyVersion: {
+              processId: new ObjectId("627004bf4c96c67a5085af66"),
+              counter: 6
+            },
+            error: MongoNetworkError: getaddrinfo EAI_AGAIN cluster0-shard-00-01.oeari.mongodb.net
+                at connectionFailureError (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongodb/src/cmap/connect.ts:496:14)
+                at TLSSocket.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongodb/src/cmap/connect.ts:394:16)
+                at Object.onceWrapper (node:events:642:26)
+                at TLSSocket.emit (node:events:527:28)
+                at TLSSocket.emit (node:domain:475:12)
+                at emitErrorNT (node:internal/streams/destroy:157:8)
+                at emitErrorCloseNT (node:internal/streams/destroy:122:3)
+                at processTicksAndRejections (node:internal/process/task_queues:83:21) {
+              [Symbol(errorLabels)]: Set(0) {}
+            }
+          },
+          'cluster0-shard-00-02.oeari.mongodb.net:27017' => ServerDescription {
+            _hostAddress: new HostAddress('cluster0-shard-00-02.oeari.mongodb.net:27017'),
+            address: 'cluster0-shard-00-02.oeari.mongodb.net:27017',
+            type: 'Unknown',
+            hosts: [],
+            passives: [],
+            arbiters: [],
+            tags: {},
+            minWireVersion: 0,
+            maxWireVersion: 0,
+            roundTripTime: -1,
+            lastUpdateTime: 177057957,
+            lastWriteDate: 0,
+            topologyVersion: {
+              processId: new ObjectId("627005674ff1ac271a85c1f3"),
+              counter: 3
+            },
+            error: MongoNetworkError: getaddrinfo EAI_AGAIN cluster0-shard-00-02.oeari.mongodb.net
+                at connectionFailureError (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongodb/src/cmap/connect.ts:496:14)
+                at TLSSocket.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongodb/src/cmap/connect.ts:394:16)
+                at Object.onceWrapper (node:events:642:26)
+                at TLSSocket.emit (node:events:527:28)
+                at TLSSocket.emit (node:domain:475:12)
+                at emitErrorNT (node:internal/streams/destroy:157:8)
+                at emitErrorCloseNT (node:internal/streams/destroy:122:3)
+                at processTicksAndRejections (node:internal/process/task_queues:83:21) {
+              [Symbol(errorLabels)]: Set(0) {}
+            }
+          }
+        },
+        stale: false,
+        compatible: true,
+        heartbeatFrequencyMS: 10000,
+        localThresholdMS: 15,
+        setName: 'atlas-80ye5b-shard-0',
+        maxSetVersion: 2,
+        maxElectionId: new ObjectId("7fffffff000000000000000a"),
+        commonWireVersion: 13,
+        logicalSessionTimeoutMinutes: undefined
+      },
+      code: undefined
+    }
+  },
+  level: 'error',
+  timestamp: '2022-05-22 12:12:42'
+}
+{
+  message: {
+    createAttachmentOnCardError: ReferenceError: FormData is not defined
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/boards.ts:176:22)
+        at Generator.next (<anonymous>)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/boards.ts:8:71
+        at new Promise (<anonymous>)
+        at __awaiter (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/boards.ts:4:12)
+        at Function.__createAttachment (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/boards.ts:188:16)
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/boards.ts:61:34)
+        at Generator.next (<anonymous>)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/boards.ts:8:71
+        at new Promise (<anonymous>)
+  },
+  level: 'error',
+  timestamp: '2022-05-22 12:21:31'
+}
+{
+  message: {
+    createAttachmentOnCardError: TypeError: Cannot read properties of undefined (reading 'toString')
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/boards.ts:180:42)
+        at Generator.next (<anonymous>)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/boards.ts:8:71
+        at new Promise (<anonymous>)
+        at __awaiter (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/boards.ts:4:12)
+        at Function.__createAttachment (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/boards.ts:189:16)
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/boards.ts:63:34)
+        at Generator.next (<anonymous>)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/boards.ts:8:71
+        at new Promise (<anonymous>)
+  },
+  level: 'error',
+  timestamp: '2022-05-22 12:25:06'
+}
+{
+  message: { createAttachmentOnCardError: 'File not existed' },
+  level: 'error',
+  timestamp: '2022-05-22 12:26:58'
+}
+{
+  message: { createAttachmentOnCardError: 'File not existed' },
+  level: 'error',
+  timestamp: '2022-05-22 12:28:07'
+}
+{
+  message: {
+    signInError: Error: data and hash arguments required
+        at Object.compare (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/bcrypt/bcrypt.js:208:17)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/bcrypt/promises.js:29:12
+        at new Promise (<anonymous>)
+        at Object.module.exports.promise (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/bcrypt/promises.js:20:12)
+        at Object.compare (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/bcrypt/bcrypt.js:204:25)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/services/auth/auth.ts:23:38
+        at Generator.next (<anonymous>)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/services/auth/auth.ts:8:71
+        at new Promise (<anonymous>)
+        at __awaiter (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/services/auth/auth.ts:4:12)
+  },
+  level: 'error',
+  timestamp: '2022-05-22 13:39:39'
+}
+{
+  message: {
+    signInError: Error: data and hash arguments required
+        at Object.compare (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/bcrypt/bcrypt.js:208:17)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/bcrypt/promises.js:29:12
+        at new Promise (<anonymous>)
+        at Object.module.exports.promise (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/bcrypt/promises.js:20:12)
+        at Object.compare (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/bcrypt/bcrypt.js:204:25)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/services/auth/auth.ts:23:38
+        at Generator.next (<anonymous>)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/services/auth/auth.ts:8:71
+        at new Promise (<anonymous>)
+        at __awaiter (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/services/auth/auth.ts:4:12)
+  },
+  level: 'error',
+  timestamp: '2022-05-22 13:39:52'
+}
+{
+  message: {
+    signInError: Error: data and hash arguments required
+        at Object.compare (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/bcrypt/bcrypt.js:208:17)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/bcrypt/promises.js:29:12
+        at new Promise (<anonymous>)
+        at Object.module.exports.promise (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/bcrypt/promises.js:20:12)
+        at Object.compare (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/bcrypt/bcrypt.js:204:25)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/services/auth/auth.ts:23:38
+        at Generator.next (<anonymous>)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/services/auth/auth.ts:8:71
+        at new Promise (<anonymous>)
+        at __awaiter (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/services/auth/auth.ts:4:12)
+  },
+  level: 'error',
+  timestamp: '2022-05-22 13:39:58'
+}
+{
+  message: {
+    signInError: Error: data and hash arguments required
+        at Object.compare (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/bcrypt/bcrypt.js:208:17)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/bcrypt/promises.js:29:12
+        at new Promise (<anonymous>)
+        at Object.module.exports.promise (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/bcrypt/promises.js:20:12)
+        at Object.compare (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/bcrypt/bcrypt.js:204:25)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/services/auth/auth.ts:23:38
+        at Generator.next (<anonymous>)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/services/auth/auth.ts:8:71
+        at new Promise (<anonymous>)
+        at __awaiter (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/services/auth/auth.ts:4:12)
+  },
+  level: 'error',
+  timestamp: '2022-05-22 13:42:33'
+}
+{
+  message: {
+    signInError: Error: data and hash arguments required
+        at Object.compare (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/bcrypt/bcrypt.js:208:17)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/bcrypt/promises.js:29:12
+        at new Promise (<anonymous>)
+        at Object.module.exports.promise (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/bcrypt/promises.js:20:12)
+        at Object.compare (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/bcrypt/bcrypt.js:204:25)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/services/auth/auth.ts:23:38
+        at Generator.next (<anonymous>)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/services/auth/auth.ts:8:71
+        at new Promise (<anonymous>)
+        at __awaiter (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/services/auth/auth.ts:4:12)
+  },
+  level: 'error',
+  timestamp: '2022-05-22 13:43:59'
+}

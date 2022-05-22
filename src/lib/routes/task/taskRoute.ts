@@ -1,11 +1,10 @@
 import { Router } from "express";
 import TaskReq from "../../presentation/task/task";
 import apiRoute from "./apis";
-import multer from "multer";
-
-let upload = multer();
-
+import Multer from "../../services/multer";
+import Authed from "../../middlewares/Auth/Authed";
 const router = Router();
+const multer = Multer();
 const {
   CREATE_TASK,
   UPDATE_TASK,
@@ -31,14 +30,23 @@ const {
   handleDeleteTask,
 } = TaskReq;
 
-router.post(`${CREATE_TASK}`, upload.single("file"), handleCreateCard);
-router.post(`${UPDATE_TASK}`, upload.single("file"), handleUpdateCard);
-router.put(`${MOVE_TASK}`, handleMoveCard);
-router.post(`${WEBHOOK_UPDATES}`, handleWebhookUpdateCard);
-router.get(`${WEBHOOK_UPDATES}`, handleWebhookUpdateCard);
-router.get(`${GET_TASKS}`, handleGetTasks);
-router.post(`${FILTER_TASKS}`, handleFilterTasks);
-router.delete(`${DELETE_TASKS}`, handleDeleteTasks);
-router.delete(`${DELETE_TASKS_BY_PROJECT_ID}`, handleDeleteTasksByProjectId);
-router.delete(`${DELETE_TASK}`, handleDeleteTask);
+router.post(
+  `${CREATE_TASK}`,
+  Authed,
+  multer.array("attachedFiles"),
+  handleCreateCard
+);
+router.post(`${UPDATE_TASK}`, multer.single("attachedFiles"), handleUpdateCard);
+router.put(`${MOVE_TASK}`, Authed, handleMoveCard);
+router.post(`${WEBHOOK_UPDATES}`, Authed, handleWebhookUpdateCard);
+router.get(`${WEBHOOK_UPDATES}`, Authed, handleWebhookUpdateCard);
+router.get(`${GET_TASKS}`, Authed, handleGetTasks);
+router.post(`${FILTER_TASKS}`, Authed, handleFilterTasks);
+router.delete(`${DELETE_TASKS}`, Authed, handleDeleteTasks);
+router.delete(
+  `${DELETE_TASKS_BY_PROJECT_ID}`,
+  Authed,
+  handleDeleteTasksByProjectId
+);
+router.delete(`${DELETE_TASK}`, Authed, handleDeleteTask);
 export default router;

@@ -1,6 +1,6 @@
 import { model, Schema, Model } from "mongoose";
 import { TaskInfo } from "../types/model/tasks";
-
+import Joi from "joi";
 const TaskSchema: Schema = new Schema<TaskInfo>(
   {
     name: {
@@ -43,7 +43,15 @@ const TaskSchema: Schema = new Schema<TaskInfo>(
     status: {
       type: String,
       default: "inProgress",
-      enum: ["inProgress", "Shared", "Done","Not Started", "Not Clear", "Cancled", "Review"],
+      enum: [
+        "inProgress",
+        "Shared",
+        "Done",
+        "Not Started",
+        "Not Clear",
+        "Cancled",
+        "Review",
+      ],
     },
     start: {
       type: Date,
@@ -81,5 +89,4 @@ const TaskSchema: Schema = new Schema<TaskInfo>(
 );
 
 const Tasks: Model<TaskInfo> = model("tasks", TaskSchema);
-
 export default Tasks;

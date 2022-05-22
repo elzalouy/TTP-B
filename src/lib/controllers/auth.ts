@@ -69,20 +69,38 @@ const AuthController = class AuthController extends UserDB {
     }
   }
 
-  static async __signIn(data: AuthSignIn): Promise<TokenAndUser> {
+  static async __signIn(data: AuthSignIn): Promise<any> {
     try {
       const { email, password } = data;
       let user = await super.findUser({ email });
+      console.log(user);
       if (!user) {
-        return { userData: false, token: false };
+        return null;
       }
-      logger.info({ user });
       let passwordCheck = await comparePassword(password, user.password);
       if (!passwordCheck) {
-        return { userData: false, token: false };
+        return null;
       }
       let getToken = createJwtToken(user._id.toString());
-      return { userData: user, token: getToken };
+      let {
+        _id,
+        email: mail,
+        role,
+        type,
+        image,
+        trelloBoardId,
+        trelloMemberId,
+      } = user;
+      return {
+        _id,
+        email: mail,
+        role,
+        type,
+        image,
+        trelloBoardId,
+        trelloMemberId,
+        token: getToken,
+      };
     } catch (error) {
       logger.error({ signInError: error });
     }

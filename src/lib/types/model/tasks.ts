@@ -55,7 +55,7 @@ export interface TaskData {
   deliveryDate?: Date;
   done?: Date;
   turnoverTime?: number;
-  attachedFiles?: string;
+  attachedFiles?: string | any;
   attachedCard?: string;
   memberId?: string;
   listId?: string;

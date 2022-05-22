@@ -72,7 +72,8 @@ const UserDB = class UserDB {
 
   static async __getUserData(data: Object) {
     try {
-      let user: IUser = await User.findOne({ ...data }).lean();
+      let user: IUser = await User.findOne({ ...data })
+      .lean();
       return user;
     } catch (error) {
       logger.error({ findUserError: error });

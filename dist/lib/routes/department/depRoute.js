@@ -1,0 +1,16 @@
+"use strict";
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+const express_1 = require("express");
+const department_1 = __importDefault(require("../../presentation/department/department"));
+const apis_1 = __importDefault(require("./apis"));
+const router = (0, express_1.Router)();
+const { CREATE_DEP, UPDATE_DEP, DELETE_DEP, GET_DEPS } = apis_1.default;
+const { handleCreateDepartment, handleDeleteDepartment, handleGetDepartment, handleUpdateDepartment, } = department_1.default;
+router.post(`${CREATE_DEP}`, handleCreateDepartment);
+router.put(`${UPDATE_DEP}`, handleUpdateDepartment);
+router.delete(`${DELETE_DEP}`, handleDeleteDepartment);
+router.get(`${GET_DEPS}`, handleGetDepartment);
+exports.default = router;

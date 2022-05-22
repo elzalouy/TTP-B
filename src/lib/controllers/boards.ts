@@ -2,8 +2,10 @@ import { MemberType } from "./../types/model/User";
 import { trelloApi } from "./../services/trello/trelloApi";
 import logger from "../../logger";
 import fetch from "node-fetch";
-import { config } from "dotenv";
 
+import { config } from "dotenv";
+import fs from "fs";
+var FormData = require("form-data");
 config();
 
 class BoardController {
@@ -49,16 +51,16 @@ class BoardController {
   static async deleteCard(id: string) {
     return await BoardController.__deleteCard(id);
   }
-  static async createCardInList(
-    listId: string,
-    cardName: string,
-    file: string | Blob
-  ) {
-    return await BoardController.__createCard(listId, cardName, file);
+  static async createCardInList(listId: string, cardName: string) {
+    return await BoardController.__createCard(listId, cardName);
   }
 
-  static async createAttachmentOnCard(cardId: string, file: string) {
-    return await BoardController.__createAttachment(cardId, file);
+  static async createAttachmentOnCard(
+    cardId: string,
+    filePath: string,
+    fileName: string
+  ) {
+    return await BoardController.__createAttachment(cardId, filePath, fileName);
   }
 
   static async createNewBoard(name: string, color: string) {
@@ -162,29 +164,38 @@ class BoardController {
     }
   }
 
-  //todo fix attachment file binary
-  static async __createAttachment(cardId: string, file: string) {
+  static async __createAttachment(
+    cardId: string,
+    filePath: string,
+    fileName: string
+  ) {
     try {
-      logger.info({ file });
-      let attachmentApi = trelloApi(
-        `cards/${cardId}/attachments?file=${file}&`
-      );
-      let attachment = await fetch(attachmentApi, {
-        method: "POST",
-        headers: {
-          Accept: "application/json",
-        },
+      let bufferFile: Buffer;
+      console.log(filePath, fileName);
+      await fs.readFile(filePath, (error, data) => {
+        if (error) throw error;
+        bufferFile = data;
       });
-      return attachment.json();
+      if (bufferFile) {
+        let formData = new FormData();
+        formData.append("name", fileName);
+        formData.append("file", bufferFile?.toString("base64"));
+        let endpoint = trelloApi(`cards/${cardId}/attachments`);
+        let response = await fetch(endpoint, {
+          method: "POST",
+          headers: { Accept: "multipart/form-data" },
+          body: JSON.stringify(formData),
+        });
+        console.log(response.json());
+        if ([200, 201].includes(response.status) && response.body)
+          return response.json();
+      }
+      throw "File not existed";
     } catch (error) {
       logger.error({ createAttachmentOnCardError: error });
     }
   }
-  static async __createCard(
-    listId: string,
-    cardName: string,
-    file: string | Blob
-  ) {
+  static async __createCard(listId: string, cardName: string) {
     try {
       let cardCreateApi = trelloApi(
         `cards?idList=${listId}&name=${cardName}&attachments=true&`

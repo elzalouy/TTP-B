@@ -5,8 +5,8 @@ export interface AuthSignIn {
 }
 
 export interface TokenAndUser {
-  token: string | boolean;
-  userData: UserData | boolean;
+  token: string | undefined;
+  userData: UserData | undefined;
 }
 
 export interface UpdatePassword {

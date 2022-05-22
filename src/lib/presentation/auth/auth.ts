@@ -11,14 +11,8 @@ const AuthReq = class AuthReq extends AuthController {
       let userData: AuthSignIn = req.body;
       if (userData) {
         let user = await super.signInUser(userData);
-        if (user.userData) {
-          const { token, userData } = user;
-          res.cookie("token", `Bearer ${token}`, {
-            httpOnly: true,
-            // maxAge:24 * 60 * 60,
-            secure: process.env.NODE_ENV === "development" ? false : true,
-          });
-          return res.status(200).send(userData);
+        if (user !== null) {
+          return res.status(200).send(user);
         } else {
           return res.status(400).send(customeError("credential_error", 400));
         }

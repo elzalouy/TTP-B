@@ -209,7 +209,6 @@ class TaskDB {
         $inc: { numberOfTasks: 1, numberOfFinishedTasks: 0 },
       });
       task = await task.save();
-      console.log(task);
       let department = await Department.findOneAndUpdate(
         { boardId: data.boardId },
         {
@@ -218,7 +217,6 @@ class TaskDB {
           },
         }
       );
-      console.log(department);
       return task;
     } catch (error) {
       logger.error({ createTaskDBError: error });

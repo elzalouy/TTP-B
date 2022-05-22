@@ -7,6 +7,8 @@ import Project from "../models/Project";
 import NotificationController from "./notification";
 import { io } from "../server";
 import ProjectDB from "../dbCalls/project/project";
+import { deleteAll } from "../services/upload";
+import { Express } from "express";
 
 class TaskController extends TaskDB {
   static async getTasks(data: TaskData) {
@@ -146,25 +148,27 @@ class TaskController extends TaskDB {
     }
   }
 
-  static async __CreateNewTask(data: TaskData, file: string) {
+  static async __CreateNewTask(data: TaskData, files: Express.Multer.File[]) {
     try {
-      logger.info({ __CreateNewTask: data });
-      // Add task to the list
       let createdCard: { id: string } | any =
-        await BoardController.createCardInList(data.listId, data.name, file);
+        await BoardController.createCardInList(data.listId, data.name);
       if (createdCard) {
         data.cardId = createdCard.id;
-        // Check if there is attachment
         let attachment;
-        if (file) {
-          attachment = await BoardController.createAttachmentOnCard(
-            createdCard.id,
-            file
-          );
+        if (files) {
+          files.forEach(async (file) => {
+            console.log(file);
+            attachment = await BoardController.createAttachmentOnCard(
+              createdCard.id,
+              file.path,
+              file.filename
+            );
+          });
         }
-        // Add task to DB
+        data.attachedFiles = attachment;
         delete data.listId;
         let task = await super.createTaskDB(data);
+        deleteAll();
         return { task, createdCard, attachment };
       } else throw "Error while creating Card in Trello";
     } catch (error) {
