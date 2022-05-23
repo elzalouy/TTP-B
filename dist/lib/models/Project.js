@@ -36,6 +36,7 @@ const ProjectSchema = new mongoose_1.Schema({
         type: String,
         default: "inProgress",
         enum: [
+            "Not Started",
             "inProgress",
             "late",
             "delivered on time",

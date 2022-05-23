@@ -67,7 +67,51 @@ const ProjectDB = class ProjectDB {
                 let project = yield Project_1.default.find(data)
                     .populate({ path: "projectManager", select: "_id name" })
                     .lean();
-                return project;
+                let fetch = yield Project_1.default.aggregate([
+                    { $match: { $and: [data] } },
+                    {
+                        $lookup: {
+                            from: "tasks",
+                            localField: "_id",
+                            foreignField: "projectId",
+                            as: "tasks",
+                        },
+                    },
+                    {
+                        $addFields: {
+                            NoOfFinishedTasks: {
+                                $filter: {
+                                    input: "$tasks",
+                                    as: "task",
+                                    cond: {
+                                        $eq: ["$$task.status", "Done"],
+                                    },
+                                },
+                            },
+                        },
+                    },
+                    {
+                        $project: {
+                            _id: 1,
+                            name: 1,
+                            projectManager: 1,
+                            projectManagerName: 1,
+                            adminId: 1,
+                            projectDeadline: 1,
+                            startDate: 1,
+                            completedDate: 1,
+                            projectStatus: 1,
+                            clientId: 1,
+                            NoOfTasks: { $size: "$tasks" },
+                            NoOfFinishedTasks: { $size: "$NoOfFinishedTasks" },
+                        },
+                    },
+                ]);
+                fetch = yield Project_1.default.populate(fetch, {
+                    path: "projectManager",
+                    select: "_id name",
+                });
+                return fetch;
             }
             catch (error) {
                 logger_1.default.error({ getProjectDBError: error });

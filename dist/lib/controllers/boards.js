@@ -16,6 +16,8 @@ const trelloApi_1 = require("./../services/trello/trelloApi");
 const logger_1 = __importDefault(require("../../logger"));
 const node_fetch_1 = __importDefault(require("node-fetch"));
 const dotenv_1 = require("dotenv");
+const fs_1 = __importDefault(require("fs"));
+var FormData = require("form-data");
 (0, dotenv_1.config)();
 class BoardController {
     static getBoardsInTrello() {
@@ -68,14 +70,14 @@ class BoardController {
             return yield BoardController.__deleteCard(id);
         });
     }
-    static createCardInList(listId, cardName, file) {
+    static createCardInList(listId, cardName) {
         return __awaiter(this, void 0, void 0, function* () {
-            return yield BoardController.__createCard(listId, cardName, file);
+            return yield BoardController.__createCard(listId, cardName);
         });
     }
-    static createAttachmentOnCard(cardId, file) {
+    static createAttachmentOnCard(cardId, filePath, fileName) {
         return __awaiter(this, void 0, void 0, function* () {
-            return yield BoardController.__createAttachment(cardId, file);
+            return yield BoardController.__createAttachment(cardId, filePath, fileName);
         });
     }
     static createNewBoard(name, color) {
@@ -183,26 +185,38 @@ class BoardController {
             }
         });
     }
-    //todo fix attachment file binary
-    static __createAttachment(cardId, file) {
+    static __createAttachment(cardId, filePath, fileName) {
         return __awaiter(this, void 0, void 0, function* () {
             try {
-                logger_1.default.info({ file });
-                let attachmentApi = (0, trelloApi_1.trelloApi)(`cards/${cardId}/attachments?file=${file}&`);
-                let attachment = yield (0, node_fetch_1.default)(attachmentApi, {
-                    method: "POST",
-                    headers: {
-                        Accept: "application/json",
-                    },
+                let bufferFile;
+                console.log(filePath, fileName);
+                yield fs_1.default.readFile(filePath, (error, data) => {
+                    if (error)
+                        throw error;
+                    bufferFile = data;
                 });
-                return attachment.json();
+                if (bufferFile) {
+                    let formData = new FormData();
+                    formData.append("name", fileName);
+                    formData.append("file", bufferFile === null || bufferFile === void 0 ? void 0 : bufferFile.toString("base64"));
+                    let endpoint = (0, trelloApi_1.trelloApi)(`cards/${cardId}/attachments`);
+                    let response = yield (0, node_fetch_1.default)(endpoint, {
+                        method: "POST",
+                        headers: { Accept: "multipart/form-data" },
+                        body: JSON.stringify(formData),
+                    });
+                    console.log(response.json());
+                    if ([200, 201].includes(response.status) && response.body)
+                        return response.json();
+                }
+                throw "File not existed";
             }
             catch (error) {
                 logger_1.default.error({ createAttachmentOnCardError: error });
             }
         });
     }
-    static __createCard(listId, cardName, file) {
+    static __createCard(listId, cardName) {
         return __awaiter(this, void 0, void 0, function* () {
             try {
                 let cardCreateApi = (0, trelloApi_1.trelloApi)(`cards?idList=${listId}&name=${cardName}&attachments=true&`);

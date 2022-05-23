@@ -38,6 +38,7 @@ const ProjectSchema: Schema = new Schema<ProjectInfo>(
       type: String,
       default: "inProgress",
       enum: [
+        "Not Started",
         "inProgress",
         "late",
         "delivered on time",

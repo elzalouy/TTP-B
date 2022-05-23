@@ -15,6 +15,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const errorUtils_1 = require("./../../utils/errorUtils");
 const logger_1 = __importDefault(require("../../../logger"));
 const task_1 = __importDefault(require("../../controllers/task"));
+const validation_1 = require("../../db/validation");
 const TaskReq = class TaskReq extends task_1.default {
     static handleCreateCard(req, res) {
         const _super = Object.create(null, {
@@ -23,7 +24,10 @@ const TaskReq = class TaskReq extends task_1.default {
         return __awaiter(this, void 0, void 0, function* () {
             try {
                 let TaskData = req.body;
-                let task = yield _super.createTask.call(this, TaskData, req.file);
+                let isValid = validation_1.createTaskSchema.validate(TaskData);
+                if (isValid.error)
+                    return res.status(400).send(isValid.error.details);
+                let task = yield _super.createTask.call(this, TaskData, req.files);
                 if (task) {
                     return res.send(task);
                 }
