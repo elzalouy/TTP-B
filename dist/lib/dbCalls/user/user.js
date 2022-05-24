@@ -94,7 +94,8 @@ const UserDB = class UserDB {
     static __getUserData(data) {
         return __awaiter(this, void 0, void 0, function* () {
             try {
-                let user = yield User_1.default.findOne(Object.assign({}, data)).lean();
+                let user = yield User_1.default.findOne(Object.assign({}, data))
+                    .lean();
                 return user;
             }
             catch (error) {

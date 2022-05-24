@@ -18,6 +18,7 @@ const boards_1 = __importDefault(require("./boards"));
 const notification_1 = __importDefault(require("./notification"));
 const server_1 = require("../server");
 const project_1 = __importDefault(require("../dbCalls/project/project"));
+const upload_1 = require("../services/upload");
 class TaskController extends tasks_1.default {
     static getTasks(data) {
         return __awaiter(this, void 0, void 0, function* () {
@@ -162,25 +163,26 @@ class TaskController extends tasks_1.default {
             }
         });
     }
-    static __CreateNewTask(data, file) {
+    static __CreateNewTask(data, files) {
         const _super = Object.create(null, {
             createTaskDB: { get: () => super.createTaskDB }
         });
         return __awaiter(this, void 0, void 0, function* () {
             try {
-                logger_1.default.info({ __CreateNewTask: data });
-                // Add task to the list
-                let createdCard = yield boards_1.default.createCardInList(data.listId, data.name, file);
+                let createdCard = yield boards_1.default.createCardInList(data.listId, data.name);
                 if (createdCard) {
                     data.cardId = createdCard.id;
-                    // Check if there is attachment
                     let attachment;
-                    if (file) {
-                        attachment = yield boards_1.default.createAttachmentOnCard(createdCard.id, file);
+                    if (files) {
+                        files.forEach((file) => __awaiter(this, void 0, void 0, function* () {
+                            console.log(file);
+                            attachment = yield boards_1.default.createAttachmentOnCard(createdCard.id, file.path, file.filename);
+                        }));
                     }
-                    // Add task to DB
+                    data.attachedFiles = attachment;
                     delete data.listId;
                     let task = yield _super.createTaskDB.call(this, data);
+                    (0, upload_1.deleteAll)();
                     return { task, createdCard, attachment };
                 }
                 else

@@ -14,7 +14,9 @@ const ClientSchema = new mongoose_1.Schema({
     doneProject: { type: Number, default: 0 },
     inProgressProject: { type: Number, default: 0 },
 }, {
+    // createdAt, updatedAt properties
     timestamps: true,
+    // it allow other data that were not in specified in our schema to be save or not.
     strict: false,
 });
 const Clients = (0, mongoose_1.model)("clients", ClientSchema);

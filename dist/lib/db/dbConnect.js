@@ -27,6 +27,12 @@ const mongoDB = () => __awaiter(void 0, void 0, void 0, function* () {
         const options = {
             useNewUrlParser: true,
             useUnifiedTopology: true,
+            autoIndex: process.env.NODE_ENV === "production" ? false : true,
+            autoCreate: process.env.NODE_ENV === "production" ? false : true,
+            //By default, mongoose buffers commands when the connection goes down until the driver manages to reconnect. To disable buffering, set bufferCommands to false.
+            bufferCommands: true,
+            // how much time mongo can wait until berfore throwing an error
+            connectTimeoutMS: 1000,
         };
         yield (0, mongoose_1.connect)(db, options);
         console.log("Mongo DB connected");

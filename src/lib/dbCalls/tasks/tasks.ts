@@ -2,7 +2,6 @@ import { TaskInfo, TasksStatistics } from "./../../types/model/tasks";
 import logger from "../../../logger";
 import Tasks from "../../models/task";
 import { TaskData } from "../../types/model/tasks";
-import Project from "../../models/Project";
 import _ from "lodash";
 import mongoose from "mongoose";
 import Department from "../../models/Department";
@@ -125,6 +124,7 @@ class TaskDB {
   static async __getTasksByIds(ids: string[]) {
     try {
       let tasks = await Tasks.find({ _id: { $in: ids } }).lean();
+
       return tasks;
     } catch (error) {
       logger.error({ updateTaskDBError: error });
@@ -150,10 +150,7 @@ class TaskDB {
   static async __deleteTasksByProjectId(id: String) {
     try {
       let deleteResult = await Tasks.deleteMany({ projectId: id });
-      await Project.findByIdAndUpdate(id, {
-        numberOfTasks: 0,
-        numberOfFinishedTasks: 0,
-      });
+
       return deleteResult;
     } catch (error) {
       logger.error({ deleteTasksByProject: error });
@@ -175,14 +172,6 @@ class TaskDB {
   static async __deleteTask(id: string) {
     try {
       let task = await Tasks.findByIdAndDelete(id);
-      if (task.status === "done")
-        await Project.findByIdAndUpdate(task.projectId, {
-          $inc: { numberOfTasks: -1, numberOfFinishedTasks: -1 },
-        });
-      else
-        await Project.findByIdAndUpdate(task.projectId, {
-          $inc: { numberOfTasks: -1 },
-        });
       return task;
     } catch (error) {
       logger.error({ deleteTaskDBError: error });
@@ -205,11 +194,9 @@ class TaskDB {
   static async __createTask(data: TaskData) {
     try {
       let task: TaskInfo = new Tasks(data);
-      await Project.findByIdAndUpdate(task.projectId, {
-        $inc: { numberOfTasks: 1, numberOfFinishedTasks: 0 },
-      });
+
       task = await task.save();
-      let department = await Department.findOneAndUpdate(
+      await Department.findOneAndUpdate(
         { boardId: data.boardId },
         {
           $push: {
@@ -242,30 +229,6 @@ class TaskDB {
       return tasks;
     } catch (error) {
       logger.error({ filterTasksError: error });
-    }
-  }
-  static async __getAllTasksStatistics() {
-    try {
-      var statistics: TasksStatistics[] = [];
-      let project = await Project.find({}).select("_id");
-      await project.forEach(async (element, index) => {
-        let finishedtasks = await Tasks.find({
-          projectId: element._id,
-          status: "done",
-        });
-        let tasks = await Tasks.find({ projectId: element._id });
-        let NoOfFinished = finishedtasks.length;
-        let NoOfTasks = tasks.length;
-        statistics.push({
-          id: element._id,
-          numberOfFinishedTasks: NoOfFinished,
-          numberOfTasks: NoOfTasks,
-          progress: (NoOfFinished / NoOfTasks) * 100,
-        });
-      });
-      return statistics;
-    } catch (error) {
-      logger.error({ AllTasksStatistics: error });
     }
   }
 }

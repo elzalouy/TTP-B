@@ -16,7 +16,9 @@ const ClientSchema: Schema = new Schema<Client>(
     inProgressProject: { type: Number, default: 0 },
   },
   {
+    // createdAt, updatedAt properties
     timestamps: true,
+    // it allow other data that were not in specified in our schema to be save or not.
     strict: false,
   }
 );

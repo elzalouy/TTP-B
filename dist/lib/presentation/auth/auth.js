@@ -25,14 +25,8 @@ const AuthReq = class AuthReq extends auth_1.default {
                 let userData = req.body;
                 if (userData) {
                     let user = yield _super.signInUser.call(this, userData);
-                    if (user.userData) {
-                        const { token, userData } = user;
-                        res.cookie("token", `Bearer ${token}`, {
-                            httpOnly: true,
-                            // maxAge:24 * 60 * 60,
-                            secure: process.env.NODE_ENV === "development" ? false : true,
-                        });
-                        return res.status(200).send(userData);
+                    if (user !== null) {
+                        return res.status(200).send(user);
                     }
                     else {
                         return res.status(400).send((0, errorUtils_1.customeError)("credential_error", 400));

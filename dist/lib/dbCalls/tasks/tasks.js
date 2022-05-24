@@ -14,7 +14,6 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 Object.defineProperty(exports, "__esModule", { value: true });
 const logger_1 = __importDefault(require("../../../logger"));
 const task_1 = __importDefault(require("../../models/task"));
-const Project_1 = __importDefault(require("../../models/Project"));
 const mongoose_1 = __importDefault(require("mongoose"));
 const Department_1 = __importDefault(require("../../models/Department"));
 class TaskDB {
@@ -201,10 +200,6 @@ class TaskDB {
         return __awaiter(this, void 0, void 0, function* () {
             try {
                 let deleteResult = yield task_1.default.deleteMany({ projectId: id });
-                yield Project_1.default.findByIdAndUpdate(id, {
-                    numberOfTasks: 0,
-                    numberOfFinishedTasks: 0,
-                });
                 return deleteResult;
             }
             catch (error) {
@@ -232,14 +227,6 @@ class TaskDB {
         return __awaiter(this, void 0, void 0, function* () {
             try {
                 let task = yield task_1.default.findByIdAndDelete(id);
-                if (task.status === "done")
-                    yield Project_1.default.findByIdAndUpdate(task.projectId, {
-                        $inc: { numberOfTasks: -1, numberOfFinishedTasks: -1 },
-                    });
-                else
-                    yield Project_1.default.findByIdAndUpdate(task.projectId, {
-                        $inc: { numberOfTasks: -1 },
-                    });
                 return task;
             }
             catch (error) {
@@ -264,17 +251,12 @@ class TaskDB {
         return __awaiter(this, void 0, void 0, function* () {
             try {
                 let task = new task_1.default(data);
-                yield Project_1.default.findByIdAndUpdate(task.projectId, {
-                    $inc: { numberOfTasks: 1, numberOfFinishedTasks: 0 },
-                });
                 task = yield task.save();
-                console.log(task);
-                let department = yield Department_1.default.findOneAndUpdate({ boardId: data.boardId }, {
+                yield Department_1.default.findOneAndUpdate({ boardId: data.boardId }, {
                     $push: {
                         tasks: task._id,
                     },
                 });
-                console.log(department);
                 return task;
             }
             catch (error) {
@@ -301,33 +283,6 @@ class TaskDB {
             }
             catch (error) {
                 logger_1.default.error({ filterTasksError: error });
-            }
-        });
-    }
-    static __getAllTasksStatistics() {
-        return __awaiter(this, void 0, void 0, function* () {
-            try {
-                var statistics = [];
-                let project = yield Project_1.default.find({}).select("_id");
-                yield project.forEach((element, index) => __awaiter(this, void 0, void 0, function* () {
-                    let finishedtasks = yield task_1.default.find({
-                        projectId: element._id,
-                        status: "done",
-                    });
-                    let tasks = yield task_1.default.find({ projectId: element._id });
-                    let NoOfFinished = finishedtasks.length;
-                    let NoOfTasks = tasks.length;
-                    statistics.push({
-                        id: element._id,
-                        numberOfFinishedTasks: NoOfFinished,
-                        numberOfTasks: NoOfTasks,
-                        progress: (NoOfFinished / NoOfTasks) * 100,
-                    });
-                }));
-                return statistics;
-            }
-            catch (error) {
-                logger_1.default.error({ AllTasksStatistics: error });
             }
         });
     }

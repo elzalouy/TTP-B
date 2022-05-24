@@ -95,16 +95,26 @@ const AuthController = class AuthController extends user_1.default {
             try {
                 const { email, password } = data;
                 let user = yield _super.findUser.call(this, { email });
+                console.log(user);
                 if (!user) {
-                    return { userData: false, token: false };
+                    return null;
                 }
-                logger_1.default.info({ user });
                 let passwordCheck = yield (0, auth_1.comparePassword)(password, user.password);
                 if (!passwordCheck) {
-                    return { userData: false, token: false };
+                    return null;
                 }
                 let getToken = (0, auth_1.createJwtToken)(user._id.toString());
-                return { userData: user, token: getToken };
+                let { _id, email: mail, role, type, image, trelloBoardId, trelloMemberId, } = user;
+                return {
+                    _id,
+                    email: mail,
+                    role,
+                    type,
+                    image,
+                    trelloBoardId,
+                    trelloMemberId,
+                    token: getToken,
+                };
             }
             catch (error) {
                 logger_1.default.error({ signInError: error });
