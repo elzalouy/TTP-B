@@ -72,13 +72,15 @@ const CategoryController = class CategoryController extends CategoryDB {
     try {
       // add new subcategory then update data
       if (data.newSubCategory) {
+        let updatedCategory = [];
         for (let i = 0; i < data.newSubCategory.length; i++) {
           let subCategory = await CategoryController.createSubcategory(
             data.newSubCategory[i]
           );
           logger.info({ subCategory });
-          data.subCategoriesId = [...subCategory._id,subCategory.id];
+          updatedCategory[i] = subCategory._id;
         }
+        data.subCategoriesId = updatedCategory;
       }
       let category = await super.updateCategoryDB(data);
       return category;
