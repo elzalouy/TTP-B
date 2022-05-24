@@ -77,7 +77,7 @@ const CategoryController = class CategoryController extends CategoryDB {
             data.newSubCategory[i]
           );
           logger.info({ subCategory });
-          data.subCategoriesId = [...data.subCategoriesId, subCategory._id];
+          data.subCategoriesId = [...data.newSubCategory, subCategory._id];
         }
       }
 
