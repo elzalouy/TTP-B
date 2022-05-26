@@ -120,6 +120,10 @@ class TaskController extends TaskDB {
             createNotifi
           );
         }
+        io.sockets.emit("Move Task", {
+          cardId: data.action.display.entities.card.id,
+          to: data?.action?.display?.entities?.listAfter?.text,
+        });
       } else {
         targetTask = await TaskDB.updateOneTaskDB(
           {
@@ -129,6 +133,10 @@ class TaskController extends TaskDB {
             status: "inProgress",
           }
         );
+        io.sockets.emit("Move Task", {
+          cardId: data.action.display.entities.card.id,
+          to: "inProgress",
+        });
       }
       return targetTask;
     } catch (error) {

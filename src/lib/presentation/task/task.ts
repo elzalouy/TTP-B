@@ -72,7 +72,6 @@ const TaskReq = class TaskReq extends TaskController {
       return res.status(500).send(customeError("server_error", 500));
     }
   }
-
   static async handleMoveCard(req: Request, res: Response) {
     try {
       let { cardId, listId, status }: any = req.body;

@@ -5,7 +5,7 @@ import mongoDB from "./db/dbConnect";
 import { createServer } from "http";
 import { Server } from "socket.io";
 import cookieParser from "cookie-parser";
-
+import AppSocket from "./startup/socket";
 import i18n from "./i18n/config";
 
 const ngrok = require("ngrok");
@@ -36,7 +36,7 @@ app.use(
 
 // MongoDB init
 mongoDB();
-
+AppSocket(io);
 // i18n init
 app.use(i18n.init);
 
@@ -59,25 +59,3 @@ app.disable("etag");
 
 // start my notification cron job
 require("./services/cronJobNotifi/cronJobNotifi");
-
-io.on("connection", (socket: any) => {
-  console.log("Client connected");
-  socket.on("disconnect", () => console.log("Client disconnected"));
-
-  //* this for admins role only
-  socket.on("joined admin", () => {
-    // logger.info({ data });
-    return socket.join("admin room");
-  });
-
-  //* this for project managers role only
-  socket.on("joined manager", () => {
-    // logger.info({ data });
-    return socket.join("manager room");
-  });
-
-  //* this is for specific user
-  socket.on('joined user',(data:any) => {
-    return socket.join(`user-${data.id}`)
-  })
-});
