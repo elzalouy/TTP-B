@@ -55,7 +55,7 @@ const ProjectController = class ProjectController extends ProjectDB {
       // if porject status update to done
       if (
         data.projectStatus &&
-        ["delivered on time", "delivered defore deadline"].includes(
+        ["deliver on time", "deliver before deadline","late"].includes(
           data.projectStatus
         )
       ) {

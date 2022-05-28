@@ -11274,3 +11274,552 @@
   level: 'error',
   timestamp: '2022-05-23 21:54:43'
 }
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-05-25 15:58:13'
+}
+{
+  message: {
+    data: { id: '62746010736e8ea96f53ea54', skip: '0', limit: undefined }
+  },
+  level: 'info',
+  timestamp: '2022-05-25 17:43:42'
+}
+{
+  message: { notificationData: { _id: '62746010736e8ea96f53ea54', role: 'OM' } },
+  level: 'info',
+  timestamp: '2022-05-25 17:43:42'
+}
+{
+  message: {
+    Notification: {
+      acknowledged: true,
+      modifiedCount: 202,
+      upsertedId: null,
+      upsertedCount: 0,
+      matchedCount: 202
+    }
+  },
+  level: 'info',
+  timestamp: '2022-05-25 17:43:44'
+}
+{
+  message: {
+    data: { id: '62746010736e8ea96f53ea54', skip: '4', limit: undefined }
+  },
+  level: 'info',
+  timestamp: '2022-05-25 17:43:49'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-05-26 00:45:47'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-05-26 13:37:17'
+}
+{
+  message: {
+    departmentData: {
+      _id: '628f57674a407f757b57dd7a',
+      boardId: '628f57678d8b476b39d53f0d',
+      name: 'Working',
+      color: 'purple',
+      mainBoard: false,
+      addTeam: [
+        { _id: '628f57d0cb73b25e9fa1d933', name: 'Working' },
+        { _id: '628ea02e98230859955b41ec', name: 'Newt' }
+      ],
+      removeTeam: []
+    }
+  },
+  level: 'info',
+  timestamp: '2022-05-26 13:38:01'
+}
+{
+  message: 'first step',
+  level: 'info',
+  timestamp: '2022-05-26 13:38:01'
+}
+{
+  message: { removeTeam: [] },
+  level: 'info',
+  timestamp: '2022-05-26 13:38:01'
+}
+{
+  message: { removeListAndWebhookSucced: 'done' },
+  level: 'info',
+  timestamp: '2022-05-26 13:38:01'
+}
+{
+  message: { removeWebhookSucced: 'done' },
+  level: 'info',
+  timestamp: '2022-05-26 13:38:02'
+}
+{
+  message: {
+    teamListIds: [
+      {
+        idInTrello: '628f58890d44c1432f000f2a',
+        idInDB: '628f57d0cb73b25e9fa1d933'
+      },
+      {
+        idInTrello: '628f58895f57fe3be8c8b46c',
+        idInDB: '628ea02e98230859955b41ec'
+      }
+    ]
+  },
+  level: 'info',
+  timestamp: '2022-05-26 13:38:02'
+}
+{
+  message: {
+    title: 'testing',
+    teamListIds: [
+      {
+        idInTrello: '628f58890d44c1432f000f2a',
+        idInDB: '628f57d0cb73b25e9fa1d933'
+      },
+      {
+        idInTrello: '628f58895f57fe3be8c8b46c',
+        idInDB: '628ea02e98230859955b41ec'
+      }
+    ]
+  },
+  level: 'info',
+  timestamp: '2022-05-26 13:38:02'
+}
+{
+  message: {
+    depUpdate: {
+      _id: new ObjectId("628f57674a407f757b57dd7a"),
+      name: 'Working',
+      boardId: '628f57678d8b476b39d53f0d',
+      color: 'purple',
+      mainBoard: false,
+      tasks: [],
+      teamsId: [
+        {
+          idInTrello: '628f58890d44c1432f000f2a',
+          idInDB: new ObjectId("628f57d0cb73b25e9fa1d933"),
+          _id: new ObjectId("628f588ad370bbd57837f513")
+        },
+        {
+          idInTrello: '628f58895f57fe3be8c8b46c',
+          idInDB: new ObjectId("628ea02e98230859955b41ec"),
+          _id: new ObjectId("628f588ad370bbd57837f514")
+        }
+      ],
+      createdAt: 2022-05-26T10:33:11.156Z,
+      updatedAt: 2022-05-26T10:38:02.539Z,
+      __v: 0,
+      canceldListId: '628f576759684d5e892c27bc',
+      defaultListId: '628f5768a9a036161db17cde',
+      departmentWindowId: '628f57672c35db4310f29032',
+      doneListId: '628f576744a7b614f723d614',
+      notClearListId: '628f576767355070a49a2f07',
+      notStartedListId: '628f5768bcc4f368d9413bea',
+      reviewListId: '628f576878271949b412d41f',
+      sharedListID: '628f57679cda3f4c904f9f00'
+    }
+  },
+  level: 'info',
+  timestamp: '2022-05-26 13:38:02'
+}
+{
+  message: {
+    department: {
+      _id: new ObjectId("628f57674a407f757b57dd7a"),
+      name: 'Working',
+      boardId: '628f57678d8b476b39d53f0d',
+      color: 'purple',
+      mainBoard: false,
+      tasks: [],
+      teamsId: [
+        {
+          idInTrello: '628f58890d44c1432f000f2a',
+          idInDB: new ObjectId("628f57d0cb73b25e9fa1d933"),
+          _id: new ObjectId("628f588ad370bbd57837f513")
+        },
+        {
+          idInTrello: '628f58895f57fe3be8c8b46c',
+          idInDB: new ObjectId("628ea02e98230859955b41ec"),
+          _id: new ObjectId("628f588ad370bbd57837f514")
+        }
+      ],
+      createdAt: 2022-05-26T10:33:11.156Z,
+      updatedAt: 2022-05-26T10:38:02.539Z,
+      __v: 0,
+      canceldListId: '628f576759684d5e892c27bc',
+      defaultListId: '628f5768a9a036161db17cde',
+      departmentWindowId: '628f57672c35db4310f29032',
+      doneListId: '628f576744a7b614f723d614',
+      notClearListId: '628f576767355070a49a2f07',
+      notStartedListId: '628f5768bcc4f368d9413bea',
+      reviewListId: '628f576878271949b412d41f',
+      sharedListID: '628f57679cda3f4c904f9f00'
+    }
+  },
+  level: 'info',
+  timestamp: '2022-05-26 13:38:02'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-05-26 13:49:04'
+}
+{
+  message: {
+    createProjectDBError: Error: projects validation failed: clientId: Path `clientId` is required., adminId: Path `adminId` is required., projectManagerName: Path `projectManagerName` is required.
+        at ValidationError.inspect (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\mongoose\lib\error\validation.js:48:26)
+        at formatValue (node:internal/util/inspect:782:19)
+        at formatProperty (node:internal/util/inspect:1819:11)
+        at formatRaw (node:internal/util/inspect:1030:9)
+        at formatValue (node:internal/util/inspect:817:10)
+        at formatProperty (node:internal/util/inspect:1819:11)
+        at formatRaw (node:internal/util/inspect:1030:9)
+        at formatValue (node:internal/util/inspect:817:10)
+        at inspect (node:internal/util/inspect:347:10)
+        at Format.transform (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\logform\pretty-print.js:27:19) {
+      errors: {
+        clientId: ValidatorError: Path `clientId` is required.
+            at validate (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\mongoose\lib\schematype.js:1330:13)
+            at ObjectId.SchemaType.doValidate (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\mongoose\lib\schematype.js:1314:7)
+            at C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\mongoose\lib\document.js:2751:18
+            at processTicksAndRejections (node:internal/process/task_queues:78:11) {
+          properties: {
+            validator: [Function (anonymous)],
+            message: 'Path `clientId` is required.',
+            type: 'required',
+            path: 'clientId',
+            value: undefined
+          },
+          kind: 'required',
+          path: 'clientId',
+          value: undefined,
+          reason: undefined,
+          [Symbol(mongoose:validatorError)]: true
+        },
+        adminId: ValidatorError: Path `adminId` is required.
+            at validate (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\mongoose\lib\schematype.js:1330:13)
+            at ObjectId.SchemaType.doValidate (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\mongoose\lib\schematype.js:1314:7)
+            at C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\mongoose\lib\document.js:2751:18
+            at processTicksAndRejections (node:internal/process/task_queues:78:11) {
+          properties: {
+            validator: [Function (anonymous)],
+            message: 'Path `adminId` is required.',
+            type: 'required',
+            path: 'adminId',
+            value: undefined
+          },
+          kind: 'required',
+          path: 'adminId',
+          value: undefined,
+          reason: undefined,
+          [Symbol(mongoose:validatorError)]: true
+        },
+        projectManagerName: ValidatorError: Path `projectManagerName` is required.
+            at validate (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\mongoose\lib\schematype.js:1330:13)
+            at SchemaString.SchemaType.doValidate (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\mongoose\lib\schematype.js:1314:7)
+            at C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\mongoose\lib\document.js:2751:18
+            at processTicksAndRejections (node:internal/process/task_queues:78:11) {
+          properties: {
+            validator: [Function (anonymous)],
+            message: 'Path `projectManagerName` is required.',
+            type: 'required',
+            path: 'projectManagerName',
+            value: undefined
+          },
+          kind: 'required',
+          path: 'projectManagerName',
+          value: undefined,
+          reason: undefined,
+          [Symbol(mongoose:validatorError)]: true
+        }
+      },
+      _message: 'projects validation failed'
+    }
+  },
+  level: 'error',
+  timestamp: '2022-05-26 13:57:31'
+}
+{
+  message: {
+    borderData: Promise { <pending> },
+    createBoardApi: 'https://api.trello.com/1/boards/?name=Testing&prefs_background=blue&defaultLists=false&key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68'
+  },
+  level: 'info',
+  timestamp: '2022-05-26 16:06:03'
+}
+{
+  message: {
+    data: {
+      name: 'Testing',
+      color: 'blue',
+      boardId: '628f7b39b9385e3f3674d651'
+    }
+  },
+  level: 'info',
+  timestamp: '2022-05-26 16:06:03'
+}
+{
+  message: { removeWebhookSucced: 'done' },
+  level: 'info',
+  timestamp: '2022-05-26 16:06:05'
+}
+{
+  message: { teamListIds: [] },
+  level: 'info',
+  timestamp: '2022-05-26 16:06:05'
+}
+{
+  message: { webhookCreateResult: 'webhook done' },
+  level: 'info',
+  timestamp: '2022-05-26 16:06:07'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-05-26 16:13:41'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-05-26 16:14:22'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-05-26 16:15:53'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-05-26 16:16:14'
+}
+{
+  message: {
+    data: { id: '62746010736e8ea96f53ea54', skip: '0', limit: undefined }
+  },
+  level: 'info',
+  timestamp: '2022-05-26 17:28:52'
+}
+{
+  message: { notificationData: { _id: '62746010736e8ea96f53ea54', role: 'OM' } },
+  level: 'info',
+  timestamp: '2022-05-26 17:28:52'
+}
+{
+  message: {
+    Notification: {
+      acknowledged: true,
+      modifiedCount: 213,
+      upsertedId: null,
+      upsertedCount: 0,
+      matchedCount: 213
+    }
+  },
+  level: 'info',
+  timestamp: '2022-05-26 17:28:54'
+}
+{
+  message: { notificationData: { _id: '62746010736e8ea96f53ea54', role: 'OM' } },
+  level: 'info',
+  timestamp: '2022-05-26 17:28:55'
+}
+{
+  message: {
+    data: { id: '62746010736e8ea96f53ea54', skip: '0', limit: undefined }
+  },
+  level: 'info',
+  timestamp: '2022-05-26 17:28:55'
+}
+{
+  message: {
+    Notification: {
+      acknowledged: true,
+      modifiedCount: 213,
+      upsertedId: null,
+      upsertedCount: 0,
+      matchedCount: 213
+    }
+  },
+  level: 'info',
+  timestamp: '2022-05-26 17:28:57'
+}
+{
+  message: {
+    data: { id: '62746010736e8ea96f53ea54', skip: '0', limit: undefined }
+  },
+  level: 'info',
+  timestamp: '2022-05-26 18:21:12'
+}
+{
+  message: { notificationData: { _id: '62746010736e8ea96f53ea54', role: 'OM' } },
+  level: 'info',
+  timestamp: '2022-05-26 18:21:12'
+}
+{
+  message: {
+    Notification: {
+      acknowledged: true,
+      modifiedCount: 214,
+      upsertedId: null,
+      upsertedCount: 0,
+      matchedCount: 214
+    }
+  },
+  level: 'info',
+  timestamp: '2022-05-26 18:21:14'
+}
+{
+  message: {
+    data: { id: '62746010736e8ea96f53ea54', skip: '4', limit: undefined }
+  },
+  level: 'info',
+  timestamp: '2022-05-26 18:21:17'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-05-26 18:21:49'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-05-28 13:57:57'
+}
+{
+  message: {
+    getTeamsError: FetchError: invalid json response body at https://api.trello.com/1/cards?idList=undefined&name=Zedan%20Saheer&attachments=true&key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68 reason: Unexpected token i in JSON at position 0
+        at C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\node-fetch\lib\index.js:273:32
+        at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+      type: 'invalid-json'
+    }
+  },
+  level: 'error',
+  timestamp: '2022-05-28 13:59:03'
+}
+{
+  message: {
+    getTeamsError: FetchError: invalid json response body at https://api.trello.com/1/cards?idList=undefined&name=Zedan%20Saheer&attachments=true&key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68 reason: Unexpected token i in JSON at position 0
+        at C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\node-fetch\lib\index.js:273:32
+        at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+      type: 'invalid-json'
+    }
+  },
+  level: 'error',
+  timestamp: '2022-05-28 14:00:14'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-05-28 14:03:01'
+}
+{
+  message: {
+    getTeamsError: FetchError: invalid json response body at https://api.trello.com/1/cards?idList=undefined&name=Zedan%20Saheer&attachments=true&key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68 reason: Unexpected token i in JSON at position 0
+        at C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\node-fetch\lib\index.js:273:32
+        at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+      type: 'invalid-json'
+    }
+  },
+  level: 'error',
+  timestamp: '2022-05-28 14:03:24'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-05-28 14:03:54'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-05-28 14:04:14'
+}
+{
+  message: {
+    getTeamsError: FetchError: invalid json response body at https://api.trello.com/1/cards?idList=undefined&name=Zedan%20Saheer&attachments=true&key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68 reason: Unexpected token i in JSON at position 0
+        at C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\node-fetch\lib\index.js:273:32
+        at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+      type: 'invalid-json'
+    }
+  },
+  level: 'error',
+  timestamp: '2022-05-28 14:04:30'
+}
+{
+  message: {
+    getTeamsError: FetchError: invalid json response body at https://api.trello.com/1/cards?idList=&name=Zedan%20Saheer&attachments=true&key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68 reason: Unexpected token i in JSON at position 0
+        at C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\node-fetch\lib\index.js:273:32
+        at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+      type: 'invalid-json'
+    }
+  },
+  level: 'error',
+  timestamp: '2022-05-28 14:07:04'
+}
+{
+  message: {
+    getTeamsError: FetchError: invalid json response body at https://api.trello.com/1/cards?idList=undefined&name=Zedan%20Saheer&attachments=true&key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68 reason: Unexpected token i in JSON at position 0
+        at C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\node-fetch\lib\index.js:273:32
+        at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+      type: 'invalid-json'
+    }
+  },
+  level: 'error',
+  timestamp: '2022-05-28 14:07:50'
+}
+{
+  message: {
+    getTeamsError: FetchError: invalid json response body at https://api.trello.com/1/cards?idList=undefined&name=Zedan%20Saheer&attachments=true&key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68 reason: Unexpected token i in JSON at position 0
+        at C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\node-fetch\lib\index.js:273:32
+        at runMicrotasks (<anonymous>)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+      type: 'invalid-json'
+    }
+  },
+  level: 'error',
+  timestamp: '2022-05-28 14:08:39'
+}
+{
+  message: {
+    getTeamsError: FetchError: invalid json response body at https://api.trello.com/1/cards?idList=undefined&name=Testing&attachments=true&key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68 reason: Unexpected token i in JSON at position 0
+        at C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\node-fetch\lib\index.js:273:32
+        at runMicrotasks (<anonymous>)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+      type: 'invalid-json'
+    }
+  },
+  level: 'error',
+  timestamp: '2022-05-28 14:15:07'
+}

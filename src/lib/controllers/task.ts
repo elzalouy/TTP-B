@@ -175,6 +175,7 @@ class TaskController extends TaskDB {
       logger.error({ getTeamsError: error });
     }
   }
+  
   static async __getTasks(data: TaskData) {
     try {
       let tasks = await super.getTasksDB(data);

@@ -194,8 +194,8 @@ class TaskDB {
   static async __createTask(data: TaskData) {
     try {
       let task: TaskInfo = new Tasks(data);
-
       task = await task.save();
+      
       await Department.findOneAndUpdate(
         { boardId: data.boardId },
         {

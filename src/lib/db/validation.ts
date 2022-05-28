@@ -64,14 +64,14 @@ export const createTaskSchema = Joi.object({
     "string.empty": "Sub Category should be selected",
     "any.required": "Sub Category is required",
   }),
-  listId: Joi.string().min(4).required().messages({
+  listId: Joi.string().optional().allow("").messages({
     "string.base": "Department is required",
     "string.empty": "Department should be string with min 4 chars",
     "string.min": "Department length should be Min 4 chars",
     "string.max": "Department length should be Max 20 chars",
     "any.required": "Department is required",
   }),
-  memberId: Joi.string().required().min(4).messages({
+  memberId: Joi.string().optional().allow("").messages({
     "string.base": "Member is required",
     "string.empty": "Member should be selected",
     "string.min": "Member should be selected",
