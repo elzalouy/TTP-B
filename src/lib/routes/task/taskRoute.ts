@@ -38,8 +38,8 @@ router.post(
 );
 router.post(`${UPDATE_TASK}`, multer.single("attachedFiles"), handleUpdateCard);
 router.put(`${MOVE_TASK}`, Authed, handleMoveCard);
-router.post(`${WEBHOOK_UPDATES}`, Authed, handleWebhookUpdateCard);
-router.get(`${WEBHOOK_UPDATES}`, Authed, handleWebhookUpdateCard);
+router.post(`${WEBHOOK_UPDATES}`, handleWebhookUpdateCard);
+router.get(`${WEBHOOK_UPDATES}`, handleWebhookUpdateCard);
 router.get(`${GET_TASKS}`, Authed, handleGetTasks);
 router.post(`${FILTER_TASKS}`, Authed, handleFilterTasks);
 router.delete(`${DELETE_TASKS}`, Authed, handleDeleteTasks);
