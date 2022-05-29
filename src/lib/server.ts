@@ -15,7 +15,7 @@ app.use(cors());
 export const http = createServer(app);
 export const io = new Server(http, {
   cors: {
-    origin: "*",
+    origin: process.env.FRONT_END_URL,
     credentials: true,
   },
 });
