@@ -121,11 +121,10 @@ class TaskController extends TaskDB {
             createNotifi
           );
         }
-        let reuslt = io.sockets.emit("Move Task", {
+        io.sockets.emit("Move Task", {
           cardId: data.action.display.entities.card.id,
           to: data?.action?.display?.entities?.listAfter?.text,
         });
-        console.log(reuslt);
       } else {
         targetTask = await TaskDB.updateOneTaskDB(
           {
