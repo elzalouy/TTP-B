@@ -11,6 +11,7 @@ const dbConnect_1 = __importDefault(require("./db/dbConnect"));
 const http_1 = require("http");
 const socket_io_1 = require("socket.io");
 const cookie_parser_1 = __importDefault(require("cookie-parser"));
+const socket_1 = __importDefault(require("./startup/socket"));
 const config_1 = __importDefault(require("./i18n/config"));
 const ngrok = require("ngrok");
 const app = (0, express_1.default)();
@@ -34,6 +35,7 @@ app.use((0, cors_1.default)({
 }));
 // MongoDB init
 (0, dbConnect_1.default)();
+(0, socket_1.default)(exports.io);
 // i18n init
 app.use(config_1.default.init);
 // if (process.env.NODE_ENV === "development") {
@@ -54,21 +56,3 @@ require("./startup/routes")(app);
 app.disable("etag");
 // start my notification cron job
 require("./services/cronJobNotifi/cronJobNotifi");
-exports.io.on("connection", (socket) => {
-    console.log("Client connected");
-    socket.on("disconnect", () => console.log("Client disconnected"));
-    //* this for admins role only
-    socket.on("joined admin", () => {
-        // logger.info({ data });
-        return socket.join("admin room");
-    });
-    //* this for project managers role only
-    socket.on("joined manager", () => {
-        // logger.info({ data });
-        return socket.join("manager room");
-    });
-    //* this is for specific user
-    socket.on('joined user', (data) => {
-        return socket.join(`user-${data.id}`);
-    });
-});

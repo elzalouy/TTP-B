@@ -12,12 +12,8 @@ const ngrok = require("ngrok");
 
 const app: Application = express();
 export const http = createServer(app);
-export const io = new Server(http, {
-  cors: {
-    origin: "*",
-    credentials: true,
-  },
-});
+app.use(cors());
+export const io = new Server(http);
 app.use(cookieParser());
 
 // middlewares
@@ -27,12 +23,6 @@ app.use(morgan("dev"));
 app.use(express.json());
 // for parsing application/x-www-form-urlencoded
 app.use(express.urlencoded({ extended: false }));
-app.use(
-  cors({
-    origin: "*",
-    credentials: true,
-  })
-);
 
 // MongoDB init
 mongoDB();

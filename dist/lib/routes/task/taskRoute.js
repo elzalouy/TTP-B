@@ -15,8 +15,8 @@ const { handleCreateCard, handleUpdateCard, handleWebhookUpdateCard, handleGetTa
 router.post(`${CREATE_TASK}`, Authed_1.default, multer.array("attachedFiles"), handleCreateCard);
 router.post(`${UPDATE_TASK}`, multer.single("attachedFiles"), handleUpdateCard);
 router.put(`${MOVE_TASK}`, Authed_1.default, handleMoveCard);
-router.post(`${WEBHOOK_UPDATES}`, Authed_1.default, handleWebhookUpdateCard);
-router.get(`${WEBHOOK_UPDATES}`, Authed_1.default, handleWebhookUpdateCard);
+router.post(`${WEBHOOK_UPDATES}`, handleWebhookUpdateCard);
+router.get(`${WEBHOOK_UPDATES}`, handleWebhookUpdateCard);
 router.get(`${GET_TASKS}`, Authed_1.default, handleGetTasks);
 router.post(`${FILTER_TASKS}`, Authed_1.default, handleFilterTasks);
 router.delete(`${DELETE_TASKS}`, Authed_1.default, handleDeleteTasks);

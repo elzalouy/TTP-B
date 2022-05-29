@@ -69,14 +69,14 @@ exports.createTaskSchema = joi_1.default.object({
         "string.empty": "Sub Category should be selected",
         "any.required": "Sub Category is required",
     }),
-    listId: joi_1.default.string().min(4).required().messages({
+    listId: joi_1.default.string().optional().allow("").messages({
         "string.base": "Department is required",
         "string.empty": "Department should be string with min 4 chars",
         "string.min": "Department length should be Min 4 chars",
         "string.max": "Department length should be Max 20 chars",
         "any.required": "Department is required",
     }),
-    memberId: joi_1.default.string().required().min(4).messages({
+    memberId: joi_1.default.string().optional().allow("").messages({
         "string.base": "Member is required",
         "string.empty": "Member should be selected",
         "string.min": "Member should be selected",

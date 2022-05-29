@@ -88,7 +88,7 @@ const ProjectController = class ProjectController extends project_1.default {
             try {
                 // if porject status update to done
                 if (data.projectStatus &&
-                    ["delivered on time", "delivered defore deadline"].includes(data.projectStatus)) {
+                    ["deliver on time", "deliver before deadline", "late"].includes(data.projectStatus)) {
                     let createNotifi = yield notification_1.default.createNotification({
                         title: `${data.name} project is done! Congratulations!`,
                         projectManagerID: data.projectManager,

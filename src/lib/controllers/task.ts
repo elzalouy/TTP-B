@@ -69,7 +69,8 @@ class TaskController extends TaskDB {
   static async __webhookUpdate(data: any) {
     try {
       // This action for updating card
-      logger.info({ webhookUpdate: data });
+      // logger.info({ webhookUpdate: data });
+      // console.log(data);
       let targetTask: any;
       const targetList: any = [
         "Not Started",
@@ -183,7 +184,7 @@ class TaskController extends TaskDB {
       logger.error({ getTeamsError: error });
     }
   }
-  
+
   static async __getTasks(data: TaskData) {
     try {
       let tasks = await super.getTasksDB(data);

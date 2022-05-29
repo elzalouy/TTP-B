@@ -24,6 +24,7 @@ const TaskReq = class TaskReq extends task_1.default {
         return __awaiter(this, void 0, void 0, function* () {
             try {
                 let TaskData = req.body;
+                console.log(TaskData);
                 let isValid = validation_1.createTaskSchema.validate(TaskData);
                 if (isValid.error)
                     return res.status(400).send(isValid.error.details);
@@ -70,6 +71,7 @@ const TaskReq = class TaskReq extends task_1.default {
         return __awaiter(this, void 0, void 0, function* () {
             try {
                 let trelloData = req.body;
+                console.log(trelloData);
                 let task = yield _super.webhookUpdate.call(this, trelloData);
                 return res.status(200).send(task);
             }

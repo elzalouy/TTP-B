@@ -87,11 +87,12 @@ class TaskController extends tasks_1.default {
         });
     }
     static __webhookUpdate(data) {
-        var _a, _b, _c, _d, _e, _f, _g, _h, _j, _k, _l, _m, _o, _p, _q, _r, _s, _t, _u, _v, _w, _x, _y, _z;
+        var _a, _b, _c, _d, _e, _f, _g, _h, _j, _k, _l, _m, _o, _p, _q, _r, _s, _t, _u, _v, _w, _x, _y, _z, _0, _1, _2, _3;
         return __awaiter(this, void 0, void 0, function* () {
             try {
                 // This action for updating card
-                logger_1.default.info({ webhookUpdate: data });
+                // logger.info({ webhookUpdate: data });
+                // console.log(data);
                 let targetTask;
                 const targetList = [
                     "Not Started",
@@ -129,12 +130,20 @@ class TaskController extends tasks_1.default {
                         // send notification to specific project manager
                         server_1.io.to(`user-${projectData.projectManager}`).emit("notification update", createNotifi);
                     }
+                    server_1.io.sockets.emit("Move Task", {
+                        cardId: data.action.display.entities.card.id,
+                        to: (_3 = (_2 = (_1 = (_0 = data === null || data === void 0 ? void 0 : data.action) === null || _0 === void 0 ? void 0 : _0.display) === null || _1 === void 0 ? void 0 : _1.entities) === null || _2 === void 0 ? void 0 : _2.listAfter) === null || _3 === void 0 ? void 0 : _3.text,
+                    });
                 }
                 else {
                     targetTask = yield tasks_1.default.updateOneTaskDB({
                         cardId: data.action.display.entities.card.id,
                     }, {
                         status: "inProgress",
+                    });
+                    server_1.io.sockets.emit("Move Task", {
+                        cardId: data.action.display.entities.card.id,
+                        to: "inProgress",
                     });
                 }
                 return targetTask;

@@ -100,11 +100,13 @@ const CategoryController = class CategoryController extends category_1.default {
             try {
                 // add new subcategory then update data
                 if (data.newSubCategory) {
+                    let updatedCategory = [];
                     for (let i = 0; i < data.newSubCategory.length; i++) {
                         let subCategory = yield CategoryController.createSubcategory(data.newSubCategory[i]);
                         logger_1.default.info({ subCategory });
-                        data.subCategoriesId = [...data.subCategoriesId, subCategory._id];
+                        updatedCategory[i] = subCategory._id;
                     }
+                    data.subCategoriesId = updatedCategory;
                 }
                 let category = yield _super.updateCategoryDB.call(this, data);
                 return category;
