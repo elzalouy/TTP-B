@@ -121,7 +121,7 @@ class TaskController extends TaskDB {
             createNotifi
           );
         }
-        io.sockets.emit("Move Task", {
+        io.emit("Move Task", {
           cardId: data.action.display.entities.card.id,
           to: data?.action?.display?.entities?.listAfter?.text,
         });
@@ -134,7 +134,7 @@ class TaskController extends TaskDB {
             status: "inProgress",
           }
         );
-        io.sockets.emit("Move Task", {
+        io.emit("Move Task", {
           cardId: data.action.display.entities.card.id,
           to: "inProgress",
         });
