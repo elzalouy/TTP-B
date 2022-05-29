@@ -121,10 +121,11 @@ class TaskController extends TaskDB {
             createNotifi
           );
         }
-        io.emit("Move Task", {
+        let reuslt = io.sockets.emit("Move Task", {
           cardId: data.action.display.entities.card.id,
           to: data?.action?.display?.entities?.listAfter?.text,
         });
+        console.log(reuslt);
       } else {
         targetTask = await TaskDB.updateOneTaskDB(
           {
@@ -134,7 +135,7 @@ class TaskController extends TaskDB {
             status: "inProgress",
           }
         );
-        io.emit("Move Task", {
+        io.sockets.emit("Move Task", {
           cardId: data.action.display.entities.card.id,
           to: "inProgress",
         });

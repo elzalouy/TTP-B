@@ -12,25 +12,25 @@ import clientRoute from "../routes/client/clientRoute";
 import notifiRoute from "../routes/notification/notifiRoute";
 
 module.exports = function (app: Application) {
-  // app.use(function (req, res, next) {
-  //   let allowedOrigins = [
-  //     "http://" + process.env.FRONT_END_URL,
-  //     "https://" + process.env.FRONT_END_URL,
-  //   ];
-  //   let origin = req.headers.origin;
-  //   if (allowedOrigins.includes(origin)) {
-  //     res.header("Access-Control-Allow-Origin", origin);
-  //   }
-  //   res.header(
-  //     "Access-Control-Allow-Headers",
-  //     "Origin, X-Requested-With, Content-Type, Accept, Key, x-auth-token, multipart/form-data"
-  //   );
-  //   res.header(
-  //     "Access-Control-Allow-Methods",
-  //     "PUT, POST, GET, DELETE, OPTIONS"
-  //   );
-  //   next();
-  // });
+  app.use(function (req, res, next) {
+    let allowedOrigins = [
+      "http://" + process.env.FRONT_END_URL,
+      "https://" + process.env.FRONT_END_URL,
+    ];
+    let origin = req.headers.origin;
+    if (allowedOrigins.includes(origin)) {
+      res.header("Access-Control-Allow-Origin", origin);
+    }
+    res.header(
+      "Access-Control-Allow-Headers",
+      "Origin, X-Requested-With, Content-Type, Accept, Key, x-auth-token, multipart/form-data"
+    );
+    res.header(
+      "Access-Control-Allow-Methods",
+      "PUT, POST, GET, DELETE, OPTIONS"
+    );
+    next();
+  });
   app.use("/api", authRoute);
   app.use("/api", taskRoute);
   app.use("/api", userRoutes);
