@@ -22418,3 +22418,802 @@
   level: 'info',
   timestamp: '2022-05-29 14:40:57'
 }
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-05-29 14:55:13'
+}
+{
+  message: {
+    borderData: Promise { <pending> },
+    createBoardApi: 'https://api.trello.com/1/boards/?name=loca server dep&prefs_background=blue&defaultLists=false&key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68'
+  },
+  level: 'info',
+  timestamp: '2022-05-29 14:57:12'
+}
+{
+  message: {
+    data: {
+      name: 'loca server dep',
+      color: 'blue',
+      boardId: '62936da8a00e444542572824'
+    }
+  },
+  level: 'info',
+  timestamp: '2022-05-29 14:57:12'
+}
+{
+  message: { removeWebhookSucced: 'done' },
+  level: 'info',
+  timestamp: '2022-05-29 14:57:15'
+}
+{
+  message: { teamListIds: [] },
+  level: 'info',
+  timestamp: '2022-05-29 14:57:15'
+}
+{
+  message: { afterList: undefined },
+  level: 'info',
+  timestamp: '2022-05-29 14:57:17'
+}
+{
+  message: {
+    webhookUpdateError: TypeError: Cannot read properties of undefined (reading 'display')
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:131:33)
+        at Generator.next (<anonymous>)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:8:71
+        at new Promise (<anonymous>)
+        at __awaiter (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:4:12)
+        at Function.__webhookUpdate (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:91:16)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:24:33
+        at Generator.next (<anonymous>)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:8:71
+        at new Promise (<anonymous>)
+  },
+  level: 'error',
+  timestamp: '2022-05-29 14:57:17'
+}
+{
+  message: { afterList: undefined },
+  level: 'info',
+  timestamp: '2022-05-29 14:57:17'
+}
+{
+  message: {
+    webhookUpdateError: TypeError: Cannot read properties of undefined (reading 'display')
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:131:33)
+        at Generator.next (<anonymous>)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:8:71
+        at new Promise (<anonymous>)
+        at __awaiter (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:4:12)
+        at Function.__webhookUpdate (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:91:16)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:24:33
+        at Generator.next (<anonymous>)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:8:71
+        at new Promise (<anonymous>)
+  },
+  level: 'error',
+  timestamp: '2022-05-29 14:57:17'
+}
+{
+  message: { afterList: undefined },
+  level: 'info',
+  timestamp: '2022-05-29 14:57:17'
+}
+{
+  message: {
+    webhookUpdateError: TypeError: Cannot read properties of undefined (reading 'display')
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:131:33)
+        at Generator.next (<anonymous>)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:8:71
+        at new Promise (<anonymous>)
+        at __awaiter (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:4:12)
+        at Function.__webhookUpdate (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:91:16)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:24:33
+        at Generator.next (<anonymous>)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:8:71
+        at new Promise (<anonymous>)
+  },
+  level: 'error',
+  timestamp: '2022-05-29 14:57:17'
+}
+{
+  message: { afterList: undefined },
+  level: 'info',
+  timestamp: '2022-05-29 14:57:17'
+}
+{
+  message: {
+    webhookUpdateError: TypeError: Cannot read properties of undefined (reading 'display')
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:131:33)
+        at Generator.next (<anonymous>)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:8:71
+        at new Promise (<anonymous>)
+        at __awaiter (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:4:12)
+        at Function.__webhookUpdate (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:91:16)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:24:33
+        at Generator.next (<anonymous>)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:8:71
+        at new Promise (<anonymous>)
+  },
+  level: 'error',
+  timestamp: '2022-05-29 14:57:17'
+}
+{
+  message: { afterList: undefined },
+  level: 'info',
+  timestamp: '2022-05-29 14:57:17'
+}
+{
+  message: {
+    webhookUpdateError: TypeError: Cannot read properties of undefined (reading 'display')
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:131:33)
+        at Generator.next (<anonymous>)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:8:71
+        at new Promise (<anonymous>)
+        at __awaiter (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:4:12)
+        at Function.__webhookUpdate (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:91:16)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:24:33
+        at Generator.next (<anonymous>)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:8:71
+        at new Promise (<anonymous>)
+  },
+  level: 'error',
+  timestamp: '2022-05-29 14:57:17'
+}
+{
+  message: { afterList: undefined },
+  level: 'info',
+  timestamp: '2022-05-29 14:57:17'
+}
+{
+  message: {
+    webhookUpdateError: TypeError: Cannot read properties of undefined (reading 'display')
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:131:33)
+        at Generator.next (<anonymous>)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:8:71
+        at new Promise (<anonymous>)
+        at __awaiter (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:4:12)
+        at Function.__webhookUpdate (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:91:16)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:24:33
+        at Generator.next (<anonymous>)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:8:71
+        at new Promise (<anonymous>)
+  },
+  level: 'error',
+  timestamp: '2022-05-29 14:57:17'
+}
+{
+  message: { afterList: undefined },
+  level: 'info',
+  timestamp: '2022-05-29 14:57:17'
+}
+{
+  message: {
+    webhookUpdateError: TypeError: Cannot read properties of undefined (reading 'display')
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:131:33)
+        at Generator.next (<anonymous>)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:8:71
+        at new Promise (<anonymous>)
+        at __awaiter (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:4:12)
+        at Function.__webhookUpdate (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:91:16)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:24:33
+        at Generator.next (<anonymous>)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:8:71
+        at new Promise (<anonymous>)
+  },
+  level: 'error',
+  timestamp: '2022-05-29 14:57:17'
+}
+{
+  message: { afterList: undefined },
+  level: 'info',
+  timestamp: '2022-05-29 14:57:17'
+}
+{
+  message: {
+    webhookUpdateError: TypeError: Cannot read properties of undefined (reading 'display')
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:131:33)
+        at Generator.next (<anonymous>)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:8:71
+        at new Promise (<anonymous>)
+        at __awaiter (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:4:12)
+        at Function.__webhookUpdate (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:91:16)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:24:33
+        at Generator.next (<anonymous>)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:8:71
+        at new Promise (<anonymous>)
+  },
+  level: 'error',
+  timestamp: '2022-05-29 14:57:17'
+}
+{
+  message: { webhookCreateResult: 'webhook done' },
+  level: 'info',
+  timestamp: '2022-05-29 14:57:17'
+}
+{
+  message: {
+    departmentData: {
+      _id: '62936da8af61a03079db6f82',
+      boardId: '62936da8a00e444542572824',
+      name: 'loca server dep',
+      color: 'blue',
+      mainBoard: false,
+      addTeam: [ { _id: '62936b7f27fe8635cce3cdb8', name: 'New' } ],
+      removeTeam: []
+    }
+  },
+  level: 'info',
+  timestamp: '2022-05-29 14:57:30'
+}
+{
+  message: 'first step',
+  level: 'info',
+  timestamp: '2022-05-29 14:57:30'
+}
+{
+  message: { removeTeam: [] },
+  level: 'info',
+  timestamp: '2022-05-29 14:57:31'
+}
+{
+  message: { removeListAndWebhookSucced: 'done' },
+  level: 'info',
+  timestamp: '2022-05-29 14:57:31'
+}
+{
+  message: { removeWebhookSucced: 'done' },
+  level: 'info',
+  timestamp: '2022-05-29 14:57:31'
+}
+{
+  message: {
+    teamListIds: [
+      {
+        idInTrello: '62936dbb8ddb844860fd31ea',
+        idInDB: '62936b7f27fe8635cce3cdb8'
+      }
+    ]
+  },
+  level: 'info',
+  timestamp: '2022-05-29 14:57:31'
+}
+{
+  message: {
+    title: 'testing',
+    teamListIds: [
+      {
+        idInTrello: '62936dbb8ddb844860fd31ea',
+        idInDB: '62936b7f27fe8635cce3cdb8'
+      }
+    ]
+  },
+  level: 'info',
+  timestamp: '2022-05-29 14:57:31'
+}
+{
+  message: {
+    depUpdate: {
+      _id: new ObjectId("62936da8af61a03079db6f82"),
+      name: 'loca server dep',
+      boardId: '62936da8a00e444542572824',
+      color: 'blue',
+      mainBoard: false,
+      tasks: [],
+      teamsId: [
+        {
+          idInTrello: '62936dbb8ddb844860fd31ea',
+          idInDB: new ObjectId("62936b7f27fe8635cce3cdb8"),
+          _id: new ObjectId("62936dbbaf61a03079db6f89")
+        }
+      ],
+      createdAt: 2022-05-29T12:57:12.592Z,
+      updatedAt: 2022-05-29T12:57:31.891Z,
+      __v: 0,
+      canceldListId: '62936da90d0ab67a54e10551',
+      defaultListId: '62936dac54b0b77b60c225e8',
+      departmentWindowId: '62936da99966263e91ec4ff1',
+      doneListId: '62936daabe61ce4462bd8082',
+      notClearListId: '62936daafd5b998cb3987824',
+      notStartedListId: '62936dac957236451c10a447',
+      reviewListId: '62936dabcdee7b8d93a5acf4',
+      sharedListID: '62936dab018e7f89aa2b3833'
+    }
+  },
+  level: 'info',
+  timestamp: '2022-05-29 14:57:32'
+}
+{
+  message: {
+    department: {
+      _id: new ObjectId("62936da8af61a03079db6f82"),
+      name: 'loca server dep',
+      boardId: '62936da8a00e444542572824',
+      color: 'blue',
+      mainBoard: false,
+      tasks: [],
+      teamsId: [
+        {
+          idInTrello: '62936dbb8ddb844860fd31ea',
+          idInDB: new ObjectId("62936b7f27fe8635cce3cdb8"),
+          _id: new ObjectId("62936dbbaf61a03079db6f89")
+        }
+      ],
+      createdAt: 2022-05-29T12:57:12.592Z,
+      updatedAt: 2022-05-29T12:57:31.891Z,
+      __v: 0,
+      canceldListId: '62936da90d0ab67a54e10551',
+      defaultListId: '62936dac54b0b77b60c225e8',
+      departmentWindowId: '62936da99966263e91ec4ff1',
+      doneListId: '62936daabe61ce4462bd8082',
+      notClearListId: '62936daafd5b998cb3987824',
+      notStartedListId: '62936dac957236451c10a447',
+      reviewListId: '62936dabcdee7b8d93a5acf4',
+      sharedListID: '62936dab018e7f89aa2b3833'
+    }
+  },
+  level: 'info',
+  timestamp: '2022-05-29 14:57:32'
+}
+{
+  message: { deleteTaskError: 'Task not existed' },
+  level: 'error',
+  timestamp: '2022-05-29 14:58:50'
+}
+{
+  message: {
+    handleDeleteTasksError: TypeError: Cannot read properties of undefined (reading '_id')
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/presentation/task/task.ts:114:24
+        at Generator.next (<anonymous>)
+        at fulfilled (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/presentation/task/task.ts:5:58)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5)
+  },
+  level: 'error',
+  timestamp: '2022-05-29 14:58:50'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-05-29 15:00:32'
+}
+{
+  size: 0,
+  timeout: 0,
+  level: 'info',
+  message: 'move board done',
+  timestamp: '2022-05-29 15:02:33',
+  [Symbol(Body internals)]: {
+    body: PassThrough {
+      _readableState: ReadableState {
+        objectMode: false,
+        highWaterMark: 16384,
+        buffer: BufferList { head: [Object], tail: [Object], length: 1 },
+        length: 78,
+        pipes: [],
+        flowing: null,
+        ended: true,
+        endEmitted: false,
+        reading: false,
+        constructed: true,
+        sync: false,
+        needReadable: false,
+        emittedReadable: false,
+        readableListening: false,
+        resumeScheduled: false,
+        errorEmitted: false,
+        emitClose: true,
+        autoDestroy: true,
+        destroyed: false,
+        errored: null,
+        closed: false,
+        closeEmitted: false,
+        defaultEncoding: 'utf8',
+        awaitDrainWriters: null,
+        multiAwaitDrain: false,
+        readingMore: false,
+        dataEmitted: false,
+        decoder: null,
+        encoding: null,
+        [Symbol(kPaused)]: null
+      },
+      _events: [Object: null prototype] {
+        prefinish: [Function: prefinish],
+        error: [Function (anonymous)]
+      },
+      _eventsCount: 2,
+      _maxListeners: undefined,
+      _writableState: WritableState {
+        objectMode: false,
+        highWaterMark: 16384,
+        finalCalled: true,
+        needDrain: false,
+        ending: true,
+        ended: true,
+        finished: true,
+        destroyed: false,
+        decodeStrings: true,
+        defaultEncoding: 'utf8',
+        length: 0,
+        writing: false,
+        corked: 0,
+        sync: false,
+        bufferProcessing: false,
+        onwrite: [Function: bound onwrite],
+        writecb: null,
+        writelen: 0,
+        afterWriteTickInfo: null,
+        buffered: [],
+        bufferedIndex: 0,
+        allBuffers: true,
+        allNoop: true,
+        pendingcb: 0,
+        constructed: true,
+        prefinished: true,
+        errorEmitted: false,
+        emitClose: true,
+        autoDestroy: true,
+        errored: null,
+        closed: false,
+        closeEmitted: false,
+        [Symbol(kOnFinished)]: []
+      },
+      allowHalfOpen: true,
+      [Symbol(kCapture)]: false,
+      [Symbol(kCallback)]: null
+    },
+    disturbed: false,
+    error: null
+  },
+  [Symbol(Response internals)]: {
+    url: 'https://api.trello.com/1/cards/62936e38af5343129ce2efb0?idList=62936daafd5b998cb3987824&key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68',
+    status: 404,
+    statusText: 'Not Found',
+    headers: Headers {
+      [Symbol(map)]: [Object: null prototype] {
+        'x-dns-prefetch-control': [ 'off' ],
+        'x-frame-options': [ 'DENY' ],
+        'x-download-options': [ 'noopen' ],
+        'x-permitted-cross-domain-policies': [ 'none' ],
+        'referrer-policy': [ 'strict-origin-when-cross-origin' ],
+        'surrogate-control': [ 'no-store' ],
+        'cache-control': [ 'no-store, no-cache, must-revalidate, proxy-revalidate' ],
+        pragma: [ 'no-cache' ],
+        expires: [ '0' ],
+        'x-trello-version': [ '1.134570.0' ],
+        'x-trello-environment': [ 'Production' ],
+        'access-control-allow-origin': [ '*' ],
+        'access-control-allow-methods': [ 'GET, PUT, POST, DELETE' ],
+        'access-control-allow-headers': [ 'Authorization, Accept, Content-Type' ],
+        'access-control-expose-headers': [
+          'x-rate-limit-api-key-interval-ms, x-rate-limit-api-key-max, x-rate-limit-api-key-remaining, x-rate-limit-api-token-interval-ms, x-rate-limit-api-token-max, x-rate-limit-api-token-remaining'
+        ],
+        'x-rate-limit-api-token-interval-ms': [ '10000' ],
+        'x-rate-limit-api-token-max': [ '100' ],
+        'x-rate-limit-api-token-remaining': [ '99' ],
+        'x-rate-limit-action-interval-ms': [ '3600000' ],
+        'x-rate-limit-action-max': [ '15000' ],
+        'x-rate-limit-action-remaining': [ '14999' ],
+        'x-rate-limit-api-key-interval-ms': [ '10000' ],
+        'x-rate-limit-api-key-max': [ '300' ],
+        'x-rate-limit-api-key-remaining': [ '299' ],
+        'x-rate-limit-member-interval-ms': [ '10000' ],
+        'x-rate-limit-member-max': [ '375' ],
+        'x-rate-limit-member-remaining': [ '374' ],
+        'content-type': [ 'text/plain; charset=utf-8' ],
+        'content-length': [ '78' ],
+        date: [ 'Sun, 29 May 2022 13:02:33 GMT' ],
+        'x-envoy-upstream-service-time': [ '124' ],
+        'expect-ct': [
+          'report-uri="https://web-security-reports.services.atlassian.com/expect-ct-report/trello-edge", max-age=86400'
+        ],
+        'strict-transport-security': [ 'max-age=63072000; preload' ],
+        'x-content-type-options': [ 'nosniff' ],
+        'x-xss-protection': [ '1; mode=block' ],
+        'atl-traceid': [ 'd120ebe62f301ae3' ],
+        'report-to': [
+          '{"group": "endpoint-1", "max_age": 600, "endpoints": [{"url": "https://dj9s4kmieytgz.cloudfront.net"}], "include_subdomains": true}'
+        ],
+        nel: [
+          '{"report_to": "endpoint-1", "max_age": 600, "include_subdomains": true, "failure_fraction": 0.001}'
+        ],
+        server: [ 'globaledge-envoy' ],
+        connection: [ 'close' ]
+      }
+    },
+    counter: 0
+  }
+}
+{
+  size: 0,
+  timeout: 0,
+  level: 'info',
+  message: 'move board done',
+  timestamp: '2022-05-29 15:05:59',
+  [Symbol(Body internals)]: {
+    body: PassThrough {
+      _readableState: ReadableState {
+        objectMode: false,
+        highWaterMark: 16384,
+        buffer: BufferList { head: [Object], tail: [Object], length: 1 },
+        length: 78,
+        pipes: [],
+        flowing: null,
+        ended: true,
+        endEmitted: false,
+        reading: false,
+        constructed: true,
+        sync: false,
+        needReadable: false,
+        emittedReadable: false,
+        readableListening: false,
+        resumeScheduled: false,
+        errorEmitted: false,
+        emitClose: true,
+        autoDestroy: true,
+        destroyed: false,
+        errored: null,
+        closed: false,
+        closeEmitted: false,
+        defaultEncoding: 'utf8',
+        awaitDrainWriters: null,
+        multiAwaitDrain: false,
+        readingMore: false,
+        dataEmitted: false,
+        decoder: null,
+        encoding: null,
+        [Symbol(kPaused)]: null
+      },
+      _events: [Object: null prototype] {
+        prefinish: [Function: prefinish],
+        error: [Function (anonymous)]
+      },
+      _eventsCount: 2,
+      _maxListeners: undefined,
+      _writableState: WritableState {
+        objectMode: false,
+        highWaterMark: 16384,
+        finalCalled: true,
+        needDrain: false,
+        ending: true,
+        ended: true,
+        finished: true,
+        destroyed: false,
+        decodeStrings: true,
+        defaultEncoding: 'utf8',
+        length: 0,
+        writing: false,
+        corked: 0,
+        sync: false,
+        bufferProcessing: false,
+        onwrite: [Function: bound onwrite],
+        writecb: null,
+        writelen: 0,
+        afterWriteTickInfo: null,
+        buffered: [],
+        bufferedIndex: 0,
+        allBuffers: true,
+        allNoop: true,
+        pendingcb: 0,
+        constructed: true,
+        prefinished: true,
+        errorEmitted: false,
+        emitClose: true,
+        autoDestroy: true,
+        errored: null,
+        closed: false,
+        closeEmitted: false,
+        [Symbol(kOnFinished)]: []
+      },
+      allowHalfOpen: true,
+      [Symbol(kCapture)]: false,
+      [Symbol(kCallback)]: null
+    },
+    disturbed: false,
+    error: null
+  },
+  [Symbol(Response internals)]: {
+    url: 'https://api.trello.com/1/cards/62936f756b4a1c4429f35526?idList=62936daafd5b998cb3987824&key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68',
+    status: 404,
+    statusText: 'Not Found',
+    headers: Headers {
+      [Symbol(map)]: [Object: null prototype] {
+        'x-dns-prefetch-control': [ 'off' ],
+        'x-frame-options': [ 'DENY' ],
+        'x-download-options': [ 'noopen' ],
+        'x-permitted-cross-domain-policies': [ 'none' ],
+        'referrer-policy': [ 'strict-origin-when-cross-origin' ],
+        'surrogate-control': [ 'no-store' ],
+        'cache-control': [ 'no-store, no-cache, must-revalidate, proxy-revalidate' ],
+        pragma: [ 'no-cache' ],
+        expires: [ '0' ],
+        'x-trello-version': [ '1.134570.0' ],
+        'x-trello-environment': [ 'Production' ],
+        'access-control-allow-origin': [ '*' ],
+        'access-control-allow-methods': [ 'GET, PUT, POST, DELETE' ],
+        'access-control-allow-headers': [ 'Authorization, Accept, Content-Type' ],
+        'access-control-expose-headers': [
+          'x-rate-limit-api-key-interval-ms, x-rate-limit-api-key-max, x-rate-limit-api-key-remaining, x-rate-limit-api-token-interval-ms, x-rate-limit-api-token-max, x-rate-limit-api-token-remaining'
+        ],
+        'x-rate-limit-api-token-interval-ms': [ '10000' ],
+        'x-rate-limit-api-token-max': [ '100' ],
+        'x-rate-limit-api-token-remaining': [ '99' ],
+        'x-rate-limit-action-interval-ms': [ '3600000' ],
+        'x-rate-limit-action-max': [ '15000' ],
+        'x-rate-limit-action-remaining': [ '14999' ],
+        'x-rate-limit-api-key-interval-ms': [ '10000' ],
+        'x-rate-limit-api-key-max': [ '300' ],
+        'x-rate-limit-api-key-remaining': [ '299' ],
+        'x-rate-limit-member-interval-ms': [ '10000' ],
+        'x-rate-limit-member-max': [ '375' ],
+        'x-rate-limit-member-remaining': [ '374' ],
+        'content-type': [ 'text/plain; charset=utf-8' ],
+        'content-length': [ '78' ],
+        date: [ 'Sun, 29 May 2022 13:05:59 GMT' ],
+        'x-envoy-upstream-service-time': [ '125' ],
+        'expect-ct': [
+          'report-uri="https://web-security-reports.services.atlassian.com/expect-ct-report/trello-edge", max-age=86400'
+        ],
+        'strict-transport-security': [ 'max-age=63072000; preload' ],
+        'x-content-type-options': [ 'nosniff' ],
+        'x-xss-protection': [ '1; mode=block' ],
+        'atl-traceid': [ '6a02d1bb4fea16ad' ],
+        'report-to': [
+          '{"group": "endpoint-1", "max_age": 600, "endpoints": [{"url": "https://dj9s4kmieytgz.cloudfront.net"}], "include_subdomains": true}'
+        ],
+        nel: [
+          '{"report_to": "endpoint-1", "max_age": 600, "include_subdomains": true, "failure_fraction": 0.001}'
+        ],
+        server: [ 'globaledge-envoy' ],
+        connection: [ 'close' ]
+      }
+    },
+    counter: 0
+  }
+}
+{
+  message: {
+    departmentData: {
+      _id: '62936da8af61a03079db6f82',
+      boardId: '62936da8a00e444542572824',
+      name: 'loca server dep',
+      color: 'blue',
+      mainBoard: false,
+      addTeam: [],
+      removeTeam: [ '62936dbb8ddb844860fd31ea' ]
+    }
+  },
+  level: 'info',
+  timestamp: '2022-05-29 15:07:46'
+}
+{
+  message: 'first step',
+  level: 'info',
+  timestamp: '2022-05-29 15:07:46'
+}
+{
+  message: { removeTeam: [ '62936dbb8ddb844860fd31ea' ] },
+  level: 'info',
+  timestamp: '2022-05-29 15:07:47'
+}
+{
+  message: { removeWebhookSucced: 'done' },
+  level: 'info',
+  timestamp: '2022-05-29 15:07:47'
+}
+{
+  message: { teamListIds: [] },
+  level: 'info',
+  timestamp: '2022-05-29 15:07:47'
+}
+{
+  message: { title: 'testing', teamListIds: [] },
+  level: 'info',
+  timestamp: '2022-05-29 15:07:47'
+}
+{
+  message: {
+    depUpdate: {
+      _id: new ObjectId("62936da8af61a03079db6f82"),
+      name: 'loca server dep',
+      boardId: '62936da8a00e444542572824',
+      color: 'blue',
+      mainBoard: false,
+      tasks: [
+        new ObjectId("62936de6af61a03079db6f90"),
+        new ObjectId("62936e38af61a03079db6fa2"),
+        new ObjectId("62936f751cde196ce1e417d2")
+      ],
+      teamsId: [],
+      createdAt: 2022-05-29T12:57:12.592Z,
+      updatedAt: 2022-05-29T13:07:47.496Z,
+      __v: 0,
+      canceldListId: '62936da90d0ab67a54e10551',
+      defaultListId: '62936dac54b0b77b60c225e8',
+      departmentWindowId: '62936da99966263e91ec4ff1',
+      doneListId: '62936daabe61ce4462bd8082',
+      notClearListId: '62936daafd5b998cb3987824',
+      notStartedListId: '62936dac957236451c10a447',
+      reviewListId: '62936dabcdee7b8d93a5acf4',
+      sharedListID: '62936dab018e7f89aa2b3833'
+    }
+  },
+  level: 'info',
+  timestamp: '2022-05-29 15:07:47'
+}
+{
+  message: {
+    department: {
+      _id: new ObjectId("62936da8af61a03079db6f82"),
+      name: 'loca server dep',
+      boardId: '62936da8a00e444542572824',
+      color: 'blue',
+      mainBoard: false,
+      tasks: [
+        new ObjectId("62936de6af61a03079db6f90"),
+        new ObjectId("62936e38af61a03079db6fa2"),
+        new ObjectId("62936f751cde196ce1e417d2")
+      ],
+      teamsId: [],
+      createdAt: 2022-05-29T12:57:12.592Z,
+      updatedAt: 2022-05-29T13:07:47.496Z,
+      __v: 0,
+      canceldListId: '62936da90d0ab67a54e10551',
+      defaultListId: '62936dac54b0b77b60c225e8',
+      departmentWindowId: '62936da99966263e91ec4ff1',
+      doneListId: '62936daabe61ce4462bd8082',
+      notClearListId: '62936daafd5b998cb3987824',
+      notStartedListId: '62936dac957236451c10a447',
+      reviewListId: '62936dabcdee7b8d93a5acf4',
+      sharedListID: '62936dab018e7f89aa2b3833'
+    }
+  },
+  level: 'info',
+  timestamp: '2022-05-29 15:07:47'
+}
+{
+  message: { removeListAndWebhookSucced: 'done' },
+  level: 'info',
+  timestamp: '2022-05-29 15:07:48'
+}
+{
+  message: { afterList: 'Review' },
+  level: 'info',
+  timestamp: '2022-05-29 15:09:00'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-05-29 15:57:56'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-05-29 15:59:09'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-05-29 16:00:31'
+}
+{
+  message: { afterList: 'Tasks Board' },
+  level: 'info',
+  timestamp: '2022-05-29 16:08:37'
+}
+{
+  message: { afterList: 'Tasks Board' },
+  level: 'info',
+  timestamp: '2022-05-29 16:08:37'
+}
