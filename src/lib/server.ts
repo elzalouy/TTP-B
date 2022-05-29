@@ -13,7 +13,6 @@ const ngrok = require("ngrok");
 const app: Application = express();
 export const http = createServer(app);
 app.use(cors());
-console.log("node env ,", process.env.NODE_ENV);
 export const io = new Server(http, {
   cors: {
     origin: process.env.FRONT_END_URL,
