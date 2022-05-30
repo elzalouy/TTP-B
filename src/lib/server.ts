@@ -11,8 +11,8 @@ import i18n from "./i18n/config";
 const ngrok = require("ngrok");
 
 const app: Application = express();
-export const http = createServer(app);
 app.use(cors());
+export const http = createServer(app);
 export const io = new Server(http, {
   cors: {
     origin: process.env.FRONT_END_URL,
