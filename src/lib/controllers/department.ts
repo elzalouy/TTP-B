@@ -204,7 +204,7 @@ const DepartmentController = class DepartmentController extends DepartmentBD {
 
       let cancel: { id: string } = await BoardController.addListToBoard(
         boardId,
-        "Cancel"
+        "Cancled"
       );
       canceldListId = cancel.id;
 
