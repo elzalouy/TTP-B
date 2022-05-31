@@ -78,7 +78,7 @@ class TaskController extends TaskDB {
         "Shared",
         "Review",
         "Not Clear",
-        "Cancel",
+        "Cancled",
       ];
       logger.info({
         afterList: data?.action?.display?.entities?.listAfter?.text,
