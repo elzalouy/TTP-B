@@ -105,5 +105,5 @@ export const createTaskSchema = Joi.object({
   deliveryDate: Joi.any().allow(null),
   done: Joi.any().allow(null),
   turnoverTime: Joi.allow(null),
-  attachedFiles: Joi.array().optional().max(2).label("Attached files"),
+  attachedFiles: Joi.any().optional().allow(null),
 });
