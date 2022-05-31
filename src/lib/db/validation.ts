@@ -1,6 +1,6 @@
 import Joi from "joi";
 const createProjectSchema = Joi.object({
-  name: Joi.string().required().min(4).max(20).messages({
+  name: Joi.string().required().min(4).messages({
     "string.base": "Project Name is required",
     "string.empty": "Project name should be string with min 4 chars",
     "string.min": "Project name length should be Min 4 chars",
