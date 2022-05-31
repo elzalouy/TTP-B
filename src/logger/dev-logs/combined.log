@@ -37,3 +37,10 @@
   level: 'info',
   timestamp: '2022-05-31 13:15:21'
 }
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-05-31 13:23:21'
+}
