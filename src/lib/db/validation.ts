@@ -71,11 +71,11 @@ export const createTaskSchema = Joi.object({
     "string.max": "Department length should be Max 20 chars",
     "any.required": "Department is required",
   }),
-  memberId: Joi.string().optional().allow("").messages({
-    "string.base": "Member is required",
-    "string.empty": "Member should be selected",
-    "string.min": "Member should be selected",
-    "any.required": "Member is required",
+  teamId: Joi.string().optional().allow(null).messages({
+    "string.base": "Team is required",
+    "string.empty": "Team should be selected",
+    "string.min": "Team should be selected",
+    "any.required": "Team is required",
   }),
   status: Joi.string().valid("inProgress", "Not Started").required().messages({
     "string.base": "Status is required",

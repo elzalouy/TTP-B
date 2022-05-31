@@ -2,7 +2,7 @@ import { MemberType } from "./../types/model/User";
 import { trelloApi } from "./../services/trello/trelloApi";
 import logger from "../../logger";
 import fetch from "node-fetch";
-
+import Config from "config";
 import { config } from "dotenv";
 import fs from "fs";
 var FormData = require("form-data");
@@ -231,7 +231,9 @@ class BoardController {
   static async __addWebHook(idModel: string) {
     try {
       let webhookApi = trelloApi(
-        `/webhooks/?callbackURL=${process.env.TRELLO_WEBHOOK_CALLBAKC_URL}&idModel=${idModel}&`
+        `/webhooks/?callbackURL=${Config.get(
+          "Trello_Webhook_Callback_Url"
+        )}&idModel=${idModel}&`
       );
 
       let webhookResult = await fetch(webhookApi, {

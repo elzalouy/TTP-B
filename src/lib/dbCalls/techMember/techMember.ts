@@ -1,13 +1,13 @@
-import { TechMemberData, DataUpdate } from "../../types/model/Team";
+import { TeamsData, DataUpdate } from "../../types/model/Team";
 import logger from "../../../logger";
-import TechMember from "../../models/TechMeber";
+import TechMember from "../../models/teams";
 
 const TechMemberDB = class TechMemberDB {
-  static async createTechMember(data: TechMemberData) {
+  static async createTechMember(data: TeamsData) {
     return await TechMemberDB.__addTechMember(data);
   }
 
-  static async updateTechMember(data: TechMemberData) {
+  static async updateTechMember(data: TeamsData) {
     return await TechMemberDB.__updateMember(data);
   }
 
@@ -18,7 +18,7 @@ const TechMemberDB = class TechMemberDB {
   static async updateTechMembersDB(data: DataUpdate) {
     return await TechMemberDB.__updateTechMembersDB(data);
   }
-  static async deleteTechMemberDB(data: TechMemberData) {
+  static async deleteTechMemberDB(data: TeamsData) {
     return await TechMemberDB.__deleteTechMemberDB(data);
   }
   static async __updateTechMembersDB(data: DataUpdate) {
@@ -45,7 +45,7 @@ const TechMemberDB = class TechMemberDB {
     }
   }
 
-  static async __updateMember(data: TechMemberData) {
+  static async __updateMember(data: TeamsData) {
     try {
       let id = data.id;
       delete data.id;
@@ -61,7 +61,7 @@ const TechMemberDB = class TechMemberDB {
     }
   }
 
-  static async __addTechMember(data: TechMemberData) {
+  static async __addTechMember(data: TeamsData) {
     try {
       let techMember = new TechMember(data);
       await techMember.save();
@@ -70,7 +70,7 @@ const TechMemberDB = class TechMemberDB {
       logger.error({ addTechMemberError: error });
     }
   }
-  static async __deleteTechMemberDB(data: TechMemberData) {
+  static async __deleteTechMemberDB(data: TeamsData) {
     try {
       let deleteResult = await TechMember.deleteMany(data);
       if (deleteResult && deleteResult.deletedCount > 0) return deleteResult;

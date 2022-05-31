@@ -1,6 +1,6 @@
 import { Server, Socket } from "socket.io";
 import { DefaultEventsMap } from "socket.io/dist/typed-events";
-
+let clients = 0;
 function appSocket(
   io: Server<DefaultEventsMap, DefaultEventsMap, DefaultEventsMap, any>
 ) {
@@ -9,7 +9,10 @@ function appSocket(
     (
       socket: Socket<DefaultEventsMap, DefaultEventsMap, DefaultEventsMap, any>
     ) => {
-      socket.on("disconnect", () => console.log("Client disconnected"));
+      console.log("new client connected No.", ++clients);
+      socket.on("disconnect", () =>
+        console.log("Client disconnected No,", --clients)
+      );
 
       //* this for admins role only
       socket.on("joined admin", () => {

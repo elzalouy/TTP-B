@@ -70,7 +70,7 @@ class TaskController extends TaskDB {
     try {
       // This action for updating card
       // logger.info({ webhookUpdate: data });
-      // console.log(data);
+      console.log(data);
       let targetTask: any;
       const targetList: any = [
         "Not Started",
@@ -94,7 +94,6 @@ class TaskController extends TaskDB {
             status: data?.action?.display?.entities?.listAfter?.text,
           }
         );
-
         // if task status update to shared send notification
         if (data?.action?.display?.entities?.listAfter?.text === "Shared") {
           let projectData: any = await ProjectDB.getProjectDB({
@@ -175,7 +174,6 @@ class TaskController extends TaskDB {
           });
         }
         data.attachedFiles = attachment;
-        delete data.listId;
         let task = await super.createTaskDB(data);
         deleteAll();
         return { task, createdCard, attachment };
@@ -230,7 +228,6 @@ class TaskController extends TaskDB {
   static async __deleteTask(id: string) {
     try {
       let task = await super.getTaskDB(id);
-      console.log(task);
       if (task) {
         await BoardController.deleteCard(task?.cardId);
         return await super.deleteTaskDB(id);

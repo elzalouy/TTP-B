@@ -1,3 +1,5 @@
 {
-  "name": "TTP"
+  "name": "TTP development",
+  "Trello_Webhook_Callback_Url": "https://84ed-154-239-215-73.ngrok.io/api/webhookUpdate",
+  "FrontEndUrl": "http://localhost:3000"
 }

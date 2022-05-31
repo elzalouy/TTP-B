@@ -6,7 +6,8 @@ export interface TaskInfo extends Document {
   projectId: ObjectId;
   categoryId: ObjectId;
   subCategoryId: ObjectId;
-  memberId: ObjectId;
+  teamId: ObjectId;
+  listId: string;
   countNotClear?: number;
   countShared?: number;
   status?:
@@ -42,6 +43,7 @@ export interface TaskData {
   subCategoryId?: string;
   countNotClear?: number;
   countShared?: number;
+  listId?: string;
   status?:
     | "inProgress"
     | "done"
@@ -57,8 +59,7 @@ export interface TaskData {
   turnoverTime?: number;
   attachedFiles?: string | any;
   attachedCard?: string;
-  memberId?: string;
-  listId?: string;
+  teamId?: string;
   cardId?: string;
   boardId?: string;
   file?: object;

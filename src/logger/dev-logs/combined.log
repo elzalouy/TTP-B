@@ -23217,3 +23217,1819 @@
   level: 'info',
   timestamp: '2022-05-29 16:08:37'
 }
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-05-30 09:37:38'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-05-30 09:48:13'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-05-30 09:49:43'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-05-30 09:50:37'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-05-30 09:52:04'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-05-30 09:54:22'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-05-30 09:57:56'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-05-30 09:58:39'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-05-30 10:10:04'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-05-30 10:10:34'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-05-30 10:24:04'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-05-30 10:38:30'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-05-30 10:39:27'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-05-30 10:49:15'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-05-30 10:49:59'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-05-30 10:51:04'
+}
+{
+  message: {
+    borderData: Promise { <pending> },
+    createBoardApi: 'https://api.trello.com/1/boards/?name=Local server dep&prefs_background=blue&defaultLists=false&key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68'
+  },
+  level: 'info',
+  timestamp: '2022-05-30 10:52:29'
+}
+{
+  message: {
+    data: {
+      name: 'Local server dep',
+      color: 'blue',
+      boardId: '629485cdb00c8b3867c2fbc4'
+    }
+  },
+  level: 'info',
+  timestamp: '2022-05-30 10:52:29'
+}
+{
+  message: { removeWebhookSucced: 'done' },
+  level: 'info',
+  timestamp: '2022-05-30 10:52:33'
+}
+{
+  message: { teamListIds: [] },
+  level: 'info',
+  timestamp: '2022-05-30 10:52:33'
+}
+{
+  message: { afterList: undefined },
+  level: 'info',
+  timestamp: '2022-05-30 10:52:34'
+}
+{
+  message: {
+    webhookUpdateError: TypeError: Cannot read properties of undefined (reading 'display')
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:131:33)
+        at Generator.next (<anonymous>)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:8:71
+        at new Promise (<anonymous>)
+        at __awaiter (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:4:12)
+        at Function.__webhookUpdate (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:91:16)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:24:33
+        at Generator.next (<anonymous>)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:8:71
+        at new Promise (<anonymous>)
+  },
+  level: 'error',
+  timestamp: '2022-05-30 10:52:34'
+}
+{
+  message: { afterList: undefined },
+  level: 'info',
+  timestamp: '2022-05-30 10:52:35'
+}
+{
+  message: {
+    webhookUpdateError: TypeError: Cannot read properties of undefined (reading 'display')
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:131:33)
+        at Generator.next (<anonymous>)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:8:71
+        at new Promise (<anonymous>)
+        at __awaiter (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:4:12)
+        at Function.__webhookUpdate (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:91:16)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:24:33
+        at Generator.next (<anonymous>)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:8:71
+        at new Promise (<anonymous>)
+  },
+  level: 'error',
+  timestamp: '2022-05-30 10:52:35'
+}
+{
+  message: { afterList: undefined },
+  level: 'info',
+  timestamp: '2022-05-30 10:52:35'
+}
+{
+  message: {
+    webhookUpdateError: TypeError: Cannot read properties of undefined (reading 'display')
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:131:33)
+        at Generator.next (<anonymous>)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:8:71
+        at new Promise (<anonymous>)
+        at __awaiter (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:4:12)
+        at Function.__webhookUpdate (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:91:16)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:24:33
+        at Generator.next (<anonymous>)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:8:71
+        at new Promise (<anonymous>)
+  },
+  level: 'error',
+  timestamp: '2022-05-30 10:52:35'
+}
+{
+  message: { afterList: undefined },
+  level: 'info',
+  timestamp: '2022-05-30 10:52:35'
+}
+{
+  message: {
+    webhookUpdateError: TypeError: Cannot read properties of undefined (reading 'display')
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:131:33)
+        at Generator.next (<anonymous>)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:8:71
+        at new Promise (<anonymous>)
+        at __awaiter (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:4:12)
+        at Function.__webhookUpdate (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:91:16)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:24:33
+        at Generator.next (<anonymous>)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:8:71
+        at new Promise (<anonymous>)
+  },
+  level: 'error',
+  timestamp: '2022-05-30 10:52:35'
+}
+{
+  message: { afterList: undefined },
+  level: 'info',
+  timestamp: '2022-05-30 10:52:35'
+}
+{
+  message: {
+    webhookUpdateError: TypeError: Cannot read properties of undefined (reading 'display')
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:131:33)
+        at Generator.next (<anonymous>)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:8:71
+        at new Promise (<anonymous>)
+        at __awaiter (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:4:12)
+        at Function.__webhookUpdate (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:91:16)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:24:33
+        at Generator.next (<anonymous>)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:8:71
+        at new Promise (<anonymous>)
+  },
+  level: 'error',
+  timestamp: '2022-05-30 10:52:35'
+}
+{
+  message: { afterList: undefined },
+  level: 'info',
+  timestamp: '2022-05-30 10:52:35'
+}
+{
+  message: {
+    webhookUpdateError: TypeError: Cannot read properties of undefined (reading 'display')
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:131:33)
+        at Generator.next (<anonymous>)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:8:71
+        at new Promise (<anonymous>)
+        at __awaiter (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:4:12)
+        at Function.__webhookUpdate (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:91:16)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:24:33
+        at Generator.next (<anonymous>)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:8:71
+        at new Promise (<anonymous>)
+  },
+  level: 'error',
+  timestamp: '2022-05-30 10:52:35'
+}
+{
+  message: { afterList: undefined },
+  level: 'info',
+  timestamp: '2022-05-30 10:52:35'
+}
+{
+  message: {
+    webhookUpdateError: TypeError: Cannot read properties of undefined (reading 'display')
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:131:33)
+        at Generator.next (<anonymous>)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:8:71
+        at new Promise (<anonymous>)
+        at __awaiter (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:4:12)
+        at Function.__webhookUpdate (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:91:16)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:24:33
+        at Generator.next (<anonymous>)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:8:71
+        at new Promise (<anonymous>)
+  },
+  level: 'error',
+  timestamp: '2022-05-30 10:52:35'
+}
+{
+  message: { afterList: undefined },
+  level: 'info',
+  timestamp: '2022-05-30 10:52:35'
+}
+{
+  message: {
+    webhookUpdateError: TypeError: Cannot read properties of undefined (reading 'display')
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:131:33)
+        at Generator.next (<anonymous>)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:8:71
+        at new Promise (<anonymous>)
+        at __awaiter (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:4:12)
+        at Function.__webhookUpdate (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:91:16)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:24:33
+        at Generator.next (<anonymous>)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:8:71
+        at new Promise (<anonymous>)
+  },
+  level: 'error',
+  timestamp: '2022-05-30 10:52:35'
+}
+{
+  message: { webhookCreateResult: 'webhook done' },
+  level: 'info',
+  timestamp: '2022-05-30 10:52:35'
+}
+{
+  message: { afterList: 'Review' },
+  level: 'info',
+  timestamp: '2022-05-30 10:54:01'
+}
+{
+  message: { afterList: 'Tasks Board' },
+  level: 'info',
+  timestamp: '2022-05-30 10:57:35'
+}
+{
+  message: { afterList: 'Tasks Board' },
+  level: 'info',
+  timestamp: '2022-05-30 10:57:35'
+}
+{
+  message: { afterList: 'Review' },
+  level: 'info',
+  timestamp: '2022-05-30 10:58:30'
+}
+{
+  message: { afterList: 'Review' },
+  level: 'info',
+  timestamp: '2022-05-30 10:58:30'
+}
+{
+  message: { afterList: undefined },
+  level: 'info',
+  timestamp: '2022-05-30 10:59:00'
+}
+{
+  message: {
+    webhookUpdateError: TypeError: Cannot read properties of undefined (reading 'id')
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:131:55)
+        at Generator.next (<anonymous>)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:8:71
+        at new Promise (<anonymous>)
+        at __awaiter (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:4:12)
+        at Function.__webhookUpdate (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:91:16)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:24:33
+        at Generator.next (<anonymous>)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:8:71
+        at new Promise (<anonymous>)
+  },
+  level: 'error',
+  timestamp: '2022-05-30 10:59:00'
+}
+{
+  size: 0,
+  timeout: 0,
+  level: 'info',
+  message: 'move board done',
+  timestamp: '2022-05-30 11:09:26',
+  [Symbol(Body internals)]: {
+    body: <ref *1> Gunzip {
+      _writeState: Uint32Array(2) [ 0, 0 ],
+      _readableState: ReadableState {
+        objectMode: false,
+        highWaterMark: 16384,
+        buffer: BufferList { head: null, tail: null, length: 0 },
+        length: 0,
+        pipes: [],
+        flowing: null,
+        ended: false,
+        endEmitted: false,
+        reading: false,
+        constructed: true,
+        sync: false,
+        needReadable: false,
+        emittedReadable: false,
+        readableListening: false,
+        resumeScheduled: false,
+        errorEmitted: false,
+        emitClose: true,
+        autoDestroy: true,
+        destroyed: false,
+        errored: null,
+        closed: false,
+        closeEmitted: false,
+        defaultEncoding: 'utf8',
+        awaitDrainWriters: null,
+        multiAwaitDrain: false,
+        readingMore: false,
+        dataEmitted: false,
+        decoder: null,
+        encoding: null,
+        [Symbol(kPaused)]: null
+      },
+      _events: [Object: null prototype] {
+        prefinish: [Function: prefinish],
+        unpipe: [Function: onunpipe],
+        error: [ [Function: onerror], [Function (anonymous)] ],
+        close: [Function: bound onceWrapper] { listener: [Function: onclose] },
+        finish: [Function: bound onceWrapper] { listener: [Function: onfinish] }
+      },
+      _eventsCount: 5,
+      _maxListeners: undefined,
+      _writableState: WritableState {
+        objectMode: false,
+        highWaterMark: 16384,
+        finalCalled: false,
+        needDrain: false,
+        ending: true,
+        ended: true,
+        finished: false,
+        destroyed: false,
+        decodeStrings: true,
+        defaultEncoding: 'utf8',
+        length: 579,
+        writing: true,
+        corked: 0,
+        sync: false,
+        bufferProcessing: false,
+        onwrite: [Function: bound onwrite],
+        writecb: [Function: nop],
+        writelen: 579,
+        afterWriteTickInfo: null,
+        buffered: [],
+        bufferedIndex: 0,
+        allBuffers: true,
+        allNoop: true,
+        pendingcb: 1,
+        constructed: true,
+        prefinished: false,
+        errorEmitted: false,
+        emitClose: true,
+        autoDestroy: true,
+        errored: null,
+        closed: false,
+        closeEmitted: false,
+        [Symbol(kOnFinished)]: []
+      },
+      allowHalfOpen: true,
+      bytesWritten: 0,
+      _handle: Zlib {
+        onerror: [Function: zlibOnError],
+        buffer: <Buffer 1f 8b 08 00 00 00 00 00 04 03 85 53 5b 6f da 30 14 fe 2b 95 9f a1 24 81 84 c0 5b a1 d3 34 89 6e 53 4b 27 6d d3 1e 7c 39 04 17 c7 8e 6c 07 44 ab fe f7 ... 529 more bytes>,
+        cb: [Function (anonymous)],
+        availOutBefore: 16384,
+        availInBefore: 579,
+        inOff: 0,
+        flushFlag: 2,
+        [Symbol(owner_symbol)]: [Circular *1]
+      },
+      _outBuffer: <Buffer 7b 22 63 68 65 63 6b 49 74 65 6d 53 74 61 74 65 73 22 3a 6e 75 6c 6c 2c 22 69 64 22 3a 22 36 32 39 34 38 37 38 31 62 63 62 30 38 61 32 39 33 62 32 35 ... 16334 more bytes>,
+      _outOffset: 0,
+      _chunkSize: 16384,
+      _defaultFlushFlag: 2,
+      _finishFlushFlag: 2,
+      _defaultFullFlushFlag: 3,
+      _info: undefined,
+      _maxOutputLength: 4294967296,
+      _level: -1,
+      _strategy: 0,
+      [Symbol(kCapture)]: false,
+      [Symbol(kCallback)]: null,
+      [Symbol(kError)]: null
+    },
+    disturbed: false,
+    error: null
+  },
+  [Symbol(Response internals)]: {
+    url: 'https://api.trello.com/1/cards/62948781bcb08a293b250fab?idList=629485d107691f7e616e1c86&key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68',
+    status: 200,
+    statusText: 'OK',
+    headers: Headers {
+      [Symbol(map)]: [Object: null prototype] {
+        'x-dns-prefetch-control': [ 'off' ],
+        'x-frame-options': [ 'DENY' ],
+        'x-download-options': [ 'noopen' ],
+        'x-permitted-cross-domain-policies': [ 'none' ],
+        'referrer-policy': [ 'strict-origin-when-cross-origin' ],
+        'surrogate-control': [ 'no-store' ],
+        'cache-control': [ 'max-age=0, must-revalidate, no-cache, no-store' ],
+        pragma: [ 'no-cache' ],
+        expires: [ 'Thu, 01 Jan 1970 00:00:00' ],
+        'x-trello-version': [ '1.134570.0' ],
+        'x-trello-environment': [ 'Production' ],
+        'access-control-allow-origin': [ '*' ],
+        'access-control-allow-methods': [ 'GET, PUT, POST, DELETE' ],
+        'access-control-allow-headers': [ 'Authorization, Accept, Content-Type' ],
+        'access-control-expose-headers': [
+          'x-rate-limit-api-key-interval-ms, x-rate-limit-api-key-max, x-rate-limit-api-key-remaining, x-rate-limit-api-token-interval-ms, x-rate-limit-api-token-max, x-rate-limit-api-token-remaining'
+        ],
+        'x-rate-limit-api-token-interval-ms': [ '10000' ],
+        'x-rate-limit-api-token-max': [ '100' ],
+        'x-rate-limit-api-token-remaining': [ '99' ],
+        'x-rate-limit-action-interval-ms': [ '3600000' ],
+        'x-rate-limit-action-max': [ '15000' ],
+        'x-rate-limit-action-remaining': [ '14999' ],
+        'x-rate-limit-api-key-interval-ms': [ '10000' ],
+        'x-rate-limit-api-key-max': [ '300' ],
+        'x-rate-limit-api-key-remaining': [ '299' ],
+        'x-rate-limit-member-interval-ms': [ '10000' ],
+        'x-rate-limit-member-max': [ '375' ],
+        'x-rate-limit-member-remaining': [ '374' ],
+        'set-cookie': [
+          'preAuthProps=s%3A625c6c7c6fc2b45763b718dc%3AisEnterpriseAdmin%3Dfalse.crCyu7YmgTEAI4IzUnC3R6X8sJ4FR%2FMkJwWc6IkKxO4; Path=/; HttpOnly'
+        ],
+        'x-server-time': [ '1653901765963' ],
+        'content-type': [ 'application/json; charset=utf-8' ],
+        date: [ 'Mon, 30 May 2022 09:09:25 GMT' ],
+        'content-encoding': [ 'gzip' ],
+        'x-envoy-upstream-service-time': [ '227' ],
+        'expect-ct': [
+          'report-uri="https://web-security-reports.services.atlassian.com/expect-ct-report/trello-edge", max-age=86400'
+        ],
+        'strict-transport-security': [ 'max-age=63072000; preload' ],
+        'x-content-type-options': [ 'nosniff' ],
+        'x-xss-protection': [ '1; mode=block' ],
+        'atl-traceid': [ '68d92814e1955b64' ],
+        'report-to': [
+          '{"group": "endpoint-1", "max_age": 600, "endpoints": [{"url": "https://dj9s4kmieytgz.cloudfront.net"}], "include_subdomains": true}'
+        ],
+        nel: [
+          '{"report_to": "endpoint-1", "max_age": 600, "include_subdomains": true, "failure_fraction": 0.001}'
+        ],
+        server: [ 'globaledge-envoy' ],
+        connection: [ 'close' ],
+        'transfer-encoding': [ 'chunked' ]
+      }
+    },
+    counter: 0
+  }
+}
+{
+  message: { afterList: 'Review' },
+  level: 'info',
+  timestamp: '2022-05-30 11:09:26'
+}
+{
+  message: { afterList: 'Team local' },
+  level: 'info',
+  timestamp: '2022-05-30 11:09:32'
+}
+{
+  message: {
+    boardId: '629485cdb00c8b3867c2fbc4',
+    myDepartment: {
+      _id: new ObjectId("629485cd33a04a7d83ed5f86"),
+      name: 'Local server dep',
+      boardId: '629485cdb00c8b3867c2fbc4',
+      color: 'blue',
+      mainBoard: false,
+      tasks: [
+        new ObjectId("6294861033a04a7d83ed5f94"),
+        new ObjectId("6294878133a04a7d83ed5fba")
+      ],
+      teamsId: [
+        {
+          idInTrello: '629485eb6041a6443002195c',
+          idInDB: new ObjectId("629485eb33a04a7d83ed5f8b"),
+          _id: new ObjectId("629485eb33a04a7d83ed5f8d")
+        }
+      ],
+      createdAt: 2022-05-30T08:52:29.691Z,
+      updatedAt: 2022-05-30T08:59:45.564Z,
+      __v: 0,
+      canceldListId: '629485ce3a023d53e5789043',
+      defaultListId: '629485d16b701374bd89b84a',
+      departmentWindowId: '629485ce6f1e093994020b46',
+      doneListId: '629485d087eae566f6ca3cec',
+      notClearListId: '629485cf8c2a70423e91dc06',
+      notStartedListId: '629485d29c52a05364cf0db8',
+      reviewListId: '629485d107691f7e616e1c86',
+      sharedListID: '629485d0e0b2b0575c1c5c43'
+    }
+  },
+  level: 'info',
+  timestamp: '2022-05-30 11:32:47'
+}
+{
+  message: {
+    removeBoard: 'https://api.trello.com/1/boards/629485cdb00c8b3867c2fbc4?response_type=token&key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68'
+  },
+  level: 'info',
+  timestamp: '2022-05-30 11:32:47'
+}
+{
+  message: {
+    'delete Tasks': { acknowledged: true, deletedCount: 1 },
+    'Delete Tech members': { acknowledged: true, deletedCount: 2 }
+  },
+  level: 'info',
+  timestamp: '2022-05-30 11:32:48'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-05-30 12:58:39'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-05-30 12:59:27'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-05-30 13:00:08'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-05-30 13:03:51'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-05-30 13:12:46'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-05-30 13:16:27'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-05-30 13:19:02'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-05-30 13:30:13'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-05-30 14:32:30'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-05-30 18:03:46'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-05-30 18:05:24'
+}
+{
+  message: {
+    getTechMemberDBError: MongoNetworkTimeoutError: connection timed out
+        at connectionFailureError (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongodb/src/cmap/connect.ts:498:14)
+        at TLSSocket.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongodb/src/cmap/connect.ts:394:16)
+        at Object.onceWrapper (node:events:641:28)
+        at TLSSocket.emit (node:events:527:28)
+        at TLSSocket.emit (node:domain:475:12)
+        at TLSSocket.Socket._onTimeout (node:net:516:8)
+        at listOnTimeout (node:internal/timers:559:17)
+        at processTimers (node:internal/timers:502:7) {
+      [Symbol(errorLabels)]: Set(0) {}
+    }
+  },
+  level: 'error',
+  timestamp: '2022-05-30 18:06:40'
+}
+{
+  message: {
+    boardId: '6293b73959be45681f9424a6',
+    myDepartment: {
+      _id: new ObjectId("6293b739639a35e423266d86"),
+      name: 'Creative Testing',
+      boardId: '6293b73959be45681f9424a6',
+      color: 'orange',
+      mainBoard: false,
+      tasks: [
+        new ObjectId("6293b895639a35e423266dd0"),
+        new ObjectId("6293b918e0e85e62a95bf246"),
+        new ObjectId("6293c092b41eaed90f964f38"),
+        new ObjectId("62949c7b0ee46ea54f822ecc"),
+        new ObjectId("62949d1f99ce54fccbe80f1b"),
+        new ObjectId("6294c9bbd43062a584ba5f2b"),
+        new ObjectId("6294c9c6b1c664b9652987bd"),
+        new ObjectId("6294df78d74ce80cb5099db4"),
+        new ObjectId("6294df8451cc62c9b695d84c"),
+        new ObjectId("6294dff780b3e938b14f77f6"),
+        new ObjectId("6294e7e96bf0f2e7a7cc8960")
+      ],
+      teamsId: [
+        {
+          idInTrello: '6293b764f926765919dea4c5',
+          idInDB: new ObjectId("6293b764639a35e423266d8b"),
+          _id: new ObjectId("6293b764639a35e423266d8d")
+        },
+        {
+          idInTrello: '62949a3f7655f325f4379eb9',
+          idInDB: new ObjectId("62949a3f0ee46ea54f822dcb"),
+          _id: new ObjectId("62949a400ee46ea54f822dcd")
+        }
+      ],
+      createdAt: 2022-05-29T18:11:05.697Z,
+      updatedAt: 2022-05-30T15:51:05.990Z,
+      __v: 0,
+      canceldListId: '6293b73a1b66bb82c3ab1fc8',
+      defaultListId: '6293b73aa391fd3f94dbc458',
+      departmentWindowId: '6293b7395020724db68c885c',
+      doneListId: '6293b73ab0bcc46d8ddb3a46',
+      notClearListId: '6293b73a5541ef0b7cce561c',
+      notStartedListId: '6293b73bc199dd0f66011f9c',
+      reviewListId: '6293b73a2132ed58be57c2d8',
+      sharedListID: '6293b73a2a24f23dd27dde51'
+    }
+  },
+  level: 'info',
+  timestamp: '2022-05-30 18:16:35'
+}
+{
+  message: {
+    removeBoard: 'https://api.trello.com/1/boards/6293b73959be45681f9424a6?response_type=token&key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68'
+  },
+  level: 'info',
+  timestamp: '2022-05-30 18:16:35'
+}
+{
+  message: {
+    'delete Tasks': { acknowledged: true, deletedCount: 3 },
+    'Delete Tech members': 'Delete result is 0 document'
+  },
+  level: 'info',
+  timestamp: '2022-05-30 18:16:37'
+}
+{
+  message: {
+    boardId: '62949a65e52475222e90d1dd',
+    myDepartment: {
+      _id: new ObjectId("62949a650ee46ea54f822dd0"),
+      name: 'Testing',
+      boardId: '62949a65e52475222e90d1dd',
+      color: 'blue',
+      mainBoard: false,
+      tasks: [],
+      teamsId: [],
+      createdAt: 2022-05-30T10:20:21.870Z,
+      updatedAt: 2022-05-30T10:20:23.491Z,
+      __v: 0,
+      canceldListId: '62949a664e7ab516d11ac318',
+      defaultListId: '62949a675b5cf181fdd20c5c',
+      departmentWindowId: '62949a66e52475222e90d23e',
+      doneListId: '62949a66c582b786b945c433',
+      notClearListId: '62949a66965b1b2736cfe332',
+      notStartedListId: '62949a67c9a4e719211746ed',
+      reviewListId: '62949a66f9cecb43007ce816',
+      sharedListID: '62949a66b5cf6c0cf7b6c714'
+    }
+  },
+  level: 'info',
+  timestamp: '2022-05-30 18:16:41'
+}
+{
+  message: {
+    removeBoard: 'https://api.trello.com/1/boards/62949a65e52475222e90d1dd?response_type=token&key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68'
+  },
+  level: 'info',
+  timestamp: '2022-05-30 18:16:41'
+}
+{
+  message: {
+    'delete Tasks': { acknowledged: true, deletedCount: 0 },
+    'Delete Tech members': 'Delete result is 0 document'
+  },
+  level: 'info',
+  timestamp: '2022-05-30 18:16:43'
+}
+{
+  message: {
+    borderData: Promise { <pending> },
+    createBoardApi: 'https://api.trello.com/1/boards/?name=Dep local&prefs_background=blue&defaultLists=false&key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68'
+  },
+  level: 'info',
+  timestamp: '2022-05-30 18:17:42'
+}
+{
+  message: {
+    data: {
+      name: 'Dep local',
+      color: 'blue',
+      boardId: '6294ee26cab17543b9b749f5'
+    }
+  },
+  level: 'info',
+  timestamp: '2022-05-30 18:17:42'
+}
+{
+  message: { removeWebhookSucced: 'done' },
+  level: 'info',
+  timestamp: '2022-05-30 18:17:47'
+}
+{
+  message: { teamListIds: [] },
+  level: 'info',
+  timestamp: '2022-05-30 18:17:47'
+}
+{
+  message: { afterList: undefined },
+  level: 'info',
+  timestamp: '2022-05-30 18:17:49'
+}
+{
+  message: {
+    webhookUpdateError: TypeError: Cannot read properties of undefined (reading 'display')
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:130:33)
+        at Generator.next (<anonymous>)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:8:71
+        at new Promise (<anonymous>)
+        at __awaiter (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:4:12)
+        at Function.__webhookUpdate (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:91:16)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:24:33
+        at Generator.next (<anonymous>)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:8:71
+        at new Promise (<anonymous>)
+  },
+  level: 'error',
+  timestamp: '2022-05-30 18:17:49'
+}
+{
+  message: { afterList: undefined },
+  level: 'info',
+  timestamp: '2022-05-30 18:17:49'
+}
+{
+  message: {
+    webhookUpdateError: TypeError: Cannot read properties of undefined (reading 'display')
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:130:33)
+        at Generator.next (<anonymous>)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:8:71
+        at new Promise (<anonymous>)
+        at __awaiter (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:4:12)
+        at Function.__webhookUpdate (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:91:16)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:24:33
+        at Generator.next (<anonymous>)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:8:71
+        at new Promise (<anonymous>)
+  },
+  level: 'error',
+  timestamp: '2022-05-30 18:17:49'
+}
+{
+  message: { afterList: undefined },
+  level: 'info',
+  timestamp: '2022-05-30 18:17:49'
+}
+{
+  message: {
+    webhookUpdateError: TypeError: Cannot read properties of undefined (reading 'display')
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:130:33)
+        at Generator.next (<anonymous>)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:8:71
+        at new Promise (<anonymous>)
+        at __awaiter (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:4:12)
+        at Function.__webhookUpdate (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:91:16)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:24:33
+        at Generator.next (<anonymous>)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:8:71
+        at new Promise (<anonymous>)
+  },
+  level: 'error',
+  timestamp: '2022-05-30 18:17:49'
+}
+{
+  message: { afterList: undefined },
+  level: 'info',
+  timestamp: '2022-05-30 18:17:49'
+}
+{
+  message: {
+    webhookUpdateError: TypeError: Cannot read properties of undefined (reading 'display')
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:130:33)
+        at Generator.next (<anonymous>)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:8:71
+        at new Promise (<anonymous>)
+        at __awaiter (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:4:12)
+        at Function.__webhookUpdate (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:91:16)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:24:33
+        at Generator.next (<anonymous>)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:8:71
+        at new Promise (<anonymous>)
+  },
+  level: 'error',
+  timestamp: '2022-05-30 18:17:49'
+}
+{
+  message: { afterList: undefined },
+  level: 'info',
+  timestamp: '2022-05-30 18:17:49'
+}
+{
+  message: {
+    webhookUpdateError: TypeError: Cannot read properties of undefined (reading 'display')
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:130:33)
+        at Generator.next (<anonymous>)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:8:71
+        at new Promise (<anonymous>)
+        at __awaiter (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:4:12)
+        at Function.__webhookUpdate (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:91:16)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:24:33
+        at Generator.next (<anonymous>)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:8:71
+        at new Promise (<anonymous>)
+  },
+  level: 'error',
+  timestamp: '2022-05-30 18:17:49'
+}
+{
+  message: { afterList: undefined },
+  level: 'info',
+  timestamp: '2022-05-30 18:17:49'
+}
+{
+  message: {
+    webhookUpdateError: TypeError: Cannot read properties of undefined (reading 'display')
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:130:33)
+        at Generator.next (<anonymous>)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:8:71
+        at new Promise (<anonymous>)
+        at __awaiter (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:4:12)
+        at Function.__webhookUpdate (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:91:16)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:24:33
+        at Generator.next (<anonymous>)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:8:71
+        at new Promise (<anonymous>)
+  },
+  level: 'error',
+  timestamp: '2022-05-30 18:17:49'
+}
+{
+  message: { afterList: undefined },
+  level: 'info',
+  timestamp: '2022-05-30 18:17:49'
+}
+{
+  message: {
+    webhookUpdateError: TypeError: Cannot read properties of undefined (reading 'display')
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:130:33)
+        at Generator.next (<anonymous>)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:8:71
+        at new Promise (<anonymous>)
+        at __awaiter (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:4:12)
+        at Function.__webhookUpdate (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:91:16)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:24:33
+        at Generator.next (<anonymous>)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:8:71
+        at new Promise (<anonymous>)
+  },
+  level: 'error',
+  timestamp: '2022-05-30 18:17:49'
+}
+{
+  message: { afterList: undefined },
+  level: 'info',
+  timestamp: '2022-05-30 18:17:49'
+}
+{
+  message: {
+    webhookUpdateError: TypeError: Cannot read properties of undefined (reading 'display')
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:130:33)
+        at Generator.next (<anonymous>)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:8:71
+        at new Promise (<anonymous>)
+        at __awaiter (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:4:12)
+        at Function.__webhookUpdate (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:91:16)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:24:33
+        at Generator.next (<anonymous>)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:8:71
+        at new Promise (<anonymous>)
+  },
+  level: 'error',
+  timestamp: '2022-05-30 18:17:49'
+}
+{
+  message: { webhookCreateResult: 'webhook done' },
+  level: 'info',
+  timestamp: '2022-05-30 18:17:50'
+}
+{
+  message: {
+    departmentData: {
+      _id: '6294ee2636a17736a0711f55',
+      boardId: '6294ee26cab17543b9b749f5',
+      name: 'Dep local',
+      color: 'blue',
+      mainBoard: false,
+      addTeam: [ { _id: '6294ee5136a17736a0711f5a', name: 'Team 1' } ],
+      removeTeam: []
+    }
+  },
+  level: 'info',
+  timestamp: '2022-05-30 18:18:45'
+}
+{
+  message: 'first step',
+  level: 'info',
+  timestamp: '2022-05-30 18:18:45'
+}
+{
+  message: { removeTeam: [] },
+  level: 'info',
+  timestamp: '2022-05-30 18:18:46'
+}
+{
+  message: { removeListAndWebhookSucced: 'done' },
+  level: 'info',
+  timestamp: '2022-05-30 18:18:46'
+}
+{
+  message: { removeWebhookSucced: 'done' },
+  level: 'info',
+  timestamp: '2022-05-30 18:18:47'
+}
+{
+  message: {
+    teamListIds: [
+      {
+        idInTrello: '6294ee677655f325f480a848',
+        idInDB: '6294ee5136a17736a0711f5a'
+      }
+    ]
+  },
+  level: 'info',
+  timestamp: '2022-05-30 18:18:47'
+}
+{
+  message: {
+    title: 'testing',
+    teamListIds: [
+      {
+        idInTrello: '6294ee677655f325f480a848',
+        idInDB: '6294ee5136a17736a0711f5a'
+      }
+    ]
+  },
+  level: 'info',
+  timestamp: '2022-05-30 18:18:47'
+}
+{
+  message: {
+    depUpdate: {
+      _id: new ObjectId("6294ee2636a17736a0711f55"),
+      name: 'Dep local',
+      boardId: '6294ee26cab17543b9b749f5',
+      color: 'blue',
+      mainBoard: false,
+      tasks: [],
+      teamsId: [
+        {
+          idInTrello: '6294ee677655f325f480a848',
+          idInDB: new ObjectId("6294ee5136a17736a0711f5a"),
+          _id: new ObjectId("6294ee6736a17736a0711f6f")
+        },
+        {
+          idInTrello: '6294ee502fdb81347de68336',
+          idInDB: new ObjectId("6294ee5136a17736a0711f5a"),
+          _id: new ObjectId("6294ee5136a17736a0711f5c")
+        }
+      ],
+      createdAt: 2022-05-30T16:17:42.890Z,
+      updatedAt: 2022-05-30T16:18:47.213Z,
+      __v: 0,
+      canceldListId: '6294ee2866f5d024d7d45634',
+      defaultListId: '6294ee2be7968d6cae2449a0',
+      departmentWindowId: '6294ee27d249d1843c8ff202',
+      doneListId: '6294ee29d263aa26e7ff58e9',
+      notClearListId: '6294ee28a93f8643ab028bf8',
+      notStartedListId: '6294ee2c813a0a70548d6d85',
+      reviewListId: '6294ee2a48a40570518e0e59',
+      sharedListID: '6294ee2a317c786baace1448'
+    }
+  },
+  level: 'info',
+  timestamp: '2022-05-30 18:18:47'
+}
+{
+  message: {
+    department: {
+      _id: new ObjectId("6294ee2636a17736a0711f55"),
+      name: 'Dep local',
+      boardId: '6294ee26cab17543b9b749f5',
+      color: 'blue',
+      mainBoard: false,
+      tasks: [],
+      teamsId: [
+        {
+          idInTrello: '6294ee677655f325f480a848',
+          idInDB: new ObjectId("6294ee5136a17736a0711f5a"),
+          _id: new ObjectId("6294ee6736a17736a0711f6f")
+        },
+        {
+          idInTrello: '6294ee502fdb81347de68336',
+          idInDB: new ObjectId("6294ee5136a17736a0711f5a"),
+          _id: new ObjectId("6294ee5136a17736a0711f5c")
+        }
+      ],
+      createdAt: 2022-05-30T16:17:42.890Z,
+      updatedAt: 2022-05-30T16:18:47.213Z,
+      __v: 0,
+      canceldListId: '6294ee2866f5d024d7d45634',
+      defaultListId: '6294ee2be7968d6cae2449a0',
+      departmentWindowId: '6294ee27d249d1843c8ff202',
+      doneListId: '6294ee29d263aa26e7ff58e9',
+      notClearListId: '6294ee28a93f8643ab028bf8',
+      notStartedListId: '6294ee2c813a0a70548d6d85',
+      reviewListId: '6294ee2a48a40570518e0e59',
+      sharedListID: '6294ee2a317c786baace1448'
+    }
+  },
+  level: 'info',
+  timestamp: '2022-05-30 18:18:47'
+}
+{
+  message: { afterList: 'Not Clear' },
+  level: 'info',
+  timestamp: '2022-05-30 18:22:59'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-05-30 18:34:13'
+}
+{
+  message: {
+    createTaskDBError: Error: tasks validation failed: listId: Path `listId` is required.
+        at ValidationError.inspect (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/error/validation.js:48:26)
+        at formatValue (node:internal/util/inspect:782:19)
+        at formatProperty (node:internal/util/inspect:1819:11)
+        at formatRaw (node:internal/util/inspect:1030:9)
+        at formatValue (node:internal/util/inspect:817:10)
+        at formatProperty (node:internal/util/inspect:1819:11)
+        at formatRaw (node:internal/util/inspect:1030:9)
+        at formatValue (node:internal/util/inspect:817:10)
+        at inspect (node:internal/util/inspect:347:10)
+        at Format.transform (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/logform/pretty-print.js:27:19) {
+      errors: {
+        listId: ValidatorError: Path `listId` is required.
+            at validate (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/schematype.js:1330:13)
+            at ObjectId.SchemaType.doValidate (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/schematype.js:1314:7)
+            at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/document.js:2751:18
+            at processTicksAndRejections (node:internal/process/task_queues:78:11) {
+          properties: {
+            validator: [Function (anonymous)],
+            message: 'Path `listId` is required.',
+            type: 'required',
+            path: 'listId',
+            value: undefined
+          },
+          kind: 'required',
+          path: 'listId',
+          value: undefined,
+          reason: undefined,
+          [Symbol(mongoose:validatorError)]: true
+        }
+      },
+      _message: 'tasks validation failed'
+    }
+  },
+  level: 'error',
+  timestamp: '2022-05-30 19:49:03'
+}
+{
+  message: {
+    createTaskDBError: Error: tasks validation failed: listId: Path `listId` is required.
+        at ValidationError.inspect (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/error/validation.js:48:26)
+        at formatValue (node:internal/util/inspect:782:19)
+        at formatProperty (node:internal/util/inspect:1819:11)
+        at formatRaw (node:internal/util/inspect:1030:9)
+        at formatValue (node:internal/util/inspect:817:10)
+        at formatProperty (node:internal/util/inspect:1819:11)
+        at formatRaw (node:internal/util/inspect:1030:9)
+        at formatValue (node:internal/util/inspect:817:10)
+        at inspect (node:internal/util/inspect:347:10)
+        at Format.transform (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/logform/pretty-print.js:27:19) {
+      errors: {
+        listId: ValidatorError: Path `listId` is required.
+            at validate (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/schematype.js:1330:13)
+            at ObjectId.SchemaType.doValidate (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/schematype.js:1314:7)
+            at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/document.js:2751:18
+            at processTicksAndRejections (node:internal/process/task_queues:78:11) {
+          properties: {
+            validator: [Function (anonymous)],
+            message: 'Path `listId` is required.',
+            type: 'required',
+            path: 'listId',
+            value: undefined
+          },
+          kind: 'required',
+          path: 'listId',
+          value: undefined,
+          reason: undefined,
+          [Symbol(mongoose:validatorError)]: true
+        }
+      },
+      _message: 'tasks validation failed'
+    }
+  },
+  level: 'error',
+  timestamp: '2022-05-30 20:00:10'
+}
+{
+  message: {
+    boardId: '6294ee26cab17543b9b749f5',
+    myDepartment: {
+      _id: new ObjectId("6294ee2636a17736a0711f55"),
+      name: 'Dep local',
+      boardId: '6294ee26cab17543b9b749f5',
+      color: 'blue',
+      mainBoard: false,
+      tasks: [
+        new ObjectId("6294eefa538ac20017adf17a"),
+        new ObjectId("6294ef078cfa7afe7dace2ae"),
+        new ObjectId("6294ef41a84fb2366425c5eb"),
+        new ObjectId("6294f13015709bd058ab25c0"),
+        new ObjectId("6294f3d680611e2aac24dbad")
+      ],
+      teamsId: [
+        {
+          idInTrello: '6294ee677655f325f480a848',
+          idInDB: new ObjectId("6294ee5136a17736a0711f5a"),
+          _id: new ObjectId("6294ee6736a17736a0711f6f")
+        },
+        {
+          idInTrello: '6294ee502fdb81347de68336',
+          idInDB: new ObjectId("6294ee5136a17736a0711f5a"),
+          _id: new ObjectId("6294ee5136a17736a0711f5c")
+        },
+        {
+          idInTrello: '6294eed406648c7cc5155c73',
+          idInDB: new ObjectId("6294eed4538ac20017adf167"),
+          _id: new ObjectId("6294eed5538ac20017adf169")
+        },
+        {
+          idInTrello: '6294eee440ccfc28a070e17d',
+          idInDB: new ObjectId("6294eee5538ac20017adf16c"),
+          _id: new ObjectId("6294eee5538ac20017adf16e")
+        },
+        {
+          idInTrello: '6294eeee9094de063236aa4e',
+          idInDB: new ObjectId("6294eeee538ac20017adf171"),
+          _id: new ObjectId("6294eeee538ac20017adf173")
+        }
+      ],
+      createdAt: 2022-05-30T16:17:42.890Z,
+      updatedAt: 2022-05-30T16:41:58.532Z,
+      __v: 0,
+      canceldListId: '6294ee2866f5d024d7d45634',
+      defaultListId: '6294ee2be7968d6cae2449a0',
+      departmentWindowId: '6294ee27d249d1843c8ff202',
+      doneListId: '6294ee29d263aa26e7ff58e9',
+      notClearListId: '6294ee28a93f8643ab028bf8',
+      notStartedListId: '6294ee2c813a0a70548d6d85',
+      reviewListId: '6294ee2a48a40570518e0e59',
+      sharedListID: '6294ee2a317c786baace1448'
+    }
+  },
+  level: 'info',
+  timestamp: '2022-05-30 20:08:22'
+}
+{
+  message: {
+    removeBoard: 'https://api.trello.com/1/boards/6294ee26cab17543b9b749f5?response_type=token&key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68'
+  },
+  level: 'info',
+  timestamp: '2022-05-30 20:08:22'
+}
+{
+  message: {
+    'delete Tasks': { acknowledged: true, deletedCount: 2 },
+    'Delete Tech members': { acknowledged: true, deletedCount: 1 }
+  },
+  level: 'info',
+  timestamp: '2022-05-30 20:08:23'
+}
+{
+  message: {
+    borderData: Promise { <pending> },
+    createBoardApi: 'https://api.trello.com/1/boards/?name=New Dep local&prefs_background=blue&defaultLists=false&key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68'
+  },
+  level: 'info',
+  timestamp: '2022-05-30 20:08:38'
+}
+{
+  message: {
+    data: {
+      name: 'New Dep local',
+      color: 'blue',
+      boardId: '62950825b350356082853519'
+    }
+  },
+  level: 'info',
+  timestamp: '2022-05-30 20:08:38'
+}
+{
+  message: { removeWebhookSucced: 'done' },
+  level: 'info',
+  timestamp: '2022-05-30 20:08:41'
+}
+{
+  message: { teamListIds: [] },
+  level: 'info',
+  timestamp: '2022-05-30 20:08:41'
+}
+{
+  message: { webhookCreateResult: 'webhook done' },
+  level: 'info',
+  timestamp: '2022-05-30 20:08:43'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-05-30 20:16:29'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-05-30 20:23:51'
+}
+{
+  message: {
+    createTaskDBError: Error: tasks validation failed: listId: Path `listId` is required.
+        at ValidationError.inspect (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/error/validation.js:48:26)
+        at formatValue (node:internal/util/inspect:782:19)
+        at formatProperty (node:internal/util/inspect:1819:11)
+        at formatRaw (node:internal/util/inspect:1030:9)
+        at formatValue (node:internal/util/inspect:817:10)
+        at formatProperty (node:internal/util/inspect:1819:11)
+        at formatRaw (node:internal/util/inspect:1030:9)
+        at formatValue (node:internal/util/inspect:817:10)
+        at inspect (node:internal/util/inspect:347:10)
+        at Format.transform (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/logform/pretty-print.js:27:19) {
+      errors: {
+        listId: ValidatorError: Path `listId` is required.
+            at validate (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/schematype.js:1330:13)
+            at ObjectId.SchemaType.doValidate (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/schematype.js:1314:7)
+            at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/document.js:2751:18
+            at processTicksAndRejections (node:internal/process/task_queues:78:11) {
+          properties: {
+            validator: [Function (anonymous)],
+            message: 'Path `listId` is required.',
+            type: 'required',
+            path: 'listId',
+            value: undefined
+          },
+          kind: 'required',
+          path: 'listId',
+          value: undefined,
+          reason: undefined,
+          [Symbol(mongoose:validatorError)]: true
+        }
+      },
+      _message: 'tasks validation failed'
+    }
+  },
+  level: 'error',
+  timestamp: '2022-05-30 20:25:53'
+}
+{
+  message: {
+    createTaskDBError: Error: tasks validation failed: listId: Path `listId` is required.
+        at ValidationError.inspect (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/error/validation.js:48:26)
+        at formatValue (node:internal/util/inspect:782:19)
+        at formatProperty (node:internal/util/inspect:1819:11)
+        at formatRaw (node:internal/util/inspect:1030:9)
+        at formatValue (node:internal/util/inspect:817:10)
+        at formatProperty (node:internal/util/inspect:1819:11)
+        at formatRaw (node:internal/util/inspect:1030:9)
+        at formatValue (node:internal/util/inspect:817:10)
+        at inspect (node:internal/util/inspect:347:10)
+        at Format.transform (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/logform/pretty-print.js:27:19) {
+      errors: {
+        listId: ValidatorError: Path `listId` is required.
+            at validate (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/schematype.js:1330:13)
+            at ObjectId.SchemaType.doValidate (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/schematype.js:1314:7)
+            at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/document.js:2751:18
+            at processTicksAndRejections (node:internal/process/task_queues:78:11) {
+          properties: {
+            validator: [Function (anonymous)],
+            message: 'Path `listId` is required.',
+            type: 'required',
+            path: 'listId',
+            value: undefined
+          },
+          kind: 'required',
+          path: 'listId',
+          value: undefined,
+          reason: undefined,
+          [Symbol(mongoose:validatorError)]: true
+        }
+      },
+      _message: 'tasks validation failed'
+    }
+  },
+  level: 'error',
+  timestamp: '2022-05-30 20:27:02'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-05-30 20:34:34'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-05-30 20:36:18'
+}
+{
+  message: {
+    createTaskDBError: Error: tasks validation failed: teamId: Cast to ObjectId failed for value "" (type string) at path "teamId" because of "BSONTypeError", listId: Path `listId` is required.
+        at ValidationError.inspect (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/error/validation.js:48:26)
+        at formatValue (node:internal/util/inspect:782:19)
+        at formatProperty (node:internal/util/inspect:1819:11)
+        at formatRaw (node:internal/util/inspect:1030:9)
+        at formatValue (node:internal/util/inspect:817:10)
+        at formatProperty (node:internal/util/inspect:1819:11)
+        at formatRaw (node:internal/util/inspect:1030:9)
+        at formatValue (node:internal/util/inspect:817:10)
+        at inspect (node:internal/util/inspect:347:10)
+        at Format.transform (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/logform/pretty-print.js:27:19) {
+      errors: {
+        teamId: CastError: Cast to ObjectId failed for value "" (type string) at path "teamId" because of "BSONTypeError"
+            at ObjectId.cast (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/schema/objectid.js:249:11)
+            at ObjectId.SchemaType.applySetters (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/schematype.js:1189:12)
+            at model.$set (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/document.js:1404:20)
+            at model.$set (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/document.js:1148:14)
+            at model.Document (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/document.js:161:12)
+            at model.Model (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/model.js:115:12)
+            at new model (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/model.js:4835:15)
+            at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/dbCalls/tasks/tasks.ts:196:28)
+            at Generator.next (<anonymous>)
+            at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/dbCalls/tasks/tasks.ts:8:71 {
+          stringValue: '""',
+          messageFormat: undefined,
+          kind: 'ObjectId',
+          value: '',
+          path: 'teamId',
+          reason: BSONTypeError: Argument passed in must be a string of 12 bytes or a string of 24 hex characters or an integer
+              at new BSONTypeError (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/bson/src/error.ts:16:5)
+              at new ObjectId (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/bson/src/objectid.ts:87:15)
+              at castObjectId (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/cast/objectid.js:24:12)
+              at ObjectId.cast (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/schema/objectid.js:247:12)
+              at ObjectId.SchemaType.applySetters (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/schematype.js:1189:12)
+              at model.$set (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/document.js:1404:20)
+              at model.$set (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/document.js:1148:14)
+              at model.Document (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/document.js:161:12)
+              at model.Model (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/model.js:115:12)
+              at new model (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/model.js:4835:15),
+          valueType: 'string'
+        },
+        listId: ValidatorError: Path `listId` is required.
+            at validate (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/schematype.js:1330:13)
+            at ObjectId.SchemaType.doValidate (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/schematype.js:1314:7)
+            at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/document.js:2751:18
+            at processTicksAndRejections (node:internal/process/task_queues:78:11) {
+          properties: {
+            validator: [Function (anonymous)],
+            message: 'Path `listId` is required.',
+            type: 'required',
+            path: 'listId',
+            value: undefined
+          },
+          kind: 'required',
+          path: 'listId',
+          value: undefined,
+          reason: undefined,
+          [Symbol(mongoose:validatorError)]: true
+        }
+      },
+      _message: 'tasks validation failed'
+    }
+  },
+  level: 'error',
+  timestamp: '2022-05-30 20:52:40'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-05-30 20:53:42'
+}
+{
+  message: {
+    createTaskDBError: Error: tasks validation failed: teamId: Cast to ObjectId failed for value "" (type string) at path "teamId" because of "BSONTypeError", listId: Path `listId` is required.
+        at ValidationError.inspect (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/error/validation.js:48:26)
+        at formatValue (node:internal/util/inspect:782:19)
+        at formatProperty (node:internal/util/inspect:1819:11)
+        at formatRaw (node:internal/util/inspect:1030:9)
+        at formatValue (node:internal/util/inspect:817:10)
+        at formatProperty (node:internal/util/inspect:1819:11)
+        at formatRaw (node:internal/util/inspect:1030:9)
+        at formatValue (node:internal/util/inspect:817:10)
+        at inspect (node:internal/util/inspect:347:10)
+        at Format.transform (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/logform/pretty-print.js:27:19) {
+      errors: {
+        teamId: CastError: Cast to ObjectId failed for value "" (type string) at path "teamId" because of "BSONTypeError"
+            at ObjectId.cast (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/schema/objectid.js:249:11)
+            at ObjectId.SchemaType.applySetters (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/schematype.js:1189:12)
+            at model.$set (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/document.js:1404:20)
+            at model.$set (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/document.js:1148:14)
+            at model.Document (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/document.js:161:12)
+            at model.Model (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/model.js:115:12)
+            at new model (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/model.js:4835:15)
+            at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/dbCalls/tasks/tasks.ts:197:28)
+            at Generator.next (<anonymous>)
+            at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/dbCalls/tasks/tasks.ts:8:71 {
+          stringValue: '""',
+          messageFormat: undefined,
+          kind: 'ObjectId',
+          value: '',
+          path: 'teamId',
+          reason: BSONTypeError: Argument passed in must be a string of 12 bytes or a string of 24 hex characters or an integer
+              at new BSONTypeError (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/bson/src/error.ts:16:5)
+              at new ObjectId (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/bson/src/objectid.ts:87:15)
+              at castObjectId (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/cast/objectid.js:24:12)
+              at ObjectId.cast (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/schema/objectid.js:247:12)
+              at ObjectId.SchemaType.applySetters (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/schematype.js:1189:12)
+              at model.$set (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/document.js:1404:20)
+              at model.$set (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/document.js:1148:14)
+              at model.Document (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/document.js:161:12)
+              at model.Model (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/model.js:115:12)
+              at new model (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/model.js:4835:15),
+          valueType: 'string'
+        },
+        listId: ValidatorError: Path `listId` is required.
+            at validate (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/schematype.js:1330:13)
+            at ObjectId.SchemaType.doValidate (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/schematype.js:1314:7)
+            at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/document.js:2751:18
+            at processTicksAndRejections (node:internal/process/task_queues:78:11) {
+          properties: {
+            validator: [Function (anonymous)],
+            message: 'Path `listId` is required.',
+            type: 'required',
+            path: 'listId',
+            value: undefined
+          },
+          kind: 'required',
+          path: 'listId',
+          value: undefined,
+          reason: undefined,
+          [Symbol(mongoose:validatorError)]: true
+        }
+      },
+      _message: 'tasks validation failed'
+    }
+  },
+  level: 'error',
+  timestamp: '2022-05-30 20:54:49'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-05-30 20:56:14'
+}
+{
+  message: {
+    createTaskDBError: Error: tasks validation failed: teamId: Cast to ObjectId failed for value "" (type string) at path "teamId" because of "BSONTypeError"
+        at ValidationError.inspect (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/error/validation.js:48:26)
+        at formatValue (node:internal/util/inspect:782:19)
+        at formatProperty (node:internal/util/inspect:1819:11)
+        at formatRaw (node:internal/util/inspect:1030:9)
+        at formatValue (node:internal/util/inspect:817:10)
+        at formatProperty (node:internal/util/inspect:1819:11)
+        at formatRaw (node:internal/util/inspect:1030:9)
+        at formatValue (node:internal/util/inspect:817:10)
+        at inspect (node:internal/util/inspect:347:10)
+        at Format.transform (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/logform/pretty-print.js:27:19) {
+      errors: {
+        teamId: CastError: Cast to ObjectId failed for value "" (type string) at path "teamId" because of "BSONTypeError"
+            at ObjectId.cast (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/schema/objectid.js:249:11)
+            at ObjectId.SchemaType.applySetters (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/schematype.js:1189:12)
+            at model.$set (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/document.js:1404:20)
+            at model.$set (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/document.js:1148:14)
+            at model.Document (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/document.js:161:12)
+            at model.Model (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/model.js:115:12)
+            at new model (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/model.js:4835:15)
+            at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/dbCalls/tasks/tasks.ts:196:28)
+            at Generator.next (<anonymous>)
+            at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/dbCalls/tasks/tasks.ts:8:71 {
+          stringValue: '""',
+          messageFormat: undefined,
+          kind: 'ObjectId',
+          value: '',
+          path: 'teamId',
+          reason: BSONTypeError: Argument passed in must be a string of 12 bytes or a string of 24 hex characters or an integer
+              at new BSONTypeError (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/bson/src/error.ts:16:5)
+              at new ObjectId (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/bson/src/objectid.ts:87:15)
+              at castObjectId (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/cast/objectid.js:24:12)
+              at ObjectId.cast (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/schema/objectid.js:247:12)
+              at ObjectId.SchemaType.applySetters (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/schematype.js:1189:12)
+              at model.$set (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/document.js:1404:20)
+              at model.$set (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/document.js:1148:14)
+              at model.Document (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/document.js:161:12)
+              at model.Model (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/model.js:115:12)
+              at new model (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/model.js:4835:15),
+          valueType: 'string'
+        }
+      },
+      _message: 'tasks validation failed'
+    }
+  },
+  level: 'error',
+  timestamp: '2022-05-30 20:59:47'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-05-30 21:04:29'
+}
+{
+  message: {
+    createTaskDBError: Error: tasks validation failed: teamId: Path `teamId` is required.
+        at ValidationError.inspect (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/error/validation.js:48:26)
+        at formatValue (node:internal/util/inspect:782:19)
+        at formatProperty (node:internal/util/inspect:1819:11)
+        at formatRaw (node:internal/util/inspect:1030:9)
+        at formatValue (node:internal/util/inspect:817:10)
+        at formatProperty (node:internal/util/inspect:1819:11)
+        at formatRaw (node:internal/util/inspect:1030:9)
+        at formatValue (node:internal/util/inspect:817:10)
+        at inspect (node:internal/util/inspect:347:10)
+        at Format.transform (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/logform/pretty-print.js:27:19) {
+      errors: {
+        teamId: ValidatorError: Path `teamId` is required.
+            at validate (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/schematype.js:1330:13)
+            at ObjectId.SchemaType.doValidate (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/schematype.js:1314:7)
+            at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/document.js:2751:18
+            at processTicksAndRejections (node:internal/process/task_queues:78:11) {
+          properties: {
+            validator: [Function (anonymous)],
+            message: 'Path `teamId` is required.',
+            type: 'required',
+            path: 'teamId',
+            value: null
+          },
+          kind: 'required',
+          path: 'teamId',
+          value: null,
+          reason: undefined,
+          [Symbol(mongoose:validatorError)]: true
+        }
+      },
+      _message: 'tasks validation failed'
+    }
+  },
+  level: 'error',
+  timestamp: '2022-05-30 21:06:27'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-05-30 21:07:24'
+}
+{
+  message: {
+    boardId: '62950825b350356082853519',
+    myDepartment: {
+      _id: new ObjectId("62950826a3c84a196c258aff"),
+      name: 'New Dep local',
+      boardId: '62950825b350356082853519',
+      color: 'blue',
+      mainBoard: false,
+      tasks: [ new ObjectId("6295161267691c9aa9979de5") ],
+      teamsId: [
+        {
+          idInTrello: '629508411cad8683ae37db87',
+          idInDB: new ObjectId("62950841a3c84a196c258b04"),
+          _id: new ObjectId("62950841a3c84a196c258b06")
+        }
+      ],
+      createdAt: 2022-05-30T18:08:38.187Z,
+      updatedAt: 2022-05-30T19:08:02.298Z,
+      __v: 0,
+      canceldListId: '62950827889ea24d7a01f216',
+      defaultListId: '62950829c385074a09d4adfc',
+      departmentWindowId: '6295082676eb5a75474a2531',
+      doneListId: '629508284711a8273b252af3',
+      notClearListId: '62950827be59ba6b570d370d',
+      notStartedListId: '6295082a00a5c44da0c74639',
+      reviewListId: '62950829b3a81f76285fd2db',
+      sharedListID: '6295082801a33d6f9f75b5f9'
+    }
+  },
+  level: 'info',
+  timestamp: '2022-05-30 21:08:43'
+}
+{
+  message: {
+    removeBoard: 'https://api.trello.com/1/boards/62950825b350356082853519?response_type=token&key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68'
+  },
+  level: 'info',
+  timestamp: '2022-05-30 21:08:43'
+}
+{
+  message: {
+    'delete Tasks': { acknowledged: true, deletedCount: 1 },
+    'Delete Tech members': { acknowledged: true, deletedCount: 1 }
+  },
+  level: 'info',
+  timestamp: '2022-05-30 21:08:44'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-05-30 21:09:09'
+}
+{
+  message: {
+    getProjectDBError: MongoNetworkTimeoutError: connection timed out
+        at connectionFailureError (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongodb/src/cmap/connect.ts:498:14)
+        at TLSSocket.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongodb/src/cmap/connect.ts:394:16)
+        at Object.onceWrapper (node:events:641:28)
+        at TLSSocket.emit (node:events:527:28)
+        at TLSSocket.emit (node:domain:475:12)
+        at TLSSocket.Socket._onTimeout (node:net:516:8)
+        at listOnTimeout (node:internal/timers:559:17)
+        at processTimers (node:internal/timers:502:7) {
+      [Symbol(errorLabels)]: Set(0) {}
+    }
+  },
+  level: 'error',
+  timestamp: '2022-05-31 09:13:18'
+}
+{
+  message: {
+    borderData: Promise { <pending> },
+    createBoardApi: 'https://api.trello.com/1/boards/?name=New local&prefs_background=blue&defaultLists=false&key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68'
+  },
+  level: 'info',
+  timestamp: '2022-05-31 09:14:21'
+}
+{
+  message: {
+    data: {
+      name: 'New local',
+      color: 'blue',
+      boardId: '6295c04cb1bce22742e7dc37'
+    }
+  },
+  level: 'info',
+  timestamp: '2022-05-31 09:14:21'
+}
+{
+  message: { removeWebhookSucced: 'done' },
+  level: 'info',
+  timestamp: '2022-05-31 09:14:27'
+}
+{
+  message: { teamListIds: [] },
+  level: 'info',
+  timestamp: '2022-05-31 09:14:27'
+}
+{
+  message: { webhookCreateResult: 'webhook done' },
+  level: 'info',
+  timestamp: '2022-05-31 09:14:30'
+}

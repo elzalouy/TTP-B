@@ -17,9 +17,13 @@ const TaskSchema: Schema = new Schema<TaskInfo>(
       ref: "categories",
       default: null,
     },
-    memberId: {
+    teamId: {
       type: Schema.Types.ObjectId,
-      ref: "techMembers",
+      ref: "teams",
+      default: null,
+    },
+    listId: {
+      type: Schema.Types.ObjectId,
       required: true,
     },
     cardId: {

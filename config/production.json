@@ -1,3 +1,5 @@
 {
-  "name": "TTP"
+  "name": "TTP production",
+  "Trello_Webhook_Callback_Url": "https://ttp-back-v1.herokuapp.com/api/webhookUpdate",
+  "FrontEndUrl": "https://ttpf.herokuapp.com"
 }

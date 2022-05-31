@@ -69,7 +69,7 @@ const DepartmentBD = class DepartmentBD {
         },
         {
           $lookup: {
-            from: "techmembers",
+            from: "teams",
             localField: "teamsId.idInDB",
             foreignField: "_id",
             as: "teamData",
@@ -124,7 +124,6 @@ const DepartmentBD = class DepartmentBD {
       for (let i = 0; i < department.length; i++) {
         department[i].teamsId = department[i].teamsId.map(
           (team: any, j: number) => {
-            // logger.info({ teamOrigin: department[i].teamOrigin });
             return {
               ...team,
               idInTrello: department[i]?.teamOrigin[j]?.idInTrello,

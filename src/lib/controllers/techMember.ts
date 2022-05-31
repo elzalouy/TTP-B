@@ -1,25 +1,25 @@
 import { ListOfBoard } from "./../types/controller/techMembers";
 import logger from "../../logger";
 import TechMemberDB from "../dbCalls/techMember/techMember";
-import { ITech, TechMemberData } from "../types/model/Team";
+import { TeamsData } from "../types/model/Team";
 import { customeError } from "../utils/errorUtils";
 import { localize } from "../utils/msgLocalize";
 import BoardController from "./boards";
 import DepartmentBD from "../dbCalls/department/department";
 
 const TechMemberController = class TechMemberController extends TechMemberDB {
-  static async createNewMember(data: TechMemberData) {
+  static async createNewMember(data: TeamsData) {
     return await TechMemberController.__createMember(data);
   }
 
-  static async updateTechMember(data: TechMemberData) {
+  static async updateTechMember(data: TeamsData) {
     return await TechMemberController.__updateMember(data);
   }
 
   static async getTechMember(data: object) {
     return await TechMemberController.__getTechMmber(data);
   }
-  static async deleteTechMemberWhere(data: TechMemberData) {
+  static async deleteTechMemberWhere(data: TeamsData) {
     return await TechMemberController.__deleteTechMember(data);
   }
   static async __getTechMmber(data: object) {
@@ -30,7 +30,7 @@ const TechMemberController = class TechMemberController extends TechMemberDB {
       logger.error({ getTechMemberError: error });
     }
   }
-  static async __updateMember(data: TechMemberData) {
+  static async __updateMember(data: TeamsData) {
     try {
       const { boardId, trelloMemberId, listId, newBoardId, name } = data;
       let listIdValue = null;
@@ -84,7 +84,7 @@ const TechMemberController = class TechMemberController extends TechMemberDB {
     }
   }
 
-  static async __createMember(data: TechMemberData) {
+  static async __createMember(data: TeamsData) {
     try {
       const { name, boardId, departmentId } = data;
       if (!departmentId) customeError("department_missing", 400);

@@ -10,7 +10,6 @@ const TaskReq = class TaskReq extends TaskController {
   static async handleCreateCard(req: Request, res: Response) {
     try {
       let TaskData: TaskData = req.body;
-      console.log(TaskData);
       let isValid = createTaskSchema.validate(TaskData);
       if (isValid.error) return res.status(400).send(isValid.error.details);
       let task = await super.createTask(TaskData, req.files);

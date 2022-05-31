@@ -1,13 +1,13 @@
 import { Document } from "mongoose";
 import { ObjectId } from "bson";
 
-export interface ITech extends Document {
+export interface TeamsInterface extends Document {
   name: string;
   departmentId: ObjectId;
   listId: string | null;
 }
 
-export interface TechMemberData {
+export interface TeamsData {
   id?: string;
   name?: string;
   departmentId?: string;

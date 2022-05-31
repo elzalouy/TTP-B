@@ -1946,3 +1946,707 @@
   level: 'error',
   timestamp: '2022-05-29 14:58:50'
 }
+{
+  message: {
+    webhookUpdateError: TypeError: Cannot read properties of undefined (reading 'display')
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:131:33)
+        at Generator.next (<anonymous>)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:8:71
+        at new Promise (<anonymous>)
+        at __awaiter (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:4:12)
+        at Function.__webhookUpdate (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:91:16)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:24:33
+        at Generator.next (<anonymous>)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:8:71
+        at new Promise (<anonymous>)
+  },
+  level: 'error',
+  timestamp: '2022-05-30 10:52:34'
+}
+{
+  message: {
+    webhookUpdateError: TypeError: Cannot read properties of undefined (reading 'display')
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:131:33)
+        at Generator.next (<anonymous>)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:8:71
+        at new Promise (<anonymous>)
+        at __awaiter (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:4:12)
+        at Function.__webhookUpdate (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:91:16)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:24:33
+        at Generator.next (<anonymous>)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:8:71
+        at new Promise (<anonymous>)
+  },
+  level: 'error',
+  timestamp: '2022-05-30 10:52:35'
+}
+{
+  message: {
+    webhookUpdateError: TypeError: Cannot read properties of undefined (reading 'display')
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:131:33)
+        at Generator.next (<anonymous>)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:8:71
+        at new Promise (<anonymous>)
+        at __awaiter (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:4:12)
+        at Function.__webhookUpdate (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:91:16)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:24:33
+        at Generator.next (<anonymous>)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:8:71
+        at new Promise (<anonymous>)
+  },
+  level: 'error',
+  timestamp: '2022-05-30 10:52:35'
+}
+{
+  message: {
+    webhookUpdateError: TypeError: Cannot read properties of undefined (reading 'display')
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:131:33)
+        at Generator.next (<anonymous>)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:8:71
+        at new Promise (<anonymous>)
+        at __awaiter (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:4:12)
+        at Function.__webhookUpdate (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:91:16)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:24:33
+        at Generator.next (<anonymous>)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:8:71
+        at new Promise (<anonymous>)
+  },
+  level: 'error',
+  timestamp: '2022-05-30 10:52:35'
+}
+{
+  message: {
+    webhookUpdateError: TypeError: Cannot read properties of undefined (reading 'display')
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:131:33)
+        at Generator.next (<anonymous>)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:8:71
+        at new Promise (<anonymous>)
+        at __awaiter (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:4:12)
+        at Function.__webhookUpdate (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:91:16)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:24:33
+        at Generator.next (<anonymous>)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:8:71
+        at new Promise (<anonymous>)
+  },
+  level: 'error',
+  timestamp: '2022-05-30 10:52:35'
+}
+{
+  message: {
+    webhookUpdateError: TypeError: Cannot read properties of undefined (reading 'display')
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:131:33)
+        at Generator.next (<anonymous>)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:8:71
+        at new Promise (<anonymous>)
+        at __awaiter (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:4:12)
+        at Function.__webhookUpdate (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:91:16)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:24:33
+        at Generator.next (<anonymous>)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:8:71
+        at new Promise (<anonymous>)
+  },
+  level: 'error',
+  timestamp: '2022-05-30 10:52:35'
+}
+{
+  message: {
+    webhookUpdateError: TypeError: Cannot read properties of undefined (reading 'display')
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:131:33)
+        at Generator.next (<anonymous>)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:8:71
+        at new Promise (<anonymous>)
+        at __awaiter (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:4:12)
+        at Function.__webhookUpdate (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:91:16)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:24:33
+        at Generator.next (<anonymous>)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:8:71
+        at new Promise (<anonymous>)
+  },
+  level: 'error',
+  timestamp: '2022-05-30 10:52:35'
+}
+{
+  message: {
+    webhookUpdateError: TypeError: Cannot read properties of undefined (reading 'display')
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:131:33)
+        at Generator.next (<anonymous>)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:8:71
+        at new Promise (<anonymous>)
+        at __awaiter (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:4:12)
+        at Function.__webhookUpdate (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:91:16)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:24:33
+        at Generator.next (<anonymous>)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:8:71
+        at new Promise (<anonymous>)
+  },
+  level: 'error',
+  timestamp: '2022-05-30 10:52:35'
+}
+{
+  message: {
+    webhookUpdateError: TypeError: Cannot read properties of undefined (reading 'id')
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:131:55)
+        at Generator.next (<anonymous>)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:8:71
+        at new Promise (<anonymous>)
+        at __awaiter (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:4:12)
+        at Function.__webhookUpdate (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:91:16)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:24:33
+        at Generator.next (<anonymous>)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:8:71
+        at new Promise (<anonymous>)
+  },
+  level: 'error',
+  timestamp: '2022-05-30 10:59:00'
+}
+{
+  message: {
+    getTechMemberDBError: MongoNetworkTimeoutError: connection timed out
+        at connectionFailureError (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongodb/src/cmap/connect.ts:498:14)
+        at TLSSocket.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongodb/src/cmap/connect.ts:394:16)
+        at Object.onceWrapper (node:events:641:28)
+        at TLSSocket.emit (node:events:527:28)
+        at TLSSocket.emit (node:domain:475:12)
+        at TLSSocket.Socket._onTimeout (node:net:516:8)
+        at listOnTimeout (node:internal/timers:559:17)
+        at processTimers (node:internal/timers:502:7) {
+      [Symbol(errorLabels)]: Set(0) {}
+    }
+  },
+  level: 'error',
+  timestamp: '2022-05-30 18:06:40'
+}
+{
+  message: {
+    webhookUpdateError: TypeError: Cannot read properties of undefined (reading 'display')
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:130:33)
+        at Generator.next (<anonymous>)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:8:71
+        at new Promise (<anonymous>)
+        at __awaiter (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:4:12)
+        at Function.__webhookUpdate (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:91:16)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:24:33
+        at Generator.next (<anonymous>)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:8:71
+        at new Promise (<anonymous>)
+  },
+  level: 'error',
+  timestamp: '2022-05-30 18:17:49'
+}
+{
+  message: {
+    webhookUpdateError: TypeError: Cannot read properties of undefined (reading 'display')
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:130:33)
+        at Generator.next (<anonymous>)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:8:71
+        at new Promise (<anonymous>)
+        at __awaiter (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:4:12)
+        at Function.__webhookUpdate (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:91:16)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:24:33
+        at Generator.next (<anonymous>)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:8:71
+        at new Promise (<anonymous>)
+  },
+  level: 'error',
+  timestamp: '2022-05-30 18:17:49'
+}
+{
+  message: {
+    webhookUpdateError: TypeError: Cannot read properties of undefined (reading 'display')
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:130:33)
+        at Generator.next (<anonymous>)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:8:71
+        at new Promise (<anonymous>)
+        at __awaiter (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:4:12)
+        at Function.__webhookUpdate (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:91:16)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:24:33
+        at Generator.next (<anonymous>)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:8:71
+        at new Promise (<anonymous>)
+  },
+  level: 'error',
+  timestamp: '2022-05-30 18:17:49'
+}
+{
+  message: {
+    webhookUpdateError: TypeError: Cannot read properties of undefined (reading 'display')
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:130:33)
+        at Generator.next (<anonymous>)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:8:71
+        at new Promise (<anonymous>)
+        at __awaiter (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:4:12)
+        at Function.__webhookUpdate (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:91:16)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:24:33
+        at Generator.next (<anonymous>)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:8:71
+        at new Promise (<anonymous>)
+  },
+  level: 'error',
+  timestamp: '2022-05-30 18:17:49'
+}
+{
+  message: {
+    webhookUpdateError: TypeError: Cannot read properties of undefined (reading 'display')
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:130:33)
+        at Generator.next (<anonymous>)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:8:71
+        at new Promise (<anonymous>)
+        at __awaiter (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:4:12)
+        at Function.__webhookUpdate (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:91:16)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:24:33
+        at Generator.next (<anonymous>)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:8:71
+        at new Promise (<anonymous>)
+  },
+  level: 'error',
+  timestamp: '2022-05-30 18:17:49'
+}
+{
+  message: {
+    webhookUpdateError: TypeError: Cannot read properties of undefined (reading 'display')
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:130:33)
+        at Generator.next (<anonymous>)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:8:71
+        at new Promise (<anonymous>)
+        at __awaiter (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:4:12)
+        at Function.__webhookUpdate (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:91:16)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:24:33
+        at Generator.next (<anonymous>)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:8:71
+        at new Promise (<anonymous>)
+  },
+  level: 'error',
+  timestamp: '2022-05-30 18:17:49'
+}
+{
+  message: {
+    webhookUpdateError: TypeError: Cannot read properties of undefined (reading 'display')
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:130:33)
+        at Generator.next (<anonymous>)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:8:71
+        at new Promise (<anonymous>)
+        at __awaiter (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:4:12)
+        at Function.__webhookUpdate (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:91:16)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:24:33
+        at Generator.next (<anonymous>)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:8:71
+        at new Promise (<anonymous>)
+  },
+  level: 'error',
+  timestamp: '2022-05-30 18:17:49'
+}
+{
+  message: {
+    webhookUpdateError: TypeError: Cannot read properties of undefined (reading 'display')
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:130:33)
+        at Generator.next (<anonymous>)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:8:71
+        at new Promise (<anonymous>)
+        at __awaiter (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:4:12)
+        at Function.__webhookUpdate (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:91:16)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:24:33
+        at Generator.next (<anonymous>)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:8:71
+        at new Promise (<anonymous>)
+  },
+  level: 'error',
+  timestamp: '2022-05-30 18:17:49'
+}
+{
+  message: {
+    createTaskDBError: Error: tasks validation failed: listId: Path `listId` is required.
+        at ValidationError.inspect (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/error/validation.js:48:26)
+        at formatValue (node:internal/util/inspect:782:19)
+        at formatProperty (node:internal/util/inspect:1819:11)
+        at formatRaw (node:internal/util/inspect:1030:9)
+        at formatValue (node:internal/util/inspect:817:10)
+        at formatProperty (node:internal/util/inspect:1819:11)
+        at formatRaw (node:internal/util/inspect:1030:9)
+        at formatValue (node:internal/util/inspect:817:10)
+        at inspect (node:internal/util/inspect:347:10)
+        at Format.transform (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/logform/pretty-print.js:27:19) {
+      errors: {
+        listId: ValidatorError: Path `listId` is required.
+            at validate (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/schematype.js:1330:13)
+            at ObjectId.SchemaType.doValidate (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/schematype.js:1314:7)
+            at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/document.js:2751:18
+            at processTicksAndRejections (node:internal/process/task_queues:78:11) {
+          properties: {
+            validator: [Function (anonymous)],
+            message: 'Path `listId` is required.',
+            type: 'required',
+            path: 'listId',
+            value: undefined
+          },
+          kind: 'required',
+          path: 'listId',
+          value: undefined,
+          reason: undefined,
+          [Symbol(mongoose:validatorError)]: true
+        }
+      },
+      _message: 'tasks validation failed'
+    }
+  },
+  level: 'error',
+  timestamp: '2022-05-30 19:49:03'
+}
+{
+  message: {
+    createTaskDBError: Error: tasks validation failed: listId: Path `listId` is required.
+        at ValidationError.inspect (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/error/validation.js:48:26)
+        at formatValue (node:internal/util/inspect:782:19)
+        at formatProperty (node:internal/util/inspect:1819:11)
+        at formatRaw (node:internal/util/inspect:1030:9)
+        at formatValue (node:internal/util/inspect:817:10)
+        at formatProperty (node:internal/util/inspect:1819:11)
+        at formatRaw (node:internal/util/inspect:1030:9)
+        at formatValue (node:internal/util/inspect:817:10)
+        at inspect (node:internal/util/inspect:347:10)
+        at Format.transform (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/logform/pretty-print.js:27:19) {
+      errors: {
+        listId: ValidatorError: Path `listId` is required.
+            at validate (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/schematype.js:1330:13)
+            at ObjectId.SchemaType.doValidate (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/schematype.js:1314:7)
+            at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/document.js:2751:18
+            at processTicksAndRejections (node:internal/process/task_queues:78:11) {
+          properties: {
+            validator: [Function (anonymous)],
+            message: 'Path `listId` is required.',
+            type: 'required',
+            path: 'listId',
+            value: undefined
+          },
+          kind: 'required',
+          path: 'listId',
+          value: undefined,
+          reason: undefined,
+          [Symbol(mongoose:validatorError)]: true
+        }
+      },
+      _message: 'tasks validation failed'
+    }
+  },
+  level: 'error',
+  timestamp: '2022-05-30 20:00:10'
+}
+{
+  message: {
+    createTaskDBError: Error: tasks validation failed: listId: Path `listId` is required.
+        at ValidationError.inspect (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/error/validation.js:48:26)
+        at formatValue (node:internal/util/inspect:782:19)
+        at formatProperty (node:internal/util/inspect:1819:11)
+        at formatRaw (node:internal/util/inspect:1030:9)
+        at formatValue (node:internal/util/inspect:817:10)
+        at formatProperty (node:internal/util/inspect:1819:11)
+        at formatRaw (node:internal/util/inspect:1030:9)
+        at formatValue (node:internal/util/inspect:817:10)
+        at inspect (node:internal/util/inspect:347:10)
+        at Format.transform (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/logform/pretty-print.js:27:19) {
+      errors: {
+        listId: ValidatorError: Path `listId` is required.
+            at validate (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/schematype.js:1330:13)
+            at ObjectId.SchemaType.doValidate (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/schematype.js:1314:7)
+            at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/document.js:2751:18
+            at processTicksAndRejections (node:internal/process/task_queues:78:11) {
+          properties: {
+            validator: [Function (anonymous)],
+            message: 'Path `listId` is required.',
+            type: 'required',
+            path: 'listId',
+            value: undefined
+          },
+          kind: 'required',
+          path: 'listId',
+          value: undefined,
+          reason: undefined,
+          [Symbol(mongoose:validatorError)]: true
+        }
+      },
+      _message: 'tasks validation failed'
+    }
+  },
+  level: 'error',
+  timestamp: '2022-05-30 20:25:53'
+}
+{
+  message: {
+    createTaskDBError: Error: tasks validation failed: listId: Path `listId` is required.
+        at ValidationError.inspect (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/error/validation.js:48:26)
+        at formatValue (node:internal/util/inspect:782:19)
+        at formatProperty (node:internal/util/inspect:1819:11)
+        at formatRaw (node:internal/util/inspect:1030:9)
+        at formatValue (node:internal/util/inspect:817:10)
+        at formatProperty (node:internal/util/inspect:1819:11)
+        at formatRaw (node:internal/util/inspect:1030:9)
+        at formatValue (node:internal/util/inspect:817:10)
+        at inspect (node:internal/util/inspect:347:10)
+        at Format.transform (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/logform/pretty-print.js:27:19) {
+      errors: {
+        listId: ValidatorError: Path `listId` is required.
+            at validate (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/schematype.js:1330:13)
+            at ObjectId.SchemaType.doValidate (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/schematype.js:1314:7)
+            at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/document.js:2751:18
+            at processTicksAndRejections (node:internal/process/task_queues:78:11) {
+          properties: {
+            validator: [Function (anonymous)],
+            message: 'Path `listId` is required.',
+            type: 'required',
+            path: 'listId',
+            value: undefined
+          },
+          kind: 'required',
+          path: 'listId',
+          value: undefined,
+          reason: undefined,
+          [Symbol(mongoose:validatorError)]: true
+        }
+      },
+      _message: 'tasks validation failed'
+    }
+  },
+  level: 'error',
+  timestamp: '2022-05-30 20:27:02'
+}
+{
+  message: {
+    createTaskDBError: Error: tasks validation failed: teamId: Cast to ObjectId failed for value "" (type string) at path "teamId" because of "BSONTypeError", listId: Path `listId` is required.
+        at ValidationError.inspect (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/error/validation.js:48:26)
+        at formatValue (node:internal/util/inspect:782:19)
+        at formatProperty (node:internal/util/inspect:1819:11)
+        at formatRaw (node:internal/util/inspect:1030:9)
+        at formatValue (node:internal/util/inspect:817:10)
+        at formatProperty (node:internal/util/inspect:1819:11)
+        at formatRaw (node:internal/util/inspect:1030:9)
+        at formatValue (node:internal/util/inspect:817:10)
+        at inspect (node:internal/util/inspect:347:10)
+        at Format.transform (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/logform/pretty-print.js:27:19) {
+      errors: {
+        teamId: CastError: Cast to ObjectId failed for value "" (type string) at path "teamId" because of "BSONTypeError"
+            at ObjectId.cast (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/schema/objectid.js:249:11)
+            at ObjectId.SchemaType.applySetters (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/schematype.js:1189:12)
+            at model.$set (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/document.js:1404:20)
+            at model.$set (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/document.js:1148:14)
+            at model.Document (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/document.js:161:12)
+            at model.Model (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/model.js:115:12)
+            at new model (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/model.js:4835:15)
+            at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/dbCalls/tasks/tasks.ts:196:28)
+            at Generator.next (<anonymous>)
+            at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/dbCalls/tasks/tasks.ts:8:71 {
+          stringValue: '""',
+          messageFormat: undefined,
+          kind: 'ObjectId',
+          value: '',
+          path: 'teamId',
+          reason: BSONTypeError: Argument passed in must be a string of 12 bytes or a string of 24 hex characters or an integer
+              at new BSONTypeError (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/bson/src/error.ts:16:5)
+              at new ObjectId (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/bson/src/objectid.ts:87:15)
+              at castObjectId (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/cast/objectid.js:24:12)
+              at ObjectId.cast (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/schema/objectid.js:247:12)
+              at ObjectId.SchemaType.applySetters (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/schematype.js:1189:12)
+              at model.$set (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/document.js:1404:20)
+              at model.$set (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/document.js:1148:14)
+              at model.Document (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/document.js:161:12)
+              at model.Model (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/model.js:115:12)
+              at new model (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/model.js:4835:15),
+          valueType: 'string'
+        },
+        listId: ValidatorError: Path `listId` is required.
+            at validate (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/schematype.js:1330:13)
+            at ObjectId.SchemaType.doValidate (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/schematype.js:1314:7)
+            at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/document.js:2751:18
+            at processTicksAndRejections (node:internal/process/task_queues:78:11) {
+          properties: {
+            validator: [Function (anonymous)],
+            message: 'Path `listId` is required.',
+            type: 'required',
+            path: 'listId',
+            value: undefined
+          },
+          kind: 'required',
+          path: 'listId',
+          value: undefined,
+          reason: undefined,
+          [Symbol(mongoose:validatorError)]: true
+        }
+      },
+      _message: 'tasks validation failed'
+    }
+  },
+  level: 'error',
+  timestamp: '2022-05-30 20:52:40'
+}
+{
+  message: {
+    createTaskDBError: Error: tasks validation failed: teamId: Cast to ObjectId failed for value "" (type string) at path "teamId" because of "BSONTypeError", listId: Path `listId` is required.
+        at ValidationError.inspect (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/error/validation.js:48:26)
+        at formatValue (node:internal/util/inspect:782:19)
+        at formatProperty (node:internal/util/inspect:1819:11)
+        at formatRaw (node:internal/util/inspect:1030:9)
+        at formatValue (node:internal/util/inspect:817:10)
+        at formatProperty (node:internal/util/inspect:1819:11)
+        at formatRaw (node:internal/util/inspect:1030:9)
+        at formatValue (node:internal/util/inspect:817:10)
+        at inspect (node:internal/util/inspect:347:10)
+        at Format.transform (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/logform/pretty-print.js:27:19) {
+      errors: {
+        teamId: CastError: Cast to ObjectId failed for value "" (type string) at path "teamId" because of "BSONTypeError"
+            at ObjectId.cast (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/schema/objectid.js:249:11)
+            at ObjectId.SchemaType.applySetters (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/schematype.js:1189:12)
+            at model.$set (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/document.js:1404:20)
+            at model.$set (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/document.js:1148:14)
+            at model.Document (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/document.js:161:12)
+            at model.Model (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/model.js:115:12)
+            at new model (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/model.js:4835:15)
+            at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/dbCalls/tasks/tasks.ts:197:28)
+            at Generator.next (<anonymous>)
+            at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/dbCalls/tasks/tasks.ts:8:71 {
+          stringValue: '""',
+          messageFormat: undefined,
+          kind: 'ObjectId',
+          value: '',
+          path: 'teamId',
+          reason: BSONTypeError: Argument passed in must be a string of 12 bytes or a string of 24 hex characters or an integer
+              at new BSONTypeError (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/bson/src/error.ts:16:5)
+              at new ObjectId (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/bson/src/objectid.ts:87:15)
+              at castObjectId (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/cast/objectid.js:24:12)
+              at ObjectId.cast (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/schema/objectid.js:247:12)
+              at ObjectId.SchemaType.applySetters (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/schematype.js:1189:12)
+              at model.$set (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/document.js:1404:20)
+              at model.$set (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/document.js:1148:14)
+              at model.Document (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/document.js:161:12)
+              at model.Model (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/model.js:115:12)
+              at new model (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/model.js:4835:15),
+          valueType: 'string'
+        },
+        listId: ValidatorError: Path `listId` is required.
+            at validate (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/schematype.js:1330:13)
+            at ObjectId.SchemaType.doValidate (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/schematype.js:1314:7)
+            at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/document.js:2751:18
+            at processTicksAndRejections (node:internal/process/task_queues:78:11) {
+          properties: {
+            validator: [Function (anonymous)],
+            message: 'Path `listId` is required.',
+            type: 'required',
+            path: 'listId',
+            value: undefined
+          },
+          kind: 'required',
+          path: 'listId',
+          value: undefined,
+          reason: undefined,
+          [Symbol(mongoose:validatorError)]: true
+        }
+      },
+      _message: 'tasks validation failed'
+    }
+  },
+  level: 'error',
+  timestamp: '2022-05-30 20:54:49'
+}
+{
+  message: {
+    createTaskDBError: Error: tasks validation failed: teamId: Cast to ObjectId failed for value "" (type string) at path "teamId" because of "BSONTypeError"
+        at ValidationError.inspect (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/error/validation.js:48:26)
+        at formatValue (node:internal/util/inspect:782:19)
+        at formatProperty (node:internal/util/inspect:1819:11)
+        at formatRaw (node:internal/util/inspect:1030:9)
+        at formatValue (node:internal/util/inspect:817:10)
+        at formatProperty (node:internal/util/inspect:1819:11)
+        at formatRaw (node:internal/util/inspect:1030:9)
+        at formatValue (node:internal/util/inspect:817:10)
+        at inspect (node:internal/util/inspect:347:10)
+        at Format.transform (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/logform/pretty-print.js:27:19) {
+      errors: {
+        teamId: CastError: Cast to ObjectId failed for value "" (type string) at path "teamId" because of "BSONTypeError"
+            at ObjectId.cast (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/schema/objectid.js:249:11)
+            at ObjectId.SchemaType.applySetters (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/schematype.js:1189:12)
+            at model.$set (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/document.js:1404:20)
+            at model.$set (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/document.js:1148:14)
+            at model.Document (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/document.js:161:12)
+            at model.Model (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/model.js:115:12)
+            at new model (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/model.js:4835:15)
+            at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/dbCalls/tasks/tasks.ts:196:28)
+            at Generator.next (<anonymous>)
+            at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/dbCalls/tasks/tasks.ts:8:71 {
+          stringValue: '""',
+          messageFormat: undefined,
+          kind: 'ObjectId',
+          value: '',
+          path: 'teamId',
+          reason: BSONTypeError: Argument passed in must be a string of 12 bytes or a string of 24 hex characters or an integer
+              at new BSONTypeError (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/bson/src/error.ts:16:5)
+              at new ObjectId (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/bson/src/objectid.ts:87:15)
+              at castObjectId (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/cast/objectid.js:24:12)
+              at ObjectId.cast (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/schema/objectid.js:247:12)
+              at ObjectId.SchemaType.applySetters (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/schematype.js:1189:12)
+              at model.$set (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/document.js:1404:20)
+              at model.$set (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/document.js:1148:14)
+              at model.Document (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/document.js:161:12)
+              at model.Model (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/model.js:115:12)
+              at new model (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/model.js:4835:15),
+          valueType: 'string'
+        }
+      },
+      _message: 'tasks validation failed'
+    }
+  },
+  level: 'error',
+  timestamp: '2022-05-30 20:59:47'
+}
+{
+  message: {
+    createTaskDBError: Error: tasks validation failed: teamId: Path `teamId` is required.
+        at ValidationError.inspect (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/error/validation.js:48:26)
+        at formatValue (node:internal/util/inspect:782:19)
+        at formatProperty (node:internal/util/inspect:1819:11)
+        at formatRaw (node:internal/util/inspect:1030:9)
+        at formatValue (node:internal/util/inspect:817:10)
+        at formatProperty (node:internal/util/inspect:1819:11)
+        at formatRaw (node:internal/util/inspect:1030:9)
+        at formatValue (node:internal/util/inspect:817:10)
+        at inspect (node:internal/util/inspect:347:10)
+        at Format.transform (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/logform/pretty-print.js:27:19) {
+      errors: {
+        teamId: ValidatorError: Path `teamId` is required.
+            at validate (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/schematype.js:1330:13)
+            at ObjectId.SchemaType.doValidate (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/schematype.js:1314:7)
+            at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/document.js:2751:18
+            at processTicksAndRejections (node:internal/process/task_queues:78:11) {
+          properties: {
+            validator: [Function (anonymous)],
+            message: 'Path `teamId` is required.',
+            type: 'required',
+            path: 'teamId',
+            value: null
+          },
+          kind: 'required',
+          path: 'teamId',
+          value: null,
+          reason: undefined,
+          [Symbol(mongoose:validatorError)]: true
+        }
+      },
+      _message: 'tasks validation failed'
+    }
+  },
+  level: 'error',
+  timestamp: '2022-05-30 21:06:27'
+}
+{
+  message: {
+    getProjectDBError: MongoNetworkTimeoutError: connection timed out
+        at connectionFailureError (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongodb/src/cmap/connect.ts:498:14)
+        at TLSSocket.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongodb/src/cmap/connect.ts:394:16)
+        at Object.onceWrapper (node:events:641:28)
+        at TLSSocket.emit (node:events:527:28)
+        at TLSSocket.emit (node:domain:475:12)
+        at TLSSocket.Socket._onTimeout (node:net:516:8)
+        at listOnTimeout (node:internal/timers:559:17)
+        at processTimers (node:internal/timers:502:7) {
+      [Symbol(errorLabels)]: Set(0) {}
+    }
+  },
+  level: 'error',
+  timestamp: '2022-05-31 09:13:18'
+}

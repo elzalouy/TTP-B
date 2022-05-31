@@ -1,7 +1,7 @@
 import { model, Schema, Model } from "mongoose";
-import { ITech } from "../types/model/Team";
+import { TeamsInterface } from "../types/model/Team";
 
-const TechMemberSchema: Schema = new Schema<ITech>(
+const TeamsSchema: Schema = new Schema<TeamsInterface>(
   {
     name: {
       type: String,
@@ -24,6 +24,6 @@ const TechMemberSchema: Schema = new Schema<ITech>(
   }
 );
 
-const TechMember: Model<ITech> = model("techMembers", TechMemberSchema);
+const Teams: Model<TeamsInterface> = model("teams", TeamsSchema);
 
-export default TechMember;
+export default Teams;
