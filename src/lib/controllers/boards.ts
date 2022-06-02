@@ -7,7 +7,7 @@ import { config } from "dotenv";
 import request from "request";
 import fs from "fs";
 import { Response } from "express";
-import { AttachmentResponse } from "../types/model/tasks";
+import { AttachmentResponse, TaskInfo } from "../types/model/tasks";
 var FormData = require("form-data");
 config();
 

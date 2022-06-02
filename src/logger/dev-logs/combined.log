@@ -18909,3 +18909,249 @@
   level: 'error',
   timestamp: '2022-06-01 15:13:45'
 }
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-06-02 09:03:38'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-06-02 09:35:41'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-06-02 09:44:31'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-06-02 10:13:31'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-06-02 10:15:14'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-06-02 10:15:59'
+}
+{
+  message: {
+    boardId: '6295e6110b35655881bddb3a',
+    myDepartment: {
+      _id: new ObjectId("6295e611f8e0108462784c7e"),
+      name: 'Creative ',
+      boardId: '6295e6110b35655881bddb3a',
+      color: 'lime',
+      mainBoard: false,
+      tasks: [
+        new ObjectId("6295e7b7f8e0108462784cb1"),
+        new ObjectId("6295e7c959e2e041355e4a5e"),
+        new ObjectId("6295e8553a38985b95fa89fe"),
+        new ObjectId("6295e886181f8d5f29d49999"),
+        new ObjectId("6295e977c636e096a2088e66"),
+        new ObjectId("6295f1719f1828bbd9f20fb4"),
+        new ObjectId("6295f8ea16a79bf8ce6a59bf"),
+        new ObjectId("6295fcf5f6c3cc2baa41c748"),
+        new ObjectId("6295fd65b7c65d346e4db0a0"),
+        new ObjectId("629600cc744f83c849659067"),
+        new ObjectId("6296013a1214d8bcefa1bbf3"),
+        new ObjectId("629724334ea15e2113bf2927"),
+        new ObjectId("629724d9e83a7e405c0c5cf8"),
+        new ObjectId("6297260d252c6fbe7bff4029"),
+        new ObjectId("62974dc13a878d06f065085f"),
+        new ObjectId("62975233c5700182f3e8e48d"),
+        new ObjectId("6297576d6e451798398bb455"),
+        new ObjectId("62975a02af0c21f878479775"),
+        new ObjectId("62975ca324ee8ecfe4d5fa6c"),
+        new ObjectId("62975fd124ee8ecfe4d5fb17"),
+        new ObjectId("6297604a24ee8ecfe4d5fb47"),
+        new ObjectId("629760ff24ee8ecfe4d5fb59"),
+        new ObjectId("629762257820763197306c1f"),
+        new ObjectId("629763737820763197306c88"),
+        new ObjectId("629764397820763197306c9a"),
+        new ObjectId("629767c97820763197306cb9"),
+        new ObjectId("629769cc7820763197306d14"),
+        new ObjectId("629869ddd6555ad7d9f5ef04"),
+        new ObjectId("62986a7da79647b6d91a788a")
+      ],
+      teamsId: [
+        {
+          idInTrello: '6297525a1a93320d33168d5d',
+          idInDB: new ObjectId("6295e665f8e0108462784c8e"),
+          _id: new ObjectId("6297525ba0346b5714d49047")
+        }
+      ],
+      createdAt: 2022-05-31T09:55:29.575Z,
+      updatedAt: 2022-06-02T07:45:01.695Z,
+      __v: 0,
+      canceldListId: '6295e611c88e771b2c0bf33b',
+      defaultListId: '6295e6124af7f3515c4a715c',
+      departmentWindowId: '6295e611f7270803d472c904',
+      doneListId: '6295e612338b9c604641f3fe',
+      notClearListId: '6295e612039e522434abafff',
+      notStartedListId: '6295e6128b91292a3648d11f',
+      reviewListId: '6295e612e85a5719ae8acc07',
+      sharedListID: '6295e6126a60c91c85212776'
+    }
+  },
+  level: 'info',
+  timestamp: '2022-06-02 10:17:22'
+}
+{
+  message: {
+    removeBoard: 'https://api.trello.com/1/boards/6295e6110b35655881bddb3a?response_type=token&key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68'
+  },
+  level: 'info',
+  timestamp: '2022-06-02 10:17:22'
+}
+{
+  message: {
+    'delete Tasks': { acknowledged: true, deletedCount: 2 },
+    'Delete Tech members': { acknowledged: true, deletedCount: 1 }
+  },
+  level: 'info',
+  timestamp: '2022-06-02 10:17:25'
+}
+{
+  message: {
+    boardId: '62960013b1fa04677b63eb40',
+    myDepartment: {
+      _id: new ObjectId("62960013744f83c84965903f"),
+      name: 'Design',
+      boardId: '62960013b1fa04677b63eb40',
+      color: 'pink',
+      mainBoard: false,
+      tasks: [ new ObjectId("62975903d89846d3725eceec") ],
+      teamsId: [],
+      createdAt: 2022-05-31T11:46:27.343Z,
+      updatedAt: 2022-06-01T12:18:11.367Z,
+      __v: 0,
+      canceldListId: '6296001329e85f284eeb6560',
+      defaultListId: '62960014fcfdaf3a5dedd02f',
+      departmentWindowId: '62960013b1a3080e8b619eab',
+      doneListId: '62960014e5ba913f22f65a3f',
+      notClearListId: '629600136b1bc71449b2180a',
+      notStartedListId: '6296001459937d7d66c372fa',
+      reviewListId: '629600142e432d3cc8af7684',
+      sharedListID: '629600147483ce5321b903f3'
+    }
+  },
+  level: 'info',
+  timestamp: '2022-06-02 10:17:36'
+}
+{
+  message: {
+    removeBoard: 'https://api.trello.com/1/boards/62960013b1fa04677b63eb40?response_type=token&key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68'
+  },
+  level: 'info',
+  timestamp: '2022-06-02 10:17:36'
+}
+{
+  message: {
+    'delete Tasks': { acknowledged: true, deletedCount: 1 },
+    'Delete Tech members': { acknowledged: true, deletedCount: 4 }
+  },
+  level: 'info',
+  timestamp: '2022-06-02 10:17:38'
+}
+{
+  message: {
+    borderData: Promise { <pending> },
+    createBoardApi: 'https://api.trello.com/1/boards/?name=Design&prefs_background=blue&defaultLists=false&key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68'
+  },
+  level: 'info',
+  timestamp: '2022-06-02 10:18:48'
+}
+{
+  message: {
+    data: {
+      name: 'Design',
+      color: 'blue',
+      boardId: '62987267ebcef45540453ff3'
+    }
+  },
+  level: 'info',
+  timestamp: '2022-06-02 10:18:48'
+}
+{
+  message: { removeWebhookSucced: 'done' },
+  level: 'info',
+  timestamp: '2022-06-02 10:18:52'
+}
+{
+  message: { teamListIds: [] },
+  level: 'info',
+  timestamp: '2022-06-02 10:18:52'
+}
+{
+  message: { webhookCreateResult: 'webhook done' },
+  level: 'info',
+  timestamp: '2022-06-02 10:18:55'
+}
+{
+  message: {
+    createCardInListError: FetchError: request to https://api.trello.com/1/cards?idList=62987287a916e76a7838b898&name=new%20task%20file&attachments=true&key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68 failed, reason: getaddrinfo ENOTFOUND api.trello.com
+        at ClientRequest.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/node-fetch/lib/index.js:1491:11)
+        at ClientRequest.emit (node:events:527:28)
+        at ClientRequest.emit (node:domain:475:12)
+        at TLSSocket.socketErrorListener (node:_http_client:454:9)
+        at TLSSocket.emit (node:events:527:28)
+        at TLSSocket.emit (node:domain:475:12)
+        at emitErrorNT (node:internal/streams/destroy:157:8)
+        at emitErrorCloseNT (node:internal/streams/destroy:122:3)
+        at processTicksAndRejections (node:internal/process/task_queues:83:21) {
+      type: 'system',
+      errno: 'ENOTFOUND',
+      code: 'ENOTFOUND'
+    }
+  },
+  level: 'error',
+  timestamp: '2022-06-02 10:21:33'
+}
+{
+  message: { getTeamsError: 'Error while creating Card in Trello' },
+  level: 'error',
+  timestamp: '2022-06-02 10:21:33'
+}
+{
+  message: {
+    createCardInListError: FetchError: request to https://api.trello.com/1/cards?idList=62987287a916e76a7838b898&name=new%20task%20file&attachments=true&key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68 failed, reason: connect ETIMEDOUT 185.166.143.26:443
+        at ClientRequest.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/node-fetch/lib/index.js:1491:11)
+        at ClientRequest.emit (node:events:527:28)
+        at ClientRequest.emit (node:domain:475:12)
+        at TLSSocket.socketErrorListener (node:_http_client:454:9)
+        at TLSSocket.emit (node:events:527:28)
+        at TLSSocket.emit (node:domain:475:12)
+        at emitErrorNT (node:internal/streams/destroy:157:8)
+        at emitErrorCloseNT (node:internal/streams/destroy:122:3)
+        at processTicksAndRejections (node:internal/process/task_queues:83:21) {
+      type: 'system',
+      errno: 'ETIMEDOUT',
+      code: 'ETIMEDOUT'
+    }
+  },
+  level: 'error',
+  timestamp: '2022-06-02 10:22:58'
+}
+{
+  message: { getTeamsError: 'Error while creating Card in Trello' },
+  level: 'error',
+  timestamp: '2022-06-02 10:22:58'
+}

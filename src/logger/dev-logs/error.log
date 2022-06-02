@@ -20632,3 +20632,53 @@
   level: 'error',
   timestamp: '2022-06-01 15:13:45'
 }
+{
+  message: {
+    createCardInListError: FetchError: request to https://api.trello.com/1/cards?idList=62987287a916e76a7838b898&name=new%20task%20file&attachments=true&key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68 failed, reason: getaddrinfo ENOTFOUND api.trello.com
+        at ClientRequest.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/node-fetch/lib/index.js:1491:11)
+        at ClientRequest.emit (node:events:527:28)
+        at ClientRequest.emit (node:domain:475:12)
+        at TLSSocket.socketErrorListener (node:_http_client:454:9)
+        at TLSSocket.emit (node:events:527:28)
+        at TLSSocket.emit (node:domain:475:12)
+        at emitErrorNT (node:internal/streams/destroy:157:8)
+        at emitErrorCloseNT (node:internal/streams/destroy:122:3)
+        at processTicksAndRejections (node:internal/process/task_queues:83:21) {
+      type: 'system',
+      errno: 'ENOTFOUND',
+      code: 'ENOTFOUND'
+    }
+  },
+  level: 'error',
+  timestamp: '2022-06-02 10:21:33'
+}
+{
+  message: { getTeamsError: 'Error while creating Card in Trello' },
+  level: 'error',
+  timestamp: '2022-06-02 10:21:33'
+}
+{
+  message: {
+    createCardInListError: FetchError: request to https://api.trello.com/1/cards?idList=62987287a916e76a7838b898&name=new%20task%20file&attachments=true&key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68 failed, reason: connect ETIMEDOUT 185.166.143.26:443
+        at ClientRequest.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/node-fetch/lib/index.js:1491:11)
+        at ClientRequest.emit (node:events:527:28)
+        at ClientRequest.emit (node:domain:475:12)
+        at TLSSocket.socketErrorListener (node:_http_client:454:9)
+        at TLSSocket.emit (node:events:527:28)
+        at TLSSocket.emit (node:domain:475:12)
+        at emitErrorNT (node:internal/streams/destroy:157:8)
+        at emitErrorCloseNT (node:internal/streams/destroy:122:3)
+        at processTicksAndRejections (node:internal/process/task_queues:83:21) {
+      type: 'system',
+      errno: 'ETIMEDOUT',
+      code: 'ETIMEDOUT'
+    }
+  },
+  level: 'error',
+  timestamp: '2022-06-02 10:22:58'
+}
+{
+  message: { getTeamsError: 'Error while creating Card in Trello' },
+  level: 'error',
+  timestamp: '2022-06-02 10:22:58'
+}

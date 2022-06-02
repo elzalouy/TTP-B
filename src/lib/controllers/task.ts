@@ -167,20 +167,22 @@ class TaskController extends TaskDB {
         data.cardId = createdCard.id;
         let attachment: AttachmentResponse;
         let newAttachments: AttachmentSchema[] = [];
-        await Promise.all(
-          files.map(async (file) => {
-            attachment = await BoardController.createAttachmentOnCard(
-              createdCard.id,
-              file
-            );
-            newAttachments.push({
-              mimeType: attachment.mimeType,
-              trelloId: attachment.id,
-              url: attachment.url,
-            });
-            data.attachedFiles = newAttachments;
-          })
-        );
+        if (files) {
+          await Promise.all(
+            files.map(async (file) => {
+              attachment = await BoardController.createAttachmentOnCard(
+                createdCard.id,
+                file
+              );
+              newAttachments.push({
+                mimeType: attachment.mimeType,
+                trelloId: attachment.id,
+                url: attachment.url,
+              });
+              data.attachedFiles = newAttachments;
+            })
+          );
+        }
         console.log(data);
         deleteAll();
         return await super.createTaskDB(data);
