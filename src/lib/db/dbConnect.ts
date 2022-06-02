@@ -4,12 +4,10 @@ import { config } from "dotenv";
 import logger from "../../logger";
 import { UserData } from "../types/model/User";
 import UserDB from "../dbCalls/user/user";
+import Config from "config";
 config();
 
-const db: string =
-  process.env.NODE_ENV === "development"
-    ? process.env.MONGODB_DEV_URL
-    : process.env.MONGODB_PROD_URL;
+const db: string = Config.get("monogDb");
 logger.info({ db });
 interface DBOptions {
   useNewUrlParser: Boolean;
@@ -26,11 +24,11 @@ const mongoDB: () => Promise<void> = async () => {
       //By default, mongoose buffers commands when the connection goes down until the driver manages to reconnect. To disable buffering, set bufferCommands to false.
       bufferCommands: true,
       // how much time mongo can wait until berfore throwing an error
-      connectTimeoutMS: 1000,
+      connectTimeoutMS: 5000,
     };
 
     await connect(db, options);
-    console.log("Mongo DB connected");
+    console.log("Mongo DB connected,", Config.get("monogDb"));
 
     // adding superAdmin in db if not exists
     const userInfo: any = await UserDB.findUser({

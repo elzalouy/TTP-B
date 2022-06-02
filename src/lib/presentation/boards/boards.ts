@@ -78,6 +78,21 @@ const BoardReq = class BoardReq extends BoardController {
       return res.status(500).send(customeError("server_error", 500));
     }
   }
+
+  // static async handleCreateAttachmentTest(req: Request, res: Response) {
+  //   try {
+  //     let cardId = req.body.cardId;
+  //     if (req.files) {
+  //       let files: any = req.files;
+  //       let result = await super.__createAttachment(cardId, files[0]);
+  //       console.log(result);
+  //       return res.send(result);
+  //     } else res.send("no files");
+  //   } catch (error) {
+  //     logger.error({ handleGetBoards: error });
+  //     return res.status(500).send(customeError("server_error", 500));
+  //   }
+  // }
 };
 
 export default BoardReq;

@@ -3,17 +3,18 @@ import { Request, Response } from "express";
 import logger from "../../../logger";
 import TaskController from "../../controllers/task";
 import { TaskData } from "../../types/model/tasks";
-import { deleteAll } from "../../services/upload";
 import { createTaskSchema } from "../../db/validation";
 
 const TaskReq = class TaskReq extends TaskController {
   static async handleCreateCard(req: Request, res: Response) {
     try {
       let TaskData: TaskData = req.body;
+      if (TaskData.teamId === "") TaskData.teamId = null;
       let isValid = createTaskSchema.validate(TaskData);
       if (isValid.error) return res.status(400).send(isValid.error.details);
       let task = await super.createTask(TaskData, req.files);
       if (task) {
+        console.log(task);
         return res.send(task);
       } else {
         return res.status(400).send(customeError("create_task_error", 400));
