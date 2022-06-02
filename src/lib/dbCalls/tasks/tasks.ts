@@ -130,6 +130,14 @@ class TaskDB {
       logger.error({ updateTaskDBError: error });
     }
   }
+  /**
+   * Delete Tasks where condition
+   *
+   * it must only used in deleting a department, so the board will also be deleted and all cards and lists inside.
+   * If it's used for any other purpose will cause a big issue in which cards are still not deleted.
+   * @param data BoardId
+   * @returns deleteResult
+   */
   static async __deleteTasksWhereDB(data: TaskData) {
     try {
       let result = await Tasks.deleteMany(data);

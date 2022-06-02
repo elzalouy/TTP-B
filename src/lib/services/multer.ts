@@ -15,6 +15,8 @@ const Mime = [
   "application/vnd.openxmlformats-officedocument.wordprocessingml.document", // .docx
   "image/gif",
   "application/pdf",
+  "application/vnd.ms-powerpoint",
+  "application/vnd.openxmlformats-officedocument.presentationml.presentation",
 ];
 export default function () {
   const storage = multer.diskStorage({
@@ -36,6 +38,7 @@ export default function () {
   });
   const upload = multer({
     storage: storage,
+    limits: { fileSize: 1000000 },
     fileFilter: (
       req: Request,
       file: Express.Multer.File,
@@ -47,7 +50,7 @@ export default function () {
         cb(null, false);
         return cb(
           new Error(
-            "Only .png, .jpg, .jpeg, svg, doc, docx, csv, pdf, and GIF  format allowed!"
+            "Only .png, .jpg, .jpeg, svg, doc, docx, csv, pdf, power point and GIF  format allowed! and max size is 10 MB"
           )
         );
       }

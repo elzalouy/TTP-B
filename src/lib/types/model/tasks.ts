@@ -1,3 +1,4 @@
+import { bool } from "aws-sdk/clients/signer";
 import { Binary, ObjectId } from "bson";
 import { Document } from "mongoose";
 // export interface TrelloData
@@ -23,7 +24,7 @@ export interface TaskInfo extends Document {
   deliveryDate?: Date;
   done?: Date;
   turnoverTime?: number;
-  attachedFiles?: string;
+  attachedFiles?: AttachmentSchema[];
   attachedCard?: string;
   cardId?: string;
   boardId?: string;
@@ -39,7 +40,7 @@ export interface TaskData {
   _id?: string;
   name?: string;
   projectId?: string;
-  categoryId?: string; //todo creat category list
+  categoryId?: string;
   subCategoryId?: string;
   countNotClear?: number;
   countShared?: number;
@@ -57,11 +58,39 @@ export interface TaskData {
   deliveryDate?: Date;
   done?: Date;
   turnoverTime?: number;
-  attachedFiles?: string | any;
+  attachedFiles?: AttachmentSchema[];
   attachedCard?: string;
   teamId?: string;
   cardId?: string;
   boardId?: string;
   file?: object;
   description?: string;
+}
+export interface AttachmentResponse {
+  id: string;
+  bytes: number;
+  date: Date;
+  edgeColor: string;
+  idMember: string;
+  isUpload: true;
+  mimeType: string;
+  name: string;
+  previews: {
+    id: string;
+    _id: string;
+    scaled: bool;
+    url: string;
+    bytes: number;
+    height: number;
+    width: number;
+  }[];
+  url: string;
+  pos: number;
+  fileName: number;
+  limits: any;
+}
+export interface AttachmentSchema {
+  trelloId: string;
+  mimeType: string;
+  url: string;
 }

@@ -8,13 +8,14 @@ import cookieParser from "cookie-parser";
 import AppSocket from "./startup/socket";
 import i18n from "./i18n/config";
 import config from "config";
+import bodyParser from "body-parser";
 const ngrok = require("ngrok");
 
 const app: Application = express();
+app.use(express.json());
 app.use(cors());
 app.use(cookieParser());
 app.use(morgan("dev"));
-app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(i18n.init);
 mongoDB();

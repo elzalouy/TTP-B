@@ -1,4 +1,9 @@
-import { TaskData, TaskInfo } from "./../types/model/tasks";
+import {
+  AttachmentResponse,
+  AttachmentSchema,
+  TaskData,
+  TaskInfo,
+} from "./../types/model/tasks";
 import { customeError } from "./../utils/errorUtils";
 import logger from "../../logger";
 import TaskDB from "../dbCalls/tasks/tasks";
@@ -14,8 +19,8 @@ class TaskController extends TaskDB {
   static async getTasks(data: TaskData) {
     return await TaskController.__getTasks(data);
   }
-  static async createTask(data: TaskData, file: any) {
-    return await TaskController.__CreateNewTask(data, file);
+  static async createTask(data: TaskData, files: any) {
+    return await TaskController.__CreateNewTask(data, files);
   }
   static async updateTask(data: object) {
     return await TaskController.__updateTaskData(data);
@@ -68,8 +73,6 @@ class TaskController extends TaskDB {
   }
   static async __webhookUpdate(data: any) {
     try {
-      // This action for updating card
-      // logger.info({ webhookUpdate: data });
       console.log(data);
       let targetTask: any;
       const targetList: any = [
@@ -162,21 +165,25 @@ class TaskController extends TaskDB {
         await BoardController.createCardInList(data.listId, data.name);
       if (createdCard) {
         data.cardId = createdCard.id;
-        let attachment;
-        if (files) {
-          files.forEach(async (file) => {
-            console.log(file);
+        let attachment: AttachmentResponse;
+        let newAttachments: AttachmentSchema[] = [];
+        await Promise.all(
+          files.map(async (file) => {
             attachment = await BoardController.createAttachmentOnCard(
               createdCard.id,
-              file.path,
-              file.filename
+              file
             );
-          });
-        }
-        data.attachedFiles = attachment;
-        let task = await super.createTaskDB(data);
+            newAttachments.push({
+              mimeType: attachment.mimeType,
+              trelloId: attachment.id,
+              url: attachment.url,
+            });
+            data.attachedFiles = newAttachments;
+          })
+        );
+        console.log(data);
         deleteAll();
-        return { task, createdCard, attachment };
+        return await super.createTaskDB(data);
       } else throw "Error while creating Card in Trello";
     } catch (error) {
       logger.error({ getTeamsError: error });
