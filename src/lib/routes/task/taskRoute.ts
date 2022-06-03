@@ -1,7 +1,7 @@
 import { Router } from "express";
 import TaskReq from "../../presentation/task/task";
 import apiRoute from "./apis";
-import Multer from "../../services/multer";
+import Multer from "../../middlewares/multer";
 import Authed from "../../middlewares/Auth/Authed";
 const router = Router();
 const multer = Multer();
@@ -17,6 +17,7 @@ const {
   DELETE_TASK,
   GET_TASKS_STATISTICS,
   GET_ALL_TASKS_STATISTICS,
+  DOWNLOAD_ATTACHMENT,
 } = apiRoute;
 const {
   handleCreateCard,
@@ -28,6 +29,7 @@ const {
   handleDeleteTasks,
   handleDeleteTasksByProjectId,
   handleDeleteTask,
+  handleDownloadAttachment,
 } = TaskReq;
 
 router.post(
@@ -36,6 +38,7 @@ router.post(
   multer.array("attachedFiles"),
   handleCreateCard
 );
+router.post(`${DOWNLOAD_ATTACHMENT}`, handleDownloadAttachment);
 router.post(`${UPDATE_TASK}`, multer.single("attachedFiles"), handleUpdateCard);
 router.put(`${MOVE_TASK}`, Authed, handleMoveCard);
 router.post(`${WEBHOOK_UPDATES}`, handleWebhookUpdateCard);

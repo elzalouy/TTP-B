@@ -43,6 +43,9 @@ class TaskController extends TaskDB {
   static async deleteTasksWhere(data: TaskData) {
     return await TaskController.__deleteTasksWhere(data);
   }
+  static async downloadAttachment(cardId: string, attachmentId: string) {
+    return await TaskController.__downloadAttachment(cardId, attachmentId);
+  }
   static async moveTaskOnTrello(
     cardId: string,
     listId: string,
@@ -175,7 +178,8 @@ class TaskController extends TaskDB {
                 file
               );
               newAttachments.push({
-                mimeType: attachment.mimeType,
+                name: file.filename,
+                mimeType: attachment?.mimeType,
                 trelloId: attachment.id,
                 url: attachment.url,
               });
@@ -244,6 +248,17 @@ class TaskController extends TaskDB {
       throw "Task not existed";
     } catch (error) {
       logger.error({ deleteTaskError: error });
+    }
+  }
+  static async __downloadAttachment(cardId: string, attachmentId: string) {
+    try {
+      let response = await BoardController.downloadAttachment(
+        cardId,
+        attachmentId
+      );
+      return response;
+    } catch (error) {
+      logger.error({ downloadAttachmentError: error });
     }
   }
 }

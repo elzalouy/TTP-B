@@ -1,6 +1,7 @@
 import { model, Schema, Model } from "mongoose";
 import { TaskInfo } from "../types/model/tasks";
 const FilesSchema: Schema = new Schema({
+  name: { type: String, required: true },
   trelloId: { type: String, required: true },
   mimeType: { type: String, required: true },
   url: { type: String, required: true },

@@ -1,4 +1,4 @@
-import { Request } from "express";
+import { Request, Response } from "express";
 import multer, { FileFilterCallback } from "multer";
 import { v4 } from "uuid";
 const path = require("path");
@@ -21,29 +21,23 @@ const Mime = [
 export default function () {
   const storage = multer.diskStorage({
     destination: (
-      req: Request,
+      req: any,
       file: Express.Multer.File,
       cb: DestinationCallback
     ) => {
       cb(null, path.join(dir[0], "/uploads"));
     },
-    filename: (
-      req: Request,
-      file: Express.Multer.File,
-      cb: FileNameCallback
-    ) => {
-      const fileName = file.originalname.toLowerCase().split(" ").join("-");
-      cb(null, v4() + "-" + Date.now() + "-" + fileName);
+    filename: (req: any, file: Express.Multer.File, cb: FileNameCallback) => {
+      const fileName = file.originalname;
+      cb(null, fileName);
+      //   .toLowerCase().split(" ").join("-");
+      // cb(null, v4() + "-" + Date.now() + "-" + fileName);
     },
   });
   const upload = multer({
     storage: storage,
     limits: { fileSize: 1000000 },
-    fileFilter: (
-      req: Request,
-      file: Express.Multer.File,
-      cb: FileFilterCallback
-    ) => {
+    fileFilter: (req, file: Express.Multer.File, cb: FileFilterCallback) => {
       if (Mime.includes(file.mimetype.toLowerCase())) {
         cb(null, true);
       } else {

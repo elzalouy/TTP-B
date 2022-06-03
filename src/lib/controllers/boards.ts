@@ -57,7 +57,9 @@ class BoardController {
   static async createCardInList(listId: string, cardName: string) {
     return await BoardController.__createCard(listId, cardName);
   }
-
+  static async downloadAttachment(cardId: string, attachmentId: string) {
+    return await BoardController.__downloadAttachment(cardId, attachmentId);
+  }
   static async createAttachmentOnCard(
     cardId: string,
     file: Express.Multer.File
@@ -340,13 +342,33 @@ class BoardController {
 
   static async __singleBoardInfo(id: string, type: string) {
     try {
-      let boardApi = await trelloApi(`boards/${id}/${type}?`);
+      let boardApi = trelloApi(`boards/${id}/${type}?`);
       let board = await fetch(boardApi, {
         method: "GET",
       });
       return board.json();
     } catch (error) {
       logger.error({ singleBoardError: error });
+    }
+  }
+  static async __downloadAttachment(cardId: string, attachmentId: string) {
+    try {
+      let api = trelloApi(
+        `cards/${cardId}/attachments/${attachmentId}?fields=url&`
+      );
+      console.log(api);
+      let Response: any = null;
+      await fetch(api, {
+        method: "GET",
+        headers: {
+          Accept: "application/json",
+        },
+      }).then(async (response) => {
+        Response = JSON.parse(await response.text());
+      });
+      return Response;
+    } catch (error) {
+      logger.error({ downloadAttachment: error });
     }
   }
 }
