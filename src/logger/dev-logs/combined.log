@@ -1,0 +1,125 @@
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-06-02 18:09:55'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-06-02 18:12:26'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-06-02 18:13:49'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-06-02 18:15:50'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-06-02 18:16:53'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-06-02 18:17:39'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-06-02 18:18:02'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-06-02 18:33:18'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-06-02 18:36:08'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-06-02 18:38:28'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-06-02 18:39:03'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-06-02 18:39:16'
+}
+{
+  message: {
+    borderData: Promise { <pending> },
+    createBoardApi: 'https://api.trello.com/1/boards/?name=Local Test&prefs_background=blue&defaultLists=false&key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68'
+  },
+  level: 'info',
+  timestamp: '2022-06-03 13:43:24'
+}
+{
+  message: {
+    data: {
+      name: 'Local Test',
+      color: 'blue',
+      boardId: '6299e5cab838848cb7c7591d'
+    }
+  },
+  level: 'info',
+  timestamp: '2022-06-03 13:43:24'
+}
+{
+  message: { removeWebhookSucced: 'done' },
+  level: 'info',
+  timestamp: '2022-06-03 13:43:28'
+}
+{
+  message: { teamListIds: [] },
+  level: 'info',
+  timestamp: '2022-06-03 13:43:28'
+}
+{
+  message: { webhookCreateResult: 'webhook done' },
+  level: 'info',
+  timestamp: '2022-06-03 13:43:29'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-06-03 13:53:34'
+}
