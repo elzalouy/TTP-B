@@ -70,6 +70,7 @@ const TechMemberDB = class TechMemberDB {
       logger.error({ addTechMemberError: error });
     }
   }
+  
   static async __deleteTechMemberDB(data: TeamsData) {
     try {
       let deleteResult = await TechMember.deleteMany(data);

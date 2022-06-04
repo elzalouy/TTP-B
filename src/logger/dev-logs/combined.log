@@ -1561,3 +1561,960 @@
     counter: 0
   }
 }
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-06-04 16:05:32'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-06-04 16:06:35'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-06-04 16:07:09'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-06-04 16:16:25'
+}
+{
+  message: {
+    __checkBoardListNameError: FetchError: invalid json response body at https://api.trello.com/1/boards/623353aa60ebf534828be159/lists?key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68 reason: Unexpected token u in JSON at position 0
+        at C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\node-fetch\lib\index.js:273:32
+        at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+      type: 'invalid-json'
+    }
+  },
+  level: 'error',
+  timestamp: '2022-06-04 16:29:52'
+}
+{
+  message: {
+    createMemberError: FetchError: invalid json response body at https://api.trello.com/1/lists?name=mohamed_nageh_3&idBoard=623353aa60ebf534828be159&key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68 reason: Unexpected token u in JSON at position 0
+        at C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\node-fetch\lib\index.js:273:32
+        at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+      type: 'invalid-json'
+    }
+  },
+  level: 'error',
+  timestamp: '2022-06-04 16:29:53'
+}
+{
+  message: {
+    handleGetBoards: TypeError: Cannot read properties of undefined (reading 'status')
+        at C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\src\lib\presentation\techMember\techMember.ts:12:18
+        at Generator.next (<anonymous>)
+        at fulfilled (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\src\lib\presentation\techMember\techMember.ts:5:58)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5)
+  },
+  level: 'error',
+  timestamp: '2022-06-04 16:29:53'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-06-04 16:30:11'
+}
+{
+  message: {
+    __checkBoardListNameError: FetchError: invalid json response body at https://api.trello.com/1/boards/623353aa60ebf534828be159/lists?key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68 reason: Unexpected token u in JSON at position 0
+        at C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\node-fetch\lib\index.js:273:32
+        at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+      type: 'invalid-json'
+    }
+  },
+  level: 'error',
+  timestamp: '2022-06-04 16:30:19'
+}
+{
+  message: {
+    createMemberError: FetchError: invalid json response body at https://api.trello.com/1/lists?name=mohamed_nageh_3&idBoard=623353aa60ebf534828be159&key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68 reason: Unexpected token u in JSON at position 0
+        at C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\node-fetch\lib\index.js:273:32
+        at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+      type: 'invalid-json'
+    }
+  },
+  level: 'error',
+  timestamp: '2022-06-04 16:30:19'
+}
+{
+  message: {
+    handleGetBoards: TypeError: Cannot read properties of undefined (reading 'status')
+        at C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\src\lib\presentation\techMember\techMember.ts:12:18
+        at Generator.next (<anonymous>)
+        at fulfilled (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\src\lib\presentation\techMember\techMember.ts:5:58)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5)
+  },
+  level: 'error',
+  timestamp: '2022-06-04 16:30:19'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-06-04 16:30:49'
+}
+{
+  message: {
+    __checkBoardListNameError: FetchError: invalid json response body at https://api.trello.com/1/boards/623353aa60ebf534828be159/lists?key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68 reason: Unexpected token u in JSON at position 0
+        at C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\node-fetch\lib\index.js:273:32
+        at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+      type: 'invalid-json'
+    }
+  },
+  level: 'error',
+  timestamp: '2022-06-04 16:30:57'
+}
+{
+  message: {
+    createMemberError: FetchError: invalid json response body at https://api.trello.com/1/lists?name=mohamed_nageh_3&idBoard=623353aa60ebf534828be159&key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68 reason: Unexpected token u in JSON at position 0
+        at C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\node-fetch\lib\index.js:273:32
+        at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+      type: 'invalid-json'
+    }
+  },
+  level: 'error',
+  timestamp: '2022-06-04 16:30:57'
+}
+{
+  message: {
+    __checkBoardListNameError: FetchError: invalid json response body at https://api.trello.com/1/boards/623353aa60ebf534828be159/lists?key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68 reason: Unexpected token u in JSON at position 0
+        at C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\node-fetch\lib\index.js:273:32
+        at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+      type: 'invalid-json'
+    }
+  },
+  level: 'error',
+  timestamp: '2022-06-04 16:31:22'
+}
+{
+  message: {
+    createMemberError: FetchError: invalid json response body at https://api.trello.com/1/lists?name=mohamed_nageh_3&idBoard=623353aa60ebf534828be159&key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68 reason: Unexpected token u in JSON at position 0
+        at C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\node-fetch\lib\index.js:273:32
+        at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+      type: 'invalid-json'
+    }
+  },
+  level: 'error',
+  timestamp: '2022-06-04 16:31:23'
+}
+{
+  message: {
+    __checkBoardListNameError: FetchError: invalid json response body at https://api.trello.com/1/boards/623353aa60ebf534828be159/lists?key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68 reason: Unexpected token u in JSON at position 0
+        at C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\node-fetch\lib\index.js:273:32
+        at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+      type: 'invalid-json'
+    }
+  },
+  level: 'error',
+  timestamp: '2022-06-04 16:31:51'
+}
+{
+  message: {
+    createMemberError: FetchError: invalid json response body at https://api.trello.com/1/lists?name=mohamed_nageh_3&idBoard=623353aa60ebf534828be159&key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68 reason: Unexpected token u in JSON at position 0
+        at C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\node-fetch\lib\index.js:273:32
+        at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+      type: 'invalid-json'
+    }
+  },
+  level: 'error',
+  timestamp: '2022-06-04 16:31:51'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-06-04 16:32:03'
+}
+{
+  message: {
+    __checkBoardListNameError: FetchError: invalid json response body at https://api.trello.com/1/boards/629b3e6314ad376eb0ab7340/lists?key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68 reason: Unexpected token T in JSON at position 0
+        at C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\node-fetch\lib\index.js:273:32
+        at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+      type: 'invalid-json'
+    }
+  },
+  level: 'error',
+  timestamp: '2022-06-04 16:34:28'
+}
+{
+  message: {
+    createMemberError: FetchError: invalid json response body at https://api.trello.com/1/lists?name=Testing&idBoard=629b3e6314ad376eb0ab7340&key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68 reason: Unexpected token u in JSON at position 0
+        at C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\node-fetch\lib\index.js:273:32
+        at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+      type: 'invalid-json'
+    }
+  },
+  level: 'error',
+  timestamp: '2022-06-04 16:34:29'
+}
+{
+  message: {
+    handleGetBoards: TypeError: Cannot read properties of undefined (reading 'status')
+        at C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\src\lib\presentation\techMember\techMember.ts:12:18
+        at Generator.next (<anonymous>)
+        at fulfilled (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\src\lib\presentation\techMember\techMember.ts:5:58)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5)
+  },
+  level: 'error',
+  timestamp: '2022-06-04 16:34:29'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-06-04 16:34:49'
+}
+{
+  message: {
+    __checkBoardListNameError: FetchError: invalid json response body at https://api.trello.com/1/boards/629b3e6314ad376eb0ab7340/lists?key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68 reason: Unexpected token T in JSON at position 0
+        at C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\node-fetch\lib\index.js:273:32
+        at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+      type: 'invalid-json'
+    }
+  },
+  level: 'error',
+  timestamp: '2022-06-04 16:35:03'
+}
+{
+  message: {
+    createMemberError: FetchError: invalid json response body at https://api.trello.com/1/lists?name=Testing&idBoard=629b3e6314ad376eb0ab7340&key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68 reason: Unexpected token u in JSON at position 0
+        at C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\node-fetch\lib\index.js:273:32
+        at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+      type: 'invalid-json'
+    }
+  },
+  level: 'error',
+  timestamp: '2022-06-04 16:35:04'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-06-04 16:37:17'
+}
+{
+  message: {
+    createMemberError: TypeError: Cannot read properties of null (reading 'id')
+        at Function.<anonymous> (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\src\lib\controllers\techMember.ts:113:41)
+        at Generator.next (<anonymous>)
+        at fulfilled (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\src\lib\controllers\techMember.ts:5:58)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5)
+  },
+  level: 'error',
+  timestamp: '2022-06-04 16:37:53'
+}
+{
+  message: {
+    __removeMemberAndListError: FetchError: invalid json response body at https://api.trello.com/1/lists/undefined/closed?value=true&key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68 reason: Unexpected token i in JSON at position 0
+        at C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\node-fetch\lib\index.js:273:32
+        at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+      type: 'invalid-json'
+    }
+  },
+  level: 'error',
+  timestamp: '2022-06-04 16:43:53'
+}
+{
+  message: { data: { isDeleted: 'true', listId: undefined } },
+  level: 'info',
+  timestamp: '2022-06-04 16:43:53'
+}
+{
+  message: {
+    __removeMemberAndListError: FetchError: invalid json response body at https://api.trello.com/1/lists/undefined/closed?value=true&key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68 reason: Unexpected token i in JSON at position 0
+        at C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\node-fetch\lib\index.js:273:32
+        at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+      type: 'invalid-json'
+    }
+  },
+  level: 'error',
+  timestamp: '2022-06-04 16:45:11'
+}
+{
+  message: { data: { isDeleted: 'false', listId: undefined } },
+  level: 'info',
+  timestamp: '2022-06-04 16:45:11'
+}
+{
+  message: {
+    __removeMemberAndListError: FetchError: invalid json response body at https://api.trello.com/1/lists/undefined/closed?value=true&key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68 reason: Unexpected token i in JSON at position 0
+        at C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\node-fetch\lib\index.js:273:32
+        at runMicrotasks (<anonymous>)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+      type: 'invalid-json'
+    }
+  },
+  level: 'error',
+  timestamp: '2022-06-04 16:56:56'
+}
+{
+  message: { data: { isDeleted: 'true', listId: undefined } },
+  level: 'info',
+  timestamp: '2022-06-04 16:56:56'
+}
+{
+  message: {
+    __removeMemberAndListError: FetchError: invalid json response body at https://api.trello.com/1/lists/undefined/closed?value=true&key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68 reason: Unexpected token i in JSON at position 0
+        at C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\node-fetch\lib\index.js:273:32
+        at runMicrotasks (<anonymous>)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+      type: 'invalid-json'
+    }
+  },
+  level: 'error',
+  timestamp: '2022-06-04 16:59:31'
+}
+{
+  message: { data: { isDeleted: 'true', listId: undefined } },
+  level: 'info',
+  timestamp: '2022-06-04 16:59:31'
+}
+{
+  message: {
+    __removeMemberAndListError: FetchError: invalid json response body at https://api.trello.com/1/lists/undefined/closed?value=true&key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68 reason: Unexpected token i in JSON at position 0
+        at C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\node-fetch\lib\index.js:273:32
+        at runMicrotasks (<anonymous>)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+      type: 'invalid-json'
+    }
+  },
+  level: 'error',
+  timestamp: '2022-06-04 17:01:14'
+}
+{
+  message: { data: { isDeleted: 'true', listId: undefined } },
+  level: 'info',
+  timestamp: '2022-06-04 17:01:14'
+}
+{
+  message: {
+    __removeMemberAndListError: FetchError: invalid json response body at https://api.trello.com/1/lists/undefined/closed?value=true&key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68 reason: Unexpected token i in JSON at position 0
+        at C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\node-fetch\lib\index.js:273:32
+        at runMicrotasks (<anonymous>)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+      type: 'invalid-json'
+    }
+  },
+  level: 'error',
+  timestamp: '2022-06-04 17:07:46'
+}
+{
+  message: { data: { isDeleted: 'true', listId: undefined } },
+  level: 'info',
+  timestamp: '2022-06-04 17:07:46'
+}
+{
+  message: {
+    __removeMemberAndListError: FetchError: invalid json response body at https://api.trello.com/1/lists/undefined/closed?value=true&key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68 reason: Unexpected token i in JSON at position 0
+        at C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\node-fetch\lib\index.js:273:32
+        at runMicrotasks (<anonymous>)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+      type: 'invalid-json'
+    }
+  },
+  level: 'error',
+  timestamp: '2022-06-04 17:08:56'
+}
+{
+  message: { data: { isDeleted: 'true', listId: undefined } },
+  level: 'info',
+  timestamp: '2022-06-04 17:08:56'
+}
+{
+  message: {
+    __removeMemberAndListError: FetchError: invalid json response body at https://api.trello.com/1/lists/undefined/closed?value=true&key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68 reason: Unexpected token i in JSON at position 0
+        at C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\node-fetch\lib\index.js:273:32
+        at runMicrotasks (<anonymous>)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+      type: 'invalid-json'
+    }
+  },
+  level: 'error',
+  timestamp: '2022-06-04 17:09:18'
+}
+{
+  message: { data: { isDeleted: 'true', listId: undefined } },
+  level: 'info',
+  timestamp: '2022-06-04 17:09:18'
+}
+{
+  message: {
+    __removeMemberAndListError: FetchError: invalid json response body at https://api.trello.com/1/lists/undefined/closed?value=true&key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68 reason: Unexpected token i in JSON at position 0
+        at C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\node-fetch\lib\index.js:273:32
+        at runMicrotasks (<anonymous>)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+      type: 'invalid-json'
+    }
+  },
+  level: 'error',
+  timestamp: '2022-06-04 17:09:36'
+}
+{
+  message: { data: { isDeleted: 'true', listId: undefined } },
+  level: 'info',
+  timestamp: '2022-06-04 17:09:36'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-06-04 17:23:00'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-06-04 17:24:36'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-06-04 17:25:10'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-06-04 17:27:14'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-06-04 17:28:04'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-06-04 17:29:14'
+}
+{
+  message: {
+    __removeMemberAndListError: FetchError: invalid json response body at https://api.trello.com/1/lists/undefined/closed?value=true&key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68 reason: Unexpected token i in JSON at position 0
+        at C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\node-fetch\lib\index.js:273:32
+        at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+      type: 'invalid-json'
+    }
+  },
+  level: 'error',
+  timestamp: '2022-06-04 17:29:32'
+}
+{
+  message: { data: { isDeleted: 'true', listId: undefined } },
+  level: 'info',
+  timestamp: '2022-06-04 17:29:32'
+}
+{
+  message: {
+    updateTechMemberError: TypeError: Cannot read properties of null (reading 'listId')
+        at Function.<anonymous> (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\src\lib\controllers\techMember.ts:87:48)
+        at Generator.next (<anonymous>)
+        at fulfilled (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\src\lib\controllers\techMember.ts:5:58)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5)
+  },
+  level: 'error',
+  timestamp: '2022-06-04 17:29:32'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-06-04 17:30:11'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-06-04 17:31:14'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-06-04 17:31:25'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-06-04 17:31:41'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-06-04 17:31:54'
+}
+{
+  message: {
+    departmentData: {
+      _id: '629b3e6314ad376eb0ab7340',
+      boardId: '629b3e622b89a3685c12a96d',
+      name: 'Local Testing',
+      color: 'blue',
+      mainBoard: false,
+      addTeam: [],
+      removeTeam: [ '629b63ae1881cd8933309372' ]
+    }
+  },
+  level: 'info',
+  timestamp: '2022-06-04 17:41:33'
+}
+{
+  message: 'first step',
+  level: 'info',
+  timestamp: '2022-06-04 17:41:33'
+}
+{
+  message: { removeTeam: [ '629b63ae1881cd8933309372' ] },
+  level: 'info',
+  timestamp: '2022-06-04 17:41:33'
+}
+{
+  message: { removeWebhookSucced: 'done' },
+  level: 'info',
+  timestamp: '2022-06-04 17:41:33'
+}
+{
+  message: { teamListIds: [] },
+  level: 'info',
+  timestamp: '2022-06-04 17:41:33'
+}
+{
+  message: { title: 'testing', teamListIds: [] },
+  level: 'info',
+  timestamp: '2022-06-04 17:41:33'
+}
+{
+  message: {
+    depUpdate: {
+      _id: new ObjectId("629b3e6314ad376eb0ab7340"),
+      name: 'Local Testing',
+      boardId: '629b3e622b89a3685c12a96d',
+      color: 'blue',
+      mainBoard: false,
+      tasks: [
+        new ObjectId("629b43bd14ad376eb0ab73b2"),
+        new ObjectId("629b441414ad376eb0ab73b6")
+      ],
+      teamsId: [
+        {
+          idInTrello: '629b438c78697d4dfe6646fc',
+          idInDB: new ObjectId("629b438d14ad376eb0ab73ad"),
+          _id: new ObjectId("629b438d14ad376eb0ab73af")
+        },
+        {
+          idInTrello: '629b60b0475dcc3588531ccb',
+          idInDB: new ObjectId("629b60b177add239d7804c56"),
+          _id: new ObjectId("629b60b177add239d7804c58")
+        },
+        {
+          idInTrello: '629b674a856ed93455a5f701',
+          idInDB: new ObjectId("629b674b77add239d7804f26"),
+          _id: new ObjectId("629b674b77add239d7804f28")
+        },
+        {
+          idInTrello: '629b6f16f2097d89d3f5a56c',
+          idInDB: new ObjectId("629b6f17ae869a7d59f71e36"),
+          _id: new ObjectId("629b6f17ae869a7d59f71e38")
+        }
+      ],
+      createdAt: 2022-06-04T11:13:39.052Z,
+      updatedAt: 2022-06-04T14:41:33.521Z,
+      __v: 0,
+      canceldListId: '629b3e63789ba00e1b508227',
+      defaultListId: '629b3e66b98b6a3063088470',
+      departmentWindowId: '629b3e622998955e0b10190e',
+      doneListId: '629b3e647bfb283dd7c84dd3',
+      notClearListId: '629b3e6306fe5351898ca081',
+      notStartedListId: '629b3e663519b44094065b5c',
+      reviewListId: '629b3e65d800eb1d8f3a5759',
+      sharedListID: '629b3e64a1b1d88774a129a0'
+    }
+  },
+  level: 'info',
+  timestamp: '2022-06-04 17:41:33'
+}
+{
+  message: {
+    department: {
+      _id: new ObjectId("629b3e6314ad376eb0ab7340"),
+      name: 'Local Testing',
+      boardId: '629b3e622b89a3685c12a96d',
+      color: 'blue',
+      mainBoard: false,
+      tasks: [
+        new ObjectId("629b43bd14ad376eb0ab73b2"),
+        new ObjectId("629b441414ad376eb0ab73b6")
+      ],
+      teamsId: [
+        {
+          idInTrello: '629b438c78697d4dfe6646fc',
+          idInDB: new ObjectId("629b438d14ad376eb0ab73ad"),
+          _id: new ObjectId("629b438d14ad376eb0ab73af")
+        },
+        {
+          idInTrello: '629b60b0475dcc3588531ccb',
+          idInDB: new ObjectId("629b60b177add239d7804c56"),
+          _id: new ObjectId("629b60b177add239d7804c58")
+        },
+        {
+          idInTrello: '629b674a856ed93455a5f701',
+          idInDB: new ObjectId("629b674b77add239d7804f26"),
+          _id: new ObjectId("629b674b77add239d7804f28")
+        },
+        {
+          idInTrello: '629b6f16f2097d89d3f5a56c',
+          idInDB: new ObjectId("629b6f17ae869a7d59f71e36"),
+          _id: new ObjectId("629b6f17ae869a7d59f71e38")
+        }
+      ],
+      createdAt: 2022-06-04T11:13:39.052Z,
+      updatedAt: 2022-06-04T14:41:33.521Z,
+      __v: 0,
+      canceldListId: '629b3e63789ba00e1b508227',
+      defaultListId: '629b3e66b98b6a3063088470',
+      departmentWindowId: '629b3e622998955e0b10190e',
+      doneListId: '629b3e647bfb283dd7c84dd3',
+      notClearListId: '629b3e6306fe5351898ca081',
+      notStartedListId: '629b3e663519b44094065b5c',
+      reviewListId: '629b3e65d800eb1d8f3a5759',
+      sharedListID: '629b3e64a1b1d88774a129a0'
+    }
+  },
+  level: 'info',
+  timestamp: '2022-06-04 17:41:33'
+}
+{
+  message: { removeListAndWebhookSucced: 'done' },
+  level: 'info',
+  timestamp: '2022-06-04 17:41:34'
+}
+{
+  message: {
+    departmentData: {
+      _id: '629b3e6314ad376eb0ab7340',
+      boardId: '629b3e622b89a3685c12a96d',
+      name: 'Local Testing',
+      color: 'blue',
+      mainBoard: false,
+      addTeam: [],
+      removeTeam: [ '629b63ae1881cd8933309372', '629b60b0475dcc3588531ccb' ]
+    }
+  },
+  level: 'info',
+  timestamp: '2022-06-04 17:45:04'
+}
+{
+  message: 'first step',
+  level: 'info',
+  timestamp: '2022-06-04 17:45:04'
+}
+{
+  message: {
+    removeTeam: [ '629b63ae1881cd8933309372', '629b60b0475dcc3588531ccb' ]
+  },
+  level: 'info',
+  timestamp: '2022-06-04 17:45:05'
+}
+{
+  message: { removeWebhookSucced: 'done' },
+  level: 'info',
+  timestamp: '2022-06-04 17:45:05'
+}
+{
+  message: { teamListIds: [] },
+  level: 'info',
+  timestamp: '2022-06-04 17:45:05'
+}
+{
+  message: { title: 'testing', teamListIds: [] },
+  level: 'info',
+  timestamp: '2022-06-04 17:45:05'
+}
+{
+  message: {
+    depUpdate: {
+      _id: new ObjectId("629b3e6314ad376eb0ab7340"),
+      name: 'Local Testing',
+      boardId: '629b3e622b89a3685c12a96d',
+      color: 'blue',
+      mainBoard: false,
+      tasks: [
+        new ObjectId("629b43bd14ad376eb0ab73b2"),
+        new ObjectId("629b441414ad376eb0ab73b6")
+      ],
+      teamsId: [
+        {
+          idInTrello: '629b438c78697d4dfe6646fc',
+          idInDB: new ObjectId("629b438d14ad376eb0ab73ad"),
+          _id: new ObjectId("629b438d14ad376eb0ab73af")
+        },
+        {
+          idInTrello: '629b674a856ed93455a5f701',
+          idInDB: new ObjectId("629b674b77add239d7804f26"),
+          _id: new ObjectId("629b674b77add239d7804f28")
+        },
+        {
+          idInTrello: '629b6f16f2097d89d3f5a56c',
+          idInDB: new ObjectId("629b6f17ae869a7d59f71e36"),
+          _id: new ObjectId("629b6f17ae869a7d59f71e38")
+        }
+      ],
+      createdAt: 2022-06-04T11:13:39.052Z,
+      updatedAt: 2022-06-04T14:45:05.533Z,
+      __v: 0,
+      canceldListId: '629b3e63789ba00e1b508227',
+      defaultListId: '629b3e66b98b6a3063088470',
+      departmentWindowId: '629b3e622998955e0b10190e',
+      doneListId: '629b3e647bfb283dd7c84dd3',
+      notClearListId: '629b3e6306fe5351898ca081',
+      notStartedListId: '629b3e663519b44094065b5c',
+      reviewListId: '629b3e65d800eb1d8f3a5759',
+      sharedListID: '629b3e64a1b1d88774a129a0'
+    }
+  },
+  level: 'info',
+  timestamp: '2022-06-04 17:45:05'
+}
+{
+  message: {
+    department: {
+      _id: new ObjectId("629b3e6314ad376eb0ab7340"),
+      name: 'Local Testing',
+      boardId: '629b3e622b89a3685c12a96d',
+      color: 'blue',
+      mainBoard: false,
+      tasks: [
+        new ObjectId("629b43bd14ad376eb0ab73b2"),
+        new ObjectId("629b441414ad376eb0ab73b6")
+      ],
+      teamsId: [
+        {
+          idInTrello: '629b438c78697d4dfe6646fc',
+          idInDB: new ObjectId("629b438d14ad376eb0ab73ad"),
+          _id: new ObjectId("629b438d14ad376eb0ab73af")
+        },
+        {
+          idInTrello: '629b674a856ed93455a5f701',
+          idInDB: new ObjectId("629b674b77add239d7804f26"),
+          _id: new ObjectId("629b674b77add239d7804f28")
+        },
+        {
+          idInTrello: '629b6f16f2097d89d3f5a56c',
+          idInDB: new ObjectId("629b6f17ae869a7d59f71e36"),
+          _id: new ObjectId("629b6f17ae869a7d59f71e38")
+        }
+      ],
+      createdAt: 2022-06-04T11:13:39.052Z,
+      updatedAt: 2022-06-04T14:45:05.533Z,
+      __v: 0,
+      canceldListId: '629b3e63789ba00e1b508227',
+      defaultListId: '629b3e66b98b6a3063088470',
+      departmentWindowId: '629b3e622998955e0b10190e',
+      doneListId: '629b3e647bfb283dd7c84dd3',
+      notClearListId: '629b3e6306fe5351898ca081',
+      notStartedListId: '629b3e663519b44094065b5c',
+      reviewListId: '629b3e65d800eb1d8f3a5759',
+      sharedListID: '629b3e64a1b1d88774a129a0'
+    }
+  },
+  level: 'info',
+  timestamp: '2022-06-04 17:45:05'
+}
+{
+  message: { removeListAndWebhookSucced: 'done' },
+  level: 'info',
+  timestamp: '2022-06-04 17:45:06'
+}
+{
+  message: {
+    departmentData: {
+      _id: '629b3e6314ad376eb0ab7340',
+      boardId: '629b3e622b89a3685c12a96d',
+      name: 'Local Testing',
+      color: 'blue',
+      mainBoard: false,
+      addTeam: [],
+      removeTeam: [ '629b674a856ed93455a5f701' ]
+    }
+  },
+  level: 'info',
+  timestamp: '2022-06-04 17:56:59'
+}
+{
+  message: 'first step',
+  level: 'info',
+  timestamp: '2022-06-04 17:56:59'
+}
+{
+  message: { removeTeam: [ '629b674a856ed93455a5f701' ] },
+  level: 'info',
+  timestamp: '2022-06-04 17:56:59'
+}
+{
+  message: { removeWebhookSucced: 'done' },
+  level: 'info',
+  timestamp: '2022-06-04 17:56:59'
+}
+{
+  message: { teamListIds: [] },
+  level: 'info',
+  timestamp: '2022-06-04 17:56:59'
+}
+{
+  message: { title: 'testing', teamListIds: [] },
+  level: 'info',
+  timestamp: '2022-06-04 17:56:59'
+}
+{
+  message: {
+    depUpdate: {
+      _id: new ObjectId("629b3e6314ad376eb0ab7340"),
+      name: 'Local Testing',
+      boardId: '629b3e622b89a3685c12a96d',
+      color: 'blue',
+      mainBoard: false,
+      tasks: [
+        new ObjectId("629b43bd14ad376eb0ab73b2"),
+        new ObjectId("629b441414ad376eb0ab73b6")
+      ],
+      teamsId: [
+        {
+          idInTrello: '629b438c78697d4dfe6646fc',
+          idInDB: new ObjectId("629b438d14ad376eb0ab73ad"),
+          _id: new ObjectId("629b438d14ad376eb0ab73af")
+        },
+        {
+          idInTrello: '629b6f16f2097d89d3f5a56c',
+          idInDB: new ObjectId("629b6f17ae869a7d59f71e36"),
+          _id: new ObjectId("629b6f17ae869a7d59f71e38")
+        }
+      ],
+      createdAt: 2022-06-04T11:13:39.052Z,
+      updatedAt: 2022-06-04T14:56:59.792Z,
+      __v: 0,
+      canceldListId: '629b3e63789ba00e1b508227',
+      defaultListId: '629b3e66b98b6a3063088470',
+      departmentWindowId: '629b3e622998955e0b10190e',
+      doneListId: '629b3e647bfb283dd7c84dd3',
+      notClearListId: '629b3e6306fe5351898ca081',
+      notStartedListId: '629b3e663519b44094065b5c',
+      reviewListId: '629b3e65d800eb1d8f3a5759',
+      sharedListID: '629b3e64a1b1d88774a129a0'
+    }
+  },
+  level: 'info',
+  timestamp: '2022-06-04 17:56:59'
+}
+{
+  message: {
+    department: {
+      _id: new ObjectId("629b3e6314ad376eb0ab7340"),
+      name: 'Local Testing',
+      boardId: '629b3e622b89a3685c12a96d',
+      color: 'blue',
+      mainBoard: false,
+      tasks: [
+        new ObjectId("629b43bd14ad376eb0ab73b2"),
+        new ObjectId("629b441414ad376eb0ab73b6")
+      ],
+      teamsId: [
+        {
+          idInTrello: '629b438c78697d4dfe6646fc',
+          idInDB: new ObjectId("629b438d14ad376eb0ab73ad"),
+          _id: new ObjectId("629b438d14ad376eb0ab73af")
+        },
+        {
+          idInTrello: '629b6f16f2097d89d3f5a56c',
+          idInDB: new ObjectId("629b6f17ae869a7d59f71e36"),
+          _id: new ObjectId("629b6f17ae869a7d59f71e38")
+        }
+      ],
+      createdAt: 2022-06-04T11:13:39.052Z,
+      updatedAt: 2022-06-04T14:56:59.792Z,
+      __v: 0,
+      canceldListId: '629b3e63789ba00e1b508227',
+      defaultListId: '629b3e66b98b6a3063088470',
+      departmentWindowId: '629b3e622998955e0b10190e',
+      doneListId: '629b3e647bfb283dd7c84dd3',
+      notClearListId: '629b3e6306fe5351898ca081',
+      notStartedListId: '629b3e663519b44094065b5c',
+      reviewListId: '629b3e65d800eb1d8f3a5759',
+      sharedListID: '629b3e64a1b1d88774a129a0'
+    }
+  },
+  level: 'info',
+  timestamp: '2022-06-04 17:56:59'
+}
+{
+  message: { removeListAndWebhookSucced: 'done' },
+  level: 'info',
+  timestamp: '2022-06-04 17:57:00'
+}
+{
+  message: {
+    __removeMemberAndListError: FetchError: invalid json response body at https://api.trello.com/1/lists/undefined/closed?value=true&key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68 reason: Unexpected token i in JSON at position 0
+        at C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\node-fetch\lib\index.js:273:32
+        at runMicrotasks (<anonymous>)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+      type: 'invalid-json'
+    }
+  },
+  level: 'error',
+  timestamp: '2022-06-04 17:57:22'
+}
+{
+  message: { data: { isDeleted: 'true', listId: undefined } },
+  level: 'info',
+  timestamp: '2022-06-04 17:57:22'
+}
+{
+  message: {
+    __removeMemberAndListError: FetchError: invalid json response body at https://api.trello.com/1/lists/undefined/closed?value=true&key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68 reason: Unexpected token i in JSON at position 0
+        at C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\node-fetch\lib\index.js:273:32
+        at runMicrotasks (<anonymous>)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+      type: 'invalid-json'
+    }
+  },
+  level: 'error',
+  timestamp: '2022-06-04 17:57:26'
+}
+{
+  message: { data: { isDeleted: 'true', listId: undefined } },
+  level: 'info',
+  timestamp: '2022-06-04 17:57:26'
+}
