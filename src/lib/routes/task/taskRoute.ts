@@ -38,7 +38,7 @@ router.post(
   multer.array("attachedFiles"),
   handleCreateCard
 );
-router.post(`${DOWNLOAD_ATTACHMENT}`, handleDownloadAttachment);
+router.get(`${DOWNLOAD_ATTACHMENT}`, handleDownloadAttachment);
 router.post(`${UPDATE_TASK}`, multer.single("attachedFiles"), handleUpdateCard);
 router.put(`${MOVE_TASK}`, Authed, handleMoveCard);
 router.post(`${WEBHOOK_UPDATES}`, handleWebhookUpdateCard);
