@@ -1100,3 +1100,51 @@
   level: 'error',
   timestamp: '2022-06-04 20:29:09'
 }
+{
+  message: {
+    __removeMemberAndListError: FetchError: invalid json response body at https://api.trello.com/1/lists/undefined/closed?value=true&key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68 reason: Unexpected token i in JSON at position 0
+        at C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\node-fetch\lib\index.js:273:32
+        at runMicrotasks (<anonymous>)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+      type: 'invalid-json'
+    }
+  },
+  level: 'error',
+  timestamp: '2022-06-05 11:57:15'
+}
+{
+  message: {
+    __removeMemberAndListError: FetchError: invalid json response body at https://api.trello.com/1/lists/undefined/closed?value=true&key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68 reason: Unexpected token i in JSON at position 0
+        at C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\node-fetch\lib\index.js:273:32
+        at runMicrotasks (<anonymous>)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+      type: 'invalid-json'
+    }
+  },
+  level: 'error',
+  timestamp: '2022-06-05 12:00:28'
+}
+{
+  message: {
+    __removeMemberAndListError: FetchError: invalid json response body at https://api.trello.com/1/lists/undefined/closed?value=true&key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68 reason: Unexpected token i in JSON at position 0
+        at C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\node-fetch\lib\index.js:273:32
+        at runMicrotasks (<anonymous>)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+      type: 'invalid-json'
+    }
+  },
+  level: 'error',
+  timestamp: '2022-06-05 12:05:34'
+}
+{
+  message: {
+    __removeMemberAndListError: FetchError: invalid json response body at https://api.trello.com/1/lists/undefined/closed?value=true&key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68 reason: Unexpected token i in JSON at position 0
+        at C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\node-fetch\lib\index.js:273:32
+        at runMicrotasks (<anonymous>)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+      type: 'invalid-json'
+    }
+  },
+  level: 'error',
+  timestamp: '2022-06-05 12:05:35'
+}

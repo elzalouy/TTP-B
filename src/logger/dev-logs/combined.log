@@ -3285,3 +3285,1447 @@
   level: 'info',
   timestamp: '2022-06-05 11:35:09'
 }
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-06-05 11:39:11'
+}
+{
+  message: {
+    departmentData: {
+      _id: '629b3e6314ad376eb0ab7340',
+      boardId: '629b3e622b89a3685c12a96d',
+      mainBoard: false,
+      addTeam: [],
+      removeTeam: [ '629b6f16f2097d89d3f5a56c' ]
+    }
+  },
+  level: 'info',
+  timestamp: '2022-06-05 11:43:00'
+}
+{
+  message: { removeTeam: [ '629b6f16f2097d89d3f5a56c' ] },
+  level: 'info',
+  timestamp: '2022-06-05 11:43:00'
+}
+{
+  message: { removeWebhookSucced: 'done' },
+  level: 'info',
+  timestamp: '2022-06-05 11:43:00'
+}
+{
+  message: { teamListIds: [] },
+  level: 'info',
+  timestamp: '2022-06-05 11:43:00'
+}
+{
+  message: { title: 'testing', teamListIds: [] },
+  level: 'info',
+  timestamp: '2022-06-05 11:43:00'
+}
+{
+  message: {
+    depUpdate: {
+      _id: new ObjectId("629b3e6314ad376eb0ab7340"),
+      name: 'Local Testing',
+      boardId: '629b3e622b89a3685c12a96d',
+      color: 'blue',
+      mainBoard: false,
+      tasks: [
+        new ObjectId("629b43bd14ad376eb0ab73b2"),
+        new ObjectId("629b441414ad376eb0ab73b6")
+      ],
+      teamsId: [
+        {
+          idInTrello: '629b72cc78697d4dfe7abd1e',
+          idInDB: new ObjectId("629b72cdae869a7d59f71f62"),
+          _id: new ObjectId("629b72cdae869a7d59f71f64")
+        },
+        {
+          idInTrello: '629b795378697d4dfe7d58a2',
+          idInDB: new ObjectId("629b7955ae869a7d59f72492"),
+          _id: new ObjectId("629b7955ae869a7d59f72494")
+        },
+        {
+          idInTrello: '629b79e909fb126b15d81ca6',
+          idInDB: new ObjectId("629b79eaae869a7d59f724b6"),
+          _id: new ObjectId("629b79eaae869a7d59f724b8")
+        },
+        {
+          idInTrello: '629b7a51dd583a3742c8d6d1',
+          idInDB: new ObjectId("629b7a53ae869a7d59f724ce"),
+          _id: new ObjectId("629b7a53ae869a7d59f724d0")
+        },
+        {
+          idInTrello: '629b962fa882213efe8c0add',
+          idInDB: new ObjectId("629b9630ae869a7d59f7260b"),
+          _id: new ObjectId("629b9630ae869a7d59f7260d")
+        }
+      ],
+      createdAt: 2022-06-04T11:13:39.052Z,
+      updatedAt: 2022-06-05T08:43:00.595Z,
+      __v: 0,
+      canceldListId: '629b3e63789ba00e1b508227',
+      defaultListId: '629b3e66b98b6a3063088470',
+      departmentWindowId: '629b3e622998955e0b10190e',
+      doneListId: '629b3e647bfb283dd7c84dd3',
+      notClearListId: '629b3e6306fe5351898ca081',
+      notStartedListId: '629b3e663519b44094065b5c',
+      reviewListId: '629b3e65d800eb1d8f3a5759',
+      sharedListID: '629b3e64a1b1d88774a129a0'
+    }
+  },
+  level: 'info',
+  timestamp: '2022-06-05 11:43:00'
+}
+{
+  message: {
+    department: {
+      _id: new ObjectId("629b3e6314ad376eb0ab7340"),
+      name: 'Local Testing',
+      boardId: '629b3e622b89a3685c12a96d',
+      color: 'blue',
+      mainBoard: false,
+      tasks: [
+        new ObjectId("629b43bd14ad376eb0ab73b2"),
+        new ObjectId("629b441414ad376eb0ab73b6")
+      ],
+      teamsId: [
+        {
+          idInTrello: '629b72cc78697d4dfe7abd1e',
+          idInDB: new ObjectId("629b72cdae869a7d59f71f62"),
+          _id: new ObjectId("629b72cdae869a7d59f71f64")
+        },
+        {
+          idInTrello: '629b795378697d4dfe7d58a2',
+          idInDB: new ObjectId("629b7955ae869a7d59f72492"),
+          _id: new ObjectId("629b7955ae869a7d59f72494")
+        },
+        {
+          idInTrello: '629b79e909fb126b15d81ca6',
+          idInDB: new ObjectId("629b79eaae869a7d59f724b6"),
+          _id: new ObjectId("629b79eaae869a7d59f724b8")
+        },
+        {
+          idInTrello: '629b7a51dd583a3742c8d6d1',
+          idInDB: new ObjectId("629b7a53ae869a7d59f724ce"),
+          _id: new ObjectId("629b7a53ae869a7d59f724d0")
+        },
+        {
+          idInTrello: '629b962fa882213efe8c0add',
+          idInDB: new ObjectId("629b9630ae869a7d59f7260b"),
+          _id: new ObjectId("629b9630ae869a7d59f7260d")
+        }
+      ],
+      createdAt: 2022-06-04T11:13:39.052Z,
+      updatedAt: 2022-06-05T08:43:00.595Z,
+      __v: 0,
+      canceldListId: '629b3e63789ba00e1b508227',
+      defaultListId: '629b3e66b98b6a3063088470',
+      departmentWindowId: '629b3e622998955e0b10190e',
+      doneListId: '629b3e647bfb283dd7c84dd3',
+      notClearListId: '629b3e6306fe5351898ca081',
+      notStartedListId: '629b3e663519b44094065b5c',
+      reviewListId: '629b3e65d800eb1d8f3a5759',
+      sharedListID: '629b3e64a1b1d88774a129a0'
+    }
+  },
+  level: 'info',
+  timestamp: '2022-06-05 11:43:00'
+}
+{
+  message: { removeListAndWebhookSucced: 'done' },
+  level: 'info',
+  timestamp: '2022-06-05 11:43:01'
+}
+{
+  message: {
+    departmentData: {
+      _id: '629b3e6314ad376eb0ab7340',
+      boardId: '629b3e622b89a3685c12a96d',
+      mainBoard: false,
+      addTeam: [],
+      removeTeam: [ '629b962fa882213efe8c0add' ]
+    }
+  },
+  level: 'info',
+  timestamp: '2022-06-05 11:43:59'
+}
+{
+  message: { removeTeam: [ '629b962fa882213efe8c0add' ] },
+  level: 'info',
+  timestamp: '2022-06-05 11:43:59'
+}
+{
+  message: { removeWebhookSucced: 'done' },
+  level: 'info',
+  timestamp: '2022-06-05 11:43:59'
+}
+{
+  message: { teamListIds: [] },
+  level: 'info',
+  timestamp: '2022-06-05 11:43:59'
+}
+{
+  message: { title: 'testing', teamListIds: [] },
+  level: 'info',
+  timestamp: '2022-06-05 11:43:59'
+}
+{
+  message: {
+    depUpdate: {
+      _id: new ObjectId("629b3e6314ad376eb0ab7340"),
+      name: 'Local Testing',
+      boardId: '629b3e622b89a3685c12a96d',
+      color: 'blue',
+      mainBoard: false,
+      tasks: [
+        new ObjectId("629b43bd14ad376eb0ab73b2"),
+        new ObjectId("629b441414ad376eb0ab73b6")
+      ],
+      teamsId: [
+        {
+          idInTrello: '629b72cc78697d4dfe7abd1e',
+          idInDB: new ObjectId("629b72cdae869a7d59f71f62"),
+          _id: new ObjectId("629b72cdae869a7d59f71f64")
+        },
+        {
+          idInTrello: '629b795378697d4dfe7d58a2',
+          idInDB: new ObjectId("629b7955ae869a7d59f72492"),
+          _id: new ObjectId("629b7955ae869a7d59f72494")
+        },
+        {
+          idInTrello: '629b79e909fb126b15d81ca6',
+          idInDB: new ObjectId("629b79eaae869a7d59f724b6"),
+          _id: new ObjectId("629b79eaae869a7d59f724b8")
+        },
+        {
+          idInTrello: '629b7a51dd583a3742c8d6d1',
+          idInDB: new ObjectId("629b7a53ae869a7d59f724ce"),
+          _id: new ObjectId("629b7a53ae869a7d59f724d0")
+        }
+      ],
+      createdAt: 2022-06-04T11:13:39.052Z,
+      updatedAt: 2022-06-05T08:43:59.150Z,
+      __v: 0,
+      canceldListId: '629b3e63789ba00e1b508227',
+      defaultListId: '629b3e66b98b6a3063088470',
+      departmentWindowId: '629b3e622998955e0b10190e',
+      doneListId: '629b3e647bfb283dd7c84dd3',
+      notClearListId: '629b3e6306fe5351898ca081',
+      notStartedListId: '629b3e663519b44094065b5c',
+      reviewListId: '629b3e65d800eb1d8f3a5759',
+      sharedListID: '629b3e64a1b1d88774a129a0'
+    }
+  },
+  level: 'info',
+  timestamp: '2022-06-05 11:43:59'
+}
+{
+  message: {
+    department: {
+      _id: new ObjectId("629b3e6314ad376eb0ab7340"),
+      name: 'Local Testing',
+      boardId: '629b3e622b89a3685c12a96d',
+      color: 'blue',
+      mainBoard: false,
+      tasks: [
+        new ObjectId("629b43bd14ad376eb0ab73b2"),
+        new ObjectId("629b441414ad376eb0ab73b6")
+      ],
+      teamsId: [
+        {
+          idInTrello: '629b72cc78697d4dfe7abd1e',
+          idInDB: new ObjectId("629b72cdae869a7d59f71f62"),
+          _id: new ObjectId("629b72cdae869a7d59f71f64")
+        },
+        {
+          idInTrello: '629b795378697d4dfe7d58a2',
+          idInDB: new ObjectId("629b7955ae869a7d59f72492"),
+          _id: new ObjectId("629b7955ae869a7d59f72494")
+        },
+        {
+          idInTrello: '629b79e909fb126b15d81ca6',
+          idInDB: new ObjectId("629b79eaae869a7d59f724b6"),
+          _id: new ObjectId("629b79eaae869a7d59f724b8")
+        },
+        {
+          idInTrello: '629b7a51dd583a3742c8d6d1',
+          idInDB: new ObjectId("629b7a53ae869a7d59f724ce"),
+          _id: new ObjectId("629b7a53ae869a7d59f724d0")
+        }
+      ],
+      createdAt: 2022-06-04T11:13:39.052Z,
+      updatedAt: 2022-06-05T08:43:59.150Z,
+      __v: 0,
+      canceldListId: '629b3e63789ba00e1b508227',
+      defaultListId: '629b3e66b98b6a3063088470',
+      departmentWindowId: '629b3e622998955e0b10190e',
+      doneListId: '629b3e647bfb283dd7c84dd3',
+      notClearListId: '629b3e6306fe5351898ca081',
+      notStartedListId: '629b3e663519b44094065b5c',
+      reviewListId: '629b3e65d800eb1d8f3a5759',
+      sharedListID: '629b3e64a1b1d88774a129a0'
+    }
+  },
+  level: 'info',
+  timestamp: '2022-06-05 11:43:59'
+}
+{
+  message: { removeListAndWebhookSucced: 'done' },
+  level: 'info',
+  timestamp: '2022-06-05 11:44:00'
+}
+{
+  message: {
+    departmentData: {
+      _id: '629b3e6314ad376eb0ab7340',
+      boardId: '629b3e622b89a3685c12a96d',
+      name: 'Local Testing',
+      color: 'blue',
+      mainBoard: false,
+      addTeam: [ { _id: '629b9630ae869a7d59f7260b', name: 'Local TestING' } ],
+      removeTeam: []
+    }
+  },
+  level: 'info',
+  timestamp: '2022-06-05 11:47:16'
+}
+{
+  message: 'first step',
+  level: 'info',
+  timestamp: '2022-06-05 11:47:16'
+}
+{
+  message: { removeTeam: [] },
+  level: 'info',
+  timestamp: '2022-06-05 11:47:16'
+}
+{
+  message: { removeListAndWebhookSucced: 'done' },
+  level: 'info',
+  timestamp: '2022-06-05 11:47:16'
+}
+{
+  message: { removeWebhookSucced: 'done' },
+  level: 'info',
+  timestamp: '2022-06-05 11:47:17'
+}
+{
+  message: {
+    teamListIds: [
+      {
+        idInTrello: '629c6d9562bc4b6bb3006152',
+        idInDB: '629b9630ae869a7d59f7260b'
+      }
+    ]
+  },
+  level: 'info',
+  timestamp: '2022-06-05 11:47:17'
+}
+{
+  message: {
+    title: 'testing',
+    teamListIds: [
+      {
+        idInTrello: '629c6d9562bc4b6bb3006152',
+        idInDB: '629b9630ae869a7d59f7260b'
+      }
+    ]
+  },
+  level: 'info',
+  timestamp: '2022-06-05 11:47:17'
+}
+{
+  message: {
+    depUpdate: {
+      _id: new ObjectId("629b3e6314ad376eb0ab7340"),
+      name: 'Local Testing',
+      boardId: '629b3e622b89a3685c12a96d',
+      color: 'blue',
+      mainBoard: false,
+      tasks: [
+        new ObjectId("629b43bd14ad376eb0ab73b2"),
+        new ObjectId("629b441414ad376eb0ab73b6")
+      ],
+      teamsId: [
+        {
+          idInTrello: '629c6d9562bc4b6bb3006152',
+          idInDB: new ObjectId("629b9630ae869a7d59f7260b"),
+          _id: new ObjectId("629c6d952f81e4cfa0f376d7")
+        },
+        {
+          idInTrello: '629b72cc78697d4dfe7abd1e',
+          idInDB: new ObjectId("629b72cdae869a7d59f71f62"),
+          _id: new ObjectId("629b72cdae869a7d59f71f64")
+        },
+        {
+          idInTrello: '629b795378697d4dfe7d58a2',
+          idInDB: new ObjectId("629b7955ae869a7d59f72492"),
+          _id: new ObjectId("629b7955ae869a7d59f72494")
+        },
+        {
+          idInTrello: '629b79e909fb126b15d81ca6',
+          idInDB: new ObjectId("629b79eaae869a7d59f724b6"),
+          _id: new ObjectId("629b79eaae869a7d59f724b8")
+        },
+        {
+          idInTrello: '629b7a51dd583a3742c8d6d1',
+          idInDB: new ObjectId("629b7a53ae869a7d59f724ce"),
+          _id: new ObjectId("629b7a53ae869a7d59f724d0")
+        }
+      ],
+      createdAt: 2022-06-04T11:13:39.052Z,
+      updatedAt: 2022-06-05T08:47:17.370Z,
+      __v: 0,
+      canceldListId: '629b3e63789ba00e1b508227',
+      defaultListId: '629b3e66b98b6a3063088470',
+      departmentWindowId: '629b3e622998955e0b10190e',
+      doneListId: '629b3e647bfb283dd7c84dd3',
+      notClearListId: '629b3e6306fe5351898ca081',
+      notStartedListId: '629b3e663519b44094065b5c',
+      reviewListId: '629b3e65d800eb1d8f3a5759',
+      sharedListID: '629b3e64a1b1d88774a129a0'
+    }
+  },
+  level: 'info',
+  timestamp: '2022-06-05 11:47:17'
+}
+{
+  message: {
+    department: {
+      _id: new ObjectId("629b3e6314ad376eb0ab7340"),
+      name: 'Local Testing',
+      boardId: '629b3e622b89a3685c12a96d',
+      color: 'blue',
+      mainBoard: false,
+      tasks: [
+        new ObjectId("629b43bd14ad376eb0ab73b2"),
+        new ObjectId("629b441414ad376eb0ab73b6")
+      ],
+      teamsId: [
+        {
+          idInTrello: '629c6d9562bc4b6bb3006152',
+          idInDB: new ObjectId("629b9630ae869a7d59f7260b"),
+          _id: new ObjectId("629c6d952f81e4cfa0f376d7")
+        },
+        {
+          idInTrello: '629b72cc78697d4dfe7abd1e',
+          idInDB: new ObjectId("629b72cdae869a7d59f71f62"),
+          _id: new ObjectId("629b72cdae869a7d59f71f64")
+        },
+        {
+          idInTrello: '629b795378697d4dfe7d58a2',
+          idInDB: new ObjectId("629b7955ae869a7d59f72492"),
+          _id: new ObjectId("629b7955ae869a7d59f72494")
+        },
+        {
+          idInTrello: '629b79e909fb126b15d81ca6',
+          idInDB: new ObjectId("629b79eaae869a7d59f724b6"),
+          _id: new ObjectId("629b79eaae869a7d59f724b8")
+        },
+        {
+          idInTrello: '629b7a51dd583a3742c8d6d1',
+          idInDB: new ObjectId("629b7a53ae869a7d59f724ce"),
+          _id: new ObjectId("629b7a53ae869a7d59f724d0")
+        }
+      ],
+      createdAt: 2022-06-04T11:13:39.052Z,
+      updatedAt: 2022-06-05T08:47:17.370Z,
+      __v: 0,
+      canceldListId: '629b3e63789ba00e1b508227',
+      defaultListId: '629b3e66b98b6a3063088470',
+      departmentWindowId: '629b3e622998955e0b10190e',
+      doneListId: '629b3e647bfb283dd7c84dd3',
+      notClearListId: '629b3e6306fe5351898ca081',
+      notStartedListId: '629b3e663519b44094065b5c',
+      reviewListId: '629b3e65d800eb1d8f3a5759',
+      sharedListID: '629b3e64a1b1d88774a129a0'
+    }
+  },
+  level: 'info',
+  timestamp: '2022-06-05 11:47:17'
+}
+{
+  message: {
+    departmentData: {
+      _id: '629b3e6314ad376eb0ab7340',
+      boardId: '629b3e622b89a3685c12a96d',
+      name: 'Local Testing',
+      color: 'blue',
+      mainBoard: false,
+      addTeam: [],
+      removeTeam: [ '629b7a51dd583a3742c8d6d1' ]
+    }
+  },
+  level: 'info',
+  timestamp: '2022-06-05 11:47:24'
+}
+{
+  message: 'first step',
+  level: 'info',
+  timestamp: '2022-06-05 11:47:24'
+}
+{
+  message: { removeTeam: [ '629b7a51dd583a3742c8d6d1' ] },
+  level: 'info',
+  timestamp: '2022-06-05 11:47:25'
+}
+{
+  message: { removeWebhookSucced: 'done' },
+  level: 'info',
+  timestamp: '2022-06-05 11:47:25'
+}
+{
+  message: { teamListIds: [] },
+  level: 'info',
+  timestamp: '2022-06-05 11:47:25'
+}
+{
+  message: { title: 'testing', teamListIds: [] },
+  level: 'info',
+  timestamp: '2022-06-05 11:47:25'
+}
+{
+  message: {
+    depUpdate: {
+      _id: new ObjectId("629b3e6314ad376eb0ab7340"),
+      name: 'Local Testing',
+      boardId: '629b3e622b89a3685c12a96d',
+      color: 'blue',
+      mainBoard: false,
+      tasks: [
+        new ObjectId("629b43bd14ad376eb0ab73b2"),
+        new ObjectId("629b441414ad376eb0ab73b6")
+      ],
+      teamsId: [
+        {
+          idInTrello: '629c6d9562bc4b6bb3006152',
+          idInDB: new ObjectId("629b9630ae869a7d59f7260b"),
+          _id: new ObjectId("629c6d952f81e4cfa0f376d7")
+        },
+        {
+          idInTrello: '629b72cc78697d4dfe7abd1e',
+          idInDB: new ObjectId("629b72cdae869a7d59f71f62"),
+          _id: new ObjectId("629b72cdae869a7d59f71f64")
+        },
+        {
+          idInTrello: '629b795378697d4dfe7d58a2',
+          idInDB: new ObjectId("629b7955ae869a7d59f72492"),
+          _id: new ObjectId("629b7955ae869a7d59f72494")
+        },
+        {
+          idInTrello: '629b79e909fb126b15d81ca6',
+          idInDB: new ObjectId("629b79eaae869a7d59f724b6"),
+          _id: new ObjectId("629b79eaae869a7d59f724b8")
+        }
+      ],
+      createdAt: 2022-06-04T11:13:39.052Z,
+      updatedAt: 2022-06-05T08:47:25.197Z,
+      __v: 0,
+      canceldListId: '629b3e63789ba00e1b508227',
+      defaultListId: '629b3e66b98b6a3063088470',
+      departmentWindowId: '629b3e622998955e0b10190e',
+      doneListId: '629b3e647bfb283dd7c84dd3',
+      notClearListId: '629b3e6306fe5351898ca081',
+      notStartedListId: '629b3e663519b44094065b5c',
+      reviewListId: '629b3e65d800eb1d8f3a5759',
+      sharedListID: '629b3e64a1b1d88774a129a0'
+    }
+  },
+  level: 'info',
+  timestamp: '2022-06-05 11:47:25'
+}
+{
+  message: {
+    department: {
+      _id: new ObjectId("629b3e6314ad376eb0ab7340"),
+      name: 'Local Testing',
+      boardId: '629b3e622b89a3685c12a96d',
+      color: 'blue',
+      mainBoard: false,
+      tasks: [
+        new ObjectId("629b43bd14ad376eb0ab73b2"),
+        new ObjectId("629b441414ad376eb0ab73b6")
+      ],
+      teamsId: [
+        {
+          idInTrello: '629c6d9562bc4b6bb3006152',
+          idInDB: new ObjectId("629b9630ae869a7d59f7260b"),
+          _id: new ObjectId("629c6d952f81e4cfa0f376d7")
+        },
+        {
+          idInTrello: '629b72cc78697d4dfe7abd1e',
+          idInDB: new ObjectId("629b72cdae869a7d59f71f62"),
+          _id: new ObjectId("629b72cdae869a7d59f71f64")
+        },
+        {
+          idInTrello: '629b795378697d4dfe7d58a2',
+          idInDB: new ObjectId("629b7955ae869a7d59f72492"),
+          _id: new ObjectId("629b7955ae869a7d59f72494")
+        },
+        {
+          idInTrello: '629b79e909fb126b15d81ca6',
+          idInDB: new ObjectId("629b79eaae869a7d59f724b6"),
+          _id: new ObjectId("629b79eaae869a7d59f724b8")
+        }
+      ],
+      createdAt: 2022-06-04T11:13:39.052Z,
+      updatedAt: 2022-06-05T08:47:25.197Z,
+      __v: 0,
+      canceldListId: '629b3e63789ba00e1b508227',
+      defaultListId: '629b3e66b98b6a3063088470',
+      departmentWindowId: '629b3e622998955e0b10190e',
+      doneListId: '629b3e647bfb283dd7c84dd3',
+      notClearListId: '629b3e6306fe5351898ca081',
+      notStartedListId: '629b3e663519b44094065b5c',
+      reviewListId: '629b3e65d800eb1d8f3a5759',
+      sharedListID: '629b3e64a1b1d88774a129a0'
+    }
+  },
+  level: 'info',
+  timestamp: '2022-06-05 11:47:25'
+}
+{
+  message: { removeListAndWebhookSucced: 'done' },
+  level: 'info',
+  timestamp: '2022-06-05 11:47:26'
+}
+{
+  message: {
+    departmentData: {
+      _id: '629b3e6314ad376eb0ab7340',
+      boardId: '629b3e622b89a3685c12a96d',
+      name: 'Local Testing',
+      color: 'blue',
+      mainBoard: false,
+      addTeam: [],
+      removeTeam: [ '629b79e909fb126b15d81ca6' ]
+    }
+  },
+  level: 'info',
+  timestamp: '2022-06-05 11:52:34'
+}
+{
+  message: 'first step',
+  level: 'info',
+  timestamp: '2022-06-05 11:52:34'
+}
+{
+  message: { removeTeam: [ '629b79e909fb126b15d81ca6' ] },
+  level: 'info',
+  timestamp: '2022-06-05 11:52:34'
+}
+{
+  message: { removeWebhookSucced: 'done' },
+  level: 'info',
+  timestamp: '2022-06-05 11:52:34'
+}
+{
+  message: { teamListIds: [] },
+  level: 'info',
+  timestamp: '2022-06-05 11:52:34'
+}
+{
+  message: { title: 'testing', teamListIds: [] },
+  level: 'info',
+  timestamp: '2022-06-05 11:52:34'
+}
+{
+  message: {
+    depUpdate: {
+      _id: new ObjectId("629b3e6314ad376eb0ab7340"),
+      name: 'Local Testing',
+      boardId: '629b3e622b89a3685c12a96d',
+      color: 'blue',
+      mainBoard: false,
+      tasks: [
+        new ObjectId("629b43bd14ad376eb0ab73b2"),
+        new ObjectId("629b441414ad376eb0ab73b6")
+      ],
+      teamsId: [
+        {
+          idInTrello: '629c6d9562bc4b6bb3006152',
+          idInDB: new ObjectId("629b9630ae869a7d59f7260b"),
+          _id: new ObjectId("629c6d952f81e4cfa0f376d7")
+        },
+        {
+          idInTrello: '629b72cc78697d4dfe7abd1e',
+          idInDB: new ObjectId("629b72cdae869a7d59f71f62"),
+          _id: new ObjectId("629b72cdae869a7d59f71f64")
+        },
+        {
+          idInTrello: '629b795378697d4dfe7d58a2',
+          idInDB: new ObjectId("629b7955ae869a7d59f72492"),
+          _id: new ObjectId("629b7955ae869a7d59f72494")
+        }
+      ],
+      createdAt: 2022-06-04T11:13:39.052Z,
+      updatedAt: 2022-06-05T08:52:34.734Z,
+      __v: 0,
+      canceldListId: '629b3e63789ba00e1b508227',
+      defaultListId: '629b3e66b98b6a3063088470',
+      departmentWindowId: '629b3e622998955e0b10190e',
+      doneListId: '629b3e647bfb283dd7c84dd3',
+      notClearListId: '629b3e6306fe5351898ca081',
+      notStartedListId: '629b3e663519b44094065b5c',
+      reviewListId: '629b3e65d800eb1d8f3a5759',
+      sharedListID: '629b3e64a1b1d88774a129a0'
+    }
+  },
+  level: 'info',
+  timestamp: '2022-06-05 11:52:34'
+}
+{
+  message: {
+    department: {
+      _id: new ObjectId("629b3e6314ad376eb0ab7340"),
+      name: 'Local Testing',
+      boardId: '629b3e622b89a3685c12a96d',
+      color: 'blue',
+      mainBoard: false,
+      tasks: [
+        new ObjectId("629b43bd14ad376eb0ab73b2"),
+        new ObjectId("629b441414ad376eb0ab73b6")
+      ],
+      teamsId: [
+        {
+          idInTrello: '629c6d9562bc4b6bb3006152',
+          idInDB: new ObjectId("629b9630ae869a7d59f7260b"),
+          _id: new ObjectId("629c6d952f81e4cfa0f376d7")
+        },
+        {
+          idInTrello: '629b72cc78697d4dfe7abd1e',
+          idInDB: new ObjectId("629b72cdae869a7d59f71f62"),
+          _id: new ObjectId("629b72cdae869a7d59f71f64")
+        },
+        {
+          idInTrello: '629b795378697d4dfe7d58a2',
+          idInDB: new ObjectId("629b7955ae869a7d59f72492"),
+          _id: new ObjectId("629b7955ae869a7d59f72494")
+        }
+      ],
+      createdAt: 2022-06-04T11:13:39.052Z,
+      updatedAt: 2022-06-05T08:52:34.734Z,
+      __v: 0,
+      canceldListId: '629b3e63789ba00e1b508227',
+      defaultListId: '629b3e66b98b6a3063088470',
+      departmentWindowId: '629b3e622998955e0b10190e',
+      doneListId: '629b3e647bfb283dd7c84dd3',
+      notClearListId: '629b3e6306fe5351898ca081',
+      notStartedListId: '629b3e663519b44094065b5c',
+      reviewListId: '629b3e65d800eb1d8f3a5759',
+      sharedListID: '629b3e64a1b1d88774a129a0'
+    }
+  },
+  level: 'info',
+  timestamp: '2022-06-05 11:52:34'
+}
+{
+  message: { removeListAndWebhookSucced: 'done' },
+  level: 'info',
+  timestamp: '2022-06-05 11:52:35'
+}
+{
+  message: {
+    departmentData: {
+      _id: '629b3e6314ad376eb0ab7340',
+      boardId: '629b3e622b89a3685c12a96d',
+      name: 'Local Testing',
+      color: 'blue',
+      mainBoard: false,
+      addTeam: [],
+      removeTeam: [ '629b79e909fb126b15d81ca6', '629b795378697d4dfe7d58a2' ]
+    }
+  },
+  level: 'info',
+  timestamp: '2022-06-05 11:52:56'
+}
+{
+  message: 'first step',
+  level: 'info',
+  timestamp: '2022-06-05 11:52:56'
+}
+{
+  message: {
+    removeTeam: [ '629b79e909fb126b15d81ca6', '629b795378697d4dfe7d58a2' ]
+  },
+  level: 'info',
+  timestamp: '2022-06-05 11:52:56'
+}
+{
+  message: { removeWebhookSucced: 'done' },
+  level: 'info',
+  timestamp: '2022-06-05 11:52:56'
+}
+{
+  message: { teamListIds: [] },
+  level: 'info',
+  timestamp: '2022-06-05 11:52:56'
+}
+{
+  message: { title: 'testing', teamListIds: [] },
+  level: 'info',
+  timestamp: '2022-06-05 11:52:56'
+}
+{
+  message: {
+    depUpdate: {
+      _id: new ObjectId("629b3e6314ad376eb0ab7340"),
+      name: 'Local Testing',
+      boardId: '629b3e622b89a3685c12a96d',
+      color: 'blue',
+      mainBoard: false,
+      tasks: [
+        new ObjectId("629b43bd14ad376eb0ab73b2"),
+        new ObjectId("629b441414ad376eb0ab73b6")
+      ],
+      teamsId: [
+        {
+          idInTrello: '629c6d9562bc4b6bb3006152',
+          idInDB: new ObjectId("629b9630ae869a7d59f7260b"),
+          _id: new ObjectId("629c6d952f81e4cfa0f376d7")
+        },
+        {
+          idInTrello: '629b72cc78697d4dfe7abd1e',
+          idInDB: new ObjectId("629b72cdae869a7d59f71f62"),
+          _id: new ObjectId("629b72cdae869a7d59f71f64")
+        }
+      ],
+      createdAt: 2022-06-04T11:13:39.052Z,
+      updatedAt: 2022-06-05T08:52:56.628Z,
+      __v: 0,
+      canceldListId: '629b3e63789ba00e1b508227',
+      defaultListId: '629b3e66b98b6a3063088470',
+      departmentWindowId: '629b3e622998955e0b10190e',
+      doneListId: '629b3e647bfb283dd7c84dd3',
+      notClearListId: '629b3e6306fe5351898ca081',
+      notStartedListId: '629b3e663519b44094065b5c',
+      reviewListId: '629b3e65d800eb1d8f3a5759',
+      sharedListID: '629b3e64a1b1d88774a129a0'
+    }
+  },
+  level: 'info',
+  timestamp: '2022-06-05 11:52:56'
+}
+{
+  message: {
+    department: {
+      _id: new ObjectId("629b3e6314ad376eb0ab7340"),
+      name: 'Local Testing',
+      boardId: '629b3e622b89a3685c12a96d',
+      color: 'blue',
+      mainBoard: false,
+      tasks: [
+        new ObjectId("629b43bd14ad376eb0ab73b2"),
+        new ObjectId("629b441414ad376eb0ab73b6")
+      ],
+      teamsId: [
+        {
+          idInTrello: '629c6d9562bc4b6bb3006152',
+          idInDB: new ObjectId("629b9630ae869a7d59f7260b"),
+          _id: new ObjectId("629c6d952f81e4cfa0f376d7")
+        },
+        {
+          idInTrello: '629b72cc78697d4dfe7abd1e',
+          idInDB: new ObjectId("629b72cdae869a7d59f71f62"),
+          _id: new ObjectId("629b72cdae869a7d59f71f64")
+        }
+      ],
+      createdAt: 2022-06-04T11:13:39.052Z,
+      updatedAt: 2022-06-05T08:52:56.628Z,
+      __v: 0,
+      canceldListId: '629b3e63789ba00e1b508227',
+      defaultListId: '629b3e66b98b6a3063088470',
+      departmentWindowId: '629b3e622998955e0b10190e',
+      doneListId: '629b3e647bfb283dd7c84dd3',
+      notClearListId: '629b3e6306fe5351898ca081',
+      notStartedListId: '629b3e663519b44094065b5c',
+      reviewListId: '629b3e65d800eb1d8f3a5759',
+      sharedListID: '629b3e64a1b1d88774a129a0'
+    }
+  },
+  level: 'info',
+  timestamp: '2022-06-05 11:52:56'
+}
+{
+  message: { removeListAndWebhookSucced: 'done' },
+  level: 'info',
+  timestamp: '2022-06-05 11:52:57'
+}
+{
+  message: {
+    departmentData: {
+      _id: '629b3e6314ad376eb0ab7340',
+      boardId: '629b3e622b89a3685c12a96d',
+      name: 'Local Testing',
+      color: 'blue',
+      mainBoard: false,
+      addTeam: [],
+      removeTeam: [
+        '629b79e909fb126b15d81ca6',
+        '629b795378697d4dfe7d58a2',
+        '629b72cc78697d4dfe7abd1e'
+      ]
+    }
+  },
+  level: 'info',
+  timestamp: '2022-06-05 11:53:11'
+}
+{
+  message: 'first step',
+  level: 'info',
+  timestamp: '2022-06-05 11:53:11'
+}
+{
+  message: {
+    removeTeam: [
+      '629b79e909fb126b15d81ca6',
+      '629b795378697d4dfe7d58a2',
+      '629b72cc78697d4dfe7abd1e'
+    ]
+  },
+  level: 'info',
+  timestamp: '2022-06-05 11:53:12'
+}
+{
+  message: { removeWebhookSucced: 'done' },
+  level: 'info',
+  timestamp: '2022-06-05 11:53:12'
+}
+{
+  message: { teamListIds: [] },
+  level: 'info',
+  timestamp: '2022-06-05 11:53:12'
+}
+{
+  message: { title: 'testing', teamListIds: [] },
+  level: 'info',
+  timestamp: '2022-06-05 11:53:12'
+}
+{
+  message: {
+    depUpdate: {
+      _id: new ObjectId("629b3e6314ad376eb0ab7340"),
+      name: 'Local Testing',
+      boardId: '629b3e622b89a3685c12a96d',
+      color: 'blue',
+      mainBoard: false,
+      tasks: [
+        new ObjectId("629b43bd14ad376eb0ab73b2"),
+        new ObjectId("629b441414ad376eb0ab73b6")
+      ],
+      teamsId: [
+        {
+          idInTrello: '629c6d9562bc4b6bb3006152',
+          idInDB: new ObjectId("629b9630ae869a7d59f7260b"),
+          _id: new ObjectId("629c6d952f81e4cfa0f376d7")
+        }
+      ],
+      createdAt: 2022-06-04T11:13:39.052Z,
+      updatedAt: 2022-06-05T08:53:12.347Z,
+      __v: 0,
+      canceldListId: '629b3e63789ba00e1b508227',
+      defaultListId: '629b3e66b98b6a3063088470',
+      departmentWindowId: '629b3e622998955e0b10190e',
+      doneListId: '629b3e647bfb283dd7c84dd3',
+      notClearListId: '629b3e6306fe5351898ca081',
+      notStartedListId: '629b3e663519b44094065b5c',
+      reviewListId: '629b3e65d800eb1d8f3a5759',
+      sharedListID: '629b3e64a1b1d88774a129a0'
+    }
+  },
+  level: 'info',
+  timestamp: '2022-06-05 11:53:12'
+}
+{
+  message: {
+    department: {
+      _id: new ObjectId("629b3e6314ad376eb0ab7340"),
+      name: 'Local Testing',
+      boardId: '629b3e622b89a3685c12a96d',
+      color: 'blue',
+      mainBoard: false,
+      tasks: [
+        new ObjectId("629b43bd14ad376eb0ab73b2"),
+        new ObjectId("629b441414ad376eb0ab73b6")
+      ],
+      teamsId: [
+        {
+          idInTrello: '629c6d9562bc4b6bb3006152',
+          idInDB: new ObjectId("629b9630ae869a7d59f7260b"),
+          _id: new ObjectId("629c6d952f81e4cfa0f376d7")
+        }
+      ],
+      createdAt: 2022-06-04T11:13:39.052Z,
+      updatedAt: 2022-06-05T08:53:12.347Z,
+      __v: 0,
+      canceldListId: '629b3e63789ba00e1b508227',
+      defaultListId: '629b3e66b98b6a3063088470',
+      departmentWindowId: '629b3e622998955e0b10190e',
+      doneListId: '629b3e647bfb283dd7c84dd3',
+      notClearListId: '629b3e6306fe5351898ca081',
+      notStartedListId: '629b3e663519b44094065b5c',
+      reviewListId: '629b3e65d800eb1d8f3a5759',
+      sharedListID: '629b3e64a1b1d88774a129a0'
+    }
+  },
+  level: 'info',
+  timestamp: '2022-06-05 11:53:12'
+}
+{
+  message: { removeListAndWebhookSucced: 'done' },
+  level: 'info',
+  timestamp: '2022-06-05 11:53:13'
+}
+{
+  message: {
+    departmentData: {
+      _id: '629b3e6314ad376eb0ab7340',
+      boardId: '629b3e622b89a3685c12a96d',
+      name: 'Local Testing',
+      color: 'blue',
+      mainBoard: false,
+      addTeam: [],
+      removeTeam: [ '629c6d9562bc4b6bb3006152' ]
+    }
+  },
+  level: 'info',
+  timestamp: '2022-06-05 11:54:37'
+}
+{
+  message: 'first step',
+  level: 'info',
+  timestamp: '2022-06-05 11:54:37'
+}
+{
+  message: { removeTeam: [ '629c6d9562bc4b6bb3006152' ] },
+  level: 'info',
+  timestamp: '2022-06-05 11:54:37'
+}
+{
+  message: { removeWebhookSucced: 'done' },
+  level: 'info',
+  timestamp: '2022-06-05 11:54:37'
+}
+{
+  message: { teamListIds: [] },
+  level: 'info',
+  timestamp: '2022-06-05 11:54:37'
+}
+{
+  message: { title: 'testing', teamListIds: [] },
+  level: 'info',
+  timestamp: '2022-06-05 11:54:37'
+}
+{
+  message: {
+    depUpdate: {
+      _id: new ObjectId("629b3e6314ad376eb0ab7340"),
+      name: 'Local Testing',
+      boardId: '629b3e622b89a3685c12a96d',
+      color: 'blue',
+      mainBoard: false,
+      tasks: [
+        new ObjectId("629b43bd14ad376eb0ab73b2"),
+        new ObjectId("629b441414ad376eb0ab73b6")
+      ],
+      teamsId: [],
+      createdAt: 2022-06-04T11:13:39.052Z,
+      updatedAt: 2022-06-05T08:54:37.559Z,
+      __v: 0,
+      canceldListId: '629b3e63789ba00e1b508227',
+      defaultListId: '629b3e66b98b6a3063088470',
+      departmentWindowId: '629b3e622998955e0b10190e',
+      doneListId: '629b3e647bfb283dd7c84dd3',
+      notClearListId: '629b3e6306fe5351898ca081',
+      notStartedListId: '629b3e663519b44094065b5c',
+      reviewListId: '629b3e65d800eb1d8f3a5759',
+      sharedListID: '629b3e64a1b1d88774a129a0'
+    }
+  },
+  level: 'info',
+  timestamp: '2022-06-05 11:54:37'
+}
+{
+  message: {
+    department: {
+      _id: new ObjectId("629b3e6314ad376eb0ab7340"),
+      name: 'Local Testing',
+      boardId: '629b3e622b89a3685c12a96d',
+      color: 'blue',
+      mainBoard: false,
+      tasks: [
+        new ObjectId("629b43bd14ad376eb0ab73b2"),
+        new ObjectId("629b441414ad376eb0ab73b6")
+      ],
+      teamsId: [],
+      createdAt: 2022-06-04T11:13:39.052Z,
+      updatedAt: 2022-06-05T08:54:37.559Z,
+      __v: 0,
+      canceldListId: '629b3e63789ba00e1b508227',
+      defaultListId: '629b3e66b98b6a3063088470',
+      departmentWindowId: '629b3e622998955e0b10190e',
+      doneListId: '629b3e647bfb283dd7c84dd3',
+      notClearListId: '629b3e6306fe5351898ca081',
+      notStartedListId: '629b3e663519b44094065b5c',
+      reviewListId: '629b3e65d800eb1d8f3a5759',
+      sharedListID: '629b3e64a1b1d88774a129a0'
+    }
+  },
+  level: 'info',
+  timestamp: '2022-06-05 11:54:37'
+}
+{
+  message: { removeListAndWebhookSucced: 'done' },
+  level: 'info',
+  timestamp: '2022-06-05 11:54:38'
+}
+{
+  message: {
+    __removeMemberAndListError: FetchError: invalid json response body at https://api.trello.com/1/lists/undefined/closed?value=true&key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68 reason: Unexpected token i in JSON at position 0
+        at C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\node-fetch\lib\index.js:273:32
+        at runMicrotasks (<anonymous>)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+      type: 'invalid-json'
+    }
+  },
+  level: 'error',
+  timestamp: '2022-06-05 11:57:15'
+}
+{
+  message: { data: { isDeleted: 'true', listId: undefined } },
+  level: 'info',
+  timestamp: '2022-06-05 11:57:15'
+}
+{
+  message: {
+    __removeMemberAndListError: FetchError: invalid json response body at https://api.trello.com/1/lists/undefined/closed?value=true&key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68 reason: Unexpected token i in JSON at position 0
+        at C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\node-fetch\lib\index.js:273:32
+        at runMicrotasks (<anonymous>)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+      type: 'invalid-json'
+    }
+  },
+  level: 'error',
+  timestamp: '2022-06-05 12:00:28'
+}
+{
+  message: { data: { isDeleted: 'true', listId: undefined } },
+  level: 'info',
+  timestamp: '2022-06-05 12:00:28'
+}
+{
+  message: {
+    departmentData: {
+      _id: '629b3e6314ad376eb0ab7340',
+      boardId: '629b3e622b89a3685c12a96d',
+      name: 'Local Testing',
+      color: 'blue',
+      mainBoard: false,
+      addTeam: [],
+      removeTeam: [ '629c6ffcf2fa6d11df998a26', '629c6ffc74c93f34c341c90b' ]
+    }
+  },
+  level: 'info',
+  timestamp: '2022-06-05 12:00:44'
+}
+{
+  message: 'first step',
+  level: 'info',
+  timestamp: '2022-06-05 12:00:44'
+}
+{
+  message: {
+    removeTeam: [ '629c6ffcf2fa6d11df998a26', '629c6ffc74c93f34c341c90b' ]
+  },
+  level: 'info',
+  timestamp: '2022-06-05 12:00:45'
+}
+{
+  message: { removeWebhookSucced: 'done' },
+  level: 'info',
+  timestamp: '2022-06-05 12:00:45'
+}
+{
+  message: { teamListIds: [] },
+  level: 'info',
+  timestamp: '2022-06-05 12:00:45'
+}
+{
+  message: { title: 'testing', teamListIds: [] },
+  level: 'info',
+  timestamp: '2022-06-05 12:00:45'
+}
+{
+  message: {
+    depUpdate: {
+      _id: new ObjectId("629b3e6314ad376eb0ab7340"),
+      name: 'Local Testing',
+      boardId: '629b3e622b89a3685c12a96d',
+      color: 'blue',
+      mainBoard: false,
+      tasks: [
+        new ObjectId("629b43bd14ad376eb0ab73b2"),
+        new ObjectId("629b441414ad376eb0ab73b6")
+      ],
+      teamsId: [
+        {
+          idInTrello: '629c6ffcb8fcd242aed2e0bf',
+          idInDB: new ObjectId("629c6ffc2f81e4cfa0f37778"),
+          _id: new ObjectId("629c6ffc2f81e4cfa0f3777a")
+        }
+      ],
+      createdAt: 2022-06-04T11:13:39.052Z,
+      updatedAt: 2022-06-05T09:00:45.450Z,
+      __v: 0,
+      canceldListId: '629b3e63789ba00e1b508227',
+      defaultListId: '629b3e66b98b6a3063088470',
+      departmentWindowId: '629b3e622998955e0b10190e',
+      doneListId: '629b3e647bfb283dd7c84dd3',
+      notClearListId: '629b3e6306fe5351898ca081',
+      notStartedListId: '629b3e663519b44094065b5c',
+      reviewListId: '629b3e65d800eb1d8f3a5759',
+      sharedListID: '629b3e64a1b1d88774a129a0'
+    }
+  },
+  level: 'info',
+  timestamp: '2022-06-05 12:00:45'
+}
+{
+  message: {
+    department: {
+      _id: new ObjectId("629b3e6314ad376eb0ab7340"),
+      name: 'Local Testing',
+      boardId: '629b3e622b89a3685c12a96d',
+      color: 'blue',
+      mainBoard: false,
+      tasks: [
+        new ObjectId("629b43bd14ad376eb0ab73b2"),
+        new ObjectId("629b441414ad376eb0ab73b6")
+      ],
+      teamsId: [
+        {
+          idInTrello: '629c6ffcb8fcd242aed2e0bf',
+          idInDB: new ObjectId("629c6ffc2f81e4cfa0f37778"),
+          _id: new ObjectId("629c6ffc2f81e4cfa0f3777a")
+        }
+      ],
+      createdAt: 2022-06-04T11:13:39.052Z,
+      updatedAt: 2022-06-05T09:00:45.450Z,
+      __v: 0,
+      canceldListId: '629b3e63789ba00e1b508227',
+      defaultListId: '629b3e66b98b6a3063088470',
+      departmentWindowId: '629b3e622998955e0b10190e',
+      doneListId: '629b3e647bfb283dd7c84dd3',
+      notClearListId: '629b3e6306fe5351898ca081',
+      notStartedListId: '629b3e663519b44094065b5c',
+      reviewListId: '629b3e65d800eb1d8f3a5759',
+      sharedListID: '629b3e64a1b1d88774a129a0'
+    }
+  },
+  level: 'info',
+  timestamp: '2022-06-05 12:00:45'
+}
+{
+  message: { removeListAndWebhookSucced: 'done' },
+  level: 'info',
+  timestamp: '2022-06-05 12:00:46'
+}
+{
+  message: {
+    departmentData: {
+      _id: '629b3e6314ad376eb0ab7340',
+      boardId: '629b3e622b89a3685c12a96d',
+      name: 'Local Testing',
+      color: 'blue',
+      mainBoard: false,
+      addTeam: [
+        { _id: '629c6ffc2f81e4cfa0f3777c', name: 'NEW LOCAL' },
+        { _id: '629c6ffc2f81e4cfa0f37782', name: "Let's GO" }
+      ],
+      removeTeam: []
+    }
+  },
+  level: 'info',
+  timestamp: '2022-06-05 12:05:27'
+}
+{
+  message: 'first step',
+  level: 'info',
+  timestamp: '2022-06-05 12:05:27'
+}
+{
+  message: { removeTeam: [] },
+  level: 'info',
+  timestamp: '2022-06-05 12:05:28'
+}
+{
+  message: { removeListAndWebhookSucced: 'done' },
+  level: 'info',
+  timestamp: '2022-06-05 12:05:28'
+}
+{
+  message: { removeWebhookSucced: 'done' },
+  level: 'info',
+  timestamp: '2022-06-05 12:05:29'
+}
+{
+  message: {
+    teamListIds: [
+      {
+        idInTrello: '629c71d8054b900cf68ac1b5',
+        idInDB: '629c6ffc2f81e4cfa0f3777c'
+      },
+      {
+        idInTrello: '629c71d81d996b339fd22834',
+        idInDB: '629c6ffc2f81e4cfa0f37782'
+      }
+    ]
+  },
+  level: 'info',
+  timestamp: '2022-06-05 12:05:29'
+}
+{
+  message: {
+    title: 'testing',
+    teamListIds: [
+      {
+        idInTrello: '629c71d8054b900cf68ac1b5',
+        idInDB: '629c6ffc2f81e4cfa0f3777c'
+      },
+      {
+        idInTrello: '629c71d81d996b339fd22834',
+        idInDB: '629c6ffc2f81e4cfa0f37782'
+      }
+    ]
+  },
+  level: 'info',
+  timestamp: '2022-06-05 12:05:29'
+}
+{
+  message: {
+    depUpdate: {
+      _id: new ObjectId("629b3e6314ad376eb0ab7340"),
+      name: 'Local Testing',
+      boardId: '629b3e622b89a3685c12a96d',
+      color: 'blue',
+      mainBoard: false,
+      tasks: [
+        new ObjectId("629b43bd14ad376eb0ab73b2"),
+        new ObjectId("629b441414ad376eb0ab73b6")
+      ],
+      teamsId: [
+        {
+          idInTrello: '629c71d8054b900cf68ac1b5',
+          idInDB: new ObjectId("629c6ffc2f81e4cfa0f3777c"),
+          _id: new ObjectId("629c71d92f81e4cfa0f37830")
+        },
+        {
+          idInTrello: '629c71d81d996b339fd22834',
+          idInDB: new ObjectId("629c6ffc2f81e4cfa0f37782"),
+          _id: new ObjectId("629c71d92f81e4cfa0f37831")
+        },
+        {
+          idInTrello: '629c6ffcb8fcd242aed2e0bf',
+          idInDB: new ObjectId("629c6ffc2f81e4cfa0f37778"),
+          _id: new ObjectId("629c6ffc2f81e4cfa0f3777a")
+        }
+      ],
+      createdAt: 2022-06-04T11:13:39.052Z,
+      updatedAt: 2022-06-05T09:05:29.045Z,
+      __v: 0,
+      canceldListId: '629b3e63789ba00e1b508227',
+      defaultListId: '629b3e66b98b6a3063088470',
+      departmentWindowId: '629b3e622998955e0b10190e',
+      doneListId: '629b3e647bfb283dd7c84dd3',
+      notClearListId: '629b3e6306fe5351898ca081',
+      notStartedListId: '629b3e663519b44094065b5c',
+      reviewListId: '629b3e65d800eb1d8f3a5759',
+      sharedListID: '629b3e64a1b1d88774a129a0'
+    }
+  },
+  level: 'info',
+  timestamp: '2022-06-05 12:05:29'
+}
+{
+  message: {
+    department: {
+      _id: new ObjectId("629b3e6314ad376eb0ab7340"),
+      name: 'Local Testing',
+      boardId: '629b3e622b89a3685c12a96d',
+      color: 'blue',
+      mainBoard: false,
+      tasks: [
+        new ObjectId("629b43bd14ad376eb0ab73b2"),
+        new ObjectId("629b441414ad376eb0ab73b6")
+      ],
+      teamsId: [
+        {
+          idInTrello: '629c71d8054b900cf68ac1b5',
+          idInDB: new ObjectId("629c6ffc2f81e4cfa0f3777c"),
+          _id: new ObjectId("629c71d92f81e4cfa0f37830")
+        },
+        {
+          idInTrello: '629c71d81d996b339fd22834',
+          idInDB: new ObjectId("629c6ffc2f81e4cfa0f37782"),
+          _id: new ObjectId("629c71d92f81e4cfa0f37831")
+        },
+        {
+          idInTrello: '629c6ffcb8fcd242aed2e0bf',
+          idInDB: new ObjectId("629c6ffc2f81e4cfa0f37778"),
+          _id: new ObjectId("629c6ffc2f81e4cfa0f3777a")
+        }
+      ],
+      createdAt: 2022-06-04T11:13:39.052Z,
+      updatedAt: 2022-06-05T09:05:29.045Z,
+      __v: 0,
+      canceldListId: '629b3e63789ba00e1b508227',
+      defaultListId: '629b3e66b98b6a3063088470',
+      departmentWindowId: '629b3e622998955e0b10190e',
+      doneListId: '629b3e647bfb283dd7c84dd3',
+      notClearListId: '629b3e6306fe5351898ca081',
+      notStartedListId: '629b3e663519b44094065b5c',
+      reviewListId: '629b3e65d800eb1d8f3a5759',
+      sharedListID: '629b3e64a1b1d88774a129a0'
+    }
+  },
+  level: 'info',
+  timestamp: '2022-06-05 12:05:29'
+}
+{
+  message: {
+    __removeMemberAndListError: FetchError: invalid json response body at https://api.trello.com/1/lists/undefined/closed?value=true&key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68 reason: Unexpected token i in JSON at position 0
+        at C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\node-fetch\lib\index.js:273:32
+        at runMicrotasks (<anonymous>)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+      type: 'invalid-json'
+    }
+  },
+  level: 'error',
+  timestamp: '2022-06-05 12:05:34'
+}
+{
+  message: { data: { isDeleted: 'true', listId: undefined } },
+  level: 'info',
+  timestamp: '2022-06-05 12:05:34'
+}
+{
+  message: {
+    __removeMemberAndListError: FetchError: invalid json response body at https://api.trello.com/1/lists/undefined/closed?value=true&key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68 reason: Unexpected token i in JSON at position 0
+        at C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\node-fetch\lib\index.js:273:32
+        at runMicrotasks (<anonymous>)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+      type: 'invalid-json'
+    }
+  },
+  level: 'error',
+  timestamp: '2022-06-05 12:05:35'
+}
+{
+  message: { data: { isDeleted: 'true', listId: undefined } },
+  level: 'info',
+  timestamp: '2022-06-05 12:05:35'
+}
