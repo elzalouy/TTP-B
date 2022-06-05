@@ -1561,3 +1561,2199 @@
     counter: 0
   }
 }
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-06-05 07:38:21'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-06-05 08:10:08'
+}
+{
+  message: {
+    data: { id: '62746010736e8ea96f53ea54', skip: '0', limit: undefined }
+  },
+  level: 'info',
+  timestamp: '2022-06-05 14:20:10'
+}
+{
+  message: { notificationData: { _id: '62746010736e8ea96f53ea54', role: 'OM' } },
+  level: 'info',
+  timestamp: '2022-06-05 14:20:10'
+}
+{
+  message: {
+    Notification: {
+      acknowledged: true,
+      modifiedCount: 11,
+      upsertedId: null,
+      upsertedCount: 0,
+      matchedCount: 11
+    }
+  },
+  level: 'info',
+  timestamp: '2022-06-05 14:20:11'
+}
+{
+  message: {
+    data: { id: '62746010736e8ea96f53ea54', skip: '0', limit: undefined }
+  },
+  level: 'info',
+  timestamp: '2022-06-05 14:22:31'
+}
+{
+  message: { notificationData: { _id: '62746010736e8ea96f53ea54', role: 'OM' } },
+  level: 'info',
+  timestamp: '2022-06-05 14:22:31'
+}
+{
+  message: {
+    Notification: {
+      acknowledged: true,
+      modifiedCount: 11,
+      upsertedId: null,
+      upsertedCount: 0,
+      matchedCount: 11
+    }
+  },
+  level: 'info',
+  timestamp: '2022-06-05 14:22:32'
+}
+{
+  message: {
+    findUserById: MongooseServerSelectionError: Could not connect to any servers in your MongoDB Atlas cluster. One common reason is that you're trying to access the database from an IP that isn't whitelisted. Make sure your current IP address is on your Atlas cluster's IP whitelist: https://docs.atlas.mongodb.com/security-whitelist/
+        at Function.Model.$wrapCallback (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/model.js:5017:32)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/query.js:4732:21
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/helpers/promiseOrCallback.js:32:5
+        at new Promise (<anonymous>)
+        at promiseOrCallback (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/helpers/promiseOrCallback.js:31:10)
+        at model.Query.exec (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/query.js:4731:10)
+        at model.Query.Query.then (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/query.js:4814:15)
+        at runMicrotasks (<anonymous>)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+      reason: TopologyDescription {
+        type: 'ReplicaSetNoPrimary',
+        servers: Map(3) {
+          'cluster0-shard-00-02.oeari.mongodb.net:27017' => ServerDescription {
+            _hostAddress: new HostAddress('cluster0-shard-00-02.oeari.mongodb.net:27017'),
+            address: 'cluster0-shard-00-02.oeari.mongodb.net:27017',
+            type: 'Unknown',
+            hosts: [],
+            passives: [],
+            arbiters: [],
+            tags: {},
+            minWireVersion: 0,
+            maxWireVersion: 0,
+            roundTripTime: -1,
+            lastUpdateTime: 26986086,
+            lastWriteDate: 0,
+            topologyVersion: {
+              processId: new ObjectId("627005674ff1ac271a85c1f3"),
+              counter: 3
+            },
+            error: MongoNetworkTimeoutError: connection timed out
+                at connectionFailureError (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongodb/src/cmap/connect.ts:498:14)
+                at TLSSocket.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongodb/src/cmap/connect.ts:394:16)
+                at Object.onceWrapper (node:events:641:28)
+                at TLSSocket.emit (node:events:527:28)
+                at TLSSocket.emit (node:domain:475:12)
+                at TLSSocket.Socket._onTimeout (node:net:516:8)
+                at listOnTimeout (node:internal/timers:559:17)
+                at processTimers (node:internal/timers:502:7) {
+              [Symbol(errorLabels)]: Set(0) {}
+            }
+          },
+          'cluster0-shard-00-00.oeari.mongodb.net:27017' => ServerDescription {
+            _hostAddress: new HostAddress('cluster0-shard-00-00.oeari.mongodb.net:27017'),
+            address: 'cluster0-shard-00-00.oeari.mongodb.net:27017',
+            type: 'Unknown',
+            hosts: [],
+            passives: [],
+            arbiters: [],
+            tags: {},
+            minWireVersion: 0,
+            maxWireVersion: 0,
+            roundTripTime: -1,
+            lastUpdateTime: 26985995,
+            lastWriteDate: 0,
+            topologyVersion: {
+              processId: new ObjectId("6270042ae8ff18065f7eb95c"),
+              counter: 4
+            },
+            error: MongoNetworkTimeoutError: connection timed out
+                at connectionFailureError (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongodb/src/cmap/connect.ts:498:14)
+                at TLSSocket.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongodb/src/cmap/connect.ts:394:16)
+                at Object.onceWrapper (node:events:641:28)
+                at TLSSocket.emit (node:events:527:28)
+                at TLSSocket.emit (node:domain:475:12)
+                at TLSSocket.Socket._onTimeout (node:net:516:8)
+                at listOnTimeout (node:internal/timers:559:17)
+                at processTimers (node:internal/timers:502:7) {
+              [Symbol(errorLabels)]: Set(0) {}
+            }
+          },
+          'cluster0-shard-00-01.oeari.mongodb.net:27017' => ServerDescription {
+            _hostAddress: new HostAddress('cluster0-shard-00-01.oeari.mongodb.net:27017'),
+            address: 'cluster0-shard-00-01.oeari.mongodb.net:27017',
+            type: 'Unknown',
+            hosts: [],
+            passives: [],
+            arbiters: [],
+            tags: {},
+            minWireVersion: 0,
+            maxWireVersion: 0,
+            roundTripTime: -1,
+            lastUpdateTime: 26986065,
+            lastWriteDate: 0,
+            topologyVersion: {
+              processId: new ObjectId("627004bf4c96c67a5085af66"),
+              counter: 6
+            },
+            error: MongoNetworkTimeoutError: connection timed out
+                at connectionFailureError (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongodb/src/cmap/connect.ts:498:14)
+                at TLSSocket.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongodb/src/cmap/connect.ts:394:16)
+                at Object.onceWrapper (node:events:641:28)
+                at TLSSocket.emit (node:events:527:28)
+                at TLSSocket.emit (node:domain:475:12)
+                at TLSSocket.Socket._onTimeout (node:net:516:8)
+                at listOnTimeout (node:internal/timers:559:17)
+                at processTimers (node:internal/timers:502:7) {
+              [Symbol(errorLabels)]: Set(0) {}
+            }
+          }
+        },
+        stale: false,
+        compatible: true,
+        heartbeatFrequencyMS: 10000,
+        localThresholdMS: 15,
+        setName: 'atlas-80ye5b-shard-0',
+        maxSetVersion: 2,
+        maxElectionId: new ObjectId("7fffffff000000000000000a"),
+        commonWireVersion: 13,
+        logicalSessionTimeoutMinutes: undefined
+      },
+      code: undefined
+    }
+  },
+  level: 'error',
+  timestamp: '2022-06-05 15:03:51'
+}
+{
+  message: {
+    getDepartmentDataError: MongoServerSelectionError: connection timed out
+        at Timeout._onTimeout (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongodb/src/sdam/topology.ts:606:30)
+        at listOnTimeout (node:internal/timers:559:17)
+        at processTimers (node:internal/timers:502:7) {
+      reason: TopologyDescription {
+        type: 'ReplicaSetNoPrimary',
+        servers: Map(3) {
+          'cluster0-shard-00-02.oeari.mongodb.net:27017' => ServerDescription {
+            _hostAddress: new HostAddress('cluster0-shard-00-02.oeari.mongodb.net:27017'),
+            address: 'cluster0-shard-00-02.oeari.mongodb.net:27017',
+            type: 'Unknown',
+            hosts: [],
+            passives: [],
+            arbiters: [],
+            tags: {},
+            minWireVersion: 0,
+            maxWireVersion: 0,
+            roundTripTime: -1,
+            lastUpdateTime: 26986086,
+            lastWriteDate: 0,
+            topologyVersion: {
+              processId: new ObjectId("627005674ff1ac271a85c1f3"),
+              counter: 3
+            },
+            error: MongoNetworkTimeoutError: connection timed out
+                at connectionFailureError (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongodb/src/cmap/connect.ts:498:14)
+                at TLSSocket.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongodb/src/cmap/connect.ts:394:16)
+                at Object.onceWrapper (node:events:641:28)
+                at TLSSocket.emit (node:events:527:28)
+                at TLSSocket.emit (node:domain:475:12)
+                at TLSSocket.Socket._onTimeout (node:net:516:8)
+                at listOnTimeout (node:internal/timers:559:17)
+                at processTimers (node:internal/timers:502:7) {
+              [Symbol(errorLabels)]: Set(0) {}
+            }
+          },
+          'cluster0-shard-00-00.oeari.mongodb.net:27017' => ServerDescription {
+            _hostAddress: new HostAddress('cluster0-shard-00-00.oeari.mongodb.net:27017'),
+            address: 'cluster0-shard-00-00.oeari.mongodb.net:27017',
+            type: 'Unknown',
+            hosts: [],
+            passives: [],
+            arbiters: [],
+            tags: {},
+            minWireVersion: 0,
+            maxWireVersion: 0,
+            roundTripTime: -1,
+            lastUpdateTime: 26985995,
+            lastWriteDate: 0,
+            topologyVersion: {
+              processId: new ObjectId("6270042ae8ff18065f7eb95c"),
+              counter: 4
+            },
+            error: MongoNetworkTimeoutError: connection timed out
+                at connectionFailureError (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongodb/src/cmap/connect.ts:498:14)
+                at TLSSocket.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongodb/src/cmap/connect.ts:394:16)
+                at Object.onceWrapper (node:events:641:28)
+                at TLSSocket.emit (node:events:527:28)
+                at TLSSocket.emit (node:domain:475:12)
+                at TLSSocket.Socket._onTimeout (node:net:516:8)
+                at listOnTimeout (node:internal/timers:559:17)
+                at processTimers (node:internal/timers:502:7) {
+              [Symbol(errorLabels)]: Set(0) {}
+            }
+          },
+          'cluster0-shard-00-01.oeari.mongodb.net:27017' => ServerDescription {
+            _hostAddress: new HostAddress('cluster0-shard-00-01.oeari.mongodb.net:27017'),
+            address: 'cluster0-shard-00-01.oeari.mongodb.net:27017',
+            type: 'Unknown',
+            hosts: [],
+            passives: [],
+            arbiters: [],
+            tags: {},
+            minWireVersion: 0,
+            maxWireVersion: 0,
+            roundTripTime: -1,
+            lastUpdateTime: 26986065,
+            lastWriteDate: 0,
+            topologyVersion: {
+              processId: new ObjectId("627004bf4c96c67a5085af66"),
+              counter: 6
+            },
+            error: MongoNetworkTimeoutError: connection timed out
+                at connectionFailureError (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongodb/src/cmap/connect.ts:498:14)
+                at TLSSocket.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongodb/src/cmap/connect.ts:394:16)
+                at Object.onceWrapper (node:events:641:28)
+                at TLSSocket.emit (node:events:527:28)
+                at TLSSocket.emit (node:domain:475:12)
+                at TLSSocket.Socket._onTimeout (node:net:516:8)
+                at listOnTimeout (node:internal/timers:559:17)
+                at processTimers (node:internal/timers:502:7) {
+              [Symbol(errorLabels)]: Set(0) {}
+            }
+          }
+        },
+        stale: false,
+        compatible: true,
+        heartbeatFrequencyMS: 10000,
+        localThresholdMS: 15,
+        setName: 'atlas-80ye5b-shard-0',
+        maxSetVersion: 2,
+        maxElectionId: new ObjectId("7fffffff000000000000000a"),
+        commonWireVersion: 13,
+        logicalSessionTimeoutMinutes: undefined
+      },
+      code: undefined,
+      [Symbol(errorLabels)]: Set(0) {}
+    }
+  },
+  level: 'error',
+  timestamp: '2022-06-05 15:03:51'
+}
+{
+  message: {
+    updateCategoryDBError: MongooseServerSelectionError: Could not connect to any servers in your MongoDB Atlas cluster. One common reason is that you're trying to access the database from an IP that isn't whitelisted. Make sure your current IP address is on your Atlas cluster's IP whitelist: https://docs.atlas.mongodb.com/security-whitelist/
+        at Function.Model.$wrapCallback (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/model.js:5017:32)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/query.js:4732:21
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/helpers/promiseOrCallback.js:32:5
+        at new Promise (<anonymous>)
+        at promiseOrCallback (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/helpers/promiseOrCallback.js:31:10)
+        at model.Query.exec (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/query.js:4731:10)
+        at model.Query.Query.then (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/query.js:4814:15)
+        at runMicrotasks (<anonymous>)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+      reason: TopologyDescription {
+        type: 'ReplicaSetNoPrimary',
+        servers: Map(3) {
+          'cluster0-shard-00-02.oeari.mongodb.net:27017' => ServerDescription {
+            _hostAddress: new HostAddress('cluster0-shard-00-02.oeari.mongodb.net:27017'),
+            address: 'cluster0-shard-00-02.oeari.mongodb.net:27017',
+            type: 'Unknown',
+            hosts: [],
+            passives: [],
+            arbiters: [],
+            tags: {},
+            minWireVersion: 0,
+            maxWireVersion: 0,
+            roundTripTime: -1,
+            lastUpdateTime: 26986086,
+            lastWriteDate: 0,
+            topologyVersion: {
+              processId: new ObjectId("627005674ff1ac271a85c1f3"),
+              counter: 3
+            },
+            error: MongoNetworkTimeoutError: connection timed out
+                at connectionFailureError (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongodb/src/cmap/connect.ts:498:14)
+                at TLSSocket.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongodb/src/cmap/connect.ts:394:16)
+                at Object.onceWrapper (node:events:641:28)
+                at TLSSocket.emit (node:events:527:28)
+                at TLSSocket.emit (node:domain:475:12)
+                at TLSSocket.Socket._onTimeout (node:net:516:8)
+                at listOnTimeout (node:internal/timers:559:17)
+                at processTimers (node:internal/timers:502:7) {
+              [Symbol(errorLabels)]: Set(0) {}
+            }
+          },
+          'cluster0-shard-00-00.oeari.mongodb.net:27017' => ServerDescription {
+            _hostAddress: new HostAddress('cluster0-shard-00-00.oeari.mongodb.net:27017'),
+            address: 'cluster0-shard-00-00.oeari.mongodb.net:27017',
+            type: 'Unknown',
+            hosts: [],
+            passives: [],
+            arbiters: [],
+            tags: {},
+            minWireVersion: 0,
+            maxWireVersion: 0,
+            roundTripTime: -1,
+            lastUpdateTime: 26985995,
+            lastWriteDate: 0,
+            topologyVersion: {
+              processId: new ObjectId("6270042ae8ff18065f7eb95c"),
+              counter: 4
+            },
+            error: MongoNetworkTimeoutError: connection timed out
+                at connectionFailureError (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongodb/src/cmap/connect.ts:498:14)
+                at TLSSocket.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongodb/src/cmap/connect.ts:394:16)
+                at Object.onceWrapper (node:events:641:28)
+                at TLSSocket.emit (node:events:527:28)
+                at TLSSocket.emit (node:domain:475:12)
+                at TLSSocket.Socket._onTimeout (node:net:516:8)
+                at listOnTimeout (node:internal/timers:559:17)
+                at processTimers (node:internal/timers:502:7) {
+              [Symbol(errorLabels)]: Set(0) {}
+            }
+          },
+          'cluster0-shard-00-01.oeari.mongodb.net:27017' => ServerDescription {
+            _hostAddress: new HostAddress('cluster0-shard-00-01.oeari.mongodb.net:27017'),
+            address: 'cluster0-shard-00-01.oeari.mongodb.net:27017',
+            type: 'Unknown',
+            hosts: [],
+            passives: [],
+            arbiters: [],
+            tags: {},
+            minWireVersion: 0,
+            maxWireVersion: 0,
+            roundTripTime: -1,
+            lastUpdateTime: 26986065,
+            lastWriteDate: 0,
+            topologyVersion: {
+              processId: new ObjectId("627004bf4c96c67a5085af66"),
+              counter: 6
+            },
+            error: MongoNetworkTimeoutError: connection timed out
+                at connectionFailureError (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongodb/src/cmap/connect.ts:498:14)
+                at TLSSocket.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongodb/src/cmap/connect.ts:394:16)
+                at Object.onceWrapper (node:events:641:28)
+                at TLSSocket.emit (node:events:527:28)
+                at TLSSocket.emit (node:domain:475:12)
+                at TLSSocket.Socket._onTimeout (node:net:516:8)
+                at listOnTimeout (node:internal/timers:559:17)
+                at processTimers (node:internal/timers:502:7) {
+              [Symbol(errorLabels)]: Set(0) {}
+            }
+          }
+        },
+        stale: false,
+        compatible: true,
+        heartbeatFrequencyMS: 10000,
+        localThresholdMS: 15,
+        setName: 'atlas-80ye5b-shard-0',
+        maxSetVersion: 2,
+        maxElectionId: new ObjectId("7fffffff000000000000000a"),
+        commonWireVersion: 13,
+        logicalSessionTimeoutMinutes: undefined
+      },
+      code: undefined
+    }
+  },
+  level: 'error',
+  timestamp: '2022-06-05 15:03:51'
+}
+{
+  message: {
+    getclientDBError: MongooseServerSelectionError: Could not connect to any servers in your MongoDB Atlas cluster. One common reason is that you're trying to access the database from an IP that isn't whitelisted. Make sure your current IP address is on your Atlas cluster's IP whitelist: https://docs.atlas.mongodb.com/security-whitelist/
+        at Function.Model.$wrapCallback (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/model.js:5017:32)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/query.js:4732:21
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/helpers/promiseOrCallback.js:32:5
+        at new Promise (<anonymous>)
+        at promiseOrCallback (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/helpers/promiseOrCallback.js:31:10)
+        at model.Query.exec (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/query.js:4731:10)
+        at model.Query.Query.then (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/query.js:4814:15)
+        at runMicrotasks (<anonymous>)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+      reason: TopologyDescription {
+        type: 'ReplicaSetNoPrimary',
+        servers: Map(3) {
+          'cluster0-shard-00-02.oeari.mongodb.net:27017' => ServerDescription {
+            _hostAddress: new HostAddress('cluster0-shard-00-02.oeari.mongodb.net:27017'),
+            address: 'cluster0-shard-00-02.oeari.mongodb.net:27017',
+            type: 'Unknown',
+            hosts: [],
+            passives: [],
+            arbiters: [],
+            tags: {},
+            minWireVersion: 0,
+            maxWireVersion: 0,
+            roundTripTime: -1,
+            lastUpdateTime: 26986086,
+            lastWriteDate: 0,
+            topologyVersion: {
+              processId: new ObjectId("627005674ff1ac271a85c1f3"),
+              counter: 3
+            },
+            error: MongoNetworkTimeoutError: connection timed out
+                at connectionFailureError (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongodb/src/cmap/connect.ts:498:14)
+                at TLSSocket.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongodb/src/cmap/connect.ts:394:16)
+                at Object.onceWrapper (node:events:641:28)
+                at TLSSocket.emit (node:events:527:28)
+                at TLSSocket.emit (node:domain:475:12)
+                at TLSSocket.Socket._onTimeout (node:net:516:8)
+                at listOnTimeout (node:internal/timers:559:17)
+                at processTimers (node:internal/timers:502:7) {
+              [Symbol(errorLabels)]: Set(0) {}
+            }
+          },
+          'cluster0-shard-00-00.oeari.mongodb.net:27017' => ServerDescription {
+            _hostAddress: new HostAddress('cluster0-shard-00-00.oeari.mongodb.net:27017'),
+            address: 'cluster0-shard-00-00.oeari.mongodb.net:27017',
+            type: 'Unknown',
+            hosts: [],
+            passives: [],
+            arbiters: [],
+            tags: {},
+            minWireVersion: 0,
+            maxWireVersion: 0,
+            roundTripTime: -1,
+            lastUpdateTime: 26985995,
+            lastWriteDate: 0,
+            topologyVersion: {
+              processId: new ObjectId("6270042ae8ff18065f7eb95c"),
+              counter: 4
+            },
+            error: MongoNetworkTimeoutError: connection timed out
+                at connectionFailureError (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongodb/src/cmap/connect.ts:498:14)
+                at TLSSocket.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongodb/src/cmap/connect.ts:394:16)
+                at Object.onceWrapper (node:events:641:28)
+                at TLSSocket.emit (node:events:527:28)
+                at TLSSocket.emit (node:domain:475:12)
+                at TLSSocket.Socket._onTimeout (node:net:516:8)
+                at listOnTimeout (node:internal/timers:559:17)
+                at processTimers (node:internal/timers:502:7) {
+              [Symbol(errorLabels)]: Set(0) {}
+            }
+          },
+          'cluster0-shard-00-01.oeari.mongodb.net:27017' => ServerDescription {
+            _hostAddress: new HostAddress('cluster0-shard-00-01.oeari.mongodb.net:27017'),
+            address: 'cluster0-shard-00-01.oeari.mongodb.net:27017',
+            type: 'Unknown',
+            hosts: [],
+            passives: [],
+            arbiters: [],
+            tags: {},
+            minWireVersion: 0,
+            maxWireVersion: 0,
+            roundTripTime: -1,
+            lastUpdateTime: 26986065,
+            lastWriteDate: 0,
+            topologyVersion: {
+              processId: new ObjectId("627004bf4c96c67a5085af66"),
+              counter: 6
+            },
+            error: MongoNetworkTimeoutError: connection timed out
+                at connectionFailureError (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongodb/src/cmap/connect.ts:498:14)
+                at TLSSocket.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongodb/src/cmap/connect.ts:394:16)
+                at Object.onceWrapper (node:events:641:28)
+                at TLSSocket.emit (node:events:527:28)
+                at TLSSocket.emit (node:domain:475:12)
+                at TLSSocket.Socket._onTimeout (node:net:516:8)
+                at listOnTimeout (node:internal/timers:559:17)
+                at processTimers (node:internal/timers:502:7) {
+              [Symbol(errorLabels)]: Set(0) {}
+            }
+          }
+        },
+        stale: false,
+        compatible: true,
+        heartbeatFrequencyMS: 10000,
+        localThresholdMS: 15,
+        setName: 'atlas-80ye5b-shard-0',
+        maxSetVersion: 2,
+        maxElectionId: new ObjectId("7fffffff000000000000000a"),
+        commonWireVersion: 13,
+        logicalSessionTimeoutMinutes: undefined
+      },
+      code: undefined
+    }
+  },
+  level: 'error',
+  timestamp: '2022-06-05 15:03:51'
+}
+{
+  message: {
+    getUserError: MongooseServerSelectionError: Could not connect to any servers in your MongoDB Atlas cluster. One common reason is that you're trying to access the database from an IP that isn't whitelisted. Make sure your current IP address is on your Atlas cluster's IP whitelist: https://docs.atlas.mongodb.com/security-whitelist/
+        at Function.Model.$wrapCallback (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/model.js:5017:32)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/query.js:4732:21
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/helpers/promiseOrCallback.js:32:5
+        at new Promise (<anonymous>)
+        at promiseOrCallback (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/helpers/promiseOrCallback.js:31:10)
+        at model.Query.exec (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/query.js:4731:10)
+        at model.Query.Query.then (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/query.js:4814:15)
+        at runMicrotasks (<anonymous>)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+      reason: TopologyDescription {
+        type: 'ReplicaSetNoPrimary',
+        servers: Map(3) {
+          'cluster0-shard-00-02.oeari.mongodb.net:27017' => ServerDescription {
+            _hostAddress: new HostAddress('cluster0-shard-00-02.oeari.mongodb.net:27017'),
+            address: 'cluster0-shard-00-02.oeari.mongodb.net:27017',
+            type: 'Unknown',
+            hosts: [],
+            passives: [],
+            arbiters: [],
+            tags: {},
+            minWireVersion: 0,
+            maxWireVersion: 0,
+            roundTripTime: -1,
+            lastUpdateTime: 26986086,
+            lastWriteDate: 0,
+            topologyVersion: {
+              processId: new ObjectId("627005674ff1ac271a85c1f3"),
+              counter: 3
+            },
+            error: MongoNetworkTimeoutError: connection timed out
+                at connectionFailureError (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongodb/src/cmap/connect.ts:498:14)
+                at TLSSocket.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongodb/src/cmap/connect.ts:394:16)
+                at Object.onceWrapper (node:events:641:28)
+                at TLSSocket.emit (node:events:527:28)
+                at TLSSocket.emit (node:domain:475:12)
+                at TLSSocket.Socket._onTimeout (node:net:516:8)
+                at listOnTimeout (node:internal/timers:559:17)
+                at processTimers (node:internal/timers:502:7) {
+              [Symbol(errorLabels)]: Set(0) {}
+            }
+          },
+          'cluster0-shard-00-00.oeari.mongodb.net:27017' => ServerDescription {
+            _hostAddress: new HostAddress('cluster0-shard-00-00.oeari.mongodb.net:27017'),
+            address: 'cluster0-shard-00-00.oeari.mongodb.net:27017',
+            type: 'Unknown',
+            hosts: [],
+            passives: [],
+            arbiters: [],
+            tags: {},
+            minWireVersion: 0,
+            maxWireVersion: 0,
+            roundTripTime: -1,
+            lastUpdateTime: 26985995,
+            lastWriteDate: 0,
+            topologyVersion: {
+              processId: new ObjectId("6270042ae8ff18065f7eb95c"),
+              counter: 4
+            },
+            error: MongoNetworkTimeoutError: connection timed out
+                at connectionFailureError (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongodb/src/cmap/connect.ts:498:14)
+                at TLSSocket.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongodb/src/cmap/connect.ts:394:16)
+                at Object.onceWrapper (node:events:641:28)
+                at TLSSocket.emit (node:events:527:28)
+                at TLSSocket.emit (node:domain:475:12)
+                at TLSSocket.Socket._onTimeout (node:net:516:8)
+                at listOnTimeout (node:internal/timers:559:17)
+                at processTimers (node:internal/timers:502:7) {
+              [Symbol(errorLabels)]: Set(0) {}
+            }
+          },
+          'cluster0-shard-00-01.oeari.mongodb.net:27017' => ServerDescription {
+            _hostAddress: new HostAddress('cluster0-shard-00-01.oeari.mongodb.net:27017'),
+            address: 'cluster0-shard-00-01.oeari.mongodb.net:27017',
+            type: 'Unknown',
+            hosts: [],
+            passives: [],
+            arbiters: [],
+            tags: {},
+            minWireVersion: 0,
+            maxWireVersion: 0,
+            roundTripTime: -1,
+            lastUpdateTime: 26986065,
+            lastWriteDate: 0,
+            topologyVersion: {
+              processId: new ObjectId("627004bf4c96c67a5085af66"),
+              counter: 6
+            },
+            error: MongoNetworkTimeoutError: connection timed out
+                at connectionFailureError (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongodb/src/cmap/connect.ts:498:14)
+                at TLSSocket.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongodb/src/cmap/connect.ts:394:16)
+                at Object.onceWrapper (node:events:641:28)
+                at TLSSocket.emit (node:events:527:28)
+                at TLSSocket.emit (node:domain:475:12)
+                at TLSSocket.Socket._onTimeout (node:net:516:8)
+                at listOnTimeout (node:internal/timers:559:17)
+                at processTimers (node:internal/timers:502:7) {
+              [Symbol(errorLabels)]: Set(0) {}
+            }
+          }
+        },
+        stale: false,
+        compatible: true,
+        heartbeatFrequencyMS: 10000,
+        localThresholdMS: 15,
+        setName: 'atlas-80ye5b-shard-0',
+        maxSetVersion: 2,
+        maxElectionId: new ObjectId("7fffffff000000000000000a"),
+        commonWireVersion: 13,
+        logicalSessionTimeoutMinutes: undefined
+      },
+      code: undefined
+    }
+  },
+  level: 'error',
+  timestamp: '2022-06-05 15:03:51'
+}
+{
+  message: {
+    getTechMemberDBError: MongooseServerSelectionError: Could not connect to any servers in your MongoDB Atlas cluster. One common reason is that you're trying to access the database from an IP that isn't whitelisted. Make sure your current IP address is on your Atlas cluster's IP whitelist: https://docs.atlas.mongodb.com/security-whitelist/
+        at Function.Model.$wrapCallback (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/model.js:5017:32)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/query.js:4732:21
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/helpers/promiseOrCallback.js:32:5
+        at new Promise (<anonymous>)
+        at promiseOrCallback (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/helpers/promiseOrCallback.js:31:10)
+        at model.Query.exec (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/query.js:4731:10)
+        at model.Query.Query.then (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/query.js:4814:15)
+        at runMicrotasks (<anonymous>)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+      reason: TopologyDescription {
+        type: 'ReplicaSetNoPrimary',
+        servers: Map(3) {
+          'cluster0-shard-00-02.oeari.mongodb.net:27017' => ServerDescription {
+            _hostAddress: new HostAddress('cluster0-shard-00-02.oeari.mongodb.net:27017'),
+            address: 'cluster0-shard-00-02.oeari.mongodb.net:27017',
+            type: 'Unknown',
+            hosts: [],
+            passives: [],
+            arbiters: [],
+            tags: {},
+            minWireVersion: 0,
+            maxWireVersion: 0,
+            roundTripTime: -1,
+            lastUpdateTime: 26986086,
+            lastWriteDate: 0,
+            topologyVersion: {
+              processId: new ObjectId("627005674ff1ac271a85c1f3"),
+              counter: 3
+            },
+            error: MongoNetworkTimeoutError: connection timed out
+                at connectionFailureError (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongodb/src/cmap/connect.ts:498:14)
+                at TLSSocket.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongodb/src/cmap/connect.ts:394:16)
+                at Object.onceWrapper (node:events:641:28)
+                at TLSSocket.emit (node:events:527:28)
+                at TLSSocket.emit (node:domain:475:12)
+                at TLSSocket.Socket._onTimeout (node:net:516:8)
+                at listOnTimeout (node:internal/timers:559:17)
+                at processTimers (node:internal/timers:502:7) {
+              [Symbol(errorLabels)]: Set(0) {}
+            }
+          },
+          'cluster0-shard-00-00.oeari.mongodb.net:27017' => ServerDescription {
+            _hostAddress: new HostAddress('cluster0-shard-00-00.oeari.mongodb.net:27017'),
+            address: 'cluster0-shard-00-00.oeari.mongodb.net:27017',
+            type: 'Unknown',
+            hosts: [],
+            passives: [],
+            arbiters: [],
+            tags: {},
+            minWireVersion: 0,
+            maxWireVersion: 0,
+            roundTripTime: -1,
+            lastUpdateTime: 26985995,
+            lastWriteDate: 0,
+            topologyVersion: {
+              processId: new ObjectId("6270042ae8ff18065f7eb95c"),
+              counter: 4
+            },
+            error: MongoNetworkTimeoutError: connection timed out
+                at connectionFailureError (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongodb/src/cmap/connect.ts:498:14)
+                at TLSSocket.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongodb/src/cmap/connect.ts:394:16)
+                at Object.onceWrapper (node:events:641:28)
+                at TLSSocket.emit (node:events:527:28)
+                at TLSSocket.emit (node:domain:475:12)
+                at TLSSocket.Socket._onTimeout (node:net:516:8)
+                at listOnTimeout (node:internal/timers:559:17)
+                at processTimers (node:internal/timers:502:7) {
+              [Symbol(errorLabels)]: Set(0) {}
+            }
+          },
+          'cluster0-shard-00-01.oeari.mongodb.net:27017' => ServerDescription {
+            _hostAddress: new HostAddress('cluster0-shard-00-01.oeari.mongodb.net:27017'),
+            address: 'cluster0-shard-00-01.oeari.mongodb.net:27017',
+            type: 'Unknown',
+            hosts: [],
+            passives: [],
+            arbiters: [],
+            tags: {},
+            minWireVersion: 0,
+            maxWireVersion: 0,
+            roundTripTime: -1,
+            lastUpdateTime: 26986065,
+            lastWriteDate: 0,
+            topologyVersion: {
+              processId: new ObjectId("627004bf4c96c67a5085af66"),
+              counter: 6
+            },
+            error: MongoNetworkTimeoutError: connection timed out
+                at connectionFailureError (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongodb/src/cmap/connect.ts:498:14)
+                at TLSSocket.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongodb/src/cmap/connect.ts:394:16)
+                at Object.onceWrapper (node:events:641:28)
+                at TLSSocket.emit (node:events:527:28)
+                at TLSSocket.emit (node:domain:475:12)
+                at TLSSocket.Socket._onTimeout (node:net:516:8)
+                at listOnTimeout (node:internal/timers:559:17)
+                at processTimers (node:internal/timers:502:7) {
+              [Symbol(errorLabels)]: Set(0) {}
+            }
+          }
+        },
+        stale: false,
+        compatible: true,
+        heartbeatFrequencyMS: 10000,
+        localThresholdMS: 15,
+        setName: 'atlas-80ye5b-shard-0',
+        maxSetVersion: 2,
+        maxElectionId: new ObjectId("7fffffff000000000000000a"),
+        commonWireVersion: 13,
+        logicalSessionTimeoutMinutes: undefined
+      },
+      code: undefined
+    }
+  },
+  level: 'error',
+  timestamp: '2022-06-05 15:03:51'
+}
+{
+  message: {
+    getProjectDBError: MongooseServerSelectionError: Could not connect to any servers in your MongoDB Atlas cluster. One common reason is that you're trying to access the database from an IP that isn't whitelisted. Make sure your current IP address is on your Atlas cluster's IP whitelist: https://docs.atlas.mongodb.com/security-whitelist/
+        at Function.Model.$wrapCallback (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/model.js:5017:32)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/query.js:4732:21
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/helpers/promiseOrCallback.js:32:5
+        at new Promise (<anonymous>)
+        at promiseOrCallback (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/helpers/promiseOrCallback.js:31:10)
+        at model.Query.exec (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/query.js:4731:10)
+        at model.Query.Query.then (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/query.js:4814:15)
+        at runMicrotasks (<anonymous>)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+      reason: TopologyDescription {
+        type: 'ReplicaSetNoPrimary',
+        servers: Map(3) {
+          'cluster0-shard-00-02.oeari.mongodb.net:27017' => ServerDescription {
+            _hostAddress: new HostAddress('cluster0-shard-00-02.oeari.mongodb.net:27017'),
+            address: 'cluster0-shard-00-02.oeari.mongodb.net:27017',
+            type: 'Unknown',
+            hosts: [],
+            passives: [],
+            arbiters: [],
+            tags: {},
+            minWireVersion: 0,
+            maxWireVersion: 0,
+            roundTripTime: -1,
+            lastUpdateTime: 27020443,
+            lastWriteDate: 0,
+            topologyVersion: {
+              processId: new ObjectId("627005674ff1ac271a85c1f3"),
+              counter: 3
+            },
+            error: MongoNetworkTimeoutError: connection timed out
+                at connectionFailureError (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongodb/src/cmap/connect.ts:498:14)
+                at TLSSocket.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongodb/src/cmap/connect.ts:394:16)
+                at Object.onceWrapper (node:events:641:28)
+                at TLSSocket.emit (node:events:527:28)
+                at TLSSocket.emit (node:domain:475:12)
+                at TLSSocket.Socket._onTimeout (node:net:516:8)
+                at listOnTimeout (node:internal/timers:559:17)
+                at processTimers (node:internal/timers:502:7) {
+              [Symbol(errorLabels)]: Set(0) {}
+            }
+          },
+          'cluster0-shard-00-00.oeari.mongodb.net:27017' => ServerDescription {
+            _hostAddress: new HostAddress('cluster0-shard-00-00.oeari.mongodb.net:27017'),
+            address: 'cluster0-shard-00-00.oeari.mongodb.net:27017',
+            type: 'Unknown',
+            hosts: [],
+            passives: [],
+            arbiters: [],
+            tags: {},
+            minWireVersion: 0,
+            maxWireVersion: 0,
+            roundTripTime: -1,
+            lastUpdateTime: 27020434,
+            lastWriteDate: 0,
+            topologyVersion: {
+              processId: new ObjectId("6270042ae8ff18065f7eb95c"),
+              counter: 4
+            },
+            error: MongoNetworkTimeoutError: connection timed out
+                at connectionFailureError (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongodb/src/cmap/connect.ts:498:14)
+                at TLSSocket.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongodb/src/cmap/connect.ts:394:16)
+                at Object.onceWrapper (node:events:641:28)
+                at TLSSocket.emit (node:events:527:28)
+                at TLSSocket.emit (node:domain:475:12)
+                at TLSSocket.Socket._onTimeout (node:net:516:8)
+                at listOnTimeout (node:internal/timers:559:17)
+                at processTimers (node:internal/timers:502:7) {
+              [Symbol(errorLabels)]: Set(0) {}
+            }
+          },
+          'cluster0-shard-00-01.oeari.mongodb.net:27017' => ServerDescription {
+            _hostAddress: new HostAddress('cluster0-shard-00-01.oeari.mongodb.net:27017'),
+            address: 'cluster0-shard-00-01.oeari.mongodb.net:27017',
+            type: 'Unknown',
+            hosts: [],
+            passives: [],
+            arbiters: [],
+            tags: {},
+            minWireVersion: 0,
+            maxWireVersion: 0,
+            roundTripTime: -1,
+            lastUpdateTime: 27020441,
+            lastWriteDate: 0,
+            topologyVersion: {
+              processId: new ObjectId("627004bf4c96c67a5085af66"),
+              counter: 6
+            },
+            error: MongoNetworkTimeoutError: connection timed out
+                at connectionFailureError (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongodb/src/cmap/connect.ts:498:14)
+                at TLSSocket.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongodb/src/cmap/connect.ts:394:16)
+                at Object.onceWrapper (node:events:641:28)
+                at TLSSocket.emit (node:events:527:28)
+                at TLSSocket.emit (node:domain:475:12)
+                at TLSSocket.Socket._onTimeout (node:net:516:8)
+                at listOnTimeout (node:internal/timers:559:17)
+                at processTimers (node:internal/timers:502:7) {
+              [Symbol(errorLabels)]: Set(0) {}
+            }
+          }
+        },
+        stale: false,
+        compatible: true,
+        heartbeatFrequencyMS: 10000,
+        localThresholdMS: 15,
+        setName: 'atlas-80ye5b-shard-0',
+        maxSetVersion: 2,
+        maxElectionId: new ObjectId("7fffffff000000000000000a"),
+        commonWireVersion: 13,
+        logicalSessionTimeoutMinutes: undefined
+      },
+      code: undefined
+    }
+  },
+  level: 'error',
+  timestamp: '2022-06-05 15:04:21'
+}
+{
+  message: {
+    updateTaskDBError: MongooseServerSelectionError: Could not connect to any servers in your MongoDB Atlas cluster. One common reason is that you're trying to access the database from an IP that isn't whitelisted. Make sure your current IP address is on your Atlas cluster's IP whitelist: https://docs.atlas.mongodb.com/security-whitelist/
+        at Function.Model.$wrapCallback (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/model.js:5017:32)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/query.js:4732:21
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/helpers/promiseOrCallback.js:32:5
+        at new Promise (<anonymous>)
+        at promiseOrCallback (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/helpers/promiseOrCallback.js:31:10)
+        at model.Query.exec (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/query.js:4731:10)
+        at model.Query.Query.then (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/query.js:4814:15)
+        at runMicrotasks (<anonymous>)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+      reason: TopologyDescription {
+        type: 'ReplicaSetNoPrimary',
+        servers: Map(3) {
+          'cluster0-shard-00-02.oeari.mongodb.net:27017' => ServerDescription {
+            _hostAddress: new HostAddress('cluster0-shard-00-02.oeari.mongodb.net:27017'),
+            address: 'cluster0-shard-00-02.oeari.mongodb.net:27017',
+            type: 'Unknown',
+            hosts: [],
+            passives: [],
+            arbiters: [],
+            tags: {},
+            minWireVersion: 0,
+            maxWireVersion: 0,
+            roundTripTime: -1,
+            lastUpdateTime: 27020443,
+            lastWriteDate: 0,
+            topologyVersion: {
+              processId: new ObjectId("627005674ff1ac271a85c1f3"),
+              counter: 3
+            },
+            error: MongoNetworkTimeoutError: connection timed out
+                at connectionFailureError (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongodb/src/cmap/connect.ts:498:14)
+                at TLSSocket.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongodb/src/cmap/connect.ts:394:16)
+                at Object.onceWrapper (node:events:641:28)
+                at TLSSocket.emit (node:events:527:28)
+                at TLSSocket.emit (node:domain:475:12)
+                at TLSSocket.Socket._onTimeout (node:net:516:8)
+                at listOnTimeout (node:internal/timers:559:17)
+                at processTimers (node:internal/timers:502:7) {
+              [Symbol(errorLabels)]: Set(0) {}
+            }
+          },
+          'cluster0-shard-00-00.oeari.mongodb.net:27017' => ServerDescription {
+            _hostAddress: new HostAddress('cluster0-shard-00-00.oeari.mongodb.net:27017'),
+            address: 'cluster0-shard-00-00.oeari.mongodb.net:27017',
+            type: 'Unknown',
+            hosts: [],
+            passives: [],
+            arbiters: [],
+            tags: {},
+            minWireVersion: 0,
+            maxWireVersion: 0,
+            roundTripTime: -1,
+            lastUpdateTime: 27020434,
+            lastWriteDate: 0,
+            topologyVersion: {
+              processId: new ObjectId("6270042ae8ff18065f7eb95c"),
+              counter: 4
+            },
+            error: MongoNetworkTimeoutError: connection timed out
+                at connectionFailureError (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongodb/src/cmap/connect.ts:498:14)
+                at TLSSocket.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongodb/src/cmap/connect.ts:394:16)
+                at Object.onceWrapper (node:events:641:28)
+                at TLSSocket.emit (node:events:527:28)
+                at TLSSocket.emit (node:domain:475:12)
+                at TLSSocket.Socket._onTimeout (node:net:516:8)
+                at listOnTimeout (node:internal/timers:559:17)
+                at processTimers (node:internal/timers:502:7) {
+              [Symbol(errorLabels)]: Set(0) {}
+            }
+          },
+          'cluster0-shard-00-01.oeari.mongodb.net:27017' => ServerDescription {
+            _hostAddress: new HostAddress('cluster0-shard-00-01.oeari.mongodb.net:27017'),
+            address: 'cluster0-shard-00-01.oeari.mongodb.net:27017',
+            type: 'Unknown',
+            hosts: [],
+            passives: [],
+            arbiters: [],
+            tags: {},
+            minWireVersion: 0,
+            maxWireVersion: 0,
+            roundTripTime: -1,
+            lastUpdateTime: 27020441,
+            lastWriteDate: 0,
+            topologyVersion: {
+              processId: new ObjectId("627004bf4c96c67a5085af66"),
+              counter: 6
+            },
+            error: MongoNetworkTimeoutError: connection timed out
+                at connectionFailureError (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongodb/src/cmap/connect.ts:498:14)
+                at TLSSocket.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongodb/src/cmap/connect.ts:394:16)
+                at Object.onceWrapper (node:events:641:28)
+                at TLSSocket.emit (node:events:527:28)
+                at TLSSocket.emit (node:domain:475:12)
+                at TLSSocket.Socket._onTimeout (node:net:516:8)
+                at listOnTimeout (node:internal/timers:559:17)
+                at processTimers (node:internal/timers:502:7) {
+              [Symbol(errorLabels)]: Set(0) {}
+            }
+          }
+        },
+        stale: false,
+        compatible: true,
+        heartbeatFrequencyMS: 10000,
+        localThresholdMS: 15,
+        setName: 'atlas-80ye5b-shard-0',
+        maxSetVersion: 2,
+        maxElectionId: new ObjectId("7fffffff000000000000000a"),
+        commonWireVersion: 13,
+        logicalSessionTimeoutMinutes: undefined
+      },
+      code: undefined
+    }
+  },
+  level: 'error',
+  timestamp: '2022-06-05 15:04:21'
+}
+{
+  message: {
+    findUserById: MongooseServerSelectionError: Could not connect to any servers in your MongoDB Atlas cluster. One common reason is that you're trying to access the database from an IP that isn't whitelisted. Make sure your current IP address is on your Atlas cluster's IP whitelist: https://docs.atlas.mongodb.com/security-whitelist/
+        at Function.Model.$wrapCallback (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/model.js:5017:32)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/query.js:4732:21
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/helpers/promiseOrCallback.js:32:5
+        at new Promise (<anonymous>)
+        at promiseOrCallback (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/helpers/promiseOrCallback.js:31:10)
+        at model.Query.exec (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/query.js:4731:10)
+        at model.Query.Query.then (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/query.js:4814:15)
+        at runMicrotasks (<anonymous>)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+      reason: TopologyDescription {
+        type: 'ReplicaSetNoPrimary',
+        servers: Map(3) {
+          'cluster0-shard-00-02.oeari.mongodb.net:27017' => ServerDescription {
+            _hostAddress: new HostAddress('cluster0-shard-00-02.oeari.mongodb.net:27017'),
+            address: 'cluster0-shard-00-02.oeari.mongodb.net:27017',
+            type: 'Unknown',
+            hosts: [],
+            passives: [],
+            arbiters: [],
+            tags: {},
+            minWireVersion: 0,
+            maxWireVersion: 0,
+            roundTripTime: -1,
+            lastUpdateTime: 27020443,
+            lastWriteDate: 0,
+            topologyVersion: {
+              processId: new ObjectId("627005674ff1ac271a85c1f3"),
+              counter: 3
+            },
+            error: MongoNetworkTimeoutError: connection timed out
+                at connectionFailureError (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongodb/src/cmap/connect.ts:498:14)
+                at TLSSocket.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongodb/src/cmap/connect.ts:394:16)
+                at Object.onceWrapper (node:events:641:28)
+                at TLSSocket.emit (node:events:527:28)
+                at TLSSocket.emit (node:domain:475:12)
+                at TLSSocket.Socket._onTimeout (node:net:516:8)
+                at listOnTimeout (node:internal/timers:559:17)
+                at processTimers (node:internal/timers:502:7) {
+              [Symbol(errorLabels)]: Set(0) {}
+            }
+          },
+          'cluster0-shard-00-00.oeari.mongodb.net:27017' => ServerDescription {
+            _hostAddress: new HostAddress('cluster0-shard-00-00.oeari.mongodb.net:27017'),
+            address: 'cluster0-shard-00-00.oeari.mongodb.net:27017',
+            type: 'Unknown',
+            hosts: [],
+            passives: [],
+            arbiters: [],
+            tags: {},
+            minWireVersion: 0,
+            maxWireVersion: 0,
+            roundTripTime: -1,
+            lastUpdateTime: 27020434,
+            lastWriteDate: 0,
+            topologyVersion: {
+              processId: new ObjectId("6270042ae8ff18065f7eb95c"),
+              counter: 4
+            },
+            error: MongoNetworkTimeoutError: connection timed out
+                at connectionFailureError (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongodb/src/cmap/connect.ts:498:14)
+                at TLSSocket.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongodb/src/cmap/connect.ts:394:16)
+                at Object.onceWrapper (node:events:641:28)
+                at TLSSocket.emit (node:events:527:28)
+                at TLSSocket.emit (node:domain:475:12)
+                at TLSSocket.Socket._onTimeout (node:net:516:8)
+                at listOnTimeout (node:internal/timers:559:17)
+                at processTimers (node:internal/timers:502:7) {
+              [Symbol(errorLabels)]: Set(0) {}
+            }
+          },
+          'cluster0-shard-00-01.oeari.mongodb.net:27017' => ServerDescription {
+            _hostAddress: new HostAddress('cluster0-shard-00-01.oeari.mongodb.net:27017'),
+            address: 'cluster0-shard-00-01.oeari.mongodb.net:27017',
+            type: 'Unknown',
+            hosts: [],
+            passives: [],
+            arbiters: [],
+            tags: {},
+            minWireVersion: 0,
+            maxWireVersion: 0,
+            roundTripTime: -1,
+            lastUpdateTime: 27020441,
+            lastWriteDate: 0,
+            topologyVersion: {
+              processId: new ObjectId("627004bf4c96c67a5085af66"),
+              counter: 6
+            },
+            error: MongoNetworkTimeoutError: connection timed out
+                at connectionFailureError (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongodb/src/cmap/connect.ts:498:14)
+                at TLSSocket.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongodb/src/cmap/connect.ts:394:16)
+                at Object.onceWrapper (node:events:641:28)
+                at TLSSocket.emit (node:events:527:28)
+                at TLSSocket.emit (node:domain:475:12)
+                at TLSSocket.Socket._onTimeout (node:net:516:8)
+                at listOnTimeout (node:internal/timers:559:17)
+                at processTimers (node:internal/timers:502:7) {
+              [Symbol(errorLabels)]: Set(0) {}
+            }
+          }
+        },
+        stale: false,
+        compatible: true,
+        heartbeatFrequencyMS: 10000,
+        localThresholdMS: 15,
+        setName: 'atlas-80ye5b-shard-0',
+        maxSetVersion: 2,
+        maxElectionId: new ObjectId("7fffffff000000000000000a"),
+        commonWireVersion: 13,
+        logicalSessionTimeoutMinutes: undefined
+      },
+      code: undefined
+    }
+  },
+  level: 'error',
+  timestamp: '2022-06-05 15:04:21'
+}
+{
+  message: {
+    findUserById: MongooseServerSelectionError: Could not connect to any servers in your MongoDB Atlas cluster. One common reason is that you're trying to access the database from an IP that isn't whitelisted. Make sure your current IP address is on your Atlas cluster's IP whitelist: https://docs.atlas.mongodb.com/security-whitelist/
+        at Function.Model.$wrapCallback (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/model.js:5017:32)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/query.js:4732:21
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/helpers/promiseOrCallback.js:32:5
+        at new Promise (<anonymous>)
+        at promiseOrCallback (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/helpers/promiseOrCallback.js:31:10)
+        at model.Query.exec (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/query.js:4731:10)
+        at model.Query.Query.then (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/query.js:4814:15)
+        at runMicrotasks (<anonymous>)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+      reason: TopologyDescription {
+        type: 'ReplicaSetNoPrimary',
+        servers: Map(3) {
+          'cluster0-shard-00-02.oeari.mongodb.net:27017' => ServerDescription {
+            _hostAddress: new HostAddress('cluster0-shard-00-02.oeari.mongodb.net:27017'),
+            address: 'cluster0-shard-00-02.oeari.mongodb.net:27017',
+            type: 'Unknown',
+            hosts: [],
+            passives: [],
+            arbiters: [],
+            tags: {},
+            minWireVersion: 0,
+            maxWireVersion: 0,
+            roundTripTime: -1,
+            lastUpdateTime: 27042484,
+            lastWriteDate: 0,
+            topologyVersion: {
+              processId: new ObjectId("627005674ff1ac271a85c1f3"),
+              counter: 3
+            },
+            error: MongoNetworkTimeoutError: connection timed out
+                at connectionFailureError (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongodb/src/cmap/connect.ts:498:14)
+                at TLSSocket.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongodb/src/cmap/connect.ts:394:16)
+                at Object.onceWrapper (node:events:641:28)
+                at TLSSocket.emit (node:events:527:28)
+                at TLSSocket.emit (node:domain:475:12)
+                at TLSSocket.Socket._onTimeout (node:net:516:8)
+                at listOnTimeout (node:internal/timers:559:17)
+                at processTimers (node:internal/timers:502:7) {
+              [Symbol(errorLabels)]: Set(0) {}
+            }
+          },
+          'cluster0-shard-00-00.oeari.mongodb.net:27017' => ServerDescription {
+            _hostAddress: new HostAddress('cluster0-shard-00-00.oeari.mongodb.net:27017'),
+            address: 'cluster0-shard-00-00.oeari.mongodb.net:27017',
+            type: 'Unknown',
+            hosts: [],
+            passives: [],
+            arbiters: [],
+            tags: {},
+            minWireVersion: 0,
+            maxWireVersion: 0,
+            roundTripTime: -1,
+            lastUpdateTime: 27042472,
+            lastWriteDate: 0,
+            topologyVersion: {
+              processId: new ObjectId("6270042ae8ff18065f7eb95c"),
+              counter: 4
+            },
+            error: MongoNetworkTimeoutError: connection timed out
+                at connectionFailureError (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongodb/src/cmap/connect.ts:498:14)
+                at TLSSocket.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongodb/src/cmap/connect.ts:394:16)
+                at Object.onceWrapper (node:events:641:28)
+                at TLSSocket.emit (node:events:527:28)
+                at TLSSocket.emit (node:domain:475:12)
+                at TLSSocket.Socket._onTimeout (node:net:516:8)
+                at listOnTimeout (node:internal/timers:559:17)
+                at processTimers (node:internal/timers:502:7) {
+              [Symbol(errorLabels)]: Set(0) {}
+            }
+          },
+          'cluster0-shard-00-01.oeari.mongodb.net:27017' => ServerDescription {
+            _hostAddress: new HostAddress('cluster0-shard-00-01.oeari.mongodb.net:27017'),
+            address: 'cluster0-shard-00-01.oeari.mongodb.net:27017',
+            type: 'Unknown',
+            hosts: [],
+            passives: [],
+            arbiters: [],
+            tags: {},
+            minWireVersion: 0,
+            maxWireVersion: 0,
+            roundTripTime: -1,
+            lastUpdateTime: 27042483,
+            lastWriteDate: 0,
+            topologyVersion: {
+              processId: new ObjectId("627004bf4c96c67a5085af66"),
+              counter: 6
+            },
+            error: MongoNetworkTimeoutError: connection timed out
+                at connectionFailureError (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongodb/src/cmap/connect.ts:498:14)
+                at TLSSocket.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongodb/src/cmap/connect.ts:394:16)
+                at Object.onceWrapper (node:events:641:28)
+                at TLSSocket.emit (node:events:527:28)
+                at TLSSocket.emit (node:domain:475:12)
+                at TLSSocket.Socket._onTimeout (node:net:516:8)
+                at listOnTimeout (node:internal/timers:559:17)
+                at processTimers (node:internal/timers:502:7) {
+              [Symbol(errorLabels)]: Set(0) {}
+            }
+          }
+        },
+        stale: false,
+        compatible: true,
+        heartbeatFrequencyMS: 10000,
+        localThresholdMS: 15,
+        setName: 'atlas-80ye5b-shard-0',
+        maxSetVersion: 2,
+        maxElectionId: new ObjectId("7fffffff000000000000000a"),
+        commonWireVersion: 13,
+        logicalSessionTimeoutMinutes: undefined
+      },
+      code: undefined
+    }
+  },
+  level: 'error',
+  timestamp: '2022-06-05 15:04:44'
+}
+{
+  message: {
+    getDepartmentDataError: MongoServerSelectionError: connection timed out
+        at Timeout._onTimeout (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongodb/src/sdam/topology.ts:606:30)
+        at listOnTimeout (node:internal/timers:559:17)
+        at processTimers (node:internal/timers:502:7) {
+      reason: TopologyDescription {
+        type: 'ReplicaSetNoPrimary',
+        servers: Map(3) {
+          'cluster0-shard-00-02.oeari.mongodb.net:27017' => ServerDescription {
+            _hostAddress: new HostAddress('cluster0-shard-00-02.oeari.mongodb.net:27017'),
+            address: 'cluster0-shard-00-02.oeari.mongodb.net:27017',
+            type: 'Unknown',
+            hosts: [],
+            passives: [],
+            arbiters: [],
+            tags: {},
+            minWireVersion: 0,
+            maxWireVersion: 0,
+            roundTripTime: -1,
+            lastUpdateTime: 27042484,
+            lastWriteDate: 0,
+            topologyVersion: {
+              processId: new ObjectId("627005674ff1ac271a85c1f3"),
+              counter: 3
+            },
+            error: MongoNetworkTimeoutError: connection timed out
+                at connectionFailureError (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongodb/src/cmap/connect.ts:498:14)
+                at TLSSocket.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongodb/src/cmap/connect.ts:394:16)
+                at Object.onceWrapper (node:events:641:28)
+                at TLSSocket.emit (node:events:527:28)
+                at TLSSocket.emit (node:domain:475:12)
+                at TLSSocket.Socket._onTimeout (node:net:516:8)
+                at listOnTimeout (node:internal/timers:559:17)
+                at processTimers (node:internal/timers:502:7) {
+              [Symbol(errorLabels)]: Set(0) {}
+            }
+          },
+          'cluster0-shard-00-00.oeari.mongodb.net:27017' => ServerDescription {
+            _hostAddress: new HostAddress('cluster0-shard-00-00.oeari.mongodb.net:27017'),
+            address: 'cluster0-shard-00-00.oeari.mongodb.net:27017',
+            type: 'Unknown',
+            hosts: [],
+            passives: [],
+            arbiters: [],
+            tags: {},
+            minWireVersion: 0,
+            maxWireVersion: 0,
+            roundTripTime: -1,
+            lastUpdateTime: 27042472,
+            lastWriteDate: 0,
+            topologyVersion: {
+              processId: new ObjectId("6270042ae8ff18065f7eb95c"),
+              counter: 4
+            },
+            error: MongoNetworkTimeoutError: connection timed out
+                at connectionFailureError (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongodb/src/cmap/connect.ts:498:14)
+                at TLSSocket.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongodb/src/cmap/connect.ts:394:16)
+                at Object.onceWrapper (node:events:641:28)
+                at TLSSocket.emit (node:events:527:28)
+                at TLSSocket.emit (node:domain:475:12)
+                at TLSSocket.Socket._onTimeout (node:net:516:8)
+                at listOnTimeout (node:internal/timers:559:17)
+                at processTimers (node:internal/timers:502:7) {
+              [Symbol(errorLabels)]: Set(0) {}
+            }
+          },
+          'cluster0-shard-00-01.oeari.mongodb.net:27017' => ServerDescription {
+            _hostAddress: new HostAddress('cluster0-shard-00-01.oeari.mongodb.net:27017'),
+            address: 'cluster0-shard-00-01.oeari.mongodb.net:27017',
+            type: 'Unknown',
+            hosts: [],
+            passives: [],
+            arbiters: [],
+            tags: {},
+            minWireVersion: 0,
+            maxWireVersion: 0,
+            roundTripTime: -1,
+            lastUpdateTime: 27042483,
+            lastWriteDate: 0,
+            topologyVersion: {
+              processId: new ObjectId("627004bf4c96c67a5085af66"),
+              counter: 6
+            },
+            error: MongoNetworkTimeoutError: connection timed out
+                at connectionFailureError (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongodb/src/cmap/connect.ts:498:14)
+                at TLSSocket.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongodb/src/cmap/connect.ts:394:16)
+                at Object.onceWrapper (node:events:641:28)
+                at TLSSocket.emit (node:events:527:28)
+                at TLSSocket.emit (node:domain:475:12)
+                at TLSSocket.Socket._onTimeout (node:net:516:8)
+                at listOnTimeout (node:internal/timers:559:17)
+                at processTimers (node:internal/timers:502:7) {
+              [Symbol(errorLabels)]: Set(0) {}
+            }
+          }
+        },
+        stale: false,
+        compatible: true,
+        heartbeatFrequencyMS: 10000,
+        localThresholdMS: 15,
+        setName: 'atlas-80ye5b-shard-0',
+        maxSetVersion: 2,
+        maxElectionId: new ObjectId("7fffffff000000000000000a"),
+        commonWireVersion: 13,
+        logicalSessionTimeoutMinutes: undefined
+      },
+      code: undefined,
+      [Symbol(errorLabels)]: Set(0) {}
+    }
+  },
+  level: 'error',
+  timestamp: '2022-06-05 15:04:44'
+}
+{
+  message: {
+    updateCategoryDBError: MongooseServerSelectionError: Could not connect to any servers in your MongoDB Atlas cluster. One common reason is that you're trying to access the database from an IP that isn't whitelisted. Make sure your current IP address is on your Atlas cluster's IP whitelist: https://docs.atlas.mongodb.com/security-whitelist/
+        at Function.Model.$wrapCallback (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/model.js:5017:32)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/query.js:4732:21
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/helpers/promiseOrCallback.js:32:5
+        at new Promise (<anonymous>)
+        at promiseOrCallback (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/helpers/promiseOrCallback.js:31:10)
+        at model.Query.exec (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/query.js:4731:10)
+        at model.Query.Query.then (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/query.js:4814:15)
+        at runMicrotasks (<anonymous>)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+      reason: TopologyDescription {
+        type: 'ReplicaSetNoPrimary',
+        servers: Map(3) {
+          'cluster0-shard-00-02.oeari.mongodb.net:27017' => ServerDescription {
+            _hostAddress: new HostAddress('cluster0-shard-00-02.oeari.mongodb.net:27017'),
+            address: 'cluster0-shard-00-02.oeari.mongodb.net:27017',
+            type: 'Unknown',
+            hosts: [],
+            passives: [],
+            arbiters: [],
+            tags: {},
+            minWireVersion: 0,
+            maxWireVersion: 0,
+            roundTripTime: -1,
+            lastUpdateTime: 27042484,
+            lastWriteDate: 0,
+            topologyVersion: {
+              processId: new ObjectId("627005674ff1ac271a85c1f3"),
+              counter: 3
+            },
+            error: MongoNetworkTimeoutError: connection timed out
+                at connectionFailureError (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongodb/src/cmap/connect.ts:498:14)
+                at TLSSocket.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongodb/src/cmap/connect.ts:394:16)
+                at Object.onceWrapper (node:events:641:28)
+                at TLSSocket.emit (node:events:527:28)
+                at TLSSocket.emit (node:domain:475:12)
+                at TLSSocket.Socket._onTimeout (node:net:516:8)
+                at listOnTimeout (node:internal/timers:559:17)
+                at processTimers (node:internal/timers:502:7) {
+              [Symbol(errorLabels)]: Set(0) {}
+            }
+          },
+          'cluster0-shard-00-00.oeari.mongodb.net:27017' => ServerDescription {
+            _hostAddress: new HostAddress('cluster0-shard-00-00.oeari.mongodb.net:27017'),
+            address: 'cluster0-shard-00-00.oeari.mongodb.net:27017',
+            type: 'Unknown',
+            hosts: [],
+            passives: [],
+            arbiters: [],
+            tags: {},
+            minWireVersion: 0,
+            maxWireVersion: 0,
+            roundTripTime: -1,
+            lastUpdateTime: 27042472,
+            lastWriteDate: 0,
+            topologyVersion: {
+              processId: new ObjectId("6270042ae8ff18065f7eb95c"),
+              counter: 4
+            },
+            error: MongoNetworkTimeoutError: connection timed out
+                at connectionFailureError (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongodb/src/cmap/connect.ts:498:14)
+                at TLSSocket.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongodb/src/cmap/connect.ts:394:16)
+                at Object.onceWrapper (node:events:641:28)
+                at TLSSocket.emit (node:events:527:28)
+                at TLSSocket.emit (node:domain:475:12)
+                at TLSSocket.Socket._onTimeout (node:net:516:8)
+                at listOnTimeout (node:internal/timers:559:17)
+                at processTimers (node:internal/timers:502:7) {
+              [Symbol(errorLabels)]: Set(0) {}
+            }
+          },
+          'cluster0-shard-00-01.oeari.mongodb.net:27017' => ServerDescription {
+            _hostAddress: new HostAddress('cluster0-shard-00-01.oeari.mongodb.net:27017'),
+            address: 'cluster0-shard-00-01.oeari.mongodb.net:27017',
+            type: 'Unknown',
+            hosts: [],
+            passives: [],
+            arbiters: [],
+            tags: {},
+            minWireVersion: 0,
+            maxWireVersion: 0,
+            roundTripTime: -1,
+            lastUpdateTime: 27042483,
+            lastWriteDate: 0,
+            topologyVersion: {
+              processId: new ObjectId("627004bf4c96c67a5085af66"),
+              counter: 6
+            },
+            error: MongoNetworkTimeoutError: connection timed out
+                at connectionFailureError (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongodb/src/cmap/connect.ts:498:14)
+                at TLSSocket.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongodb/src/cmap/connect.ts:394:16)
+                at Object.onceWrapper (node:events:641:28)
+                at TLSSocket.emit (node:events:527:28)
+                at TLSSocket.emit (node:domain:475:12)
+                at TLSSocket.Socket._onTimeout (node:net:516:8)
+                at listOnTimeout (node:internal/timers:559:17)
+                at processTimers (node:internal/timers:502:7) {
+              [Symbol(errorLabels)]: Set(0) {}
+            }
+          }
+        },
+        stale: false,
+        compatible: true,
+        heartbeatFrequencyMS: 10000,
+        localThresholdMS: 15,
+        setName: 'atlas-80ye5b-shard-0',
+        maxSetVersion: 2,
+        maxElectionId: new ObjectId("7fffffff000000000000000a"),
+        commonWireVersion: 13,
+        logicalSessionTimeoutMinutes: undefined
+      },
+      code: undefined
+    }
+  },
+  level: 'error',
+  timestamp: '2022-06-05 15:04:44'
+}
+{
+  message: {
+    getclientDBError: MongooseServerSelectionError: Could not connect to any servers in your MongoDB Atlas cluster. One common reason is that you're trying to access the database from an IP that isn't whitelisted. Make sure your current IP address is on your Atlas cluster's IP whitelist: https://docs.atlas.mongodb.com/security-whitelist/
+        at Function.Model.$wrapCallback (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/model.js:5017:32)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/query.js:4732:21
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/helpers/promiseOrCallback.js:32:5
+        at new Promise (<anonymous>)
+        at promiseOrCallback (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/helpers/promiseOrCallback.js:31:10)
+        at model.Query.exec (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/query.js:4731:10)
+        at model.Query.Query.then (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/query.js:4814:15)
+        at runMicrotasks (<anonymous>)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+      reason: TopologyDescription {
+        type: 'ReplicaSetNoPrimary',
+        servers: Map(3) {
+          'cluster0-shard-00-02.oeari.mongodb.net:27017' => ServerDescription {
+            _hostAddress: new HostAddress('cluster0-shard-00-02.oeari.mongodb.net:27017'),
+            address: 'cluster0-shard-00-02.oeari.mongodb.net:27017',
+            type: 'Unknown',
+            hosts: [],
+            passives: [],
+            arbiters: [],
+            tags: {},
+            minWireVersion: 0,
+            maxWireVersion: 0,
+            roundTripTime: -1,
+            lastUpdateTime: 27042484,
+            lastWriteDate: 0,
+            topologyVersion: {
+              processId: new ObjectId("627005674ff1ac271a85c1f3"),
+              counter: 3
+            },
+            error: MongoNetworkTimeoutError: connection timed out
+                at connectionFailureError (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongodb/src/cmap/connect.ts:498:14)
+                at TLSSocket.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongodb/src/cmap/connect.ts:394:16)
+                at Object.onceWrapper (node:events:641:28)
+                at TLSSocket.emit (node:events:527:28)
+                at TLSSocket.emit (node:domain:475:12)
+                at TLSSocket.Socket._onTimeout (node:net:516:8)
+                at listOnTimeout (node:internal/timers:559:17)
+                at processTimers (node:internal/timers:502:7) {
+              [Symbol(errorLabels)]: Set(0) {}
+            }
+          },
+          'cluster0-shard-00-00.oeari.mongodb.net:27017' => ServerDescription {
+            _hostAddress: new HostAddress('cluster0-shard-00-00.oeari.mongodb.net:27017'),
+            address: 'cluster0-shard-00-00.oeari.mongodb.net:27017',
+            type: 'Unknown',
+            hosts: [],
+            passives: [],
+            arbiters: [],
+            tags: {},
+            minWireVersion: 0,
+            maxWireVersion: 0,
+            roundTripTime: -1,
+            lastUpdateTime: 27042472,
+            lastWriteDate: 0,
+            topologyVersion: {
+              processId: new ObjectId("6270042ae8ff18065f7eb95c"),
+              counter: 4
+            },
+            error: MongoNetworkTimeoutError: connection timed out
+                at connectionFailureError (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongodb/src/cmap/connect.ts:498:14)
+                at TLSSocket.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongodb/src/cmap/connect.ts:394:16)
+                at Object.onceWrapper (node:events:641:28)
+                at TLSSocket.emit (node:events:527:28)
+                at TLSSocket.emit (node:domain:475:12)
+                at TLSSocket.Socket._onTimeout (node:net:516:8)
+                at listOnTimeout (node:internal/timers:559:17)
+                at processTimers (node:internal/timers:502:7) {
+              [Symbol(errorLabels)]: Set(0) {}
+            }
+          },
+          'cluster0-shard-00-01.oeari.mongodb.net:27017' => ServerDescription {
+            _hostAddress: new HostAddress('cluster0-shard-00-01.oeari.mongodb.net:27017'),
+            address: 'cluster0-shard-00-01.oeari.mongodb.net:27017',
+            type: 'Unknown',
+            hosts: [],
+            passives: [],
+            arbiters: [],
+            tags: {},
+            minWireVersion: 0,
+            maxWireVersion: 0,
+            roundTripTime: -1,
+            lastUpdateTime: 27042483,
+            lastWriteDate: 0,
+            topologyVersion: {
+              processId: new ObjectId("627004bf4c96c67a5085af66"),
+              counter: 6
+            },
+            error: MongoNetworkTimeoutError: connection timed out
+                at connectionFailureError (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongodb/src/cmap/connect.ts:498:14)
+                at TLSSocket.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongodb/src/cmap/connect.ts:394:16)
+                at Object.onceWrapper (node:events:641:28)
+                at TLSSocket.emit (node:events:527:28)
+                at TLSSocket.emit (node:domain:475:12)
+                at TLSSocket.Socket._onTimeout (node:net:516:8)
+                at listOnTimeout (node:internal/timers:559:17)
+                at processTimers (node:internal/timers:502:7) {
+              [Symbol(errorLabels)]: Set(0) {}
+            }
+          }
+        },
+        stale: false,
+        compatible: true,
+        heartbeatFrequencyMS: 10000,
+        localThresholdMS: 15,
+        setName: 'atlas-80ye5b-shard-0',
+        maxSetVersion: 2,
+        maxElectionId: new ObjectId("7fffffff000000000000000a"),
+        commonWireVersion: 13,
+        logicalSessionTimeoutMinutes: undefined
+      },
+      code: undefined
+    }
+  },
+  level: 'error',
+  timestamp: '2022-06-05 15:04:44'
+}
+{
+  message: {
+    getUserError: MongooseServerSelectionError: Could not connect to any servers in your MongoDB Atlas cluster. One common reason is that you're trying to access the database from an IP that isn't whitelisted. Make sure your current IP address is on your Atlas cluster's IP whitelist: https://docs.atlas.mongodb.com/security-whitelist/
+        at Function.Model.$wrapCallback (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/model.js:5017:32)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/query.js:4732:21
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/helpers/promiseOrCallback.js:32:5
+        at new Promise (<anonymous>)
+        at promiseOrCallback (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/helpers/promiseOrCallback.js:31:10)
+        at model.Query.exec (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/query.js:4731:10)
+        at model.Query.Query.then (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/query.js:4814:15)
+        at runMicrotasks (<anonymous>)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+      reason: TopologyDescription {
+        type: 'ReplicaSetNoPrimary',
+        servers: Map(3) {
+          'cluster0-shard-00-02.oeari.mongodb.net:27017' => ServerDescription {
+            _hostAddress: new HostAddress('cluster0-shard-00-02.oeari.mongodb.net:27017'),
+            address: 'cluster0-shard-00-02.oeari.mongodb.net:27017',
+            type: 'Unknown',
+            hosts: [],
+            passives: [],
+            arbiters: [],
+            tags: {},
+            minWireVersion: 0,
+            maxWireVersion: 0,
+            roundTripTime: -1,
+            lastUpdateTime: 27042484,
+            lastWriteDate: 0,
+            topologyVersion: {
+              processId: new ObjectId("627005674ff1ac271a85c1f3"),
+              counter: 3
+            },
+            error: MongoNetworkTimeoutError: connection timed out
+                at connectionFailureError (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongodb/src/cmap/connect.ts:498:14)
+                at TLSSocket.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongodb/src/cmap/connect.ts:394:16)
+                at Object.onceWrapper (node:events:641:28)
+                at TLSSocket.emit (node:events:527:28)
+                at TLSSocket.emit (node:domain:475:12)
+                at TLSSocket.Socket._onTimeout (node:net:516:8)
+                at listOnTimeout (node:internal/timers:559:17)
+                at processTimers (node:internal/timers:502:7) {
+              [Symbol(errorLabels)]: Set(0) {}
+            }
+          },
+          'cluster0-shard-00-00.oeari.mongodb.net:27017' => ServerDescription {
+            _hostAddress: new HostAddress('cluster0-shard-00-00.oeari.mongodb.net:27017'),
+            address: 'cluster0-shard-00-00.oeari.mongodb.net:27017',
+            type: 'Unknown',
+            hosts: [],
+            passives: [],
+            arbiters: [],
+            tags: {},
+            minWireVersion: 0,
+            maxWireVersion: 0,
+            roundTripTime: -1,
+            lastUpdateTime: 27042472,
+            lastWriteDate: 0,
+            topologyVersion: {
+              processId: new ObjectId("6270042ae8ff18065f7eb95c"),
+              counter: 4
+            },
+            error: MongoNetworkTimeoutError: connection timed out
+                at connectionFailureError (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongodb/src/cmap/connect.ts:498:14)
+                at TLSSocket.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongodb/src/cmap/connect.ts:394:16)
+                at Object.onceWrapper (node:events:641:28)
+                at TLSSocket.emit (node:events:527:28)
+                at TLSSocket.emit (node:domain:475:12)
+                at TLSSocket.Socket._onTimeout (node:net:516:8)
+                at listOnTimeout (node:internal/timers:559:17)
+                at processTimers (node:internal/timers:502:7) {
+              [Symbol(errorLabels)]: Set(0) {}
+            }
+          },
+          'cluster0-shard-00-01.oeari.mongodb.net:27017' => ServerDescription {
+            _hostAddress: new HostAddress('cluster0-shard-00-01.oeari.mongodb.net:27017'),
+            address: 'cluster0-shard-00-01.oeari.mongodb.net:27017',
+            type: 'Unknown',
+            hosts: [],
+            passives: [],
+            arbiters: [],
+            tags: {},
+            minWireVersion: 0,
+            maxWireVersion: 0,
+            roundTripTime: -1,
+            lastUpdateTime: 27042483,
+            lastWriteDate: 0,
+            topologyVersion: {
+              processId: new ObjectId("627004bf4c96c67a5085af66"),
+              counter: 6
+            },
+            error: MongoNetworkTimeoutError: connection timed out
+                at connectionFailureError (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongodb/src/cmap/connect.ts:498:14)
+                at TLSSocket.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongodb/src/cmap/connect.ts:394:16)
+                at Object.onceWrapper (node:events:641:28)
+                at TLSSocket.emit (node:events:527:28)
+                at TLSSocket.emit (node:domain:475:12)
+                at TLSSocket.Socket._onTimeout (node:net:516:8)
+                at listOnTimeout (node:internal/timers:559:17)
+                at processTimers (node:internal/timers:502:7) {
+              [Symbol(errorLabels)]: Set(0) {}
+            }
+          }
+        },
+        stale: false,
+        compatible: true,
+        heartbeatFrequencyMS: 10000,
+        localThresholdMS: 15,
+        setName: 'atlas-80ye5b-shard-0',
+        maxSetVersion: 2,
+        maxElectionId: new ObjectId("7fffffff000000000000000a"),
+        commonWireVersion: 13,
+        logicalSessionTimeoutMinutes: undefined
+      },
+      code: undefined
+    }
+  },
+  level: 'error',
+  timestamp: '2022-06-05 15:04:44'
+}
+{
+  message: {
+    getTechMemberDBError: MongooseServerSelectionError: Could not connect to any servers in your MongoDB Atlas cluster. One common reason is that you're trying to access the database from an IP that isn't whitelisted. Make sure your current IP address is on your Atlas cluster's IP whitelist: https://docs.atlas.mongodb.com/security-whitelist/
+        at Function.Model.$wrapCallback (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/model.js:5017:32)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/query.js:4732:21
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/helpers/promiseOrCallback.js:32:5
+        at new Promise (<anonymous>)
+        at promiseOrCallback (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/helpers/promiseOrCallback.js:31:10)
+        at model.Query.exec (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/query.js:4731:10)
+        at model.Query.Query.then (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/query.js:4814:15)
+        at runMicrotasks (<anonymous>)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+      reason: TopologyDescription {
+        type: 'ReplicaSetNoPrimary',
+        servers: Map(3) {
+          'cluster0-shard-00-02.oeari.mongodb.net:27017' => ServerDescription {
+            _hostAddress: new HostAddress('cluster0-shard-00-02.oeari.mongodb.net:27017'),
+            address: 'cluster0-shard-00-02.oeari.mongodb.net:27017',
+            type: 'Unknown',
+            hosts: [],
+            passives: [],
+            arbiters: [],
+            tags: {},
+            minWireVersion: 0,
+            maxWireVersion: 0,
+            roundTripTime: -1,
+            lastUpdateTime: 27042484,
+            lastWriteDate: 0,
+            topologyVersion: {
+              processId: new ObjectId("627005674ff1ac271a85c1f3"),
+              counter: 3
+            },
+            error: MongoNetworkTimeoutError: connection timed out
+                at connectionFailureError (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongodb/src/cmap/connect.ts:498:14)
+                at TLSSocket.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongodb/src/cmap/connect.ts:394:16)
+                at Object.onceWrapper (node:events:641:28)
+                at TLSSocket.emit (node:events:527:28)
+                at TLSSocket.emit (node:domain:475:12)
+                at TLSSocket.Socket._onTimeout (node:net:516:8)
+                at listOnTimeout (node:internal/timers:559:17)
+                at processTimers (node:internal/timers:502:7) {
+              [Symbol(errorLabels)]: Set(0) {}
+            }
+          },
+          'cluster0-shard-00-00.oeari.mongodb.net:27017' => ServerDescription {
+            _hostAddress: new HostAddress('cluster0-shard-00-00.oeari.mongodb.net:27017'),
+            address: 'cluster0-shard-00-00.oeari.mongodb.net:27017',
+            type: 'Unknown',
+            hosts: [],
+            passives: [],
+            arbiters: [],
+            tags: {},
+            minWireVersion: 0,
+            maxWireVersion: 0,
+            roundTripTime: -1,
+            lastUpdateTime: 27042472,
+            lastWriteDate: 0,
+            topologyVersion: {
+              processId: new ObjectId("6270042ae8ff18065f7eb95c"),
+              counter: 4
+            },
+            error: MongoNetworkTimeoutError: connection timed out
+                at connectionFailureError (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongodb/src/cmap/connect.ts:498:14)
+                at TLSSocket.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongodb/src/cmap/connect.ts:394:16)
+                at Object.onceWrapper (node:events:641:28)
+                at TLSSocket.emit (node:events:527:28)
+                at TLSSocket.emit (node:domain:475:12)
+                at TLSSocket.Socket._onTimeout (node:net:516:8)
+                at listOnTimeout (node:internal/timers:559:17)
+                at processTimers (node:internal/timers:502:7) {
+              [Symbol(errorLabels)]: Set(0) {}
+            }
+          },
+          'cluster0-shard-00-01.oeari.mongodb.net:27017' => ServerDescription {
+            _hostAddress: new HostAddress('cluster0-shard-00-01.oeari.mongodb.net:27017'),
+            address: 'cluster0-shard-00-01.oeari.mongodb.net:27017',
+            type: 'Unknown',
+            hosts: [],
+            passives: [],
+            arbiters: [],
+            tags: {},
+            minWireVersion: 0,
+            maxWireVersion: 0,
+            roundTripTime: -1,
+            lastUpdateTime: 27042483,
+            lastWriteDate: 0,
+            topologyVersion: {
+              processId: new ObjectId("627004bf4c96c67a5085af66"),
+              counter: 6
+            },
+            error: MongoNetworkTimeoutError: connection timed out
+                at connectionFailureError (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongodb/src/cmap/connect.ts:498:14)
+                at TLSSocket.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongodb/src/cmap/connect.ts:394:16)
+                at Object.onceWrapper (node:events:641:28)
+                at TLSSocket.emit (node:events:527:28)
+                at TLSSocket.emit (node:domain:475:12)
+                at TLSSocket.Socket._onTimeout (node:net:516:8)
+                at listOnTimeout (node:internal/timers:559:17)
+                at processTimers (node:internal/timers:502:7) {
+              [Symbol(errorLabels)]: Set(0) {}
+            }
+          }
+        },
+        stale: false,
+        compatible: true,
+        heartbeatFrequencyMS: 10000,
+        localThresholdMS: 15,
+        setName: 'atlas-80ye5b-shard-0',
+        maxSetVersion: 2,
+        maxElectionId: new ObjectId("7fffffff000000000000000a"),
+        commonWireVersion: 13,
+        logicalSessionTimeoutMinutes: undefined
+      },
+      code: undefined
+    }
+  },
+  level: 'error',
+  timestamp: '2022-06-05 15:04:44'
+}
+{
+  message: {
+    getProjectDBError: MongooseServerSelectionError: Could not connect to any servers in your MongoDB Atlas cluster. One common reason is that you're trying to access the database from an IP that isn't whitelisted. Make sure your current IP address is on your Atlas cluster's IP whitelist: https://docs.atlas.mongodb.com/security-whitelist/
+        at Function.Model.$wrapCallback (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/model.js:5017:32)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/query.js:4732:21
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/helpers/promiseOrCallback.js:32:5
+        at new Promise (<anonymous>)
+        at promiseOrCallback (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/helpers/promiseOrCallback.js:31:10)
+        at model.Query.exec (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/query.js:4731:10)
+        at model.Query.Query.then (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/query.js:4814:15)
+        at runMicrotasks (<anonymous>)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+      reason: TopologyDescription {
+        type: 'ReplicaSetNoPrimary',
+        servers: Map(3) {
+          'cluster0-shard-00-02.oeari.mongodb.net:27017' => ServerDescription {
+            _hostAddress: new HostAddress('cluster0-shard-00-02.oeari.mongodb.net:27017'),
+            address: 'cluster0-shard-00-02.oeari.mongodb.net:27017',
+            type: 'Unknown',
+            hosts: [],
+            passives: [],
+            arbiters: [],
+            tags: {},
+            minWireVersion: 0,
+            maxWireVersion: 0,
+            roundTripTime: -1,
+            lastUpdateTime: 27070036,
+            lastWriteDate: 0,
+            topologyVersion: {
+              processId: new ObjectId("627005674ff1ac271a85c1f3"),
+              counter: 3
+            },
+            error: MongoNetworkTimeoutError: connection timed out
+                at connectionFailureError (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongodb/src/cmap/connect.ts:498:14)
+                at TLSSocket.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongodb/src/cmap/connect.ts:394:16)
+                at Object.onceWrapper (node:events:641:28)
+                at TLSSocket.emit (node:events:527:28)
+                at TLSSocket.emit (node:domain:475:12)
+                at TLSSocket.Socket._onTimeout (node:net:516:8)
+                at listOnTimeout (node:internal/timers:559:17)
+                at processTimers (node:internal/timers:502:7) {
+              [Symbol(errorLabels)]: Set(0) {}
+            }
+          },
+          'cluster0-shard-00-00.oeari.mongodb.net:27017' => ServerDescription {
+            _hostAddress: new HostAddress('cluster0-shard-00-00.oeari.mongodb.net:27017'),
+            address: 'cluster0-shard-00-00.oeari.mongodb.net:27017',
+            type: 'Unknown',
+            hosts: [],
+            passives: [],
+            arbiters: [],
+            tags: {},
+            minWireVersion: 0,
+            maxWireVersion: 0,
+            roundTripTime: -1,
+            lastUpdateTime: 27070019,
+            lastWriteDate: 0,
+            topologyVersion: {
+              processId: new ObjectId("6270042ae8ff18065f7eb95c"),
+              counter: 4
+            },
+            error: MongoNetworkTimeoutError: connection timed out
+                at connectionFailureError (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongodb/src/cmap/connect.ts:498:14)
+                at TLSSocket.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongodb/src/cmap/connect.ts:394:16)
+                at Object.onceWrapper (node:events:641:28)
+                at TLSSocket.emit (node:events:527:28)
+                at TLSSocket.emit (node:domain:475:12)
+                at TLSSocket.Socket._onTimeout (node:net:516:8)
+                at listOnTimeout (node:internal/timers:559:17)
+                at processTimers (node:internal/timers:502:7) {
+              [Symbol(errorLabels)]: Set(0) {}
+            }
+          },
+          'cluster0-shard-00-01.oeari.mongodb.net:27017' => ServerDescription {
+            _hostAddress: new HostAddress('cluster0-shard-00-01.oeari.mongodb.net:27017'),
+            address: 'cluster0-shard-00-01.oeari.mongodb.net:27017',
+            type: 'Unknown',
+            hosts: [],
+            passives: [],
+            arbiters: [],
+            tags: {},
+            minWireVersion: 0,
+            maxWireVersion: 0,
+            roundTripTime: -1,
+            lastUpdateTime: 27070034,
+            lastWriteDate: 0,
+            topologyVersion: {
+              processId: new ObjectId("627004bf4c96c67a5085af66"),
+              counter: 6
+            },
+            error: MongoNetworkTimeoutError: connection timed out
+                at connectionFailureError (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongodb/src/cmap/connect.ts:498:14)
+                at TLSSocket.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongodb/src/cmap/connect.ts:394:16)
+                at Object.onceWrapper (node:events:641:28)
+                at TLSSocket.emit (node:events:527:28)
+                at TLSSocket.emit (node:domain:475:12)
+                at TLSSocket.Socket._onTimeout (node:net:516:8)
+                at listOnTimeout (node:internal/timers:559:17)
+                at processTimers (node:internal/timers:502:7) {
+              [Symbol(errorLabels)]: Set(0) {}
+            }
+          }
+        },
+        stale: false,
+        compatible: true,
+        heartbeatFrequencyMS: 10000,
+        localThresholdMS: 15,
+        setName: 'atlas-80ye5b-shard-0',
+        maxSetVersion: 2,
+        maxElectionId: new ObjectId("7fffffff000000000000000a"),
+        commonWireVersion: 13,
+        logicalSessionTimeoutMinutes: undefined
+      },
+      code: undefined
+    }
+  },
+  level: 'error',
+  timestamp: '2022-06-05 15:05:14'
+}
+{
+  message: {
+    updateTaskDBError: MongooseServerSelectionError: Could not connect to any servers in your MongoDB Atlas cluster. One common reason is that you're trying to access the database from an IP that isn't whitelisted. Make sure your current IP address is on your Atlas cluster's IP whitelist: https://docs.atlas.mongodb.com/security-whitelist/
+        at Function.Model.$wrapCallback (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/model.js:5017:32)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/query.js:4732:21
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/helpers/promiseOrCallback.js:32:5
+        at new Promise (<anonymous>)
+        at promiseOrCallback (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/helpers/promiseOrCallback.js:31:10)
+        at model.Query.exec (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/query.js:4731:10)
+        at model.Query.Query.then (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/query.js:4814:15)
+        at runMicrotasks (<anonymous>)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+      reason: TopologyDescription {
+        type: 'ReplicaSetNoPrimary',
+        servers: Map(3) {
+          'cluster0-shard-00-02.oeari.mongodb.net:27017' => ServerDescription {
+            _hostAddress: new HostAddress('cluster0-shard-00-02.oeari.mongodb.net:27017'),
+            address: 'cluster0-shard-00-02.oeari.mongodb.net:27017',
+            type: 'Unknown',
+            hosts: [],
+            passives: [],
+            arbiters: [],
+            tags: {},
+            minWireVersion: 0,
+            maxWireVersion: 0,
+            roundTripTime: -1,
+            lastUpdateTime: 27070036,
+            lastWriteDate: 0,
+            topologyVersion: {
+              processId: new ObjectId("627005674ff1ac271a85c1f3"),
+              counter: 3
+            },
+            error: MongoNetworkTimeoutError: connection timed out
+                at connectionFailureError (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongodb/src/cmap/connect.ts:498:14)
+                at TLSSocket.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongodb/src/cmap/connect.ts:394:16)
+                at Object.onceWrapper (node:events:641:28)
+                at TLSSocket.emit (node:events:527:28)
+                at TLSSocket.emit (node:domain:475:12)
+                at TLSSocket.Socket._onTimeout (node:net:516:8)
+                at listOnTimeout (node:internal/timers:559:17)
+                at processTimers (node:internal/timers:502:7) {
+              [Symbol(errorLabels)]: Set(0) {}
+            }
+          },
+          'cluster0-shard-00-00.oeari.mongodb.net:27017' => ServerDescription {
+            _hostAddress: new HostAddress('cluster0-shard-00-00.oeari.mongodb.net:27017'),
+            address: 'cluster0-shard-00-00.oeari.mongodb.net:27017',
+            type: 'Unknown',
+            hosts: [],
+            passives: [],
+            arbiters: [],
+            tags: {},
+            minWireVersion: 0,
+            maxWireVersion: 0,
+            roundTripTime: -1,
+            lastUpdateTime: 27070019,
+            lastWriteDate: 0,
+            topologyVersion: {
+              processId: new ObjectId("6270042ae8ff18065f7eb95c"),
+              counter: 4
+            },
+            error: MongoNetworkTimeoutError: connection timed out
+                at connectionFailureError (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongodb/src/cmap/connect.ts:498:14)
+                at TLSSocket.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongodb/src/cmap/connect.ts:394:16)
+                at Object.onceWrapper (node:events:641:28)
+                at TLSSocket.emit (node:events:527:28)
+                at TLSSocket.emit (node:domain:475:12)
+                at TLSSocket.Socket._onTimeout (node:net:516:8)
+                at listOnTimeout (node:internal/timers:559:17)
+                at processTimers (node:internal/timers:502:7) {
+              [Symbol(errorLabels)]: Set(0) {}
+            }
+          },
+          'cluster0-shard-00-01.oeari.mongodb.net:27017' => ServerDescription {
+            _hostAddress: new HostAddress('cluster0-shard-00-01.oeari.mongodb.net:27017'),
+            address: 'cluster0-shard-00-01.oeari.mongodb.net:27017',
+            type: 'Unknown',
+            hosts: [],
+            passives: [],
+            arbiters: [],
+            tags: {},
+            minWireVersion: 0,
+            maxWireVersion: 0,
+            roundTripTime: -1,
+            lastUpdateTime: 27070034,
+            lastWriteDate: 0,
+            topologyVersion: {
+              processId: new ObjectId("627004bf4c96c67a5085af66"),
+              counter: 6
+            },
+            error: MongoNetworkTimeoutError: connection timed out
+                at connectionFailureError (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongodb/src/cmap/connect.ts:498:14)
+                at TLSSocket.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongodb/src/cmap/connect.ts:394:16)
+                at Object.onceWrapper (node:events:641:28)
+                at TLSSocket.emit (node:events:527:28)
+                at TLSSocket.emit (node:domain:475:12)
+                at TLSSocket.Socket._onTimeout (node:net:516:8)
+                at listOnTimeout (node:internal/timers:559:17)
+                at processTimers (node:internal/timers:502:7) {
+              [Symbol(errorLabels)]: Set(0) {}
+            }
+          }
+        },
+        stale: false,
+        compatible: true,
+        heartbeatFrequencyMS: 10000,
+        localThresholdMS: 15,
+        setName: 'atlas-80ye5b-shard-0',
+        maxSetVersion: 2,
+        maxElectionId: new ObjectId("7fffffff000000000000000a"),
+        commonWireVersion: 13,
+        logicalSessionTimeoutMinutes: undefined
+      },
+      code: undefined
+    }
+  },
+  level: 'error',
+  timestamp: '2022-06-05 15:05:14'
+}
+{
+  message: {
+    findUserById: MongooseServerSelectionError: Could not connect to any servers in your MongoDB Atlas cluster. One common reason is that you're trying to access the database from an IP that isn't whitelisted. Make sure your current IP address is on your Atlas cluster's IP whitelist: https://docs.atlas.mongodb.com/security-whitelist/
+        at Function.Model.$wrapCallback (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/model.js:5017:32)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/query.js:4732:21
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/helpers/promiseOrCallback.js:32:5
+        at new Promise (<anonymous>)
+        at promiseOrCallback (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/helpers/promiseOrCallback.js:31:10)
+        at model.Query.exec (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/query.js:4731:10)
+        at model.Query.Query.then (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/query.js:4814:15)
+        at runMicrotasks (<anonymous>)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+      reason: TopologyDescription {
+        type: 'ReplicaSetNoPrimary',
+        servers: Map(3) {
+          'cluster0-shard-00-02.oeari.mongodb.net:27017' => ServerDescription {
+            _hostAddress: new HostAddress('cluster0-shard-00-02.oeari.mongodb.net:27017'),
+            address: 'cluster0-shard-00-02.oeari.mongodb.net:27017',
+            type: 'Unknown',
+            hosts: [],
+            passives: [],
+            arbiters: [],
+            tags: {},
+            minWireVersion: 0,
+            maxWireVersion: 0,
+            roundTripTime: -1,
+            lastUpdateTime: 27070036,
+            lastWriteDate: 0,
+            topologyVersion: {
+              processId: new ObjectId("627005674ff1ac271a85c1f3"),
+              counter: 3
+            },
+            error: MongoNetworkTimeoutError: connection timed out
+                at connectionFailureError (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongodb/src/cmap/connect.ts:498:14)
+                at TLSSocket.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongodb/src/cmap/connect.ts:394:16)
+                at Object.onceWrapper (node:events:641:28)
+                at TLSSocket.emit (node:events:527:28)
+                at TLSSocket.emit (node:domain:475:12)
+                at TLSSocket.Socket._onTimeout (node:net:516:8)
+                at listOnTimeout (node:internal/timers:559:17)
+                at processTimers (node:internal/timers:502:7) {
+              [Symbol(errorLabels)]: Set(0) {}
+            }
+          },
+          'cluster0-shard-00-00.oeari.mongodb.net:27017' => ServerDescription {
+            _hostAddress: new HostAddress('cluster0-shard-00-00.oeari.mongodb.net:27017'),
+            address: 'cluster0-shard-00-00.oeari.mongodb.net:27017',
+            type: 'Unknown',
+            hosts: [],
+            passives: [],
+            arbiters: [],
+            tags: {},
+            minWireVersion: 0,
+            maxWireVersion: 0,
+            roundTripTime: -1,
+            lastUpdateTime: 27070019,
+            lastWriteDate: 0,
+            topologyVersion: {
+              processId: new ObjectId("6270042ae8ff18065f7eb95c"),
+              counter: 4
+            },
+            error: MongoNetworkTimeoutError: connection timed out
+                at connectionFailureError (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongodb/src/cmap/connect.ts:498:14)
+                at TLSSocket.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongodb/src/cmap/connect.ts:394:16)
+                at Object.onceWrapper (node:events:641:28)
+                at TLSSocket.emit (node:events:527:28)
+                at TLSSocket.emit (node:domain:475:12)
+                at TLSSocket.Socket._onTimeout (node:net:516:8)
+                at listOnTimeout (node:internal/timers:559:17)
+                at processTimers (node:internal/timers:502:7) {
+              [Symbol(errorLabels)]: Set(0) {}
+            }
+          },
+          'cluster0-shard-00-01.oeari.mongodb.net:27017' => ServerDescription {
+            _hostAddress: new HostAddress('cluster0-shard-00-01.oeari.mongodb.net:27017'),
+            address: 'cluster0-shard-00-01.oeari.mongodb.net:27017',
+            type: 'Unknown',
+            hosts: [],
+            passives: [],
+            arbiters: [],
+            tags: {},
+            minWireVersion: 0,
+            maxWireVersion: 0,
+            roundTripTime: -1,
+            lastUpdateTime: 27070034,
+            lastWriteDate: 0,
+            topologyVersion: {
+              processId: new ObjectId("627004bf4c96c67a5085af66"),
+              counter: 6
+            },
+            error: MongoNetworkTimeoutError: connection timed out
+                at connectionFailureError (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongodb/src/cmap/connect.ts:498:14)
+                at TLSSocket.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongodb/src/cmap/connect.ts:394:16)
+                at Object.onceWrapper (node:events:641:28)
+                at TLSSocket.emit (node:events:527:28)
+                at TLSSocket.emit (node:domain:475:12)
+                at TLSSocket.Socket._onTimeout (node:net:516:8)
+                at listOnTimeout (node:internal/timers:559:17)
+                at processTimers (node:internal/timers:502:7) {
+              [Symbol(errorLabels)]: Set(0) {}
+            }
+          }
+        },
+        stale: false,
+        compatible: true,
+        heartbeatFrequencyMS: 10000,
+        localThresholdMS: 15,
+        setName: 'atlas-80ye5b-shard-0',
+        maxSetVersion: 2,
+        maxElectionId: new ObjectId("7fffffff000000000000000a"),
+        commonWireVersion: 13,
+        logicalSessionTimeoutMinutes: undefined
+      },
+      code: undefined
+    }
+  },
+  level: 'error',
+  timestamp: '2022-06-05 15:05:14'
+}
