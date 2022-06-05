@@ -9,7 +9,7 @@ const TechMemberReq = class TechMemberReq extends TechMemberController {
   static async handleCreatMember(req: Request, res: Response) {
     try {
       let member = await super.createNewMember(req.body);
-      if (member.status === 200) {
+      if (member?.status === 200) {
         return res.status(200).send(member);
       } else {
         return res.status(400).send(member);

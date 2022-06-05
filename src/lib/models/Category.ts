@@ -8,7 +8,10 @@ const CategorySchema: Schema = new Schema<Category>(
       required: true,
       unique: true,
     },
-
+    isDeleted: {
+      type: Boolean,
+      default: false,
+    },
     subCategoriesId: [
       {
         type: Schema.Types.ObjectId,
