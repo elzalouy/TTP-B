@@ -4914,3 +4914,801 @@
   level: 'info',
   timestamp: '2022-06-05 16:46:46'
 }
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-06-05 17:41:54'
+}
+{
+  message: {
+    boardId: '629b3e622b89a3685c12a96d',
+    myDepartment: {
+      _id: new ObjectId("629b3e6314ad376eb0ab7340"),
+      name: 'Local Testing',
+      boardId: '629b3e622b89a3685c12a96d',
+      color: 'blue',
+      mainBoard: false,
+      tasks: [
+        new ObjectId("629b43bd14ad376eb0ab73b2"),
+        new ObjectId("629b441414ad376eb0ab73b6")
+      ],
+      teamsId: [
+        {
+          idInTrello: '629c71d8054b900cf68ac1b5',
+          idInDB: new ObjectId("629c6ffc2f81e4cfa0f3777c"),
+          _id: new ObjectId("629c71d92f81e4cfa0f37830")
+        },
+        {
+          idInTrello: '629c71d81d996b339fd22834',
+          idInDB: new ObjectId("629c6ffc2f81e4cfa0f37782"),
+          _id: new ObjectId("629c71d92f81e4cfa0f37831")
+        },
+        {
+          idInTrello: '629c6ffcb8fcd242aed2e0bf',
+          idInDB: new ObjectId("629c6ffc2f81e4cfa0f37778"),
+          _id: new ObjectId("629c6ffc2f81e4cfa0f3777a")
+        }
+      ],
+      createdAt: 2022-06-04T11:13:39.052Z,
+      updatedAt: 2022-06-05T13:46:45.813Z,
+      __v: 0,
+      canceldListId: '629b3e63789ba00e1b508227',
+      defaultListId: '629b3e66b98b6a3063088470',
+      departmentWindowId: '629b3e622998955e0b10190e',
+      doneListId: '629b3e647bfb283dd7c84dd3',
+      notClearListId: '629b3e6306fe5351898ca081',
+      notStartedListId: '629b3e663519b44094065b5c',
+      reviewListId: '629b3e65d800eb1d8f3a5759',
+      sharedListID: '629b3e64a1b1d88774a129a0'
+    }
+  },
+  level: 'info',
+  timestamp: '2022-06-05 17:42:23'
+}
+{
+  message: {
+    removeBoard: 'https://api.trello.com/1/boards/629b3e622b89a3685c12a96d?response_type=token&key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68'
+  },
+  level: 'info',
+  timestamp: '2022-06-05 17:42:23'
+}
+{
+  message: {
+    'delete Tasks': { acknowledged: true, deletedCount: 2 },
+    'Delete Tech members': { acknowledged: true, deletedCount: 14 }
+  },
+  level: 'info',
+  timestamp: '2022-06-05 17:42:24'
+}
+{
+  message: {
+    borderData: Promise { <pending> },
+    createBoardApi: 'https://api.trello.com/1/boards/?name=Testing Local&prefs_background=blue&defaultLists=false&key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68'
+  },
+  level: 'info',
+  timestamp: '2022-06-06 11:36:21'
+}
+{
+  message: {
+    data: {
+      name: 'Testing Local',
+      color: 'blue',
+      boardId: '629dbc84d887b2021a83dd82'
+    }
+  },
+  level: 'info',
+  timestamp: '2022-06-06 11:36:21'
+}
+{
+  message: { removeWebhookSucced: 'done' },
+  level: 'info',
+  timestamp: '2022-06-06 11:36:24'
+}
+{
+  message: { teamListIds: [] },
+  level: 'info',
+  timestamp: '2022-06-06 11:36:24'
+}
+{
+  message: { webhookCreateResult: 'webhook done' },
+  level: 'info',
+  timestamp: '2022-06-06 11:36:25'
+}
+{
+  message: {
+    borderData: Promise { <pending> },
+    createBoardApi: 'https://api.trello.com/1/boards/?name=Filter Local&prefs_background=blue&defaultLists=false&key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68'
+  },
+  level: 'info',
+  timestamp: '2022-06-06 11:41:48'
+}
+{
+  message: {
+    data: {
+      name: 'Filter Local',
+      color: 'blue',
+      boardId: '629dbdcbf2a5780728303653'
+    }
+  },
+  level: 'info',
+  timestamp: '2022-06-06 11:41:48'
+}
+{
+  message: { removeWebhookSucced: 'done' },
+  level: 'info',
+  timestamp: '2022-06-06 11:41:51'
+}
+{
+  message: { teamListIds: [] },
+  level: 'info',
+  timestamp: '2022-06-06 11:41:51'
+}
+{
+  message: { webhookCreateResult: 'webhook done' },
+  level: 'info',
+  timestamp: '2022-06-06 11:41:53'
+}
+{
+  message: {
+    __removeMemberAndListError: FetchError: invalid json response body at https://api.trello.com/1/lists/undefined/closed?value=true&key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68 reason: Unexpected token i in JSON at position 0
+        at C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\node-fetch\lib\index.js:273:32
+        at runMicrotasks (<anonymous>)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+      type: 'invalid-json'
+    }
+  },
+  level: 'error',
+  timestamp: '2022-06-06 11:44:12'
+}
+{
+  message: { data: { isDeleted: 'true', listId: undefined } },
+  level: 'info',
+  timestamp: '2022-06-06 11:44:12'
+}
+{
+  message: {
+    __removeMemberAndListError: FetchError: invalid json response body at https://api.trello.com/1/lists/undefined/closed?value=true&key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68 reason: Unexpected token i in JSON at position 0
+        at C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\node-fetch\lib\index.js:273:32
+        at runMicrotasks (<anonymous>)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+      type: 'invalid-json'
+    }
+  },
+  level: 'error',
+  timestamp: '2022-06-06 11:45:10'
+}
+{
+  message: { data: { isDeleted: 'true', listId: undefined } },
+  level: 'info',
+  timestamp: '2022-06-06 11:45:10'
+}
+{
+  message: {
+    updateCategoryDBError: CastError: Cast to ObjectId failed for value "{ _id: undefined }" (type Object) at path "_id" for model "category"
+        at model.Query.exec (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\mongoose\lib\query.js:4715:21)
+        at model.Query.Query.then (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\mongoose\lib\query.js:4814:15)
+        at runMicrotasks (<anonymous>)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+      messageFormat: undefined,
+      stringValue: '"{ _id: undefined }"',
+      kind: 'ObjectId',
+      value: { _id: undefined },
+      path: '_id',
+      reason: BSONTypeError: Argument passed in must be a string of 12 bytes or a string of 24 hex characters or an integer
+          at new BSONTypeError (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\bson\src\error.ts:16:5)
+          at new ObjectId (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\bson\src\objectid.ts:87:15)
+          at castObjectId (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\mongoose\lib\cast\objectid.js:24:12)
+          at ObjectId.cast (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\mongoose\lib\schema\objectid.js:247:12)
+          at ObjectId.SchemaType.applySetters (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\mongoose\lib\schematype.js:1189:12)
+          at ObjectId.SchemaType._castForQuery (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\mongoose\lib\schematype.js:1623:15)
+          at ObjectId.SchemaType.castForQuery (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\mongoose\lib\schematype.js:1613:15)
+          at ObjectId.SchemaType.castForQueryWrapper (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\mongoose\lib\schematype.js:1590:20)
+          at cast (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\mongoose\lib\cast.js:288:34)
+          at model.Query.Query.cast (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\mongoose\lib\query.js:5137:12),
+      valueType: 'Object'
+    }
+  },
+  level: 'error',
+  timestamp: '2022-06-06 11:46:37'
+}
+{
+  message: {
+    updateCategoryDBError: CastError: Cast to ObjectId failed for value "{ _id: undefined }" (type Object) at path "_id" for model "category"
+        at model.Query.exec (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\mongoose\lib\query.js:4715:21)
+        at model.Query.Query.then (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\mongoose\lib\query.js:4814:15)
+        at runMicrotasks (<anonymous>)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+      messageFormat: undefined,
+      stringValue: '"{ _id: undefined }"',
+      kind: 'ObjectId',
+      value: { _id: undefined },
+      path: '_id',
+      reason: BSONTypeError: Argument passed in must be a string of 12 bytes or a string of 24 hex characters or an integer
+          at new BSONTypeError (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\bson\src\error.ts:16:5)
+          at new ObjectId (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\bson\src\objectid.ts:87:15)
+          at castObjectId (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\mongoose\lib\cast\objectid.js:24:12)
+          at ObjectId.cast (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\mongoose\lib\schema\objectid.js:247:12)
+          at ObjectId.SchemaType.applySetters (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\mongoose\lib\schematype.js:1189:12)
+          at ObjectId.SchemaType._castForQuery (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\mongoose\lib\schematype.js:1623:15)
+          at ObjectId.SchemaType.castForQuery (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\mongoose\lib\schematype.js:1613:15)
+          at ObjectId.SchemaType.castForQueryWrapper (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\mongoose\lib\schematype.js:1590:20)
+          at cast (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\mongoose\lib\cast.js:288:34)
+          at model.Query.Query.cast (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\mongoose\lib\query.js:5137:12),
+      valueType: 'Object'
+    }
+  },
+  level: 'error',
+  timestamp: '2022-06-06 11:47:16'
+}
+{
+  message: {
+    updateCategoryDBError: CastError: Cast to ObjectId failed for value "{ _id: undefined }" (type Object) at path "_id" for model "category"
+        at model.Query.exec (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\mongoose\lib\query.js:4715:21)
+        at model.Query.Query.then (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\mongoose\lib\query.js:4814:15)
+        at runMicrotasks (<anonymous>)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+      messageFormat: undefined,
+      stringValue: '"{ _id: undefined }"',
+      kind: 'ObjectId',
+      value: { _id: undefined },
+      path: '_id',
+      reason: BSONTypeError: Argument passed in must be a string of 12 bytes or a string of 24 hex characters or an integer
+          at new BSONTypeError (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\bson\src\error.ts:16:5)
+          at new ObjectId (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\bson\src\objectid.ts:87:15)
+          at castObjectId (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\mongoose\lib\cast\objectid.js:24:12)
+          at ObjectId.cast (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\mongoose\lib\schema\objectid.js:247:12)
+          at ObjectId.SchemaType.applySetters (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\mongoose\lib\schematype.js:1189:12)
+          at ObjectId.SchemaType._castForQuery (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\mongoose\lib\schematype.js:1623:15)
+          at ObjectId.SchemaType.castForQuery (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\mongoose\lib\schematype.js:1613:15)
+          at ObjectId.SchemaType.castForQueryWrapper (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\mongoose\lib\schematype.js:1590:20)
+          at cast (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\mongoose\lib\cast.js:288:34)
+          at model.Query.Query.cast (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\mongoose\lib\query.js:5137:12),
+      valueType: 'Object'
+    }
+  },
+  level: 'error',
+  timestamp: '2022-06-06 11:48:09'
+}
+{
+  message: {
+    updateCategoryDBError: CastError: Cast to ObjectId failed for value "{ _id: undefined }" (type Object) at path "_id" for model "category"
+        at model.Query.exec (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\mongoose\lib\query.js:4715:21)
+        at model.Query.Query.then (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\mongoose\lib\query.js:4814:15)
+        at runMicrotasks (<anonymous>)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+      messageFormat: undefined,
+      stringValue: '"{ _id: undefined }"',
+      kind: 'ObjectId',
+      value: { _id: undefined },
+      path: '_id',
+      reason: BSONTypeError: Argument passed in must be a string of 12 bytes or a string of 24 hex characters or an integer
+          at new BSONTypeError (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\bson\src\error.ts:16:5)
+          at new ObjectId (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\bson\src\objectid.ts:87:15)
+          at castObjectId (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\mongoose\lib\cast\objectid.js:24:12)
+          at ObjectId.cast (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\mongoose\lib\schema\objectid.js:247:12)
+          at ObjectId.SchemaType.applySetters (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\mongoose\lib\schematype.js:1189:12)
+          at ObjectId.SchemaType._castForQuery (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\mongoose\lib\schematype.js:1623:15)
+          at ObjectId.SchemaType.castForQuery (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\mongoose\lib\schematype.js:1613:15)
+          at ObjectId.SchemaType.castForQueryWrapper (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\mongoose\lib\schematype.js:1590:20)
+          at cast (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\mongoose\lib\cast.js:288:34)
+          at model.Query.Query.cast (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\mongoose\lib\query.js:5137:12),
+      valueType: 'Object'
+    }
+  },
+  level: 'error',
+  timestamp: '2022-06-06 11:49:40'
+}
+{
+  message: {
+    borderData: Promise { <pending> },
+    createBoardApi: 'https://api.trello.com/1/boards/?name=TESTING NEW&prefs_background=blue&defaultLists=false&key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68'
+  },
+  level: 'info',
+  timestamp: '2022-06-06 14:00:06'
+}
+{
+  message: {
+    data: {
+      name: 'TESTING NEW',
+      color: 'blue',
+      boardId: '629dde3540bf15786710cf71'
+    }
+  },
+  level: 'info',
+  timestamp: '2022-06-06 14:00:06'
+}
+{
+  message: { removeWebhookSucced: 'done' },
+  level: 'info',
+  timestamp: '2022-06-06 14:00:09'
+}
+{
+  message: { teamListIds: [] },
+  level: 'info',
+  timestamp: '2022-06-06 14:00:09'
+}
+{
+  message: { webhookCreateResult: 'webhook done' },
+  level: 'info',
+  timestamp: '2022-06-06 14:00:11'
+}
+{
+  message: {
+    borderData: Promise { <pending> },
+    createBoardApi: 'https://api.trello.com/1/boards/?name=SHOOT HOOK&prefs_background=blue&defaultLists=false&key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68'
+  },
+  level: 'info',
+  timestamp: '2022-06-06 14:00:39'
+}
+{
+  message: {
+    data: {
+      name: 'SHOOT HOOK',
+      color: 'blue',
+      boardId: '629dde55a8dfcf3af58d370a'
+    }
+  },
+  level: 'info',
+  timestamp: '2022-06-06 14:00:39'
+}
+{
+  message: { removeWebhookSucced: 'done' },
+  level: 'info',
+  timestamp: '2022-06-06 14:00:42'
+}
+{
+  message: { teamListIds: [] },
+  level: 'info',
+  timestamp: '2022-06-06 14:00:42'
+}
+{
+  message: { webhookCreateResult: 'webhook done' },
+  level: 'info',
+  timestamp: '2022-06-06 14:00:44'
+}
+{
+  message: {
+    boardId: '629dbc84d887b2021a83dd82',
+    myDepartment: {
+      _id: new ObjectId("629dbc854c1f58aaa633e60c"),
+      name: 'Testing Local',
+      boardId: '629dbc84d887b2021a83dd82',
+      color: 'blue',
+      mainBoard: false,
+      tasks: [],
+      teamsId: [
+        {
+          idInTrello: '629dbdc1c70eac0d1bfa434d',
+          idInDB: new ObjectId("629dbdc24c1f58aaa633e6b4"),
+          _id: new ObjectId("629dbdc24c1f58aaa633e6b6")
+        },
+        {
+          idInTrello: '629dbe3a8dc9868b5df69dd3',
+          idInDB: new ObjectId("629dbe3b4c1f58aaa633e6c6"),
+          _id: new ObjectId("629dbe3b4c1f58aaa633e6c8")
+        },
+        {
+          idInTrello: '629dcba932787f3ccf8f7d58',
+          idInDB: new ObjectId("629dcbaa4c1f58aaa633e981"),
+          _id: new ObjectId("629dcbaa4c1f58aaa633e983")
+        }
+      ],
+      createdAt: 2022-06-06T08:36:21.546Z,
+      updatedAt: 2022-06-06T09:40:58.880Z,
+      __v: 0,
+      canceldListId: '629dbc8580cd0611d54b8b0f',
+      defaultListId: '629dbc88b84e8f0158907125',
+      departmentWindowId: '629dbc854d5b5c6cf3c762b8',
+      doneListId: '629dbc869bda037fbd2ad1e1',
+      notClearListId: '629dbc8684bdec73b7af982d',
+      notStartedListId: '629dbc88bf9e508643b7fcdf',
+      reviewListId: '629dbc873cefc76a88041089',
+      sharedListID: '629dbc87ed39690175b38ed8'
+    }
+  },
+  level: 'info',
+  timestamp: '2022-06-06 14:03:51'
+}
+{
+  message: {
+    removeBoard: 'https://api.trello.com/1/boards/629dbc84d887b2021a83dd82?response_type=token&key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68'
+  },
+  level: 'info',
+  timestamp: '2022-06-06 14:03:51'
+}
+{
+  message: {
+    'delete Tasks': { acknowledged: true, deletedCount: 0 },
+    'Delete Tech members': 'Delete result is 0 document'
+  },
+  level: 'info',
+  timestamp: '2022-06-06 14:03:52'
+}
+{
+  message: {
+    boardId: '629dbdcbf2a5780728303653',
+    myDepartment: {
+      _id: new ObjectId("629dbdcc4c1f58aaa633e6b9"),
+      name: 'Filter Local',
+      boardId: '629dbdcbf2a5780728303653',
+      color: 'blue',
+      mainBoard: false,
+      tasks: [],
+      teamsId: [
+        {
+          idInTrello: '629dcba93159448f80628ffb',
+          idInDB: new ObjectId("629dcbaa4c1f58aaa633e97c"),
+          _id: new ObjectId("629dcbaa4c1f58aaa633e97e")
+        }
+      ],
+      createdAt: 2022-06-06T08:41:48.812Z,
+      updatedAt: 2022-06-06T09:40:58.403Z,
+      __v: 0,
+      canceldListId: '629dbdcc1f4a756db8d4028d',
+      defaultListId: '629dbdcf2db7a567c8f1ebdb',
+      departmentWindowId: '629dbdcc7c0c9b7183d1c0ca',
+      doneListId: '629dbdcd8ad8778a4aad1980',
+      notClearListId: '629dbdcdca8e2a1ad72aa92c',
+      notStartedListId: '629dbdcf47302d0c78b3b425',
+      reviewListId: '629dbdce6ce85c12ca9d3dd2',
+      sharedListID: '629dbdce881f6b5d654e62e0'
+    }
+  },
+  level: 'info',
+  timestamp: '2022-06-06 14:03:55'
+}
+{
+  message: {
+    removeBoard: 'https://api.trello.com/1/boards/629dbdcbf2a5780728303653?response_type=token&key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68'
+  },
+  level: 'info',
+  timestamp: '2022-06-06 14:03:55'
+}
+{
+  message: {
+    'delete Tasks': { acknowledged: true, deletedCount: 0 },
+    'Delete Tech members': 'Delete result is 0 document'
+  },
+  level: 'info',
+  timestamp: '2022-06-06 14:03:55'
+}
+{
+  message: {
+    boardId: '629dde3540bf15786710cf71',
+    myDepartment: {
+      _id: new ObjectId("629dde364c1f58aaa633e9b6"),
+      name: 'TESTING NEW',
+      boardId: '629dde3540bf15786710cf71',
+      color: 'blue',
+      mainBoard: false,
+      tasks: [],
+      teamsId: [],
+      createdAt: 2022-06-06T11:00:06.442Z,
+      updatedAt: 2022-06-06T11:00:10.559Z,
+      __v: 0,
+      canceldListId: '629dde36fd9d47883dd79302',
+      defaultListId: '629dde38b9140211337c56a3',
+      departmentWindowId: '629dde35b1de32830182b3b1',
+      doneListId: '629dde374138db77286be7e1',
+      notClearListId: '629dde36e54edf5e7518011b',
+      notStartedListId: '629dde390f5be55b52f9e0a1',
+      reviewListId: '629dde385ae1237f83375549',
+      sharedListID: '629dde37674262426e16df0b'
+    }
+  },
+  level: 'info',
+  timestamp: '2022-06-06 14:03:58'
+}
+{
+  message: {
+    removeBoard: 'https://api.trello.com/1/boards/629dde3540bf15786710cf71?response_type=token&key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68'
+  },
+  level: 'info',
+  timestamp: '2022-06-06 14:03:58'
+}
+{
+  message: {
+    'delete Tasks': { acknowledged: true, deletedCount: 0 },
+    'Delete Tech members': 'Delete result is 0 document'
+  },
+  level: 'info',
+  timestamp: '2022-06-06 14:03:59'
+}
+{
+  message: {
+    boardId: '629dde55a8dfcf3af58d370a',
+    myDepartment: {
+      _id: new ObjectId("629dde574c1f58aaa633e9cb"),
+      name: 'SHOOT HOOK',
+      boardId: '629dde55a8dfcf3af58d370a',
+      color: 'blue',
+      mainBoard: false,
+      tasks: [],
+      teamsId: [],
+      createdAt: 2022-06-06T11:00:39.118Z,
+      updatedAt: 2022-06-06T11:00:44.007Z,
+      __v: 0,
+      canceldListId: '629dde57fc826b112b0cff15',
+      defaultListId: '629dde5a823fa80e0ed9a616',
+      departmentWindowId: '629dde56ccf26b894c69650d',
+      doneListId: '629dde5886795b3cc4f270c6',
+      notClearListId: '629dde577fe1d31e27c7bbbf',
+      notStartedListId: '629dde5a968f845e4c3cf7ba',
+      reviewListId: '629dde59546d284fb6465b07',
+      sharedListID: '629dde5999479c5e0a274fce'
+    }
+  },
+  level: 'info',
+  timestamp: '2022-06-06 14:04:02'
+}
+{
+  message: {
+    removeBoard: 'https://api.trello.com/1/boards/629dde55a8dfcf3af58d370a?response_type=token&key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68'
+  },
+  level: 'info',
+  timestamp: '2022-06-06 14:04:02'
+}
+{
+  message: {
+    'delete Tasks': { acknowledged: true, deletedCount: 0 },
+    'Delete Tech members': { acknowledged: true, deletedCount: 4 }
+  },
+  level: 'info',
+  timestamp: '2022-06-06 14:04:03'
+}
+{
+  message: {
+    borderData: Promise { <pending> },
+    createBoardApi: 'https://api.trello.com/1/boards/?name=Testing 1&prefs_background=blue&defaultLists=false&key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68'
+  },
+  level: 'info',
+  timestamp: '2022-06-06 14:04:20'
+}
+{
+  message: {
+    data: {
+      name: 'Testing 1',
+      color: 'blue',
+      boardId: '629ddf3290c90a40e729f10f'
+    }
+  },
+  level: 'info',
+  timestamp: '2022-06-06 14:04:20'
+}
+{
+  message: { removeWebhookSucced: 'done' },
+  level: 'info',
+  timestamp: '2022-06-06 14:04:23'
+}
+{
+  message: { teamListIds: [] },
+  level: 'info',
+  timestamp: '2022-06-06 14:04:23'
+}
+{
+  message: { webhookCreateResult: 'webhook done' },
+  level: 'info',
+  timestamp: '2022-06-06 14:04:24'
+}
+{
+  message: {
+    borderData: Promise { <pending> },
+    createBoardApi: 'https://api.trello.com/1/boards/?name=Testing 2&prefs_background=blue&defaultLists=false&key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68'
+  },
+  level: 'info',
+  timestamp: '2022-06-06 14:04:45'
+}
+{
+  message: {
+    data: {
+      name: 'Testing 2',
+      color: 'blue',
+      boardId: '629ddf4cdda2730cf32ed243'
+    }
+  },
+  level: 'info',
+  timestamp: '2022-06-06 14:04:45'
+}
+{
+  message: { removeWebhookSucced: 'done' },
+  level: 'info',
+  timestamp: '2022-06-06 14:04:48'
+}
+{
+  message: { teamListIds: [] },
+  level: 'info',
+  timestamp: '2022-06-06 14:04:48'
+}
+{
+  message: { webhookCreateResult: 'webhook done' },
+  level: 'info',
+  timestamp: '2022-06-06 14:04:49'
+}
+{
+  message: {
+    borderData: Promise { <pending> },
+    createBoardApi: 'https://api.trello.com/1/boards/?name=Testing 3&prefs_background=blue&defaultLists=false&key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68'
+  },
+  level: 'info',
+  timestamp: '2022-06-06 14:20:15'
+}
+{
+  message: {
+    data: {
+      name: 'Testing 3',
+      color: 'blue',
+      boardId: '629de2eeaae8e31747f392fd'
+    }
+  },
+  level: 'info',
+  timestamp: '2022-06-06 14:20:15'
+}
+{
+  message: { removeWebhookSucced: 'done' },
+  level: 'info',
+  timestamp: '2022-06-06 14:20:18'
+}
+{
+  message: { teamListIds: [] },
+  level: 'info',
+  timestamp: '2022-06-06 14:20:18'
+}
+{
+  message: { webhookCreateResult: 'webhook done' },
+  level: 'info',
+  timestamp: '2022-06-06 14:20:20'
+}
+{
+  message: {
+    boardId: '629de2eeaae8e31747f392fd',
+    myDepartment: {
+      _id: new ObjectId("629de2ef4c1f58aaa633ea53"),
+      name: 'Testing 3',
+      boardId: '629de2eeaae8e31747f392fd',
+      color: 'blue',
+      mainBoard: false,
+      tasks: [],
+      teamsId: [],
+      createdAt: 2022-06-06T11:20:15.927Z,
+      updatedAt: 2022-06-06T11:20:19.892Z,
+      __v: 0,
+      canceldListId: '629de2efa12c85498dddcb79',
+      defaultListId: '629de2f2a61194634ea2ef12',
+      departmentWindowId: '629de2ef9926c750c1ee14b8',
+      doneListId: '629de2f0e58a2e13e563992c',
+      notClearListId: '629de2f02796678f18db55eb',
+      notStartedListId: '629de2f2a198194b601900de',
+      reviewListId: '629de2f151936187854d3189',
+      sharedListID: '629de2f16b88ce331981e77c'
+    }
+  },
+  level: 'info',
+  timestamp: '2022-06-06 14:33:03'
+}
+{
+  message: {
+    removeBoard: 'https://api.trello.com/1/boards/629de2eeaae8e31747f392fd?response_type=token&key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68'
+  },
+  level: 'info',
+  timestamp: '2022-06-06 14:33:03'
+}
+{
+  message: {
+    'delete Tasks': { acknowledged: true, deletedCount: 0 },
+    'Delete Tech members': { acknowledged: true, deletedCount: 1 }
+  },
+  level: 'info',
+  timestamp: '2022-06-06 14:33:04'
+}
+{
+  message: {
+    borderData: Promise { <pending> },
+    createBoardApi: 'https://api.trello.com/1/boards/?name=Testing 3&prefs_background=blue&defaultLists=false&key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68'
+  },
+  level: 'info',
+  timestamp: '2022-06-06 14:34:37'
+}
+{
+  message: {
+    data: {
+      name: 'Testing 3',
+      color: 'blue',
+      boardId: '629de64cb63b4a720aabf181'
+    }
+  },
+  level: 'info',
+  timestamp: '2022-06-06 14:34:37'
+}
+{
+  message: { removeWebhookSucced: 'done' },
+  level: 'info',
+  timestamp: '2022-06-06 14:34:40'
+}
+{
+  message: { teamListIds: [] },
+  level: 'info',
+  timestamp: '2022-06-06 14:34:40'
+}
+{
+  message: { webhookCreateResult: 'webhook done' },
+  level: 'info',
+  timestamp: '2022-06-06 14:34:42'
+}
+{
+  message: {
+    boardId: '629de64cb63b4a720aabf181',
+    myDepartment: {
+      _id: new ObjectId("629de64d4c1f58aaa633ea78"),
+      name: 'Testing 3',
+      boardId: '629de64cb63b4a720aabf181',
+      color: 'blue',
+      mainBoard: false,
+      tasks: [],
+      teamsId: [],
+      createdAt: 2022-06-06T11:34:37.431Z,
+      updatedAt: 2022-06-06T11:34:41.856Z,
+      __v: 0,
+      canceldListId: '629de64deabe8c3a32aa26c3',
+      defaultListId: '629de6502d437b28232db28d',
+      departmentWindowId: '629de64c44872f758bbbfbea',
+      doneListId: '629de64e8365a170435398e0',
+      notClearListId: '629de64d3dc8c0413fe8fd1e',
+      notStartedListId: '629de650b40e3b6a4a36bc5c',
+      reviewListId: '629de64f78c3586d6ffd4a20',
+      sharedListID: '629de64fa04730371b95672f'
+    }
+  },
+  level: 'info',
+  timestamp: '2022-06-06 14:35:02'
+}
+{
+  message: {
+    removeBoard: 'https://api.trello.com/1/boards/629de64cb63b4a720aabf181?response_type=token&key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68'
+  },
+  level: 'info',
+  timestamp: '2022-06-06 14:35:02'
+}
+{
+  message: {
+    'delete Tasks': { acknowledged: true, deletedCount: 0 },
+    'Delete Tech members': { acknowledged: true, deletedCount: 1 }
+  },
+  level: 'info',
+  timestamp: '2022-06-06 14:35:03'
+}
+{
+  message: {
+    borderData: Promise { <pending> },
+    createBoardApi: 'https://api.trello.com/1/boards/?name=Testing 3&prefs_background=blue&defaultLists=false&key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68'
+  },
+  level: 'info',
+  timestamp: '2022-06-06 14:35:41'
+}
+{
+  message: {
+    data: {
+      name: 'Testing 3',
+      color: 'blue',
+      boardId: '629de68ca8255c3131e8bc6d'
+    }
+  },
+  level: 'info',
+  timestamp: '2022-06-06 14:35:41'
+}
+{
+  message: { removeWebhookSucced: 'done' },
+  level: 'info',
+  timestamp: '2022-06-06 14:35:44'
+}
+{
+  message: { teamListIds: [] },
+  level: 'info',
+  timestamp: '2022-06-06 14:35:44'
+}
+{
+  message: { webhookCreateResult: 'webhook done' },
+  level: 'info',
+  timestamp: '2022-06-06 14:35:46'
+}
