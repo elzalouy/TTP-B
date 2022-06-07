@@ -9,7 +9,7 @@ const TechMemberReq = class TechMemberReq extends TechMemberController {
   static async handleCreatMember(req: Request, res: Response) {
     try {
       let member = await super.createNewMember(req.body);
-      if (member.status === 200) {
+      if (member?.status === 200) {
         return res.status(200).send(member);
       } else {
         return res.status(400).send(member);
@@ -43,6 +43,21 @@ const TechMemberReq = class TechMemberReq extends TechMemberController {
         return res.status(200).send(members);
       } else {
         return res.status(400).send(customeError("tec_member_get_error", 400));
+      }
+    } catch (error) {
+      logger.error({ handleGetBoards: error });
+      return res.status(500).send(customeError("server_error", 500));
+    }
+  }
+
+
+  static async handleDeleteTechMember(req: Request, res: Response) {
+    try {
+      let members = await super.deleteTechMemberDB(req.query);
+      if (members) {
+        return res.status(200).send(members);
+      } else {
+        return res.status(400).send(customeError("tech_member_delete_error", 400));
       }
     } catch (error) {
       logger.error({ handleGetBoards: error });

@@ -48,7 +48,6 @@ const DepartmentBD = class DepartmentBD {
         Recordupdate,
         { new: true, lean: true, populate: "teamsId" }
       );
-
       return department;
     } catch (error) {
       logger.error({ deleteNestedRecordDepDBError: error });

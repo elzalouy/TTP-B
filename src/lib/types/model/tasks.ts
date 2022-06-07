@@ -86,11 +86,13 @@ export interface AttachmentResponse {
   }[];
   url: string;
   pos: number;
-  fileName: number;
+  fileName: string;
   limits: any;
 }
 export interface AttachmentSchema {
+  name?: string;
   trelloId: string;
   mimeType: string;
   url: string;
 }
+export interface DownloadAttachmentResponse {}

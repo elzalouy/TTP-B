@@ -1,3 +1,4 @@
+import { Express } from "express";
 import Joi from "joi";
 const createProjectSchema = Joi.object({
   name: Joi.string().required().min(4).messages({
@@ -105,5 +106,5 @@ export const createTaskSchema = Joi.object({
   deliveryDate: Joi.any().allow(null),
   done: Joi.any().allow(null),
   turnoverTime: Joi.allow(null),
-  attachedFiles: Joi.array().optional().allow(null).max(3),
+  attachedFiles: Joi.array().optional().allow(null),
 });

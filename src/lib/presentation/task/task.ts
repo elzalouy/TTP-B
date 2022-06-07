@@ -1,9 +1,10 @@
 import { customeError } from "./../../utils/errorUtils";
-import { Request, Response } from "express";
+import { Express, Request, Response } from "express";
 import logger from "../../../logger";
 import TaskController from "../../controllers/task";
 import { TaskData } from "../../types/model/tasks";
-import { createTaskSchema } from "../../db/validation";
+import { createTaskSchema } from "../../services/validation";
+import BoardController from "../../controllers/boards";
 
 const TaskReq = class TaskReq extends TaskController {
   static async handleCreateCard(req: Request, res: Response) {
@@ -14,14 +15,14 @@ const TaskReq = class TaskReq extends TaskController {
       if (isValid.error) return res.status(400).send(isValid.error.details);
       let task = await super.createTask(TaskData, req.files);
       if (task) {
-        console.log(task);
         return res.send(task);
       } else {
         return res.status(400).send(customeError("create_task_error", 400));
       }
-    } catch (error) {
+    } catch (error: any) {
+      console.log(new Error(error).message);
       logger.error({ handleCreateCardError: error });
-      return res.status(500).send(customeError("server_error", 500));
+      return res.status(500).send([{ message: error?.message }]);
     }
   }
 
@@ -115,6 +116,20 @@ const TaskReq = class TaskReq extends TaskController {
       else res.status(400).send(customeError("delete_task_error", 400));
     } catch (error) {
       logger.error({ handleDeleteTasksError: error });
+    }
+  }
+  static async handleDownloadAttachment(req: Request, res: Response) {
+    try {
+      let cardId: string = req.query?.cardId.toString();
+      let attachmentId = req.query?.attachmentId.toString();
+      if (cardId && attachmentId) {
+        let result = await super.downloadAttachment(cardId, attachmentId);
+        if (result) return res.send(result);
+        return res.status(400).send("Bad Request for downlaoding this file");
+      } else
+        res.status(400).send("Request values missed cardId and AttachmentId");
+    } catch (error) {
+      logger.error({ handleDownloadAttachmentError: error });
     }
   }
 };

@@ -1,7 +1,7 @@
 import { Router } from "express";
 import BoardReq from "../../presentation/boards/boards";
 import apiRoute from "./apis";
-import Multer from "../../services/multer";
+import Multer from "../../middlewares/multer";
 
 const multer = Multer();
 

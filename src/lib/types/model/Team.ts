@@ -4,6 +4,7 @@ import { ObjectId } from "bson";
 export interface TeamsInterface extends Document {
   name: string;
   departmentId: ObjectId;
+  isDeleted:boolean;
   listId: string | null;
 }
 
@@ -13,6 +14,7 @@ export interface TeamsData {
   departmentId?: string;
   boardId?: string;
   trelloMemberId?: string;
+  isDeleted?:boolean;
   listId?: string;
   newBoardId?: string;
   mainBaord?: null | boolean;

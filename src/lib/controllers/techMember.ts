@@ -19,9 +19,11 @@ const TechMemberController = class TechMemberController extends TechMemberDB {
   static async getTechMember(data: object) {
     return await TechMemberController.__getTechMmber(data);
   }
+
   static async deleteTechMemberWhere(data: TeamsData) {
     return await TechMemberController.__deleteTechMember(data);
   }
+
   static async __getTechMmber(data: object) {
     try {
       let techMember = await super.getTechMemberDB(data);
@@ -30,6 +32,7 @@ const TechMemberController = class TechMemberController extends TechMemberDB {
       logger.error({ getTechMemberError: error });
     }
   }
+
   static async __updateMember(data: TeamsData) {
     try {
       const { boardId, trelloMemberId, listId, newBoardId, name } = data;
@@ -77,6 +80,7 @@ const TechMemberController = class TechMemberController extends TechMemberDB {
       data.listId = listIdValue;
       delete data.newBoardId;
 
+      
       let updatedMember = await TechMemberDB.updateTechMember(data);
       return updatedMember;
     } catch (error) {
@@ -153,6 +157,7 @@ const TechMemberController = class TechMemberController extends TechMemberDB {
       logger.error({ __checkBoardListNameError: error });
     }
   }
+
   static async __deleteTechMember(data: any) {
     try {
       return await TechMemberController.deleteTechMemberDB(data);

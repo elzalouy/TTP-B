@@ -1,7 +1,7 @@
 import { config } from "dotenv";
 import nodemailer from "nodemailer";
 import logger from "../../../logger";
-
+import Config from "config";
 config();
 
 interface Data {
@@ -24,15 +24,16 @@ const sendMail = async (data: Data) => {
         clientSecret: process.env.CLIENT_SECRET,
       },
     });
-  
 
     const mailOptions = {
       from: process.env.EMAIL_ADDRESS,
       to: data.email,
       subject: `${data.subject} TTP`,
-      text: `${data.body} ${process.env.FRONT_END_URL}/${data.path}/${data.token}`,
+      text: `${data.body} ${Config.get("FrontEndUrl")}/${data.path}/${
+        data.token
+      }`,
       html: `<h1>
-      <a href="${process.env.FRONT_END_URL}/${data.path}/${data.token}">
+      <a href="${Config.get("FrontEndUrl")}/${data.path}/${data.token}">
       ${data.body}
       </a>
       </h1>`,
