@@ -15,6 +15,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const dotenv_1 = require("dotenv");
 const nodemailer_1 = __importDefault(require("nodemailer"));
 const logger_1 = __importDefault(require("../../../logger"));
+const config_1 = __importDefault(require("config"));
 (0, dotenv_1.config)();
 const sendMail = (data) => __awaiter(void 0, void 0, void 0, function* () {
     try {
@@ -32,9 +33,9 @@ const sendMail = (data) => __awaiter(void 0, void 0, void 0, function* () {
             from: process.env.EMAIL_ADDRESS,
             to: data.email,
             subject: `${data.subject} TTP`,
-            text: `${data.body} ${process.env.FRONT_END_URL}/${data.path}/${data.token}`,
+            text: `${data.body} ${config_1.default.get("FrontEndUrl")}/${data.path}/${data.token}`,
             html: `<h1>
-      <a href="${process.env.FRONT_END_URL}/${data.path}/${data.token}">
+      <a href="${config_1.default.get("FrontEndUrl")}/${data.path}/${data.token}">
       ${data.body}
       </a>
       </h1>`,

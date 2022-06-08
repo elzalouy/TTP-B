@@ -2,7 +2,7 @@ import { Request, Response } from "express";
 import multer, { FileFilterCallback } from "multer";
 import { v4 } from "uuid";
 const path = require("path");
-let dir = __dirname.split("/services");
+let dir = __dirname.split("/middlewares");
 type DestinationCallback = (error: Error | null, destination: string) => void;
 type FileNameCallback = (error: Error | null, filename: string) => void;
 const Mime = [

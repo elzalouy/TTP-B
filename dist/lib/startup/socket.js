@@ -1,8 +1,10 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+let clients = 0;
 function appSocket(io) {
     io.on("connection", (socket) => {
-        socket.on("disconnect", () => console.log("Client disconnected"));
+        console.log("new client connected No.", ++clients);
+        socket.on("disconnect", () => console.log("Client disconnected No,", --clients));
         //* this for admins role only
         socket.on("joined admin", () => {
             // logger.info({ data });

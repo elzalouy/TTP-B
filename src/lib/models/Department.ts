@@ -6,7 +6,7 @@ const DepartmentSchema: Schema = new Schema<DepartmentInfo>( // department
     name: {
       type: String,
       required: true,
-      unique:true
+      unique: true,
     },
     boardId: {
       type: String,
@@ -34,11 +34,8 @@ const DepartmentSchema: Schema = new Schema<DepartmentInfo>( // department
     reviewListId: {
       type: String,
     },
-    departmentWindowId:{
-      type:String
-    },
-    notStartedListId:{
-      type:String
+    inProgressListId: {
+      type: String,
     },
     mainBoard: {
       type: Boolean,

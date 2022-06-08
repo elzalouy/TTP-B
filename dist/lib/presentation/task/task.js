@@ -15,7 +15,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const errorUtils_1 = require("./../../utils/errorUtils");
 const logger_1 = __importDefault(require("../../../logger"));
 const task_1 = __importDefault(require("../../controllers/task"));
-const validation_1 = require("../../db/validation");
+const validation_1 = require("../../services/validation");
 const TaskReq = class TaskReq extends task_1.default {
     static handleCreateCard(req, res) {
         const _super = Object.create(null, {
@@ -24,7 +24,8 @@ const TaskReq = class TaskReq extends task_1.default {
         return __awaiter(this, void 0, void 0, function* () {
             try {
                 let TaskData = req.body;
-                console.log(TaskData);
+                if (TaskData.teamId === "")
+                    TaskData.teamId = null;
                 let isValid = validation_1.createTaskSchema.validate(TaskData);
                 if (isValid.error)
                     return res.status(400).send(isValid.error.details);
@@ -37,8 +38,9 @@ const TaskReq = class TaskReq extends task_1.default {
                 }
             }
             catch (error) {
+                console.log(new Error(error).message);
                 logger_1.default.error({ handleCreateCardError: error });
-                return res.status(500).send((0, errorUtils_1.customeError)("server_error", 500));
+                return res.status(500).send([{ message: error === null || error === void 0 ? void 0 : error.message }]);
             }
         });
     }
@@ -188,6 +190,29 @@ const TaskReq = class TaskReq extends task_1.default {
             }
             catch (error) {
                 logger_1.default.error({ handleDeleteTasksError: error });
+            }
+        });
+    }
+    static handleDownloadAttachment(req, res) {
+        const _super = Object.create(null, {
+            downloadAttachment: { get: () => super.downloadAttachment }
+        });
+        var _a, _b;
+        return __awaiter(this, void 0, void 0, function* () {
+            try {
+                let cardId = (_a = req.query) === null || _a === void 0 ? void 0 : _a.cardId.toString();
+                let attachmentId = (_b = req.query) === null || _b === void 0 ? void 0 : _b.attachmentId.toString();
+                if (cardId && attachmentId) {
+                    let result = yield _super.downloadAttachment.call(this, cardId, attachmentId);
+                    if (result)
+                        return res.send(result);
+                    return res.status(400).send("Bad Request for downlaoding this file");
+                }
+                else
+                    res.status(400).send("Request values missed cardId and AttachmentId");
+            }
+            catch (error) {
+                logger_1.default.error({ handleDownloadAttachmentError: error });
             }
         });
     }

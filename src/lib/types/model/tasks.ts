@@ -9,26 +9,18 @@ export interface TaskInfo extends Document {
   subCategoryId: ObjectId;
   teamId: ObjectId;
   listId: string;
-  countNotClear?: number;
-  countShared?: number;
-  status?:
-    | "inProgress"
-    | "done"
-    | "shared"
-    | "not started"
-    | "not clear"
-    | "cancled"
-    | "review";
+  status?: string;
   start?: Date | number;
   deadline?: Date | number;
   deliveryDate?: Date;
   done?: Date;
-  turnoverTime?: number;
   attachedFiles?: AttachmentSchema[];
   attachedCard?: string;
   cardId?: string;
   boardId?: string;
-  description: String;
+  description?: string;
+  lastMove?: string;
+  lastMoveDate?: string;
 }
 export interface TasksStatistics {
   id?: ObjectId;
@@ -45,14 +37,7 @@ export interface TaskData {
   countNotClear?: number;
   countShared?: number;
   listId?: string;
-  status?:
-    | "inProgress"
-    | "done"
-    | "shared"
-    | "not clear"
-    | "not started"
-    | "cancled"
-    | "review";
+  status?: string;
   start?: Date | number;
   deadline?: Date | number;
   deliveryDate?: Date;
@@ -65,6 +50,8 @@ export interface TaskData {
   boardId?: string;
   file?: object;
   description?: string;
+  lastMove?: String;
+  lastMoveDate?: String;
 }
 export interface AttachmentResponse {
   id: string;

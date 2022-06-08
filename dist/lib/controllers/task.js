@@ -25,9 +25,9 @@ class TaskController extends tasks_1.default {
             return yield TaskController.__getTasks(data);
         });
     }
-    static createTask(data, file) {
+    static createTask(data, files) {
         return __awaiter(this, void 0, void 0, function* () {
-            return yield TaskController.__CreateNewTask(data, file);
+            return yield TaskController.__CreateNewTask(data, files);
         });
     }
     static updateTask(data) {
@@ -65,6 +65,11 @@ class TaskController extends tasks_1.default {
             return yield TaskController.__deleteTasksWhere(data);
         });
     }
+    static downloadAttachment(cardId, attachmentId) {
+        return __awaiter(this, void 0, void 0, function* () {
+            return yield TaskController.__downloadAttachment(cardId, attachmentId);
+        });
+    }
     static moveTaskOnTrello(cardId, listId, status) {
         return __awaiter(this, void 0, void 0, function* () {
             return yield TaskController.__moveTaskOnTrello(cardId, listId, status);
@@ -73,11 +78,15 @@ class TaskController extends tasks_1.default {
     static __moveTaskOnTrello(cardId, listId, status) {
         return __awaiter(this, void 0, void 0, function* () {
             try {
-                yield boards_1.default.moveTaskToDiffList(cardId, listId);
+                const result = yield boards_1.default.moveTaskToDiffList(cardId, listId);
+                console.log(result);
                 let task = yield tasks_1.default.updateOneTaskDB({
                     cardId: cardId,
                 }, {
                     status: status,
+                    listId: listId,
+                    lastMove: status,
+                    lastMoveDate: new Date().toUTCString(),
                 });
                 return task;
             }
@@ -87,12 +96,10 @@ class TaskController extends tasks_1.default {
         });
     }
     static __webhookUpdate(data) {
-        var _a, _b, _c, _d, _e, _f, _g, _h, _j, _k, _l, _m, _o, _p, _q, _r, _s, _t, _u, _v, _w, _x, _y, _z, _0, _1, _2, _3;
+        var _a, _b, _c, _d, _e, _f, _g, _h, _j, _k, _l, _m, _o, _p, _q, _r, _s, _t, _u, _v, _w, _x, _y, _z, _0, _1, _2, _3, _4, _5, _6, _7;
         return __awaiter(this, void 0, void 0, function* () {
             try {
-                // This action for updating card
-                // logger.info({ webhookUpdate: data });
-                // console.log(data);
+                console.log(data);
                 let targetTask;
                 const targetList = [
                     "Not Started",
@@ -100,7 +107,7 @@ class TaskController extends tasks_1.default {
                     "Shared",
                     "Review",
                     "Not Clear",
-                    "Cancel",
+                    "Cancled",
                 ];
                 logger_1.default.info({
                     afterList: (_d = (_c = (_b = (_a = data === null || data === void 0 ? void 0 : data.action) === null || _a === void 0 ? void 0 : _a.display) === null || _b === void 0 ? void 0 : _b.entities) === null || _c === void 0 ? void 0 : _c.listAfter) === null || _d === void 0 ? void 0 : _d.text,
@@ -110,14 +117,16 @@ class TaskController extends tasks_1.default {
                         cardId: data.action.display.entities.card.id,
                     }, {
                         status: (_m = (_l = (_k = (_j = data === null || data === void 0 ? void 0 : data.action) === null || _j === void 0 ? void 0 : _j.display) === null || _k === void 0 ? void 0 : _k.entities) === null || _l === void 0 ? void 0 : _l.listAfter) === null || _m === void 0 ? void 0 : _m.text,
+                        lastMove: (_r = (_q = (_p = (_o = data === null || data === void 0 ? void 0 : data.action) === null || _o === void 0 ? void 0 : _o.display) === null || _p === void 0 ? void 0 : _p.entities) === null || _q === void 0 ? void 0 : _q.listBefore) === null || _r === void 0 ? void 0 : _r.text,
+                        lastMoveDate: new Date().toUTCString(),
                     });
                     // if task status update to shared send notification
-                    if (((_r = (_q = (_p = (_o = data === null || data === void 0 ? void 0 : data.action) === null || _o === void 0 ? void 0 : _o.display) === null || _p === void 0 ? void 0 : _p.entities) === null || _q === void 0 ? void 0 : _q.listAfter) === null || _r === void 0 ? void 0 : _r.text) === "Shared") {
+                    if (((_v = (_u = (_t = (_s = data === null || data === void 0 ? void 0 : data.action) === null || _s === void 0 ? void 0 : _s.display) === null || _t === void 0 ? void 0 : _t.entities) === null || _u === void 0 ? void 0 : _u.listAfter) === null || _v === void 0 ? void 0 : _v.text) === "Shared") {
                         let projectData = yield project_1.default.getProjectDB({
                             _id: targetTask.projectId,
                         });
-                        let userName = (_v = (_u = (_t = (_s = data === null || data === void 0 ? void 0 : data.action) === null || _s === void 0 ? void 0 : _s.display) === null || _t === void 0 ? void 0 : _t.entities) === null || _u === void 0 ? void 0 : _u.memberCreator) === null || _v === void 0 ? void 0 : _v.username;
-                        let cardName = (_z = (_y = (_x = (_w = data === null || data === void 0 ? void 0 : data.action) === null || _w === void 0 ? void 0 : _w.display) === null || _x === void 0 ? void 0 : _x.entities) === null || _y === void 0 ? void 0 : _y.card) === null || _z === void 0 ? void 0 : _z.text;
+                        let userName = (_z = (_y = (_x = (_w = data === null || data === void 0 ? void 0 : data.action) === null || _w === void 0 ? void 0 : _w.display) === null || _x === void 0 ? void 0 : _x.entities) === null || _y === void 0 ? void 0 : _y.memberCreator) === null || _z === void 0 ? void 0 : _z.username;
+                        let cardName = (_3 = (_2 = (_1 = (_0 = data === null || data === void 0 ? void 0 : data.action) === null || _0 === void 0 ? void 0 : _0.display) === null || _1 === void 0 ? void 0 : _1.entities) === null || _2 === void 0 ? void 0 : _2.card) === null || _3 === void 0 ? void 0 : _3.text;
                         let createNotifi = yield notification_1.default.createNotification({
                             title: `${cardName} status has been changed to Shared`,
                             description: `${cardName} status has been changed to shared by ${userName}`,
@@ -132,7 +141,7 @@ class TaskController extends tasks_1.default {
                     }
                     server_1.io.sockets.emit("Move Task", {
                         cardId: data.action.display.entities.card.id,
-                        to: (_3 = (_2 = (_1 = (_0 = data === null || data === void 0 ? void 0 : data.action) === null || _0 === void 0 ? void 0 : _0.display) === null || _1 === void 0 ? void 0 : _1.entities) === null || _2 === void 0 ? void 0 : _2.listAfter) === null || _3 === void 0 ? void 0 : _3.text,
+                        to: (_7 = (_6 = (_5 = (_4 = data === null || data === void 0 ? void 0 : data.action) === null || _4 === void 0 ? void 0 : _4.display) === null || _5 === void 0 ? void 0 : _5.entities) === null || _6 === void 0 ? void 0 : _6.listAfter) === null || _7 === void 0 ? void 0 : _7.text,
                     });
                 }
                 else {
@@ -140,6 +149,8 @@ class TaskController extends tasks_1.default {
                         cardId: data.action.display.entities.card.id,
                     }, {
                         status: "inProgress",
+                        lastMove: "inProgress",
+                        lastMoveDate: new Date().toUTCString(),
                     });
                     server_1.io.sockets.emit("Move Task", {
                         cardId: data.action.display.entities.card.id,
@@ -182,17 +193,22 @@ class TaskController extends tasks_1.default {
                 if (createdCard) {
                     data.cardId = createdCard.id;
                     let attachment;
+                    let newAttachments = [];
                     if (files) {
-                        files.forEach((file) => __awaiter(this, void 0, void 0, function* () {
-                            console.log(file);
-                            attachment = yield boards_1.default.createAttachmentOnCard(createdCard.id, file.path, file.filename);
-                        }));
+                        yield Promise.all(files.map((file) => __awaiter(this, void 0, void 0, function* () {
+                            attachment = yield boards_1.default.createAttachmentOnCard(createdCard.id, file);
+                            newAttachments.push({
+                                name: file.filename,
+                                mimeType: attachment === null || attachment === void 0 ? void 0 : attachment.mimeType,
+                                trelloId: attachment.id,
+                                url: attachment.url,
+                            });
+                            data.attachedFiles = newAttachments;
+                        })));
                     }
-                    data.attachedFiles = attachment;
-                    delete data.listId;
-                    let task = yield _super.createTaskDB.call(this, data);
+                    console.log(data);
                     (0, upload_1.deleteAll)();
-                    return { task, createdCard, attachment };
+                    return yield _super.createTaskDB.call(this, data);
                 }
                 else
                     throw "Error while creating Card in Trello";
@@ -280,7 +296,6 @@ class TaskController extends tasks_1.default {
         return __awaiter(this, void 0, void 0, function* () {
             try {
                 let task = yield _super.getTaskDB.call(this, id);
-                console.log(task);
                 if (task) {
                     yield boards_1.default.deleteCard(task === null || task === void 0 ? void 0 : task.cardId);
                     return yield _super.deleteTaskDB.call(this, id);
@@ -289,6 +304,17 @@ class TaskController extends tasks_1.default {
             }
             catch (error) {
                 logger_1.default.error({ deleteTaskError: error });
+            }
+        });
+    }
+    static __downloadAttachment(cardId, attachmentId) {
+        return __awaiter(this, void 0, void 0, function* () {
+            try {
+                let response = yield boards_1.default.downloadAttachment(cardId, attachmentId);
+                return response;
+            }
+            catch (error) {
+                logger_1.default.error({ downloadAttachmentError: error });
             }
         });
     }

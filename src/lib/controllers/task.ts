@@ -60,13 +60,15 @@ class TaskController extends TaskDB {
     status: string
   ) {
     try {
-      await BoardController.moveTaskToDiffList(cardId, listId);
+      const result = await BoardController.moveTaskToDiffList(cardId, listId);
+      console.log(result);
       let task = await TaskDB.updateOneTaskDB(
         {
           cardId: cardId,
         },
         {
           status: status,
+          listId: listId,
         }
       );
       return task;
@@ -187,7 +189,6 @@ class TaskController extends TaskDB {
             })
           );
         }
-        console.log(data);
         deleteAll();
         return await super.createTaskDB(data);
       } else throw "Error while creating Card in Trello";

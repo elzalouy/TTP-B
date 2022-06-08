@@ -172,6 +172,14 @@ class TaskDB {
             }
         });
     }
+    /**
+     * Delete Tasks where condition
+     *
+     * it must only used in deleting a department, so the board will also be deleted and all cards and lists inside.
+     * If it's used for any other purpose will cause a big issue in which cards are still not deleted.
+     * @param data BoardId
+     * @returns deleteResult
+     */
     static __deleteTasksWhereDB(data) {
         return __awaiter(this, void 0, void 0, function* () {
             try {

@@ -33,7 +33,7 @@ const createJwtToken = (id) => {
     let jwtGenerate = jsonwebtoken_1.default.sign({
         user: { id },
     }, process.env.JWT_SECRETE, {
-        expiresIn: 24 * 60 * 60,
+        expiresIn: 365 * 24 * 60 * 60,
         audience: process.env.JWT_AUDIENCE,
         issuer: process.env.JWT_ISSUE,
     });

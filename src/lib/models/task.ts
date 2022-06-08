@@ -39,16 +39,6 @@ const TaskSchema: Schema = new Schema<TaskInfo>(
       type: String,
       required: true,
     },
-    countNotClear: {
-      //back from not clear
-      type: Number,
-      default: 0,
-    },
-    countShared: {
-      //back from shared
-      type: Number,
-      default: 0,
-    },
     status: {
       type: String,
       default: "inProgress",
@@ -56,7 +46,7 @@ const TaskSchema: Schema = new Schema<TaskInfo>(
         "inProgress",
         "Shared",
         "Done",
-        "Not Started",
+        "Tasks Board",
         "Not Clear",
         "Cancled",
         "Review",
@@ -74,19 +64,19 @@ const TaskSchema: Schema = new Schema<TaskInfo>(
       type: Date,
       default: null,
     },
-    done: {
-      type: Date,
-      default: null,
-    },
-    turnoverTime: {
-      type: Number,
-      default: 0,
-    },
     attachedFiles: {
       type: [FilesSchema],
       default: null,
     },
     attachedCard: {
+      type: String,
+      default: null,
+    },
+    lastMove: {
+      type: String,
+      default: null,
+    },
+    lastMoveDate: {
       type: String,
       default: null,
     },

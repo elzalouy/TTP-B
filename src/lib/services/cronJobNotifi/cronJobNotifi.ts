@@ -37,7 +37,7 @@ export default cron.schedule("* * 23 * * *", async () => {
   }
 
   //todo check if the task pass the deadline
-  let tasks:any = await TaskDB.getAllTasksDB({
+  let tasks: any = await TaskDB.getAllTasksDB({
     status: { $in: ["inProgress"] },
     deadline: { $lt: new Date() },
   });

@@ -7,6 +7,10 @@ const CategorySchema = new mongoose_1.Schema({
         required: true,
         unique: true,
     },
+    isDeleted: {
+        type: Boolean,
+        default: false,
+    },
     subCategoriesId: [
         {
             type: mongoose_1.Schema.Types.ObjectId,

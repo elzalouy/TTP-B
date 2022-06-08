@@ -1,6 +1,12 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 const mongoose_1 = require("mongoose");
+const FilesSchema = new mongoose_1.Schema({
+    name: { type: String, required: true },
+    trelloId: { type: String, required: true },
+    mimeType: { type: String, required: true },
+    url: { type: String, required: true },
+});
 const TaskSchema = new mongoose_1.Schema({
     name: {
         type: String,
@@ -16,9 +22,13 @@ const TaskSchema = new mongoose_1.Schema({
         ref: "categories",
         default: null,
     },
-    memberId: {
+    teamId: {
         type: mongoose_1.Schema.Types.ObjectId,
-        ref: "techMembers",
+        ref: "teams",
+        default: null,
+    },
+    listId: {
+        type: mongoose_1.Schema.Types.ObjectId,
         required: true,
     },
     cardId: {
@@ -28,16 +38,6 @@ const TaskSchema = new mongoose_1.Schema({
     boardId: {
         type: String,
         required: true,
-    },
-    countNotClear: {
-        //back from not clear
-        type: Number,
-        default: 0,
-    },
-    countShared: {
-        //back from shared
-        type: Number,
-        default: 0,
     },
     status: {
         type: String,
@@ -64,19 +64,19 @@ const TaskSchema = new mongoose_1.Schema({
         type: Date,
         default: null,
     },
-    done: {
-        type: Date,
-        default: null,
-    },
-    turnoverTime: {
-        type: Number,
-        default: 0,
-    },
     attachedFiles: {
-        type: String,
+        type: [FilesSchema],
         default: null,
     },
     attachedCard: {
+        type: String,
+        default: null,
+    },
+    lastMove: {
+        type: String,
+        default: null,
+    },
+    lastMoveDate: {
         type: String,
         default: null,
     },

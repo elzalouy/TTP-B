@@ -24,7 +24,7 @@ const TechMemberReq = class TechMemberReq extends techMember_1.default {
         return __awaiter(this, void 0, void 0, function* () {
             try {
                 let member = yield _super.createNewMember.call(this, req.body);
-                if (member.status === 200) {
+                if ((member === null || member === void 0 ? void 0 : member.status) === 200) {
                     return res.status(200).send(member);
                 }
                 else {
@@ -71,6 +71,26 @@ const TechMemberReq = class TechMemberReq extends techMember_1.default {
                 }
                 else {
                     return res.status(400).send((0, errorUtils_1.customeError)("tec_member_get_error", 400));
+                }
+            }
+            catch (error) {
+                logger_1.default.error({ handleGetBoards: error });
+                return res.status(500).send((0, errorUtils_1.customeError)("server_error", 500));
+            }
+        });
+    }
+    static handleDeleteTechMember(req, res) {
+        const _super = Object.create(null, {
+            deleteTechMemberDB: { get: () => super.deleteTechMemberDB }
+        });
+        return __awaiter(this, void 0, void 0, function* () {
+            try {
+                let members = yield _super.deleteTechMemberDB.call(this, req.query);
+                if (members) {
+                    return res.status(200).send(members);
+                }
+                else {
+                    return res.status(400).send((0, errorUtils_1.customeError)("tech_member_delete_error", 400));
                 }
             }
             catch (error) {

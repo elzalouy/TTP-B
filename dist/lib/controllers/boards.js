@@ -15,6 +15,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const trelloApi_1 = require("./../services/trello/trelloApi");
 const logger_1 = __importDefault(require("../../logger"));
 const node_fetch_1 = __importDefault(require("node-fetch"));
+const config_1 = __importDefault(require("config"));
 const dotenv_1 = require("dotenv");
 const fs_1 = __importDefault(require("fs"));
 var FormData = require("form-data");
@@ -75,9 +76,14 @@ class BoardController {
             return yield BoardController.__createCard(listId, cardName);
         });
     }
-    static createAttachmentOnCard(cardId, filePath, fileName) {
+    static downloadAttachment(cardId, attachmentId) {
         return __awaiter(this, void 0, void 0, function* () {
-            return yield BoardController.__createAttachment(cardId, filePath, fileName);
+            return yield BoardController.__downloadAttachment(cardId, attachmentId);
+        });
+    }
+    static createAttachmentOnCard(cardId, file) {
+        return __awaiter(this, void 0, void 0, function* () {
+            return yield BoardController.__createAttachment(cardId, file);
         });
     }
     static createNewBoard(name, color) {
@@ -104,13 +110,16 @@ class BoardController {
         return __awaiter(this, void 0, void 0, function* () {
             try {
                 let moveTask = (0, trelloApi_1.trelloApi)(`cards/${cardId}?idList=${listId}&`);
-                return yield (0, node_fetch_1.default)(moveTask, {
+                yield (0, node_fetch_1.default)(moveTask, {
                     method: "PUT",
                     headers: {
                         Accept: "application/json",
                     },
                 })
-                    .then((res) => logger_1.default.info("move board done", res))
+                    .then((res) => {
+                    logger_1.default.info("move board done", res);
+                    return res;
+                })
                     .catch((err) => logger_1.default.info("error in moving board", err));
             }
             catch (error) {
@@ -185,31 +194,34 @@ class BoardController {
             }
         });
     }
-    static __createAttachment(cardId, filePath, fileName) {
+    static __createAttachment(cardId, file) {
         return __awaiter(this, void 0, void 0, function* () {
             try {
-                let bufferFile;
-                console.log(filePath, fileName);
-                yield fs_1.default.readFile(filePath, (error, data) => {
-                    if (error)
-                        throw error;
-                    bufferFile = data;
+                let formData = new FormData();
+                formData.append("id", cardId);
+                formData.append("name", file.filename);
+                formData.append("mimeType", file.mimetype);
+                formData.append("file", fs_1.default.readFileSync(file.path), {
+                    contentType: file.mimetype,
+                    name: "file",
+                    filename: file.filename,
                 });
-                if (bufferFile) {
-                    let formData = new FormData();
-                    formData.append("name", fileName);
-                    formData.append("file", bufferFile === null || bufferFile === void 0 ? void 0 : bufferFile.toString("base64"));
-                    let endpoint = (0, trelloApi_1.trelloApi)(`cards/${cardId}/attachments`);
-                    let response = yield (0, node_fetch_1.default)(endpoint, {
-                        method: "POST",
-                        headers: { Accept: "multipart/form-data" },
-                        body: JSON.stringify(formData),
-                    });
-                    console.log(response.json());
-                    if ([200, 201].includes(response.status) && response.body)
-                        return response.json();
-                }
-                throw "File not existed";
+                let endpoint = (0, trelloApi_1.trelloApi)(`cards/${cardId}/attachments?`);
+                let Response;
+                yield (0, node_fetch_1.default)(endpoint, {
+                    method: "POST",
+                    body: formData,
+                })
+                    .then((response) => __awaiter(this, void 0, void 0, function* () {
+                    Response = JSON.parse(yield response.text());
+                }))
+                    .then((json) => {
+                    return json;
+                })
+                    .catch((err) => {
+                    throw err;
+                });
+                return Response;
             }
             catch (error) {
                 logger_1.default.error({ createAttachmentOnCardError: error });
@@ -256,7 +268,7 @@ class BoardController {
     static __addWebHook(idModel) {
         return __awaiter(this, void 0, void 0, function* () {
             try {
-                let webhookApi = (0, trelloApi_1.trelloApi)(`/webhooks/?callbackURL=${process.env.TRELLO_WEBHOOK_CALLBAKC_URL}&idModel=${idModel}&`);
+                let webhookApi = (0, trelloApi_1.trelloApi)(`/webhooks/?callbackURL=${config_1.default.get("Trello_Webhook_Callback_Url")}&idModel=${idModel}&`);
                 let webhookResult = yield (0, node_fetch_1.default)(webhookApi, {
                     method: "POST",
                     headers: {
@@ -361,7 +373,7 @@ class BoardController {
     static __singleBoardInfo(id, type) {
         return __awaiter(this, void 0, void 0, function* () {
             try {
-                let boardApi = yield (0, trelloApi_1.trelloApi)(`boards/${id}/${type}?`);
+                let boardApi = (0, trelloApi_1.trelloApi)(`boards/${id}/${type}?`);
                 let board = yield (0, node_fetch_1.default)(boardApi, {
                     method: "GET",
                 });
@@ -369,6 +381,27 @@ class BoardController {
             }
             catch (error) {
                 logger_1.default.error({ singleBoardError: error });
+            }
+        });
+    }
+    static __downloadAttachment(cardId, attachmentId) {
+        return __awaiter(this, void 0, void 0, function* () {
+            try {
+                let api = (0, trelloApi_1.trelloApi)(`cards/${cardId}/attachments/${attachmentId}?fields=url&`);
+                console.log(api);
+                let Response = null;
+                yield (0, node_fetch_1.default)(api, {
+                    method: "GET",
+                    headers: {
+                        Accept: "application/json",
+                    },
+                }).then((response) => __awaiter(this, void 0, void 0, function* () {
+                    Response = JSON.parse(yield response.text());
+                }));
+                return Response;
+            }
+            catch (error) {
+                logger_1.default.error({ downloadAttachment: error });
             }
         });
     }

@@ -15,7 +15,6 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const logger_1 = __importDefault(require("../../logger"));
 const procedures_1 = __importDefault(require("../db/procedures"));
 const department_1 = __importDefault(require("../dbCalls/department/department"));
-const techMember_1 = __importDefault(require("../dbCalls/techMember/techMember"));
 const boards_1 = __importDefault(require("./boards"));
 const DepartmentController = class DepartmentController extends department_1.default {
     static createDepartment(data) {
@@ -209,7 +208,7 @@ const DepartmentController = class DepartmentController extends department_1.def
                 // create main list on board
                 let departmentWindow = yield boards_1.default.addListToBoard(boardId, "Department window");
                 departmentWindowId = departmentWindow.id;
-                let cancel = yield boards_1.default.addListToBoard(boardId, "Cancel");
+                let cancel = yield boards_1.default.addListToBoard(boardId, "Cancled");
                 canceldListId = cancel.id;
                 let unClear = yield boards_1.default.addListToBoard(boardId, "Not Clear");
                 notClearListId = unClear.id;
@@ -270,8 +269,8 @@ const DepartmentController = class DepartmentController extends department_1.def
         return __awaiter(this, void 0, void 0, function* () {
             try {
                 let ids = teams.map((team) => team._id);
-                // update team record with the department id
-                yield techMember_1.default.updateTechMembersDB({ ids, departmentId: departId });
+                // update team record with the department id (commented out because this is causing a bug)
+                /*  await TechMemberDB.updateTechMembersDB({ ids, departmentId: departId }); */
                 // update my department with the ids for the team in trello
                 return yield _super.updatedbDepartment.call(this, Object.assign({ _id: departId }, data));
             }

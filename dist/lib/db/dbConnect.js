@@ -17,10 +17,9 @@ const mongoose_1 = require("mongoose");
 const dotenv_1 = require("dotenv");
 const logger_1 = __importDefault(require("../../logger"));
 const user_1 = __importDefault(require("../dbCalls/user/user"));
+const config_1 = __importDefault(require("config"));
 (0, dotenv_1.config)();
-const db = process.env.NODE_ENV === "development"
-    ? process.env.MONGODB_DEV_URL
-    : process.env.MONGODB_PROD_URL;
+const db = config_1.default.get("monogDb");
 logger_1.default.info({ db });
 const mongoDB = () => __awaiter(void 0, void 0, void 0, function* () {
     try {
@@ -32,10 +31,10 @@ const mongoDB = () => __awaiter(void 0, void 0, void 0, function* () {
             //By default, mongoose buffers commands when the connection goes down until the driver manages to reconnect. To disable buffering, set bufferCommands to false.
             bufferCommands: true,
             // how much time mongo can wait until berfore throwing an error
-            connectTimeoutMS: 1000,
+            connectTimeoutMS: 5000,
         };
         yield (0, mongoose_1.connect)(db, options);
-        console.log("Mongo DB connected");
+        console.log("Mongo DB connected,", config_1.default.get("monogDb"));
         // adding superAdmin in db if not exists
         const userInfo = yield user_1.default.findUser({
             email: process.env.SUPER_ADMIN_EMAIL,

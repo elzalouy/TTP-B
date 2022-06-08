@@ -49,7 +49,6 @@ const DepartmentController = class DepartmentController extends DepartmentBD {
         myDepartment?.notClearListId,
         myDepartment?.reviewListId,
         myDepartment?.sharedListID,
-        myDepartment?.notStartedListId,
         ...teamId,
       ];
 
@@ -175,13 +174,12 @@ const DepartmentController = class DepartmentController extends DepartmentBD {
       // define the board and list variable
       let boardId: string = "";
       let defaultListId: string = "";
-      let notStartedListId: string = "";
       let sharedListID: string = "";
       let doneListId: string = "";
       let reviewListId: string = "";
       let notClearListId: string = "";
       let canceldListId: string = "";
-      let departmentWindowId: string = "";
+      let inProgressListId: string = "";
       // create board
       let boardData: any = await BoardController.createNewBoard(
         data.name,
@@ -198,9 +196,11 @@ const DepartmentController = class DepartmentController extends DepartmentBD {
 
       // create main list on board
 
-      let departmentWindow: { id: string } =
-        await BoardController.addListToBoard(boardId, "Department window");
-      departmentWindowId = departmentWindow.id;
+      let inprogress: { id: string } = await BoardController.addListToBoard(
+        boardId,
+        "inProgress"
+      );
+      inProgressListId = inprogress.id;
 
       let cancel: { id: string } = await BoardController.addListToBoard(
         boardId,
@@ -246,12 +246,6 @@ const DepartmentController = class DepartmentController extends DepartmentBD {
       );
       defaultListId = defaultList.id;
 
-      let notStarted: { id: string } = await BoardController.addListToBoard(
-        boardId,
-        "Not Started"
-      );
-      notStartedListId = notStarted.id;
-
       // create webhook for list
       const listId: string[] = [
         defaultListId,
@@ -260,8 +254,7 @@ const DepartmentController = class DepartmentController extends DepartmentBD {
         reviewListId,
         notClearListId,
         canceldListId,
-        departmentWindowId,
-        notStartedListId,
+        inProgressListId,
       ];
 
       let webhookCreate = listId.map(async (id) => {
@@ -277,8 +270,7 @@ const DepartmentController = class DepartmentController extends DepartmentBD {
         reviewListId,
         notClearListId,
         canceldListId,
-        departmentWindowId,
-        notStartedListId,
+        inProgressListId,
         teamsId: teamListIds,
       };
       let department = await DepartmentController.__createTeamList(
@@ -306,7 +298,7 @@ const DepartmentController = class DepartmentController extends DepartmentBD {
       let ids: string[] = teams.map((team) => team._id);
 
       // update team record with the department id (commented out because this is causing a bug)
-     /*  await TechMemberDB.updateTechMembersDB({ ids, departmentId: departId }); */
+      /*  await TechMemberDB.updateTechMembersDB({ ids, departmentId: departId }); */
 
       // update my department with the ids for the team in trello
       return await super.updatedbDepartment({ _id: departId, ...data });
