@@ -6,6 +6,7 @@ import logger from "../../../logger";
 import ProjectController from "../../controllers/project";
 import Client from "../../controllers/client";
 import mongoose from "mongoose";
+import TaskController from "../../controllers/task";
 
 const ProjectReq = class ProjectReq extends ProjectController {
   static async handleCreateProject(req: Request, res: Response) {
@@ -69,10 +70,15 @@ const ProjectReq = class ProjectReq extends ProjectController {
       if (!projectId) {
         return res.status(400).send(customeError("project_missing_data", 400));
       }
-      let project = await super.deleteProject(projectId);
-      if (project) {
-        await Client.updateClientProcedure(project.clientId);
-        return res.status(200).send(successMsg("project_deleted", 200));
+      let tasks = await TaskController.deleteTasksByProjectId(projectId);
+      if (tasks) {
+        let project = await super.deleteProject(projectId);
+        if (project) {
+          await Client.updateClientProcedure(project.clientId);
+          return res.status(200).send(successMsg("projects_and_tasks_deleted", 200));
+        } else {
+          return res.status(400).send(customeError("delete_project_error", 400));
+        }
       } else {
         return res.status(400).send(customeError("delete_project_error", 400));
       }
