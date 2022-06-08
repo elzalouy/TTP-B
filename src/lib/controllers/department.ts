@@ -305,8 +305,8 @@ const DepartmentController = class DepartmentController extends DepartmentBD {
     try {
       let ids: string[] = teams.map((team) => team._id);
 
-      // update team record with the department id
-      await TechMemberDB.updateTechMembersDB({ ids, departmentId: departId });
+      // update team record with the department id (commented out because this is causing a bug)
+     /*  await TechMemberDB.updateTechMembersDB({ ids, departmentId: departId }); */
 
       // update my department with the ids for the team in trello
       return await super.updatedbDepartment({ _id: departId, ...data });
