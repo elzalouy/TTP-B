@@ -27,7 +27,6 @@ export const io = new Server(http, {
     methods: ["GET", "POST"],
     credentials: true,
   },
-  transports:["websocket"]
 });
 
 AppSocket(io);
