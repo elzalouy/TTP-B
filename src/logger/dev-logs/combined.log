@@ -4666,3 +4666,265 @@
   level: 'info',
   timestamp: '2022-06-08 17:16:31'
 }
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-06-08 18:00:44'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-06-08 18:07:22'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-06-08 18:08:41'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-06-08 18:10:24'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-06-08 18:11:57'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-06-08 18:13:16'
+}
+{
+  message: {
+    filterProjectsError: MongoServerError: $and must be an array
+        at Connection.onMessage (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongodb/src/cmap/connection.ts:440:20)
+        at MessageStream.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongodb/src/cmap/connection.ts:267:56)
+        at MessageStream.emit (node:events:527:28)
+        at MessageStream.emit (node:domain:475:12)
+        at processIncomingData (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongodb/src/cmap/message_stream.ts:168:12)
+        at MessageStream._write (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongodb/src/cmap/message_stream.ts:65:5)
+        at writeOrBuffer (node:internal/streams/writable:389:12)
+        at _write (node:internal/streams/writable:330:10)
+        at MessageStream.Writable.write (node:internal/streams/writable:334:10)
+        at TLSSocket.ondata (node:internal/streams/readable:754:22) {
+      ok: 0,
+      code: 2,
+      codeName: 'BadValue',
+      '$clusterTime': {
+        clusterTime: new Timestamp({ t: 1654704817, i: 4 }),
+        signature: {
+          hash: new Binary(Buffer.from("242d33671c4de2430b756cea017c9760c25f49b4", "hex"), 0),
+          keyId: new Long("7057499658175643653")
+        }
+      },
+      operationTime: new Timestamp({ t: 1654704817, i: 4 }),
+      [Symbol(errorLabels)]: Set(0) {}
+    }
+  },
+  level: 'error',
+  timestamp: '2022-06-08 18:13:38'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-06-08 18:15:51'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-06-08 18:20:26'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-06-08 18:21:11'
+}
+{
+  message: {
+    filterProjectsError: MongoServerError: $and must be an array
+        at Connection.onMessage (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongodb/src/cmap/connection.ts:440:20)
+        at MessageStream.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongodb/src/cmap/connection.ts:267:56)
+        at MessageStream.emit (node:events:527:28)
+        at MessageStream.emit (node:domain:475:12)
+        at processIncomingData (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongodb/src/cmap/message_stream.ts:168:12)
+        at MessageStream._write (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongodb/src/cmap/message_stream.ts:65:5)
+        at writeOrBuffer (node:internal/streams/writable:389:12)
+        at _write (node:internal/streams/writable:330:10)
+        at MessageStream.Writable.write (node:internal/streams/writable:334:10)
+        at TLSSocket.ondata (node:internal/streams/readable:754:22) {
+      ok: 0,
+      code: 2,
+      codeName: 'BadValue',
+      '$clusterTime': {
+        clusterTime: new Timestamp({ t: 1654705293, i: 4 }),
+        signature: {
+          hash: new Binary(Buffer.from("3109135fcb5c63a3356766bab458e37fd4e2b9e8", "hex"), 0),
+          keyId: new Long("7057499658175643653")
+        }
+      },
+      operationTime: new Timestamp({ t: 1654705293, i: 4 }),
+      [Symbol(errorLabels)]: Set(0) {}
+    }
+  },
+  level: 'error',
+  timestamp: '2022-06-08 18:21:34'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-06-08 18:23:07'
+}
+{
+  message: {
+    filterProjectsError: MongoServerError: $or/$and/$nor entries need to be full objects
+        at Connection.onMessage (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongodb/src/cmap/connection.ts:440:20)
+        at MessageStream.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongodb/src/cmap/connection.ts:267:56)
+        at MessageStream.emit (node:events:527:28)
+        at MessageStream.emit (node:domain:475:12)
+        at processIncomingData (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongodb/src/cmap/message_stream.ts:168:12)
+        at MessageStream._write (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongodb/src/cmap/message_stream.ts:65:5)
+        at writeOrBuffer (node:internal/streams/writable:389:12)
+        at _write (node:internal/streams/writable:330:10)
+        at MessageStream.Writable.write (node:internal/streams/writable:334:10)
+        at TLSSocket.ondata (node:internal/streams/readable:754:22) {
+      ok: 0,
+      code: 2,
+      codeName: 'BadValue',
+      '$clusterTime': {
+        clusterTime: new Timestamp({ t: 1654705430, i: 3 }),
+        signature: {
+          hash: new Binary(Buffer.from("44f812c83e761bcf34dccebc4244ab150043ce3e", "hex"), 0),
+          keyId: new Long("7057499658175643653")
+        }
+      },
+      operationTime: new Timestamp({ t: 1654705430, i: 3 }),
+      [Symbol(errorLabels)]: Set(0) {}
+    }
+  },
+  level: 'error',
+  timestamp: '2022-06-08 18:23:50'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-06-08 18:25:06'
+}
+{
+  message: {
+    filterProjectsError: MongoServerError: $and/$or/$nor must be a nonempty array
+        at Connection.onMessage (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongodb/src/cmap/connection.ts:440:20)
+        at MessageStream.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongodb/src/cmap/connection.ts:267:56)
+        at MessageStream.emit (node:events:527:28)
+        at MessageStream.emit (node:domain:475:12)
+        at processIncomingData (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongodb/src/cmap/message_stream.ts:168:12)
+        at MessageStream._write (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongodb/src/cmap/message_stream.ts:65:5)
+        at writeOrBuffer (node:internal/streams/writable:389:12)
+        at _write (node:internal/streams/writable:330:10)
+        at MessageStream.Writable.write (node:internal/streams/writable:334:10)
+        at TLSSocket.ondata (node:internal/streams/readable:754:22) {
+      ok: 0,
+      code: 2,
+      codeName: 'BadValue',
+      '$clusterTime': {
+        clusterTime: new Timestamp({ t: 1654705558, i: 3 }),
+        signature: {
+          hash: new Binary(Buffer.from("39d7edb13a1ef7f683f6f55dbdcebc9e883dc1ce", "hex"), 0),
+          keyId: new Long("7057499658175643653")
+        }
+      },
+      operationTime: new Timestamp({ t: 1654705558, i: 3 }),
+      [Symbol(errorLabels)]: Set(0) {}
+    }
+  },
+  level: 'error',
+  timestamp: '2022-06-08 18:25:59'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-06-08 18:26:21'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-06-08 18:26:52'
+}
+{
+  message: {
+    filterProjectsError: MongoServerError: the match filter must be an expression in an object
+        at Connection.onMessage (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongodb/src/cmap/connection.ts:440:20)
+        at MessageStream.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongodb/src/cmap/connection.ts:267:56)
+        at MessageStream.emit (node:events:527:28)
+        at MessageStream.emit (node:domain:475:12)
+        at processIncomingData (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongodb/src/cmap/message_stream.ts:168:12)
+        at MessageStream._write (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongodb/src/cmap/message_stream.ts:65:5)
+        at writeOrBuffer (node:internal/streams/writable:389:12)
+        at _write (node:internal/streams/writable:330:10)
+        at MessageStream.Writable.write (node:internal/streams/writable:334:10)
+        at TLSSocket.ondata (node:internal/streams/readable:754:22) {
+      ok: 0,
+      code: 15959,
+      codeName: 'Location15959',
+      '$clusterTime': {
+        clusterTime: new Timestamp({ t: 1654705646, i: 5 }),
+        signature: {
+          hash: new Binary(Buffer.from("3689645e771ca83ad3ee2c9403a8b4335210aafb", "hex"), 0),
+          keyId: new Long("7057499658175643653")
+        }
+      },
+      operationTime: new Timestamp({ t: 1654705646, i: 5 }),
+      [Symbol(errorLabels)]: Set(0) {}
+    }
+  },
+  level: 'error',
+  timestamp: '2022-06-08 18:27:27'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-06-08 18:32:15'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-06-08 18:32:49'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-06-08 18:37:06'
+}

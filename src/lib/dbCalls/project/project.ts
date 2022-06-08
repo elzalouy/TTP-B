@@ -1,6 +1,7 @@
 import logger from "../../../logger";
 import Project from "../../models/Project";
 import { ProjectData, ProjectInfo } from "../../types/model/Project";
+const mongoose = require("mongoose");
 
 const ProjectDB = class ProjectDB {
   static async createProjectDB(data: ProjectData) {
@@ -126,14 +127,60 @@ const ProjectDB = class ProjectDB {
   static async __filterProjects(filter: any) {
     try {
       let filters: any = {};
-      if (filter.projectManager) filters.projectManager = filter.projectManager;
+      if (filter.projectManager)
+        filters.projectManager = mongoose.Types.ObjectId(filter.projectManager);
       if (filter.projectStatus) filters.projectStatus = filter.projectStatus;
-      if (filter.clientId) filters.clientId = filter.clientId;
+      if (filter.clientId)
+        filters.clientId = mongoose.Types.ObjectId(filter.clientId);
       if (filter.name) filters.name = { $regex: filter.name };
-      let project = await Project.find(filters)
-        .populate({ path: "projectManager", select: "_id name" })
-        .lean();
-      return project;
+      console.log([filters]);
+      let fetch = await Project.aggregate([
+        { $match: { $and: [filters] } },
+        {
+          $lookup: {
+            from: "tasks",
+            localField: "_id",
+            foreignField: "projectId",
+            as: "tasks",
+          },
+        },
+        {
+          $addFields: {
+            NoOfFinishedTasks: {
+              $filter: {
+                input: "$tasks",
+                as: "task",
+                cond: {
+                  $eq: ["$$task.status", "Done"],
+                },
+              },
+            },
+          },
+        },
+        {
+          $project: {
+            _id: 1,
+            name: 1,
+            projectManager: 1,
+            projectManagerName: 1,
+            adminId: 1,
+            projectDeadline: 1,
+            startDate: 1,
+            completedDate: 1,
+            projectStatus: 1,
+            clientId: 1,
+            NoOfTasks: { $size: "$tasks" },
+            NoOfFinishedTasks: { $size: "$NoOfFinishedTasks" },
+          },
+        },
+      ]);
+      console.log(fetch);
+      fetch = await Project.populate(fetch, {
+        path: "projectManager",
+        select: "_id name",
+      });
+
+      return fetch;
     } catch (error) {
       logger.error({ filterProjectsError: error });
     }
