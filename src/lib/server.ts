@@ -20,12 +20,16 @@ app.use(express.urlencoded({ extended: false }));
 app.use(i18n.init);
 mongoDB();
 export const http = createServer(app);
+
 export const io = new Server(http, {
   cors: {
     origin: config.get("FrontEndUrl"),
+    methods: ["GET", "POST"],
     credentials: true,
   },
+  transports:["websocket"]
 });
+
 AppSocket(io);
 
 require("./startup/routes")(app);
