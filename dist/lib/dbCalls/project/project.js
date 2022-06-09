@@ -14,6 +14,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 Object.defineProperty(exports, "__esModule", { value: true });
 const logger_1 = __importDefault(require("../../../logger"));
 const Project_1 = __importDefault(require("../../models/Project"));
+const mongoose = require("mongoose");
 const ProjectDB = class ProjectDB {
     static createProjectDB(data) {
         return __awaiter(this, void 0, void 0, function* () {
@@ -163,17 +164,60 @@ const ProjectDB = class ProjectDB {
             try {
                 let filters = {};
                 if (filter.projectManager)
-                    filters.projectManager = filter.projectManager;
+                    filters.projectManager = mongoose.Types.ObjectId(filter.projectManager);
                 if (filter.projectStatus)
                     filters.projectStatus = filter.projectStatus;
                 if (filter.clientId)
-                    filters.clientId = filter.clientId;
+                    filters.clientId = mongoose.Types.ObjectId(filter.clientId);
                 if (filter.name)
                     filters.name = { $regex: filter.name };
-                let project = yield Project_1.default.find(filters)
-                    .populate({ path: "projectManager", select: "_id name" })
-                    .lean();
-                return project;
+                console.log([filters]);
+                let fetch = yield Project_1.default.aggregate([
+                    { $match: { $and: [filters] } },
+                    {
+                        $lookup: {
+                            from: "tasks",
+                            localField: "_id",
+                            foreignField: "projectId",
+                            as: "tasks",
+                        },
+                    },
+                    {
+                        $addFields: {
+                            NoOfFinishedTasks: {
+                                $filter: {
+                                    input: "$tasks",
+                                    as: "task",
+                                    cond: {
+                                        $eq: ["$$task.status", "Done"],
+                                    },
+                                },
+                            },
+                        },
+                    },
+                    {
+                        $project: {
+                            _id: 1,
+                            name: 1,
+                            projectManager: 1,
+                            projectManagerName: 1,
+                            adminId: 1,
+                            projectDeadline: 1,
+                            startDate: 1,
+                            completedDate: 1,
+                            projectStatus: 1,
+                            clientId: 1,
+                            NoOfTasks: { $size: "$tasks" },
+                            NoOfFinishedTasks: { $size: "$NoOfFinishedTasks" },
+                        },
+                    },
+                ]);
+                console.log(fetch);
+                fetch = yield Project_1.default.populate(fetch, {
+                    path: "projectManager",
+                    select: "_id name",
+                });
+                return fetch;
             }
             catch (error) {
                 logger_1.default.error({ filterProjectsError: error });

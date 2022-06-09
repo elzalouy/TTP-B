@@ -27,8 +27,10 @@ exports.http = (0, http_1.createServer)(app);
 exports.io = new socket_io_1.Server(exports.http, {
     cors: {
         origin: config_2.default.get("FrontEndUrl"),
+        methods: ["GET", "POST"],
         credentials: true,
     },
+    transports: ["websocket"]
 });
 (0, socket_1.default)(exports.io);
 require("./startup/routes")(app);

@@ -143,8 +143,13 @@ class TaskDB {
     static __updateOneTaskDB(data, value) {
         return __awaiter(this, void 0, void 0, function* () {
             try {
-                let task = yield task_1.default.updateOne(data, value, { new: true, lean: true });
-                return task;
+                let task = yield task_1.default.findOne(data);
+                task.lastMove = task.status;
+                task.lastMoveDate = new Date().toUTCString();
+                yield task.update(value);
+                let result = yield task.save();
+                console.log(result);
+                return result;
             }
             catch (error) {
                 logger_1.default.error({ updateMultiTaskDBError: error });

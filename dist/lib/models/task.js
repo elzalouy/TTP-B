@@ -46,7 +46,7 @@ const TaskSchema = new mongoose_1.Schema({
             "inProgress",
             "Shared",
             "Done",
-            "Not Started",
+            "Tasks Board",
             "Not Clear",
             "Cancled",
             "Review",

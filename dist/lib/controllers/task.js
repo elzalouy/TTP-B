@@ -85,8 +85,6 @@ class TaskController extends tasks_1.default {
                 }, {
                     status: status,
                     listId: listId,
-                    lastMove: status,
-                    lastMoveDate: new Date().toUTCString(),
                 });
                 return task;
             }
@@ -96,7 +94,7 @@ class TaskController extends tasks_1.default {
         });
     }
     static __webhookUpdate(data) {
-        var _a, _b, _c, _d, _e, _f, _g, _h, _j, _k, _l, _m, _o, _p, _q, _r, _s, _t, _u, _v, _w, _x, _y, _z, _0, _1, _2, _3, _4, _5, _6, _7;
+        var _a, _b, _c, _d, _e, _f, _g, _h, _j, _k, _l, _m, _o, _p, _q, _r, _s, _t, _u, _v, _w, _x, _y, _z, _0, _1, _2, _3;
         return __awaiter(this, void 0, void 0, function* () {
             try {
                 console.log(data);
@@ -117,16 +115,14 @@ class TaskController extends tasks_1.default {
                         cardId: data.action.display.entities.card.id,
                     }, {
                         status: (_m = (_l = (_k = (_j = data === null || data === void 0 ? void 0 : data.action) === null || _j === void 0 ? void 0 : _j.display) === null || _k === void 0 ? void 0 : _k.entities) === null || _l === void 0 ? void 0 : _l.listAfter) === null || _m === void 0 ? void 0 : _m.text,
-                        lastMove: (_r = (_q = (_p = (_o = data === null || data === void 0 ? void 0 : data.action) === null || _o === void 0 ? void 0 : _o.display) === null || _p === void 0 ? void 0 : _p.entities) === null || _q === void 0 ? void 0 : _q.listBefore) === null || _r === void 0 ? void 0 : _r.text,
-                        lastMoveDate: new Date().toUTCString(),
                     });
                     // if task status update to shared send notification
-                    if (((_v = (_u = (_t = (_s = data === null || data === void 0 ? void 0 : data.action) === null || _s === void 0 ? void 0 : _s.display) === null || _t === void 0 ? void 0 : _t.entities) === null || _u === void 0 ? void 0 : _u.listAfter) === null || _v === void 0 ? void 0 : _v.text) === "Shared") {
+                    if (((_r = (_q = (_p = (_o = data === null || data === void 0 ? void 0 : data.action) === null || _o === void 0 ? void 0 : _o.display) === null || _p === void 0 ? void 0 : _p.entities) === null || _q === void 0 ? void 0 : _q.listAfter) === null || _r === void 0 ? void 0 : _r.text) === "Shared") {
                         let projectData = yield project_1.default.getProjectDB({
                             _id: targetTask.projectId,
                         });
-                        let userName = (_z = (_y = (_x = (_w = data === null || data === void 0 ? void 0 : data.action) === null || _w === void 0 ? void 0 : _w.display) === null || _x === void 0 ? void 0 : _x.entities) === null || _y === void 0 ? void 0 : _y.memberCreator) === null || _z === void 0 ? void 0 : _z.username;
-                        let cardName = (_3 = (_2 = (_1 = (_0 = data === null || data === void 0 ? void 0 : data.action) === null || _0 === void 0 ? void 0 : _0.display) === null || _1 === void 0 ? void 0 : _1.entities) === null || _2 === void 0 ? void 0 : _2.card) === null || _3 === void 0 ? void 0 : _3.text;
+                        let userName = (_v = (_u = (_t = (_s = data === null || data === void 0 ? void 0 : data.action) === null || _s === void 0 ? void 0 : _s.display) === null || _t === void 0 ? void 0 : _t.entities) === null || _u === void 0 ? void 0 : _u.memberCreator) === null || _v === void 0 ? void 0 : _v.username;
+                        let cardName = (_z = (_y = (_x = (_w = data === null || data === void 0 ? void 0 : data.action) === null || _w === void 0 ? void 0 : _w.display) === null || _x === void 0 ? void 0 : _x.entities) === null || _y === void 0 ? void 0 : _y.card) === null || _z === void 0 ? void 0 : _z.text;
                         let createNotifi = yield notification_1.default.createNotification({
                             title: `${cardName} status has been changed to Shared`,
                             description: `${cardName} status has been changed to shared by ${userName}`,
@@ -141,7 +137,7 @@ class TaskController extends tasks_1.default {
                     }
                     server_1.io.sockets.emit("Move Task", {
                         cardId: data.action.display.entities.card.id,
-                        to: (_7 = (_6 = (_5 = (_4 = data === null || data === void 0 ? void 0 : data.action) === null || _4 === void 0 ? void 0 : _4.display) === null || _5 === void 0 ? void 0 : _5.entities) === null || _6 === void 0 ? void 0 : _6.listAfter) === null || _7 === void 0 ? void 0 : _7.text,
+                        to: (_3 = (_2 = (_1 = (_0 = data === null || data === void 0 ? void 0 : data.action) === null || _0 === void 0 ? void 0 : _0.display) === null || _1 === void 0 ? void 0 : _1.entities) === null || _2 === void 0 ? void 0 : _2.listAfter) === null || _3 === void 0 ? void 0 : _3.text,
                     });
                 }
                 else {
@@ -149,8 +145,6 @@ class TaskController extends tasks_1.default {
                         cardId: data.action.display.entities.card.id,
                     }, {
                         status: "inProgress",
-                        lastMove: "inProgress",
-                        lastMoveDate: new Date().toUTCString(),
                     });
                     server_1.io.sockets.emit("Move Task", {
                         cardId: data.action.display.entities.card.id,
@@ -206,7 +200,6 @@ class TaskController extends tasks_1.default {
                             data.attachedFiles = newAttachments;
                         })));
                     }
-                    console.log(data);
                     (0, upload_1.deleteAll)();
                     return yield _super.createTaskDB.call(this, data);
                 }

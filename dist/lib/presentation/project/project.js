@@ -18,6 +18,7 @@ const logger_1 = __importDefault(require("../../../logger"));
 const project_1 = __importDefault(require("../../controllers/project"));
 const client_1 = __importDefault(require("../../controllers/client"));
 const mongoose_1 = __importDefault(require("mongoose"));
+const task_1 = __importDefault(require("../../controllers/task"));
 const ProjectReq = class ProjectReq extends project_1.default {
     static handleCreateProject(req, res) {
         const _super = Object.create(null, {
@@ -102,10 +103,16 @@ const ProjectReq = class ProjectReq extends project_1.default {
                 if (!projectId) {
                     return res.status(400).send((0, errorUtils_1.customeError)("project_missing_data", 400));
                 }
-                let project = yield _super.deleteProject.call(this, projectId);
-                if (project) {
-                    yield client_1.default.updateClientProcedure(project.clientId);
-                    return res.status(200).send((0, successMsg_1.successMsg)("project_deleted", 200));
+                let tasks = yield task_1.default.deleteTasksByProjectId(projectId);
+                if (tasks) {
+                    let project = yield _super.deleteProject.call(this, projectId);
+                    if (project) {
+                        yield client_1.default.updateClientProcedure(project.clientId);
+                        return res.status(200).send((0, successMsg_1.successMsg)("projects_and_tasks_deleted", 200));
+                    }
+                    else {
+                        return res.status(400).send((0, errorUtils_1.customeError)("delete_project_error", 400));
+                    }
                 }
                 else {
                     return res.status(400).send((0, errorUtils_1.customeError)("delete_project_error", 400));

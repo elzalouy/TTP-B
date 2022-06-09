@@ -6,7 +6,7 @@ const DepartmentSchema = new mongoose_1.Schema(// department
     name: {
         type: String,
         required: true,
-        unique: true
+        unique: true,
     },
     boardId: {
         type: String,
@@ -34,11 +34,8 @@ const DepartmentSchema = new mongoose_1.Schema(// department
     reviewListId: {
         type: String,
     },
-    departmentWindowId: {
-        type: String
-    },
-    notStartedListId: {
-        type: String
+    inProgressListId: {
+        type: String,
     },
     mainBoard: {
         type: Boolean,

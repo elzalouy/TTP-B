@@ -82,7 +82,7 @@ exports.createTaskSchema = joi_1.default.object({
         "string.min": "Team should be selected",
         "any.required": "Team is required",
     }),
-    status: joi_1.default.string().valid("inProgress", "Not Started").required().messages({
+    status: joi_1.default.string().valid("Tasks Board").required().messages({
         "string.base": "Status is required",
         "string.empty": "Status should be string with min 4 chars",
         "string.min": "Status length should be Min 4 chars",
