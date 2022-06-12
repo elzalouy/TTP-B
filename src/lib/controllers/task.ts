@@ -11,7 +11,12 @@ import { io } from "../server";
 import ProjectDB from "../dbCalls/project/project";
 import { deleteAll } from "../services/upload";
 import DepartmentBD from "../dbCalls/department/department";
-import { moveTaskJob, TaskQueue } from "../background/taskQueue";
+import {
+  moveTaskJob,
+  TaskQueue,
+  webhookUpdateMoveTaskJob,
+} from "../background/taskQueue";
+import { webhookUpdateInterface } from "../types/controller/Tasks";
 
 class TaskController extends TaskDB {
   static async getTasks(data: TaskData) {
@@ -23,7 +28,7 @@ class TaskController extends TaskDB {
   static async updateTask(data: object) {
     return await TaskController.__updateTaskData(data);
   }
-  static async webhookUpdate(data: object) {
+  static async webhookUpdate(data: webhookUpdateInterface) {
     return await TaskController.__webhookUpdate(data);
   }
   static async filterTasks(data: any) {
@@ -84,64 +89,18 @@ class TaskController extends TaskDB {
     }
   }
 
-  static async __webhookUpdate(data: any) {
+  static async __webhookUpdate(data: webhookUpdateInterface) {
     try {
-      let targetTask: any;
-      const targetList: any = [
-        "Tasks Board",
-        "Done",
-        "Shared",
-        "Review",
-        "Not Clear",
-        "Cancled",
-        "inProgress",
-      ];
+      console.log(data.action.data, data.action.display.entities);
       logger.info({
         afterList: data?.action?.display?.entities?.listAfter?.text,
       });
-      if (
-        targetList.includes(data?.action?.display?.entities?.listAfter?.text)
-      ) {
-        targetTask = await TaskDB.updateTaskStatus(
-          {
-            cardId: data.action.display.entities.card.id,
-          },
-          {
-            status: data?.action?.display?.entities?.listAfter?.text,
-          }
-        );
-        io.sockets.emit("Move Task", {
-          cardId: data.action.display.entities.card.id,
-          to: data?.action?.display?.entities?.listAfter?.text,
-        });
-        // if task status update to shared send notification
-        if (data?.action?.display?.entities?.listAfter?.text === "Shared") {
-          let projectData: any = await ProjectDB.getProjectDB({
-            _id: targetTask.projectId,
-          });
-          let userName: string =
-            data?.action?.display?.entities?.memberCreator?.username;
-          let cardName: string = data?.action?.display?.entities?.card?.text;
-
-          let createNotifi = await NotificationController.createNotification({
-            title: `${cardName} status has been changed to Shared`,
-            description: `${cardName} status has been changed to shared by ${userName}`,
-            projectManagerID: projectData.projectManager,
-            projectID: targetTask.projectId,
-            adminUserID: projectData.adminId,
-          });
-
-          // send notification to all the admin
-          io.to("admin room").emit("notification update", createNotifi);
-
-          // send notification to specific project manager
-          io.to(`user-${projectData.projectManager}`).emit(
-            "notification update",
-            createNotifi
-          );
-        }
-      }
-      return targetTask;
+      webhookUpdateMoveTaskJob(data);
+      TaskQueue.start();
+      await io.sockets.emit("Move Task", {
+        cardId: data.action.display.entities.card.id,
+        to: data?.action?.display?.entities?.listAfter?.text,
+      });
     } catch (error) {
       logger.error({ webhookUpdateError: error });
     }

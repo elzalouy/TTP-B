@@ -4,6 +4,7 @@ import logger from "../../../logger";
 import TaskController from "../../controllers/task";
 import { TaskData } from "../../types/model/tasks";
 import { createTaskSchema } from "../../services/validation";
+import { webhookUpdateInterface } from "../../types/controller/Tasks";
 
 const TaskReq = class TaskReq extends TaskController {
   static async handleCreateCard(req: Request, res: Response) {
@@ -42,7 +43,7 @@ const TaskReq = class TaskReq extends TaskController {
 
   static async handleWebhookUpdateCard(req: Request, res: Response) {
     try {
-      let trelloData: any = req.body;
+      let trelloData: webhookUpdateInterface = req.body;
       let task: any = await super.webhookUpdate(trelloData);
       return res.status(200).send(task);
     } catch (error) {
