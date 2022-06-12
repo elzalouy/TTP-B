@@ -41,4 +41,9 @@ export interface createBoardResponse {
 }
 export interface createListResponse {
   id: string;
+  name: string;
+  closed: boolean;
+  idBoard: string;
+  pos: number;
+  limits: any;
 }

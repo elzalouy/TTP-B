@@ -43,6 +43,7 @@ export const createOneJob = (
             department.boardId,
             "inProgress"
           );
+        console.log(inprogress);
         inProgressListId = inprogress.id;
 
         let cancel: createListResponse = await BoardController.addListToBoard(

@@ -15,7 +15,7 @@ export function moveTaskJob(listId: string, cardId: string, status: string) {
   });
   TaskQueue.push(async (cb) => {
     try {
-      let task = await TaskDB.updateOneTaskDB(
+      let task = await TaskDB.updateTaskStatus(
         {
           cardId: cardId,
         },

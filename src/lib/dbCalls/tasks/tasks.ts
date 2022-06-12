@@ -21,8 +21,8 @@ class TaskDB {
     return await TaskDB.__deleteTasks(ids);
   }
 
-  static async updateOneTaskDB(data: object, value: object) {
-    return await TaskDB.__updateOneTaskDB(data, value);
+  static async updateTaskStatus(data: object, value: object) {
+    return await TaskDB.__updateTaskStatus(data, value);
   }
 
   static async getTaskDepartmentDB(depId: string) {
@@ -110,13 +110,11 @@ class TaskDB {
     }
   }
 
-  static async __updateOneTaskDB(data: TaskData, value: TaskData) {
+  static async __updateTaskStatus(data: TaskData, value: TaskData) {
     try {
       let task = await Tasks.findOne(data);
-      if (data.status) {
-        task.lastMove = task.status;
-        task.lastMoveDate = new Date().toUTCString();
-      }
+      task.lastMove = task.status;
+      task.lastMoveDate = new Date().toUTCString();
       await task.updateOne(value);
       let result = await task.save();
       return result;

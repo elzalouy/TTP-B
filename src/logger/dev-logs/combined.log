@@ -67883,3 +67883,1269 @@
   level: 'info',
   timestamp: '2022-06-12 11:50:20'
 }
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-06-12 11:53:15'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-06-12 11:56:37'
+}
+{
+  message: {
+    boardId: '62a5776d34e7c07f7b929044',
+    myDepartment: {
+      _id: new ObjectId("62a5776ddbe608627b1cf6ba"),
+      name: 'new dep',
+      boardId: '62a5776d34e7c07f7b929044',
+      color: 'blue',
+      mainBoard: false,
+      tasks: [ new ObjectId("62a5a58a6d0b660e0799ff4d") ],
+      teamsId: [],
+      createdAt: 2022-06-12T05:19:41.355Z,
+      updatedAt: 2022-06-12T08:36:27.009Z,
+      __v: 0,
+      canceldListId: '62a5776e0ba65329a6ee67ce',
+      defaultListId: '62a5777151ff62859d6cf8fd',
+      doneListId: '62a5776f79d2161d661d3c1f',
+      inProgressListId: '62a5776ed973d20fa6175135',
+      notClearListId: '62a5776fe97a7e5969f86878',
+      reviewListId: '62a5777059899562bdbc8d58',
+      sharedListID: '62a5777006a81d312aa63456'
+    }
+  },
+  level: 'info',
+  timestamp: '2022-06-12 12:17:22'
+}
+{
+  message: {
+    removeBoard: 'https://api.trello.com/1/boards/62a5776d34e7c07f7b929044?response_type=token&key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68'
+  },
+  level: 'info',
+  timestamp: '2022-06-12 12:17:22'
+}
+{
+  message: {
+    'delete Tasks': { acknowledged: true, deletedCount: 0 },
+    'Delete Tech members': 'Delete result is 0 document'
+  },
+  level: 'info',
+  timestamp: '2022-06-12 12:17:23'
+}
+{
+  message: {
+    borderData: Promise { <pending> },
+    createBoardApi: 'https://api.trello.com/1/boards/?name=new dep &prefs_background=blue&defaultLists=false&key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68'
+  },
+  level: 'info',
+  timestamp: '2022-06-12 12:19:41'
+}
+{
+  message: { removeWebhookSucced: 'done' },
+  level: 'info',
+  timestamp: '2022-06-12 12:19:45'
+}
+{
+  message: { afterList: undefined },
+  level: 'info',
+  timestamp: '2022-06-12 12:19:46'
+}
+{
+  message: {
+    webhookUpdateError: TypeError: Cannot read properties of undefined (reading 'display')
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:144:33)
+        at Generator.next (<anonymous>)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:8:71
+        at new Promise (<anonymous>)
+        at __awaiter (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:4:12)
+        at Function.__webhookUpdate (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:105:16)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:27:33
+        at Generator.next (<anonymous>)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:8:71
+        at new Promise (<anonymous>)
+  },
+  level: 'error',
+  timestamp: '2022-06-12 12:19:46'
+}
+{
+  message: { afterList: undefined },
+  level: 'info',
+  timestamp: '2022-06-12 12:19:46'
+}
+{
+  message: {
+    webhookUpdateError: TypeError: Cannot read properties of undefined (reading 'display')
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:144:33)
+        at Generator.next (<anonymous>)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:8:71
+        at new Promise (<anonymous>)
+        at __awaiter (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:4:12)
+        at Function.__webhookUpdate (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:105:16)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:27:33
+        at Generator.next (<anonymous>)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:8:71
+        at new Promise (<anonymous>)
+  },
+  level: 'error',
+  timestamp: '2022-06-12 12:19:46'
+}
+{
+  message: { afterList: undefined },
+  level: 'info',
+  timestamp: '2022-06-12 12:19:46'
+}
+{
+  message: {
+    webhookUpdateError: TypeError: Cannot read properties of undefined (reading 'display')
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:144:33)
+        at Generator.next (<anonymous>)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:8:71
+        at new Promise (<anonymous>)
+        at __awaiter (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:4:12)
+        at Function.__webhookUpdate (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:105:16)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:27:33
+        at Generator.next (<anonymous>)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:8:71
+        at new Promise (<anonymous>)
+  },
+  level: 'error',
+  timestamp: '2022-06-12 12:19:46'
+}
+{
+  message: { afterList: undefined },
+  level: 'info',
+  timestamp: '2022-06-12 12:19:46'
+}
+{
+  message: {
+    webhookUpdateError: TypeError: Cannot read properties of undefined (reading 'display')
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:144:33)
+        at Generator.next (<anonymous>)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:8:71
+        at new Promise (<anonymous>)
+        at __awaiter (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:4:12)
+        at Function.__webhookUpdate (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:105:16)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:27:33
+        at Generator.next (<anonymous>)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:8:71
+        at new Promise (<anonymous>)
+  },
+  level: 'error',
+  timestamp: '2022-06-12 12:19:46'
+}
+{
+  message: { afterList: undefined },
+  level: 'info',
+  timestamp: '2022-06-12 12:19:46'
+}
+{
+  message: {
+    webhookUpdateError: TypeError: Cannot read properties of undefined (reading 'display')
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:144:33)
+        at Generator.next (<anonymous>)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:8:71
+        at new Promise (<anonymous>)
+        at __awaiter (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:4:12)
+        at Function.__webhookUpdate (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:105:16)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:27:33
+        at Generator.next (<anonymous>)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:8:71
+        at new Promise (<anonymous>)
+  },
+  level: 'error',
+  timestamp: '2022-06-12 12:19:46'
+}
+{
+  message: { afterList: undefined },
+  level: 'info',
+  timestamp: '2022-06-12 12:19:46'
+}
+{
+  message: {
+    webhookUpdateError: TypeError: Cannot read properties of undefined (reading 'display')
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:144:33)
+        at Generator.next (<anonymous>)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:8:71
+        at new Promise (<anonymous>)
+        at __awaiter (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:4:12)
+        at Function.__webhookUpdate (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:105:16)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:27:33
+        at Generator.next (<anonymous>)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:8:71
+        at new Promise (<anonymous>)
+  },
+  level: 'error',
+  timestamp: '2022-06-12 12:19:46'
+}
+{
+  message: { afterList: undefined },
+  level: 'info',
+  timestamp: '2022-06-12 12:19:46'
+}
+{
+  message: {
+    webhookUpdateError: TypeError: Cannot read properties of undefined (reading 'display')
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:144:33)
+        at Generator.next (<anonymous>)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:8:71
+        at new Promise (<anonymous>)
+        at __awaiter (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:4:12)
+        at Function.__webhookUpdate (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:105:16)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:27:33
+        at Generator.next (<anonymous>)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:8:71
+        at new Promise (<anonymous>)
+  },
+  level: 'error',
+  timestamp: '2022-06-12 12:19:46'
+}
+{
+  message: { webhookCreateResult: 'webhook done' },
+  level: 'info',
+  timestamp: '2022-06-12 12:19:46'
+}
+{
+  message: {
+    boardId: '62a5bdbd73050d481036e5a9',
+    myDepartment: {
+      _id: new ObjectId("62a5bdbd1d6c7b384fda101b"),
+      name: 'new dep ',
+      boardId: '62a5bdbd73050d481036e5a9',
+      color: 'blue',
+      mainBoard: false,
+      tasks: [],
+      teamsId: [],
+      createdAt: 2022-06-12T10:19:41.836Z,
+      updatedAt: 2022-06-12T10:19:45.835Z,
+      __v: 0,
+      canceldListId: '62a5bdbe54822c7ab29a2287',
+      defaultListId: '62a5bdc1c1b56c794a7912d8',
+      doneListId: '62a5bdc005588c61e1ac9927',
+      inProgressListId: '62a5bdbe085bf44ce5d10a65',
+      notClearListId: '62a5bdbf596b0d181b1001ec',
+      reviewListId: '62a5bdc1c3e4544ac0852792',
+      sharedListID: '62a5bdc00af8c17606757fd0'
+    }
+  },
+  level: 'info',
+  timestamp: '2022-06-12 12:20:12'
+}
+{
+  message: {
+    removeBoard: 'https://api.trello.com/1/boards/62a5bdbd73050d481036e5a9?response_type=token&key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68'
+  },
+  level: 'info',
+  timestamp: '2022-06-12 12:20:12'
+}
+{
+  message: {
+    'delete Tasks': { acknowledged: true, deletedCount: 0 },
+    'Delete Tech members': 'Delete result is 0 document'
+  },
+  level: 'info',
+  timestamp: '2022-06-12 12:20:15'
+}
+{
+  message: { afterList: undefined },
+  level: 'info',
+  timestamp: '2022-06-12 12:44:16'
+}
+{
+  message: {
+    webhookUpdateError: TypeError: Cannot read properties of undefined (reading 'display')
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:144:33)
+        at Generator.next (<anonymous>)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:8:71
+        at new Promise (<anonymous>)
+        at __awaiter (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:4:12)
+        at Function.__webhookUpdate (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:105:16)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:27:33
+        at Generator.next (<anonymous>)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:8:71
+        at new Promise (<anonymous>)
+  },
+  level: 'error',
+  timestamp: '2022-06-12 12:44:16'
+}
+{
+  message: { afterList: undefined },
+  level: 'info',
+  timestamp: '2022-06-12 12:44:16'
+}
+{
+  message: {
+    webhookUpdateError: TypeError: Cannot read properties of undefined (reading 'display')
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:144:33)
+        at Generator.next (<anonymous>)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:8:71
+        at new Promise (<anonymous>)
+        at __awaiter (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:4:12)
+        at Function.__webhookUpdate (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:105:16)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:27:33
+        at Generator.next (<anonymous>)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:8:71
+        at new Promise (<anonymous>)
+  },
+  level: 'error',
+  timestamp: '2022-06-12 12:44:16'
+}
+{
+  message: { afterList: undefined },
+  level: 'info',
+  timestamp: '2022-06-12 12:44:16'
+}
+{
+  message: {
+    webhookUpdateError: TypeError: Cannot read properties of undefined (reading 'display')
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:144:33)
+        at Generator.next (<anonymous>)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:8:71
+        at new Promise (<anonymous>)
+        at __awaiter (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:4:12)
+        at Function.__webhookUpdate (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:105:16)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:27:33
+        at Generator.next (<anonymous>)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:8:71
+        at new Promise (<anonymous>)
+  },
+  level: 'error',
+  timestamp: '2022-06-12 12:44:16'
+}
+{
+  message: { afterList: undefined },
+  level: 'info',
+  timestamp: '2022-06-12 12:44:16'
+}
+{
+  message: {
+    webhookUpdateError: TypeError: Cannot read properties of undefined (reading 'display')
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:144:33)
+        at Generator.next (<anonymous>)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:8:71
+        at new Promise (<anonymous>)
+        at __awaiter (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:4:12)
+        at Function.__webhookUpdate (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:105:16)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:27:33
+        at Generator.next (<anonymous>)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:8:71
+        at new Promise (<anonymous>)
+  },
+  level: 'error',
+  timestamp: '2022-06-12 12:44:16'
+}
+{
+  message: { afterList: undefined },
+  level: 'info',
+  timestamp: '2022-06-12 12:44:16'
+}
+{
+  message: {
+    webhookUpdateError: TypeError: Cannot read properties of undefined (reading 'display')
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:144:33)
+        at Generator.next (<anonymous>)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:8:71
+        at new Promise (<anonymous>)
+        at __awaiter (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:4:12)
+        at Function.__webhookUpdate (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:105:16)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:27:33
+        at Generator.next (<anonymous>)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:8:71
+        at new Promise (<anonymous>)
+  },
+  level: 'error',
+  timestamp: '2022-06-12 12:44:16'
+}
+{
+  message: { afterList: undefined },
+  level: 'info',
+  timestamp: '2022-06-12 12:44:16'
+}
+{
+  message: {
+    webhookUpdateError: TypeError: Cannot read properties of undefined (reading 'display')
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:144:33)
+        at Generator.next (<anonymous>)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:8:71
+        at new Promise (<anonymous>)
+        at __awaiter (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:4:12)
+        at Function.__webhookUpdate (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:105:16)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:27:33
+        at Generator.next (<anonymous>)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:8:71
+        at new Promise (<anonymous>)
+  },
+  level: 'error',
+  timestamp: '2022-06-12 12:44:16'
+}
+{
+  message: { afterList: undefined },
+  level: 'info',
+  timestamp: '2022-06-12 12:44:16'
+}
+{
+  message: {
+    webhookUpdateError: TypeError: Cannot read properties of undefined (reading 'display')
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:144:33)
+        at Generator.next (<anonymous>)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:8:71
+        at new Promise (<anonymous>)
+        at __awaiter (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:4:12)
+        at Function.__webhookUpdate (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:105:16)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:27:33
+        at Generator.next (<anonymous>)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:8:71
+        at new Promise (<anonymous>)
+  },
+  level: 'error',
+  timestamp: '2022-06-12 12:44:16'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-06-12 14:51:10'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-06-12 14:52:32'
+}
+{
+  message: {
+    boardId: '62a5c4659549c218280c23c3',
+    myDepartment: {
+      _id: new ObjectId("62a5c46547f4499bba877d34"),
+      name: 'Testing',
+      boardId: '62a5c4659549c218280c23c3',
+      color: 'blue',
+      mainBoard: false,
+      tasks: [
+        new ObjectId("62a5c471534d25253f507665"),
+        new ObjectId("62a5c503fe2c221ae9942f40")
+      ],
+      teamsId: [],
+      createdAt: 2022-06-12T10:48:05.643Z,
+      updatedAt: 2022-06-12T10:50:43.405Z,
+      __v: 0,
+      canceldListId: '62a5c4662c82153a358b2a5d',
+      defaultListId: '62a5c466a4212a27d47751e2',
+      doneListId: '62a5c466005e7a8104e4705e',
+      inProgressListId: '62a5c465c00cb533fbe3d349',
+      notClearListId: '62a5c466310aca486f3b476b',
+      reviewListId: '62a5c466603a2e3a50b9d4c0',
+      sharedListID: '62a5c466ae316218bc0a7e7c'
+    }
+  },
+  level: 'info',
+  timestamp: '2022-06-12 14:53:25'
+}
+{
+  message: {
+    removeBoard: 'https://api.trello.com/1/boards/62a5c4659549c218280c23c3?response_type=token&key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68'
+  },
+  level: 'info',
+  timestamp: '2022-06-12 14:53:25'
+}
+{
+  message: {
+    'delete Tasks': { acknowledged: true, deletedCount: 1 },
+    'Delete Tech members': 'Delete result is 0 document'
+  },
+  level: 'info',
+  timestamp: '2022-06-12 14:53:27'
+}
+{
+  message: {
+    borderData: Promise { <pending> },
+    createBoardApi: 'https://api.trello.com/1/boards/?name=new ede&prefs_background=blue&defaultLists=false&key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68'
+  },
+  level: 'info',
+  timestamp: '2022-06-12 14:53:38'
+}
+{
+  message: { removeWebhookSucced: 'done' },
+  level: 'info',
+  timestamp: '2022-06-12 14:53:42'
+}
+{
+  message: { afterList: undefined },
+  level: 'info',
+  timestamp: '2022-06-12 14:53:42'
+}
+{
+  message: {
+    webhookUpdateError: TypeError: Cannot read properties of undefined (reading 'display')
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:144:33)
+        at Generator.next (<anonymous>)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:8:71
+        at new Promise (<anonymous>)
+        at __awaiter (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:4:12)
+        at Function.__webhookUpdate (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:105:16)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:27:33
+        at Generator.next (<anonymous>)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:8:71
+        at new Promise (<anonymous>)
+  },
+  level: 'error',
+  timestamp: '2022-06-12 14:53:42'
+}
+{
+  message: { afterList: undefined },
+  level: 'info',
+  timestamp: '2022-06-12 14:53:43'
+}
+{
+  message: {
+    webhookUpdateError: TypeError: Cannot read properties of undefined (reading 'display')
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:144:33)
+        at Generator.next (<anonymous>)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:8:71
+        at new Promise (<anonymous>)
+        at __awaiter (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:4:12)
+        at Function.__webhookUpdate (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:105:16)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:27:33
+        at Generator.next (<anonymous>)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:8:71
+        at new Promise (<anonymous>)
+  },
+  level: 'error',
+  timestamp: '2022-06-12 14:53:43'
+}
+{
+  message: { afterList: undefined },
+  level: 'info',
+  timestamp: '2022-06-12 14:53:43'
+}
+{
+  message: {
+    webhookUpdateError: TypeError: Cannot read properties of undefined (reading 'display')
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:144:33)
+        at Generator.next (<anonymous>)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:8:71
+        at new Promise (<anonymous>)
+        at __awaiter (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:4:12)
+        at Function.__webhookUpdate (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:105:16)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:27:33
+        at Generator.next (<anonymous>)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:8:71
+        at new Promise (<anonymous>)
+  },
+  level: 'error',
+  timestamp: '2022-06-12 14:53:43'
+}
+{
+  message: { afterList: undefined },
+  level: 'info',
+  timestamp: '2022-06-12 14:53:43'
+}
+{
+  message: {
+    webhookUpdateError: TypeError: Cannot read properties of undefined (reading 'display')
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:144:33)
+        at Generator.next (<anonymous>)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:8:71
+        at new Promise (<anonymous>)
+        at __awaiter (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:4:12)
+        at Function.__webhookUpdate (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:105:16)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:27:33
+        at Generator.next (<anonymous>)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:8:71
+        at new Promise (<anonymous>)
+  },
+  level: 'error',
+  timestamp: '2022-06-12 14:53:43'
+}
+{
+  message: { afterList: undefined },
+  level: 'info',
+  timestamp: '2022-06-12 14:53:43'
+}
+{
+  message: {
+    webhookUpdateError: TypeError: Cannot read properties of undefined (reading 'display')
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:144:33)
+        at Generator.next (<anonymous>)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:8:71
+        at new Promise (<anonymous>)
+        at __awaiter (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:4:12)
+        at Function.__webhookUpdate (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:105:16)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:27:33
+        at Generator.next (<anonymous>)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:8:71
+        at new Promise (<anonymous>)
+  },
+  level: 'error',
+  timestamp: '2022-06-12 14:53:43'
+}
+{
+  message: { afterList: undefined },
+  level: 'info',
+  timestamp: '2022-06-12 14:53:43'
+}
+{
+  message: {
+    webhookUpdateError: TypeError: Cannot read properties of undefined (reading 'display')
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:144:33)
+        at Generator.next (<anonymous>)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:8:71
+        at new Promise (<anonymous>)
+        at __awaiter (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:4:12)
+        at Function.__webhookUpdate (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:105:16)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:27:33
+        at Generator.next (<anonymous>)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:8:71
+        at new Promise (<anonymous>)
+  },
+  level: 'error',
+  timestamp: '2022-06-12 14:53:43'
+}
+{
+  message: { afterList: undefined },
+  level: 'info',
+  timestamp: '2022-06-12 14:53:43'
+}
+{
+  message: {
+    webhookUpdateError: TypeError: Cannot read properties of undefined (reading 'display')
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:144:33)
+        at Generator.next (<anonymous>)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:8:71
+        at new Promise (<anonymous>)
+        at __awaiter (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:4:12)
+        at Function.__webhookUpdate (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:105:16)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:27:33
+        at Generator.next (<anonymous>)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:8:71
+        at new Promise (<anonymous>)
+  },
+  level: 'error',
+  timestamp: '2022-06-12 14:53:43'
+}
+{
+  message: { webhookCreateResult: 'webhook done' },
+  level: 'info',
+  timestamp: '2022-06-12 14:53:43'
+}
+{
+  message: { afterList: undefined },
+  level: 'info',
+  timestamp: '2022-06-12 14:54:46'
+}
+{
+  message: { afterList: 'Not Clear' },
+  level: 'info',
+  timestamp: '2022-06-12 14:55:45'
+}
+{
+  message: { afterList: 'Not Clear' },
+  level: 'info',
+  timestamp: '2022-06-12 14:55:45'
+}
+{
+  message: { afterList: 'Done' },
+  level: 'info',
+  timestamp: '2022-06-12 14:56:44'
+}
+{
+  message: { afterList: 'Done' },
+  level: 'info',
+  timestamp: '2022-06-12 14:56:44'
+}
+{
+  message: { afterList: 'Review' },
+  level: 'info',
+  timestamp: '2022-06-12 14:57:01'
+}
+{
+  message: { afterList: 'Review' },
+  level: 'info',
+  timestamp: '2022-06-12 14:57:01'
+}
+{
+  message: { afterList: 'Shared' },
+  level: 'info',
+  timestamp: '2022-06-12 14:57:07'
+}
+{
+  message: { afterList: 'Shared' },
+  level: 'info',
+  timestamp: '2022-06-12 14:57:07'
+}
+{
+  message: { afterList: 'Review' },
+  level: 'info',
+  timestamp: '2022-06-12 14:57:12'
+}
+{
+  message: { afterList: 'Review' },
+  level: 'info',
+  timestamp: '2022-06-12 14:57:12'
+}
+{
+  message: { afterList: 'Shared' },
+  level: 'info',
+  timestamp: '2022-06-12 14:57:16'
+}
+{
+  message: { afterList: 'Shared' },
+  level: 'info',
+  timestamp: '2022-06-12 14:57:16'
+}
+{
+  message: { afterList: 'Review' },
+  level: 'info',
+  timestamp: '2022-06-12 14:57:21'
+}
+{
+  message: { afterList: 'Review' },
+  level: 'info',
+  timestamp: '2022-06-12 14:57:21'
+}
+{
+  message: { afterList: 'Shared' },
+  level: 'info',
+  timestamp: '2022-06-12 14:57:22'
+}
+{
+  message: { afterList: 'Shared' },
+  level: 'info',
+  timestamp: '2022-06-12 14:57:22'
+}
+{
+  message: { afterList: 'Review' },
+  level: 'info',
+  timestamp: '2022-06-12 14:57:28'
+}
+{
+  message: { afterList: 'Review' },
+  level: 'info',
+  timestamp: '2022-06-12 14:57:28'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-06-12 16:04:55'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-06-12 16:07:05'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-06-12 16:15:21'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-06-12 16:15:45'
+}
+{
+  message: { afterList: 'Shared' },
+  level: 'info',
+  timestamp: '2022-06-12 16:16:11'
+}
+{
+  message: { afterList: 'Shared' },
+  level: 'info',
+  timestamp: '2022-06-12 16:16:11'
+}
+{
+  message: { afterList: 'Done' },
+  level: 'info',
+  timestamp: '2022-06-12 16:18:55'
+}
+{
+  message: { afterList: 'Done' },
+  level: 'info',
+  timestamp: '2022-06-12 16:18:55'
+}
+{
+  message: { afterList: 'Review' },
+  level: 'info',
+  timestamp: '2022-06-12 16:19:10'
+}
+{
+  message: { afterList: 'Review' },
+  level: 'info',
+  timestamp: '2022-06-12 16:19:10'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-06-12 16:26:16'
+}
+{
+  message: {
+    boardId: '62a5e1d2c71cef1ef8af7042',
+    myDepartment: {
+      _id: new ObjectId("62a5e1d223a91f95656b54c4"),
+      name: 'new ede',
+      boardId: '62a5e1d2c71cef1ef8af7042',
+      color: 'blue',
+      mainBoard: false,
+      tasks: [],
+      teamsId: [],
+      createdAt: 2022-06-12T12:53:38.534Z,
+      updatedAt: 2022-06-12T12:53:42.509Z,
+      __v: 0,
+      canceldListId: '62a5e1d33d358307423b5feb',
+      defaultListId: '62a5e1d6a389fc52781b11f6',
+      doneListId: '62a5e1d48ab607683115d8f2',
+      inProgressListId: '62a5e1d370522c215582fbba',
+      notClearListId: '62a5e1d43ca72e58692af32a',
+      reviewListId: '62a5e1d555ac2b5c2011ce7b',
+      sharedListID: '62a5e1d5bd40ff53eddab0d5'
+    }
+  },
+  level: 'info',
+  timestamp: '2022-06-12 16:26:48'
+}
+{
+  message: {
+    removeBoard: 'https://api.trello.com/1/boards/62a5e1d2c71cef1ef8af7042?response_type=token&key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68'
+  },
+  level: 'info',
+  timestamp: '2022-06-12 16:26:48'
+}
+{
+  message: {
+    'delete Tasks': { acknowledged: true, deletedCount: 1 },
+    'Delete Tech members': 'Delete result is 0 document'
+  },
+  level: 'info',
+  timestamp: '2022-06-12 16:26:50'
+}
+{
+  message: {
+    borderData: Promise { <pending> },
+    createBoardApi: 'https://api.trello.com/1/boards/?name=test&prefs_background=blue&defaultLists=false&key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68'
+  },
+  level: 'info',
+  timestamp: '2022-06-12 16:26:58'
+}
+{
+  message: { removeWebhookSucced: 'done' },
+  level: 'info',
+  timestamp: '2022-06-12 16:27:03'
+}
+{
+  message: { afterList: undefined },
+  level: 'info',
+  timestamp: '2022-06-12 16:27:03'
+}
+{
+  message: {
+    webhookUpdateError: TypeError: Cannot read properties of undefined (reading 'display')
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:144:33)
+        at Generator.next (<anonymous>)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:8:71
+        at new Promise (<anonymous>)
+        at __awaiter (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:4:12)
+        at Function.__webhookUpdate (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:105:16)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:27:33
+        at Generator.next (<anonymous>)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:8:71
+        at new Promise (<anonymous>)
+  },
+  level: 'error',
+  timestamp: '2022-06-12 16:27:03'
+}
+{
+  message: { afterList: undefined },
+  level: 'info',
+  timestamp: '2022-06-12 16:27:03'
+}
+{
+  message: {
+    webhookUpdateError: TypeError: Cannot read properties of undefined (reading 'display')
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:144:33)
+        at Generator.next (<anonymous>)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:8:71
+        at new Promise (<anonymous>)
+        at __awaiter (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:4:12)
+        at Function.__webhookUpdate (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:105:16)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:27:33
+        at Generator.next (<anonymous>)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:8:71
+        at new Promise (<anonymous>)
+  },
+  level: 'error',
+  timestamp: '2022-06-12 16:27:03'
+}
+{
+  message: { afterList: undefined },
+  level: 'info',
+  timestamp: '2022-06-12 16:27:03'
+}
+{
+  message: {
+    webhookUpdateError: TypeError: Cannot read properties of undefined (reading 'display')
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:144:33)
+        at Generator.next (<anonymous>)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:8:71
+        at new Promise (<anonymous>)
+        at __awaiter (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:4:12)
+        at Function.__webhookUpdate (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:105:16)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:27:33
+        at Generator.next (<anonymous>)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:8:71
+        at new Promise (<anonymous>)
+  },
+  level: 'error',
+  timestamp: '2022-06-12 16:27:03'
+}
+{
+  message: { afterList: undefined },
+  level: 'info',
+  timestamp: '2022-06-12 16:27:03'
+}
+{
+  message: {
+    webhookUpdateError: TypeError: Cannot read properties of undefined (reading 'display')
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:144:33)
+        at Generator.next (<anonymous>)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:8:71
+        at new Promise (<anonymous>)
+        at __awaiter (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:4:12)
+        at Function.__webhookUpdate (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:105:16)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:27:33
+        at Generator.next (<anonymous>)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:8:71
+        at new Promise (<anonymous>)
+  },
+  level: 'error',
+  timestamp: '2022-06-12 16:27:03'
+}
+{
+  message: { afterList: undefined },
+  level: 'info',
+  timestamp: '2022-06-12 16:27:03'
+}
+{
+  message: {
+    webhookUpdateError: TypeError: Cannot read properties of undefined (reading 'display')
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:144:33)
+        at Generator.next (<anonymous>)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:8:71
+        at new Promise (<anonymous>)
+        at __awaiter (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:4:12)
+        at Function.__webhookUpdate (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:105:16)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:27:33
+        at Generator.next (<anonymous>)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:8:71
+        at new Promise (<anonymous>)
+  },
+  level: 'error',
+  timestamp: '2022-06-12 16:27:03'
+}
+{
+  message: { afterList: undefined },
+  level: 'info',
+  timestamp: '2022-06-12 16:27:03'
+}
+{
+  message: {
+    webhookUpdateError: TypeError: Cannot read properties of undefined (reading 'display')
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:144:33)
+        at Generator.next (<anonymous>)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:8:71
+        at new Promise (<anonymous>)
+        at __awaiter (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:4:12)
+        at Function.__webhookUpdate (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:105:16)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:27:33
+        at Generator.next (<anonymous>)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:8:71
+        at new Promise (<anonymous>)
+  },
+  level: 'error',
+  timestamp: '2022-06-12 16:27:03'
+}
+{
+  message: { afterList: undefined },
+  level: 'info',
+  timestamp: '2022-06-12 16:27:03'
+}
+{
+  message: {
+    webhookUpdateError: TypeError: Cannot read properties of undefined (reading 'display')
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:144:33)
+        at Generator.next (<anonymous>)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:8:71
+        at new Promise (<anonymous>)
+        at __awaiter (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:4:12)
+        at Function.__webhookUpdate (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:105:16)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:27:33
+        at Generator.next (<anonymous>)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:8:71
+        at new Promise (<anonymous>)
+  },
+  level: 'error',
+  timestamp: '2022-06-12 16:27:03'
+}
+{
+  message: { webhookCreateResult: 'webhook done' },
+  level: 'info',
+  timestamp: '2022-06-12 16:27:04'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-06-12 16:29:32'
+}
+{
+  message: {
+    boardId: '62a5f7b27a5372326cd5e33e',
+    myDepartment: {
+      _id: new ObjectId("62a5f7b29efd4a6e4818e88d"),
+      name: 'test',
+      boardId: '62a5f7b27a5372326cd5e33e',
+      color: 'blue',
+      mainBoard: false,
+      tasks: [],
+      teamsId: [],
+      createdAt: 2022-06-12T14:26:58.682Z,
+      updatedAt: 2022-06-12T14:27:03.118Z,
+      __v: 0,
+      canceldListId: '62a5f7b397605e49b00224f4',
+      defaultListId: '62a5f7b65fc9db0bfa4728f7',
+      doneListId: '62a5f7b49331c314c29614dd',
+      inProgressListId: '62a5f7b394227d72b362c6fc',
+      notClearListId: '62a5f7b4ff4ca1872722a69d',
+      reviewListId: '62a5f7b6c5f025825747b633',
+      sharedListID: '62a5f7b5028f1c7e8a9917b0'
+    }
+  },
+  level: 'info',
+  timestamp: '2022-06-12 16:46:36'
+}
+{
+  message: {
+    removeBoard: 'https://api.trello.com/1/boards/62a5f7b27a5372326cd5e33e?response_type=token&key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68'
+  },
+  level: 'info',
+  timestamp: '2022-06-12 16:46:36'
+}
+{
+  message: {
+    'delete Tasks': { acknowledged: true, deletedCount: 0 },
+    'Delete Tech members': 'Delete result is 0 document'
+  },
+  level: 'info',
+  timestamp: '2022-06-12 16:46:38'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-06-12 16:47:00'
+}
+{
+  message: {
+    borderData: Promise { <pending> },
+    createBoardApi: 'https://api.trello.com/1/boards/?name=new dep&prefs_background=blue&defaultLists=false&key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68'
+  },
+  level: 'info',
+  timestamp: '2022-06-12 16:47:41'
+}
+{
+  message: { removeWebhookSucced: 'done' },
+  level: 'info',
+  timestamp: '2022-06-12 16:47:45'
+}
+{
+  message: { afterList: undefined },
+  level: 'info',
+  timestamp: '2022-06-12 16:47:46'
+}
+{
+  message: {
+    webhookUpdateError: TypeError: Cannot read properties of undefined (reading 'display')
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:144:33)
+        at Generator.next (<anonymous>)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:8:71
+        at new Promise (<anonymous>)
+        at __awaiter (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:4:12)
+        at Function.__webhookUpdate (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:105:16)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:27:33
+        at Generator.next (<anonymous>)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:8:71
+        at new Promise (<anonymous>)
+  },
+  level: 'error',
+  timestamp: '2022-06-12 16:47:46'
+}
+{
+  message: { afterList: undefined },
+  level: 'info',
+  timestamp: '2022-06-12 16:47:46'
+}
+{
+  message: {
+    webhookUpdateError: TypeError: Cannot read properties of undefined (reading 'display')
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:144:33)
+        at Generator.next (<anonymous>)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:8:71
+        at new Promise (<anonymous>)
+        at __awaiter (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:4:12)
+        at Function.__webhookUpdate (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:105:16)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:27:33
+        at Generator.next (<anonymous>)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:8:71
+        at new Promise (<anonymous>)
+  },
+  level: 'error',
+  timestamp: '2022-06-12 16:47:46'
+}
+{
+  message: { afterList: undefined },
+  level: 'info',
+  timestamp: '2022-06-12 16:47:46'
+}
+{
+  message: {
+    webhookUpdateError: TypeError: Cannot read properties of undefined (reading 'display')
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:144:33)
+        at Generator.next (<anonymous>)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:8:71
+        at new Promise (<anonymous>)
+        at __awaiter (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:4:12)
+        at Function.__webhookUpdate (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:105:16)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:27:33
+        at Generator.next (<anonymous>)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:8:71
+        at new Promise (<anonymous>)
+  },
+  level: 'error',
+  timestamp: '2022-06-12 16:47:46'
+}
+{
+  message: { afterList: undefined },
+  level: 'info',
+  timestamp: '2022-06-12 16:47:46'
+}
+{
+  message: {
+    webhookUpdateError: TypeError: Cannot read properties of undefined (reading 'display')
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:144:33)
+        at Generator.next (<anonymous>)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:8:71
+        at new Promise (<anonymous>)
+        at __awaiter (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:4:12)
+        at Function.__webhookUpdate (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:105:16)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:27:33
+        at Generator.next (<anonymous>)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:8:71
+        at new Promise (<anonymous>)
+  },
+  level: 'error',
+  timestamp: '2022-06-12 16:47:46'
+}
+{
+  message: { afterList: undefined },
+  level: 'info',
+  timestamp: '2022-06-12 16:47:46'
+}
+{
+  message: {
+    webhookUpdateError: TypeError: Cannot read properties of undefined (reading 'display')
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:144:33)
+        at Generator.next (<anonymous>)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:8:71
+        at new Promise (<anonymous>)
+        at __awaiter (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:4:12)
+        at Function.__webhookUpdate (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:105:16)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:27:33
+        at Generator.next (<anonymous>)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:8:71
+        at new Promise (<anonymous>)
+  },
+  level: 'error',
+  timestamp: '2022-06-12 16:47:46'
+}
+{
+  message: { afterList: undefined },
+  level: 'info',
+  timestamp: '2022-06-12 16:47:46'
+}
+{
+  message: {
+    webhookUpdateError: TypeError: Cannot read properties of undefined (reading 'display')
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:144:33)
+        at Generator.next (<anonymous>)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:8:71
+        at new Promise (<anonymous>)
+        at __awaiter (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:4:12)
+        at Function.__webhookUpdate (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:105:16)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:27:33
+        at Generator.next (<anonymous>)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:8:71
+        at new Promise (<anonymous>)
+  },
+  level: 'error',
+  timestamp: '2022-06-12 16:47:46'
+}
+{
+  message: { afterList: undefined },
+  level: 'info',
+  timestamp: '2022-06-12 16:47:46'
+}
+{
+  message: {
+    webhookUpdateError: TypeError: Cannot read properties of undefined (reading 'display')
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:144:33)
+        at Generator.next (<anonymous>)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:8:71
+        at new Promise (<anonymous>)
+        at __awaiter (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:4:12)
+        at Function.__webhookUpdate (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:105:16)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:27:33
+        at Generator.next (<anonymous>)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:8:71
+        at new Promise (<anonymous>)
+  },
+  level: 'error',
+  timestamp: '2022-06-12 16:47:46'
+}
+{
+  message: { webhookCreateResult: 'webhook done' },
+  level: 'info',
+  timestamp: '2022-06-12 16:47:46'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-06-12 16:48:28'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-06-12 16:52:43'
+}

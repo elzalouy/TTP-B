@@ -100,7 +100,7 @@ class TaskController extends TaskDB {
       if (
         targetList.includes(data?.action?.display?.entities?.listAfter?.text)
       ) {
-        targetTask = await TaskDB.updateOneTaskDB(
+        targetTask = await TaskDB.updateTaskStatus(
           {
             cardId: data.action.display.entities.card.id,
           },
@@ -139,7 +139,7 @@ class TaskController extends TaskDB {
           to: data?.action?.display?.entities?.listAfter?.text,
         });
       } else {
-        targetTask = await TaskDB.updateOneTaskDB(
+        targetTask = await TaskDB.updateTaskStatus(
           {
             cardId: data.action.display.entities.card.id,
           },
