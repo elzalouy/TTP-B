@@ -138,19 +138,6 @@ class TaskController extends TaskDB {
           cardId: data.action.display.entities.card.id,
           to: data?.action?.display?.entities?.listAfter?.text,
         });
-      } else {
-        targetTask = await TaskDB.updateTaskStatus(
-          {
-            cardId: data.action.display.entities.card.id,
-          },
-          {
-            status: "inProgress",
-          }
-        );
-        io.sockets.emit("Move Task", {
-          cardId: data.action.display.entities.card.id,
-          to: "inProgress",
-        });
       }
       return targetTask;
     } catch (error) {
