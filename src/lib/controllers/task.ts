@@ -44,6 +44,7 @@ class TaskController extends TaskDB {
   static async downloadAttachment(cardId: string, attachmentId: string) {
     return await TaskController.__downloadAttachment(cardId, attachmentId);
   }
+
   static async moveTaskOnTrello(
     cardId: string,
     listId: string,
@@ -82,6 +83,7 @@ class TaskController extends TaskDB {
       logger.error({ moveTaskOnTrelloError: error });
     }
   }
+
   static async __webhookUpdate(data: any) {
     try {
       let targetTask: any;
@@ -108,6 +110,10 @@ class TaskController extends TaskDB {
             status: data?.action?.display?.entities?.listAfter?.text,
           }
         );
+        io.sockets.emit("Move Task", {
+          cardId: data.action.display.entities.card.id,
+          to: data?.action?.display?.entities?.listAfter?.text,
+        });
         // if task status update to shared send notification
         if (data?.action?.display?.entities?.listAfter?.text === "Shared") {
           let projectData: any = await ProjectDB.getProjectDB({
@@ -134,16 +140,13 @@ class TaskController extends TaskDB {
             createNotifi
           );
         }
-        io.sockets.emit("Move Task", {
-          cardId: data.action.display.entities.card.id,
-          to: data?.action?.display?.entities?.listAfter?.text,
-        });
       }
       return targetTask;
     } catch (error) {
       logger.error({ webhookUpdateError: error });
     }
   }
+
   static async __updateTaskData(data: any) {
     try {
       if (data.idModel) {
@@ -156,7 +159,6 @@ class TaskController extends TaskDB {
       logger.error({ updateTaskError: error });
     }
   }
-
   static async __CreateNewTask(data: TaskData, files: Express.Multer.File[]) {
     try {
       let createdCard: { id: string } | any =

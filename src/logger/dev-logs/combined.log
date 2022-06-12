@@ -69720,3 +69720,118 @@
   level: 'info',
   timestamp: '2022-06-12 18:11:28'
 }
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-06-12 18:41:37'
+}
+{
+  message: {
+    borderData: Promise { <pending> },
+    createBoardApi: 'https://api.trello.com/1/boards/?name=new dep local&prefs_background=blue&defaultLists=false&key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68'
+  },
+  level: 'info',
+  timestamp: '2022-06-12 18:43:45'
+}
+{
+  message: { removeWebhookSucced: 'done' },
+  level: 'info',
+  timestamp: '2022-06-12 18:43:49'
+}
+{
+  message: { afterList: undefined },
+  level: 'info',
+  timestamp: '2022-06-12 18:43:50'
+}
+{
+  message: { afterList: undefined },
+  level: 'info',
+  timestamp: '2022-06-12 18:43:50'
+}
+{
+  message: { afterList: undefined },
+  level: 'info',
+  timestamp: '2022-06-12 18:43:50'
+}
+{
+  message: { afterList: undefined },
+  level: 'info',
+  timestamp: '2022-06-12 18:43:50'
+}
+{
+  message: { afterList: undefined },
+  level: 'info',
+  timestamp: '2022-06-12 18:43:50'
+}
+{
+  message: { afterList: undefined },
+  level: 'info',
+  timestamp: '2022-06-12 18:43:50'
+}
+{
+  message: { afterList: undefined },
+  level: 'info',
+  timestamp: '2022-06-12 18:43:50'
+}
+{
+  message: { webhookCreateResult: 'webhook done' },
+  level: 'info',
+  timestamp: '2022-06-12 18:43:50'
+}
+{
+  message: {
+    boardId: '62a617c10bb86c2ffce237e5',
+    myDepartment: {
+      _id: new ObjectId("62a617c126ee72d33f8ae631"),
+      name: 'new dep local',
+      boardId: '62a617c10bb86c2ffce237e5',
+      color: 'blue',
+      mainBoard: false,
+      tasks: [],
+      teamsId: [],
+      createdAt: 2022-06-12T16:43:45.313Z,
+      updatedAt: 2022-06-12T16:43:49.807Z,
+      __v: 0,
+      canceldListId: '62a617c2cbd0c3035e0f6b7e',
+      defaultListId: '62a617c5ce756956cbf905ab',
+      doneListId: '62a617c3b13ec1810388036a',
+      inProgressListId: '62a617c2458b6e1deb7bfc22',
+      notClearListId: '62a617c3e531bb7303c166ec',
+      reviewListId: '62a617c4845b2c05f6518430',
+      sharedListID: '62a617c4af306562b12a9ad4'
+    }
+  },
+  level: 'info',
+  timestamp: '2022-06-12 18:44:05'
+}
+{
+  message: {
+    removeBoard: 'https://api.trello.com/1/boards/62a617c10bb86c2ffce237e5?response_type=token&key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68'
+  },
+  level: 'info',
+  timestamp: '2022-06-12 18:44:05'
+}
+{
+  message: {
+    'delete Tasks': { acknowledged: true, deletedCount: 0 },
+    'Delete Tech members': 'Delete result is 0 document'
+  },
+  level: 'info',
+  timestamp: '2022-06-12 18:44:06'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-06-12 18:59:12'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-06-12 19:05:20'
+}
