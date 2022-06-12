@@ -34,6 +34,9 @@ class TaskDB {
   static async getTaskDB(id: string) {
     return await TaskDB.__getTask(id);
   }
+  static async getOneTaskBy(data: TaskData) {
+    return await TaskDB.__getOneTaskBy(data);
+  }
 
   static async getAllTasksDB(data: any) {
     return await TaskDB.__getAllTasks(data);
@@ -110,11 +113,12 @@ class TaskDB {
   static async __updateOneTaskDB(data: TaskData, value: TaskData) {
     try {
       let task = await Tasks.findOne(data);
-      task.lastMove = task.status;
-      task.lastMoveDate = new Date().toUTCString();
-      await task.update(value);
+      if (data.status) {
+        task.lastMove = task.status;
+        task.lastMoveDate = new Date().toUTCString();
+      }
+      await task.updateOne(value);
       let result = await task.save();
-      console.log(result);
       return result;
     } catch (error) {
       logger.error({ updateMultiTaskDBError: error });
@@ -208,14 +212,7 @@ class TaskDB {
     try {
       let task: TaskInfo = new Tasks(data);
       task = await task.save();
-      await Department.findOneAndUpdate(
-        { boardId: data.boardId },
-        {
-          $push: {
-            tasks: task._id,
-          },
-        }
-      );
+
       return task;
     } catch (error) {
       logger.error({ createTaskDBError: error });
@@ -241,6 +238,15 @@ class TaskDB {
       return tasks;
     } catch (error) {
       logger.error({ filterTasksError: error });
+    }
+  }
+  static async __getOneTaskBy(data: TaskData) {
+    try {
+      let task = await Tasks.findOne(data).lean();
+      if (task) return task;
+      else return null;
+    } catch (error) {
+      logger.error({ getOneTaskError: error });
     }
   }
 }

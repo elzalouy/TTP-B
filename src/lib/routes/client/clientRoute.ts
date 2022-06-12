@@ -1,7 +1,7 @@
 import apis from "./apis";
 import { Router } from "express";
 import ClientReq from "../../presentation/client/client";
-import { imageUpload } from "../../services/awsS3/awsS3";
+import { imageUpload } from "../../services/awsS3";
 
 const router = Router();
 

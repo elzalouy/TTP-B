@@ -4,5 +4,15 @@
   "FrontEndUrl": "https://ttpf.herokuapp.com",
   "monogDb": "mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority",
   "trellKey": "0d05ca858d1bc7893a91aef2712e7568",
-  "trelloApiKey": "2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68"
+  "trelloApiKey": "2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68",
+  "BoardStatus": [
+    "inProgress",
+    "Cancled",
+    "Not Clear",
+    "Done",
+    "Shared",
+    "Review",
+    "Tasks Board"
+  ],
+  "redis": "redis://localhost:6379"
 }

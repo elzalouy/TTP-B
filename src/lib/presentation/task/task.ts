@@ -4,7 +4,6 @@ import logger from "../../../logger";
 import TaskController from "../../controllers/task";
 import { TaskData } from "../../types/model/tasks";
 import { createTaskSchema } from "../../services/validation";
-import BoardController from "../../controllers/boards";
 
 const TaskReq = class TaskReq extends TaskController {
   static async handleCreateCard(req: Request, res: Response) {
@@ -29,8 +28,6 @@ const TaskReq = class TaskReq extends TaskController {
   static async handleUpdateCard(req: Request, res: Response) {
     try {
       let TaskData: any = req.body;
-      // TaskData.file = req.file
-
       let task = await super.updateTask(TaskData);
       if (task) {
         return res.send(task);
@@ -46,7 +43,6 @@ const TaskReq = class TaskReq extends TaskController {
   static async handleWebhookUpdateCard(req: Request, res: Response) {
     try {
       let trelloData: any = req.body;
-      console.log(trelloData);
       let task: any = await super.webhookUpdate(trelloData);
       return res.status(200).send(task);
     } catch (error) {
@@ -78,13 +74,15 @@ const TaskReq = class TaskReq extends TaskController {
   }
   static async handleMoveCard(req: Request, res: Response) {
     try {
-      let { cardId, listId, status }: any = req.body;
-      let task = await super.moveTaskOnTrello(cardId, listId, status);
-      if (task) {
-        return res.send(task);
-      } else {
-        return res.status(400).send(customeError("update_task_error", 400));
-      }
+      let { cardId, listId, status, list }: any = req.body;
+      let task: any = await super.moveTaskOnTrello(
+        cardId,
+        listId,
+        status,
+        list
+      );
+      if (task?.error) return res.status(400).send(task?.message);
+      return res.send(task);
     } catch (error) {
       logger.error({ handleMoveCardError: error });
     }

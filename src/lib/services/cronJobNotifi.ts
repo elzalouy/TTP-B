@@ -1,10 +1,10 @@
 import moment from "moment";
 import cron from "node-cron";
-import logger from "../../../logger";
-import NotificationController from "../../controllers/notification";
-import ProjectDB from "../../dbCalls/project/project";
-import { io } from "../../server";
-import TaskDB from "../../dbCalls/tasks/tasks";
+import logger from "../../logger";
+import NotificationController from "../controllers/notification";
+import ProjectDB from "../dbCalls/project/project";
+import { io } from "../server";
+import TaskDB from "../dbCalls/tasks/tasks";
 
 // '0 0 0 1-31 0-7'
 //todo update notification cron job

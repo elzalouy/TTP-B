@@ -1,8 +1,14 @@
 import logger from "../../logger";
+import { createOneJob, DepartmentQueue } from "../background/departmentsQueue";
 import Procedures from "../db/procedures";
 import DepartmentBD from "../dbCalls/department/department";
 import TechMemberDB from "../dbCalls/techMember/techMember";
-import { UpdateDepartment, DepartmentData } from "../types/model/Department";
+import { createBoardResponse } from "../types/controller/board";
+import {
+  UpdateDepartment,
+  DepartmentData,
+  DepartmentInfo,
+} from "../types/model/Department";
 import BoardController from "./boards";
 
 const DepartmentController = class DepartmentController extends DepartmentBD {
@@ -18,13 +24,13 @@ const DepartmentController = class DepartmentController extends DepartmentBD {
     return await DepartmentController.__deleteDepartmentData(data);
   }
 
-  static async getDepartments(data: object) {
-    return await DepartmentController.__getDepartmentsData(data);
+  static async getDepartments(data: object, and: boolean) {
+    return await DepartmentController.__getDepartmentsData(data, and);
   }
 
-  static async __getDepartmentsData(data: object) {
+  static async __getDepartmentsData(data: object, and: boolean) {
     try {
-      let departments = await super.getDepartmentsData(data);
+      let departments = await super.getDepartmentsData(data, and);
       return departments;
     } catch (error) {
       logger.error({ getDepartmentsError: error });
@@ -57,7 +63,6 @@ const DepartmentController = class DepartmentController extends DepartmentBD {
         let hookRemove = listTrelloIds.map(async (id) => {
           return await BoardController.removeWebhook(id);
         });
-        logger.info("third step");
 
         Promise.all(hookRemove).then((res) =>
           logger.info({ removeWebhookSucced: "done" })
@@ -78,7 +83,6 @@ const DepartmentController = class DepartmentController extends DepartmentBD {
   static async __updateDepartmentData(data: UpdateDepartment) {
     try {
       let depUpdate: any;
-
       // update board color and name
       if (data.name && data.color) {
         logger.info("first step");
@@ -169,120 +173,142 @@ const DepartmentController = class DepartmentController extends DepartmentBD {
 
   static async __createNewDepartment(data: DepartmentData) {
     try {
-      let teams = data.teams;
-      let mainBoard = data.mainBoard;
-      // define the board and list variable
-      let boardId: string = "";
-      let defaultListId: string = "";
-      let sharedListID: string = "";
-      let doneListId: string = "";
-      let reviewListId: string = "";
-      let notClearListId: string = "";
-      let canceldListId: string = "";
-      let inProgressListId: string = "";
-      // create board
-      let boardData: any = await BoardController.createNewBoard(
+      // let teams = data.teams;
+      // let mainBoard = data.mainBoard;
+      // // define the board and list variable
+      // let boardId: string = "";
+      // let defaultListId: string = "";
+      // let sharedListID: string = "";
+      // let doneListId: string = "";
+      // let reviewListId: string = "";
+      // let notClearListId: string = "";
+      // let canceldListId: string = "";
+      // let inProgressListId: string = "";
+      // // create board
+      // let boardData: any = await BoardController.createNewBoard(
+      //   data.name,
+      //   data.color
+      // );
+      // boardId = boardData.id;
+      // data = {
+      //   name: data.name,
+      //   color: data.color,
+      //   boardId,
+      // };
+
+      // let departmentCreate = await super.createdbDepartment(data);
+
+      // // create main list on board
+
+      // let inprogress: { id: string } = await BoardController.addListToBoard(
+      //   boardId,
+      //   "inProgress"
+      // );
+      // inProgressListId = inprogress.id;
+
+      // let cancel: { id: string } = await BoardController.addListToBoard(
+      //   boardId,
+      //   "Cancled"
+      // );
+      // canceldListId = cancel.id;
+
+      // let unClear: { id: string } = await BoardController.addListToBoard(
+      //   boardId,
+      //   "Not Clear"
+      // );
+      // notClearListId = unClear.id;
+
+      // let done: { id: string } = await BoardController.addListToBoard(
+      //   boardId,
+      //   "Done"
+      // );
+      // doneListId = done.id;
+
+      // let shared: { id: string } = await BoardController.addListToBoard(
+      //   boardId,
+      //   "Shared"
+      // );
+      // sharedListID = shared.id;
+
+      // let review: { id: string } = await BoardController.addListToBoard(
+      //   boardId,
+      //   "Review"
+      // );
+      // reviewListId = review.id;
+
+      // // create list and webhook for the team
+      // let teamListIds: { idInTrello: string; idInDB: any }[] =
+      //   await DepartmentController.__createTeamWebhookAndList(
+      //     teams,
+      //     boardId,
+      //     mainBoard
+      //   );
+      // let defaultList: { id: string } = await BoardController.addListToBoard(
+      //   boardId,
+      //   "Tasks Board"
+      // );
+      // defaultListId = defaultList.id;
+
+      // // create webhook for list
+      // const listId: string[] = [
+      //   defaultListId,
+      //   sharedListID,
+      //   doneListId,
+      //   reviewListId,
+      //   notClearListId,
+      //   canceldListId,
+      //   inProgressListId,
+      // ];
+
+      // let webhookCreate = listId.map(async (id) => {
+      //   return await BoardController.createWebHook(id);
+      // });
+      // Promise.all(webhookCreate).then((res) =>
+      //   logger.info({ webhookCreateResult: "webhook done" })
+      // );
+      // data = {
+      //   defaultListId,
+      //   sharedListID,
+      //   doneListId,
+      //   reviewListId,
+      //   notClearListId,
+      //   canceldListId,
+      //   inProgressListId,
+      //   teamsId: teamListIds,
+      // };
+      // let department = await DepartmentController.__createTeamList(
+      //   teams,
+      //   departmentCreate._id,
+      //   data
+      // );
+
+      // if (!department) {
+      //   return null;
+      // }
+      let boardData: createBoardResponse = await BoardController.createNewBoard(
         data.name,
         data.color
       );
-      boardId = boardData.id;
-      data = {
-        name: data.name,
-        color: data.color,
-        boardId,
-      };
-
-      let departmentCreate = await super.createdbDepartment(data);
-
-      // create main list on board
-
-      let inprogress: { id: string } = await BoardController.addListToBoard(
-        boardId,
-        "inProgress"
-      );
-      inProgressListId = inprogress.id;
-
-      let cancel: { id: string } = await BoardController.addListToBoard(
-        boardId,
-        "Cancled"
-      );
-      canceldListId = cancel.id;
-
-      let unClear: { id: string } = await BoardController.addListToBoard(
-        boardId,
-        "Not Clear"
-      );
-      notClearListId = unClear.id;
-
-      let done: { id: string } = await BoardController.addListToBoard(
-        boardId,
-        "Done"
-      );
-      doneListId = done.id;
-
-      let shared: { id: string } = await BoardController.addListToBoard(
-        boardId,
-        "Shared"
-      );
-      sharedListID = shared.id;
-
-      let review: { id: string } = await BoardController.addListToBoard(
-        boardId,
-        "Review"
-      );
-      reviewListId = review.id;
-
-      // create list and webhook for the team
-      let teamListIds: { idInTrello: string; idInDB: any }[] =
-        await DepartmentController.__createTeamWebhookAndList(
-          teams,
-          boardId,
-          mainBoard
-        );
-
-      let defaultList: { id: string } = await BoardController.addListToBoard(
-        boardId,
-        "Tasks Board"
-      );
-      defaultListId = defaultList.id;
-
-      // create webhook for list
-      const listId: string[] = [
-        defaultListId,
-        sharedListID,
-        doneListId,
-        reviewListId,
-        notClearListId,
-        canceldListId,
-        inProgressListId,
-      ];
-
-      let webhookCreate = listId.map(async (id) => {
-        return await BoardController.createWebHook(id);
-      });
-      Promise.all(webhookCreate).then((res) =>
-        logger.info({ webhookCreateResult: "webhook done" })
-      );
-      data = {
-        defaultListId,
-        sharedListID,
-        doneListId,
-        reviewListId,
-        notClearListId,
-        canceldListId,
-        inProgressListId,
-        teamsId: teamListIds,
-      };
-      let department = await DepartmentController.__createTeamList(
-        teams,
-        departmentCreate._id,
-        data
-      );
-
-      if (!department) {
-        return null;
-      }
-      return department;
+      if (boardData.id) {
+        let departmentResult: DepartmentInfo = await super.createdbDepartment({
+          name: data.name,
+          color: data.color,
+          boardId: boardData.id,
+          mainBoard: data.mainBoard,
+        });
+        createOneJob(departmentResult, data.teams);
+        DepartmentQueue.start();
+        if (!departmentResult._id)
+          return {
+            error: "department",
+            message: "error happened while creating department",
+          };
+        return departmentResult;
+      } else
+        return {
+          error: "board",
+          message: "error happened while creating board",
+        };
     } catch (error) {
       logger.error({ createDepartmentError: error });
     }
@@ -333,7 +359,6 @@ const DepartmentController = class DepartmentController extends DepartmentBD {
           logger.info({ removeWebhookSucced: "done" })
         );
       }
-      logger.info({ teamListIds });
       return teamListIds;
     } catch (error) {
       logger.error({ createTeamListError: error });

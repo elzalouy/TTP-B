@@ -8,7 +8,8 @@ import DepartmentController from "../../controllers/department";
 const DepartmentReq = class DepartmentReq extends DepartmentController {
   static async handleCreateDepartment(req: Request, res: Response) {
     try {
-      let department = await super.createDepartment(req.body);
+      let department: any = await super.createDepartment(req.body);
+      if (department?.error) return res.status(400).send(department?.message);
       if (department) {
         return res.status(200).send(department);
       } else {
@@ -69,7 +70,7 @@ const DepartmentReq = class DepartmentReq extends DepartmentController {
         return res.status(400).send(customeError("get_dep_error", 400));
       }
 
-      let department = await super.getDepartments(data);
+      let department = await super.getDepartments(data, true);
       if (department) {
         return res.status(200).send(department);
       } else {

@@ -1,3 +1,13 @@
 {
-  "name": "TTP test"
+  "name": "TTP test",
+  "BoardStatus": [
+    "inProgress",
+    "Cancled",
+    "Not Clear",
+    "Done",
+    "Shared",
+    "Review",
+    "Tasks Board"
+  ],
+  "redis": "redis://localhost:6379"
 }

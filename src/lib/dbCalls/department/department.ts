@@ -21,8 +21,8 @@ const DepartmentBD = class DepartmentBD {
     return await DepartmentBD.__deleteDepartment(id);
   }
 
-  static async getDepartmentsData(data: object) {
-    return await DepartmentBD.__getDepartment(data);
+  static async getDepartmentsData(data: object, and: boolean) {
+    return await DepartmentBD.__getDepartment(data, and);
   }
 
   static async updateNestedRecordDepDB(DepId: string, Recordupdate: object) {
@@ -53,11 +53,20 @@ const DepartmentBD = class DepartmentBD {
       logger.error({ deleteNestedRecordDepDBError: error });
     }
   }
-
-  static async __getDepartment(data: object) {
+  static async __getOneDepartmentBy(data: DepartmentData) {
     try {
+      let dep = await Department.findOne(data);
+      if (dep) return dep;
+      return null;
+    } catch (error) {
+      logger.error({ getDepOneError: error });
+    }
+  }
+  static async __getDepartment(data: DepartmentData, and: boolean) {
+    try {
+      let match = and ? { $and: [data] } : { $or: [data] };
       let department: any = await Department.aggregate([
-        { $match: { $and: [data] } },
+        { $match: match },
         {
           $lookup: {
             from: "tasks",
@@ -163,7 +172,6 @@ const DepartmentBD = class DepartmentBD {
 
   static async __addNewDepartment(data: DepartmentData) {
     try {
-      logger.info({ data });
       let department = new Department(data);
       await department.save();
       return department;

@@ -2,18 +2,16 @@ import {
   AttachmentResponse,
   AttachmentSchema,
   TaskData,
-  TaskInfo,
 } from "./../types/model/tasks";
-import { customeError } from "./../utils/errorUtils";
 import logger from "../../logger";
 import TaskDB from "../dbCalls/tasks/tasks";
 import BoardController from "./boards";
-import Project from "../models/Project";
 import NotificationController from "./notification";
 import { io } from "../server";
 import ProjectDB from "../dbCalls/project/project";
 import { deleteAll } from "../services/upload";
-import { Express } from "express";
+import DepartmentBD from "../dbCalls/department/department";
+import { moveTaskJob, TaskQueue } from "../background/taskQueue";
 
 class TaskController extends TaskDB {
   static async getTasks(data: TaskData) {
@@ -49,44 +47,52 @@ class TaskController extends TaskDB {
   static async moveTaskOnTrello(
     cardId: string,
     listId: string,
-    status: string
+    status: string,
+    list: string
   ) {
-    return await TaskController.__moveTaskOnTrello(cardId, listId, status);
+    return await TaskController.__moveTaskOnTrello(
+      cardId,
+      listId,
+      status,
+      list
+    );
   }
 
   static async __moveTaskOnTrello(
     cardId: string,
     listId: string,
-    status: string
+    status: string,
+    list: string
   ) {
     try {
-      const result = await BoardController.moveTaskToDiffList(cardId, listId);
-      console.log(result);
-      let task = await TaskDB.updateOneTaskDB(
-        {
-          cardId: cardId,
-        },
-        {
-          status: status,
-          listId: listId,
-        }
-      );
-      return task;
+      let data = await TaskDB.__getOneTaskBy({ cardId: cardId });
+      if (!data) return { error: "Task", message: "Task Not Existed" };
+      let depFilter: any = {};
+      depFilter[list] = listId;
+      let department = await DepartmentBD.__getOneDepartmentBy(depFilter);
+      if (!department)
+        return {
+          error: "Department",
+          message: "Department with this list was not found",
+        };
+      moveTaskJob(listId, cardId, status);
+      TaskQueue.start();
+      return { data: `Task with cardId ${cardId} has moved to list ${list}` };
     } catch (error) {
       logger.error({ moveTaskOnTrelloError: error });
     }
   }
   static async __webhookUpdate(data: any) {
     try {
-      console.log(data);
       let targetTask: any;
       const targetList: any = [
-        "Not Started",
+        "Tasks Board",
         "Done",
         "Shared",
         "Review",
         "Not Clear",
         "Cancled",
+        "inProgress",
       ];
       logger.info({
         afterList: data?.action?.display?.entities?.listAfter?.text,

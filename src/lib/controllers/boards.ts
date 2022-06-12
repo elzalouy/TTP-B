@@ -1,5 +1,5 @@
 import { MemberType } from "./../types/model/User";
-import { trelloApi } from "./../services/trello/trelloApi";
+import { trelloApi } from "../services/trelloApi";
 import logger from "../../logger";
 import fetch from "node-fetch";
 import Config from "config";
@@ -96,7 +96,6 @@ class BoardController {
         },
       })
         .then((res) => {
-          logger.info("move board done", res);
           return res;
         })
         .catch((err) => logger.info("error in moving board", err));
@@ -289,7 +288,6 @@ class BoardController {
           Accept: "application/json",
         },
       });
-
       return newList.json();
     } catch (error) {
       logger.error({ addListError: error });

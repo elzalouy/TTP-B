@@ -1,6 +1,6 @@
 import AWS from "aws-sdk";
 import { config } from "dotenv";
-import logger from "../../../logger";
+import logger from "../../logger";
 import multer from "multer";
 import multerS3 from "multer-s3";
 import path from "path";

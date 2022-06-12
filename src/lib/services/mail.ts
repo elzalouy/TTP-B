@@ -1,6 +1,6 @@
 import { config } from "dotenv";
 import nodemailer from "nodemailer";
-import logger from "../../../logger";
+import logger from "../../logger";
 import Config from "config";
 config();
 

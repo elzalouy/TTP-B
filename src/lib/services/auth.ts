@@ -1,9 +1,9 @@
 import bcrypt from "bcrypt";
-import logger from "../../../logger";
-import { localize } from "../../utils/msgLocalize";
+import logger from "../../logger";
+import { localize } from "../utils/msgLocalize";
 import jwt, { JwtPayload } from "jsonwebtoken";
 import { config } from "dotenv";
-import { customeError } from "../../utils/errorUtils";
+import { customeError } from "../utils/errorUtils";
 
 config();
 

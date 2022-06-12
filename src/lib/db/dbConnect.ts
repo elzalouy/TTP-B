@@ -1,4 +1,4 @@
-import { hashBassword } from "./../services/auth/auth";
+import { hashBassword } from "../services/auth";
 import { connect, ConnectOptions } from "mongoose";
 import { config } from "dotenv";
 import logger from "../../logger";
