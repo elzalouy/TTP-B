@@ -234,9 +234,7 @@ const DepartmentController = class DepartmentController extends DepartmentBD {
             boardId,
             team.name
           );
-          if (mainBoard) {
-            BoardController.createWebHook(teamData.id);
-          }
+          BoardController.createWebHook(teamData.id);
           return teamListIds.push({
             idInTrello: teamData.id,
             idInDB: team._id,
