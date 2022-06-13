@@ -25,6 +25,8 @@ export const io = new Server(http, {
     credentials: true,
   },
   transports: ["websocket", "polling"],
+  pingInterval: 1000,
+  pingTimeout: 1000,
 });
 AppSocket(io);
 
