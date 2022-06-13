@@ -74,15 +74,13 @@ export const webhookUpdateMoveTaskJob = (data: any) => {
             projectID: targetTask.projectId,
             adminUserID: projectData.adminId,
           });
-          io.on("connection", async (socket) => {
-            // send notification to all the admin
-            io.to("admin room").emit("notification update", createNotifi);
-            // send notification to specific project manager
-            io.to(`user-${projectData.projectManager}`).emit(
-              "notification update",
-              createNotifi
-            );
-          });
+          // send notification to all the admin
+          io.to("admin room").emit("notification update", createNotifi);
+          // send notification to specific project manager
+          io.to(`user-${projectData.projectManager}`).emit(
+            "notification update",
+            createNotifi
+          );
         }
       }
     } catch (error: any) {
