@@ -97,6 +97,15 @@ class TaskController extends TaskDB {
       });
       webhookUpdateMoveTaskJob(data);
       TaskQueue.start();
+      console.log(
+        await io.send({
+          function: "Move Task",
+          data: {
+            cardId: data.action.display.entities.card.id,
+            to: data?.action?.display?.entities?.listAfter?.text,
+          },
+        })
+      );
       await io.sockets.emit("Move Task", {
         cardId: data.action.display.entities.card.id,
         to: data?.action?.display?.entities?.listAfter?.text,
