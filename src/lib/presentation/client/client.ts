@@ -9,7 +9,9 @@ const ClientReq = class ClientReq extends ClientController {
   static async handleCreateClient(req: Request, res: Response) {
     try {
       let file: { image: { location: string }[] } | any = req.files;
-      req.body.image = file.image[0].location;
+      if(file.image){
+        req.body.image = file.image[0].location;
+      }
       let Client = await super.createClient(req.body);
       if (Client) {
         return res.status(200).send(Client);

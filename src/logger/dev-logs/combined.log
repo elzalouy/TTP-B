@@ -70266,3 +70266,184 @@
   level: 'info',
   timestamp: '2022-06-12 19:57:51'
 }
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-06-13 17:39:12'
+}
+{
+  message: {
+    handleCreateClientDataError: TypeError: Cannot read properties of undefined (reading '0')
+        at C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\src\lib\presentation\client\client.ts:13:36
+        at Generator.next (<anonymous>)
+        at C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\src\lib\presentation\client\client.ts:8:71
+        at new Promise (<anonymous>)
+        at __awaiter (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\src\lib\presentation\client\client.ts:4:12)
+        at handleCreateClient (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\src\lib\presentation\client\client.ts:24:16)
+        at Layer.handle [as handle_request] (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\express\lib\router\layer.js:95:5)
+        at next (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\express\lib\router\route.js:144:13)
+        at C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\multer\lib\make-middleware.js:53:37
+        at AsyncResource.runInAsyncScope (node:async_hooks:202:9)
+  },
+  level: 'error',
+  timestamp: '2022-06-13 17:39:24'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-06-13 17:40:04'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-06-13 17:40:47'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-06-13 17:41:27'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-06-13 17:41:55'
+}
+{
+  message: {
+    createclientDBError: MongoServerError: E11000 duplicate key error collection: TTP.clients index: clientName_1 dup key: { clientName: "Testing" }
+        at C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\mongodb\src\operations\insert.ts:85:25
+        at C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\mongodb\src\cmap\connection_pool.ts:482:13
+        at handleOperationResult (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\mongodb\src\sdam\server.ts:538:14)
+        at Connection.onMessage (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\mongodb\src\cmap\connection.ts:452:5)
+        at MessageStream.<anonymous> (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\mongodb\src\cmap\connection.ts:267:56)
+        at MessageStream.emit (node:events:527:28)
+        at MessageStream.emit (node:domain:475:12)
+        at processIncomingData (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\mongodb\src\cmap\message_stream.ts:168:12)
+        at MessageStream._write (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\mongodb\src\cmap\message_stream.ts:65:5)
+        at writeOrBuffer (node:internal/streams/writable:389:12) {
+      index: 0,
+      code: 11000,
+      keyPattern: { clientName: 1 },
+      keyValue: { clientName: 'Testing' },
+      [Symbol(errorLabels)]: Set(0) {}
+    }
+  },
+  level: 'error',
+  timestamp: '2022-06-13 17:42:08'
+}
+{
+  message: {
+    createclientDBError: MongoServerError: E11000 duplicate key error collection: TTP.clients index: clientName_1 dup key: { clientName: "Testing" }
+        at C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\mongodb\src\operations\insert.ts:85:25
+        at C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\mongodb\src\cmap\connection_pool.ts:482:13
+        at handleOperationResult (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\mongodb\src\sdam\server.ts:538:14)
+        at Connection.onMessage (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\mongodb\src\cmap\connection.ts:452:5)
+        at MessageStream.<anonymous> (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\mongodb\src\cmap\connection.ts:267:56)
+        at MessageStream.emit (node:events:527:28)
+        at MessageStream.emit (node:domain:475:12)
+        at processIncomingData (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\mongodb\src\cmap\message_stream.ts:168:12)
+        at MessageStream._write (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\mongodb\src\cmap\message_stream.ts:65:5)
+        at writeOrBuffer (node:internal/streams/writable:389:12) {
+      index: 0,
+      code: 11000,
+      keyPattern: { clientName: 1 },
+      keyValue: { clientName: 'Testing' },
+      [Symbol(errorLabels)]: Set(0) {}
+    }
+  },
+  level: 'error',
+  timestamp: '2022-06-13 17:45:17'
+}
+{
+  message: {
+    createclientDBError: MongoServerError: E11000 duplicate key error collection: TTP.clients index: clientName_1 dup key: { clientName: "Testing" }
+        at C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\mongodb\src\operations\insert.ts:85:25
+        at C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\mongodb\src\cmap\connection_pool.ts:482:13
+        at handleOperationResult (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\mongodb\src\sdam\server.ts:538:14)
+        at Connection.onMessage (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\mongodb\src\cmap\connection.ts:452:5)
+        at MessageStream.<anonymous> (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\mongodb\src\cmap\connection.ts:267:56)
+        at MessageStream.emit (node:events:527:28)
+        at MessageStream.emit (node:domain:475:12)
+        at processIncomingData (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\mongodb\src\cmap\message_stream.ts:168:12)
+        at MessageStream._write (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\mongodb\src\cmap\message_stream.ts:65:5)
+        at writeOrBuffer (node:internal/streams/writable:389:12) {
+      index: 0,
+      code: 11000,
+      keyPattern: { clientName: 1 },
+      keyValue: { clientName: 'Testing' },
+      [Symbol(errorLabels)]: Set(0) {}
+    }
+  },
+  level: 'error',
+  timestamp: '2022-06-13 17:45:27'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-06-13 17:47:34'
+}
+{
+  message: {
+    createclientDBError: MongoServerError: E11000 duplicate key error collection: TTP.clients index: clientName_1 dup key: { clientName: "Testing" }
+        at C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\mongodb\src\operations\insert.ts:85:25
+        at C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\mongodb\src\cmap\connection_pool.ts:482:13
+        at handleOperationResult (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\mongodb\src\sdam\server.ts:538:14)
+        at Connection.onMessage (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\mongodb\src\cmap\connection.ts:452:5)
+        at MessageStream.<anonymous> (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\mongodb\src\cmap\connection.ts:267:56)
+        at MessageStream.emit (node:events:527:28)
+        at MessageStream.emit (node:domain:475:12)
+        at processIncomingData (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\mongodb\src\cmap\message_stream.ts:168:12)
+        at MessageStream._write (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\mongodb\src\cmap\message_stream.ts:65:5)
+        at writeOrBuffer (node:internal/streams/writable:389:12) {
+      index: 0,
+      code: 11000,
+      keyPattern: { clientName: 1 },
+      keyValue: { clientName: 'Testing' },
+      [Symbol(errorLabels)]: Set(0) {}
+    }
+  },
+  level: 'error',
+  timestamp: '2022-06-13 17:47:45'
+}
+{
+  message: {
+    createclientDBError: MongoServerError: E11000 duplicate key error collection: TTP.clients index: clientName_1 dup key: { clientName: "Testing" }
+        at C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\mongodb\src\operations\insert.ts:85:25
+        at C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\mongodb\src\cmap\connection_pool.ts:482:13
+        at handleOperationResult (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\mongodb\src\sdam\server.ts:538:14)
+        at Connection.onMessage (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\mongodb\src\cmap\connection.ts:452:5)
+        at MessageStream.<anonymous> (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\mongodb\src\cmap\connection.ts:267:56)
+        at MessageStream.emit (node:events:527:28)
+        at MessageStream.emit (node:domain:475:12)
+        at processIncomingData (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\mongodb\src\cmap\message_stream.ts:168:12)
+        at MessageStream._write (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\mongodb\src\cmap\message_stream.ts:65:5)
+        at writeOrBuffer (node:internal/streams/writable:389:12) {
+      index: 0,
+      code: 11000,
+      keyPattern: { clientName: 1 },
+      keyValue: { clientName: 'Testing' },
+      [Symbol(errorLabels)]: Set(0) {}
+    }
+  },
+  level: 'error',
+  timestamp: '2022-06-13 17:50:35'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-06-13 17:51:15'
+}
