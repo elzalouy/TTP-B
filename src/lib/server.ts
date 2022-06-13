@@ -24,7 +24,7 @@ export const io = new Server(http, {
     methods: ["GET", "POST"],
     credentials: true,
   },
-  transports: ["websocket"],
+  transports: ["websocket", "polling"],
 });
 AppSocket(io);
 

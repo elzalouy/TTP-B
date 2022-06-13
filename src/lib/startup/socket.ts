@@ -13,6 +13,7 @@ function appSocket(
       socket.on("disconnect", () =>
         console.log("Client disconnected No,", --clients)
       );
+      console.log(io.allSockets());
 
       //* this for admins role only
       socket.on("joined admin", () => {

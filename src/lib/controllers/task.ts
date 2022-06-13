@@ -118,6 +118,7 @@ class TaskController extends TaskDB {
       logger.error({ updateTaskError: error });
     }
   }
+
   static async __CreateNewTask(data: TaskData, files: Express.Multer.File[]) {
     try {
       let createdCard: { id: string } | any =
@@ -172,6 +173,7 @@ class TaskController extends TaskDB {
       logger.error({ DeleteTasksByProjectId: error });
     }
   }
+
   static async __deleteTasksWhere(data: TaskData) {
     try {
       // let tasks = await super.getTasksByIdsDB;
@@ -182,6 +184,7 @@ class TaskController extends TaskDB {
       logger.error({ DeleteTasksWhereError: error });
     }
   }
+
   static async __deleteTasks(ids: string[]) {
     try {
       let tasks = await super.getTasksByIdsDB(ids);
@@ -193,6 +196,7 @@ class TaskController extends TaskDB {
       logger.error({ DeleteTasksByProjectId: error });
     }
   }
+
   static async __deleteTask(id: string) {
     try {
       let task = await super.getTaskDB(id);
@@ -205,6 +209,7 @@ class TaskController extends TaskDB {
       logger.error({ deleteTaskError: error });
     }
   }
+
   static async __downloadAttachment(cardId: string, attachmentId: string) {
     try {
       let response = await BoardController.downloadAttachment(
@@ -217,4 +222,5 @@ class TaskController extends TaskDB {
     }
   }
 }
+
 export default TaskController;
