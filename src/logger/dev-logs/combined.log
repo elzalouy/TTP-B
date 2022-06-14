@@ -70471,3 +70471,84 @@
   timestamp: '2022-06-13 17:51:15'
 >>>>>>> ed55fac8924859df82cab6724dd5e7f1bfa7d8a6
 }
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-06-13 19:11:15'
+}
+{
+  message: { notificationData: { _id: '62746010736e8ea96f53ea54', role: 'OM' } },
+  level: 'info',
+  timestamp: '2022-06-14 15:39:49'
+}
+{
+  message: {
+    data: { id: '62746010736e8ea96f53ea54', skip: '0', limit: undefined }
+  },
+  level: 'info',
+  timestamp: '2022-06-14 15:39:49'
+}
+{
+  message: {
+    Notification: {
+      acknowledged: true,
+      modifiedCount: 8,
+      upsertedId: null,
+      upsertedCount: 0,
+      matchedCount: 8
+    }
+  },
+  level: 'info',
+  timestamp: '2022-06-14 15:39:49'
+}
+{
+  message: {
+    data: { id: '62746010736e8ea96f53ea54', skip: '4', limit: undefined }
+  },
+  level: 'info',
+  timestamp: '2022-06-14 15:39:50'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-06-14 16:09:35'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-06-14 16:13:52'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-06-14 16:15:43'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-06-14 17:09:22'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-06-14 17:29:58'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-06-14 17:30:27'
+}
