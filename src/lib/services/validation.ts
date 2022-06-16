@@ -141,12 +141,23 @@ export const editTaskSchema = Joi.object({
     "string.empty": "Team should be selected",
     "string.min": "Team should be selected",
   }),
-  status: Joi.string().valid("Tasks Board", "inProgress").optional().messages({
-    "string.base": "Status is required",
-    "string.empty": "Status should be string with min 4 chars",
-    "string.min": "Status length should be Min 4 chars",
-    "string.max": "Status length should be Max 20 chars",
-  }),
+  status: Joi.string()
+    .valid(
+      "Tasks Board",
+      "inProgress",
+      "Review",
+      "Cancled",
+      "Done",
+      "Late",
+      "Shared"
+    )
+    .optional()
+    .messages({
+      "string.base": "Status is required",
+      "string.empty": "Status should be string with min 4 chars",
+      "string.min": "Status length should be Min 4 chars",
+      "string.max": "Status length should be Max 20 chars",
+    }),
   deadline: Joi.date().optional().allow(null, "").messages({
     "any.required": "Task Deadline is required",
   }),
@@ -158,4 +169,5 @@ export const editTaskSchema = Joi.object({
     "any.required": "Department is required",
   }),
   attachedFiles: Joi.array().optional().allow(null),
+  description: Joi.string().optional().allow(""),
 });

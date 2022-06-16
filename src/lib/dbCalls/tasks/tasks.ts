@@ -201,11 +201,12 @@ class TaskDB {
     try {
       let id = data.id;
       delete data.id;
+      console.log("task data", data);
       let task = await Tasks.findOne({ _id: id });
       if (!task) return taskNotFoundError;
       if (data?.attachedFiles?.length > 0) {
         data.attachedFiles = [...task.attachedFiles, ...data.attachedFiles];
-      }
+      } else data.attachedFiles = task.attachedFiles;
       if (data?.deleteFiles && [...data?.deleteFiles].length > 0) {
         data.attachedFiles = data.attachedFiles.filter(
           (item) =>

@@ -142,8 +142,6 @@ class TaskController extends TaskDB {
       if (files) {
         data = await this.__createTaskAttachment(files, data);
       }
-      console.log("data after attachments", data);
-
       // update data in the db in dbCalls
       let task = await super.updateTaskDB(data);
       return task;
@@ -174,7 +172,7 @@ class TaskController extends TaskDB {
             url: item.url,
           });
         });
-      }
+      } else delete data.attachedFiles;
       deleteAll();
       return data;
     } catch (error) {
