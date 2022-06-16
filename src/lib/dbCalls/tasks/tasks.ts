@@ -1,10 +1,15 @@
-import { TaskInfo, TasksStatistics } from "./../../types/model/tasks";
+import {
+  AttachmentSchema,
+  TaskInfo,
+  TasksStatistics,
+} from "./../../types/model/tasks";
 import logger from "../../../logger";
 import Tasks from "../../models/task";
 import { TaskData } from "../../types/model/tasks";
 import _ from "lodash";
 import mongoose from "mongoose";
 import Department from "../../models/Department";
+import { taskNotFoundError } from "../../types/controller/Tasks";
 class TaskDB {
   static async createTaskDB(data: TaskData) {
     return await TaskDB.__createTask(data);
@@ -192,16 +197,29 @@ class TaskDB {
       logger.error({ deleteTaskDBError: error });
     }
   }
-  static async __updateTask(data: any) {
+  static async __updateTask(data: TaskData) {
     try {
       let id = data.id;
       delete data.id;
-      let task = await Tasks.findByIdAndUpdate(
-        { _id: id },
-        { ...data },
-        { new: true, lean: true }
-      );
-      return task;
+      let task = await Tasks.findOne({ _id: id });
+      if (!task) return taskNotFoundError;
+      if (data?.attachedFiles?.length > 0) {
+        data.attachedFiles = [...task.attachedFiles, ...data.attachedFiles];
+      }
+      if (data?.deleteFiles && [...data?.deleteFiles].length > 0) {
+        data.attachedFiles = data.attachedFiles.filter(
+          (item) =>
+            [...data.deleteFiles].findIndex(
+              (file) => file.trelloId === item.trelloId
+            ) < 0
+        );
+      }
+      delete data?.deleteFiles;
+      let update = await Tasks.findByIdAndUpdate(id, data, {
+        lean: true,
+        new: true,
+      });
+      return { error: null, task: update };
     } catch (error) {
       logger.error({ updateTaskDBError: error });
     }

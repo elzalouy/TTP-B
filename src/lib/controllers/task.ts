@@ -6,18 +6,21 @@ import {
 import logger from "../../logger";
 import TaskDB from "../dbCalls/tasks/tasks";
 import BoardController from "./boards";
-import NotificationController from "./notification";
 import { io } from "../server";
-import ProjectDB from "../dbCalls/project/project";
 import { deleteAll } from "../services/upload";
 import DepartmentBD from "../dbCalls/department/department";
 import {
   moveTaskJob,
   TaskQueue,
+  updateCardJob,
   webhookUpdateMoveTaskJob,
 } from "../background/taskQueue";
-import { webhookUpdateInterface } from "../types/controller/Tasks";
-
+import {
+  deleteFilesError,
+  provideCardIdError,
+  webhookUpdateInterface,
+} from "../types/controller/Tasks";
+import { taskResponse } from "../types/controller/Tasks";
 class TaskController extends TaskDB {
   static async getTasks(data: TaskData) {
     return await TaskController.__getTasks(data);
@@ -25,8 +28,8 @@ class TaskController extends TaskDB {
   static async createTask(data: TaskData, files: any) {
     return await TaskController.__CreateNewTask(data, files);
   }
-  static async updateTask(data: object) {
-    return await TaskController.__updateTaskData(data);
+  static async updateTask(data: object, files: any) {
+    return await TaskController.__updateTaskData(data, files);
   }
   static async webhookUpdate(data: webhookUpdateInterface) {
     return await TaskController.__webhookUpdate(data);
@@ -91,13 +94,11 @@ class TaskController extends TaskDB {
 
   static async __webhookUpdate(data: webhookUpdateInterface) {
     try {
-      console.log(data.action.data, data.action.display.entities);
       logger.info({
         afterList: data?.action?.display?.entities?.listAfter?.text,
       });
       webhookUpdateMoveTaskJob(data);
       TaskQueue.start();
-      console.log(io.allSockets());
       await io.send({
         function: "Move Task",
         data: {
@@ -114,19 +115,72 @@ class TaskController extends TaskDB {
     }
   }
 
-  static async __updateTaskData(data: any) {
+  static async __updateTaskData(data: TaskData, files: Express.Multer.File[]) {
     try {
-      if (data.idModel) {
-        logger.info({ webhookCall: data });
-      } else {
-        let task = await super.updateTaskDB(data);
-        return task;
+      if (!data.cardId) return provideCardIdError;
+      // recieve data
+
+      // call a background job for updating the trello card data.
+      updateCardJob(data);
+      TaskQueue.start();
+
+      // wait for both update date in db and upload,delete files to trello
+      // if there are deleted files, then delete it from the db
+
+      let deleteFiles: AttachmentSchema[];
+      if (data?.deleteFiles) {
+        deleteFiles = JSON.parse(data?.deleteFiles);
+        data.deleteFiles = deleteFiles;
+        if (deleteFiles.length > 0) {
+          await deleteFiles?.forEach(async (item) => {
+            if (!item.trelloId) return deleteFilesError;
+            await BoardController.__deleteAtachment(data.cardId, item.trelloId);
+          });
+        }
       }
+      // if there are uploading files, upload it in the controller layer.
+      if (files) {
+        data = await this.__createTaskAttachment(files, data);
+      }
+      console.log("data after attachments", data);
+
+      // update data in the db in dbCalls
+      let task = await super.updateTaskDB(data);
+      return task;
     } catch (error) {
       logger.error({ updateTaskError: error });
     }
   }
-
+  // todo add one static function for handling create attachment
+  static async __createTaskAttachment(
+    files: Express.Multer.File[],
+    data: TaskData
+  ) {
+    try {
+      if (files) {
+        let newAttachments = await files.map(async (file) => {
+          return await BoardController.createAttachmentOnCard(
+            data.cardId,
+            file
+          );
+        });
+        let attachedFiles = await Promise.all(newAttachments);
+        data.attachedFiles = [];
+        attachedFiles.forEach((item) => {
+          data.attachedFiles.push({
+            trelloId: item.id,
+            name: item.fileName,
+            mimeType: item.mimeType,
+            url: item.url,
+          });
+        });
+      }
+      deleteAll();
+      return data;
+    } catch (error) {
+      logger.error({ createTaskAttachmentError: error });
+    }
+  }
   static async __CreateNewTask(data: TaskData, files: Express.Multer.File[]) {
     try {
       let createdCard: { id: string } | any =
@@ -143,8 +197,8 @@ class TaskController extends TaskDB {
                 file
               );
               newAttachments.push({
-                name: file.filename,
-                mimeType: attachment?.mimeType,
+                name: attachment.fileName,
+                mimeType: attachment.mimeType,
                 trelloId: attachment.id,
                 url: attachment.url,
               });
@@ -152,9 +206,8 @@ class TaskController extends TaskDB {
             })
           );
         }
-        deleteAll();
-        return await super.createTaskDB(data);
       } else throw "Error while creating Card in Trello";
+      return await super.createTaskDB(data);
     } catch (error) {
       logger.error({ getTeamsError: error });
     }

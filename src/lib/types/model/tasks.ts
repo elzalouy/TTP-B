@@ -30,6 +30,7 @@ export interface TasksStatistics {
 }
 export interface TaskData {
   _id?: string;
+  id?: string;
   name?: string;
   projectId?: string;
   categoryId?: string;
@@ -52,6 +53,8 @@ export interface TaskData {
   description?: string;
   lastMove?: String;
   lastMoveDate?: String;
+  // edit task files only
+  deleteFiles?: AttachmentSchema[] | any;
 }
 export interface AttachmentResponse {
   id: string;
