@@ -5,6 +5,7 @@ import NotificationController from "../controllers/notification";
 import ProjectDB from "../dbCalls/project/project";
 import TaskDB from "../dbCalls/tasks/tasks";
 import { io } from "../server";
+import { AttachmentSchema, TaskData } from "../types/model/tasks";
 
 export const TaskQueue = queue({ results: [] });
 export function moveTaskJob(listId: string, cardId: string, status: string) {
@@ -85,7 +86,21 @@ export const webhookUpdateMoveTaskJob = (data: any) => {
       }
     } catch (error: any) {
       cb(new Error(error), null);
-      logger.error({ webHookUpdateMoveTaskJobError: error });
+      logger.ercror({ webHookUpdateMoveTaskJobError: error });
+    }
+  });
+};
+export const updateCardJob = (data: TaskData) => {
+  TaskQueue.push(async (cb) => {
+    try {
+      let response = await BoardController.__updateCard(data.cardId, {
+        name: data.name,
+        desc: data?.description ? data?.description : "",
+      });
+      cb(null, response);
+    } catch (error: any) {
+      cb(error, null);
+      logger.ercror({ updateCardDataError: error });
     }
   });
 };

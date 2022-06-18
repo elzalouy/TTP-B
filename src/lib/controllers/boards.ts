@@ -1,13 +1,15 @@
 import { MemberType } from "./../types/model/User";
 import { trelloApi } from "../services/trelloApi";
 import logger from "../../logger";
-import fetch from "node-fetch";
+import fetch, { RequestInit } from "node-fetch";
 import Config from "config";
 import { config } from "dotenv";
 import request from "request";
 import fs from "fs";
 import { Response } from "express";
 import { AttachmentResponse, TaskInfo } from "../types/model/tasks";
+import { method } from "lodash";
+import { updateCardResponse } from "../types/controller/Tasks";
 var FormData = require("form-data");
 config();
 
@@ -112,10 +114,8 @@ class BoardController {
         method: "DELETE",
       })
         .then((response) => {
-          console.log(`Response: ${response.status} ${response.statusText}`);
           return response.text();
         })
-        .then((text) => console.log(text))
         .catch((err) => logger.info("error in delete board", err));
     } catch (error) {
       logger.error({ deleteBoardError: error });
@@ -201,6 +201,22 @@ class BoardController {
       logger.error({ createAttachmentOnCardError: error });
     }
   }
+  static async __deleteAtachment(cardId: string, attachmentId: string) {
+    try {
+      let endpoint = trelloApi(`cards/${cardId}/attachments/${attachmentId}?`);
+      let response: any;
+      await fetch(endpoint, { method: "DELETE" })
+        .then(async (res) => {
+          response = await res.json();
+        })
+        .catch((err) => {
+          throw err;
+        });
+      return response;
+    } catch (error) {
+      logger.error({ deleteAttachmentFileError: error });
+    }
+  }
 
   static async __createCard(listId: string, cardName: string) {
     try {
@@ -214,7 +230,6 @@ class BoardController {
         },
       });
       if (cardResult.status !== 200 && cardResult.status !== 201) {
-        console.log(cardResult);
       }
       return cardResult.json();
     } catch (error) {
@@ -357,7 +372,6 @@ class BoardController {
       let api = trelloApi(
         `cards/${cardId}/attachments/${attachmentId}?fields=url&`
       );
-      console.log(api);
       let Response: any = null;
       await fetch(api, {
         method: "GET",
@@ -372,6 +386,33 @@ class BoardController {
       logger.error({ downloadAttachment: error });
     }
   }
+  static async __updateCard(
+    cardId: string,
+    data: { name: string; desc: string }
+  ) {
+    try {
+      let params: RequestInit = {
+        method: "PUT",
+        headers: {
+          Accept: "*/*",
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ name: data.name, desc: data.desc }),
+      };
+      let api = trelloApi(`cards/${cardId}?`);
+      let response = await fetch(api, params)
+        .then(async (res) => {
+          let result: updateCardResponse = await res.json();
+          console.log("update card result", result);
+          return result;
+        })
+        .catch((err) => {
+          throw err;
+        });
+      return response;
+    } catch (error) {
+      logger.error({ __updateCardError: error });
+    }
+  }
 }
-
 export default BoardController;

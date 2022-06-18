@@ -3,8 +3,11 @@ import { Express, Request, Response } from "express";
 import logger from "../../../logger";
 import TaskController from "../../controllers/task";
 import { TaskData } from "../../types/model/tasks";
-import { createTaskSchema } from "../../services/validation";
-import { webhookUpdateInterface } from "../../types/controller/Tasks";
+import { createTaskSchema, editTaskSchema } from "../../services/validation";
+import {
+  taskResponse,
+  webhookUpdateInterface,
+} from "../../types/controller/Tasks";
 
 const TaskReq = class TaskReq extends TaskController {
   static async handleCreateCard(req: Request, res: Response) {
@@ -12,7 +15,7 @@ const TaskReq = class TaskReq extends TaskController {
       let TaskData: TaskData = req.body;
       if (TaskData.teamId === "") TaskData.teamId = null;
       let isValid = createTaskSchema.validate(TaskData);
-      if (isValid.error) return res.status(400).send(isValid.error.details);
+      if (isValid.error) return res.status(400).send(isValid.error.details[0]);
       let task = await super.createTask(TaskData, req.files);
       if (task) {
         return res.send(task);
@@ -22,22 +25,25 @@ const TaskReq = class TaskReq extends TaskController {
     } catch (error: any) {
       console.log(new Error(error).message);
       logger.error({ handleCreateCardError: error });
-      return res.status(500).send([{ message: error?.message }]);
     }
   }
 
   static async handleUpdateCard(req: Request, res: Response) {
     try {
       let TaskData: any = req.body;
-      let task = await super.updateTask(TaskData);
-      if (task) {
-        return res.send(task);
+      let files = req.files;
+      let validate = editTaskSchema.validate(TaskData);
+      if (validate.error)
+        return res.status(400).send(validate.error.details[0]);
+      let task: taskResponse = await super.updateTask(TaskData, files);
+      if (task && task?.error) res.status(400).send(task.error);
+      if (task?.task?._id) {
+        return res.send(task.task);
       } else {
         return res.status(400).send(customeError("update_task_error", 400));
       }
     } catch (error) {
       logger.error({ handleUpdateCardError: error });
-      return res.status(500).send(customeError("server_error", 500));
     }
   }
 
@@ -48,7 +54,6 @@ const TaskReq = class TaskReq extends TaskController {
       return res.status(200).send(task);
     } catch (error) {
       logger.error({ handleWebhookUpdateCardError: error });
-      return res.status(500).send(customeError("server_error", 500));
     }
   }
   static async handleGetTasks(req: Request, res: Response) {
@@ -59,7 +64,6 @@ const TaskReq = class TaskReq extends TaskController {
       else res.status(400).send(customeError("get_tasks_error", 400));
     } catch (error) {
       logger.error({ handleGetTasksError: error });
-      return res.status(500).send(customeError("server_error", 500));
     }
   }
   static async handleFilterTasks(req: Request, res: Response) {
@@ -70,7 +74,6 @@ const TaskReq = class TaskReq extends TaskController {
       else res.status(400).send(customeError("get_tasks_error", 400));
     } catch (error) {
       logger.error({ handleGetTasksError: error });
-      return res.status(500).send(customeError("server_error", 500));
     }
   }
   static async handleMoveCard(req: Request, res: Response) {
