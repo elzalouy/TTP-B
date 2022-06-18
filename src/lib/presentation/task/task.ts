@@ -31,6 +31,7 @@ const TaskReq = class TaskReq extends TaskController {
   static async handleUpdateCard(req: Request, res: Response) {
     try {
       let TaskData: any = req.body;
+      if (TaskData.teamId === "") TaskData.teamId = null;
       let files = req.files;
       let validate = editTaskSchema.validate(TaskData);
       if (validate.error)
