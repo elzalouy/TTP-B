@@ -13,7 +13,7 @@ function appSocket(
       socket.on("disconnect", () =>
         console.log("Client disconnected No,", --clients)
       );
-      console.log(io.allSockets());
+      console.log("listening to move task, ", io.listeners("Move Task"));
       //* this for admins role only
       socket.on("joined admin", () => {
         // logger.info({ data });

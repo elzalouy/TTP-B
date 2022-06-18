@@ -99,10 +99,16 @@ class TaskController extends TaskDB {
       });
       webhookUpdateMoveTaskJob(data);
       TaskQueue.start();
-      io.sockets.emit("Move Task", {
-        cardId: data.action.display.entities.card.id,
-        to: data?.action?.display?.entities?.listAfter?.text,
+      io.on("connection", (socket) => {
+        socket.broadcast.emit("Move Task", {
+          cardId: data.action.display.entities.card.id,
+          to: data?.action?.display?.entities?.listAfter?.text,
+        });
       });
+      // io.sockets.emit("Move Task", {
+      //   cardId: data.action.display.entities.card.id,
+      //   to: data?.action?.display?.entities?.listAfter?.text,
+      // });
     } catch (error) {
       logger.error({ webhookUpdateError: error });
     }

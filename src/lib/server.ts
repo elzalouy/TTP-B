@@ -23,6 +23,7 @@ export const io = new Server(http, {
     origin: config.get("FrontEndUrl"),
   },
   transports: ["websocket"],
+  pingInterval: 1000,
 });
 AppSocket(io);
 
