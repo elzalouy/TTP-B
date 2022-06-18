@@ -6,7 +6,6 @@ const ClientSchema: Schema = new Schema<Client>(
     clientName: {
       type: String,
       required: true,
-      unique: true,
     },
     image: {
       type: Object,

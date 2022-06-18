@@ -205,7 +205,10 @@ class TaskDB {
       let task = await Tasks.findOne({ _id: id });
       if (!task) return taskNotFoundError;
       if (data?.attachedFiles?.length > 0) {
-        data.attachedFiles = [...task.attachedFiles, ...data.attachedFiles];
+        data.attachedFiles =
+          task?.attachedFiles?.length > 0
+            ? [...task.attachedFiles, ...data.attachedFiles]
+            : [...data.attachedFiles];
       } else data.attachedFiles = task.attachedFiles;
       if (data?.deleteFiles && [...data?.deleteFiles].length > 0) {
         data.attachedFiles = data.attachedFiles.filter(

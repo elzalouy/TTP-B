@@ -80,6 +80,7 @@ export interface AttachmentResponse {
   limits: any;
 }
 export interface AttachmentSchema {
+  _id?: string | ObjectId;
   name?: string;
   trelloId: string;
   mimeType: string;

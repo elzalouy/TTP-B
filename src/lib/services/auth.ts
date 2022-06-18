@@ -31,7 +31,7 @@ export const createJwtToken: (id: string) => string = (id: string) => {
     },
     process.env.JWT_SECRETE,
     {
-      expiresIn: 365 * 24 * 60 * 60, // Our token expires after one day
+      expiresIn: 24 * 60 * 60, // Our token expires after one day
       audience: process.env.JWT_AUDIENCE,
       issuer: process.env.JWT_ISSUE,
     }
