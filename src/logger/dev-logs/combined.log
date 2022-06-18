@@ -4171,3 +4171,37 @@
   level: 'info',
   timestamp: '2022-06-18 14:05:22'
 }
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-06-18 14:14:02'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-06-18 14:15:12'
+}
+{
+  message: { afterList: 'Not Clear' },
+  level: 'info',
+  timestamp: '2022-06-18 14:20:30'
+}
+{
+  message: { afterList: 'Not Clear' },
+  level: 'info',
+  timestamp: '2022-06-18 14:20:30'
+}
+{
+  message: { afterList: 'Cancled' },
+  level: 'info',
+  timestamp: '2022-06-18 14:20:40'
+}
+{
+  message: { afterList: 'Cancled' },
+  level: 'info',
+  timestamp: '2022-06-18 14:20:40'
+}
