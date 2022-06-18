@@ -3728,24 +3728,396 @@
     db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
   },
   level: 'info',
+<<<<<<< HEAD
+  timestamp: '2022-06-18 10:47:54'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-06-18 12:10:51'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-06-18 12:13:20'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-06-18 12:16:53'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-06-18 12:18:04'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-06-18 12:26:46'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-06-18 12:27:20'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-06-18 12:28:20'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-06-18 12:31:56'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-06-18 12:38:46'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-06-18 12:44:02'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-06-18 13:26:57'
+=======
   timestamp: '2022-06-14 17:54:08'
+>>>>>>> 25f5feb61a804c6647d9a99a342961d28f9e5253
 }
 {
   message: {
     borderData: Promise { <pending> },
+<<<<<<< HEAD
+    createBoardApi: 'https://api.trello.com/1/boards/?name=local&prefs_background=blue&defaultLists=false&key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68'
+  },
+  level: 'info',
+  timestamp: '2022-06-18 13:27:41'
+=======
     createBoardApi: 'https://api.trello.com/1/boards/?name=Testing&prefs_background=green&defaultLists=false&key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68'
   },
   level: 'info',
   timestamp: '2022-06-14 18:33:15'
+>>>>>>> 25f5feb61a804c6647d9a99a342961d28f9e5253
 }
 {
   message: { removeWebhookSucced: 'done' },
   level: 'info',
+<<<<<<< HEAD
+  timestamp: '2022-06-18 13:27:46'
+}
+{
+  message: { afterList: undefined },
+  level: 'info',
+  timestamp: '2022-06-18 13:27:47'
+}
+{
+  message: {
+    webhookUpdateError: TypeError: Cannot read properties of undefined (reading 'display')
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:103:29)
+        at Generator.next (<anonymous>)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:8:71
+        at new Promise (<anonymous>)
+        at __awaiter (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:4:12)
+        at Function.__webhookUpdate (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:104:16)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:35:33
+        at Generator.next (<anonymous>)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:8:71
+        at new Promise (<anonymous>)
+  },
+  level: 'error',
+  timestamp: '2022-06-18 13:27:47'
+}
+{
+  message: { afterList: undefined },
+  level: 'info',
+  timestamp: '2022-06-18 13:27:47'
+}
+{
+  message: {
+    webhookUpdateError: TypeError: Cannot read properties of undefined (reading 'display')
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:103:29)
+        at Generator.next (<anonymous>)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:8:71
+        at new Promise (<anonymous>)
+        at __awaiter (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:4:12)
+        at Function.__webhookUpdate (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:104:16)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:35:33
+        at Generator.next (<anonymous>)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:8:71
+        at new Promise (<anonymous>)
+  },
+  level: 'error',
+  timestamp: '2022-06-18 13:27:47'
+}
+{
+  message: { afterList: undefined },
+  level: 'info',
+  timestamp: '2022-06-18 13:27:47'
+}
+{
+  message: {
+    webhookUpdateError: TypeError: Cannot read properties of undefined (reading 'display')
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:103:29)
+        at Generator.next (<anonymous>)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:8:71
+        at new Promise (<anonymous>)
+        at __awaiter (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:4:12)
+        at Function.__webhookUpdate (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:104:16)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:35:33
+        at Generator.next (<anonymous>)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:8:71
+        at new Promise (<anonymous>)
+  },
+  level: 'error',
+  timestamp: '2022-06-18 13:27:47'
+}
+{
+  message: { afterList: undefined },
+  level: 'info',
+  timestamp: '2022-06-18 13:27:47'
+}
+{
+  message: {
+    webhookUpdateError: TypeError: Cannot read properties of undefined (reading 'display')
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:103:29)
+        at Generator.next (<anonymous>)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:8:71
+        at new Promise (<anonymous>)
+        at __awaiter (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:4:12)
+        at Function.__webhookUpdate (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:104:16)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:35:33
+        at Generator.next (<anonymous>)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:8:71
+        at new Promise (<anonymous>)
+  },
+  level: 'error',
+  timestamp: '2022-06-18 13:27:47'
+}
+{
+  message: { afterList: undefined },
+  level: 'info',
+  timestamp: '2022-06-18 13:27:47'
+}
+{
+  message: {
+    webhookUpdateError: TypeError: Cannot read properties of undefined (reading 'display')
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:103:29)
+        at Generator.next (<anonymous>)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:8:71
+        at new Promise (<anonymous>)
+        at __awaiter (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:4:12)
+        at Function.__webhookUpdate (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:104:16)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:35:33
+        at Generator.next (<anonymous>)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:8:71
+        at new Promise (<anonymous>)
+  },
+  level: 'error',
+  timestamp: '2022-06-18 13:27:47'
+}
+{
+  message: { afterList: undefined },
+  level: 'info',
+  timestamp: '2022-06-18 13:27:47'
+}
+{
+  message: {
+    webhookUpdateError: TypeError: Cannot read properties of undefined (reading 'display')
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:103:29)
+        at Generator.next (<anonymous>)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:8:71
+        at new Promise (<anonymous>)
+        at __awaiter (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:4:12)
+        at Function.__webhookUpdate (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:104:16)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:35:33
+        at Generator.next (<anonymous>)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:8:71
+        at new Promise (<anonymous>)
+  },
+  level: 'error',
+  timestamp: '2022-06-18 13:27:47'
+}
+{
+  message: { afterList: undefined },
+  level: 'info',
+  timestamp: '2022-06-18 13:27:47'
+}
+{
+  message: {
+    webhookUpdateError: TypeError: Cannot read properties of undefined (reading 'display')
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:103:29)
+        at Generator.next (<anonymous>)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:8:71
+        at new Promise (<anonymous>)
+        at __awaiter (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:4:12)
+        at Function.__webhookUpdate (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:104:16)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:35:33
+        at Generator.next (<anonymous>)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:8:71
+        at new Promise (<anonymous>)
+  },
+  level: 'error',
+  timestamp: '2022-06-18 13:27:47'
+=======
   timestamp: '2022-06-14 18:33:18'
+>>>>>>> 25f5feb61a804c6647d9a99a342961d28f9e5253
 }
 {
   message: { webhookCreateResult: 'webhook done' },
   level: 'info',
+<<<<<<< HEAD
+  timestamp: '2022-06-18 13:27:48'
+}
+{
+  message: { afterList: undefined },
+  level: 'info',
+  timestamp: '2022-06-18 13:31:23'
+}
+{
+  message: { afterList: undefined },
+  level: 'info',
+  timestamp: '2022-06-18 13:31:28'
+}
+{
+  message: { afterList: 'Review' },
+  level: 'info',
+  timestamp: '2022-06-18 13:31:51'
+}
+{
+  message: { afterList: 'Review' },
+  level: 'info',
+  timestamp: '2022-06-18 13:31:51'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-06-18 13:36:45'
+}
+{
+  message: { afterList: undefined },
+  level: 'info',
+  timestamp: '2022-06-18 13:37:40'
+}
+{
+  message: { afterList: undefined },
+  level: 'info',
+  timestamp: '2022-06-18 13:37:46'
+}
+{
+  message: { afterList: undefined },
+  level: 'info',
+  timestamp: '2022-06-18 13:38:23'
+}
+{
+  message: { afterList: undefined },
+  level: 'info',
+  timestamp: '2022-06-18 13:39:11'
+}
+{
+  message: { afterList: undefined },
+  level: 'info',
+  timestamp: '2022-06-18 13:39:51'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-06-18 13:41:01'
+}
+{
+  message: { afterList: 'inProgress' },
+  level: 'info',
+  timestamp: '2022-06-18 13:41:49'
+}
+{
+  message: { afterList: 'inProgress' },
+  level: 'info',
+  timestamp: '2022-06-18 13:41:49'
+}
+{
+  message: { afterList: undefined },
+  level: 'info',
+  timestamp: '2022-06-18 13:42:45'
+}
+{
+  message: { afterList: undefined },
+  level: 'info',
+  timestamp: '2022-06-18 13:42:57'
+}
+{
+  message: { afterList: undefined },
+  level: 'info',
+  timestamp: '2022-06-18 13:43:13'
+}
+{
+  message: { afterList: 'Not Clear' },
+  level: 'info',
+  timestamp: '2022-06-18 13:43:25'
+}
+{
+  message: { afterList: 'Not Clear' },
+  level: 'info',
+  timestamp: '2022-06-18 13:43:25'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-06-18 13:46:11'
+}
+{
+  message: { afterList: undefined },
+  level: 'info',
+  timestamp: '2022-06-18 13:47:32'
+}
+{
+  message: {
+    webhookUpdateError: TypeError: Cannot read properties of undefined (reading 'id')
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:103:51)
+        at Generator.next (<anonymous>)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:8:71
+        at new Promise (<anonymous>)
+        at __awaiter (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:4:12)
+        at Function.__webhookUpdate (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:104:16)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:35:33
+        at Generator.next (<anonymous>)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:8:71
+        at new Promise (<anonymous>)
+  },
+  level: 'error',
+  timestamp: '2022-06-18 13:47:32'
+=======
   timestamp: '2022-06-14 18:33:19'
 }
 {
@@ -5655,19 +6027,82 @@
   },
   level: 'info',
   timestamp: '2022-06-15 12:52:24'
+>>>>>>> 25f5feb61a804c6647d9a99a342961d28f9e5253
 }
 {
   message: {
     db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
   },
   level: 'info',
+<<<<<<< HEAD
+  timestamp: '2022-06-18 13:59:25'
+=======
   timestamp: '2022-06-16 05:10:03'
+>>>>>>> 25f5feb61a804c6647d9a99a342961d28f9e5253
 }
 {
   message: {
     db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
   },
   level: 'info',
+<<<<<<< HEAD
+  timestamp: '2022-06-18 14:00:39'
+}
+{
+  message: { afterList: undefined },
+  level: 'info',
+  timestamp: '2022-06-18 14:02:03'
+}
+{
+  message: { afterList: 'Review' },
+  level: 'info',
+  timestamp: '2022-06-18 14:02:16'
+}
+{
+  message: { afterList: 'Review' },
+  level: 'info',
+  timestamp: '2022-06-18 14:02:16'
+}
+{
+  message: { afterList: 'Shared' },
+  level: 'info',
+  timestamp: '2022-06-18 14:02:29'
+}
+{
+  message: { afterList: 'Shared' },
+  level: 'info',
+  timestamp: '2022-06-18 14:02:29'
+}
+{
+  message: { afterList: 'Done' },
+  level: 'info',
+  timestamp: '2022-06-18 14:03:04'
+}
+{
+  message: { afterList: 'Done' },
+  level: 'info',
+  timestamp: '2022-06-18 14:03:04'
+}
+{
+  message: { afterList: 'Not Clear' },
+  level: 'info',
+  timestamp: '2022-06-18 14:03:15'
+}
+{
+  message: { afterList: 'Not Clear' },
+  level: 'info',
+  timestamp: '2022-06-18 14:03:15'
+}
+{
+  message: { afterList: 'Done' },
+  level: 'info',
+  timestamp: '2022-06-18 14:05:22'
+}
+{
+  message: { afterList: 'Done' },
+  level: 'info',
+  timestamp: '2022-06-18 14:05:22'
+=======
   timestamp: '2022-06-16 05:22:46'
 }
 {
@@ -7091,27 +7526,250 @@
   },
   level: 'error',
   timestamp: '2022-06-16 17:47:54'
+>>>>>>> 25f5feb61a804c6647d9a99a342961d28f9e5253
 }
 {
   message: {
     db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
   },
   level: 'info',
+<<<<<<< HEAD
+  timestamp: '2022-06-18 14:14:02'
+=======
   timestamp: '2022-06-17 19:46:23'
+>>>>>>> 25f5feb61a804c6647d9a99a342961d28f9e5253
 }
 {
   message: {
     db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
   },
   level: 'info',
+<<<<<<< HEAD
+  timestamp: '2022-06-18 14:15:12'
+}
+{
+  message: { afterList: 'Not Clear' },
+  level: 'info',
+  timestamp: '2022-06-18 14:20:30'
+}
+{
+  message: { afterList: 'Not Clear' },
+  level: 'info',
+  timestamp: '2022-06-18 14:20:30'
+}
+{
+  message: { afterList: 'Cancled' },
+  level: 'info',
+  timestamp: '2022-06-18 14:20:40'
+}
+{
+  message: { afterList: 'Cancled' },
+  level: 'info',
+  timestamp: '2022-06-18 14:20:40'
+}
+{
+  message: { afterList: 'inProgress' },
+  level: 'info',
+  timestamp: '2022-06-18 14:33:49'
+}
+{
+  message: { afterList: 'inProgress' },
+  level: 'info',
+  timestamp: '2022-06-18 14:33:49'
+}
+{
+  message: { afterList: 'Cancled' },
+  level: 'info',
+  timestamp: '2022-06-18 14:34:41'
+}
+{
+  message: { afterList: 'Cancled' },
+  level: 'info',
+  timestamp: '2022-06-18 14:34:41'
+}
+{
+  message: { afterList: 'inProgress' },
+  level: 'info',
+  timestamp: '2022-06-18 14:34:51'
+}
+{
+  message: { afterList: 'inProgress' },
+  level: 'info',
+  timestamp: '2022-06-18 14:34:51'
+}
+{
+  message: { afterList: 'Tasks Board' },
+  level: 'info',
+  timestamp: '2022-06-18 14:36:21'
+}
+{
+  message: { afterList: 'Tasks Board' },
+  level: 'info',
+  timestamp: '2022-06-18 14:36:21'
+=======
   timestamp: '2022-06-18 14:39:45'
+>>>>>>> 25f5feb61a804c6647d9a99a342961d28f9e5253
 }
 {
   message: {
     db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
   },
   level: 'info',
+<<<<<<< HEAD
+  timestamp: '2022-06-18 14:40:02'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-06-18 14:51:47'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-06-18 14:53:27'
+}
+{
+  message: { afterList: 'Not Clear' },
+  level: 'info',
+  timestamp: '2022-06-18 14:57:32'
+}
+{
+  message: { afterList: 'Not Clear' },
+  level: 'info',
+  timestamp: '2022-06-18 14:57:32'
+}
+{
+  message: { afterList: undefined },
+  level: 'info',
+  timestamp: '2022-06-18 14:58:19'
+}
+{
+  message: { afterList: 'inProgress' },
+  level: 'info',
+  timestamp: '2022-06-18 14:58:25'
+}
+{
+  message: { afterList: 'inProgress' },
+  level: 'info',
+  timestamp: '2022-06-18 14:58:25'
+}
+{
+  message: { afterList: 'Review' },
+  level: 'info',
+  timestamp: '2022-06-18 14:58:30'
+}
+{
+  message: { afterList: 'Review' },
+  level: 'info',
+  timestamp: '2022-06-18 14:58:30'
+}
+{
+  message: { afterList: 'Cancled' },
+  level: 'info',
+  timestamp: '2022-06-18 14:58:33'
+}
+{
+  message: { afterList: 'Cancled' },
+  level: 'info',
+  timestamp: '2022-06-18 14:58:33'
+}
+{
+  message: { afterList: 'Done' },
+  level: 'info',
+  timestamp: '2022-06-18 14:59:00'
+}
+{
+  message: { afterList: 'Done' },
+  level: 'info',
+  timestamp: '2022-06-18 14:59:00'
+}
+{
+  message: { afterList: 'Cancled' },
+  level: 'info',
+  timestamp: '2022-06-18 14:59:18'
+}
+{
+  message: { afterList: 'Cancled' },
+  level: 'info',
+  timestamp: '2022-06-18 14:59:18'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-06-18 15:01:47'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-06-18 15:02:57'
+}
+{
+  message: { afterList: 'Not Clear' },
+  level: 'info',
+  timestamp: '2022-06-18 15:03:24'
+}
+{
+  message: { afterList: 'Not Clear' },
+  level: 'info',
+  timestamp: '2022-06-18 15:03:25'
+}
+{
+  message: { afterList: 'Cancled' },
+  level: 'info',
+  timestamp: '2022-06-18 15:03:35'
+}
+{
+  message: { afterList: 'Cancled' },
+  level: 'info',
+  timestamp: '2022-06-18 15:03:35'
+}
+{
+  message: { afterList: 'inProgress' },
+  level: 'info',
+  timestamp: '2022-06-18 15:03:44'
+}
+{
+  message: { afterList: 'inProgress' },
+  level: 'info',
+  timestamp: '2022-06-18 15:03:44'
+}
+{
+  message: { afterList: 'Cancled' },
+  level: 'info',
+  timestamp: '2022-06-18 15:03:56'
+}
+{
+  message: { afterList: 'Cancled' },
+  level: 'info',
+  timestamp: '2022-06-18 15:03:56'
+}
+{
+  message: { afterList: 'Not Clear' },
+  level: 'info',
+  timestamp: '2022-06-18 15:04:03'
+}
+{
+  message: { afterList: 'Not Clear' },
+  level: 'info',
+  timestamp: '2022-06-18 15:04:03'
+=======
   timestamp: '2022-06-18 16:15:07'
+>>>>>>> 25f5feb61a804c6647d9a99a342961d28f9e5253
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-06-18 17:53:18'
 }
 {
   message: {
@@ -7119,4 +7777,18 @@
   },
   level: 'info',
   timestamp: '2022-06-18 17:06:25'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-06-18 17:07:20'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-06-18 17:08:32'
 }

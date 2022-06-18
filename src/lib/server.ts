@@ -21,12 +21,8 @@ export const http = createServer(app);
 export const io = new Server(http, {
   cors: {
     origin: config.get("FrontEndUrl"),
-    methods: ["GET", "POST"],
-    credentials: true,
   },
   transports: ["websocket"],
-  pingInterval: 0,
-  pingTimeout: 25000,
 });
 AppSocket(io);
 

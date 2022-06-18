@@ -137,6 +137,7 @@ class TaskController extends TaskDB {
       }
       // update data in the db in dbCalls
       let task = await super.updateTaskDB(data);
+      deleteAll();
       return task;
     } catch (error) {
       logger.error({ updateTaskError: error });
@@ -166,7 +167,6 @@ class TaskController extends TaskDB {
           });
         });
       } else delete data.attachedFiles;
-      deleteAll();
       return data;
     } catch (error) {
       logger.error({ createTaskAttachmentError: error });
