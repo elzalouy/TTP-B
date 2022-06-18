@@ -70552,3 +70552,3393 @@
   level: 'info',
   timestamp: '2022-06-14 17:30:27'
 }
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-06-14 17:54:08'
+}
+{
+  message: {
+    borderData: Promise { <pending> },
+    createBoardApi: 'https://api.trello.com/1/boards/?name=Testing&prefs_background=green&defaultLists=false&key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68'
+  },
+  level: 'info',
+  timestamp: '2022-06-14 18:33:15'
+}
+{
+  message: { removeWebhookSucced: 'done' },
+  level: 'info',
+  timestamp: '2022-06-14 18:33:18'
+}
+{
+  message: { webhookCreateResult: 'webhook done' },
+  level: 'info',
+  timestamp: '2022-06-14 18:33:19'
+}
+{
+  message: {
+    createCategoryDBError: MongoServerError: E11000 duplicate key error collection: TTP.categories index: category_1 dup key: { category: "Testing" }
+        at C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\mongodb\src\operations\insert.ts:85:25
+        at C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\mongodb\src\cmap\connection_pool.ts:482:13
+        at handleOperationResult (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\mongodb\src\sdam\server.ts:538:14)
+        at Connection.onMessage (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\mongodb\src\cmap\connection.ts:452:5)
+        at MessageStream.<anonymous> (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\mongodb\src\cmap\connection.ts:267:56)
+        at MessageStream.emit (node:events:527:28)
+        at MessageStream.emit (node:domain:475:12)
+        at processIncomingData (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\mongodb\src\cmap\message_stream.ts:168:12)
+        at MessageStream._write (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\mongodb\src\cmap\message_stream.ts:65:5)
+        at writeOrBuffer (node:internal/streams/writable:389:12) {
+      index: 0,
+      code: 11000,
+      keyPattern: { category: 1 },
+      keyValue: { category: 'Testing' },
+      [Symbol(errorLabels)]: Set(0) {}
+    }
+  },
+  level: 'error',
+  timestamp: '2022-06-14 19:10:24'
+}
+{
+  message: {
+    createCategoryDBError: MongoServerError: E11000 duplicate key error collection: TTP.categories index: category_1 dup key: { category: "Testing" }
+        at C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\mongodb\src\operations\insert.ts:85:25
+        at C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\mongodb\src\cmap\connection_pool.ts:482:13
+        at handleOperationResult (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\mongodb\src\sdam\server.ts:538:14)
+        at Connection.onMessage (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\mongodb\src\cmap\connection.ts:452:5)
+        at MessageStream.<anonymous> (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\mongodb\src\cmap\connection.ts:267:56)
+        at MessageStream.emit (node:events:527:28)
+        at MessageStream.emit (node:domain:475:12)
+        at processIncomingData (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\mongodb\src\cmap\message_stream.ts:168:12)
+        at MessageStream._write (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\mongodb\src\cmap\message_stream.ts:65:5)
+        at writeOrBuffer (node:internal/streams/writable:389:12) {
+      index: 0,
+      code: 11000,
+      keyPattern: { category: 1 },
+      keyValue: { category: 'Testing' },
+      [Symbol(errorLabels)]: Set(0) {}
+    }
+  },
+  level: 'error',
+  timestamp: '2022-06-14 19:10:29'
+}
+{
+  message: {
+    borderData: Promise { <pending> },
+    createBoardApi: 'https://api.trello.com/1/boards/?name=Testing local&prefs_background=blue&defaultLists=false&key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68'
+  },
+  level: 'info',
+  timestamp: '2022-06-14 19:14:13'
+}
+{
+  message: { removeWebhookSucced: 'done' },
+  level: 'info',
+  timestamp: '2022-06-14 19:14:16'
+}
+{
+  message: { webhookCreateResult: 'webhook done' },
+  level: 'info',
+  timestamp: '2022-06-14 19:14:17'
+}
+{
+  message: {
+    departmentData: {
+      _id: '62a617f405b44ee71dcca49e',
+      boardId: '62a617f4de1f1e31cb5131c9',
+      name: 'live dep',
+      color: 'blue',
+      mainBoard: false,
+      addTeam: [],
+      removeTeam: [ '62a8b400e8cd064343aff85f' ]
+    }
+  },
+  level: 'info',
+  timestamp: '2022-06-14 19:15:02'
+}
+{
+  message: 'first step',
+  level: 'info',
+  timestamp: '2022-06-14 19:15:02'
+}
+{
+  message: {
+    __removeMemberAndListError: FetchError: invalid json response body at https://api.trello.com/1/lists/undefined/closed?value=true&key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68 reason: Unexpected token i in JSON at position 0
+        at C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\node-fetch\lib\index.js:273:32
+        at runMicrotasks (<anonymous>)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+      type: 'invalid-json'
+    }
+  },
+  level: 'error',
+  timestamp: '2022-06-14 19:15:03'
+}
+{
+  message: { data: { isDeleted: 'true', listId: undefined } },
+  level: 'info',
+  timestamp: '2022-06-14 19:15:03'
+}
+{
+  message: { removeTeam: [ '62a8b400e8cd064343aff85f' ] },
+  level: 'info',
+  timestamp: '2022-06-14 19:15:03'
+}
+{
+  message: { removeWebhookSucced: 'done' },
+  level: 'info',
+  timestamp: '2022-06-14 19:15:03'
+}
+{
+  message: { title: 'testing', teamListIds: [] },
+  level: 'info',
+  timestamp: '2022-06-14 19:15:03'
+}
+{
+  message: {
+    depUpdate: {
+      _id: new ObjectId("62a617f405b44ee71dcca49e"),
+      name: 'live dep',
+      boardId: '62a617f4de1f1e31cb5131c9',
+      color: 'blue',
+      mainBoard: false,
+      tasks: [],
+      teamsId: [],
+      createdAt: 2022-06-12T16:44:36.677Z,
+      updatedAt: 2022-06-14T16:15:03.596Z,
+      __v: 0,
+      canceldListId: '62a617f5be69d35515ae5c83',
+      defaultListId: '62a617f5e738943242381c6d',
+      doneListId: '62a617f59331c314c29bba8d',
+      inProgressListId: '62a617f4cd455573a7add704',
+      notClearListId: '62a617f5aa17373acf8b2625',
+      reviewListId: '62a617f553eec722216422f5',
+      sharedListID: '62a617f5a743cd67113c904b'
+    }
+  },
+  level: 'info',
+  timestamp: '2022-06-14 19:15:03'
+}
+{
+  message: {
+    department: {
+      _id: new ObjectId("62a617f405b44ee71dcca49e"),
+      name: 'live dep',
+      boardId: '62a617f4de1f1e31cb5131c9',
+      color: 'blue',
+      mainBoard: false,
+      tasks: [],
+      teamsId: [],
+      createdAt: 2022-06-12T16:44:36.677Z,
+      updatedAt: 2022-06-14T16:15:03.596Z,
+      __v: 0,
+      canceldListId: '62a617f5be69d35515ae5c83',
+      defaultListId: '62a617f5e738943242381c6d',
+      doneListId: '62a617f59331c314c29bba8d',
+      inProgressListId: '62a617f4cd455573a7add704',
+      notClearListId: '62a617f5aa17373acf8b2625',
+      reviewListId: '62a617f553eec722216422f5',
+      sharedListID: '62a617f5a743cd67113c904b'
+    }
+  },
+  level: 'info',
+  timestamp: '2022-06-14 19:15:03'
+}
+{
+  message: { removeListAndWebhookSucced: 'done' },
+  level: 'info',
+  timestamp: '2022-06-14 19:15:04'
+}
+{
+  message: {
+    data: { id: '62746010736e8ea96f53ea54', skip: '0', limit: undefined }
+  },
+  level: 'info',
+  timestamp: '2022-06-14 19:15:40'
+}
+{
+  message: { notificationData: { _id: '62746010736e8ea96f53ea54', role: 'OM' } },
+  level: 'info',
+  timestamp: '2022-06-14 19:15:40'
+}
+{
+  message: {
+    Notification: {
+      acknowledged: true,
+      modifiedCount: 8,
+      upsertedId: null,
+      upsertedCount: 0,
+      matchedCount: 8
+    }
+  },
+  level: 'info',
+  timestamp: '2022-06-14 19:15:40'
+}
+{
+  message: {
+    data: { id: '62746010736e8ea96f53ea54', skip: '4', limit: undefined }
+  },
+  level: 'info',
+  timestamp: '2022-06-14 19:15:41'
+}
+{
+  message: {
+    data: { id: '62746010736e8ea96f53ea54', skip: '8', limit: undefined }
+  },
+  level: 'info',
+  timestamp: '2022-06-14 19:15:48'
+}
+{
+  message: {
+    data: { id: '62746010736e8ea96f53ea54', skip: '8', limit: undefined }
+  },
+  level: 'info',
+  timestamp: '2022-06-14 19:15:49'
+}
+{
+  message: {
+    data: { id: '62746010736e8ea96f53ea54', skip: '8', limit: undefined }
+  },
+  level: 'info',
+  timestamp: '2022-06-14 19:15:50'
+}
+{
+  message: {
+    data: { id: '62746010736e8ea96f53ea54', skip: '8', limit: undefined }
+  },
+  level: 'info',
+  timestamp: '2022-06-14 19:15:50'
+}
+{
+  message: {
+    data: { id: '62746010736e8ea96f53ea54', skip: '8', limit: undefined }
+  },
+  level: 'info',
+  timestamp: '2022-06-14 19:15:51'
+}
+{
+  message: {
+    data: { id: '62746010736e8ea96f53ea54', skip: '8', limit: undefined }
+  },
+  level: 'info',
+  timestamp: '2022-06-14 19:15:52'
+}
+{
+  message: {
+    data: { id: '62746010736e8ea96f53ea54', skip: '8', limit: undefined }
+  },
+  level: 'info',
+  timestamp: '2022-06-14 19:15:53'
+}
+{
+  message: { notificationData: { _id: '62746010736e8ea96f53ea54', role: 'OM' } },
+  level: 'info',
+  timestamp: '2022-06-14 19:15:57'
+}
+{
+  message: {
+    data: { id: '62746010736e8ea96f53ea54', skip: '0', limit: undefined }
+  },
+  level: 'info',
+  timestamp: '2022-06-14 19:15:57'
+}
+{
+  message: {
+    Notification: {
+      acknowledged: true,
+      modifiedCount: 8,
+      upsertedId: null,
+      upsertedCount: 0,
+      matchedCount: 8
+    }
+  },
+  level: 'info',
+  timestamp: '2022-06-14 19:15:58'
+}
+{
+  message: {
+    data: { id: '62746010736e8ea96f53ea54', skip: '4', limit: undefined }
+  },
+  level: 'info',
+  timestamp: '2022-06-14 19:16:00'
+}
+{
+  message: {
+    data: { id: '62746010736e8ea96f53ea54', skip: '8', limit: undefined }
+  },
+  level: 'info',
+  timestamp: '2022-06-14 19:16:05'
+}
+{
+  message: {
+    data: { id: '62746010736e8ea96f53ea54', skip: '8', limit: undefined }
+  },
+  level: 'info',
+  timestamp: '2022-06-14 19:16:06'
+}
+{
+  message: {
+    data: { id: '62746010736e8ea96f53ea54', skip: '8', limit: undefined }
+  },
+  level: 'info',
+  timestamp: '2022-06-14 19:16:07'
+}
+{
+  message: {
+    data: { id: '62746010736e8ea96f53ea54', skip: '8', limit: undefined }
+  },
+  level: 'info',
+  timestamp: '2022-06-14 19:16:09'
+}
+{
+  message: {
+    data: { id: '62746010736e8ea96f53ea54', skip: '8', limit: undefined }
+  },
+  level: 'info',
+  timestamp: '2022-06-14 19:16:10'
+}
+{
+  message: {
+    data: { id: '62746010736e8ea96f53ea54', skip: '8', limit: undefined }
+  },
+  level: 'info',
+  timestamp: '2022-06-14 19:16:10'
+}
+{
+  message: {
+    data: { id: '62746010736e8ea96f53ea54', skip: '8', limit: undefined }
+  },
+  level: 'info',
+  timestamp: '2022-06-14 19:16:48'
+}
+{
+  message: {
+    borderData: Promise { <pending> },
+    createBoardApi: 'https://api.trello.com/1/boards/?name=Testing &prefs_background=red&defaultLists=false&key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68'
+  },
+  level: 'info',
+  timestamp: '2022-06-14 19:28:12'
+}
+{
+  message: { removeWebhookSucced: 'done' },
+  level: 'info',
+  timestamp: '2022-06-14 19:28:15'
+}
+{
+  message: { webhookCreateResult: 'webhook done' },
+  level: 'info',
+  timestamp: '2022-06-14 19:28:16'
+}
+{
+  message: {
+    borderData: Promise { <pending> },
+    createBoardApi: 'https://api.trello.com/1/boards/?name=Testing New Local&prefs_background=purple&defaultLists=false&key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68'
+  },
+  level: 'info',
+  timestamp: '2022-06-14 19:28:53'
+}
+{
+  message: { removeWebhookSucced: 'done' },
+  level: 'info',
+  timestamp: '2022-06-14 19:28:56'
+}
+{
+  message: { webhookCreateResult: 'webhook done' },
+  level: 'info',
+  timestamp: '2022-06-14 19:28:57'
+}
+{
+  message: {
+    data: { id: '62746010736e8ea96f53ea54', skip: '0', limit: undefined }
+  },
+  level: 'info',
+  timestamp: '2022-06-14 19:30:58'
+}
+{
+  message: { notificationData: { _id: '62746010736e8ea96f53ea54', role: 'OM' } },
+  level: 'info',
+  timestamp: '2022-06-14 19:30:58'
+}
+{
+  message: {
+    Notification: {
+      acknowledged: true,
+      modifiedCount: 8,
+      upsertedId: null,
+      upsertedCount: 0,
+      matchedCount: 8
+    }
+  },
+  level: 'info',
+  timestamp: '2022-06-14 19:30:58'
+}
+{
+  message: {
+    borderData: Promise { <pending> },
+    createBoardApi: 'https://api.trello.com/1/boards/?name=Testing New Name&prefs_background=blue&defaultLists=false&key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68'
+  },
+  level: 'info',
+  timestamp: '2022-06-15 02:54:53'
+}
+{
+  message: { removeWebhookSucced: 'done' },
+  level: 'info',
+  timestamp: '2022-06-15 02:54:56'
+}
+{
+  message: { webhookCreateResult: 'webhook done' },
+  level: 'info',
+  timestamp: '2022-06-15 02:54:57'
+}
+{
+  message: {
+    borderData: Promise { <pending> },
+    createBoardApi: 'https://api.trello.com/1/boards/?name=Local Test&prefs_background=blue&defaultLists=false&key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68'
+  },
+  level: 'info',
+  timestamp: '2022-06-15 02:56:14'
+}
+{
+  message: { removeWebhookSucced: 'done' },
+  level: 'info',
+  timestamp: '2022-06-15 02:56:17'
+}
+{
+  message: { webhookCreateResult: 'webhook done' },
+  level: 'info',
+  timestamp: '2022-06-15 02:56:18'
+}
+{
+  message: { notificationData: { _id: '62746010736e8ea96f53ea54', role: 'OM' } },
+  level: 'info',
+  timestamp: '2022-06-15 03:12:24'
+}
+{
+  message: {
+    data: { id: '62746010736e8ea96f53ea54', skip: '0', limit: undefined }
+  },
+  level: 'info',
+  timestamp: '2022-06-15 03:12:24'
+}
+{
+  message: {
+    Notification: {
+      acknowledged: true,
+      modifiedCount: 8,
+      upsertedId: null,
+      upsertedCount: 0,
+      matchedCount: 8
+    }
+  },
+  level: 'info',
+  timestamp: '2022-06-15 03:12:24'
+}
+{
+  message: {
+    data: { id: '62746010736e8ea96f53ea54', skip: '4', limit: undefined }
+  },
+  level: 'info',
+  timestamp: '2022-06-15 03:14:31'
+}
+{
+  message: {
+    data: { id: '62746010736e8ea96f53ea54', skip: '8', limit: undefined }
+  },
+  level: 'info',
+  timestamp: '2022-06-15 03:14:33'
+}
+{
+  message: {
+    data: { id: '62746010736e8ea96f53ea54', skip: '8', limit: undefined }
+  },
+  level: 'info',
+  timestamp: '2022-06-15 03:14:34'
+}
+{
+  message: {
+    data: { id: '62746010736e8ea96f53ea54', skip: '0', limit: undefined }
+  },
+  level: 'info',
+  timestamp: '2022-06-15 03:15:27'
+}
+{
+  message: { notificationData: { _id: '62746010736e8ea96f53ea54', role: 'OM' } },
+  level: 'info',
+  timestamp: '2022-06-15 03:15:27'
+}
+{
+  message: {
+    Notification: {
+      acknowledged: true,
+      modifiedCount: 8,
+      upsertedId: null,
+      upsertedCount: 0,
+      matchedCount: 8
+    }
+  },
+  level: 'info',
+  timestamp: '2022-06-15 03:15:27'
+}
+{
+  message: {
+    data: { id: '62746010736e8ea96f53ea54', skip: '0', limit: undefined }
+  },
+  level: 'info',
+  timestamp: '2022-06-15 03:15:38'
+}
+{
+  message: { notificationData: { _id: '62746010736e8ea96f53ea54', role: 'OM' } },
+  level: 'info',
+  timestamp: '2022-06-15 03:15:38'
+}
+{
+  message: {
+    Notification: {
+      acknowledged: true,
+      modifiedCount: 8,
+      upsertedId: null,
+      upsertedCount: 0,
+      matchedCount: 8
+    }
+  },
+  level: 'info',
+  timestamp: '2022-06-15 03:15:38'
+}
+{
+  message: {
+    data: { id: '62746010736e8ea96f53ea54', skip: '4', limit: undefined }
+  },
+  level: 'info',
+  timestamp: '2022-06-15 03:15:41'
+}
+{
+  message: {
+    data: { id: '62746010736e8ea96f53ea54', skip: '8', limit: undefined }
+  },
+  level: 'info',
+  timestamp: '2022-06-15 03:15:50'
+}
+{
+  message: {
+    data: { id: '62746010736e8ea96f53ea54', skip: '8', limit: undefined }
+  },
+  level: 'info',
+  timestamp: '2022-06-15 03:15:51'
+}
+{
+  message: {
+    data: { id: '62746010736e8ea96f53ea54', skip: '0', limit: undefined }
+  },
+  level: 'info',
+  timestamp: '2022-06-15 03:16:50'
+}
+{
+  message: { notificationData: { _id: '62746010736e8ea96f53ea54', role: 'OM' } },
+  level: 'info',
+  timestamp: '2022-06-15 03:16:50'
+}
+{
+  message: {
+    Notification: {
+      acknowledged: true,
+      modifiedCount: 8,
+      upsertedId: null,
+      upsertedCount: 0,
+      matchedCount: 8
+    }
+  },
+  level: 'info',
+  timestamp: '2022-06-15 03:16:50'
+}
+{
+  message: {
+    data: { id: '62746010736e8ea96f53ea54', skip: '0', limit: undefined }
+  },
+  level: 'info',
+  timestamp: '2022-06-15 03:17:11'
+}
+{
+  message: { notificationData: { _id: '62746010736e8ea96f53ea54', role: 'OM' } },
+  level: 'info',
+  timestamp: '2022-06-15 03:17:11'
+}
+{
+  message: {
+    Notification: {
+      acknowledged: true,
+      modifiedCount: 8,
+      upsertedId: null,
+      upsertedCount: 0,
+      matchedCount: 8
+    }
+  },
+  level: 'info',
+  timestamp: '2022-06-15 03:17:11'
+}
+{
+  message: { notificationData: { _id: '62746010736e8ea96f53ea54', role: 'OM' } },
+  level: 'info',
+  timestamp: '2022-06-15 03:17:16'
+}
+{
+  message: {
+    data: { id: '62746010736e8ea96f53ea54', skip: '0', limit: undefined }
+  },
+  level: 'info',
+  timestamp: '2022-06-15 03:17:16'
+}
+{
+  message: {
+    Notification: {
+      acknowledged: true,
+      modifiedCount: 8,
+      upsertedId: null,
+      upsertedCount: 0,
+      matchedCount: 8
+    }
+  },
+  level: 'info',
+  timestamp: '2022-06-15 03:17:16'
+}
+{
+  message: {
+    data: { id: '62746010736e8ea96f53ea54', skip: '0', limit: undefined }
+  },
+  level: 'info',
+  timestamp: '2022-06-15 03:17:22'
+}
+{
+  message: { notificationData: { _id: '62746010736e8ea96f53ea54', role: 'OM' } },
+  level: 'info',
+  timestamp: '2022-06-15 03:17:22'
+}
+{
+  message: {
+    Notification: {
+      acknowledged: true,
+      modifiedCount: 8,
+      upsertedId: null,
+      upsertedCount: 0,
+      matchedCount: 8
+    }
+  },
+  level: 'info',
+  timestamp: '2022-06-15 03:17:22'
+}
+{
+  message: {
+    data: { id: '62746010736e8ea96f53ea54', skip: '0', limit: undefined }
+  },
+  level: 'info',
+  timestamp: '2022-06-15 03:17:51'
+}
+{
+  message: { notificationData: { _id: '62746010736e8ea96f53ea54', role: 'OM' } },
+  level: 'info',
+  timestamp: '2022-06-15 03:17:51'
+}
+{
+  message: {
+    Notification: {
+      acknowledged: true,
+      modifiedCount: 8,
+      upsertedId: null,
+      upsertedCount: 0,
+      matchedCount: 8
+    }
+  },
+  level: 'info',
+  timestamp: '2022-06-15 03:17:51'
+}
+{
+  message: {
+    data: { id: '62746010736e8ea96f53ea54', skip: '0', limit: undefined }
+  },
+  level: 'info',
+  timestamp: '2022-06-15 03:17:53'
+}
+{
+  message: { notificationData: { _id: '62746010736e8ea96f53ea54', role: 'OM' } },
+  level: 'info',
+  timestamp: '2022-06-15 03:17:53'
+}
+{
+  message: {
+    Notification: {
+      acknowledged: true,
+      modifiedCount: 8,
+      upsertedId: null,
+      upsertedCount: 0,
+      matchedCount: 8
+    }
+  },
+  level: 'info',
+  timestamp: '2022-06-15 03:17:53'
+}
+{
+  message: {
+    data: { id: '62746010736e8ea96f53ea54', skip: '0', limit: undefined }
+  },
+  level: 'info',
+  timestamp: '2022-06-15 03:18:01'
+}
+{
+  message: { notificationData: { _id: '62746010736e8ea96f53ea54', role: 'OM' } },
+  level: 'info',
+  timestamp: '2022-06-15 03:18:01'
+}
+{
+  message: {
+    Notification: {
+      acknowledged: true,
+      modifiedCount: 8,
+      upsertedId: null,
+      upsertedCount: 0,
+      matchedCount: 8
+    }
+  },
+  level: 'info',
+  timestamp: '2022-06-15 03:18:01'
+}
+{
+  message: {
+    data: { id: '62746010736e8ea96f53ea54', skip: '0', limit: undefined }
+  },
+  level: 'info',
+  timestamp: '2022-06-15 03:18:04'
+}
+{
+  message: { notificationData: { _id: '62746010736e8ea96f53ea54', role: 'OM' } },
+  level: 'info',
+  timestamp: '2022-06-15 03:18:04'
+}
+{
+  message: {
+    Notification: {
+      acknowledged: true,
+      modifiedCount: 8,
+      upsertedId: null,
+      upsertedCount: 0,
+      matchedCount: 8
+    }
+  },
+  level: 'info',
+  timestamp: '2022-06-15 03:18:04'
+}
+{
+  message: {
+    data: { id: '62746010736e8ea96f53ea54', skip: '0', limit: undefined }
+  },
+  level: 'info',
+  timestamp: '2022-06-15 03:18:24'
+}
+{
+  message: { notificationData: { _id: '62746010736e8ea96f53ea54', role: 'OM' } },
+  level: 'info',
+  timestamp: '2022-06-15 03:18:24'
+}
+{
+  message: {
+    Notification: {
+      acknowledged: true,
+      modifiedCount: 8,
+      upsertedId: null,
+      upsertedCount: 0,
+      matchedCount: 8
+    }
+  },
+  level: 'info',
+  timestamp: '2022-06-15 03:18:24'
+}
+{
+  message: { notificationData: { _id: '62746010736e8ea96f53ea54', role: 'OM' } },
+  level: 'info',
+  timestamp: '2022-06-15 03:18:28'
+}
+{
+  message: {
+    data: { id: '62746010736e8ea96f53ea54', skip: '0', limit: undefined }
+  },
+  level: 'info',
+  timestamp: '2022-06-15 03:18:28'
+}
+{
+  message: {
+    Notification: {
+      acknowledged: true,
+      modifiedCount: 8,
+      upsertedId: null,
+      upsertedCount: 0,
+      matchedCount: 8
+    }
+  },
+  level: 'info',
+  timestamp: '2022-06-15 03:18:28'
+}
+{
+  message: {
+    data: { id: '62746010736e8ea96f53ea54', skip: '0', limit: undefined }
+  },
+  level: 'info',
+  timestamp: '2022-06-15 03:18:37'
+}
+{
+  message: { notificationData: { _id: '62746010736e8ea96f53ea54', role: 'OM' } },
+  level: 'info',
+  timestamp: '2022-06-15 03:18:37'
+}
+{
+  message: {
+    Notification: {
+      acknowledged: true,
+      modifiedCount: 8,
+      upsertedId: null,
+      upsertedCount: 0,
+      matchedCount: 8
+    }
+  },
+  level: 'info',
+  timestamp: '2022-06-15 03:18:37'
+}
+{
+  message: {
+    data: { id: '62746010736e8ea96f53ea54', skip: '0', limit: undefined }
+  },
+  level: 'info',
+  timestamp: '2022-06-15 03:18:41'
+}
+{
+  message: { notificationData: { _id: '62746010736e8ea96f53ea54', role: 'OM' } },
+  level: 'info',
+  timestamp: '2022-06-15 03:18:41'
+}
+{
+  message: {
+    Notification: {
+      acknowledged: true,
+      modifiedCount: 8,
+      upsertedId: null,
+      upsertedCount: 0,
+      matchedCount: 8
+    }
+  },
+  level: 'info',
+  timestamp: '2022-06-15 03:18:41'
+}
+{
+  message: {
+    data: { id: '62746010736e8ea96f53ea54', skip: '0', limit: undefined }
+  },
+  level: 'info',
+  timestamp: '2022-06-15 03:18:47'
+}
+{
+  message: { notificationData: { _id: '62746010736e8ea96f53ea54', role: 'OM' } },
+  level: 'info',
+  timestamp: '2022-06-15 03:18:47'
+}
+{
+  message: {
+    Notification: {
+      acknowledged: true,
+      modifiedCount: 8,
+      upsertedId: null,
+      upsertedCount: 0,
+      matchedCount: 8
+    }
+  },
+  level: 'info',
+  timestamp: '2022-06-15 03:18:47'
+}
+{
+  message: { notificationData: { _id: '62746010736e8ea96f53ea54', role: 'OM' } },
+  level: 'info',
+  timestamp: '2022-06-15 03:18:51'
+}
+{
+  message: {
+    data: { id: '62746010736e8ea96f53ea54', skip: '0', limit: undefined }
+  },
+  level: 'info',
+  timestamp: '2022-06-15 03:18:51'
+}
+{
+  message: {
+    Notification: {
+      acknowledged: true,
+      modifiedCount: 8,
+      upsertedId: null,
+      upsertedCount: 0,
+      matchedCount: 8
+    }
+  },
+  level: 'info',
+  timestamp: '2022-06-15 03:18:51'
+}
+{
+  message: {
+    data: { id: '62746010736e8ea96f53ea54', skip: '0', limit: undefined }
+  },
+  level: 'info',
+  timestamp: '2022-06-15 03:19:01'
+}
+{
+  message: { notificationData: { _id: '62746010736e8ea96f53ea54', role: 'OM' } },
+  level: 'info',
+  timestamp: '2022-06-15 03:19:01'
+}
+{
+  message: {
+    Notification: {
+      acknowledged: true,
+      modifiedCount: 8,
+      upsertedId: null,
+      upsertedCount: 0,
+      matchedCount: 8
+    }
+  },
+  level: 'info',
+  timestamp: '2022-06-15 03:19:01'
+}
+{
+  message: {
+    data: { id: '62746010736e8ea96f53ea54', skip: '0', limit: undefined }
+  },
+  level: 'info',
+  timestamp: '2022-06-15 03:19:07'
+}
+{
+  message: { notificationData: { _id: '62746010736e8ea96f53ea54', role: 'OM' } },
+  level: 'info',
+  timestamp: '2022-06-15 03:19:07'
+}
+{
+  message: {
+    Notification: {
+      acknowledged: true,
+      modifiedCount: 8,
+      upsertedId: null,
+      upsertedCount: 0,
+      matchedCount: 8
+    }
+  },
+  level: 'info',
+  timestamp: '2022-06-15 03:19:07'
+}
+{
+  message: { notificationData: { _id: '62746010736e8ea96f53ea54', role: 'OM' } },
+  level: 'info',
+  timestamp: '2022-06-15 03:19:11'
+}
+{
+  message: {
+    data: { id: '62746010736e8ea96f53ea54', skip: '0', limit: undefined }
+  },
+  level: 'info',
+  timestamp: '2022-06-15 03:19:11'
+}
+{
+  message: {
+    Notification: {
+      acknowledged: true,
+      modifiedCount: 8,
+      upsertedId: null,
+      upsertedCount: 0,
+      matchedCount: 8
+    }
+  },
+  level: 'info',
+  timestamp: '2022-06-15 03:19:11'
+}
+{
+  message: { notificationData: { _id: '62746010736e8ea96f53ea54', role: 'OM' } },
+  level: 'info',
+  timestamp: '2022-06-15 03:19:23'
+}
+{
+  message: {
+    data: { id: '62746010736e8ea96f53ea54', skip: '0', limit: undefined }
+  },
+  level: 'info',
+  timestamp: '2022-06-15 03:19:23'
+}
+{
+  message: {
+    Notification: {
+      acknowledged: true,
+      modifiedCount: 8,
+      upsertedId: null,
+      upsertedCount: 0,
+      matchedCount: 8
+    }
+  },
+  level: 'info',
+  timestamp: '2022-06-15 03:19:23'
+}
+{
+  message: { notificationData: { _id: '62746010736e8ea96f53ea54', role: 'OM' } },
+  level: 'info',
+  timestamp: '2022-06-15 03:19:27'
+}
+{
+  message: {
+    data: { id: '62746010736e8ea96f53ea54', skip: '0', limit: undefined }
+  },
+  level: 'info',
+  timestamp: '2022-06-15 03:19:27'
+}
+{
+  message: {
+    Notification: {
+      acknowledged: true,
+      modifiedCount: 8,
+      upsertedId: null,
+      upsertedCount: 0,
+      matchedCount: 8
+    }
+  },
+  level: 'info',
+  timestamp: '2022-06-15 03:19:27'
+}
+{
+  message: {
+    data: { id: '62746010736e8ea96f53ea54', skip: '4', limit: undefined }
+  },
+  level: 'info',
+  timestamp: '2022-06-15 03:19:29'
+}
+{
+  message: {
+    data: { id: '62746010736e8ea96f53ea54', skip: '8', limit: undefined }
+  },
+  level: 'info',
+  timestamp: '2022-06-15 03:19:31'
+}
+{
+  message: {
+    data: { id: '62746010736e8ea96f53ea54', skip: '0', limit: undefined }
+  },
+  level: 'info',
+  timestamp: '2022-06-15 03:20:21'
+}
+{
+  message: { notificationData: { _id: '62746010736e8ea96f53ea54', role: 'OM' } },
+  level: 'info',
+  timestamp: '2022-06-15 03:20:21'
+}
+{
+  message: {
+    Notification: {
+      acknowledged: true,
+      modifiedCount: 8,
+      upsertedId: null,
+      upsertedCount: 0,
+      matchedCount: 8
+    }
+  },
+  level: 'info',
+  timestamp: '2022-06-15 03:20:21'
+}
+{
+  message: {
+    data: { id: '62746010736e8ea96f53ea54', skip: '0', limit: undefined }
+  },
+  level: 'info',
+  timestamp: '2022-06-15 03:20:30'
+}
+{
+  message: { notificationData: { _id: '62746010736e8ea96f53ea54', role: 'OM' } },
+  level: 'info',
+  timestamp: '2022-06-15 03:20:30'
+}
+{
+  message: {
+    Notification: {
+      acknowledged: true,
+      modifiedCount: 8,
+      upsertedId: null,
+      upsertedCount: 0,
+      matchedCount: 8
+    }
+  },
+  level: 'info',
+  timestamp: '2022-06-15 03:20:30'
+}
+{
+  message: {
+    data: { id: '62746010736e8ea96f53ea54', skip: '0', limit: undefined }
+  },
+  level: 'info',
+  timestamp: '2022-06-15 03:20:43'
+}
+{
+  message: { notificationData: { _id: '62746010736e8ea96f53ea54', role: 'OM' } },
+  level: 'info',
+  timestamp: '2022-06-15 03:20:43'
+}
+{
+  message: {
+    Notification: {
+      acknowledged: true,
+      modifiedCount: 8,
+      upsertedId: null,
+      upsertedCount: 0,
+      matchedCount: 8
+    }
+  },
+  level: 'info',
+  timestamp: '2022-06-15 03:20:43'
+}
+{
+  message: {
+    data: { id: '62746010736e8ea96f53ea54', skip: '4', limit: undefined }
+  },
+  level: 'info',
+  timestamp: '2022-06-15 03:20:44'
+}
+{
+  message: {
+    data: { id: '62746010736e8ea96f53ea54', skip: '8', limit: undefined }
+  },
+  level: 'info',
+  timestamp: '2022-06-15 03:20:47'
+}
+{
+  message: {
+    data: { id: '62746010736e8ea96f53ea54', skip: '8', limit: undefined }
+  },
+  level: 'info',
+  timestamp: '2022-06-15 03:20:48'
+}
+{
+  message: {
+    data: { id: '62746010736e8ea96f53ea54', skip: '8', limit: undefined }
+  },
+  level: 'info',
+  timestamp: '2022-06-15 03:20:49'
+}
+{
+  message: {
+    data: { id: '62746010736e8ea96f53ea54', skip: '8', limit: undefined }
+  },
+  level: 'info',
+  timestamp: '2022-06-15 03:20:50'
+}
+{
+  message: {
+    data: { id: '62746010736e8ea96f53ea54', skip: '8', limit: undefined }
+  },
+  level: 'info',
+  timestamp: '2022-06-15 03:20:50'
+}
+{
+  message: {
+    data: { id: '62746010736e8ea96f53ea54', skip: '8', limit: undefined }
+  },
+  level: 'info',
+  timestamp: '2022-06-15 03:20:50'
+}
+{
+  message: {
+    data: { id: '62746010736e8ea96f53ea54', skip: '8', limit: undefined }
+  },
+  level: 'info',
+  timestamp: '2022-06-15 03:20:51'
+}
+{
+  message: {
+    data: { id: '62746010736e8ea96f53ea54', skip: '8', limit: undefined }
+  },
+  level: 'info',
+  timestamp: '2022-06-15 03:20:51'
+}
+{
+  message: {
+    data: { id: '62746010736e8ea96f53ea54', skip: '8', limit: undefined }
+  },
+  level: 'info',
+  timestamp: '2022-06-15 03:20:52'
+}
+{
+  message: {
+    data: { id: '62746010736e8ea96f53ea54', skip: '0', limit: undefined }
+  },
+  level: 'info',
+  timestamp: '2022-06-15 03:21:12'
+}
+{
+  message: { notificationData: { _id: '62746010736e8ea96f53ea54', role: 'OM' } },
+  level: 'info',
+  timestamp: '2022-06-15 03:21:12'
+}
+{
+  message: {
+    Notification: {
+      acknowledged: true,
+      modifiedCount: 8,
+      upsertedId: null,
+      upsertedCount: 0,
+      matchedCount: 8
+    }
+  },
+  level: 'info',
+  timestamp: '2022-06-15 03:21:12'
+}
+{
+  message: { notificationData: { _id: '62746010736e8ea96f53ea54', role: 'OM' } },
+  level: 'info',
+  timestamp: '2022-06-15 05:08:34'
+}
+{
+  message: {
+    data: { id: '62746010736e8ea96f53ea54', skip: '0', limit: undefined }
+  },
+  level: 'info',
+  timestamp: '2022-06-15 05:08:34'
+}
+{
+  message: {
+    Notification: {
+      acknowledged: true,
+      modifiedCount: 8,
+      upsertedId: null,
+      upsertedCount: 0,
+      matchedCount: 8
+    }
+  },
+  level: 'info',
+  timestamp: '2022-06-15 05:08:34'
+}
+{
+  message: {
+    data: { id: '62746010736e8ea96f53ea54', skip: '0', limit: undefined }
+  },
+  level: 'info',
+  timestamp: '2022-06-15 05:08:52'
+}
+{
+  message: { notificationData: { _id: '62746010736e8ea96f53ea54', role: 'OM' } },
+  level: 'info',
+  timestamp: '2022-06-15 05:08:52'
+}
+{
+  message: {
+    Notification: {
+      acknowledged: true,
+      modifiedCount: 8,
+      upsertedId: null,
+      upsertedCount: 0,
+      matchedCount: 8
+    }
+  },
+  level: 'info',
+  timestamp: '2022-06-15 05:08:52'
+}
+{
+  message: {
+    data: { id: '62746010736e8ea96f53ea54', skip: '0', limit: undefined }
+  },
+  level: 'info',
+  timestamp: '2022-06-15 05:09:33'
+}
+{
+  message: { notificationData: { _id: '62746010736e8ea96f53ea54', role: 'OM' } },
+  level: 'info',
+  timestamp: '2022-06-15 05:09:33'
+}
+{
+  message: {
+    Notification: {
+      acknowledged: true,
+      modifiedCount: 8,
+      upsertedId: null,
+      upsertedCount: 0,
+      matchedCount: 8
+    }
+  },
+  level: 'info',
+  timestamp: '2022-06-15 05:09:33'
+}
+{
+  message: {
+    data: { id: '62746010736e8ea96f53ea54', skip: '0', limit: undefined }
+  },
+  level: 'info',
+  timestamp: '2022-06-15 05:09:50'
+}
+{
+  message: { notificationData: { _id: '62746010736e8ea96f53ea54', role: 'OM' } },
+  level: 'info',
+  timestamp: '2022-06-15 05:09:50'
+}
+{
+  message: {
+    Notification: {
+      acknowledged: true,
+      modifiedCount: 8,
+      upsertedId: null,
+      upsertedCount: 0,
+      matchedCount: 8
+    }
+  },
+  level: 'info',
+  timestamp: '2022-06-15 05:09:50'
+}
+{
+  message: {
+    data: { id: '62746010736e8ea96f53ea54', skip: '0', limit: undefined }
+  },
+  level: 'info',
+  timestamp: '2022-06-15 05:09:55'
+}
+{
+  message: { notificationData: { _id: '62746010736e8ea96f53ea54', role: 'OM' } },
+  level: 'info',
+  timestamp: '2022-06-15 05:09:55'
+}
+{
+  message: {
+    Notification: {
+      acknowledged: true,
+      modifiedCount: 8,
+      upsertedId: null,
+      upsertedCount: 0,
+      matchedCount: 8
+    }
+  },
+  level: 'info',
+  timestamp: '2022-06-15 05:09:55'
+}
+{
+  message: {
+    data: { id: '62746010736e8ea96f53ea54', skip: '0', limit: undefined }
+  },
+  level: 'info',
+  timestamp: '2022-06-15 05:10:19'
+}
+{
+  message: { notificationData: { _id: '62746010736e8ea96f53ea54', role: 'OM' } },
+  level: 'info',
+  timestamp: '2022-06-15 05:10:19'
+}
+{
+  message: {
+    Notification: {
+      acknowledged: true,
+      modifiedCount: 8,
+      upsertedId: null,
+      upsertedCount: 0,
+      matchedCount: 8
+    }
+  },
+  level: 'info',
+  timestamp: '2022-06-15 05:10:19'
+}
+{
+  message: {
+    data: { id: '62746010736e8ea96f53ea54', skip: '0', limit: undefined }
+  },
+  level: 'info',
+  timestamp: '2022-06-15 05:10:22'
+}
+{
+  message: { notificationData: { _id: '62746010736e8ea96f53ea54', role: 'OM' } },
+  level: 'info',
+  timestamp: '2022-06-15 05:10:22'
+}
+{
+  message: {
+    Notification: {
+      acknowledged: true,
+      modifiedCount: 8,
+      upsertedId: null,
+      upsertedCount: 0,
+      matchedCount: 8
+    }
+  },
+  level: 'info',
+  timestamp: '2022-06-15 05:10:22'
+}
+{
+  message: {
+    data: { id: '62746010736e8ea96f53ea54', skip: '0', limit: undefined }
+  },
+  level: 'info',
+  timestamp: '2022-06-15 05:10:35'
+}
+{
+  message: { notificationData: { _id: '62746010736e8ea96f53ea54', role: 'OM' } },
+  level: 'info',
+  timestamp: '2022-06-15 05:10:35'
+}
+{
+  message: {
+    Notification: {
+      acknowledged: true,
+      modifiedCount: 8,
+      upsertedId: null,
+      upsertedCount: 0,
+      matchedCount: 8
+    }
+  },
+  level: 'info',
+  timestamp: '2022-06-15 05:10:35'
+}
+{
+  message: {
+    data: { id: '62746010736e8ea96f53ea54', skip: '0', limit: undefined }
+  },
+  level: 'info',
+  timestamp: '2022-06-15 05:10:40'
+}
+{
+  message: { notificationData: { _id: '62746010736e8ea96f53ea54', role: 'OM' } },
+  level: 'info',
+  timestamp: '2022-06-15 05:10:40'
+}
+{
+  message: {
+    Notification: {
+      acknowledged: true,
+      modifiedCount: 8,
+      upsertedId: null,
+      upsertedCount: 0,
+      matchedCount: 8
+    }
+  },
+  level: 'info',
+  timestamp: '2022-06-15 05:10:40'
+}
+{
+  message: {
+    data: { id: '62746010736e8ea96f53ea54', skip: '0', limit: undefined }
+  },
+  level: 'info',
+  timestamp: '2022-06-15 05:10:50'
+}
+{
+  message: { notificationData: { _id: '62746010736e8ea96f53ea54', role: 'OM' } },
+  level: 'info',
+  timestamp: '2022-06-15 05:10:50'
+}
+{
+  message: {
+    Notification: {
+      acknowledged: true,
+      modifiedCount: 8,
+      upsertedId: null,
+      upsertedCount: 0,
+      matchedCount: 8
+    }
+  },
+  level: 'info',
+  timestamp: '2022-06-15 05:10:50'
+}
+{
+  message: {
+    data: { id: '62746010736e8ea96f53ea54', skip: '0', limit: undefined }
+  },
+  level: 'info',
+  timestamp: '2022-06-15 05:11:09'
+}
+{
+  message: { notificationData: { _id: '62746010736e8ea96f53ea54', role: 'OM' } },
+  level: 'info',
+  timestamp: '2022-06-15 05:11:09'
+}
+{
+  message: {
+    Notification: {
+      acknowledged: true,
+      modifiedCount: 8,
+      upsertedId: null,
+      upsertedCount: 0,
+      matchedCount: 8
+    }
+  },
+  level: 'info',
+  timestamp: '2022-06-15 05:11:09'
+}
+{
+  message: {
+    data: { id: '62746010736e8ea96f53ea54', skip: '0', limit: undefined }
+  },
+  level: 'info',
+  timestamp: '2022-06-15 05:11:25'
+}
+{
+  message: { notificationData: { _id: '62746010736e8ea96f53ea54', role: 'OM' } },
+  level: 'info',
+  timestamp: '2022-06-15 05:11:25'
+}
+{
+  message: {
+    Notification: {
+      acknowledged: true,
+      modifiedCount: 8,
+      upsertedId: null,
+      upsertedCount: 0,
+      matchedCount: 8
+    }
+  },
+  level: 'info',
+  timestamp: '2022-06-15 05:11:25'
+}
+{
+  message: {
+    data: { id: '62746010736e8ea96f53ea54', skip: '0', limit: undefined }
+  },
+  level: 'info',
+  timestamp: '2022-06-15 05:11:29'
+}
+{
+  message: { notificationData: { _id: '62746010736e8ea96f53ea54', role: 'OM' } },
+  level: 'info',
+  timestamp: '2022-06-15 05:11:29'
+}
+{
+  message: {
+    Notification: {
+      acknowledged: true,
+      modifiedCount: 8,
+      upsertedId: null,
+      upsertedCount: 0,
+      matchedCount: 8
+    }
+  },
+  level: 'info',
+  timestamp: '2022-06-15 05:11:29'
+}
+{
+  message: {
+    data: { id: '62746010736e8ea96f53ea54', skip: '0', limit: undefined }
+  },
+  level: 'info',
+  timestamp: '2022-06-15 05:11:33'
+}
+{
+  message: { notificationData: { _id: '62746010736e8ea96f53ea54', role: 'OM' } },
+  level: 'info',
+  timestamp: '2022-06-15 05:11:33'
+}
+{
+  message: {
+    Notification: {
+      acknowledged: true,
+      modifiedCount: 8,
+      upsertedId: null,
+      upsertedCount: 0,
+      matchedCount: 8
+    }
+  },
+  level: 'info',
+  timestamp: '2022-06-15 05:11:33'
+}
+{
+  message: {
+    data: { id: '62746010736e8ea96f53ea54', skip: '0', limit: undefined }
+  },
+  level: 'info',
+  timestamp: '2022-06-15 05:11:50'
+}
+{
+  message: { notificationData: { _id: '62746010736e8ea96f53ea54', role: 'OM' } },
+  level: 'info',
+  timestamp: '2022-06-15 05:11:50'
+}
+{
+  message: {
+    Notification: {
+      acknowledged: true,
+      modifiedCount: 8,
+      upsertedId: null,
+      upsertedCount: 0,
+      matchedCount: 8
+    }
+  },
+  level: 'info',
+  timestamp: '2022-06-15 05:11:50'
+}
+{
+  message: {
+    data: { id: '62746010736e8ea96f53ea54', skip: '0', limit: undefined }
+  },
+  level: 'info',
+  timestamp: '2022-06-15 05:11:53'
+}
+{
+  message: { notificationData: { _id: '62746010736e8ea96f53ea54', role: 'OM' } },
+  level: 'info',
+  timestamp: '2022-06-15 05:11:53'
+}
+{
+  message: {
+    Notification: {
+      acknowledged: true,
+      modifiedCount: 8,
+      upsertedId: null,
+      upsertedCount: 0,
+      matchedCount: 8
+    }
+  },
+  level: 'info',
+  timestamp: '2022-06-15 05:11:53'
+}
+{
+  message: {
+    data: { id: '62746010736e8ea96f53ea54', skip: '0', limit: undefined }
+  },
+  level: 'info',
+  timestamp: '2022-06-15 05:12:04'
+}
+{
+  message: { notificationData: { _id: '62746010736e8ea96f53ea54', role: 'OM' } },
+  level: 'info',
+  timestamp: '2022-06-15 05:12:04'
+}
+{
+  message: {
+    Notification: {
+      acknowledged: true,
+      modifiedCount: 8,
+      upsertedId: null,
+      upsertedCount: 0,
+      matchedCount: 8
+    }
+  },
+  level: 'info',
+  timestamp: '2022-06-15 05:12:04'
+}
+{
+  message: {
+    data: { id: '62746010736e8ea96f53ea54', skip: '0', limit: undefined }
+  },
+  level: 'info',
+  timestamp: '2022-06-15 05:12:12'
+}
+{
+  message: { notificationData: { _id: '62746010736e8ea96f53ea54', role: 'OM' } },
+  level: 'info',
+  timestamp: '2022-06-15 05:12:12'
+}
+{
+  message: {
+    Notification: {
+      acknowledged: true,
+      modifiedCount: 8,
+      upsertedId: null,
+      upsertedCount: 0,
+      matchedCount: 8
+    }
+  },
+  level: 'info',
+  timestamp: '2022-06-15 05:12:12'
+}
+{
+  message: {
+    boardId: '62a9201d5545d53ac08d25ad',
+    myDepartment: {
+      _id: new ObjectId("62a9201ed14032c1ae24afff"),
+      name: 'Local Test',
+      boardId: '62a9201d5545d53ac08d25ad',
+      color: 'blue',
+      mainBoard: false,
+      tasks: [],
+      teamsId: [],
+      createdAt: 2022-06-14T23:56:14.240Z,
+      updatedAt: 2022-06-14T23:56:17.705Z,
+      __v: 0,
+      canceldListId: '62a9201e39d1692afbef8603',
+      defaultListId: '62a920210d27db8c68a2a43b',
+      doneListId: '62a9201f57a4998aecaeaca2',
+      inProgressListId: '62a9201edf9b9a19ccae23ed',
+      notClearListId: '62a9201fa53f48569a1b1402',
+      reviewListId: '62a9202045f04c3d0a2e0013',
+      sharedListID: '62a92020fc50ec0ae1c39505'
+    }
+  },
+  level: 'info',
+  timestamp: '2022-06-15 12:52:06'
+}
+{
+  message: {
+    removeBoard: 'https://api.trello.com/1/boards/62a9201d5545d53ac08d25ad?response_type=token&key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68'
+  },
+  level: 'info',
+  timestamp: '2022-06-15 12:52:06'
+}
+{
+  message: {
+    'delete Tasks': { acknowledged: true, deletedCount: 0 },
+    'Delete Tech members': 'Delete result is 0 document'
+  },
+  level: 'info',
+  timestamp: '2022-06-15 12:52:07'
+}
+{
+  message: {
+    boardId: '62a8b744b02a2e77218e2d49',
+    myDepartment: {
+      _id: new ObjectId("62a8b745d14032c1ae24af0b"),
+      name: 'Testing New Local',
+      boardId: '62a8b744b02a2e77218e2d49',
+      color: 'purple',
+      mainBoard: false,
+      tasks: [],
+      teamsId: [],
+      createdAt: 2022-06-14T16:28:53.292Z,
+      updatedAt: 2022-06-14T16:28:56.843Z,
+      __v: 0,
+      canceldListId: '62a8b74588c79d66a8668332',
+      defaultListId: '62a8b7480cc6a9590e28a089',
+      doneListId: '62a8b7466040df15fbb69d84',
+      inProgressListId: '62a8b745ca816678225a328d',
+      notClearListId: '62a8b7468232fa11af3918ee',
+      reviewListId: '62a8b747f8947c2a451e1671',
+      sharedListID: '62a8b7476ca6c017658f4f61'
+    }
+  },
+  level: 'info',
+  timestamp: '2022-06-15 12:52:08'
+}
+{
+  message: {
+    removeBoard: 'https://api.trello.com/1/boards/62a8b744b02a2e77218e2d49?response_type=token&key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68'
+  },
+  level: 'info',
+  timestamp: '2022-06-15 12:52:08'
+}
+{
+  message: {
+    'delete Tasks': { acknowledged: true, deletedCount: 0 },
+    'Delete Tech members': 'Delete result is 0 document'
+  },
+  level: 'info',
+  timestamp: '2022-06-15 12:52:09'
+}
+{
+  message: {
+    boardId: '62a91fccfc50ec0ae1c36278',
+    myDepartment: {
+      _id: new ObjectId("62a91fcdd14032c1ae24afdf"),
+      name: 'Testing New Name',
+      boardId: '62a91fccfc50ec0ae1c36278',
+      color: 'blue',
+      mainBoard: false,
+      tasks: [],
+      teamsId: [],
+      createdAt: 2022-06-14T23:54:53.611Z,
+      updatedAt: 2022-06-14T23:54:56.975Z,
+      __v: 0,
+      canceldListId: '62a91fcdb2aaed86da611b7a',
+      defaultListId: '62a91fd06b875159b2a8f574',
+      doneListId: '62a91fce2629fe753f25ca3a',
+      inProgressListId: '62a91fcddaaf2a473ce960cb',
+      notClearListId: '62a91fce9a270d06ad6551a6',
+      reviewListId: '62a91fcf827caa788fb20dc6',
+      sharedListID: '62a91fcfef23782bcdd5f588'
+    }
+  },
+  level: 'info',
+  timestamp: '2022-06-15 12:52:13'
+}
+{
+  message: {
+    removeBoard: 'https://api.trello.com/1/boards/62a91fccfc50ec0ae1c36278?response_type=token&key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68'
+  },
+  level: 'info',
+  timestamp: '2022-06-15 12:52:13'
+}
+{
+  message: {
+    'delete Tasks': { acknowledged: true, deletedCount: 0 },
+    'Delete Tech members': 'Delete result is 0 document'
+  },
+  level: 'info',
+  timestamp: '2022-06-15 12:52:14'
+}
+{
+  message: {
+    boardId: '62a8b71b12b31973ba55f25c',
+    myDepartment: {
+      _id: new ObjectId("62a8b71cd14032c1ae24aef9"),
+      name: 'Testing ',
+      boardId: '62a8b71b12b31973ba55f25c',
+      color: 'red',
+      mainBoard: false,
+      tasks: [],
+      teamsId: [],
+      createdAt: 2022-06-14T16:28:12.325Z,
+      updatedAt: 2022-06-14T16:28:15.756Z,
+      __v: 0,
+      canceldListId: '62a8b71c330253236b6e3e1b',
+      defaultListId: '62a8b71f774073564e85f04e',
+      doneListId: '62a8b71df558327479ed875e',
+      inProgressListId: '62a8b71cd80b7606c680af57',
+      notClearListId: '62a8b71d3d95fa667aded2d2',
+      reviewListId: '62a8b71e64696817007eaebb',
+      sharedListID: '62a8b71e6807072eabcd3578'
+    }
+  },
+  level: 'info',
+  timestamp: '2022-06-15 12:52:16'
+}
+{
+  message: {
+    removeBoard: 'https://api.trello.com/1/boards/62a8b71b12b31973ba55f25c?response_type=token&key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68'
+  },
+  level: 'info',
+  timestamp: '2022-06-15 12:52:16'
+}
+{
+  message: {
+    'delete Tasks': { acknowledged: true, deletedCount: 0 },
+    'Delete Tech members': 'Delete result is 0 document'
+  },
+  level: 'info',
+  timestamp: '2022-06-15 12:52:17'
+}
+{
+  message: {
+    boardId: '62a8b3d48aba8d586a33dc34',
+    myDepartment: {
+      _id: new ObjectId("62a8b3d5d14032c1ae24aeb0"),
+      name: 'Testing local',
+      boardId: '62a8b3d48aba8d586a33dc34',
+      color: 'blue',
+      mainBoard: false,
+      tasks: [],
+      teamsId: [],
+      createdAt: 2022-06-14T16:14:13.078Z,
+      updatedAt: 2022-06-14T16:14:16.518Z,
+      __v: 0,
+      canceldListId: '62a8b3d53215361541beaaeb',
+      defaultListId: '62a8b3d72cfd3938c3407028',
+      doneListId: '62a8b3d68c6da70602e990fa',
+      inProgressListId: '62a8b3d46c81f709b55a468a',
+      notClearListId: '62a8b3d52aba1066aa82cd8c',
+      reviewListId: '62a8b3d70c63d17508a10c7a',
+      sharedListID: '62a8b3d6a9435755742bd56b'
+    }
+  },
+  level: 'info',
+  timestamp: '2022-06-15 12:52:19'
+}
+{
+  message: {
+    removeBoard: 'https://api.trello.com/1/boards/62a8b3d48aba8d586a33dc34?response_type=token&key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68'
+  },
+  level: 'info',
+  timestamp: '2022-06-15 12:52:19'
+}
+{
+  message: {
+    'delete Tasks': { acknowledged: true, deletedCount: 0 },
+    'Delete Tech members': 'Delete result is 0 document'
+  },
+  level: 'info',
+  timestamp: '2022-06-15 12:52:20'
+}
+{
+  message: {
+    boardId: '62a8aa3a517c4965870e0ee2',
+    myDepartment: {
+      _id: new ObjectId("62a8aa3bd14032c1ae24adfb"),
+      name: 'Testing',
+      boardId: '62a8aa3a517c4965870e0ee2',
+      color: 'green',
+      mainBoard: false,
+      tasks: [],
+      teamsId: [
+        {
+          idInTrello: '62a8b40093a2de1169e8f2e4',
+          idInDB: new ObjectId("62a8b401d14032c1ae24aeb8"),
+          _id: new ObjectId("62a8b401d14032c1ae24aebc")
+        }
+      ],
+      createdAt: 2022-06-14T15:33:15.300Z,
+      updatedAt: 2022-06-14T16:14:57.175Z,
+      __v: 0,
+      canceldListId: '62a8aa3bb85b49399c4b0358',
+      defaultListId: '62a8aa3eec67ef84453ebe07',
+      doneListId: '62a8aa3ce8e04043fd1e4fac',
+      inProgressListId: '62a8aa3b923d3c7322ea5e7f',
+      notClearListId: '62a8aa3cf7fe402db16aa255',
+      reviewListId: '62a8aa3dff1487473c3bda7c',
+      sharedListID: '62a8aa3dec8d83673393df22'
+    }
+  },
+  level: 'info',
+  timestamp: '2022-06-15 12:52:23'
+}
+{
+  message: {
+    removeBoard: 'https://api.trello.com/1/boards/62a8aa3a517c4965870e0ee2?response_type=token&key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68'
+  },
+  level: 'info',
+  timestamp: '2022-06-15 12:52:23'
+}
+{
+  message: {
+    'delete Tasks': { acknowledged: true, deletedCount: 0 },
+    'Delete Tech members': { acknowledged: true, deletedCount: 1 }
+  },
+  level: 'info',
+  timestamp: '2022-06-15 12:52:24'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-06-16 05:10:03'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-06-16 05:22:46'
+}
+{
+  message: {
+    borderData: Promise { <pending> },
+    createBoardApi: 'https://api.trello.com/1/boards/?name=Zedan Saheer&prefs_background=red&defaultLists=false&key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68'
+  },
+  level: 'info',
+  timestamp: '2022-06-16 15:18:42'
+}
+{
+  message: { removeWebhookSucced: 'done' },
+  level: 'info',
+  timestamp: '2022-06-16 15:18:46'
+}
+{
+  message: { webhookCreateResult: 'webhook done' },
+  level: 'info',
+  timestamp: '2022-06-16 15:18:46'
+}
+{
+  message: {
+    departmentData: {
+      _id: '62ab1fa291c09b3f6ed2d5b4',
+      boardId: '62ab1fa15751307b7abac272',
+      name: 'Zedan Saheer',
+      color: 'pink',
+      mainBoard: false,
+      addTeam: [],
+      removeTeam: []
+    }
+  },
+  level: 'info',
+  timestamp: '2022-06-16 15:19:01'
+}
+{
+  message: 'first step',
+  level: 'info',
+  timestamp: '2022-06-16 15:19:01'
+}
+{
+  message: { removeTeam: [] },
+  level: 'info',
+  timestamp: '2022-06-16 15:19:01'
+}
+{
+  message: { removeListAndWebhookSucced: 'done' },
+  level: 'info',
+  timestamp: '2022-06-16 15:19:01'
+}
+{
+  message: { removeWebhookSucced: 'done' },
+  level: 'info',
+  timestamp: '2022-06-16 15:19:01'
+}
+{
+  message: { title: 'testing', teamListIds: [] },
+  level: 'info',
+  timestamp: '2022-06-16 15:19:01'
+}
+{
+  message: {
+    depUpdate: {
+      _id: new ObjectId("62ab1fa291c09b3f6ed2d5b4"),
+      name: 'Zedan Saheer',
+      boardId: '62ab1fa15751307b7abac272',
+      color: 'pink',
+      mainBoard: false,
+      tasks: [],
+      teamsId: [],
+      createdAt: 2022-06-16T12:18:42.662Z,
+      updatedAt: 2022-06-16T12:19:01.989Z,
+      __v: 0,
+      canceldListId: '62ab1fa2a8e3b84c5943d629',
+      defaultListId: '62ab1fa48206198b281a2e58',
+      doneListId: '62ab1fa3d3adba7b9aca09b7',
+      inProgressListId: '62ab1fa1ec0b462df2e400fe',
+      notClearListId: '62ab1fa2002c877ce249e84d',
+      reviewListId: '62ab1fa4f74fdd683086432e',
+      sharedListID: '62ab1fa3131d1516e6ee7d69'
+    }
+  },
+  level: 'info',
+  timestamp: '2022-06-16 15:19:02'
+}
+{
+  message: {
+    department: {
+      _id: new ObjectId("62ab1fa291c09b3f6ed2d5b4"),
+      name: 'Zedan Saheer',
+      boardId: '62ab1fa15751307b7abac272',
+      color: 'pink',
+      mainBoard: false,
+      tasks: [],
+      teamsId: [],
+      createdAt: 2022-06-16T12:18:42.662Z,
+      updatedAt: 2022-06-16T12:19:01.989Z,
+      __v: 0,
+      canceldListId: '62ab1fa2a8e3b84c5943d629',
+      defaultListId: '62ab1fa48206198b281a2e58',
+      doneListId: '62ab1fa3d3adba7b9aca09b7',
+      inProgressListId: '62ab1fa1ec0b462df2e400fe',
+      notClearListId: '62ab1fa2002c877ce249e84d',
+      reviewListId: '62ab1fa4f74fdd683086432e',
+      sharedListID: '62ab1fa3131d1516e6ee7d69'
+    }
+  },
+  level: 'info',
+  timestamp: '2022-06-16 15:19:02'
+}
+{
+  message: {
+    departmentData: {
+      _id: '62ab1fa291c09b3f6ed2d5b4',
+      boardId: '62ab1fa15751307b7abac272',
+      name: 'Zedan Saheer',
+      color: 'pink',
+      mainBoard: false,
+      addTeam: [],
+      removeTeam: [ '62ab200ad6a27b04931acc34' ]
+    }
+  },
+  level: 'info',
+  timestamp: '2022-06-16 15:20:37'
+}
+{
+  message: 'first step',
+  level: 'info',
+  timestamp: '2022-06-16 15:20:37'
+}
+{
+  message: {
+    __removeMemberAndListError: FetchError: invalid json response body at https://api.trello.com/1/lists/undefined/closed?value=true&key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68 reason: Unexpected token i in JSON at position 0
+        at C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\node-fetch\lib\index.js:273:32
+        at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+      type: 'invalid-json'
+    }
+  },
+  level: 'error',
+  timestamp: '2022-06-16 15:20:37'
+}
+{
+  message: { data: { isDeleted: 'true', listId: undefined } },
+  level: 'info',
+  timestamp: '2022-06-16 15:20:37'
+}
+{
+  message: { removeTeam: [ '62ab200ad6a27b04931acc34' ] },
+  level: 'info',
+  timestamp: '2022-06-16 15:20:37'
+}
+{
+  message: { removeWebhookSucced: 'done' },
+  level: 'info',
+  timestamp: '2022-06-16 15:20:37'
+}
+{
+  message: { title: 'testing', teamListIds: [] },
+  level: 'info',
+  timestamp: '2022-06-16 15:20:37'
+}
+{
+  message: {
+    depUpdate: {
+      _id: new ObjectId("62ab1fa291c09b3f6ed2d5b4"),
+      name: 'Zedan Saheer',
+      boardId: '62ab1fa15751307b7abac272',
+      color: 'pink',
+      mainBoard: false,
+      tasks: [],
+      teamsId: [
+        {
+          idInTrello: '62ab200a7917706044e646ea',
+          idInDB: new ObjectId("62ab200c91c09b3f6ed2d5c0"),
+          _id: new ObjectId("62ab200c91c09b3f6ed2d5c2")
+        }
+      ],
+      createdAt: 2022-06-16T12:18:42.662Z,
+      updatedAt: 2022-06-16T12:20:37.694Z,
+      __v: 0,
+      canceldListId: '62ab1fa2a8e3b84c5943d629',
+      defaultListId: '62ab1fa48206198b281a2e58',
+      doneListId: '62ab1fa3d3adba7b9aca09b7',
+      inProgressListId: '62ab1fa1ec0b462df2e400fe',
+      notClearListId: '62ab1fa2002c877ce249e84d',
+      reviewListId: '62ab1fa4f74fdd683086432e',
+      sharedListID: '62ab1fa3131d1516e6ee7d69'
+    }
+  },
+  level: 'info',
+  timestamp: '2022-06-16 15:20:37'
+}
+{
+  message: {
+    department: {
+      _id: new ObjectId("62ab1fa291c09b3f6ed2d5b4"),
+      name: 'Zedan Saheer',
+      boardId: '62ab1fa15751307b7abac272',
+      color: 'pink',
+      mainBoard: false,
+      tasks: [],
+      teamsId: [
+        {
+          idInTrello: '62ab200a7917706044e646ea',
+          idInDB: new ObjectId("62ab200c91c09b3f6ed2d5c0"),
+          _id: new ObjectId("62ab200c91c09b3f6ed2d5c2")
+        }
+      ],
+      createdAt: 2022-06-16T12:18:42.662Z,
+      updatedAt: 2022-06-16T12:20:37.694Z,
+      __v: 0,
+      canceldListId: '62ab1fa2a8e3b84c5943d629',
+      defaultListId: '62ab1fa48206198b281a2e58',
+      doneListId: '62ab1fa3d3adba7b9aca09b7',
+      inProgressListId: '62ab1fa1ec0b462df2e400fe',
+      notClearListId: '62ab1fa2002c877ce249e84d',
+      reviewListId: '62ab1fa4f74fdd683086432e',
+      sharedListID: '62ab1fa3131d1516e6ee7d69'
+    }
+  },
+  level: 'info',
+  timestamp: '2022-06-16 15:20:37'
+}
+{
+  message: { removeListAndWebhookSucced: 'done' },
+  level: 'info',
+  timestamp: '2022-06-16 15:20:38'
+}
+{
+  message: {
+    departmentData: {
+      _id: '62ab1fa291c09b3f6ed2d5b4',
+      boardId: '62ab1fa15751307b7abac272',
+      name: 'Zedan Saheer',
+      color: 'orange',
+      mainBoard: false,
+      addTeam: [ { _id: '62ab1f9391c09b3f6ed2d5af', name: 'Testing' } ],
+      removeTeam: [ '62ab200ad6a27b04931acc34' ]
+    }
+  },
+  level: 'info',
+  timestamp: '2022-06-16 15:20:57'
+}
+{
+  message: 'first step',
+  level: 'info',
+  timestamp: '2022-06-16 15:20:57'
+}
+{
+  message: { removeTeam: [ '62ab200ad6a27b04931acc34' ] },
+  level: 'info',
+  timestamp: '2022-06-16 15:20:57'
+}
+{
+  message: { removeWebhookSucced: 'done' },
+  level: 'info',
+  timestamp: '2022-06-16 15:20:58'
+}
+{
+  message: {
+    title: 'testing',
+    teamListIds: [
+      {
+        idInTrello: '62ab20288d01465800515678',
+        idInDB: '62ab1f9391c09b3f6ed2d5af'
+      }
+    ]
+  },
+  level: 'info',
+  timestamp: '2022-06-16 15:20:58'
+}
+{
+  message: {
+    depUpdate: {
+      _id: new ObjectId("62ab1fa291c09b3f6ed2d5b4"),
+      name: 'Zedan Saheer',
+      boardId: '62ab1fa15751307b7abac272',
+      color: 'orange',
+      mainBoard: false,
+      tasks: [],
+      teamsId: [
+        {
+          idInTrello: '62ab20288d01465800515678',
+          idInDB: new ObjectId("62ab1f9391c09b3f6ed2d5af"),
+          _id: new ObjectId("62ab202a91c09b3f6ed2d5d3")
+        },
+        {
+          idInTrello: '62ab200a7917706044e646ea',
+          idInDB: new ObjectId("62ab200c91c09b3f6ed2d5c0"),
+          _id: new ObjectId("62ab200c91c09b3f6ed2d5c2")
+        }
+      ],
+      createdAt: 2022-06-16T12:18:42.662Z,
+      updatedAt: 2022-06-16T12:20:58.093Z,
+      __v: 0,
+      canceldListId: '62ab1fa2a8e3b84c5943d629',
+      defaultListId: '62ab1fa48206198b281a2e58',
+      doneListId: '62ab1fa3d3adba7b9aca09b7',
+      inProgressListId: '62ab1fa1ec0b462df2e400fe',
+      notClearListId: '62ab1fa2002c877ce249e84d',
+      reviewListId: '62ab1fa4f74fdd683086432e',
+      sharedListID: '62ab1fa3131d1516e6ee7d69'
+    }
+  },
+  level: 'info',
+  timestamp: '2022-06-16 15:20:58'
+}
+{
+  message: {
+    department: {
+      _id: new ObjectId("62ab1fa291c09b3f6ed2d5b4"),
+      name: 'Zedan Saheer',
+      boardId: '62ab1fa15751307b7abac272',
+      color: 'orange',
+      mainBoard: false,
+      tasks: [],
+      teamsId: [
+        {
+          idInTrello: '62ab20288d01465800515678',
+          idInDB: new ObjectId("62ab1f9391c09b3f6ed2d5af"),
+          _id: new ObjectId("62ab202a91c09b3f6ed2d5d3")
+        },
+        {
+          idInTrello: '62ab200a7917706044e646ea',
+          idInDB: new ObjectId("62ab200c91c09b3f6ed2d5c0"),
+          _id: new ObjectId("62ab200c91c09b3f6ed2d5c2")
+        }
+      ],
+      createdAt: 2022-06-16T12:18:42.662Z,
+      updatedAt: 2022-06-16T12:20:58.093Z,
+      __v: 0,
+      canceldListId: '62ab1fa2a8e3b84c5943d629',
+      defaultListId: '62ab1fa48206198b281a2e58',
+      doneListId: '62ab1fa3d3adba7b9aca09b7',
+      inProgressListId: '62ab1fa1ec0b462df2e400fe',
+      notClearListId: '62ab1fa2002c877ce249e84d',
+      reviewListId: '62ab1fa4f74fdd683086432e',
+      sharedListID: '62ab1fa3131d1516e6ee7d69'
+    }
+  },
+  level: 'info',
+  timestamp: '2022-06-16 15:20:58'
+}
+{
+  message: { removeListAndWebhookSucced: 'done' },
+  level: 'info',
+  timestamp: '2022-06-16 15:20:58'
+}
+{
+  message: {
+    departmentData: {
+      _id: '62ab1fa291c09b3f6ed2d5b4',
+      boardId: '62ab1fa15751307b7abac272',
+      name: 'Zedan Saheer',
+      color: 'orange',
+      mainBoard: false,
+      addTeam: [],
+      removeTeam: [ '62ab200a7917706044e646ea', '62ab20288d01465800515678' ]
+    }
+  },
+  level: 'info',
+  timestamp: '2022-06-16 15:22:32'
+}
+{
+  message: 'first step',
+  level: 'info',
+  timestamp: '2022-06-16 15:22:32'
+}
+{
+  message: {
+    __removeMemberAndListError: FetchError: invalid json response body at https://api.trello.com/1/lists/undefined/closed?value=true&key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68 reason: Unexpected token i in JSON at position 0
+        at C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\node-fetch\lib\index.js:273:32
+        at runMicrotasks (<anonymous>)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+      type: 'invalid-json'
+    }
+  },
+  level: 'error',
+  timestamp: '2022-06-16 15:22:32'
+}
+{
+  message: { data: { isDeleted: 'true', listId: undefined } },
+  level: 'info',
+  timestamp: '2022-06-16 15:22:32'
+}
+{
+  message: {
+    __removeMemberAndListError: FetchError: invalid json response body at https://api.trello.com/1/lists/undefined/closed?value=true&key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68 reason: Unexpected token i in JSON at position 0
+        at C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\node-fetch\lib\index.js:273:32
+        at runMicrotasks (<anonymous>)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+      type: 'invalid-json'
+    }
+  },
+  level: 'error',
+  timestamp: '2022-06-16 15:22:32'
+}
+{
+  message: { data: { isDeleted: 'true', listId: undefined } },
+  level: 'info',
+  timestamp: '2022-06-16 15:22:32'
+}
+{
+  message: {
+    removeTeam: [ '62ab200a7917706044e646ea', '62ab20288d01465800515678' ]
+  },
+  level: 'info',
+  timestamp: '2022-06-16 15:22:32'
+}
+{
+  message: { removeWebhookSucced: 'done' },
+  level: 'info',
+  timestamp: '2022-06-16 15:22:32'
+}
+{
+  message: { title: 'testing', teamListIds: [] },
+  level: 'info',
+  timestamp: '2022-06-16 15:22:32'
+}
+{
+  message: {
+    depUpdate: {
+      _id: new ObjectId("62ab1fa291c09b3f6ed2d5b4"),
+      name: 'Zedan Saheer',
+      boardId: '62ab1fa15751307b7abac272',
+      color: 'orange',
+      mainBoard: false,
+      tasks: [],
+      teamsId: [],
+      createdAt: 2022-06-16T12:18:42.662Z,
+      updatedAt: 2022-06-16T12:22:32.715Z,
+      __v: 0,
+      canceldListId: '62ab1fa2a8e3b84c5943d629',
+      defaultListId: '62ab1fa48206198b281a2e58',
+      doneListId: '62ab1fa3d3adba7b9aca09b7',
+      inProgressListId: '62ab1fa1ec0b462df2e400fe',
+      notClearListId: '62ab1fa2002c877ce249e84d',
+      reviewListId: '62ab1fa4f74fdd683086432e',
+      sharedListID: '62ab1fa3131d1516e6ee7d69'
+    }
+  },
+  level: 'info',
+  timestamp: '2022-06-16 15:22:32'
+}
+{
+  message: {
+    department: {
+      _id: new ObjectId("62ab1fa291c09b3f6ed2d5b4"),
+      name: 'Zedan Saheer',
+      boardId: '62ab1fa15751307b7abac272',
+      color: 'orange',
+      mainBoard: false,
+      tasks: [],
+      teamsId: [],
+      createdAt: 2022-06-16T12:18:42.662Z,
+      updatedAt: 2022-06-16T12:22:32.715Z,
+      __v: 0,
+      canceldListId: '62ab1fa2a8e3b84c5943d629',
+      defaultListId: '62ab1fa48206198b281a2e58',
+      doneListId: '62ab1fa3d3adba7b9aca09b7',
+      inProgressListId: '62ab1fa1ec0b462df2e400fe',
+      notClearListId: '62ab1fa2002c877ce249e84d',
+      reviewListId: '62ab1fa4f74fdd683086432e',
+      sharedListID: '62ab1fa3131d1516e6ee7d69'
+    }
+  },
+  level: 'info',
+  timestamp: '2022-06-16 15:22:32'
+}
+{
+  message: { removeListAndWebhookSucced: 'done' },
+  level: 'info',
+  timestamp: '2022-06-16 15:22:33'
+}
+{
+  message: {
+    borderData: Promise { <pending> },
+    createBoardApi: 'https://api.trello.com/1/boards/?name=Local Department&prefs_background=blue&defaultLists=false&key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68'
+  },
+  level: 'info',
+  timestamp: '2022-06-16 16:52:27'
+}
+{
+  message: { removeWebhookSucced: 'done' },
+  level: 'info',
+  timestamp: '2022-06-16 16:52:30'
+}
+{
+  message: { webhookCreateResult: 'webhook done' },
+  level: 'info',
+  timestamp: '2022-06-16 16:52:31'
+}
+{
+  message: {
+    borderData: Promise { <pending> },
+    createBoardApi: 'https://api.trello.com/1/boards/?name=Testing local&prefs_background=blue&defaultLists=false&key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68'
+  },
+  level: 'info',
+  timestamp: '2022-06-16 16:53:55'
+}
+{
+  message: { removeWebhookSucced: 'done' },
+  level: 'info',
+  timestamp: '2022-06-16 16:53:59'
+}
+{
+  message: { webhookCreateResult: 'webhook done' },
+  level: 'info',
+  timestamp: '2022-06-16 16:53:59'
+}
+{
+  message: {
+    departmentData: {
+      _id: '62ab35f391c09b3f6ed2da52',
+      boardId: '62ab35f142a3a5314a718add',
+      name: 'Testing local',
+      color: 'blue',
+      mainBoard: false,
+      addTeam: [ { _id: '62ab35be91c09b3f6ed2da4b', name: 'Local 1' } ],
+      removeTeam: []
+    }
+  },
+  level: 'info',
+  timestamp: '2022-06-16 16:54:03'
+}
+{
+  message: 'first step',
+  level: 'info',
+  timestamp: '2022-06-16 16:54:03'
+}
+{
+  message: { removeTeam: [] },
+  level: 'info',
+  timestamp: '2022-06-16 16:54:03'
+}
+{
+  message: { removeListAndWebhookSucced: 'done' },
+  level: 'info',
+  timestamp: '2022-06-16 16:54:03'
+}
+{
+  message: { removeWebhookSucced: 'done' },
+  level: 'info',
+  timestamp: '2022-06-16 16:54:04'
+}
+{
+  message: {
+    title: 'testing',
+    teamListIds: [
+      {
+        idInTrello: '62ab35faded3883e9b796a21',
+        idInDB: '62ab35be91c09b3f6ed2da4b'
+      }
+    ]
+  },
+  level: 'info',
+  timestamp: '2022-06-16 16:54:04'
+}
+{
+  message: {
+    depUpdate: {
+      _id: new ObjectId("62ab35f391c09b3f6ed2da52"),
+      name: 'Testing local',
+      boardId: '62ab35f142a3a5314a718add',
+      color: 'blue',
+      mainBoard: false,
+      tasks: [],
+      teamsId: [
+        {
+          idInTrello: '62ab35faded3883e9b796a21',
+          idInDB: new ObjectId("62ab35be91c09b3f6ed2da4b"),
+          _id: new ObjectId("62ab35fc91c09b3f6ed2da59")
+        },
+        {
+          idInTrello: '62ab35f57cb41087b4aa8171',
+          idInDB: new ObjectId("62ab35be91c09b3f6ed2da4b"),
+          _id: new ObjectId("62ab35f791c09b3f6ed2da55")
+        }
+      ],
+      createdAt: 2022-06-16T13:53:55.246Z,
+      updatedAt: 2022-06-16T13:54:04.319Z,
+      __v: 0,
+      canceldListId: '62ab35f2d975223b4654c455',
+      defaultListId: '62ab35f5d2912684dd5490a8',
+      doneListId: '62ab35f3ff6e1f08b1d3b3d5',
+      inProgressListId: '62ab35f2e565f47a9772550e',
+      notClearListId: '62ab35f38073005304065eee',
+      reviewListId: '62ab35f4f5b8ae84b6c95540',
+      sharedListID: '62ab35f4e171bb0a88cb5f39'
+    }
+  },
+  level: 'info',
+  timestamp: '2022-06-16 16:54:04'
+}
+{
+  message: {
+    department: {
+      _id: new ObjectId("62ab35f391c09b3f6ed2da52"),
+      name: 'Testing local',
+      boardId: '62ab35f142a3a5314a718add',
+      color: 'blue',
+      mainBoard: false,
+      tasks: [],
+      teamsId: [
+        {
+          idInTrello: '62ab35faded3883e9b796a21',
+          idInDB: new ObjectId("62ab35be91c09b3f6ed2da4b"),
+          _id: new ObjectId("62ab35fc91c09b3f6ed2da59")
+        },
+        {
+          idInTrello: '62ab35f57cb41087b4aa8171',
+          idInDB: new ObjectId("62ab35be91c09b3f6ed2da4b"),
+          _id: new ObjectId("62ab35f791c09b3f6ed2da55")
+        }
+      ],
+      createdAt: 2022-06-16T13:53:55.246Z,
+      updatedAt: 2022-06-16T13:54:04.319Z,
+      __v: 0,
+      canceldListId: '62ab35f2d975223b4654c455',
+      defaultListId: '62ab35f5d2912684dd5490a8',
+      doneListId: '62ab35f3ff6e1f08b1d3b3d5',
+      inProgressListId: '62ab35f2e565f47a9772550e',
+      notClearListId: '62ab35f38073005304065eee',
+      reviewListId: '62ab35f4f5b8ae84b6c95540',
+      sharedListID: '62ab35f4e171bb0a88cb5f39'
+    }
+  },
+  level: 'info',
+  timestamp: '2022-06-16 16:54:04'
+}
+{
+  message: {
+    departmentData: {
+      _id: '62ab341742640e31954212ab',
+      boardId: '62ab34177b2b2f86a9f32099',
+      name: 'new dep',
+      color: 'orange',
+      mainBoard: false,
+      addTeam: [ { _id: '62ab35be91c09b3f6ed2da4b', name: 'Local 1' } ],
+      removeTeam: []
+    }
+  },
+  level: 'info',
+  timestamp: '2022-06-16 16:54:14'
+}
+{
+  message: 'first step',
+  level: 'info',
+  timestamp: '2022-06-16 16:54:14'
+}
+{
+  message: { removeTeam: [] },
+  level: 'info',
+  timestamp: '2022-06-16 16:54:15'
+}
+{
+  message: { removeListAndWebhookSucced: 'done' },
+  level: 'info',
+  timestamp: '2022-06-16 16:54:15'
+}
+{
+  message: { removeWebhookSucced: 'done' },
+  level: 'info',
+  timestamp: '2022-06-16 16:54:15'
+}
+{
+  message: {
+    title: 'testing',
+    teamListIds: [
+      {
+        idInTrello: '62ab36069f88e72d84906564',
+        idInDB: '62ab35be91c09b3f6ed2da4b'
+      }
+    ]
+  },
+  level: 'info',
+  timestamp: '2022-06-16 16:54:15'
+}
+{
+  message: {
+    depUpdate: {
+      _id: new ObjectId("62ab341742640e31954212ab"),
+      name: 'new dep',
+      boardId: '62ab34177b2b2f86a9f32099',
+      color: 'orange',
+      mainBoard: false,
+      tasks: [],
+      teamsId: [
+        {
+          idInTrello: '62ab36069f88e72d84906564',
+          idInDB: new ObjectId("62ab35be91c09b3f6ed2da4b"),
+          _id: new ObjectId("62ab360791c09b3f6ed2da6c")
+        }
+      ],
+      createdAt: 2022-06-16T13:45:59.370Z,
+      updatedAt: 2022-06-16T13:54:15.722Z,
+      __v: 0,
+      canceldListId: '62ab3418e6e54a3a9c2a5b9b',
+      defaultListId: '62ab341beb44818f849430b8',
+      doneListId: '62ab341949bb9d60ea18e6b9',
+      inProgressListId: '62ab341801d5c43b9892ea76',
+      notClearListId: '62ab3419938f175c342ac988',
+      reviewListId: '62ab341b499bb6225f65b5fd',
+      sharedListID: '62ab341a15d0a277170ea5f8'
+    }
+  },
+  level: 'info',
+  timestamp: '2022-06-16 16:54:15'
+}
+{
+  message: {
+    department: {
+      _id: new ObjectId("62ab341742640e31954212ab"),
+      name: 'new dep',
+      boardId: '62ab34177b2b2f86a9f32099',
+      color: 'orange',
+      mainBoard: false,
+      tasks: [],
+      teamsId: [
+        {
+          idInTrello: '62ab36069f88e72d84906564',
+          idInDB: new ObjectId("62ab35be91c09b3f6ed2da4b"),
+          _id: new ObjectId("62ab360791c09b3f6ed2da6c")
+        }
+      ],
+      createdAt: 2022-06-16T13:45:59.370Z,
+      updatedAt: 2022-06-16T13:54:15.722Z,
+      __v: 0,
+      canceldListId: '62ab3418e6e54a3a9c2a5b9b',
+      defaultListId: '62ab341beb44818f849430b8',
+      doneListId: '62ab341949bb9d60ea18e6b9',
+      inProgressListId: '62ab341801d5c43b9892ea76',
+      notClearListId: '62ab3419938f175c342ac988',
+      reviewListId: '62ab341b499bb6225f65b5fd',
+      sharedListID: '62ab341a15d0a277170ea5f8'
+    }
+  },
+  level: 'info',
+  timestamp: '2022-06-16 16:54:15'
+}
+{
+  message: {
+    departmentData: {
+      _id: '62ab359b91c09b3f6ed2da42',
+      boardId: '62ab359969d8545b4dc9f818',
+      name: 'Local Department',
+      color: 'blue',
+      mainBoard: false,
+      addTeam: [],
+      removeTeam: [ '62ab35bd7398ca8798e95987' ]
+    }
+  },
+  level: 'info',
+  timestamp: '2022-06-16 16:54:21'
+}
+{
+  message: 'first step',
+  level: 'info',
+  timestamp: '2022-06-16 16:54:21'
+}
+{
+  message: { removeTeam: [ '62ab35bd7398ca8798e95987' ] },
+  level: 'info',
+  timestamp: '2022-06-16 16:54:21'
+}
+{
+  message: { removeWebhookSucced: 'done' },
+  level: 'info',
+  timestamp: '2022-06-16 16:54:21'
+}
+{
+  message: { title: 'testing', teamListIds: [] },
+  level: 'info',
+  timestamp: '2022-06-16 16:54:21'
+}
+{
+  message: {
+    depUpdate: {
+      _id: new ObjectId("62ab359b91c09b3f6ed2da42"),
+      name: 'Local Department',
+      boardId: '62ab359969d8545b4dc9f818',
+      color: 'blue',
+      mainBoard: false,
+      tasks: [],
+      teamsId: [],
+      createdAt: 2022-06-16T13:52:27.330Z,
+      updatedAt: 2022-06-16T13:54:21.769Z,
+      __v: 0,
+      canceldListId: '62ab359a5b8b682f62eb7c86',
+      defaultListId: '62ab359d54d92b31527317e4',
+      doneListId: '62ab359bb13e6b87206591ff',
+      inProgressListId: '62ab359a09358188bf02b277',
+      notClearListId: '62ab359be3b12e2693bc177d',
+      reviewListId: '62ab359c8d3ed2697093d3af',
+      sharedListID: '62ab359ceb5ca139292b310b'
+    }
+  },
+  level: 'info',
+  timestamp: '2022-06-16 16:54:21'
+}
+{
+  message: {
+    department: {
+      _id: new ObjectId("62ab359b91c09b3f6ed2da42"),
+      name: 'Local Department',
+      boardId: '62ab359969d8545b4dc9f818',
+      color: 'blue',
+      mainBoard: false,
+      tasks: [],
+      teamsId: [],
+      createdAt: 2022-06-16T13:52:27.330Z,
+      updatedAt: 2022-06-16T13:54:21.769Z,
+      __v: 0,
+      canceldListId: '62ab359a5b8b682f62eb7c86',
+      defaultListId: '62ab359d54d92b31527317e4',
+      doneListId: '62ab359bb13e6b87206591ff',
+      inProgressListId: '62ab359a09358188bf02b277',
+      notClearListId: '62ab359be3b12e2693bc177d',
+      reviewListId: '62ab359c8d3ed2697093d3af',
+      sharedListID: '62ab359ceb5ca139292b310b'
+    }
+  },
+  level: 'info',
+  timestamp: '2022-06-16 16:54:21'
+}
+{
+  message: { removeListAndWebhookSucced: 'done' },
+  level: 'info',
+  timestamp: '2022-06-16 16:54:22'
+}
+{
+  message: {
+    departmentData: {
+      _id: '62ab341742640e31954212ab',
+      boardId: '62ab34177b2b2f86a9f32099',
+      name: 'new dep',
+      color: 'orange',
+      mainBoard: false,
+      addTeam: [],
+      removeTeam: [ '62ab36069f88e72d84906564' ]
+    }
+  },
+  level: 'info',
+  timestamp: '2022-06-16 16:56:18'
+}
+{
+  message: 'first step',
+  level: 'info',
+  timestamp: '2022-06-16 16:56:18'
+}
+{
+  message: { removeTeam: [ '62ab36069f88e72d84906564' ] },
+  level: 'info',
+  timestamp: '2022-06-16 16:56:18'
+}
+{
+  message: { removeWebhookSucced: 'done' },
+  level: 'info',
+  timestamp: '2022-06-16 16:56:18'
+}
+{
+  message: { title: 'testing', teamListIds: [] },
+  level: 'info',
+  timestamp: '2022-06-16 16:56:18'
+}
+{
+  message: {
+    depUpdate: {
+      _id: new ObjectId("62ab341742640e31954212ab"),
+      name: 'new dep',
+      boardId: '62ab34177b2b2f86a9f32099',
+      color: 'orange',
+      mainBoard: false,
+      tasks: [],
+      teamsId: [],
+      createdAt: 2022-06-16T13:45:59.370Z,
+      updatedAt: 2022-06-16T13:56:18.530Z,
+      __v: 0,
+      canceldListId: '62ab3418e6e54a3a9c2a5b9b',
+      defaultListId: '62ab341beb44818f849430b8',
+      doneListId: '62ab341949bb9d60ea18e6b9',
+      inProgressListId: '62ab341801d5c43b9892ea76',
+      notClearListId: '62ab3419938f175c342ac988',
+      reviewListId: '62ab341b499bb6225f65b5fd',
+      sharedListID: '62ab341a15d0a277170ea5f8'
+    }
+  },
+  level: 'info',
+  timestamp: '2022-06-16 16:56:18'
+}
+{
+  message: {
+    department: {
+      _id: new ObjectId("62ab341742640e31954212ab"),
+      name: 'new dep',
+      boardId: '62ab34177b2b2f86a9f32099',
+      color: 'orange',
+      mainBoard: false,
+      tasks: [],
+      teamsId: [],
+      createdAt: 2022-06-16T13:45:59.370Z,
+      updatedAt: 2022-06-16T13:56:18.530Z,
+      __v: 0,
+      canceldListId: '62ab3418e6e54a3a9c2a5b9b',
+      defaultListId: '62ab341beb44818f849430b8',
+      doneListId: '62ab341949bb9d60ea18e6b9',
+      inProgressListId: '62ab341801d5c43b9892ea76',
+      notClearListId: '62ab3419938f175c342ac988',
+      reviewListId: '62ab341b499bb6225f65b5fd',
+      sharedListID: '62ab341a15d0a277170ea5f8'
+    }
+  },
+  level: 'info',
+  timestamp: '2022-06-16 16:56:18'
+}
+{
+  message: { removeListAndWebhookSucced: 'done' },
+  level: 'info',
+  timestamp: '2022-06-16 16:56:19'
+}
+{
+  message: {
+    departmentData: {
+      _id: '62ab35f391c09b3f6ed2da52',
+      boardId: '62ab35f142a3a5314a718add',
+      name: 'Testing local',
+      color: 'blue',
+      mainBoard: false,
+      addTeam: [],
+      removeTeam: [ '62ab35faded3883e9b796a21' ]
+    }
+  },
+  level: 'info',
+  timestamp: '2022-06-16 16:59:23'
+}
+{
+  message: 'first step',
+  level: 'info',
+  timestamp: '2022-06-16 16:59:23'
+}
+{
+  message: { removeTeam: [ '62ab35faded3883e9b796a21' ] },
+  level: 'info',
+  timestamp: '2022-06-16 16:59:24'
+}
+{
+  message: { removeWebhookSucced: 'done' },
+  level: 'info',
+  timestamp: '2022-06-16 16:59:24'
+}
+{
+  message: { title: 'testing', teamListIds: [] },
+  level: 'info',
+  timestamp: '2022-06-16 16:59:24'
+}
+{
+  message: {
+    depUpdate: {
+      _id: new ObjectId("62ab35f391c09b3f6ed2da52"),
+      name: 'Testing local',
+      boardId: '62ab35f142a3a5314a718add',
+      color: 'blue',
+      mainBoard: false,
+      tasks: [],
+      teamsId: [
+        {
+          idInTrello: '62ab35f57cb41087b4aa8171',
+          idInDB: new ObjectId("62ab35be91c09b3f6ed2da4b"),
+          _id: new ObjectId("62ab35f791c09b3f6ed2da55")
+        }
+      ],
+      createdAt: 2022-06-16T13:53:55.246Z,
+      updatedAt: 2022-06-16T13:59:24.462Z,
+      __v: 0,
+      canceldListId: '62ab35f2d975223b4654c455',
+      defaultListId: '62ab35f5d2912684dd5490a8',
+      doneListId: '62ab35f3ff6e1f08b1d3b3d5',
+      inProgressListId: '62ab35f2e565f47a9772550e',
+      notClearListId: '62ab35f38073005304065eee',
+      reviewListId: '62ab35f4f5b8ae84b6c95540',
+      sharedListID: '62ab35f4e171bb0a88cb5f39'
+    }
+  },
+  level: 'info',
+  timestamp: '2022-06-16 16:59:24'
+}
+{
+  message: {
+    department: {
+      _id: new ObjectId("62ab35f391c09b3f6ed2da52"),
+      name: 'Testing local',
+      boardId: '62ab35f142a3a5314a718add',
+      color: 'blue',
+      mainBoard: false,
+      tasks: [],
+      teamsId: [
+        {
+          idInTrello: '62ab35f57cb41087b4aa8171',
+          idInDB: new ObjectId("62ab35be91c09b3f6ed2da4b"),
+          _id: new ObjectId("62ab35f791c09b3f6ed2da55")
+        }
+      ],
+      createdAt: 2022-06-16T13:53:55.246Z,
+      updatedAt: 2022-06-16T13:59:24.462Z,
+      __v: 0,
+      canceldListId: '62ab35f2d975223b4654c455',
+      defaultListId: '62ab35f5d2912684dd5490a8',
+      doneListId: '62ab35f3ff6e1f08b1d3b3d5',
+      inProgressListId: '62ab35f2e565f47a9772550e',
+      notClearListId: '62ab35f38073005304065eee',
+      reviewListId: '62ab35f4f5b8ae84b6c95540',
+      sharedListID: '62ab35f4e171bb0a88cb5f39'
+    }
+  },
+  level: 'info',
+  timestamp: '2022-06-16 16:59:24'
+}
+{
+  message: { removeListAndWebhookSucced: 'done' },
+  level: 'info',
+  timestamp: '2022-06-16 16:59:25'
+}
+{
+  message: {
+    departmentData: {
+      _id: '62ab35f391c09b3f6ed2da52',
+      boardId: '62ab35f142a3a5314a718add',
+      name: 'Testing local',
+      color: 'blue',
+      mainBoard: false,
+      addTeam: [],
+      removeTeam: [ '62ab35faded3883e9b796a21', '62ab35f57cb41087b4aa8171' ]
+    }
+  },
+  level: 'info',
+  timestamp: '2022-06-16 16:59:31'
+}
+{
+  message: 'first step',
+  level: 'info',
+  timestamp: '2022-06-16 16:59:31'
+}
+{
+  message: {
+    removeTeam: [ '62ab35faded3883e9b796a21', '62ab35f57cb41087b4aa8171' ]
+  },
+  level: 'info',
+  timestamp: '2022-06-16 16:59:32'
+}
+{
+  message: { removeWebhookSucced: 'done' },
+  level: 'info',
+  timestamp: '2022-06-16 16:59:32'
+}
+{
+  message: { title: 'testing', teamListIds: [] },
+  level: 'info',
+  timestamp: '2022-06-16 16:59:32'
+}
+{
+  message: {
+    depUpdate: {
+      _id: new ObjectId("62ab35f391c09b3f6ed2da52"),
+      name: 'Testing local',
+      boardId: '62ab35f142a3a5314a718add',
+      color: 'blue',
+      mainBoard: false,
+      tasks: [],
+      teamsId: [],
+      createdAt: 2022-06-16T13:53:55.246Z,
+      updatedAt: 2022-06-16T13:59:32.343Z,
+      __v: 0,
+      canceldListId: '62ab35f2d975223b4654c455',
+      defaultListId: '62ab35f5d2912684dd5490a8',
+      doneListId: '62ab35f3ff6e1f08b1d3b3d5',
+      inProgressListId: '62ab35f2e565f47a9772550e',
+      notClearListId: '62ab35f38073005304065eee',
+      reviewListId: '62ab35f4f5b8ae84b6c95540',
+      sharedListID: '62ab35f4e171bb0a88cb5f39'
+    }
+  },
+  level: 'info',
+  timestamp: '2022-06-16 16:59:32'
+}
+{
+  message: {
+    department: {
+      _id: new ObjectId("62ab35f391c09b3f6ed2da52"),
+      name: 'Testing local',
+      boardId: '62ab35f142a3a5314a718add',
+      color: 'blue',
+      mainBoard: false,
+      tasks: [],
+      teamsId: [],
+      createdAt: 2022-06-16T13:53:55.246Z,
+      updatedAt: 2022-06-16T13:59:32.343Z,
+      __v: 0,
+      canceldListId: '62ab35f2d975223b4654c455',
+      defaultListId: '62ab35f5d2912684dd5490a8',
+      doneListId: '62ab35f3ff6e1f08b1d3b3d5',
+      inProgressListId: '62ab35f2e565f47a9772550e',
+      notClearListId: '62ab35f38073005304065eee',
+      reviewListId: '62ab35f4f5b8ae84b6c95540',
+      sharedListID: '62ab35f4e171bb0a88cb5f39'
+    }
+  },
+  level: 'info',
+  timestamp: '2022-06-16 16:59:32'
+}
+{
+  message: { removeListAndWebhookSucced: 'done' },
+  level: 'info',
+  timestamp: '2022-06-16 16:59:33'
+}
+{
+  message: {
+    __removeMemberAndListError: FetchError: invalid json response body at https://api.trello.com/1/lists/undefined/closed?value=true&key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68 reason: Unexpected token i in JSON at position 0
+        at C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\node-fetch\lib\index.js:273:32
+        at runMicrotasks (<anonymous>)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+      type: 'invalid-json'
+    }
+  },
+  level: 'error',
+  timestamp: '2022-06-16 17:02:37'
+}
+{
+  message: { data: { isDeleted: 'true', listId: undefined } },
+  level: 'info',
+  timestamp: '2022-06-16 17:02:37'
+}
+{
+  message: {
+    departmentData: {
+      _id: '62ab341742640e31954212ab',
+      boardId: '62ab34177b2b2f86a9f32099',
+      name: 'new dep',
+      color: 'orange',
+      mainBoard: false,
+      addTeam: [],
+      removeTeam: [ '62ab38acd3c9f52d22d49b51' ]
+    }
+  },
+  level: 'info',
+  timestamp: '2022-06-16 17:05:39'
+}
+{
+  message: 'first step',
+  level: 'info',
+  timestamp: '2022-06-16 17:05:39'
+}
+{
+  message: { removeTeam: [ '62ab38acd3c9f52d22d49b51' ] },
+  level: 'info',
+  timestamp: '2022-06-16 17:05:39'
+}
+{
+  message: { removeWebhookSucced: 'done' },
+  level: 'info',
+  timestamp: '2022-06-16 17:05:39'
+}
+{
+  message: { title: 'testing', teamListIds: [] },
+  level: 'info',
+  timestamp: '2022-06-16 17:05:39'
+}
+{
+  message: {
+    depUpdate: {
+      _id: new ObjectId("62ab341742640e31954212ab"),
+      name: 'new dep',
+      boardId: '62ab34177b2b2f86a9f32099',
+      color: 'orange',
+      mainBoard: false,
+      tasks: [],
+      teamsId: [],
+      createdAt: 2022-06-16T13:45:59.370Z,
+      updatedAt: 2022-06-16T14:05:39.751Z,
+      __v: 0,
+      canceldListId: '62ab3418e6e54a3a9c2a5b9b',
+      defaultListId: '62ab341beb44818f849430b8',
+      doneListId: '62ab341949bb9d60ea18e6b9',
+      inProgressListId: '62ab341801d5c43b9892ea76',
+      notClearListId: '62ab3419938f175c342ac988',
+      reviewListId: '62ab341b499bb6225f65b5fd',
+      sharedListID: '62ab341a15d0a277170ea5f8'
+    }
+  },
+  level: 'info',
+  timestamp: '2022-06-16 17:05:39'
+}
+{
+  message: {
+    department: {
+      _id: new ObjectId("62ab341742640e31954212ab"),
+      name: 'new dep',
+      boardId: '62ab34177b2b2f86a9f32099',
+      color: 'orange',
+      mainBoard: false,
+      tasks: [],
+      teamsId: [],
+      createdAt: 2022-06-16T13:45:59.370Z,
+      updatedAt: 2022-06-16T14:05:39.751Z,
+      __v: 0,
+      canceldListId: '62ab3418e6e54a3a9c2a5b9b',
+      defaultListId: '62ab341beb44818f849430b8',
+      doneListId: '62ab341949bb9d60ea18e6b9',
+      inProgressListId: '62ab341801d5c43b9892ea76',
+      notClearListId: '62ab3419938f175c342ac988',
+      reviewListId: '62ab341b499bb6225f65b5fd',
+      sharedListID: '62ab341a15d0a277170ea5f8'
+    }
+  },
+  level: 'info',
+  timestamp: '2022-06-16 17:05:39'
+}
+{
+  message: { removeListAndWebhookSucced: 'done' },
+  level: 'info',
+  timestamp: '2022-06-16 17:05:40'
+}
+{
+  message: {
+    departmentData: {
+      _id: '62ab341742640e31954212ab',
+      boardId: '62ab34177b2b2f86a9f32099',
+      name: 'new dep',
+      color: 'orange',
+      mainBoard: false,
+      addTeam: [ { _id: '62ab38ad91c09b3f6ed2dab1', name: 'Local' } ],
+      removeTeam: []
+    }
+  },
+  level: 'info',
+  timestamp: '2022-06-16 17:46:26'
+}
+{
+  message: 'first step',
+  level: 'info',
+  timestamp: '2022-06-16 17:46:26'
+}
+{
+  message: { removeTeam: [] },
+  level: 'info',
+  timestamp: '2022-06-16 17:46:26'
+}
+{
+  message: { removeListAndWebhookSucced: 'done' },
+  level: 'info',
+  timestamp: '2022-06-16 17:46:26'
+}
+{
+  message: { removeWebhookSucced: 'done' },
+  level: 'info',
+  timestamp: '2022-06-16 17:46:27'
+}
+{
+  message: {
+    title: 'testing',
+    teamListIds: [
+      {
+        idInTrello: '62ab424163efc32c7f3889c4',
+        idInDB: '62ab38ad91c09b3f6ed2dab1'
+      }
+    ]
+  },
+  level: 'info',
+  timestamp: '2022-06-16 17:46:27'
+}
+{
+  message: {
+    depUpdate: {
+      _id: new ObjectId("62ab341742640e31954212ab"),
+      name: 'new dep',
+      boardId: '62ab34177b2b2f86a9f32099',
+      color: 'orange',
+      mainBoard: false,
+      tasks: [],
+      teamsId: [
+        {
+          idInTrello: '62ab424163efc32c7f3889c4',
+          idInDB: new ObjectId("62ab38ad91c09b3f6ed2dab1"),
+          _id: new ObjectId("62ab424391c09b3f6ed2dc0c")
+        }
+      ],
+      createdAt: 2022-06-16T13:45:59.370Z,
+      updatedAt: 2022-06-16T14:46:27.453Z,
+      __v: 0,
+      canceldListId: '62ab3418e6e54a3a9c2a5b9b',
+      defaultListId: '62ab341beb44818f849430b8',
+      doneListId: '62ab341949bb9d60ea18e6b9',
+      inProgressListId: '62ab341801d5c43b9892ea76',
+      notClearListId: '62ab3419938f175c342ac988',
+      reviewListId: '62ab341b499bb6225f65b5fd',
+      sharedListID: '62ab341a15d0a277170ea5f8'
+    }
+  },
+  level: 'info',
+  timestamp: '2022-06-16 17:46:27'
+}
+{
+  message: {
+    department: {
+      _id: new ObjectId("62ab341742640e31954212ab"),
+      name: 'new dep',
+      boardId: '62ab34177b2b2f86a9f32099',
+      color: 'orange',
+      mainBoard: false,
+      tasks: [],
+      teamsId: [
+        {
+          idInTrello: '62ab424163efc32c7f3889c4',
+          idInDB: new ObjectId("62ab38ad91c09b3f6ed2dab1"),
+          _id: new ObjectId("62ab424391c09b3f6ed2dc0c")
+        }
+      ],
+      createdAt: 2022-06-16T13:45:59.370Z,
+      updatedAt: 2022-06-16T14:46:27.453Z,
+      __v: 0,
+      canceldListId: '62ab3418e6e54a3a9c2a5b9b',
+      defaultListId: '62ab341beb44818f849430b8',
+      doneListId: '62ab341949bb9d60ea18e6b9',
+      inProgressListId: '62ab341801d5c43b9892ea76',
+      notClearListId: '62ab3419938f175c342ac988',
+      reviewListId: '62ab341b499bb6225f65b5fd',
+      sharedListID: '62ab341a15d0a277170ea5f8'
+    }
+  },
+  level: 'info',
+  timestamp: '2022-06-16 17:46:27'
+}
+{
+  message: {
+    updateMultiTaskDBError: Error: tasks validation failed: attachedFiles.0.url: Path `url` is required., attachedFiles.0.mimeType: Path `mimeType` is required., attachedFiles.0.trelloId: Path `trelloId` is required., attachedFiles.0.name: Path `name` is required.
+        at ValidationError.inspect (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\mongoose\lib\error\validation.js:48:26)
+        at formatValue (node:internal/util/inspect:782:19)
+        at formatProperty (node:internal/util/inspect:1819:11)
+        at formatRaw (node:internal/util/inspect:1030:9)
+        at formatValue (node:internal/util/inspect:817:10)
+        at formatProperty (node:internal/util/inspect:1819:11)
+        at formatRaw (node:internal/util/inspect:1030:9)
+        at formatValue (node:internal/util/inspect:817:10)
+        at inspect (node:internal/util/inspect:347:10)
+        at Format.transform (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\logform\pretty-print.js:27:19) {
+      errors: {
+        'attachedFiles.0.url': ValidatorError: Path `url` is required.
+            at validate (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\mongoose\lib\schematype.js:1330:13)
+            at SchemaString.SchemaType.doValidate (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\mongoose\lib\schematype.js:1314:7)
+            at C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\mongoose\lib\document.js:2751:18
+            at processTicksAndRejections (node:internal/process/task_queues:78:11) {
+          properties: {
+            validator: [Function (anonymous)],
+            message: 'Path `url` is required.',
+            type: 'required',
+            path: 'url',
+            value: undefined
+          },
+          kind: 'required',
+          path: 'url',
+          value: undefined,
+          reason: undefined,
+          [Symbol(mongoose:validatorError)]: true
+        },
+        'attachedFiles.0.mimeType': ValidatorError: Path `mimeType` is required.
+            at validate (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\mongoose\lib\schematype.js:1330:13)
+            at SchemaString.SchemaType.doValidate (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\mongoose\lib\schematype.js:1314:7)
+            at C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\mongoose\lib\document.js:2751:18
+            at processTicksAndRejections (node:internal/process/task_queues:78:11) {
+          properties: {
+            validator: [Function (anonymous)],
+            message: 'Path `mimeType` is required.',
+            type: 'required',
+            path: 'mimeType',
+            value: undefined
+          },
+          kind: 'required',
+          path: 'mimeType',
+          value: undefined,
+          reason: undefined,
+          [Symbol(mongoose:validatorError)]: true
+        },
+        'attachedFiles.0.trelloId': ValidatorError: Path `trelloId` is required.
+            at validate (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\mongoose\lib\schematype.js:1330:13)
+            at SchemaString.SchemaType.doValidate (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\mongoose\lib\schematype.js:1314:7)
+            at C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\mongoose\lib\document.js:2751:18
+            at processTicksAndRejections (node:internal/process/task_queues:78:11) {
+          properties: {
+            validator: [Function (anonymous)],
+            message: 'Path `trelloId` is required.',
+            type: 'required',
+            path: 'trelloId',
+            value: undefined
+          },
+          kind: 'required',
+          path: 'trelloId',
+          value: undefined,
+          reason: undefined,
+          [Symbol(mongoose:validatorError)]: true
+        },
+        'attachedFiles.0.name': ValidatorError: Path `name` is required.
+            at validate (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\mongoose\lib\schematype.js:1330:13)
+            at SchemaString.SchemaType.doValidate (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\mongoose\lib\schematype.js:1314:7)
+            at C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\mongoose\lib\document.js:2751:18
+            at processTicksAndRejections (node:internal/process/task_queues:78:11) {
+          properties: {
+            validator: [Function (anonymous)],
+            message: 'Path `name` is required.',
+            type: 'required',
+            path: 'name',
+            value: undefined
+          },
+          kind: 'required',
+          path: 'name',
+          value: undefined,
+          reason: undefined,
+          [Symbol(mongoose:validatorError)]: true
+        }
+      },
+      _message: 'tasks validation failed'
+    }
+  },
+  level: 'error',
+  timestamp: '2022-06-16 17:47:54'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-06-17 19:46:23'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-06-18 14:39:45'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-06-18 16:15:07'
+}
