@@ -4,7 +4,7 @@ let clients = 0;
 function appSocket(
   io: Server<DefaultEventsMap, DefaultEventsMap, DefaultEventsMap, any>
 ) {
-  io.on(
+  let soc = io.on(
     "connection",
     (
       socket: Socket<DefaultEventsMap, DefaultEventsMap, DefaultEventsMap, any>
@@ -14,7 +14,6 @@ function appSocket(
         console.log("Client disconnected No,", --clients)
       );
       console.log(io.allSockets());
-
       //* this for admins role only
       socket.on("joined admin", () => {
         // logger.info({ data });

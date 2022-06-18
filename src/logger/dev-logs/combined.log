@@ -4205,3 +4205,193 @@
   level: 'info',
   timestamp: '2022-06-18 14:20:40'
 }
+{
+  message: { afterList: 'inProgress' },
+  level: 'info',
+  timestamp: '2022-06-18 14:33:49'
+}
+{
+  message: { afterList: 'inProgress' },
+  level: 'info',
+  timestamp: '2022-06-18 14:33:49'
+}
+{
+  message: { afterList: 'Cancled' },
+  level: 'info',
+  timestamp: '2022-06-18 14:34:41'
+}
+{
+  message: { afterList: 'Cancled' },
+  level: 'info',
+  timestamp: '2022-06-18 14:34:41'
+}
+{
+  message: { afterList: 'inProgress' },
+  level: 'info',
+  timestamp: '2022-06-18 14:34:51'
+}
+{
+  message: { afterList: 'inProgress' },
+  level: 'info',
+  timestamp: '2022-06-18 14:34:51'
+}
+{
+  message: { afterList: 'Tasks Board' },
+  level: 'info',
+  timestamp: '2022-06-18 14:36:21'
+}
+{
+  message: { afterList: 'Tasks Board' },
+  level: 'info',
+  timestamp: '2022-06-18 14:36:21'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-06-18 14:40:02'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-06-18 14:51:47'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-06-18 14:53:27'
+}
+{
+  message: { afterList: 'Not Clear' },
+  level: 'info',
+  timestamp: '2022-06-18 14:57:32'
+}
+{
+  message: { afterList: 'Not Clear' },
+  level: 'info',
+  timestamp: '2022-06-18 14:57:32'
+}
+{
+  message: { afterList: undefined },
+  level: 'info',
+  timestamp: '2022-06-18 14:58:19'
+}
+{
+  message: { afterList: 'inProgress' },
+  level: 'info',
+  timestamp: '2022-06-18 14:58:25'
+}
+{
+  message: { afterList: 'inProgress' },
+  level: 'info',
+  timestamp: '2022-06-18 14:58:25'
+}
+{
+  message: { afterList: 'Review' },
+  level: 'info',
+  timestamp: '2022-06-18 14:58:30'
+}
+{
+  message: { afterList: 'Review' },
+  level: 'info',
+  timestamp: '2022-06-18 14:58:30'
+}
+{
+  message: { afterList: 'Cancled' },
+  level: 'info',
+  timestamp: '2022-06-18 14:58:33'
+}
+{
+  message: { afterList: 'Cancled' },
+  level: 'info',
+  timestamp: '2022-06-18 14:58:33'
+}
+{
+  message: { afterList: 'Done' },
+  level: 'info',
+  timestamp: '2022-06-18 14:59:00'
+}
+{
+  message: { afterList: 'Done' },
+  level: 'info',
+  timestamp: '2022-06-18 14:59:00'
+}
+{
+  message: { afterList: 'Cancled' },
+  level: 'info',
+  timestamp: '2022-06-18 14:59:18'
+}
+{
+  message: { afterList: 'Cancled' },
+  level: 'info',
+  timestamp: '2022-06-18 14:59:18'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-06-18 15:01:47'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-06-18 15:02:57'
+}
+{
+  message: { afterList: 'Not Clear' },
+  level: 'info',
+  timestamp: '2022-06-18 15:03:24'
+}
+{
+  message: { afterList: 'Not Clear' },
+  level: 'info',
+  timestamp: '2022-06-18 15:03:25'
+}
+{
+  message: { afterList: 'Cancled' },
+  level: 'info',
+  timestamp: '2022-06-18 15:03:35'
+}
+{
+  message: { afterList: 'Cancled' },
+  level: 'info',
+  timestamp: '2022-06-18 15:03:35'
+}
+{
+  message: { afterList: 'inProgress' },
+  level: 'info',
+  timestamp: '2022-06-18 15:03:44'
+}
+{
+  message: { afterList: 'inProgress' },
+  level: 'info',
+  timestamp: '2022-06-18 15:03:44'
+}
+{
+  message: { afterList: 'Cancled' },
+  level: 'info',
+  timestamp: '2022-06-18 15:03:56'
+}
+{
+  message: { afterList: 'Cancled' },
+  level: 'info',
+  timestamp: '2022-06-18 15:03:56'
+}
+{
+  message: { afterList: 'Not Clear' },
+  level: 'info',
+  timestamp: '2022-06-18 15:04:03'
+}
+{
+  message: { afterList: 'Not Clear' },
+  level: 'info',
+  timestamp: '2022-06-18 15:04:03'
+}
