@@ -2860,4 +2860,199 @@
   },
   level: 'error',
   timestamp: '2022-06-18 13:47:32'
+    createCategoryDBError: MongoServerError: E11000 duplicate key error collection: TTP.categories index: category_1 dup key: { category: "Testing" }
+        at C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\mongodb\src\operations\insert.ts:85:25
+        at C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\mongodb\src\cmap\connection_pool.ts:482:13
+        at handleOperationResult (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\mongodb\src\sdam\server.ts:538:14)
+        at Connection.onMessage (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\mongodb\src\cmap\connection.ts:452:5)
+        at MessageStream.<anonymous> (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\mongodb\src\cmap\connection.ts:267:56)
+        at MessageStream.emit (node:events:527:28)
+        at MessageStream.emit (node:domain:475:12)
+        at processIncomingData (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\mongodb\src\cmap\message_stream.ts:168:12)
+        at MessageStream._write (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\mongodb\src\cmap\message_stream.ts:65:5)
+        at writeOrBuffer (node:internal/streams/writable:389:12) {
+      index: 0,
+      code: 11000,
+      keyPattern: { category: 1 },
+      keyValue: { category: 'Testing' },
+      [Symbol(errorLabels)]: Set(0) {}
+    }
+  },
+  level: 'error',
+  timestamp: '2022-06-14 19:10:24'
+}
+{
+  message: {
+    createCategoryDBError: MongoServerError: E11000 duplicate key error collection: TTP.categories index: category_1 dup key: { category: "Testing" }
+        at C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\mongodb\src\operations\insert.ts:85:25
+        at C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\mongodb\src\cmap\connection_pool.ts:482:13
+        at handleOperationResult (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\mongodb\src\sdam\server.ts:538:14)
+        at Connection.onMessage (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\mongodb\src\cmap\connection.ts:452:5)
+        at MessageStream.<anonymous> (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\mongodb\src\cmap\connection.ts:267:56)
+        at MessageStream.emit (node:events:527:28)
+        at MessageStream.emit (node:domain:475:12)
+        at processIncomingData (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\mongodb\src\cmap\message_stream.ts:168:12)
+        at MessageStream._write (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\mongodb\src\cmap\message_stream.ts:65:5)
+        at writeOrBuffer (node:internal/streams/writable:389:12) {
+      index: 0,
+      code: 11000,
+      keyPattern: { category: 1 },
+      keyValue: { category: 'Testing' },
+      [Symbol(errorLabels)]: Set(0) {}
+    }
+  },
+  level: 'error',
+  timestamp: '2022-06-14 19:10:29'
+}
+{
+  message: {
+    __removeMemberAndListError: FetchError: invalid json response body at https://api.trello.com/1/lists/undefined/closed?value=true&key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68 reason: Unexpected token i in JSON at position 0
+        at C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\node-fetch\lib\index.js:273:32
+        at runMicrotasks (<anonymous>)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+      type: 'invalid-json'
+    }
+  },
+  level: 'error',
+  timestamp: '2022-06-14 19:15:03'
+}
+{
+  message: {
+    __removeMemberAndListError: FetchError: invalid json response body at https://api.trello.com/1/lists/undefined/closed?value=true&key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68 reason: Unexpected token i in JSON at position 0
+        at C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\node-fetch\lib\index.js:273:32
+        at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+      type: 'invalid-json'
+    }
+  },
+  level: 'error',
+  timestamp: '2022-06-16 15:20:37'
+}
+{
+  message: {
+    __removeMemberAndListError: FetchError: invalid json response body at https://api.trello.com/1/lists/undefined/closed?value=true&key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68 reason: Unexpected token i in JSON at position 0
+        at C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\node-fetch\lib\index.js:273:32
+        at runMicrotasks (<anonymous>)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+      type: 'invalid-json'
+    }
+  },
+  level: 'error',
+  timestamp: '2022-06-16 15:22:32'
+}
+{
+  message: {
+    __removeMemberAndListError: FetchError: invalid json response body at https://api.trello.com/1/lists/undefined/closed?value=true&key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68 reason: Unexpected token i in JSON at position 0
+        at C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\node-fetch\lib\index.js:273:32
+        at runMicrotasks (<anonymous>)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+      type: 'invalid-json'
+    }
+  },
+  level: 'error',
+  timestamp: '2022-06-16 15:22:32'
+}
+{
+  message: {
+    __removeMemberAndListError: FetchError: invalid json response body at https://api.trello.com/1/lists/undefined/closed?value=true&key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68 reason: Unexpected token i in JSON at position 0
+        at C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\node-fetch\lib\index.js:273:32
+        at runMicrotasks (<anonymous>)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+      type: 'invalid-json'
+    }
+  },
+  level: 'error',
+  timestamp: '2022-06-16 17:02:37'
+}
+{
+  message: {
+    updateMultiTaskDBError: Error: tasks validation failed: attachedFiles.0.url: Path `url` is required., attachedFiles.0.mimeType: Path `mimeType` is required., attachedFiles.0.trelloId: Path `trelloId` is required., attachedFiles.0.name: Path `name` is required.
+        at ValidationError.inspect (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\mongoose\lib\error\validation.js:48:26)
+        at formatValue (node:internal/util/inspect:782:19)
+        at formatProperty (node:internal/util/inspect:1819:11)
+        at formatRaw (node:internal/util/inspect:1030:9)
+        at formatValue (node:internal/util/inspect:817:10)
+        at formatProperty (node:internal/util/inspect:1819:11)
+        at formatRaw (node:internal/util/inspect:1030:9)
+        at formatValue (node:internal/util/inspect:817:10)
+        at inspect (node:internal/util/inspect:347:10)
+        at Format.transform (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\logform\pretty-print.js:27:19) {
+      errors: {
+        'attachedFiles.0.url': ValidatorError: Path `url` is required.
+            at validate (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\mongoose\lib\schematype.js:1330:13)
+            at SchemaString.SchemaType.doValidate (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\mongoose\lib\schematype.js:1314:7)
+            at C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\mongoose\lib\document.js:2751:18
+            at processTicksAndRejections (node:internal/process/task_queues:78:11) {
+          properties: {
+            validator: [Function (anonymous)],
+            message: 'Path `url` is required.',
+            type: 'required',
+            path: 'url',
+            value: undefined
+          },
+          kind: 'required',
+          path: 'url',
+          value: undefined,
+          reason: undefined,
+          [Symbol(mongoose:validatorError)]: true
+        },
+        'attachedFiles.0.mimeType': ValidatorError: Path `mimeType` is required.
+            at validate (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\mongoose\lib\schematype.js:1330:13)
+            at SchemaString.SchemaType.doValidate (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\mongoose\lib\schematype.js:1314:7)
+            at C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\mongoose\lib\document.js:2751:18
+            at processTicksAndRejections (node:internal/process/task_queues:78:11) {
+          properties: {
+            validator: [Function (anonymous)],
+            message: 'Path `mimeType` is required.',
+            type: 'required',
+            path: 'mimeType',
+            value: undefined
+          },
+          kind: 'required',
+          path: 'mimeType',
+          value: undefined,
+          reason: undefined,
+          [Symbol(mongoose:validatorError)]: true
+        },
+        'attachedFiles.0.trelloId': ValidatorError: Path `trelloId` is required.
+            at validate (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\mongoose\lib\schematype.js:1330:13)
+            at SchemaString.SchemaType.doValidate (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\mongoose\lib\schematype.js:1314:7)
+            at C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\mongoose\lib\document.js:2751:18
+            at processTicksAndRejections (node:internal/process/task_queues:78:11) {
+          properties: {
+            validator: [Function (anonymous)],
+            message: 'Path `trelloId` is required.',
+            type: 'required',
+            path: 'trelloId',
+            value: undefined
+          },
+          kind: 'required',
+          path: 'trelloId',
+          value: undefined,
+          reason: undefined,
+          [Symbol(mongoose:validatorError)]: true
+        },
+        'attachedFiles.0.name': ValidatorError: Path `name` is required.
+            at validate (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\mongoose\lib\schematype.js:1330:13)
+            at SchemaString.SchemaType.doValidate (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\mongoose\lib\schematype.js:1314:7)
+            at C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\mongoose\lib\document.js:2751:18
+            at processTicksAndRejections (node:internal/process/task_queues:78:11) {
+          properties: {
+            validator: [Function (anonymous)],
+            message: 'Path `name` is required.',
+            type: 'required',
+            path: 'name',
+            value: undefined
+          },
+          kind: 'required',
+          path: 'name',
+          value: undefined,
+          reason: undefined,
+          [Symbol(mongoose:validatorError)]: true
+        }
+      },
+      _message: 'tasks validation failed'
+    }
+  },
+  level: 'error',
+  timestamp: '2022-06-16 17:47:54'
 }
