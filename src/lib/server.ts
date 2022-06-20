@@ -23,8 +23,8 @@ export const io = new Server(http, {
     origin: config.get("FrontEndUrl"),
   },
   transports: ["websocket", "polling"],
-  pingInterval: 10000,
-  pingTimeout: 0,
+  pingInterval: 2000,
+  pingTimeout: 5000,
 });
 AppSocket(io);
 

@@ -10537,3 +10537,10 @@
   level: 'info',
   timestamp: '2022-06-20 15:28:38'
 }
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-06-20 15:34:18'
+}
