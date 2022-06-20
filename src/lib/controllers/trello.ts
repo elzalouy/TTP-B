@@ -467,24 +467,21 @@ class BoardController {
       // }
 
       //update
-
       if (type === "updateCard" && action !== "action_archived_card") {
         if (action === "action_changed_description_of_card")
-          // tested
           task.description = data.action.data.card?.desc;
         if (action === "action_renamed_card")
-          //tested
           task.description = data.action.data.card.name;
-        //tested
         if (action === "action_move_card_from_list_to_list") {
           task.status = data.action.data.listAfter?.name;
           task.listId = data.action.data.listAfter?.id;
+          task.lastMove = data.action.data.listBefore.name;
+          task.lastMoveDate = new Date().toUTCString();
         }
         let result = await TaskController.updateTaskByTrelloDB(task);
         io.sockets.emit("update task", result);
       }
       // add attachment
-      // tested
       if (type === "addAttachmentToCard") {
         task.attachedFiles = [
           {
@@ -509,6 +506,7 @@ class BoardController {
         let result = await TaskController.archiveTaskByTrelloDB(task, false);
         return io.sockets.emit("update task", result);
       }
+      //delete
       if (type === "deleteCard") {
         let result = await TaskController.deleteTaskByTrelloDB(task);
         io.sockets.emit("delete task", result);
