@@ -1,6 +1,6 @@
 import queue from "queue";
 import logger from "../../logger";
-import BoardController from "../controllers/boards";
+import BoardController from "../controllers/trello";
 import DepartmentController from "../controllers/department";
 import { DepartmentData, DepartmentInfo } from "../types/model/Department";
 import { io } from "../server";

@@ -10,7 +10,7 @@ import logger from "../../logger";
 import UserDB from "../dbCalls/user/user";
 import { IUser, PasswordUpdate, UserData } from "../types/model/User";
 import { customeError } from "../utils/errorUtils";
-import BoardController from "./boards";
+import BoardController from "./trello";
 import sendMail from "../services/mail";
 import { JwtPayload } from "jsonwebtoken";
 

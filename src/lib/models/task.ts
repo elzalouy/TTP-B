@@ -30,10 +30,12 @@ const TaskSchema: Schema = new Schema<TaskInfo>(
     listId: {
       type: Schema.Types.ObjectId,
       required: true,
+      default: null,
     },
     cardId: {
       type: String,
       required: true,
+      unique: true,
     },
     boardId: {
       type: String,
@@ -50,6 +52,7 @@ const TaskSchema: Schema = new Schema<TaskInfo>(
         "Not Clear",
         "Cancled",
         "Review",
+        "Archived",
       ],
     },
     start: {

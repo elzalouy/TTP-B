@@ -9,7 +9,7 @@ import {
   DepartmentData,
   DepartmentInfo,
 } from "../types/model/Department";
-import BoardController from "./boards";
+import BoardController from "./trello";
 
 const DepartmentController = class DepartmentController extends DepartmentBD {
   static async createDepartment(data: DepartmentData) {

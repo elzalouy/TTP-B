@@ -78,7 +78,7 @@ export const createTaskSchema = Joi.object({
     "string.min": "Team should be selected",
     "any.required": "Team is required",
   }),
-  status: Joi.string().valid("Tasks Board").required().messages({
+  status: Joi.string().valid("Tasks Board", "inProgress").required().messages({
     "string.base": "Status is required",
     "string.empty": "Status should be string with min 4 chars",
     "string.min": "Status length should be Min 4 chars",

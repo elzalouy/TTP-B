@@ -49,6 +49,15 @@ class TaskDB {
   static async deleteTasksWhereDB(data: TaskData) {
     return await TaskDB.__deleteTasksWhereDB(data);
   }
+  static async updateTaskByTrelloDB(data: TaskData) {
+    return await TaskDB.__updateTaskByTrelloDB(data);
+  }
+  static async deleteTaskByTrelloDB(data: TaskData) {
+    return await TaskDB.__deleteTaskByTrelloDB(data);
+  }
+  static async archiveTaskByTrelloDB(data: TaskData, archive: boolean) {
+    return await TaskDB.__archiveTaskByTrelloDB(data, archive);
+  }
   static async __getAllTasks(data: any) {
     try {
       let tasks = Tasks.find(data).populate("memberId");
@@ -142,14 +151,6 @@ class TaskDB {
       logger.error({ updateTaskDBError: error });
     }
   }
-  /**
-   * Delete Tasks where condition
-   *
-   * it must only used in deleting a department, so the board will also be deleted and all cards and lists inside.
-   * If it's used for any other purpose will cause a big issue in which cards are still not deleted.
-   * @param data BoardId
-   * @returns deleteResult
-   */
   static async __deleteTasksWhereDB(data: TaskData) {
     try {
       let result = await Tasks.deleteMany(data);
@@ -232,7 +233,6 @@ class TaskDB {
     try {
       let task: TaskInfo = new Tasks(data);
       task = await task.save();
-
       return task;
     } catch (error) {
       logger.error({ createTaskDBError: error });
@@ -267,6 +267,58 @@ class TaskDB {
       else return null;
     } catch (error) {
       logger.error({ getOneTaskError: error });
+    }
+  }
+  static async __updateTaskByTrelloDB(data: TaskData) {
+    try {
+      let attachments = data?.attachedFiles ? data.attachedFiles : [];
+      delete data.attachedFiles;
+      let task = await Tasks.findOneAndUpdate(
+        { cardId: data.cardId },
+        { $set: data, $push: { attachedFiles: attachments } },
+        {
+          new: true,
+          lean: true,
+        }
+      );
+      return task;
+    } catch (error) {
+      logger.error({ __updateTaskByTrelloDBError: error });
+    }
+  }
+  static async __createTaskByTrelloDB(data: TaskData) {
+    try {
+      let result = await Tasks.findOne({ cardId: data.cardId });
+      if (result) return result;
+      else {
+        let task = new Tasks(data);
+        return await task.save();
+      }
+    } catch (error) {
+      logger.error({ __createTaskByTrelloDBError: error });
+    }
+  }
+  static async __deleteTaskByTrelloDB(data: TaskData) {
+    try {
+      let result = await Tasks.findOneAndDelete({ cardId: data.cardId });
+      return result;
+    } catch (error) {
+      logger.error({ __deleteTaskByTrelloDBError: error });
+    }
+  }
+  static async __archiveTaskByTrelloDB(data: TaskData, archive: boolean) {
+    try {
+      let taskData =
+        archive === true ? { listId: null, status: "Archived" } : data;
+      console.log(taskData);
+      let archiveTask = await Tasks.findOneAndUpdate(
+        { cardId: data.cardId },
+        taskData,
+        { new: true, lean: true }
+      );
+      return archiveTask;
+    } catch (error) {
+      logger.error({ __archiveTaskByTrelloDBError: error });
     }
   }
 }

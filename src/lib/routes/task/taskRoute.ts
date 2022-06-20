@@ -8,7 +8,6 @@ const multer = Multer();
 const {
   CREATE_TASK,
   UPDATE_TASK,
-  WEBHOOK_UPDATES,
   GET_TASKS,
   FILTER_TASKS,
   MOVE_TASK,
@@ -20,7 +19,6 @@ const {
 const {
   handleCreateCard,
   handleUpdateCard,
-  handleWebhookUpdateCard,
   handleGetTasks,
   handleFilterTasks,
   handleMoveCard,
@@ -44,8 +42,6 @@ router.post(
   handleUpdateCard
 );
 router.put(`${MOVE_TASK}`, Authed, handleMoveCard);
-router.post(`${WEBHOOK_UPDATES}`, handleWebhookUpdateCard);
-router.get(`${WEBHOOK_UPDATES}`, handleWebhookUpdateCard);
 router.get(`${GET_TASKS}`, Authed, handleGetTasks);
 router.post(`${FILTER_TASKS}`, Authed, handleFilterTasks);
 router.delete(`${DELETE_TASKS}`, Authed, handleDeleteTasks);

@@ -1,8 +1,9 @@
-import { customeError } from "./../../utils/errorUtils";
+import { customeError } from "../../utils/errorUtils";
 import { Request, Response } from "express";
 import logger from "../../../logger";
 import { localize } from "../../utils/msgLocalize";
-import BoardController from "../../controllers/boards";
+import BoardController from "../../controllers/trello";
+import { webhookUpdateInterface } from "../../types/controller/Tasks";
 
 const BoardReq = class BoardReq extends BoardController {
   static async handleGetBoards(req: Request, res: Response) {
@@ -16,6 +17,16 @@ const BoardReq = class BoardReq extends BoardController {
     } catch (error) {
       logger.error({ handleGetBoards: error });
       return res.status(500).send(customeError("server_error", 500));
+    }
+  }
+
+  static async handleWebhookUpdateCard(req: Request, res: Response) {
+    try {
+      let trelloData: webhookUpdateInterface = req.body;
+      let task: any = await super.webhookUpdate(trelloData);
+      return res.status(200).send(task);
+    } catch (error) {
+      logger.error({ handleWebhookUpdateCardError: error });
     }
   }
 

@@ -5,7 +5,7 @@ import {
 } from "./../types/model/tasks";
 import logger from "../../logger";
 import TaskDB from "../dbCalls/tasks/tasks";
-import BoardController from "./boards";
+import BoardController from "./trello";
 import { io } from "../server";
 import { deleteAll } from "../services/upload";
 import DepartmentBD from "../dbCalls/department/department";
@@ -31,9 +31,7 @@ class TaskController extends TaskDB {
   static async updateTask(data: object, files: any) {
     return await TaskController.__updateTaskData(data, files);
   }
-  static async webhookUpdate(data: webhookUpdateInterface) {
-    return await TaskController.__webhookUpdate(data);
-  }
+
   static async filterTasks(data: any) {
     return await TaskController.__filterTasksDB(data);
   }
@@ -52,7 +50,12 @@ class TaskController extends TaskDB {
   static async downloadAttachment(cardId: string, attachmentId: string) {
     return await TaskController.__downloadAttachment(cardId, attachmentId);
   }
-
+  static async createTaskByTrello(data: TaskData) {
+    return await TaskController.__createTaskByTrello(data);
+  }
+  static async updateTaskDataByTrello(data: TaskData) {
+    return await TaskController.__updateTaskByTrello(data);
+  }
   static async moveTaskOnTrello(
     cardId: string,
     listId: string,
@@ -92,35 +95,15 @@ class TaskController extends TaskDB {
     }
   }
 
-  static async __webhookUpdate(data: webhookUpdateInterface) {
-    try {
-      logger.info({
-        afterList: data?.action?.display?.entities?.listAfter?.text,
-      });
-      webhookUpdateMoveTaskJob(data);
-      TaskQueue.start();
-
-      io.sockets.emit("Move Task", {
-        cardId: data.action.display.entities.card.id,
-        to: data?.action?.display?.entities?.listAfter?.text,
-      });
-    } catch (error) {
-      logger.error({ webhookUpdateError: error });
-    }
-  }
-
   static async __updateTaskData(data: TaskData, files: Express.Multer.File[]) {
     try {
       if (!data.cardId) return provideCardIdError;
       // recieve data
-
       // call a background job for updating the trello card data.
       updateCardJob(data);
       TaskQueue.start();
-
       // wait for both update date in db and upload,delete files to trello
       // if there are deleted files, then delete it from the db
-
       let deleteFiles: AttachmentSchema[];
       if (data?.deleteFiles) {
         deleteFiles = JSON.parse(data?.deleteFiles);
@@ -272,6 +255,22 @@ class TaskController extends TaskDB {
       return response;
     } catch (error) {
       logger.error({ downloadAttachmentError: error });
+    }
+  }
+  static async __createTaskByTrello(data: TaskData) {
+    try {
+      let response = await super.__createTaskByTrelloDB(data);
+      return response;
+    } catch (error) {
+      logger.error({ createTaskByTrelloError: error });
+    }
+  }
+  static async __updateTaskByTrello(data: TaskData) {
+    try {
+      let task = await super.updateTaskByTrelloDB(data);
+      return task;
+    } catch (error) {
+      logger.error({ updateTaskByTrello: error });
     }
   }
 }

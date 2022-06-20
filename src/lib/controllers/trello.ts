@@ -1,4 +1,4 @@
-import { MemberType } from "./../types/model/User";
+import { MemberType } from "../types/model/User";
 import { trelloApi } from "../services/trelloApi";
 import logger from "../../logger";
 import fetch, { RequestInit } from "node-fetch";
@@ -7,9 +7,15 @@ import { config } from "dotenv";
 import request from "request";
 import fs from "fs";
 import { Response } from "express";
-import { AttachmentResponse, TaskInfo } from "../types/model/tasks";
+import { AttachmentResponse, TaskData, TaskInfo } from "../types/model/tasks";
 import { method } from "lodash";
-import { updateCardResponse } from "../types/controller/Tasks";
+import {
+  updateCardResponse,
+  webhookUpdateInterface,
+} from "../types/controller/Tasks";
+import { TaskQueue, webhookUpdateMoveTaskJob } from "../background/taskQueue";
+import { io } from "../server";
+import TaskController from "./task";
 var FormData = require("form-data");
 config();
 
@@ -86,6 +92,20 @@ class BoardController {
 
   static async moveTaskToDiffList(cardId: string, listId: string) {
     return await BoardController.__moveTaskToDiffList(cardId, listId);
+  }
+  static async updateBoardCard(data: webhookUpdateInterface) {
+    return await BoardController.__updateBoardCard(data);
+  }
+  static async webhookUpdate(data: webhookUpdateInterface) {
+    return await BoardController.__webhookUpdate(data);
+  }
+
+  static async __webhookUpdate(data: webhookUpdateInterface) {
+    try {
+      await BoardController.updateBoardCard(data);
+    } catch (error) {
+      logger.error({ webhookUpdateError: error });
+    }
   }
 
   static async __moveTaskToDiffList(cardId: string, listId: string) {
@@ -412,6 +432,89 @@ class BoardController {
       return response;
     } catch (error) {
       logger.error({ __updateCardError: error });
+    }
+  }
+  /**
+   * updateBoardCard
+   *
+   * Update task with a new data coming from trello,
+   * here is the actions handled here :-
+   * - add Attachment
+   * - change name
+   * - description
+   * - move task from list to list
+   *
+   * @param data webhook request data inserted with the webhook call.
+   */
+  static async __updateBoardCard(data: webhookUpdateInterface) {
+    try {
+      console.log(data.action.data);
+      let type = data.action?.type;
+      let action = data.action.display.translationKey;
+      let task: TaskData = {
+        name: data.action.data.card.name,
+        listId: data.action.data.card.idList,
+        status: data.action.data?.list?.name,
+        boardId: data.action.data.board.id,
+        cardId: data.action.data.card?.id,
+      };
+      // create
+      // if (type === "createCard") {
+      //   task.listId = data.action.data.list.id;
+      //   task.status = data.action.data.list.name;
+      //   let result = await TaskController.createTaskByTrello(task);
+      //   io.sockets.emit("create task", result);
+      // }
+
+      //update
+
+      if (type === "updateCard" && action !== "action_archived_card") {
+        if (action === "action_changed_description_of_card")
+          // tested
+          task.description = data.action.data.card?.desc;
+        if (action === "action_renamed_card")
+          //tested
+          task.description = data.action.data.card.name;
+        //tested
+        if (action === "action_move_card_from_list_to_list") {
+          task.status = data.action.data.listAfter?.name;
+          task.listId = data.action.data.listAfter?.id;
+        }
+        let result = await TaskController.updateTaskByTrelloDB(task);
+        io.sockets.emit("update task", result);
+      }
+      // add attachment
+      // tested
+      if (type === "addAttachmentToCard") {
+        task.attachedFiles = [
+          {
+            trelloId: data.action.data?.attachment?.id,
+            name: data.action.data?.attachment?.name,
+            url: data.action.data.attachment?.url,
+            // utils function to detect type from name.ext
+            mimeType: "",
+          },
+        ];
+        let result = await TaskController.updateTaskByTrelloDB(task);
+        io.sockets.emit("update task", result);
+      }
+      // archive, unArchive or delete
+      if (type === "updateCard" && action === "action_archived_card") {
+        let result = await TaskController.archiveTaskByTrelloDB(task, true);
+        return io.sockets.emit("update task", result);
+      }
+      if (type === "updateCard" && action === "action_sent_card_to_board") {
+        task.status = data.action.data.list.name;
+        task.listId = data.action.data.list.id;
+        let result = await TaskController.archiveTaskByTrelloDB(task, false);
+        return io.sockets.emit("update task", result);
+      }
+      if (type === "deleteCard") {
+        let result = await TaskController.deleteTaskByTrelloDB(task);
+        io.sockets.emit("delete task", result);
+      }
+    } catch (error) {
+      logger.error({ updateBoardCardError: error });
     }
   }
 }

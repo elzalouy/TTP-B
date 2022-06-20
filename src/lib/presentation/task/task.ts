@@ -48,16 +48,6 @@ const TaskReq = class TaskReq extends TaskController {
       logger.error({ handleUpdateCardError: error });
     }
   }
-
-  static async handleWebhookUpdateCard(req: Request, res: Response) {
-    try {
-      let trelloData: webhookUpdateInterface = req.body;
-      let task: any = await super.webhookUpdate(trelloData);
-      return res.status(200).send(task);
-    } catch (error) {
-      logger.error({ handleWebhookUpdateCardError: error });
-    }
-  }
   static async handleGetTasks(req: Request, res: Response) {
     try {
       let data: TaskData = req.query;

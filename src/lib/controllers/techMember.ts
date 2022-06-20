@@ -4,7 +4,7 @@ import TechMemberDB from "../dbCalls/techMember/techMember";
 import { TeamsData } from "../types/model/Team";
 import { customeError } from "../utils/errorUtils";
 import { localize } from "../utils/msgLocalize";
-import BoardController from "./boards";
+import BoardController from "./trello";
 import DepartmentBD from "../dbCalls/department/department";
 
 const TechMemberController = class TechMemberController extends TechMemberDB {
@@ -80,7 +80,6 @@ const TechMemberController = class TechMemberController extends TechMemberDB {
       data.listId = listIdValue;
       delete data.newBoardId;
 
-      
       let updatedMember = await TechMemberDB.updateTechMember(data);
       return updatedMember;
     } catch (error) {

@@ -1,6 +1,6 @@
 import queue from "queue";
 import logger from "../../logger";
-import BoardController from "../controllers/boards";
+import BoardController from "../controllers/trello";
 import NotificationController from "../controllers/notification";
 import ProjectDB from "../dbCalls/project/project";
 import TaskDB from "../dbCalls/tasks/tasks";
