@@ -22,7 +22,9 @@ export const io = new Server(http, {
   cors: {
     origin: config.get("FrontEndUrl"),
   },
-  transports: ["websocket"],
+  transports: ["websocket", "polling"],
+  pingInterval: 10000,
+  pingTimeout: 0,
 });
 AppSocket(io);
 
