@@ -3,7 +3,6 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.default = {
     CREATE_TASK: "/createTask",
     UPDATE_TASK: "/updateTask",
-    WEBHOOK_UPDATES: "/webhookUpdate",
     GET_TASKS: "/getTasks",
     GET_TASKS_STATISTICS: "/getTasksStatistics",
     GET_ALL_TASKS_STATISTICS: "/getAllTasksStatistics",

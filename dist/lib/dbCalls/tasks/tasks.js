@@ -15,7 +15,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const logger_1 = __importDefault(require("../../../logger"));
 const task_1 = __importDefault(require("../../models/task"));
 const mongoose_1 = __importDefault(require("mongoose"));
-const Department_1 = __importDefault(require("../../models/Department"));
+const Tasks_1 = require("../../types/controller/Tasks");
 class TaskDB {
     static createTaskDB(data) {
         return __awaiter(this, void 0, void 0, function* () {
@@ -37,9 +37,9 @@ class TaskDB {
             return yield TaskDB.__deleteTasks(ids);
         });
     }
-    static updateOneTaskDB(data, value) {
+    static updateTaskStatus(data, value) {
         return __awaiter(this, void 0, void 0, function* () {
-            return yield TaskDB.__updateOneTaskDB(data, value);
+            return yield TaskDB.__updateTaskStatus(data, value);
         });
     }
     static getTaskDepartmentDB(depId) {
@@ -57,6 +57,11 @@ class TaskDB {
             return yield TaskDB.__getTask(id);
         });
     }
+    static getOneTaskBy(data) {
+        return __awaiter(this, void 0, void 0, function* () {
+            return yield TaskDB.__getOneTaskBy(data);
+        });
+    }
     static getAllTasksDB(data) {
         return __awaiter(this, void 0, void 0, function* () {
             return yield TaskDB.__getAllTasks(data);
@@ -65,6 +70,21 @@ class TaskDB {
     static deleteTasksWhereDB(data) {
         return __awaiter(this, void 0, void 0, function* () {
             return yield TaskDB.__deleteTasksWhereDB(data);
+        });
+    }
+    static updateTaskByTrelloDB(data) {
+        return __awaiter(this, void 0, void 0, function* () {
+            return yield TaskDB.__updateTaskByTrelloDB(data);
+        });
+    }
+    static deleteTaskByTrelloDB(data) {
+        return __awaiter(this, void 0, void 0, function* () {
+            return yield TaskDB.__deleteTaskByTrelloDB(data);
+        });
+    }
+    static archiveTaskByTrelloDB(data, archive) {
+        return __awaiter(this, void 0, void 0, function* () {
+            return yield TaskDB.__archiveTaskByTrelloDB(data, archive);
         });
     }
     static __getAllTasks(data) {
@@ -140,15 +160,14 @@ class TaskDB {
             }
         });
     }
-    static __updateOneTaskDB(data, value) {
+    static __updateTaskStatus(data, value) {
         return __awaiter(this, void 0, void 0, function* () {
             try {
                 let task = yield task_1.default.findOne(data);
                 task.lastMove = task.status;
                 task.lastMoveDate = new Date().toUTCString();
-                yield task.update(value);
+                yield task.updateOne(value);
                 let result = yield task.save();
-                console.log(result);
                 return result;
             }
             catch (error) {
@@ -177,14 +196,6 @@ class TaskDB {
             }
         });
     }
-    /**
-     * Delete Tasks where condition
-     *
-     * it must only used in deleting a department, so the board will also be deleted and all cards and lists inside.
-     * If it's used for any other purpose will cause a big issue in which cards are still not deleted.
-     * @param data BoardId
-     * @returns deleteResult
-     */
     static __deleteTasksWhereDB(data) {
         return __awaiter(this, void 0, void 0, function* () {
             try {
@@ -248,12 +259,32 @@ class TaskDB {
         });
     }
     static __updateTask(data) {
+        var _a, _b;
         return __awaiter(this, void 0, void 0, function* () {
             try {
                 let id = data.id;
                 delete data.id;
-                let task = yield task_1.default.findByIdAndUpdate({ _id: id }, Object.assign({}, data), { new: true, lean: true });
-                return task;
+                console.log("task data", data);
+                let task = yield task_1.default.findOne({ _id: id });
+                if (!task)
+                    return Tasks_1.taskNotFoundError;
+                if (((_a = data === null || data === void 0 ? void 0 : data.attachedFiles) === null || _a === void 0 ? void 0 : _a.length) > 0) {
+                    data.attachedFiles =
+                        ((_b = task === null || task === void 0 ? void 0 : task.attachedFiles) === null || _b === void 0 ? void 0 : _b.length) > 0
+                            ? [...task.attachedFiles, ...data.attachedFiles]
+                            : [...data.attachedFiles];
+                }
+                else
+                    data.attachedFiles = task.attachedFiles;
+                if ((data === null || data === void 0 ? void 0 : data.deleteFiles) && [...data === null || data === void 0 ? void 0 : data.deleteFiles].length > 0) {
+                    data.attachedFiles = data.attachedFiles.filter((item) => [...data.deleteFiles].findIndex((file) => file.trelloId === item.trelloId) < 0);
+                }
+                data === null || data === void 0 ? true : delete data.deleteFiles;
+                let update = yield task_1.default.findByIdAndUpdate(id, data, {
+                    lean: true,
+                    new: true,
+                });
+                return { error: null, task: update };
             }
             catch (error) {
                 logger_1.default.error({ updateTaskDBError: error });
@@ -265,11 +296,6 @@ class TaskDB {
             try {
                 let task = new task_1.default(data);
                 task = yield task.save();
-                yield Department_1.default.findOneAndUpdate({ boardId: data.boardId }, {
-                    $push: {
-                        tasks: task._id,
-                    },
-                });
                 return task;
             }
             catch (error) {
@@ -296,6 +322,76 @@ class TaskDB {
             }
             catch (error) {
                 logger_1.default.error({ filterTasksError: error });
+            }
+        });
+    }
+    static __getOneTaskBy(data) {
+        return __awaiter(this, void 0, void 0, function* () {
+            try {
+                let task = yield task_1.default.findOne(data).lean();
+                if (task)
+                    return task;
+                else
+                    return null;
+            }
+            catch (error) {
+                logger_1.default.error({ getOneTaskError: error });
+            }
+        });
+    }
+    static __updateTaskByTrelloDB(data) {
+        return __awaiter(this, void 0, void 0, function* () {
+            try {
+                let attachments = (data === null || data === void 0 ? void 0 : data.attachedFiles) ? data.attachedFiles : [];
+                delete data.attachedFiles;
+                let task = yield task_1.default.findOneAndUpdate({ cardId: data.cardId }, { $set: data, $push: { attachedFiles: attachments } }, {
+                    new: true,
+                    lean: true,
+                });
+                return task;
+            }
+            catch (error) {
+                logger_1.default.error({ __updateTaskByTrelloDBError: error });
+            }
+        });
+    }
+    static __createTaskByTrelloDB(data) {
+        return __awaiter(this, void 0, void 0, function* () {
+            try {
+                let result = yield task_1.default.findOne({ cardId: data.cardId });
+                if (result)
+                    return result;
+                else {
+                    let task = new task_1.default(data);
+                    return yield task.save();
+                }
+            }
+            catch (error) {
+                logger_1.default.error({ __createTaskByTrelloDBError: error });
+            }
+        });
+    }
+    static __deleteTaskByTrelloDB(data) {
+        return __awaiter(this, void 0, void 0, function* () {
+            try {
+                let result = yield task_1.default.findOneAndDelete({ cardId: data.cardId });
+                return result;
+            }
+            catch (error) {
+                logger_1.default.error({ __deleteTaskByTrelloDBError: error });
+            }
+        });
+    }
+    static __archiveTaskByTrelloDB(data, archive) {
+        return __awaiter(this, void 0, void 0, function* () {
+            try {
+                let taskData = archive === true ? { listId: null, status: "Archived" } : data;
+                console.log(taskData);
+                let archiveTask = yield task_1.default.findOneAndUpdate({ cardId: data.cardId }, taskData, { new: true, lean: true });
+                return archiveTask;
+            }
+            catch (error) {
+                logger_1.default.error({ __archiveTaskByTrelloDBError: error });
             }
         });
     }

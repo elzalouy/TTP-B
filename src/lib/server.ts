@@ -24,14 +24,12 @@ export const io = new Server(http, {
     origin: config.get("FrontEndUrl"),
     credentials: true,
   },
+  transports: ["websocket"],
 });
 io.on("connection", (socket) => {
   console.log("id", socket.id);
 });
 let socket = AppSocket(io);
 
-require("./startup/routes")(app);
-app.disable("etag");
-
 require("./services/cronJobNotifi");
-export { socket };
+export { socket, app };

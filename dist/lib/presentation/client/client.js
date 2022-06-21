@@ -24,7 +24,9 @@ const ClientReq = class ClientReq extends client_1.default {
         return __awaiter(this, void 0, void 0, function* () {
             try {
                 let file = req.files;
-                req.body.image = file.image[0].location;
+                if (file.image) {
+                    req.body.image = file.image[0].location;
+                }
                 let Client = yield _super.createClient.call(this, req.body);
                 if (Client) {
                     return res.status(200).send(Client);

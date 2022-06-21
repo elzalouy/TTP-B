@@ -14,11 +14,11 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 Object.defineProperty(exports, "__esModule", { value: true });
 const validation_1 = require("./../utils/validation");
 const successMsg_1 = require("./../utils/successMsg");
-const auth_1 = require("./../services/auth/auth");
+const auth_1 = require("../services/auth");
 const logger_1 = __importDefault(require("../../logger"));
 const user_1 = __importDefault(require("../dbCalls/user/user"));
 //NodeMailer
-const mail_1 = __importDefault(require("../services/mail/mail"));
+const mail_1 = __importDefault(require("../services/mail"));
 const errorUtils_1 = require("../utils/errorUtils");
 const AuthController = class AuthController extends user_1.default {
     static signInUser(data) {

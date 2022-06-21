@@ -30,10 +30,12 @@ const TaskSchema = new mongoose_1.Schema({
     listId: {
         type: mongoose_1.Schema.Types.ObjectId,
         required: true,
+        default: null,
     },
     cardId: {
         type: String,
         required: true,
+        unique: true,
     },
     boardId: {
         type: String,
@@ -50,6 +52,7 @@ const TaskSchema = new mongoose_1.Schema({
             "Not Clear",
             "Cancled",
             "Review",
+            "Archived",
         ],
     },
     start: {

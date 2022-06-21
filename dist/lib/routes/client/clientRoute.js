@@ -6,7 +6,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const apis_1 = __importDefault(require("./apis"));
 const express_1 = require("express");
 const client_1 = __importDefault(require("../../presentation/client/client"));
-const awsS3_1 = require("../../services/awsS3/awsS3");
+const awsS3_1 = require("../../services/awsS3");
 const router = (0, express_1.Router)();
 let clientImage = awsS3_1.imageUpload.fields([{ name: "image", maxCount: 1 }]);
 const { GET_CLIENT, GET_ALL_CLIENTS, CREATE_CLIENT, DELETE_CLIENT, UPDATE_CLIENT, } = apis_1.default;

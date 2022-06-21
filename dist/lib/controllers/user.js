@@ -12,12 +12,12 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-const auth_1 = require("./../services/auth/auth");
+const auth_1 = require("../services/auth");
 const validation_1 = require("./../utils/validation");
 const logger_1 = __importDefault(require("../../logger"));
 const user_1 = __importDefault(require("../dbCalls/user/user"));
 const errorUtils_1 = require("../utils/errorUtils");
-const mail_1 = __importDefault(require("../services/mail/mail"));
+const mail_1 = __importDefault(require("../services/mail"));
 const UserController = class UserController extends user_1.default {
     static addUser(data) {
         return __awaiter(this, void 0, void 0, function* () {
@@ -72,7 +72,7 @@ const UserController = class UserController extends user_1.default {
                     subject: "This is a reminder to set a New Password for your TTP account",
                     token: token,
                     path: "newPassword",
-                    body: "Please set your new password using this link to start using your account"
+                    body: "Please set your new password using this link to start using your account",
                 });
             }
             catch (error) {
@@ -147,7 +147,10 @@ const UserController = class UserController extends user_1.default {
                 }
                 // hash password
                 let passwordHash = yield (0, auth_1.hashBassword)(password);
-                let user = yield _super.updateUser.call(this, { id: token.user.id, password: passwordHash });
+                let user = yield _super.updateUser.call(this, {
+                    id: token.user.id,
+                    password: passwordHash,
+                });
                 return user;
             }
             catch (error) {
@@ -176,7 +179,10 @@ const UserController = class UserController extends user_1.default {
                 }
                 // hash password
                 let passwordHash = yield (0, auth_1.hashBassword)(password);
-                let user = yield _super.updateUser.call(this, { id: token.user.id, password: passwordHash });
+                let user = yield _super.updateUser.call(this, {
+                    id: token.user.id,
+                    password: passwordHash,
+                });
                 return user;
             }
             catch (error) {
@@ -234,7 +240,7 @@ const UserController = class UserController extends user_1.default {
                     subject: "Update Password",
                     token: token,
                     path: "newPassword",
-                    body: "Please set your new password using this link to start using your account"
+                    body: "Please set your new password using this link to start using your account",
                 });
                 return newUser;
             }

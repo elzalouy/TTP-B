@@ -24,6 +24,8 @@ const DepartmentReq = class DepartmentReq extends department_1.default {
         return __awaiter(this, void 0, void 0, function* () {
             try {
                 let department = yield _super.createDepartment.call(this, req.body);
+                if (department === null || department === void 0 ? void 0 : department.error)
+                    return res.status(400).send(department === null || department === void 0 ? void 0 : department.message);
                 if (department) {
                     return res.status(200).send(department);
                 }
@@ -99,7 +101,7 @@ const DepartmentReq = class DepartmentReq extends department_1.default {
                 if (!data) {
                     return res.status(400).send((0, errorUtils_1.customeError)("get_dep_error", 400));
                 }
-                let department = yield _super.getDepartments.call(this, data);
+                let department = yield _super.getDepartments.call(this, data, true);
                 if (department) {
                     return res.status(200).send(department);
                 }

@@ -15,7 +15,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const logger_1 = __importDefault(require("../../logger"));
 const techMember_1 = __importDefault(require("../dbCalls/techMember/techMember"));
 const errorUtils_1 = require("../utils/errorUtils");
-const boards_1 = __importDefault(require("./boards"));
+const trello_1 = __importDefault(require("./trello"));
 const department_1 = __importDefault(require("../dbCalls/department/department"));
 const TechMemberController = class TechMemberController extends techMember_1.default {
     static createNewMember(data) {
@@ -69,8 +69,8 @@ const TechMemberController = class TechMemberController extends techMember_1.def
                         return;
                     }
                     yield TechMemberController.__removeMemberAndList(listId, boardId, trelloMemberId);
-                    yield boards_1.default.addMemberToBoard(newBoardId, trelloMemberId, "normal");
-                    let list = yield boards_1.default.addListToBoard(newBoardId, name);
+                    yield trello_1.default.addMemberToBoard(newBoardId, trelloMemberId, "normal");
+                    let list = yield trello_1.default.addListToBoard(newBoardId, name);
                     listIdValue = list.id;
                     data.boardId = newBoardId;
                 }
@@ -104,9 +104,9 @@ const TechMemberController = class TechMemberController extends techMember_1.def
                     if (checkExsit) {
                         return (0, errorUtils_1.customeError)("list_already_exsit", 400);
                     }
-                    listId = yield boards_1.default.addListToBoard(boardId, name);
+                    listId = yield trello_1.default.addListToBoard(boardId, name);
                     if (data.mainBaord) {
-                        return yield boards_1.default.createWebHook(listId.id);
+                        return yield trello_1.default.createWebHook(listId.id);
                     }
                 }
                 let techMember = yield _super.createTechMember.call(this, Object.assign(Object.assign({}, data), { listId: listId === null || listId === void 0 ? void 0 : listId.id }));
@@ -127,9 +127,9 @@ const TechMemberController = class TechMemberController extends techMember_1.def
         return __awaiter(this, void 0, void 0, function* () {
             try {
                 // Remove(archieve) the member list from board
-                yield boards_1.default.addListToArchieve(listId);
+                yield trello_1.default.addListToArchieve(listId);
                 // Remove member from board
-                yield boards_1.default.removeMemberFromBoard(boardId, trelloMemberId);
+                yield trello_1.default.removeMemberFromBoard(boardId, trelloMemberId);
                 return;
             }
             catch (error) {
@@ -142,7 +142,7 @@ const TechMemberController = class TechMemberController extends techMember_1.def
             try {
                 let check = false;
                 // Get Lists in Board
-                let boardList = yield boards_1.default.getSingleBoardInfo(boardId, "lists");
+                let boardList = yield trello_1.default.getSingleBoardInfo(boardId, "lists");
                 for (let i = 0; i < boardList.length; i++) {
                     if (name === boardList[i].name) {
                         check = true;
