@@ -21,9 +21,8 @@ export const http = createServer(app);
 export const io = new Server(http, {
   path: "/socket.io",
   cors: {
-    origin: "*",
-    methods: "*",
-    allowedHeaders: ["Content-Type"],
+    origin: config.get("FrontEndUrl"),
+    credentials: true,
   },
 });
 io.on("connection", (socket) => {
