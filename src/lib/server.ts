@@ -19,16 +19,20 @@ app.use(i18n.init);
 mongoDB();
 export const http = createServer(app);
 export const io = new Server(http, {
+  path: "/socket.io",
   cors: {
-    origin: config.get("FrontEndUrl"),
+    origin: "*",
+    methods: "*",
+    allowedHeaders: ["Content-Type"],
   },
-  transports: ["websocket", "polling"],
-  pingInterval: 10000,
-  pingTimeout: 0,
 });
-AppSocket(io);
+io.on("connection", (socket) => {
+  console.log("id", socket.id);
+});
+let socket = AppSocket(io);
 
 require("./startup/routes")(app);
 app.disable("etag");
 
 require("./services/cronJobNotifi");
+export { socket };
