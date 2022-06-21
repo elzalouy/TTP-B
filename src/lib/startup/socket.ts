@@ -30,5 +30,7 @@ function appSocket(
       });
     }
   );
+  console.log(soc.allSockets());
+  return soc;
 }
 export default appSocket;
