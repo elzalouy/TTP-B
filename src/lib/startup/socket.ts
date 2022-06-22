@@ -9,6 +9,7 @@ export default function appSocket(http: any) {
       origin: config.get("FrontEndUrl"),
       methods: "*",
       allowedHeaders: ["Content-type"],
+      credentials: true,
     },
   });
   io.on("connection", (socket) => {
