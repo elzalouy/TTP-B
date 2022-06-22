@@ -7,7 +7,6 @@ import i18n from "./i18n/config";
 import morgan from "morgan";
 import cors from "cors";
 import routes from "./startup/routes";
-const numCPUs = require("os").cpus().length;
 
 // declerations
 const app: Application = express();
