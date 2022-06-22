@@ -7,6 +7,11 @@ import i18n from "./i18n/config";
 import morgan from "morgan";
 import cors from "cors";
 import routes from "./startup/routes";
+import cluster from "cluster";
+const numCPUs = require("os").cpus().length;
+const { setupMaster, setupWorker } = require("@socket.io/sticky");
+const { createAdapter, setupPrimary } = require("@socket.io/cluster-adapter");
+
 // declerations
 const app: Application = express();
 // app uses
