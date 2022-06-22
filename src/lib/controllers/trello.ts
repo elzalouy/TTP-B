@@ -479,7 +479,7 @@ class BoardController {
           task.lastMoveDate = new Date().toUTCString();
         }
         let result = await TaskController.updateTaskByTrelloDB(task);
-        io.sockets.emit("update task", result);
+        io.sockets.emit("update-task", result);
       }
       // add attachment
       if (type === "addAttachmentToCard") {
@@ -493,23 +493,23 @@ class BoardController {
           },
         ];
         let result = await TaskController.updateTaskByTrelloDB(task);
-        io.sockets.emit("update task", result);
+        io.sockets.emit("update-task", result);
       }
       // archive, unArchive or delete
       if (type === "updateCard" && action === "action_archived_card") {
         let result = await TaskController.archiveTaskByTrelloDB(task, true);
-        return io.sockets.emit("update task", result);
+        return io.sockets.emit("update-task", result);
       }
       if (type === "updateCard" && action === "action_sent_card_to_board") {
         task.status = data.action.data.list.name;
         task.listId = data.action.data.list.id;
         let result = await TaskController.archiveTaskByTrelloDB(task, false);
-        return io.sockets.emit("update task", result);
+        return io.sockets.emit("update-task", result);
       }
       //delete
       if (type === "deleteCard") {
         let result = await TaskController.deleteTaskByTrelloDB(task);
-        io.sockets.emit("delete task", result);
+        io.sockets.emit("delete-task", result);
       }
     } catch (error) {
       logger.error({ updateBoardCardError: error });
