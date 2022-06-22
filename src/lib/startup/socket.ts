@@ -1,3 +1,4 @@
+import config from "config";
 import { Server, Socket } from "socket.io";
 import { DefaultEventsMap } from "socket.io/dist/typed-events";
 export default function appSocket(http: any) {
@@ -5,9 +6,10 @@ export default function appSocket(http: any) {
   const io = new Server(http, {
     path: "/socket.io",
     cors: {
-      origin: "*",
+      origin: config.get("FrontEndUrl"),
       methods: ["GET", "POST"],
       allowedHeaders: ["Content-type"],
+      credentials: true,
     },
   });
   io.on("connect", (socket) => {
