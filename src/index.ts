@@ -26,8 +26,6 @@ routes(app);
 config();
 let port = process.env.PORT || 5000;
 console.log(process.env.NODE_ENV);
-let io: Server<DefaultEventsMap, DefaultEventsMap, DefaultEventsMap, any> =
-  null;
 export const http = createServer(app);
 // if (process.env.NODE_ENV === "development") {
 http.listen(port, function () {
@@ -38,7 +36,7 @@ http.listen(port, function () {
   );
   console.log("server listen to port " + port);
 });
-io = appSocket(http);
+let io = appSocket(http);
 cronJobsBySocket(io);
 // } else {
 //   io = listen(app);

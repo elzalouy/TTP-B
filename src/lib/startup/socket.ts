@@ -20,16 +20,16 @@ export default function appSocket(http: any) {
     (
       socket: Socket<DefaultEventsMap, DefaultEventsMap, DefaultEventsMap, any>
     ) => {
-      // console.log("listening to move task, ", io.listeners("Move Task"));
-      // socket.on("joined admin", () => {
-      //   return socket.join("admin room");
-      // });
-      // socket.on("joined manager", () => {
-      //   return socket.join("manager room");
-      // });
-      // socket.on("joined user", (data: any) => {
-      //   return socket.join(`user-${data.id}`);
-      // });
+      console.log("listening to move task, ", io.listeners("Move Task"));
+      socket.on("joined admin", () => {
+        return socket.join("admin room");
+      });
+      socket.on("joined manager", () => {
+        return socket.join("manager room");
+      });
+      socket.on("joined user", (data: any) => {
+        return socket.join(`user-${data.id}`);
+      });
     }
   );
   console.log(soc.allSockets());
