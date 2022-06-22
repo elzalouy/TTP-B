@@ -1,11 +1,20 @@
 import { Server, Socket } from "socket.io";
 import { DefaultEventsMap } from "socket.io/dist/typed-events";
-let clients = 0;
-function appSocket(
-  io: Server<DefaultEventsMap, DefaultEventsMap, DefaultEventsMap, any>
-) {
+export default function appSocket(http: any) {
+  let clients = 0;
+  const io = new Server(http, {
+    path: "/socket.io",
+    cors: {
+      origin: "*",
+      methods: ["GET", "POST"],
+      allowedHeaders: ["Content-type"],
+    },
+  });
+  io.on("connect", (socket) => {
+    console.log("id", socket.id);
+  });
   let soc = io.on(
-    "connection",
+    "connect",
     (
       socket: Socket<DefaultEventsMap, DefaultEventsMap, DefaultEventsMap, any>
     ) => {
@@ -13,24 +22,18 @@ function appSocket(
       socket.on("disconnect", () =>
         console.log("Client disconnected No,", --clients)
       );
-      console.log("listening to move task, ", io.listeners("Move Task"));
-      //* this for admins role only
-      socket.on("joined admin", () => {
-        // logger.info({ data });
-        return socket.join("admin room");
-      });
-      //* this for project managers role only
-      socket.on("joined manager", () => {
-        // logger.info({ data });
-        return socket.join("manager room");
-      });
-      //* this is for specific user
-      socket.on("joined user", (data: any) => {
-        return socket.join(`user-${data.id}`);
-      });
+      // console.log("listening to move task, ", io.listeners("Move Task"));
+      // socket.on("joined admin", () => {
+      //   return socket.join("admin room");
+      // });
+      // socket.on("joined manager", () => {
+      //   return socket.join("manager room");
+      // });
+      // socket.on("joined user", (data: any) => {
+      //   return socket.join(`user-${data.id}`);
+      // });
     }
   );
   console.log(soc.allSockets());
   return soc;
 }
-export default appSocket;
