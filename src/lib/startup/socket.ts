@@ -11,7 +11,7 @@ export default function appSocket(http: any) {
       allowedHeaders: ["Content-type"],
     },
   });
-  io.on("connect", (socket) => {
+  io.on("connection", (socket) => {
     console.log("id", socket.id);
   });
   let soc = io.on(
