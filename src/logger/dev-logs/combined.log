@@ -587,3 +587,1594 @@
   level: 'info',
   timestamp: '2022-06-22 15:48:31'
 }
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-06-22 15:51:52'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-06-22 15:57:19'
+}
+{
+  message: {
+    data: { id: '62746010736e8ea96f53ea54', skip: '0', limit: undefined }
+  },
+  level: 'info',
+  timestamp: '2022-06-22 15:58:42'
+}
+{
+  message: { notificationData: { _id: '62746010736e8ea96f53ea54', role: 'OM' } },
+  level: 'info',
+  timestamp: '2022-06-22 15:58:42'
+}
+{
+  message: {
+    Notification: {
+      acknowledged: true,
+      modifiedCount: 24,
+      upsertedId: null,
+      upsertedCount: 0,
+      matchedCount: 24
+    }
+  },
+  level: 'info',
+  timestamp: '2022-06-22 15:58:42'
+}
+{
+  message: {
+    data: { id: '62746010736e8ea96f53ea54', skip: '0', limit: undefined }
+  },
+  level: 'info',
+  timestamp: '2022-06-22 15:58:53'
+}
+{
+  message: { notificationData: { _id: '62746010736e8ea96f53ea54', role: 'OM' } },
+  level: 'info',
+  timestamp: '2022-06-22 15:58:53'
+}
+{
+  message: {
+    Notification: {
+      acknowledged: true,
+      modifiedCount: 24,
+      upsertedId: null,
+      upsertedCount: 0,
+      matchedCount: 24
+    }
+  },
+  level: 'info',
+  timestamp: '2022-06-22 15:58:53'
+}
+{
+  message: { notificationData: { _id: '62746010736e8ea96f53ea54', role: 'OM' } },
+  level: 'info',
+  timestamp: '2022-06-22 15:58:56'
+}
+{
+  message: {
+    data: { id: '62746010736e8ea96f53ea54', skip: '0', limit: undefined }
+  },
+  level: 'info',
+  timestamp: '2022-06-22 15:58:56'
+}
+{
+  message: {
+    Notification: {
+      acknowledged: true,
+      modifiedCount: 24,
+      upsertedId: null,
+      upsertedCount: 0,
+      matchedCount: 24
+    }
+  },
+  level: 'info',
+  timestamp: '2022-06-22 15:58:56'
+}
+{
+  message: {
+    data: { id: '62746010736e8ea96f53ea54', skip: '4', limit: undefined }
+  },
+  level: 'info',
+  timestamp: '2022-06-22 15:58:57'
+}
+{
+  message: {
+    data: { id: '62746010736e8ea96f53ea54', skip: '8', limit: undefined }
+  },
+  level: 'info',
+  timestamp: '2022-06-22 15:58:59'
+}
+{
+  message: {
+    data: { id: '62746010736e8ea96f53ea54', skip: '12', limit: undefined }
+  },
+  level: 'info',
+  timestamp: '2022-06-22 15:59:01'
+}
+{
+  message: {
+    data: { id: '62746010736e8ea96f53ea54', skip: '16', limit: undefined }
+  },
+  level: 'info',
+  timestamp: '2022-06-22 15:59:02'
+}
+{
+  message: {
+    data: { id: '62746010736e8ea96f53ea54', skip: '20', limit: undefined }
+  },
+  level: 'info',
+  timestamp: '2022-06-22 15:59:04'
+}
+{
+  message: {
+    data: { id: '62746010736e8ea96f53ea54', skip: '24', limit: undefined }
+  },
+  level: 'info',
+  timestamp: '2022-06-22 15:59:06'
+}
+{
+  message: {
+    data: { id: '62746010736e8ea96f53ea54', skip: '24', limit: undefined }
+  },
+  level: 'info',
+  timestamp: '2022-06-22 15:59:07'
+}
+{
+  message: {
+    data: { id: '62746010736e8ea96f53ea54', skip: '24', limit: undefined }
+  },
+  level: 'info',
+  timestamp: '2022-06-22 15:59:08'
+}
+{
+  message: {
+    data: { id: '62746010736e8ea96f53ea54', skip: '24', limit: undefined }
+  },
+  level: 'info',
+  timestamp: '2022-06-22 15:59:08'
+}
+{
+  message: {
+    data: { id: '62746010736e8ea96f53ea54', skip: '0', limit: undefined }
+  },
+  level: 'info',
+  timestamp: '2022-06-22 15:59:37'
+}
+{
+  message: { notificationData: { _id: '62746010736e8ea96f53ea54', role: 'OM' } },
+  level: 'info',
+  timestamp: '2022-06-22 15:59:37'
+}
+{
+  message: {
+    Notification: {
+      acknowledged: true,
+      modifiedCount: 24,
+      upsertedId: null,
+      upsertedCount: 0,
+      matchedCount: 24
+    }
+  },
+  level: 'info',
+  timestamp: '2022-06-22 15:59:37'
+}
+{
+  message: {
+    data: { id: '62746010736e8ea96f53ea54', skip: '0', limit: undefined }
+  },
+  level: 'info',
+  timestamp: '2022-06-22 15:59:41'
+}
+{
+  message: { notificationData: { _id: '62746010736e8ea96f53ea54', role: 'OM' } },
+  level: 'info',
+  timestamp: '2022-06-22 15:59:41'
+}
+{
+  message: {
+    Notification: {
+      acknowledged: true,
+      modifiedCount: 24,
+      upsertedId: null,
+      upsertedCount: 0,
+      matchedCount: 24
+    }
+  },
+  level: 'info',
+  timestamp: '2022-06-22 15:59:41'
+}
+{
+  message: {
+    data: { id: '62746010736e8ea96f53ea54', skip: '0', limit: undefined }
+  },
+  level: 'info',
+  timestamp: '2022-06-22 15:59:45'
+}
+{
+  message: { notificationData: { _id: '62746010736e8ea96f53ea54', role: 'OM' } },
+  level: 'info',
+  timestamp: '2022-06-22 15:59:45'
+}
+{
+  message: {
+    Notification: {
+      acknowledged: true,
+      modifiedCount: 24,
+      upsertedId: null,
+      upsertedCount: 0,
+      matchedCount: 24
+    }
+  },
+  level: 'info',
+  timestamp: '2022-06-22 15:59:45'
+}
+{
+  message: {
+    data: { id: '62746010736e8ea96f53ea54', skip: '4', limit: undefined }
+  },
+  level: 'info',
+  timestamp: '2022-06-22 15:59:46'
+}
+{
+  message: {
+    data: { id: '62746010736e8ea96f53ea54', skip: '8', limit: undefined }
+  },
+  level: 'info',
+  timestamp: '2022-06-22 15:59:47'
+}
+{
+  message: {
+    data: { id: '62746010736e8ea96f53ea54', skip: '12', limit: undefined }
+  },
+  level: 'info',
+  timestamp: '2022-06-22 15:59:49'
+}
+{
+  message: {
+    data: { id: '62746010736e8ea96f53ea54', skip: '16', limit: undefined }
+  },
+  level: 'info',
+  timestamp: '2022-06-22 15:59:50'
+}
+{
+  message: {
+    data: { id: '62746010736e8ea96f53ea54', skip: '20', limit: undefined }
+  },
+  level: 'info',
+  timestamp: '2022-06-22 15:59:51'
+}
+{
+  message: {
+    data: { id: '62746010736e8ea96f53ea54', skip: '24', limit: undefined }
+  },
+  level: 'info',
+  timestamp: '2022-06-22 15:59:53'
+}
+{
+  message: {
+    data: { id: '62746010736e8ea96f53ea54', skip: '24', limit: undefined }
+  },
+  level: 'info',
+  timestamp: '2022-06-22 15:59:54'
+}
+{
+  message: {
+    data: { id: '62746010736e8ea96f53ea54', skip: '0', limit: undefined }
+  },
+  level: 'info',
+  timestamp: '2022-06-22 16:00:35'
+}
+{
+  message: { notificationData: { _id: '62746010736e8ea96f53ea54', role: 'OM' } },
+  level: 'info',
+  timestamp: '2022-06-22 16:00:35'
+}
+{
+  message: {
+    Notification: {
+      acknowledged: true,
+      modifiedCount: 24,
+      upsertedId: null,
+      upsertedCount: 0,
+      matchedCount: 24
+    }
+  },
+  level: 'info',
+  timestamp: '2022-06-22 16:00:35'
+}
+{
+  message: {
+    data: { id: '62746010736e8ea96f53ea54', skip: '0', limit: undefined }
+  },
+  level: 'info',
+  timestamp: '2022-06-22 16:00:38'
+}
+{
+  message: { notificationData: { _id: '62746010736e8ea96f53ea54', role: 'OM' } },
+  level: 'info',
+  timestamp: '2022-06-22 16:00:38'
+}
+{
+  message: {
+    Notification: {
+      acknowledged: true,
+      modifiedCount: 24,
+      upsertedId: null,
+      upsertedCount: 0,
+      matchedCount: 24
+    }
+  },
+  level: 'info',
+  timestamp: '2022-06-22 16:00:38'
+}
+{
+  message: {
+    data: { id: '62746010736e8ea96f53ea54', skip: '0', limit: undefined }
+  },
+  level: 'info',
+  timestamp: '2022-06-22 16:00:47'
+}
+{
+  message: { notificationData: { _id: '62746010736e8ea96f53ea54', role: 'OM' } },
+  level: 'info',
+  timestamp: '2022-06-22 16:00:47'
+}
+{
+  message: {
+    Notification: {
+      acknowledged: true,
+      modifiedCount: 24,
+      upsertedId: null,
+      upsertedCount: 0,
+      matchedCount: 24
+    }
+  },
+  level: 'info',
+  timestamp: '2022-06-22 16:00:47'
+}
+{
+  message: {
+    data: { id: '62746010736e8ea96f53ea54', skip: '4', limit: undefined }
+  },
+  level: 'info',
+  timestamp: '2022-06-22 16:00:50'
+}
+{
+  message: {
+    data: { id: '62746010736e8ea96f53ea54', skip: '8', limit: undefined }
+  },
+  level: 'info',
+  timestamp: '2022-06-22 16:00:51'
+}
+{
+  message: {
+    data: { id: '62746010736e8ea96f53ea54', skip: '12', limit: undefined }
+  },
+  level: 'info',
+  timestamp: '2022-06-22 16:00:53'
+}
+{
+  message: {
+    data: { id: '62746010736e8ea96f53ea54', skip: '16', limit: undefined }
+  },
+  level: 'info',
+  timestamp: '2022-06-22 16:00:54'
+}
+{
+  message: {
+    data: { id: '62746010736e8ea96f53ea54', skip: '20', limit: undefined }
+  },
+  level: 'info',
+  timestamp: '2022-06-22 16:00:56'
+}
+{
+  message: {
+    data: { id: '62746010736e8ea96f53ea54', skip: '24', limit: undefined }
+  },
+  level: 'info',
+  timestamp: '2022-06-22 16:00:57'
+}
+{
+  message: {
+    data: { id: '62746010736e8ea96f53ea54', skip: '24', limit: undefined }
+  },
+  level: 'info',
+  timestamp: '2022-06-22 16:00:58'
+}
+{
+  message: {
+    data: { id: '62746010736e8ea96f53ea54', skip: '24', limit: undefined }
+  },
+  level: 'info',
+  timestamp: '2022-06-22 16:00:59'
+}
+{
+  message: {
+    data: { id: '62746010736e8ea96f53ea54', skip: '24', limit: undefined }
+  },
+  level: 'info',
+  timestamp: '2022-06-22 16:01:02'
+}
+{
+  message: {
+    data: { id: '62746010736e8ea96f53ea54', skip: '0', limit: undefined }
+  },
+  level: 'info',
+  timestamp: '2022-06-22 16:01:21'
+}
+{
+  message: { notificationData: { _id: '62746010736e8ea96f53ea54', role: 'OM' } },
+  level: 'info',
+  timestamp: '2022-06-22 16:01:21'
+}
+{
+  message: {
+    Notification: {
+      acknowledged: true,
+      modifiedCount: 24,
+      upsertedId: null,
+      upsertedCount: 0,
+      matchedCount: 24
+    }
+  },
+  level: 'info',
+  timestamp: '2022-06-22 16:01:21'
+}
+{
+  message: {
+    data: { id: '62746010736e8ea96f53ea54', skip: '4', limit: undefined }
+  },
+  level: 'info',
+  timestamp: '2022-06-22 16:01:22'
+}
+{
+  message: {
+    data: { id: '62746010736e8ea96f53ea54', skip: '8', limit: undefined }
+  },
+  level: 'info',
+  timestamp: '2022-06-22 16:01:23'
+}
+{
+  message: {
+    data: { id: '62746010736e8ea96f53ea54', skip: '12', limit: undefined }
+  },
+  level: 'info',
+  timestamp: '2022-06-22 16:01:25'
+}
+{
+  message: {
+    data: { id: '62746010736e8ea96f53ea54', skip: '16', limit: undefined }
+  },
+  level: 'info',
+  timestamp: '2022-06-22 16:01:26'
+}
+{
+  message: {
+    data: { id: '62746010736e8ea96f53ea54', skip: '20', limit: undefined }
+  },
+  level: 'info',
+  timestamp: '2022-06-22 16:01:28'
+}
+{
+  message: {
+    data: { id: '62746010736e8ea96f53ea54', skip: '24', limit: undefined }
+  },
+  level: 'info',
+  timestamp: '2022-06-22 16:01:29'
+}
+{
+  message: {
+    data: { id: '62746010736e8ea96f53ea54', skip: '24', limit: undefined }
+  },
+  level: 'info',
+  timestamp: '2022-06-22 16:01:30'
+}
+{
+  message: {
+    data: { id: '62746010736e8ea96f53ea54', skip: '0', limit: undefined }
+  },
+  level: 'info',
+  timestamp: '2022-06-22 16:01:39'
+}
+{
+  message: { notificationData: { _id: '62746010736e8ea96f53ea54', role: 'OM' } },
+  level: 'info',
+  timestamp: '2022-06-22 16:01:39'
+}
+{
+  message: {
+    Notification: {
+      acknowledged: true,
+      modifiedCount: 24,
+      upsertedId: null,
+      upsertedCount: 0,
+      matchedCount: 24
+    }
+  },
+  level: 'info',
+  timestamp: '2022-06-22 16:01:39'
+}
+{
+  message: {
+    data: { id: '62746010736e8ea96f53ea54', skip: '0', limit: undefined }
+  },
+  level: 'info',
+  timestamp: '2022-06-22 16:01:42'
+}
+{
+  message: { notificationData: { _id: '62746010736e8ea96f53ea54', role: 'OM' } },
+  level: 'info',
+  timestamp: '2022-06-22 16:01:42'
+}
+{
+  message: {
+    Notification: {
+      acknowledged: true,
+      modifiedCount: 24,
+      upsertedId: null,
+      upsertedCount: 0,
+      matchedCount: 24
+    }
+  },
+  level: 'info',
+  timestamp: '2022-06-22 16:01:42'
+}
+{
+  message: {
+    data: { id: '62746010736e8ea96f53ea54', skip: '0', limit: undefined }
+  },
+  level: 'info',
+  timestamp: '2022-06-22 16:01:46'
+}
+{
+  message: { notificationData: { _id: '62746010736e8ea96f53ea54', role: 'OM' } },
+  level: 'info',
+  timestamp: '2022-06-22 16:01:46'
+}
+{
+  message: {
+    Notification: {
+      acknowledged: true,
+      modifiedCount: 24,
+      upsertedId: null,
+      upsertedCount: 0,
+      matchedCount: 24
+    }
+  },
+  level: 'info',
+  timestamp: '2022-06-22 16:01:46'
+}
+{
+  message: {
+    data: { id: '62746010736e8ea96f53ea54', skip: '0', limit: undefined }
+  },
+  level: 'info',
+  timestamp: '2022-06-22 16:02:11'
+}
+{
+  message: { notificationData: { _id: '62746010736e8ea96f53ea54', role: 'OM' } },
+  level: 'info',
+  timestamp: '2022-06-22 16:02:11'
+}
+{
+  message: {
+    Notification: {
+      acknowledged: true,
+      modifiedCount: 24,
+      upsertedId: null,
+      upsertedCount: 0,
+      matchedCount: 24
+    }
+  },
+  level: 'info',
+  timestamp: '2022-06-22 16:02:11'
+}
+{
+  message: {
+    data: { id: '62746010736e8ea96f53ea54', skip: '0', limit: undefined }
+  },
+  level: 'info',
+  timestamp: '2022-06-22 16:02:24'
+}
+{
+  message: { notificationData: { _id: '62746010736e8ea96f53ea54', role: 'OM' } },
+  level: 'info',
+  timestamp: '2022-06-22 16:02:24'
+}
+{
+  message: {
+    Notification: {
+      acknowledged: true,
+      modifiedCount: 24,
+      upsertedId: null,
+      upsertedCount: 0,
+      matchedCount: 24
+    }
+  },
+  level: 'info',
+  timestamp: '2022-06-22 16:02:24'
+}
+{
+  message: {
+    data: { id: '62746010736e8ea96f53ea54', skip: '0', limit: undefined }
+  },
+  level: 'info',
+  timestamp: '2022-06-22 16:02:37'
+}
+{
+  message: { notificationData: { _id: '62746010736e8ea96f53ea54', role: 'OM' } },
+  level: 'info',
+  timestamp: '2022-06-22 16:02:37'
+}
+{
+  message: {
+    Notification: {
+      acknowledged: true,
+      modifiedCount: 24,
+      upsertedId: null,
+      upsertedCount: 0,
+      matchedCount: 24
+    }
+  },
+  level: 'info',
+  timestamp: '2022-06-22 16:02:37'
+}
+{
+  message: {
+    data: { id: '62746010736e8ea96f53ea54', skip: '4', limit: undefined }
+  },
+  level: 'info',
+  timestamp: '2022-06-22 16:02:38'
+}
+{
+  message: {
+    data: { id: '62746010736e8ea96f53ea54', skip: '8', limit: undefined }
+  },
+  level: 'info',
+  timestamp: '2022-06-22 16:02:39'
+}
+{
+  message: {
+    data: { id: '62746010736e8ea96f53ea54', skip: '12', limit: undefined }
+  },
+  level: 'info',
+  timestamp: '2022-06-22 16:02:41'
+}
+{
+  message: {
+    data: { id: '62746010736e8ea96f53ea54', skip: '16', limit: undefined }
+  },
+  level: 'info',
+  timestamp: '2022-06-22 16:02:42'
+}
+{
+  message: {
+    data: { id: '62746010736e8ea96f53ea54', skip: '20', limit: undefined }
+  },
+  level: 'info',
+  timestamp: '2022-06-22 16:02:44'
+}
+{
+  message: {
+    data: { id: '62746010736e8ea96f53ea54', skip: '24', limit: undefined }
+  },
+  level: 'info',
+  timestamp: '2022-06-22 16:02:45'
+}
+{
+  message: {
+    data: { id: '62746010736e8ea96f53ea54', skip: '24', limit: undefined }
+  },
+  level: 'info',
+  timestamp: '2022-06-22 16:02:46'
+}
+{
+  message: {
+    data: { id: '62746010736e8ea96f53ea54', skip: '0', limit: undefined }
+  },
+  level: 'info',
+  timestamp: '2022-06-22 16:03:01'
+}
+{
+  message: { notificationData: { _id: '62746010736e8ea96f53ea54', role: 'OM' } },
+  level: 'info',
+  timestamp: '2022-06-22 16:03:01'
+}
+{
+  message: {
+    Notification: {
+      acknowledged: true,
+      modifiedCount: 24,
+      upsertedId: null,
+      upsertedCount: 0,
+      matchedCount: 24
+    }
+  },
+  level: 'info',
+  timestamp: '2022-06-22 16:03:01'
+}
+{
+  message: {
+    data: { id: '62746010736e8ea96f53ea54', skip: '0', limit: undefined }
+  },
+  level: 'info',
+  timestamp: '2022-06-22 16:03:07'
+}
+{
+  message: { notificationData: { _id: '62746010736e8ea96f53ea54', role: 'OM' } },
+  level: 'info',
+  timestamp: '2022-06-22 16:03:07'
+}
+{
+  message: {
+    Notification: {
+      acknowledged: true,
+      modifiedCount: 24,
+      upsertedId: null,
+      upsertedCount: 0,
+      matchedCount: 24
+    }
+  },
+  level: 'info',
+  timestamp: '2022-06-22 16:03:07'
+}
+{
+  message: {
+    data: { id: '62746010736e8ea96f53ea54', skip: '4', limit: undefined }
+  },
+  level: 'info',
+  timestamp: '2022-06-22 16:03:09'
+}
+{
+  message: {
+    data: { id: '62746010736e8ea96f53ea54', skip: '8', limit: undefined }
+  },
+  level: 'info',
+  timestamp: '2022-06-22 16:03:10'
+}
+{
+  message: {
+    data: { id: '62746010736e8ea96f53ea54', skip: '12', limit: undefined }
+  },
+  level: 'info',
+  timestamp: '2022-06-22 16:03:26'
+}
+{
+  message: {
+    data: { id: '62746010736e8ea96f53ea54', skip: '16', limit: undefined }
+  },
+  level: 'info',
+  timestamp: '2022-06-22 16:03:27'
+}
+{
+  message: {
+    data: { id: '62746010736e8ea96f53ea54', skip: '20', limit: undefined }
+  },
+  level: 'info',
+  timestamp: '2022-06-22 16:03:29'
+}
+{
+  message: {
+    data: { id: '62746010736e8ea96f53ea54', skip: '24', limit: undefined }
+  },
+  level: 'info',
+  timestamp: '2022-06-22 16:03:31'
+}
+{
+  message: {
+    data: { id: '62746010736e8ea96f53ea54', skip: '0', limit: undefined }
+  },
+  level: 'info',
+  timestamp: '2022-06-22 16:04:23'
+}
+{
+  message: { notificationData: { _id: '62746010736e8ea96f53ea54', role: 'OM' } },
+  level: 'info',
+  timestamp: '2022-06-22 16:04:23'
+}
+{
+  message: {
+    Notification: {
+      acknowledged: true,
+      modifiedCount: 24,
+      upsertedId: null,
+      upsertedCount: 0,
+      matchedCount: 24
+    }
+  },
+  level: 'info',
+  timestamp: '2022-06-22 16:04:23'
+}
+{
+  message: {
+    data: { id: '62746010736e8ea96f53ea54', skip: '0', limit: undefined }
+  },
+  level: 'info',
+  timestamp: '2022-06-22 16:04:36'
+}
+{
+  message: { notificationData: { _id: '62746010736e8ea96f53ea54', role: 'OM' } },
+  level: 'info',
+  timestamp: '2022-06-22 16:04:36'
+}
+{
+  message: {
+    Notification: {
+      acknowledged: true,
+      modifiedCount: 24,
+      upsertedId: null,
+      upsertedCount: 0,
+      matchedCount: 24
+    }
+  },
+  level: 'info',
+  timestamp: '2022-06-22 16:04:36'
+}
+{
+  message: {
+    data: { id: '62746010736e8ea96f53ea54', skip: '0', limit: undefined }
+  },
+  level: 'info',
+  timestamp: '2022-06-22 16:04:43'
+}
+{
+  message: { notificationData: { _id: '62746010736e8ea96f53ea54', role: 'OM' } },
+  level: 'info',
+  timestamp: '2022-06-22 16:04:43'
+}
+{
+  message: {
+    Notification: {
+      acknowledged: true,
+      modifiedCount: 24,
+      upsertedId: null,
+      upsertedCount: 0,
+      matchedCount: 24
+    }
+  },
+  level: 'info',
+  timestamp: '2022-06-22 16:04:44'
+}
+{
+  message: {
+    data: { id: '62746010736e8ea96f53ea54', skip: '0', limit: undefined }
+  },
+  level: 'info',
+  timestamp: '2022-06-22 16:04:53'
+}
+{
+  message: { notificationData: { _id: '62746010736e8ea96f53ea54', role: 'OM' } },
+  level: 'info',
+  timestamp: '2022-06-22 16:04:53'
+}
+{
+  message: {
+    Notification: {
+      acknowledged: true,
+      modifiedCount: 24,
+      upsertedId: null,
+      upsertedCount: 0,
+      matchedCount: 24
+    }
+  },
+  level: 'info',
+  timestamp: '2022-06-22 16:04:53'
+}
+{
+  message: {
+    data: { id: '62746010736e8ea96f53ea54', skip: '0', limit: undefined }
+  },
+  level: 'info',
+  timestamp: '2022-06-22 16:05:06'
+}
+{
+  message: { notificationData: { _id: '62746010736e8ea96f53ea54', role: 'OM' } },
+  level: 'info',
+  timestamp: '2022-06-22 16:05:06'
+}
+{
+  message: {
+    Notification: {
+      acknowledged: true,
+      modifiedCount: 24,
+      upsertedId: null,
+      upsertedCount: 0,
+      matchedCount: 24
+    }
+  },
+  level: 'info',
+  timestamp: '2022-06-22 16:05:06'
+}
+{
+  message: {
+    data: { id: '62746010736e8ea96f53ea54', skip: '0', limit: undefined }
+  },
+  level: 'info',
+  timestamp: '2022-06-22 16:05:47'
+}
+{
+  message: { notificationData: { _id: '62746010736e8ea96f53ea54', role: 'OM' } },
+  level: 'info',
+  timestamp: '2022-06-22 16:05:47'
+}
+{
+  message: {
+    Notification: {
+      acknowledged: true,
+      modifiedCount: 24,
+      upsertedId: null,
+      upsertedCount: 0,
+      matchedCount: 24
+    }
+  },
+  level: 'info',
+  timestamp: '2022-06-22 16:05:47'
+}
+{
+  message: {
+    data: { id: '62746010736e8ea96f53ea54', skip: '0', limit: undefined }
+  },
+  level: 'info',
+  timestamp: '2022-06-22 16:06:07'
+}
+{
+  message: { notificationData: { _id: '62746010736e8ea96f53ea54', role: 'OM' } },
+  level: 'info',
+  timestamp: '2022-06-22 16:06:07'
+}
+{
+  message: {
+    Notification: {
+      acknowledged: true,
+      modifiedCount: 24,
+      upsertedId: null,
+      upsertedCount: 0,
+      matchedCount: 24
+    }
+  },
+  level: 'info',
+  timestamp: '2022-06-22 16:06:07'
+}
+{
+  message: {
+    data: { id: '62746010736e8ea96f53ea54', skip: '0', limit: undefined }
+  },
+  level: 'info',
+  timestamp: '2022-06-22 16:06:39'
+}
+{
+  message: { notificationData: { _id: '62746010736e8ea96f53ea54', role: 'OM' } },
+  level: 'info',
+  timestamp: '2022-06-22 16:06:39'
+}
+{
+  message: {
+    Notification: {
+      acknowledged: true,
+      modifiedCount: 24,
+      upsertedId: null,
+      upsertedCount: 0,
+      matchedCount: 24
+    }
+  },
+  level: 'info',
+  timestamp: '2022-06-22 16:06:39'
+}
+{
+  message: {
+    data: { id: '62746010736e8ea96f53ea54', skip: '0', limit: undefined }
+  },
+  level: 'info',
+  timestamp: '2022-06-22 16:06:54'
+}
+{
+  message: { notificationData: { _id: '62746010736e8ea96f53ea54', role: 'OM' } },
+  level: 'info',
+  timestamp: '2022-06-22 16:06:54'
+}
+{
+  message: {
+    Notification: {
+      acknowledged: true,
+      modifiedCount: 24,
+      upsertedId: null,
+      upsertedCount: 0,
+      matchedCount: 24
+    }
+  },
+  level: 'info',
+  timestamp: '2022-06-22 16:06:54'
+}
+{
+  message: {
+    data: { id: '62746010736e8ea96f53ea54', skip: '0', limit: undefined }
+  },
+  level: 'info',
+  timestamp: '2022-06-22 16:07:49'
+}
+{
+  message: { notificationData: { _id: '62746010736e8ea96f53ea54', role: 'OM' } },
+  level: 'info',
+  timestamp: '2022-06-22 16:07:49'
+}
+{
+  message: {
+    Notification: {
+      acknowledged: true,
+      modifiedCount: 24,
+      upsertedId: null,
+      upsertedCount: 0,
+      matchedCount: 24
+    }
+  },
+  level: 'info',
+  timestamp: '2022-06-22 16:07:49'
+}
+{
+  message: {
+    data: { id: '62746010736e8ea96f53ea54', skip: '0', limit: undefined }
+  },
+  level: 'info',
+  timestamp: '2022-06-22 16:07:52'
+}
+{
+  message: { notificationData: { _id: '62746010736e8ea96f53ea54', role: 'OM' } },
+  level: 'info',
+  timestamp: '2022-06-22 16:07:52'
+}
+{
+  message: {
+    Notification: {
+      acknowledged: true,
+      modifiedCount: 24,
+      upsertedId: null,
+      upsertedCount: 0,
+      matchedCount: 24
+    }
+  },
+  level: 'info',
+  timestamp: '2022-06-22 16:07:52'
+}
+{
+  message: {
+    data: { id: '62746010736e8ea96f53ea54', skip: '0', limit: undefined }
+  },
+  level: 'info',
+  timestamp: '2022-06-22 16:11:49'
+}
+{
+  message: { notificationData: { _id: '62746010736e8ea96f53ea54', role: 'OM' } },
+  level: 'info',
+  timestamp: '2022-06-22 16:11:49'
+}
+{
+  message: {
+    Notification: {
+      acknowledged: true,
+      modifiedCount: 24,
+      upsertedId: null,
+      upsertedCount: 0,
+      matchedCount: 24
+    }
+  },
+  level: 'info',
+  timestamp: '2022-06-22 16:11:49'
+}
+{
+  message: {
+    data: { id: '62746010736e8ea96f53ea54', skip: '0', limit: undefined }
+  },
+  level: 'info',
+  timestamp: '2022-06-22 16:12:56'
+}
+{
+  message: { notificationData: { _id: '62746010736e8ea96f53ea54', role: 'OM' } },
+  level: 'info',
+  timestamp: '2022-06-22 16:12:56'
+}
+{
+  message: {
+    Notification: {
+      acknowledged: true,
+      modifiedCount: 24,
+      upsertedId: null,
+      upsertedCount: 0,
+      matchedCount: 24
+    }
+  },
+  level: 'info',
+  timestamp: '2022-06-22 16:12:56'
+}
+{
+  message: {
+    data: { id: '62746010736e8ea96f53ea54', skip: '0', limit: undefined }
+  },
+  level: 'info',
+  timestamp: '2022-06-22 16:12:58'
+}
+{
+  message: { notificationData: { _id: '62746010736e8ea96f53ea54', role: 'OM' } },
+  level: 'info',
+  timestamp: '2022-06-22 16:12:58'
+}
+{
+  message: {
+    Notification: {
+      acknowledged: true,
+      modifiedCount: 24,
+      upsertedId: null,
+      upsertedCount: 0,
+      matchedCount: 24
+    }
+  },
+  level: 'info',
+  timestamp: '2022-06-22 16:12:58'
+}
+{
+  message: {
+    data: { id: '62746010736e8ea96f53ea54', skip: '4', limit: undefined }
+  },
+  level: 'info',
+  timestamp: '2022-06-22 16:13:01'
+}
+{
+  message: {
+    data: { id: '62746010736e8ea96f53ea54', skip: '8', limit: undefined }
+  },
+  level: 'info',
+  timestamp: '2022-06-22 16:13:03'
+}
+{
+  message: {
+    data: { id: '62746010736e8ea96f53ea54', skip: '12', limit: undefined }
+  },
+  level: 'info',
+  timestamp: '2022-06-22 16:13:05'
+}
+{
+  message: {
+    data: { id: '62746010736e8ea96f53ea54', skip: '16', limit: undefined }
+  },
+  level: 'info',
+  timestamp: '2022-06-22 16:13:06'
+}
+{
+  message: {
+    data: { id: '62746010736e8ea96f53ea54', skip: '20', limit: undefined }
+  },
+  level: 'info',
+  timestamp: '2022-06-22 16:13:07'
+}
+{
+  message: {
+    data: { id: '62746010736e8ea96f53ea54', skip: '24', limit: undefined }
+  },
+  level: 'info',
+  timestamp: '2022-06-22 16:13:09'
+}
+{
+  message: {
+    data: { id: '62746010736e8ea96f53ea54', skip: '0', limit: undefined }
+  },
+  level: 'info',
+  timestamp: '2022-06-22 16:13:24'
+}
+{
+  message: { notificationData: { _id: '62746010736e8ea96f53ea54', role: 'OM' } },
+  level: 'info',
+  timestamp: '2022-06-22 16:13:24'
+}
+{
+  message: {
+    Notification: {
+      acknowledged: true,
+      modifiedCount: 24,
+      upsertedId: null,
+      upsertedCount: 0,
+      matchedCount: 24
+    }
+  },
+  level: 'info',
+  timestamp: '2022-06-22 16:13:24'
+}
+{
+  message: {
+    borderData: Promise { <pending> },
+    createBoardApi: 'https://api.trello.com/1/boards/?name=local test&prefs_background=blue&defaultLists=false&key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68'
+  },
+  level: 'info',
+  timestamp: '2022-06-22 16:13:54'
+}
+{
+  message: { removeWebhookSucced: 'done' },
+  level: 'info',
+  timestamp: '2022-06-22 16:13:58'
+}
+{
+  message: {
+    createDepartmentJobError: TypeError: server_1.io.sockets.emit is not a function
+        at C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\src\lib\background\departmentsQueue.ts:133:20
+        at Generator.next (<anonymous>)
+        at fulfilled (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\src\lib\background\departmentsQueue.ts:5:58)
+        at runMicrotasks (<anonymous>)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5)
+  },
+  level: 'error',
+  timestamp: '2022-06-22 16:13:58'
+}
+{
+  message: { webhookCreateResult: 'webhook done' },
+  level: 'info',
+  timestamp: '2022-06-22 16:13:59'
+}
+{
+  message: {
+    borderData: Promise { <pending> },
+    createBoardApi: 'https://api.trello.com/1/boards/?name=Zedan Saheer&prefs_background=blue&defaultLists=false&key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68'
+  },
+  level: 'info',
+  timestamp: '2022-06-22 16:20:12'
+}
+{
+  message: { removeWebhookSucced: 'done' },
+  level: 'info',
+  timestamp: '2022-06-22 16:20:16'
+}
+{
+  message: {
+    createDepartmentJobError: TypeError: server_1.io.sockets.emit is not a function
+        at C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\src\lib\background\departmentsQueue.ts:133:20
+        at Generator.next (<anonymous>)
+        at fulfilled (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\src\lib\background\departmentsQueue.ts:5:58)
+        at runMicrotasks (<anonymous>)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5)
+  },
+  level: 'error',
+  timestamp: '2022-06-22 16:20:16'
+}
+{
+  message: { webhookCreateResult: 'webhook done' },
+  level: 'info',
+  timestamp: '2022-06-22 16:20:16'
+}
+{
+  message: {
+    departmentData: {
+      _id: '62b3170c1490de13890e232c',
+      boardId: '62b3170bad2bf856a6c41b3a',
+      name: 'Zedan Saheer',
+      color: 'blue',
+      mainBoard: false,
+      addTeam: [],
+      removeTeam: [ '62b3170ffbb7f63d5775daf1' ]
+    }
+  },
+  level: 'info',
+  timestamp: '2022-06-22 16:24:54'
+}
+{
+  message: 'first step',
+  level: 'info',
+  timestamp: '2022-06-22 16:24:54'
+}
+{
+  message: { removeTeam: [ '62b3170ffbb7f63d5775daf1' ] },
+  level: 'info',
+  timestamp: '2022-06-22 16:24:54'
+}
+{
+  message: { removeWebhookSucced: 'done' },
+  level: 'info',
+  timestamp: '2022-06-22 16:24:54'
+}
+{
+  message: { title: 'testing', teamListIds: [] },
+  level: 'info',
+  timestamp: '2022-06-22 16:24:54'
+}
+{
+  message: {
+    depUpdate: {
+      _id: new ObjectId("62b3170c1490de13890e232c"),
+      name: 'Zedan Saheer',
+      boardId: '62b3170bad2bf856a6c41b3a',
+      color: 'blue',
+      mainBoard: false,
+      tasks: [],
+      teamsId: [],
+      createdAt: 2022-06-22T13:20:12.540Z,
+      updatedAt: 2022-06-22T13:24:54.713Z,
+      __v: 0,
+      canceldListId: '62b3170c91500960c43d3f9a',
+      defaultListId: '62b3170e4c23f45e193a68ca',
+      doneListId: '62b3170d36607936bc173dbd',
+      inProgressListId: '62b3170b41325b198b3f9e96',
+      notClearListId: '62b3170c6a4e906631e2190b',
+      reviewListId: '62b3170e63b9bb6073d3606e',
+      sharedListID: '62b3170dbff49f3a043f863d'
+    }
+  },
+  level: 'info',
+  timestamp: '2022-06-22 16:24:54'
+}
+{
+  message: {
+    department: {
+      _id: new ObjectId("62b3170c1490de13890e232c"),
+      name: 'Zedan Saheer',
+      boardId: '62b3170bad2bf856a6c41b3a',
+      color: 'blue',
+      mainBoard: false,
+      tasks: [],
+      teamsId: [],
+      createdAt: 2022-06-22T13:20:12.540Z,
+      updatedAt: 2022-06-22T13:24:54.713Z,
+      __v: 0,
+      canceldListId: '62b3170c91500960c43d3f9a',
+      defaultListId: '62b3170e4c23f45e193a68ca',
+      doneListId: '62b3170d36607936bc173dbd',
+      inProgressListId: '62b3170b41325b198b3f9e96',
+      notClearListId: '62b3170c6a4e906631e2190b',
+      reviewListId: '62b3170e63b9bb6073d3606e',
+      sharedListID: '62b3170dbff49f3a043f863d'
+    }
+  },
+  level: 'info',
+  timestamp: '2022-06-22 16:24:54'
+}
+{
+  message: { removeListAndWebhookSucced: 'done' },
+  level: 'info',
+  timestamp: '2022-06-22 16:24:55'
+}
+{
+  message: {
+    borderData: Promise { <pending> },
+    createBoardApi: 'https://api.trello.com/1/boards/?name=Zedan &prefs_background=blue&defaultLists=false&key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68'
+  },
+  level: 'info',
+  timestamp: '2022-06-22 16:37:38'
+}
+{
+  message: { removeWebhookSucced: 'done' },
+  level: 'info',
+  timestamp: '2022-06-22 16:37:42'
+}
+{
+  message: {
+    createDepartmentJobError: TypeError: server_1.io.sockets.emit is not a function
+        at C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\src\lib\background\departmentsQueue.ts:133:20
+        at Generator.next (<anonymous>)
+        at fulfilled (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\src\lib\background\departmentsQueue.ts:5:58)
+        at runMicrotasks (<anonymous>)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5)
+  },
+  level: 'error',
+  timestamp: '2022-06-22 16:37:42'
+}
+{
+  message: { webhookCreateResult: 'webhook done' },
+  level: 'info',
+  timestamp: '2022-06-22 16:37:42'
+}
+{
+  message: {
+    borderData: Promise { <pending> },
+    createBoardApi: 'https://api.trello.com/1/boards/?name=Local test zedan&prefs_background=blue&defaultLists=false&key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68'
+  },
+  level: 'info',
+  timestamp: '2022-06-22 17:18:56'
+}
+{
+  message: { removeWebhookSucced: 'done' },
+  level: 'info',
+  timestamp: '2022-06-22 17:18:59'
+}
+{
+  message: {
+    createDepartmentJobError: TypeError: server_1.io.sockets.emit is not a function
+        at C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\src\lib\background\departmentsQueue.ts:133:20
+        at Generator.next (<anonymous>)
+        at fulfilled (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\src\lib\background\departmentsQueue.ts:5:58)
+        at runMicrotasks (<anonymous>)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5)
+  },
+  level: 'error',
+  timestamp: '2022-06-22 17:18:59'
+}
+{
+  message: { webhookCreateResult: 'webhook done' },
+  level: 'info',
+  timestamp: '2022-06-22 17:19:00'
+}
+{
+  message: {
+    addTechMemberError: MongoServerError: E11000 duplicate key error collection: TTP.teams index: name_1 dup key: { name: "Testing" }
+        at C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\mongodb\src\operations\insert.ts:85:25
+        at C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\mongodb\src\cmap\connection_pool.ts:482:13
+        at handleOperationResult (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\mongodb\src\sdam\server.ts:538:14)
+        at Connection.onMessage (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\mongodb\src\cmap\connection.ts:452:5)
+        at MessageStream.<anonymous> (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\mongodb\src\cmap\connection.ts:267:56)
+        at MessageStream.emit (node:events:527:28)
+        at MessageStream.emit (node:domain:475:12)
+        at processIncomingData (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\mongodb\src\cmap\message_stream.ts:168:12)
+        at MessageStream._write (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\mongodb\src\cmap\message_stream.ts:65:5)
+        at writeOrBuffer (node:internal/streams/writable:389:12) {
+      index: 0,
+      code: 11000,
+      keyPattern: { name: 1 },
+      keyValue: { name: 'Testing' },
+      [Symbol(errorLabels)]: Set(0) {}
+    }
+  },
+  level: 'error',
+  timestamp: '2022-06-22 17:20:00'
+}
+{
+  message: {
+    createMemberError: TypeError: Cannot read properties of undefined (reading '_id')
+        at Function.<anonymous> (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\src\lib\controllers\techMember.ts:113:64)
+        at Generator.next (<anonymous>)
+        at fulfilled (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\src\lib\controllers\techMember.ts:5:58)
+        at runMicrotasks (<anonymous>)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5)
+  },
+  level: 'error',
+  timestamp: '2022-06-22 17:20:00'
+}
+{
+  message: {
+    borderData: Promise { <pending> },
+    createBoardApi: 'https://api.trello.com/1/boards/?name=Testing another new local&prefs_background=blue&defaultLists=false&key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68'
+  },
+  level: 'info',
+  timestamp: '2022-06-22 17:20:47'
+}
+{
+  message: { removeWebhookSucced: 'done' },
+  level: 'info',
+  timestamp: '2022-06-22 17:20:51'
+}
+{
+  message: {
+    createDepartmentJobError: TypeError: server_1.io.sockets.emit is not a function
+        at C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\src\lib\background\departmentsQueue.ts:133:20
+        at Generator.next (<anonymous>)
+        at fulfilled (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\src\lib\background\departmentsQueue.ts:5:58)
+        at runMicrotasks (<anonymous>)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5)
+  },
+  level: 'error',
+  timestamp: '2022-06-22 17:20:51'
+}
+{
+  message: { webhookCreateResult: 'webhook done' },
+  level: 'info',
+  timestamp: '2022-06-22 17:20:51'
+}
+{
+  message: {
+    borderData: Promise { <pending> },
+    createBoardApi: 'https://api.trello.com/1/boards/?name=New&prefs_background=blue&defaultLists=false&key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68'
+  },
+  level: 'info',
+  timestamp: '2022-06-22 18:22:28'
+}
+{
+  message: { removeWebhookSucced: 'done' },
+  level: 'info',
+  timestamp: '2022-06-22 18:22:32'
+}
+{
+  message: {
+    createDepartmentJobError: TypeError: server_1.io.sockets.emit is not a function
+        at C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\src\lib\background\departmentsQueue.ts:133:20
+        at Generator.next (<anonymous>)
+        at fulfilled (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\src\lib\background\departmentsQueue.ts:5:58)
+        at runMicrotasks (<anonymous>)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5)
+  },
+  level: 'error',
+  timestamp: '2022-06-22 18:22:32'
+}
+{
+  message: { webhookCreateResult: 'webhook done' },
+  level: 'info',
+  timestamp: '2022-06-22 18:22:32'
+}
+{
+  message: {
+    departmentData: {
+      _id: '62b324d01490de13890e2454',
+      boardId: '62b324cee5593f314633e649',
+      name: 'Local test zedan',
+      color: 'blue',
+      mainBoard: false,
+      addTeam: [],
+      removeTeam: [ '62b325249e9e5476e67e8d71' ]
+    }
+  },
+  level: 'info',
+  timestamp: '2022-06-22 18:22:53'
+}
+{
+  message: 'first step',
+  level: 'info',
+  timestamp: '2022-06-22 18:22:53'
+}
+{
+  message: { removeTeam: [ '62b325249e9e5476e67e8d71' ] },
+  level: 'info',
+  timestamp: '2022-06-22 18:22:54'
+}
+{
+  message: { removeWebhookSucced: 'done' },
+  level: 'info',
+  timestamp: '2022-06-22 18:22:54'
+}
+{
+  message: { title: 'testing', teamListIds: [] },
+  level: 'info',
+  timestamp: '2022-06-22 18:22:54'
+}
+{
+  message: {
+    depUpdate: {
+      _id: new ObjectId("62b324d01490de13890e2454"),
+      name: 'Local test zedan',
+      boardId: '62b324cee5593f314633e649',
+      color: 'blue',
+      mainBoard: false,
+      tasks: [],
+      teamsId: [],
+      createdAt: 2022-06-22T14:18:56.355Z,
+      updatedAt: 2022-06-22T15:22:54.084Z,
+      __v: 0,
+      canceldListId: '62b324d0b1cd134ddf676ade',
+      defaultListId: '62b324d2190c2675cf91df5c',
+      doneListId: '62b324d1d7a35a04a892ea2f',
+      inProgressListId: '62b324cf74d73a10a3528297',
+      notClearListId: '62b324d0c1098461292ad3f5',
+      reviewListId: '62b324d28c298d0ce233b2d5',
+      sharedListID: '62b324d1a3dee80470ecf9dc'
+    }
+  },
+  level: 'info',
+  timestamp: '2022-06-22 18:22:54'
+}
+{
+  message: {
+    department: {
+      _id: new ObjectId("62b324d01490de13890e2454"),
+      name: 'Local test zedan',
+      boardId: '62b324cee5593f314633e649',
+      color: 'blue',
+      mainBoard: false,
+      tasks: [],
+      teamsId: [],
+      createdAt: 2022-06-22T14:18:56.355Z,
+      updatedAt: 2022-06-22T15:22:54.084Z,
+      __v: 0,
+      canceldListId: '62b324d0b1cd134ddf676ade',
+      defaultListId: '62b324d2190c2675cf91df5c',
+      doneListId: '62b324d1d7a35a04a892ea2f',
+      inProgressListId: '62b324cf74d73a10a3528297',
+      notClearListId: '62b324d0c1098461292ad3f5',
+      reviewListId: '62b324d28c298d0ce233b2d5',
+      sharedListID: '62b324d1a3dee80470ecf9dc'
+    }
+  },
+  level: 'info',
+  timestamp: '2022-06-22 18:22:54'
+}
+{
+  message: { removeListAndWebhookSucced: 'done' },
+  level: 'info',
+  timestamp: '2022-06-22 18:22:54'
+}

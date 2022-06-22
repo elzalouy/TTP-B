@@ -4718,3 +4718,110 @@
   level: 'error',
   timestamp: '2022-06-20 17:47:21'
 }
+{
+  message: {
+    createDepartmentJobError: TypeError: server_1.io.sockets.emit is not a function
+        at C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\src\lib\background\departmentsQueue.ts:133:20
+        at Generator.next (<anonymous>)
+        at fulfilled (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\src\lib\background\departmentsQueue.ts:5:58)
+        at runMicrotasks (<anonymous>)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5)
+  },
+  level: 'error',
+  timestamp: '2022-06-22 16:13:58'
+}
+{
+  message: {
+    createDepartmentJobError: TypeError: server_1.io.sockets.emit is not a function
+        at C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\src\lib\background\departmentsQueue.ts:133:20
+        at Generator.next (<anonymous>)
+        at fulfilled (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\src\lib\background\departmentsQueue.ts:5:58)
+        at runMicrotasks (<anonymous>)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5)
+  },
+  level: 'error',
+  timestamp: '2022-06-22 16:20:16'
+}
+{
+  message: {
+    createDepartmentJobError: TypeError: server_1.io.sockets.emit is not a function
+        at C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\src\lib\background\departmentsQueue.ts:133:20
+        at Generator.next (<anonymous>)
+        at fulfilled (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\src\lib\background\departmentsQueue.ts:5:58)
+        at runMicrotasks (<anonymous>)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5)
+  },
+  level: 'error',
+  timestamp: '2022-06-22 16:37:42'
+}
+{
+  message: {
+    createDepartmentJobError: TypeError: server_1.io.sockets.emit is not a function
+        at C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\src\lib\background\departmentsQueue.ts:133:20
+        at Generator.next (<anonymous>)
+        at fulfilled (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\src\lib\background\departmentsQueue.ts:5:58)
+        at runMicrotasks (<anonymous>)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5)
+  },
+  level: 'error',
+  timestamp: '2022-06-22 17:18:59'
+}
+{
+  message: {
+    addTechMemberError: MongoServerError: E11000 duplicate key error collection: TTP.teams index: name_1 dup key: { name: "Testing" }
+        at C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\mongodb\src\operations\insert.ts:85:25
+        at C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\mongodb\src\cmap\connection_pool.ts:482:13
+        at handleOperationResult (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\mongodb\src\sdam\server.ts:538:14)
+        at Connection.onMessage (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\mongodb\src\cmap\connection.ts:452:5)
+        at MessageStream.<anonymous> (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\mongodb\src\cmap\connection.ts:267:56)
+        at MessageStream.emit (node:events:527:28)
+        at MessageStream.emit (node:domain:475:12)
+        at processIncomingData (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\mongodb\src\cmap\message_stream.ts:168:12)
+        at MessageStream._write (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\mongodb\src\cmap\message_stream.ts:65:5)
+        at writeOrBuffer (node:internal/streams/writable:389:12) {
+      index: 0,
+      code: 11000,
+      keyPattern: { name: 1 },
+      keyValue: { name: 'Testing' },
+      [Symbol(errorLabels)]: Set(0) {}
+    }
+  },
+  level: 'error',
+  timestamp: '2022-06-22 17:20:00'
+}
+{
+  message: {
+    createMemberError: TypeError: Cannot read properties of undefined (reading '_id')
+        at Function.<anonymous> (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\src\lib\controllers\techMember.ts:113:64)
+        at Generator.next (<anonymous>)
+        at fulfilled (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\src\lib\controllers\techMember.ts:5:58)
+        at runMicrotasks (<anonymous>)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5)
+  },
+  level: 'error',
+  timestamp: '2022-06-22 17:20:00'
+}
+{
+  message: {
+    createDepartmentJobError: TypeError: server_1.io.sockets.emit is not a function
+        at C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\src\lib\background\departmentsQueue.ts:133:20
+        at Generator.next (<anonymous>)
+        at fulfilled (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\src\lib\background\departmentsQueue.ts:5:58)
+        at runMicrotasks (<anonymous>)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5)
+  },
+  level: 'error',
+  timestamp: '2022-06-22 17:20:51'
+}
+{
+  message: {
+    createDepartmentJobError: TypeError: server_1.io.sockets.emit is not a function
+        at C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\src\lib\background\departmentsQueue.ts:133:20
+        at Generator.next (<anonymous>)
+        at fulfilled (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\src\lib\background\departmentsQueue.ts:5:58)
+        at runMicrotasks (<anonymous>)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5)
+  },
+  level: 'error',
+  timestamp: '2022-06-22 18:22:32'
+}

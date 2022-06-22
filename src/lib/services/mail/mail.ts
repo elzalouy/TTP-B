@@ -29,7 +29,7 @@ const sendMail = async (data: Data) => {
     link: `${Config.get("FrontEndUrl")}/${data.path}/${data.token}`,
     body: data.body,
   };
-  
+
   const htmlToSend = template(replacements);
 
   try {
@@ -67,6 +67,7 @@ const sendMail = async (data: Data) => {
     };
 
     const result = await transporter.sendMail(mailOptions);
+    console.log(result);
     return result;
   } catch (error) {
     logger.info({ sendMailError: error });
