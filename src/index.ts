@@ -9,7 +9,7 @@ import morgan from "morgan";
 import cors from "cors";
 import routes from "./lib/startup/routes";
 import cronJobsBySocket from "./lib/services/cronJobNotifi";
-import listen from "./lib/startup/prod";
+import listenMultiNodes from "./lib/startup/prod";
 import { DefaultEventsMap } from "socket.io/dist/typed-events";
 import { Server } from "socket.io";
 const Config = require("config");
@@ -27,7 +27,6 @@ config();
 let port = process.env.PORT || 5000;
 console.log(process.env.NODE_ENV);
 export const http = createServer(app);
-// if (process.env.NODE_ENV === "development") {
 http.listen(port, function () {
   console.log("Welcome to", Config.get("name"));
   console.log(
@@ -36,11 +35,5 @@ http.listen(port, function () {
   );
   console.log("server listen to port " + port);
 });
-let io = appSocket(http);
+export const io = appSocket(http);
 cronJobsBySocket(io);
-// } else {
-//   io = listen(app);
-// }
-export { io };
-
-// socket & jobs

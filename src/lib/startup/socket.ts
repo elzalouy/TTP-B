@@ -15,7 +15,7 @@ export default function appSocket(http: any) {
   io.on("connection", (socket) => {
     console.log("id", socket.id);
   });
-  let soc = io.on(
+  io.on(
     "connect",
     (
       socket: Socket<DefaultEventsMap, DefaultEventsMap, DefaultEventsMap, any>
@@ -32,6 +32,5 @@ export default function appSocket(http: any) {
       });
     }
   );
-  console.log(soc.allSockets());
-  return soc;
+  return io;
 }
