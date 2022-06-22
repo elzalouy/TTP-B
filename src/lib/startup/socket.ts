@@ -6,10 +6,9 @@ export default function appSocket(http: any) {
   const io = new Server(http, {
     path: "/socket.io",
     cors: {
-      origin: config.get("FrontEndUrl"),
+      origin: "*",
       methods: ["GET", "POST"],
       allowedHeaders: ["Content-type"],
-      credentials: true,
     },
   });
   io.on("connect", (socket) => {
