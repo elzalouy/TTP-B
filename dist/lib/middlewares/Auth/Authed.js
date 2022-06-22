@@ -9,7 +9,7 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
     });
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-const auth_1 = require("../../services/auth/auth");
+const auth_1 = require("../../services/auth");
 exports.default = (req, res, next) => __awaiter(void 0, void 0, void 0, function* () {
     var _a;
     try {

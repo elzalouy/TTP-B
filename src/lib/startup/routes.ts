@@ -11,7 +11,7 @@ import categoryRoute from "../routes/category/categoryRoute";
 import clientRoute from "../routes/client/clientRoute";
 import notifiRoute from "../routes/notification/notifiRoute";
 
-module.exports = function (app: Application) {
+export default function (app: Application) {
   app.use(function (req, res, next) {
     let allowedOrigins = [
       "http://" + process.env.FRONT_END_URL,
@@ -41,4 +41,4 @@ module.exports = function (app: Application) {
   app.use("/api", categoryRoute);
   app.use("/api", clientRoute);
   app.use("/api", notifiRoute);
-};
+}

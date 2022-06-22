@@ -28,7 +28,7 @@ const TaskReq = class TaskReq extends task_1.default {
                     TaskData.teamId = null;
                 let isValid = validation_1.createTaskSchema.validate(TaskData);
                 if (isValid.error)
-                    return res.status(400).send(isValid.error.details);
+                    return res.status(400).send(isValid.error.details[0]);
                 let task = yield _super.createTask.call(this, TaskData, req.files);
                 if (task) {
                     return res.send(task);
@@ -40,7 +40,6 @@ const TaskReq = class TaskReq extends task_1.default {
             catch (error) {
                 console.log(new Error(error).message);
                 logger_1.default.error({ handleCreateCardError: error });
-                return res.status(500).send([{ message: error === null || error === void 0 ? void 0 : error.message }]);
             }
         });
     }
@@ -48,13 +47,21 @@ const TaskReq = class TaskReq extends task_1.default {
         const _super = Object.create(null, {
             updateTask: { get: () => super.updateTask }
         });
+        var _a;
         return __awaiter(this, void 0, void 0, function* () {
             try {
                 let TaskData = req.body;
-                // TaskData.file = req.file
-                let task = yield _super.updateTask.call(this, TaskData);
-                if (task) {
-                    return res.send(task);
+                if (TaskData.teamId === "" || TaskData.teamId === null)
+                    TaskData.teamId = null;
+                let files = req.files;
+                let validate = validation_1.editTaskSchema.validate(TaskData);
+                if (validate.error)
+                    return res.status(400).send(validate.error.details[0]);
+                let task = yield _super.updateTask.call(this, TaskData, files);
+                if (task && (task === null || task === void 0 ? void 0 : task.error))
+                    res.status(400).send(task.error);
+                if ((_a = task === null || task === void 0 ? void 0 : task.task) === null || _a === void 0 ? void 0 : _a._id) {
+                    return res.send(task.task);
                 }
                 else {
                     return res.status(400).send((0, errorUtils_1.customeError)("update_task_error", 400));
@@ -62,24 +69,6 @@ const TaskReq = class TaskReq extends task_1.default {
             }
             catch (error) {
                 logger_1.default.error({ handleUpdateCardError: error });
-                return res.status(500).send((0, errorUtils_1.customeError)("server_error", 500));
-            }
-        });
-    }
-    static handleWebhookUpdateCard(req, res) {
-        const _super = Object.create(null, {
-            webhookUpdate: { get: () => super.webhookUpdate }
-        });
-        return __awaiter(this, void 0, void 0, function* () {
-            try {
-                let trelloData = req.body;
-                console.log(trelloData);
-                let task = yield _super.webhookUpdate.call(this, trelloData);
-                return res.status(200).send(task);
-            }
-            catch (error) {
-                logger_1.default.error({ handleWebhookUpdateCardError: error });
-                return res.status(500).send((0, errorUtils_1.customeError)("server_error", 500));
             }
         });
     }
@@ -98,7 +87,6 @@ const TaskReq = class TaskReq extends task_1.default {
             }
             catch (error) {
                 logger_1.default.error({ handleGetTasksError: error });
-                return res.status(500).send((0, errorUtils_1.customeError)("server_error", 500));
             }
         });
     }
@@ -117,7 +105,6 @@ const TaskReq = class TaskReq extends task_1.default {
             }
             catch (error) {
                 logger_1.default.error({ handleGetTasksError: error });
-                return res.status(500).send((0, errorUtils_1.customeError)("server_error", 500));
             }
         });
     }
@@ -127,14 +114,11 @@ const TaskReq = class TaskReq extends task_1.default {
         });
         return __awaiter(this, void 0, void 0, function* () {
             try {
-                let { cardId, listId, status } = req.body;
-                let task = yield _super.moveTaskOnTrello.call(this, cardId, listId, status);
-                if (task) {
-                    return res.send(task);
-                }
-                else {
-                    return res.status(400).send((0, errorUtils_1.customeError)("update_task_error", 400));
-                }
+                let { cardId, listId, status, list } = req.body;
+                let task = yield _super.moveTaskOnTrello.call(this, cardId, listId, status, list);
+                if (task === null || task === void 0 ? void 0 : task.error)
+                    return res.status(400).send(task === null || task === void 0 ? void 0 : task.message);
+                return res.send(task);
             }
             catch (error) {
                 logger_1.default.error({ handleMoveCardError: error });

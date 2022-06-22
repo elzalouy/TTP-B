@@ -31,9 +31,9 @@ const DepartmentBD = class DepartmentBD {
             return yield DepartmentBD.__deleteDepartment(id);
         });
     }
-    static getDepartmentsData(data) {
+    static getDepartmentsData(data, and) {
         return __awaiter(this, void 0, void 0, function* () {
-            return yield DepartmentBD.__getDepartment(data);
+            return yield DepartmentBD.__getDepartment(data, and);
         });
     }
     static updateNestedRecordDepDB(DepId, Recordupdate) {
@@ -68,12 +68,26 @@ const DepartmentBD = class DepartmentBD {
             }
         });
     }
-    static __getDepartment(data) {
+    static __getOneDepartmentBy(data) {
+        return __awaiter(this, void 0, void 0, function* () {
+            try {
+                let dep = yield Department_1.default.findOne(data);
+                if (dep)
+                    return dep;
+                return null;
+            }
+            catch (error) {
+                logger_1.default.error({ getDepOneError: error });
+            }
+        });
+    }
+    static __getDepartment(data, and) {
         var _a;
         return __awaiter(this, void 0, void 0, function* () {
             try {
+                let match = and ? { $and: [data] } : { $or: [data] };
                 let department = yield Department_1.default.aggregate([
-                    { $match: { $and: [data] } },
+                    { $match: match },
                     {
                         $lookup: {
                             from: "tasks",
@@ -126,6 +140,7 @@ const DepartmentBD = class DepartmentBD {
                             reviewListId: 1,
                             sharedListID: 1,
                             notStartedListId: 1,
+                            inProgressListId: 1,
                             totalInProgress: {
                                 $size: "$totalInProgress",
                             },
@@ -177,7 +192,6 @@ const DepartmentBD = class DepartmentBD {
     static __addNewDepartment(data) {
         return __awaiter(this, void 0, void 0, function* () {
             try {
-                logger_1.default.info({ data });
                 let department = new Department_1.default(data);
                 yield department.save();
                 return department;

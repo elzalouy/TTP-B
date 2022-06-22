@@ -5,7 +5,6 @@ const ClientSchema = new mongoose_1.Schema({
     clientName: {
         type: String,
         required: true,
-        unique: true,
     },
     image: {
         type: Object,

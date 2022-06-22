@@ -3,7 +3,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.createTaskSchema = void 0;
+exports.editTaskSchema = exports.createTaskSchema = void 0;
 const joi_1 = __importDefault(require("joi"));
 const createProjectSchema = joi_1.default.object({
     name: joi_1.default.string().required().min(4).messages({
@@ -64,7 +64,7 @@ exports.createTaskSchema = joi_1.default.object({
         "string.empty": "Category should be selected",
         "any.required": "Category is required",
     }),
-    subCategoryId: joi_1.default.string().required().messages({
+    subCategoryId: joi_1.default.string().optional().allow(null, "").messages({
         "string.base": "Sub Category is required",
         "string.empty": "Sub Category should be selected",
         "any.required": "Sub Category is required",
@@ -82,7 +82,7 @@ exports.createTaskSchema = joi_1.default.object({
         "string.min": "Team should be selected",
         "any.required": "Team is required",
     }),
-    status: joi_1.default.string().valid("Tasks Board").required().messages({
+    status: joi_1.default.string().valid("Tasks Board", "inProgress").required().messages({
         "string.base": "Status is required",
         "string.empty": "Status should be string with min 4 chars",
         "string.min": "Status length should be Min 4 chars",
@@ -111,4 +111,59 @@ exports.createTaskSchema = joi_1.default.object({
     done: joi_1.default.any().allow(null),
     turnoverTime: joi_1.default.allow(null),
     attachedFiles: joi_1.default.array().optional().allow(null),
+});
+exports.editTaskSchema = joi_1.default.object({
+    id: joi_1.default.string()
+        .required()
+        .messages({ "any.required": "Task id is required" }),
+    name: joi_1.default.string().optional().min(4).max(20).messages({
+        "string.base": "Task Name is required",
+        "string.empty": "Task name should be string with min 4 chars",
+        "string.min": "Task name length should be Min 4 chars",
+        "string.max": "Task name length should be Max 20 chars",
+    }),
+    categoryId: joi_1.default.string().optional().messages({
+        "string.base": "Category is required",
+        "string.empty": "Category should be selected",
+    }),
+    cardId: joi_1.default.string()
+        .required()
+        .messages({ "any.required": "Card id is required" }),
+    deleteFiles: joi_1.default.string().optional(),
+    subCategoryId: joi_1.default.string().optional().messages({
+        "string.base": "Sub Category is required",
+        "string.empty": "Sub Category should be selected",
+    }),
+    listId: joi_1.default.string().optional().allow("").messages({
+        "string.base": "Department is required",
+        "string.empty": "Department should be string with min 4 chars",
+        "string.min": "Department length should be Min 4 chars",
+        "string.max": "Department length should be Max 20 chars",
+    }),
+    teamId: joi_1.default.string().optional().allow(null).messages({
+        "string.base": "Team is required",
+        "string.empty": "Team should be selected",
+        "string.min": "Team should be selected",
+    }),
+    status: joi_1.default.string()
+        .valid("Tasks Board", "inProgress", "Review", "Cancled", "Done", "Late", "Shared")
+        .optional()
+        .messages({
+        "string.base": "Status is required",
+        "string.empty": "Status should be string with min 4 chars",
+        "string.min": "Status length should be Min 4 chars",
+        "string.max": "Status length should be Max 20 chars",
+    }),
+    deadline: joi_1.default.date().optional().allow(null, "").messages({
+        "any.required": "Task Deadline is required",
+    }),
+    boardId: joi_1.default.string().optional().min(4).messages({
+        "string.base": "Department is required",
+        "string.empty": "Department should be string with min 4 chars",
+        "string.min": "Department length should be Min 4 chars",
+        "string.max": "Department length should be Max 20 chars",
+        "any.required": "Department is required",
+    }),
+    attachedFiles: joi_1.default.array().optional().allow(null),
+    description: joi_1.default.string().optional().allow(""),
 });

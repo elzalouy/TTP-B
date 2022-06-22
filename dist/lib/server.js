@@ -3,7 +3,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.io = exports.http = void 0;
+exports.app = exports.socket = exports.io = exports.http = void 0;
 const express_1 = __importDefault(require("express"));
 const morgan_1 = __importDefault(require("morgan"));
 const cors_1 = __importDefault(require("cors"));
@@ -16,6 +16,7 @@ const config_1 = __importDefault(require("./i18n/config"));
 const config_2 = __importDefault(require("config"));
 const ngrok = require("ngrok");
 const app = (0, express_1.default)();
+exports.app = app;
 app.use(express_1.default.json());
 app.use((0, cors_1.default)());
 app.use((0, cookie_parser_1.default)());
@@ -25,14 +26,16 @@ app.use(config_1.default.init);
 (0, dbConnect_1.default)();
 exports.http = (0, http_1.createServer)(app);
 exports.io = new socket_io_1.Server(exports.http, {
+    path: "/socket.io",
     cors: {
         origin: config_2.default.get("FrontEndUrl"),
-        methods: ["GET", "POST"],
         credentials: true,
     },
-    transports: ["websocket"]
+    transports: ["websocket"],
 });
-(0, socket_1.default)(exports.io);
-require("./startup/routes")(app);
-app.disable("etag");
-require("./services/cronJobNotifi/cronJobNotifi");
+exports.io.on("connection", (socket) => {
+    console.log("id", socket.id);
+});
+let socket = (0, socket_1.default)(exports.io);
+exports.socket = socket;
+require("./services/cronJobNotifi");

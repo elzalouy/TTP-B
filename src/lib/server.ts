@@ -1,34 +1,25 @@
-import express, { Application, Request, Response, NextFunction } from "express";
+import { createServer } from "http";
+import express, { Application } from "express";
+import cookieParser from "cookie-parser";
+import mongoDB from "./db/dbConnect";
+import appSocket from "./startup/socket";
+import i18n from "./i18n/config";
 import morgan from "morgan";
 import cors from "cors";
-import mongoDB from "./db/dbConnect";
-import { createServer } from "http";
-import { Server } from "socket.io";
-import cookieParser from "cookie-parser";
-import AppSocket from "./startup/socket";
-import i18n from "./i18n/config";
-import config from "config";
-const ngrok = require("ngrok");
+import routes from "./startup/routes";
+// declerations
 const app: Application = express();
+// app uses
 app.use(express.json());
 app.use(cors());
 app.use(cookieParser());
 app.use(morgan("dev"));
 app.use(express.urlencoded({ extended: false }));
 app.use(i18n.init);
+// functions
 mongoDB();
-export const http = createServer(app);
-export const io = new Server(http, {
-  cors: {
-    origin: config.get("FrontEndUrl"),
-  },
-  transports: ["websocket", "polling"],
-  pingInterval: 10000,
-  pingTimeout: 0,
-});
-AppSocket(io);
-
-require("./startup/routes")(app);
-app.disable("etag");
-
+routes(app);
 require("./services/cronJobNotifi");
+// servers
+export const http = createServer(app);
+export const io = appSocket(http);

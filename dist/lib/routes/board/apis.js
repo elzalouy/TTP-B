@@ -6,4 +6,5 @@ exports.default = {
     GET_MEMBERS: "/getMembers",
     ADD_MEMBER: "/addMember",
     CREATE_LIST: "/addList",
+    WEBHOOK_UPDATES: "/webhookUpdate",
 };
