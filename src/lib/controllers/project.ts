@@ -3,7 +3,7 @@ import { customeError } from "./../utils/errorUtils";
 import logger from "../../logger";
 import ProjectDB from "../dbCalls/project/project";
 import Tasks from "../models/task";
-import { io } from "../server";
+import { io } from "../../index";
 import NotificationController from "./notification";
 
 const ProjectController = class ProjectController extends ProjectDB {
@@ -35,7 +35,7 @@ const ProjectController = class ProjectController extends ProjectDB {
   static async __deleteProjectData(id: string) {
     try {
       let project = await super.deleteProjectDB(id);
-      
+
       return project;
     } catch (error) {
       logger.error({ getProjectError: error });
@@ -56,7 +56,7 @@ const ProjectController = class ProjectController extends ProjectDB {
       // if porject status update to done
       if (
         data.projectStatus &&
-        ["deliver on time", "deliver before deadline","late"].includes(
+        ["deliver on time", "deliver before deadline", "late"].includes(
           data.projectStatus
         )
       ) {

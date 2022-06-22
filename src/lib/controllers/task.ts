@@ -6,7 +6,7 @@ import {
 import logger from "../../logger";
 import TaskDB from "../dbCalls/tasks/tasks";
 import BoardController from "./trello";
-import { io } from "../server";
+import { io } from "../../index";
 import { deleteAll } from "../services/upload";
 import DepartmentBD from "../dbCalls/department/department";
 import {
@@ -20,7 +20,6 @@ import {
   provideCardIdError,
   webhookUpdateInterface,
 } from "../types/controller/Tasks";
-import { taskResponse } from "../types/controller/Tasks";
 class TaskController extends TaskDB {
   static async getTasks(data: TaskData) {
     return await TaskController.__getTasks(data);

@@ -4,7 +4,7 @@ import BoardController from "../controllers/trello";
 import NotificationController from "../controllers/notification";
 import ProjectDB from "../dbCalls/project/project";
 import TaskDB from "../dbCalls/tasks/tasks";
-import { io } from "../server";
+import { io } from "../../index";
 import { AttachmentSchema, TaskData } from "../types/model/tasks";
 
 export const TaskQueue = queue({ results: [] });

@@ -3,7 +3,7 @@ import logger from "../../logger";
 import BoardController from "../controllers/trello";
 import DepartmentController from "../controllers/department";
 import { DepartmentData, DepartmentInfo } from "../types/model/Department";
-import { io } from "../server";
+import { io } from "../../index";
 
 import {
   createBoardResponse,

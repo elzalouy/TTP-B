@@ -14,7 +14,7 @@ import {
   webhookUpdateInterface,
 } from "../types/controller/Tasks";
 import { TaskQueue, webhookUpdateMoveTaskJob } from "../background/taskQueue";
-import { io } from "../server";
+import { io } from "../../index";
 import TaskController from "./task";
 var FormData = require("form-data");
 config();
