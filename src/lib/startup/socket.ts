@@ -7,7 +7,7 @@ export default function appSocket(http: any) {
     path: "/socket.io",
     cors: {
       origin: "*",
-      methods: ["GET", "POST"],
+      methods: "*",
       allowedHeaders: ["Content-type"],
     },
   });
