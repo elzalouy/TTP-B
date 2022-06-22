@@ -1,14 +1,17 @@
 import moment from "moment";
 import cron from "node-cron";
+import { Server } from "socket.io";
+import { DefaultEventsMap } from "socket.io/dist/typed-events";
 import logger from "../../logger";
 import NotificationController from "../controllers/notification";
 import ProjectDB from "../dbCalls/project/project";
-import { io } from "../../index";
 import TaskDB from "../dbCalls/tasks/tasks";
 
 // '0 0 0 1-31 0-7'
 //todo update notification cron job
-export default function executeHob() {
+export default function executeHob(
+  io: Server<DefaultEventsMap, DefaultEventsMap, DefaultEventsMap, any>
+) {
   cron.schedule("* * 23 * * *", async () => {
     //todo check if project is passed the deadline
     let projects = await ProjectDB.getProjectDB({
