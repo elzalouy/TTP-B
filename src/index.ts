@@ -29,20 +29,20 @@ console.log(process.env.NODE_ENV);
 let io: Server<DefaultEventsMap, DefaultEventsMap, DefaultEventsMap, any> =
   null;
 export const http = createServer(app);
-if (process.env.NODE_ENV === "development") {
-  http.listen(port, function () {
-    console.log("Welcome to", Config.get("name"));
-    console.log(
-      "web hook url will be,",
-      Config.get("Trello_Webhook_Callback_Url")
-    );
-    console.log("server listen to port " + port);
-  });
-  io = appSocket(http);
-  cronJobsBySocket(io);
-} else {
-  io = listen(app);
-}
+// if (process.env.NODE_ENV === "development") {
+http.listen(port, function () {
+  console.log("Welcome to", Config.get("name"));
+  console.log(
+    "web hook url will be,",
+    Config.get("Trello_Webhook_Callback_Url")
+  );
+  console.log("server listen to port " + port);
+});
+io = appSocket(http);
+cronJobsBySocket(io);
+// } else {
+//   io = listen(app);
+// }
 export { io };
 
 // socket & jobs
