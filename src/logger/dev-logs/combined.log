@@ -459,3 +459,131 @@
   level: 'info',
   timestamp: '2022-06-22 15:35:26'
 }
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-06-22 15:40:44'
+}
+{
+  message: {
+    data: { id: '62746010736e8ea96f53ea54', skip: '0', limit: undefined }
+  },
+  level: 'info',
+  timestamp: '2022-06-22 15:41:04'
+}
+{
+  message: { notificationData: { _id: '62746010736e8ea96f53ea54', role: 'OM' } },
+  level: 'info',
+  timestamp: '2022-06-22 15:41:04'
+}
+{
+  message: {
+    Notification: {
+      acknowledged: true,
+      modifiedCount: 24,
+      upsertedId: null,
+      upsertedCount: 0,
+      matchedCount: 24
+    }
+  },
+  level: 'info',
+  timestamp: '2022-06-22 15:41:04'
+}
+{
+  message: {
+    data: { id: '62746010736e8ea96f53ea54', skip: '0', limit: undefined }
+  },
+  level: 'info',
+  timestamp: '2022-06-22 15:41:39'
+}
+{
+  message: { notificationData: { _id: '62746010736e8ea96f53ea54', role: 'OM' } },
+  level: 'info',
+  timestamp: '2022-06-22 15:41:39'
+}
+{
+  message: {
+    Notification: {
+      acknowledged: true,
+      modifiedCount: 24,
+      upsertedId: null,
+      upsertedCount: 0,
+      matchedCount: 24
+    }
+  },
+  level: 'info',
+  timestamp: '2022-06-22 15:41:39'
+}
+{
+  message: {
+    data: { id: '62746010736e8ea96f53ea54', skip: '0', limit: undefined }
+  },
+  level: 'info',
+  timestamp: '2022-06-22 15:41:45'
+}
+{
+  message: { notificationData: { _id: '62746010736e8ea96f53ea54', role: 'OM' } },
+  level: 'info',
+  timestamp: '2022-06-22 15:41:45'
+}
+{
+  message: {
+    Notification: {
+      acknowledged: true,
+      modifiedCount: 24,
+      upsertedId: null,
+      upsertedCount: 0,
+      matchedCount: 24
+    }
+  },
+  level: 'info',
+  timestamp: '2022-06-22 15:41:45'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-06-22 15:46:10'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-06-22 15:46:32'
+}
+{
+  message: { notificationData: { _id: '62746010736e8ea96f53ea54', role: 'OM' } },
+  level: 'info',
+  timestamp: '2022-06-22 15:46:41'
+}
+{
+  message: {
+    data: { id: '62746010736e8ea96f53ea54', skip: '0', limit: undefined }
+  },
+  level: 'info',
+  timestamp: '2022-06-22 15:46:41'
+}
+{
+  message: {
+    Notification: {
+      acknowledged: true,
+      modifiedCount: 24,
+      upsertedId: null,
+      upsertedCount: 0,
+      matchedCount: 24
+    }
+  },
+  level: 'info',
+  timestamp: '2022-06-22 15:46:41'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-06-22 15:48:31'
+}

@@ -56,7 +56,7 @@ const UserController = class UserController extends UserDB {
           "This is a reminder to set a New Password for your TTP account",
         token: token,
         path: "newPassword",
-        body: "Please set your new password using this link to start using your account",
+        body: "Set your new password",
       });
     } catch (error) {
       logger.error({ getUsers: error });

@@ -29,6 +29,7 @@ const sendMail = async (data: Data) => {
     link: `${Config.get("FrontEndUrl")}/${data.path}/${data.token}`,
     body: data.body,
   };
+  
   const htmlToSend = template(replacements);
 
   try {
