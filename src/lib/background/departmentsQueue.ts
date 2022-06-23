@@ -3,7 +3,7 @@ import logger from "../../logger";
 import BoardController from "../controllers/trello";
 import DepartmentController from "../controllers/department";
 import { DepartmentData, DepartmentInfo } from "../types/model/Department";
-import { io } from "../server";
+import { io } from "../../index";
 
 import {
   createBoardResponse,
@@ -125,12 +125,12 @@ export const createOneJob = (
           data
         );
         if (!department || !result) {
-          io.sockets.emit("new department error", { id: department._id });
+          io?.sockets?.emit("new-department-error", { id: department._id });
           await BoardController.deleteBoard(department.boardId);
           await DepartmentController.deleteDepartment(department._id);
           await cb(new Error("Board was not created"), null);
         }
-        io.sockets.emit("new department", result);
+        io?.sockets?.emit("new-department", result);
         cb(null, result);
       }
     } catch (error) {

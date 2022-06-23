@@ -89310,3 +89310,19 @@
   service: 'trello',
   timestamp: '2021-10-30T08:06:01.993Z'
 }
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  service: 'trello',
+  timestamp: '2022-06-22T15:44:14.334Z'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  service: 'trello',
+  timestamp: '2022-06-22T15:57:26.925Z'
+}

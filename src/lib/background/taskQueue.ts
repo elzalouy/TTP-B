@@ -4,7 +4,7 @@ import BoardController from "../controllers/trello";
 import NotificationController from "../controllers/notification";
 import ProjectDB from "../dbCalls/project/project";
 import TaskDB from "../dbCalls/tasks/tasks";
-import { io } from "../server";
+import { io } from "../../index";
 import { AttachmentSchema, TaskData } from "../types/model/tasks";
 
 export const TaskQueue = queue({ results: [] });
@@ -76,7 +76,7 @@ export const webhookUpdateMoveTaskJob = (data: any) => {
             adminUserID: projectData.adminId,
           });
           // send notification to all the admin
-          io.to("admin room").emit("notification update", createNotifi);
+          io.to("admin-room").emit("notification update", createNotifi);
           // send notification to specific project manager
           io.to(`user-${projectData.projectManager}`).emit(
             "notification update",
