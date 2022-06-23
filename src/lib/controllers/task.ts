@@ -150,6 +150,7 @@ class TaskController extends TaskDB {
           });
         });
       } else delete data.attachedFiles;
+      deleteAll();
       return data;
     } catch (error) {
       logger.error({ createTaskAttachmentError: error });
@@ -181,6 +182,7 @@ class TaskController extends TaskDB {
           );
         }
       } else throw "Error while creating Card in Trello";
+      deleteAll();
       return await super.createTaskDB(data);
     } catch (error) {
       logger.error({ getTeamsError: error });
