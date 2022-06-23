@@ -30,7 +30,7 @@ export default function executeHob(
         });
 
         // send notification to all admin
-        io.to("admin room").emit("notification update", createNotifi);
+        io.to("admin-room").emit("notification update", createNotifi);
 
         // send notification to specific project manager
         io.to(`user-${projects[i].projectManager}`).emit(
@@ -58,7 +58,7 @@ export default function executeHob(
         });
 
         // send notification to all admin
-        io.to("admin room").emit("notification update", createNotifi);
+        io.to("admin-room").emit("notification update", createNotifi);
 
         // send notification to specific project manager
         io.to(`user-${projects[i].projectManager}`).emit(

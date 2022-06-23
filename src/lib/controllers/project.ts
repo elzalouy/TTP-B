@@ -69,7 +69,7 @@ const ProjectController = class ProjectController extends ProjectDB {
           adminUserID: data.adminId,
         });
         // send notification to all admin
-        io.to("admin room").emit("notification update", createNotifi);
+        io.to("admin-room").emit("notification update", createNotifi);
 
         // send notification to specific project manager
         io.to(`user-${data.projectManager}`).emit(
