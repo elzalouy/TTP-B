@@ -11,7 +11,7 @@ import UserDB from "../dbCalls/user/user";
 import { IUser, PasswordUpdate, UserData } from "../types/model/User";
 import { customeError } from "../utils/errorUtils";
 import BoardController from "./trello";
-import sendMail from "../services/mail";
+import sendMail from "../services/mail/mail";
 import { JwtPayload } from "jsonwebtoken";
 
 const UserController = class UserController extends UserDB {

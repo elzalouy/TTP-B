@@ -11,7 +11,7 @@ import {
 import logger from "../../logger";
 import UserDB from "../dbCalls/user/user";
 //NodeMailer
-import sendMail from "../services/mail";
+import sendMail from "../services/mail/mail";
 import { customeError } from "../utils/errorUtils";
 import { JwtPayload } from "jsonwebtoken";
 

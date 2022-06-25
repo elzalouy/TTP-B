@@ -20,7 +20,6 @@ interface Data {
 
 
 const sendMail = async (data: Data) => {
-
   const filePath = path.join(__dirname, './template/template.hbs');
   const source = fs.readFileSync(filePath, 'utf-8').toString();
   const template = handlebars.compile(source);
