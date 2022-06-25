@@ -2178,3 +2178,239 @@
   level: 'info',
   timestamp: '2022-06-25 15:40:14'
 }
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-06-25 18:02:35'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-06-25 18:05:10'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-06-25 18:06:18'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-06-25 18:07:02'
+}
+{
+  message: {
+    borderData: Promise { <pending> },
+    createBoardApi: 'https://api.trello.com/1/boards/?name=New Local&prefs_background=blue&defaultLists=false&key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68'
+  },
+  level: 'info',
+  timestamp: '2022-06-25 18:07:15'
+}
+{
+  message: { removeWebhookSucced: 'done' },
+  level: 'info',
+  timestamp: '2022-06-25 18:07:19'
+}
+{
+  message: { webhookCreateResult: 'webhook done' },
+  level: 'info',
+  timestamp: '2022-06-25 18:07:19'
+}
+{
+  message: {
+    boardId: '62b3224e7b4ec837ea02e87c',
+    myDepartment: {
+      _id: new ObjectId("62b3224e640d6cca9c7c6fae"),
+      name: 'live test',
+      boardId: '62b3224e7b4ec837ea02e87c',
+      color: 'blue',
+      mainBoard: false,
+      tasks: [],
+      teamsId: [
+        {
+          idInTrello: '62b493db42d51a37e47626b6',
+          idInDB: new ObjectId("62b493dc6990c7a9ad191e50"),
+          _id: new ObjectId("62b493dc6990c7a9ad191e52")
+        }
+      ],
+      createdAt: 2022-06-22T14:08:14.703Z,
+      updatedAt: 2022-06-23T16:25:00.073Z,
+      __v: 0,
+      canceldListId: '62b3224f9317396334d254c4',
+      defaultListId: '62b3224f4051cb3e31192190',
+      doneListId: '62b3224f33d8f1725cfac300',
+      inProgressListId: '62b3224e91171a4d758bddd6',
+      notClearListId: '62b3224f34d8651418b9f5c9',
+      reviewListId: '62b3224f12306a11cc62984e',
+      sharedListID: '62b3224f29c0df77c10796cb'
+    }
+  },
+  level: 'info',
+  timestamp: '2022-06-25 18:46:59'
+}
+{
+  message: {
+    removeBoard: 'https://api.trello.com/1/boards/62b3224e7b4ec837ea02e87c?response_type=token&key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68'
+  },
+  level: 'info',
+  timestamp: '2022-06-25 18:46:59'
+}
+{
+  message: {
+    'delete Tasks': { acknowledged: true, deletedCount: 3 },
+    'Delete Tech members': { acknowledged: true, deletedCount: 2 }
+  },
+  level: 'info',
+  timestamp: '2022-06-25 18:47:00'
+}
+{
+  message: {
+    boardId: '62b42566b0f91f1750e7ba5c',
+    myDepartment: {
+      _id: new ObjectId("62b4256760feac270b5fe525"),
+      name: 'Creative ',
+      boardId: '62b42566b0f91f1750e7ba5c',
+      color: 'blue',
+      mainBoard: false,
+      tasks: [],
+      teamsId: [
+        {
+          idInTrello: '62b493e7cb34e4435039f07d',
+          idInDB: new ObjectId("62b325061490de13890e246a"),
+          _id: new ObjectId("62b493e76990c7a9ad191e5b")
+        }
+      ],
+      createdAt: 2022-06-23T08:33:43.143Z,
+      updatedAt: 2022-06-23T16:25:11.999Z,
+      __v: 0,
+      canceldListId: '62b4256782e15c0c9ba65f06',
+      defaultListId: '62b425684a4a95390cbb22d6',
+      doneListId: '62b42567302128395f183efd',
+      inProgressListId: '62b4256747dfd31e62aa6a88',
+      notClearListId: '62b4256794b4da37a1146bfe',
+      reviewListId: '62b4256815ad363701e1a6e2',
+      sharedListID: '62b4256815ad363701e1a6b2'
+    }
+  },
+  level: 'info',
+  timestamp: '2022-06-25 18:47:02'
+}
+{
+  message: {
+    removeBoard: 'https://api.trello.com/1/boards/62b42566b0f91f1750e7ba5c?response_type=token&key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68'
+  },
+  level: 'info',
+  timestamp: '2022-06-25 18:47:02'
+}
+{
+  message: {
+    'delete Tasks': { acknowledged: true, deletedCount: 2 },
+    'Delete Tech members': 'Delete result is 0 document'
+  },
+  level: 'info',
+  timestamp: '2022-06-25 18:47:03'
+}
+{
+  message: {
+    boardId: '62b4256fb9e5ff774d4862cb',
+    myDepartment: {
+      _id: new ObjectId("62b4256f60feac270b5fe529"),
+      name: 'Art',
+      boardId: '62b4256fb9e5ff774d4862cb',
+      color: 'green',
+      mainBoard: false,
+      tasks: [],
+      teamsId: [],
+      createdAt: 2022-06-23T08:33:51.444Z,
+      updatedAt: 2022-06-23T08:33:52.776Z,
+      __v: 0,
+      canceldListId: '62b4256f8dac5e36e61bcf35',
+      defaultListId: '62b4257013f66d7af1fccd7e',
+      doneListId: '62b42570dd44ee28cb5de877',
+      inProgressListId: '62b4256f9f717372ddd13059',
+      notClearListId: '62b425703ac14f36a386854f',
+      reviewListId: '62b42570d49a8d469e24663f',
+      sharedListID: '62b425707d627f4273329bcd'
+    }
+  },
+  level: 'info',
+  timestamp: '2022-06-25 18:47:06'
+}
+{
+  message: {
+    removeBoard: 'https://api.trello.com/1/boards/62b4256fb9e5ff774d4862cb?response_type=token&key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68'
+  },
+  level: 'info',
+  timestamp: '2022-06-25 18:47:06'
+}
+{
+  message: {
+    'delete Tasks': { acknowledged: true, deletedCount: 1 },
+    'Delete Tech members': 'Delete result is 0 document'
+  },
+  level: 'info',
+  timestamp: '2022-06-25 18:47:07'
+}
+{
+  message: {
+    boardId: '62b4257a945953285e7395c8',
+    myDepartment: {
+      _id: new ObjectId("62b4257a60feac270b5fe52d"),
+      name: 'Strategy ',
+      boardId: '62b4257a945953285e7395c8',
+      color: 'purple',
+      mainBoard: false,
+      tasks: [],
+      teamsId: [],
+      createdAt: 2022-06-23T08:34:02.225Z,
+      updatedAt: 2022-06-23T08:34:03.646Z,
+      __v: 0,
+      canceldListId: '62b4257a9220d36920f7c33e',
+      defaultListId: '62b4257b929800694997dbfe',
+      doneListId: '62b4257a3ac95d74fa1bf5b2',
+      inProgressListId: '62b4257add415827cec5aa51',
+      notClearListId: '62b4257a1fae4853c0b3454b',
+      reviewListId: '62b4257bef938863d9670ad8',
+      sharedListID: '62b4257b15acf1641e751508'
+    }
+  },
+  level: 'info',
+  timestamp: '2022-06-25 18:47:09'
+}
+{
+  message: {
+    removeBoard: 'https://api.trello.com/1/boards/62b4257a945953285e7395c8?response_type=token&key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68'
+  },
+  level: 'info',
+  timestamp: '2022-06-25 18:47:09'
+}
+{
+  message: {
+    'delete Tasks': { acknowledged: true, deletedCount: 0 },
+    'Delete Tech members': 'Delete result is 0 document'
+  },
+  level: 'info',
+  timestamp: '2022-06-25 18:47:10'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-06-25 18:51:34'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-06-25 18:54:25'
+}
