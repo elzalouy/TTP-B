@@ -108,6 +108,7 @@ export const createTaskSchema = Joi.object({
   turnoverTime: Joi.allow(null),
   attachedFiles: Joi.array().optional().allow(null),
 });
+
 export const editTaskSchema = Joi.object({
   id: Joi.string()
     .required()
@@ -126,7 +127,7 @@ export const editTaskSchema = Joi.object({
     .required()
     .messages({ "any.required": "Card id is required" }),
   deleteFiles: Joi.string().optional(),
-  subCategoryId: Joi.string().optional().messages({
+  subCategoryId: Joi.string().optional().allow(null, "").messages({
     "string.base": "Sub Category is required",
     "string.empty": "Sub Category should be selected",
   }),
