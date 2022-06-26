@@ -37,6 +37,9 @@ const DepartmentSchema: Schema = new Schema<DepartmentInfo>( // department
     inProgressListId: {
       type: String,
     },
+    boardURL: {
+      type: String,
+    },
     mainBoard: {
       type: Boolean,
       default: false,

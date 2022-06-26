@@ -109,6 +109,7 @@ const DepartmentBD = class DepartmentBD {
             name: 1,
             boardId: 1,
             color: 1,
+            boardURL:"$boardURL",
             mainBoard: 1,
             teamsId: "$teamData",
             teamOrigin: "$teamsId",

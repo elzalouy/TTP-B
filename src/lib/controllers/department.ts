@@ -183,6 +183,7 @@ const DepartmentController = class DepartmentController extends DepartmentBD {
           color: data.color,
           boardId: boardData.id,
           mainBoard: data.mainBoard,
+          boardURL:boardData.url
         });
         createOneJob(departmentResult, data.teams);
         DepartmentQueue.start();
