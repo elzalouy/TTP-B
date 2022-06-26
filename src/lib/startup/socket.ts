@@ -1,4 +1,5 @@
 import config from "config";
+import _ from "lodash";
 import { Server, Socket } from "socket.io";
 import { DefaultEventsMap } from "socket.io/dist/typed-events";
 export default function appSocket(http: any) {
@@ -13,10 +14,19 @@ export default function appSocket(http: any) {
     },
   });
   io.on(
-    "connect",
+    "connection",
     (
       socket: Socket<DefaultEventsMap, DefaultEventsMap, DefaultEventsMap, any>
     ) => {
+      clients.push(socket.id);
+      clients = _.uniq(clients);
+      console.log("client connected, ", socket.id);
+      console.log("no of clients,", clients.length);
+      socket.on("disconnect", () => {
+        clients = clients.filter((item) => item !== socket.id);
+        console.log("client disconnected, ", socket.id);
+        console.log("no of clients,", clients.length);
+      });
       socket.on("joined-admin", () => {
         console.log("joined-admin");
         return socket.join("admin-room");

@@ -149,7 +149,8 @@ export const editTaskSchema = Joi.object({
       "Cancled",
       "Done",
       "Late",
-      "Shared"
+      "Shared",
+      "Not Clear"
     )
     .optional()
     .messages({

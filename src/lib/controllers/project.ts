@@ -69,11 +69,11 @@ const ProjectController = class ProjectController extends ProjectDB {
           adminUserID: data.adminId,
         });
         // send notification to all admin
-        io.to("admin-room").emit("notification update", createNotifi);
-
+        io.to("admin-room").emit("notification-update", createNotifi);
+        io.to("manager-room").emit("notification-update");
         // send notification to specific project manager
         io.to(`user-${data.projectManager}`).emit(
-          "notification update",
+          "notification-update",
           createNotifi
         );
       }
@@ -98,10 +98,9 @@ const ProjectController = class ProjectController extends ProjectDB {
 
       // send notification to specific project manager
       io.to(`user-${data.projectManager}`).emit(
-        "notification update",
+        "notification-update",
         createNotifi
       );
-
       return project;
     } catch (error) {
       logger.error({ getTeamsError: error });

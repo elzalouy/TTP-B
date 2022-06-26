@@ -127,10 +127,15 @@ class TaskDB {
   static async __updateTaskStatus(data: TaskData, value: TaskData) {
     try {
       let task = await Tasks.findOne(data);
-      task.lastMove = task.status;
-      task.lastMoveDate = new Date().toUTCString();
-      await task.updateOne(value);
-      let result = await task.save();
+      let newdata = {
+        ...value,
+        lastMove: task.status,
+        lastMoveDate: data.lastMoveDate,
+      };
+      let result = await Tasks.findOneAndUpdate(data, newdata, {
+        new: true,
+        lean: true,
+      });
       return result;
     } catch (error) {
       logger.error({ updateMultiTaskDBError: error });

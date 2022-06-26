@@ -10,15 +10,15 @@ import { io } from "../../index";
 import { deleteAll } from "../services/upload";
 import DepartmentBD from "../dbCalls/department/department";
 import {
+  createTaskFromBoardJob,
+  deleteTaskFromBoardJob,
   moveTaskJob,
   TaskQueue,
   updateCardJob,
-  webhookUpdateMoveTaskJob,
 } from "../background/taskQueue";
 import {
   deleteFilesError,
   provideCardIdError,
-  webhookUpdateInterface,
 } from "../types/controller/Tasks";
 class TaskController extends TaskDB {
   static async getTasks(data: TaskData) {
@@ -76,16 +76,6 @@ class TaskController extends TaskDB {
     list: string
   ) {
     try {
-      let data = await TaskDB.__getOneTaskBy({ cardId: cardId });
-      if (!data) return { error: "Task", message: "Task Not Existed" };
-      let depFilter: any = {};
-      depFilter[list] = listId;
-      let department = await DepartmentBD.__getOneDepartmentBy(depFilter);
-      if (!department)
-        return {
-          error: "Department",
-          message: "Department with this list was not found",
-        };
       moveTaskJob(listId, cardId, status);
       TaskQueue.start();
       return { data: `Task with cardId ${cardId} has moved to list ${list}` };
@@ -183,7 +173,10 @@ class TaskController extends TaskDB {
         }
       } else throw "Error while creating Card in Trello";
       deleteAll();
-      return await super.createTaskDB(data);
+      let task = await super.createTaskDB(data);
+      createTaskFromBoardJob(task);
+      TaskQueue.start();
+      return task;
     } catch (error) {
       logger.error({ getTeamsError: error });
     }
@@ -238,6 +231,8 @@ class TaskController extends TaskDB {
     try {
       let task = await super.getTaskDB(id);
       if (task) {
+        deleteTaskFromBoardJob(task);
+        TaskQueue.start();
         await BoardController.deleteCard(task?.cardId);
         return await super.deleteTaskDB(id);
       }

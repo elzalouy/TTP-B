@@ -3,7 +3,7 @@ import { TaskInfo } from "../types/model/tasks";
 const FilesSchema: Schema = new Schema({
   name: { type: String, required: true },
   trelloId: { type: String, required: true },
-  mimeType: { type: String, required: true },
+  mimeType: { type: String },
   url: { type: String, required: true },
 });
 const TaskSchema: Schema = new Schema<TaskInfo>(

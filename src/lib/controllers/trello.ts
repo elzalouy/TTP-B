@@ -13,7 +13,7 @@ import {
   updateCardResponse,
   webhookUpdateInterface,
 } from "../types/controller/Tasks";
-import { TaskQueue, webhookUpdateMoveTaskJob } from "../background/taskQueue";
+import { moveTaskNotificationJob, TaskQueue } from "../background/taskQueue";
 import { io } from "../../index";
 import TaskController from "./task";
 var FormData = require("form-data");
@@ -467,6 +467,7 @@ class BoardController {
       // }
 
       //update
+      console.log(action);
       if (type === "updateCard" && action !== "action_archived_card") {
         if (action === "action_changed_description_of_card")
           task.description = data.action.data.card?.desc;
@@ -477,6 +478,8 @@ class BoardController {
           task.listId = data.action.data.listAfter?.id;
           task.lastMove = data.action.data.listBefore.name;
           task.lastMoveDate = new Date().toUTCString();
+          moveTaskNotificationJob(data);
+          TaskQueue.start();
         }
         let result = await TaskController.updateTaskByTrelloDB(task);
         io?.sockets?.emit("update-task", result);

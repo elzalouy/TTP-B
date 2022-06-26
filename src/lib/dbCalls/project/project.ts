@@ -13,7 +13,7 @@ const ProjectDB = class ProjectDB {
   }
 
   static async getProjectDB(data: object) {
-    return await ProjectDB.__getProject(data);
+    return await ProjectDB.__getProjects(data);
   }
 
   static async deleteProjectDB(id: string) {
@@ -36,8 +36,15 @@ const ProjectDB = class ProjectDB {
       logger.error({ deletProjectDBError: error });
     }
   }
-
-  static async __getProject(data: object) {
+  static async __getProject(data: ProjectData) {
+    try {
+      let project = await Project.findOne(data);
+      return project;
+    } catch (error) {
+      logger.error({ getProjectDBError: error });
+    }
+  }
+  static async __getProjects(data: object) {
     try {
       let project = await Project.find(data)
         .populate({ path: "projectManager", select: "_id name" })
