@@ -176,7 +176,6 @@ class TaskDB {
   static async __deleteTasksByProjectId(id: String) {
     try {
       let deleteResult = await Tasks.deleteMany({ projectId: id });
-
       return deleteResult;
     } catch (error) {
       logger.error({ deleteTasksByProject: error });
