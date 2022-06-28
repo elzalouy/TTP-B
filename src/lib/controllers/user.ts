@@ -178,9 +178,9 @@ const UserController = class UserController extends UserDB {
 
   static async __addNewUser(data: UserData): Promise<
     | {
-        msg: string;
-        status: number;
-      }
+      msg: string;
+      status: number;
+    }
     | IUser
   > {
     try {
@@ -211,7 +211,7 @@ const UserController = class UserController extends UserDB {
 
       let token = await createJwtToken(newUser._id.toString());
 
-      await sendMail({
+      sendMail({
         email: email,
         subject: "Update Password",
         token: token,
