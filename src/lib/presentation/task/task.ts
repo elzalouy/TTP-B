@@ -9,10 +9,12 @@ import {
   webhookUpdateInterface,
 } from "../../types/controller/Tasks";
 import { updateTaskQueue } from "../../background/taskQueue";
+import BoardController from "../../controllers/trello";
 
 const TaskReq = class TaskReq extends TaskController {
   static async handleCreateCard(req: Request, res: Response) {
     try {
+      console.log(req.files, req.body);
       let TaskData: TaskData = req.body;
       if (TaskData.teamId === "") TaskData.teamId = null;
       let isValid = createTaskSchema.validate(TaskData);
@@ -122,6 +124,8 @@ const TaskReq = class TaskReq extends TaskController {
       let attachmentId = req.query?.attachmentId.toString();
       if (cardId && attachmentId) {
         let result = await super.downloadAttachment(cardId, attachmentId);
+        console.log(result);
+        await BoardController.__getCardAttachments(cardId);
         if (result) return res.send(result);
         return res.status(400).send("Bad Request for downlaoding this file");
       } else

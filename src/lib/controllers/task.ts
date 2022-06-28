@@ -128,7 +128,7 @@ class TaskController extends TaskDB {
     data: TaskData
   ) {
     try {
-      if (files) {
+      if (files && files.length > 0) {
         let newAttachments = await files.map(async (file) => {
           return await BoardController.createAttachmentOnCard(
             data.cardId,
@@ -159,7 +159,9 @@ class TaskController extends TaskDB {
         await BoardController.createCardInList(data.listId, data.name);
       if (createdCard) {
         data.cardId = createdCard.id;
-        data = await TaskController.__createTaskAttachment(files, data);
+        if (files.length > 0)
+          data = await TaskController.__createTaskAttachment(files, data);
+        else data.attachedFiles = null;
       } else throw "Error while creating Card in Trello";
       let task = await super.createTaskDB(data);
       createTaskFromBoardJob(task);
@@ -239,6 +241,7 @@ class TaskController extends TaskDB {
       return response;
     } catch (error) {
       logger.error({ downloadAttachmentError: error });
+      return { error: "FileError", status: 400 };
     }
   }
   static async __createTaskByTrello(data: TaskData) {

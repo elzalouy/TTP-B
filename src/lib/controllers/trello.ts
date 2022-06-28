@@ -267,6 +267,13 @@ class BoardController {
       logger.error({ deleteTasksError: error });
     }
   }
+  static async __getCardAttachments(cardId: string) {
+    try {
+      let api = trelloApi(`cards/${cardId}/attachments?`);
+      let result = await fetch(api);
+      console.log(result);
+    } catch (error) {}
+  }
   static async __addWebHook(idModel: string) {
     try {
       let webhookApi = trelloApi(
@@ -394,7 +401,7 @@ class BoardController {
         method: "GET",
         headers: {
           Accept: "application/json",
-          Authorization:`OAuth oauth_consumer_key=${process.env.TRELLO_KEY}, oauth_token=${process.env.TRELLO_TOKEN}`
+          Authorization: `OAuth oauth_consumer_key=${process.env.TRELLO_KEY}, oauth_token=${process.env.TRELLO_TOKEN}`,
         },
       }).then(async (response) => {
         Response = JSON.parse(await response.text());

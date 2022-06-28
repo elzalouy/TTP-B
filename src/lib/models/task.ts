@@ -1,10 +1,10 @@
 import { model, Schema, Model } from "mongoose";
 import { TaskInfo } from "../types/model/tasks";
 const FilesSchema: Schema = new Schema({
-  name: { type: String, required: true },
-  trelloId: { type: String, required: true, unique: false, default: null },
+  name: { type: String },
+  trelloId: { type: String },
   mimeType: { type: String },
-  url: { type: String, required: true },
+  url: { type: String },
 });
 const TaskSchema: Schema = new Schema<TaskInfo>(
   {
@@ -69,7 +69,7 @@ const TaskSchema: Schema = new Schema<TaskInfo>(
     },
     attachedFiles: {
       type: [FilesSchema],
-      default: null,
+      default: [],
     },
     attachedCard: {
       type: String,
