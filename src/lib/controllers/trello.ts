@@ -397,9 +397,11 @@ class BoardController {
         method: "GET",
         headers: {
           Accept: "application/json",
+          Authorization:`OAuth oauth_consumer_key=${process.env.TRELLO_KEY}, oauth_token=${process.env.TRELLO_TOKEN}`
         },
       }).then(async (response) => {
         Response = JSON.parse(await response.text());
+        console.log(Response);
       });
       return Response;
     } catch (error) {

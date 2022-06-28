@@ -26,3 +26,845 @@
   level: 'info',
   timestamp: '2022-06-27 17:25:54'
 }
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-06-27 17:29:18'
+}
+{
+  message: {
+    departmentData: {
+      _id: '62b874b6d64f57e0816f0fa5',
+      boardId: '62b874b611ce5c868fa2ebbe',
+      name: 'New live',
+      color: 'blue',
+      mainBoard: false,
+      addTeam: [],
+      removeTeam: [ '62b9c16cf9de4e40cf1fc429' ]
+    }
+  },
+  level: 'info',
+  timestamp: '2022-06-27 17:40:47'
+}
+{
+  message: 'first step',
+  level: 'info',
+  timestamp: '2022-06-27 17:40:47'
+}
+{
+  message: { removeTeam: [ '62b9c16cf9de4e40cf1fc429' ] },
+  level: 'info',
+  timestamp: '2022-06-27 17:40:48'
+}
+{
+  message: { removeWebhookSucced: 'done' },
+  level: 'info',
+  timestamp: '2022-06-27 17:40:48'
+}
+{
+  message: { title: 'testing', teamListIds: [] },
+  level: 'info',
+  timestamp: '2022-06-27 17:40:48'
+}
+{
+  message: {
+    depUpdate: {
+      _id: new ObjectId("62b874b6d64f57e0816f0fa5"),
+      name: 'New live',
+      boardId: '62b874b611ce5c868fa2ebbe',
+      color: 'blue',
+      boardURL: 'https://trello.com/b/iVeMtZ8o/new-live',
+      mainBoard: false,
+      tasks: [],
+      teamsId: [],
+      createdAt: 2022-06-26T15:01:10.556Z,
+      updatedAt: 2022-06-27T14:40:48.292Z,
+      __v: 0,
+      canceldListId: '62b874b627505e5e856fd4b6',
+      defaultListId: '62b874b73c67404ea6159a64',
+      doneListId: '62b874b7e6809b618b6e967f',
+      inProgressListId: '62b874b68467e60bf876ed5f',
+      notClearListId: '62b874b77c49b7869227492c',
+      reviewListId: '62b874b797eefe72de62d6e3',
+      sharedListID: '62b874b7d26f4f15bb767b4c'
+    }
+  },
+  level: 'info',
+  timestamp: '2022-06-27 17:40:48'
+}
+{
+  message: {
+    department: {
+      _id: new ObjectId("62b874b6d64f57e0816f0fa5"),
+      name: 'New live',
+      boardId: '62b874b611ce5c868fa2ebbe',
+      color: 'blue',
+      boardURL: 'https://trello.com/b/iVeMtZ8o/new-live',
+      mainBoard: false,
+      tasks: [],
+      teamsId: [],
+      createdAt: 2022-06-26T15:01:10.556Z,
+      updatedAt: 2022-06-27T14:40:48.292Z,
+      __v: 0,
+      canceldListId: '62b874b627505e5e856fd4b6',
+      defaultListId: '62b874b73c67404ea6159a64',
+      doneListId: '62b874b7e6809b618b6e967f',
+      inProgressListId: '62b874b68467e60bf876ed5f',
+      notClearListId: '62b874b77c49b7869227492c',
+      reviewListId: '62b874b797eefe72de62d6e3',
+      sharedListID: '62b874b7d26f4f15bb767b4c'
+    }
+  },
+  level: 'info',
+  timestamp: '2022-06-27 17:40:48'
+}
+{
+  message: { removeListAndWebhookSucced: 'done' },
+  level: 'info',
+  timestamp: '2022-06-27 17:40:49'
+}
+{
+  message: {
+    borderData: Promise { <pending> },
+    createBoardApi: 'https://api.trello.com/1/boards/?name=Zedan Saheer&prefs_background=blue&defaultLists=false&key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68'
+  },
+  level: 'info',
+  timestamp: '2022-06-27 17:44:45'
+}
+{
+  message: { removeWebhookSucced: 'done' },
+  level: 'info',
+  timestamp: '2022-06-27 17:44:50'
+}
+{
+  message: {
+    departmentData: {
+      _id: '62b9c25db7850380aad13f7b',
+      boardId: '62b9c25db60e0d7928677633',
+      name: 'Zedan Saheer',
+      color: 'blue',
+      mainBoard: false,
+      addTeam: [],
+      removeTeam: [ '62b9c2632bdd2f746ae6ace6' ]
+    }
+  },
+  level: 'info',
+  timestamp: '2022-06-27 17:44:59'
+}
+{
+  message: 'first step',
+  level: 'info',
+  timestamp: '2022-06-27 17:44:59'
+}
+{
+  message: {
+    departmentData: {
+      _id: '62b9c25db7850380aad13f7b',
+      boardId: '62b9c25db60e0d7928677633',
+      name: 'Zedan Saheer',
+      color: 'blue',
+      mainBoard: false,
+      addTeam: [],
+      removeTeam: [ '62b9c2632bdd2f746ae6ace6' ]
+    }
+  },
+  level: 'info',
+  timestamp: '2022-06-27 17:45:31'
+}
+{
+  message: 'first step',
+  level: 'info',
+  timestamp: '2022-06-27 17:45:31'
+}
+{
+  message: {
+    departmentData: {
+      _id: '62b9c25db7850380aad13f7b',
+      boardId: '62b9c25db60e0d7928677633',
+      name: 'Zedan Saheer',
+      color: 'blue',
+      mainBoard: false,
+      addTeam: [],
+      removeTeam: [ '62b9c2632bdd2f746ae6ace6' ]
+    }
+  },
+  level: 'info',
+  timestamp: '2022-06-27 18:10:52'
+}
+{
+  message: 'first step',
+  level: 'info',
+  timestamp: '2022-06-27 18:10:52'
+}
+{
+  message: { removeTeam: [ '62b9c2632bdd2f746ae6ace6' ] },
+  level: 'info',
+  timestamp: '2022-06-27 18:10:52'
+}
+{
+  message: { removeWebhookSucced: 'done' },
+  level: 'info',
+  timestamp: '2022-06-27 18:10:52'
+}
+{
+  message: { title: 'testing', teamListIds: [] },
+  level: 'info',
+  timestamp: '2022-06-27 18:10:52'
+}
+{
+  message: {
+    depUpdate: {
+      _id: new ObjectId("62b9c25db7850380aad13f7b"),
+      name: 'Zedan Saheer',
+      boardId: '62b9c25db60e0d7928677633',
+      color: 'blue',
+      boardURL: 'https://trello.com/b/vOxg31eS/zedan-saheer',
+      mainBoard: false,
+      tasks: [],
+      teamsId: [],
+      createdAt: 2022-06-27T14:44:45.188Z,
+      updatedAt: 2022-06-27T15:10:52.846Z,
+      __v: 0,
+      canceldListId: '62b9c25f47613f2b244267c3',
+      defaultListId: '62b9c262405e9853d1282370',
+      doneListId: '62b9c2602a3ab87566f74f69',
+      inProgressListId: '62b9c25ef6ba887782630a37',
+      notClearListId: '62b9c25f44f0e81067d8b0e7',
+      reviewListId: '62b9c262cff0350d62c8b556',
+      sharedListID: '62b9c261e9d33213541c19ad'
+    }
+  },
+  level: 'info',
+  timestamp: '2022-06-27 18:10:52'
+}
+{
+  message: {
+    department: {
+      _id: new ObjectId("62b9c25db7850380aad13f7b"),
+      name: 'Zedan Saheer',
+      boardId: '62b9c25db60e0d7928677633',
+      color: 'blue',
+      boardURL: 'https://trello.com/b/vOxg31eS/zedan-saheer',
+      mainBoard: false,
+      tasks: [],
+      teamsId: [],
+      createdAt: 2022-06-27T14:44:45.188Z,
+      updatedAt: 2022-06-27T15:10:52.846Z,
+      __v: 0,
+      canceldListId: '62b9c25f47613f2b244267c3',
+      defaultListId: '62b9c262405e9853d1282370',
+      doneListId: '62b9c2602a3ab87566f74f69',
+      inProgressListId: '62b9c25ef6ba887782630a37',
+      notClearListId: '62b9c25f44f0e81067d8b0e7',
+      reviewListId: '62b9c262cff0350d62c8b556',
+      sharedListID: '62b9c261e9d33213541c19ad'
+    }
+  },
+  level: 'info',
+  timestamp: '2022-06-27 18:10:52'
+}
+{
+  message: { removeListAndWebhookSucced: 'done' },
+  level: 'info',
+  timestamp: '2022-06-27 18:10:53'
+}
+{
+  message: {
+    createWebHookError: FetchError: request to https://api.trello.com/1//webhooks/?callbackURL=https://ed77-217-55-164-98.ngrok.io/api/webhookUpdate&idModel=62b9c261e9d33213541c19ad&key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68 failed, reason: read ECONNRESET
+        at ClientRequest.<anonymous> (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\node-fetch\lib\index.js:1491:11)
+        at ClientRequest.emit (node:events:527:28)
+        at ClientRequest.emit (node:domain:475:12)
+        at TLSSocket.socketErrorListener (node:_http_client:454:9)
+        at TLSSocket.emit (node:events:527:28)
+        at TLSSocket.emit (node:domain:475:12)
+        at emitErrorNT (node:internal/streams/destroy:157:8)
+        at emitErrorCloseNT (node:internal/streams/destroy:122:3)
+        at processTicksAndRejections (node:internal/process/task_queues:83:21) {
+      type: 'system',
+      errno: 'ECONNRESET',
+      code: 'ECONNRESET'
+    }
+  },
+  level: 'error',
+  timestamp: '2022-06-27 18:13:00'
+}
+{
+  message: { webhookCreateResult: 'webhook done' },
+  level: 'info',
+  timestamp: '2022-06-27 18:13:00'
+}
+{
+  message: {
+    updateBoardError: FetchError: request to https://api.trello.com/1/boards/62b9c25db60e0d7928677633/?name=Zedan%20Saheer&prefs/background=blue&key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68 failed, reason: read ECONNRESET
+        at ClientRequest.<anonymous> (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\node-fetch\lib\index.js:1491:11)
+        at ClientRequest.emit (node:events:527:28)
+        at ClientRequest.emit (node:domain:475:12)
+        at TLSSocket.socketErrorListener (node:_http_client:454:9)
+        at TLSSocket.emit (node:events:527:28)
+        at TLSSocket.emit (node:domain:475:12)
+        at emitErrorNT (node:internal/streams/destroy:157:8)
+        at emitErrorCloseNT (node:internal/streams/destroy:122:3)
+        at processTicksAndRejections (node:internal/process/task_queues:83:21) {
+      type: 'system',
+      errno: 'ECONNRESET',
+      code: 'ECONNRESET'
+    }
+  },
+  level: 'error',
+  timestamp: '2022-06-27 18:13:00'
+}
+{
+  message: {
+    updateBoardError: FetchError: request to https://api.trello.com/1/boards/62b9c25db60e0d7928677633/?name=Zedan%20Saheer&prefs/background=blue&key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68 failed, reason: read ECONNRESET
+        at ClientRequest.<anonymous> (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\node-fetch\lib\index.js:1491:11)
+        at ClientRequest.emit (node:events:527:28)
+        at ClientRequest.emit (node:domain:475:12)
+        at TLSSocket.socketErrorListener (node:_http_client:454:9)
+        at TLSSocket.emit (node:events:527:28)
+        at TLSSocket.emit (node:domain:475:12)
+        at emitErrorNT (node:internal/streams/destroy:157:8)
+        at emitErrorCloseNT (node:internal/streams/destroy:122:3)
+        at processTicksAndRejections (node:internal/process/task_queues:83:21) {
+      type: 'system',
+      errno: 'ECONNRESET',
+      code: 'ECONNRESET'
+    }
+  },
+  level: 'error',
+  timestamp: '2022-06-27 18:13:00'
+}
+{
+  message: {
+    updatedbDepartmentError: MongoNetworkError: connection 2 to 157.241.5.173:27017 closed
+        at Connection.onClose (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\mongodb\src\cmap\connection.ts:355:13)
+        at TLSSocket.<anonymous> (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\mongodb\src\cmap\connection.ts:269:42)
+        at TLSSocket.emit (node:events:527:28)
+        at TLSSocket.emit (node:domain:475:12)
+        at node:net:709:12
+        at TCP.done (node:_tls_wrap:582:7) {
+      [Symbol(errorLabels)]: Set(0) {}
+    }
+  },
+  level: 'error',
+  timestamp: '2022-06-27 18:13:00'
+}
+{
+  message: { removeTeam: [ '62b9c2632bdd2f746ae6ace6' ] },
+  level: 'info',
+  timestamp: '2022-06-27 18:13:00'
+}
+{
+  message: {
+    archieveListError: FetchError: request to https://api.trello.com/1/lists/62b9c2632bdd2f746ae6ace6/closed?value=true&key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68 failed, reason: getaddrinfo ENOTFOUND api.trello.com
+        at ClientRequest.<anonymous> (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\node-fetch\lib\index.js:1491:11)
+        at ClientRequest.emit (node:events:527:28)
+        at ClientRequest.emit (node:domain:475:12)
+        at TLSSocket.socketErrorListener (node:_http_client:454:9)
+        at TLSSocket.emit (node:events:527:28)
+        at TLSSocket.emit (node:domain:475:12)
+        at emitErrorNT (node:internal/streams/destroy:157:8)
+        at emitErrorCloseNT (node:internal/streams/destroy:122:3)
+        at processTicksAndRejections (node:internal/process/task_queues:83:21) {
+      type: 'system',
+      errno: 'ENOTFOUND',
+      code: 'ENOTFOUND'
+    }
+  },
+  level: 'error',
+  timestamp: '2022-06-27 18:13:00'
+}
+{
+  message: {
+    removeWebhookError: FetchError: request to https://api.trello.com/1//webhooks/62b9c2632bdd2f746ae6ace6&key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68 failed, reason: getaddrinfo ENOTFOUND api.trello.com
+        at ClientRequest.<anonymous> (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\node-fetch\lib\index.js:1491:11)
+        at ClientRequest.emit (node:events:527:28)
+        at ClientRequest.emit (node:domain:475:12)
+        at TLSSocket.socketErrorListener (node:_http_client:454:9)
+        at TLSSocket.emit (node:events:527:28)
+        at TLSSocket.emit (node:domain:475:12)
+        at emitErrorNT (node:internal/streams/destroy:157:8)
+        at emitErrorCloseNT (node:internal/streams/destroy:122:3)
+        at processTicksAndRejections (node:internal/process/task_queues:83:21) {
+      type: 'system',
+      errno: 'ENOTFOUND',
+      code: 'ENOTFOUND'
+    }
+  },
+  level: 'error',
+  timestamp: '2022-06-27 18:13:00'
+}
+{
+  message: { removeListAndWebhookSucced: 'done' },
+  level: 'info',
+  timestamp: '2022-06-27 18:13:00'
+}
+{
+  message: {
+    updatedbDepartmentError: MongooseServerSelectionError: Could not connect to any servers in your MongoDB Atlas cluster. One common reason is that you're trying to access the database from an IP that isn't whitelisted. Make sure your current IP address is on your Atlas cluster's IP whitelist: https://docs.atlas.mongodb.com/security-whitelist/
+        at Function.Model.$wrapCallback (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\mongoose\lib\model.js:5017:32)
+        at C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\mongoose\lib\query.js:4732:21
+        at C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\mongoose\lib\helpers\promiseOrCallback.js:32:5
+        at new Promise (<anonymous>)
+        at promiseOrCallback (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\mongoose\lib\helpers\promiseOrCallback.js:31:10)
+        at model.Query.exec (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\mongoose\lib\query.js:4731:10)
+        at model.Query.Query.then (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\mongoose\lib\query.js:4814:15)
+        at runMicrotasks (<anonymous>)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+      reason: TopologyDescription {
+        type: 'ReplicaSetNoPrimary',
+        servers: Map(3) {
+          'cluster0-shard-00-01.oeari.mongodb.net:27017' => ServerDescription {
+            _hostAddress: new HostAddress('cluster0-shard-00-01.oeari.mongodb.net:27017'),
+            address: 'cluster0-shard-00-01.oeari.mongodb.net:27017',
+            type: 'Unknown',
+            hosts: [],
+            passives: [],
+            arbiters: [],
+            tags: {},
+            minWireVersion: 0,
+            maxWireVersion: 0,
+            roundTripTime: -1,
+            lastUpdateTime: 5256619,
+            lastWriteDate: 0,
+            topologyVersion: {
+              processId: new ObjectId("62af49d2e5516717a96ee4e2"),
+              counter: 3
+            },
+            error: MongoNetworkError: getaddrinfo ENOTFOUND cluster0-shard-00-01.oeari.mongodb.net
+                at connectionFailureError (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\mongodb\src\cmap\connect.ts:496:14)
+                at TLSSocket.<anonymous> (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\mongodb\src\cmap\connect.ts:394:16)
+                at Object.onceWrapper (node:events:642:26)
+                at TLSSocket.emit (node:events:527:28)
+                at TLSSocket.emit (node:domain:475:12)
+                at emitErrorNT (node:internal/streams/destroy:157:8)
+                at emitErrorCloseNT (node:internal/streams/destroy:122:3)
+                at processTicksAndRejections (node:internal/process/task_queues:83:21) {
+              [Symbol(errorLabels)]: Set(0) {}
+            }
+          },
+          'cluster0-shard-00-02.oeari.mongodb.net:27017' => ServerDescription {
+            _hostAddress: new HostAddress('cluster0-shard-00-02.oeari.mongodb.net:27017'),
+            address: 'cluster0-shard-00-02.oeari.mongodb.net:27017',
+            type: 'Unknown',
+            hosts: [],
+            passives: [],
+            arbiters: [],
+            tags: {},
+            minWireVersion: 0,
+            maxWireVersion: 0,
+            roundTripTime: -1,
+            lastUpdateTime: 5256590,
+            lastWriteDate: 0,
+            topologyVersion: {
+              processId: new ObjectId("62af4926733773295cad08ed"),
+              counter: 6
+            },
+            error: MongoNetworkError: getaddrinfo ENOTFOUND cluster0-shard-00-02.oeari.mongodb.net
+                at connectionFailureError (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\mongodb\src\cmap\connect.ts:496:14)
+                at TLSSocket.<anonymous> (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\mongodb\src\cmap\connect.ts:394:16)
+                at Object.onceWrapper (node:events:642:26)
+                at TLSSocket.emit (node:events:527:28)
+                at TLSSocket.emit (node:domain:475:12)
+                at emitErrorNT (node:internal/streams/destroy:157:8)
+                at emitErrorCloseNT (node:internal/streams/destroy:122:3)
+                at processTicksAndRejections (node:internal/process/task_queues:83:21) {
+              [Symbol(errorLabels)]: Set(0) {}
+            }
+          },
+          'cluster0-shard-00-00.oeari.mongodb.net:27017' => ServerDescription {
+            _hostAddress: new HostAddress('cluster0-shard-00-00.oeari.mongodb.net:27017'),
+            address: 'cluster0-shard-00-00.oeari.mongodb.net:27017',
+            type: 'Unknown',
+            hosts: [],
+            passives: [],
+            arbiters: [],
+            tags: {},
+            minWireVersion: 0,
+            maxWireVersion: 0,
+            roundTripTime: -1,
+            lastUpdateTime: 5256591,
+            lastWriteDate: 0,
+            topologyVersion: {
+              processId: new ObjectId("62af48789fec636f500e3b5c"),
+              counter: 4
+            },
+            error: MongoNetworkError: getaddrinfo ENOTFOUND cluster0-shard-00-00.oeari.mongodb.net
+                at connectionFailureError (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\mongodb\src\cmap\connect.ts:496:14)
+                at TLSSocket.<anonymous> (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\mongodb\src\cmap\connect.ts:394:16)
+                at Object.onceWrapper (node:events:642:26)
+                at TLSSocket.emit (node:events:527:28)
+                at TLSSocket.emit (node:domain:475:12)
+                at emitErrorNT (node:internal/streams/destroy:157:8)
+                at emitErrorCloseNT (node:internal/streams/destroy:122:3)
+                at processTicksAndRejections (node:internal/process/task_queues:83:21) {
+              [Symbol(errorLabels)]: Set(0) {}
+            }
+          }
+        },
+        stale: false,
+        compatible: true,
+        heartbeatFrequencyMS: 10000,
+        localThresholdMS: 15,
+        setName: 'atlas-80ye5b-shard-0',
+        maxSetVersion: 2,
+        maxElectionId: new ObjectId("7fffffff000000000000000d"),
+        commonWireVersion: 13,
+        logicalSessionTimeoutMinutes: undefined
+      },
+      code: undefined
+    }
+  },
+  level: 'error',
+  timestamp: '2022-06-27 19:51:37'
+}
+{
+  message: { removeTeam: [ '62b9c2632bdd2f746ae6ace6' ] },
+  level: 'info',
+  timestamp: '2022-06-27 19:51:37'
+}
+{
+  message: {
+    deleteNestedRecordDepDBError: MongooseServerSelectionError: Could not connect to any servers in your MongoDB Atlas cluster. One common reason is that you're trying to access the database from an IP that isn't whitelisted. Make sure your current IP address is on your Atlas cluster's IP whitelist: https://docs.atlas.mongodb.com/security-whitelist/
+        at Function.Model.$wrapCallback (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\mongoose\lib\model.js:5017:32)
+        at C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\mongoose\lib\query.js:4732:21
+        at C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\mongoose\lib\helpers\promiseOrCallback.js:32:5
+        at new Promise (<anonymous>)
+        at promiseOrCallback (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\mongoose\lib\helpers\promiseOrCallback.js:31:10)
+        at model.Query.exec (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\mongoose\lib\query.js:4731:10)
+        at model.Query.Query.then (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\mongoose\lib\query.js:4814:15)
+        at runMicrotasks (<anonymous>)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+      reason: TopologyDescription {
+        type: 'ReplicaSetNoPrimary',
+        servers: Map(3) {
+          'cluster0-shard-00-01.oeari.mongodb.net:27017' => ServerDescription {
+            _hostAddress: new HostAddress('cluster0-shard-00-01.oeari.mongodb.net:27017'),
+            address: 'cluster0-shard-00-01.oeari.mongodb.net:27017',
+            type: 'Unknown',
+            hosts: [],
+            passives: [],
+            arbiters: [],
+            tags: {},
+            minWireVersion: 0,
+            maxWireVersion: 0,
+            roundTripTime: -1,
+            lastUpdateTime: 5256619,
+            lastWriteDate: 0,
+            topologyVersion: {
+              processId: new ObjectId("62af49d2e5516717a96ee4e2"),
+              counter: 3
+            },
+            error: MongoNetworkError: getaddrinfo ENOTFOUND cluster0-shard-00-01.oeari.mongodb.net
+                at connectionFailureError (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\mongodb\src\cmap\connect.ts:496:14)
+                at TLSSocket.<anonymous> (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\mongodb\src\cmap\connect.ts:394:16)
+                at Object.onceWrapper (node:events:642:26)
+                at TLSSocket.emit (node:events:527:28)
+                at TLSSocket.emit (node:domain:475:12)
+                at emitErrorNT (node:internal/streams/destroy:157:8)
+                at emitErrorCloseNT (node:internal/streams/destroy:122:3)
+                at processTicksAndRejections (node:internal/process/task_queues:83:21) {
+              [Symbol(errorLabels)]: Set(0) {}
+            }
+          },
+          'cluster0-shard-00-02.oeari.mongodb.net:27017' => ServerDescription {
+            _hostAddress: new HostAddress('cluster0-shard-00-02.oeari.mongodb.net:27017'),
+            address: 'cluster0-shard-00-02.oeari.mongodb.net:27017',
+            type: 'Unknown',
+            hosts: [],
+            passives: [],
+            arbiters: [],
+            tags: {},
+            minWireVersion: 0,
+            maxWireVersion: 0,
+            roundTripTime: -1,
+            lastUpdateTime: 5256590,
+            lastWriteDate: 0,
+            topologyVersion: {
+              processId: new ObjectId("62af4926733773295cad08ed"),
+              counter: 6
+            },
+            error: MongoNetworkError: getaddrinfo ENOTFOUND cluster0-shard-00-02.oeari.mongodb.net
+                at connectionFailureError (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\mongodb\src\cmap\connect.ts:496:14)
+                at TLSSocket.<anonymous> (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\mongodb\src\cmap\connect.ts:394:16)
+                at Object.onceWrapper (node:events:642:26)
+                at TLSSocket.emit (node:events:527:28)
+                at TLSSocket.emit (node:domain:475:12)
+                at emitErrorNT (node:internal/streams/destroy:157:8)
+                at emitErrorCloseNT (node:internal/streams/destroy:122:3)
+                at processTicksAndRejections (node:internal/process/task_queues:83:21) {
+              [Symbol(errorLabels)]: Set(0) {}
+            }
+          },
+          'cluster0-shard-00-00.oeari.mongodb.net:27017' => ServerDescription {
+            _hostAddress: new HostAddress('cluster0-shard-00-00.oeari.mongodb.net:27017'),
+            address: 'cluster0-shard-00-00.oeari.mongodb.net:27017',
+            type: 'Unknown',
+            hosts: [],
+            passives: [],
+            arbiters: [],
+            tags: {},
+            minWireVersion: 0,
+            maxWireVersion: 0,
+            roundTripTime: -1,
+            lastUpdateTime: 5256591,
+            lastWriteDate: 0,
+            topologyVersion: {
+              processId: new ObjectId("62af48789fec636f500e3b5c"),
+              counter: 4
+            },
+            error: MongoNetworkError: getaddrinfo ENOTFOUND cluster0-shard-00-00.oeari.mongodb.net
+                at connectionFailureError (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\mongodb\src\cmap\connect.ts:496:14)
+                at TLSSocket.<anonymous> (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\mongodb\src\cmap\connect.ts:394:16)
+                at Object.onceWrapper (node:events:642:26)
+                at TLSSocket.emit (node:events:527:28)
+                at TLSSocket.emit (node:domain:475:12)
+                at emitErrorNT (node:internal/streams/destroy:157:8)
+                at emitErrorCloseNT (node:internal/streams/destroy:122:3)
+                at processTicksAndRejections (node:internal/process/task_queues:83:21) {
+              [Symbol(errorLabels)]: Set(0) {}
+            }
+          }
+        },
+        stale: false,
+        compatible: true,
+        heartbeatFrequencyMS: 10000,
+        localThresholdMS: 15,
+        setName: 'atlas-80ye5b-shard-0',
+        maxSetVersion: 2,
+        maxElectionId: new ObjectId("7fffffff000000000000000d"),
+        commonWireVersion: 13,
+        logicalSessionTimeoutMinutes: undefined
+      },
+      code: undefined
+    }
+  },
+  level: 'error',
+  timestamp: '2022-06-27 19:51:37'
+}
+{
+  message: { removeWebhookSucced: 'done' },
+  level: 'info',
+  timestamp: '2022-06-27 19:51:37'
+}
+{
+  message: { title: 'testing', teamListIds: [] },
+  level: 'info',
+  timestamp: '2022-06-27 19:51:37'
+}
+{
+  message: {
+    archieveListError: FetchError: request to https://api.trello.com/1/lists/62b9c2632bdd2f746ae6ace6/closed?value=true&key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68 failed, reason: getaddrinfo ENOTFOUND api.trello.com
+        at ClientRequest.<anonymous> (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\node-fetch\lib\index.js:1491:11)
+        at ClientRequest.emit (node:events:527:28)
+        at ClientRequest.emit (node:domain:475:12)
+        at TLSSocket.socketErrorListener (node:_http_client:454:9)
+        at TLSSocket.emit (node:events:527:28)
+        at TLSSocket.emit (node:domain:475:12)
+        at emitErrorNT (node:internal/streams/destroy:157:8)
+        at emitErrorCloseNT (node:internal/streams/destroy:122:3)
+        at processTicksAndRejections (node:internal/process/task_queues:83:21) {
+      type: 'system',
+      errno: 'ENOTFOUND',
+      code: 'ENOTFOUND'
+    }
+  },
+  level: 'error',
+  timestamp: '2022-06-27 19:51:37'
+}
+{
+  message: {
+    removeWebhookError: FetchError: request to https://api.trello.com/1//webhooks/62b9c2632bdd2f746ae6ace6&key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68 failed, reason: getaddrinfo ENOTFOUND api.trello.com
+        at ClientRequest.<anonymous> (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\node-fetch\lib\index.js:1491:11)
+        at ClientRequest.emit (node:events:527:28)
+        at ClientRequest.emit (node:domain:475:12)
+        at TLSSocket.socketErrorListener (node:_http_client:454:9)
+        at TLSSocket.emit (node:events:527:28)
+        at TLSSocket.emit (node:domain:475:12)
+        at emitErrorNT (node:internal/streams/destroy:157:8)
+        at emitErrorCloseNT (node:internal/streams/destroy:122:3)
+        at processTicksAndRejections (node:internal/process/task_queues:83:21) {
+      type: 'system',
+      errno: 'ENOTFOUND',
+      code: 'ENOTFOUND'
+    }
+  },
+  level: 'error',
+  timestamp: '2022-06-27 19:51:37'
+}
+{
+  message: { removeListAndWebhookSucced: 'done' },
+  level: 'info',
+  timestamp: '2022-06-27 19:51:37'
+}
+{
+  message: { removeWebhookSucced: 'done' },
+  level: 'info',
+  timestamp: '2022-06-27 19:51:44'
+}
+{
+  message: { title: 'testing', teamListIds: [] },
+  level: 'info',
+  timestamp: '2022-06-27 19:51:44'
+}
+{
+  message: {
+    depUpdate: {
+      _id: new ObjectId("62b9c25db7850380aad13f7b"),
+      name: 'Zedan Saheer',
+      boardId: '62b9c25db60e0d7928677633',
+      color: 'blue',
+      boardURL: 'https://trello.com/b/vOxg31eS/zedan-saheer',
+      mainBoard: false,
+      tasks: [],
+      teamsId: [],
+      createdAt: 2022-06-27T14:44:45.188Z,
+      updatedAt: 2022-06-27T16:51:44.260Z,
+      __v: 0,
+      canceldListId: '62b9c25f47613f2b244267c3',
+      defaultListId: '62b9c262405e9853d1282370',
+      doneListId: '62b9c2602a3ab87566f74f69',
+      inProgressListId: '62b9c25ef6ba887782630a37',
+      notClearListId: '62b9c25f44f0e81067d8b0e7',
+      reviewListId: '62b9c262cff0350d62c8b556',
+      sharedListID: '62b9c261e9d33213541c19ad'
+    }
+  },
+  level: 'info',
+  timestamp: '2022-06-27 19:51:44'
+}
+{
+  message: {
+    department: {
+      _id: new ObjectId("62b9c25db7850380aad13f7b"),
+      name: 'Zedan Saheer',
+      boardId: '62b9c25db60e0d7928677633',
+      color: 'blue',
+      boardURL: 'https://trello.com/b/vOxg31eS/zedan-saheer',
+      mainBoard: false,
+      tasks: [],
+      teamsId: [],
+      createdAt: 2022-06-27T14:44:45.188Z,
+      updatedAt: 2022-06-27T16:51:44.260Z,
+      __v: 0,
+      canceldListId: '62b9c25f47613f2b244267c3',
+      defaultListId: '62b9c262405e9853d1282370',
+      doneListId: '62b9c2602a3ab87566f74f69',
+      inProgressListId: '62b9c25ef6ba887782630a37',
+      notClearListId: '62b9c25f44f0e81067d8b0e7',
+      reviewListId: '62b9c262cff0350d62c8b556',
+      sharedListID: '62b9c261e9d33213541c19ad'
+    }
+  },
+  level: 'info',
+  timestamp: '2022-06-27 19:51:44'
+}
+{
+  message: {
+    depUpdate: {
+      _id: new ObjectId("62b9c25db7850380aad13f7b"),
+      name: 'Zedan Saheer',
+      boardId: '62b9c25db60e0d7928677633',
+      color: 'blue',
+      boardURL: 'https://trello.com/b/vOxg31eS/zedan-saheer',
+      mainBoard: false,
+      tasks: [],
+      teamsId: [],
+      createdAt: 2022-06-27T14:44:45.188Z,
+      updatedAt: 2022-06-27T16:51:37.833Z,
+      __v: 0,
+      canceldListId: '62b9c25f47613f2b244267c3',
+      defaultListId: '62b9c262405e9853d1282370',
+      doneListId: '62b9c2602a3ab87566f74f69',
+      inProgressListId: '62b9c25ef6ba887782630a37',
+      notClearListId: '62b9c25f44f0e81067d8b0e7',
+      reviewListId: '62b9c262cff0350d62c8b556',
+      sharedListID: '62b9c261e9d33213541c19ad'
+    }
+  },
+  level: 'info',
+  timestamp: '2022-06-27 19:51:44'
+}
+{
+  message: {
+    department: {
+      _id: new ObjectId("62b9c25db7850380aad13f7b"),
+      name: 'Zedan Saheer',
+      boardId: '62b9c25db60e0d7928677633',
+      color: 'blue',
+      boardURL: 'https://trello.com/b/vOxg31eS/zedan-saheer',
+      mainBoard: false,
+      tasks: [],
+      teamsId: [],
+      createdAt: 2022-06-27T14:44:45.188Z,
+      updatedAt: 2022-06-27T16:51:37.833Z,
+      __v: 0,
+      canceldListId: '62b9c25f47613f2b244267c3',
+      defaultListId: '62b9c262405e9853d1282370',
+      doneListId: '62b9c2602a3ab87566f74f69',
+      inProgressListId: '62b9c25ef6ba887782630a37',
+      notClearListId: '62b9c25f44f0e81067d8b0e7',
+      reviewListId: '62b9c262cff0350d62c8b556',
+      sharedListID: '62b9c261e9d33213541c19ad'
+    }
+  },
+  level: 'info',
+  timestamp: '2022-06-27 19:51:44'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-06-28 16:03:52'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-06-28 16:05:01'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-06-28 16:07:19'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-06-28 16:10:51'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-06-28 16:11:38'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-06-28 16:15:31'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-06-28 16:16:50'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-06-28 16:17:08'
+}
