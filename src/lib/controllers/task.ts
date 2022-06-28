@@ -161,7 +161,7 @@ class TaskController extends TaskDB {
         data.cardId = createdCard.id;
         if (files.length > 0)
           data = await TaskController.__createTaskAttachment(files, data);
-        else data.attachedFiles = null;
+        else data.attachedFiles = [];
       } else throw "Error while creating Card in Trello";
       let task = await super.createTaskDB(data);
       createTaskFromBoardJob(task);

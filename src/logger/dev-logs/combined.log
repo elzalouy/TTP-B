@@ -1564,3 +1564,32 @@
   level: 'info',
   timestamp: '2022-06-28 20:54:34'
 }
+{
+  message: {
+    updateTaskDBError: TypeError: task.attachedFiles is not iterable
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/dbCalls/tasks/tasks.ts:227:39)
+        at Generator.next (<anonymous>)
+        at fulfilled (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/dbCalls/tasks/tasks.ts:5:58)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5)
+  },
+  level: 'error',
+  timestamp: '2022-06-28 20:59:14'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-06-28 21:00:09'
+}
+{
+  message: {
+    handleDeleteTasksError: TypeError: Cannot read properties of null (reading '_id')
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/presentation/task/task.ts:115:24
+        at Generator.next (<anonymous>)
+        at fulfilled (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/presentation/task/task.ts:5:58)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5)
+  },
+  level: 'error',
+  timestamp: '2022-06-28 21:00:23'
+}
