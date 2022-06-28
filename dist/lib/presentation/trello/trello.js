@@ -15,6 +15,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const errorUtils_1 = require("../../utils/errorUtils");
 const logger_1 = __importDefault(require("../../../logger"));
 const trello_1 = __importDefault(require("../../controllers/trello"));
+const taskQueue_1 = require("../../background/taskQueue");
 const BoardReq = class BoardReq extends trello_1.default {
     static handleGetBoards(req, res) {
         const _super = Object.create(null, {
@@ -42,9 +43,12 @@ const BoardReq = class BoardReq extends trello_1.default {
         });
         return __awaiter(this, void 0, void 0, function* () {
             try {
-                let trelloData = req.body;
-                let task = yield _super.webhookUpdate.call(this, trelloData);
-                return res.status(200).send(task);
+                taskQueue_1.updateTaskQueue.push((cb) => __awaiter(this, void 0, void 0, function* () {
+                    let trelloData = req.body;
+                    let task = yield _super.webhookUpdate.call(this, trelloData);
+                    return res.status(200).send(task);
+                }));
+                yield taskQueue_1.updateTaskQueue.start();
             }
             catch (error) {
                 logger_1.default.error({ handleWebhookUpdateCardError: error });

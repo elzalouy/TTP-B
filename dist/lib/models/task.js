@@ -2,10 +2,10 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 const mongoose_1 = require("mongoose");
 const FilesSchema = new mongoose_1.Schema({
-    name: { type: String, required: true },
-    trelloId: { type: String, required: true },
-    mimeType: { type: String, required: true },
-    url: { type: String, required: true },
+    name: { type: String },
+    trelloId: { type: String },
+    mimeType: { type: String },
+    url: { type: String },
 });
 const TaskSchema = new mongoose_1.Schema({
     name: {
@@ -69,7 +69,7 @@ const TaskSchema = new mongoose_1.Schema({
     },
     attachedFiles: {
         type: [FilesSchema],
-        default: null,
+        default: [],
     },
     attachedCard: {
         type: String,

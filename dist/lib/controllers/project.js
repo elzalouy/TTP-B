@@ -14,7 +14,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 Object.defineProperty(exports, "__esModule", { value: true });
 const logger_1 = __importDefault(require("../../logger"));
 const project_1 = __importDefault(require("../dbCalls/project/project"));
-const server_1 = require("../server");
+const index_1 = require("../../index");
 const notification_1 = __importDefault(require("./notification"));
 const ProjectController = class ProjectController extends project_1.default {
     static createProject(data) {
@@ -98,9 +98,10 @@ const ProjectController = class ProjectController extends project_1.default {
                         adminUserID: data.adminId,
                     });
                     // send notification to all admin
-                    server_1.io.to("admin room").emit("notification update", createNotifi);
+                    index_1.io.to("admin-room").emit("notification-update", createNotifi);
+                    index_1.io.to("manager-room").emit("notification-update");
                     // send notification to specific project manager
-                    server_1.io.to(`user-${data.projectManager}`).emit("notification update", createNotifi);
+                    index_1.io.to(`user-${data.projectManager}`).emit("notification-update", createNotifi);
                 }
                 let project = yield _super.updateProjectDB.call(this, data);
                 return project;
@@ -125,7 +126,7 @@ const ProjectController = class ProjectController extends project_1.default {
                     adminUserID: data.adminId,
                 });
                 // send notification to specific project manager
-                server_1.io.to(`user-${data.projectManager}`).emit("notification update", createNotifi);
+                index_1.io.to(`user-${data.projectManager}`).emit("notification-update", createNotifi);
                 return project;
             }
             catch (error) {

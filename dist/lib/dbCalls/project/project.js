@@ -28,7 +28,7 @@ const ProjectDB = class ProjectDB {
     }
     static getProjectDB(data) {
         return __awaiter(this, void 0, void 0, function* () {
-            return yield ProjectDB.__getProject(data);
+            return yield ProjectDB.__getProjects(data);
         });
     }
     static deleteProjectDB(id) {
@@ -63,6 +63,17 @@ const ProjectDB = class ProjectDB {
         });
     }
     static __getProject(data) {
+        return __awaiter(this, void 0, void 0, function* () {
+            try {
+                let project = yield Project_1.default.findOne(data);
+                return project;
+            }
+            catch (error) {
+                logger_1.default.error({ getProjectDBError: error });
+            }
+        });
+    }
+    static __getProjects(data) {
         return __awaiter(this, void 0, void 0, function* () {
             try {
                 let project = yield Project_1.default.find(data)

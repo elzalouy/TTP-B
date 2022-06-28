@@ -8,7 +8,6 @@ const path = require("path");
 let dir = __dirname.split("/middlewares");
 const Mime = [
     "image/png",
-    "image/png",
     "image/jpeg",
     "image/svg",
     "text/csv",
@@ -33,7 +32,7 @@ function default_1() {
     });
     const upload = (0, multer_1.default)({
         storage: storage,
-        limits: { fileSize: 1000000 },
+        limits: { fileSize: 10000000 },
         fileFilter: (req, file, cb) => {
             if (Mime.includes(file.mimetype.toLowerCase())) {
                 cb(null, true);

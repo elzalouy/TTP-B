@@ -52,11 +52,11 @@ exports.createTaskSchema = joi_1.default.object({
         "string.min": "Project Id is required",
         "any.required": "Project Id is required",
     }),
-    name: joi_1.default.string().required().min(4).max(20).messages({
+    name: joi_1.default.string().required().min(4).max(50).messages({
         "string.base": "Task Name is required",
         "string.empty": "Task name should be string with min 4 chars",
         "string.min": "Task name length should be Min 4 chars",
-        "string.max": "Task name length should be Max 20 chars",
+        "string.max": "Task name length should be Max 50 chars",
         "any.required": "Task Name is required",
     }),
     categoryId: joi_1.default.string().required().messages({
@@ -116,11 +116,11 @@ exports.editTaskSchema = joi_1.default.object({
     id: joi_1.default.string()
         .required()
         .messages({ "any.required": "Task id is required" }),
-    name: joi_1.default.string().optional().min(4).max(20).messages({
+    name: joi_1.default.string().optional().min(4).max(50).messages({
         "string.base": "Task Name is required",
         "string.empty": "Task name should be string with min 4 chars",
         "string.min": "Task name length should be Min 4 chars",
-        "string.max": "Task name length should be Max 20 chars",
+        "string.max": "Task name length should be Max 50 chars",
     }),
     categoryId: joi_1.default.string().optional().messages({
         "string.base": "Category is required",
@@ -130,7 +130,7 @@ exports.editTaskSchema = joi_1.default.object({
         .required()
         .messages({ "any.required": "Card id is required" }),
     deleteFiles: joi_1.default.string().optional(),
-    subCategoryId: joi_1.default.string().optional().messages({
+    subCategoryId: joi_1.default.string().optional().allow(null, "").messages({
         "string.base": "Sub Category is required",
         "string.empty": "Sub Category should be selected",
     }),
@@ -146,7 +146,7 @@ exports.editTaskSchema = joi_1.default.object({
         "string.min": "Team should be selected",
     }),
     status: joi_1.default.string()
-        .valid("Tasks Board", "inProgress", "Review", "Cancled", "Done", "Late", "Shared")
+        .valid("Tasks Board", "inProgress", "Review", "Cancled", "Done", "Late", "Shared", "Not Clear")
         .optional()
         .messages({
         "string.base": "Status is required",

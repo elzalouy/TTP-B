@@ -16,6 +16,7 @@ const errorUtils_1 = require("./../../utils/errorUtils");
 const logger_1 = __importDefault(require("../../../logger"));
 const task_1 = __importDefault(require("../../controllers/task"));
 const validation_1 = require("../../services/validation");
+const taskQueue_1 = require("../../background/taskQueue");
 const TaskReq = class TaskReq extends task_1.default {
     static handleCreateCard(req, res) {
         const _super = Object.create(null, {
@@ -23,6 +24,7 @@ const TaskReq = class TaskReq extends task_1.default {
         });
         return __awaiter(this, void 0, void 0, function* () {
             try {
+                console.log(req.files, req.body);
                 let TaskData = req.body;
                 if (TaskData.teamId === "")
                     TaskData.teamId = null;
@@ -47,25 +49,28 @@ const TaskReq = class TaskReq extends task_1.default {
         const _super = Object.create(null, {
             updateTask: { get: () => super.updateTask }
         });
-        var _a;
         return __awaiter(this, void 0, void 0, function* () {
             try {
-                let TaskData = req.body;
-                if (TaskData.teamId === "" || TaskData.teamId === null)
-                    TaskData.teamId = null;
-                let files = req.files;
-                let validate = validation_1.editTaskSchema.validate(TaskData);
-                if (validate.error)
-                    return res.status(400).send(validate.error.details[0]);
-                let task = yield _super.updateTask.call(this, TaskData, files);
-                if (task && (task === null || task === void 0 ? void 0 : task.error))
-                    res.status(400).send(task.error);
-                if ((_a = task === null || task === void 0 ? void 0 : task.task) === null || _a === void 0 ? void 0 : _a._id) {
-                    return res.send(task.task);
-                }
-                else {
-                    return res.status(400).send((0, errorUtils_1.customeError)("update_task_error", 400));
-                }
+                taskQueue_1.updateTaskQueue.push((cb) => __awaiter(this, void 0, void 0, function* () {
+                    var _a;
+                    let TaskData = req.body;
+                    if (TaskData.teamId === "" || TaskData.teamId === null)
+                        TaskData.teamId = null;
+                    let files = req.files;
+                    let validate = validation_1.editTaskSchema.validate(TaskData);
+                    if (validate.error)
+                        return res.status(400).send(validate.error.details[0]);
+                    let task = yield _super.updateTask.call(this, TaskData, files);
+                    if (task && (task === null || task === void 0 ? void 0 : task.error))
+                        res.status(400).send(task.error);
+                    if ((_a = task === null || task === void 0 ? void 0 : task.task) === null || _a === void 0 ? void 0 : _a._id) {
+                        return res.send(task.task);
+                    }
+                    else {
+                        return res.status(400).send((0, errorUtils_1.customeError)("update_task_error", 400));
+                    }
+                }));
+                taskQueue_1.updateTaskQueue.start();
             }
             catch (error) {
                 logger_1.default.error({ handleUpdateCardError: error });
@@ -188,6 +193,11 @@ const TaskReq = class TaskReq extends task_1.default {
                 let attachmentId = (_b = req.query) === null || _b === void 0 ? void 0 : _b.attachmentId.toString();
                 if (cardId && attachmentId) {
                     let result = yield _super.downloadAttachment.call(this, cardId, attachmentId);
+                    console.log(result);
+                    if (result === undefined) {
+                        (0, taskQueue_1.updateTaskAttachmentsJob)({ cardId: cardId });
+                        taskQueue_1.TaskQueue.start();
+                    }
                     if (result)
                         return res.send(result);
                     return res.status(400).send("Bad Request for downlaoding this file");
