@@ -396,6 +396,7 @@ class BoardController {
       let api = trelloApi(
         `cards/${cardId}/attachments/${attachmentId}?fields=url&`
       );
+      console.log(api);
       let Response: any = null;
       await fetch(api, {
         method: "GET",
