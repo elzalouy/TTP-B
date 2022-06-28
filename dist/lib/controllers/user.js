@@ -235,7 +235,7 @@ const UserController = class UserController extends user_1.default {
                 // }
                 let newUser = yield _super.createUser.call(this, Object.assign({}, data /* password: passwordHash  */));
                 let token = yield (0, auth_1.createJwtToken)(newUser._id.toString());
-                yield (0, mail_1.default)({
+                (0, mail_1.default)({
                     email: email,
                     subject: "Update Password",
                     token: token,
