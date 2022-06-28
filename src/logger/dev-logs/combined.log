@@ -1,0 +1,1353 @@
+{
+  message: {
+    createTaskAttachmentError: TypeError: Cannot read properties of undefined (reading 'url')
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:139:35
+        at Array.forEach (<anonymous>)
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:134:23)
+        at Generator.next (<anonymous>)
+        at fulfilled (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:5:58)
+        at runMicrotasks (<anonymous>)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5)
+  },
+  level: 'error',
+  timestamp: '2022-06-28 10:35:39'
+}
+{
+  message: {
+    updateTaskDBError: TypeError: Cannot read properties of undefined (reading 'id')
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/dbCalls/tasks/tasks.ts:208:21)
+        at Generator.next (<anonymous>)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/dbCalls/tasks/tasks.ts:8:71
+        at new Promise (<anonymous>)
+        at __awaiter (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/dbCalls/tasks/tasks.ts:4:12)
+        at Function.__updateTask (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/dbCalls/tasks/tasks.ts:263:16)
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/dbCalls/tasks/tasks.ts:19:25)
+        at Generator.next (<anonymous>)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/dbCalls/tasks/tasks.ts:8:71
+        at new Promise (<anonymous>)
+  },
+  level: 'error',
+  timestamp: '2022-06-28 10:35:39'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-06-28 10:36:55'
+}
+{
+  message: {
+    createTaskAttachmentError: TypeError: Cannot read properties of undefined (reading 'url')
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:140:35
+        at Array.forEach (<anonymous>)
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:135:23)
+        at Generator.next (<anonymous>)
+        at fulfilled (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:5:58)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5)
+  },
+  level: 'error',
+  timestamp: '2022-06-28 10:43:09'
+}
+{
+  message: {
+    updateTaskDBError: TypeError: Cannot read properties of undefined (reading 'id')
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/dbCalls/tasks/tasks.ts:208:21)
+        at Generator.next (<anonymous>)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/dbCalls/tasks/tasks.ts:8:71
+        at new Promise (<anonymous>)
+        at __awaiter (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/dbCalls/tasks/tasks.ts:4:12)
+        at Function.__updateTask (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/dbCalls/tasks/tasks.ts:263:16)
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/dbCalls/tasks/tasks.ts:19:25)
+        at Generator.next (<anonymous>)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/dbCalls/tasks/tasks.ts:8:71
+        at new Promise (<anonymous>)
+  },
+  level: 'error',
+  timestamp: '2022-06-28 10:43:09'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-06-28 10:44:37'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-06-28 10:47:47'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-06-28 10:52:34'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-06-28 10:54:12'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-06-28 10:54:49'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-06-28 10:59:07'
+}
+{
+  message: {
+    deleteAttachmentFileError: FetchError: invalid json response body at https://api.trello.com/1/cards/62b9ae68a6b269258d3e8994/attachments/62bac2025a1e4064ce0b8588?key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68 reason: Unexpected token C in JSON at position 0
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/node-fetch/lib/index.js:273:32
+        at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+      type: 'invalid-json'
+    }
+  },
+  level: 'error',
+  timestamp: '2022-06-28 10:59:27'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-06-28 11:00:48'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-06-28 11:01:49'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-06-28 11:04:24'
+}
+{
+  message: {
+    deleteAttachmentFileError: FetchError: invalid json response body at https://api.trello.com/1/cards/62b9ae68a6b269258d3e8994/attachments/62bac3bb29198e4fbd269ba8?key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68 reason: Unexpected token C in JSON at position 0
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/node-fetch/lib/index.js:273:32
+        at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+      type: 'invalid-json'
+    }
+  },
+  level: 'error',
+  timestamp: '2022-06-28 11:04:39'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-06-28 11:11:48'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-06-28 11:14:39'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-06-28 11:15:33'
+}
+{
+  message: {
+    deleteAttachmentFileError: FetchError: invalid json response body at https://api.trello.com/1/cards/62b9ae68a6b269258d3e8994/attachments/62bac45708dca30ad2906028?key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68 reason: Unexpected token C in JSON at position 0
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/node-fetch/lib/index.js:273:32
+        at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+      type: 'invalid-json'
+    }
+  },
+  level: 'error',
+  timestamp: '2022-06-28 11:16:37'
+}
+{
+  message: {
+    deleteAttachmentFileError: FetchError: invalid json response body at https://api.trello.com/1/cards/62b9ae68a6b269258d3e8994/attachments/62bac4eb5f100d37182a1ab8?key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68 reason: Unexpected token C in JSON at position 0
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/node-fetch/lib/index.js:273:32
+        at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+      type: 'invalid-json'
+    }
+  },
+  level: 'error',
+  timestamp: '2022-06-28 11:16:37'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-06-28 11:27:54'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-06-28 11:33:25'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-06-28 11:35:24'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-06-28 11:49:35'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-06-28 11:49:55'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-06-28 11:57:50'
+}
+{
+  message: {
+    downloadAttachment: SyntaxError: Unexpected token i in JSON at position 0
+        at JSON.parse (<anonymous>)
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/trello.ts:399:25)
+        at Generator.next (<anonymous>)
+        at fulfilled (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/trello.ts:5:58)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5)
+  },
+  level: 'error',
+  timestamp: '2022-06-28 11:59:56'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-06-28 12:45:03'
+}
+{
+  message: {
+    deleteAttachmentFileError: FetchError: invalid json response body at https://api.trello.com/1/cards/62b9ae68a6b269258d3e8994/attachments/62bac746422abc28b2098a33?key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68 reason: Unexpected token C in JSON at position 0
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/node-fetch/lib/index.js:273:32
+        at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+      type: 'invalid-json'
+    }
+  },
+  level: 'error',
+  timestamp: '2022-06-28 12:47:17'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-06-28 12:49:30'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-06-28 12:50:02'
+}
+{
+  message: {
+    borderData: Promise { <pending> },
+    createBoardApi: 'https://api.trello.com/1/boards/?name=ngrok server&prefs_background=blue&defaultLists=false&key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68'
+  },
+  level: 'info',
+  timestamp: '2022-06-28 12:53:03'
+}
+{
+  message: { removeWebhookSucced: 'done' },
+  level: 'info',
+  timestamp: '2022-06-28 12:53:10'
+}
+{
+  message: {
+    updateBoardCardError: TypeError: Cannot read properties of undefined (reading 'display')
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/trello.ts:449:32)
+        at Generator.next (<anonymous>)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/trello.ts:8:71
+        at new Promise (<anonymous>)
+        at __awaiter (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/trello.ts:4:12)
+        at Function.__updateBoardCard (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/trello.ts:483:16)
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/trello.ts:97:34)
+        at Generator.next (<anonymous>)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/trello.ts:8:71
+        at new Promise (<anonymous>)
+  },
+  level: 'error',
+  timestamp: '2022-06-28 12:53:11'
+}
+{
+  message: {
+    updateBoardCardError: TypeError: Cannot read properties of undefined (reading 'display')
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/trello.ts:449:32)
+        at Generator.next (<anonymous>)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/trello.ts:8:71
+        at new Promise (<anonymous>)
+        at __awaiter (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/trello.ts:4:12)
+        at Function.__updateBoardCard (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/trello.ts:483:16)
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/trello.ts:97:34)
+        at Generator.next (<anonymous>)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/trello.ts:8:71
+        at new Promise (<anonymous>)
+  },
+  level: 'error',
+  timestamp: '2022-06-28 12:53:11'
+}
+{
+  message: {
+    updateBoardCardError: TypeError: Cannot read properties of undefined (reading 'display')
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/trello.ts:449:32)
+        at Generator.next (<anonymous>)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/trello.ts:8:71
+        at new Promise (<anonymous>)
+        at __awaiter (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/trello.ts:4:12)
+        at Function.__updateBoardCard (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/trello.ts:483:16)
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/trello.ts:97:34)
+        at Generator.next (<anonymous>)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/trello.ts:8:71
+        at new Promise (<anonymous>)
+  },
+  level: 'error',
+  timestamp: '2022-06-28 12:53:11'
+}
+{
+  message: {
+    updateBoardCardError: TypeError: Cannot read properties of undefined (reading 'display')
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/trello.ts:449:32)
+        at Generator.next (<anonymous>)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/trello.ts:8:71
+        at new Promise (<anonymous>)
+        at __awaiter (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/trello.ts:4:12)
+        at Function.__updateBoardCard (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/trello.ts:483:16)
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/trello.ts:97:34)
+        at Generator.next (<anonymous>)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/trello.ts:8:71
+        at new Promise (<anonymous>)
+  },
+  level: 'error',
+  timestamp: '2022-06-28 12:53:11'
+}
+{
+  message: {
+    updateBoardCardError: TypeError: Cannot read properties of undefined (reading 'display')
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/trello.ts:449:32)
+        at Generator.next (<anonymous>)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/trello.ts:8:71
+        at new Promise (<anonymous>)
+        at __awaiter (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/trello.ts:4:12)
+        at Function.__updateBoardCard (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/trello.ts:483:16)
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/trello.ts:97:34)
+        at Generator.next (<anonymous>)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/trello.ts:8:71
+        at new Promise (<anonymous>)
+  },
+  level: 'error',
+  timestamp: '2022-06-28 12:53:11'
+}
+{
+  message: {
+    updateBoardCardError: TypeError: Cannot read properties of undefined (reading 'display')
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/trello.ts:449:32)
+        at Generator.next (<anonymous>)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/trello.ts:8:71
+        at new Promise (<anonymous>)
+        at __awaiter (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/trello.ts:4:12)
+        at Function.__updateBoardCard (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/trello.ts:483:16)
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/trello.ts:97:34)
+        at Generator.next (<anonymous>)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/trello.ts:8:71
+        at new Promise (<anonymous>)
+  },
+  level: 'error',
+  timestamp: '2022-06-28 12:53:11'
+}
+{
+  message: {
+    updateBoardCardError: TypeError: Cannot read properties of undefined (reading 'display')
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/trello.ts:449:32)
+        at Generator.next (<anonymous>)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/trello.ts:8:71
+        at new Promise (<anonymous>)
+        at __awaiter (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/trello.ts:4:12)
+        at Function.__updateBoardCard (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/trello.ts:483:16)
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/trello.ts:97:34)
+        at Generator.next (<anonymous>)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/trello.ts:8:71
+        at new Promise (<anonymous>)
+  },
+  level: 'error',
+  timestamp: '2022-06-28 12:53:11'
+}
+{
+  message: { webhookCreateResult: 'webhook done' },
+  level: 'info',
+  timestamp: '2022-06-28 12:53:12'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-06-28 13:08:30'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-06-28 13:12:08'
+}
+{
+  message: {
+    __updateTaskByTrelloDBError: TypeError: task.save is not a function
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/dbCalls/tasks/tasks.ts:303:25)
+        at Generator.next (<anonymous>)
+        at fulfilled (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/dbCalls/tasks/tasks.ts:5:58)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5)
+  },
+  level: 'error',
+  timestamp: '2022-06-28 13:12:45'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-06-28 13:13:45'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-06-28 13:22:10'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-06-28 13:26:28'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-06-28 13:28:54'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-06-28 13:32:29'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-06-28 13:32:57'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-06-28 13:35:25'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-06-28 13:46:05'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-06-28 13:50:53'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-06-28 13:51:59'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-06-28 13:52:31'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-06-28 13:54:21'
+}
+{
+  message: {
+    removeBoard: 'https://api.trello.com/1/boards/62badd8e6e7f933634daf694?response_type=token&key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68'
+  },
+  level: 'info',
+  timestamp: '2022-06-28 13:54:38'
+}
+{
+  message: {
+    'delete Tasks': { acknowledged: true, deletedCount: 2 },
+    'Delete Tech members': 'Delete result is 0 document'
+  },
+  level: 'info',
+  timestamp: '2022-06-28 13:54:39'
+}
+{
+  message: {
+    borderData: Promise { <pending> },
+    createBoardApi: 'https://api.trello.com/1/boards/?name=ngrok server&prefs_background=blue&defaultLists=false&key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68'
+  },
+  level: 'info',
+  timestamp: '2022-06-28 13:54:51'
+}
+{
+  message: { removeWebhookSucced: 'done' },
+  level: 'info',
+  timestamp: '2022-06-28 13:54:57'
+}
+{
+  message: {
+    updateBoardCardError: TypeError: Cannot read properties of undefined (reading 'display')
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/trello.ts:450:32)
+        at Generator.next (<anonymous>)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/trello.ts:8:71
+        at new Promise (<anonymous>)
+        at __awaiter (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/trello.ts:4:12)
+        at Function.__updateBoardCard (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/trello.ts:483:16)
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/trello.ts:97:34)
+        at Generator.next (<anonymous>)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/trello.ts:8:71
+        at new Promise (<anonymous>)
+  },
+  level: 'error',
+  timestamp: '2022-06-28 13:54:57'
+}
+{
+  message: {
+    updateBoardCardError: TypeError: Cannot read properties of undefined (reading 'display')
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/trello.ts:450:32)
+        at Generator.next (<anonymous>)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/trello.ts:8:71
+        at new Promise (<anonymous>)
+        at __awaiter (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/trello.ts:4:12)
+        at Function.__updateBoardCard (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/trello.ts:483:16)
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/trello.ts:97:34)
+        at Generator.next (<anonymous>)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/trello.ts:8:71
+        at new Promise (<anonymous>)
+  },
+  level: 'error',
+  timestamp: '2022-06-28 13:54:58'
+}
+{
+  message: {
+    updateBoardCardError: TypeError: Cannot read properties of undefined (reading 'display')
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/trello.ts:450:32)
+        at Generator.next (<anonymous>)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/trello.ts:8:71
+        at new Promise (<anonymous>)
+        at __awaiter (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/trello.ts:4:12)
+        at Function.__updateBoardCard (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/trello.ts:483:16)
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/trello.ts:97:34)
+        at Generator.next (<anonymous>)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/trello.ts:8:71
+        at new Promise (<anonymous>)
+  },
+  level: 'error',
+  timestamp: '2022-06-28 13:54:58'
+}
+{
+  message: {
+    updateBoardCardError: TypeError: Cannot read properties of undefined (reading 'display')
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/trello.ts:450:32)
+        at Generator.next (<anonymous>)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/trello.ts:8:71
+        at new Promise (<anonymous>)
+        at __awaiter (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/trello.ts:4:12)
+        at Function.__updateBoardCard (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/trello.ts:483:16)
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/trello.ts:97:34)
+        at Generator.next (<anonymous>)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/trello.ts:8:71
+        at new Promise (<anonymous>)
+  },
+  level: 'error',
+  timestamp: '2022-06-28 13:54:58'
+}
+{
+  message: {
+    updateBoardCardError: TypeError: Cannot read properties of undefined (reading 'display')
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/trello.ts:450:32)
+        at Generator.next (<anonymous>)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/trello.ts:8:71
+        at new Promise (<anonymous>)
+        at __awaiter (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/trello.ts:4:12)
+        at Function.__updateBoardCard (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/trello.ts:483:16)
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/trello.ts:97:34)
+        at Generator.next (<anonymous>)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/trello.ts:8:71
+        at new Promise (<anonymous>)
+  },
+  level: 'error',
+  timestamp: '2022-06-28 13:54:58'
+}
+{
+  message: {
+    updateBoardCardError: TypeError: Cannot read properties of undefined (reading 'display')
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/trello.ts:450:32)
+        at Generator.next (<anonymous>)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/trello.ts:8:71
+        at new Promise (<anonymous>)
+        at __awaiter (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/trello.ts:4:12)
+        at Function.__updateBoardCard (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/trello.ts:483:16)
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/trello.ts:97:34)
+        at Generator.next (<anonymous>)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/trello.ts:8:71
+        at new Promise (<anonymous>)
+  },
+  level: 'error',
+  timestamp: '2022-06-28 13:54:58'
+}
+{
+  message: {
+    updateBoardCardError: TypeError: Cannot read properties of undefined (reading 'display')
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/trello.ts:450:32)
+        at Generator.next (<anonymous>)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/trello.ts:8:71
+        at new Promise (<anonymous>)
+        at __awaiter (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/trello.ts:4:12)
+        at Function.__updateBoardCard (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/trello.ts:483:16)
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/trello.ts:97:34)
+        at Generator.next (<anonymous>)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/trello.ts:8:71
+        at new Promise (<anonymous>)
+  },
+  level: 'error',
+  timestamp: '2022-06-28 13:54:58'
+}
+{
+  message: { webhookCreateResult: 'webhook done' },
+  level: 'info',
+  timestamp: '2022-06-28 13:54:58'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-06-28 14:07:50'
+}
+{
+  message: {
+    updateTaskDBError: MongoServerError: Plan executor error during findAndModify :: caused by :: E11000 duplicate key error collection: TTP.tasks index: attachedFiles.trelloId_1 dup key: { attachedFiles.trelloId: null }
+        at Connection.onMessage (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongodb/src/cmap/connection.ts:440:20)
+        at MessageStream.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongodb/src/cmap/connection.ts:267:56)
+        at MessageStream.emit (node:events:527:28)
+        at MessageStream.emit (node:domain:475:12)
+        at processIncomingData (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongodb/src/cmap/message_stream.ts:168:12)
+        at MessageStream._write (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongodb/src/cmap/message_stream.ts:65:5)
+        at writeOrBuffer (node:internal/streams/writable:389:12)
+        at _write (node:internal/streams/writable:330:10)
+        at MessageStream.Writable.write (node:internal/streams/writable:334:10)
+        at TLSSocket.ondata (node:internal/streams/readable:754:22) {
+      ok: 0,
+      code: 11000,
+      codeName: 'DuplicateKey',
+      keyPattern: { 'attachedFiles.trelloId': 1 },
+      keyValue: { 'attachedFiles.trelloId': null },
+      '$clusterTime': {
+        clusterTime: new Timestamp({ t: 1656418102, i: 1 }),
+        signature: {
+          hash: new Binary(Buffer.from("be92ff6d247481d2acda794dc64823c39f499244", "hex"), 0),
+          keyId: new Long("7057499658175643653")
+        }
+      },
+      operationTime: new Timestamp({ t: 1656418102, i: 1 }),
+      [Symbol(errorLabels)]: Set(0) {}
+    }
+  },
+  level: 'error',
+  timestamp: '2022-06-28 14:08:22'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-06-28 14:17:00'
+}
+{
+  message: {
+    updateTaskDBError: MongoServerError: Plan executor error during findAndModify :: caused by :: E11000 duplicate key error collection: TTP.tasks index: attachedFiles.trelloId_1 dup key: { attachedFiles.trelloId: null }
+        at Connection.onMessage (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongodb/src/cmap/connection.ts:440:20)
+        at MessageStream.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongodb/src/cmap/connection.ts:267:56)
+        at MessageStream.emit (node:events:527:28)
+        at MessageStream.emit (node:domain:475:12)
+        at processIncomingData (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongodb/src/cmap/message_stream.ts:168:12)
+        at MessageStream._write (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongodb/src/cmap/message_stream.ts:65:5)
+        at writeOrBuffer (node:internal/streams/writable:389:12)
+        at _write (node:internal/streams/writable:330:10)
+        at MessageStream.Writable.write (node:internal/streams/writable:334:10)
+        at TLSSocket.ondata (node:internal/streams/readable:754:22) {
+      ok: 0,
+      code: 11000,
+      codeName: 'DuplicateKey',
+      keyPattern: { 'attachedFiles.trelloId': 1 },
+      keyValue: { 'attachedFiles.trelloId': null },
+      '$clusterTime': {
+        clusterTime: new Timestamp({ t: 1656419024, i: 1 }),
+        signature: {
+          hash: new Binary(Buffer.from("bedf928147bc50b19e90d82ecab5647b872ee540", "hex"), 0),
+          keyId: new Long("7057499658175643653")
+        }
+      },
+      operationTime: new Timestamp({ t: 1656419024, i: 1 }),
+      [Symbol(errorLabels)]: Set(0) {}
+    }
+  },
+  level: 'error',
+  timestamp: '2022-06-28 14:23:44'
+}
+{
+  message: {
+    createTaskDBError: MongoServerError: E11000 duplicate key error collection: TTP.tasks index: attachedFiles.trelloId_1 dup key: { attachedFiles.trelloId: null }
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongodb/src/operations/insert.ts:85:25
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongodb/src/cmap/connection_pool.ts:482:13
+        at handleOperationResult (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongodb/src/sdam/server.ts:538:14)
+        at Connection.onMessage (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongodb/src/cmap/connection.ts:452:5)
+        at MessageStream.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongodb/src/cmap/connection.ts:267:56)
+        at MessageStream.emit (node:events:527:28)
+        at MessageStream.emit (node:domain:475:12)
+        at processIncomingData (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongodb/src/cmap/message_stream.ts:168:12)
+        at MessageStream._write (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongodb/src/cmap/message_stream.ts:65:5)
+        at writeOrBuffer (node:internal/streams/writable:389:12) {
+      index: 0,
+      code: 11000,
+      keyPattern: { 'attachedFiles.trelloId': 1 },
+      keyValue: { 'attachedFiles.trelloId': null },
+      [Symbol(errorLabels)]: Set(0) {}
+    }
+  },
+  level: 'error',
+  timestamp: '2022-06-28 14:24:20'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-06-28 14:25:43'
+}
+{
+  message: {
+    createTaskDBError: MongoServerError: E11000 duplicate key error collection: TTP.tasks index: attachedFiles.trelloId_1 dup key: { attachedFiles.trelloId: null }
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongodb/src/operations/insert.ts:85:25
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongodb/src/cmap/connection_pool.ts:482:13
+        at handleOperationResult (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongodb/src/sdam/server.ts:538:14)
+        at Connection.onMessage (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongodb/src/cmap/connection.ts:452:5)
+        at MessageStream.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongodb/src/cmap/connection.ts:267:56)
+        at MessageStream.emit (node:events:527:28)
+        at MessageStream.emit (node:domain:475:12)
+        at processIncomingData (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongodb/src/cmap/message_stream.ts:168:12)
+        at MessageStream._write (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongodb/src/cmap/message_stream.ts:65:5)
+        at writeOrBuffer (node:internal/streams/writable:389:12) {
+      index: 0,
+      code: 11000,
+      keyPattern: { 'attachedFiles.trelloId': 1 },
+      keyValue: { 'attachedFiles.trelloId': null },
+      [Symbol(errorLabels)]: Set(0) {}
+    }
+  },
+  level: 'error',
+  timestamp: '2022-06-28 14:27:43'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-06-28 14:28:10'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-06-28 14:32:41'
+}
+{
+  message: {
+    createTaskDBError: MongoServerError: E11000 duplicate key error collection: TTP.tasks index: attachedFiles.trelloId_1 dup key: { attachedFiles.trelloId: null }
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongodb/src/operations/insert.ts:85:25
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongodb/src/cmap/connection_pool.ts:482:13
+        at handleOperationResult (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongodb/src/sdam/server.ts:538:14)
+        at Connection.onMessage (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongodb/src/cmap/connection.ts:452:5)
+        at MessageStream.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongodb/src/cmap/connection.ts:267:56)
+        at MessageStream.emit (node:events:527:28)
+        at MessageStream.emit (node:domain:475:12)
+        at processIncomingData (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongodb/src/cmap/message_stream.ts:168:12)
+        at MessageStream._write (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongodb/src/cmap/message_stream.ts:65:5)
+        at writeOrBuffer (node:internal/streams/writable:389:12) {
+      index: 0,
+      code: 11000,
+      keyPattern: { 'attachedFiles.trelloId': 1 },
+      keyValue: { 'attachedFiles.trelloId': null },
+      [Symbol(errorLabels)]: Set(0) {}
+    }
+  },
+  level: 'error',
+  timestamp: '2022-06-28 14:33:01'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-06-28 14:35:02'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-06-28 14:35:46'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-06-28 14:42:52'
+}
+{
+  message: {
+    __updateTaskByTrelloDBError: TypeError: task.save is not a function
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/dbCalls/tasks/tasks.ts:306:27)
+        at Generator.next (<anonymous>)
+        at fulfilled (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/dbCalls/tasks/tasks.ts:5:58)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5)
+  },
+  level: 'error',
+  timestamp: '2022-06-28 14:43:51'
+}
+{
+  message: {
+    __updateTaskByTrelloDBError: TypeError: task.save is not a function
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/dbCalls/tasks/tasks.ts:306:27)
+        at Generator.next (<anonymous>)
+        at fulfilled (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/dbCalls/tasks/tasks.ts:5:58)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5)
+  },
+  level: 'error',
+  timestamp: '2022-06-28 14:44:02'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-06-28 14:45:47'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-06-28 14:47:52'
+}
+{
+  message: {
+    updateTaskDBError: MongooseServerSelectionError: Could not connect to any servers in your MongoDB Atlas cluster. One common reason is that you're trying to access the database from an IP that isn't whitelisted. Make sure your current IP address is on your Atlas cluster's IP whitelist: https://docs.atlas.mongodb.com/security-whitelist/
+        at Function.Model.$wrapCallback (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/model.js:5017:32)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/query.js:4732:21
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/helpers/promiseOrCallback.js:32:5
+        at new Promise (<anonymous>)
+        at promiseOrCallback (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/helpers/promiseOrCallback.js:31:10)
+        at model.Query.exec (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/query.js:4731:10)
+        at model.Query.Query.then (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/query.js:4814:15)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+      reason: TopologyDescription {
+        type: 'ReplicaSetNoPrimary',
+        servers: Map(3) {
+          'cluster0-shard-00-00.oeari.mongodb.net:27017' => ServerDescription {
+            _hostAddress: new HostAddress('cluster0-shard-00-00.oeari.mongodb.net:27017'),
+            address: 'cluster0-shard-00-00.oeari.mongodb.net:27017',
+            type: 'Unknown',
+            hosts: [],
+            passives: [],
+            arbiters: [],
+            tags: {},
+            minWireVersion: 0,
+            maxWireVersion: 0,
+            roundTripTime: -1,
+            lastUpdateTime: 4220445,
+            lastWriteDate: 0,
+            topologyVersion: {
+              processId: new ObjectId("62af48789fec636f500e3b5c"),
+              counter: 4
+            },
+            error: MongoNetworkTimeoutError: connection timed out
+                at connectionFailureError (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongodb/src/cmap/connect.ts:498:14)
+                at TLSSocket.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongodb/src/cmap/connect.ts:394:16)
+                at Object.onceWrapper (node:events:641:28)
+                at TLSSocket.emit (node:events:527:28)
+                at TLSSocket.emit (node:domain:475:12)
+                at TLSSocket.Socket._onTimeout (node:net:516:8)
+                at listOnTimeout (node:internal/timers:559:17)
+                at processTimers (node:internal/timers:502:7) {
+              [Symbol(errorLabels)]: Set(0) {}
+            }
+          },
+          'cluster0-shard-00-01.oeari.mongodb.net:27017' => ServerDescription {
+            _hostAddress: new HostAddress('cluster0-shard-00-01.oeari.mongodb.net:27017'),
+            address: 'cluster0-shard-00-01.oeari.mongodb.net:27017',
+            type: 'Unknown',
+            hosts: [],
+            passives: [],
+            arbiters: [],
+            tags: {},
+            minWireVersion: 0,
+            maxWireVersion: 0,
+            roundTripTime: -1,
+            lastUpdateTime: 4219726,
+            lastWriteDate: 0,
+            topologyVersion: {
+              processId: new ObjectId("62af49d2e5516717a96ee4e2"),
+              counter: 3
+            },
+            error: MongoNetworkTimeoutError: connection timed out
+                at connectionFailureError (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongodb/src/cmap/connect.ts:498:14)
+                at TLSSocket.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongodb/src/cmap/connect.ts:394:16)
+                at Object.onceWrapper (node:events:641:28)
+                at TLSSocket.emit (node:events:527:28)
+                at TLSSocket.emit (node:domain:475:12)
+                at TLSSocket.Socket._onTimeout (node:net:516:8)
+                at listOnTimeout (node:internal/timers:559:17)
+                at processTimers (node:internal/timers:502:7) {
+              [Symbol(errorLabels)]: Set(0) {}
+            }
+          },
+          'cluster0-shard-00-02.oeari.mongodb.net:27017' => ServerDescription {
+            _hostAddress: new HostAddress('cluster0-shard-00-02.oeari.mongodb.net:27017'),
+            address: 'cluster0-shard-00-02.oeari.mongodb.net:27017',
+            type: 'Unknown',
+            hosts: [],
+            passives: [],
+            arbiters: [],
+            tags: {},
+            minWireVersion: 0,
+            maxWireVersion: 0,
+            roundTripTime: -1,
+            lastUpdateTime: 4220445,
+            lastWriteDate: 0,
+            topologyVersion: {
+              processId: new ObjectId("62af4926733773295cad08ed"),
+              counter: 6
+            },
+            error: MongoNetworkTimeoutError: connection timed out
+                at connectionFailureError (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongodb/src/cmap/connect.ts:498:14)
+                at TLSSocket.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongodb/src/cmap/connect.ts:394:16)
+                at Object.onceWrapper (node:events:641:28)
+                at TLSSocket.emit (node:events:527:28)
+                at TLSSocket.emit (node:domain:475:12)
+                at TLSSocket.Socket._onTimeout (node:net:516:8)
+                at listOnTimeout (node:internal/timers:559:17)
+                at processTimers (node:internal/timers:502:7) {
+              [Symbol(errorLabels)]: Set(0) {}
+            }
+          }
+        },
+        stale: false,
+        compatible: true,
+        heartbeatFrequencyMS: 10000,
+        localThresholdMS: 15,
+        setName: 'atlas-80ye5b-shard-0',
+        maxSetVersion: 2,
+        maxElectionId: new ObjectId("7fffffff000000000000000d"),
+        commonWireVersion: 13,
+        logicalSessionTimeoutMinutes: undefined
+      },
+      code: undefined
+    }
+  },
+  level: 'error',
+  timestamp: '2022-06-28 14:50:53'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-06-28 15:09:43'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-06-28 15:10:57'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-06-28 15:11:22'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-06-28 15:13:27'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-06-28 15:20:51'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-06-28 15:21:52'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-06-28 15:32:38'
+}
+{
+  message: {
+    deleteAttachmentFileError: FetchError: invalid json response body at https://api.trello.com/1/cards/62baf5e819d0103ea9dc7c3c/attachments/62bafa4b328b392becd56534?key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68 reason: Unexpected token T in JSON at position 0
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/node-fetch/lib/index.js:273:32
+        at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+      type: 'invalid-json'
+    }
+  },
+  level: 'error',
+  timestamp: '2022-06-28 15:32:50'
+}
+{
+  message: {
+    __updateCardError: FetchError: invalid json response body at https://api.trello.com/1/cards/62baf5e819d0103ea9dc7c3c?key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68 reason: Unexpected token T in JSON at position 0
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/node-fetch/lib/index.js:273:32
+        at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+      type: 'invalid-json'
+    }
+  },
+  level: 'error',
+  timestamp: '2022-06-28 15:32:50'
+}
+{
+  message: {
+    deleteAttachmentFileError: FetchError: invalid json response body at https://api.trello.com/1/cards/62baf5e819d0103ea9dc7c3c/attachments/62bafa4c5dffad3de66f25a7?key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68 reason: Unexpected token T in JSON at position 0
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/node-fetch/lib/index.js:273:32
+        at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+      type: 'invalid-json'
+    }
+  },
+  level: 'error',
+  timestamp: '2022-06-28 15:32:50'
+}
+{
+  message: {
+    createAttachmentOnCardError: SyntaxError: Unexpected token T in JSON at position 0
+        at JSON.parse (<anonymous>)
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/trello.ts:211:27)
+        at Generator.next (<anonymous>)
+        at fulfilled (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/trello.ts:5:58)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5)
+  },
+  level: 'error',
+  timestamp: '2022-06-28 15:32:53'
+}
+{
+  message: {
+    createTaskAttachmentError: TypeError: Cannot read properties of undefined (reading 'id')
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:144:28
+        at Array.forEach (<anonymous>)
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:142:23)
+        at Generator.next (<anonymous>)
+        at fulfilled (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/task.ts:5:58)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5)
+  },
+  level: 'error',
+  timestamp: '2022-06-28 15:32:53'
+}
+{
+  message: {
+    updateTaskDBError: TypeError: Cannot read properties of undefined (reading 'id')
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/dbCalls/tasks/tasks.ts:207:21)
+        at Generator.next (<anonymous>)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/dbCalls/tasks/tasks.ts:8:71
+        at new Promise (<anonymous>)
+        at __awaiter (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/dbCalls/tasks/tasks.ts:4:12)
+        at Function.__updateTask (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/dbCalls/tasks/tasks.ts:263:16)
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/dbCalls/tasks/tasks.ts:19:25)
+        at Generator.next (<anonymous>)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/dbCalls/tasks/tasks.ts:8:71
+        at new Promise (<anonymous>)
+  },
+  level: 'error',
+  timestamp: '2022-06-28 15:32:53'
+}
+{
+  message: {
+    deleteAttachmentFileError: FetchError: invalid json response body at https://api.trello.com/1/cards/62bb010a3d85c13206846067/attachments/62bb010a68baa94a81ea1f33?key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68 reason: Unexpected token C in JSON at position 0
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/node-fetch/lib/index.js:273:32
+        at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+      type: 'invalid-json'
+    }
+  },
+  level: 'error',
+  timestamp: '2022-06-28 15:38:37'
+}
+{
+  message: {
+    __updateTaskByTrelloDBError: TypeError: Cannot set properties of null (setting 'name')
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/dbCalls/tasks/tasks.ts:291:16)
+        at Generator.next (<anonymous>)
+        at fulfilled (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/dbCalls/tasks/tasks.ts:5:58)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5)
+  },
+  level: 'error',
+  timestamp: '2022-06-28 15:39:24'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-06-28 15:40:57'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-06-28 15:57:01'
+}
+{
+  message: {
+    removeBoard: 'https://api.trello.com/1/boards/62baec0b2d0b7a73427609b2?response_type=token&key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68'
+  },
+  level: 'info',
+  timestamp: '2022-06-28 15:59:30'
+}
+{
+  message: {
+    'delete Tasks': { acknowledged: true, deletedCount: 1 },
+    'Delete Tech members': 'Delete result is 0 document'
+  },
+  level: 'info',
+  timestamp: '2022-06-28 15:59:33'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-06-28 16:00:11'
+}
+{
+  message: {
+    borderData: Promise { <pending> },
+    createBoardApi: 'https://api.trello.com/1/boards/?name=ngrok server&prefs_background=blue&defaultLists=false&key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68'
+  },
+  level: 'info',
+  timestamp: '2022-06-28 16:00:32'
+}
+{
+  message: { removeWebhookSucced: 'done' },
+  level: 'info',
+  timestamp: '2022-06-28 16:01:18'
+}
+{
+  message: {
+    updateBoardCardError: TypeError: Cannot read properties of undefined (reading 'display')
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/trello.ts:449:32)
+        at Generator.next (<anonymous>)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/trello.ts:8:71
+        at new Promise (<anonymous>)
+        at __awaiter (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/trello.ts:4:12)
+        at Function.__updateBoardCard (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/trello.ts:483:16)
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/trello.ts:97:34)
+        at Generator.next (<anonymous>)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/trello.ts:8:71
+        at new Promise (<anonymous>)
+  },
+  level: 'error',
+  timestamp: '2022-06-28 16:01:19'
+}
+{
+  message: {
+    updateBoardCardError: TypeError: Cannot read properties of undefined (reading 'display')
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/trello.ts:449:32)
+        at Generator.next (<anonymous>)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/trello.ts:8:71
+        at new Promise (<anonymous>)
+        at __awaiter (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/trello.ts:4:12)
+        at Function.__updateBoardCard (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/trello.ts:483:16)
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/trello.ts:97:34)
+        at Generator.next (<anonymous>)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/trello.ts:8:71
+        at new Promise (<anonymous>)
+  },
+  level: 'error',
+  timestamp: '2022-06-28 16:01:19'
+}
+{
+  message: {
+    updateBoardCardError: TypeError: Cannot read properties of undefined (reading 'display')
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/trello.ts:449:32)
+        at Generator.next (<anonymous>)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/trello.ts:8:71
+        at new Promise (<anonymous>)
+        at __awaiter (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/trello.ts:4:12)
+        at Function.__updateBoardCard (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/trello.ts:483:16)
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/trello.ts:97:34)
+        at Generator.next (<anonymous>)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/trello.ts:8:71
+        at new Promise (<anonymous>)
+  },
+  level: 'error',
+  timestamp: '2022-06-28 16:01:19'
+}
+{
+  message: {
+    updateBoardCardError: TypeError: Cannot read properties of undefined (reading 'display')
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/trello.ts:449:32)
+        at Generator.next (<anonymous>)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/trello.ts:8:71
+        at new Promise (<anonymous>)
+        at __awaiter (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/trello.ts:4:12)
+        at Function.__updateBoardCard (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/trello.ts:483:16)
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/trello.ts:97:34)
+        at Generator.next (<anonymous>)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/trello.ts:8:71
+        at new Promise (<anonymous>)
+  },
+  level: 'error',
+  timestamp: '2022-06-28 16:01:19'
+}
+{
+  message: {
+    updateBoardCardError: TypeError: Cannot read properties of undefined (reading 'display')
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/trello.ts:449:32)
+        at Generator.next (<anonymous>)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/trello.ts:8:71
+        at new Promise (<anonymous>)
+        at __awaiter (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/trello.ts:4:12)
+        at Function.__updateBoardCard (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/trello.ts:483:16)
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/trello.ts:97:34)
+        at Generator.next (<anonymous>)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/trello.ts:8:71
+        at new Promise (<anonymous>)
+  },
+  level: 'error',
+  timestamp: '2022-06-28 16:01:20'
+}
+{
+  message: {
+    updateBoardCardError: TypeError: Cannot read properties of undefined (reading 'display')
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/trello.ts:449:32)
+        at Generator.next (<anonymous>)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/trello.ts:8:71
+        at new Promise (<anonymous>)
+        at __awaiter (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/trello.ts:4:12)
+        at Function.__updateBoardCard (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/trello.ts:483:16)
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/trello.ts:97:34)
+        at Generator.next (<anonymous>)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/trello.ts:8:71
+        at new Promise (<anonymous>)
+  },
+  level: 'error',
+  timestamp: '2022-06-28 16:01:20'
+}
+{
+  message: {
+    updateBoardCardError: TypeError: Cannot read properties of undefined (reading 'display')
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/trello.ts:449:32)
+        at Generator.next (<anonymous>)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/trello.ts:8:71
+        at new Promise (<anonymous>)
+        at __awaiter (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/trello.ts:4:12)
+        at Function.__updateBoardCard (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/trello.ts:483:16)
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/trello.ts:97:34)
+        at Generator.next (<anonymous>)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/trello.ts:8:71
+        at new Promise (<anonymous>)
+  },
+  level: 'error',
+  timestamp: '2022-06-28 16:01:20'
+}
+{
+  message: { webhookCreateResult: 'webhook done' },
+  level: 'info',
+  timestamp: '2022-06-28 16:01:21'
+}
+{
+  message: {
+    __updateTaskByTrelloDBError: TypeError: Cannot set properties of null (setting 'name')
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/dbCalls/tasks/tasks.ts:291:16)
+        at Generator.next (<anonymous>)
+        at fulfilled (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/dbCalls/tasks/tasks.ts:5:58)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5)
+  },
+  level: 'error',
+  timestamp: '2022-06-28 16:01:53'
+}

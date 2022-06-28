@@ -4,6 +4,8 @@ import logger from "../../../logger";
 import { localize } from "../../utils/msgLocalize";
 import BoardController from "../../controllers/trello";
 import { webhookUpdateInterface } from "../../types/controller/Tasks";
+import { updateTaskQueue } from "../../background/taskQueue";
+import { TaskInfo } from "../../types/model/tasks";
 
 const BoardReq = class BoardReq extends BoardController {
   static async handleGetBoards(req: Request, res: Response) {
@@ -22,9 +24,12 @@ const BoardReq = class BoardReq extends BoardController {
 
   static async handleWebhookUpdateCard(req: Request, res: Response) {
     try {
-      let trelloData: webhookUpdateInterface = req.body;
-      let task: any = await super.webhookUpdate(trelloData);
-      return res.status(200).send(task);
+      updateTaskQueue.push(async (cb) => {
+        let trelloData: webhookUpdateInterface = req.body;
+        let task = await super.webhookUpdate(trelloData);
+        return res.status(200).send(task);
+      });
+      await updateTaskQueue.start();
     } catch (error) {
       logger.error({ handleWebhookUpdateCardError: error });
     }

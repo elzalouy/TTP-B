@@ -9,6 +9,7 @@ import { AttachmentSchema, TaskData, TaskInfo } from "../types/model/tasks";
 import { webhookUpdateInterface } from "../types/controller/Tasks";
 
 export const TaskQueue = queue({ results: [] });
+export const updateTaskQueue = queue({ results: [] });
 export function moveTaskJob(listId: string, cardId: string, status: string) {
   var task: TaskInfo;
   TaskQueue.push(async (cb) => {

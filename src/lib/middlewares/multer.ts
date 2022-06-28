@@ -36,7 +36,7 @@ export default function () {
   });
   const upload = multer({
     storage: storage,
-    limits: { fileSize: 1000000 },
+    limits: { fileSize: 10000000 },
     fileFilter: (req, file: Express.Multer.File, cb: FileFilterCallback) => {
       if (Mime.includes(file.mimetype.toLowerCase())) {
         cb(null, true);

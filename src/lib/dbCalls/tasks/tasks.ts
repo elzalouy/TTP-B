@@ -70,10 +70,9 @@ class TaskDB {
   static async __getTask(id: string) {
     try {
       let task = await Tasks.findOne({ _id: id });
-      console.log(task, id);
       return task;
     } catch (error) {
-      logger.error({ updateTaskDBError: error });
+      logger.error({ getTaskDBError: error });
     }
   }
   static async __getTaskDepartment(depId: string) {
@@ -153,7 +152,7 @@ class TaskDB {
 
       return tasks;
     } catch (error) {
-      logger.error({ updateTaskDBError: error });
+      logger.error({ getTasksByIdDBError: error });
     }
   }
   static async __deleteTasksWhereDB(data: TaskData) {
@@ -170,7 +169,7 @@ class TaskDB {
       let tasks = await Tasks.find(data).lean();
       return tasks;
     } catch (error) {
-      logger.error({ updateTaskDBError: error });
+      logger.error({ getTaskDBError: error });
     }
   }
   static async __deleteTasksByProjectId(id: String) {
@@ -207,25 +206,37 @@ class TaskDB {
     try {
       let id = data.id;
       delete data.id;
-      console.log("task data", data);
-      let task = await Tasks.findOne({ _id: id });
+      let task = await Tasks.findOne({ _id: id }).lean();
       if (!task) return taskNotFoundError;
+
+      task.name = data.name ? data.name : task.name;
+      task.description = data.description ? data.description : task.description;
+      task.deadline = data.deadline ? data.deadline : task.deadline;
+      task.categoryId = data.categoryId
+        ? new mongoose.Types.ObjectId(data.categoryId)
+        : task.categoryId;
+      task.subCategoryId = data.subCategoryId
+        ? new mongoose.Types.ObjectId(data.subCategoryId)
+        : task.subCategoryId;
+      task.status = data.status ? data.status : task.status;
+      task.cardId = data.cardId ? data.cardId : task.cardId;
+      task.boardId = data.boardId ? data.boardId : task.boardId;
+      task.listId = data.listId ? data.listId : task.listId;
+
       if (data?.attachedFiles?.length > 0) {
-        data.attachedFiles =
-          task?.attachedFiles?.length > 0
-            ? [...task.attachedFiles, ...data.attachedFiles]
-            : [...data.attachedFiles];
-      } else data.attachedFiles = task.attachedFiles;
-      if (data?.deleteFiles && [...data?.deleteFiles].length > 0) {
-        data.attachedFiles = data.attachedFiles.filter(
+        task.attachedFiles = [...task.attachedFiles, ...data?.attachedFiles];
+      }
+      if ([...data?.deleteFiles].length > 0) {
+        task.attachedFiles = task.attachedFiles.filter(
           (item) =>
             [...data.deleteFiles].findIndex(
-              (file) => file.trelloId === item.trelloId
+              (file) => item._id.toString() === file._id
             ) < 0
         );
       }
       delete data?.deleteFiles;
-      let update = await Tasks.findByIdAndUpdate(id, data, {
+      delete task._id;
+      let update = await Tasks.findByIdAndUpdate(id, task, {
         lean: true,
         new: true,
       });
@@ -276,17 +287,27 @@ class TaskDB {
   }
   static async __updateTaskByTrelloDB(data: TaskData) {
     try {
-      let attachments = data?.attachedFiles ? data.attachedFiles : [];
-      delete data.attachedFiles;
-      let task = await Tasks.findOneAndUpdate(
-        { cardId: data.cardId },
-        { $set: data, $push: { attachedFiles: attachments } },
-        {
-          new: true,
-          lean: true,
-        }
-      );
-      return task;
+      let task = await Tasks.findOne({ cardId: data.cardId });
+      task.name = data?.name ? data?.name : task.name;
+      task.status = data?.status ? data.status : task.status;
+      task.listId = data?.listId ? data.listId : task.listId;
+      task.cardId = data?.cardId ? data.cardId : task.cardId;
+      task.boardId = data?.boardId ? data.boardId : task.boardId;
+      task.description = data?.description
+        ? data.description
+        : task.description;
+      task.lastMove = data?.lastMove ? data.lastMove : task.lastMoveDate;
+      task.lastMoveDate = data?.lastMoveDate
+        ? data.lastMoveDate
+        : task.lastMoveDate;
+      if (data.attachedFiles) {
+        task.attachedFiles = _.uniqBy(
+          [...task.attachedFiles, ...data.attachedFiles],
+          "trelloId"
+        );
+        console.log("new latest", task.attachedFiles);
+      }
+      return await task.save();
     } catch (error) {
       logger.error({ __updateTaskByTrelloDBError: error });
     }
@@ -315,7 +336,6 @@ class TaskDB {
     try {
       let taskData =
         archive === true ? { listId: null, status: "Archived" } : data;
-      console.log(taskData);
       let archiveTask = await Tasks.findOneAndUpdate(
         { cardId: data.cardId },
         taskData,

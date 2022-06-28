@@ -86,6 +86,7 @@ class TaskController extends TaskDB {
 
   static async __updateTaskData(data: TaskData, files: Express.Multer.File[]) {
     try {
+      console.log("updae task data", data);
       if (!data.cardId) return provideCardIdError;
       // recieve data
       // call a background job for updating the trello card data.
@@ -116,7 +117,13 @@ class TaskController extends TaskDB {
       logger.error({ updateTaskError: error });
     }
   }
-  // todo add one static function for handling create attachment
+  /**
+   * createTaskAttachment
+   * it should be fired inside of a async background job with the webhook
+   * @param files to be uploaded
+   * @param data to be changes
+   * @returns update task
+   */
   static async __createTaskAttachment(
     files: Express.Multer.File[],
     data: TaskData
@@ -130,6 +137,7 @@ class TaskController extends TaskDB {
           );
         });
         let attachedFiles = await Promise.all(newAttachments);
+        console.log("attached files", attachedFiles);
         data.attachedFiles = [];
         attachedFiles.forEach((item) => {
           data.attachedFiles.push({
@@ -150,29 +158,11 @@ class TaskController extends TaskDB {
     try {
       let createdCard: { id: string } | any =
         await BoardController.createCardInList(data.listId, data.name);
+
       if (createdCard) {
         data.cardId = createdCard.id;
-        let attachment: AttachmentResponse;
-        let newAttachments: AttachmentSchema[] = [];
-        if (files) {
-          await Promise.all(
-            files.map(async (file) => {
-              attachment = await BoardController.createAttachmentOnCard(
-                createdCard.id,
-                file
-              );
-              newAttachments.push({
-                name: attachment.fileName,
-                mimeType: attachment.mimeType,
-                trelloId: attachment.id,
-                url: attachment.url,
-              });
-              data.attachedFiles = newAttachments;
-            })
-          );
-        }
+        data = await TaskController.__createTaskAttachment(files, data);
       } else throw "Error while creating Card in Trello";
-      deleteAll();
       let task = await super.createTaskDB(data);
       createTaskFromBoardJob(task);
       TaskQueue.start();
