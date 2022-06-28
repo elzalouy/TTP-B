@@ -71,14 +71,12 @@ export function moveTaskJob(listId: string, cardId: string, status: string) {
 export const moveTaskNotificationJob = (data: webhookUpdateInterface) => {
   TaskQueue.push(async (cb) => {
     try {
+      let to = data.action.data?.listAfter?.name;
       // if task status update to shared send notification
-      console.log(data);
       if (
         data.action.display.translationKey ===
-          "action_move_card_from_list_to_list" &&
-        data.action.data?.listAfter?.name === "Shared"
+        "action_move_card_from_list_to_list"
       ) {
-        console.log("action_move_card_from_list_to_list: Shared");
         let targetTask = await TaskDB.getOneTaskBy({
           cardId: data.action.data.card.id,
         });
@@ -88,21 +86,22 @@ export const moveTaskNotificationJob = (data: webhookUpdateInterface) => {
         let userName: string =
           data?.action?.display?.entities?.memberCreator?.username;
         let cardName: string = data?.action?.data.card.name;
-
-        let createNotifi = await NotificationController.createNotification({
-          title: `${cardName} status has been changed to Shared`,
-          description: `${cardName} status has been changed to shared by ${userName}`,
-          projectManagerID: projectData.projectManager,
-          projectID: targetTask.projectId,
-          adminUserID: projectData.adminId,
-        });
-        // send notification to all the admin
-        io.to("admin-room").emit("notification-update", createNotifi);
-        // send notification to specific project manager
-        io.to(`user-${projectData.projectManager}`).emit(
-          "notification-update",
-          createNotifi
-        );
+        if (to === "Shared" || to === "Not Clear") {
+          let createNotifi = await NotificationController.createNotification({
+            title: `${cardName} status has been changed to ${to}`,
+            description: `${cardName} status has been changed to ${to} by ${userName}`,
+            projectManagerID: projectData.projectManager,
+            projectID: targetTask.projectId,
+            adminUserID: projectData.adminId,
+          });
+          // send notification to all the admin
+          io.to("admin-room").emit("notification-update", createNotifi);
+          // send notification to specific project manager
+          io.to(`user-${projectData.projectManager}`).emit(
+            "notification-update",
+            createNotifi
+          );
+        }
       }
     } catch (error: any) {
       cb(new Error(error), null);
