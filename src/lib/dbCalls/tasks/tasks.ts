@@ -175,6 +175,7 @@ class TaskDB {
   static async __deleteTasksByProjectId(id: String) {
     try {
       let deleteResult = await Tasks.deleteMany({ projectId: id });
+
       return deleteResult;
     } catch (error) {
       logger.error({ deleteTasksByProject: error });
@@ -304,7 +305,6 @@ class TaskDB {
           [...task.attachedFiles, ...data.attachedFiles],
           "trelloId"
         );
-        console.log("new latest", task.attachedFiles);
       }
       return await task.save();
     } catch (error) {

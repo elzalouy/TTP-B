@@ -86,7 +86,6 @@ class TaskController extends TaskDB {
 
   static async __updateTaskData(data: TaskData, files: Express.Multer.File[]) {
     try {
-      console.log("updae task data", data);
       if (!data.cardId) return provideCardIdError;
       // recieve data
       // call a background job for updating the trello card data.
@@ -158,7 +157,6 @@ class TaskController extends TaskDB {
     try {
       let createdCard: { id: string } | any =
         await BoardController.createCardInList(data.listId, data.name);
-
       if (createdCard) {
         data.cardId = createdCard.id;
         data = await TaskController.__createTaskAttachment(files, data);
