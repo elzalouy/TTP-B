@@ -391,3 +391,71 @@
   level: 'error',
   timestamp: '2022-06-27 19:51:37'
 }
+{
+  message: {
+    downloadAttachment: SyntaxError: Unexpected token T in JSON at position 0
+        at JSON.parse (<anonymous>)
+        at Function.<anonymous> (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\src\lib\controllers\trello.ts:403:25)
+        at Generator.next (<anonymous>)
+        at fulfilled (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\src\lib\controllers\trello.ts:5:58)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5)
+  },
+  level: 'error',
+  timestamp: '2022-06-28 16:26:24'
+}
+{
+  message: {
+    downloadAttachment: SyntaxError: Unexpected token T in JSON at position 0
+        at JSON.parse (<anonymous>)
+        at Function.<anonymous> (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\src\lib\controllers\trello.ts:403:25)
+        at Generator.next (<anonymous>)
+        at fulfilled (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\src\lib\controllers\trello.ts:5:58)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5)
+  },
+  level: 'error',
+  timestamp: '2022-06-28 16:26:35'
+}
+{
+  message: {
+    downloadAttachment: SyntaxError: Unexpected token i in JSON at position 0
+        at JSON.parse (<anonymous>)
+        at Function.<anonymous> (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\src\lib\controllers\trello.ts:402:25)
+        at Generator.next (<anonymous>)
+        at fulfilled (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\src\lib\controllers\trello.ts:5:58)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5)
+  },
+  level: 'error',
+  timestamp: '2022-06-28 16:32:44'
+}
+{
+  message: { deleteTaskError: 'Task not existed' },
+  level: 'error',
+  timestamp: '2022-06-28 16:51:41'
+}
+{
+  message: {
+    handleDeleteTasksError: TypeError: Cannot read properties of undefined (reading '_id')
+        at C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\src\lib\presentation\task\task.ts:109:24
+        at Generator.next (<anonymous>)
+        at fulfilled (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\src\lib\presentation\task\task.ts:5:58)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5)
+  },
+  level: 'error',
+  timestamp: '2022-06-28 16:51:41'
+}
+{
+  message: { deleteTaskError: 'Task not existed' },
+  level: 'error',
+  timestamp: '2022-06-28 16:51:48'
+}
+{
+  message: {
+    handleDeleteTasksError: TypeError: Cannot read properties of undefined (reading '_id')
+        at C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\src\lib\presentation\task\task.ts:109:24
+        at Generator.next (<anonymous>)
+        at fulfilled (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\src\lib\presentation\task\task.ts:5:58)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5)
+  },
+  level: 'error',
+  timestamp: '2022-06-28 16:51:48'
+}
