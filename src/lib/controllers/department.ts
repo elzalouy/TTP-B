@@ -48,6 +48,7 @@ const DepartmentController = class DepartmentController extends DepartmentBD {
           return teamId.push(team.idInTrello);
         });
       }
+      
       let listTrelloIds = [
         myDepartment?.canceldListId,
         myDepartment?.defaultListId,
@@ -68,7 +69,6 @@ const DepartmentController = class DepartmentController extends DepartmentBD {
           logger.info({ removeWebhookSucced: "done" })
         );
       }
-      logger.info({ boardId: myDepartment?.boardId, myDepartment });
       await BoardController.deleteBoard(myDepartment?.boardId);
       let deleteDepartment = await super.deleteDepartmentDB(_id);
       if (deleteDepartment?._id) {

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 {
   message: {
     createWebHookError: FetchError: request to https://api.trello.com/1//webhooks/?callbackURL=https://ed77-217-55-164-98.ngrok.io/api/webhookUpdate&idModel=62b9c261e9d33213541c19ad&key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68 failed, reason: read ECONNRESET
@@ -459,3 +460,5 @@
   level: 'error',
   timestamp: '2022-06-28 16:51:48'
 }
+=======
+>>>>>>> f69ba73b53806161be12e7c5bbbf4c7c1fb09883

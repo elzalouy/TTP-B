@@ -8,6 +8,7 @@ import {
   taskResponse,
   webhookUpdateInterface,
 } from "../../types/controller/Tasks";
+import { updateTaskQueue } from "../../background/taskQueue";
 
 const TaskReq = class TaskReq extends TaskController {
   static async handleCreateCard(req: Request, res: Response) {
@@ -30,20 +31,23 @@ const TaskReq = class TaskReq extends TaskController {
 
   static async handleUpdateCard(req: Request, res: Response) {
     try {
-      let TaskData: any = req.body;
-      if (TaskData.teamId === "" || TaskData.teamId === null)
-        TaskData.teamId = null;
-      let files = req.files;
-      let validate = editTaskSchema.validate(TaskData);
-      if (validate.error)
-        return res.status(400).send(validate.error.details[0]);
-      let task: taskResponse = await super.updateTask(TaskData, files);
-      if (task && task?.error) res.status(400).send(task.error);
-      if (task?.task?._id) {
-        return res.send(task.task);
-      } else {
-        return res.status(400).send(customeError("update_task_error", 400));
-      }
+      updateTaskQueue.push(async (cb) => {
+        let TaskData: any = req.body;
+        if (TaskData.teamId === "" || TaskData.teamId === null)
+          TaskData.teamId = null;
+        let files = req.files;
+        let validate = editTaskSchema.validate(TaskData);
+        if (validate.error)
+          return res.status(400).send(validate.error.details[0]);
+        let task: taskResponse = await super.updateTask(TaskData, files);
+        if (task && task?.error) res.status(400).send(task.error);
+        if (task?.task?._id) {
+          return res.send(task.task);
+        } else {
+          return res.status(400).send(customeError("update_task_error", 400));
+        }
+      });
+      updateTaskQueue.start();
     } catch (error) {
       logger.error({ handleUpdateCardError: error });
     }

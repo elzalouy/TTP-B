@@ -210,9 +210,6 @@ class BoardController {
         .then(async (response) => {
           Response = JSON.parse(await response.text());
         })
-        .then((json: any) => {
-          return json;
-        })
         .catch((err) => {
           throw err;
         });
@@ -425,7 +422,6 @@ class BoardController {
       let response = await fetch(api, params)
         .then(async (res) => {
           let result: updateCardResponse = await res.json();
-          console.log("update card result", result);
           return result;
         })
         .catch((err) => {
@@ -436,6 +432,7 @@ class BoardController {
       logger.error({ __updateCardError: error });
     }
   }
+
   /**
    * updateBoardCard
    *
@@ -450,7 +447,6 @@ class BoardController {
    */
   static async __updateBoardCard(data: webhookUpdateInterface) {
     try {
-      console.log(data.action.data);
       let type = data.action?.type;
       let action = data.action.display.translationKey;
       let task: TaskData = {
@@ -460,6 +456,7 @@ class BoardController {
         boardId: data.action.data.board.id,
         cardId: data.action.data.card?.id,
       };
+
       // create
       // if (type === "createCard") {
       //   task.listId = data.action.data.list.id;
@@ -469,7 +466,6 @@ class BoardController {
       // }
 
       //update
-      console.log(action);
       if (type === "updateCard" && action !== "action_archived_card") {
         if (action === "action_changed_description_of_card")
           task.description = data.action.data.card?.desc;
@@ -498,7 +494,7 @@ class BoardController {
           },
         ];
         let result = await TaskController.updateTaskByTrelloDB(task);
-        io?.sockets?.emit("update-task", result);
+        io.sockets.emit("update-task", result);
       }
       // archive, unArchive or delete
       if (type === "updateCard" && action === "action_archived_card") {

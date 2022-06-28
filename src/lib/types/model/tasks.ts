@@ -19,8 +19,8 @@ export interface TaskInfo extends Document {
   cardId?: string;
   boardId?: string;
   description?: string;
-  lastMove?: string;
-  lastMoveDate?: string;
+  lastMove?: string | String;
+  lastMoveDate?: string | String;
 }
 export interface TasksStatistics {
   id?: ObjectId;
@@ -51,7 +51,7 @@ export interface TaskData {
   boardId?: string;
   file?: object;
   description?: string;
-  lastMove?: String;
+  lastMove?: string;
   lastMoveDate?: String;
   // edit task files only
   deleteFiles?: AttachmentSchema[] | any;

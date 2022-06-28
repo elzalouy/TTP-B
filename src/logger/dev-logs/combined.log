@@ -3,28 +3,21 @@
     db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
   },
   level: 'info',
-  timestamp: '2022-06-26 17:59:57'
+  timestamp: '2022-06-28 17:01:49'
 }
 {
   message: {
     db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
   },
   level: 'info',
-  timestamp: '2022-06-26 18:00:58'
+  timestamp: '2022-06-28 17:02:54'
 }
 {
   message: {
     db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
   },
   level: 'info',
-  timestamp: '2022-06-27 14:49:27'
-}
-{
-  message: {
-    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
-  },
-  level: 'info',
-  timestamp: '2022-06-27 17:25:54'
+  timestamp: '2022-06-28 17:03:54'
 }
 {
   message: {
@@ -870,6 +863,7 @@
 }
 {
   message: {
+<<<<<<< HEAD
     downloadAttachment: SyntaxError: Unexpected token T in JSON at position 0
         at JSON.parse (<anonymous>)
         at Function.<anonymous> (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\src\lib\controllers\trello.ts:403:25)
@@ -891,12 +885,19 @@
   },
   level: 'error',
   timestamp: '2022-06-28 16:26:35'
+=======
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-06-28 17:04:49'
+>>>>>>> f69ba73b53806161be12e7c5bbbf4c7c1fb09883
 }
 {
   message: {
     db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
   },
   level: 'info',
+<<<<<<< HEAD
   timestamp: '2022-06-28 16:32:26'
 }
 {
@@ -910,12 +911,16 @@
   },
   level: 'error',
   timestamp: '2022-06-28 16:32:44'
+=======
+  timestamp: '2022-06-28 17:05:44'
+>>>>>>> f69ba73b53806161be12e7c5bbbf4c7c1fb09883
 }
 {
   message: {
     db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
   },
   level: 'info',
+<<<<<<< HEAD
   timestamp: '2022-06-28 16:33:48'
 }
 {
@@ -956,4 +961,57 @@
   },
   level: 'error',
   timestamp: '2022-06-28 16:51:48'
+=======
+  timestamp: '2022-06-28 17:12:51'
+}
+{
+  message: { notificationData: { _id: '62746010736e8ea96f53ea54', role: 'OM' } },
+  level: 'info',
+  timestamp: '2022-06-28 17:17:42'
+}
+{
+  message: {
+    data: { id: '62746010736e8ea96f53ea54', skip: '0', limit: undefined }
+  },
+  level: 'info',
+  timestamp: '2022-06-28 17:17:42'
+}
+{
+  message: {
+    Notification: {
+      acknowledged: true,
+      modifiedCount: 50,
+      upsertedId: null,
+      upsertedCount: 0,
+      matchedCount: 50
+    }
+  },
+  level: 'info',
+  timestamp: '2022-06-28 17:17:42'
+}
+{
+  message: { notificationData: { _id: '62746010736e8ea96f53ea54', role: 'OM' } },
+  level: 'info',
+  timestamp: '2022-06-28 17:17:51'
+}
+{
+  message: {
+    data: { id: '62746010736e8ea96f53ea54', skip: '0', limit: undefined }
+  },
+  level: 'info',
+  timestamp: '2022-06-28 17:17:51'
+}
+{
+  message: {
+    Notification: {
+      acknowledged: true,
+      modifiedCount: 52,
+      upsertedId: null,
+      upsertedCount: 0,
+      matchedCount: 52
+    }
+  },
+  level: 'info',
+  timestamp: '2022-06-28 17:17:52'
+>>>>>>> f69ba73b53806161be12e7c5bbbf4c7c1fb09883
 }

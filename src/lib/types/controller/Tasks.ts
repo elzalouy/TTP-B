@@ -45,7 +45,7 @@ export interface webhookUpdateInterface {
     date: string;
     limits: any;
     display: {
-      translationKey: string; // like "action_move_card_from_list_to_list";
+      translationKey: string; // like "action_move_card_from_list_to_list" "";
       entities: any;
     };
     memberCreator: {
