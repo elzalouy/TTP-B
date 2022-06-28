@@ -1593,3 +1593,176 @@
   level: 'error',
   timestamp: '2022-06-28 21:00:23'
 }
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-06-28 21:01:51'
+}
+{
+  message: {
+    removeBoard: 'https://api.trello.com/1/boards/62bb4962f14943222f4f4078?response_type=token&key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68'
+  },
+  level: 'info',
+  timestamp: '2022-06-28 21:02:28'
+}
+{
+  message: {
+    'delete Tasks': { acknowledged: true, deletedCount: 0 },
+    'Delete Tech members': 'Delete result is 0 document'
+  },
+  level: 'info',
+  timestamp: '2022-06-28 21:02:30'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-06-28 21:03:46'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-06-28 21:04:46'
+}
+{
+  message: {
+    downloadAttachment: SyntaxError: Unexpected token i in JSON at position 0
+        at JSON.parse (<anonymous>)
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/trello.ts:410:25)
+        at Generator.next (<anonymous>)
+        at fulfilled (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/trello.ts:5:58)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5)
+  },
+  level: 'error',
+  timestamp: '2022-06-28 21:10:30'
+}
+{
+  message: {
+    downloadAttachment: SyntaxError: Unexpected token i in JSON at position 0
+        at JSON.parse (<anonymous>)
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/trello.ts:410:25)
+        at Generator.next (<anonymous>)
+        at fulfilled (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/trello.ts:5:58)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5)
+  },
+  level: 'error',
+  timestamp: '2022-06-28 21:11:32'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-06-28 21:16:39'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-06-28 21:18:15'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-06-28 21:18:44'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-06-28 21:22:57'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-06-28 21:30:07'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-06-28 21:30:41'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-06-28 21:31:20'
+}
+{
+  message: {
+    downloadAttachment: SyntaxError: Unexpected token i in JSON at position 0
+        at JSON.parse (<anonymous>)
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/trello.ts:412:25)
+        at Generator.next (<anonymous>)
+        at fulfilled (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/trello.ts:5:58)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5)
+  },
+  level: 'error',
+  timestamp: '2022-06-28 21:31:53'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-06-28 21:33:39'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-06-28 21:34:02'
+}
+{
+  message: {
+    downloadAttachment: SyntaxError: Unexpected token i in JSON at position 0
+        at JSON.parse (<anonymous>)
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/trello.ts:412:25)
+        at Generator.next (<anonymous>)
+        at fulfilled (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/trello.ts:5:58)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5)
+  },
+  level: 'error',
+  timestamp: '2022-06-28 21:34:18'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-06-28 21:35:03'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-06-28 21:35:59'
+}
+{
+  message: {
+    downloadAttachment: SyntaxError: Unexpected token i in JSON at position 0
+        at JSON.parse (<anonymous>)
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/trello.ts:412:25)
+        at Generator.next (<anonymous>)
+        at fulfilled (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/trello.ts:5:58)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5)
+  },
+  level: 'error',
+  timestamp: '2022-06-28 21:36:24'
+}

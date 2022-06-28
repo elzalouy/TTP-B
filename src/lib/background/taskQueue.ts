@@ -5,7 +5,12 @@ import NotificationController from "../controllers/notification";
 import ProjectDB from "../dbCalls/project/project";
 import TaskDB from "../dbCalls/tasks/tasks";
 import { io } from "../../index";
-import { AttachmentSchema, TaskData, TaskInfo } from "../types/model/tasks";
+import {
+  AttachmentResponse,
+  AttachmentSchema,
+  TaskData,
+  TaskInfo,
+} from "../types/model/tasks";
 import { webhookUpdateInterface } from "../types/controller/Tasks";
 
 export const TaskQueue = queue({ results: [] });
@@ -141,6 +146,28 @@ export const deleteTaskFromBoardJob = (data: TaskInfo) => {
       cb(null, data);
     } catch (error) {
       logger.ercror({ deleteCardDataError: error });
+    }
+  });
+};
+export const updateTaskAttachmentsJob = (task: TaskData) => {
+  TaskQueue.push(async (cb) => {
+    try {
+      let attachments: AttachmentResponse[] =
+        await BoardController.__getCardAttachments(task.cardId);
+      let newfiles = attachments.map((item) => {
+        let file: AttachmentSchema = {
+          trelloId: item.id,
+          mimeType: item.mimeType,
+          name: item.name,
+          url: item.url,
+        };
+        return file;
+      });
+      console.log("change task files to,", newfiles);
+      let Task = await TaskDB.__updateTaskAttachments(task, newfiles);
+      io.sockets.emit("update-task", Task);
+    } catch (error) {
+      logger.ercror({ updateTaskAttachmentsError: error });
     }
   });
 };

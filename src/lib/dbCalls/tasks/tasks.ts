@@ -1,4 +1,5 @@
 import {
+  AttachmentResponse,
   AttachmentSchema,
   TaskInfo,
   TasksStatistics,
@@ -243,6 +244,23 @@ class TaskDB {
       return { error: null, task: update };
     } catch (error) {
       logger.error({ updateTaskDBError: error });
+    }
+  }
+  static async __updateTaskAttachments(
+    data: TaskData,
+    attachments: AttachmentSchema[]
+  ) {
+    try {
+      let task = await Tasks.findOneAndUpdate(
+        data,
+        {
+          $set: { attachedFiles: attachments },
+        },
+        { new: true, lean: true }
+      );
+      return task;
+    } catch (error) {
+      logger.error({ updateAttachmentsDBError: error });
     }
   }
   static async __createTask(data: TaskData) {

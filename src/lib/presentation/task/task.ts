@@ -8,7 +8,11 @@ import {
   taskResponse,
   webhookUpdateInterface,
 } from "../../types/controller/Tasks";
-import { updateTaskQueue } from "../../background/taskQueue";
+import {
+  TaskQueue,
+  updateTaskAttachmentsJob,
+  updateTaskQueue,
+} from "../../background/taskQueue";
 import BoardController from "../../controllers/trello";
 
 const TaskReq = class TaskReq extends TaskController {
@@ -125,7 +129,10 @@ const TaskReq = class TaskReq extends TaskController {
       if (cardId && attachmentId) {
         let result = await super.downloadAttachment(cardId, attachmentId);
         console.log(result);
-        await BoardController.__getCardAttachments(cardId);
+        if (result === undefined) {
+          updateTaskAttachmentsJob({ cardId: cardId });
+          TaskQueue.start();
+        }
         if (result) return res.send(result);
         return res.status(400).send("Bad Request for downlaoding this file");
       } else

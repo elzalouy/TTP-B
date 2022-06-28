@@ -20,3 +20,63 @@
   level: 'error',
   timestamp: '2022-06-28 21:00:23'
 }
+{
+  message: {
+    downloadAttachment: SyntaxError: Unexpected token i in JSON at position 0
+        at JSON.parse (<anonymous>)
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/trello.ts:410:25)
+        at Generator.next (<anonymous>)
+        at fulfilled (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/trello.ts:5:58)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5)
+  },
+  level: 'error',
+  timestamp: '2022-06-28 21:10:30'
+}
+{
+  message: {
+    downloadAttachment: SyntaxError: Unexpected token i in JSON at position 0
+        at JSON.parse (<anonymous>)
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/trello.ts:410:25)
+        at Generator.next (<anonymous>)
+        at fulfilled (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/trello.ts:5:58)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5)
+  },
+  level: 'error',
+  timestamp: '2022-06-28 21:11:32'
+}
+{
+  message: {
+    downloadAttachment: SyntaxError: Unexpected token i in JSON at position 0
+        at JSON.parse (<anonymous>)
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/trello.ts:412:25)
+        at Generator.next (<anonymous>)
+        at fulfilled (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/trello.ts:5:58)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5)
+  },
+  level: 'error',
+  timestamp: '2022-06-28 21:31:53'
+}
+{
+  message: {
+    downloadAttachment: SyntaxError: Unexpected token i in JSON at position 0
+        at JSON.parse (<anonymous>)
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/trello.ts:412:25)
+        at Generator.next (<anonymous>)
+        at fulfilled (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/trello.ts:5:58)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5)
+  },
+  level: 'error',
+  timestamp: '2022-06-28 21:34:18'
+}
+{
+  message: {
+    downloadAttachment: SyntaxError: Unexpected token i in JSON at position 0
+        at JSON.parse (<anonymous>)
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/trello.ts:412:25)
+        at Generator.next (<anonymous>)
+        at fulfilled (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/trello.ts:5:58)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5)
+  },
+  level: 'error',
+  timestamp: '2022-06-28 21:36:24'
+}

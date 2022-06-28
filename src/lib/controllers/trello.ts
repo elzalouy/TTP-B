@@ -218,6 +218,7 @@ class BoardController {
       logger.error({ createAttachmentOnCardError: error });
     }
   }
+
   static async __deleteAtachment(cardId: string, attachmentId: string) {
     try {
       let endpoint = trelloApi(`cards/${cardId}/attachments/${attachmentId}?`);
@@ -246,8 +247,6 @@ class BoardController {
           Accept: "application/json",
         },
       });
-      if (cardResult.status !== 200 && cardResult.status !== 201) {
-      }
       return cardResult.json();
     } catch (error) {
       logger.error({ createCardInListError: error });
@@ -270,9 +269,14 @@ class BoardController {
   static async __getCardAttachments(cardId: string) {
     try {
       let api = trelloApi(`cards/${cardId}/attachments?`);
-      let result = await fetch(api);
-      console.log(result);
-    } catch (error) {}
+      let Response: AttachmentResponse[];
+      await fetch(api).then(async (data) => {
+        Response = JSON.parse(await data.text());
+      });
+      return Response;
+    } catch (error) {
+      logger.error({ getAttachmentsError: error });
+    }
   }
   static async __addWebHook(idModel: string) {
     try {
