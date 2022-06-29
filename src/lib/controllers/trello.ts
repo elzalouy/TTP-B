@@ -400,7 +400,6 @@ class BoardController {
       let api = trelloApi(
         `cards/${cardId}/attachments/${attachmentId}?fields=url&`
       );
-      console.log(api);
       let Response: any = null;
       await fetch(api, {
         method: "GET",
@@ -410,7 +409,6 @@ class BoardController {
         },
       }).then(async (response) => {
         Response = JSON.parse(await response.text());
-        console.log(Response);
       });
       return Response;
     } catch (error) {
