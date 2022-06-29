@@ -87,7 +87,6 @@ const ProjectController = class ProjectController extends ProjectDB {
   static async __createNewProject(data: ProjectData) {
     try {
       let project = await super.createProjectDB(data);
-
       let createNotifi = await NotificationController.createNotification({
         title: `${data.projectManagerName} project has been assigend to you`,
         description: `${data.name} has been assigend to you by ${data.adminName}`,
