@@ -84,7 +84,7 @@ export const createOneJob = (
         defaultListId = defaultList.id;
 
         // // create list and webhook for the team
-        let teamListIds: { idInTrello: string; idInDB: any }[] =
+        let teamListIds: { idInTrello: string; idInDB: any; name: string }[] =
           await DepartmentController.__createTeamWebhookAndList(
             teams,
             department.boardId,

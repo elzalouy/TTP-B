@@ -47,15 +47,6 @@ const sendMail = (data) => __awaiter(void 0, void 0, void 0, function* () {
             to: data.email,
             subject: `${data.subject}`,
             html: htmlToSend,
-            attachments: [{
-                    filename: 'Logo.png',
-                    path: __dirname + '/template/assets/images/Logo.png',
-                    cid: 'logo'
-                }, {
-                    filename: 'lock.jpg',
-                    path: __dirname + '/template/assets/images/lock.jpg',
-                    cid: 'lock'
-                }],
             auth: {
                 user: process.env.EMAIL_ADDRESS,
                 refreshToken: process.env.REFRESH_TOKEN,

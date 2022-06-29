@@ -50,14 +50,15 @@ const TechMemberReq = class TechMemberReq extends TechMemberController {
     }
   }
 
-
   static async handleDeleteTechMember(req: Request, res: Response) {
     try {
       let members = await super.deleteTechMemberDB(req.query);
       if (members) {
         return res.status(200).send(members);
       } else {
-        return res.status(400).send(customeError("tech_member_delete_error", 400));
+        return res
+          .status(400)
+          .send(customeError("tech_member_delete_error", 400));
       }
     } catch (error) {
       logger.error({ handleGetBoards: error });

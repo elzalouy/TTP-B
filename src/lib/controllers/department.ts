@@ -48,7 +48,7 @@ const DepartmentController = class DepartmentController extends DepartmentBD {
           return teamId.push(team.idInTrello);
         });
       }
-      
+
       let listTrelloIds = [
         myDepartment?.canceldListId,
         myDepartment?.defaultListId,
@@ -183,7 +183,7 @@ const DepartmentController = class DepartmentController extends DepartmentBD {
           color: data.color,
           boardId: boardData.id,
           mainBoard: data.mainBoard,
-          boardURL:boardData.url
+          boardURL: boardData.url,
         });
         createOneJob(departmentResult, data.teams);
         DepartmentQueue.start();
@@ -228,7 +228,7 @@ const DepartmentController = class DepartmentController extends DepartmentBD {
     mainBoard: boolean
   ) {
     try {
-      let teamListIds: { idInTrello: string; idInDB: any }[] = [];
+      let teamListIds: { idInTrello: string; idInDB: any; name: string }[] = [];
       if (teams) {
         let teamsList = teams.map(async (team) => {
           let teamData: { id: string } = await BoardController.addListToBoard(
@@ -239,6 +239,7 @@ const DepartmentController = class DepartmentController extends DepartmentBD {
           return teamListIds.push({
             idInTrello: teamData.id,
             idInDB: team._id,
+            name: team.name,
           });
         });
 

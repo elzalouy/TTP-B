@@ -46,7 +46,7 @@ export function moveTaskJob(listId: string, cardId: string, status: string) {
   TaskQueue.push(async (cb) => {
     try {
       // if task status update to shared send notification
-      if (status === "Shared") {
+      if (status === "Shared" || status === "Not Clear") {
         console.log("action_move_card_from_list_to_list: Shared");
         let targetTask = task;
         let projectData = await ProjectDB.__getProject({
@@ -54,12 +54,13 @@ export function moveTaskJob(listId: string, cardId: string, status: string) {
         });
         let cardName: string = targetTask.name;
         let createNotifi = await NotificationController.createNotification({
-          title: `${cardName} status has been changed to Shared`,
-          description: `${cardName} status has been changed to shared`,
+          title: `${cardName} status has been changed to ${status}`,
+          description: `${cardName} status has been changed to ${status}`,
           projectManagerID: projectData.projectManager,
           projectID: targetTask.projectId,
           adminUserID: projectData.adminId,
         });
+        console.log("notifiaction move task to shared");
         io.to("admin-room").emit("notification-update", createNotifi);
         io.to(`user-${projectData.projectManager}`).emit(
           "notification-update",

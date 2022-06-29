@@ -436,7 +436,6 @@ class BoardController {
         return __awaiter(this, void 0, void 0, function* () {
             try {
                 let api = (0, trelloApi_1.trelloApi)(`cards/${cardId}/attachments/${attachmentId}?fields=url&`);
-                console.log(api);
                 let Response = null;
                 yield (0, node_fetch_1.default)(api, {
                     method: "GET",
@@ -446,7 +445,6 @@ class BoardController {
                     },
                 }).then((response) => __awaiter(this, void 0, void 0, function* () {
                     Response = JSON.parse(yield response.text());
-                    console.log(Response);
                 }));
                 return Response;
             }
