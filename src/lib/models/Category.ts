@@ -6,7 +6,7 @@ const CategorySchema: Schema = new Schema<Category>(
     category: {
       type: String,
       required: true,
-      unique: true,
+      unique: false,
     },
     isDeleted: {
       type: Boolean,
