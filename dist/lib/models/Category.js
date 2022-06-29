@@ -5,7 +5,7 @@ const CategorySchema = new mongoose_1.Schema({
     category: {
         type: String,
         required: true,
-        unique: true,
+        unique: false,
     },
     isDeleted: {
         type: Boolean,
