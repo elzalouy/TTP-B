@@ -14,6 +14,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 Object.defineProperty(exports, "__esModule", { value: true });
 const logger_1 = __importDefault(require("../../../logger"));
 const task_1 = __importDefault(require("../../models/task"));
+const lodash_1 = __importDefault(require("lodash"));
 const mongoose_1 = __importDefault(require("mongoose"));
 const Tasks_1 = require("../../types/controller/Tasks");
 class TaskDB {
@@ -102,11 +103,10 @@ class TaskDB {
         return __awaiter(this, void 0, void 0, function* () {
             try {
                 let task = yield task_1.default.findOne({ _id: id });
-                console.log(task, id);
                 return task;
             }
             catch (error) {
-                logger_1.default.error({ updateTaskDBError: error });
+                logger_1.default.error({ getTaskDBError: error });
             }
         });
     }
@@ -164,10 +164,11 @@ class TaskDB {
         return __awaiter(this, void 0, void 0, function* () {
             try {
                 let task = yield task_1.default.findOne(data);
-                task.lastMove = task.status;
-                task.lastMoveDate = new Date().toUTCString();
-                yield task.updateOne(value);
-                let result = yield task.save();
+                let newdata = Object.assign(Object.assign({}, value), { lastMove: task.status, lastMoveDate: data.lastMoveDate });
+                let result = yield task_1.default.findOneAndUpdate(data, newdata, {
+                    new: true,
+                    lean: true,
+                });
                 return result;
             }
             catch (error) {
@@ -192,7 +193,7 @@ class TaskDB {
                 return tasks;
             }
             catch (error) {
-                logger_1.default.error({ updateTaskDBError: error });
+                logger_1.default.error({ getTasksByIdDBError: error });
             }
         });
     }
@@ -216,7 +217,7 @@ class TaskDB {
                 return tasks;
             }
             catch (error) {
-                logger_1.default.error({ updateTaskDBError: error });
+                logger_1.default.error({ getTaskDBError: error });
             }
         });
     }
@@ -259,28 +260,36 @@ class TaskDB {
         });
     }
     static __updateTask(data) {
-        var _a, _b;
+        var _a;
         return __awaiter(this, void 0, void 0, function* () {
             try {
                 let id = data.id;
                 delete data.id;
-                console.log("task data", data);
-                let task = yield task_1.default.findOne({ _id: id });
+                let task = yield task_1.default.findOne({ _id: id }).lean();
                 if (!task)
                     return Tasks_1.taskNotFoundError;
+                task.name = data.name ? data.name : task.name;
+                task.description = data.description ? data.description : task.description;
+                task.deadline = data.deadline ? data.deadline : task.deadline;
+                task.categoryId = data.categoryId
+                    ? new mongoose_1.default.Types.ObjectId(data.categoryId)
+                    : task.categoryId;
+                task.subCategoryId = data.subCategoryId
+                    ? new mongoose_1.default.Types.ObjectId(data.subCategoryId)
+                    : task.subCategoryId;
+                task.status = data.status ? data.status : task.status;
+                task.cardId = data.cardId ? data.cardId : task.cardId;
+                task.boardId = data.boardId ? data.boardId : task.boardId;
+                task.listId = data.listId ? data.listId : task.listId;
                 if (((_a = data === null || data === void 0 ? void 0 : data.attachedFiles) === null || _a === void 0 ? void 0 : _a.length) > 0) {
-                    data.attachedFiles =
-                        ((_b = task === null || task === void 0 ? void 0 : task.attachedFiles) === null || _b === void 0 ? void 0 : _b.length) > 0
-                            ? [...task.attachedFiles, ...data.attachedFiles]
-                            : [...data.attachedFiles];
+                    task.attachedFiles = [...task.attachedFiles, ...data === null || data === void 0 ? void 0 : data.attachedFiles];
                 }
-                else
-                    data.attachedFiles = task.attachedFiles;
-                if ((data === null || data === void 0 ? void 0 : data.deleteFiles) && [...data === null || data === void 0 ? void 0 : data.deleteFiles].length > 0) {
-                    data.attachedFiles = data.attachedFiles.filter((item) => [...data.deleteFiles].findIndex((file) => file.trelloId === item.trelloId) < 0);
+                if ([...data === null || data === void 0 ? void 0 : data.deleteFiles].length > 0) {
+                    task.attachedFiles = task.attachedFiles.filter((item) => [...data.deleteFiles].findIndex((file) => item._id.toString() === file._id) < 0);
                 }
                 data === null || data === void 0 ? true : delete data.deleteFiles;
-                let update = yield task_1.default.findByIdAndUpdate(id, data, {
+                delete task._id;
+                let update = yield task_1.default.findByIdAndUpdate(id, task, {
                     lean: true,
                     new: true,
                 });
@@ -291,9 +300,23 @@ class TaskDB {
             }
         });
     }
+    static __updateTaskAttachments(data, attachments) {
+        return __awaiter(this, void 0, void 0, function* () {
+            try {
+                let task = yield task_1.default.findOneAndUpdate(data, {
+                    $set: { attachedFiles: attachments },
+                }, { new: true, lean: true });
+                return task;
+            }
+            catch (error) {
+                logger_1.default.error({ updateAttachmentsDBError: error });
+            }
+        });
+    }
     static __createTask(data) {
         return __awaiter(this, void 0, void 0, function* () {
             try {
+                console.log("data from db", data);
                 let task = new task_1.default(data);
                 task = yield task.save();
                 return task;
@@ -342,13 +365,23 @@ class TaskDB {
     static __updateTaskByTrelloDB(data) {
         return __awaiter(this, void 0, void 0, function* () {
             try {
-                let attachments = (data === null || data === void 0 ? void 0 : data.attachedFiles) ? data.attachedFiles : [];
-                delete data.attachedFiles;
-                let task = yield task_1.default.findOneAndUpdate({ cardId: data.cardId }, { $set: data, $push: { attachedFiles: attachments } }, {
-                    new: true,
-                    lean: true,
-                });
-                return task;
+                let task = yield task_1.default.findOne({ cardId: data.cardId });
+                task.name = (data === null || data === void 0 ? void 0 : data.name) ? data === null || data === void 0 ? void 0 : data.name : task.name;
+                task.status = (data === null || data === void 0 ? void 0 : data.status) ? data.status : task.status;
+                task.listId = (data === null || data === void 0 ? void 0 : data.listId) ? data.listId : task.listId;
+                task.cardId = (data === null || data === void 0 ? void 0 : data.cardId) ? data.cardId : task.cardId;
+                task.boardId = (data === null || data === void 0 ? void 0 : data.boardId) ? data.boardId : task.boardId;
+                task.description = (data === null || data === void 0 ? void 0 : data.description)
+                    ? data.description
+                    : task.description;
+                task.lastMove = (data === null || data === void 0 ? void 0 : data.lastMove) ? data.lastMove : task.lastMoveDate;
+                task.lastMoveDate = (data === null || data === void 0 ? void 0 : data.lastMoveDate)
+                    ? data.lastMoveDate
+                    : task.lastMoveDate;
+                if (data.attachedFiles) {
+                    task.attachedFiles = lodash_1.default.uniqBy([...task.attachedFiles, ...data.attachedFiles], "trelloId");
+                }
+                return yield task.save();
             }
             catch (error) {
                 logger_1.default.error({ __updateTaskByTrelloDBError: error });
@@ -386,7 +419,6 @@ class TaskDB {
         return __awaiter(this, void 0, void 0, function* () {
             try {
                 let taskData = archive === true ? { listId: null, status: "Archived" } : data;
-                console.log(taskData);
                 let archiveTask = yield task_1.default.findOneAndUpdate({ cardId: data.cardId }, taskData, { new: true, lean: true });
                 return archiveTask;
             }

@@ -80,3 +80,95 @@
   level: 'error',
   timestamp: '2022-06-28 21:36:24'
 }
+{
+  message: {
+    createCategoryDBError: MongoServerError: E11000 duplicate key error collection: TTP.categories index: category_1 dup key: { category: "Testing" }
+        at C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\mongodb\lib\operations\insert.js:53:33
+        at C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\mongodb\lib\cmap\connection_pool.js:273:25
+        at handleOperationResult (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\mongodb\lib\sdam\server.js:327:20)
+        at Connection.onMessage (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\mongodb\lib\cmap\connection.js:215:9)
+        at MessageStream.<anonymous> (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\mongodb\lib\cmap\connection.js:63:60)
+        at MessageStream.emit (node:events:527:28)
+        at MessageStream.emit (node:domain:475:12)
+        at processIncomingData (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\mongodb\lib\cmap\message_stream.js:108:16)
+        at MessageStream._write (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\mongodb\lib\cmap\message_stream.js:28:9)
+        at writeOrBuffer (node:internal/streams/writable:389:12) {
+      index: 0,
+      code: 11000,
+      keyPattern: { category: 1 },
+      keyValue: { category: 'Testing' },
+      [Symbol(errorLabels)]: Set(0) {}
+    }
+  },
+  level: 'error',
+  timestamp: '2022-06-29 02:58:44'
+}
+{
+  message: {
+    createCategoryDBError: MongoServerError: E11000 duplicate key error collection: TTP.categories index: category_1 dup key: { category: "Testing" }
+        at C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\mongodb\lib\operations\insert.js:53:33
+        at C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\mongodb\lib\cmap\connection_pool.js:273:25
+        at handleOperationResult (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\mongodb\lib\sdam\server.js:327:20)
+        at Connection.onMessage (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\mongodb\lib\cmap\connection.js:215:9)
+        at MessageStream.<anonymous> (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\mongodb\lib\cmap\connection.js:63:60)
+        at MessageStream.emit (node:events:527:28)
+        at MessageStream.emit (node:domain:475:12)
+        at processIncomingData (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\mongodb\lib\cmap\message_stream.js:108:16)
+        at MessageStream._write (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\mongodb\lib\cmap\message_stream.js:28:9)
+        at writeOrBuffer (node:internal/streams/writable:389:12) {
+      index: 0,
+      code: 11000,
+      keyPattern: { category: 1 },
+      keyValue: { category: 'Testing' },
+      [Symbol(errorLabels)]: Set(0) {}
+    }
+  },
+  level: 'error',
+  timestamp: '2022-06-29 03:10:16'
+}
+{
+  message: {
+    createCategoryDBError: MongoServerError: E11000 duplicate key error collection: TTP.categories index: category_1 dup key: { category: "Testing" }
+        at C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\mongodb\lib\operations\insert.js:53:33
+        at C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\mongodb\lib\cmap\connection_pool.js:273:25
+        at handleOperationResult (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\mongodb\lib\sdam\server.js:327:20)
+        at Connection.onMessage (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\mongodb\lib\cmap\connection.js:215:9)
+        at MessageStream.<anonymous> (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\mongodb\lib\cmap\connection.js:63:60)
+        at MessageStream.emit (node:events:527:28)
+        at MessageStream.emit (node:domain:475:12)
+        at processIncomingData (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\mongodb\lib\cmap\message_stream.js:108:16)
+        at MessageStream._write (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\mongodb\lib\cmap\message_stream.js:28:9)
+        at writeOrBuffer (node:internal/streams/writable:389:12) {
+      index: 0,
+      code: 11000,
+      keyPattern: { category: 1 },
+      keyValue: { category: 'Testing' },
+      [Symbol(errorLabels)]: Set(0) {}
+    }
+  },
+  level: 'error',
+  timestamp: '2022-06-29 03:13:12'
+}
+{
+  message: {
+    createCategoryDBError: MongoServerError: E11000 duplicate key error collection: TTP.categories index: category_1 dup key: { category: "Testing" }
+        at C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\mongodb\src\operations\insert.ts:85:25
+        at C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\mongodb\src\cmap\connection_pool.ts:482:13
+        at handleOperationResult (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\mongodb\src\sdam\server.ts:538:14)
+        at Connection.onMessage (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\mongodb\src\cmap\connection.ts:452:5)
+        at MessageStream.<anonymous> (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\mongodb\src\cmap\connection.ts:267:56)
+        at MessageStream.emit (node:events:527:28)
+        at MessageStream.emit (node:domain:475:12)
+        at processIncomingData (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\mongodb\src\cmap\message_stream.ts:168:12)
+        at MessageStream._write (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\mongodb\src\cmap\message_stream.ts:65:5)
+        at writeOrBuffer (node:internal/streams/writable:389:12) {
+      index: 0,
+      code: 11000,
+      keyPattern: { category: 1 },
+      keyValue: { category: 'Testing' },
+      [Symbol(errorLabels)]: Set(0) {}
+    }
+  },
+  level: 'error',
+  timestamp: '2022-06-29 03:14:11'
+}

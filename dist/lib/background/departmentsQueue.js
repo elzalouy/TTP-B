@@ -17,7 +17,7 @@ const queue_1 = __importDefault(require("queue"));
 const logger_1 = __importDefault(require("../../logger"));
 const trello_1 = __importDefault(require("../controllers/trello"));
 const department_1 = __importDefault(require("../controllers/department"));
-const server_1 = require("../server");
+const index_1 = require("../../index");
 exports.DepartmentQueue = (0, queue_1.default)({ results: [] });
 /**
  * CreateOne
@@ -30,6 +30,7 @@ exports.DepartmentQueue = (0, queue_1.default)({ results: [] });
  */
 const createOneJob = (department, teams) => {
     exports.DepartmentQueue.push((cb) => __awaiter(void 0, void 0, void 0, function* () {
+        var _a, _b;
         try {
             // b- create department based the on created board id
             if (department._id) {
@@ -85,12 +86,12 @@ const createOneJob = (department, teams) => {
                 };
                 let result = yield department_1.default.__createTeamList(teams, department._id, data);
                 if (!department || !result) {
-                    server_1.io.sockets.emit("new department error", { id: department._id });
+                    (_a = index_1.io === null || index_1.io === void 0 ? void 0 : index_1.io.sockets) === null || _a === void 0 ? void 0 : _a.emit("new-department-error", { id: department._id });
                     yield trello_1.default.deleteBoard(department.boardId);
                     yield department_1.default.deleteDepartment(department._id);
                     yield cb(new Error("Board was not created"), null);
                 }
-                server_1.io.sockets.emit("new department", result);
+                (_b = index_1.io === null || index_1.io === void 0 ? void 0 : index_1.io.sockets) === null || _b === void 0 ? void 0 : _b.emit("new-department", result);
                 cb(null, result);
             }
         }

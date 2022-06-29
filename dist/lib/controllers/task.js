@@ -16,7 +16,6 @@ const logger_1 = __importDefault(require("../../logger"));
 const tasks_1 = __importDefault(require("../dbCalls/tasks/tasks"));
 const trello_1 = __importDefault(require("./trello"));
 const upload_1 = require("../services/upload");
-const department_1 = __importDefault(require("../dbCalls/department/department"));
 const taskQueue_1 = require("../background/taskQueue");
 const Tasks_1 = require("../types/controller/Tasks");
 class TaskController extends tasks_1.default {
@@ -83,17 +82,6 @@ class TaskController extends tasks_1.default {
     static __moveTaskOnTrello(cardId, listId, status, list) {
         return __awaiter(this, void 0, void 0, function* () {
             try {
-                let data = yield tasks_1.default.__getOneTaskBy({ cardId: cardId });
-                if (!data)
-                    return { error: "Task", message: "Task Not Existed" };
-                let depFilter = {};
-                depFilter[list] = listId;
-                let department = yield department_1.default.__getOneDepartmentBy(depFilter);
-                if (!department)
-                    return {
-                        error: "Department",
-                        message: "Department with this list was not found",
-                    };
                 (0, taskQueue_1.moveTaskJob)(listId, cardId, status);
                 taskQueue_1.TaskQueue.start();
                 return { data: `Task with cardId ${cardId} has moved to list ${list}` };
@@ -143,15 +131,22 @@ class TaskController extends tasks_1.default {
             }
         });
     }
-    // todo add one static function for handling create attachment
+    /**
+     * createTaskAttachment
+     * it should be fired inside of a async background job with the webhook
+     * @param files to be uploaded
+     * @param data to be changes
+     * @returns update task
+     */
     static __createTaskAttachment(files, data) {
         return __awaiter(this, void 0, void 0, function* () {
             try {
-                if (files) {
+                if (files && files.length > 0) {
                     let newAttachments = yield files.map((file) => __awaiter(this, void 0, void 0, function* () {
                         return yield trello_1.default.createAttachmentOnCard(data.cardId, file);
                     }));
                     let attachedFiles = yield Promise.all(newAttachments);
+                    console.log("attached files", attachedFiles);
                     data.attachedFiles = [];
                     attachedFiles.forEach((item) => {
                         data.attachedFiles.push({
@@ -164,6 +159,7 @@ class TaskController extends tasks_1.default {
                 }
                 else
                     delete data.attachedFiles;
+                (0, upload_1.deleteAll)();
                 return data;
             }
             catch (error) {
@@ -180,24 +176,17 @@ class TaskController extends tasks_1.default {
                 let createdCard = yield trello_1.default.createCardInList(data.listId, data.name);
                 if (createdCard) {
                     data.cardId = createdCard.id;
-                    let attachment;
-                    let newAttachments = [];
-                    if (files) {
-                        yield Promise.all(files.map((file) => __awaiter(this, void 0, void 0, function* () {
-                            attachment = yield trello_1.default.createAttachmentOnCard(createdCard.id, file);
-                            newAttachments.push({
-                                name: attachment.fileName,
-                                mimeType: attachment.mimeType,
-                                trelloId: attachment.id,
-                                url: attachment.url,
-                            });
-                            data.attachedFiles = newAttachments;
-                        })));
-                    }
+                    if (files.length > 0)
+                        data = yield TaskController.__createTaskAttachment(files, data);
+                    else
+                        data.attachedFiles = [];
                 }
                 else
                     throw "Error while creating Card in Trello";
-                return yield _super.createTaskDB.call(this, data);
+                let task = yield _super.createTaskDB.call(this, data);
+                (0, taskQueue_1.createTaskFromBoardJob)(task);
+                taskQueue_1.TaskQueue.start();
+                return task;
             }
             catch (error) {
                 logger_1.default.error({ getTeamsError: error });
@@ -283,6 +272,8 @@ class TaskController extends tasks_1.default {
             try {
                 let task = yield _super.getTaskDB.call(this, id);
                 if (task) {
+                    (0, taskQueue_1.deleteTaskFromBoardJob)(task);
+                    taskQueue_1.TaskQueue.start();
                     yield trello_1.default.deleteCard(task === null || task === void 0 ? void 0 : task.cardId);
                     return yield _super.deleteTaskDB.call(this, id);
                 }
@@ -301,6 +292,7 @@ class TaskController extends tasks_1.default {
             }
             catch (error) {
                 logger_1.default.error({ downloadAttachmentError: error });
+                return { error: "FileError", status: 400 };
             }
         });
     }

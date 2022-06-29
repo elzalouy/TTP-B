@@ -83,7 +83,6 @@ const DepartmentController = class DepartmentController extends department_1.def
                     }));
                     Promise.all(hookRemove).then((res) => logger_1.default.info({ removeWebhookSucced: "done" }));
                 }
-                logger_1.default.info({ boardId: myDepartment === null || myDepartment === void 0 ? void 0 : myDepartment.boardId, myDepartment });
                 yield trello_1.default.deleteBoard(myDepartment === null || myDepartment === void 0 ? void 0 : myDepartment.boardId);
                 let deleteDepartment = yield _super.deleteDepartmentDB.call(this, _id);
                 if (deleteDepartment === null || deleteDepartment === void 0 ? void 0 : deleteDepartment._id) {
@@ -190,6 +189,7 @@ const DepartmentController = class DepartmentController extends department_1.def
                         color: data.color,
                         boardId: boardData.id,
                         mainBoard: data.mainBoard,
+                        boardURL: boardData.url
                     });
                     (0, departmentsQueue_1.createOneJob)(departmentResult, data.teams);
                     departmentsQueue_1.DepartmentQueue.start();

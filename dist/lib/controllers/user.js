@@ -17,7 +17,7 @@ const validation_1 = require("./../utils/validation");
 const logger_1 = __importDefault(require("../../logger"));
 const user_1 = __importDefault(require("../dbCalls/user/user"));
 const errorUtils_1 = require("../utils/errorUtils");
-const mail_1 = __importDefault(require("../services/mail"));
+const mail_1 = __importDefault(require("../services/mail/mail"));
 const UserController = class UserController extends user_1.default {
     static addUser(data) {
         return __awaiter(this, void 0, void 0, function* () {
@@ -72,7 +72,7 @@ const UserController = class UserController extends user_1.default {
                     subject: "This is a reminder to set a New Password for your TTP account",
                     token: token,
                     path: "newPassword",
-                    body: "Please set your new password using this link to start using your account",
+                    body: "Set your new password",
                 });
             }
             catch (error) {
@@ -235,7 +235,7 @@ const UserController = class UserController extends user_1.default {
                 // }
                 let newUser = yield _super.createUser.call(this, Object.assign({}, data /* password: passwordHash  */));
                 let token = yield (0, auth_1.createJwtToken)(newUser._id.toString());
-                yield (0, mail_1.default)({
+                (0, mail_1.default)({
                     email: email,
                     subject: "Update Password",
                     token: token,

@@ -12,18 +12,21 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.updateCardJob = exports.webhookUpdateMoveTaskJob = exports.moveTaskJob = exports.TaskQueue = void 0;
+exports.updateTaskAttachmentsJob = exports.deleteTaskFromBoardJob = exports.createTaskFromBoardJob = exports.updateCardJob = exports.moveTaskNotificationJob = exports.moveTaskJob = exports.updateTaskQueue = exports.TaskQueue = void 0;
 const queue_1 = __importDefault(require("queue"));
 const logger_1 = __importDefault(require("../../logger"));
 const trello_1 = __importDefault(require("../controllers/trello"));
 const notification_1 = __importDefault(require("../controllers/notification"));
 const project_1 = __importDefault(require("../dbCalls/project/project"));
 const tasks_1 = __importDefault(require("../dbCalls/tasks/tasks"));
-const server_1 = require("../server");
+const index_1 = require("../../index");
 exports.TaskQueue = (0, queue_1.default)({ results: [] });
+exports.updateTaskQueue = (0, queue_1.default)({ results: [] });
 function moveTaskJob(listId, cardId, status) {
+    var task;
     exports.TaskQueue.push((cb) => __awaiter(this, void 0, void 0, function* () {
         try {
+            exports.TaskQueue.start();
             const result = yield trello_1.default.moveTaskToDiffList(cardId, listId);
             cb(null, { message: "move in trello" });
         }
@@ -33,58 +36,75 @@ function moveTaskJob(listId, cardId, status) {
     }));
     exports.TaskQueue.push((cb) => __awaiter(this, void 0, void 0, function* () {
         try {
-            let task = yield tasks_1.default.updateTaskStatus({
+            task = yield tasks_1.default.updateTaskStatus({
                 cardId: cardId,
             }, {
                 status: status,
                 listId: listId,
             });
+            index_1.io.sockets.emit("update-task", task);
             cb(null, task);
         }
         catch (error) {
             cb(new Error(error), null);
         }
     }));
+    exports.TaskQueue.push((cb) => __awaiter(this, void 0, void 0, function* () {
+        try {
+            // if task status update to shared send notification
+            if (status === "Shared") {
+                console.log("action_move_card_from_list_to_list: Shared");
+                let targetTask = task;
+                let projectData = yield project_1.default.__getProject({
+                    _id: targetTask.projectId,
+                });
+                let cardName = targetTask.name;
+                let createNotifi = yield notification_1.default.createNotification({
+                    title: `${cardName} status has been changed to Shared`,
+                    description: `${cardName} status has been changed to shared`,
+                    projectManagerID: projectData.projectManager,
+                    projectID: targetTask.projectId,
+                    adminUserID: projectData.adminId,
+                });
+                index_1.io.to("admin-room").emit("notification-update", createNotifi);
+                index_1.io.to(`user-${projectData.projectManager}`).emit("notification-update", createNotifi);
+            }
+        }
+        catch (error) {
+            cb(new Error(error), null);
+            logger_1.default.ercror({ webHookUpdateMoveTaskJobError: error });
+        }
+    }));
 }
 exports.moveTaskJob = moveTaskJob;
-const webhookUpdateMoveTaskJob = (data) => {
+const moveTaskNotificationJob = (data) => {
     exports.TaskQueue.push((cb) => __awaiter(void 0, void 0, void 0, function* () {
-        var _a, _b, _c, _d, _e, _f, _g, _h, _j, _k, _l, _m, _o, _p, _q, _r, _s, _t, _u, _v;
+        var _a, _b, _c, _d, _e, _f, _g;
         try {
-            const targetList = [
-                "Tasks Board",
-                "Done",
-                "Shared",
-                "Review",
-                "Not Clear",
-                "Cancled",
-                "inProgress",
-            ];
-            let targetTask;
-            if (targetList.includes((_d = (_c = (_b = (_a = data === null || data === void 0 ? void 0 : data.action) === null || _a === void 0 ? void 0 : _a.display) === null || _b === void 0 ? void 0 : _b.entities) === null || _c === void 0 ? void 0 : _c.listAfter) === null || _d === void 0 ? void 0 : _d.text)) {
-                targetTask = yield tasks_1.default.updateTaskStatus({
-                    cardId: data.action.display.entities.card.id,
-                }, {
-                    status: (_h = (_g = (_f = (_e = data === null || data === void 0 ? void 0 : data.action) === null || _e === void 0 ? void 0 : _e.display) === null || _f === void 0 ? void 0 : _f.entities) === null || _g === void 0 ? void 0 : _g.listAfter) === null || _h === void 0 ? void 0 : _h.text,
+            let to = (_b = (_a = data.action.data) === null || _a === void 0 ? void 0 : _a.listAfter) === null || _b === void 0 ? void 0 : _b.name;
+            // if task status update to shared send notification
+            if (data.action.display.translationKey ===
+                "action_move_card_from_list_to_list") {
+                let targetTask = yield tasks_1.default.getOneTaskBy({
+                    cardId: data.action.data.card.id,
                 });
-                // if task status update to shared send notification
-                if (((_m = (_l = (_k = (_j = data === null || data === void 0 ? void 0 : data.action) === null || _j === void 0 ? void 0 : _j.display) === null || _k === void 0 ? void 0 : _k.entities) === null || _l === void 0 ? void 0 : _l.listAfter) === null || _m === void 0 ? void 0 : _m.text) === "Shared") {
-                    let projectData = yield project_1.default.getProjectDB({
-                        _id: targetTask.projectId,
-                    });
-                    let userName = (_r = (_q = (_p = (_o = data === null || data === void 0 ? void 0 : data.action) === null || _o === void 0 ? void 0 : _o.display) === null || _p === void 0 ? void 0 : _p.entities) === null || _q === void 0 ? void 0 : _q.memberCreator) === null || _r === void 0 ? void 0 : _r.username;
-                    let cardName = (_v = (_u = (_t = (_s = data === null || data === void 0 ? void 0 : data.action) === null || _s === void 0 ? void 0 : _s.display) === null || _t === void 0 ? void 0 : _t.entities) === null || _u === void 0 ? void 0 : _u.card) === null || _v === void 0 ? void 0 : _v.text;
+                let projectData = yield project_1.default.__getProject({
+                    _id: targetTask.projectId,
+                });
+                let userName = (_f = (_e = (_d = (_c = data === null || data === void 0 ? void 0 : data.action) === null || _c === void 0 ? void 0 : _c.display) === null || _d === void 0 ? void 0 : _d.entities) === null || _e === void 0 ? void 0 : _e.memberCreator) === null || _f === void 0 ? void 0 : _f.username;
+                let cardName = (_g = data === null || data === void 0 ? void 0 : data.action) === null || _g === void 0 ? void 0 : _g.data.card.name;
+                if (to === "Shared" || to === "Not Clear") {
                     let createNotifi = yield notification_1.default.createNotification({
-                        title: `${cardName} status has been changed to Shared`,
-                        description: `${cardName} status has been changed to shared by ${userName}`,
+                        title: `${cardName} status has been changed to ${to}`,
+                        description: `${cardName} status has been changed to ${to} by ${userName}`,
                         projectManagerID: projectData.projectManager,
                         projectID: targetTask.projectId,
                         adminUserID: projectData.adminId,
                     });
                     // send notification to all the admin
-                    server_1.io.to("admin room").emit("notification update", createNotifi);
+                    index_1.io.to("admin-room").emit("notification-update", createNotifi);
                     // send notification to specific project manager
-                    server_1.io.to(`user-${projectData.projectManager}`).emit("notification update", createNotifi);
+                    index_1.io.to(`user-${projectData.projectManager}`).emit("notification-update", createNotifi);
                 }
             }
         }
@@ -94,7 +114,7 @@ const webhookUpdateMoveTaskJob = (data) => {
         }
     }));
 };
-exports.webhookUpdateMoveTaskJob = webhookUpdateMoveTaskJob;
+exports.moveTaskNotificationJob = moveTaskNotificationJob;
 const updateCardJob = (data) => {
     exports.TaskQueue.push((cb) => __awaiter(void 0, void 0, void 0, function* () {
         try {
@@ -111,3 +131,50 @@ const updateCardJob = (data) => {
     }));
 };
 exports.updateCardJob = updateCardJob;
+const createTaskFromBoardJob = (data) => {
+    exports.TaskQueue.push((cb) => __awaiter(void 0, void 0, void 0, function* () {
+        try {
+            index_1.io.sockets.emit("create-task", data);
+            cb(null, data);
+        }
+        catch (error) {
+            logger_1.default.ercror({ createCardDataError: error });
+        }
+    }));
+};
+exports.createTaskFromBoardJob = createTaskFromBoardJob;
+const deleteTaskFromBoardJob = (data) => {
+    exports.TaskQueue.push((cb) => __awaiter(void 0, void 0, void 0, function* () {
+        try {
+            index_1.io.sockets.emit("delete-task", data);
+            cb(null, data);
+        }
+        catch (error) {
+            logger_1.default.ercror({ deleteCardDataError: error });
+        }
+    }));
+};
+exports.deleteTaskFromBoardJob = deleteTaskFromBoardJob;
+const updateTaskAttachmentsJob = (task) => {
+    exports.TaskQueue.push((cb) => __awaiter(void 0, void 0, void 0, function* () {
+        try {
+            let attachments = yield trello_1.default.__getCardAttachments(task.cardId);
+            let newfiles = attachments.map((item) => {
+                let file = {
+                    trelloId: item.id,
+                    mimeType: item.mimeType,
+                    name: item.name,
+                    url: item.url,
+                };
+                return file;
+            });
+            console.log("change task files to,", newfiles);
+            let Task = yield tasks_1.default.__updateTaskAttachments(task, newfiles);
+            index_1.io.sockets.emit("update-task", Task);
+        }
+        catch (error) {
+            logger_1.default.ercror({ updateTaskAttachmentsError: error });
+        }
+    }));
+};
+exports.updateTaskAttachmentsJob = updateTaskAttachmentsJob;

@@ -37,6 +37,9 @@ const DepartmentSchema = new mongoose_1.Schema(// department
     inProgressListId: {
         type: String,
     },
+    boardURL: {
+        type: String,
+    },
     mainBoard: {
         type: Boolean,
         default: false,

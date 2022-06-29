@@ -1,29 +1,47 @@
 "use strict";
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
 Object.defineProperty(exports, "__esModule", { value: true });
-let clients = 0;
-function appSocket(io) {
-  let soc = io.on("connection", (socket) => {
-    console.log("new client connected No.", ++clients);
-    socket.on("disconnect", () =>
-      console.log("Client disconnected No,", --clients)
-    );
-    console.log("listening to move task, ", io.listeners("Move Task"));
-    //* this for admins role only
-    socket.on("joined-admin", () => {
-      // logger.info({ data });
-      return socket.join("admin-room");
+const config_1 = __importDefault(require("config"));
+const lodash_1 = __importDefault(require("lodash"));
+const socket_io_1 = require("socket.io");
+function appSocket(http) {
+    let clients = [];
+    const io = new socket_io_1.Server(http, {
+        path: "/socket.io",
+        cors: {
+            origin: config_1.default.get("FrontEndUrl"),
+            methods: "*",
+            allowedHeaders: ["Content-type"],
+            credentials: true,
+        },
     });
-    //* this for project managers role only
-    socket.on("joined-manager", () => {
-      // logger.info({ data });
-      return socket.join("manager-room");
+    io.on("connection", (socket) => {
+        clients.push(socket.id);
+        clients = lodash_1.default.uniq(clients);
+        console.log("client connected, ", socket.id);
+        console.log("no of clients,", clients.length);
+        socket.on("disconnect", () => {
+            clients = clients.filter((item) => item !== socket.id);
+            console.log("client disconnected, ", socket.id);
+            console.log("no of clients,", clients.length);
+        });
+        socket.on("joined-admin", () => {
+            console.log("joined-admin");
+            return socket.join("admin-room");
+        });
+        socket.on("joined-manager", () => {
+            console.log("joined-manager");
+            return socket.join("manager-room");
+        });
+        socket.on("joined-user", (data) => {
+            if (data.id) {
+                console.log(`user-${data.id}`);
+                return socket.join(`user-${data.id}`);
+            }
+        });
     });
-    //* this is for specific user
-    socket.on("joined-user", (data) => {
-      return socket.join(`user-${data.id}`);
-    });
-  });
-  console.log(soc.allSockets());
-  return soc;
+    return io;
 }
 exports.default = appSocket;

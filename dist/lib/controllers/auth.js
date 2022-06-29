@@ -18,7 +18,7 @@ const auth_1 = require("../services/auth");
 const logger_1 = __importDefault(require("../../logger"));
 const user_1 = __importDefault(require("../dbCalls/user/user"));
 //NodeMailer
-const mail_1 = __importDefault(require("../services/mail"));
+const mail_1 = __importDefault(require("../services/mail/mail"));
 const errorUtils_1 = require("../utils/errorUtils");
 const AuthController = class AuthController extends user_1.default {
     static signInUser(data) {
@@ -76,7 +76,7 @@ const AuthController = class AuthController extends user_1.default {
                 yield (0, mail_1.default)({
                     token: token,
                     email: email,
-                    body: "Please click on this link to reset your password",
+                    body: "Reset your password",
                     subject: "Forgot Password",
                     path: "resetPassword",
                 });

@@ -1,1 +1,6 @@
-{}
+{
+  "delete_success": "delete_success",
+  "email_sent": "email_sent",
+  "user_not_exist": "user_not_exist",
+  "delete_client_success": "delete_client_success"
+}
