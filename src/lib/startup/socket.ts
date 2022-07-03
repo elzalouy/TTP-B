@@ -2,8 +2,9 @@ import config from "config";
 import _ from "lodash";
 import { Server, Socket } from "socket.io";
 import { DefaultEventsMap } from "socket.io/dist/typed-events";
+export let socketClients: any[] = [];
+export let socketOM: any[] = [];
 export default function appSocket(http: any) {
-  let clients: any[] = [];
   const io = new Server(http, {
     path: "/socket.io",
     cors: {
@@ -18,28 +19,30 @@ export default function appSocket(http: any) {
     (
       socket: Socket<DefaultEventsMap, DefaultEventsMap, DefaultEventsMap, any>
     ) => {
-      clients.push(socket.id);
-      clients = _.uniq(clients);
-      console.log("client connected, ", socket.id);
-      console.log("no of clients,", clients.length);
       socket.on("disconnect", () => {
-        clients = clients.filter((item) => item !== socket.id);
+        socketClients = socketClients.filter(
+          (item) => item.socketId !== socket.id
+        );
+        socketOM = socketOM.filter((item) => item.socketId !== socket.id);
         console.log("client disconnected, ", socket.id);
-        console.log("no of clients,", clients.length);
       });
-      socket.on("joined-admin", () => {
-        console.log("joined-admin");
-        return socket.join("admin-room");
+      socket.on("joined-OM", (data: any) => {
+        console.log("joined OM");
+        socketOM = socketOM.filter((item) => item.id !== data._id);
+        socketOM.push({
+          id: data._id,
+          socketId: socket.id,
+        });
+        console.log("OM connected,", socketOM);
       });
-      socket.on("joined-manager", () => {
-        console.log("joined-manager");
-        return socket.join("manager-room");
-      });
-      socket.on("joined-user", (data: any) => {
-        if (data.id) {
-          console.log(`user-${data.id}`);
-          return socket.join(`user-${data.id}`);
-        }
+      socket.on("joined-PM", (data: any) => {
+        console.log("joined PM");
+        socketClients = socketClients.filter((item) => item.id !== data._id);
+        socketClients.push({
+          id: data._id,
+          socketId: socket.id,
+        });
+        console.log("PM connected,", socketClients);
       });
     }
   );

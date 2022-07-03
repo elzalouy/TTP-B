@@ -587,3 +587,148 @@
   level: 'error',
   timestamp: '2022-06-29 18:12:08'
 }
+{
+  message: {
+    __MoveTaskNotificationError: TypeError: Cannot read properties of undefined (reading 'projectId')
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/notification.ts:36:55)
+        at Generator.next (<anonymous>)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/notification.ts:8:71
+        at new Promise (<anonymous>)
+        at __awaiter (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/notification.ts:4:12)
+        at Function.__MoveTaskNotification (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/notification.ts:42:16)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/background/taskQueue.ts:55:38
+        at Generator.next (<anonymous>)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/background/taskQueue.ts:8:71
+        at new Promise (<anonymous>)
+  },
+  level: 'error',
+  timestamp: '2022-07-02 19:38:35'
+}
+{
+  message: {
+    __MoveTaskNotificationError: TypeError: Cannot read properties of undefined (reading 'projectId')
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/notification.ts:36:55)
+        at Generator.next (<anonymous>)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/notification.ts:8:71
+        at new Promise (<anonymous>)
+        at __awaiter (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/notification.ts:4:12)
+        at Function.__MoveTaskNotification (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/notification.ts:42:16)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/background/taskQueue.ts:55:38
+        at Generator.next (<anonymous>)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/background/taskQueue.ts:8:71
+        at new Promise (<anonymous>)
+  },
+  level: 'error',
+  timestamp: '2022-07-02 19:40:51'
+}
+{
+  message: {
+    __MoveTaskNotificationError: TypeError: Cannot read properties of undefined (reading 'projectId')
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/notification.ts:36:55)
+        at Generator.next (<anonymous>)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/notification.ts:8:71
+        at new Promise (<anonymous>)
+        at __awaiter (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/notification.ts:4:12)
+        at Function.__MoveTaskNotification (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/notification.ts:42:16)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/background/taskQueue.ts:55:38
+        at Generator.next (<anonymous>)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/background/taskQueue.ts:8:71
+        at new Promise (<anonymous>)
+  },
+  level: 'error',
+  timestamp: '2022-07-02 19:51:06'
+}
+{
+  message: {
+    __MoveTaskNotificationError: TypeError: Cannot read properties of undefined (reading 'projectId')
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/notification.ts:36:55)
+        at Generator.next (<anonymous>)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/notification.ts:8:71
+        at new Promise (<anonymous>)
+        at __awaiter (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/notification.ts:4:12)
+        at Function.__MoveTaskNotification (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/notification.ts:42:16)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/background/taskQueue.ts:56:38
+        at Generator.next (<anonymous>)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/background/taskQueue.ts:8:71
+        at new Promise (<anonymous>)
+  },
+  level: 'error',
+  timestamp: '2022-07-02 19:52:54'
+}
+{
+  message: {
+    __sendNotificationsDBError: MongoServerError: BSON field 'skip' value must be >= 0, actual value '-11'
+        at Connection.onMessage (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongodb/src/cmap/connection.ts:440:20)
+        at MessageStream.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongodb/src/cmap/connection.ts:267:56)
+        at MessageStream.emit (node:events:527:28)
+        at MessageStream.emit (node:domain:475:12)
+        at processIncomingData (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongodb/src/cmap/message_stream.ts:168:12)
+        at MessageStream._write (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongodb/src/cmap/message_stream.ts:65:5)
+        at writeOrBuffer (node:internal/streams/writable:389:12)
+        at _write (node:internal/streams/writable:330:10)
+        at MessageStream.Writable.write (node:internal/streams/writable:334:10)
+        at TLSSocket.ondata (node:internal/streams/readable:754:22) {
+      ok: 0,
+      code: 51024,
+      codeName: 'Location51024',
+      '$clusterTime': {
+        clusterTime: new Timestamp({ t: 1656787439, i: 5 }),
+        signature: {
+          hash: new Binary(Buffer.from("51f1da8e69f7b3f1a002b1cad8a8c6a5b9c5d6be", "hex"), 0),
+          keyId: new Long("7057499658175643653")
+        }
+      },
+      operationTime: new Timestamp({ t: 1656787439, i: 5 }),
+      [Symbol(errorLabels)]: Set(0) {}
+    }
+  },
+  level: 'error',
+  timestamp: '2022-07-02 20:43:59'
+}
+{
+  message: {
+    __sendNotificationsDBError: MongoServerError: BSON field 'skip' value must be >= 0, actual value '-11'
+        at Connection.onMessage (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongodb/src/cmap/connection.ts:440:20)
+        at MessageStream.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongodb/src/cmap/connection.ts:267:56)
+        at MessageStream.emit (node:events:527:28)
+        at MessageStream.emit (node:domain:475:12)
+        at processIncomingData (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongodb/src/cmap/message_stream.ts:168:12)
+        at MessageStream._write (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongodb/src/cmap/message_stream.ts:65:5)
+        at writeOrBuffer (node:internal/streams/writable:389:12)
+        at _write (node:internal/streams/writable:330:10)
+        at MessageStream.Writable.write (node:internal/streams/writable:334:10)
+        at TLSSocket.ondata (node:internal/streams/readable:754:22) {
+      ok: 0,
+      code: 51024,
+      codeName: 'Location51024',
+      '$clusterTime': {
+        clusterTime: new Timestamp({ t: 1656787440, i: 1 }),
+        signature: {
+          hash: new Binary(Buffer.from("c167ace6265512ac9312b228f56bc7c0aa378a50", "hex"), 0),
+          keyId: new Long("7057499658175643653")
+        }
+      },
+      operationTime: new Timestamp({ t: 1656787440, i: 1 }),
+      [Symbol(errorLabels)]: Set(0) {}
+    }
+  },
+  level: 'error',
+  timestamp: '2022-07-02 20:44:00'
+}
+{
+  message: {
+    __updateProjectNotificationError: TypeError: Cannot read properties of undefined (reading 'toString')
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/notification.ts:93:41)
+        at Generator.next (<anonymous>)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/notification.ts:8:71
+        at new Promise (<anonymous>)
+        at __awaiter (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/notification.ts:4:12)
+        at Function.__updateProjectNotification (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/notification.ts:114:16)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/project.ts:58:32
+        at Queue.start (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/queue/index.js:145:17)
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/project.ts:61:20)
+        at Generator.next (<anonymous>)
+  },
+  level: 'error',
+  timestamp: '2022-07-03 10:22:14'
+}

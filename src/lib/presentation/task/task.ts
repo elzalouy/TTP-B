@@ -13,7 +13,7 @@ import {
   updateTaskAttachmentsJob,
   updateTaskQueue,
 } from "../../background/taskQueue";
-import BoardController from "../../controllers/trello";
+import { jwtVerify } from "../../services/auth";
 
 const TaskReq = class TaskReq extends TaskController {
   static async handleCreateCard(req: Request, res: Response) {
@@ -80,15 +80,19 @@ const TaskReq = class TaskReq extends TaskController {
   }
   static async handleMoveCard(req: Request, res: Response) {
     try {
-      let { cardId, listId, status, list }: any = req.body;
-      let task: any = await super.moveTaskOnTrello(
-        cardId,
-        listId,
-        status,
-        list
-      );
-      if (task?.error) return res.status(400).send(task?.message);
-      return res.send(task);
+      let decoded: any = await jwtVerify(req.header("Authorization"));
+      if (decoded?.user) {
+        let { cardId, listId, status, list }: any = req.body;
+        let task: any = await super.moveTaskOnTrello(
+          cardId,
+          listId,
+          status,
+          list,
+          decoded?.user
+        );
+        if (task?.error) return res.status(400).send(task?.message);
+        return res.send(task);
+      }
     } catch (error) {
       logger.error({ handleMoveCardError: error });
     }

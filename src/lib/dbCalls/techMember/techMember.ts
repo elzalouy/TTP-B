@@ -1,6 +1,6 @@
 import { TeamsData, DataUpdate } from "../../types/model/Team";
 import logger from "../../../logger";
-import TechMember from "../../models/teams";
+import TechMember from "../../models/Teams";
 
 const TechMemberDB = class TechMemberDB {
   static async createTechMember(data: TeamsData) {
@@ -70,7 +70,7 @@ const TechMemberDB = class TechMemberDB {
       logger.error({ addTechMemberError: error });
     }
   }
-  
+
   static async __deleteTechMemberDB(data: TeamsData) {
     try {
       let deleteResult = await TechMember.deleteMany(data);

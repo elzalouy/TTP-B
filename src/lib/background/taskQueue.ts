@@ -15,8 +15,13 @@ import { webhookUpdateInterface } from "../types/controller/Tasks";
 
 export const TaskQueue = queue({ results: [] });
 export const updateTaskQueue = queue({ results: [] });
-export function moveTaskJob(listId: string, cardId: string, status: string) {
-  var task: TaskInfo;
+export function moveTaskJob(
+  listId: string,
+  cardId: string,
+  status: string,
+  user: any
+) {
+  var task;
   TaskQueue.push(async (cb) => {
     try {
       TaskQueue.start();
@@ -45,27 +50,10 @@ export function moveTaskJob(listId: string, cardId: string, status: string) {
   });
   TaskQueue.push(async (cb) => {
     try {
-      // if task status update to shared send notification
       if (status === "Shared" || status === "Not Clear") {
-        console.log("action_move_card_from_list_to_list: Shared");
-        let targetTask = task;
-        let projectData = await ProjectDB.__getProject({
-          _id: targetTask.projectId,
-        });
-        let cardName: string = targetTask.name;
-        let createNotifi = await NotificationController.createNotification({
-          title: `${cardName} status has been changed to ${status}`,
-          description: `${cardName} status has been changed to ${status}`,
-          projectManagerID: projectData.projectManager,
-          projectID: targetTask.projectId,
-          adminUserID: projectData.adminId,
-        });
-        console.log("notifiaction move task to shared");
-        io.to("admin-room").emit("notification-update", createNotifi);
-        io.to(`user-${projectData.projectManager}`).emit(
-          "notification-update",
-          createNotifi
-        );
+        console.log(`move task ${cardId} to ${status}`);
+        task = await TaskDB.getOneTaskBy({ cardId: cardId });
+        await NotificationController.__MoveTaskNotification(task, status, user);
       }
     } catch (error: any) {
       cb(new Error(error), null);
@@ -92,22 +80,22 @@ export const moveTaskNotificationJob = (data: webhookUpdateInterface) => {
         let userName: string =
           data?.action?.display?.entities?.memberCreator?.username;
         let cardName: string = data?.action?.data.card.name;
-        if (to === "Shared" || to === "Not Clear") {
-          let createNotifi = await NotificationController.createNotification({
-            title: `${cardName} status has been changed to ${to}`,
-            description: `${cardName} status has been changed to ${to} by ${userName}`,
-            projectManagerID: projectData.projectManager,
-            projectID: targetTask.projectId,
-            adminUserID: projectData.adminId,
-          });
-          // send notification to all the admin
-          io.to("admin-room").emit("notification-update", createNotifi);
-          // send notification to specific project manager
-          io.to(`user-${projectData.projectManager}`).emit(
-            "notification-update",
-            createNotifi
-          );
-        }
+        // if (to === "Shared" || to === "Not Clear") {
+        //   let createNotifi = await NotificationController.createNotification({
+        //     title: `${cardName} status has been changed to ${to}`,
+        //     description: `${cardName} status has been changed to ${to} by ${userName}`,
+        //     projectManagerID: projectData.projectManager,
+        //     projectID: targetTask.projectId,
+        //     adminUserID: projectData.adminId,
+        //   });
+        //   // send notification to all the admin
+        //   io.to("admin-room").emit("notification-update", createNotifi);
+        //   // send notification to specific project manager
+        //   io.to(`user-${projectData.projectManager}`).emit(
+        //     "notification-update",
+        //     createNotifi
+        //   );
+        // }
       }
     } catch (error: any) {
       cb(new Error(error), null);

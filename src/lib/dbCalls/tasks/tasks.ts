@@ -5,7 +5,7 @@ import {
   TasksStatistics,
 } from "./../../types/model/tasks";
 import logger from "../../../logger";
-import Tasks from "../../models/task";
+import Tasks from "../../models/Task";
 import { TaskData } from "../../types/model/tasks";
 import _ from "lodash";
 import mongoose from "mongoose";

@@ -1,21 +1,15 @@
 import apis from "./apis";
 import { Router } from "express";
 import NotificationReq from "../../presentation/notification/notification";
+import Authed from "../../middlewares/Auth/Authed";
 
 const router = Router();
 
-const { GET_ALL_NOTIFIS, DELETE_NOTIFI, UPDATE_NOTIFI, CREATE_NOTIFI } = apis;
+const { SEND_NOTIFICATIONS, UPDATE_NOTIFIED, GET_UNNOTIFIED } = apis;
 
-const {
-  handleCreateNotification,
-  handleUpdateNotification,
-  handleDeleteNotification,
-  handleGetAllNotifications,
-} = NotificationReq;
+const { sendNotifications, updateNotified, getUnNotified } = NotificationReq;
 
-router.post(`${CREATE_NOTIFI}`, handleCreateNotification);
-router.put(`${UPDATE_NOTIFI}`, handleUpdateNotification);
-router.delete(`${DELETE_NOTIFI}`, handleDeleteNotification);
-router.get(`${GET_ALL_NOTIFIS}`, handleGetAllNotifications);
-
+router.get(SEND_NOTIFICATIONS, Authed, sendNotifications);
+router.put(UPDATE_NOTIFIED, Authed, updateNotified);
+router.get(GET_UNNOTIFIED, Authed, getUnNotified);
 export default router;

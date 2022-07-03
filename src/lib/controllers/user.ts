@@ -1,18 +1,17 @@
+import sendMail from "../services/mail/mail";
+import logger from "../../logger";
+import UserDB from "../dbCalls/user/user";
+import { customeError } from "../utils/errorUtils";
+import { JwtPayload } from "jsonwebtoken";
 import { GetUserData } from "./../types/controller/user";
+import { passwordCheck, emailCheck } from "./../utils/validation";
+import { IUser, PasswordUpdate, UserData } from "../types/model/User";
 import {
   hashBassword,
   comparePassword,
   createJwtToken,
   jwtVerify,
 } from "../services/auth";
-import { passwordCheck, emailCheck } from "./../utils/validation";
-import logger from "../../logger";
-import UserDB from "../dbCalls/user/user";
-import { IUser, PasswordUpdate, UserData } from "../types/model/User";
-import { customeError } from "../utils/errorUtils";
-import BoardController from "./trello";
-import sendMail from "../services/mail/mail";
-import { JwtPayload } from "jsonwebtoken";
 
 const UserController = class UserController extends UserDB {
   static async addUser(data: UserData) {
@@ -178,9 +177,9 @@ const UserController = class UserController extends UserDB {
 
   static async __addNewUser(data: UserData): Promise<
     | {
-      msg: string;
-      status: number;
-    }
+        msg: string;
+        status: number;
+      }
     | IUser
   > {
     try {
@@ -197,13 +196,6 @@ const UserController = class UserController extends UserDB {
       if (findUser) {
         return customeError("user_already_exist", 400);
       }
-      // hash password
-      /* let passwordHash: string = await hashBassword(password); */
-
-      // add project manager to specific board
-      // if(trelloBoardId &&trelloMemberId && type){
-      //      BoardController.addMemberToBoard(trelloBoardId,trelloMemberId,type)
-      // }
 
       let newUser = await super.createUser({
         ...data /* password: passwordHash  */,

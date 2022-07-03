@@ -2,17 +2,18 @@ import { ProjectData } from "./../types/model/Project";
 import { customeError } from "./../utils/errorUtils";
 import logger from "../../logger";
 import ProjectDB from "../dbCalls/project/project";
-import Tasks from "../models/task";
+import Tasks from "../models/Task";
 import { io } from "../../index";
 import NotificationController from "./notification";
+import { projectQueue } from "../background/projectQueue";
 
 const ProjectController = class ProjectController extends ProjectDB {
-  static async createProject(data: ProjectData) {
-    return await ProjectController.__createNewProject(data);
+  static async createProject(data: ProjectData, userId: string) {
+    return await ProjectController.__createNewProject(data, userId);
   }
 
-  static async updateProject(data: ProjectData) {
-    return await ProjectController.__updateProjectData(data);
+  static async updateProject(data: ProjectData, userId: string) {
+    return await ProjectController.__updateProjectData(data, userId);
   }
 
   static async getProject(data: object) {
@@ -51,32 +52,13 @@ const ProjectController = class ProjectController extends ProjectDB {
     }
   }
 
-  static async __updateProjectData(data: ProjectData) {
+  static async __updateProjectData(data: ProjectData, userId: string) {
     try {
-      // if porject status update to done
-      if (
-        data.projectStatus &&
-        ["deliver on time", "deliver before deadline", "late"].includes(
-          data.projectStatus
-        )
-      ) {
-        let createNotifi = await NotificationController.createNotification({
-          title: `${data.name} project is done! Congratulations!`,
-          projectManagerID: data.projectManager,
-          description: `${data.name} project is done! Thank you for your hard work`,
-          clientName: data.clientId,
-          projectID: data._id,
-          adminUserID: data.adminId,
-        });
-        // send notification to all admin
-        io.to("admin-room").emit("notification-update", createNotifi);
-        io.to("manager-room").emit("notification-update");
-        // send notification to specific project manager
-        io.to(`user-${data.projectManager}`).emit(
-          "notification-update",
-          createNotifi
-        );
-      }
+      projectQueue.push((cb) => {
+        NotificationController.__updateProjectNotification(data, userId);
+        cb(null, true);
+      });
+      projectQueue.start();
       let project = await super.updateProjectDB(data);
       return project;
     } catch (error) {
@@ -84,23 +66,14 @@ const ProjectController = class ProjectController extends ProjectDB {
     }
   }
 
-  static async __createNewProject(data: ProjectData) {
+  static async __createNewProject(data: ProjectData, userId: string) {
     try {
       let project = await super.createProjectDB(data);
-
-      let createNotifi = await NotificationController.createNotification({
-        title: `${data.projectManagerName} project has been assigend to you`,
-        description: `${data.name} has been assigend to you by ${data.adminName}`,
-        projectManagerID: data.projectManager,
-        projectID: data._id,
-        adminUserID: data.adminId,
+      projectQueue.push((cb) => {
+        NotificationController.__creatProjectNotification(data, userId);
+        cb(null, true);
       });
-
-      // send notification to specific project manager
-      io.to(`user-${data.projectManager}`).emit(
-        "notification-update",
-        createNotifi
-      );
+      projectQueue.start();
       return project;
     } catch (error) {
       logger.error({ getTeamsError: error });

@@ -7,15 +7,17 @@ import ProjectController from "../../controllers/project";
 import Client from "../../controllers/client";
 import mongoose from "mongoose";
 import TaskController from "../../controllers/task";
+import { jwtVerify } from "../../services/auth";
 
 const ProjectReq = class ProjectReq extends ProjectController {
   static async handleCreateProject(req: Request, res: Response) {
     try {
+      let decoded: any = await jwtVerify(req.header("Authorization"));
       let projectData: ProjectData = req.body;
       if (!projectData) {
         return res.status(400).send(customeError("project_missing_data", 400));
       }
-      let project = await super.createProject(projectData);
+      let project = await super.createProject(projectData, decoded?.user?.id);
       if (project) {
         await Client.updateClientProcedure(projectData.clientId);
         return res.status(200).send(project);
@@ -30,11 +32,12 @@ const ProjectReq = class ProjectReq extends ProjectController {
 
   static async handleUpdateProject(req: Request, res: Response) {
     try {
+      let decoded: any = await jwtVerify(req.header("Authorization"));
       let projectData: ProjectData = req.body;
       if (!projectData._id) {
         return res.status(400).send(customeError("project_missing_data", 400));
       }
-      let project = await super.updateProject(projectData);
+      let project = await super.updateProject(projectData, decoded.user.id);
       if (project) {
         await Client.updateClientProcedure(project.clientId);
         return res.status(200).send(project);
@@ -75,9 +78,13 @@ const ProjectReq = class ProjectReq extends ProjectController {
         let project = await super.deleteProject(projectId);
         if (project) {
           await Client.updateClientProcedure(project.clientId);
-          return res.status(200).send(successMsg("projects_and_tasks_deleted", 200));
+          return res
+            .status(200)
+            .send(successMsg("projects_and_tasks_deleted", 200));
         } else {
-          return res.status(400).send(customeError("delete_project_error", 400));
+          return res
+            .status(400)
+            .send(customeError("delete_project_error", 400));
         }
       } else {
         return res.status(400).send(customeError("delete_project_error", 400));

@@ -1,14 +1,8 @@
-import {
-  AttachmentResponse,
-  AttachmentSchema,
-  TaskData,
-} from "./../types/model/tasks";
+import { AttachmentSchema, TaskData } from "./../types/model/tasks";
 import logger from "../../logger";
 import TaskDB from "../dbCalls/tasks/tasks";
 import BoardController from "./trello";
-import { io } from "../../index";
 import { deleteAll } from "../services/upload";
-import DepartmentBD from "../dbCalls/department/department";
 import {
   createTaskFromBoardJob,
   deleteTaskFromBoardJob,
@@ -59,13 +53,15 @@ class TaskController extends TaskDB {
     cardId: string,
     listId: string,
     status: string,
-    list: string
+    list: string,
+    user: any
   ) {
     return await TaskController.__moveTaskOnTrello(
       cardId,
       listId,
       status,
-      list
+      list,
+      user
     );
   }
 
@@ -73,10 +69,11 @@ class TaskController extends TaskDB {
     cardId: string,
     listId: string,
     status: string,
-    list: string
+    list: string,
+    user: any
   ) {
     try {
-      moveTaskJob(listId, cardId, status);
+      moveTaskJob(listId, cardId, status, user);
       TaskQueue.start();
       return { data: `Task with cardId ${cardId} has moved to list ${list}` };
     } catch (error) {

@@ -7,134 +7,68 @@ import {
 import { ObjectID } from "bson";
 
 const NotificationDB = class NotificationDB {
-  static async createNotificationDB(data: NotificationData) {
-    return await NotificationDB.__createNotification(data);
-  }
-
-  static async updateNotificationDB(query: object, value: object) {
-    return await NotificationDB.__updateNotification(query, value);
-  }
-
-  static async getAllNotificationsDB(data: {
-    id: string;
-    skip?: string;
-    limit?: string;
+  static async __sendNotificationsDB({
+    userId,
+    current,
+    limit,
+  }: {
+    userId: string;
+    current: number;
+    limit: number;
   }) {
-    return await NotificationDB.__getAllNotifications(data);
-  }
-  static async deleteNotificationDB(id: string) {
-    return await NotificationDB.__deleteNotification(id);
-  }
-
-  static async __deleteNotification(id: string) {
     try {
-      let notification = await Notification.findByIdAndDelete({
-        _id: new ObjectID(id),
+      let length = await Notification.count({
+        "isNotified.userId": userId,
       });
-      return notification;
+      console.log(length);
+      let notifications = await Notification.find(
+        {
+          "isNotified.userId": userId,
+        },
+        "_id title description isNotified createdAt",
+        { sort: { createdAt: -1 }, skip: current * limit, limit: limit }
+      );
+      return {
+        notifications: notifications,
+        pages: Math.floor(length / limit),
+        current: current,
+        limit: limit,
+      };
     } catch (error) {
-      logger.error({ deletNotificationDBError: error });
+      logger.error({ __sendNotificationsDBError: error });
     }
   }
-
-  static async __getAllNotifications(
-    data: { id: string; skip?: string; limit?: string } = { id: "" }
-  ) {
-    try {
-      logger.info({ data });
-      let notification: any = await Notification.aggregate([
-        {
-          $match: {
-            $or: [
-              { projectManagerID: new ObjectID(data.id) },
-              { adminUserID: new ObjectID(data.id) },
-            ],
-          },
-        },
-        {
-          $lookup: {
-            from: "users",
-            localField: "projectManagerID",
-            foreignField: "_id",
-            as: "projectManagerID",
-          },
-        },
-        {
-          $lookup: {
-            from: "users",
-            localField: "adminUserID",
-            foreignField: "_id",
-            as: "adminUserID",
-          },
-        },
-        {
-          $lookup: {
-            from: "projects",
-            localField: "projectID",
-            foreignField: "_id",
-            as: "projectID",
-          },
-        },
-        { $unwind: { path: "$adminUserID", preserveNullAndEmptyArrays: true } },
-        { $unwind: { path: "$projectID", preserveNullAndEmptyArrays: true } },
-        {
-          $unwind: {
-            path: "$projectManagerID",
-            preserveNullAndEmptyArrays: true,
-          },
-        },
-        {
-          $sort: { createdAt: -1 },
-        },
-        {
-          $project: {
-            _id: 1,
-            description: 1,
-            projectManagerID: 1,
-            adminViewed: 1,
-            projectManagerViewed: 1,
-            title: 1,
-            adminUserID: 1,
-            createdAt: 1,
-            projectID:1
-          },
-        },
-        {
-          $skip: data.skip ? Number(data.skip) : 0,
-        },
-        {
-          $limit: data.limit ? Number(data.limit) : 4,
-        },
-      ]);
-      return notification;
-    } catch (error) {
-      logger.error({ getNotificationDBError: error });
-    }
-  }
-
-  static async __updateNotification(query: object, value: object) {
-    try {
-      console.log({ query, value });
-      let notification = await Notification.updateMany(query, value);
-      // let notification = await Notification.findByIdAndUpdate(
-      //   { _id: new ObjectID(id) },
-      //   { ...data },
-      //   { new: true }
-      // );
-      console.log({ notification });
-      return notification;
-    } catch (error) {
-      logger.error({ updateNotificationDBError: error });
-    }
-  }
-
   static async __createNotification(data: NotificationData) {
     try {
-      let notification: NotificationInfo = new Notification(data);
-      await notification.save();
-      return notification;
+      let notification = new Notification(data);
+      let result = await notification.save();
+      return result;
     } catch (error) {
-      logger.error({ createNotificationDBError: error });
+      logger.error({ __createNotificationsDBError: error });
+    }
+  }
+  static async __getUnotified(userId: string) {
+    try {
+      let notifications = await Notification.count({
+        isNotified: { $elemMatch: { userId: userId, isNotified: false } },
+      });
+      return { NoOfUnNotified: notifications };
+    } catch (error) {
+      logger.error({ __createNotificationsDBError: error });
+    }
+  }
+  static async __updateUnotifiedDB(userId: string) {
+    try {
+      let update = await Notification.updateMany(
+        { isNotified: { $elemMatch: { userId: userId, isNotified: false } } },
+        { $set: { "isNotified.$.isNotified": true } }
+      );
+      if (update.matchedCount) {
+        return { NoOfUnNotified: 0 };
+      }
+      return null;
+    } catch (error) {
+      logger.error({ __createNotificationsDBError: error });
     }
   }
 };
