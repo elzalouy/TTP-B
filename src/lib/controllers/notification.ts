@@ -31,18 +31,14 @@ const NotificationController = class NotificationController extends Notification
     try {
       // get Notified users
       let id = user.id;
-      let users: IsNotified[] = [];
       let project = await Project.findOne({ _id: data.projectId });
 
-      if (project.projectManager !== id)
-        users.push({ userId: project.projectManager, isNotified: false });
-
       // create notificaton
-      if (users.length >= 1) {
+      if (project.projectManager !== id) {
         let newNotification: NotificationData = {
           title: `${data.name} has been moved to ${status}`,
           description: `${data.name} status has been changed to ${status}`,
-          isNotified: users,
+          isNotified: [{ userId: project.projectManager, isNotified: false }],
         };
         await super.__createNotification(newNotification);
         // send to current socket clients an update
