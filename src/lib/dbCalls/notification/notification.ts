@@ -52,6 +52,7 @@ const NotificationDB = class NotificationDB {
       let notifications = await Notification.count({
         isNotified: { $elemMatch: { userId: userId, isNotified: false } },
       });
+      console.log(notifications);
       return { NoOfUnNotified: notifications };
     } catch (error) {
       logger.error({ __createNotificationsDBError: error });

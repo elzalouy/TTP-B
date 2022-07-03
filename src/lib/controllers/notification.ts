@@ -34,7 +34,7 @@ const NotificationController = class NotificationController extends Notification
       let project = await Project.findOne({ _id: data.projectId });
 
       // create notificaton
-      if (project.projectManager !== id) {
+      if (project.projectManager.toString() !== id) {
         let newNotification: NotificationData = {
           title: `${data.name} has been moved to ${status}`,
           description: `${data.name} status has been changed to ${status}`,
