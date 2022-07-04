@@ -211,7 +211,8 @@ class TaskDB {
       if (!task) return taskNotFoundError;
 
       task.name = data.name ? data.name : task.name;
-      task.description = data.description ? data.description : task.description;
+      task.description =
+        data.description.length > 0 ? data.description : task.description;
       task.deadline = data.deadline ? data.deadline : task.deadline;
       task.categoryId = data.categoryId
         ? new mongoose.Types.ObjectId(data.categoryId)
@@ -265,7 +266,6 @@ class TaskDB {
   }
   static async __createTask(data: TaskData) {
     try {
-      console.log("data from db", data);
       let task: TaskInfo = new Tasks(data);
       task = await task.save();
       return task;
@@ -306,15 +306,14 @@ class TaskDB {
   }
   static async __updateTaskByTrelloDB(data: TaskData) {
     try {
+      console.log("dataaa", data);
       let task = await Tasks.findOne({ cardId: data.cardId });
       task.name = data?.name ? data?.name : task.name;
       task.status = data?.status ? data.status : task.status;
       task.listId = data?.listId ? data.listId : task.listId;
       task.cardId = data?.cardId ? data.cardId : task.cardId;
       task.boardId = data?.boardId ? data.boardId : task.boardId;
-      task.description = data?.description
-        ? data.description
-        : task.description;
+      task.description = data.description ? data.description : task.description;
       task.lastMove = data?.lastMove ? data.lastMove : task.lastMoveDate;
       task.lastMoveDate = data?.lastMoveDate
         ? data.lastMoveDate
@@ -325,6 +324,7 @@ class TaskDB {
           "trelloId"
         );
       }
+      console.log(task);
       return await task.save();
     } catch (error) {
       logger.error({ __updateTaskByTrelloDBError: error });

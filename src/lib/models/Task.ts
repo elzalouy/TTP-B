@@ -83,6 +83,10 @@ const TaskSchema: Schema = new Schema<TaskInfo>(
       type: String,
       default: null,
     },
+    description: {
+      type: String,
+      default: null,
+    },
   },
   {
     timestamps: true,

@@ -474,11 +474,11 @@ class BoardController {
       //   let result = await TaskController.createTaskByTrello(task);
       //   io.sockets.emit("create task", result);
       // }
-
+      console.log(data.action.data.card);
       //update
       if (type === "updateCard" && action !== "action_archived_card") {
         if (action === "action_changed_description_of_card")
-          task.description = data.action.data.card?.desc;
+          task.description = data.action.data.card.desc;
         if (action === "action_renamed_card")
           task.description = data.action.data.card.name;
         if (action === "action_move_card_from_list_to_list") {
