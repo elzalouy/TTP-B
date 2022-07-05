@@ -152,8 +152,13 @@ class TaskController extends TaskDB {
   }
   static async __CreateNewTask(data: TaskData, files: Express.Multer.File[]) {
     try {
+      console.log(data);
       let createdCard: { id: string } | any =
-        await BoardController.createCardInList(data.listId, data.name);
+        await BoardController.createCardInList(
+          data.listId,
+          data.name,
+          data.description
+        );
       if (createdCard) {
         data.cardId = createdCard.id;
         if (files.length > 0)

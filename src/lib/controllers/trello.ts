@@ -62,8 +62,12 @@ class BoardController {
   static async deleteCard(id: string) {
     return await BoardController.__deleteCard(id);
   }
-  static async createCardInList(listId: string, cardName: string) {
-    return await BoardController.__createCard(listId, cardName);
+  static async createCardInList(
+    listId: string,
+    cardName: string,
+    description: string
+  ) {
+    return await BoardController.__createCard(listId, cardName, description);
   }
   static async downloadAttachment(cardId: string, attachmentId: string) {
     return await BoardController.__downloadAttachment(cardId, attachmentId);
@@ -236,10 +240,14 @@ class BoardController {
     }
   }
 
-  static async __createCard(listId: string, cardName: string) {
+  static async __createCard(
+    listId: string,
+    cardName: string,
+    description: string
+  ) {
     try {
       let cardCreateApi = trelloApi(
-        `cards?idList=${listId}&name=${cardName}&attachments=true&`
+        `cards?idList=${listId}&name=${cardName}&desc=${description}&attachments=true&`
       );
       let cardResult = await fetch(cardCreateApi, {
         method: "POST",

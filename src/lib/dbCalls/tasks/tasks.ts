@@ -266,6 +266,7 @@ class TaskDB {
   }
   static async __createTask(data: TaskData) {
     try {
+      console.log(data);
       let task: TaskInfo = new Tasks(data);
       task = await task.save();
       return task;

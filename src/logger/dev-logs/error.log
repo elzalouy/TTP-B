@@ -851,3 +851,168 @@
   level: 'error',
   timestamp: '2022-07-04 16:31:40'
 }
+{
+  message: {
+    __updateProjectNotificationError: TypeError: Cannot read properties of undefined (reading 'socketId')
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/notification.ts:137:20)
+        at Generator.next (<anonymous>)
+        at fulfilled (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/notification.ts:5:58)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5)
+  },
+  level: 'error',
+  timestamp: '2022-07-04 16:59:24'
+}
+{
+  message: {
+    __updateProjectNotificationError: TypeError: Cannot read properties of undefined (reading 'socketId')
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/notification.ts:93:22)
+        at Generator.next (<anonymous>)
+        at fulfilled (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/notification.ts:5:58)
+        at runMicrotasks (<anonymous>)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5)
+  },
+  level: 'error',
+  timestamp: '2022-07-04 17:04:40'
+}
+{
+  message: {
+    __updateProjectNotificationError: TypeError: Cannot read properties of undefined (reading 'socketId')
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/notification.ts:93:22)
+        at Generator.next (<anonymous>)
+        at fulfilled (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/notification.ts:5:58)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5)
+  },
+  level: 'error',
+  timestamp: '2022-07-04 17:46:12'
+}
+{
+  message: {
+    __updateProjectNotificationError: TypeError: Cannot read properties of undefined (reading 'socketId')
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/notification.ts:93:22)
+        at Generator.next (<anonymous>)
+        at fulfilled (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/notification.ts:5:58)
+        at runMicrotasks (<anonymous>)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5)
+  },
+  level: 'error',
+  timestamp: '2022-07-04 17:53:07'
+}
+{
+  message: {
+    updateBoardCardError: TypeError: Cannot read properties of undefined (reading 'display')
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/trello.ts:461:32)
+        at Generator.next (<anonymous>)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/trello.ts:8:71
+        at new Promise (<anonymous>)
+        at __awaiter (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/trello.ts:4:12)
+        at Function.__updateBoardCard (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/trello.ts:497:16)
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/trello.ts:97:34)
+        at Generator.next (<anonymous>)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/trello.ts:8:71
+        at new Promise (<anonymous>)
+  },
+  level: 'error',
+  timestamp: '2022-07-05 18:44:19'
+}
+{
+  message: {
+    updateBoardCardError: TypeError: Cannot read properties of undefined (reading 'display')
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/trello.ts:461:32)
+        at Generator.next (<anonymous>)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/trello.ts:8:71
+        at new Promise (<anonymous>)
+        at __awaiter (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/trello.ts:4:12)
+        at Function.__updateBoardCard (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/trello.ts:497:16)
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/trello.ts:97:34)
+        at Generator.next (<anonymous>)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/trello.ts:8:71
+        at new Promise (<anonymous>)
+  },
+  level: 'error',
+  timestamp: '2022-07-05 18:44:19'
+}
+{
+  message: {
+    updateBoardCardError: TypeError: Cannot read properties of undefined (reading 'display')
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/trello.ts:461:32)
+        at Generator.next (<anonymous>)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/trello.ts:8:71
+        at new Promise (<anonymous>)
+        at __awaiter (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/trello.ts:4:12)
+        at Function.__updateBoardCard (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/trello.ts:497:16)
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/trello.ts:97:34)
+        at Generator.next (<anonymous>)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/trello.ts:8:71
+        at new Promise (<anonymous>)
+  },
+  level: 'error',
+  timestamp: '2022-07-05 18:44:19'
+}
+{
+  message: {
+    updateBoardCardError: TypeError: Cannot read properties of undefined (reading 'display')
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/trello.ts:461:32)
+        at Generator.next (<anonymous>)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/trello.ts:8:71
+        at new Promise (<anonymous>)
+        at __awaiter (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/trello.ts:4:12)
+        at Function.__updateBoardCard (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/trello.ts:497:16)
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/trello.ts:97:34)
+        at Generator.next (<anonymous>)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/trello.ts:8:71
+        at new Promise (<anonymous>)
+  },
+  level: 'error',
+  timestamp: '2022-07-05 18:44:19'
+}
+{
+  message: {
+    updateBoardCardError: TypeError: Cannot read properties of undefined (reading 'display')
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/trello.ts:461:32)
+        at Generator.next (<anonymous>)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/trello.ts:8:71
+        at new Promise (<anonymous>)
+        at __awaiter (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/trello.ts:4:12)
+        at Function.__updateBoardCard (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/trello.ts:497:16)
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/trello.ts:97:34)
+        at Generator.next (<anonymous>)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/trello.ts:8:71
+        at new Promise (<anonymous>)
+  },
+  level: 'error',
+  timestamp: '2022-07-05 18:44:19'
+}
+{
+  message: {
+    updateBoardCardError: TypeError: Cannot read properties of undefined (reading 'display')
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/trello.ts:461:32)
+        at Generator.next (<anonymous>)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/trello.ts:8:71
+        at new Promise (<anonymous>)
+        at __awaiter (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/trello.ts:4:12)
+        at Function.__updateBoardCard (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/trello.ts:497:16)
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/trello.ts:97:34)
+        at Generator.next (<anonymous>)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/trello.ts:8:71
+        at new Promise (<anonymous>)
+  },
+  level: 'error',
+  timestamp: '2022-07-05 18:44:19'
+}
+{
+  message: {
+    updateBoardCardError: TypeError: Cannot read properties of undefined (reading 'display')
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/trello.ts:461:32)
+        at Generator.next (<anonymous>)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/trello.ts:8:71
+        at new Promise (<anonymous>)
+        at __awaiter (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/trello.ts:4:12)
+        at Function.__updateBoardCard (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/trello.ts:497:16)
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/trello.ts:97:34)
+        at Generator.next (<anonymous>)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/trello.ts:8:71
+        at new Promise (<anonymous>)
+  },
+  level: 'error',
+  timestamp: '2022-07-05 18:44:19'
+}
