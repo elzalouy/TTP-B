@@ -8,9 +8,10 @@ import TechMemberController from "../../controllers/techMember";
 const TechMemberReq = class TechMemberReq extends TechMemberController {
   static async handleCreatMember(req: Request, res: Response) {
     try {
-      let member = await super.createNewMember(req.body);
+      let member: any = await super.createNewMember(req.body);
       if (member?.status === 200) {
-        return res.status(200).send(member);
+        console.log(member.techMember);
+        return res.status(200).send(member.techMember);
       } else {
         return res.status(400).send(member);
       }
