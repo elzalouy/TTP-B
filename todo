@@ -1,12 +1,6 @@
 
-TODO add event emmiter for deleteTaskFromBoard, editTaskFromBoard
+TODO  deleteTaskFromBoard, editTaskFromBoard createTaskFromBoard emit
+// Description 
+When we edit a certain task from ttp , we need to emit the task changes to all open sockets.
 
-TODO the notification system and socket system should be rebuild again with the right logic.
-
-TODO User role should be only {PM,OM} without userType:[user, admin] (done)
-TODO Change the notification document schema to the right one (done)
-TODO Create a static feature with virtual data first (done)
-TODO Move task notification (make a function for it) it will receive (TaskData)  (done)
-TODO Notification for update project to deliver in date or done (done)
-
-TODO test move task notification from another OM Account
+TODO 
