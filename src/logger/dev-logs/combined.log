@@ -1,0 +1,360 @@
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-07-07 16:13:23'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-07-07 16:18:35'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-07-07 16:19:18'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-07-07 16:22:23'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-07-07 16:25:09'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-07-07 16:32:01'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-07-07 16:35:01'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-07-07 16:35:58'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-07-07 17:00:09'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-07-07 17:01:26'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-07-07 17:01:54'
+}
+{
+  message: {
+    removeBoard: 'https://api.trello.com/1/boards/62c6855e621d0b51ae083d1a?response_type=token&key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68'
+  },
+  level: 'info',
+  timestamp: '2022-07-07 17:02:26'
+}
+{
+  message: {
+    'delete Tasks': [
+      {
+        _id: new ObjectId("62c69f8897f57106f222ee6f"),
+        name: 'Task No 1',
+        projectId: new ObjectId("62c69f4f97f57106f222ee61"),
+        categoryId: new ObjectId("62c18c59e4cbf6eb27c52c76"),
+        teamId: null,
+        listId: new ObjectId("62c6855e939e0231893b6052"),
+        cardId: '62c69f84f403b252e4217caf',
+        boardId: '62c6855e621d0b51ae083d1a',
+        status: 'Not Clear',
+        start: 2022-07-07T08:55:31.000Z,
+        deadline: 2022-07-07T22:00:00.000Z,
+        deliveryDate: null,
+        attachedFiles: [],
+        attachedCard: null,
+        lastMove: 'Tasks Board',
+        lastMoveDate: 'Thu, 07 Jul 2022 14:30:14 GMT',
+        description: 'Task No 1 description',
+        subCategoryId: '62c18c59e4cbf6eb27c52c6e',
+        createdAt: 2022-07-07T08:55:36.662Z,
+        updatedAt: 2022-07-07T14:30:16.076Z,
+        __v: 0
+      },
+      {
+        _id: new ObjectId("62c6c4b61350f20db09dd588"),
+        name: 'Almond concept ',
+        projectId: new ObjectId("62c6c3fa1350f20db09dd57a"),
+        categoryId: new ObjectId("62c18c59e4cbf6eb27c52c76"),
+        teamId: null,
+        listId: new ObjectId("62c6855fdd6c6016af5f02af"),
+        cardId: '62c6c4b529201148b1735385',
+        boardId: '62c6855e621d0b51ae083d1a',
+        status: 'Tasks Board',
+        start: 2022-07-07T11:34:12.000Z,
+        deadline: 2022-07-19T21:00:00.000Z,
+        deliveryDate: null,
+        attachedFiles: [
+          {
+            name: 'Adel_vaccine_certificates_.pdf',
+            trelloId: '62c6c4b53d0f738b3bb668bf',
+            mimeType: 'application/pdf',
+            url: 'https://trello.com/1/cards/62c6c4b529201148b1735385/attachments/62c6c4b53d0f738b3bb668bf/download/Adel_vaccine_certificates_.pdf',
+            _id: new ObjectId("62c6c4b61350f20db09dd589")
+          },
+          {
+            name: "Be can't all'.png",
+            trelloId: '62c6c51a31e5ba894847e6a8',
+            mimeType: '',
+            url: 'https://trello.com/1/cards/62c6c4b529201148b1735385/attachments/62c6c51a31e5ba894847e6a8/download/Be_can_t_all_.png',
+            _id: new ObjectId("62c6c51c3512a9782157e840")
+          }
+        ],
+        attachedCard: null,
+        lastMove: null,
+        lastMoveDate: null,
+        description: 'Check on Trello ',
+        subCategoryId: '62c18c59e4cbf6eb27c52c72',
+        createdAt: 2022-07-07T11:34:14.637Z,
+        updatedAt: 2022-07-07T11:35:56.087Z,
+        __v: 1
+      }
+    ],
+    'Delete Tech members': 'Delete result is 0 document'
+  },
+  level: 'info',
+  timestamp: '2022-07-07 17:02:29'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-07-07 17:04:30'
+}
+{
+  message: {
+    borderData: Promise { <pending> },
+    createBoardApi: 'https://api.trello.com/1/boards/?name=loval ngrok&prefs_background=blue&defaultLists=false&key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68'
+  },
+  level: 'info',
+  timestamp: '2022-07-07 17:05:22'
+}
+{
+  message: { removeWebhookSucced: 'done' },
+  level: 'info',
+  timestamp: '2022-07-07 17:05:31'
+}
+{
+  message: {
+    updateBoardCardError: TypeError: Cannot read properties of undefined (reading 'display')
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/trello.ts:468:32)
+        at Generator.next (<anonymous>)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/trello.ts:8:71
+        at new Promise (<anonymous>)
+        at __awaiter (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/trello.ts:4:12)
+        at Function.__updateBoardCard (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/trello.ts:497:16)
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/trello.ts:101:34)
+        at Generator.next (<anonymous>)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/trello.ts:8:71
+        at new Promise (<anonymous>)
+  },
+  level: 'error',
+  timestamp: '2022-07-07 17:06:08'
+}
+{
+  message: {
+    __updateTaskByTrelloDBError: Error: tasks validation failed: listId: Path `listId` is required.
+        at ValidationError.inspect (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/error/validation.js:48:26)
+        at formatValue (node:internal/util/inspect:782:19)
+        at formatProperty (node:internal/util/inspect:1819:11)
+        at formatRaw (node:internal/util/inspect:1030:9)
+        at formatValue (node:internal/util/inspect:817:10)
+        at formatProperty (node:internal/util/inspect:1819:11)
+        at formatRaw (node:internal/util/inspect:1030:9)
+        at formatValue (node:internal/util/inspect:817:10)
+        at inspect (node:internal/util/inspect:347:10)
+        at Format.transform (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/logform/pretty-print.js:27:19) {
+      errors: {
+        listId: ValidatorError: Path `listId` is required.
+            at validate (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/schematype.js:1330:13)
+            at ObjectId.SchemaType.doValidate (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/schematype.js:1314:7)
+            at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/document.js:2751:18
+            at processTicksAndRejections (node:internal/process/task_queues:78:11) {
+          properties: {
+            validator: [Function (anonymous)],
+            message: 'Path `listId` is required.',
+            type: 'required',
+            path: 'listId',
+            value: null
+          },
+          kind: 'required',
+          path: 'listId',
+          value: null,
+          reason: undefined,
+          [Symbol(mongoose:validatorError)]: true
+        }
+      },
+      _message: 'tasks validation failed'
+    }
+  },
+  level: 'error',
+  timestamp: '2022-07-07 17:09:27'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-07-07 17:14:50'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-07-07 17:19:54'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-07-07 17:23:48'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-07-07 17:24:19'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-07-07 17:25:33'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-07-07 17:27:41'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-07-07 17:28:16'
+}
+{
+  message: {
+    updateBoardCardError: TypeError: Cannot read properties of undefined (reading 'display')
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/trello.ts:468:32)
+        at Generator.next (<anonymous>)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/trello.ts:8:71
+        at new Promise (<anonymous>)
+        at __awaiter (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/trello.ts:4:12)
+        at Function.__updateBoardCard (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/trello.ts:497:16)
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/trello.ts:101:34)
+        at Generator.next (<anonymous>)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/trello.ts:8:71
+        at new Promise (<anonymous>)
+  },
+  level: 'error',
+  timestamp: '2022-07-07 17:29:51'
+}
+{
+  message: {
+    __updateTaskByTrelloDBError: TypeError: Cannot set properties of null (setting 'name')
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/dbCalls/tasks/tasks.ts:312:16)
+        at Generator.next (<anonymous>)
+        at fulfilled (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/dbCalls/tasks/tasks.ts:5:58)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5)
+  },
+  level: 'error',
+  timestamp: '2022-07-07 17:30:01'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-07-07 17:34:07'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-07-07 17:36:39'
+}
+{
+  message: {
+    updateBoardCardError: TypeError: Cannot read properties of undefined (reading 'display')
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/trello.ts:468:32)
+        at Generator.next (<anonymous>)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/trello.ts:8:71
+        at new Promise (<anonymous>)
+        at __awaiter (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/trello.ts:4:12)
+        at Function.__updateBoardCard (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/trello.ts:497:16)
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/trello.ts:101:34)
+        at Generator.next (<anonymous>)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/trello.ts:8:71
+        at new Promise (<anonymous>)
+  },
+  level: 'error',
+  timestamp: '2022-07-07 17:51:49'
+}
+{
+  message: {
+    __updateTaskByTrelloDBError: TypeError: Cannot set properties of null (setting 'name')
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/dbCalls/tasks/tasks.ts:312:16)
+        at Generator.next (<anonymous>)
+        at fulfilled (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/dbCalls/tasks/tasks.ts:5:58)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5)
+  },
+  level: 'error',
+  timestamp: '2022-07-07 17:51:53'
+}
+{
+  message: {
+    __updateTaskByTrelloDBError: TypeError: Cannot set properties of null (setting 'name')
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/dbCalls/tasks/tasks.ts:312:16)
+        at Generator.next (<anonymous>)
+        at fulfilled (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/dbCalls/tasks/tasks.ts:5:58)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5)
+  },
+  level: 'error',
+  timestamp: '2022-07-07 17:51:54'
+}

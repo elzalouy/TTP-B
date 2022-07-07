@@ -47,6 +47,7 @@ class TaskDB {
   static async getAllTasksDB(data: any) {
     return await TaskDB.__getAllTasks(data);
   }
+
   static async deleteTasksWhereDB(data: TaskData) {
     return await TaskDB.__deleteTasksWhereDB(data);
   }
@@ -158,8 +159,9 @@ class TaskDB {
   }
   static async __deleteTasksWhereDB(data: TaskData) {
     try {
+      let tasks = await Tasks.find(data);
       let result = await Tasks.deleteMany(data);
-      if (result) return result;
+      if (result) return tasks;
       throw "Tasks not found";
     } catch (error) {
       logger.error({ deleteTasksWhereError: error });
@@ -266,7 +268,6 @@ class TaskDB {
   }
   static async __createTask(data: TaskData) {
     try {
-      console.log(data);
       let task: TaskInfo = new Tasks(data);
       task = await task.save();
       return task;
@@ -307,7 +308,6 @@ class TaskDB {
   }
   static async __updateTaskByTrelloDB(data: TaskData) {
     try {
-      console.log("dataaa", data);
       let task = await Tasks.findOne({ cardId: data.cardId });
       task.name = data?.name ? data?.name : task.name;
       task.status = data?.status ? data.status : task.status;
@@ -325,7 +325,12 @@ class TaskDB {
           "trelloId"
         );
       }
-      console.log(task);
+      if (data.deleteFiles && data?.deleteFiles?.trelloId) {
+        task.attachedFiles = _.filter(
+          task.attachedFiles,
+          (item) => item.trelloId !== data?.deleteFiles?.trelloId
+        );
+      }
       return await task.save();
     } catch (error) {
       logger.error({ __updateTaskByTrelloDBError: error });

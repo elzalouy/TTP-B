@@ -137,6 +137,13 @@ export const deleteTaskFromBoardJob = (data: TaskInfo) => {
       logger.ercror({ deleteCardDataError: error });
     }
   });
+  TaskQueue.push(async (cb) => {
+    try {
+      await BoardController.removeWebhook(data.cardId);
+    } catch (error) {
+      logger.ercror({ deleteCardWebhookError: error });
+    }
+  });
 };
 export const updateTaskAttachmentsJob = (task: TaskData) => {
   TaskQueue.push(async (cb) => {

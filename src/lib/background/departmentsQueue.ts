@@ -27,8 +27,6 @@ export const createOneJob = (
 ) => {
   DepartmentQueue.push(async (cb) => {
     try {
-      // b- create department based the on created board id
-
       if (department._id) {
         let defaultListId: string = "";
         let sharedListID: string = "";
@@ -37,13 +35,12 @@ export const createOneJob = (
         let notClearListId: string = "";
         let canceldListId: string = "";
         let inProgressListId: string = "";
-        // // create board
+
         let inprogress: createListResponse =
           await BoardController.addListToBoard(
             department.boardId,
             "inProgress"
           );
-        console.log(inprogress);
         inProgressListId = inprogress.id;
 
         let cancel: createListResponse = await BoardController.addListToBoard(
@@ -52,11 +49,11 @@ export const createOneJob = (
         );
         canceldListId = cancel.id;
 
-        let unClear: createListResponse = await BoardController.addListToBoard(
+        let NotClear: createListResponse = await BoardController.addListToBoard(
           department.boardId,
           "Not Clear"
         );
-        notClearListId = unClear.id;
+        notClearListId = NotClear.id;
 
         let done: createListResponse = await BoardController.addListToBoard(
           department.boardId,
@@ -85,30 +82,29 @@ export const createOneJob = (
 
         // // create list and webhook for the team
         let teamListIds: { idInTrello: string; idInDB: any; name: string }[] =
-          await DepartmentController.__createTeamWebhookAndList(
+          await DepartmentController.__createTeamAndList(
             teams,
-            department.boardId,
-            department.mainBoard
+            department.boardId
           );
         defaultListId = defaultList.id;
 
         // create webhook for list
-        const listId: string[] = [
-          defaultListId,
-          sharedListID,
-          doneListId,
-          reviewListId,
-          notClearListId,
-          canceldListId,
-          inProgressListId,
-        ];
+        // const listId: string[] = [
+        //   defaultListId,
+        //   sharedListID,
+        //   doneListId,
+        //   reviewListId,
+        //   notClearListId,
+        //   canceldListId,
+        //   inProgressListId,
+        // ];
 
-        let webhookCreate = listId.map(async (id) => {
-          return await BoardController.createWebHook(id);
-        });
-        Promise.all(webhookCreate).then((res) =>
-          logger.info({ webhookCreateResult: "webhook done" })
-        );
+        // let webhookCreate = listId.map(async (id) => {
+        //   return await BoardController.createWebHook(id);
+        // });
+        // Promise.all(webhookCreate).then((res) =>
+        //   logger.info({ webhookCreateResult: "webhook done" })
+        // );
         let data = {
           defaultListId,
           sharedListID,

@@ -37,6 +37,7 @@ class TaskController extends TaskDB {
   static async deleteTasks(ids: string[]) {
     return await TaskController.__deleteTasks(ids);
   }
+
   static async deleteTasksWhere(data: TaskData) {
     return await TaskController.__deleteTasksWhere(data);
   }
@@ -152,7 +153,6 @@ class TaskController extends TaskDB {
   }
   static async __CreateNewTask(data: TaskData, files: Express.Multer.File[]) {
     try {
-      console.log(data);
       let createdCard: { id: string } | any =
         await BoardController.createCardInList(
           data.listId,
@@ -161,6 +161,7 @@ class TaskController extends TaskDB {
         );
       if (createdCard) {
         data.cardId = createdCard.id;
+        await BoardController.createWebHook(data.cardId);
         if (files.length > 0)
           data = await TaskController.__createTaskAttachment(files, data);
         else data.attachedFiles = [];
@@ -189,6 +190,7 @@ class TaskController extends TaskDB {
       });
       tasks.forEach(async (item) => {
         await BoardController.deleteCard(item.cardId);
+        await BoardController.removeWebhook(item.cardId);
       });
       return await super.deleteTasksByProjectIdDB(id);
     } catch (error) {
@@ -200,6 +202,9 @@ class TaskController extends TaskDB {
     try {
       // let tasks = await super.getTasksByIdsDB;
       let deleteResult = await super.deleteTasksWhereDB(data);
+      deleteResult.forEach((item) =>
+        BoardController.removeWebhook(item.cardId)
+      );
       if (deleteResult) return deleteResult;
       else throw "Error hapenned while deleting tasks";
     } catch (error) {
@@ -212,6 +217,7 @@ class TaskController extends TaskDB {
       let tasks = await super.getTasksByIdsDB(ids);
       tasks.forEach(async (item) => {
         BoardController.deleteCard(item.cardId);
+        BoardController.removeWebhook(item.cardId);
       });
       return await super.deleteTasksDB(ids);
     } catch (error) {
@@ -249,6 +255,7 @@ class TaskController extends TaskDB {
   static async __createTaskByTrello(data: TaskData) {
     try {
       let response = await super.__createTaskByTrelloDB(data);
+
       return response;
     } catch (error) {
       logger.error({ createTaskByTrelloError: error });

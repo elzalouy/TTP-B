@@ -293,7 +293,6 @@ class BoardController {
           "Trello_Webhook_Callback_Url"
         )}&idModel=${idModel}&`
       );
-
       let webhookResult = await fetch(webhookApi, {
         method: "POST",
         headers: {
@@ -482,7 +481,8 @@ class BoardController {
       //   let result = await TaskController.createTaskByTrello(task);
       //   io.sockets.emit("create task", result);
       // }
-      console.log(data.action.data.card);
+
+      console.log(type, action);
       //update
       if (type === "updateCard" && action !== "action_archived_card") {
         if (action === "action_changed_description_of_card")
@@ -514,8 +514,16 @@ class BoardController {
         let result = await TaskController.updateTaskByTrelloDB(task);
         io.sockets.emit("update-task", result);
       }
-      // archive, unArchive or delete
+      if (type === "deleteAttachmentFromCard") {
+        task.deleteFiles = {
+          trelloId: data.action.data.attachment.id,
+          name: data.action.data.attachment.name,
+        };
+        let result = await TaskController.updateTaskByTrelloDB(task);
+        io.sockets.emit("update-task", result);
+      }
       if (type === "updateCard" && action === "action_archived_card") {
+        // archive, unArchive or delete
         let result = await TaskController.archiveTaskByTrelloDB(task, true);
         return io?.sockets?.emit("update-task", result);
       }
