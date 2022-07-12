@@ -14,7 +14,7 @@ import {
 import { webhookUpdateInterface } from "../types/controller/Tasks";
 
 export const TaskQueue = queue({ results: [] });
-export const updateTaskQueue = queue({ results: [] });
+export const updateTaskQueue = queue({ results: [], autostart: true });
 export function moveTaskJob(
   listId: string,
   cardId: string,

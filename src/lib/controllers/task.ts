@@ -104,7 +104,7 @@ class TaskController extends TaskDB {
       }
       // if there are uploading files, upload it in the controller layer.
       if (files) {
-        data = await this.__createTaskAttachment(files, data);
+        await this.__createTaskAttachment(files, data);
       }
       // update data in the db in dbCalls
       delete data.attachedFiles;
@@ -135,16 +135,16 @@ class TaskController extends TaskDB {
             file
           );
         });
-        // let attachedFiles = await Promise.all(newAttachments);
-        // data.attachedFiles = [];
-        // attachedFiles.forEach((item) => {
-        //   data.attachedFiles.push({
-        //     trelloId: item.id,
-        //     name: item.fileName,
-        //     mimeType: item.mimeType,
-        //     url: item.url,
-        //   });
-        // });
+        let attachedFiles = await Promise.all(newAttachments);
+        data.attachedFiles = [];
+        attachedFiles.forEach((item) => {
+          data.attachedFiles.push({
+            trelloId: item.id,
+            name: item.fileName,
+            mimeType: item.mimeType,
+            url: item.url,
+          });
+        });
       } else delete data.attachedFiles;
       deleteAll();
       return data;
@@ -162,16 +162,17 @@ class TaskController extends TaskDB {
         );
       if (createdCard) {
         data.cardId = createdCard.id;
-        BoardController.createWebHook(data.cardId);
-        if (files.length > 0)
-          TaskController.__createTaskAttachment(files, data);
-        else data.attachedFiles = [];
+        let response = await BoardController.createWebHook(data.cardId);
+        if (response) {
+          if (files.length > 0)
+            data = await TaskController.__createTaskAttachment(files, data);
+          else data.attachedFiles = [];
+        }
+        let task = await super.createTaskDB(data);
+        createTaskFromBoardJob(task);
+        TaskQueue.start();
+        return task;
       } else throw "Error while creating Card in Trello";
-      delete data.attachedFiles;
-      let task = await super.createTaskDB(data);
-      createTaskFromBoardJob(task);
-      TaskQueue.start();
-      return task;
     } catch (error) {
       logger.error({ getTeamsError: error });
     }
@@ -257,7 +258,6 @@ class TaskController extends TaskDB {
   static async __createTaskByTrello(data: TaskData) {
     try {
       let response = await super.__createTaskByTrelloDB(data);
-
       return response;
     } catch (error) {
       logger.error({ createTaskByTrelloError: error });

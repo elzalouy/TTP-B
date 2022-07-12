@@ -29,7 +29,6 @@ const BoardReq = class BoardReq extends BoardController {
         let task = await super.webhookUpdate(trelloData);
         return res.status(200).send(task);
       });
-      await updateTaskQueue.start();
     } catch (error) {
       logger.error({ handleWebhookUpdateCardError: error });
     }

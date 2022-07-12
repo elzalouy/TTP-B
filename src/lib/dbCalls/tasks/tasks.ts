@@ -226,22 +226,6 @@ class TaskDB {
       task.cardId = data.cardId ? data.cardId : task.cardId;
       task.boardId = data.boardId ? data.boardId : task.boardId;
       task.listId = data.listId ? data.listId : task.listId;
-
-      // if (data?.attachedFiles?.length > 0) {
-      //   task.attachedFiles = [...task.attachedFiles, ...data?.attachedFiles];
-      // }
-      // console.log(data.deleteFiles);
-      // if ([...data?.deleteFiles].length > 0) {
-      //   task.attachedFiles = task.attachedFiles.filter(
-      //     (item) =>
-      //       [...data.deleteFiles].findIndex(
-      //         (file: AttachmentSchema) => file.trelloId === item.trelloId
-      //       ) < 0
-      //   );
-      // }
-      // task.attachedFiles = _.uniqBy(task.attachedFiles, "trelloId");
-      // console.log(task.attachedFiles);
-      // delete data?.deleteFiles;
       delete task._id;
       let update = await Tasks.findByIdAndUpdate(id, task, {
         new: true,
@@ -323,7 +307,7 @@ class TaskDB {
         : task.lastMoveDate;
       if (data.attachedFiles) {
         let files = [...task.attachedFiles, ...data.attachedFiles];
-        task.attachedFiles = _.uniqBy(files, "trelloId");
+        task.attachedFiles = files;
       }
       if (data.deleteFiles && data?.deleteFiles?.trelloId) {
         task.attachedFiles = _.filter(
@@ -331,9 +315,15 @@ class TaskDB {
           (item) => item.trelloId !== data?.deleteFiles?.trelloId
         );
       }
+      task.attachedFiles = task.attachedFiles.filter(
+        (item) => item.mimeType !== ""
+      );
       task.attachedFiles = _.uniqBy(task.attachedFiles, "trelloId");
-      let result = await Tasks.findOneAndUpdate({ _id: task._id }, task, {
+      console.log(task);
+      let id = task._id;
+      let result = await Tasks.findOneAndUpdate({ _id: id }, task, {
         new: true,
+        lean: true,
       });
       return result;
     } catch (error) {
