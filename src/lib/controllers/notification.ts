@@ -112,7 +112,10 @@ const NotificationController = class NotificationController extends Notification
           if (userId !== data.projectManager)
             io.to(pm).emit("notification-update");
         }
-        if (data.adminId.toString() !== userId) {
+        if (
+          data.adminId.toString() !== userId &&
+          data.adminId.toString() !== data.projectManager
+        ) {
           let notification = await super.__createNotification({
             title: `${data.name} project status changed to done`,
             description: `${data.name} project status changed to done`,
