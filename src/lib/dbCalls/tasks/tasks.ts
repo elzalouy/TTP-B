@@ -227,21 +227,23 @@ class TaskDB {
       task.boardId = data.boardId ? data.boardId : task.boardId;
       task.listId = data.listId ? data.listId : task.listId;
 
-      if (data?.attachedFiles?.length > 0) {
-        task.attachedFiles = [...task.attachedFiles, ...data?.attachedFiles];
-      }
-      if ([...data?.deleteFiles].length > 0) {
-        task.attachedFiles = task.attachedFiles.filter(
-          (item) =>
-            [...data.deleteFiles].findIndex(
-              (file) => item._id.toString() === file._id
-            ) < 0
-        );
-      }
-      delete data?.deleteFiles;
+      // if (data?.attachedFiles?.length > 0) {
+      //   task.attachedFiles = [...task.attachedFiles, ...data?.attachedFiles];
+      // }
+      // console.log(data.deleteFiles);
+      // if ([...data?.deleteFiles].length > 0) {
+      //   task.attachedFiles = task.attachedFiles.filter(
+      //     (item) =>
+      //       [...data.deleteFiles].findIndex(
+      //         (file: AttachmentSchema) => file.trelloId === item.trelloId
+      //       ) < 0
+      //   );
+      // }
+      // task.attachedFiles = _.uniqBy(task.attachedFiles, "trelloId");
+      // console.log(task.attachedFiles);
+      // delete data?.deleteFiles;
       delete task._id;
       let update = await Tasks.findByIdAndUpdate(id, task, {
-        lean: true,
         new: true,
       });
       return { error: null, task: update };
@@ -306,7 +308,7 @@ class TaskDB {
       logger.error({ getOneTaskError: error });
     }
   }
-  static async __updateTaskByTrelloDB(data: TaskData) {
+  static async __updateTaskByTrelloDB(data: TaskData | any) {
     try {
       let task = await Tasks.findOne({ cardId: data.cardId });
       task.name = data?.name ? data?.name : task.name;
@@ -320,10 +322,8 @@ class TaskDB {
         ? data.lastMoveDate
         : task.lastMoveDate;
       if (data.attachedFiles) {
-        task.attachedFiles = _.uniqBy(
-          [...task.attachedFiles, ...data.attachedFiles],
-          "trelloId"
-        );
+        let files = [...task.attachedFiles, ...data.attachedFiles];
+        task.attachedFiles = _.uniqBy(files, "trelloId");
       }
       if (data.deleteFiles && data?.deleteFiles?.trelloId) {
         task.attachedFiles = _.filter(
@@ -331,7 +331,11 @@ class TaskDB {
           (item) => item.trelloId !== data?.deleteFiles?.trelloId
         );
       }
-      return await task.save();
+      task.attachedFiles = _.uniqBy(task.attachedFiles, "trelloId");
+      let result = await Tasks.findOneAndUpdate({ _id: task._id }, task, {
+        new: true,
+      });
+      return result;
     } catch (error) {
       logger.error({ __updateTaskByTrelloDBError: error });
     }

@@ -28,7 +28,7 @@ export default function appSocket(http: any) {
       });
       socket.on("joined-OM", (data: any) => {
         console.log("joined OM");
-        socketOM = socketOM.filter((item) => item.id !== data._id);
+        // socketOM = socketOM.filter((item) => item.id !== data._id);
         socketOM.push({
           id: data._id,
           socketId: socket.id,
@@ -37,7 +37,7 @@ export default function appSocket(http: any) {
       });
       socket.on("joined-PM", (data: any) => {
         console.log("joined PM");
-        socketClients = socketClients.filter((item) => item.id !== data._id);
+        // socketClients = socketClients.filter((item) => item.id !== data._id);
         socketClients.push({
           id: data._id,
           socketId: socket.id,

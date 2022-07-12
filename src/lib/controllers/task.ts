@@ -107,6 +107,8 @@ class TaskController extends TaskDB {
         data = await this.__createTaskAttachment(files, data);
       }
       // update data in the db in dbCalls
+      delete data.attachedFiles;
+      delete data.deleteFiles;
       let task = await super.updateTaskDB(data);
       deleteAll();
       return task;
@@ -133,17 +135,16 @@ class TaskController extends TaskDB {
             file
           );
         });
-        let attachedFiles = await Promise.all(newAttachments);
-        console.log("attached files", attachedFiles);
-        data.attachedFiles = [];
-        attachedFiles.forEach((item) => {
-          data.attachedFiles.push({
-            trelloId: item.id,
-            name: item.fileName,
-            mimeType: item.mimeType,
-            url: item.url,
-          });
-        });
+        // let attachedFiles = await Promise.all(newAttachments);
+        // data.attachedFiles = [];
+        // attachedFiles.forEach((item) => {
+        //   data.attachedFiles.push({
+        //     trelloId: item.id,
+        //     name: item.fileName,
+        //     mimeType: item.mimeType,
+        //     url: item.url,
+        //   });
+        // });
       } else delete data.attachedFiles;
       deleteAll();
       return data;
@@ -161,11 +162,12 @@ class TaskController extends TaskDB {
         );
       if (createdCard) {
         data.cardId = createdCard.id;
-        await BoardController.createWebHook(data.cardId);
+        BoardController.createWebHook(data.cardId);
         if (files.length > 0)
-          data = await TaskController.__createTaskAttachment(files, data);
+          TaskController.__createTaskAttachment(files, data);
         else data.attachedFiles = [];
       } else throw "Error while creating Card in Trello";
+      delete data.attachedFiles;
       let task = await super.createTaskDB(data);
       createTaskFromBoardJob(task);
       TaskQueue.start();

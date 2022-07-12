@@ -4,10 +4,7 @@ import logger from "../../../logger";
 import TaskController from "../../controllers/task";
 import { TaskData } from "../../types/model/tasks";
 import { createTaskSchema, editTaskSchema } from "../../services/validation";
-import {
-  taskResponse,
-  webhookUpdateInterface,
-} from "../../types/controller/Tasks";
+import { taskResponse } from "../../types/controller/Tasks";
 import {
   TaskQueue,
   updateTaskAttachmentsJob,

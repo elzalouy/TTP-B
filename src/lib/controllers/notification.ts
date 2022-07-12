@@ -1,13 +1,11 @@
 import NotificationDB from "../dbCalls/notification/notification";
-import { IsNotified, NotificationData } from "./../types/model/Notification";
+import { NotificationData } from "./../types/model/Notification";
 import logger from "../../logger";
-import { TaskData, TaskInfo } from "../types/model/tasks";
 import Project from "../models/Project";
 import User from "../models/User";
 import { io } from "../..";
 import { socketClients, socketOM } from "../startup/socket";
 import { ProjectData } from "../types/model/Project";
-import UserDB from "../dbCalls/user/user";
 
 const NotificationController = class NotificationController extends NotificationDB {
   static async __sendNotifications(
@@ -27,12 +25,34 @@ const NotificationController = class NotificationController extends Notification
     }
   }
 
+  static async __MoveTaskFromBoardNotification(data: any, status: string) {
+    try {
+      // get Notified users
+      let project = await Project.findOne({ _id: data.projectId });
+      // create notificaton
+      let newNotification: NotificationData = {
+        title: `${data.name} has been moved to ${status}`,
+        description: `${data.name} status has been changed to ${status}`,
+        isNotified: [{ userId: project.projectManager, isNotified: false }],
+      };
+      await super.__createNotification(newNotification);
+      // send to current socket clients an update
+      // PM
+      let PMid = socketClients.find(
+        (item) => item.id === project.projectManager.toString()
+      );
+      io.to(PMid.socketId).emit("notification-update");
+    } catch (error) {
+      logger.error({ __MoveTaskNotificationError: error });
+    }
+  }
+
   static async __MoveTaskNotification(data: any, status: string, user: any) {
     try {
       // get Notified users
       let id = user.id;
       let project = await Project.findOne({ _id: data.projectId });
-
+      console.log(data, project);
       // create notificaton
       if (project.projectManager.toString() !== id) {
         let newNotification: NotificationData = {
@@ -43,11 +63,11 @@ const NotificationController = class NotificationController extends Notification
         await super.__createNotification(newNotification);
         // send to current socket clients an update
         // PM
-        let PMid = socketClients.find(
-          (item) => item.id === project.projectManager.toString()
-        );
+        let PMid = socketClients
+          .filter((item) => item.id === project.projectManager.toString())
+          .map((item) => item.socketId);
         if (PMid && project.projectManager !== id)
-          io.to(PMid.socketId).emit("notification-update");
+          io.to(PMid).emit("notification-update");
       }
     } catch (error) {
       logger.error({ __MoveTaskNotificationError: error });
@@ -86,11 +106,11 @@ const NotificationController = class NotificationController extends Notification
             description: `${data.name} project is done. Thank you for your hard work.`,
             isNotified: [{ userId: data.projectManager, isNotified: false }],
           });
-          let pm = socketClients.find(
-            (item) => item.id === data.projectManager
-          );
+          let pm = socketClients
+            .filter((item) => item.id === data.projectManager)
+            .map((item) => item.socketId);
           if (userId !== data.projectManager)
-            io.to(pm.socketId).emit("notification-update");
+            io.to(pm).emit("notification-update");
         }
         if (data.adminId.toString() !== userId) {
           let notification = await super.__createNotification({
@@ -102,11 +122,11 @@ const NotificationController = class NotificationController extends Notification
           });
         }
         // PM
-        let admin = socketOM.find(
-          (item) => item.id === data.adminId.toString()
-        );
+        let admin = socketOM
+          .filter((item) => item.id === data.adminId.toString())
+          .map((item) => item.socketId);
         if (data.adminId.toString() !== userId)
-          io.to(admin.socketId).emit("notification-update");
+          io.to(admin).emit("notification-update");
       }
     } catch (error) {
       logger.error({ __updateProjectNotificationError: error });
@@ -115,26 +135,32 @@ const NotificationController = class NotificationController extends Notification
   static async __creatProjectNotification(data: ProjectData, userId: string) {
     try {
       let user = await User.findById(userId);
-      if (userId !== data.adminId.toString()) {
-        let notification = await super.__createNotification({
-          title: `${data.name} has started`,
-          description: `${data.name} has created by ${user.name}`,
-          isNotified: [{ userId: data.adminId.toString(), isNotified: false }],
-        });
-        let admin = socketOM.find(
-          (item) => item.id === data.adminId.toString()
-        );
-        io.to(admin.socketId).emit("notification-update");
-      }
       if (userId !== data.projectManager) {
-        let PmNotification = await super.__createNotification({
+        await super.__createNotification({
           title: `${data.name} has been assigned to you`,
           description: `${data.name} has assigned to you by ${user.name}`,
           isNotified: [{ userId: data.projectManager, isNotified: false }],
         });
-        let pm = socketClients.find((item) => item.id === data.projectManager);
+        let pm = socketClients
+          .filter((item) => item.id === data.projectManager)
+          .map((item) => item.socketId);
         if (userId !== data.projectManager)
-          io.to(pm.socketId).emit("notification-update");
+          io.to(pm).emit("notification-update");
+      } else {
+        let OMS = await (
+          await User.find({ role: "OM" }).select("_id").lean()
+        ).map((item) => {
+          return { userId: item._id, isNotified: false };
+        });
+        let notification = await super.__createNotification({
+          title: `${data.name} has started`,
+          description: `${data.name} has created by ${user.name}`,
+          isNotified: OMS,
+        });
+        let oms = socketOM
+          .filter((item) => item.id !== userId)
+          .map((item) => item.socketId);
+        io.to(oms).emit("notification-update");
       }
     } catch (error) {
       logger.error({ __updateProjectNotificationError: error });

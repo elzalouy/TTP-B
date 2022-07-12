@@ -16,6 +16,7 @@ import {
 import { moveTaskNotificationJob, TaskQueue } from "../background/taskQueue";
 import { io } from "../../index";
 import TaskController from "./task";
+import { validateExtentions } from "../services/validation";
 var FormData = require("form-data");
 config();
 
@@ -481,21 +482,20 @@ class BoardController {
       //   let result = await TaskController.createTaskByTrello(task);
       //   io.sockets.emit("create task", result);
       // }
-
       console.log(type, action);
       //update
       if (type === "updateCard" && action !== "action_archived_card") {
         if (action === "action_changed_description_of_card")
           task.description = data.action.data.card.desc;
         if (action === "action_renamed_card")
-          task.description = data.action.data.card.name;
+          task.name = data.action.data.card.name;
         if (action === "action_move_card_from_list_to_list") {
           task.status = data.action.data.listAfter?.name;
           task.listId = data.action.data.listAfter?.id;
           task.lastMove = data.action.data.listBefore.name;
           task.lastMoveDate = new Date().toUTCString();
-          moveTaskNotificationJob(data);
-          TaskQueue.start();
+          // moveTaskNotificationJob(data);
+          // TaskQueue.start();
         }
         let result = await TaskController.updateTaskByTrelloDB(task);
         io?.sockets?.emit("update-task", result);
@@ -508,7 +508,7 @@ class BoardController {
             name: data.action.data?.attachment?.name,
             url: data.action.data.attachment?.url,
             // utils function to detect type from name.ext
-            mimeType: "",
+            mimeType: validateExtentions(data.action.data?.attachment?.name),
           },
         ];
         let result = await TaskController.updateTaskByTrelloDB(task);

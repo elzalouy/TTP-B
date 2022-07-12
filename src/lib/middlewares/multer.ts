@@ -9,6 +9,7 @@ const Mime = [
   "image/png",
   "image/jpeg",
   "image/svg",
+  "image/jpg",
   "text/csv",
   "application/msword", // .doc
   "application/vnd.openxmlformats-officedocument.wordprocessingml.document", // .docx

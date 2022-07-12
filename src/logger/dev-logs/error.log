@@ -121,3 +121,1418 @@
   level: 'error',
   timestamp: '2022-07-07 17:51:54'
 }
+{
+  message: {
+    updateTaskDBError: TypeError: Cannot read properties of undefined (reading 'toString')
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/dbCalls/tasks/tasks.ts:237:34
+        at Array.findIndex (<anonymous>)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/dbCalls/tasks/tasks.ts:236:35
+        at Array.filter (<anonymous>)
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/dbCalls/tasks/tasks.ts:234:49)
+        at Generator.next (<anonymous>)
+        at fulfilled (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/dbCalls/tasks/tasks.ts:5:58)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5)
+  },
+  level: 'error',
+  timestamp: '2022-07-08 17:16:48'
+}
+{
+  message: {
+    deleteAttachmentFileError: FetchError: invalid json response body at https://api.trello.com/1/cards/62c83e2eda684c7b40768e06/attachments/62c83e98d3f8cb615a7e23eb?key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68 reason: Unexpected token C in JSON at position 0
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/node-fetch/lib/index.js:273:32
+        at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+      type: 'invalid-json'
+    }
+  },
+  level: 'error',
+  timestamp: '2022-07-08 17:19:24'
+}
+{
+  message: {
+    updateTaskDBError: TypeError: Cannot read properties of undefined (reading 'toString')
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/dbCalls/tasks/tasks.ts:238:34
+        at Array.findIndex (<anonymous>)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/dbCalls/tasks/tasks.ts:237:35
+        at Array.filter (<anonymous>)
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/dbCalls/tasks/tasks.ts:235:49)
+        at Generator.next (<anonymous>)
+        at fulfilled (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/dbCalls/tasks/tasks.ts:5:58)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5)
+  },
+  level: 'error',
+  timestamp: '2022-07-08 17:19:26'
+}
+{
+  message: {
+    deleteAttachmentFileError: FetchError: invalid json response body at https://api.trello.com/1/cards/62c83e2eda684c7b40768e06/attachments/62c84a5faccac53235e23336?key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68 reason: Unexpected token C in JSON at position 0
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/node-fetch/lib/index.js:273:32
+        at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+      type: 'invalid-json'
+    }
+  },
+  level: 'error',
+  timestamp: '2022-07-08 17:20:11'
+}
+{
+  message: {
+    updateTaskDBError: TypeError: Cannot read properties of undefined (reading 'toString')
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/dbCalls/tasks/tasks.ts:238:34
+        at Array.findIndex (<anonymous>)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/dbCalls/tasks/tasks.ts:237:35
+        at Array.filter (<anonymous>)
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/dbCalls/tasks/tasks.ts:235:49)
+        at Generator.next (<anonymous>)
+        at fulfilled (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/dbCalls/tasks/tasks.ts:5:58)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5)
+  },
+  level: 'error',
+  timestamp: '2022-07-08 17:20:15'
+}
+{
+  message: {
+    updateTaskDBError: TypeError: Cannot read properties of undefined (reading 'toString')
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/dbCalls/tasks/tasks.ts:239:50
+        at Array.find (<anonymous>)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/dbCalls/tasks/tasks.ts:237:30
+        at Array.map (<anonymous>)
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/dbCalls/tasks/tasks.ts:235:40)
+        at Generator.next (<anonymous>)
+        at fulfilled (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/dbCalls/tasks/tasks.ts:5:58)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5)
+  },
+  level: 'error',
+  timestamp: '2022-07-08 17:30:04'
+}
+{
+  message: {
+    deleteAttachmentFileError: FetchError: invalid json response body at https://api.trello.com/1/cards/62c83e2eda684c7b40768e06/attachments/62c84b2ccfe66657e3e3d0ad?key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68 reason: Unexpected token C in JSON at position 0
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/node-fetch/lib/index.js:273:32
+        at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+      type: 'invalid-json'
+    }
+  },
+  level: 'error',
+  timestamp: '2022-07-08 17:31:30'
+}
+{
+  message: {
+    updateTaskDBError: TypeError: Cannot read properties of undefined (reading 'toString')
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/dbCalls/tasks/tasks.ts:239:50
+        at Array.find (<anonymous>)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/dbCalls/tasks/tasks.ts:237:30
+        at Array.map (<anonymous>)
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/dbCalls/tasks/tasks.ts:235:40)
+        at Generator.next (<anonymous>)
+        at fulfilled (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/dbCalls/tasks/tasks.ts:5:58)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5)
+  },
+  level: 'error',
+  timestamp: '2022-07-08 17:31:32'
+}
+{
+  message: {
+    deleteAttachmentFileError: FetchError: invalid json response body at https://api.trello.com/1/cards/62c83e2eda684c7b40768e06/attachments/62c84b2ccfe66657e3e3d0ad?key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68 reason: Unexpected token C in JSON at position 0
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/node-fetch/lib/index.js:273:32
+        at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+      type: 'invalid-json'
+    }
+  },
+  level: 'error',
+  timestamp: '2022-07-08 17:32:55'
+}
+{
+  message: {
+    deleteAttachmentFileError: FetchError: invalid json response body at https://api.trello.com/1/cards/62c837887143e53bad1df31f/attachments/62c84f670c1ec923dafd1af8?key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68 reason: Unexpected token C in JSON at position 0
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/node-fetch/lib/index.js:273:32
+        at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+      type: 'invalid-json'
+    }
+  },
+  level: 'error',
+  timestamp: '2022-07-08 17:53:48'
+}
+{
+  message: {
+    deleteAttachmentFileError: FetchError: invalid json response body at https://api.trello.com/1/cards/62c837887143e53bad1df31f/attachments/62c84f670c1ec923dafd1af8?key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68 reason: Unexpected token C in JSON at position 0
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/node-fetch/lib/index.js:273:32
+        at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+      type: 'invalid-json'
+    }
+  },
+  level: 'error',
+  timestamp: '2022-07-08 17:54:26'
+}
+{
+  message: {
+    deleteAttachmentFileError: FetchError: invalid json response body at https://api.trello.com/1/cards/62c837887143e53bad1df31f/attachments/62c84f936d2d8834ef21f977?key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68 reason: Unexpected token C in JSON at position 0
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/node-fetch/lib/index.js:273:32
+        at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+      type: 'invalid-json'
+    }
+  },
+  level: 'error',
+  timestamp: '2022-07-08 17:54:26'
+}
+{
+  message: {
+    deleteAttachmentFileError: FetchError: invalid json response body at https://api.trello.com/1/cards/62c837887143e53bad1df31f/attachments/62c85379b978cb17aa28432e?key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68 reason: Unexpected token C in JSON at position 0
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/node-fetch/lib/index.js:273:32
+        at runMicrotasks (<anonymous>)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+      type: 'invalid-json'
+    }
+  },
+  level: 'error',
+  timestamp: '2022-07-08 17:57:39'
+}
+{
+  message: {
+    deleteAttachmentFileError: FetchError: invalid json response body at https://api.trello.com/1/cards/62c837887143e53bad1df31f/attachments/62c8537b441c9a8cbd0e5f5d?key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68 reason: Unexpected token C in JSON at position 0
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/node-fetch/lib/index.js:273:32
+        at runMicrotasks (<anonymous>)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+      type: 'invalid-json'
+    }
+  },
+  level: 'error',
+  timestamp: '2022-07-08 17:57:39'
+}
+{
+  message: {
+    deleteAttachmentFileError: FetchError: invalid json response body at https://api.trello.com/1/cards/62c837887143e53bad1df31f/attachments/62c85379b978cb17aa28432e?key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68 reason: Unexpected token C in JSON at position 0
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/node-fetch/lib/index.js:273:32
+        at runMicrotasks (<anonymous>)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+      type: 'invalid-json'
+    }
+  },
+  level: 'error',
+  timestamp: '2022-07-08 17:57:39'
+}
+{
+  message: {
+    deleteAttachmentFileError: FetchError: invalid json response body at https://api.trello.com/1/cards/62c837887143e53bad1df31f/attachments/62c85379b978cb17aa28432e?key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68 reason: Unexpected token C in JSON at position 0
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/node-fetch/lib/index.js:273:32
+        at runMicrotasks (<anonymous>)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+      type: 'invalid-json'
+    }
+  },
+  level: 'error',
+  timestamp: '2022-07-08 17:57:39'
+}
+{
+  message: {
+    deleteAttachmentFileError: FetchError: invalid json response body at https://api.trello.com/1/cards/62c83a02b7adf2606415542c/attachments/62c85379b978cb17aa28432e?key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68 reason: Unexpected token C in JSON at position 0
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/node-fetch/lib/index.js:273:32
+        at runMicrotasks (<anonymous>)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+      type: 'invalid-json'
+    }
+  },
+  level: 'error',
+  timestamp: '2022-07-08 17:57:56'
+}
+{
+  message: {
+    deleteAttachmentFileError: FetchError: invalid json response body at https://api.trello.com/1/cards/62c83a02b7adf2606415542c/attachments/62c85379b978cb17aa28432e?key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68 reason: Unexpected token C in JSON at position 0
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/node-fetch/lib/index.js:273:32
+        at runMicrotasks (<anonymous>)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+      type: 'invalid-json'
+    }
+  },
+  level: 'error',
+  timestamp: '2022-07-08 17:57:56'
+}
+{
+  message: {
+    deleteAttachmentFileError: FetchError: invalid json response body at https://api.trello.com/1/cards/62c83a02b7adf2606415542c/attachments/62c855a008026f1c1391314e?key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68 reason: Unexpected token C in JSON at position 0
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/node-fetch/lib/index.js:273:32
+        at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+      type: 'invalid-json'
+    }
+  },
+  level: 'error',
+  timestamp: '2022-07-08 18:10:13'
+}
+{
+  message: {
+    deleteAttachmentFileError: FetchError: invalid json response body at https://api.trello.com/1/cards/62c83a02b7adf2606415542c/attachments/62c8592dca38db0af8cc6d09?key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68 reason: Unexpected token C in JSON at position 0
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/node-fetch/lib/index.js:273:32
+        at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+      type: 'invalid-json'
+    }
+  },
+  level: 'error',
+  timestamp: '2022-07-08 18:23:48'
+}
+{
+  message: {
+    deleteAttachmentFileError: FetchError: invalid json response body at https://api.trello.com/1/cards/62c83a02b7adf2606415542c/attachments/62c8592dca38db0af8cc6d09?key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68 reason: Unexpected token C in JSON at position 0
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/node-fetch/lib/index.js:273:32
+        at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+      type: 'invalid-json'
+    }
+  },
+  level: 'error',
+  timestamp: '2022-07-08 18:24:02'
+}
+{
+  message: {
+    deleteAttachmentFileError: FetchError: invalid json response body at https://api.trello.com/1/cards/62c83a02b7adf2606415542c/attachments/62c859513f954f24b0d30af0?key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68 reason: Unexpected token C in JSON at position 0
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/node-fetch/lib/index.js:273:32
+        at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+      type: 'invalid-json'
+    }
+  },
+  level: 'error',
+  timestamp: '2022-07-08 18:24:02'
+}
+{
+  message: {
+    deleteAttachmentFileError: FetchError: invalid json response body at https://api.trello.com/1/cards/62c83a02b7adf2606415542c/attachments/62c859513f954f24b0d30af0?key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68 reason: Unexpected token C in JSON at position 0
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/node-fetch/lib/index.js:273:32
+        at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+      type: 'invalid-json'
+    }
+  },
+  level: 'error',
+  timestamp: '2022-07-08 18:24:02'
+}
+{
+  message: {
+    updateBoardCardError: TypeError: Cannot read properties of undefined (reading 'display')
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/trello.ts:468:32)
+        at Generator.next (<anonymous>)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/trello.ts:8:71
+        at new Promise (<anonymous>)
+        at __awaiter (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/trello.ts:4:12)
+        at Function.__updateBoardCard (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/trello.ts:497:16)
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/trello.ts:101:34)
+        at Generator.next (<anonymous>)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/trello.ts:8:71
+        at new Promise (<anonymous>)
+  },
+  level: 'error',
+  timestamp: '2022-07-08 18:31:10'
+}
+{
+  message: {
+    __updateTaskByTrelloDBError: TypeError: Cannot set properties of null (setting 'name')
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/dbCalls/tasks/tasks.ts:310:16)
+        at Generator.next (<anonymous>)
+        at fulfilled (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/dbCalls/tasks/tasks.ts:5:58)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5)
+  },
+  level: 'error',
+  timestamp: '2022-07-08 18:31:17'
+}
+{
+  message: {
+    __updateTaskByTrelloDBError: TypeError: Cannot set properties of null (setting 'name')
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/dbCalls/tasks/tasks.ts:310:16)
+        at Generator.next (<anonymous>)
+        at fulfilled (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/dbCalls/tasks/tasks.ts:5:58)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5)
+  },
+  level: 'error',
+  timestamp: '2022-07-08 18:31:18'
+}
+{
+  message: {
+    deleteAttachmentFileError: FetchError: invalid json response body at https://api.trello.com/1/cards/62c85bcd686c5333040d25f3/attachments/62c85bd0c0d42024e255bf5c?key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68 reason: Unexpected token C in JSON at position 0
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/node-fetch/lib/index.js:273:32
+        at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+      type: 'invalid-json'
+    }
+  },
+  level: 'error',
+  timestamp: '2022-07-08 18:33:51'
+}
+{
+  message: {
+    deleteAttachmentFileError: FetchError: invalid json response body at https://api.trello.com/1/cards/62c85bcd686c5333040d25f3/attachments/62c85bd0c0d42024e255bf5c?key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68 reason: Unexpected token C in JSON at position 0
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/node-fetch/lib/index.js:273:32
+        at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+      type: 'invalid-json'
+    }
+  },
+  level: 'error',
+  timestamp: '2022-07-08 18:34:33'
+}
+{
+  message: {
+    deleteAttachmentFileError: FetchError: invalid json response body at https://api.trello.com/1/cards/62c85bcd686c5333040d25f3/attachments/62c85bd0063eb007f2ec6a42?key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68 reason: Unexpected token C in JSON at position 0
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/node-fetch/lib/index.js:273:32
+        at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+      type: 'invalid-json'
+    }
+  },
+  level: 'error',
+  timestamp: '2022-07-08 18:34:33'
+}
+{
+  message: {
+    deleteAttachmentFileError: FetchError: invalid json response body at https://api.trello.com/1/cards/62c85bcd686c5333040d25f3/attachments/62c85bd0c0d42024e255bf5c?key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68 reason: Unexpected token C in JSON at position 0
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/node-fetch/lib/index.js:273:32
+        at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+      type: 'invalid-json'
+    }
+  },
+  level: 'error',
+  timestamp: '2022-07-08 18:37:18'
+}
+{
+  message: {
+    deleteAttachmentFileError: FetchError: invalid json response body at https://api.trello.com/1/cards/62c85bcd686c5333040d25f3/attachments/62c85c741a15222a8d897095?key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68 reason: Unexpected token C in JSON at position 0
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/node-fetch/lib/index.js:273:32
+        at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+      type: 'invalid-json'
+    }
+  },
+  level: 'error',
+  timestamp: '2022-07-08 18:37:18'
+}
+{
+  message: {
+    deleteAttachmentFileError: FetchError: invalid json response body at https://api.trello.com/1/cards/62c85bcd686c5333040d25f3/attachments/62c85bd0063eb007f2ec6a42?key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68 reason: Unexpected token C in JSON at position 0
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/node-fetch/lib/index.js:273:32
+        at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+      type: 'invalid-json'
+    }
+  },
+  level: 'error',
+  timestamp: '2022-07-08 18:37:18'
+}
+{
+  message: {
+    __updateTaskByTrelloDBError: VersionError: No matching document found for id "62c85bd636567cac2d0e8031" version 5 modifiedPaths "attachedFiles"
+        at generateVersionError (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/model.js:450:10)
+        at model.Model.save (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/model.js:506:28)
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/dbCalls/tasks/tasks.ts:335:25)
+        at Generator.next (<anonymous>)
+        at fulfilled (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/dbCalls/tasks/tasks.ts:5:58)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+      version: 5,
+      modifiedPaths: [ 'attachedFiles' ]
+    }
+  },
+  level: 'error',
+  timestamp: '2022-07-08 18:37:22'
+}
+{
+  message: {
+    deleteAttachmentFileError: FetchError: invalid json response body at https://api.trello.com/1/cards/62c85bcd686c5333040d25f3/attachments/62c85bd0c0d42024e255bf5c?key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68 reason: Unexpected token C in JSON at position 0
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/node-fetch/lib/index.js:273:32
+        at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+      type: 'invalid-json'
+    }
+  },
+  level: 'error',
+  timestamp: '2022-07-08 18:37:52'
+}
+{
+  message: {
+    deleteAttachmentFileError: FetchError: invalid json response body at https://api.trello.com/1/cards/62c85bcd686c5333040d25f3/attachments/62c85c741a15222a8d897095?key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68 reason: Unexpected token C in JSON at position 0
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/node-fetch/lib/index.js:273:32
+        at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+      type: 'invalid-json'
+    }
+  },
+  level: 'error',
+  timestamp: '2022-07-08 18:37:52'
+}
+{
+  message: {
+    deleteAttachmentFileError: FetchError: invalid json response body at https://api.trello.com/1/cards/62c85bcd686c5333040d25f3/attachments/62c85bd0063eb007f2ec6a42?key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68 reason: Unexpected token C in JSON at position 0
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/node-fetch/lib/index.js:273:32
+        at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+      type: 'invalid-json'
+    }
+  },
+  level: 'error',
+  timestamp: '2022-07-08 18:37:52'
+}
+{
+  message: {
+    deleteAttachmentFileError: FetchError: invalid json response body at https://api.trello.com/1/cards/62c85bcd686c5333040d25f3/attachments/62c85bd53e5ab975bf4982e7?key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68 reason: Unexpected token C in JSON at position 0
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/node-fetch/lib/index.js:273:32
+        at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+      type: 'invalid-json'
+    }
+  },
+  level: 'error',
+  timestamp: '2022-07-08 18:37:52'
+}
+{
+  message: {
+    deleteAttachmentFileError: FetchError: invalid json response body at https://api.trello.com/1/cards/62c85bcd686c5333040d25f3/attachments/62c85bd53e5ab975bf4982e7?key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68 reason: Unexpected token C in JSON at position 0
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/node-fetch/lib/index.js:273:32
+        at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+      type: 'invalid-json'
+    }
+  },
+  level: 'error',
+  timestamp: '2022-07-08 18:37:52'
+}
+{
+  message: {
+    deleteAttachmentFileError: FetchError: invalid json response body at https://api.trello.com/1/cards/62c85bcd686c5333040d25f3/attachments/62c85c999391cf38d457ef03?key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68 reason: Unexpected token C in JSON at position 0
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/node-fetch/lib/index.js:273:32
+        at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+      type: 'invalid-json'
+    }
+  },
+  level: 'error',
+  timestamp: '2022-07-08 18:37:52'
+}
+{
+  message: {
+    deleteAttachmentFileError: FetchError: invalid json response body at https://api.trello.com/1/cards/62c85bcd686c5333040d25f3/attachments/62c85c741a15222a8d897095?key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68 reason: Unexpected token C in JSON at position 0
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/node-fetch/lib/index.js:273:32
+        at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+      type: 'invalid-json'
+    }
+  },
+  level: 'error',
+  timestamp: '2022-07-08 18:37:52'
+}
+{
+  message: {
+    deleteAttachmentFileError: FetchError: invalid json response body at https://api.trello.com/1/cards/62c85bcd686c5333040d25f3/attachments/62c85c741a15222a8d897095?key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68 reason: Unexpected token C in JSON at position 0
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/node-fetch/lib/index.js:273:32
+        at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+      type: 'invalid-json'
+    }
+  },
+  level: 'error',
+  timestamp: '2022-07-08 18:38:29'
+}
+{
+  message: {
+    deleteAttachmentFileError: FetchError: invalid json response body at https://api.trello.com/1/cards/62c85bcd686c5333040d25f3/attachments/62c85c999391cf38d457ef03?key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68 reason: Unexpected token C in JSON at position 0
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/node-fetch/lib/index.js:273:32
+        at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+      type: 'invalid-json'
+    }
+  },
+  level: 'error',
+  timestamp: '2022-07-08 18:38:29'
+}
+{
+  message: {
+    deleteAttachmentFileError: FetchError: invalid json response body at https://api.trello.com/1/cards/62c85bcd686c5333040d25f3/attachments/62c85c999391cf38d457ef03?key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68 reason: Unexpected token C in JSON at position 0
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/node-fetch/lib/index.js:273:32
+        at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+      type: 'invalid-json'
+    }
+  },
+  level: 'error',
+  timestamp: '2022-07-08 19:31:51'
+}
+{
+  message: {
+    deleteAttachmentFileError: FetchError: invalid json response body at https://api.trello.com/1/cards/62c85bcd686c5333040d25f3/attachments/62c85c999391cf38d457ef03?key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68 reason: Unexpected token C in JSON at position 0
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/node-fetch/lib/index.js:273:32
+        at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+      type: 'invalid-json'
+    }
+  },
+  level: 'error',
+  timestamp: '2022-07-08 19:32:03'
+}
+{
+  message: {
+    __updateTaskByTrelloDBError: VersionError: No matching document found for id "62c85bd636567cac2d0e8031" version 8 modifiedPaths "attachedFiles"
+        at generateVersionError (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/model.js:450:10)
+        at model.Model.save (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/model.js:506:28)
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/dbCalls/tasks/tasks.ts:335:25)
+        at Generator.next (<anonymous>)
+        at fulfilled (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/dbCalls/tasks/tasks.ts:5:58)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+      version: 8,
+      modifiedPaths: [ 'attachedFiles' ]
+    }
+  },
+  level: 'error',
+  timestamp: '2022-07-08 19:32:06'
+}
+{
+  message: {
+    deleteAttachmentFileError: FetchError: invalid json response body at https://api.trello.com/1/cards/62c85bcd686c5333040d25f3/attachments/62c85c999391cf38d457ef03?key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68 reason: Unexpected token C in JSON at position 0
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/node-fetch/lib/index.js:273:32
+        at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+      type: 'invalid-json'
+    }
+  },
+  level: 'error',
+  timestamp: '2022-07-08 19:32:18'
+}
+{
+  message: {
+    deleteAttachmentFileError: FetchError: invalid json response body at https://api.trello.com/1/cards/62c85bcd686c5333040d25f3/attachments/62c85c999391cf38d457ef03?key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68 reason: Unexpected token C in JSON at position 0
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/node-fetch/lib/index.js:273:32
+        at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+      type: 'invalid-json'
+    }
+  },
+  level: 'error',
+  timestamp: '2022-07-08 19:32:35'
+}
+{
+  message: {
+    deleteAttachmentFileError: FetchError: invalid json response body at https://api.trello.com/1/cards/62c85bcd686c5333040d25f3/attachments/62c86a141b21828b28c06c1b?key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68 reason: Unexpected token C in JSON at position 0
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/node-fetch/lib/index.js:273:32
+        at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+      type: 'invalid-json'
+    }
+  },
+  level: 'error',
+  timestamp: '2022-07-08 19:32:35'
+}
+{
+  message: {
+    deleteAttachmentFileError: FetchError: invalid json response body at https://api.trello.com/1/cards/62c85bcd686c5333040d25f3/attachments/62c85c741a15222a8d897095?key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68 reason: Unexpected token C in JSON at position 0
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/node-fetch/lib/index.js:273:32
+        at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+      type: 'invalid-json'
+    }
+  },
+  level: 'error',
+  timestamp: '2022-07-08 19:32:35'
+}
+{
+  message: {
+    deleteAttachmentFileError: FetchError: invalid json response body at https://api.trello.com/1/cards/62c85bcd686c5333040d25f3/attachments/62c85c999391cf38d457ef03?key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68 reason: Unexpected token C in JSON at position 0
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/node-fetch/lib/index.js:273:32
+        at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+      type: 'invalid-json'
+    }
+  },
+  level: 'error',
+  timestamp: '2022-07-08 19:39:37'
+}
+{
+  message: {
+    deleteAttachmentFileError: FetchError: invalid json response body at https://api.trello.com/1/cards/62c85bcd686c5333040d25f3/attachments/62c85c741a15222a8d897095?key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68 reason: Unexpected token C in JSON at position 0
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/node-fetch/lib/index.js:273:32
+        at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+      type: 'invalid-json'
+    }
+  },
+  level: 'error',
+  timestamp: '2022-07-08 19:39:37'
+}
+{
+  message: {
+    deleteAttachmentFileError: FetchError: invalid json response body at https://api.trello.com/1/cards/62c85bcd686c5333040d25f3/attachments/62c86a141b21828b28c06c1b?key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68 reason: Unexpected token C in JSON at position 0
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/node-fetch/lib/index.js:273:32
+        at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+      type: 'invalid-json'
+    }
+  },
+  level: 'error',
+  timestamp: '2022-07-08 19:39:37'
+}
+{
+  message: {
+    deleteAttachmentFileError: FetchError: invalid json response body at https://api.trello.com/1/cards/62c85bcd686c5333040d25f3/attachments/62c86a14700d2a58a45b84b0?key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68 reason: Unexpected token C in JSON at position 0
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/node-fetch/lib/index.js:273:32
+        at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+      type: 'invalid-json'
+    }
+  },
+  level: 'error',
+  timestamp: '2022-07-08 19:39:37'
+}
+{
+  message: {
+    deleteAttachmentFileError: FetchError: invalid json response body at https://api.trello.com/1/cards/62c85bcd686c5333040d25f3/attachments/62c85c741a15222a8d897095?key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68 reason: Unexpected token C in JSON at position 0
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/node-fetch/lib/index.js:273:32
+        at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+      type: 'invalid-json'
+    }
+  },
+  level: 'error',
+  timestamp: '2022-07-08 19:39:37'
+}
+{
+  message: {
+    deleteAttachmentFileError: FetchError: invalid json response body at https://api.trello.com/1/cards/62c85bcd686c5333040d25f3/attachments/62c85c999391cf38d457ef03?key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68 reason: Unexpected token C in JSON at position 0
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/node-fetch/lib/index.js:273:32
+        at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+      type: 'invalid-json'
+    }
+  },
+  level: 'error',
+  timestamp: '2022-07-08 19:40:39'
+}
+{
+  message: {
+    deleteAttachmentFileError: FetchError: invalid json response body at https://api.trello.com/1/cards/62c85bcd686c5333040d25f3/attachments/62c86a141b21828b28c06c1b?key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68 reason: Unexpected token C in JSON at position 0
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/node-fetch/lib/index.js:273:32
+        at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+      type: 'invalid-json'
+    }
+  },
+  level: 'error',
+  timestamp: '2022-07-08 19:40:39'
+}
+{
+  message: {
+    deleteAttachmentFileError: FetchError: invalid json response body at https://api.trello.com/1/cards/62c85bcd686c5333040d25f3/attachments/62c85c741a15222a8d897095?key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68 reason: Unexpected token C in JSON at position 0
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/node-fetch/lib/index.js:273:32
+        at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+      type: 'invalid-json'
+    }
+  },
+  level: 'error',
+  timestamp: '2022-07-08 19:40:39'
+}
+{
+  message: {
+    deleteAttachmentFileError: FetchError: invalid json response body at https://api.trello.com/1/cards/62c85bcd686c5333040d25f3/attachments/62c85c741a15222a8d897095?key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68 reason: Unexpected token C in JSON at position 0
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/node-fetch/lib/index.js:273:32
+        at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+      type: 'invalid-json'
+    }
+  },
+  level: 'error',
+  timestamp: '2022-07-08 19:40:39'
+}
+{
+  message: {
+    deleteAttachmentFileError: FetchError: invalid json response body at https://api.trello.com/1/cards/62c85bcd686c5333040d25f3/attachments/62c86ca2626d6a42351cb61b?key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68 reason: Unexpected token C in JSON at position 0
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/node-fetch/lib/index.js:273:32
+        at runMicrotasks (<anonymous>)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+      type: 'invalid-json'
+    }
+  },
+  level: 'error',
+  timestamp: '2022-07-08 19:45:17'
+}
+{
+  message: {
+    deleteTaskError: FetchError: invalid json response body at https://api.trello.com/1/cards/62c85bcd686c5333040d25f3?key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68 reason: Unexpected token T in JSON at position 0
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/node-fetch/lib/index.js:273:32
+        at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+      type: 'invalid-json'
+    }
+  },
+  level: 'error',
+  timestamp: '2022-07-08 19:48:58'
+}
+{
+  message: {
+    handleDeleteTasksError: TypeError: Cannot read properties of undefined (reading '_id')
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/presentation/task/task.ts:120:24
+        at Generator.next (<anonymous>)
+        at fulfilled (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/presentation/task/task.ts:5:58)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5)
+  },
+  level: 'error',
+  timestamp: '2022-07-08 19:48:58'
+}
+{
+  message: {
+    handleDeleteTasksError: TypeError: Cannot read properties of null (reading '_id')
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/presentation/task/task.ts:120:24
+        at Generator.next (<anonymous>)
+        at fulfilled (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/presentation/task/task.ts:5:58)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5)
+  },
+  level: 'error',
+  timestamp: '2022-07-08 19:49:00'
+}
+{
+  message: {
+    updateBoardCardError: TypeError: Cannot read properties of undefined (reading 'display')
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/trello.ts:468:32)
+        at Generator.next (<anonymous>)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/trello.ts:8:71
+        at new Promise (<anonymous>)
+        at __awaiter (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/trello.ts:4:12)
+        at Function.__updateBoardCard (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/trello.ts:497:16)
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/trello.ts:101:34)
+        at Generator.next (<anonymous>)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/trello.ts:8:71
+        at new Promise (<anonymous>)
+  },
+  level: 'error',
+  timestamp: '2022-07-08 19:50:25'
+}
+{
+  message: {
+    __updateTaskByTrelloDBError: TypeError: Cannot set properties of null (setting 'name')
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/dbCalls/tasks/tasks.ts:314:16)
+        at Generator.next (<anonymous>)
+        at fulfilled (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/dbCalls/tasks/tasks.ts:5:58)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5)
+  },
+  level: 'error',
+  timestamp: '2022-07-08 19:50:39'
+}
+{
+  message: {
+    __updateTaskByTrelloDBError: TypeError: Cannot set properties of null (setting 'name')
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/dbCalls/tasks/tasks.ts:314:16)
+        at Generator.next (<anonymous>)
+        at fulfilled (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/dbCalls/tasks/tasks.ts:5:58)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5)
+  },
+  level: 'error',
+  timestamp: '2022-07-08 19:50:41'
+}
+{
+  message: {
+    deleteAttachmentFileError: FetchError: invalid json response body at https://api.trello.com/1/cards/62c86e5be7563709bee3e3b0/attachments/62c86e6a8c4bb732e34d4225?key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68 reason: Unexpected token C in JSON at position 0
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/node-fetch/lib/index.js:273:32
+        at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+      type: 'invalid-json'
+    }
+  },
+  level: 'error',
+  timestamp: '2022-07-08 19:53:27'
+}
+{
+  message: {
+    deleteAttachmentFileError: FetchError: invalid json response body at https://api.trello.com/1/cards/62c86e5be7563709bee3e3b0/attachments/62c86e6a8c4bb732e34d4225?key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68 reason: Unexpected token C in JSON at position 0
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/node-fetch/lib/index.js:273:32
+        at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+      type: 'invalid-json'
+    }
+  },
+  level: 'error',
+  timestamp: '2022-07-08 19:53:44'
+}
+{
+  message: {
+    deleteAttachmentFileError: FetchError: invalid json response body at https://api.trello.com/1/cards/62c86e5be7563709bee3e3b0/attachments/62c86e6a8c4bb732e34d4225?key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68 reason: Unexpected token C in JSON at position 0
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/node-fetch/lib/index.js:273:32
+        at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+      type: 'invalid-json'
+    }
+  },
+  level: 'error',
+  timestamp: '2022-07-08 19:54:22'
+}
+{
+  message: {
+    deleteAttachmentFileError: FetchError: invalid json response body at https://api.trello.com/1/cards/62c86e5be7563709bee3e3b0/attachments/62c86e6af72e715230ee380d?key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68 reason: Unexpected token C in JSON at position 0
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/node-fetch/lib/index.js:273:32
+        at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+      type: 'invalid-json'
+    }
+  },
+  level: 'error',
+  timestamp: '2022-07-08 19:54:22'
+}
+{
+  message: {
+    __updateTaskByTrelloDBError: VersionError: No matching document found for id "62c86e739169e5a5171f9596" version 6 modifiedPaths "attachedFiles"
+        at generateVersionError (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/model.js:450:10)
+        at model.Model.save (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/model.js:506:28)
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/dbCalls/tasks/tasks.ts:337:25)
+        at Generator.next (<anonymous>)
+        at fulfilled (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/dbCalls/tasks/tasks.ts:5:58)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+      version: 6,
+      modifiedPaths: [ 'attachedFiles' ]
+    }
+  },
+  level: 'error',
+  timestamp: '2022-07-08 20:09:52'
+}
+{
+  message: {
+    deleteAttachmentFileError: FetchError: invalid json response body at https://api.trello.com/1/cards/62c86e5be7563709bee3e3b0/attachments/62c86f4ef0fa9c28f1ffb9be?key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68 reason: Unexpected token C in JSON at position 0
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/node-fetch/lib/index.js:273:32
+        at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+      type: 'invalid-json'
+    }
+  },
+  level: 'error',
+  timestamp: '2022-07-08 20:10:34'
+}
+{
+  message: {
+    deleteAttachmentFileError: FetchError: invalid json response body at https://api.trello.com/1/cards/62c86e5be7563709bee3e3b0/attachments/62c86f4ffc6c992e2650e32d?key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68 reason: Unexpected token C in JSON at position 0
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/node-fetch/lib/index.js:273:32
+        at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+      type: 'invalid-json'
+    }
+  },
+  level: 'error',
+  timestamp: '2022-07-08 20:10:34'
+}
+{
+  message: {
+    deleteAttachmentFileError: FetchError: invalid json response body at https://api.trello.com/1/cards/62c86e5be7563709bee3e3b0/attachments/62c86f4ef0fa9c28f1ffb9be?key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68 reason: Unexpected token C in JSON at position 0
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/node-fetch/lib/index.js:273:32
+        at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+      type: 'invalid-json'
+    }
+  },
+  level: 'error',
+  timestamp: '2022-07-08 20:10:54'
+}
+{
+  message: {
+    deleteAttachmentFileError: FetchError: invalid json response body at https://api.trello.com/1/cards/62c86e5be7563709bee3e3b0/attachments/62c872ec2df447837a85f7ed?key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68 reason: Unexpected token C in JSON at position 0
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/node-fetch/lib/index.js:273:32
+        at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+      type: 'invalid-json'
+    }
+  },
+  level: 'error',
+  timestamp: '2022-07-08 20:10:55'
+}
+{
+  message: {
+    __updateTaskByTrelloDBError: VersionError: No matching document found for id "62c86e739169e5a5171f9596" version 10 modifiedPaths "attachedFiles"
+        at generateVersionError (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/model.js:450:10)
+        at model.Model.save (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/model.js:506:28)
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/dbCalls/tasks/tasks.ts:337:25)
+        at Generator.next (<anonymous>)
+        at fulfilled (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/dbCalls/tasks/tasks.ts:5:58)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+      version: 10,
+      modifiedPaths: [ 'attachedFiles' ]
+    }
+  },
+  level: 'error',
+  timestamp: '2022-07-08 20:11:06'
+}
+{
+  message: {
+    deleteAttachmentFileError: FetchError: invalid json response body at https://api.trello.com/1/cards/62c86e5be7563709bee3e3b0/attachments/62c86f4ef0fa9c28f1ffb9be?key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68 reason: Unexpected token C in JSON at position 0
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/node-fetch/lib/index.js:273:32
+        at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+      type: 'invalid-json'
+    }
+  },
+  level: 'error',
+  timestamp: '2022-07-08 20:14:31'
+}
+{
+  message: {
+    deleteAttachmentFileError: FetchError: invalid json response body at https://api.trello.com/1/cards/62c86e5be7563709bee3e3b0/attachments/62c872ec2df447837a85f7ed?key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68 reason: Unexpected token C in JSON at position 0
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/node-fetch/lib/index.js:273:32
+        at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+      type: 'invalid-json'
+    }
+  },
+  level: 'error',
+  timestamp: '2022-07-08 20:14:31'
+}
+{
+  message: {
+    __updateTaskByTrelloDBError: VersionError: No matching document found for id "62c86e739169e5a5171f9596" version 11 modifiedPaths "attachedFiles"
+        at generateVersionError (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/model.js:450:10)
+        at model.Model.save (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/mongoose/lib/model.js:506:28)
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/dbCalls/tasks/tasks.ts:337:25)
+        at Generator.next (<anonymous>)
+        at fulfilled (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/dbCalls/tasks/tasks.ts:5:58)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+      version: 11,
+      modifiedPaths: [ 'attachedFiles' ]
+    }
+  },
+  level: 'error',
+  timestamp: '2022-07-08 20:14:39'
+}
+{
+  message: {
+    deleteAttachmentFileError: FetchError: invalid json response body at https://api.trello.com/1/cards/62c86e5be7563709bee3e3b0/attachments/62c87331d45e9757258b7415?key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68 reason: Unexpected token C in JSON at position 0
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/node-fetch/lib/index.js:273:32
+        at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+      type: 'invalid-json'
+    }
+  },
+  level: 'error',
+  timestamp: '2022-07-08 20:17:50'
+}
+{
+  message: {
+    deleteAttachmentFileError: FetchError: invalid json response body at https://api.trello.com/1/cards/62c86e5be7563709bee3e3b0/attachments/62c87331d45e9757258b7415?key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68 reason: Unexpected token C in JSON at position 0
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/node-fetch/lib/index.js:273:32
+        at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+      type: 'invalid-json'
+    }
+  },
+  level: 'error',
+  timestamp: '2022-07-08 20:19:10'
+}
+{
+  message: {
+    deleteAttachmentFileError: FetchError: invalid json response body at https://api.trello.com/1/cards/62c86e5be7563709bee3e3b0/attachments/62c8740c4369b25fee203c12?key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68 reason: Unexpected token C in JSON at position 0
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/node-fetch/lib/index.js:273:32
+        at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+      type: 'invalid-json'
+    }
+  },
+  level: 'error',
+  timestamp: '2022-07-08 20:19:10'
+}
+{
+  message: {
+    deleteAttachmentFileError: FetchError: invalid json response body at https://api.trello.com/1/cards/62c86e5be7563709bee3e3b0/attachments/62c8740c4369b25fee203c12?key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68 reason: Unexpected token C in JSON at position 0
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/node-fetch/lib/index.js:273:32
+        at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+      type: 'invalid-json'
+    }
+  },
+  level: 'error',
+  timestamp: '2022-07-08 20:19:10'
+}
+{
+  message: {
+    deleteAttachmentFileError: FetchError: invalid json response body at https://api.trello.com/1/cards/62c86e5be7563709bee3e3b0/attachments/62c87331d45e9757258b7415?key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68 reason: Unexpected token C in JSON at position 0
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/node-fetch/lib/index.js:273:32
+        at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+      type: 'invalid-json'
+    }
+  },
+  level: 'error',
+  timestamp: '2022-07-08 20:19:28'
+}
+{
+  message: {
+    deleteAttachmentFileError: FetchError: invalid json response body at https://api.trello.com/1/cards/62c86e5be7563709bee3e3b0/attachments/62c8740c4369b25fee203c12?key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68 reason: Unexpected token C in JSON at position 0
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/node-fetch/lib/index.js:273:32
+        at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+      type: 'invalid-json'
+    }
+  },
+  level: 'error',
+  timestamp: '2022-07-08 20:19:28'
+}
+{
+  message: {
+    deleteAttachmentFileError: FetchError: invalid json response body at https://api.trello.com/1/cards/62c86e5be7563709bee3e3b0/attachments/62c8740c4369b25fee203c12?key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68 reason: Unexpected token C in JSON at position 0
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/node-fetch/lib/index.js:273:32
+        at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+      type: 'invalid-json'
+    }
+  },
+  level: 'error',
+  timestamp: '2022-07-08 20:19:28'
+}
+{
+  message: {
+    deleteAttachmentFileError: FetchError: invalid json response body at https://api.trello.com/1/cards/62c86e5be7563709bee3e3b0/attachments/62c874d4c71d7933b8a359d7?key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68 reason: Unexpected token C in JSON at position 0
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/node-fetch/lib/index.js:273:32
+        at runMicrotasks (<anonymous>)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+      type: 'invalid-json'
+    }
+  },
+  level: 'error',
+  timestamp: '2022-07-08 20:24:09'
+}
+{
+  message: {
+    deleteAttachmentFileError: FetchError: invalid json response body at https://api.trello.com/1/cards/62c86e5be7563709bee3e3b0/attachments/62c874d4c71d7933b8a359d7?key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68 reason: Unexpected token C in JSON at position 0
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/node-fetch/lib/index.js:273:32
+        at runMicrotasks (<anonymous>)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+      type: 'invalid-json'
+    }
+  },
+  level: 'error',
+  timestamp: '2022-07-08 20:24:57'
+}
+{
+  message: {
+    deleteAttachmentFileError: FetchError: invalid json response body at https://api.trello.com/1/cards/62c86e5be7563709bee3e3b0/attachments/62c874d4c71d7933b8a359d7?key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68 reason: Unexpected token C in JSON at position 0
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/node-fetch/lib/index.js:273:32
+        at runMicrotasks (<anonymous>)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+      type: 'invalid-json'
+    }
+  },
+  level: 'error',
+  timestamp: '2022-07-08 20:24:57'
+}
+{
+  message: {
+    deleteAttachmentFileError: FetchError: invalid json response body at https://api.trello.com/1/cards/62c86e5be7563709bee3e3b0/attachments/62c874d4c71d7933b8a359d7?key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68 reason: Unexpected token C in JSON at position 0
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/node-fetch/lib/index.js:273:32
+        at runMicrotasks (<anonymous>)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+      type: 'invalid-json'
+    }
+  },
+  level: 'error',
+  timestamp: '2022-07-08 20:25:26'
+}
+{
+  message: {
+    deleteAttachmentFileError: FetchError: invalid json response body at https://api.trello.com/1/cards/62c86e5be7563709bee3e3b0/attachments/62c874d4c71d7933b8a359d7?key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68 reason: Unexpected token C in JSON at position 0
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/node-fetch/lib/index.js:273:32
+        at runMicrotasks (<anonymous>)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+      type: 'invalid-json'
+    }
+  },
+  level: 'error',
+  timestamp: '2022-07-08 20:25:26'
+}
+{
+  message: {
+    updateTaskDBError: TypeError: (intermediate value)(intermediate value)(intermediate value) is not iterable
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/dbCalls/tasks/tasks.ts:234:15)
+        at Generator.next (<anonymous>)
+        at fulfilled (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/dbCalls/tasks/tasks.ts:5:58)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5)
+  },
+  level: 'error',
+  timestamp: '2022-07-11 11:54:12'
+}
+{
+  message: {
+    deleteAttachmentFileError: FetchError: invalid json response body at https://api.trello.com/1/cards/62c86e5be7563709bee3e3b0/attachments/62c8753184eed240b8280218?key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68 reason: Unexpected token C in JSON at position 0
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/node-fetch/lib/index.js:273:32
+        at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+      type: 'invalid-json'
+    }
+  },
+  level: 'error',
+  timestamp: '2022-07-11 11:54:13'
+}
+{
+  message: {
+    updateTaskDBError: TypeError: (intermediate value)(intermediate value)(intermediate value) is not iterable
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/dbCalls/tasks/tasks.ts:234:15)
+        at Generator.next (<anonymous>)
+        at fulfilled (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/dbCalls/tasks/tasks.ts:5:58)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5)
+  },
+  level: 'error',
+  timestamp: '2022-07-11 11:54:18'
+}
+{
+  message: {
+    deleteAttachmentFileError: FetchError: invalid json response body at https://api.trello.com/1/cards/62c86e5be7563709bee3e3b0/attachments/62c8753184eed240b8280218?key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68 reason: Unexpected token C in JSON at position 0
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/node-fetch/lib/index.js:273:32
+        at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+      type: 'invalid-json'
+    }
+  },
+  level: 'error',
+  timestamp: '2022-07-11 11:54:21'
+}
+{
+  message: {
+    deleteAttachmentFileError: FetchError: invalid json response body at https://api.trello.com/1/cards/62c86e5be7563709bee3e3b0/attachments/62c8764db1462c442fabb67a?key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68 reason: Unexpected token C in JSON at position 0
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/node-fetch/lib/index.js:273:32
+        at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+      type: 'invalid-json'
+    }
+  },
+  level: 'error',
+  timestamp: '2022-07-11 11:54:21'
+}
+{
+  message: {
+    deleteAttachmentFileError: FetchError: invalid json response body at https://api.trello.com/1/cards/62c86e5be7563709bee3e3b0/attachments/62c8753184eed240b8280218?key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68 reason: Unexpected token C in JSON at position 0
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/node-fetch/lib/index.js:273:32
+        at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+      type: 'invalid-json'
+    }
+  },
+  level: 'error',
+  timestamp: '2022-07-11 11:56:26'
+}
+{
+  message: {
+    deleteAttachmentFileError: FetchError: invalid json response body at https://api.trello.com/1/cards/62c86e5be7563709bee3e3b0/attachments/62c8764db1462c442fabb67a?key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68 reason: Unexpected token C in JSON at position 0
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/node-fetch/lib/index.js:273:32
+        at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+      type: 'invalid-json'
+    }
+  },
+  level: 'error',
+  timestamp: '2022-07-11 11:56:26'
+}
+{
+  message: {
+    updateBoardCardError: TypeError: Cannot read properties of undefined (reading 'display')
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/trello.ts:469:32)
+        at Generator.next (<anonymous>)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/trello.ts:8:71
+        at new Promise (<anonymous>)
+        at __awaiter (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/trello.ts:4:12)
+        at Function.__updateBoardCard (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/trello.ts:498:16)
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/trello.ts:102:34)
+        at Generator.next (<anonymous>)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/trello.ts:8:71
+        at new Promise (<anonymous>)
+  },
+  level: 'error',
+  timestamp: '2022-07-11 11:58:30'
+}
+{
+  message: {
+    updateBoardCardError: TypeError: Cannot read properties of undefined (reading 'display')
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/trello.ts:469:32)
+        at Generator.next (<anonymous>)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/trello.ts:8:71
+        at new Promise (<anonymous>)
+        at __awaiter (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/trello.ts:4:12)
+        at Function.__updateBoardCard (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/trello.ts:498:16)
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/trello.ts:102:34)
+        at Generator.next (<anonymous>)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/trello.ts:8:71
+        at new Promise (<anonymous>)
+  },
+  level: 'error',
+  timestamp: '2022-07-11 12:52:25'
+}
+{
+  message: {
+    updateBoardCardError: TypeError: Cannot read properties of undefined (reading 'display')
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/trello.ts:469:32)
+        at Generator.next (<anonymous>)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/trello.ts:8:71
+        at new Promise (<anonymous>)
+        at __awaiter (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/trello.ts:4:12)
+        at Function.__updateBoardCard (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/trello.ts:498:16)
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/trello.ts:102:34)
+        at Generator.next (<anonymous>)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/trello.ts:8:71
+        at new Promise (<anonymous>)
+  },
+  level: 'error',
+  timestamp: '2022-07-11 12:54:38'
+}
+{
+  message: {
+    updateBoardCardError: TypeError: Cannot read properties of undefined (reading 'display')
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/trello.ts:469:32)
+        at Generator.next (<anonymous>)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/trello.ts:8:71
+        at new Promise (<anonymous>)
+        at __awaiter (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/trello.ts:4:12)
+        at Function.__updateBoardCard (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/trello.ts:498:16)
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/trello.ts:102:34)
+        at Generator.next (<anonymous>)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/trello.ts:8:71
+        at new Promise (<anonymous>)
+  },
+  level: 'error',
+  timestamp: '2022-07-11 13:43:22'
+}
+{
+  message: {
+    updateBoardCardError: TypeError: Cannot read properties of undefined (reading 'display')
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/trello.ts:469:32)
+        at Generator.next (<anonymous>)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/trello.ts:8:71
+        at new Promise (<anonymous>)
+        at __awaiter (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/trello.ts:4:12)
+        at Function.__updateBoardCard (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/trello.ts:498:16)
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/trello.ts:102:34)
+        at Generator.next (<anonymous>)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/trello.ts:8:71
+        at new Promise (<anonymous>)
+  },
+  level: 'error',
+  timestamp: '2022-07-11 13:50:39'
+}
+{
+  message: {
+    handleDeleteTasksError: TypeError: Cannot read properties of null (reading '_id')
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/presentation/task/task.ts:120:24
+        at Generator.next (<anonymous>)
+        at fulfilled (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/presentation/task/task.ts:5:58)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5)
+  },
+  level: 'error',
+  timestamp: '2022-07-11 13:56:25'
+}
+{
+  message: {
+    updateBoardCardError: TypeError: Cannot read properties of undefined (reading 'display')
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/trello.ts:469:32)
+        at Generator.next (<anonymous>)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/trello.ts:8:71
+        at new Promise (<anonymous>)
+        at __awaiter (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/trello.ts:4:12)
+        at Function.__updateBoardCard (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/trello.ts:498:16)
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/trello.ts:102:34)
+        at Generator.next (<anonymous>)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/trello.ts:8:71
+        at new Promise (<anonymous>)
+  },
+  level: 'error',
+  timestamp: '2022-07-11 13:56:55'
+}
+{
+  message: {
+    deleteAttachmentFileError: FetchError: invalid json response body at https://api.trello.com/1/cards/62cc1006da953e24234e70d4/attachments/62cc100a99078b4a22f03b55?key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68 reason: Unexpected token C in JSON at position 0
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/node_modules/node-fetch/lib/index.js:273:32
+        at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+      type: 'invalid-json'
+    }
+  },
+  level: 'error',
+  timestamp: '2022-07-11 13:58:25'
+}
+{
+  message: {
+    __MoveTaskNotificationError: TypeError: Cannot read properties of null (reading 'projectManager')
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/notification.ts:38:40)
+        at Generator.next (<anonymous>)
+        at fulfilled (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/notification.ts:5:58)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5)
+  },
+  level: 'error',
+  timestamp: '2022-07-11 14:19:44'
+}
+{
+  message: {
+    __MoveTaskNotificationError: TypeError: Cannot read properties of null (reading 'projectManager')
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/notification.ts:59:19)
+        at Generator.next (<anonymous>)
+        at fulfilled (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/notification.ts:5:58)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5)
+  },
+  level: 'error',
+  timestamp: '2022-07-11 14:21:39'
+}
+{
+  message: {
+    __MoveTaskNotificationError: TypeError: Cannot read properties of null (reading 'projectManager')
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/notification.ts:38:40)
+        at Generator.next (<anonymous>)
+        at fulfilled (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/notification.ts:5:58)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5)
+  },
+  level: 'error',
+  timestamp: '2022-07-11 14:21:40'
+}
+{
+  message: {
+    updateBoardCardError: TypeError: Cannot read properties of undefined (reading 'display')
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/trello.ts:469:32)
+        at Generator.next (<anonymous>)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/trello.ts:8:71
+        at new Promise (<anonymous>)
+        at __awaiter (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/trello.ts:4:12)
+        at Function.__updateBoardCard (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/trello.ts:498:16)
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/trello.ts:102:34)
+        at Generator.next (<anonymous>)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/trello.ts:8:71
+        at new Promise (<anonymous>)
+  },
+  level: 'error',
+  timestamp: '2022-07-11 15:41:24'
+}
+{
+  message: {
+    __MoveTaskNotificationError: TypeError: Cannot read properties of null (reading 'projectManager')
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/notification.ts:59:19)
+        at Generator.next (<anonymous>)
+        at fulfilled (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/notification.ts:5:58)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5)
+  },
+  level: 'error',
+  timestamp: '2022-07-11 15:41:33'
+}
+{
+  message: {
+    __MoveTaskNotificationError: TypeError: Cannot read properties of null (reading 'projectManager')
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/notification.ts:38:40)
+        at Generator.next (<anonymous>)
+        at fulfilled (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/notification.ts:5:58)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5)
+  },
+  level: 'error',
+  timestamp: '2022-07-11 15:41:34'
+}
+{
+  message: {
+    __MoveTaskNotificationError: TypeError: Cannot read properties of null (reading 'projectManager')
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/notification.ts:60:19)
+        at Generator.next (<anonymous>)
+        at fulfilled (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/notification.ts:5:58)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5)
+  },
+  level: 'error',
+  timestamp: '2022-07-11 15:44:53'
+}
+{
+  message: {
+    __MoveTaskNotificationError: TypeError: Cannot read properties of null (reading 'projectManager')
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/notification.ts:39:40)
+        at Generator.next (<anonymous>)
+        at fulfilled (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/notification.ts:5:58)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5)
+  },
+  level: 'error',
+  timestamp: '2022-07-11 15:44:54'
+}
+{
+  message: {
+    __MoveTaskNotificationError: TypeError: Cannot read properties of null (reading 'projectManager')
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/notification.ts:60:19)
+        at Generator.next (<anonymous>)
+        at fulfilled (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/notification.ts:5:58)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5)
+  },
+  level: 'error',
+  timestamp: '2022-07-11 15:48:38'
+}
+{
+  message: {
+    __MoveTaskNotificationError: TypeError: Cannot read properties of null (reading 'projectManager')
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/notification.ts:60:19)
+        at Generator.next (<anonymous>)
+        at fulfilled (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/notification.ts:5:58)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5)
+  },
+  level: 'error',
+  timestamp: '2022-07-11 15:52:39'
+}
+{
+  message: {
+    __MoveTaskNotificationError: TypeError: Cannot read properties of null (reading 'projectManager')
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/notification.ts:60:19)
+        at Generator.next (<anonymous>)
+        at fulfilled (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/notification.ts:5:58)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5)
+  },
+  level: 'error',
+  timestamp: '2022-07-11 15:53:42'
+}
+{
+  message: {
+    __MoveTaskNotificationError: TypeError: Cannot read properties of null (reading 'projectManager')
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/notification.ts:60:19)
+        at Generator.next (<anonymous>)
+        at fulfilled (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/notification.ts:5:58)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5)
+  },
+  level: 'error',
+  timestamp: '2022-07-11 16:22:55'
+}
+{
+  message: {
+    updateBoardCardError: TypeError: Cannot read properties of undefined (reading 'display')
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/trello.ts:469:32)
+        at Generator.next (<anonymous>)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/trello.ts:8:71
+        at new Promise (<anonymous>)
+        at __awaiter (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/trello.ts:4:12)
+        at Function.__updateBoardCard (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/trello.ts:497:16)
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/trello.ts:102:34)
+        at Generator.next (<anonymous>)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/trello.ts:8:71
+        at new Promise (<anonymous>)
+  },
+  level: 'error',
+  timestamp: '2022-07-12 11:47:59'
+}

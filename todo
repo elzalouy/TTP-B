@@ -1,6 +1,31 @@
 
 TODO  deleteTaskFromBoard, editTaskFromBoard createTaskFromBoard emit
-// Description 
-When we edit a certain task from ttp , we need to emit the task changes to all open sockets.
 
-TODO 
+Status : Not Started
+
+Issue : When we edit a certain task from ttp , we need to emit the task changes to all open sockets.
+
+TODO edit task info with attachment
+
+Status : Done, Tested
+
+Issue : Every attachment we will upload will call the webhookUpdate with addAttachmentToCard type, 
+and every attachment is gonna be deleted will call the webhookUpdate with deleteAttachmentFromCard.
+So
+1- deleting an attachment will delete the attachment from trello not the db and trello will call a webhook to update us.
+2- creating an attachment will create the attachment on trello not our db and then trello will update us with the new one.
+
+TODO socket filter issue 
+
+Status : Done, Testing
+
+Issue : delete the filter of the sockets.
+
+TODO send notification to all OMs if a project is created by a PM
+Status : Done, Testing
+
+TODO moveTask socket
+
+Status : InProgress
+
+Issue : moveTask should send a notification to the project manager, if he wasn't the one who moved this task. Move task from trello doesn't allow me to know who moved it. so i am not gonna send a notification if task has been moved from trello.

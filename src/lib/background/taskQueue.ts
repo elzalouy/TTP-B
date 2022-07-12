@@ -24,30 +24,29 @@ export function moveTaskJob(
   var task;
   TaskQueue.push(async (cb) => {
     try {
-      TaskQueue.start();
       const result = await BoardController.moveTaskToDiffList(cardId, listId);
       cb(null, { message: "move in trello" });
     } catch (error) {
       logger.error({ moveTaskJobError: error });
     }
   });
-  TaskQueue.push(async (cb) => {
-    try {
-      task = await TaskDB.updateTaskStatus(
-        {
-          cardId: cardId,
-        },
-        {
-          status: status,
-          listId: listId,
-        }
-      );
-      io.sockets.emit("update-task", task);
-      cb(null, task);
-    } catch (error: any) {
-      cb(new Error(error), null);
-    }
-  });
+  // TaskQueue.push(async (cb) => {
+  //   try {
+  //     task = await TaskDB.updateTaskStatus(
+  //       {
+  //         cardId: cardId,
+  //       },
+  //       {
+  //         status: status,
+  //         listId: listId,
+  //       }
+  //     );
+  //     // io.sockets.emit("update-task", task);
+  //     cb(null, task);
+  //   } catch (error: any) {
+  //     cb(new Error(error), null);
+  //   }
+  // });
   TaskQueue.push(async (cb) => {
     try {
       if (status === "Shared" || status === "Not Clear") {
@@ -71,15 +70,8 @@ export const moveTaskNotificationJob = (data: webhookUpdateInterface) => {
         data.action.display.translationKey ===
         "action_move_card_from_list_to_list"
       ) {
-        let targetTask = await TaskDB.getOneTaskBy({
-          cardId: data.action.data.card.id,
-        });
-        let projectData = await ProjectDB.__getProject({
-          _id: targetTask.projectId,
-        });
-        let userName: string =
-          data?.action?.display?.entities?.memberCreator?.username;
-        let cardName: string = data?.action?.data.card.name;
+        // let task = await TaskDB.getOneTaskBy({ cardId: data.model.id });
+        // await NotificationController.__MoveTaskNotification(task, status, user);
         // if (to === "Shared" || to === "Not Clear") {
         //   let createNotifi = await NotificationController.createNotification({
         //     title: `${cardName} status has been changed to ${to}`,
