@@ -4,16 +4,18 @@ import { successMsg } from "../../utils/successMsg";
 import { customeError } from "../../utils/errorUtils";
 import { Request, Response } from "express";
 import logger from "../../../logger";
+import { io } from "../../..";
 
 const ClientReq = class ClientReq extends ClientController {
   static async handleCreateClient(req: Request, res: Response) {
     try {
       let file: { image: { location: string }[] } | any = req.files;
-      if(file.image){
+      if (file.image) {
         req.body.image = file.image[0].location;
       }
       let Client = await super.createClient(req.body);
       if (Client) {
+        io.sockets.emit("create-client", Client);
         return res.status(200).send(Client);
       } else {
         return res.status(400).send(customeError("create_client_error", 400));
