@@ -25,7 +25,8 @@ const TechMemberReq = class TechMemberReq extends techMember_1.default {
             try {
                 let member = yield _super.createNewMember.call(this, req.body);
                 if ((member === null || member === void 0 ? void 0 : member.status) === 200) {
-                    return res.status(200).send(member);
+                    console.log(member.techMember);
+                    return res.status(200).send(member.techMember);
                 }
                 else {
                     return res.status(400).send(member);
@@ -90,7 +91,9 @@ const TechMemberReq = class TechMemberReq extends techMember_1.default {
                     return res.status(200).send(members);
                 }
                 else {
-                    return res.status(400).send((0, errorUtils_1.customeError)("tech_member_delete_error", 400));
+                    return res
+                        .status(400)
+                        .send((0, errorUtils_1.customeError)("tech_member_delete_error", 400));
                 }
             }
             catch (error) {

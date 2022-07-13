@@ -19,18 +19,21 @@ const project_1 = __importDefault(require("../../controllers/project"));
 const client_1 = __importDefault(require("../../controllers/client"));
 const mongoose_1 = __importDefault(require("mongoose"));
 const task_1 = __importDefault(require("../../controllers/task"));
+const auth_1 = require("../../services/auth");
 const ProjectReq = class ProjectReq extends project_1.default {
     static handleCreateProject(req, res) {
         const _super = Object.create(null, {
             createProject: { get: () => super.createProject }
         });
+        var _a;
         return __awaiter(this, void 0, void 0, function* () {
             try {
+                let decoded = yield (0, auth_1.jwtVerify)(req.header("Authorization"));
                 let projectData = req.body;
                 if (!projectData) {
                     return res.status(400).send((0, errorUtils_1.customeError)("project_missing_data", 400));
                 }
-                let project = yield _super.createProject.call(this, projectData);
+                let project = yield _super.createProject.call(this, projectData, (_a = decoded === null || decoded === void 0 ? void 0 : decoded.user) === null || _a === void 0 ? void 0 : _a.id);
                 if (project) {
                     yield client_1.default.updateClientProcedure(projectData.clientId);
                     return res.status(200).send(project);
@@ -51,11 +54,12 @@ const ProjectReq = class ProjectReq extends project_1.default {
         });
         return __awaiter(this, void 0, void 0, function* () {
             try {
+                let decoded = yield (0, auth_1.jwtVerify)(req.header("Authorization"));
                 let projectData = req.body;
                 if (!projectData._id) {
                     return res.status(400).send((0, errorUtils_1.customeError)("project_missing_data", 400));
                 }
-                let project = yield _super.updateProject.call(this, projectData);
+                let project = yield _super.updateProject.call(this, projectData, decoded.user.id);
                 if (project) {
                     yield client_1.default.updateClientProcedure(project.clientId);
                     return res.status(200).send(project);
@@ -108,10 +112,14 @@ const ProjectReq = class ProjectReq extends project_1.default {
                     let project = yield _super.deleteProject.call(this, projectId);
                     if (project) {
                         yield client_1.default.updateClientProcedure(project.clientId);
-                        return res.status(200).send((0, successMsg_1.successMsg)("projects_and_tasks_deleted", 200));
+                        return res
+                            .status(200)
+                            .send((0, successMsg_1.successMsg)("projects_and_tasks_deleted", 200));
                     }
                     else {
-                        return res.status(400).send((0, errorUtils_1.customeError)("delete_project_error", 400));
+                        return res
+                            .status(400)
+                            .send((0, errorUtils_1.customeError)("delete_project_error", 400));
                     }
                 }
                 else {

@@ -3283,3 +3283,212 @@
   level: 'info',
   timestamp: '2022-07-12 18:56:08'
 }
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-07-13 14:54:10'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-07-13 15:02:09'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-07-13 15:03:44'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-07-13 15:07:17'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-07-13 15:08:38'
+}
+{
+  message: {
+    sendMailError: [Error: ENOENT: no such file or directory, open 'C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\template\assets\Images\Logo.png'] {
+      errno: -4058,
+      code: 'ESTREAM',
+      syscall: 'open',
+      path: 'C:\\Users\\zedsa\\Desktop\\Work\\TTP\\TTP-Back\\template\\assets\\Images\\Logo.png',
+      command: 'API'
+    }
+  },
+  level: 'info',
+  timestamp: '2022-07-13 15:09:53'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-07-13 15:11:06'
+}
+{
+  message: {
+    sendMailError: [Error: ENOENT: no such file or directory, open 'C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\template\assets\Images\Logo.png'] {
+      errno: -4058,
+      code: 'ESTREAM',
+      syscall: 'open',
+      path: 'C:\\Users\\zedsa\\Desktop\\Work\\TTP\\TTP-Back\\template\\assets\\Images\\Logo.png',
+      command: 'API'
+    }
+  },
+  level: 'info',
+  timestamp: '2022-07-13 15:12:04'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-07-13 15:13:17'
+}
+{
+  message: {
+    sendMailError: [Error: ENOENT: no such file or directory, open 'C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\template\assets\Images\Logo.png'] {
+      errno: -4058,
+      code: 'ESTREAM',
+      syscall: 'open',
+      path: 'C:\\Users\\zedsa\\Desktop\\Work\\TTP\\TTP-Back\\template\\assets\\Images\\Logo.png',
+      command: 'API'
+    }
+  },
+  level: 'info',
+  timestamp: '2022-07-13 15:13:38'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-07-13 15:14:55'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-07-13 15:15:33'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-07-13 15:16:52'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-07-13 15:17:53'
+}
+{
+  message: {
+    sendMailError: [Error: ENOENT: no such file or directory, open 'C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\template\assets\Images\Logo.png'] {
+      errno: -4058,
+      code: 'ESTREAM',
+      syscall: 'open',
+      path: 'C:\\Users\\zedsa\\Desktop\\Work\\TTP\\TTP-Back\\template\\assets\\Images\\Logo.png',
+      command: 'API'
+    }
+  },
+  level: 'info',
+  timestamp: '2022-07-13 15:18:16'
+}
+{
+  message: {
+    sendMailError: [Error: ENOENT: no such file or directory, open 'C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\template\assets\Images\Logo.png'] {
+      errno: -4058,
+      code: 'ESTREAM',
+      syscall: 'open',
+      path: 'C:\\Users\\zedsa\\Desktop\\Work\\TTP\\TTP-Back\\template\\assets\\Images\\Logo.png',
+      command: 'API'
+    }
+  },
+  level: 'info',
+  timestamp: '2022-07-13 15:20:06'
+}
+{
+  message: {
+    sendMailError: [Error: ENOENT: no such file or directory, open 'C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\template\assets\Images\Logo.png'] {
+      errno: -4058,
+      code: 'ESTREAM',
+      syscall: 'open',
+      path: 'C:\\Users\\zedsa\\Desktop\\Work\\TTP\\TTP-Back\\template\\assets\\Images\\Logo.png',
+      command: 'API'
+    }
+  },
+  level: 'info',
+  timestamp: '2022-07-13 15:20:33'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-07-13 15:23:48'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-07-13 15:31:15'
+}
+{
+  message: {
+    forgetUserPasswordError: Error: ENOENT: no such file or directory, open 'C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\dist\lib\services\mail\template\template.hbs'
+        at Object.openSync (node:fs:585:3)
+        at Object.readFileSync (node:fs:453:35)
+        at C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\dist\lib\services\mail\mail.js:26:33
+        at Generator.next (<anonymous>)
+        at C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\dist\lib\services\mail\mail.js:8:71
+        at new Promise (<anonymous>)
+        at __awaiter (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\dist\lib\services\mail\mail.js:4:12)
+        at sendMail (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\dist\lib\services\mail\mail.js:24:28)
+        at Function.<anonymous> (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\dist\lib\controllers\auth.js:76:42)
+        at Generator.next (<anonymous>) {
+      errno: -4058,
+      syscall: 'open',
+      code: 'ENOENT',
+      path: 'C:\\Users\\zedsa\\Desktop\\Work\\TTP\\TTP-Back\\dist\\lib\\services\\mail\\template\\template.hbs'
+    }
+  },
+  level: 'error',
+  timestamp: '2022-07-13 15:36:59'
+}
+{
+  message: {
+    handleUserForgetPasswordError: TypeError: Cannot read properties of undefined (reading 'status')
+        at C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\dist\lib\presentation\auth\auth.js:66:30
+        at Generator.next (<anonymous>)
+        at fulfilled (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\dist\lib\presentation\auth\auth.js:5:58)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5)
+  },
+  level: 'error',
+  timestamp: '2022-07-13 15:36:59'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-07-13 15:37:54'
+}

@@ -14,131 +14,26 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 Object.defineProperty(exports, "__esModule", { value: true });
 const Notification_1 = __importDefault(require("../../models/Notification"));
 const logger_1 = __importDefault(require("../../../logger"));
-const bson_1 = require("bson");
 const NotificationDB = class NotificationDB {
-    static createNotificationDB(data) {
-        return __awaiter(this, void 0, void 0, function* () {
-            return yield NotificationDB.__createNotification(data);
-        });
-    }
-    static updateNotificationDB(query, value) {
-        return __awaiter(this, void 0, void 0, function* () {
-            return yield NotificationDB.__updateNotification(query, value);
-        });
-    }
-    static getAllNotificationsDB(data) {
-        return __awaiter(this, void 0, void 0, function* () {
-            return yield NotificationDB.__getAllNotifications(data);
-        });
-    }
-    static deleteNotificationDB(id) {
-        return __awaiter(this, void 0, void 0, function* () {
-            return yield NotificationDB.__deleteNotification(id);
-        });
-    }
-    static __deleteNotification(id) {
+    static __sendNotificationsDB({ userId, current, limit, }) {
         return __awaiter(this, void 0, void 0, function* () {
             try {
-                let notification = yield Notification_1.default.findByIdAndDelete({
-                    _id: new bson_1.ObjectID(id),
+                let length = yield Notification_1.default.count({
+                    "isNotified.userId": userId,
                 });
-                return notification;
+                console.log(length);
+                let notifications = yield Notification_1.default.find({
+                    "isNotified.userId": userId,
+                }, "_id title description isNotified createdAt", { sort: { createdAt: -1 }, skip: current * limit, limit: limit });
+                return {
+                    notifications: notifications,
+                    pages: Math.floor(length / limit),
+                    current: current,
+                    limit: limit,
+                };
             }
             catch (error) {
-                logger_1.default.error({ deletNotificationDBError: error });
-            }
-        });
-    }
-    static __getAllNotifications(data = { id: "" }) {
-        return __awaiter(this, void 0, void 0, function* () {
-            try {
-                logger_1.default.info({ data });
-                let notification = yield Notification_1.default.aggregate([
-                    {
-                        $match: {
-                            $or: [
-                                { projectManagerID: new bson_1.ObjectID(data.id) },
-                                { adminUserID: new bson_1.ObjectID(data.id) },
-                            ],
-                        },
-                    },
-                    {
-                        $lookup: {
-                            from: "users",
-                            localField: "projectManagerID",
-                            foreignField: "_id",
-                            as: "projectManagerID",
-                        },
-                    },
-                    {
-                        $lookup: {
-                            from: "users",
-                            localField: "adminUserID",
-                            foreignField: "_id",
-                            as: "adminUserID",
-                        },
-                    },
-                    {
-                        $lookup: {
-                            from: "projects",
-                            localField: "projectID",
-                            foreignField: "_id",
-                            as: "projectID",
-                        },
-                    },
-                    { $unwind: { path: "$adminUserID", preserveNullAndEmptyArrays: true } },
-                    { $unwind: { path: "$projectID", preserveNullAndEmptyArrays: true } },
-                    {
-                        $unwind: {
-                            path: "$projectManagerID",
-                            preserveNullAndEmptyArrays: true,
-                        },
-                    },
-                    {
-                        $sort: { createdAt: -1 },
-                    },
-                    {
-                        $project: {
-                            _id: 1,
-                            description: 1,
-                            projectManagerID: 1,
-                            adminViewed: 1,
-                            projectManagerViewed: 1,
-                            title: 1,
-                            adminUserID: 1,
-                            createdAt: 1,
-                            projectID: 1
-                        },
-                    },
-                    {
-                        $skip: data.skip ? Number(data.skip) : 0,
-                    },
-                    {
-                        $limit: data.limit ? Number(data.limit) : 4,
-                    },
-                ]);
-                return notification;
-            }
-            catch (error) {
-                logger_1.default.error({ getNotificationDBError: error });
-            }
-        });
-    }
-    static __updateNotification(query, value) {
-        return __awaiter(this, void 0, void 0, function* () {
-            try {
-                console.log({ query, value });
-                let notification = yield Notification_1.default.updateMany(query, value);
-                // let notification = await Notification.findByIdAndUpdate(
-                //   { _id: new ObjectID(id) },
-                //   { ...data },
-                //   { new: true }
-                // );
-                console.log({ notification });
-                return notification;
-            }
-            catch (error) {
-                logger_1.default.error({ updateNotificationDBError: error });
+                logger_1.default.error({ __sendNotificationsDBError: error });
             }
         });
     }
@@ -146,11 +41,39 @@ const NotificationDB = class NotificationDB {
         return __awaiter(this, void 0, void 0, function* () {
             try {
                 let notification = new Notification_1.default(data);
-                yield notification.save();
-                return notification;
+                let result = yield notification.save();
+                return result;
             }
             catch (error) {
-                logger_1.default.error({ createNotificationDBError: error });
+                logger_1.default.error({ __createNotificationsDBError: error });
+            }
+        });
+    }
+    static __getUnotified(userId) {
+        return __awaiter(this, void 0, void 0, function* () {
+            try {
+                let notifications = yield Notification_1.default.count({
+                    isNotified: { $elemMatch: { userId: userId, isNotified: false } },
+                });
+                console.log(notifications);
+                return { NoOfUnNotified: notifications };
+            }
+            catch (error) {
+                logger_1.default.error({ __createNotificationsDBError: error });
+            }
+        });
+    }
+    static __updateUnotifiedDB(userId) {
+        return __awaiter(this, void 0, void 0, function* () {
+            try {
+                let update = yield Notification_1.default.updateMany({ isNotified: { $elemMatch: { userId: userId, isNotified: false } } }, { $set: { "isNotified.$.isNotified": true } });
+                if (update.matchedCount) {
+                    return { NoOfUnNotified: 0 };
+                }
+                return null;
+            }
+            catch (error) {
+                logger_1.default.error({ __createNotificationsDBError: error });
             }
         });
     }

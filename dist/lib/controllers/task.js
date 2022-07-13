@@ -74,15 +74,15 @@ class TaskController extends tasks_1.default {
             return yield TaskController.__updateTaskByTrello(data);
         });
     }
-    static moveTaskOnTrello(cardId, listId, status, list) {
+    static moveTaskOnTrello(cardId, listId, status, list, user) {
         return __awaiter(this, void 0, void 0, function* () {
-            return yield TaskController.__moveTaskOnTrello(cardId, listId, status, list);
+            return yield TaskController.__moveTaskOnTrello(cardId, listId, status, list, user);
         });
     }
-    static __moveTaskOnTrello(cardId, listId, status, list) {
+    static __moveTaskOnTrello(cardId, listId, status, list, user) {
         return __awaiter(this, void 0, void 0, function* () {
             try {
-                (0, taskQueue_1.moveTaskJob)(listId, cardId, status);
+                (0, taskQueue_1.moveTaskJob)(listId, cardId, status, user);
                 taskQueue_1.TaskQueue.start();
                 return { data: `Task with cardId ${cardId} has moved to list ${list}` };
             }
@@ -119,9 +119,11 @@ class TaskController extends tasks_1.default {
                 }
                 // if there are uploading files, upload it in the controller layer.
                 if (files) {
-                    data = yield this.__createTaskAttachment(files, data);
+                    yield this.__createTaskAttachment(files, data);
                 }
                 // update data in the db in dbCalls
+                delete data.attachedFiles;
+                delete data.deleteFiles;
                 let task = yield _super.updateTaskDB.call(this, data);
                 (0, upload_1.deleteAll)();
                 return task;
@@ -146,7 +148,6 @@ class TaskController extends tasks_1.default {
                         return yield trello_1.default.createAttachmentOnCard(data.cardId, file);
                     }));
                     let attachedFiles = yield Promise.all(newAttachments);
-                    console.log("attached files", attachedFiles);
                     data.attachedFiles = [];
                     attachedFiles.forEach((item) => {
                         data.attachedFiles.push({
@@ -173,20 +174,23 @@ class TaskController extends tasks_1.default {
         });
         return __awaiter(this, void 0, void 0, function* () {
             try {
-                let createdCard = yield trello_1.default.createCardInList(data.listId, data.name);
+                let createdCard = yield trello_1.default.createCardInList(data.listId, data.name, data.description);
                 if (createdCard) {
                     data.cardId = createdCard.id;
-                    if (files.length > 0)
-                        data = yield TaskController.__createTaskAttachment(files, data);
-                    else
-                        data.attachedFiles = [];
+                    let response = yield trello_1.default.createWebHook(data.cardId);
+                    if (response) {
+                        if (files.length > 0)
+                            data = yield TaskController.__createTaskAttachment(files, data);
+                        else
+                            data.attachedFiles = [];
+                    }
+                    let task = yield _super.createTaskDB.call(this, data);
+                    (0, taskQueue_1.createTaskFromBoardJob)(task);
+                    taskQueue_1.TaskQueue.start();
+                    return task;
                 }
                 else
                     throw "Error while creating Card in Trello";
-                let task = yield _super.createTaskDB.call(this, data);
-                (0, taskQueue_1.createTaskFromBoardJob)(task);
-                taskQueue_1.TaskQueue.start();
-                return task;
             }
             catch (error) {
                 logger_1.default.error({ getTeamsError: error });
@@ -219,6 +223,7 @@ class TaskController extends tasks_1.default {
                 });
                 tasks.forEach((item) => __awaiter(this, void 0, void 0, function* () {
                     yield trello_1.default.deleteCard(item.cardId);
+                    yield trello_1.default.removeWebhook(item.cardId);
                 }));
                 return yield _super.deleteTasksByProjectIdDB.call(this, id);
             }
@@ -235,6 +240,7 @@ class TaskController extends tasks_1.default {
             try {
                 // let tasks = await super.getTasksByIdsDB;
                 let deleteResult = yield _super.deleteTasksWhereDB.call(this, data);
+                deleteResult.forEach((item) => trello_1.default.removeWebhook(item.cardId));
                 if (deleteResult)
                     return deleteResult;
                 else
@@ -255,6 +261,7 @@ class TaskController extends tasks_1.default {
                 let tasks = yield _super.getTasksByIdsDB.call(this, ids);
                 tasks.forEach((item) => __awaiter(this, void 0, void 0, function* () {
                     trello_1.default.deleteCard(item.cardId);
+                    trello_1.default.removeWebhook(item.cardId);
                 }));
                 return yield _super.deleteTasksDB.call(this, ids);
             }

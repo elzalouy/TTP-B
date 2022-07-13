@@ -41,6 +41,8 @@ const sendMail = async (data: Data) => {
         clientId: process.env.CLIENT_ID,
         clientSecret: process.env.CLIENT_SECRET,
       },
+      debug: true, // show debug output
+      logger: true // log information in console
     });
 
     const mailOptions = {

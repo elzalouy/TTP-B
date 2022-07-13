@@ -13,7 +13,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 const logger_1 = __importDefault(require("../../../logger"));
-const task_1 = __importDefault(require("../../models/task"));
+const Task_1 = __importDefault(require("../../models/Task"));
 const lodash_1 = __importDefault(require("lodash"));
 const mongoose_1 = __importDefault(require("mongoose"));
 const Tasks_1 = require("../../types/controller/Tasks");
@@ -91,7 +91,7 @@ class TaskDB {
     static __getAllTasks(data) {
         return __awaiter(this, void 0, void 0, function* () {
             try {
-                let tasks = task_1.default.find(data).populate("memberId");
+                let tasks = Task_1.default.find(data).populate("memberId");
                 return tasks;
             }
             catch (error) {
@@ -102,7 +102,7 @@ class TaskDB {
     static __getTask(id) {
         return __awaiter(this, void 0, void 0, function* () {
             try {
-                let task = yield task_1.default.findOne({ _id: id });
+                let task = yield Task_1.default.findOne({ _id: id });
                 return task;
             }
             catch (error) {
@@ -113,7 +113,7 @@ class TaskDB {
     static __getTaskDepartment(depId) {
         return __awaiter(this, void 0, void 0, function* () {
             try {
-                let taskCount = yield task_1.default.aggregate([
+                let taskCount = yield Task_1.default.aggregate([
                     {
                         $facet: {
                             inProgressTasks: [
@@ -163,9 +163,9 @@ class TaskDB {
     static __updateTaskStatus(data, value) {
         return __awaiter(this, void 0, void 0, function* () {
             try {
-                let task = yield task_1.default.findOne(data);
+                let task = yield Task_1.default.findOne(data);
                 let newdata = Object.assign(Object.assign({}, value), { lastMove: task.status, lastMoveDate: data.lastMoveDate });
-                let result = yield task_1.default.findOneAndUpdate(data, newdata, {
+                let result = yield Task_1.default.findOneAndUpdate(data, newdata, {
                     new: true,
                     lean: true,
                 });
@@ -189,7 +189,7 @@ class TaskDB {
     static __getTasksByIds(ids) {
         return __awaiter(this, void 0, void 0, function* () {
             try {
-                let tasks = yield task_1.default.find({ _id: { $in: ids } }).lean();
+                let tasks = yield Task_1.default.find({ _id: { $in: ids } }).lean();
                 return tasks;
             }
             catch (error) {
@@ -200,9 +200,10 @@ class TaskDB {
     static __deleteTasksWhereDB(data) {
         return __awaiter(this, void 0, void 0, function* () {
             try {
-                let result = yield task_1.default.deleteMany(data);
+                let tasks = yield Task_1.default.find(data);
+                let result = yield Task_1.default.deleteMany(data);
                 if (result)
-                    return result;
+                    return tasks;
                 throw "Tasks not found";
             }
             catch (error) {
@@ -213,7 +214,7 @@ class TaskDB {
     static __getTasks(data) {
         return __awaiter(this, void 0, void 0, function* () {
             try {
-                let tasks = yield task_1.default.find(data).lean();
+                let tasks = yield Task_1.default.find(data).lean();
                 return tasks;
             }
             catch (error) {
@@ -224,7 +225,7 @@ class TaskDB {
     static __deleteTasksByProjectId(id) {
         return __awaiter(this, void 0, void 0, function* () {
             try {
-                let deleteResult = yield task_1.default.deleteMany({ projectId: id });
+                let deleteResult = yield Task_1.default.deleteMany({ projectId: id });
                 return deleteResult;
             }
             catch (error) {
@@ -235,9 +236,9 @@ class TaskDB {
     static __deleteTasks(ids) {
         return __awaiter(this, void 0, void 0, function* () {
             try {
-                let deleteResult = yield task_1.default.deleteMany({ _id: { $in: ids } });
+                let deleteResult = yield Task_1.default.deleteMany({ _id: { $in: ids } });
                 if (deleteResult) {
-                    let remaind = yield task_1.default.find({});
+                    let remaind = yield Task_1.default.find({});
                     return remaind;
                 }
                 else
@@ -251,7 +252,7 @@ class TaskDB {
     static __deleteTask(id) {
         return __awaiter(this, void 0, void 0, function* () {
             try {
-                let task = yield task_1.default.findByIdAndDelete(id);
+                let task = yield Task_1.default.findByIdAndDelete(id);
                 return task;
             }
             catch (error) {
@@ -260,16 +261,16 @@ class TaskDB {
         });
     }
     static __updateTask(data) {
-        var _a;
         return __awaiter(this, void 0, void 0, function* () {
             try {
                 let id = data.id;
                 delete data.id;
-                let task = yield task_1.default.findOne({ _id: id }).lean();
+                let task = yield Task_1.default.findOne({ _id: id }).lean();
                 if (!task)
                     return Tasks_1.taskNotFoundError;
                 task.name = data.name ? data.name : task.name;
-                task.description = data.description ? data.description : task.description;
+                task.description =
+                    data.description.length > 0 ? data.description : task.description;
                 task.deadline = data.deadline ? data.deadline : task.deadline;
                 task.categoryId = data.categoryId
                     ? new mongoose_1.default.Types.ObjectId(data.categoryId)
@@ -281,16 +282,8 @@ class TaskDB {
                 task.cardId = data.cardId ? data.cardId : task.cardId;
                 task.boardId = data.boardId ? data.boardId : task.boardId;
                 task.listId = data.listId ? data.listId : task.listId;
-                if (((_a = data === null || data === void 0 ? void 0 : data.attachedFiles) === null || _a === void 0 ? void 0 : _a.length) > 0) {
-                    task.attachedFiles = [...task.attachedFiles, ...data === null || data === void 0 ? void 0 : data.attachedFiles];
-                }
-                if ([...data === null || data === void 0 ? void 0 : data.deleteFiles].length > 0) {
-                    task.attachedFiles = task.attachedFiles.filter((item) => [...data.deleteFiles].findIndex((file) => item._id.toString() === file._id) < 0);
-                }
-                data === null || data === void 0 ? true : delete data.deleteFiles;
                 delete task._id;
-                let update = yield task_1.default.findByIdAndUpdate(id, task, {
-                    lean: true,
+                let update = yield Task_1.default.findByIdAndUpdate(id, task, {
                     new: true,
                 });
                 return { error: null, task: update };
@@ -303,7 +296,7 @@ class TaskDB {
     static __updateTaskAttachments(data, attachments) {
         return __awaiter(this, void 0, void 0, function* () {
             try {
-                let task = yield task_1.default.findOneAndUpdate(data, {
+                let task = yield Task_1.default.findOneAndUpdate(data, {
                     $set: { attachedFiles: attachments },
                 }, { new: true, lean: true });
                 return task;
@@ -316,8 +309,7 @@ class TaskDB {
     static __createTask(data) {
         return __awaiter(this, void 0, void 0, function* () {
             try {
-                console.log("data from db", data);
-                let task = new task_1.default(data);
+                let task = new Task_1.default(data);
                 task = yield task.save();
                 return task;
             }
@@ -340,7 +332,7 @@ class TaskDB {
                     filter.name = { $regex: data.name };
                 if (data.projectManager)
                     filter.projectManager = { $regex: data.projectManager };
-                let tasks = yield task_1.default.find(filter);
+                let tasks = yield Task_1.default.find(filter);
                 return tasks;
             }
             catch (error) {
@@ -351,7 +343,7 @@ class TaskDB {
     static __getOneTaskBy(data) {
         return __awaiter(this, void 0, void 0, function* () {
             try {
-                let task = yield task_1.default.findOne(data).lean();
+                let task = yield Task_1.default.findOne(data).lean();
                 if (task)
                     return task;
                 else
@@ -363,25 +355,36 @@ class TaskDB {
         });
     }
     static __updateTaskByTrelloDB(data) {
+        var _a;
         return __awaiter(this, void 0, void 0, function* () {
             try {
-                let task = yield task_1.default.findOne({ cardId: data.cardId });
+                let task = yield Task_1.default.findOne({ cardId: data.cardId });
                 task.name = (data === null || data === void 0 ? void 0 : data.name) ? data === null || data === void 0 ? void 0 : data.name : task.name;
                 task.status = (data === null || data === void 0 ? void 0 : data.status) ? data.status : task.status;
                 task.listId = (data === null || data === void 0 ? void 0 : data.listId) ? data.listId : task.listId;
                 task.cardId = (data === null || data === void 0 ? void 0 : data.cardId) ? data.cardId : task.cardId;
                 task.boardId = (data === null || data === void 0 ? void 0 : data.boardId) ? data.boardId : task.boardId;
-                task.description = (data === null || data === void 0 ? void 0 : data.description)
-                    ? data.description
-                    : task.description;
+                task.description = data.description ? data.description : task.description;
                 task.lastMove = (data === null || data === void 0 ? void 0 : data.lastMove) ? data.lastMove : task.lastMoveDate;
                 task.lastMoveDate = (data === null || data === void 0 ? void 0 : data.lastMoveDate)
                     ? data.lastMoveDate
                     : task.lastMoveDate;
                 if (data.attachedFiles) {
-                    task.attachedFiles = lodash_1.default.uniqBy([...task.attachedFiles, ...data.attachedFiles], "trelloId");
+                    let files = [...task.attachedFiles, ...data.attachedFiles];
+                    task.attachedFiles = files;
                 }
-                return yield task.save();
+                if (data.deleteFiles && ((_a = data === null || data === void 0 ? void 0 : data.deleteFiles) === null || _a === void 0 ? void 0 : _a.trelloId)) {
+                    task.attachedFiles = lodash_1.default.filter(task.attachedFiles, (item) => { var _a; return item.trelloId !== ((_a = data === null || data === void 0 ? void 0 : data.deleteFiles) === null || _a === void 0 ? void 0 : _a.trelloId); });
+                }
+                task.attachedFiles = task.attachedFiles.filter((item) => item.mimeType !== "");
+                task.attachedFiles = lodash_1.default.uniqBy(task.attachedFiles, "trelloId");
+                console.log(task);
+                let id = task._id;
+                let result = yield Task_1.default.findOneAndUpdate({ _id: id }, task, {
+                    new: true,
+                    lean: true,
+                });
+                return result;
             }
             catch (error) {
                 logger_1.default.error({ __updateTaskByTrelloDBError: error });
@@ -391,11 +394,11 @@ class TaskDB {
     static __createTaskByTrelloDB(data) {
         return __awaiter(this, void 0, void 0, function* () {
             try {
-                let result = yield task_1.default.findOne({ cardId: data.cardId });
+                let result = yield Task_1.default.findOne({ cardId: data.cardId });
                 if (result)
                     return result;
                 else {
-                    let task = new task_1.default(data);
+                    let task = new Task_1.default(data);
                     return yield task.save();
                 }
             }
@@ -407,7 +410,7 @@ class TaskDB {
     static __deleteTaskByTrelloDB(data) {
         return __awaiter(this, void 0, void 0, function* () {
             try {
-                let result = yield task_1.default.findOneAndDelete({ cardId: data.cardId });
+                let result = yield Task_1.default.findOneAndDelete({ cardId: data.cardId });
                 return result;
             }
             catch (error) {
@@ -419,7 +422,7 @@ class TaskDB {
         return __awaiter(this, void 0, void 0, function* () {
             try {
                 let taskData = archive === true ? { listId: null, status: "Archived" } : data;
-                let archiveTask = yield task_1.default.findOneAndUpdate({ cardId: data.cardId }, taskData, { new: true, lean: true });
+                let archiveTask = yield Task_1.default.findOneAndUpdate({ cardId: data.cardId }, taskData, { new: true, lean: true });
                 return archiveTask;
             }
             catch (error) {

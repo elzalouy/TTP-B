@@ -118,33 +118,37 @@ const DepartmentController = class DepartmentController extends department_1.def
                 }
                 // if not undefine then there is an action needed
                 // make mainBoard or not
-                if (data.mainBoard !== undefined && data.teams) {
-                    logger_1.default.info("second step");
-                    // if false => remove the webhook
-                    if (!data.mainBoard) {
-                        let hookRemove = data.teams.map((id) => __awaiter(this, void 0, void 0, function* () {
-                            return yield trello_1.default.removeWebhook(id);
-                        }));
-                        logger_1.default.info("third step");
-                        Promise.all(hookRemove).then((res) => logger_1.default.info({ removeWebhookSucced: "done" }));
-                    }
-                    // if true => create the webhook
-                    if (data.mainBoard) {
-                        logger_1.default.info("fourth step");
-                        let hookAdd = data.teams.map((id) => __awaiter(this, void 0, void 0, function* () {
-                            return yield trello_1.default.createWebHook(id);
-                        }));
-                        Promise.all(hookAdd).then((res) => logger_1.default.info({ addWebhookSucced: "done" }));
-                    }
-                }
+                // if (data.mainBoard !== undefined && data.teams) {
+                //   logger.info("second step");
+                //   // if false => remove the webhook
+                //   if (!data.mainBoard) {
+                //     let hookRemove = data.teams.map(async (id) => {
+                //       return await BoardController.removeWebhook(id);
+                //     });
+                //     logger.info("third step");
+                //     Promise.all(hookRemove).then((res) =>
+                //       logger.info({ removeWebhookSucced: "done" })
+                //     );
+                //   }
+                //   // if true => create the webhook
+                //   if (data.mainBoard) {
+                //     logger.info("fourth step");
+                //     let hookAdd = data.teams.map(async (id) => {
+                //       return await BoardController.createWebHook(id);
+                //     });
+                //     Promise.all(hookAdd).then((res) =>
+                //       logger.info({ addWebhookSucced: "done" })
+                //     );
+                //   }
+                // }
                 //todo add team or remove team
                 // if remove team
                 if (data.removeTeam) {
                     let hookListremove = data.removeTeam.map((id) => __awaiter(this, void 0, void 0, function* () {
                         // remove team list
-                        yield trello_1.default.addListToArchieve(id);
+                        return yield trello_1.default.addListToArchieve(id);
                         // remove webhook
-                        return yield trello_1.default.removeWebhook(id);
+                        // return await BoardController.removeWebhook(id);
                     }));
                     Promise.all(hookListremove).then((res) => logger_1.default.info({ removeListAndWebhookSucced: "done" }));
                     logger_1.default.info({ removeTeam: data.removeTeam });
@@ -159,7 +163,7 @@ const DepartmentController = class DepartmentController extends department_1.def
                 }
                 // If add team
                 if (data.addTeam) {
-                    let teamListIds = yield DepartmentController.__createTeamWebhookAndList(data.addTeam, data.boardId, data.mainBoard);
+                    let teamListIds = yield DepartmentController.__createTeamAndList(data.addTeam, data.boardId);
                     logger_1.default.info({ title: "testing", teamListIds });
                     // add team
                     depUpdate = yield _super.updateNestedRecordDepDB.call(this, data._id, {
@@ -189,7 +193,7 @@ const DepartmentController = class DepartmentController extends department_1.def
                         color: data.color,
                         boardId: boardData.id,
                         mainBoard: data.mainBoard,
-                        boardURL: boardData.url
+                        boardURL: boardData.url,
                     });
                     (0, departmentsQueue_1.createOneJob)(departmentResult, data.teams);
                     departmentsQueue_1.DepartmentQueue.start();
@@ -229,17 +233,17 @@ const DepartmentController = class DepartmentController extends department_1.def
             }
         });
     }
-    static __createTeamWebhookAndList(teams, boardId, mainBoard) {
+    static __createTeamAndList(teams, boardId) {
         return __awaiter(this, void 0, void 0, function* () {
             try {
                 let teamListIds = [];
                 if (teams) {
                     let teamsList = teams.map((team) => __awaiter(this, void 0, void 0, function* () {
                         let teamData = yield trello_1.default.addListToBoard(boardId, team.name);
-                        trello_1.default.createWebHook(teamData.id);
                         return teamListIds.push({
                             idInTrello: teamData.id,
                             idInDB: team._id,
+                            name: team.name,
                         });
                     }));
                     yield Promise.all(teamsList).then((res) => logger_1.default.info({ removeWebhookSucced: "done" }));

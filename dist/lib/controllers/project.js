@@ -14,17 +14,17 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 Object.defineProperty(exports, "__esModule", { value: true });
 const logger_1 = __importDefault(require("../../logger"));
 const project_1 = __importDefault(require("../dbCalls/project/project"));
-const index_1 = require("../../index");
 const notification_1 = __importDefault(require("./notification"));
+const projectQueue_1 = require("../background/projectQueue");
 const ProjectController = class ProjectController extends project_1.default {
-    static createProject(data) {
+    static createProject(data, userId) {
         return __awaiter(this, void 0, void 0, function* () {
-            return yield ProjectController.__createNewProject(data);
+            return yield ProjectController.__createNewProject(data, userId);
         });
     }
-    static updateProject(data) {
+    static updateProject(data, userId) {
         return __awaiter(this, void 0, void 0, function* () {
-            return yield ProjectController.__updateProjectData(data);
+            return yield ProjectController.__updateProjectData(data, userId);
         });
     }
     static getProject(data) {
@@ -80,29 +80,17 @@ const ProjectController = class ProjectController extends project_1.default {
             }
         });
     }
-    static __updateProjectData(data) {
+    static __updateProjectData(data, userId) {
         const _super = Object.create(null, {
             updateProjectDB: { get: () => super.updateProjectDB }
         });
         return __awaiter(this, void 0, void 0, function* () {
             try {
-                // if porject status update to done
-                if (data.projectStatus &&
-                    ["deliver on time", "deliver before deadline", "late"].includes(data.projectStatus)) {
-                    let createNotifi = yield notification_1.default.createNotification({
-                        title: `${data.name} project is done! Congratulations!`,
-                        projectManagerID: data.projectManager,
-                        description: `${data.name} project is done! Thank you for your hard work`,
-                        clientName: data.clientId,
-                        projectID: data._id,
-                        adminUserID: data.adminId,
-                    });
-                    // send notification to all admin
-                    index_1.io.to("admin-room").emit("notification-update", createNotifi);
-                    index_1.io.to("manager-room").emit("notification-update");
-                    // send notification to specific project manager
-                    index_1.io.to(`user-${data.projectManager}`).emit("notification-update", createNotifi);
-                }
+                projectQueue_1.projectQueue.push((cb) => {
+                    notification_1.default.__updateProjectNotification(data, userId);
+                    cb(null, true);
+                });
+                projectQueue_1.projectQueue.start();
                 let project = yield _super.updateProjectDB.call(this, data);
                 return project;
             }
@@ -111,22 +99,18 @@ const ProjectController = class ProjectController extends project_1.default {
             }
         });
     }
-    static __createNewProject(data) {
+    static __createNewProject(data, userId) {
         const _super = Object.create(null, {
             createProjectDB: { get: () => super.createProjectDB }
         });
         return __awaiter(this, void 0, void 0, function* () {
             try {
                 let project = yield _super.createProjectDB.call(this, data);
-                let createNotifi = yield notification_1.default.createNotification({
-                    title: `${data.projectManagerName} project has been assigend to you`,
-                    description: `${data.name} has been assigend to you by ${data.adminName}`,
-                    projectManagerID: data.projectManager,
-                    projectID: data._id,
-                    adminUserID: data.adminId,
+                projectQueue_1.projectQueue.push((cb) => {
+                    notification_1.default.__creatProjectNotification(data, userId);
+                    cb(null, true);
                 });
-                // send notification to specific project manager
-                index_1.io.to(`user-${data.projectManager}`).emit("notification-update", createNotifi);
+                projectQueue_1.projectQueue.start();
                 return project;
             }
             catch (error) {
