@@ -41,6 +41,8 @@ const sendMail = (data) => __awaiter(void 0, void 0, void 0, function* () {
                 clientId: process.env.CLIENT_ID,
                 clientSecret: process.env.CLIENT_SECRET,
             },
+            debug: true,
+            logger: true // log information in console
         });
         const mailOptions = {
             from: process.env.EMAIL_ADDRESS,

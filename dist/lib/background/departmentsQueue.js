@@ -32,7 +32,6 @@ const createOneJob = (department, teams) => {
     exports.DepartmentQueue.push((cb) => __awaiter(void 0, void 0, void 0, function* () {
         var _a, _b;
         try {
-            // b- create department based the on created board id
             if (department._id) {
                 let defaultListId = "";
                 let sharedListID = "";
@@ -41,14 +40,12 @@ const createOneJob = (department, teams) => {
                 let notClearListId = "";
                 let canceldListId = "";
                 let inProgressListId = "";
-                // // create board
                 let inprogress = yield trello_1.default.addListToBoard(department.boardId, "inProgress");
-                console.log(inprogress);
                 inProgressListId = inprogress.id;
                 let cancel = yield trello_1.default.addListToBoard(department.boardId, "Cancled");
                 canceldListId = cancel.id;
-                let unClear = yield trello_1.default.addListToBoard(department.boardId, "Not Clear");
-                notClearListId = unClear.id;
+                let NotClear = yield trello_1.default.addListToBoard(department.boardId, "Not Clear");
+                notClearListId = NotClear.id;
                 let done = yield trello_1.default.addListToBoard(department.boardId, "Done");
                 doneListId = done.id;
                 let shared = yield trello_1.default.addListToBoard(department.boardId, "Shared");
@@ -58,22 +55,24 @@ const createOneJob = (department, teams) => {
                 let defaultList = yield trello_1.default.addListToBoard(department.boardId, "Tasks Board");
                 defaultListId = defaultList.id;
                 // // create list and webhook for the team
-                let teamListIds = yield department_1.default.__createTeamWebhookAndList(teams, department.boardId, department.mainBoard);
+                let teamListIds = yield department_1.default.__createTeamAndList(teams, department.boardId);
                 defaultListId = defaultList.id;
                 // create webhook for list
-                const listId = [
-                    defaultListId,
-                    sharedListID,
-                    doneListId,
-                    reviewListId,
-                    notClearListId,
-                    canceldListId,
-                    inProgressListId,
-                ];
-                let webhookCreate = listId.map((id) => __awaiter(void 0, void 0, void 0, function* () {
-                    return yield trello_1.default.createWebHook(id);
-                }));
-                Promise.all(webhookCreate).then((res) => logger_1.default.info({ webhookCreateResult: "webhook done" }));
+                // const listId: string[] = [
+                //   defaultListId,
+                //   sharedListID,
+                //   doneListId,
+                //   reviewListId,
+                //   notClearListId,
+                //   canceldListId,
+                //   inProgressListId,
+                // ];
+                // let webhookCreate = listId.map(async (id) => {
+                //   return await BoardController.createWebHook(id);
+                // });
+                // Promise.all(webhookCreate).then((res) =>
+                //   logger.info({ webhookCreateResult: "webhook done" })
+                // );
                 let data = {
                     defaultListId,
                     sharedListID,

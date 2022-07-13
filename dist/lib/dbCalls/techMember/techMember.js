@@ -13,7 +13,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 const logger_1 = __importDefault(require("../../../logger"));
-const teams_1 = __importDefault(require("../../models/teams"));
+const Teams_1 = __importDefault(require("../../models/Teams"));
 const TechMemberDB = class TechMemberDB {
     static createTechMember(data) {
         return __awaiter(this, void 0, void 0, function* () {
@@ -45,7 +45,7 @@ const TechMemberDB = class TechMemberDB {
             try {
                 let ids = data.ids;
                 delete data.ids;
-                let techMembers = yield teams_1.default.updateMany({ id: { $in: ids } }, Object.assign({}, data), { multi: true });
+                let techMembers = yield Teams_1.default.updateMany({ id: { $in: ids } }, Object.assign({}, data), { multi: true });
                 return techMembers;
             }
             catch (error) {
@@ -56,7 +56,7 @@ const TechMemberDB = class TechMemberDB {
     static __getTechMmber(data) {
         return __awaiter(this, void 0, void 0, function* () {
             try {
-                let techMember = yield teams_1.default.find(data).lean();
+                let techMember = yield Teams_1.default.find(data).lean();
                 return techMember;
             }
             catch (error) {
@@ -70,7 +70,7 @@ const TechMemberDB = class TechMemberDB {
                 let id = data.id;
                 delete data.id;
                 logger_1.default.info({ data });
-                let techMember = yield teams_1.default.findOneAndUpdate({ _id: id }, Object.assign({}, data), { new: true, lean: true });
+                let techMember = yield Teams_1.default.findOneAndUpdate({ _id: id }, Object.assign({}, data), { new: true, lean: true });
                 return techMember;
             }
             catch (error) {
@@ -81,7 +81,7 @@ const TechMemberDB = class TechMemberDB {
     static __addTechMember(data) {
         return __awaiter(this, void 0, void 0, function* () {
             try {
-                let techMember = new teams_1.default(data);
+                let techMember = new Teams_1.default(data);
                 yield techMember.save();
                 return techMember;
             }
@@ -93,7 +93,7 @@ const TechMemberDB = class TechMemberDB {
     static __deleteTechMemberDB(data) {
         return __awaiter(this, void 0, void 0, function* () {
             try {
-                let deleteResult = yield teams_1.default.deleteMany(data);
+                let deleteResult = yield Teams_1.default.deleteMany(data);
                 if (deleteResult && deleteResult.deletedCount > 0)
                     return deleteResult;
                 else

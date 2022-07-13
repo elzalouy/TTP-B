@@ -3,8 +3,9 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.editTaskSchema = exports.createTaskSchema = void 0;
+exports.validateExtentions = exports.editTaskSchema = exports.createTaskSchema = void 0;
 const joi_1 = __importDefault(require("joi"));
+const lodash_1 = __importDefault(require("lodash"));
 const createProjectSchema = joi_1.default.object({
     name: joi_1.default.string().required().min(4).messages({
         "string.base": "Project Name is required",
@@ -167,3 +168,59 @@ exports.editTaskSchema = joi_1.default.object({
     attachedFiles: joi_1.default.array().optional().allow(null),
     description: joi_1.default.string().optional().allow(""),
 });
+const validateExtentions = (name) => {
+    let ext = lodash_1.default.split(name, ".");
+    let extention = ext[ext.length - 1];
+    let types = [
+        "image/png",
+        "image/jpeg",
+        "image/jpg",
+        "image/svg",
+        "text/csv",
+        "application/msword",
+        "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+        "image/gif",
+        "application/pdf",
+        "application/vnd.ms-powerpoint",
+        "application/vnd.openxmlformats-officedocument.presentationml.presentation",
+    ];
+    let format = "";
+    switch (extention) {
+        case "png":
+            format = types[0];
+            break;
+        case "jpeg":
+            format = types[1];
+            break;
+        case "jpg":
+            format = types[2];
+            break;
+        case "svg":
+            format = types[3];
+            break;
+        case "csv":
+            format = types[4];
+            break;
+        case "doc":
+            format = types[5];
+            break;
+        case "docx":
+            format = types[6];
+            break;
+        case "gif":
+            format = types[7];
+            break;
+        case "pdf":
+            format = types[8];
+            break;
+        case "ppt":
+            format = types[9];
+            break;
+        case "pptx":
+            format = types[10];
+            break;
+    }
+    console.log(format);
+    return format;
+};
+exports.validateExtentions = validateExtentions;

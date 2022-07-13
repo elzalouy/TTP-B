@@ -17,6 +17,7 @@ const logger_1 = __importDefault(require("../../../logger"));
 const task_1 = __importDefault(require("../../controllers/task"));
 const validation_1 = require("../../services/validation");
 const taskQueue_1 = require("../../background/taskQueue");
+const auth_1 = require("../../services/auth");
 const TaskReq = class TaskReq extends task_1.default {
     static handleCreateCard(req, res) {
         const _super = Object.create(null, {
@@ -119,11 +120,14 @@ const TaskReq = class TaskReq extends task_1.default {
         });
         return __awaiter(this, void 0, void 0, function* () {
             try {
-                let { cardId, listId, status, list } = req.body;
-                let task = yield _super.moveTaskOnTrello.call(this, cardId, listId, status, list);
-                if (task === null || task === void 0 ? void 0 : task.error)
-                    return res.status(400).send(task === null || task === void 0 ? void 0 : task.message);
-                return res.send(task);
+                let decoded = yield (0, auth_1.jwtVerify)(req.header("Authorization"));
+                if (decoded === null || decoded === void 0 ? void 0 : decoded.user) {
+                    let { cardId, listId, status, list } = req.body;
+                    let task = yield _super.moveTaskOnTrello.call(this, cardId, listId, status, list, decoded === null || decoded === void 0 ? void 0 : decoded.user);
+                    if (task === null || task === void 0 ? void 0 : task.error)
+                        return res.status(400).send(task === null || task === void 0 ? void 0 : task.message);
+                    return res.send(task);
+                }
             }
             catch (error) {
                 logger_1.default.error({ handleMoveCardError: error });

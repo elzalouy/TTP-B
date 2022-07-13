@@ -465,9 +465,7 @@ class BoardController {
    */
   static async __updateBoardCard(data: webhookUpdateInterface) {
     try {
-      console.log(data);
       let type = data.action?.type;
-
       let action = data?.action?.display?.translationKey
         ? data?.action?.display?.translationKey
         : "";

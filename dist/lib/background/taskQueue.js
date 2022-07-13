@@ -17,16 +17,14 @@ const queue_1 = __importDefault(require("queue"));
 const logger_1 = __importDefault(require("../../logger"));
 const trello_1 = __importDefault(require("../controllers/trello"));
 const notification_1 = __importDefault(require("../controllers/notification"));
-const project_1 = __importDefault(require("../dbCalls/project/project"));
 const tasks_1 = __importDefault(require("../dbCalls/tasks/tasks"));
 const index_1 = require("../../index");
 exports.TaskQueue = (0, queue_1.default)({ results: [] });
-exports.updateTaskQueue = (0, queue_1.default)({ results: [] });
-function moveTaskJob(listId, cardId, status) {
+exports.updateTaskQueue = (0, queue_1.default)({ results: [], autostart: true });
+function moveTaskJob(listId, cardId, status, user) {
     var task;
     exports.TaskQueue.push((cb) => __awaiter(this, void 0, void 0, function* () {
         try {
-            exports.TaskQueue.start();
             const result = yield trello_1.default.moveTaskToDiffList(cardId, listId);
             cb(null, { message: "move in trello" });
         }
@@ -34,40 +32,29 @@ function moveTaskJob(listId, cardId, status) {
             logger_1.default.error({ moveTaskJobError: error });
         }
     }));
+    // TaskQueue.push(async (cb) => {
+    //   try {
+    //     task = await TaskDB.updateTaskStatus(
+    //       {
+    //         cardId: cardId,
+    //       },
+    //       {
+    //         status: status,
+    //         listId: listId,
+    //       }
+    //     );
+    //     // io.sockets.emit("update-task", task);
+    //     cb(null, task);
+    //   } catch (error: any) {
+    //     cb(new Error(error), null);
+    //   }
+    // });
     exports.TaskQueue.push((cb) => __awaiter(this, void 0, void 0, function* () {
         try {
-            task = yield tasks_1.default.updateTaskStatus({
-                cardId: cardId,
-            }, {
-                status: status,
-                listId: listId,
-            });
-            index_1.io.sockets.emit("update-task", task);
-            cb(null, task);
-        }
-        catch (error) {
-            cb(new Error(error), null);
-        }
-    }));
-    exports.TaskQueue.push((cb) => __awaiter(this, void 0, void 0, function* () {
-        try {
-            // if task status update to shared send notification
-            if (status === "Shared") {
-                console.log("action_move_card_from_list_to_list: Shared");
-                let targetTask = task;
-                let projectData = yield project_1.default.__getProject({
-                    _id: targetTask.projectId,
-                });
-                let cardName = targetTask.name;
-                let createNotifi = yield notification_1.default.createNotification({
-                    title: `${cardName} status has been changed to Shared`,
-                    description: `${cardName} status has been changed to shared`,
-                    projectManagerID: projectData.projectManager,
-                    projectID: targetTask.projectId,
-                    adminUserID: projectData.adminId,
-                });
-                index_1.io.to("admin-room").emit("notification-update", createNotifi);
-                index_1.io.to(`user-${projectData.projectManager}`).emit("notification-update", createNotifi);
+            if (status === "Shared" || status === "Not Clear") {
+                console.log(`move task ${cardId} to ${status}`);
+                task = yield tasks_1.default.getOneTaskBy({ cardId: cardId });
+                yield notification_1.default.__MoveTaskNotification(task, status, user);
             }
         }
         catch (error) {
@@ -79,33 +66,30 @@ function moveTaskJob(listId, cardId, status) {
 exports.moveTaskJob = moveTaskJob;
 const moveTaskNotificationJob = (data) => {
     exports.TaskQueue.push((cb) => __awaiter(void 0, void 0, void 0, function* () {
-        var _a, _b, _c, _d, _e, _f, _g;
+        var _a, _b;
         try {
             let to = (_b = (_a = data.action.data) === null || _a === void 0 ? void 0 : _a.listAfter) === null || _b === void 0 ? void 0 : _b.name;
             // if task status update to shared send notification
             if (data.action.display.translationKey ===
                 "action_move_card_from_list_to_list") {
-                let targetTask = yield tasks_1.default.getOneTaskBy({
-                    cardId: data.action.data.card.id,
-                });
-                let projectData = yield project_1.default.__getProject({
-                    _id: targetTask.projectId,
-                });
-                let userName = (_f = (_e = (_d = (_c = data === null || data === void 0 ? void 0 : data.action) === null || _c === void 0 ? void 0 : _c.display) === null || _d === void 0 ? void 0 : _d.entities) === null || _e === void 0 ? void 0 : _e.memberCreator) === null || _f === void 0 ? void 0 : _f.username;
-                let cardName = (_g = data === null || data === void 0 ? void 0 : data.action) === null || _g === void 0 ? void 0 : _g.data.card.name;
-                if (to === "Shared" || to === "Not Clear") {
-                    let createNotifi = yield notification_1.default.createNotification({
-                        title: `${cardName} status has been changed to ${to}`,
-                        description: `${cardName} status has been changed to ${to} by ${userName}`,
-                        projectManagerID: projectData.projectManager,
-                        projectID: targetTask.projectId,
-                        adminUserID: projectData.adminId,
-                    });
-                    // send notification to all the admin
-                    index_1.io.to("admin-room").emit("notification-update", createNotifi);
-                    // send notification to specific project manager
-                    index_1.io.to(`user-${projectData.projectManager}`).emit("notification-update", createNotifi);
-                }
+                // let task = await TaskDB.getOneTaskBy({ cardId: data.model.id });
+                // await NotificationController.__MoveTaskNotification(task, status, user);
+                // if (to === "Shared" || to === "Not Clear") {
+                //   let createNotifi = await NotificationController.createNotification({
+                //     title: `${cardName} status has been changed to ${to}`,
+                //     description: `${cardName} status has been changed to ${to} by ${userName}`,
+                //     projectManagerID: projectData.projectManager,
+                //     projectID: targetTask.projectId,
+                //     adminUserID: projectData.adminId,
+                //   });
+                //   // send notification to all the admin
+                //   io.to("admin-room").emit("notification-update", createNotifi);
+                //   // send notification to specific project manager
+                //   io.to(`user-${projectData.projectManager}`).emit(
+                //     "notification-update",
+                //     createNotifi
+                //   );
+                // }
             }
         }
         catch (error) {
@@ -151,6 +135,14 @@ const deleteTaskFromBoardJob = (data) => {
         }
         catch (error) {
             logger_1.default.ercror({ deleteCardDataError: error });
+        }
+    }));
+    exports.TaskQueue.push((cb) => __awaiter(void 0, void 0, void 0, function* () {
+        try {
+            yield trello_1.default.removeWebhook(data.cardId);
+        }
+        catch (error) {
+            logger_1.default.ercror({ deleteCardWebhookError: error });
         }
     }));
 };

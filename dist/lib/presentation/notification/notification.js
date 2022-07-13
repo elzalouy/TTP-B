@@ -12,106 +12,85 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-const successMsg_1 = require("../../utils/successMsg");
-const errorUtils_1 = require("../../utils/errorUtils");
 const logger_1 = __importDefault(require("../../../logger"));
 const notification_1 = __importDefault(require("../../controllers/notification"));
-const mongodb_1 = require("mongodb");
+const auth_1 = require("../../services/auth");
 const NotificationReq = class NotificationReq extends notification_1.default {
-    static handleCreateNotification(req, res) {
+    /**
+     * sendNotifications
+     *
+     * A presentation function receive the user request to get his notifications
+     * It accepts req from user to get the new notifications.
+     * @param req Request from user to get the current page of notifications.
+     * @param res Response should be a page of notificationd with NoOfPages, currentPage, NoOfItems (pagination)
+     */
+    static sendNotifications(req, res) {
         const _super = Object.create(null, {
-            createNotification: { get: () => super.createNotification }
+            __sendNotifications: { get: () => super.__sendNotifications }
         });
+        var _a, _b;
         return __awaiter(this, void 0, void 0, function* () {
             try {
-                let Notification = yield _super.createNotification.call(this, req.body);
-                if (Notification) {
-                    return res.status(200).send(Notification);
-                }
-                else {
-                    return res.status(400).send((0, errorUtils_1.customeError)("create_notifi_error", 400));
+                let decoded = yield (0, auth_1.jwtVerify)(req.header("Authorization"));
+                if ((_a = decoded === null || decoded === void 0 ? void 0 : decoded.user) === null || _a === void 0 ? void 0 : _a.id) {
+                    let notifications = yield _super.__sendNotifications.call(this, (_b = decoded === null || decoded === void 0 ? void 0 : decoded.user) === null || _b === void 0 ? void 0 : _b.id, parseInt(req.params.current), parseInt(req.params.limit));
+                    return res.status(200).send(notifications);
                 }
             }
             catch (error) {
-                logger_1.default.error({ handleCreateNotificationDataError: error });
-                return res.status(500).send((0, errorUtils_1.customeError)("server_error", 500));
+                logger_1.default.error({ sendNotificationsError: error });
             }
         });
     }
-    static handleUpdateNotification(req, res) {
+    /**
+     * updateNotified
+     *
+     * A presentation function accepts the user request to update notifications to the notified status with isNotified=true
+     * @param req Request with notifications ids to update
+     * @param res Response should be sent to the user with NoOfUnNotified
+     */
+    static updateNotified(req, res) {
         const _super = Object.create(null, {
-            updateNotification: { get: () => super.updateNotification }
+            __updateUnotified: { get: () => super.__updateUnotified }
         });
+        var _a, _b;
         return __awaiter(this, void 0, void 0, function* () {
             try {
-                let notificationData = req.body;
-                logger_1.default.info({ notificationData });
-                if (!notificationData) {
-                    return res.status(400).send((0, errorUtils_1.customeError)("update_notifi_error", 400));
-                }
-                let Notification;
-                if (notificationData.role === 'PM') {
-                    Notification = yield _super.updateNotification.call(this, { projectManagerID: new mongodb_1.ObjectId(notificationData._id) }, { projectManagerViewed: true });
-                }
-                if (notificationData.role === 'OM') {
-                    Notification = yield _super.updateNotification.call(this, { adminUserID: new mongodb_1.ObjectId(notificationData._id) }, { adminViewed: true });
-                }
-                logger_1.default.info({ Notification });
-                if (Notification) {
-                    return res.status(200).send(Notification);
-                }
-                else {
-                    return res.status(400).send((0, errorUtils_1.customeError)("update_notifi_error", 400));
+                let decoded = yield (0, auth_1.jwtVerify)(req.header("Authorization"));
+                if ((_a = decoded === null || decoded === void 0 ? void 0 : decoded.user) === null || _a === void 0 ? void 0 : _a.id) {
+                    let updateUnNotified = yield _super.__updateUnotified.call(this, (_b = decoded === null || decoded === void 0 ? void 0 : decoded.user) === null || _b === void 0 ? void 0 : _b.id);
+                    console.log(updateUnNotified);
+                    return res.status(200).send(updateUnNotified);
                 }
             }
             catch (error) {
-                logger_1.default.error({ handleUpdateNotificationDataError: error });
-                return res.status(500).send((0, errorUtils_1.customeError)("server_error", 500));
+                logger_1.default.error({ updateNotifiedUserError: error });
             }
         });
     }
-    static handleDeleteNotification(req, res) {
+    /**
+     * getUnNotified
+     *
+     * A presentation function reveive the user request to get the number of notifications with inNotified=false.
+     *
+     * @param req Request with no data except the user token
+     * @param res Response should be sent to the user which is NoOfUnNotified = the number of notifications with inNotified=false
+     */
+    static getUnNotified(req, res) {
         const _super = Object.create(null, {
-            deleteNotification: { get: () => super.deleteNotification }
+            __getUnNotified: { get: () => super.__getUnNotified }
         });
+        var _a, _b;
         return __awaiter(this, void 0, void 0, function* () {
             try {
-                let id = req.query.id;
-                if (!id) {
-                    return res.status(400).send((0, errorUtils_1.customeError)("delete_notifi_error", 400));
-                }
-                let Notification = yield _super.deleteNotification.call(this, id);
-                if (Notification) {
-                    return res.status(200).send((0, successMsg_1.successMsg)("delete_notifi_success", 200));
-                }
-                else {
-                    return res.status(400).send((0, errorUtils_1.customeError)("delete_notifi_error", 400));
+                let decoded = yield (0, auth_1.jwtVerify)(req.header("Authorization"));
+                if ((_a = decoded === null || decoded === void 0 ? void 0 : decoded.user) === null || _a === void 0 ? void 0 : _a.id) {
+                    let notified = yield _super.__getUnNotified.call(this, (_b = decoded === null || decoded === void 0 ? void 0 : decoded.user) === null || _b === void 0 ? void 0 : _b.id);
+                    return res.status(200).send(notified);
                 }
             }
             catch (error) {
-                logger_1.default.error({ handleDeletNotificationDataError: error });
-                return res.status(500).send((0, errorUtils_1.customeError)("server_error", 500));
-            }
-        });
-    }
-    static handleGetAllNotifications(req, res) {
-        const _super = Object.create(null, {
-            getAllNotifications: { get: () => super.getAllNotifications }
-        });
-        return __awaiter(this, void 0, void 0, function* () {
-            try {
-                let { id, skip, limit } = req.query;
-                let Notification = yield _super.getAllNotifications.call(this, { id, skip, limit });
-                if (Notification) {
-                    return res.status(200).send(Notification);
-                }
-                else {
-                    return res.status(400).send((0, errorUtils_1.customeError)("get_notifi_error", 400));
-                }
-            }
-            catch (error) {
-                logger_1.default.error({ handleDeletNotificationDataError: error });
-                return res.status(500).send((0, errorUtils_1.customeError)("server_error", 500));
+                logger_1.default.error({ getUnNotifiedError: error });
             }
         });
     }

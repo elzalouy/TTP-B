@@ -3,11 +3,12 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.socketOM = exports.socketClients = void 0;
 const config_1 = __importDefault(require("config"));
-const lodash_1 = __importDefault(require("lodash"));
 const socket_io_1 = require("socket.io");
+exports.socketClients = [];
+exports.socketOM = [];
 function appSocket(http) {
-    let clients = [];
     const io = new socket_io_1.Server(http, {
         path: "/socket.io",
         cors: {
@@ -18,28 +19,28 @@ function appSocket(http) {
         },
     });
     io.on("connection", (socket) => {
-        clients.push(socket.id);
-        clients = lodash_1.default.uniq(clients);
-        console.log("client connected, ", socket.id);
-        console.log("no of clients,", clients.length);
         socket.on("disconnect", () => {
-            clients = clients.filter((item) => item !== socket.id);
+            exports.socketClients = exports.socketClients.filter((item) => item.socketId !== socket.id);
+            exports.socketOM = exports.socketOM.filter((item) => item.socketId !== socket.id);
             console.log("client disconnected, ", socket.id);
-            console.log("no of clients,", clients.length);
         });
-        socket.on("joined-admin", () => {
-            console.log("joined-admin");
-            return socket.join("admin-room");
+        socket.on("joined-OM", (data) => {
+            console.log("joined OM");
+            // socketOM = socketOM.filter((item) => item.id !== data._id);
+            exports.socketOM.push({
+                id: data._id,
+                socketId: socket.id,
+            });
+            console.log("OM connected,", exports.socketOM);
         });
-        socket.on("joined-manager", () => {
-            console.log("joined-manager");
-            return socket.join("manager-room");
-        });
-        socket.on("joined-user", (data) => {
-            if (data.id) {
-                console.log(`user-${data.id}`);
-                return socket.join(`user-${data.id}`);
-            }
+        socket.on("joined-PM", (data) => {
+            console.log("joined PM");
+            // socketClients = socketClients.filter((item) => item.id !== data._id);
+            exports.socketClients.push({
+                id: data._id,
+                socketId: socket.id,
+            });
+            console.log("PM connected,", exports.socketClients);
         });
     });
     return io;

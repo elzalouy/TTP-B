@@ -190,6 +190,18 @@ export const validateExtentions = (name: string) => {
     "application/pdf",
     "application/vnd.ms-powerpoint",
     "application/vnd.openxmlformats-officedocument.presentationml.presentation",
+    "video/mp4",
+    "video/3gpp",
+    "video/quicktime",
+    "video/x-ms-wmv",
+    "video/x-msvideo",
+    "video/mpeg",
+    "video/dvd",
+    "video/xvid",
+    "video/x-flv",
+    "video/x-f4v",
+    "video/divx",
+    "video/mov",
   ];
   let format = "";
   switch (extention) {
@@ -225,6 +237,42 @@ export const validateExtentions = (name: string) => {
       break;
     case "pptx":
       format = types[10];
+      break;
+    case "mp4":
+      format = types[11];
+      break;
+    case "3gpp":
+      format = types[12];
+      break;
+    case "quicktime":
+      format = types[13];
+      break;
+    case "x-ms-wmv":
+      format = types[14];
+      break;
+    case "x-msvideo":
+      format = types[15];
+      break;
+    case "mpeg":
+      format = types[16];
+      break;
+    case "dvd":
+      format = types[17];
+      break;
+    case "xvid":
+      format = types[18];
+      break;
+    case "x-flv":
+      format = types[19];
+      break;
+    case "x-f4v":
+      format = types[20];
+      break;
+    case "divx":
+      format = types[21];
+      break;
+    case "mov":
+      format = types[22];
       break;
   }
   console.log(format);

@@ -93,6 +93,7 @@ const NotificationController = class NotificationController extends Notification
   }
 
   static async __updateProjectNotification(data: ProjectData, userId: string) {
+    // to the PM if not the current user, and admins except the current user
     try {
       if (
         data.projectStatus &&
@@ -112,30 +113,30 @@ const NotificationController = class NotificationController extends Notification
           if (userId !== data.projectManager)
             io.to(pm).emit("notification-update");
         }
-        if (
-          data.adminId.toString() !== userId &&
-          data.adminId.toString() !== data.projectManager
-        ) {
-          let notification = await super.__createNotification({
-            title: `${data.name} project status changed to done`,
-            description: `${data.name} project status changed to done`,
-            isNotified: [
-              { userId: data.adminId.toString(), isNotified: false },
-            ],
-          });
-        }
-        // PM
-        let admin = socketOM
-          .filter((item) => item.id === data.adminId.toString())
+        let OMS = await (
+          await User.find({ role: "OM" }).select("_id").lean()
+        ).map((item) => {
+          return { userId: item._id.toString(), isNotified: false };
+        });
+
+        let users = OMS.filter((item) => item.userId !== userId);
+        let notification = await super.__createNotification({
+          title: `${data.name} project status changed to done`,
+          description: `${data.name} project status changed to done`,
+          isNotified: users,
+        });
+        let oms = socketOM
+          .filter((item) => item.id !== userId)
           .map((item) => item.socketId);
         if (data.adminId.toString() !== userId)
-          io.to(admin).emit("notification-update");
+          io.to(oms).emit("notification-update");
       }
     } catch (error) {
       logger.error({ __updateProjectNotificationError: error });
     }
   }
   static async __creatProjectNotification(data: ProjectData, userId: string) {
+    // to the PM if not created by him, and other admins without the userId
     try {
       let user = await User.findById(userId);
       if (userId !== data.projectManager) {
@@ -149,22 +150,22 @@ const NotificationController = class NotificationController extends Notification
           .map((item) => item.socketId);
         if (userId !== data.projectManager)
           io.to(pm).emit("notification-update");
-      } else {
-        let OMS = await (
-          await User.find({ role: "OM" }).select("_id").lean()
-        ).map((item) => {
-          return { userId: item._id, isNotified: false };
-        });
-        let notification = await super.__createNotification({
-          title: `${data.name} has started`,
-          description: `${data.name} has created by ${user.name}`,
-          isNotified: OMS,
-        });
-        let oms = socketOM
-          .filter((item) => item.id !== userId)
-          .map((item) => item.socketId);
-        io.to(oms).emit("notification-update");
       }
+      let OMS = await (
+        await User.find({ role: "OM" }).select("_id").lean()
+      ).map((item) => {
+        return { userId: item._id.toString(), isNotified: false };
+      });
+      let OMusers = OMS.filter((item) => item.userId !== userId);
+      let notification = await super.__createNotification({
+        title: `${data.name} has started`,
+        description: `${data.name} has created by ${user.name}`,
+        isNotified: OMusers,
+      });
+      let oms = socketOM
+        .filter((item) => item.id !== userId)
+        .map((item) => item.socketId);
+      io.to(oms).emit("notification-update");
     } catch (error) {
       logger.error({ __updateProjectNotificationError: error });
     }

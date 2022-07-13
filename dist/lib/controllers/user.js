@@ -12,12 +12,12 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-const auth_1 = require("../services/auth");
-const validation_1 = require("./../utils/validation");
+const mail_1 = __importDefault(require("../services/mail/mail"));
 const logger_1 = __importDefault(require("../../logger"));
 const user_1 = __importDefault(require("../dbCalls/user/user"));
 const errorUtils_1 = require("../utils/errorUtils");
-const mail_1 = __importDefault(require("../services/mail/mail"));
+const validation_1 = require("./../utils/validation");
+const auth_1 = require("../services/auth");
 const UserController = class UserController extends user_1.default {
     static addUser(data) {
         return __awaiter(this, void 0, void 0, function* () {
@@ -227,12 +227,6 @@ const UserController = class UserController extends user_1.default {
                 if (findUser) {
                     return (0, errorUtils_1.customeError)("user_already_exist", 400);
                 }
-                // hash password
-                /* let passwordHash: string = await hashBassword(password); */
-                // add project manager to specific board
-                // if(trelloBoardId &&trelloMemberId && type){
-                //      BoardController.addMemberToBoard(trelloBoardId,trelloMemberId,type)
-                // }
                 let newUser = yield _super.createUser.call(this, Object.assign({}, data /* password: passwordHash  */));
                 let token = yield (0, auth_1.createJwtToken)(newUser._id.toString());
                 (0, mail_1.default)({

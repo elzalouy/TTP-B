@@ -48,7 +48,6 @@ const BoardReq = class BoardReq extends trello_1.default {
                     let task = yield _super.webhookUpdate.call(this, trelloData);
                     return res.status(200).send(task);
                 }));
-                yield taskQueue_1.updateTaskQueue.start();
             }
             catch (error) {
                 logger_1.default.error({ handleWebhookUpdateCardError: error });
