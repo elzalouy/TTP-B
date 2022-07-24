@@ -18,6 +18,17 @@ const Mime = [
     "application/pdf",
     "application/vnd.ms-powerpoint",
     "application/vnd.openxmlformats-officedocument.presentationml.presentation",
+    "video/mp4",
+    "video/3gpp",
+    "video/quicktime",
+    "video/x-ms-wmv",
+    "video/x-msvideo",
+    "video/mpeg",
+    "video/dvd",
+    "video/xvid",
+    "video/x-flv",
+    "video/x-f4v",
+    "video/divx",
 ];
 function default_1() {
     const storage = multer_1.default.diskStorage({
@@ -40,7 +51,7 @@ function default_1() {
             }
             else {
                 cb(null, false);
-                return cb(new Error("Only .png, .jpg, .jpeg, svg, doc, docx, csv, pdf, power point and GIF  format allowed! and max size is 10 MB"));
+                return cb(new Error("Only .png, .jpg, .jpeg, svg, doc, docx, csv, pdf, power point, GIF, video format allowed! and max size is 10 MB"));
             }
         },
     });

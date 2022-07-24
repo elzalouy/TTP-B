@@ -234,7 +234,7 @@ const UserController = class UserController extends user_1.default {
                     subject: "Update Password",
                     token: token,
                     path: "newPassword",
-                    body: "Please set your new password using this link to start using your account",
+                    body: "Set your new password",
                 });
                 return newUser;
             }
