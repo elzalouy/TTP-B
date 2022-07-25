@@ -128,6 +128,7 @@ const NotificationController = class NotificationController extends notification
             __createNotification: { get: () => super.__createNotification }
         });
         return __awaiter(this, void 0, void 0, function* () {
+            // to the PM if not the current user, and admins except the current user
             try {
                 if (data.projectStatus &&
                     ["deliver on time", "deliver before deadline", "late"].includes(data.projectStatus)) {
@@ -143,22 +144,20 @@ const NotificationController = class NotificationController extends notification
                         if (userId !== data.projectManager)
                             __1.io.to(pm).emit("notification-update");
                     }
-                    if (data.adminId.toString() !== userId &&
-                        data.adminId.toString() !== data.projectManager) {
-                        let notification = yield _super.__createNotification.call(this, {
-                            title: `${data.name} project status changed to done`,
-                            description: `${data.name} project status changed to done`,
-                            isNotified: [
-                                { userId: data.adminId.toString(), isNotified: false },
-                            ],
-                        });
-                    }
-                    // PM
-                    let admin = socket_1.socketOM
-                        .filter((item) => item.id === data.adminId.toString())
+                    let OMS = yield (yield User_1.default.find({ role: "OM" }).select("_id").lean()).map((item) => {
+                        return { userId: item._id.toString(), isNotified: false };
+                    });
+                    let users = OMS.filter((item) => item.userId !== userId);
+                    let notification = yield _super.__createNotification.call(this, {
+                        title: `${data.name} project status changed to done`,
+                        description: `${data.name} project status changed to done`,
+                        isNotified: users,
+                    });
+                    let oms = socket_1.socketOM
+                        .filter((item) => item.id !== userId)
                         .map((item) => item.socketId);
                     if (data.adminId.toString() !== userId)
-                        __1.io.to(admin).emit("notification-update");
+                        __1.io.to(oms).emit("notification-update");
                 }
             }
             catch (error) {
@@ -171,6 +170,7 @@ const NotificationController = class NotificationController extends notification
             __createNotification: { get: () => super.__createNotification }
         });
         return __awaiter(this, void 0, void 0, function* () {
+            // to the PM if not created by him, and other admins without the userId
             try {
                 let user = yield User_1.default.findById(userId);
                 if (userId !== data.projectManager) {
@@ -185,20 +185,19 @@ const NotificationController = class NotificationController extends notification
                     if (userId !== data.projectManager)
                         __1.io.to(pm).emit("notification-update");
                 }
-                else {
-                    let OMS = yield (yield User_1.default.find({ role: "OM" }).select("_id").lean()).map((item) => {
-                        return { userId: item._id, isNotified: false };
-                    });
-                    let notification = yield _super.__createNotification.call(this, {
-                        title: `${data.name} has started`,
-                        description: `${data.name} has created by ${user.name}`,
-                        isNotified: OMS,
-                    });
-                    let oms = socket_1.socketOM
-                        .filter((item) => item.id !== userId)
-                        .map((item) => item.socketId);
-                    __1.io.to(oms).emit("notification-update");
-                }
+                let OMS = yield (yield User_1.default.find({ role: "OM" }).select("_id").lean()).map((item) => {
+                    return { userId: item._id.toString(), isNotified: false };
+                });
+                let OMusers = OMS.filter((item) => item.userId !== userId);
+                let notification = yield _super.__createNotification.call(this, {
+                    title: `${data.name} has started`,
+                    description: `${data.name} has created by ${user.name}`,
+                    isNotified: OMusers,
+                });
+                let oms = socket_1.socketOM
+                    .filter((item) => item.id !== userId)
+                    .map((item) => item.socketId);
+                __1.io.to(oms).emit("notification-update");
             }
             catch (error) {
                 logger_1.default.error({ __updateProjectNotificationError: error });
