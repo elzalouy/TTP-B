@@ -59,7 +59,7 @@ const AuthController = class AuthController extends UserDB {
       await sendMail({
         token: token,
         email: email,
-        body: "Reset your password",
+        body: "Reset your old password",
         subject: "Forgot Password",
         path: "resetPassword",
       });
