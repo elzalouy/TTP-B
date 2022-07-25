@@ -465,6 +465,15 @@ class BoardController {
    */
   static async __updateBoardCard(data: webhookUpdateInterface) {
     try {
+      let status = [
+        "inProgress",
+        "Shared",
+        "Done",
+        "Tasks Board",
+        "Not Clear",
+        "Cancled",
+        "Review",
+      ];
       let type = data.action?.type;
       let action = data?.action?.display?.translationKey
         ? data?.action?.display?.translationKey
@@ -472,11 +481,13 @@ class BoardController {
       let task: TaskData = {
         name: data.action.data.card.name,
         listId: data.action.data.card.idList,
-        status: data.action.data?.list?.name,
+        status: status.includes(data.action.data?.list?.name)
+          ? data.action.data.list.name
+          : "inProgress",
         boardId: data.action.data.board.id,
         cardId: data.action.data.card?.id,
       };
-
+      console.log(task);
       // create
       // if (type === "createCard") {
       //   task.listId = data.action.data.list.id;
@@ -492,7 +503,9 @@ class BoardController {
         if (action === "action_renamed_card")
           task.name = data.action.data.card.name;
         if (action === "action_move_card_from_list_to_list") {
-          task.status = data.action.data.listAfter?.name;
+          task.status = status.includes(data.action.data.listAfter?.name)
+            ? data.action.data.listAfter?.name
+            : "inProgress";
           task.listId = data.action.data.listAfter?.id;
           task.lastMove = data.action.data.listBefore.name;
           task.lastMoveDate = new Date().toUTCString();
