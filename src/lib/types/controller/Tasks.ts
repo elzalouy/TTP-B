@@ -28,6 +28,11 @@ export interface webhookUpdateInterface {
         name?: string;
         shortLink?: string;
       };
+      boardSource?: {
+        id?: string;
+        name?: string;
+        shortLink?: string;
+      };
       old?: { idList?: string };
       attachment?: {
         id: string;

@@ -17,6 +17,8 @@ import { moveTaskNotificationJob, TaskQueue } from "../background/taskQueue";
 import { io } from "../../index";
 import TaskController from "./task";
 import { validateExtentions } from "../services/validation";
+import TechMemberController from "./techMember";
+import TechMemberDB from "../dbCalls/techMember/techMember";
 var FormData = require("form-data");
 config();
 
@@ -478,6 +480,8 @@ class BoardController {
       let action = data?.action?.display?.translationKey
         ? data?.action?.display?.translationKey
         : "";
+      console.log(type, action);
+
       let task: TaskData = {
         name: data.action.data.card.name,
         listId: data.action.data.card.idList,
@@ -487,16 +491,33 @@ class BoardController {
         boardId: data.action.data.board.id,
         cardId: data.action.data.card?.id,
       };
-      console.log(task);
-      // create
-      // if (type === "createCard") {
-      //   task.listId = data.action.data.list.id;
-      //   task.status = data.action.data.list.name;
-      //   let result = await TaskController.createTaskByTrello(task);
-      //   io.sockets.emit("create task", result);
+
+      // if (!status.includes(data.action.data?.list?.name)) {
+      //   let team = await TechMemberDB.__getOneTechMember({
+      //     listId: data.action.data?.list?.id,
+      //   });
+      //   if (team._id) task.teamId = team._id;
       // }
-      console.log(type, action);
+
       //update
+      if (
+        type === "moveCardToBoard" &&
+        action === "action_move_card_to_board"
+      ) {
+        task.boardId = data.action.data.board.id;
+        task.listId = data.action.data.list.id;
+        // move task to the new team
+        let team = await TechMemberDB.__getOneTechMember({
+          listId: data.action.data.list.id,
+        });
+        console.log(team);
+        if (team) task.teamId = team._id;
+        else task.teamId = null;
+        console.log(task);
+        // update task
+        let result = await TaskController.updateTaskByTrelloDB(task);
+        return io?.sockets?.emit("update-task", result);
+      }
       if (type === "updateCard" && action !== "action_archived_card") {
         if (action === "action_changed_description_of_card")
           task.description = data.action.data.card.desc;
@@ -509,11 +530,15 @@ class BoardController {
           task.listId = data.action.data.listAfter?.id;
           task.lastMove = data.action.data.listBefore.name;
           task.lastMoveDate = new Date().toUTCString();
-          // moveTaskNotificationJob(data);
-          // TaskQueue.start();
+          if (!status.includes(data.action.data.listAfter?.name)) {
+            let team = await TechMemberDB.__getOneTechMember({
+              listId: data.action.data.listAfter.id,
+            });
+            if (team) task.teamId = team._id;
+          }
         }
         let result = await TaskController.updateTaskByTrelloDB(task);
-        io?.sockets?.emit("update-task", result);
+        return io?.sockets?.emit("update-task", result);
       }
       // add attachment
       if (type === "addAttachmentToCard") {
@@ -535,7 +560,7 @@ class BoardController {
           name: data.action.data.attachment.name,
         };
         let result = await TaskController.updateTaskByTrelloDB(task);
-        io.sockets.emit("update-task", result);
+        return io.sockets.emit("update-task", result);
       }
       if (type === "updateCard" && action === "action_archived_card") {
         // archive, unArchive or delete
@@ -551,7 +576,7 @@ class BoardController {
       //delete
       if (type === "deleteCard") {
         let result = await TaskController.deleteTaskByTrelloDB(task);
-        io?.sockets?.emit("delete-task", result);
+        return io?.sockets?.emit("delete-task", result);
       }
     } catch (error) {
       logger.error({ updateBoardCardError: error });

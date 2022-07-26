@@ -301,6 +301,10 @@ class TaskDB {
       task.cardId = data?.cardId ? data.cardId : task.cardId;
       task.boardId = data?.boardId ? data.boardId : task.boardId;
       task.description = data.description ? data.description : task.description;
+      task.teamId =
+        data?.teamId === null || data?.teamId?.toString().length > 0
+          ? data.teamId
+          : task.teamId;
       task.lastMove = data?.lastMove ? data.lastMove : task.lastMoveDate;
       task.lastMoveDate = data?.lastMoveDate
         ? data.lastMoveDate
@@ -319,7 +323,6 @@ class TaskDB {
         (item) => item.mimeType !== ""
       );
       task.attachedFiles = _.uniqBy(task.attachedFiles, "trelloId");
-      console.log(task);
       let id = task._id;
       let result = await Tasks.findOneAndUpdate({ _id: id }, task, {
         new: true,
