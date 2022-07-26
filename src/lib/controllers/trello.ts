@@ -427,7 +427,7 @@ class BoardController {
   }
   static async __updateCard(
     cardId: string,
-    data: { name: string; desc: string }
+    data: { name: string; desc: string; idBoard?: string; idList?: string }
   ) {
     try {
       let params: RequestInit = {
@@ -436,7 +436,12 @@ class BoardController {
           Accept: "*/*",
           "Content-Type": "application/json",
         },
-        body: JSON.stringify({ name: data.name, desc: data.desc }),
+        body: JSON.stringify({
+          name: data.name,
+          desc: data.desc,
+          idBoard: data.idBoard,
+          idList: data.idList,
+        }),
       };
       let api = trelloApi(`cards/${cardId}?`);
       let response = await fetch(api, params)

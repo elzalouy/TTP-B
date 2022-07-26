@@ -3,302 +3,14 @@
     db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
   },
   level: 'info',
-  timestamp: '2022-07-25 11:34:05'
+  timestamp: '2022-07-26 13:09:13'
 }
 {
   message: {
     db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
   },
   level: 'info',
-  timestamp: '2022-07-26 10:11:21'
-}
-{
-  message: {
-    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
-  },
-  level: 'info',
-  timestamp: '2022-07-26 10:13:42'
-}
-{
-  message: {
-    updateBoardCardError: TypeError: Cannot read properties of undefined (reading 'data')
-        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/trello.ts:482:27)
-        at Generator.next (<anonymous>)
-        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/trello.ts:8:71
-        at new Promise (<anonymous>)
-        at __awaiter (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/trello.ts:4:12)
-        at Function.__updateBoardCard (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/trello.ts:497:16)
-        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/trello.ts:102:34)
-        at Generator.next (<anonymous>)
-        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/trello.ts:8:71
-        at new Promise (<anonymous>)
-  },
-  level: 'error',
-  timestamp: '2022-07-26 10:15:28'
-}
-{
-  message: {
-    __updateTaskByTrelloDBError: TypeError: Cannot set properties of null (setting 'name')
-        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/dbCalls/tasks/tasks.ts:298:16)
-        at Generator.next (<anonymous>)
-        at fulfilled (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/dbCalls/tasks/tasks.ts:5:58)
-        at processTicksAndRejections (node:internal/process/task_queues:96:5)
-  },
-  level: 'error',
-  timestamp: '2022-07-26 10:15:30'
-}
-{
-  message: {
-    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
-  },
-  level: 'info',
-  timestamp: '2022-07-26 10:18:07'
-}
-{
-  message: {
-    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
-  },
-  level: 'info',
-  timestamp: '2022-07-26 10:19:44'
-}
-{
-  message: {
-    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
-  },
-  level: 'info',
-  timestamp: '2022-07-26 10:40:16'
-}
-{
-  message: {
-    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
-  },
-  level: 'info',
-  timestamp: '2022-07-26 10:42:13'
-}
-{
-  message: {
-    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
-  },
-  level: 'info',
-  timestamp: '2022-07-26 10:52:10'
-}
-{
-  message: {
-    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
-  },
-  level: 'info',
-  timestamp: '2022-07-26 10:52:38'
-}
-{
-  message: {
-    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
-  },
-  level: 'info',
-  timestamp: '2022-07-26 10:53:34'
-}
-{
-  message: {
-    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
-  },
-  level: 'info',
-  timestamp: '2022-07-26 10:57:50'
-}
-{
-  message: {
-    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
-  },
-  level: 'info',
-  timestamp: '2022-07-26 11:17:30'
-}
-{
-  message: {
-    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
-  },
-  level: 'info',
-  timestamp: '2022-07-26 11:19:19'
-}
-{
-  message: {
-    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
-  },
-  level: 'info',
-  timestamp: '2022-07-26 11:20:30'
-}
-{
-  message: {
-    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
-  },
-  level: 'info',
-  timestamp: '2022-07-26 11:21:16'
-}
-{
-  message: {
-    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
-  },
-  level: 'info',
-  timestamp: '2022-07-26 11:24:23'
-}
-{
-  message: {
-    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
-  },
-  level: 'info',
-  timestamp: '2022-07-26 11:27:29'
-}
-{
-  message: {
-    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
-  },
-  level: 'info',
-  timestamp: '2022-07-26 11:27:48'
-}
-{
-  message: {
-    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
-  },
-  level: 'info',
-  timestamp: '2022-07-26 11:31:20'
-}
-{
-  message: {
-    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
-  },
-  level: 'info',
-  timestamp: '2022-07-26 11:33:11'
-}
-{
-  message: {
-    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
-  },
-  level: 'info',
-  timestamp: '2022-07-26 11:35:21'
-}
-{
-  message: {
-    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
-  },
-  level: 'info',
-  timestamp: '2022-07-26 11:36:15'
-}
-{
-  message: {
-    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
-  },
-  level: 'info',
-  timestamp: '2022-07-26 11:38:16'
-}
-{
-  message: {
-    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
-  },
-  level: 'info',
-  timestamp: '2022-07-26 11:41:17'
-}
-{
-  message: {
-    updateBoardCardError: TypeError: Cannot read properties of undefined (reading 'name')
-        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/trello.ts:492:50)
-        at Generator.next (<anonymous>)
-        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/trello.ts:8:71
-        at new Promise (<anonymous>)
-        at __awaiter (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/trello.ts:4:12)
-        at Function.__updateBoardCard (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/trello.ts:498:16)
-        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/trello.ts:104:34)
-        at Generator.next (<anonymous>)
-        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/trello.ts:8:71
-        at new Promise (<anonymous>)
-  },
-  level: 'error',
-  timestamp: '2022-07-26 11:41:36'
-}
-{
-  message: {
-    updateBoardCardError: TypeError: Cannot read properties of undefined (reading 'name')
-        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/trello.ts:492:50)
-        at Generator.next (<anonymous>)
-        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/trello.ts:8:71
-        at new Promise (<anonymous>)
-        at __awaiter (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/trello.ts:4:12)
-        at Function.__updateBoardCard (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/trello.ts:498:16)
-        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/trello.ts:104:34)
-        at Generator.next (<anonymous>)
-        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/trello.ts:8:71
-        at new Promise (<anonymous>)
-  },
-  level: 'error',
-  timestamp: '2022-07-26 11:41:42'
-}
-{
-  message: {
-    updateBoardCardError: TypeError: Cannot read properties of undefined (reading 'name')
-        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/trello.ts:492:50)
-        at Generator.next (<anonymous>)
-        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/trello.ts:8:71
-        at new Promise (<anonymous>)
-        at __awaiter (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/trello.ts:4:12)
-        at Function.__updateBoardCard (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/trello.ts:498:16)
-        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/trello.ts:104:34)
-        at Generator.next (<anonymous>)
-        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/trello.ts:8:71
-        at new Promise (<anonymous>)
-  },
-  level: 'error',
-  timestamp: '2022-07-26 11:41:57'
-}
-{
-  message: {
-    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
-  },
-  level: 'info',
-  timestamp: '2022-07-26 11:43:00'
-}
-{
-  message: {
-    updateBoardCardError: TypeError: Cannot read properties of undefined (reading 'id')
-        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/trello.ts:494:41)
-        at Generator.next (<anonymous>)
-        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/trello.ts:8:71
-        at new Promise (<anonymous>)
-        at __awaiter (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/trello.ts:4:12)
-        at Function.__updateBoardCard (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/trello.ts:498:16)
-        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/trello.ts:104:34)
-        at Generator.next (<anonymous>)
-        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/trello.ts:8:71
-        at new Promise (<anonymous>)
-  },
-  level: 'error',
-  timestamp: '2022-07-26 11:43:17'
-}
-{
-  message: {
-    updateBoardCardError: TypeError: Cannot read properties of undefined (reading 'id')
-        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/trello.ts:494:41)
-        at Generator.next (<anonymous>)
-        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/trello.ts:8:71
-        at new Promise (<anonymous>)
-        at __awaiter (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/trello.ts:4:12)
-        at Function.__updateBoardCard (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/trello.ts:498:16)
-        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/trello.ts:104:34)
-        at Generator.next (<anonymous>)
-        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/trello.ts:8:71
-        at new Promise (<anonymous>)
-  },
-  level: 'error',
-  timestamp: '2022-07-26 11:43:24'
-}
-{
-  message: {
-    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
-  },
-  level: 'info',
-  timestamp: '2022-07-26 11:44:17'
-}
-{
-  message: {
-    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
-  },
-  level: 'info',
-  timestamp: '2022-07-26 12:43:24'
+  timestamp: '2022-07-26 13:10:17'
 }
 {
   message: {
@@ -315,12 +27,81 @@
         at new Promise (<anonymous>)
   },
   level: 'error',
-  timestamp: '2022-07-26 12:44:36'
+  timestamp: '2022-07-26 13:12:32'
+}
+{
+  message: {
+    removeBoard: 'https://api.trello.com/1/boards/62d961b0908ef467f35c1b8d?response_type=token&key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68'
+  },
+  level: 'info',
+  timestamp: '2022-07-26 13:14:02'
+}
+{
+  message: {
+    'delete Tasks': [],
+    'Delete Tech members': { acknowledged: true, deletedCount: 1 }
+  },
+  level: 'info',
+  timestamp: '2022-07-26 13:14:04'
+}
+{
+  message: {
+    removeBoard: 'https://api.trello.com/1/boards/62dd292acb45d98030d947d1?response_type=token&key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68'
+  },
+  level: 'info',
+  timestamp: '2022-07-26 13:14:09'
+}
+{
+  message: {
+    'delete Tasks': [],
+    'Delete Tech members': 'Delete result is 0 document'
+  },
+  level: 'info',
+  timestamp: '2022-07-26 13:14:11'
+}
+{
+  message: {
+    removeBoard: 'https://api.trello.com/1/boards/62dd2f2da9e4c557d7faf7ec?response_type=token&key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68'
+  },
+  level: 'info',
+  timestamp: '2022-07-26 13:14:15'
+}
+{
+  message: {
+    'delete Tasks': [],
+    'Delete Tech members': 'Delete result is 0 document'
+  },
+  level: 'info',
+  timestamp: '2022-07-26 13:14:17'
 }
 {
   message: {
     db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
   },
   level: 'info',
-  timestamp: '2022-07-26 12:53:39'
+  timestamp: '2022-07-26 13:17:47'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/TTP?retryWrites=true&w=majority'
+  },
+  level: 'info',
+  timestamp: '2022-07-26 13:18:49'
+}
+{
+  message: {
+    updateBoardCardError: TypeError: Cannot read properties of undefined (reading 'data')
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/trello.ts:491:27)
+        at Generator.next (<anonymous>)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/trello.ts:8:71
+        at new Promise (<anonymous>)
+        at __awaiter (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/trello.ts:4:12)
+        at Function.__updateBoardCard (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/trello.ts:503:16)
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/trello.ts:104:34)
+        at Generator.next (<anonymous>)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP-Back/src/lib/controllers/trello.ts:8:71
+        at new Promise (<anonymous>)
+  },
+  level: 'error',
+  timestamp: '2022-07-26 13:19:22'
 }

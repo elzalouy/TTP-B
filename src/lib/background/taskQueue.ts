@@ -102,6 +102,8 @@ export const updateCardJob = (data: TaskData) => {
       let response = await BoardController.__updateCard(data.cardId, {
         name: data.name,
         desc: data?.description ? data?.description : "",
+        idList: data?.listId,
+        idBoard: data?.boardId,
       });
       cb(null, response);
     } catch (error: any) {
