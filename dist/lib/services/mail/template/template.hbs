@@ -9,63 +9,13 @@
   <body
     style="text-align: center;padding:20px;background-color:#FEDF2D;color-scheme:light only;"
   >
-    <div class="logo-container" style="display: table; margin:0px;">
+    <a href={{link}}>
       <img
-        src="http://drive.google.com/uc?export=view&id=1NkA0PWTKBfsjh7yT94w_BYbYj1u4-sgx"
-        alt="TTP logo"
+        src={{image}}
+        alt="reset"
+        width="100%"
+        height="100%"
       />
-    </div>
-    <div class="body-wrapper" style="text-transform: capitalize;">
-      {{!  <div class="body-bg" style="width: 100%;height:100%; position:absolute; top:0;left:0;">
-        <a href="#">
-          <img
-            style="width: 100%;height:100%; position:absolute; top:0;left:0;z-index:-1;"
-            src="http://drive.google.com/uc?export=view&id=1tAZqc3_0_bJTX4AK5LAfYuZbSpGlVVC8"
-            alt="bg"
-          /></a>
-      </div> }}
-      <div
-        class="body-content"
-        style="background-color: #FFF;padding:20px;border-radius:10px;"
-      >
-        <div
-          class="content-wrapper"
-          style="background-color: #FFF;height: 400px;display: table;width: 100%;"
-        >
-          <div
-            class="lock-icon-container"
-            style=" display: table;margin: 15px auto;"
-          >
-            <a href="#">
-              <img
-                src="http://drive.google.com/uc?export=view&id=1qESVnpDhO6Wyi131vhIPP7I02KuA7OJn"
-                alt="lock icon"
-                class="lock"
-                width="100px"
-                height="100px"
-              />
-            </a>
-          </div>
-          <div class="content-container" style="">
-            <div class="content">
-              <h1 style="text-transform: capitalize; margin:15px 5px;">Welcome
-                to TTP Management Platform</h1>
-              <p>{{action}}
-                We got your back! Click on the button below to set your new
-                password.</p>
-            </div>
-            <div class="button" style="margin:45px 0px;">
-              <a
-                style="padding:15px 37px; background-color:#111;color:#fff;border-radius:40px;text-transform:uppercase;text-decoration:none;"
-                href={{link}}
-              >
-                {{body}}
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+    </a>
   </body>
-
 </html>
