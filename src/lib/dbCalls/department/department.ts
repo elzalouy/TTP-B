@@ -1,15 +1,9 @@
 import { ObjectId } from "bson";
-
-import {
-  DepartmentInfo,
-  DepartmentData,
-  UpdateDepartment,
-} from "../../types/model/Department";
 import logger from "../../../logger";
 import Department from "../../models/Department";
 
 const DepartmentBD = class DepartmentBD {
-  static async createdbDepartment(data: DepartmentData) {
+  static async createdbDepartment(data: any) {
     return await DepartmentBD.__addNewDepartment(data);
   }
 
@@ -53,7 +47,7 @@ const DepartmentBD = class DepartmentBD {
       logger.error({ deleteNestedRecordDepDBError: error });
     }
   }
-  static async __getOneDepartmentBy(data: DepartmentData) {
+  static async __getOneDepartmentBy(data: any) {
     try {
       let dep = await Department.findOne(data);
       if (dep) return dep;
@@ -62,7 +56,7 @@ const DepartmentBD = class DepartmentBD {
       logger.error({ getDepOneError: error });
     }
   }
-  static async __getDepartment(data: DepartmentData, and: boolean) {
+  static async __getDepartment(data: any, and: boolean) {
     try {
       let match = and ? { $and: [data] } : { $or: [data] };
       let department: any = await Department.aggregate([
@@ -109,7 +103,7 @@ const DepartmentBD = class DepartmentBD {
             name: 1,
             boardId: 1,
             color: 1,
-            boardURL:"$boardURL",
+            boardURL: "$boardURL",
             mainBoard: 1,
             teamsId: "$teamData",
             teamOrigin: "$teamsId",
@@ -172,7 +166,7 @@ const DepartmentBD = class DepartmentBD {
     }
   }
 
-  static async __addNewDepartment(data: DepartmentData) {
+  static async __addNewDepartment(data: any) {
     try {
       let department = new Department(data);
       await department.save();
