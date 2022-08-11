@@ -434,3 +434,14 @@
   level: 'error',
   timestamp: '2022-08-11 09:26:03'
 }
+{
+  message: {
+    getTeamsError: FetchError: invalid json response body at https://api.trello.com/1/cards?idList=62f27d172b222c001744fb5b&name=Testing&desc=&attachments=true&key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68 reason: Unexpected token c in JSON at position 0
+        at C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\node-fetch\lib\index.js:273:32
+        at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+      type: 'invalid-json'
+    }
+  },
+  level: 'error',
+  timestamp: '2022-08-10 13:50:33'
+}

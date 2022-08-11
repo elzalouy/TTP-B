@@ -14,8 +14,7 @@ interface Data {
   path: string;
   token: string;
   subject: string;
-  body?: string;
-  action?: string;
+  image?: string;
 }
 
 
@@ -24,9 +23,8 @@ const sendMail = async (data: Data) => {
   const source = fs.readFileSync(filePath, 'utf-8').toString();
   const template = handlebars.compile(source);
   const replacements = {
-    action: data.action,
     link: `${Config.get("FrontEndUrl")}/${data.path}/${data.token}`,
-    body: data.body,
+    image: data.image
   };
 
   const htmlToSend = template(replacements);

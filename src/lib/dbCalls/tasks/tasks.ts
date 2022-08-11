@@ -274,7 +274,11 @@ class TaskDB {
       if (data.projectId) filter.projectId = data.projectId;
       if (data.memberId) filter.memberId = data.memberId;
       if (data.status) filter.status = data.status;
-      if (data.name) filter.name = { $regex: data.name };
+      if (data.name) {
+        //Making search value to lower case for case insensitive search
+        let name = data.name.toLowerCase();
+        filter.name = { $regex: name }
+      };
       if (data.projectManager)
         filter.projectManager = { $regex: data.projectManager };
       let tasks = await Tasks.find(filter);
