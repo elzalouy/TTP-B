@@ -1352,3 +1352,366 @@
   level: 'info',
   timestamp: '2022-08-10 17:38:49'
 }
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-08-11 11:47:31'
+}
+{
+  message: 'error in moving board request to https://api.trello.com/1/cards/62f4af0a928d62001eb573e7?idList=62f3cedf107f4300b65b52af&key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68 failed, reason: getaddrinfo EAI_AGAIN api.trello.com',
+  type: 'system',
+  errno: 'EAI_AGAIN',
+  code: 'EAI_AGAIN',
+  level: 'info',
+  stack: 'FetchError: request to https://api.trello.com/1/cards/62f4af0a928d62001eb573e7?idList=62f3cedf107f4300b65b52af&key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68 failed, reason: getaddrinfo EAI_AGAIN api.trello.com\n' +
+    '    at ClientRequest.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/node-fetch/lib/index.js:1491:11)\n' +
+    '    at ClientRequest.emit (node:events:527:28)\n' +
+    '    at ClientRequest.emit (node:domain:475:12)\n' +
+    '    at TLSSocket.socketErrorListener (node:_http_client:454:9)\n' +
+    '    at TLSSocket.emit (node:events:527:28)\n' +
+    '    at TLSSocket.emit (node:domain:475:12)\n' +
+    '    at emitErrorNT (node:internal/streams/destroy:157:8)\n' +
+    '    at emitErrorCloseNT (node:internal/streams/destroy:122:3)\n' +
+    '    at processTicksAndRejections (node:internal/process/task_queues:83:21)',
+  timestamp: '2022-08-11 11:48:19'
+}
+{
+  message: 'error in moving board request to https://api.trello.com/1/cards/62f4af0a928d62001eb573e7?idList=62f3cee0c9fddb081af7a9f0&key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68 failed, reason: getaddrinfo ENOTFOUND api.trello.com',
+  type: 'system',
+  errno: 'ENOTFOUND',
+  code: 'ENOTFOUND',
+  level: 'info',
+  stack: 'FetchError: request to https://api.trello.com/1/cards/62f4af0a928d62001eb573e7?idList=62f3cee0c9fddb081af7a9f0&key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68 failed, reason: getaddrinfo ENOTFOUND api.trello.com\n' +
+    '    at ClientRequest.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/node-fetch/lib/index.js:1491:11)\n' +
+    '    at ClientRequest.emit (node:events:527:28)\n' +
+    '    at ClientRequest.emit (node:domain:475:12)\n' +
+    '    at TLSSocket.socketErrorListener (node:_http_client:454:9)\n' +
+    '    at TLSSocket.emit (node:events:527:28)\n' +
+    '    at TLSSocket.emit (node:domain:475:12)\n' +
+    '    at emitErrorNT (node:internal/streams/destroy:157:8)\n' +
+    '    at emitErrorCloseNT (node:internal/streams/destroy:122:3)\n' +
+    '    at processTicksAndRejections (node:internal/process/task_queues:83:21)',
+  timestamp: '2022-08-11 11:48:47'
+}
+{
+  message: 'error in moving board request to https://api.trello.com/1/cards/62f4af0a928d62001eb573e7?idList=62f3cedf151b2600da2ba100&key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68 failed, reason: getaddrinfo ENOTFOUND api.trello.com',
+  type: 'system',
+  errno: 'ENOTFOUND',
+  code: 'ENOTFOUND',
+  level: 'info',
+  stack: 'FetchError: request to https://api.trello.com/1/cards/62f4af0a928d62001eb573e7?idList=62f3cedf151b2600da2ba100&key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68 failed, reason: getaddrinfo ENOTFOUND api.trello.com\n' +
+    '    at ClientRequest.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/node-fetch/lib/index.js:1491:11)\n' +
+    '    at ClientRequest.emit (node:events:527:28)\n' +
+    '    at ClientRequest.emit (node:domain:475:12)\n' +
+    '    at TLSSocket.socketErrorListener (node:_http_client:454:9)\n' +
+    '    at TLSSocket.emit (node:events:527:28)\n' +
+    '    at TLSSocket.emit (node:domain:475:12)\n' +
+    '    at emitErrorNT (node:internal/streams/destroy:157:8)\n' +
+    '    at emitErrorCloseNT (node:internal/streams/destroy:122:3)\n' +
+    '    at processTicksAndRejections (node:internal/process/task_queues:83:21)',
+  timestamp: '2022-08-11 11:48:47'
+}
+{
+  message: 'error in moving board request to https://api.trello.com/1/cards/62f4af0a928d62001eb573e7?idList=62f3cee1e7711600a7dda2be&key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68 failed, reason: getaddrinfo ENOTFOUND api.trello.com',
+  type: 'system',
+  errno: 'ENOTFOUND',
+  code: 'ENOTFOUND',
+  level: 'info',
+  stack: 'FetchError: request to https://api.trello.com/1/cards/62f4af0a928d62001eb573e7?idList=62f3cee1e7711600a7dda2be&key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68 failed, reason: getaddrinfo ENOTFOUND api.trello.com\n' +
+    '    at ClientRequest.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/node-fetch/lib/index.js:1491:11)\n' +
+    '    at ClientRequest.emit (node:events:527:28)\n' +
+    '    at ClientRequest.emit (node:domain:475:12)\n' +
+    '    at TLSSocket.socketErrorListener (node:_http_client:454:9)\n' +
+    '    at TLSSocket.emit (node:events:527:28)\n' +
+    '    at TLSSocket.emit (node:domain:475:12)\n' +
+    '    at emitErrorNT (node:internal/streams/destroy:157:8)\n' +
+    '    at emitErrorCloseNT (node:internal/streams/destroy:122:3)\n' +
+    '    at processTicksAndRejections (node:internal/process/task_queues:83:21)',
+  timestamp: '2022-08-11 11:49:34'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-08-11 11:58:13'
+}
+{
+  message: { borderData: Promise { <pending> } },
+  level: 'info',
+  timestamp: '2022-08-11 11:58:35'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-08-11 11:59:04'
+}
+{
+  message: {
+    removeBoard: 'https://api.trello.com/1/boards/62f4d2cacc427500f011efb3?response_type=token&key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68'
+  },
+  level: 'info',
+  timestamp: '2022-08-11 11:59:09'
+}
+{
+  message: { deleteTasksOfDepartment: { acknowledged: true, deletedCount: 0 } },
+  level: 'info',
+  timestamp: '2022-08-11 11:59:10'
+}
+{
+  message: {
+    borderData: {
+      id: '62f4d2fac78f1b008e78396f',
+      name: 'board',
+      desc: '',
+      descData: null,
+      closed: false,
+      idOrganization: '62932bf998452a111d515e0d',
+      idEnterprise: null,
+      pinned: false,
+      url: 'https://trello.com/b/HHYNBCnH/board',
+      shortUrl: 'https://trello.com/b/HHYNBCnH',
+      prefs: {
+        permissionLevel: 'private',
+        hideVotes: false,
+        voting: 'disabled',
+        comments: 'members',
+        invitations: 'members',
+        selfJoin: true,
+        cardCovers: true,
+        isTemplate: false,
+        cardAging: 'regular',
+        calendarFeedEnabled: false,
+        hiddenPluginBoardButtons: [],
+        switcherViews: [
+          {
+            _id: '62f4d2fac78f1b008e783970',
+            viewType: 'Board',
+            enabled: true
+          },
+          {
+            _id: '62f4d2fac78f1b008e783971',
+            viewType: 'Table',
+            enabled: true
+          },
+          {
+            _id: '62f4d2fac78f1b008e783972',
+            viewType: 'Calendar',
+            enabled: false
+          },
+          {
+            _id: '62f4d2fac78f1b008e783973',
+            viewType: 'Dashboard',
+            enabled: false
+          },
+          {
+            _id: '62f4d2fac78f1b008e783974',
+            viewType: 'Timeline',
+            enabled: false
+          },
+          {
+            _id: '62f4d2fac78f1b008e783975',
+            viewType: 'Map',
+            enabled: false
+          }
+        ],
+        background: 'blue',
+        backgroundColor: '#0079BF',
+        backgroundImage: null,
+        backgroundImageScaled: null,
+        backgroundTile: false,
+        backgroundBrightness: 'dark',
+        backgroundBottomColor: '#0079BF',
+        backgroundTopColor: '#0079BF',
+        canBePublic: true,
+        canBeEnterprise: true,
+        canBeOrg: true,
+        canBePrivate: true,
+        canInvite: true
+      },
+      labelNames: {
+        green: '',
+        yellow: '',
+        orange: '',
+        red: '',
+        purple: '',
+        blue: '',
+        sky: '',
+        lime: '',
+        pink: '',
+        black: '',
+        green_dark: '',
+        yellow_dark: '',
+        orange_dark: '',
+        red_dark: '',
+        purple_dark: '',
+        blue_dark: '',
+        sky_dark: '',
+        lime_dark: '',
+        pink_dark: '',
+        black_dark: '',
+        green_light: '',
+        yellow_light: '',
+        orange_light: '',
+        red_light: '',
+        purple_light: '',
+        blue_light: '',
+        sky_light: '',
+        lime_light: '',
+        pink_light: '',
+        black_light: ''
+      },
+      limits: {}
+    }
+  },
+  level: 'info',
+  timestamp: '2022-08-11 11:59:22'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-08-11 12:02:07'
+}
+{
+  message: {
+    removeBoard: 'https://api.trello.com/1/boards/62f3c5b2e21e7800e1b649d9?response_type=token&key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68'
+  },
+  level: 'info',
+  timestamp: '2022-08-11 12:02:58'
+}
+{
+  message: { deleteTasksOfDepartment: { acknowledged: true, deletedCount: 0 } },
+  level: 'info',
+  timestamp: '2022-08-11 12:02:59'
+}
+{
+  message: {
+    removeBoard: 'https://api.trello.com/1/boards/62f4d2fac78f1b008e78396f?response_type=token&key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68'
+  },
+  level: 'info',
+  timestamp: '2022-08-11 12:03:03'
+}
+{
+  message: { deleteTasksOfDepartment: { acknowledged: true, deletedCount: 0 } },
+  level: 'info',
+  timestamp: '2022-08-11 12:03:04'
+}
+{
+  message: {
+    removeBoard: 'https://api.trello.com/1/boards/62f3cedee28b75009337c9b5?response_type=token&key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68'
+  },
+  level: 'info',
+  timestamp: '2022-08-11 12:03:08'
+}
+{
+  message: { deleteTasksOfDepartment: { acknowledged: true, deletedCount: 1 } },
+  level: 'info',
+  timestamp: '2022-08-11 12:03:10'
+}
+{
+  message: {
+    borderData: {
+      id: '62f4d3f38305d000c53bd329',
+      name: 'local dep',
+      desc: '',
+      descData: null,
+      closed: false,
+      idOrganization: '62932bf998452a111d515e0d',
+      idEnterprise: null,
+      pinned: false,
+      url: 'https://trello.com/b/NTHwZvxB/local-dep',
+      shortUrl: 'https://trello.com/b/NTHwZvxB',
+      prefs: {
+        permissionLevel: 'private',
+        hideVotes: false,
+        voting: 'disabled',
+        comments: 'members',
+        invitations: 'members',
+        selfJoin: true,
+        cardCovers: true,
+        isTemplate: false,
+        cardAging: 'regular',
+        calendarFeedEnabled: false,
+        hiddenPluginBoardButtons: [],
+        switcherViews: [
+          {
+            _id: '62f4d3f38305d000c53bd32a',
+            viewType: 'Board',
+            enabled: true
+          },
+          {
+            _id: '62f4d3f38305d000c53bd32b',
+            viewType: 'Table',
+            enabled: true
+          },
+          {
+            _id: '62f4d3f38305d000c53bd32c',
+            viewType: 'Calendar',
+            enabled: false
+          },
+          {
+            _id: '62f4d3f38305d000c53bd32d',
+            viewType: 'Dashboard',
+            enabled: false
+          },
+          {
+            _id: '62f4d3f38305d000c53bd32e',
+            viewType: 'Timeline',
+            enabled: false
+          },
+          {
+            _id: '62f4d3f38305d000c53bd32f',
+            viewType: 'Map',
+            enabled: false
+          }
+        ],
+        background: 'blue',
+        backgroundColor: '#0079BF',
+        backgroundImage: null,
+        backgroundImageScaled: null,
+        backgroundTile: false,
+        backgroundBrightness: 'dark',
+        backgroundBottomColor: '#0079BF',
+        backgroundTopColor: '#0079BF',
+        canBePublic: true,
+        canBeEnterprise: true,
+        canBeOrg: true,
+        canBePrivate: true,
+        canInvite: true
+      },
+      labelNames: {
+        green: '',
+        yellow: '',
+        orange: '',
+        red: '',
+        purple: '',
+        blue: '',
+        sky: '',
+        lime: '',
+        pink: '',
+        black: '',
+        green_dark: '',
+        yellow_dark: '',
+        orange_dark: '',
+        red_dark: '',
+        purple_dark: '',
+        blue_dark: '',
+        sky_dark: '',
+        lime_dark: '',
+        pink_dark: '',
+        black_dark: '',
+        green_light: '',
+        yellow_light: '',
+        orange_light: '',
+        red_light: '',
+        purple_light: '',
+        blue_light: '',
+        sky_light: '',
+        lime_light: '',
+        pink_light: '',
+        black_light: ''
+      },
+      limits: {}
+    }
+  },
+  level: 'info',
+  timestamp: '2022-08-11 12:03:31'
+}

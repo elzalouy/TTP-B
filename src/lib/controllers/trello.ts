@@ -191,8 +191,8 @@ class BoardController {
           Accept: "application/json",
         },
       });
-      let borderData = board.json();
-      logger.info({ borderData, createBoardApi });
+      let borderData = await board.json();
+      logger.info({ borderData });
       return borderData;
     } catch (error) {
       logger.error({ createNewBoardError: error });

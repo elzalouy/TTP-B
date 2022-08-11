@@ -251,7 +251,10 @@ DepartmentSchema.methods.createDepartmentBoard = async function (
         error: "Boart Error",
         message: "Board not created, please see Trello roles first.",
       };
-    if (board?.id) this.boardId = board.id;
+    if (board?.id && board?.url) {
+      this.boardId = board.id;
+      this.boardURL = board.url;
+    }
     //2- create lists
     let listsResult = await lists.map(async (list, index) => {
       result = await BoardController.addListToBoard(board.id, list.name);
