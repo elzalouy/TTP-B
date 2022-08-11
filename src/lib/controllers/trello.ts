@@ -1,24 +1,23 @@
-import { MemberType } from "../types/model/User";
-import { trelloApi } from "../services/trelloApi";
-import logger from "../../logger";
-import fetch, { RequestInit } from "node-fetch";
-import Config from "config";
-import { config } from "dotenv";
-import request from "request";
 import fs from "fs";
-import { Response } from "express";
-import { AttachmentResponse, TaskData, TaskInfo } from "../types/model/tasks";
-import { method } from "lodash";
+import Config from "config";
+import logger from "../../logger";
+import { config } from "dotenv";
+import { trelloApi } from "../services/trelloApi";
+import { MemberType } from "../types/model/User";
+import fetch, { RequestInit } from "node-fetch";
+import { AttachmentResponse, TaskData } from "../types/model/tasks";
 import {
   updateCardResponse,
   webhookUpdateInterface,
 } from "../types/controller/Tasks";
-import { moveTaskNotificationJob, TaskQueue } from "../background/taskQueue";
 import { io } from "../../index";
 import TaskController from "./task";
 import { validateExtentions } from "../services/validation";
-var FormData = require("form-data");
+import TechMemberDB from "../dbCalls/techMember/techMember";
+import Department from "../models/Department";
+
 config();
+var FormData = require("form-data");
 
 class BoardController {
   static async getBoardsInTrello() {
@@ -169,6 +168,11 @@ class BoardController {
       );
       let board: any = await fetch(updateBoardApi, {
         method: "PUT",
+      }).catch((err) => {
+        throw JSON.stringify({
+          error: "TrelloError",
+          message: "Failed to update trello name and color",
+        });
       });
       return board.json();
     } catch (error) {
@@ -338,10 +342,16 @@ class BoardController {
         headers: {
           Accept: "application/json",
         },
+      }).catch((err) => {
+        throw JSON.stringify({
+          error: "TrelloError",
+          message: "Failed to update trello lists",
+        });
       });
       return newList.json();
     } catch (error) {
       logger.error({ addListError: error });
+      return error;
     }
   }
 
@@ -425,7 +435,7 @@ class BoardController {
   }
   static async __updateCard(
     cardId: string,
-    data: { name: string; desc: string }
+    data: { name: string; desc: string; idBoard?: string; idList?: string }
   ) {
     try {
       let params: RequestInit = {
@@ -434,7 +444,12 @@ class BoardController {
           Accept: "*/*",
           "Content-Type": "application/json",
         },
-        body: JSON.stringify({ name: data.name, desc: data.desc }),
+        body: JSON.stringify({
+          name: data.name,
+          desc: data.desc,
+          idBoard: data.idBoard,
+          idList: data.idList,
+        }),
       };
       let api = trelloApi(`cards/${cardId}?`);
       let response = await fetch(api, params)
@@ -465,42 +480,71 @@ class BoardController {
    */
   static async __updateBoardCard(data: webhookUpdateInterface) {
     try {
+      let status = [
+        "inProgress",
+        "Shared",
+        "Done",
+        "Tasks Board",
+        "Not Clear",
+        "Cancled",
+        "Review",
+      ];
       let type = data.action?.type;
       let action = data?.action?.display?.translationKey
         ? data?.action?.display?.translationKey
         : "";
+      console.log(type, action);
+
       let task: TaskData = {
         name: data.action.data.card.name,
         listId: data.action.data.card.idList,
-        status: data.action.data?.list?.name,
+        status: status.includes(data.action.data?.list?.name)
+          ? data.action.data.list.name
+          : "inProgress",
         boardId: data.action.data.board.id,
         cardId: data.action.data.card?.id,
       };
+      let department = await Department.findOne({
+        boardId: task.boardId,
+      });
 
-      // create
-      // if (type === "createCard") {
-      //   task.listId = data.action.data.list.id;
-      //   task.status = data.action.data.list.name;
-      //   let result = await TaskController.createTaskByTrello(task);
-      //   io.sockets.emit("create task", result);
-      // }
-      console.log(type, action);
-      //update
+      if (
+        type === "moveCardToBoard" &&
+        action === "action_move_card_to_board"
+      ) {
+        task.boardId = data.action.data.board.id;
+        task.listId = data.action.data.list.id;
+        // move task to the new team
+        let team = department.teams.find(
+          (item) => item.listId === data.action.data.list.id
+        );
+        if (team) task.teamId = team._id;
+        else task.teamId = null;
+        // update task
+        let result = await TaskController.updateTaskByTrelloDB(task);
+        return io?.sockets?.emit("update-task", result);
+      }
       if (type === "updateCard" && action !== "action_archived_card") {
         if (action === "action_changed_description_of_card")
           task.description = data.action.data.card.desc;
         if (action === "action_renamed_card")
           task.name = data.action.data.card.name;
         if (action === "action_move_card_from_list_to_list") {
-          task.status = data.action.data.listAfter?.name;
+          task.status = status.includes(data.action.data.listAfter?.name)
+            ? data.action.data.listAfter?.name
+            : "inProgress";
           task.listId = data.action.data.listAfter?.id;
           task.lastMove = data.action.data.listBefore.name;
           task.lastMoveDate = new Date().toUTCString();
-          // moveTaskNotificationJob(data);
-          // TaskQueue.start();
+          if (!status.includes(data.action.data.listAfter?.name)) {
+            let team = await department.teams.find(
+              (item) => item.listId === data.action.data.listAfter.id
+            );
+            if (team) task.teamId = team._id;
+          }
         }
         let result = await TaskController.updateTaskByTrelloDB(task);
-        io?.sockets?.emit("update-task", result);
+        return io?.sockets?.emit("update-task", result);
       }
       // add attachment
       if (type === "addAttachmentToCard") {
@@ -522,7 +566,7 @@ class BoardController {
           name: data.action.data.attachment.name,
         };
         let result = await TaskController.updateTaskByTrelloDB(task);
-        io.sockets.emit("update-task", result);
+        return io.sockets.emit("update-task", result);
       }
       if (type === "updateCard" && action === "action_archived_card") {
         // archive, unArchive or delete
@@ -538,7 +582,7 @@ class BoardController {
       //delete
       if (type === "deleteCard") {
         let result = await TaskController.deleteTaskByTrelloDB(task);
-        io?.sockets?.emit("delete-task", result);
+        return io?.sockets?.emit("delete-task", result);
       }
     } catch (error) {
       logger.error({ updateBoardCardError: error });

@@ -59,9 +59,9 @@ const AuthController = class AuthController extends UserDB {
       await sendMail({
         token: token,
         email: email,
-        body: "Reset your password",
-        subject: "Forgot Password",
+        subject: "Forgot Password : Reset your old password",
         path: "resetPassword",
+        image: "http://drive.google.com/uc?export=view&id=1F7ef1MmFkhOOOwPsYjPu-YT9ab51jR1s",
       });
       return successMsg("email_sent", 200);
     } catch (error) {

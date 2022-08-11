@@ -44,7 +44,14 @@ const TechMemberDB = class TechMemberDB {
       logger.error({ getTechMemberDBError: error });
     }
   }
-
+  static async __getOneTechMember(data: object) {
+    try {
+      let techMem = await TechMember.findOne(data).lean();
+      return techMem;
+    } catch (error) {
+      logger.error({ getTechMemberDBError: error });
+    }
+  }
   static async __updateMember(data: TeamsData) {
     try {
       let id = data.id;

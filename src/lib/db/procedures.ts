@@ -1,10 +1,9 @@
 import logger from "../../logger";
 import TaskController from "../controllers/task";
 import TechMemberController from "../controllers/techMember";
-import { DepartmentInfo } from "../types/model/Department";
 
 const Procedures = class Procedures {
-  static async deleteDepartmentProcedure(department: DepartmentInfo) {
+  static async deleteDepartmentProcedure(department: any) {
     try {
       let tasksResult = await TaskController.deleteTasksWhere({
         boardId: department.boardId,

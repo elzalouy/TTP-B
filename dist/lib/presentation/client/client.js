@@ -16,6 +16,7 @@ const client_1 = __importDefault(require("../../controllers/client"));
 const successMsg_1 = require("../../utils/successMsg");
 const errorUtils_1 = require("../../utils/errorUtils");
 const logger_1 = __importDefault(require("../../../logger"));
+const __1 = require("../../..");
 const ClientReq = class ClientReq extends client_1.default {
     static handleCreateClient(req, res) {
         const _super = Object.create(null, {
@@ -29,6 +30,7 @@ const ClientReq = class ClientReq extends client_1.default {
                 }
                 let Client = yield _super.createClient.call(this, req.body);
                 if (Client) {
+                    __1.io.sockets.emit("create-client", Client);
                     return res.status(200).send(Client);
                 }
                 else {

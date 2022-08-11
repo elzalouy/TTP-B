@@ -496,7 +496,6 @@ class BoardController {
         var _a, _b, _c, _d, _e, _f, _g, _h, _j, _k, _l, _m, _o, _p, _q, _r, _s, _t, _u, _v, _w;
         return __awaiter(this, void 0, void 0, function* () {
             try {
-                console.log(data);
                 let type = (_a = data.action) === null || _a === void 0 ? void 0 : _a.type;
                 let action = ((_c = (_b = data === null || data === void 0 ? void 0 : data.action) === null || _b === void 0 ? void 0 : _b.display) === null || _c === void 0 ? void 0 : _c.translationKey)
                     ? (_e = (_d = data === null || data === void 0 ? void 0 : data.action) === null || _d === void 0 ? void 0 : _d.display) === null || _e === void 0 ? void 0 : _e.translationKey

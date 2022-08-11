@@ -17,15 +17,15 @@ So
 
 TODO socket filter issue 
 
-Status : Done, Testing
+Status : Done, Tested
 
 Issue : delete the filter of the sockets.
 
 TODO send notification to all OMs if a project is created by a PM
-Status : Done, Testing
+Status : Done, tested
 
 TODO moveTask socket
 
-Status : InProgress
+Status : Done
 
 Issue : moveTask should send a notification to the project manager, if he wasn't the one who moved this task. Move task from trello doesn't allow me to know who moved it. so i am not gonna send a notification if task has been moved from trello.

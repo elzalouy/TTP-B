@@ -274,7 +274,11 @@ class TaskDB {
       if (data.projectId) filter.projectId = data.projectId;
       if (data.memberId) filter.memberId = data.memberId;
       if (data.status) filter.status = data.status;
-      if (data.name) filter.name = { $regex: data.name };
+      if (data.name) {
+        //Making search value to lower case for case insensitive search
+        let name = data.name.toLowerCase();
+        filter.name = { $regex: name }
+      };
       if (data.projectManager)
         filter.projectManager = { $regex: data.projectManager };
       let tasks = await Tasks.find(filter);
@@ -301,6 +305,10 @@ class TaskDB {
       task.cardId = data?.cardId ? data.cardId : task.cardId;
       task.boardId = data?.boardId ? data.boardId : task.boardId;
       task.description = data.description ? data.description : task.description;
+      task.teamId =
+        data?.teamId === null || data?.teamId?.toString().length > 0
+          ? data.teamId
+          : task.teamId;
       task.lastMove = data?.lastMove ? data.lastMove : task.lastMoveDate;
       task.lastMoveDate = data?.lastMoveDate
         ? data.lastMoveDate
@@ -319,7 +327,6 @@ class TaskDB {
         (item) => item.mimeType !== ""
       );
       task.attachedFiles = _.uniqBy(task.attachedFiles, "trelloId");
-      console.log(task);
       let id = task._id;
       let result = await Tasks.findOneAndUpdate({ _id: id }, task, {
         new: true,
