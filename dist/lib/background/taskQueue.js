@@ -105,6 +105,8 @@ const updateCardJob = (data) => {
             let response = yield trello_1.default.__updateCard(data.cardId, {
                 name: data.name,
                 desc: (data === null || data === void 0 ? void 0 : data.description) ? data === null || data === void 0 ? void 0 : data.description : "",
+                idList: data === null || data === void 0 ? void 0 : data.listId,
+                idBoard: data === null || data === void 0 ? void 0 : data.boardId,
             });
             cb(null, response);
         }

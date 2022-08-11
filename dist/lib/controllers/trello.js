@@ -12,17 +12,18 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-const trelloApi_1 = require("../services/trelloApi");
-const logger_1 = __importDefault(require("../../logger"));
-const node_fetch_1 = __importDefault(require("node-fetch"));
-const config_1 = __importDefault(require("config"));
-const dotenv_1 = require("dotenv");
 const fs_1 = __importDefault(require("fs"));
+const config_1 = __importDefault(require("config"));
+const logger_1 = __importDefault(require("../../logger"));
+const dotenv_1 = require("dotenv");
+const trelloApi_1 = require("../services/trelloApi");
+const node_fetch_1 = __importDefault(require("node-fetch"));
 const index_1 = require("../../index");
 const task_1 = __importDefault(require("./task"));
 const validation_1 = require("../services/validation");
-var FormData = require("form-data");
+const Department_1 = __importDefault(require("../models/Department"));
 (0, dotenv_1.config)();
+var FormData = require("form-data");
 class BoardController {
     static getBoardsInTrello() {
         return __awaiter(this, void 0, void 0, function* () {
@@ -187,6 +188,11 @@ class BoardController {
                 let updateBoardApi = (0, trelloApi_1.trelloApi)(`boards/${id}/?name=${name}&prefs/background=${color}&`);
                 let board = yield (0, node_fetch_1.default)(updateBoardApi, {
                     method: "PUT",
+                }).catch((err) => {
+                    throw JSON.stringify({
+                        error: "TrelloError",
+                        message: "Failed to update trello name and color",
+                    });
                 });
                 return board.json();
             }
@@ -205,8 +211,8 @@ class BoardController {
                         Accept: "application/json",
                     },
                 });
-                let borderData = board.json();
-                logger_1.default.info({ borderData, createBoardApi });
+                let borderData = yield board.json();
+                logger_1.default.info({ borderData });
                 return borderData;
             }
             catch (error) {
@@ -367,11 +373,17 @@ class BoardController {
                     headers: {
                         Accept: "application/json",
                     },
+                }).catch((err) => {
+                    throw JSON.stringify({
+                        error: "TrelloError",
+                        message: "Failed to update trello lists",
+                    });
                 });
                 return newList.json();
             }
             catch (error) {
                 logger_1.default.error({ addListError: error });
+                return error;
             }
         });
     }
@@ -462,7 +474,12 @@ class BoardController {
                         Accept: "*/*",
                         "Content-Type": "application/json",
                     },
-                    body: JSON.stringify({ name: data.name, desc: data.desc }),
+                    body: JSON.stringify({
+                        name: data.name,
+                        desc: data.desc,
+                        idBoard: data.idBoard,
+                        idList: data.idList,
+                    }),
                 };
                 let api = (0, trelloApi_1.trelloApi)(`cards/${cardId}?`);
                 let response = yield (0, node_fetch_1.default)(api, params)
@@ -493,54 +510,79 @@ class BoardController {
      * @param data webhook request data inserted with the webhook call.
      */
     static __updateBoardCard(data) {
-        var _a, _b, _c, _d, _e, _f, _g, _h, _j, _k, _l, _m, _o, _p, _q, _r, _s, _t, _u, _v, _w;
+        var _a, _b, _c, _d, _e, _f, _g, _h, _j, _k, _l, _m, _o, _p, _q, _r, _s, _t, _u, _v, _w, _x, _y, _z;
         return __awaiter(this, void 0, void 0, function* () {
             try {
+                let status = [
+                    "inProgress",
+                    "Shared",
+                    "Done",
+                    "Tasks Board",
+                    "Not Clear",
+                    "Cancled",
+                    "Review",
+                ];
                 let type = (_a = data.action) === null || _a === void 0 ? void 0 : _a.type;
                 let action = ((_c = (_b = data === null || data === void 0 ? void 0 : data.action) === null || _b === void 0 ? void 0 : _b.display) === null || _c === void 0 ? void 0 : _c.translationKey)
                     ? (_e = (_d = data === null || data === void 0 ? void 0 : data.action) === null || _d === void 0 ? void 0 : _d.display) === null || _e === void 0 ? void 0 : _e.translationKey
                     : "";
+                console.log(type, action);
                 let task = {
                     name: data.action.data.card.name,
                     listId: data.action.data.card.idList,
-                    status: (_g = (_f = data.action.data) === null || _f === void 0 ? void 0 : _f.list) === null || _g === void 0 ? void 0 : _g.name,
+                    status: status.includes((_g = (_f = data.action.data) === null || _f === void 0 ? void 0 : _f.list) === null || _g === void 0 ? void 0 : _g.name)
+                        ? data.action.data.list.name
+                        : "inProgress",
                     boardId: data.action.data.board.id,
                     cardId: (_h = data.action.data.card) === null || _h === void 0 ? void 0 : _h.id,
                 };
-                // create
-                // if (type === "createCard") {
-                //   task.listId = data.action.data.list.id;
-                //   task.status = data.action.data.list.name;
-                //   let result = await TaskController.createTaskByTrello(task);
-                //   io.sockets.emit("create task", result);
-                // }
-                console.log(type, action);
-                //update
+                let department = yield Department_1.default.findOne({
+                    boardId: task.boardId,
+                });
+                if (type === "moveCardToBoard" &&
+                    action === "action_move_card_to_board") {
+                    task.boardId = data.action.data.board.id;
+                    task.listId = data.action.data.list.id;
+                    // move task to the new team
+                    let team = department.teams.find((item) => item.listId === data.action.data.list.id);
+                    if (team)
+                        task.teamId = team._id;
+                    else
+                        task.teamId = null;
+                    // update task
+                    let result = yield task_1.default.updateTaskByTrelloDB(task);
+                    return (_j = index_1.io === null || index_1.io === void 0 ? void 0 : index_1.io.sockets) === null || _j === void 0 ? void 0 : _j.emit("update-task", result);
+                }
                 if (type === "updateCard" && action !== "action_archived_card") {
                     if (action === "action_changed_description_of_card")
                         task.description = data.action.data.card.desc;
                     if (action === "action_renamed_card")
                         task.name = data.action.data.card.name;
                     if (action === "action_move_card_from_list_to_list") {
-                        task.status = (_j = data.action.data.listAfter) === null || _j === void 0 ? void 0 : _j.name;
-                        task.listId = (_k = data.action.data.listAfter) === null || _k === void 0 ? void 0 : _k.id;
+                        task.status = status.includes((_k = data.action.data.listAfter) === null || _k === void 0 ? void 0 : _k.name)
+                            ? (_l = data.action.data.listAfter) === null || _l === void 0 ? void 0 : _l.name
+                            : "inProgress";
+                        task.listId = (_m = data.action.data.listAfter) === null || _m === void 0 ? void 0 : _m.id;
                         task.lastMove = data.action.data.listBefore.name;
                         task.lastMoveDate = new Date().toUTCString();
-                        // moveTaskNotificationJob(data);
-                        // TaskQueue.start();
+                        if (!status.includes((_o = data.action.data.listAfter) === null || _o === void 0 ? void 0 : _o.name)) {
+                            let team = yield department.teams.find((item) => item.listId === data.action.data.listAfter.id);
+                            if (team)
+                                task.teamId = team._id;
+                        }
                     }
                     let result = yield task_1.default.updateTaskByTrelloDB(task);
-                    (_l = index_1.io === null || index_1.io === void 0 ? void 0 : index_1.io.sockets) === null || _l === void 0 ? void 0 : _l.emit("update-task", result);
+                    return (_p = index_1.io === null || index_1.io === void 0 ? void 0 : index_1.io.sockets) === null || _p === void 0 ? void 0 : _p.emit("update-task", result);
                 }
                 // add attachment
                 if (type === "addAttachmentToCard") {
                     task.attachedFiles = [
                         {
-                            trelloId: (_o = (_m = data.action.data) === null || _m === void 0 ? void 0 : _m.attachment) === null || _o === void 0 ? void 0 : _o.id,
-                            name: (_q = (_p = data.action.data) === null || _p === void 0 ? void 0 : _p.attachment) === null || _q === void 0 ? void 0 : _q.name,
-                            url: (_r = data.action.data.attachment) === null || _r === void 0 ? void 0 : _r.url,
+                            trelloId: (_r = (_q = data.action.data) === null || _q === void 0 ? void 0 : _q.attachment) === null || _r === void 0 ? void 0 : _r.id,
+                            name: (_t = (_s = data.action.data) === null || _s === void 0 ? void 0 : _s.attachment) === null || _t === void 0 ? void 0 : _t.name,
+                            url: (_u = data.action.data.attachment) === null || _u === void 0 ? void 0 : _u.url,
                             // utils function to detect type from name.ext
-                            mimeType: (0, validation_1.validateExtentions)((_t = (_s = data.action.data) === null || _s === void 0 ? void 0 : _s.attachment) === null || _t === void 0 ? void 0 : _t.name),
+                            mimeType: (0, validation_1.validateExtentions)((_w = (_v = data.action.data) === null || _v === void 0 ? void 0 : _v.attachment) === null || _w === void 0 ? void 0 : _w.name),
                         },
                     ];
                     let result = yield task_1.default.updateTaskByTrelloDB(task);
@@ -552,23 +594,23 @@ class BoardController {
                         name: data.action.data.attachment.name,
                     };
                     let result = yield task_1.default.updateTaskByTrelloDB(task);
-                    index_1.io.sockets.emit("update-task", result);
+                    return index_1.io.sockets.emit("update-task", result);
                 }
                 if (type === "updateCard" && action === "action_archived_card") {
                     // archive, unArchive or delete
                     let result = yield task_1.default.archiveTaskByTrelloDB(task, true);
-                    return (_u = index_1.io === null || index_1.io === void 0 ? void 0 : index_1.io.sockets) === null || _u === void 0 ? void 0 : _u.emit("update-task", result);
+                    return (_x = index_1.io === null || index_1.io === void 0 ? void 0 : index_1.io.sockets) === null || _x === void 0 ? void 0 : _x.emit("update-task", result);
                 }
                 if (type === "updateCard" && action === "action_sent_card_to_board") {
                     task.status = data.action.data.list.name;
                     task.listId = data.action.data.list.id;
                     let result = yield task_1.default.archiveTaskByTrelloDB(task, false);
-                    return (_v = index_1.io === null || index_1.io === void 0 ? void 0 : index_1.io.sockets) === null || _v === void 0 ? void 0 : _v.emit("update-task", result);
+                    return (_y = index_1.io === null || index_1.io === void 0 ? void 0 : index_1.io.sockets) === null || _y === void 0 ? void 0 : _y.emit("update-task", result);
                 }
                 //delete
                 if (type === "deleteCard") {
                     let result = yield task_1.default.deleteTaskByTrelloDB(task);
-                    (_w = index_1.io === null || index_1.io === void 0 ? void 0 : index_1.io.sockets) === null || _w === void 0 ? void 0 : _w.emit("delete-task", result);
+                    return (_z = index_1.io === null || index_1.io === void 0 ? void 0 : index_1.io.sockets) === null || _z === void 0 ? void 0 : _z.emit("delete-task", result);
                 }
             }
             catch (error) {

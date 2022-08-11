@@ -12,7 +12,6 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-const successMsg_1 = require("../../utils/successMsg");
 const errorUtils_1 = require("../../utils/errorUtils");
 const logger_1 = __importDefault(require("../../../logger"));
 const department_1 = __importDefault(require("../../controllers/department"));
@@ -23,11 +22,12 @@ const DepartmentReq = class DepartmentReq extends department_1.default {
         });
         return __awaiter(this, void 0, void 0, function* () {
             try {
-                let department = yield _super.createDepartment.call(this, req.body);
-                if (department === null || department === void 0 ? void 0 : department.error)
-                    return res.status(400).send(department === null || department === void 0 ? void 0 : department.message);
-                if (department) {
-                    return res.status(200).send(department);
+                let response = yield _super.createDepartment.call(this, req.body);
+                console.log({ response: response });
+                if ((response === null || response === void 0 ? void 0 : response.error) || (response === null || response === void 0 ? void 0 : response.message))
+                    return res.status(400).send(response === null || response === void 0 ? void 0 : response.message);
+                if (response) {
+                    return res.status(200).send(response);
                 }
                 else {
                     return res.status(400).send((0, errorUtils_1.customeError)("create_dep_error", 400));
@@ -46,22 +46,20 @@ const DepartmentReq = class DepartmentReq extends department_1.default {
         return __awaiter(this, void 0, void 0, function* () {
             try {
                 let departmentData = req.body;
-                logger_1.default.info({ departmentData });
-                if (!departmentData) {
-                    return res.status(400).send((0, errorUtils_1.customeError)("update_dep_error", 400));
-                }
-                let department = yield _super.updateDepartment.call(this, departmentData);
-                logger_1.default.info({ department });
-                if (department) {
-                    return res.status(200).send(department);
+                let id = req.params.id;
+                let response = yield _super.updateDepartment.call(this, id, departmentData);
+                if ((response === null || response === void 0 ? void 0 : response.error) || (response === null || response === void 0 ? void 0 : response.message))
+                    return res.status(400).send(response === null || response === void 0 ? void 0 : response.message);
+                if (response) {
+                    return res.status(200).send(response);
                 }
                 else {
-                    return res.status(400).send((0, errorUtils_1.customeError)("update_dep_error", 400));
+                    return res.status(400).send((0, errorUtils_1.customeError)("create_dep_error", 400));
                 }
             }
             catch (error) {
                 logger_1.default.error({ handleUpdateDepartmentDataError: error });
-                return res.status(500).send((0, errorUtils_1.customeError)("server_error", 500));
+                return res.status(400).send(error);
             }
         });
     }
@@ -71,19 +69,17 @@ const DepartmentReq = class DepartmentReq extends department_1.default {
         });
         return __awaiter(this, void 0, void 0, function* () {
             try {
-                let { _id } = req.query;
-                if (!_id) {
-                    return res.status(400).send((0, errorUtils_1.customeError)("delete_dep_error", 400));
+                let id = req.params.id;
+                if (id) {
+                    let response = yield _super.deleteDepartment.call(this, id);
+                    if (response === null || response === void 0 ? void 0 : response.error)
+                        return res.status(400).send(response.message);
+                    return res.status(200).send(response);
                 }
-                let department = yield _super.deleteDepartment.call(this, {
-                    _id,
-                });
-                if (department) {
-                    return res.status(200).send((0, successMsg_1.successMsg)("delete_dep_success", 200));
-                }
-                else {
-                    return res.status(400).send((0, errorUtils_1.customeError)("delete_dep_error", 400));
-                }
+                else
+                    return res
+                        .status(400)
+                        .send("Request should have an id in the query params");
             }
             catch (error) {
                 logger_1.default.error({ handleDeletDepartmentDataError: error });
@@ -97,11 +93,7 @@ const DepartmentReq = class DepartmentReq extends department_1.default {
         });
         return __awaiter(this, void 0, void 0, function* () {
             try {
-                let data = req.query;
-                if (!data) {
-                    return res.status(400).send((0, errorUtils_1.customeError)("get_dep_error", 400));
-                }
-                let department = yield _super.getDepartments.call(this, data, true);
+                let department = yield _super.getDepartments.call(this);
                 if (department) {
                     return res.status(200).send(department);
                 }
