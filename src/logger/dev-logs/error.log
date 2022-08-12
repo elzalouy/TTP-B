@@ -270,3 +270,227 @@
   level: 'error',
   timestamp: '2022-08-10 13:50:33'
 }
+{
+  message: {
+    updateUserDataError: MongoServerError: Plan executor error during findAndModify :: caused by :: E11000 duplicate key error collection: TTP.users index: email_1 dup key: { email: "zed.saheer5@gmail.com" }
+        at Connection.onMessage (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\mongodb\src\cmap\connection.ts:440:20)
+        at MessageStream.<anonymous> (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\mongodb\src\cmap\connection.ts:267:56)
+        at MessageStream.emit (node:events:526:28)
+        at MessageStream.emit (node:domain:475:12)
+        at processIncomingData (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\mongodb\src\cmap\message_stream.ts:168:12)
+        at MessageStream._write (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\mongodb\src\cmap\message_stream.ts:65:5)
+        at writeOrBuffer (node:internal/streams/writable:389:12)
+        at _write (node:internal/streams/writable:330:10)
+        at MessageStream.Writable.write (node:internal/streams/writable:334:10)
+        at TLSSocket.ondata (node:internal/streams/readable:754:22) {
+      ok: 0,
+      code: 11000,
+      codeName: 'DuplicateKey',
+      keyPattern: { email: 1 },
+      keyValue: { email: 'zed.saheer5@gmail.com' },
+      '$clusterTime': {
+        clusterTime: new Timestamp({ t: 1660251126, i: 2 }),
+        signature: {
+          hash: new Binary(Buffer.from("25850334d6cab1c71fb2b616c95d2793eb60c693", "hex"), 0),
+          keyId: new Long("7090947428957814786")
+        }
+      },
+      operationTime: new Timestamp({ t: 1660251126, i: 2 }),
+      [Symbol(errorLabels)]: Set(0) {}
+    }
+  },
+  level: 'error',
+  timestamp: '2022-08-12 02:22:06'
+}
+{
+  message: {
+    updateUserDataError: MongoServerError: Plan executor error during findAndModify :: caused by :: E11000 duplicate key error collection: TTP.users index: email_1 dup key: { email: "zed.saheer5@gmail.com" }
+        at Connection.onMessage (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\mongodb\src\cmap\connection.ts:440:20)
+        at MessageStream.<anonymous> (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\mongodb\src\cmap\connection.ts:267:56)
+        at MessageStream.emit (node:events:526:28)
+        at MessageStream.emit (node:domain:475:12)
+        at processIncomingData (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\mongodb\src\cmap\message_stream.ts:168:12)
+        at MessageStream._write (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\mongodb\src\cmap\message_stream.ts:65:5)
+        at writeOrBuffer (node:internal/streams/writable:389:12)
+        at _write (node:internal/streams/writable:330:10)
+        at MessageStream.Writable.write (node:internal/streams/writable:334:10)
+        at TLSSocket.ondata (node:internal/streams/readable:754:22) {
+      ok: 0,
+      code: 11000,
+      codeName: 'DuplicateKey',
+      keyPattern: { email: 1 },
+      keyValue: { email: 'zed.saheer5@gmail.com' },
+      '$clusterTime': {
+        clusterTime: new Timestamp({ t: 1660251526, i: 3 }),
+        signature: {
+          hash: new Binary(Buffer.from("15f6d8b1ed9415e12b549bce8bd2c7ba423886d0", "hex"), 0),
+          keyId: new Long("7090947428957814786")
+        }
+      },
+      operationTime: new Timestamp({ t: 1660251526, i: 3 }),
+      [Symbol(errorLabels)]: Set(0) {}
+    }
+  },
+  level: 'error',
+  timestamp: '2022-08-12 02:28:46'
+}
+{
+  message: {
+    updateUserDataError: MongoServerError: Plan executor error during findAndModify :: caused by :: E11000 duplicate key error collection: TTP.users index: email_1 dup key: { email: "zed.saheer5@gmail.com" }
+        at Connection.onMessage (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\mongodb\src\cmap\connection.ts:440:20)
+        at MessageStream.<anonymous> (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\mongodb\src\cmap\connection.ts:267:56)
+        at MessageStream.emit (node:events:526:28)
+        at MessageStream.emit (node:domain:475:12)
+        at processIncomingData (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\mongodb\src\cmap\message_stream.ts:168:12)
+        at MessageStream._write (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\mongodb\src\cmap\message_stream.ts:65:5)
+        at writeOrBuffer (node:internal/streams/writable:389:12)
+        at _write (node:internal/streams/writable:330:10)
+        at MessageStream.Writable.write (node:internal/streams/writable:334:10)
+        at TLSSocket.ondata (node:internal/streams/readable:754:22) {
+      ok: 0,
+      code: 11000,
+      codeName: 'DuplicateKey',
+      keyPattern: { email: 1 },
+      keyValue: { email: 'zed.saheer5@gmail.com' },
+      '$clusterTime': {
+        clusterTime: new Timestamp({ t: 1660251562, i: 4 }),
+        signature: {
+          hash: new Binary(Buffer.from("d84347f820e157b8d69981443834dcbe297c0aff", "hex"), 0),
+          keyId: new Long("7090947428957814786")
+        }
+      },
+      operationTime: new Timestamp({ t: 1660251562, i: 4 }),
+      [Symbol(errorLabels)]: Set(0) {}
+    }
+  },
+  level: 'error',
+  timestamp: '2022-08-12 02:29:23'
+}
+{
+  message: {
+    updateUserDataError: MongoServerError: Plan executor error during findAndModify :: caused by :: E11000 duplicate key error collection: TTP.users index: email_1 dup key: { email: "zed.saheer5@gmail.com" }
+        at Connection.onMessage (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\mongodb\src\cmap\connection.ts:440:20)
+        at MessageStream.<anonymous> (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\mongodb\src\cmap\connection.ts:267:56)
+        at MessageStream.emit (node:events:526:28)
+        at MessageStream.emit (node:domain:475:12)
+        at processIncomingData (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\mongodb\src\cmap\message_stream.ts:168:12)
+        at MessageStream._write (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\mongodb\src\cmap\message_stream.ts:65:5)
+        at writeOrBuffer (node:internal/streams/writable:389:12)
+        at _write (node:internal/streams/writable:330:10)
+        at MessageStream.Writable.write (node:internal/streams/writable:334:10)
+        at TLSSocket.ondata (node:internal/streams/readable:754:22) {
+      ok: 0,
+      code: 11000,
+      codeName: 'DuplicateKey',
+      keyPattern: { email: 1 },
+      keyValue: { email: 'zed.saheer5@gmail.com' },
+      '$clusterTime': {
+        clusterTime: new Timestamp({ t: 1660251574, i: 5 }),
+        signature: {
+          hash: new Binary(Buffer.from("b845d645b3337a9f6d2dd8365df247834af6185f", "hex"), 0),
+          keyId: new Long("7090947428957814786")
+        }
+      },
+      operationTime: new Timestamp({ t: 1660251574, i: 5 }),
+      [Symbol(errorLabels)]: Set(0) {}
+    }
+  },
+  level: 'error',
+  timestamp: '2022-08-12 02:29:35'
+}
+{
+  message: {
+    updateUserDataError: MongoServerError: Plan executor error during findAndModify :: caused by :: E11000 duplicate key error collection: TTP.users index: email_1 dup key: { email: "zed.saheer5@gmail.com" }
+        at Connection.onMessage (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\mongodb\src\cmap\connection.ts:440:20)
+        at MessageStream.<anonymous> (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\mongodb\src\cmap\connection.ts:267:56)
+        at MessageStream.emit (node:events:526:28)
+        at MessageStream.emit (node:domain:475:12)
+        at processIncomingData (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\mongodb\src\cmap\message_stream.ts:168:12)
+        at MessageStream._write (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\mongodb\src\cmap\message_stream.ts:65:5)
+        at writeOrBuffer (node:internal/streams/writable:389:12)
+        at _write (node:internal/streams/writable:330:10)
+        at MessageStream.Writable.write (node:internal/streams/writable:334:10)
+        at TLSSocket.ondata (node:internal/streams/readable:754:22) {
+      ok: 0,
+      code: 11000,
+      codeName: 'DuplicateKey',
+      keyPattern: { email: 1 },
+      keyValue: { email: 'zed.saheer5@gmail.com' },
+      '$clusterTime': {
+        clusterTime: new Timestamp({ t: 1660251587, i: 4 }),
+        signature: {
+          hash: new Binary(Buffer.from("98d518b1190877cb5cd1e820a2a106b6b22ecaee", "hex"), 0),
+          keyId: new Long("7090947428957814786")
+        }
+      },
+      operationTime: new Timestamp({ t: 1660251587, i: 4 }),
+      [Symbol(errorLabels)]: Set(0) {}
+    }
+  },
+  level: 'error',
+  timestamp: '2022-08-12 02:29:47'
+}
+{
+  message: {
+    updateUserDataError: MongoServerError: Plan executor error during findAndModify :: caused by :: E11000 duplicate key error collection: TTP.users index: email_1 dup key: { email: "zed.saheer5@gmail.com" }
+        at Connection.onMessage (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\mongodb\src\cmap\connection.ts:440:20)
+        at MessageStream.<anonymous> (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\mongodb\src\cmap\connection.ts:267:56)
+        at MessageStream.emit (node:events:526:28)
+        at MessageStream.emit (node:domain:475:12)
+        at processIncomingData (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\mongodb\src\cmap\message_stream.ts:168:12)
+        at MessageStream._write (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\mongodb\src\cmap\message_stream.ts:65:5)
+        at writeOrBuffer (node:internal/streams/writable:389:12)
+        at _write (node:internal/streams/writable:330:10)
+        at MessageStream.Writable.write (node:internal/streams/writable:334:10)
+        at TLSSocket.ondata (node:internal/streams/readable:754:22) {
+      ok: 0,
+      code: 11000,
+      codeName: 'DuplicateKey',
+      keyPattern: { email: 1 },
+      keyValue: { email: 'zed.saheer5@gmail.com' },
+      '$clusterTime': {
+        clusterTime: new Timestamp({ t: 1660252128, i: 5 }),
+        signature: {
+          hash: new Binary(Buffer.from("28fec6769ca8385238411a328b8702236c8905a6", "hex"), 0),
+          keyId: new Long("7090947428957814786")
+        }
+      },
+      operationTime: new Timestamp({ t: 1660252128, i: 5 }),
+      [Symbol(errorLabels)]: Set(0) {}
+    }
+  },
+  level: 'error',
+  timestamp: '2022-08-12 02:38:49'
+}
+{
+  message: {
+    updateUserDataError: MongoServerError: Plan executor error during findAndModify :: caused by :: E11000 duplicate key error collection: TTP.users index: email_1 dup key: { email: "zed.saheer5@gmail.com" }
+        at Connection.onMessage (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\mongodb\src\cmap\connection.ts:440:20)
+        at MessageStream.<anonymous> (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\mongodb\src\cmap\connection.ts:267:56)
+        at MessageStream.emit (node:events:526:28)
+        at MessageStream.emit (node:domain:475:12)
+        at processIncomingData (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\mongodb\src\cmap\message_stream.ts:168:12)
+        at MessageStream._write (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\mongodb\src\cmap\message_stream.ts:65:5)
+        at writeOrBuffer (node:internal/streams/writable:389:12)
+        at _write (node:internal/streams/writable:330:10)
+        at MessageStream.Writable.write (node:internal/streams/writable:334:10)
+        at TLSSocket.ondata (node:internal/streams/readable:754:22) {
+      ok: 0,
+      code: 11000,
+      codeName: 'DuplicateKey',
+      keyPattern: { email: 1 },
+      keyValue: { email: 'zed.saheer5@gmail.com' },
+      '$clusterTime': {
+        clusterTime: new Timestamp({ t: 1660252291, i: 5 }),
+        signature: {
+          hash: new Binary(Buffer.from("79a09605ff5233c61eabcea4a7fafc625505da8f", "hex"), 0),
+          keyId: new Long("7090947428957814786")
+        }
+      },
+      operationTime: new Timestamp({ t: 1660252291, i: 5 }),
+      [Symbol(errorLabels)]: Set(0) {}
+    }
+  },
+  level: 'error',
+  timestamp: '2022-08-12 02:41:32'
+}
