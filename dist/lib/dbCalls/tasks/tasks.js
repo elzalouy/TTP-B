@@ -328,8 +328,12 @@ class TaskDB {
                     filter.memberId = data.memberId;
                 if (data.status)
                     filter.status = data.status;
-                if (data.name)
-                    filter.name = { $regex: data.name };
+                if (data.name) {
+                    //Making search value to lower case for case insensitive search
+                    let name = data.name.toLowerCase();
+                    filter.name = { $regex: name };
+                }
+                ;
                 if (data.projectManager)
                     filter.projectManager = { $regex: data.projectManager };
                 let tasks = yield Task_1.default.find(filter);
@@ -355,7 +359,7 @@ class TaskDB {
         });
     }
     static __updateTaskByTrelloDB(data) {
-        var _a;
+        var _a, _b;
         return __awaiter(this, void 0, void 0, function* () {
             try {
                 let task = yield Task_1.default.findOne({ cardId: data.cardId });
@@ -365,6 +369,10 @@ class TaskDB {
                 task.cardId = (data === null || data === void 0 ? void 0 : data.cardId) ? data.cardId : task.cardId;
                 task.boardId = (data === null || data === void 0 ? void 0 : data.boardId) ? data.boardId : task.boardId;
                 task.description = data.description ? data.description : task.description;
+                task.teamId =
+                    (data === null || data === void 0 ? void 0 : data.teamId) === null || ((_a = data === null || data === void 0 ? void 0 : data.teamId) === null || _a === void 0 ? void 0 : _a.toString().length) > 0
+                        ? data.teamId
+                        : task.teamId;
                 task.lastMove = (data === null || data === void 0 ? void 0 : data.lastMove) ? data.lastMove : task.lastMoveDate;
                 task.lastMoveDate = (data === null || data === void 0 ? void 0 : data.lastMoveDate)
                     ? data.lastMoveDate
@@ -373,12 +381,11 @@ class TaskDB {
                     let files = [...task.attachedFiles, ...data.attachedFiles];
                     task.attachedFiles = files;
                 }
-                if (data.deleteFiles && ((_a = data === null || data === void 0 ? void 0 : data.deleteFiles) === null || _a === void 0 ? void 0 : _a.trelloId)) {
+                if (data.deleteFiles && ((_b = data === null || data === void 0 ? void 0 : data.deleteFiles) === null || _b === void 0 ? void 0 : _b.trelloId)) {
                     task.attachedFiles = lodash_1.default.filter(task.attachedFiles, (item) => { var _a; return item.trelloId !== ((_a = data === null || data === void 0 ? void 0 : data.deleteFiles) === null || _a === void 0 ? void 0 : _a.trelloId); });
                 }
                 task.attachedFiles = task.attachedFiles.filter((item) => item.mimeType !== "");
                 task.attachedFiles = lodash_1.default.uniqBy(task.attachedFiles, "trelloId");
-                console.log(task);
                 let id = task._id;
                 let result = yield Task_1.default.findOneAndUpdate({ _id: id }, task, {
                     new: true,

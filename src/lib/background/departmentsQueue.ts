@@ -2,7 +2,6 @@ import queue from "queue";
 import logger from "../../logger";
 import BoardController from "../controllers/trello";
 import DepartmentController from "../controllers/department";
-import { DepartmentData, DepartmentInfo } from "../types/model/Department";
 import { io } from "../../index";
 
 import {
@@ -21,117 +20,118 @@ export const DepartmentQueue = queue({ results: [] });
  * If an error just hapenned, it will emit an event to the client using the websocket connection and cancel the create request.
  * @param department DepartmentData
  */
-export const createOneJob = (
-  department: DepartmentInfo,
-  teams: { name: string; _id: any }[]
-) => {
-  DepartmentQueue.push(async (cb) => {
-    try {
-      if (department._id) {
-        let defaultListId: string = "";
-        let sharedListID: string = "";
-        let doneListId: string = "";
-        let reviewListId: string = "";
-        let notClearListId: string = "";
-        let canceldListId: string = "";
-        let inProgressListId: string = "";
 
-        let inprogress: createListResponse =
-          await BoardController.addListToBoard(
-            department.boardId,
-            "inProgress"
-          );
-        inProgressListId = inprogress.id;
+// export const createOneJob = (
+//   department: DepartmentInfo,
+//   teams: { name: string; _id: any }[]
+// ) => {
+//   DepartmentQueue.push(async (cb) => {
+//     try {
+//       if (department._id) {
+//         let defaultListId: string = "";
+//         let sharedListID: string = "";
+//         let doneListId: string = "";
+//         let reviewListId: string = "";
+//         let notClearListId: string = "";
+//         let canceldListId: string = "";
+//         let inProgressListId: string = "";
 
-        let cancel: createListResponse = await BoardController.addListToBoard(
-          department.boardId,
-          "Cancled"
-        );
-        canceldListId = cancel.id;
+//         let inprogress: createListResponse =
+//           await BoardController.addListToBoard(
+//             department.boardId,
+//             "inProgress"
+//           );
+//         inProgressListId = inprogress.id;
 
-        let NotClear: createListResponse = await BoardController.addListToBoard(
-          department.boardId,
-          "Not Clear"
-        );
-        notClearListId = NotClear.id;
+//         let cancel: createListResponse = await BoardController.addListToBoard(
+//           department.boardId,
+//           "Cancled"
+//         );
+//         canceldListId = cancel.id;
 
-        let done: createListResponse = await BoardController.addListToBoard(
-          department.boardId,
-          "Done"
-        );
-        doneListId = done.id;
+//         let NotClear: createListResponse = await BoardController.addListToBoard(
+//           department.boardId,
+//           "Not Clear"
+//         );
+//         notClearListId = NotClear.id;
 
-        let shared: createListResponse = await BoardController.addListToBoard(
-          department.boardId,
-          "Shared"
-        );
-        sharedListID = shared.id;
+//         let done: createListResponse = await BoardController.addListToBoard(
+//           department.boardId,
+//           "Done"
+//         );
+//         doneListId = done.id;
 
-        let review: createListResponse = await BoardController.addListToBoard(
-          department.boardId,
-          "Review"
-        );
-        reviewListId = review.id;
+//         let shared: createListResponse = await BoardController.addListToBoard(
+//           department.boardId,
+//           "Shared"
+//         );
+//         sharedListID = shared.id;
 
-        let defaultList: createListResponse =
-          await BoardController.addListToBoard(
-            department.boardId,
-            "Tasks Board"
-          );
-        defaultListId = defaultList.id;
+//         let review: createListResponse = await BoardController.addListToBoard(
+//           department.boardId,
+//           "Review"
+//         );
+//         reviewListId = review.id;
 
-        // // create list and webhook for the team
-        let teamListIds: { idInTrello: string; idInDB: any; name: string }[] =
-          await DepartmentController.__createTeamAndList(
-            teams,
-            department.boardId
-          );
-        defaultListId = defaultList.id;
+//         let defaultList: createListResponse =
+//           await BoardController.addListToBoard(
+//             department.boardId,
+//             "Tasks Board"
+//           );
+//         defaultListId = defaultList.id;
 
-        // create webhook for list
-        // const listId: string[] = [
-        //   defaultListId,
-        //   sharedListID,
-        //   doneListId,
-        //   reviewListId,
-        //   notClearListId,
-        //   canceldListId,
-        //   inProgressListId,
-        // ];
+//         // // create list and webhook for the team
+//         let teamListIds: { idInTrello: string; idInDB: any; name: string }[] =
+//           await DepartmentController.__createTeamAndList(
+//             teams,
+//             department.boardId
+//           );
+//         defaultListId = defaultList.id;
 
-        // let webhookCreate = listId.map(async (id) => {
-        //   return await BoardController.createWebHook(id);
-        // });
-        // Promise.all(webhookCreate).then((res) =>
-        //   logger.info({ webhookCreateResult: "webhook done" })
-        // );
-        let data = {
-          defaultListId,
-          sharedListID,
-          doneListId,
-          reviewListId,
-          notClearListId,
-          canceldListId,
-          inProgressListId,
-          teamsId: teamListIds,
-        };
-        let result = await DepartmentController.__createTeamList(
-          teams,
-          department._id,
-          data
-        );
-        if (!department || !result) {
-          io?.sockets?.emit("new-department-error", { id: department._id });
-          await BoardController.deleteBoard(department.boardId);
-          await DepartmentController.deleteDepartment(department._id);
-          await cb(new Error("Board was not created"), null);
-        }
-        io?.sockets?.emit("new-department", result);
-        cb(null, result);
-      }
-    } catch (error) {
-      // socket event should emit here
-      logger.error({ createDepartmentJobError: error });
-    }
-  });
-};
+//         // create webhook for list
+//         // const listId: string[] = [
+//         //   defaultListId,
+//         //   sharedListID,
+//         //   doneListId,
+//         //   reviewListId,
+//         //   notClearListId,
+//         //   canceldListId,
+//         //   inProgressListId,
+//         // ];
+
+//         // let webhookCreate = listId.map(async (id) => {
+//         //   return await BoardController.createWebHook(id);
+//         // });
+//         // Promise.all(webhookCreate).then((res) =>
+//         //   logger.info({ webhookCreateResult: "webhook done" })
+//         // );
+//         let data = {
+//           defaultListId,
+//           sharedListID,
+//           doneListId,
+//           reviewListId,
+//           notClearListId,
+//           canceldListId,
+//           inProgressListId,
+//           teamsId: teamListIds,
+//         };
+//         let result = await DepartmentController.__createTeamList(
+//           teams,
+//           department._id,
+//           data
+//         );
+//         if (!department || !result) {
+//           io?.sockets?.emit("new-department-error", { id: department._id });
+//           await BoardController.deleteBoard(department.boardId);
+//           await DepartmentController.deleteDepartment(department._id);
+//           await cb(new Error("Board was not created"), null);
+//         }
+//         io?.sockets?.emit("new-department", result);
+//         cb(null, result);
+//       }
+//     } catch (error) {
+//       // socket event should emit here
+//       logger.error({ createDepartmentJobError: error });
+//     }
+//   });
+// };

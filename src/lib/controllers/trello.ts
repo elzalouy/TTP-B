@@ -1,26 +1,23 @@
-import { MemberType } from "../types/model/User";
-import { trelloApi } from "../services/trelloApi";
-import logger from "../../logger";
-import fetch, { RequestInit } from "node-fetch";
-import Config from "config";
-import { config } from "dotenv";
-import request from "request";
 import fs from "fs";
-import { Response } from "express";
-import { AttachmentResponse, TaskData, TaskInfo } from "../types/model/tasks";
-import { method } from "lodash";
+import Config from "config";
+import logger from "../../logger";
+import { config } from "dotenv";
+import { trelloApi } from "../services/trelloApi";
+import { MemberType } from "../types/model/User";
+import fetch, { RequestInit } from "node-fetch";
+import { AttachmentResponse, TaskData } from "../types/model/tasks";
 import {
   updateCardResponse,
   webhookUpdateInterface,
 } from "../types/controller/Tasks";
-import { moveTaskNotificationJob, TaskQueue } from "../background/taskQueue";
 import { io } from "../../index";
 import TaskController from "./task";
 import { validateExtentions } from "../services/validation";
-import TechMemberController from "./techMember";
 import TechMemberDB from "../dbCalls/techMember/techMember";
-var FormData = require("form-data");
+import Department from "../models/Department";
+
 config();
+var FormData = require("form-data");
 
 class BoardController {
   static async getBoardsInTrello() {
@@ -171,6 +168,11 @@ class BoardController {
       );
       let board: any = await fetch(updateBoardApi, {
         method: "PUT",
+      }).catch((err) => {
+        throw JSON.stringify({
+          error: "TrelloError",
+          message: "Failed to update trello name and color",
+        });
       });
       return board.json();
     } catch (error) {
@@ -189,8 +191,8 @@ class BoardController {
           Accept: "application/json",
         },
       });
-      let borderData = board.json();
-      logger.info({ borderData, createBoardApi });
+      let borderData = await board.json();
+      logger.info({ borderData });
       return borderData;
     } catch (error) {
       logger.error({ createNewBoardError: error });
@@ -340,10 +342,16 @@ class BoardController {
         headers: {
           Accept: "application/json",
         },
+      }).catch((err) => {
+        throw JSON.stringify({
+          error: "TrelloError",
+          message: "Failed to update trello lists",
+        });
       });
       return newList.json();
     } catch (error) {
       logger.error({ addListError: error });
+      return error;
     }
   }
 
@@ -496,15 +504,10 @@ class BoardController {
         boardId: data.action.data.board.id,
         cardId: data.action.data.card?.id,
       };
+      let department = await Department.findOne({
+        boardId: task.boardId,
+      });
 
-      // if (!status.includes(data.action.data?.list?.name)) {
-      //   let team = await TechMemberDB.__getOneTechMember({
-      //     listId: data.action.data?.list?.id,
-      //   });
-      //   if (team._id) task.teamId = team._id;
-      // }
-
-      //update
       if (
         type === "moveCardToBoard" &&
         action === "action_move_card_to_board"
@@ -512,13 +515,11 @@ class BoardController {
         task.boardId = data.action.data.board.id;
         task.listId = data.action.data.list.id;
         // move task to the new team
-        let team = await TechMemberDB.__getOneTechMember({
-          listId: data.action.data.list.id,
-        });
-        console.log(team);
+        let team = department.teams.find(
+          (item) => item.listId === data.action.data.list.id
+        );
         if (team) task.teamId = team._id;
         else task.teamId = null;
-        console.log(task);
         // update task
         let result = await TaskController.updateTaskByTrelloDB(task);
         return io?.sockets?.emit("update-task", result);
@@ -536,9 +537,9 @@ class BoardController {
           task.lastMove = data.action.data.listBefore.name;
           task.lastMoveDate = new Date().toUTCString();
           if (!status.includes(data.action.data.listAfter?.name)) {
-            let team = await TechMemberDB.__getOneTechMember({
-              listId: data.action.data.listAfter.id,
-            });
+            let team = await department.teams.find(
+              (item) => item.listId === data.action.data.listAfter.id
+            );
             if (team) task.teamId = team._id;
           }
         }

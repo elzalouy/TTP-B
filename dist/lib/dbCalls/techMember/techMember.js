@@ -64,6 +64,17 @@ const TechMemberDB = class TechMemberDB {
             }
         });
     }
+    static __getOneTechMember(data) {
+        return __awaiter(this, void 0, void 0, function* () {
+            try {
+                let techMem = yield Teams_1.default.findOne(data).lean();
+                return techMem;
+            }
+            catch (error) {
+                logger_1.default.error({ getTechMemberDBError: error });
+            }
+        });
+    }
     static __updateMember(data) {
         return __awaiter(this, void 0, void 0, function* () {
             try {

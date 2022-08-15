@@ -1,58 +1,63 @@
-import { ObjectId } from "bson";
 import { Document } from "mongoose";
+import Joi from "joi";
 
-export interface DepartmentInfo extends Document {
+export const ListTypes = [
+  "Tasks Board",
+  "inProgress",
+  "Shared",
+  "Review",
+  "Done",
+  "Not Clear",
+  "Cancled",
+];
+export interface IDepartment extends Document {
+  _id?: string;
   name: string;
   boardId: string;
-  defaultListId: string;
-  reviewListId: string;
-  sharedListID: string;
-  doneListId: string;
-  notClearListId: string;
-  canceldListId: string;
-  inProgressListId: string;
+  lists: IList[];
   color: string;
-  mainBoard: boolean;
-  teamsId: {
-    idInTrello: string;
-    idInDB: any;
-  }[];
-  boardURL?:string;
-  tasks: string[];
+  teams: ITeam[];
+  boardURL?: string;
+  /**
+   * createDepartmentValidate
+   *
+   * It's a validation function for the new department document in the request, it will check all roles needed to be achieved to save this doc.
+   */
+  createDepartmentValidate(): Joi.ValidationResult<any>;
+  createDepartmentBoard(cb?: (doc: IDepartment) => any): IDepartment;
+  deleteDepartment(cb?: (doc: IDepartment) => any): IDepartment;
+  updateDepartmentValidate(
+    data: IDepartmentState,
+    cb?: (doc: IDepartment) => any
+  ): Joi.ValidationResult<any>;
+  updateDepartment(
+    data?: IDepartmentState,
+    cb?: (doc: IDepartment) => any
+  ): IDepartment;
+  updateTeams(
+    data: IDepartmentState,
+    cb?: (doc: IDepartment) => any
+  ): IDepartment;
 }
 
-export interface DepartmentData {
-  id?: string;
-  name?: string;
-  color?: string;
-  boardId?: string;
-  defaultListId?: string;
-  reviewListId?: string;
-  sharedListID?: string;
-  doneListId?: string;
-  notClearListId?: string;
-  inProgressListId?: string;
-  canceldListId?: string;
-  teamsId?: { idInTrello: string; idInDB: any }[];
-  teams?: { name: string; _id: any }[];
-  mainBoard?: boolean | null;
-  boardURL?:string;
-  tasks?: string[];
-}
-
-export interface UpdateDepartment {
+export interface IDepartmentState {
   _id?: string;
   name?: string;
-  boardId?: string;
+  lists?: IList[];
   color?: string;
-  mainBoard?: boolean | null;
-  teams?: string[];
-  removeTeam?: string[] | null;
-  addTeam?:
-    | {
-        _id: string;
-        name: string;
-      }[]
-    | null;
-  listIds?: string[] | null;
+  teams?: ITeam[];
+  boardURL?: string;
+  removeTeams?: string[];
+  addTeams?: string[];
+}
+export interface ITeam {
+  _id?: string;
+  name: string;
+  listId: string;
+  isDeleted: boolean;
+}
+export interface IList {
+  _id: string;
+  name: string;
+  listId: string;
 }

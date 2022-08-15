@@ -72,7 +72,7 @@ const UserController = class UserController extends user_1.default {
                     subject: "This is a reminder to set a New Password for your TTP account",
                     token: token,
                     path: "newPassword",
-                    body: "Set your new password",
+                    image: "http://drive.google.com/uc?export=view&id=1bfh1fwvqg9JegwTghhuYWIhUS0wGIryj"
                 });
             }
             catch (error) {
@@ -231,10 +231,10 @@ const UserController = class UserController extends user_1.default {
                 let token = yield (0, auth_1.createJwtToken)(newUser._id.toString());
                 (0, mail_1.default)({
                     email: email,
-                    subject: "Update Password",
+                    subject: "Please update your new password",
                     token: token,
                     path: "newPassword",
-                    body: "Set your new password",
+                    image: "http://drive.google.com/uc?export=view&id=1bfh1fwvqg9JegwTghhuYWIhUS0wGIryj"
                 });
                 return newUser;
             }

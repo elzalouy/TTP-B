@@ -72,7 +72,6 @@ const NotificationController = class NotificationController extends notification
                 // get Notified users
                 let id = user.id;
                 let project = yield Project_1.default.findOne({ _id: data.projectId });
-                console.log(data, project);
                 // create notificaton
                 if (project.projectManager.toString() !== id) {
                     let newNotification = {

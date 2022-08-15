@@ -2,7 +2,7 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.default = {
     CREATE_DEP: "/createDep",
-    UPDATE_DEP: "/updateDep",
-    DELETE_DEP: "/deleteDep",
-    GET_DEPS: "/getDeps"
+    UPDATE_DEP: "/updateDep/:id",
+    DELETE_DEP: "/deleteDep/:id",
+    GET_DEPS: "/getDeps",
 };

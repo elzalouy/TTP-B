@@ -26,9 +26,8 @@ const sendMail = (data) => __awaiter(void 0, void 0, void 0, function* () {
     const source = fs_1.default.readFileSync(filePath, 'utf-8').toString();
     const template = handlebars_1.default.compile(source);
     const replacements = {
-        action: data.action,
         link: `${config_1.default.get("FrontEndUrl")}/${data.path}/${data.token}`,
-        body: data.body,
+        image: data.image
     };
     const htmlToSend = template(replacements);
     try {

@@ -1,17 +1,18 @@
-import { UpdateDepartment, DepartmentData } from "../../types/model/Department";
-import { successMsg } from "../../utils/successMsg";
 import { customeError } from "../../utils/errorUtils";
 import { Request, Response } from "express";
 import logger from "../../../logger";
 import DepartmentController from "../../controllers/department";
+import { IDepartmentState } from "../../types/model/Department";
 
 const DepartmentReq = class DepartmentReq extends DepartmentController {
   static async handleCreateDepartment(req: Request, res: Response) {
     try {
-      let department: any = await super.createDepartment(req.body);
-      if (department?.error) return res.status(400).send(department?.message);
-      if (department) {
-        return res.status(200).send(department);
+      let response: any = await super.createDepartment(req.body);
+      console.log({ response: response });
+      if (response?.error || response?.message)
+        return res.status(400).send(response?.message);
+      if (response) {
+        return res.status(200).send(response);
       } else {
         return res.status(400).send(customeError("create_dep_error", 400));
       }
@@ -23,40 +24,34 @@ const DepartmentReq = class DepartmentReq extends DepartmentController {
 
   static async handleUpdateDepartment(req: Request, res: Response) {
     try {
-      let departmentData: UpdateDepartment = req.body;
-      logger.info({ departmentData });
-      if (!departmentData) {
-        return res.status(400).send(customeError("update_dep_error", 400));
-      }
+      let departmentData: IDepartmentState = req.body;
+      let id = req.params.id;
 
-      let department = await super.updateDepartment(departmentData);
-      logger.info({ department });
-
-      if (department) {
-        return res.status(200).send(department);
+      let response: any = await super.updateDepartment(id, departmentData);
+      if (response?.error || response?.message)
+        return res.status(400).send(response?.message);
+      if (response) {
+        return res.status(200).send(response);
       } else {
-        return res.status(400).send(customeError("update_dep_error", 400));
+        return res.status(400).send(customeError("create_dep_error", 400));
       }
     } catch (error) {
       logger.error({ handleUpdateDepartmentDataError: error });
-      return res.status(500).send(customeError("server_error", 500));
+      return res.status(400).send(error);
     }
   }
 
   static async handleDeleteDepartment(req: Request, res: Response) {
     try {
-      let { _id } = req.query;
-      if (!_id) {
-        return res.status(400).send(customeError("delete_dep_error", 400));
-      }
-      let department = await super.deleteDepartment({
-        _id,
-      });
-      if (department) {
-        return res.status(200).send(successMsg("delete_dep_success", 200));
-      } else {
-        return res.status(400).send(customeError("delete_dep_error", 400));
-      }
+      let id = req.params.id;
+      if (id) {
+        let response: any = await super.deleteDepartment(id);
+        if (response?.error) return res.status(400).send(response.message);
+        return res.status(200).send(response);
+      } else
+        return res
+          .status(400)
+          .send("Request should have an id in the query params");
     } catch (error) {
       logger.error({ handleDeletDepartmentDataError: error });
       return res.status(500).send(customeError("server_error", 500));
@@ -65,12 +60,7 @@ const DepartmentReq = class DepartmentReq extends DepartmentController {
 
   static async handleGetDepartment(req: Request, res: Response) {
     try {
-      let data: object = req.query;
-      if (!data) {
-        return res.status(400).send(customeError("get_dep_error", 400));
-      }
-
-      let department = await super.getDepartments(data, true);
+      let department = await super.getDepartments();
       if (department) {
         return res.status(200).send(department);
       } else {
