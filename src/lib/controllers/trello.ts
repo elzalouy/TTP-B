@@ -15,6 +15,7 @@ import TaskController from "./task";
 import { validateExtentions } from "../services/validation";
 import TechMemberDB from "../dbCalls/techMember/techMember";
 import Department from "../models/Department";
+import Tasks from "../models/Task";
 
 config();
 var FormData = require("form-data");
@@ -493,7 +494,6 @@ class BoardController {
       let action = data?.action?.display?.translationKey
         ? data?.action?.display?.translationKey
         : "";
-      console.log(type, action);
 
       let task: TaskData = {
         name: data.action.data.card.name,

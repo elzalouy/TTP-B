@@ -1,6 +1,6 @@
 import Joi from "joi";
 import _ from "lodash";
-import mongoose, { model, Schema } from "mongoose";
+import { model, Schema } from "mongoose";
 import logger from "../../logger";
 import BoardController from "../controllers/trello";
 import { createBoardResponse } from "../types/controller/board";
@@ -329,6 +329,7 @@ DepartmentSchema.methods.updateTeams = async function (
     );
     depTeams = [...this.teams, ...depTeams];
     this.teams = depTeams;
+    cb(this);
     return this;
   } catch (error: any) {
     logger.error({ updateTeamsError: error });

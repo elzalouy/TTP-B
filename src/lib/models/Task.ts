@@ -1,12 +1,14 @@
 import { model, Schema, Model } from "mongoose";
-import { TaskInfo } from "../types/model/tasks";
+import logger from "../../logger";
+import { TaskInfo, TasksModel } from "../types/model/tasks";
 const FilesSchema: Schema = new Schema({
   name: { type: String },
   trelloId: { type: String },
   mimeType: { type: String },
   url: { type: String },
 });
-const TaskSchema: Schema = new Schema<TaskInfo>(
+
+const TaskSchema = new Schema<TaskInfo, TasksModel>(
   {
     name: {
       type: String,
@@ -87,12 +89,46 @@ const TaskSchema: Schema = new Schema<TaskInfo>(
       type: String,
       default: null,
     },
+    history: {
+      type: [
+        {
+          listId: { type: String, required: true },
+          boardId: { type: String, required: true, unique: true },
+          date: { type: String, required: true },
+        },
+      ],
+      default: null,
+      required: false,
+    },
   },
   {
     timestamps: true,
     strict: false,
   }
 );
-
-const Tasks: Model<TaskInfo> = model("tasks", TaskSchema);
+TaskSchema.static(
+  "updateHistory",
+  async function (cardId: string, cb?: (doc: TaskInfo) => any) {
+    try {
+      let task = await Tasks.findOne({ cardId: cardId });
+      if (task) {
+        let index = task.history.findIndex((i) => i.boardId === task.boardId);
+        if (index >= 0) {
+          task.history[index].listId = task.listId;
+          task.history[index].date = new Date().toString();
+        } else
+          task.history.push({
+            boardId: task.boardId,
+            listId: task.listId,
+            date: new Date().toString(),
+          });
+        return await task.save();
+      }
+    } catch (error) {
+      logger.error({ updateTeamsError: error });
+      return error;
+    }
+  }
+);
+const Tasks = model<TaskInfo, TasksModel>("tasks", TaskSchema);
 export default Tasks;
