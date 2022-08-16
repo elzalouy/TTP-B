@@ -202,6 +202,16 @@ const UserController = class UserController extends user_1.default {
                 if (!findUser) {
                     return null;
                 }
+                let token = yield (0, auth_1.createJwtToken)(id.toString());
+                if (data.email) {
+                    (0, mail_1.default)({
+                        email: data.email,
+                        subject: "Please update your new password",
+                        token: token,
+                        path: "newPassword",
+                        image: "http://drive.google.com/uc?export=view&id=1bfh1fwvqg9JegwTghhuYWIhUS0wGIryj"
+                    });
+                }
                 return yield _super.updateUser.call(this, Object.assign({}, data));
             }
             catch (error) {
