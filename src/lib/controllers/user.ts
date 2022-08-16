@@ -170,6 +170,18 @@ const UserController = class UserController extends UserDB {
         return null;
       }
 
+      let token = await createJwtToken(id.toString());
+
+      if(data.email){
+        sendMail({
+          email: data.email,
+          subject: "Please update your new password",
+          token: token,
+          path: "newPassword",
+          image: "http://drive.google.com/uc?export=view&id=1bfh1fwvqg9JegwTghhuYWIhUS0wGIryj"
+        });
+      }
+
       return await super.updateUser({ ...data });
     } catch (error) {
       logger.error({ updateUserInfoError: error });
