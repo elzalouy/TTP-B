@@ -89332,3 +89332,9 @@
   service: 'trello',
   timestamp: '2022-08-16T10:08:53.262Z'
 }
+{
+  message: { db: 'mongodb://localhost:27017/testTTP' },
+  level: 'info',
+  service: 'trello',
+  timestamp: '2022-08-16T10:35:59.655Z'
+}
