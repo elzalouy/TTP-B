@@ -12,26 +12,16 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-const user_1 = __importDefault(require("../../controllers/user"));
-const auth_1 = require("../../services/auth");
+const config_1 = __importDefault(require("config"));
 exports.default = (req, res, next) => __awaiter(void 0, void 0, void 0, function* () {
-    var _a, _b;
     try {
-        const token = req.header("Authorization");
-        // missing or bad authentication => 401 unauthorized
-        // not authorized to perform a task => 403 forbidden
-        if (!token)
-            return res.status(401).send("Access denied, No token provided");
-        const decoded = yield (0, auth_1.jwtVerify)(token);
-        if (!((_a = decoded === null || decoded === void 0 ? void 0 : decoded.user) === null || _a === void 0 ? void 0 : _a.id)) {
-            return res.status(400).send("Invalid Token");
-        }
-        let user = yield user_1.default.getUserById((_b = decoded === null || decoded === void 0 ? void 0 : decoded.user) === null || _b === void 0 ? void 0 : _b.id);
-        if (user.role !== "OM")
+        let envName = config_1.default.get("name");
+        if (envName === "TTP development" && process.env.NODE_ENV)
+            next();
+        else
             return res
-                .status(401)
-                .send("Un-authenticated, you should be authenticated to do this job ");
-        next();
+                .status(400)
+                .send("Dropping the collection cannot be executed if node environment wasn't in testing mode");
     }
     catch (error) {
         res.status(401).send("Invalid Token");

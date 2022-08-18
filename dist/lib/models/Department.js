@@ -287,6 +287,7 @@ DepartmentSchema.methods.updateTeams = function (data, cb) {
             })));
             depTeams = [...this.teams, ...depTeams];
             this.teams = depTeams;
+            cb(this);
             return this;
         }
         catch (error) {

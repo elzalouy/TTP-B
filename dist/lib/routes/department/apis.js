@@ -5,4 +5,5 @@ exports.default = {
     UPDATE_DEP: "/updateDep/:id",
     DELETE_DEP: "/deleteDep/:id",
     GET_DEPS: "/getDeps",
+    DROP_TEST: "/dropTestCollection",
 };

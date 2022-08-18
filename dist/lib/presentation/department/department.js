@@ -107,5 +107,20 @@ const DepartmentReq = class DepartmentReq extends department_1.default {
             }
         });
     }
+    static handleDropTestCollection(req, res) {
+        const _super = Object.create(null, {
+            deleteAllDocs: { get: () => super.deleteAllDocs }
+        });
+        return __awaiter(this, void 0, void 0, function* () {
+            try {
+                yield _super.deleteAllDocs.call(this);
+                return res.status(200).send("done");
+            }
+            catch (error) {
+                logger_1.default.error({ handleDropTestCollection: error });
+                return res.status(500).send((0, errorUtils_1.customeError)("server_error", 500));
+            }
+        });
+    }
 };
 exports.default = DepartmentReq;
