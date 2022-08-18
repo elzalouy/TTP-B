@@ -71,6 +71,15 @@ const DepartmentReq = class DepartmentReq extends DepartmentController {
       return res.status(500).send(customeError("server_error", 500));
     }
   }
+  static async handleDropTestCollection(req: Request, res: Response) {
+    try {
+      await super.deleteAllDocs();
+      return res.status(200).send("done");
+    } catch (error) {
+      logger.error({ handleDropTestCollection: error });
+      return res.status(500).send(customeError("server_error", 500));
+    }
+  }
 };
 
 export default DepartmentReq;

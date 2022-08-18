@@ -9,7 +9,7 @@ export default async (req: Request, res: Response, next: any) => {
     if (!token) return res.status(401).send("Access denied, No token provided");
     const decoded: any = await jwtVerify(token);
     if (!decoded?.user?.id) {
-      return res.status(401).send("Invalid Token");
+      return res.status(400).send("Invalid Token");
     }
     let user = await UserController.getUserById(decoded?.user?.id);
     if (user.role !== "OM")

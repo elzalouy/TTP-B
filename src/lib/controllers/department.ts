@@ -1,3 +1,4 @@
+import mongoose from "mongoose";
 import logger from "../../logger";
 import Department from "../models/Department";
 import {
@@ -11,6 +12,9 @@ export default class DepartmentController {
     return await DepartmentController.__createNewDepartment(data);
   }
 
+  static async deleteAllDocs() {
+    return await DepartmentController.__deleteAllDocs();
+  }
   static async updateDepartment(id: string, data: IDepartmentState) {
     return await DepartmentController.__updateDepartmentData(id, data);
   }
@@ -91,6 +95,17 @@ export default class DepartmentController {
         return error;
       }
       logger.error({ createDepartmentError: error });
+    }
+  }
+  static async __deleteAllDocs() {
+    try {
+      let boards = await Department.find({}).select("boardId");
+      boards.map(
+        async (item) => await BoardController.deleteBoard(item.boardId)
+      );
+      await Department.deleteMany({});
+    } catch (error) {
+      logger.error({ dropCollectionError: error });
     }
   }
 }
