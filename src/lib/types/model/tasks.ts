@@ -24,7 +24,6 @@ export interface TaskInfo extends Document {
   description?: string;
   lastMove?: string | String;
   lastMoveDate?: string | String;
-  history?: [TaskHistory];
 }
 export interface TaskHistory {
   listId: string;

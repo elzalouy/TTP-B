@@ -89,46 +89,12 @@ const TaskSchema = new Schema<TaskInfo, TasksModel>(
       type: String,
       default: null,
     },
-    history: {
-      type: [
-        {
-          listId: { type: String, required: true },
-          boardId: { type: String, required: true, unique: true },
-          date: { type: String, required: true },
-        },
-      ],
-      default: null,
-      required: false,
-    },
   },
   {
     timestamps: true,
     strict: false,
   }
 );
-TaskSchema.static(
-  "updateHistory",
-  async function (cardId: string, cb?: (doc: TaskInfo) => any) {
-    try {
-      let task = await Tasks.findOne({ cardId: cardId });
-      if (task) {
-        let index = task.history.findIndex((i) => i.boardId === task.boardId);
-        if (index >= 0) {
-          task.history[index].listId = task.listId;
-          task.history[index].date = new Date().toString();
-        } else
-          task.history.push({
-            boardId: task.boardId,
-            listId: task.listId,
-            date: new Date().toString(),
-          });
-        return await task.save();
-      }
-    } catch (error) {
-      logger.error({ updateTeamsError: error });
-      return error;
-    }
-  }
-);
+
 const Tasks = model<TaskInfo, TasksModel>("tasks", TaskSchema);
 export default Tasks;
