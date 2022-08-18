@@ -1,7 +1,10 @@
 import { bool } from "aws-sdk/clients/signer";
 import { Binary, ObjectId } from "bson";
-import { Document } from "mongoose";
-// export interface TrelloData
+import { Document, Model } from "mongoose";
+
+export interface TasksModel extends Model<TaskInfo> {
+  updateHistory(cardId: string, cb?: (doc: TaskInfo) => any): TaskInfo;
+}
 export interface TaskInfo extends Document {
   name: string;
   projectId: ObjectId;
@@ -21,6 +24,12 @@ export interface TaskInfo extends Document {
   description?: string;
   lastMove?: string | String;
   lastMoveDate?: string | String;
+  history?: [TaskHistory];
+}
+export interface TaskHistory {
+  listId: string;
+  boardId: string;
+  date: string;
 }
 export interface TasksStatistics {
   id?: ObjectId;
