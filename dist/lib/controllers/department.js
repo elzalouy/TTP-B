@@ -22,6 +22,11 @@ class DepartmentController {
             return yield DepartmentController.__createNewDepartment(data);
         });
     }
+    static deleteAllDocs() {
+        return __awaiter(this, void 0, void 0, function* () {
+            return yield DepartmentController.__deleteAllDocs();
+        });
+    }
     static updateDepartment(id, data) {
         return __awaiter(this, void 0, void 0, function* () {
             return yield DepartmentController.__updateDepartmentData(id, data);
@@ -114,6 +119,18 @@ class DepartmentController {
                     return error;
                 }
                 logger_1.default.error({ createDepartmentError: error });
+            }
+        });
+    }
+    static __deleteAllDocs() {
+        return __awaiter(this, void 0, void 0, function* () {
+            try {
+                let boards = yield Department_1.default.find({}).select("boardId");
+                boards.map((item) => __awaiter(this, void 0, void 0, function* () { return yield trello_1.default.deleteBoard(item.boardId); }));
+                yield Department_1.default.deleteMany({});
+            }
+            catch (error) {
+                logger_1.default.error({ dropCollectionError: error });
             }
         });
     }

@@ -526,7 +526,6 @@ class BoardController {
                 let action = ((_c = (_b = data === null || data === void 0 ? void 0 : data.action) === null || _b === void 0 ? void 0 : _b.display) === null || _c === void 0 ? void 0 : _c.translationKey)
                     ? (_e = (_d = data === null || data === void 0 ? void 0 : data.action) === null || _d === void 0 ? void 0 : _d.display) === null || _e === void 0 ? void 0 : _e.translationKey
                     : "";
-                console.log(type, action);
                 let task = {
                     name: data.action.data.card.name,
                     listId: data.action.data.card.idList,
