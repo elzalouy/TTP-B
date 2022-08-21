@@ -226,6 +226,9 @@ DepartmentSchema.methods.updateDepartmentValidate = function (
 ) {
   try {
     let teams = this.teams.filter((item) => item.isDeleted === false);
+    teams = teams.filter(
+      (item) => !data.removeTeams.includes(item._id.toString())
+    );
     let teamName = teams.map((item) => item.name);
     console.log({ teams: this.teams, notDeleted: teams, names: teamName });
     let validateFun = updateDepartmentValidateSchema(teamName);
@@ -311,9 +314,14 @@ DepartmentSchema.methods.updateTeams = async function (
 ) {
   try {
     let depTeams: ITeam[] = [];
-    data.removeTeams.forEach(async (item, index) => {
-      let team = this.teams.find((t) => t._id.toString() === item);
-      if (team) {
+    // remove teams
+    this.teams = this.teams.map((item) => {
+      if (data.removeTeams.includes(item._id.toString())) item.isDeleted = true;
+      return item;
+    });
+    await data.removeTeams.forEach(async (item, index) => {
+      let team = this.teams.find((t) => t._id.toString());
+      if (team && team.isDeleted === false) {
         this.teams[index].isDeleted = true;
         await BoardController.addListToArchieve(this.teams[index].listId);
       }
@@ -329,7 +337,6 @@ DepartmentSchema.methods.updateTeams = async function (
     );
     depTeams = [...this.teams, ...depTeams];
     this.teams = depTeams;
-    cb(this);
     return this;
   } catch (error: any) {
     logger.error({ updateTeamsError: error });

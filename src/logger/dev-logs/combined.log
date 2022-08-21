@@ -1,0 +1,578 @@
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-08-21 08:21:29'
+}
+{
+  message: {
+    updateTeamsError: TypeError: cb is not a function
+        at model.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/models/Department.ts:332:5)
+        at Generator.next (<anonymous>)
+        at fulfilled (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/models/Department.ts:5:58)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5)
+  },
+  level: 'error',
+  timestamp: '2022-08-21 08:29:32'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-08-21 08:45:42'
+}
+{
+  message: {
+    updateTeamsError: TypeError: cb is not a function
+        at model.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/models/Department.ts:335:5)
+        at Generator.next (<anonymous>)
+        at fulfilled (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/models/Department.ts:5:58)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5)
+  },
+  level: 'error',
+  timestamp: '2022-08-21 08:46:46'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-08-21 08:50:04'
+}
+{
+  message: {
+    updateTeamsError: TypeError: cb is not a function
+        at model.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/models/Department.ts:335:5)
+        at Generator.next (<anonymous>)
+        at fulfilled (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/models/Department.ts:5:58)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5)
+  },
+  level: 'error',
+  timestamp: '2022-08-21 08:50:23'
+}
+{
+  message: {
+    removeBoard: 'https://api.trello.com/1/boards/6301c7e4415c09003754a952?response_type=token&key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68'
+  },
+  level: 'info',
+  timestamp: '2022-08-21 08:51:08'
+}
+{
+  message: { deleteTasksOfDepartment: { acknowledged: true, deletedCount: 1 } },
+  level: 'info',
+  timestamp: '2022-08-21 08:51:09'
+}
+{
+  message: {
+    borderData: {
+      id: '6301d5f81d59d509ab16293f',
+      name: 'department',
+      desc: '',
+      descData: null,
+      closed: false,
+      idOrganization: '62932bf998452a111d515e0d',
+      idEnterprise: null,
+      pinned: false,
+      url: 'https://trello.com/b/Bm5AWyT1/department',
+      shortUrl: 'https://trello.com/b/Bm5AWyT1',
+      prefs: {
+        permissionLevel: 'private',
+        hideVotes: false,
+        voting: 'disabled',
+        comments: 'members',
+        invitations: 'members',
+        selfJoin: true,
+        cardCovers: true,
+        isTemplate: false,
+        cardAging: 'regular',
+        calendarFeedEnabled: false,
+        hiddenPluginBoardButtons: [],
+        switcherViews: [
+          {
+            _id: '6301d5f81d59d509ab162940',
+            viewType: 'Board',
+            enabled: true
+          },
+          {
+            _id: '6301d5f81d59d509ab162941',
+            viewType: 'Table',
+            enabled: true
+          },
+          {
+            _id: '6301d5f81d59d509ab162942',
+            viewType: 'Calendar',
+            enabled: false
+          },
+          {
+            _id: '6301d5f81d59d509ab162943',
+            viewType: 'Dashboard',
+            enabled: false
+          },
+          {
+            _id: '6301d5f81d59d509ab162944',
+            viewType: 'Timeline',
+            enabled: false
+          },
+          {
+            _id: '6301d5f81d59d509ab162945',
+            viewType: 'Map',
+            enabled: false
+          }
+        ],
+        background: 'blue',
+        backgroundColor: '#0079BF',
+        backgroundImage: null,
+        backgroundImageScaled: null,
+        backgroundTile: false,
+        backgroundBrightness: 'dark',
+        backgroundBottomColor: '#0079BF',
+        backgroundTopColor: '#0079BF',
+        canBePublic: true,
+        canBeEnterprise: true,
+        canBeOrg: true,
+        canBePrivate: true,
+        canInvite: true
+      },
+      labelNames: {
+        green: '',
+        yellow: '',
+        orange: '',
+        red: '',
+        purple: '',
+        blue: '',
+        sky: '',
+        lime: '',
+        pink: '',
+        black: '',
+        green_dark: '',
+        yellow_dark: '',
+        orange_dark: '',
+        red_dark: '',
+        purple_dark: '',
+        blue_dark: '',
+        sky_dark: '',
+        lime_dark: '',
+        pink_dark: '',
+        black_dark: '',
+        green_light: '',
+        yellow_light: '',
+        orange_light: '',
+        red_light: '',
+        purple_light: '',
+        blue_light: '',
+        sky_light: '',
+        lime_light: '',
+        pink_light: '',
+        black_light: ''
+      },
+      limits: {}
+    }
+  },
+  level: 'info',
+  timestamp: '2022-08-21 08:51:36'
+}
+{
+  message: {
+    updateTeamsError: TypeError: cb is not a function
+        at model.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/models/Department.ts:335:5)
+        at Generator.next (<anonymous>)
+        at fulfilled (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/models/Department.ts:5:58)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5)
+  },
+  level: 'error',
+  timestamp: '2022-08-21 08:52:17'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-08-21 08:52:40'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-08-21 09:43:26'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-08-21 09:51:17'
+}
+{
+  message: {
+    removeBoard: 'https://api.trello.com/1/boards/6301d5f81d59d509ab16293f?response_type=token&key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68'
+  },
+  level: 'info',
+  timestamp: '2022-08-21 09:51:24'
+}
+{
+  message: { deleteTasksOfDepartment: { acknowledged: true, deletedCount: 0 } },
+  level: 'info',
+  timestamp: '2022-08-21 09:51:25'
+}
+{
+  message: {
+    borderData: {
+      id: '6301e4173d4336005bdba028',
+      name: 'department 1',
+      desc: '',
+      descData: null,
+      closed: false,
+      idOrganization: '62932bf998452a111d515e0d',
+      idEnterprise: null,
+      pinned: false,
+      url: 'https://trello.com/b/ac4Et86p/department-1',
+      shortUrl: 'https://trello.com/b/ac4Et86p',
+      prefs: {
+        permissionLevel: 'private',
+        hideVotes: false,
+        voting: 'disabled',
+        comments: 'members',
+        invitations: 'members',
+        selfJoin: true,
+        cardCovers: true,
+        isTemplate: false,
+        cardAging: 'regular',
+        calendarFeedEnabled: false,
+        hiddenPluginBoardButtons: [],
+        switcherViews: [
+          {
+            _id: '6301e4173d4336005bdba029',
+            viewType: 'Board',
+            enabled: true
+          },
+          {
+            _id: '6301e4173d4336005bdba02a',
+            viewType: 'Table',
+            enabled: true
+          },
+          {
+            _id: '6301e4173d4336005bdba02b',
+            viewType: 'Calendar',
+            enabled: false
+          },
+          {
+            _id: '6301e4173d4336005bdba02c',
+            viewType: 'Dashboard',
+            enabled: false
+          },
+          {
+            _id: '6301e4173d4336005bdba02d',
+            viewType: 'Timeline',
+            enabled: false
+          },
+          {
+            _id: '6301e4173d4336005bdba02e',
+            viewType: 'Map',
+            enabled: false
+          }
+        ],
+        background: 'blue',
+        backgroundColor: '#0079BF',
+        backgroundImage: null,
+        backgroundImageScaled: null,
+        backgroundTile: false,
+        backgroundBrightness: 'dark',
+        backgroundBottomColor: '#0079BF',
+        backgroundTopColor: '#0079BF',
+        canBePublic: true,
+        canBeEnterprise: true,
+        canBeOrg: true,
+        canBePrivate: true,
+        canInvite: true
+      },
+      labelNames: {
+        green: '',
+        yellow: '',
+        orange: '',
+        red: '',
+        purple: '',
+        blue: '',
+        sky: '',
+        lime: '',
+        pink: '',
+        black: '',
+        green_dark: '',
+        yellow_dark: '',
+        orange_dark: '',
+        red_dark: '',
+        purple_dark: '',
+        blue_dark: '',
+        sky_dark: '',
+        lime_dark: '',
+        pink_dark: '',
+        black_dark: '',
+        green_light: '',
+        yellow_light: '',
+        orange_light: '',
+        red_light: '',
+        purple_light: '',
+        blue_light: '',
+        sky_light: '',
+        lime_light: '',
+        pink_light: '',
+        black_light: ''
+      },
+      limits: {}
+    }
+  },
+  level: 'info',
+  timestamp: '2022-08-21 09:51:52'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-08-21 09:57:38'
+}
+{
+  message: {
+    removeBoard: 'https://api.trello.com/1/boards/6301e4173d4336005bdba028?response_type=token&key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68'
+  },
+  level: 'info',
+  timestamp: '2022-08-21 10:10:45'
+}
+{
+  message: { deleteTasksOfDepartment: { acknowledged: true, deletedCount: 0 } },
+  level: 'info',
+  timestamp: '2022-08-21 10:10:46'
+}
+{
+  message: {
+    borderData: {
+      id: '6301e898f3cd1a0045abd260',
+      name: 'Dep',
+      desc: '',
+      descData: null,
+      closed: false,
+      idOrganization: '62932bf998452a111d515e0d',
+      idEnterprise: null,
+      pinned: false,
+      url: 'https://trello.com/b/kW3FcAJG/dep',
+      shortUrl: 'https://trello.com/b/kW3FcAJG',
+      prefs: {
+        permissionLevel: 'private',
+        hideVotes: false,
+        voting: 'disabled',
+        comments: 'members',
+        invitations: 'members',
+        selfJoin: true,
+        cardCovers: true,
+        isTemplate: false,
+        cardAging: 'regular',
+        calendarFeedEnabled: false,
+        hiddenPluginBoardButtons: [],
+        switcherViews: [
+          {
+            _id: '6301e898f3cd1a0045abd261',
+            viewType: 'Board',
+            enabled: true
+          },
+          {
+            _id: '6301e898f3cd1a0045abd262',
+            viewType: 'Table',
+            enabled: true
+          },
+          {
+            _id: '6301e898f3cd1a0045abd263',
+            viewType: 'Calendar',
+            enabled: false
+          },
+          {
+            _id: '6301e898f3cd1a0045abd264',
+            viewType: 'Dashboard',
+            enabled: false
+          },
+          {
+            _id: '6301e898f3cd1a0045abd265',
+            viewType: 'Timeline',
+            enabled: false
+          },
+          {
+            _id: '6301e898f3cd1a0045abd266',
+            viewType: 'Map',
+            enabled: false
+          }
+        ],
+        background: 'blue',
+        backgroundColor: '#0079BF',
+        backgroundImage: null,
+        backgroundImageScaled: null,
+        backgroundTile: false,
+        backgroundBrightness: 'dark',
+        backgroundBottomColor: '#0079BF',
+        backgroundTopColor: '#0079BF',
+        canBePublic: true,
+        canBeEnterprise: true,
+        canBeOrg: true,
+        canBePrivate: true,
+        canInvite: true
+      },
+      labelNames: {
+        green: '',
+        yellow: '',
+        orange: '',
+        red: '',
+        purple: '',
+        blue: '',
+        sky: '',
+        lime: '',
+        pink: '',
+        black: '',
+        green_dark: '',
+        yellow_dark: '',
+        orange_dark: '',
+        red_dark: '',
+        purple_dark: '',
+        blue_dark: '',
+        sky_dark: '',
+        lime_dark: '',
+        pink_dark: '',
+        black_dark: '',
+        green_light: '',
+        yellow_light: '',
+        orange_light: '',
+        red_light: '',
+        purple_light: '',
+        blue_light: '',
+        sky_light: '',
+        lime_light: '',
+        pink_light: '',
+        black_light: ''
+      },
+      limits: {}
+    }
+  },
+  level: 'info',
+  timestamp: '2022-08-21 10:11:05'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-08-21 10:17:13'
+}
+{
+  message: {
+    removeBoard: 'https://api.trello.com/1/boards/6301e898f3cd1a0045abd260?response_type=token&key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68'
+  },
+  level: 'info',
+  timestamp: '2022-08-21 10:17:22'
+}
+{
+  message: { deleteTasksOfDepartment: { acknowledged: true, deletedCount: 0 } },
+  level: 'info',
+  timestamp: '2022-08-21 10:17:23'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-08-21 10:19:14'
+}
+{
+  message: {
+    borderData: {
+      id: '6301eaa05417f8001ec89ca0',
+      name: 'new one',
+      desc: '',
+      descData: null,
+      closed: false,
+      idOrganization: '62932bf998452a111d515e0d',
+      idEnterprise: null,
+      pinned: false,
+      url: 'https://trello.com/b/GimLcFKC/new-one',
+      shortUrl: 'https://trello.com/b/GimLcFKC',
+      prefs: {
+        permissionLevel: 'private',
+        hideVotes: false,
+        voting: 'disabled',
+        comments: 'members',
+        invitations: 'members',
+        selfJoin: true,
+        cardCovers: true,
+        isTemplate: false,
+        cardAging: 'regular',
+        calendarFeedEnabled: false,
+        hiddenPluginBoardButtons: [],
+        switcherViews: [
+          {
+            _id: '6301eaa05417f8001ec89ca1',
+            viewType: 'Board',
+            enabled: true
+          },
+          {
+            _id: '6301eaa05417f8001ec89ca2',
+            viewType: 'Table',
+            enabled: true
+          },
+          {
+            _id: '6301eaa05417f8001ec89ca3',
+            viewType: 'Calendar',
+            enabled: false
+          },
+          {
+            _id: '6301eaa05417f8001ec89ca4',
+            viewType: 'Dashboard',
+            enabled: false
+          },
+          {
+            _id: '6301eaa05417f8001ec89ca5',
+            viewType: 'Timeline',
+            enabled: false
+          },
+          {
+            _id: '6301eaa05417f8001ec89ca6',
+            viewType: 'Map',
+            enabled: false
+          }
+        ],
+        background: 'blue',
+        backgroundColor: '#0079BF',
+        backgroundImage: null,
+        backgroundImageScaled: null,
+        backgroundTile: false,
+        backgroundBrightness: 'dark',
+        backgroundBottomColor: '#0079BF',
+        backgroundTopColor: '#0079BF',
+        canBePublic: true,
+        canBeEnterprise: true,
+        canBeOrg: true,
+        canBePrivate: true,
+        canInvite: true
+      },
+      labelNames: {
+        green: '',
+        yellow: '',
+        orange: '',
+        red: '',
+        purple: '',
+        blue: '',
+        sky: '',
+        lime: '',
+        pink: '',
+        black: '',
+        green_dark: '',
+        yellow_dark: '',
+        orange_dark: '',
+        red_dark: '',
+        purple_dark: '',
+        blue_dark: '',
+        sky_dark: '',
+        lime_dark: '',
+        pink_dark: '',
+        black_dark: '',
+        green_light: '',
+        yellow_light: '',
+        orange_light: '',
+        red_light: '',
+        purple_light: '',
+        blue_light: '',
+        sky_light: '',
+        lime_light: '',
+        pink_light: '',
+        black_light: ''
+      },
+      limits: {}
+    }
+  },
+  level: 'info',
+  timestamp: '2022-08-21 10:19:44'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-08-21 10:25:10'
+}
