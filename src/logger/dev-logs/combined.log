@@ -1700,3 +1700,8 @@
   level: 'info',
   timestamp: '2022-08-24 19:12:05'
 }
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-08-24 19:49:33'
+}
