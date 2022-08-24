@@ -490,17 +490,16 @@ class BoardController {
         "Cancled",
         "Review",
       ];
+
       let type = data.action?.type;
+
       let action = data?.action?.display?.translationKey
         ? data?.action?.display?.translationKey
         : "";
-
+      console.log(type, action);
       let task: TaskData = {
         name: data.action.data.card.name,
         listId: data.action.data.card.idList,
-        status: status.includes(data.action.data?.list?.name)
-          ? data.action.data.list.name
-          : "inProgress",
         boardId: data.action.data.board.id,
         cardId: data.action.data.card?.id,
       };
@@ -519,28 +518,34 @@ class BoardController {
           (item) => item.listId === data.action.data.list.id
         );
         if (team) task.teamId = team._id;
-        else task.teamId = null;
+        else {
+          task.status = data.action.data.list.name;
+        }
         // update task
         let result = await TaskController.updateTaskByTrelloDB(task);
         return io?.sockets?.emit("update-task", result);
       }
-      if (type === "updateCard" && action !== "action_archived_card") {
+      if (
+        type === "updateCard" &&
+        action !== "action_archived_card" &&
+        action !== "action_sent_card_to_board"
+      ) {
         if (action === "action_changed_description_of_card")
           task.description = data.action.data.card.desc;
         if (action === "action_renamed_card")
           task.name = data.action.data.card.name;
         if (action === "action_move_card_from_list_to_list") {
-          task.status = status.includes(data.action.data.listAfter?.name)
-            ? data.action.data.listAfter?.name
-            : "inProgress";
           task.listId = data.action.data.listAfter?.id;
           task.lastMove = data.action.data.listBefore.name;
           task.lastMoveDate = new Date().toUTCString();
-          if (!status.includes(data.action.data.listAfter?.name)) {
-            let team = await department.teams.find(
-              (item) => item.listId === data.action.data.listAfter.id
-            );
-            if (team) task.teamId = team._id;
+          let team = await department.teams.find(
+            (item) => item.listId === data.action.data.listAfter.id
+          );
+          if (team) {
+            task.teamId = team._id;
+            task.status === "inProgress";
+          } else {
+            task.status = data.action.data.listAfter.name;
           }
         }
         let result = await TaskController.updateTaskByTrelloDB(task);
@@ -574,8 +579,15 @@ class BoardController {
         return io?.sockets?.emit("update-task", result);
       }
       if (type === "updateCard" && action === "action_sent_card_to_board") {
-        task.status = data.action.data.list.name;
+        console.log({ list: data.action.data.list });
         task.listId = data.action.data.list.id;
+        let team = department.teams.find(
+          (item) => item.listId === data.action.data.list.id
+        );
+        if (team) {
+          task.status = "inProgress";
+          task.teamId = team._id;
+        } else task.status = data.action.data.list.name;
         let result = await TaskController.archiveTaskByTrelloDB(task, false);
         return io?.sockets?.emit("update-task", result);
       }

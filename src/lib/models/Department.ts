@@ -315,16 +315,15 @@ DepartmentSchema.methods.updateTeams = async function (
   try {
     let depTeams: ITeam[] = [];
     // remove teams
-    this.teams = this.teams.map((item) => {
-      if (data.removeTeams.includes(item._id.toString())) item.isDeleted = true;
-      return item;
-    });
     await data.removeTeams.forEach(async (item, index) => {
-      let team = this.teams.find((t) => t._id.toString());
-      if (team && team.isDeleted === false) {
-        this.teams[index].isDeleted = true;
-        await BoardController.addListToArchieve(this.teams[index].listId);
+      let team = this.teams.find((t) => t._id.toString() === item);
+      await BoardController.addListToArchieve(team.listId);
+    });
+    this.teams = this.teams.map((item) => {
+      if (data.removeTeams.includes(item._id.toString())) {
+        item.isDeleted = true;
       }
+      return item;
     });
     depTeams = await Promise.all(
       data.addTeams.map(async (item) => {
