@@ -61,23 +61,17 @@ export const createTaskSchema = Joi.object({
     "string.empty": "Category should be selected",
     "any.required": "Category is required",
   }),
-  subCategoryId: Joi.string().optional().allow(null, "").messages({
-    "string.base": "Sub Category is required",
-    "string.empty": "Sub Category should be selected",
-    "any.required": "Sub Category is required",
+  listId: Joi.string().required().messages({
+    "string.base": "You should select a department to get its default list",
+    "string.empty": "You should select a department to get its default list",
+    "any.required": "You should select a department to get its default list",
   }),
-  listId: Joi.string().optional().allow("").messages({
-    "string.base": "Department is required",
-    "string.empty": "Department should be string with min 4 chars",
-    "string.min": "Department length should be Min 4 chars",
-    "string.max": "Department length should be Max 20 chars",
-    "any.required": "Department is required",
-  }),
-  teamId: Joi.string().optional().allow(null).messages({
-    "string.base": "Team is required",
-    "string.empty": "Team should be selected",
-    "string.min": "Team should be selected",
-    "any.required": "Team is required",
+  boardId: Joi.string().required().min(4).messages({
+    "string.base": "You should select a department",
+    "string.empty": "You should select a department",
+    "string.min": "You should select a department",
+    "string.max": "You should select a department",
+    "any.required": "You should select a department",
   }),
   status: Joi.string().valid("Tasks Board", "inProgress").required().messages({
     "string.base": "Status is required",
@@ -89,21 +83,10 @@ export const createTaskSchema = Joi.object({
   start: Joi.date().required().messages({
     "any.required": "Task start date is required",
   }),
-  deadline: Joi.date().optional().allow(null, "").messages({
-    "any.required": "Task Deadline is required",
-  }),
-  boardId: Joi.string().required().min(4).messages({
-    "string.base": "Department is required",
-    "string.empty": "Department should be string with min 4 chars",
-    "string.min": "Department length should be Min 4 chars",
-    "string.max": "Department length should be Max 20 chars",
-    "any.required": "Department is required",
-  }),
-  description: Joi.string().optional().allow("", null).messages({
-    "string.base": "Description is required",
-    "string.empty": "Description should be string with min 10 chars",
-    "any.required": "Description is required",
-  }),
+  subCategoryId: Joi.string().optional().allow(null),
+  teamId: Joi.string().optional().allow(null),
+  deadline: Joi.date().optional().allow(null),
+  description: Joi.string().optional().allow("", null),
   deliveryDate: Joi.any().allow(null),
   done: Joi.any().allow(null),
   turnoverTime: Joi.allow(null),
@@ -120,29 +103,16 @@ export const editTaskSchema = Joi.object({
     "string.min": "Task name length should be Min 4 chars",
     "string.max": "Task name length should be Max 50 chars",
   }),
-  categoryId: Joi.string().optional().messages({
-    "string.base": "Category is required",
-    "string.empty": "Category should be selected",
+  categoryId: Joi.string().required().messages({
+    "string.base": "You should select a category",
+    "string.empty": "You should select a category",
   }),
   cardId: Joi.string()
     .required()
     .messages({ "any.required": "Card id is required" }),
-  deleteFiles: Joi.string().optional(),
-  subCategoryId: Joi.string().optional().allow(null, "").messages({
-    "string.base": "Sub Category is required",
-    "string.empty": "Sub Category should be selected",
-  }),
-  listId: Joi.string().optional().allow("").messages({
-    "string.base": "Department is required",
-    "string.empty": "Department should be string with min 4 chars",
-    "string.min": "Department length should be Min 4 chars",
-    "string.max": "Department length should be Max 20 chars",
-  }),
-  teamId: Joi.string().optional().allow(null).messages({
-    "string.base": "Team is required",
-    "string.empty": "Team should be selected",
-    "string.min": "Team should be selected",
-  }),
+  subCategoryId: Joi.string().optional().allow(null, ""),
+  listId: Joi.string().optional().allow(""),
+  teamId: Joi.string().optional().allow(null),
   status: Joi.string()
     .valid(
       "Tasks Board",
@@ -154,24 +124,14 @@ export const editTaskSchema = Joi.object({
       "Shared",
       "Not Clear"
     )
-    .optional()
-    .messages({
-      "string.base": "Status is required",
-      "string.empty": "Status should be string with min 4 chars",
-      "string.min": "Status length should be Min 4 chars",
-      "string.max": "Status length should be Max 20 chars",
-    }),
-  deadline: Joi.date().optional().allow(null, "").messages({
-    "any.required": "Task Deadline is required",
-  }),
-  boardId: Joi.string().optional().min(4).messages({
-    "string.base": "Department is required",
-    "string.empty": "Department should be string with min 4 chars",
-    "string.min": "Department length should be Min 4 chars",
-    "string.max": "Department length should be Max 20 chars",
-    "any.required": "Department is required",
+    .optional(),
+  deadline: Joi.date().optional().allow(null, ""),
+  boardId: Joi.string().required().messages({
+    "string.base": "You should select a department",
+    "any.required": "You should select a department",
   }),
   attachedFiles: Joi.array().optional().allow(null),
+  deleteFiles: Joi.array().optional().allow(null),
   description: Joi.string().optional().allow(""),
 });
 
