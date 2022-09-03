@@ -2,7 +2,7 @@ import { customeError } from "./../../utils/errorUtils";
 import { Express, Request, Response } from "express";
 import logger from "../../../logger";
 import TaskController from "../../controllers/task";
-import { TaskData } from "../../types/model/tasks";
+import { AttachmentSchema, TaskData } from "../../types/model/tasks";
 import { createTaskSchema, editTaskSchema } from "../../services/validation";
 import { taskResponse } from "../../types/controller/Tasks";
 import {
@@ -39,6 +39,12 @@ const TaskReq = class TaskReq extends TaskController {
         if (TaskData.teamId === "" || TaskData.teamId === null)
           TaskData.teamId = null;
         let files = req.files;
+        let deleteFiles: AttachmentSchema[];
+        if (TaskData.deleteFiles)
+          deleteFiles = TaskData.deleteFiles
+            ? JSON.parse(TaskData?.deleteFiles)
+            : [];
+        TaskData.deleteFiles = deleteFiles;
         let validate = editTaskSchema.validate(TaskData);
         if (validate.error)
           return res.status(400).send(validate.error.details[0]);

@@ -93,8 +93,7 @@ class TaskController extends TaskDB {
       // if there are deleted files, then delete it from the db
       let deleteFiles: AttachmentSchema[];
       if (data?.deleteFiles) {
-        deleteFiles = JSON.parse(data?.deleteFiles);
-        data.deleteFiles = deleteFiles;
+        deleteFiles = data.deleteFiles;
         if (deleteFiles.length > 0) {
           await deleteFiles?.forEach(async (item) => {
             if (!item.trelloId) return deleteFilesError;

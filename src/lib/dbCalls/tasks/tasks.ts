@@ -214,7 +214,7 @@ class TaskDB {
 
       task.name = data.name ? data.name : task.name;
       task.description =
-        data.description.length > 0 ? data.description : task.description;
+        data?.description?.length > 0 ? data.description : task.description;
       task.deadline = data.deadline ? data.deadline : task.deadline;
       task.categoryId = data.categoryId
         ? new mongoose.Types.ObjectId(data.categoryId)
@@ -277,8 +277,8 @@ class TaskDB {
       if (data.name) {
         //Making search value to lower case for case insensitive search
         let name = data.name.toLowerCase();
-        filter.name = { $regex: name }
-      };
+        filter.name = { $regex: name };
+      }
       if (data.projectManager)
         filter.projectManager = { $regex: data.projectManager };
       let tasks = await Tasks.find(filter);
