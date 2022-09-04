@@ -298,8 +298,9 @@ class TaskDB {
   }
   static async __updateTaskByTrelloDB(data: TaskData | any) {
     try {
+      console.log({ data });
       let task = await Tasks.findOne({ cardId: data.cardId });
-      task.name = data?.name ? data?.name : task.name;
+      task.name = data?.name ? data.name : task.name;
       task.status = data?.status ? data.status : task.status;
       task.listId = data?.listId ? data.listId : task.listId;
       task.cardId = data?.cardId ? data.cardId : task.cardId;
