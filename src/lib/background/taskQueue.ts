@@ -12,8 +12,14 @@ import {
   TaskInfo,
 } from "../types/model/tasks";
 import { webhookUpdateInterface } from "../types/controller/Tasks";
+import TaskController from "../controllers/task";
+import { deleteAll } from "../services/upload";
 
-export const TaskQueue = queue({ results: [] });
+export const TaskQueue = queue({
+  results: [],
+  autostart: true,
+  concurrency: 1,
+});
 export const updateTaskQueue = queue({ results: [], autostart: true });
 export function moveTaskJob(
   listId: string,
@@ -30,23 +36,6 @@ export function moveTaskJob(
       logger.error({ moveTaskJobError: error });
     }
   });
-  // TaskQueue.push(async (cb) => {
-  //   try {
-  //     task = await TaskDB.updateTaskStatus(
-  //       {
-  //         cardId: cardId,
-  //       },
-  //       {
-  //         status: status,
-  //         listId: listId,
-  //       }
-  //     );
-  //     // io.sockets.emit("update-task", task);
-  //     cb(null, task);
-  //   } catch (error: any) {
-  //     cb(new Error(error), null);
-  //   }
-  // });
   TaskQueue.push(async (cb) => {
     try {
       if (status === "Shared" || status === "Not Clear") {
@@ -61,49 +50,28 @@ export function moveTaskJob(
   });
 }
 
-export const moveTaskNotificationJob = (data: webhookUpdateInterface) => {
+export const updateCardJob = (
+  data: TaskData,
+  newFiles: Express.Multer.File[]
+) => {
+  const deleteFiles: AttachmentSchema[] = data.deleteFiles
+    ? data.deleteFiles
+    : [];
+  delete data.deleteFiles;
+  delete data.attachedFiles;
   TaskQueue.push(async (cb) => {
     try {
-      let to = data.action.data?.listAfter?.name;
-      // if task status update to shared send notification
-      if (
-        data.action.display.translationKey ===
-        "action_move_card_from_list_to_list"
-      ) {
-        // let task = await TaskDB.getOneTaskBy({ cardId: data.model.id });
-        // await NotificationController.__MoveTaskNotification(task, status, user);
-        // if (to === "Shared" || to === "Not Clear") {
-        //   let createNotifi = await NotificationController.createNotification({
-        //     title: `${cardName} status has been changed to ${to}`,
-        //     description: `${cardName} status has been changed to ${to} by ${userName}`,
-        //     projectManagerID: projectData.projectManager,
-        //     projectID: targetTask.projectId,
-        //     adminUserID: projectData.adminId,
-        //   });
-        //   // send notification to all the admin
-        //   io.to("admin-room").emit("notification-update", createNotifi);
-        //   // send notification to specific project manager
-        //   io.to(`user-${projectData.projectManager}`).emit(
-        //     "notification-update",
-        //     createNotifi
-        //   );
-        // }
-      }
-    } catch (error: any) {
-      cb(new Error(error), null);
-      logger.ercror({ webHookUpdateMoveTaskJobError: error });
-    }
-  });
-};
-
-export const updateCardJob = (data: TaskData) => {
-  TaskQueue.push(async (cb) => {
-    try {
+      console.log({
+        name: data.name,
+        desc: data.description,
+        idList: data.listId,
+        idBoard: data.boardId,
+      });
       let response = await BoardController.__updateCard(data.cardId, {
         name: data.name,
-        desc: data?.description ? data?.description : "",
-        idList: data?.listId,
-        idBoard: data?.boardId,
+        desc: data.description,
+        idList: data.listId,
+        idBoard: data.boardId,
       });
       cb(null, response);
     } catch (error: any) {
@@ -111,7 +79,44 @@ export const updateCardJob = (data: TaskData) => {
       logger.ercror({ updateCardDataError: error });
     }
   });
+  TaskQueue.push(async (cb) => {
+    try {
+      // wait for both update date in db and upload,delete files to trello
+      // if there are deleted files, then delete it from the db
+      let deleteTaskFiles: AttachmentSchema[];
+      if (deleteFiles) {
+        if (deleteFiles.length > 0) {
+          let isDeletedAll = await deleteFiles?.map(async (item) => {
+            return await BoardController.__deleteAtachment(
+              data.cardId,
+              item.trelloId
+            );
+          });
+          let isDeletedResullt = Promise.resolve(isDeletedAll);
+          cb(null, isDeletedResullt);
+        }
+      }
+    } catch (error: any) {
+      cb(error, null);
+      logger.error({ updateCardDeleteFilesJobError: error });
+    }
+  });
+  TaskQueue.push(async (cb) => {
+    if (newFiles) {
+      await TaskController.__createTaskAttachment(newFiles, data);
+    }
+    cb(null, true);
+  });
+  TaskQueue.push(async (cb) => {
+    let task = await TaskController.updateTaskDB(data);
+    if (task.error) cb(new Error(task.error.message), null);
+    await io.sockets.emit("update-task", task);
+    deleteAll();
+
+    cb(null, task);
+  });
 };
+
 export const createTaskFromBoardJob = (data: TaskInfo) => {
   TaskQueue.push(async (cb) => {
     try {
