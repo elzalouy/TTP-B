@@ -5,12 +5,14 @@ import {
   TasksStatistics,
 } from "./../../types/model/tasks";
 import logger from "../../../logger";
-import Tasks from "../../models/Task";
+import Tasks, { FilesSchema, TaskFileSchema } from "../../models/Task";
 import { TaskData } from "../../types/model/tasks";
 import _ from "lodash";
 import mongoose from "mongoose";
 import Department from "../../models/Department";
 import { taskNotFoundError } from "../../types/controller/Tasks";
+import { ObjectId } from "mongodb";
+import { io } from "../../..";
 class TaskDB {
   static async createTaskDB(data: TaskData) {
     return await TaskDB.__createTask(data);
@@ -226,6 +228,11 @@ class TaskDB {
       task.cardId = data.cardId ? data.cardId : task.cardId;
       task.boardId = data.boardId ? data.boardId : task.boardId;
       task.listId = data.listId ? data.listId : task.listId;
+      task.attachedFiles = data.deleteFiles
+        ? task.attachedFiles.filter(
+            (item) => item.trelloId === data.deleteFiles.trelloId
+          )
+        : task.attachedFiles;
       delete task._id;
       let update = await Tasks.findByIdAndUpdate(id, task, {
         new: true,
@@ -296,11 +303,10 @@ class TaskDB {
       logger.error({ getOneTaskError: error });
     }
   }
-  static async __updateTaskByTrelloDB(data: TaskData | any) {
+  static async __updateTaskByTrelloDB(data: TaskData) {
     try {
-      console.log({ data });
       let task = await Tasks.findOne({ cardId: data.cardId });
-      task.name = data?.name ? data.name : task.name;
+      task.name = data?.name ? data?.name : task.name;
       task.status = data?.status ? data.status : task.status;
       task.listId = data?.listId ? data.listId : task.listId;
       task.cardId = data?.cardId ? data.cardId : task.cardId;
@@ -308,32 +314,35 @@ class TaskDB {
       task.description = data.description ? data.description : task.description;
       task.teamId =
         data?.teamId === null || data?.teamId?.toString().length > 0
-          ? data.teamId
+          ? new ObjectId(data.teamId)
           : task.teamId;
       task.lastMove = data?.lastMove ? data.lastMove : task.lastMoveDate;
       task.lastMoveDate = data?.lastMoveDate
         ? data.lastMoveDate
         : task.lastMoveDate;
-      if (data.attachedFiles) {
-        let files = [...task.attachedFiles, ...data.attachedFiles];
-        task.attachedFiles = files;
+      if (data.attachedFile) {
+        console.log({
+          filesBefore: task.attachedFiles,
+          file: data.attachedFile,
+        });
+        let file = new TaskFileSchema({ ...data.attachedFile });
+        task.attachedFiles.push(file);
+        task = await task.save();
+        console.log({ filesAfter: task.attachedFiles });
       }
       if (data.deleteFiles && data?.deleteFiles?.trelloId) {
+        console.log({ trelloId: data.deleteFiles.trelloId });
         task.attachedFiles = _.filter(
           task.attachedFiles,
           (item) => item.trelloId !== data?.deleteFiles?.trelloId
         );
       }
-      task.attachedFiles = task.attachedFiles.filter(
-        (item) => item.mimeType !== ""
-      );
+      // task.attachedFiles = task.attachedFiles.filter(
+      //   (item) => item.mimeType !== ""
+      // );
       task.attachedFiles = _.uniqBy(task.attachedFiles, "trelloId");
-      let id = task._id;
-      let result = await Tasks.findOneAndUpdate({ _id: id }, task, {
-        new: true,
-        lean: true,
-      });
-      return result;
+      let result = await (await task.save()).toObject();
+      await io.sockets.emit("update-task", result);
     } catch (error) {
       logger.error({ __updateTaskByTrelloDBError: error });
     }
@@ -353,7 +362,7 @@ class TaskDB {
   static async __deleteTaskByTrelloDB(data: TaskData) {
     try {
       let result = await Tasks.findOneAndDelete({ cardId: data.cardId });
-      return result;
+      return io?.sockets?.emit("delete-task", result);
     } catch (error) {
       logger.error({ __deleteTaskByTrelloDBError: error });
     }
@@ -367,7 +376,7 @@ class TaskDB {
         taskData,
         { new: true, lean: true }
       );
-      return archiveTask;
+      return io?.sockets?.emit("update-task", archiveTask);
     } catch (error) {
       logger.error({ __archiveTaskByTrelloDBError: error });
     }
