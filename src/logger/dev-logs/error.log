@@ -1406,3 +1406,970 @@
   level: 'error',
   timestamp: '2022-09-03 17:17:16'
 }
+{
+  message: {
+    updateBoardCardError: TypeError: Cannot read properties of undefined (reading 'data')
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:501:27)
+        at Generator.next (<anonymous>)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:8:71
+        at new Promise (<anonymous>)
+        at __awaiter (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:4:12)
+        at Function.__updateBoardCard (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:514:16)
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:102:34)
+        at Generator.next (<anonymous>)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:8:71
+        at new Promise (<anonymous>)
+  },
+  level: 'error',
+  timestamp: '2022-09-04 12:54:32'
+}
+{
+  message: {
+    __updateTaskByTrelloDBError: TypeError: Cannot set properties of null (setting 'name')
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/dbCalls/tasks/tasks.ts:303:16)
+        at Generator.next (<anonymous>)
+        at fulfilled (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/dbCalls/tasks/tasks.ts:5:58)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5)
+  },
+  level: 'error',
+  timestamp: '2022-09-04 12:54:33'
+}
+{
+  message: {
+    updateBoardCardError: TypeError: Cannot read properties of undefined (reading 'data')
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:501:27)
+        at Generator.next (<anonymous>)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:8:71
+        at new Promise (<anonymous>)
+        at __awaiter (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:4:12)
+        at Function.__updateBoardCard (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:514:16)
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:102:34)
+        at Generator.next (<anonymous>)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:8:71
+        at new Promise (<anonymous>)
+  },
+  level: 'error',
+  timestamp: '2022-09-04 12:55:13'
+}
+{
+  message: {
+    updateBoardCardError: TypeError: Cannot read properties of undefined (reading 'data')
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:501:27)
+        at Generator.next (<anonymous>)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:8:71
+        at new Promise (<anonymous>)
+        at __awaiter (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:4:12)
+        at Function.__updateBoardCard (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:514:16)
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:102:34)
+        at Generator.next (<anonymous>)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:8:71
+        at new Promise (<anonymous>)
+  },
+  level: 'error',
+  timestamp: '2022-09-04 14:11:40'
+}
+{
+  message: {
+    __updateTaskByTrelloDBError: TypeError: Cannot set properties of null (setting 'name')
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/dbCalls/tasks/tasks.ts:303:16)
+        at Generator.next (<anonymous>)
+        at fulfilled (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/dbCalls/tasks/tasks.ts:5:58)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5)
+  },
+  level: 'error',
+  timestamp: '2022-09-04 14:11:42'
+}
+{
+  message: {
+    updateBoardCardError: TypeError: Cannot read properties of undefined (reading 'data')
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:501:27)
+        at Generator.next (<anonymous>)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:8:71
+        at new Promise (<anonymous>)
+        at __awaiter (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:4:12)
+        at Function.__updateBoardCard (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:514:16)
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:102:34)
+        at Generator.next (<anonymous>)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:8:71
+        at new Promise (<anonymous>)
+  },
+  level: 'error',
+  timestamp: '2022-09-04 14:32:29'
+}
+{
+  message: {
+    __updateTaskByTrelloDBError: TypeError: Cannot read properties of undefined (reading '0')
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/dbCalls/tasks/tasks.ts:301:52)
+        at Generator.next (<anonymous>)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/dbCalls/tasks/tasks.ts:8:71
+        at new Promise (<anonymous>)
+        at __awaiter (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/dbCalls/tasks/tasks.ts:4:12)
+        at Function.__updateTaskByTrelloDB (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/dbCalls/tasks/tasks.ts:363:16)
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/dbCalls/tasks/tasks.ts:55:25)
+        at Generator.next (<anonymous>)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/dbCalls/tasks/tasks.ts:8:71
+        at new Promise (<anonymous>)
+  },
+  level: 'error',
+  timestamp: '2022-09-04 15:12:12'
+}
+{
+  message: {
+    __updateTaskByTrelloDBError: TypeError: Cannot read properties of undefined (reading '0')
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/dbCalls/tasks/tasks.ts:301:52)
+        at Generator.next (<anonymous>)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/dbCalls/tasks/tasks.ts:8:71
+        at new Promise (<anonymous>)
+        at __awaiter (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/dbCalls/tasks/tasks.ts:4:12)
+        at Function.__updateTaskByTrelloDB (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/dbCalls/tasks/tasks.ts:363:16)
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/dbCalls/tasks/tasks.ts:55:25)
+        at Generator.next (<anonymous>)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/dbCalls/tasks/tasks.ts:8:71
+        at new Promise (<anonymous>)
+  },
+  level: 'error',
+  timestamp: '2022-09-04 15:12:12'
+}
+{
+  message: {
+    updateBoardCardError: TypeError: Cannot read properties of undefined (reading 'data')
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:501:27)
+        at Generator.next (<anonymous>)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:8:71
+        at new Promise (<anonymous>)
+        at __awaiter (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:4:12)
+        at Function.__updateBoardCard (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:514:16)
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:102:34)
+        at Generator.next (<anonymous>)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:8:71
+        at new Promise (<anonymous>)
+  },
+  level: 'error',
+  timestamp: '2022-09-04 15:13:36'
+}
+{
+  message: {
+    __updateTaskByTrelloDBError: TypeError: Cannot set properties of null (setting 'name')
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/dbCalls/tasks/tasks.ts:304:16)
+        at Generator.next (<anonymous>)
+        at fulfilled (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/dbCalls/tasks/tasks.ts:5:58)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5)
+  },
+  level: 'error',
+  timestamp: '2022-09-04 15:13:38'
+}
+{
+  message: {
+    updateBoardCardError: TypeError: Cannot read properties of undefined (reading 'data')
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:501:27)
+        at Generator.next (<anonymous>)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:8:71
+        at new Promise (<anonymous>)
+        at __awaiter (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:4:12)
+        at Function.__updateBoardCard (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:514:16)
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:102:34)
+        at Generator.next (<anonymous>)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:8:71
+        at new Promise (<anonymous>)
+  },
+  level: 'error',
+  timestamp: '2022-09-04 15:15:50'
+}
+{
+  message: {
+    __updateTaskByTrelloDBError: TypeError: Cannot set properties of null (setting 'name')
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/dbCalls/tasks/tasks.ts:304:16)
+        at Generator.next (<anonymous>)
+        at fulfilled (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/dbCalls/tasks/tasks.ts:5:58)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5)
+  },
+  level: 'error',
+  timestamp: '2022-09-04 15:15:52'
+}
+{
+  message: {
+    deleteAttachmentFileError: FetchError: invalid json response body at https://api.trello.com/1/cards/6314a5057f0b8a1393a93a49/attachments/6314a5074a464900fc26e9db?key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68 reason: Unexpected token C in JSON at position 0
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/node-fetch/lib/index.js:273:32
+        at runMicrotasks (<anonymous>)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+      type: 'invalid-json'
+    }
+  },
+  level: 'error',
+  timestamp: '2022-09-04 15:24:43'
+}
+{
+  message: {
+    updateBoardCardError: TypeError: Cannot read properties of undefined (reading 'data')
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:501:27)
+        at Generator.next (<anonymous>)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:8:71
+        at new Promise (<anonymous>)
+        at __awaiter (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:4:12)
+        at Function.__updateBoardCard (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:514:16)
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:102:34)
+        at Generator.next (<anonymous>)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:8:71
+        at new Promise (<anonymous>)
+  },
+  level: 'error',
+  timestamp: '2022-09-04 15:25:46'
+}
+{
+  message: {
+    deleteAttachmentFileError: FetchError: invalid json response body at https://api.trello.com/1/cards/6314a75a3c916900bd6442c1/attachments/6314a8694e1cf50123fca843?key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68 reason: Unexpected token C in JSON at position 0
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/node-fetch/lib/index.js:273:32
+        at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+      type: 'invalid-json'
+    }
+  },
+  level: 'error',
+  timestamp: '2022-09-04 15:36:09'
+}
+{
+  message: {
+    updateBoardCardError: TypeError: Cannot read properties of undefined (reading 'data')
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:501:27)
+        at Generator.next (<anonymous>)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:8:71
+        at new Promise (<anonymous>)
+        at __awaiter (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:4:12)
+        at Function.__updateBoardCard (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:514:16)
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:102:34)
+        at Generator.next (<anonymous>)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:8:71
+        at new Promise (<anonymous>)
+  },
+  level: 'error',
+  timestamp: '2022-09-04 15:37:04'
+}
+{
+  message: {
+    __updateTaskByTrelloDBError: TypeError: Cannot read properties of undefined (reading 'length')
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/dbCalls/tasks/tasks.ts:301:50)
+        at Generator.next (<anonymous>)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/dbCalls/tasks/tasks.ts:8:71
+        at new Promise (<anonymous>)
+        at __awaiter (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/dbCalls/tasks/tasks.ts:4:12)
+        at Function.__updateTaskByTrelloDB (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/dbCalls/tasks/tasks.ts:363:16)
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/dbCalls/tasks/tasks.ts:55:25)
+        at Generator.next (<anonymous>)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/dbCalls/tasks/tasks.ts:8:71
+        at new Promise (<anonymous>)
+  },
+  level: 'error',
+  timestamp: '2022-09-04 15:37:05'
+}
+{
+  message: {
+    __updateTaskByTrelloDBError: TypeError: Cannot read properties of undefined (reading 'length')
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/dbCalls/tasks/tasks.ts:301:50)
+        at Generator.next (<anonymous>)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/dbCalls/tasks/tasks.ts:8:71
+        at new Promise (<anonymous>)
+        at __awaiter (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/dbCalls/tasks/tasks.ts:4:12)
+        at Function.__updateTaskByTrelloDB (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/dbCalls/tasks/tasks.ts:363:16)
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/dbCalls/tasks/tasks.ts:55:25)
+        at Generator.next (<anonymous>)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/dbCalls/tasks/tasks.ts:8:71
+        at new Promise (<anonymous>)
+  },
+  level: 'error',
+  timestamp: '2022-09-04 15:37:06'
+}
+{
+  message: {
+    __updateTaskByTrelloDBError: TypeError: Cannot read properties of undefined (reading 'length')
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/dbCalls/tasks/tasks.ts:301:50)
+        at Generator.next (<anonymous>)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/dbCalls/tasks/tasks.ts:8:71
+        at new Promise (<anonymous>)
+        at __awaiter (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/dbCalls/tasks/tasks.ts:4:12)
+        at Function.__updateTaskByTrelloDB (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/dbCalls/tasks/tasks.ts:363:16)
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/dbCalls/tasks/tasks.ts:55:25)
+        at Generator.next (<anonymous>)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/dbCalls/tasks/tasks.ts:8:71
+        at new Promise (<anonymous>)
+  },
+  level: 'error',
+  timestamp: '2022-09-04 15:37:06'
+}
+{
+  message: {
+    updateBoardCardError: TypeError: Cannot read properties of undefined (reading 'data')
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:501:27)
+        at Generator.next (<anonymous>)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:8:71
+        at new Promise (<anonymous>)
+        at __awaiter (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:4:12)
+        at Function.__updateBoardCard (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:514:16)
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:102:34)
+        at Generator.next (<anonymous>)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:8:71
+        at new Promise (<anonymous>)
+  },
+  level: 'error',
+  timestamp: '2022-09-04 15:40:19'
+}
+{
+  message: {
+    __updateTaskByTrelloDBError: TypeError: Cannot set properties of null (setting 'name')
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/dbCalls/tasks/tasks.ts:306:16)
+        at Generator.next (<anonymous>)
+        at fulfilled (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/dbCalls/tasks/tasks.ts:5:58)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5)
+  },
+  level: 'error',
+  timestamp: '2022-09-04 15:40:21'
+}
+{
+  message: {
+    __updateTaskByTrelloDBError: TypeError: Cannot set properties of null (setting 'name')
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/dbCalls/tasks/tasks.ts:306:16)
+        at Generator.next (<anonymous>)
+        at fulfilled (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/dbCalls/tasks/tasks.ts:5:58)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5)
+  },
+  level: 'error',
+  timestamp: '2022-09-04 15:40:21'
+}
+{
+  message: {
+    updateBoardCardError: TypeError: Cannot read properties of undefined (reading 'data')
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:501:27)
+        at Generator.next (<anonymous>)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:8:71
+        at new Promise (<anonymous>)
+        at __awaiter (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:4:12)
+        at Function.__updateBoardCard (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:514:16)
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:102:34)
+        at Generator.next (<anonymous>)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:8:71
+        at new Promise (<anonymous>)
+  },
+  level: 'error',
+  timestamp: '2022-09-04 16:42:49'
+}
+{
+  message: {
+    __updateTaskByTrelloDBError: TypeError: Cannot set properties of null (setting 'name')
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/dbCalls/tasks/tasks.ts:306:16)
+        at Generator.next (<anonymous>)
+        at fulfilled (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/dbCalls/tasks/tasks.ts:5:58)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5)
+  },
+  level: 'error',
+  timestamp: '2022-09-04 16:42:51'
+}
+{
+  message: {
+    deleteAttachmentFileError: FetchError: invalid json response body at https://api.trello.com/1/cards/6314b9690ee3c6011f7ad5d8/attachments/6314b96a5f07ec1368a7710a?key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68 reason: Unexpected token C in JSON at position 0
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/node-fetch/lib/index.js:273:32
+        at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+      type: 'invalid-json'
+    }
+  },
+  level: 'error',
+  timestamp: '2022-09-04 16:45:00'
+}
+{
+  message: {
+    updateBoardCardError: TypeError: Cannot read properties of undefined (reading 'data')
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:501:27)
+        at Generator.next (<anonymous>)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:8:71
+        at new Promise (<anonymous>)
+        at __awaiter (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:4:12)
+        at Function.__updateBoardCard (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:514:16)
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:102:34)
+        at Generator.next (<anonymous>)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:8:71
+        at new Promise (<anonymous>)
+  },
+  level: 'error',
+  timestamp: '2022-09-04 16:49:52'
+}
+{
+  message: {
+    deleteAttachmentFileError: FetchError: invalid json response body at https://api.trello.com/1/cards/6314bb0f865f4e015e908300/attachments/6314bb1a3cba2b0365e20ffb?key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68 reason: Unexpected token C in JSON at position 0
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/node-fetch/lib/index.js:273:32
+        at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+      type: 'invalid-json'
+    }
+  },
+  level: 'error',
+  timestamp: '2022-09-04 16:55:40'
+}
+{
+  message: {
+    deleteAttachmentFileError: FetchError: invalid json response body at https://api.trello.com/1/cards/6314bb0f865f4e015e908300/attachments/6314bb1a3cba2b0365e20ffb?key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68 reason: Unexpected token C in JSON at position 0
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/node-fetch/lib/index.js:273:32
+        at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+      type: 'invalid-json'
+    }
+  },
+  level: 'error',
+  timestamp: '2022-09-04 16:59:43'
+}
+{
+  message: {
+    updateBoardCardError: TypeError: Cannot read properties of undefined (reading 'data')
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:501:27)
+        at Generator.next (<anonymous>)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:8:71
+        at new Promise (<anonymous>)
+        at __awaiter (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:4:12)
+        at Function.__updateBoardCard (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:514:16)
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:102:34)
+        at Generator.next (<anonymous>)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:8:71
+        at new Promise (<anonymous>)
+  },
+  level: 'error',
+  timestamp: '2022-09-04 17:00:32'
+}
+{
+  message: {
+    updateBoardCardError: TypeError: Cannot read properties of undefined (reading 'data')
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:501:27)
+        at Generator.next (<anonymous>)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:8:71
+        at new Promise (<anonymous>)
+        at __awaiter (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:4:12)
+        at Function.__updateBoardCard (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:514:16)
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:102:34)
+        at Generator.next (<anonymous>)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:8:71
+        at new Promise (<anonymous>)
+  },
+  level: 'error',
+  timestamp: '2022-09-04 17:02:17'
+}
+{
+  message: {
+    updateBoardCardError: TypeError: Cannot read properties of undefined (reading 'data')
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:501:27)
+        at Generator.next (<anonymous>)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:8:71
+        at new Promise (<anonymous>)
+        at __awaiter (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:4:12)
+        at Function.__updateBoardCard (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:514:16)
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:102:34)
+        at Generator.next (<anonymous>)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:8:71
+        at new Promise (<anonymous>)
+  },
+  level: 'error',
+  timestamp: '2022-09-04 17:15:41'
+}
+{
+  message: {
+    updateBoardCardError: TypeError: Cannot read properties of undefined (reading 'data')
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:501:27)
+        at Generator.next (<anonymous>)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:8:71
+        at new Promise (<anonymous>)
+        at __awaiter (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:4:12)
+        at Function.__updateBoardCard (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:514:16)
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:102:34)
+        at Generator.next (<anonymous>)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:8:71
+        at new Promise (<anonymous>)
+  },
+  level: 'error',
+  timestamp: '2022-09-04 17:17:18'
+}
+{
+  message: {
+    updateBoardCardError: TypeError: Cannot read properties of undefined (reading 'data')
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:503:29)
+        at Generator.next (<anonymous>)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:8:71
+        at new Promise (<anonymous>)
+        at __awaiter (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:4:12)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:484:46
+        at Queue.start (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/queue/index.js:145:17)
+        at Queue.<computed> [as push] (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/queue/index.js:59:12)
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:484:28)
+        at Generator.next (<anonymous>)
+  },
+  level: 'error',
+  timestamp: '2022-09-04 17:26:03'
+}
+{
+  message: {
+    updateBoardCardError: TypeError: Cannot read properties of undefined (reading 'data')
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:503:29)
+        at Generator.next (<anonymous>)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:8:71
+        at new Promise (<anonymous>)
+        at __awaiter (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:4:12)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:484:46
+        at Queue.start (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/queue/index.js:145:17)
+        at Queue.<computed> [as push] (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/queue/index.js:59:12)
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:484:28)
+        at Generator.next (<anonymous>)
+  },
+  level: 'error',
+  timestamp: '2022-09-04 17:29:11'
+}
+{
+  message: {
+    updateBoardCardError: TypeError: Cannot read properties of undefined (reading 'data')
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:502:29)
+        at Generator.next (<anonymous>)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:8:71
+        at new Promise (<anonymous>)
+        at __awaiter (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:4:12)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:483:46
+        at Queue.start (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/queue/index.js:145:17)
+        at Queue.<computed> [as push] (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/queue/index.js:59:12)
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:483:28)
+        at Generator.next (<anonymous>)
+  },
+  level: 'error',
+  timestamp: '2022-09-04 17:43:06'
+}
+{
+  message: {
+    __updateTaskByTrelloDBError: VersionError: No matching document found for id "6314c78a81cdf46d2e84a8b1" version 19 modifiedPaths "attachedFiles"
+        at generateVersionError (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/mongoose/lib/model.js:450:10)
+        at model.Model.save (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/mongoose/lib/model.js:506:28)
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/dbCalls/tasks/tasks.ts:342:10)
+        at Generator.next (<anonymous>)
+        at fulfilled (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/dbCalls/tasks/tasks.ts:5:58)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+      version: 19,
+      modifiedPaths: [ 'attachedFiles' ]
+    }
+  },
+  level: 'error',
+  timestamp: '2022-09-04 18:07:02'
+}
+{
+  message: {
+    updateBoardCardError: TypeError: Cannot read properties of undefined (reading 'data')
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:502:29)
+        at Generator.next (<anonymous>)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:8:71
+        at new Promise (<anonymous>)
+        at __awaiter (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:4:12)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:483:46
+        at Queue.start (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/queue/index.js:145:17)
+        at Queue.<computed> [as push] (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/queue/index.js:59:12)
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:483:28)
+        at Generator.next (<anonymous>)
+  },
+  level: 'error',
+  timestamp: '2022-09-04 18:11:25'
+}
+{
+  message: {
+    __updateTaskByTrelloDBError: TypeError: Cannot set properties of null (setting 'name')
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/dbCalls/tasks/tasks.ts:313:16)
+        at Generator.next (<anonymous>)
+        at fulfilled (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/dbCalls/tasks/tasks.ts:5:58)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5)
+  },
+  level: 'error',
+  timestamp: '2022-09-04 18:11:27'
+}
+{
+  message: {
+    updateBoardCardError: TypeError: Cannot read properties of undefined (reading 'data')
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:502:29)
+        at Generator.next (<anonymous>)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:8:71
+        at new Promise (<anonymous>)
+        at __awaiter (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:4:12)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:483:46
+        at Queue.start (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/queue/index.js:145:17)
+        at Queue.<computed> [as push] (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/queue/index.js:59:12)
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:483:28)
+        at Generator.next (<anonymous>)
+  },
+  level: 'error',
+  timestamp: '2022-09-05 09:15:44'
+}
+{
+  message: {
+    __updateTaskByTrelloDBError: TypeError: data.attachedFiles is not iterable
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/dbCalls/tasks/tasks.ts:328:39)
+        at Generator.next (<anonymous>)
+        at fulfilled (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/dbCalls/tasks/tasks.ts:5:58)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5)
+  },
+  level: 'error',
+  timestamp: '2022-09-05 09:22:12'
+}
+{
+  message: {
+    __updateTaskByTrelloDBError: TypeError: data.attachedFiles is not iterable
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/dbCalls/tasks/tasks.ts:328:39)
+        at Generator.next (<anonymous>)
+        at fulfilled (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/dbCalls/tasks/tasks.ts:5:58)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5)
+  },
+  level: 'error',
+  timestamp: '2022-09-05 09:22:13'
+}
+{
+  message: {
+    __updateTaskByTrelloDBError: TypeError: data.attachedFiles is not iterable
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/dbCalls/tasks/tasks.ts:328:39)
+        at Generator.next (<anonymous>)
+        at fulfilled (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/dbCalls/tasks/tasks.ts:5:58)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5)
+  },
+  level: 'error',
+  timestamp: '2022-09-05 09:22:14'
+}
+{
+  message: {
+    updateTaskDBError: CastError: Cast to ObjectId failed for value "undefined" (type string) at path "listId" because of "BSONTypeError"
+        at model.Query.exec (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/mongoose/lib/query.js:4715:21)
+        at model.Query.Query.then (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/mongoose/lib/query.js:4814:15)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+      messageFormat: undefined,
+      stringValue: '"undefined"',
+      kind: 'ObjectId',
+      value: 'undefined',
+      path: 'listId',
+      reason: BSONTypeError: Argument passed in must be a string of 12 bytes or a string of 24 hex characters or an integer
+          at new BSONTypeError (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/bson/src/error.ts:16:5)
+          at new ObjectId (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/bson/src/objectid.ts:87:15)
+          at castObjectId (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/mongoose/lib/cast/objectid.js:24:12)
+          at ObjectId.cast (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/mongoose/lib/schema/objectid.js:247:12)
+          at ObjectId.SchemaType.applySetters (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/mongoose/lib/schematype.js:1189:12)
+          at ObjectId.SchemaType._castForQuery (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/mongoose/lib/schematype.js:1623:15)
+          at ObjectId.SchemaType.castForQuery (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/mongoose/lib/schematype.js:1613:15)
+          at ObjectId.SchemaType.castForQueryWrapper (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/mongoose/lib/schematype.js:1590:20)
+          at castUpdateVal (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/mongoose/lib/helpers/query/castUpdate.js:544:19)
+          at walkUpdatePath (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/mongoose/lib/helpers/query/castUpdate.js:359:24),
+      valueType: 'string'
+    }
+  },
+  level: 'error',
+  timestamp: '2022-09-05 11:18:38'
+}
+{
+  message: {
+    deleteAttachmentFileError: FetchError: invalid json response body at https://api.trello.com/1/cards/6315a21f8a3238223495b4a1/attachments/6315ac468874b401dd681b43?key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68 reason: Unexpected token C in JSON at position 0
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/node-fetch/lib/index.js:273:32
+        at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+      type: 'invalid-json'
+    }
+  },
+  level: 'error',
+  timestamp: '2022-09-05 12:47:54'
+}
+{
+  message: {
+    updateBoardCardError: TypeError: Cannot read properties of undefined (reading 'data')
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:502:29)
+        at Generator.next (<anonymous>)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:8:71
+        at new Promise (<anonymous>)
+        at __awaiter (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:4:12)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:483:46
+        at Queue.start (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/queue/index.js:145:17)
+        at Queue.<computed> [as push] (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/queue/index.js:59:12)
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:483:28)
+        at Generator.next (<anonymous>)
+  },
+  level: 'error',
+  timestamp: '2022-09-05 12:48:18'
+}
+{
+  message: {
+    deleteAttachmentFileError: FetchError: invalid json response body at https://api.trello.com/1/cards/6315d3f07e07be0239ede68b/attachments/6315ac468874b401dd681b43?key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68 reason: Unexpected token C in JSON at position 0
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/node-fetch/lib/index.js:273:32
+        at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+      type: 'invalid-json'
+    }
+  },
+  level: 'error',
+  timestamp: '2022-09-05 12:48:29'
+}
+{
+  message: {
+    deleteAttachmentFileError: FetchError: invalid json response body at https://api.trello.com/1/cards/6315d3f07e07be0239ede68b/attachments/6315ac468874b401dd681b43?key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68 reason: Unexpected token C in JSON at position 0
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/node-fetch/lib/index.js:273:32
+        at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+      type: 'invalid-json'
+    }
+  },
+  level: 'error',
+  timestamp: '2022-09-05 12:48:29'
+}
+{
+  message: {
+    updateBoardCardError: TypeError: Cannot read properties of undefined (reading 'data')
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:502:29)
+        at Generator.next (<anonymous>)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:8:71
+        at new Promise (<anonymous>)
+        at __awaiter (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:4:12)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:483:46
+        at Queue.start (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/queue/index.js:145:17)
+        at Queue.<computed> [as push] (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/queue/index.js:59:12)
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:483:28)
+        at Generator.next (<anonymous>)
+  },
+  level: 'error',
+  timestamp: '2022-09-05 12:50:17'
+}
+{
+  message: {
+    deleteAttachmentFileError: FetchError: invalid json response body at https://api.trello.com/1/cards/6315d46993ce1500700d6f44/attachments/6315ac468874b401dd681b43?key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68 reason: Unexpected token C in JSON at position 0
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/node-fetch/lib/index.js:273:32
+        at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+      type: 'invalid-json'
+    }
+  },
+  level: 'error',
+  timestamp: '2022-09-05 12:50:31'
+}
+{
+  message: {
+    deleteAttachmentFileError: FetchError: invalid json response body at https://api.trello.com/1/cards/6315d46993ce1500700d6f44/attachments/6315ac468874b401dd681b43?key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68 reason: Unexpected token C in JSON at position 0
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/node-fetch/lib/index.js:273:32
+        at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+      type: 'invalid-json'
+    }
+  },
+  level: 'error',
+  timestamp: '2022-09-05 12:50:31'
+}
+{
+  message: {
+    updateBoardCardError: TypeError: Cannot read properties of undefined (reading 'data')
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:502:29)
+        at Generator.next (<anonymous>)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:8:71
+        at new Promise (<anonymous>)
+        at __awaiter (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:4:12)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:483:46
+        at Queue.start (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/queue/index.js:145:17)
+        at Queue.<computed> [as push] (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/queue/index.js:59:12)
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:483:28)
+        at Generator.next (<anonymous>)
+  },
+  level: 'error',
+  timestamp: '2022-09-05 12:53:04'
+}
+{
+  message: {
+    deleteAttachmentFileError: FetchError: invalid json response body at https://api.trello.com/1/cards/6315d510d2bc540181c046a0/attachments/6315ac468874b401dd681b43?key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68 reason: Unexpected token C in JSON at position 0
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/node-fetch/lib/index.js:273:32
+        at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+      type: 'invalid-json'
+    }
+  },
+  level: 'error',
+  timestamp: '2022-09-05 12:53:30'
+}
+{
+  message: {
+    deleteAttachmentFileError: FetchError: invalid json response body at https://api.trello.com/1/cards/6315d510d2bc540181c046a0/attachments/6315ac468874b401dd681b43?key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68 reason: Unexpected token C in JSON at position 0
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/node-fetch/lib/index.js:273:32
+        at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+      type: 'invalid-json'
+    }
+  },
+  level: 'error',
+  timestamp: '2022-09-05 12:53:50'
+}
+{
+  message: {
+    deleteAttachmentFileError: FetchError: invalid json response body at https://api.trello.com/1/cards/6315d510d2bc540181c046a0/attachments/6315d512a46a83038b716188?key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68 reason: Unexpected token C in JSON at position 0
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/node-fetch/lib/index.js:273:32
+        at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+      type: 'invalid-json'
+    }
+  },
+  level: 'error',
+  timestamp: '2022-09-05 12:53:50'
+}
+{
+  message: {
+    updateBoardCardError: TypeError: Cannot read properties of undefined (reading 'data')
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:502:29)
+        at Generator.next (<anonymous>)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:8:71
+        at new Promise (<anonymous>)
+        at __awaiter (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:4:12)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:483:46
+        at Queue.start (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/queue/index.js:145:17)
+        at Queue.<computed> [as push] (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/queue/index.js:59:12)
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:483:28)
+        at Generator.next (<anonymous>)
+  },
+  level: 'error',
+  timestamp: '2022-09-05 12:59:23'
+}
+{
+  message: {
+    __updateTaskByTrelloDBError: TypeError: Cannot set properties of null (setting 'name')
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/dbCalls/tasks/tasks.ts:309:16)
+        at Generator.next (<anonymous>)
+        at fulfilled (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/dbCalls/tasks/tasks.ts:28:58)
+        at runMicrotasks (<anonymous>)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5)
+  },
+  level: 'error',
+  timestamp: '2022-09-05 12:59:35'
+}
+{
+  message: {
+    __updateTaskByTrelloDBError: TypeError: Cannot set properties of null (setting 'name')
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/dbCalls/tasks/tasks.ts:309:16)
+        at Generator.next (<anonymous>)
+        at fulfilled (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/dbCalls/tasks/tasks.ts:28:58)
+        at runMicrotasks (<anonymous>)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5)
+  },
+  level: 'error',
+  timestamp: '2022-09-05 12:59:47'
+}
+{
+  message: {
+    updateBoardCardError: TypeError: Cannot read properties of undefined (reading 'data')
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:502:29)
+        at Generator.next (<anonymous>)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:8:71
+        at new Promise (<anonymous>)
+        at __awaiter (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:4:12)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:483:46
+        at Queue.start (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/queue/index.js:145:17)
+        at Queue.<computed> [as push] (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/queue/index.js:59:12)
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:483:28)
+        at Generator.next (<anonymous>)
+  },
+  level: 'error',
+  timestamp: '2022-09-05 13:09:14'
+}
+{
+  message: {
+    __updateTaskByTrelloDBError: TypeError: Cannot set properties of null (setting 'name')
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/dbCalls/tasks/tasks.ts:309:16)
+        at Generator.next (<anonymous>)
+        at fulfilled (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/dbCalls/tasks/tasks.ts:28:58)
+        at runMicrotasks (<anonymous>)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5)
+  },
+  level: 'error',
+  timestamp: '2022-09-05 13:09:16'
+}
+{
+  message: {
+    deleteAttachmentFileError: FetchError: invalid json response body at https://api.trello.com/1/cards/6315d8da299d32001672d7e0/attachments/6315d512a46a83038b716188?key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68 reason: Unexpected token C in JSON at position 0
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/node-fetch/lib/index.js:273:32
+        at runMicrotasks (<anonymous>)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+      type: 'invalid-json'
+    }
+  },
+  level: 'error',
+  timestamp: '2022-09-05 13:14:32'
+}
+{
+  message: {
+    deleteAttachmentFileError: FetchError: invalid json response body at https://api.trello.com/1/cards/6315d8da299d32001672d7e0/attachments/6315d52bbcc8e503ef44f2c8?key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68 reason: Unexpected token C in JSON at position 0
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/node-fetch/lib/index.js:273:32
+        at runMicrotasks (<anonymous>)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+      type: 'invalid-json'
+    }
+  },
+  level: 'error',
+  timestamp: '2022-09-05 13:14:32'
+}
+{
+  message: {
+    deleteAttachmentFileError: FetchError: invalid json response body at https://api.trello.com/1/cards/6315d8da299d32001672d7e0/attachments/6315ac468874b401dd681b43?key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68 reason: Unexpected token C in JSON at position 0
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/node-fetch/lib/index.js:273:32
+        at runMicrotasks (<anonymous>)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+      type: 'invalid-json'
+    }
+  },
+  level: 'error',
+  timestamp: '2022-09-05 13:14:32'
+}
+{
+  message: {
+    deleteAttachmentFileError: FetchError: invalid json response body at https://api.trello.com/1/cards/6315d8da299d32001672d7e0/attachments/6315d512a46a83038b716188?key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68 reason: Unexpected token C in JSON at position 0
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/node-fetch/lib/index.js:273:32
+        at runMicrotasks (<anonymous>)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+      type: 'invalid-json'
+    }
+  },
+  level: 'error',
+  timestamp: '2022-09-05 13:14:43'
+}
+{
+  message: {
+    deleteAttachmentFileError: FetchError: invalid json response body at https://api.trello.com/1/cards/6315d8da299d32001672d7e0/attachments/6315ac468874b401dd681b43?key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68 reason: Unexpected token C in JSON at position 0
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/node-fetch/lib/index.js:273:32
+        at runMicrotasks (<anonymous>)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+      type: 'invalid-json'
+    }
+  },
+  level: 'error',
+  timestamp: '2022-09-05 13:14:43'
+}
+{
+  message: {
+    deleteAttachmentFileError: FetchError: invalid json response body at https://api.trello.com/1/cards/6315d8da299d32001672d7e0/attachments/6315d8dc68c0eb01731a2410?key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68 reason: Unexpected token C in JSON at position 0
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/node-fetch/lib/index.js:273:32
+        at runMicrotasks (<anonymous>)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+      type: 'invalid-json'
+    }
+  },
+  level: 'error',
+  timestamp: '2022-09-05 13:14:43'
+}
+{
+  message: {
+    deleteAttachmentFileError: FetchError: invalid json response body at https://api.trello.com/1/cards/6315d8da299d32001672d7e0/attachments/6315d52bbcc8e503ef44f2c8?key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68 reason: Unexpected token C in JSON at position 0
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/node-fetch/lib/index.js:273:32
+        at runMicrotasks (<anonymous>)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+      type: 'invalid-json'
+    }
+  },
+  level: 'error',
+  timestamp: '2022-09-05 13:14:43'
+}
+{
+  message: {
+    updateBoardCardError: TypeError: Cannot read properties of undefined (reading 'data')
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:502:29)
+        at Generator.next (<anonymous>)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:8:71
+        at new Promise (<anonymous>)
+        at __awaiter (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:4:12)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:483:46
+        at Queue.start (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/queue/index.js:145:17)
+        at Queue.<computed> [as push] (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/queue/index.js:59:12)
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:483:28)
+        at Generator.next (<anonymous>)
+  },
+  level: 'error',
+  timestamp: '2022-09-05 13:21:28'
+}
+{
+  message: {
+    __updateTaskByTrelloDBError: TypeError: Cannot set properties of null (setting 'name')
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/dbCalls/tasks/tasks.ts:309:16)
+        at Generator.next (<anonymous>)
+        at fulfilled (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/dbCalls/tasks/tasks.ts:28:58)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5)
+  },
+  level: 'error',
+  timestamp: '2022-09-05 13:21:30'
+}

@@ -1,7 +1,7 @@
 import { model, Schema, Model } from "mongoose";
 import logger from "../../logger";
 import { TaskInfo, TasksModel } from "../types/model/tasks";
-const FilesSchema: Schema = new Schema({
+export const FilesSchema: Schema = new Schema({
   name: { type: String },
   trelloId: { type: String },
   mimeType: { type: String },
@@ -97,4 +97,5 @@ const TaskSchema = new Schema<TaskInfo, TasksModel>(
 );
 
 const Tasks = model<TaskInfo, TasksModel>("tasks", TaskSchema);
+export const TaskFileSchema = model("attachedFiles", FilesSchema);
 export default Tasks;

@@ -48,17 +48,12 @@ const TaskReq = class TaskReq extends TaskController {
         let validate = editTaskSchema.validate(TaskData);
         if (validate.error)
           return res.status(400).send(validate.error.details[0]);
-        let task: taskResponse = await super.updateTask(TaskData, files);
-        if (task && task?.error) res.status(400).send(task.error);
-        if (task?.task?._id) {
-          return res.send(task.task);
-        } else {
-          return res.status(400).send(customeError("update_task_error", 400));
-        }
+        await super.updateTask(TaskData, files);
+        return res.send({ message: "Task updated Sucessfully" });
       });
-      updateTaskQueue.start();
     } catch (error) {
       logger.error({ handleUpdateCardError: error });
+      return res.status(400).send(customeError("update_task_error", 400));
     }
   }
   static async handleGetTasks(req: Request, res: Response) {

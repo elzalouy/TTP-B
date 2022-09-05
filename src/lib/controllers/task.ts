@@ -87,34 +87,13 @@ class TaskController extends TaskDB {
       if (!data.cardId) return provideCardIdError;
       // recieve data
       // call a background job for updating the trello card data.
-      updateCardJob(data);
-      TaskQueue.start();
-      // wait for both update date in db and upload,delete files to trello
-      // if there are deleted files, then delete it from the db
-      let deleteFiles: AttachmentSchema[];
-      if (data?.deleteFiles) {
-        deleteFiles = data.deleteFiles;
-        if (deleteFiles.length > 0) {
-          await deleteFiles?.forEach(async (item) => {
-            if (!item.trelloId) return deleteFilesError;
-            await BoardController.__deleteAtachment(data.cardId, item.trelloId);
-          });
-        }
-      }
-      // if there are uploading files, upload it in the controller layer.
-      if (files) {
-        await this.__createTaskAttachment(files, data);
-      }
-      // update data in the db in dbCalls
-      delete data.attachedFiles;
-      delete data.deleteFiles;
-      let task = await super.updateTaskDB(data);
-      deleteAll();
-      return task;
+
+      updateCardJob(data, files);
     } catch (error) {
       logger.error({ updateTaskError: error });
     }
   }
+
   /**
    * createTaskAttachment
    * it should be fired inside of a async background job with the webhook
@@ -145,12 +124,12 @@ class TaskController extends TaskDB {
           });
         });
       } else delete data.attachedFiles;
-      deleteAll();
       return data;
     } catch (error) {
       logger.error({ createTaskAttachmentError: error });
     }
   }
+
   static async __CreateNewTask(data: TaskData, files: Express.Multer.File[]) {
     try {
       let createdCard: { id: string } | any =

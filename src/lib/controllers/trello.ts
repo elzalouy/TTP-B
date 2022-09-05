@@ -10,12 +10,12 @@ import {
   updateCardResponse,
   webhookUpdateInterface,
 } from "../types/controller/Tasks";
-import { io } from "../../index";
 import TaskController from "./task";
 import { validateExtentions } from "../services/validation";
 import TechMemberDB from "../dbCalls/techMember/techMember";
 import Department from "../models/Department";
 import Tasks from "../models/Task";
+import { TrelloCardActionsQueue } from "../background/boardQueue";
 
 config();
 var FormData = require("form-data");
@@ -480,125 +480,120 @@ class BoardController {
    * @param data webhook request data inserted with the webhook call.
    */
   static async __updateBoardCard(data: webhookUpdateInterface) {
-    try {
-      let status = [
-        "inProgress",
-        "Shared",
-        "Done",
-        "Tasks Board",
-        "Not Clear",
-        "Cancled",
-        "Review",
-      ];
+    TrelloCardActionsQueue.push(async (cb) => {
+      try {
+        let status = [
+          "inProgress",
+          "Shared",
+          "Done",
+          "Tasks Board",
+          "Not Clear",
+          "Cancled",
+          "Review",
+        ];
 
-      let type = data.action?.type;
+        let type = data.action?.type;
 
-      let action = data?.action?.display?.translationKey
-        ? data?.action?.display?.translationKey
-        : "";
-      console.log(type, action);
-      let task: TaskData = {
-        name: data.action.data.card.name,
-        listId: data.action.data.card.idList,
-        boardId: data.action.data.board.id,
-        cardId: data.action.data.card?.id,
-      };
-      let department = await Department.findOne({
-        boardId: task.boardId,
-      });
+        let action = data?.action?.display?.translationKey
+          ? data?.action?.display?.translationKey
+          : "";
+        console.log(type, action);
+        let task: TaskData = {
+          name: data.action.data.card.name,
+          listId: data.action.data.card.idList,
+          boardId: data.action.data.board.id,
+          cardId: data.action.data.card?.id,
+        };
+        let department = await Department.findOne({
+          boardId: task.boardId,
+        });
 
-      if (
-        type === "moveCardToBoard" &&
-        action === "action_move_card_to_board"
-      ) {
-        task.boardId = data.action.data.board.id;
-        task.listId = data.action.data.list.id;
-        // move task to the new team
-        let team = department.teams.find(
-          (item) => item.listId === data.action.data.list.id
-        );
-        if (team) task.teamId = team._id;
-        else {
-          task.status = data.action.data.list.name;
-        }
-        // update task
-        let result = await TaskController.updateTaskByTrelloDB(task);
-        return io?.sockets?.emit("update-task", result);
-      }
-      if (
-        type === "updateCard" &&
-        action !== "action_archived_card" &&
-        action !== "action_sent_card_to_board"
-      ) {
-        if (action === "action_changed_description_of_card")
-          task.description = data.action.data.card.desc;
-        if (action === "action_renamed_card")
-          task.name = data.action.data.card.name;
-        if (action === "action_move_card_from_list_to_list") {
-          task.listId = data.action.data.listAfter?.id;
-          task.lastMove = data.action.data.listBefore.name;
-          task.lastMoveDate = new Date().toUTCString();
-          let team = await department.teams.find(
-            (item) => item.listId === data.action.data.listAfter.id
+        if (
+          type === "moveCardToBoard" &&
+          action === "action_move_card_to_board"
+        ) {
+          task.boardId = data.action.data.board.id;
+          task.listId = data.action.data.list.id;
+          // move task to the new team
+          let team = department.teams.find(
+            (item) => item.listId === data.action.data.list.id
           );
-          if (team) {
-            task.teamId = team._id;
-            task.status === "inProgress";
-          } else {
-            task.status = data.action.data.listAfter.name;
+          if (team) task.teamId = team._id;
+          else {
+            task.status = data.action.data.list.name;
           }
+          // update task
+          await TaskController.updateTaskByTrelloDB(task);
         }
-        let result = await TaskController.updateTaskByTrelloDB(task);
-        return io?.sockets?.emit("update-task", result);
-      }
-      // add attachment
-      if (type === "addAttachmentToCard") {
-        task.attachedFiles = [
-          {
+        if (
+          type === "updateCard" &&
+          action !== "action_archived_card" &&
+          action !== "action_sent_card_to_board"
+        ) {
+          if (action === "action_changed_description_of_card")
+            task.description = data.action.data.card.desc;
+          if (action === "action_renamed_card")
+            task.name = data.action.data.card.name;
+          if (action === "action_move_card_from_list_to_list") {
+            task.listId = data.action.data.listAfter?.id;
+            task.lastMove = data.action.data.listBefore.name;
+            task.lastMoveDate = new Date().toUTCString();
+            let team = await department.teams.find(
+              (item) => item.listId === data.action.data.listAfter.id
+            );
+            if (team) {
+              task.teamId = team._id;
+              task.status === "inProgress";
+            } else {
+              task.status = data.action.data.listAfter.name;
+            }
+          }
+          await TaskController.updateTaskByTrelloDB(task);
+        }
+        // add attachment
+        if (type === "addAttachmentToCard") {
+          task.attachedFile = {
             trelloId: data.action.data?.attachment?.id,
             name: data.action.data?.attachment?.name,
             url: data.action.data.attachment?.url,
             // utils function to detect type from name.ext
             mimeType: validateExtentions(data.action.data?.attachment?.name),
-          },
-        ];
-        let result = await TaskController.updateTaskByTrelloDB(task);
-        io.sockets.emit("update-task", result);
+          };
+          await TaskController.updateTaskByTrelloDB(task);
+        }
+        if (type === "deleteAttachmentFromCard") {
+          task.deleteFiles = {
+            trelloId: data.action.data.attachment.id,
+            name: data.action.data.attachment.name,
+          };
+          await TaskController.updateTaskByTrelloDB(task);
+        }
+        if (type === "updateCard" && action === "action_archived_card") {
+          // archive, unArchive or delete
+          let result = await TaskController.archiveTaskByTrelloDB(task, true);
+        }
+        if (type === "updateCard" && action === "action_sent_card_to_board") {
+          console.log({ list: data.action.data.list });
+          task.listId = data.action.data.list.id;
+          let team = department.teams.find(
+            (item) => item.listId === data.action.data.list.id
+          );
+          if (team) {
+            task.status = "inProgress";
+            task.teamId = team._id;
+          } else task.status = data.action.data.list.name;
+          await TaskController.archiveTaskByTrelloDB(task, false);
+        }
+        //delete
+        if (type === "deleteCard") {
+          let result = await TaskController.deleteTaskByTrelloDB(task);
+        }
+        cb(null, true);
+      } catch (error: any) {
+        logger.error({ updateBoardCardError: error });
+        cb(error, null);
       }
-      if (type === "deleteAttachmentFromCard") {
-        task.deleteFiles = {
-          trelloId: data.action.data.attachment.id,
-          name: data.action.data.attachment.name,
-        };
-        let result = await TaskController.updateTaskByTrelloDB(task);
-        return io.sockets.emit("update-task", result);
-      }
-      if (type === "updateCard" && action === "action_archived_card") {
-        // archive, unArchive or delete
-        let result = await TaskController.archiveTaskByTrelloDB(task, true);
-        return io?.sockets?.emit("update-task", result);
-      }
-      if (type === "updateCard" && action === "action_sent_card_to_board") {
-        console.log({ list: data.action.data.list });
-        task.listId = data.action.data.list.id;
-        let team = department.teams.find(
-          (item) => item.listId === data.action.data.list.id
-        );
-        if (team) {
-          task.status = "inProgress";
-          task.teamId = team._id;
-        } else task.status = data.action.data.list.name;
-        let result = await TaskController.archiveTaskByTrelloDB(task, false);
-        return io?.sockets?.emit("update-task", result);
-      }
-      //delete
-      if (type === "deleteCard") {
-        let result = await TaskController.deleteTaskByTrelloDB(task);
-        return io?.sockets?.emit("delete-task", result);
-      }
-    } catch (error) {
-      logger.error({ updateBoardCardError: error });
-    }
+    });
   }
 }
 export default BoardController;

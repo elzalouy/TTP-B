@@ -52,7 +52,6 @@ export interface TaskData {
   deliveryDate?: Date;
   done?: Date;
   turnoverTime?: number;
-  attachedFiles?: AttachmentSchema[];
   attachedCard?: string;
   teamId?: string;
   cardId?: string;
@@ -62,7 +61,9 @@ export interface TaskData {
   lastMove?: string;
   lastMoveDate?: String;
   // edit task files only
+  attachedFiles?: AttachmentSchema[];
   deleteFiles?: AttachmentSchema[] | any;
+  attachedFile?: AttachmentSchema;
 }
 export interface AttachmentResponse {
   id: string;
