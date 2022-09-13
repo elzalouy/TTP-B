@@ -436,7 +436,14 @@ class BoardController {
   }
   static async __updateCard(
     cardId: string,
-    data: { name: string; desc: string; idBoard?: string; idList?: string }
+    data: {
+      name: string;
+      desc: string;
+      idBoard?: string;
+      idList?: string;
+      start?: string;
+      deadline?: string;
+    }
   ) {
     try {
       let params: RequestInit = {
@@ -450,6 +457,8 @@ class BoardController {
           desc: data.desc,
           idBoard: data.idBoard,
           idList: data.idList,
+          due: data.deadline,
+          start: data.start,
         }),
       };
       let api = trelloApi(`cards/${cardId}?`);
@@ -482,22 +491,13 @@ class BoardController {
   static async __updateBoardCard(data: webhookUpdateInterface) {
     TrelloCardActionsQueue.push(async (cb) => {
       try {
-        let status = [
-          "inProgress",
-          "Shared",
-          "Done",
-          "Tasks Board",
-          "Not Clear",
-          "Cancled",
-          "Review",
-        ];
-
         let type = data.action?.type;
 
         let action = data?.action?.display?.translationKey
           ? data?.action?.display?.translationKey
           : "";
-        console.log(type, action);
+        console.log({ type, action });
+        console.log({ action: data.action.data.card });
         let task: TaskData = {
           name: data.action.data.card.name,
           listId: data.action.data.card.idList,
@@ -530,6 +530,11 @@ class BoardController {
           action !== "action_archived_card" &&
           action !== "action_sent_card_to_board"
         ) {
+          if (action === "action_changed_a_due_date")
+            task.deadline = new Date(data.action.data.card.due);
+          if (action === "action_changed_a_start_date") {
+            task.start = new Date(data.action.data.card.start);
+          }
           if (action === "action_changed_description_of_card")
             task.description = data.action.data.card.desc;
           if (action === "action_renamed_card")

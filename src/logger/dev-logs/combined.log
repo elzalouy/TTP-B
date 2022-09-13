@@ -3977,3 +3977,1264 @@
   level: 'error',
   timestamp: '2022-09-05 13:21:30'
 }
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-09-05 15:13:51'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-09-06 09:29:45'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-09-06 13:32:35'
+}
+{
+  message: {
+    s3File: {
+      fieldname: 'image',
+      originalname: 'download.jpeg',
+      encoding: '7bit',
+      mimetype: 'image/jpeg'
+    }
+  },
+  level: 'info',
+  timestamp: '2022-09-06 13:34:14'
+}
+{
+  message: {
+    s3File: {
+      fieldname: 'image',
+      originalname: 'download (1).jpeg',
+      encoding: '7bit',
+      mimetype: 'image/jpeg'
+    }
+  },
+  level: 'info',
+  timestamp: '2022-09-06 13:35:17'
+}
+{
+  message: {
+    s3File: {
+      fieldname: 'image',
+      originalname: 'download.jpeg',
+      encoding: '7bit',
+      mimetype: 'image/jpeg'
+    }
+  },
+  level: 'info',
+  timestamp: '2022-09-06 13:35:47'
+}
+{
+  message: {
+    createclientDBError: MongoServerError: E11000 duplicate key error collection: TTP.clients index: clientName_1 dup key: { clientName: "asd" }
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/mongodb/src/operations/insert.ts:85:25
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/mongodb/src/cmap/connection_pool.ts:482:13
+        at handleOperationResult (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/mongodb/src/sdam/server.ts:538:14)
+        at Connection.onMessage (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/mongodb/src/cmap/connection.ts:452:5)
+        at MessageStream.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/mongodb/src/cmap/connection.ts:267:56)
+        at MessageStream.emit (node:events:527:28)
+        at MessageStream.emit (node:domain:475:12)
+        at processIncomingData (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/mongodb/src/cmap/message_stream.ts:168:12)
+        at MessageStream._write (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/mongodb/src/cmap/message_stream.ts:65:5)
+        at writeOrBuffer (node:internal/streams/writable:389:12) {
+      index: 0,
+      code: 11000,
+      keyPattern: { clientName: 1 },
+      keyValue: { clientName: 'asd' },
+      [Symbol(errorLabels)]: Set(0) {}
+    }
+  },
+  level: 'error',
+  timestamp: '2022-09-06 13:35:48'
+}
+{
+  message: {
+    s3File: {
+      fieldname: 'image',
+      originalname: 'download (1).jpeg',
+      encoding: '7bit',
+      mimetype: 'image/jpeg'
+    }
+  },
+  level: 'info',
+  timestamp: '2022-09-06 13:39:03'
+}
+{
+  message: {
+    s3File: {
+      fieldname: 'image',
+      originalname: 'download (1).jpeg',
+      encoding: '7bit',
+      mimetype: 'image/jpeg'
+    }
+  },
+  level: 'info',
+  timestamp: '2022-09-06 13:41:04'
+}
+{
+  message: {
+    s3File: {
+      fieldname: 'image',
+      originalname: 'download (1).jpeg',
+      encoding: '7bit',
+      mimetype: 'image/jpeg'
+    }
+  },
+  level: 'info',
+  timestamp: '2022-09-06 13:41:57'
+}
+{
+  message: {
+    s3File: {
+      fieldname: 'image',
+      originalname: 'download.jpeg',
+      encoding: '7bit',
+      mimetype: 'image/jpeg'
+    }
+  },
+  level: 'info',
+  timestamp: '2022-09-06 13:43:39'
+}
+{
+  message: {
+    s3File: {
+      fieldname: 'image',
+      originalname: 'download.jpeg',
+      encoding: '7bit',
+      mimetype: 'image/jpeg'
+    }
+  },
+  level: 'info',
+  timestamp: '2022-09-06 13:44:54'
+}
+{
+  message: {
+    s3File: {
+      fieldname: 'image',
+      originalname: 'download (1).jpeg',
+      encoding: '7bit',
+      mimetype: 'image/jpeg'
+    }
+  },
+  level: 'info',
+  timestamp: '2022-09-06 13:45:44'
+}
+{
+  message: {
+    s3File: {
+      fieldname: 'image',
+      originalname: 'download.jpeg',
+      encoding: '7bit',
+      mimetype: 'image/jpeg'
+    }
+  },
+  level: 'info',
+  timestamp: '2022-09-06 13:49:32'
+}
+{
+  message: {
+    s3File: {
+      fieldname: 'image',
+      originalname: 'download (1).jpeg',
+      encoding: '7bit',
+      mimetype: 'image/jpeg'
+    }
+  },
+  level: 'info',
+  timestamp: '2022-09-06 13:51:48'
+}
+{
+  message: {
+    s3File: {
+      fieldname: 'image',
+      originalname: 'download.jpeg',
+      encoding: '7bit',
+      mimetype: 'image/jpeg'
+    }
+  },
+  level: 'info',
+  timestamp: '2022-09-06 13:52:15'
+}
+{
+  message: {
+    s3File: {
+      fieldname: 'image',
+      originalname: 'download (1).jpeg',
+      encoding: '7bit',
+      mimetype: 'image/jpeg'
+    }
+  },
+  level: 'info',
+  timestamp: '2022-09-06 13:53:21'
+}
+{
+  message: {
+    s3File: {
+      fieldname: 'image',
+      originalname: 'download (1).jpeg',
+      encoding: '7bit',
+      mimetype: 'image/jpeg'
+    }
+  },
+  level: 'info',
+  timestamp: '2022-09-06 13:56:48'
+}
+{
+  message: {
+    s3File: {
+      fieldname: 'image',
+      originalname: 'download.jpeg',
+      encoding: '7bit',
+      mimetype: 'image/jpeg'
+    }
+  },
+  level: 'info',
+  timestamp: '2022-09-06 13:59:06'
+}
+{
+  message: {
+    s3File: {
+      fieldname: 'image',
+      originalname: 'download (1).jpeg',
+      encoding: '7bit',
+      mimetype: 'image/jpeg'
+    }
+  },
+  level: 'info',
+  timestamp: '2022-09-06 13:59:38'
+}
+{
+  message: {
+    s3File: {
+      fieldname: 'image',
+      originalname: 'download (1).jpeg',
+      encoding: '7bit',
+      mimetype: 'image/jpeg'
+    }
+  },
+  level: 'info',
+  timestamp: '2022-09-06 14:00:20'
+}
+{
+  message: {
+    s3File: {
+      fieldname: 'image',
+      originalname: 'download (1).jpeg',
+      encoding: '7bit',
+      mimetype: 'image/jpeg'
+    }
+  },
+  level: 'info',
+  timestamp: '2022-09-06 14:05:09'
+}
+{
+  message: {
+    s3File: {
+      fieldname: 'image',
+      originalname: 'download (1).jpeg',
+      encoding: '7bit',
+      mimetype: 'image/jpeg'
+    }
+  },
+  level: 'info',
+  timestamp: '2022-09-06 14:12:05'
+}
+{
+  message: {
+    s3File: {
+      fieldname: 'image',
+      originalname: 'download.jpeg',
+      encoding: '7bit',
+      mimetype: 'image/jpeg'
+    }
+  },
+  level: 'info',
+  timestamp: '2022-09-06 14:13:34'
+}
+{
+  message: {
+    s3File: {
+      fieldname: 'image',
+      originalname: 'download (1).jpeg',
+      encoding: '7bit',
+      mimetype: 'image/jpeg'
+    }
+  },
+  level: 'info',
+  timestamp: '2022-09-06 14:14:05'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-09-06 14:18:52'
+}
+{
+  message: {
+    updateBoardCardError: TypeError: Cannot read properties of undefined (reading 'data')
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:502:29)
+        at Generator.next (<anonymous>)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:8:71
+        at new Promise (<anonymous>)
+        at __awaiter (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:4:12)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:483:46
+        at Queue.start (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/queue/index.js:145:17)
+        at Queue.<computed> [as push] (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/queue/index.js:59:12)
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:483:28)
+        at Generator.next (<anonymous>)
+  },
+  level: 'error',
+  timestamp: '2022-09-06 14:19:31'
+}
+{
+  message: {
+    __updateTaskByTrelloDBError: TypeError: Cannot set properties of null (setting 'name')
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/dbCalls/tasks/tasks.ts:309:16)
+        at Generator.next (<anonymous>)
+        at fulfilled (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/dbCalls/tasks/tasks.ts:28:58)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5)
+  },
+  level: 'error',
+  timestamp: '2022-09-06 14:19:32'
+}
+{
+  message: {
+    __updateTaskByTrelloDBError: TypeError: Cannot set properties of null (setting 'name')
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/dbCalls/tasks/tasks.ts:309:16)
+        at Generator.next (<anonymous>)
+        at fulfilled (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/dbCalls/tasks/tasks.ts:28:58)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5)
+  },
+  level: 'error',
+  timestamp: '2022-09-06 14:19:33'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-09-06 19:26:32'
+}
+{
+  message: {
+    updateBoardCardError: TypeError: Cannot read properties of undefined (reading 'data')
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:502:29)
+        at Generator.next (<anonymous>)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:8:71
+        at new Promise (<anonymous>)
+        at __awaiter (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:4:12)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:483:46
+        at Queue.start (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/queue/index.js:145:17)
+        at Queue.<computed> [as push] (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/queue/index.js:59:12)
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:483:28)
+        at Generator.next (<anonymous>)
+  },
+  level: 'error',
+  timestamp: '2022-09-06 19:26:57'
+}
+{
+  message: {
+    __updateTaskByTrelloDBError: TypeError: Cannot set properties of null (setting 'name')
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/dbCalls/tasks/tasks.ts:309:16)
+        at Generator.next (<anonymous>)
+        at fulfilled (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/dbCalls/tasks/tasks.ts:28:58)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5)
+  },
+  level: 'error',
+  timestamp: '2022-09-06 19:26:59'
+}
+{
+  message: {
+    updateBoardCardError: TypeError: Cannot read properties of undefined (reading 'data')
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:502:29)
+        at Generator.next (<anonymous>)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:8:71
+        at new Promise (<anonymous>)
+        at __awaiter (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:4:12)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:483:46
+        at Queue.start (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/queue/index.js:145:17)
+        at Queue.<computed> [as push] (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/queue/index.js:59:12)
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:483:28)
+        at Generator.next (<anonymous>)
+  },
+  level: 'error',
+  timestamp: '2022-09-06 19:35:21'
+}
+{
+  message: {
+    __updateTaskByTrelloDBError: TypeError: Cannot set properties of null (setting 'name')
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/dbCalls/tasks/tasks.ts:309:16)
+        at Generator.next (<anonymous>)
+        at fulfilled (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/dbCalls/tasks/tasks.ts:28:58)
+        at runMicrotasks (<anonymous>)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5)
+  },
+  level: 'error',
+  timestamp: '2022-09-06 19:35:23'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-09-07 09:55:32'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-09-07 09:56:10'
+}
+{
+  message: {
+    updateBoardCardError: TypeError: Cannot read properties of undefined (reading 'data')
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:502:29)
+        at Generator.next (<anonymous>)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:8:71
+        at new Promise (<anonymous>)
+        at __awaiter (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:4:12)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:483:46
+        at Queue.start (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/queue/index.js:145:17)
+        at Queue.<computed> [as push] (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/queue/index.js:59:12)
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:483:28)
+        at Generator.next (<anonymous>)
+  },
+  level: 'error',
+  timestamp: '2022-09-07 09:59:07'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-09-07 15:11:51'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-09-07 15:19:51'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-09-07 15:29:03'
+}
+{
+  message: {
+    updateBoardCardError: TypeError: Cannot read properties of undefined (reading 'data')
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:502:29)
+        at Generator.next (<anonymous>)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:8:71
+        at new Promise (<anonymous>)
+        at __awaiter (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:4:12)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:483:46
+        at Queue.start (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/queue/index.js:145:17)
+        at Queue.<computed> [as push] (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/queue/index.js:59:12)
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:483:28)
+        at Generator.next (<anonymous>)
+  },
+  level: 'error',
+  timestamp: '2022-09-07 15:30:29'
+}
+{
+  message: {
+    updateBoardCardError: TypeError: Cannot read properties of undefined (reading 'data')
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:502:29)
+        at Generator.next (<anonymous>)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:8:71
+        at new Promise (<anonymous>)
+        at __awaiter (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:4:12)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:483:46
+        at Queue.start (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/queue/index.js:145:17)
+        at Queue.<computed> [as push] (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/queue/index.js:59:12)
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:483:28)
+        at Generator.next (<anonymous>)
+  },
+  level: 'error',
+  timestamp: '2022-09-07 15:36:52'
+}
+{
+  message: {
+    updateBoardCardError: TypeError: Cannot read properties of undefined (reading 'data')
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:502:29)
+        at Generator.next (<anonymous>)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:8:71
+        at new Promise (<anonymous>)
+        at __awaiter (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:4:12)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:483:46
+        at Queue.start (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/queue/index.js:145:17)
+        at Queue.<computed> [as push] (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/queue/index.js:59:12)
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:483:28)
+        at Generator.next (<anonymous>)
+  },
+  level: 'error',
+  timestamp: '2022-09-07 16:20:45'
+}
+{
+  message: {
+    updateBoardCardError: TypeError: Cannot read properties of undefined (reading 'data')
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:502:29)
+        at Generator.next (<anonymous>)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:8:71
+        at new Promise (<anonymous>)
+        at __awaiter (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:4:12)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:483:46
+        at Queue.start (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/queue/index.js:145:17)
+        at Queue.<computed> [as push] (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/queue/index.js:59:12)
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:483:28)
+        at Generator.next (<anonymous>)
+  },
+  level: 'error',
+  timestamp: '2022-09-07 16:21:04'
+}
+{
+  message: {
+    updateBoardCardError: TypeError: Cannot read properties of undefined (reading 'data')
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:502:29)
+        at Generator.next (<anonymous>)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:8:71
+        at new Promise (<anonymous>)
+        at __awaiter (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:4:12)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:483:46
+        at Queue.start (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/queue/index.js:145:17)
+        at Queue.<computed> [as push] (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/queue/index.js:59:12)
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:483:28)
+        at Generator.next (<anonymous>)
+  },
+  level: 'error',
+  timestamp: '2022-09-07 16:21:26'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-09-07 17:49:23'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-09-07 19:38:37'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-09-07 20:52:42'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-09-07 20:58:18'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-09-08 10:17:00'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-09-08 10:19:16'
+}
+{
+  message: {
+    sendMailError: Error: Unexpected socket close
+        at Timeout._onTimeout (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/nodemailer/lib/smtp-transport/index.js:189:31)
+        at listOnTimeout (node:internal/timers:559:17)
+        at processTimers (node:internal/timers:502:7)
+  },
+  level: 'info',
+  timestamp: '2022-09-08 10:58:28'
+}
+{
+  message: {
+    updateBoardCardError: TypeError: Cannot read properties of undefined (reading 'data')
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:502:29)
+        at Generator.next (<anonymous>)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:8:71
+        at new Promise (<anonymous>)
+        at __awaiter (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:4:12)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:483:46
+        at Queue.start (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/queue/index.js:145:17)
+        at Queue.<computed> [as push] (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/queue/index.js:59:12)
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:483:28)
+        at Generator.next (<anonymous>)
+  },
+  level: 'error',
+  timestamp: '2022-09-08 11:10:06'
+}
+{
+  message: {
+    updateBoardCardError: TypeError: Cannot read properties of undefined (reading 'data')
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:502:29)
+        at Generator.next (<anonymous>)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:8:71
+        at new Promise (<anonymous>)
+        at __awaiter (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:4:12)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:483:46
+        at Queue.start (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/queue/index.js:145:17)
+        at Queue.<computed> [as push] (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/queue/index.js:59:12)
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:483:28)
+        at Generator.next (<anonymous>)
+  },
+  level: 'error',
+  timestamp: '2022-09-08 11:18:06'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-09-08 11:52:09'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-09-08 13:57:48'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-09-08 18:33:52'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-09-10 02:30:21'
+}
+{
+  message: {
+    updateBoardCardError: TypeError: Cannot read properties of undefined (reading 'data')
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:502:29)
+        at Generator.next (<anonymous>)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:8:71
+        at new Promise (<anonymous>)
+        at __awaiter (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:4:12)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:483:46
+        at Queue.start (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/queue/index.js:145:17)
+        at Queue.<computed> [as push] (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/queue/index.js:59:12)
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:483:28)
+        at Generator.next (<anonymous>)
+  },
+  level: 'error',
+  timestamp: '2022-09-10 02:30:42'
+}
+{
+  message: {
+    updateBoardCardError: TypeError: Cannot read properties of undefined (reading 'data')
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:502:29)
+        at Generator.next (<anonymous>)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:8:71
+        at new Promise (<anonymous>)
+        at __awaiter (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:4:12)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:483:46
+        at Queue.start (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/queue/index.js:145:17)
+        at Queue.<computed> [as push] (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/queue/index.js:59:12)
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:483:28)
+        at Generator.next (<anonymous>)
+  },
+  level: 'error',
+  timestamp: '2022-09-10 02:30:58'
+}
+{
+  message: {
+    updateBoardCardError: TypeError: Cannot read properties of undefined (reading 'data')
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:502:29)
+        at Generator.next (<anonymous>)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:8:71
+        at new Promise (<anonymous>)
+        at __awaiter (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:4:12)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:483:46
+        at Queue.start (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/queue/index.js:145:17)
+        at Queue.<computed> [as push] (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/queue/index.js:59:12)
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:483:28)
+        at Generator.next (<anonymous>)
+  },
+  level: 'error',
+  timestamp: '2022-09-10 02:32:44'
+}
+{
+  message: {
+    updateBoardCardError: TypeError: Cannot read properties of undefined (reading 'data')
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:502:29)
+        at Generator.next (<anonymous>)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:8:71
+        at new Promise (<anonymous>)
+        at __awaiter (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:4:12)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:483:46
+        at Queue.start (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/queue/index.js:145:17)
+        at Queue.<computed> [as push] (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/queue/index.js:59:12)
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:483:28)
+        at Generator.next (<anonymous>)
+  },
+  level: 'error',
+  timestamp: '2022-09-10 03:36:33'
+}
+{
+  message: {
+    updateBoardCardError: TypeError: Cannot read properties of undefined (reading 'data')
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:502:29)
+        at Generator.next (<anonymous>)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:8:71
+        at new Promise (<anonymous>)
+        at __awaiter (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:4:12)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:483:46
+        at Queue.start (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/queue/index.js:145:17)
+        at Queue.<computed> [as push] (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/queue/index.js:59:12)
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:483:28)
+        at Generator.next (<anonymous>)
+  },
+  level: 'error',
+  timestamp: '2022-09-10 03:36:43'
+}
+{
+  message: {
+    updateBoardCardError: TypeError: Cannot read properties of undefined (reading 'data')
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:502:29)
+        at Generator.next (<anonymous>)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:8:71
+        at new Promise (<anonymous>)
+        at __awaiter (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:4:12)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:483:46
+        at Queue.start (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/queue/index.js:145:17)
+        at Queue.<computed> [as push] (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/queue/index.js:59:12)
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:483:28)
+        at Generator.next (<anonymous>)
+  },
+  level: 'error',
+  timestamp: '2022-09-10 03:36:58'
+}
+{
+  message: {
+    updateBoardCardError: TypeError: Cannot read properties of undefined (reading 'data')
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:502:29)
+        at Generator.next (<anonymous>)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:8:71
+        at new Promise (<anonymous>)
+        at __awaiter (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:4:12)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:483:46
+        at Queue.start (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/queue/index.js:145:17)
+        at Queue.<computed> [as push] (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/queue/index.js:59:12)
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:483:28)
+        at Generator.next (<anonymous>)
+  },
+  level: 'error',
+  timestamp: '2022-09-10 03:37:17'
+}
+{
+  message: {
+    updateBoardCardError: TypeError: Cannot read properties of undefined (reading 'data')
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:502:29)
+        at Generator.next (<anonymous>)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:8:71
+        at new Promise (<anonymous>)
+        at __awaiter (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:4:12)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:483:46
+        at Queue.start (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/queue/index.js:145:17)
+        at Queue.<computed> [as push] (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/queue/index.js:59:12)
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:483:28)
+        at Generator.next (<anonymous>)
+  },
+  level: 'error',
+  timestamp: '2022-09-10 03:37:32'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-09-10 19:20:33'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-09-10 19:21:13'
+}
+{
+  message: {
+    updateBoardCardError: TypeError: Cannot read properties of undefined (reading 'data')
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:502:29)
+        at Generator.next (<anonymous>)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:8:71
+        at new Promise (<anonymous>)
+        at __awaiter (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:4:12)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:483:46
+        at Queue.start (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/queue/index.js:145:17)
+        at Queue.<computed> [as push] (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/queue/index.js:59:12)
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:483:28)
+        at Generator.next (<anonymous>)
+  },
+  level: 'error',
+  timestamp: '2022-09-10 19:22:28'
+}
+{
+  message: {
+    updateBoardCardError: TypeError: Cannot read properties of undefined (reading 'data')
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:502:29)
+        at Generator.next (<anonymous>)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:8:71
+        at new Promise (<anonymous>)
+        at __awaiter (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:4:12)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:483:46
+        at Queue.start (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/queue/index.js:145:17)
+        at Queue.<computed> [as push] (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/queue/index.js:59:12)
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:483:28)
+        at Generator.next (<anonymous>)
+  },
+  level: 'error',
+  timestamp: '2022-09-10 19:37:55'
+}
+{
+  message: {
+    __updateTaskByTrelloDBError: TypeError: Cannot set properties of null (setting 'name')
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/dbCalls/tasks/tasks.ts:309:16)
+        at Generator.next (<anonymous>)
+        at fulfilled (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/dbCalls/tasks/tasks.ts:28:58)
+        at runMicrotasks (<anonymous>)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5)
+  },
+  level: 'error',
+  timestamp: '2022-09-10 19:37:56'
+}
+{
+  message: {
+    updateBoardCardError: TypeError: Cannot read properties of undefined (reading 'data')
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:502:29)
+        at Generator.next (<anonymous>)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:8:71
+        at new Promise (<anonymous>)
+        at __awaiter (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:4:12)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:483:46
+        at Queue.start (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/queue/index.js:145:17)
+        at Queue.<computed> [as push] (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/queue/index.js:59:12)
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:483:28)
+        at Generator.next (<anonymous>)
+  },
+  level: 'error',
+  timestamp: '2022-09-10 19:40:32'
+}
+{
+  message: {
+    __updateTaskByTrelloDBError: TypeError: Cannot set properties of null (setting 'name')
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/dbCalls/tasks/tasks.ts:309:16)
+        at Generator.next (<anonymous>)
+        at fulfilled (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/dbCalls/tasks/tasks.ts:28:58)
+        at runMicrotasks (<anonymous>)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5)
+  },
+  level: 'error',
+  timestamp: '2022-09-10 19:40:34'
+}
+{
+  message: {
+    __updateTaskByTrelloDBError: TypeError: Cannot set properties of null (setting 'name')
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/dbCalls/tasks/tasks.ts:309:16)
+        at Generator.next (<anonymous>)
+        at fulfilled (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/dbCalls/tasks/tasks.ts:28:58)
+        at runMicrotasks (<anonymous>)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5)
+  },
+  level: 'error',
+  timestamp: '2022-09-10 19:40:34'
+}
+{
+  message: {
+    updateBoardCardError: TypeError: Cannot read properties of undefined (reading 'data')
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:502:29)
+        at Generator.next (<anonymous>)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:8:71
+        at new Promise (<anonymous>)
+        at __awaiter (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:4:12)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:483:46
+        at Queue.start (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/queue/index.js:145:17)
+        at Queue.<computed> [as push] (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/queue/index.js:59:12)
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:483:28)
+        at Generator.next (<anonymous>)
+  },
+  level: 'error',
+  timestamp: '2022-09-10 19:40:35'
+}
+{
+  message: {
+    __updateTaskByTrelloDBError: TypeError: Cannot set properties of null (setting 'name')
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/dbCalls/tasks/tasks.ts:309:16)
+        at Generator.next (<anonymous>)
+        at fulfilled (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/dbCalls/tasks/tasks.ts:28:58)
+        at runMicrotasks (<anonymous>)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5)
+  },
+  level: 'error',
+  timestamp: '2022-09-10 19:40:37'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-09-12 09:58:42'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-09-12 12:47:17'
+}
+{
+  message: {
+    updateBoardCardError: TypeError: Cannot read properties of undefined (reading 'data')
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:502:29)
+        at Generator.next (<anonymous>)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:8:71
+        at new Promise (<anonymous>)
+        at __awaiter (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:4:12)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:483:46
+        at Queue.start (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/queue/index.js:145:17)
+        at Queue.<computed> [as push] (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/queue/index.js:59:12)
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:483:28)
+        at Generator.next (<anonymous>)
+  },
+  level: 'error',
+  timestamp: '2022-09-12 12:47:24'
+}
+{
+  message: {
+    __updateTaskByTrelloDBError: TypeError: Cannot set properties of null (setting 'name')
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/dbCalls/tasks/tasks.ts:309:16)
+        at Generator.next (<anonymous>)
+        at fulfilled (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/dbCalls/tasks/tasks.ts:28:58)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5)
+  },
+  level: 'error',
+  timestamp: '2022-09-12 12:47:26'
+}
+{
+  message: {
+    updateBoardCardError: TypeError: Cannot read properties of undefined (reading 'data')
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:502:29)
+        at Generator.next (<anonymous>)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:8:71
+        at new Promise (<anonymous>)
+        at __awaiter (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:4:12)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:483:46
+        at Queue.start (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/queue/index.js:145:17)
+        at Queue.<computed> [as push] (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/queue/index.js:59:12)
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:483:28)
+        at Generator.next (<anonymous>)
+  },
+  level: 'error',
+  timestamp: '2022-09-12 12:57:20'
+}
+{
+  message: {
+    updateBoardCardError: TypeError: Cannot read properties of undefined (reading 'data')
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:502:29)
+        at Generator.next (<anonymous>)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:8:71
+        at new Promise (<anonymous>)
+        at __awaiter (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:4:12)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:483:46
+        at Queue.start (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/queue/index.js:145:17)
+        at Queue.<computed> [as push] (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/queue/index.js:59:12)
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:483:28)
+        at Generator.next (<anonymous>)
+  },
+  level: 'error',
+  timestamp: '2022-09-12 12:57:36'
+}
+{
+  message: {
+    updateBoardCardError: TypeError: Cannot read properties of undefined (reading 'data')
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:502:29)
+        at Generator.next (<anonymous>)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:8:71
+        at new Promise (<anonymous>)
+        at __awaiter (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:4:12)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:483:46
+        at Queue.start (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/queue/index.js:145:17)
+        at Queue.<computed> [as push] (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/queue/index.js:59:12)
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:483:28)
+        at Generator.next (<anonymous>)
+  },
+  level: 'error',
+  timestamp: '2022-09-12 13:13:18'
+}
+{
+  message: {
+    updateBoardCardError: TypeError: Cannot read properties of undefined (reading 'data')
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:502:29)
+        at Generator.next (<anonymous>)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:8:71
+        at new Promise (<anonymous>)
+        at __awaiter (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:4:12)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:483:46
+        at Queue.start (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/queue/index.js:145:17)
+        at Queue.<computed> [as push] (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/queue/index.js:59:12)
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:483:28)
+        at Generator.next (<anonymous>)
+  },
+  level: 'error',
+  timestamp: '2022-09-12 14:37:53'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-09-12 14:59:54'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-09-13 11:08:15'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-09-13 11:11:46'
+}
+{
+  message: {
+    updateBoardCardError: TypeError: Cannot read properties of undefined (reading 'data')
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:502:29)
+        at Generator.next (<anonymous>)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:8:71
+        at new Promise (<anonymous>)
+        at __awaiter (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:4:12)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:483:46
+        at Queue.start (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/queue/index.js:145:17)
+        at Queue.<computed> [as push] (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/queue/index.js:59:12)
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:483:28)
+        at Generator.next (<anonymous>)
+  },
+  level: 'error',
+  timestamp: '2022-09-13 11:13:16'
+}
+{
+  message: {
+    updateBoardCardError: TypeError: Cannot read properties of undefined (reading 'data')
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:502:29)
+        at Generator.next (<anonymous>)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:8:71
+        at new Promise (<anonymous>)
+        at __awaiter (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:4:12)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:483:46
+        at Queue.start (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/queue/index.js:145:17)
+        at Queue.<computed> [as push] (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/queue/index.js:59:12)
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:483:28)
+        at Generator.next (<anonymous>)
+  },
+  level: 'error',
+  timestamp: '2022-09-13 11:13:28'
+}
+{
+  message: {
+    updateBoardCardError: TypeError: Cannot read properties of undefined (reading 'data')
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:502:29)
+        at Generator.next (<anonymous>)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:8:71
+        at new Promise (<anonymous>)
+        at __awaiter (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:4:12)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:483:46
+        at Queue.start (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/queue/index.js:145:17)
+        at Queue.<computed> [as push] (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/queue/index.js:59:12)
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:483:28)
+        at Generator.next (<anonymous>)
+  },
+  level: 'error',
+  timestamp: '2022-09-13 11:13:38'
+}
+{
+  message: {
+    removeBoard: 'https://api.trello.com/1/boards/6315d8a7f7946d02567f0454?response_type=token&key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68'
+  },
+  level: 'info',
+  timestamp: '2022-09-13 11:37:20'
+}
+{
+  message: { deleteTasksOfDepartment: { acknowledged: true, deletedCount: 3 } },
+  level: 'info',
+  timestamp: '2022-09-13 11:37:21'
+}
+{
+  message: {
+    borderData: {
+      id: '63204f7e3b8f1401935aa4d9',
+      name: 'this is loca, not usable for TTP team',
+      desc: '',
+      descData: null,
+      closed: false,
+      idOrganization: '62932bf998452a111d515e0d',
+      idEnterprise: null,
+      pinned: false,
+      url: 'https://trello.com/b/lKB1AqGR/this-is-loca-not-usable-for-ttp-team',
+      shortUrl: 'https://trello.com/b/lKB1AqGR',
+      prefs: {
+        permissionLevel: 'private',
+        hideVotes: false,
+        voting: 'disabled',
+        comments: 'members',
+        invitations: 'members',
+        selfJoin: true,
+        cardCovers: true,
+        isTemplate: false,
+        cardAging: 'regular',
+        calendarFeedEnabled: false,
+        hiddenPluginBoardButtons: [],
+        switcherViews: [
+          {
+            _id: '63204f7e3b8f1401935aa4da',
+            viewType: 'Board',
+            enabled: true
+          },
+          {
+            _id: '63204f7e3b8f1401935aa4db',
+            viewType: 'Table',
+            enabled: true
+          },
+          {
+            _id: '63204f7e3b8f1401935aa4dc',
+            viewType: 'Calendar',
+            enabled: false
+          },
+          {
+            _id: '63204f7e3b8f1401935aa4dd',
+            viewType: 'Dashboard',
+            enabled: false
+          },
+          {
+            _id: '63204f7e3b8f1401935aa4de',
+            viewType: 'Timeline',
+            enabled: false
+          },
+          {
+            _id: '63204f7e3b8f1401935aa4df',
+            viewType: 'Map',
+            enabled: false
+          }
+        ],
+        background: 'blue',
+        backgroundColor: '#0079BF',
+        backgroundImage: null,
+        backgroundImageScaled: null,
+        backgroundTile: false,
+        backgroundBrightness: 'dark',
+        backgroundBottomColor: '#0079BF',
+        backgroundTopColor: '#0079BF',
+        canBePublic: true,
+        canBeEnterprise: true,
+        canBeOrg: true,
+        canBePrivate: true,
+        canInvite: true
+      },
+      labelNames: {
+        green: '',
+        yellow: '',
+        orange: '',
+        red: '',
+        purple: '',
+        blue: '',
+        sky: '',
+        lime: '',
+        pink: '',
+        black: '',
+        green_dark: '',
+        yellow_dark: '',
+        orange_dark: '',
+        red_dark: '',
+        purple_dark: '',
+        blue_dark: '',
+        sky_dark: '',
+        lime_dark: '',
+        pink_dark: '',
+        black_dark: '',
+        green_light: '',
+        yellow_light: '',
+        orange_light: '',
+        red_light: '',
+        purple_light: '',
+        blue_light: '',
+        sky_light: '',
+        lime_light: '',
+        pink_light: '',
+        black_light: ''
+      },
+      limits: {}
+    }
+  },
+  level: 'info',
+  timestamp: '2022-09-13 11:38:06'
+}
+{
+  message: {
+    updateBoardCardError: TypeError: Cannot read properties of undefined (reading 'data')
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:502:29)
+        at Generator.next (<anonymous>)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:8:71
+        at new Promise (<anonymous>)
+        at __awaiter (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:4:12)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:483:46
+        at Queue.start (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/queue/index.js:145:17)
+        at Queue.<computed> [as push] (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/queue/index.js:59:12)
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:483:28)
+        at Generator.next (<anonymous>)
+  },
+  level: 'error',
+  timestamp: '2022-09-13 11:39:16'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-09-13 14:20:22'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-09-13 14:27:04'
+}
+{
+  message: {
+    updateBoardCardError: TypeError: Cannot read properties of undefined (reading 'data')
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:501:29)
+        at Generator.next (<anonymous>)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:8:71
+        at new Promise (<anonymous>)
+        at __awaiter (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:4:12)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:483:46
+        at Queue.start (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/queue/index.js:145:17)
+        at Queue.<computed> [as push] (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/queue/index.js:59:12)
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:483:28)
+        at Generator.next (<anonymous>)
+  },
+  level: 'error',
+  timestamp: '2022-09-13 14:28:09'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-09-13 14:34:54'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-09-13 14:36:31'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-09-13 14:40:55'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-09-13 14:42:51'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-09-13 14:44:37'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-09-13 14:45:32'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-09-13 14:53:15'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-09-13 14:54:05'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-09-13 14:55:36'
+}

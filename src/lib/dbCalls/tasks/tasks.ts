@@ -320,26 +320,19 @@ class TaskDB {
       task.lastMoveDate = data?.lastMoveDate
         ? data.lastMoveDate
         : task.lastMoveDate;
+      task.deadline = data?.deadline ? data.deadline : task.deadline;
+      task.start = data?.start ? data.start : task.start;
       if (data.attachedFile) {
-        console.log({
-          filesBefore: task.attachedFiles,
-          file: data.attachedFile,
-        });
         let file = new TaskFileSchema({ ...data.attachedFile });
         task.attachedFiles.push(file);
         task = await task.save();
-        console.log({ filesAfter: task.attachedFiles });
       }
       if (data.deleteFiles && data?.deleteFiles?.trelloId) {
-        console.log({ trelloId: data.deleteFiles.trelloId });
         task.attachedFiles = _.filter(
           task.attachedFiles,
           (item) => item.trelloId !== data?.deleteFiles?.trelloId
         );
       }
-      // task.attachedFiles = task.attachedFiles.filter(
-      //   (item) => item.mimeType !== ""
-      // );
       task.attachedFiles = _.uniqBy(task.attachedFiles, "trelloId");
       let result = await (await task.save()).toObject();
       await io.sockets.emit("update-task", result);

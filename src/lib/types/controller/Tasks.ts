@@ -16,6 +16,8 @@ export interface webhookUpdateInterface {
     idMemberCreator: string;
     data: {
       card: {
+        start?: string;
+        due?: string;
         idList?: string;
         id: string;
         name?: string;

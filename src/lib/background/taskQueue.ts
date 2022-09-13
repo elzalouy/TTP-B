@@ -72,6 +72,7 @@ export const updateCardJob = (
         desc: data.description,
         idList: data.listId,
         idBoard: data.boardId,
+        deadline: new Date(data.deadline).toString(),
       });
       cb(null, response);
     } catch (error: any) {
