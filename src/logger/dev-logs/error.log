@@ -1014,6 +1014,397 @@
   },
   level: 'error',
   timestamp: '2022-09-04 10:36:28'
+    getProjectDBError: MongooseServerSelectionError: Could not connect to any servers in your MongoDB Atlas cluster. One common reason is that you're trying to access the database from an IP that isn't whitelisted. Make sure your current IP address is on your Atlas cluster's IP whitelist: https://docs.atlas.mongodb.com/security-whitelist/
+        at Function.Model.$wrapCallback (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\mongoose\lib\model.js:5017:32)
+        at C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\mongoose\lib\query.js:4732:21
+        at C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\mongoose\lib\helpers\promiseOrCallback.js:32:5
+        at new Promise (<anonymous>)
+        at promiseOrCallback (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\mongoose\lib\helpers\promiseOrCallback.js:31:10)
+        at model.Query.exec (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\mongoose\lib\query.js:4731:10)
+        at model.Query.Query.then (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\mongoose\lib\query.js:4814:15)
+        at runMicrotasks (<anonymous>)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+      reason: TopologyDescription {
+        type: 'ReplicaSetNoPrimary',
+        servers: Map(3) {
+          'cluster0-shard-00-00.oeari.mongodb.net:27017' => ServerDescription {
+            _hostAddress: new HostAddress('cluster0-shard-00-00.oeari.mongodb.net:27017'),
+            address: 'cluster0-shard-00-00.oeari.mongodb.net:27017',
+            type: 'Unknown',
+            hosts: [],
+            passives: [],
+            arbiters: [],
+            tags: {},
+            minWireVersion: 0,
+            maxWireVersion: 0,
+            roundTripTime: -1,
+            lastUpdateTime: 250876835,
+            lastWriteDate: 0,
+            topologyVersion: {
+              processId: new ObjectId("6307a3c157e512d0b330ae39"),
+              counter: 4
+            },
+            error: MongoNetworkError: getaddrinfo ENOTFOUND cluster0-shard-00-00.oeari.mongodb.net
+                at connectionFailureError (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\mongodb\src\cmap\connect.ts:496:14)
+                at TLSSocket.<anonymous> (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\mongodb\src\cmap\connect.ts:394:16)
+                at Object.onceWrapper (node:events:642:26)
+                at TLSSocket.emit (node:events:527:28)
+                at TLSSocket.emit (node:domain:475:12)
+                at emitErrorNT (node:internal/streams/destroy:157:8)
+                at emitErrorCloseNT (node:internal/streams/destroy:122:3)
+                at processTicksAndRejections (node:internal/process/task_queues:83:21) {
+              [Symbol(errorLabels)]: Set(0) {}
+            }
+          },
+          'cluster0-shard-00-01.oeari.mongodb.net:27017' => ServerDescription {
+            _hostAddress: new HostAddress('cluster0-shard-00-01.oeari.mongodb.net:27017'),
+            address: 'cluster0-shard-00-01.oeari.mongodb.net:27017',
+            type: 'Unknown',
+            hosts: [],
+            passives: [],
+            arbiters: [],
+            tags: {},
+            minWireVersion: 0,
+            maxWireVersion: 0,
+            roundTripTime: -1,
+            lastUpdateTime: 250881324,
+            lastWriteDate: 0,
+            topologyVersion: {
+              processId: new ObjectId("6307a59499214d6759a25894"),
+              counter: 6
+            },
+            error: MongoNetworkError: getaddrinfo ENOTFOUND cluster0-shard-00-01.oeari.mongodb.net
+                at connectionFailureError (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\mongodb\src\cmap\connect.ts:496:14)
+                at TLSSocket.<anonymous> (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\mongodb\src\cmap\connect.ts:394:16)
+                at Object.onceWrapper (node:events:642:26)
+                at TLSSocket.emit (node:events:527:28)
+                at TLSSocket.emit (node:domain:475:12)
+                at emitErrorNT (node:internal/streams/destroy:157:8)
+                at emitErrorCloseNT (node:internal/streams/destroy:122:3)
+                at processTicksAndRejections (node:internal/process/task_queues:83:21) {
+              [Symbol(errorLabels)]: Set(0) {}
+            }
+          },
+          'cluster0-shard-00-02.oeari.mongodb.net:27017' => ServerDescription {
+            _hostAddress: new HostAddress('cluster0-shard-00-02.oeari.mongodb.net:27017'),
+            address: 'cluster0-shard-00-02.oeari.mongodb.net:27017',
+            type: 'Unknown',
+            hosts: [],
+            passives: [],
+            arbiters: [],
+            tags: {},
+            minWireVersion: 0,
+            maxWireVersion: 0,
+            roundTripTime: -1,
+            lastUpdateTime: 250876835,
+            lastWriteDate: 0,
+            topologyVersion: {
+              processId: new ObjectId("6307a77008cc8c54d06c7e7e"),
+              counter: 3
+            },
+            error: MongoNetworkError: getaddrinfo ENOTFOUND cluster0-shard-00-02.oeari.mongodb.net
+                at connectionFailureError (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\mongodb\src\cmap\connect.ts:496:14)
+                at TLSSocket.<anonymous> (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\mongodb\src\cmap\connect.ts:394:16)
+                at Object.onceWrapper (node:events:642:26)
+                at TLSSocket.emit (node:events:527:28)
+                at TLSSocket.emit (node:domain:475:12)
+                at emitErrorNT (node:internal/streams/destroy:157:8)
+                at emitErrorCloseNT (node:internal/streams/destroy:122:3)
+                at processTicksAndRejections (node:internal/process/task_queues:83:21) {
+              [Symbol(errorLabels)]: Set(0) {}
+            }
+          }
+        },
+        stale: false,
+        compatible: true,
+        heartbeatFrequencyMS: 10000,
+        localThresholdMS: 15,
+        setName: 'atlas-80ye5b-shard-0',
+        maxSetVersion: 2,
+        maxElectionId: new ObjectId("7fffffff0000000000000012"),
+        commonWireVersion: 13,
+        logicalSessionTimeoutMinutes: undefined
+      },
+      code: undefined
+    }
+  },
+  level: 'error',
+  timestamp: '2022-09-01 00:04:03'
+}
+{
+  message: {
+    findUserById: MongooseServerSelectionError: Could not connect to any servers in your MongoDB Atlas cluster. One common reason is that you're trying to access the database from an IP that isn't whitelisted. Make sure your current IP address is on your Atlas cluster's IP whitelist: https://docs.atlas.mongodb.com/security-whitelist/
+        at Function.Model.$wrapCallback (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\mongoose\lib\model.js:5017:32)
+        at C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\mongoose\lib\query.js:4732:21
+        at C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\mongoose\lib\helpers\promiseOrCallback.js:32:5
+        at new Promise (<anonymous>)
+        at promiseOrCallback (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\mongoose\lib\helpers\promiseOrCallback.js:31:10)
+        at model.Query.exec (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\mongoose\lib\query.js:4731:10)
+        at model.Query.Query.then (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\mongoose\lib\query.js:4814:15)
+        at runMicrotasks (<anonymous>)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+      reason: TopologyDescription {
+        type: 'ReplicaSetNoPrimary',
+        servers: Map(3) {
+          'cluster0-shard-00-00.oeari.mongodb.net:27017' => ServerDescription {
+            _hostAddress: new HostAddress('cluster0-shard-00-00.oeari.mongodb.net:27017'),
+            address: 'cluster0-shard-00-00.oeari.mongodb.net:27017',
+            type: 'Unknown',
+            hosts: [],
+            passives: [],
+            arbiters: [],
+            tags: {},
+            minWireVersion: 0,
+            maxWireVersion: 0,
+            roundTripTime: -1,
+            lastUpdateTime: 250876835,
+            lastWriteDate: 0,
+            topologyVersion: {
+              processId: new ObjectId("6307a3c157e512d0b330ae39"),
+              counter: 4
+            },
+            error: MongoNetworkError: getaddrinfo ENOTFOUND cluster0-shard-00-00.oeari.mongodb.net
+                at connectionFailureError (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\mongodb\src\cmap\connect.ts:496:14)
+                at TLSSocket.<anonymous> (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\mongodb\src\cmap\connect.ts:394:16)
+                at Object.onceWrapper (node:events:642:26)
+                at TLSSocket.emit (node:events:527:28)
+                at TLSSocket.emit (node:domain:475:12)
+                at emitErrorNT (node:internal/streams/destroy:157:8)
+                at emitErrorCloseNT (node:internal/streams/destroy:122:3)
+                at processTicksAndRejections (node:internal/process/task_queues:83:21) {
+              [Symbol(errorLabels)]: Set(0) {}
+            }
+          },
+          'cluster0-shard-00-01.oeari.mongodb.net:27017' => ServerDescription {
+            _hostAddress: new HostAddress('cluster0-shard-00-01.oeari.mongodb.net:27017'),
+            address: 'cluster0-shard-00-01.oeari.mongodb.net:27017',
+            type: 'Unknown',
+            hosts: [],
+            passives: [],
+            arbiters: [],
+            tags: {},
+            minWireVersion: 0,
+            maxWireVersion: 0,
+            roundTripTime: -1,
+            lastUpdateTime: 250881324,
+            lastWriteDate: 0,
+            topologyVersion: {
+              processId: new ObjectId("6307a59499214d6759a25894"),
+              counter: 6
+            },
+            error: MongoNetworkError: getaddrinfo ENOTFOUND cluster0-shard-00-01.oeari.mongodb.net
+                at connectionFailureError (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\mongodb\src\cmap\connect.ts:496:14)
+                at TLSSocket.<anonymous> (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\mongodb\src\cmap\connect.ts:394:16)
+                at Object.onceWrapper (node:events:642:26)
+                at TLSSocket.emit (node:events:527:28)
+                at TLSSocket.emit (node:domain:475:12)
+                at emitErrorNT (node:internal/streams/destroy:157:8)
+                at emitErrorCloseNT (node:internal/streams/destroy:122:3)
+                at processTicksAndRejections (node:internal/process/task_queues:83:21) {
+              [Symbol(errorLabels)]: Set(0) {}
+            }
+          },
+          'cluster0-shard-00-02.oeari.mongodb.net:27017' => ServerDescription {
+            _hostAddress: new HostAddress('cluster0-shard-00-02.oeari.mongodb.net:27017'),
+            address: 'cluster0-shard-00-02.oeari.mongodb.net:27017',
+            type: 'Unknown',
+            hosts: [],
+            passives: [],
+            arbiters: [],
+            tags: {},
+            minWireVersion: 0,
+            maxWireVersion: 0,
+            roundTripTime: -1,
+            lastUpdateTime: 250876835,
+            lastWriteDate: 0,
+            topologyVersion: {
+              processId: new ObjectId("6307a77008cc8c54d06c7e7e"),
+              counter: 3
+            },
+            error: MongoNetworkError: getaddrinfo ENOTFOUND cluster0-shard-00-02.oeari.mongodb.net
+                at connectionFailureError (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\mongodb\src\cmap\connect.ts:496:14)
+                at TLSSocket.<anonymous> (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\mongodb\src\cmap\connect.ts:394:16)
+                at Object.onceWrapper (node:events:642:26)
+                at TLSSocket.emit (node:events:527:28)
+                at TLSSocket.emit (node:domain:475:12)
+                at emitErrorNT (node:internal/streams/destroy:157:8)
+                at emitErrorCloseNT (node:internal/streams/destroy:122:3)
+                at processTicksAndRejections (node:internal/process/task_queues:83:21) {
+              [Symbol(errorLabels)]: Set(0) {}
+            }
+          }
+        },
+        stale: false,
+        compatible: true,
+        heartbeatFrequencyMS: 10000,
+        localThresholdMS: 15,
+        setName: 'atlas-80ye5b-shard-0',
+        maxSetVersion: 2,
+        maxElectionId: new ObjectId("7fffffff0000000000000012"),
+        commonWireVersion: 13,
+        logicalSessionTimeoutMinutes: undefined
+      },
+      code: undefined
+    }
+  },
+  level: 'error',
+  timestamp: '2022-09-01 00:04:03'
+}
+{
+  message: {
+    createclientDBError: Error: clients validation failed: clientName: Path `clientName` is required.
+        at ValidationError.inspect (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\mongoose\lib\error\validation.js:48:26)
+        at formatValue (node:internal/util/inspect:782:19)
+        at formatProperty (node:internal/util/inspect:1819:11)
+        at formatRaw (node:internal/util/inspect:1030:9)
+        at formatValue (node:internal/util/inspect:817:10)
+        at formatProperty (node:internal/util/inspect:1819:11)
+        at formatRaw (node:internal/util/inspect:1030:9)
+        at formatValue (node:internal/util/inspect:817:10)
+        at inspect (node:internal/util/inspect:347:10)
+        at Format.transform (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\logform\pretty-print.js:27:19) {
+      errors: {
+        clientName: ValidatorError: Path `clientName` is required.
+            at validate (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\mongoose\lib\schematype.js:1330:13)
+            at SchemaString.SchemaType.doValidate (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\mongoose\lib\schematype.js:1314:7)
+            at C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\mongoose\lib\document.js:2751:18
+            at processTicksAndRejections (node:internal/process/task_queues:78:11) {
+          properties: {
+            validator: [Function (anonymous)],
+            message: 'Path `clientName` is required.',
+            type: 'required',
+            path: 'clientName',
+            value: ''
+          },
+          kind: 'required',
+          path: 'clientName',
+          value: '',
+          reason: undefined,
+          [Symbol(mongoose:validatorError)]: true
+        }
+      },
+      _message: 'clients validation failed'
+    }
+  },
+  level: 'error',
+  timestamp: '2022-09-03 17:11:44'
+}
+{
+  message: {
+    createclientDBError: Error: clients validation failed: clientName: Path `clientName` is required.
+        at ValidationError.inspect (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\mongoose\lib\error\validation.js:48:26)
+        at formatValue (node:internal/util/inspect:782:19)
+        at formatProperty (node:internal/util/inspect:1819:11)
+        at formatRaw (node:internal/util/inspect:1030:9)
+        at formatValue (node:internal/util/inspect:817:10)
+        at formatProperty (node:internal/util/inspect:1819:11)
+        at formatRaw (node:internal/util/inspect:1030:9)
+        at formatValue (node:internal/util/inspect:817:10)
+        at inspect (node:internal/util/inspect:347:10)
+        at Format.transform (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\logform\pretty-print.js:27:19) {
+      errors: {
+        clientName: ValidatorError: Path `clientName` is required.
+            at validate (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\mongoose\lib\schematype.js:1330:13)
+            at SchemaString.SchemaType.doValidate (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\mongoose\lib\schematype.js:1314:7)
+            at C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\mongoose\lib\document.js:2751:18
+            at processTicksAndRejections (node:internal/process/task_queues:78:11) {
+          properties: {
+            validator: [Function (anonymous)],
+            message: 'Path `clientName` is required.',
+            type: 'required',
+            path: 'clientName',
+            value: ''
+          },
+          kind: 'required',
+          path: 'clientName',
+          value: '',
+          reason: undefined,
+          [Symbol(mongoose:validatorError)]: true
+        }
+      },
+      _message: 'clients validation failed'
+    }
+  },
+  level: 'error',
+  timestamp: '2022-09-03 17:12:35'
+}
+{
+  message: {
+    createclientDBError: Error: clients validation failed: clientName: Path `clientName` is required.
+        at ValidationError.inspect (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\mongoose\lib\error\validation.js:48:26)
+        at formatValue (node:internal/util/inspect:782:19)
+        at formatProperty (node:internal/util/inspect:1819:11)
+        at formatRaw (node:internal/util/inspect:1030:9)
+        at formatValue (node:internal/util/inspect:817:10)
+        at formatProperty (node:internal/util/inspect:1819:11)
+        at formatRaw (node:internal/util/inspect:1030:9)
+        at formatValue (node:internal/util/inspect:817:10)
+        at inspect (node:internal/util/inspect:347:10)
+        at Format.transform (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\logform\pretty-print.js:27:19) {
+      errors: {
+        clientName: ValidatorError: Path `clientName` is required.
+            at validate (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\mongoose\lib\schematype.js:1330:13)
+            at SchemaString.SchemaType.doValidate (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\mongoose\lib\schematype.js:1314:7)
+            at C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\mongoose\lib\document.js:2751:18
+            at processTicksAndRejections (node:internal/process/task_queues:78:11) {
+          properties: {
+            validator: [Function (anonymous)],
+            message: 'Path `clientName` is required.',
+            type: 'required',
+            path: 'clientName',
+            value: ''
+          },
+          kind: 'required',
+          path: 'clientName',
+          value: '',
+          reason: undefined,
+          [Symbol(mongoose:validatorError)]: true
+        }
+      },
+      _message: 'clients validation failed'
+    }
+  },
+  level: 'error',
+  timestamp: '2022-09-03 17:14:59'
+}
+{
+  message: {
+    createclientDBError: Error: clients validation failed: clientName: Path `clientName` is required.
+        at ValidationError.inspect (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\mongoose\lib\error\validation.js:48:26)
+        at formatValue (node:internal/util/inspect:782:19)
+        at formatProperty (node:internal/util/inspect:1819:11)
+        at formatRaw (node:internal/util/inspect:1030:9)
+        at formatValue (node:internal/util/inspect:817:10)
+        at formatProperty (node:internal/util/inspect:1819:11)
+        at formatRaw (node:internal/util/inspect:1030:9)
+        at formatValue (node:internal/util/inspect:817:10)
+        at inspect (node:internal/util/inspect:347:10)
+        at Format.transform (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\logform\pretty-print.js:27:19) {
+      errors: {
+        clientName: ValidatorError: Path `clientName` is required.
+            at validate (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\mongoose\lib\schematype.js:1330:13)
+            at SchemaString.SchemaType.doValidate (C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\mongoose\lib\schematype.js:1314:7)
+            at C:\Users\zedsa\Desktop\Work\TTP\TTP-Back\node_modules\mongoose\lib\document.js:2751:18
+            at processTicksAndRejections (node:internal/process/task_queues:78:11) {
+          properties: {
+            validator: [Function (anonymous)],
+            message: 'Path `clientName` is required.',
+            type: 'required',
+            path: 'clientName',
+            value: ''
+          },
+          kind: 'required',
+          path: 'clientName',
+          value: '',
+          reason: undefined,
+          [Symbol(mongoose:validatorError)]: true
+        }
+      },
+      _message: 'clients validation failed'
+    }
+  },
+  level: 'error',
+  timestamp: '2022-09-03 17:17:16'
 }
 {
   message: {
