@@ -15,7 +15,6 @@ import { jwtVerify } from "../../services/auth";
 const TaskReq = class TaskReq extends TaskController {
   static async handleCreateCard(req: Request, res: Response) {
     try {
-      console.log(req.files, req.body);
       let TaskData: TaskData = req.body;
       if (TaskData.teamId === "") TaskData.teamId = null;
       let isValid = createTaskSchema.validate(TaskData);

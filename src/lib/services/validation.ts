@@ -162,6 +162,7 @@ export const validateExtentions = (name: string) => {
     "video/x-f4v",
     "video/divx",
     "video/mov",
+    "application/pkcs8",
   ];
   let format = "";
   switch (extention) {
@@ -233,6 +234,9 @@ export const validateExtentions = (name: string) => {
       break;
     case "mov":
       format = types[22];
+      break;
+    case "key":
+      format = types[23];
       break;
   }
   console.log(format);
