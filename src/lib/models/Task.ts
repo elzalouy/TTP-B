@@ -89,6 +89,10 @@ const TaskSchema = new Schema<TaskInfo, TasksModel>(
       type: String,
       default: null,
     },
+    trelloShortUrl: {
+      type: String,
+      default: null,
+    },
   },
   {
     timestamps: true,

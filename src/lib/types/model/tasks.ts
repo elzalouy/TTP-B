@@ -24,6 +24,7 @@ export interface TaskInfo extends Document {
   description?: string;
   lastMove?: string | String;
   lastMoveDate?: string | String;
+  trelloShortUrl?: string;
 }
 export interface TaskHistory {
   listId: string;
@@ -56,6 +57,7 @@ export interface TaskData {
   teamId?: string;
   cardId?: string;
   boardId?: string;
+  trelloShortUrl?: string;
   file?: object;
   description?: string;
   lastMove?: string;

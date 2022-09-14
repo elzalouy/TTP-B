@@ -139,7 +139,9 @@ class TaskController extends TaskDB {
           data.description
         );
       if (createdCard) {
+        console.log(createdCard);
         data.cardId = createdCard.id;
+        data.trelloShortUrl = createdCard.shortUrl;
         let response = await BoardController.createWebHook(data.cardId);
         if (response) {
           if (files.length > 0)
