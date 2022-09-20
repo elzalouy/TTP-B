@@ -12,14 +12,20 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.updateTaskAttachmentsJob = exports.deleteTaskFromBoardJob = exports.createTaskFromBoardJob = exports.updateCardJob = exports.moveTaskNotificationJob = exports.moveTaskJob = exports.updateTaskQueue = exports.TaskQueue = void 0;
+exports.updateTaskAttachmentsJob = exports.deleteTaskFromBoardJob = exports.createTaskFromBoardJob = exports.updateCardJob = exports.moveTaskJob = exports.updateTaskQueue = exports.TaskQueue = void 0;
 const queue_1 = __importDefault(require("queue"));
 const logger_1 = __importDefault(require("../../logger"));
 const trello_1 = __importDefault(require("../controllers/trello"));
 const notification_1 = __importDefault(require("../controllers/notification"));
 const tasks_1 = __importDefault(require("../dbCalls/tasks/tasks"));
 const index_1 = require("../../index");
-exports.TaskQueue = (0, queue_1.default)({ results: [] });
+const task_1 = __importDefault(require("../controllers/task"));
+const upload_1 = require("../services/upload");
+exports.TaskQueue = (0, queue_1.default)({
+    results: [],
+    autostart: true,
+    concurrency: 1,
+});
 exports.updateTaskQueue = (0, queue_1.default)({ results: [], autostart: true });
 function moveTaskJob(listId, cardId, status, user) {
     var task;
@@ -32,23 +38,6 @@ function moveTaskJob(listId, cardId, status, user) {
             logger_1.default.error({ moveTaskJobError: error });
         }
     }));
-    // TaskQueue.push(async (cb) => {
-    //   try {
-    //     task = await TaskDB.updateTaskStatus(
-    //       {
-    //         cardId: cardId,
-    //       },
-    //       {
-    //         status: status,
-    //         listId: listId,
-    //       }
-    //     );
-    //     // io.sockets.emit("update-task", task);
-    //     cb(null, task);
-    //   } catch (error: any) {
-    //     cb(new Error(error), null);
-    //   }
-    // });
     exports.TaskQueue.push((cb) => __awaiter(this, void 0, void 0, function* () {
         try {
             if (status === "Shared" || status === "Not Clear") {
@@ -64,49 +53,26 @@ function moveTaskJob(listId, cardId, status, user) {
     }));
 }
 exports.moveTaskJob = moveTaskJob;
-const moveTaskNotificationJob = (data) => {
-    exports.TaskQueue.push((cb) => __awaiter(void 0, void 0, void 0, function* () {
-        var _a, _b;
-        try {
-            let to = (_b = (_a = data.action.data) === null || _a === void 0 ? void 0 : _a.listAfter) === null || _b === void 0 ? void 0 : _b.name;
-            // if task status update to shared send notification
-            if (data.action.display.translationKey ===
-                "action_move_card_from_list_to_list") {
-                // let task = await TaskDB.getOneTaskBy({ cardId: data.model.id });
-                // await NotificationController.__MoveTaskNotification(task, status, user);
-                // if (to === "Shared" || to === "Not Clear") {
-                //   let createNotifi = await NotificationController.createNotification({
-                //     title: `${cardName} status has been changed to ${to}`,
-                //     description: `${cardName} status has been changed to ${to} by ${userName}`,
-                //     projectManagerID: projectData.projectManager,
-                //     projectID: targetTask.projectId,
-                //     adminUserID: projectData.adminId,
-                //   });
-                //   // send notification to all the admin
-                //   io.to("admin-room").emit("notification-update", createNotifi);
-                //   // send notification to specific project manager
-                //   io.to(`user-${projectData.projectManager}`).emit(
-                //     "notification-update",
-                //     createNotifi
-                //   );
-                // }
-            }
-        }
-        catch (error) {
-            cb(new Error(error), null);
-            logger_1.default.ercror({ webHookUpdateMoveTaskJobError: error });
-        }
-    }));
-};
-exports.moveTaskNotificationJob = moveTaskNotificationJob;
-const updateCardJob = (data) => {
+const updateCardJob = (data, newFiles) => {
+    const deleteFiles = data.deleteFiles
+        ? data.deleteFiles
+        : [];
+    delete data.deleteFiles;
+    delete data.attachedFiles;
     exports.TaskQueue.push((cb) => __awaiter(void 0, void 0, void 0, function* () {
         try {
+            console.log({
+                name: data.name,
+                desc: data.description,
+                idList: data.listId,
+                idBoard: data.boardId,
+            });
             let response = yield trello_1.default.__updateCard(data.cardId, {
                 name: data.name,
-                desc: (data === null || data === void 0 ? void 0 : data.description) ? data === null || data === void 0 ? void 0 : data.description : "",
-                idList: data === null || data === void 0 ? void 0 : data.listId,
-                idBoard: data === null || data === void 0 ? void 0 : data.boardId,
+                desc: data.description,
+                idList: data.listId,
+                idBoard: data.boardId,
+                deadline: new Date(data.deadline).toString(),
             });
             cb(null, response);
         }
@@ -114,6 +80,39 @@ const updateCardJob = (data) => {
             cb(error, null);
             logger_1.default.ercror({ updateCardDataError: error });
         }
+    }));
+    exports.TaskQueue.push((cb) => __awaiter(void 0, void 0, void 0, function* () {
+        try {
+            // wait for both update date in db and upload,delete files to trello
+            // if there are deleted files, then delete it from the db
+            if (deleteFiles) {
+                if (deleteFiles.length > 0) {
+                    let isDeletedAll = yield (deleteFiles === null || deleteFiles === void 0 ? void 0 : deleteFiles.map((item) => __awaiter(void 0, void 0, void 0, function* () {
+                        return yield trello_1.default.__deleteAtachment(data.cardId, item.trelloId);
+                    })));
+                    let isDeletedResullt = Promise.resolve(isDeletedAll);
+                    cb(null, isDeletedResullt);
+                }
+            }
+        }
+        catch (error) {
+            cb(error, null);
+            logger_1.default.error({ updateCardDeleteFilesJobError: error });
+        }
+    }));
+    exports.TaskQueue.push((cb) => __awaiter(void 0, void 0, void 0, function* () {
+        if (newFiles) {
+            yield task_1.default.__createTaskAttachment(newFiles, data);
+        }
+        cb(null, true);
+    }));
+    exports.TaskQueue.push((cb) => __awaiter(void 0, void 0, void 0, function* () {
+        let task = yield task_1.default.updateTaskDB(data);
+        if (task.error)
+            cb(new Error(task.error.message), null);
+        yield index_1.io.sockets.emit("update-task", task.task);
+        (0, upload_1.deleteAll)();
+        cb(null, task);
     }));
 };
 exports.updateCardJob = updateCardJob;
@@ -162,7 +161,6 @@ const updateTaskAttachmentsJob = (task) => {
                 };
                 return file;
             });
-            console.log("change task files to,", newfiles);
             let Task = yield tasks_1.default.__updateTaskAttachments(task, newfiles);
             index_1.io.sockets.emit("update-task", Task);
         }

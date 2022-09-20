@@ -15,9 +15,9 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const logger_1 = __importDefault(require("../../logger"));
 const tasks_1 = __importDefault(require("../dbCalls/tasks/tasks"));
 const trello_1 = __importDefault(require("./trello"));
-const upload_1 = require("../services/upload");
 const taskQueue_1 = require("../background/taskQueue");
 const Tasks_1 = require("../types/controller/Tasks");
+const __1 = require("../..");
 class TaskController extends tasks_1.default {
     static getTasks(data) {
         return __awaiter(this, void 0, void 0, function* () {
@@ -92,41 +92,13 @@ class TaskController extends tasks_1.default {
         });
     }
     static __updateTaskData(data, files) {
-        const _super = Object.create(null, {
-            updateTaskDB: { get: () => super.updateTaskDB }
-        });
         return __awaiter(this, void 0, void 0, function* () {
             try {
                 if (!data.cardId)
                     return Tasks_1.provideCardIdError;
                 // recieve data
                 // call a background job for updating the trello card data.
-                (0, taskQueue_1.updateCardJob)(data);
-                taskQueue_1.TaskQueue.start();
-                // wait for both update date in db and upload,delete files to trello
-                // if there are deleted files, then delete it from the db
-                let deleteFiles;
-                if (data === null || data === void 0 ? void 0 : data.deleteFiles) {
-                    deleteFiles = JSON.parse(data === null || data === void 0 ? void 0 : data.deleteFiles);
-                    data.deleteFiles = deleteFiles;
-                    if (deleteFiles.length > 0) {
-                        yield (deleteFiles === null || deleteFiles === void 0 ? void 0 : deleteFiles.forEach((item) => __awaiter(this, void 0, void 0, function* () {
-                            if (!item.trelloId)
-                                return Tasks_1.deleteFilesError;
-                            yield trello_1.default.__deleteAtachment(data.cardId, item.trelloId);
-                        })));
-                    }
-                }
-                // if there are uploading files, upload it in the controller layer.
-                if (files) {
-                    yield this.__createTaskAttachment(files, data);
-                }
-                // update data in the db in dbCalls
-                delete data.attachedFiles;
-                delete data.deleteFiles;
-                let task = yield _super.updateTaskDB.call(this, data);
-                (0, upload_1.deleteAll)();
-                return task;
+                (0, taskQueue_1.updateCardJob)(data, files);
             }
             catch (error) {
                 logger_1.default.error({ updateTaskError: error });
@@ -160,7 +132,6 @@ class TaskController extends tasks_1.default {
                 }
                 else
                     delete data.attachedFiles;
-                (0, upload_1.deleteAll)();
                 return data;
             }
             catch (error) {
@@ -177,6 +148,7 @@ class TaskController extends tasks_1.default {
                 let createdCard = yield trello_1.default.createCardInList(data.listId, data.name, data.description);
                 if (createdCard) {
                     data.cardId = createdCard.id;
+                    data.trelloShortUrl = createdCard.shortUrl;
                     let response = yield trello_1.default.createWebHook(data.cardId);
                     if (response) {
                         if (files.length > 0)
@@ -310,6 +282,8 @@ class TaskController extends tasks_1.default {
         return __awaiter(this, void 0, void 0, function* () {
             try {
                 let response = yield _super.__createTaskByTrelloDB.call(this, data);
+                yield trello_1.default.createWebHook(response.cardId);
+                yield __1.io.sockets.emit("update-task", response);
                 return response;
             }
             catch (error) {
@@ -328,6 +302,20 @@ class TaskController extends tasks_1.default {
             }
             catch (error) {
                 logger_1.default.error({ updateTaskByTrello: error });
+            }
+        });
+    }
+    static __editTasksProjectId(ids, projectId) {
+        const _super = Object.create(null, {
+            __updateTasksProjectId: { get: () => super.__updateTasksProjectId }
+        });
+        return __awaiter(this, void 0, void 0, function* () {
+            try {
+                let result = yield _super.__updateTasksProjectId.call(this, projectId, ids);
+                return result;
+            }
+            catch (error) {
+                logger_1.default.error({ __updateTasksProjectId: error });
             }
         });
     }

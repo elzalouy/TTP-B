@@ -65,23 +65,17 @@ exports.createTaskSchema = joi_1.default.object({
         "string.empty": "Category should be selected",
         "any.required": "Category is required",
     }),
-    subCategoryId: joi_1.default.string().optional().allow(null, "").messages({
-        "string.base": "Sub Category is required",
-        "string.empty": "Sub Category should be selected",
-        "any.required": "Sub Category is required",
+    listId: joi_1.default.string().required().messages({
+        "string.base": "You should select a department to get its default list",
+        "string.empty": "You should select a department to get its default list",
+        "any.required": "You should select a department to get its default list",
     }),
-    listId: joi_1.default.string().optional().allow("").messages({
-        "string.base": "Department is required",
-        "string.empty": "Department should be string with min 4 chars",
-        "string.min": "Department length should be Min 4 chars",
-        "string.max": "Department length should be Max 20 chars",
-        "any.required": "Department is required",
-    }),
-    teamId: joi_1.default.string().optional().allow(null).messages({
-        "string.base": "Team is required",
-        "string.empty": "Team should be selected",
-        "string.min": "Team should be selected",
-        "any.required": "Team is required",
+    boardId: joi_1.default.string().required().min(4).messages({
+        "string.base": "You should select a department",
+        "string.empty": "You should select a department",
+        "string.min": "You should select a department",
+        "string.max": "You should select a department",
+        "any.required": "You should select a department",
     }),
     status: joi_1.default.string().valid("Tasks Board", "inProgress").required().messages({
         "string.base": "Status is required",
@@ -93,21 +87,10 @@ exports.createTaskSchema = joi_1.default.object({
     start: joi_1.default.date().required().messages({
         "any.required": "Task start date is required",
     }),
-    deadline: joi_1.default.date().optional().allow(null, "").messages({
-        "any.required": "Task Deadline is required",
-    }),
-    boardId: joi_1.default.string().required().min(4).messages({
-        "string.base": "Department is required",
-        "string.empty": "Department should be string with min 4 chars",
-        "string.min": "Department length should be Min 4 chars",
-        "string.max": "Department length should be Max 20 chars",
-        "any.required": "Department is required",
-    }),
-    description: joi_1.default.string().optional().allow("", null).messages({
-        "string.base": "Description is required",
-        "string.empty": "Description should be string with min 10 chars",
-        "any.required": "Description is required",
-    }),
+    subCategoryId: joi_1.default.string().optional().allow(null),
+    teamId: joi_1.default.string().optional().allow(null),
+    deadline: joi_1.default.date().optional().allow(null),
+    description: joi_1.default.string().optional().allow("", null),
     deliveryDate: joi_1.default.any().allow(null),
     done: joi_1.default.any().allow(null),
     turnoverTime: joi_1.default.allow(null),
@@ -123,49 +106,26 @@ exports.editTaskSchema = joi_1.default.object({
         "string.min": "Task name length should be Min 4 chars",
         "string.max": "Task name length should be Max 50 chars",
     }),
-    categoryId: joi_1.default.string().optional().messages({
-        "string.base": "Category is required",
-        "string.empty": "Category should be selected",
+    categoryId: joi_1.default.string().required().messages({
+        "string.base": "You should select a category",
+        "string.empty": "You should select a category",
     }),
     cardId: joi_1.default.string()
         .required()
         .messages({ "any.required": "Card id is required" }),
-    deleteFiles: joi_1.default.string().optional(),
-    subCategoryId: joi_1.default.string().optional().allow(null, "").messages({
-        "string.base": "Sub Category is required",
-        "string.empty": "Sub Category should be selected",
-    }),
-    listId: joi_1.default.string().optional().allow("").messages({
-        "string.base": "Department is required",
-        "string.empty": "Department should be string with min 4 chars",
-        "string.min": "Department length should be Min 4 chars",
-        "string.max": "Department length should be Max 20 chars",
-    }),
-    teamId: joi_1.default.string().optional().allow(null).messages({
-        "string.base": "Team is required",
-        "string.empty": "Team should be selected",
-        "string.min": "Team should be selected",
-    }),
+    subCategoryId: joi_1.default.string().optional().allow(null, ""),
+    listId: joi_1.default.string().optional().allow(""),
+    teamId: joi_1.default.string().optional().allow(null),
     status: joi_1.default.string()
         .valid("Tasks Board", "inProgress", "Review", "Cancled", "Done", "Late", "Shared", "Not Clear")
-        .optional()
-        .messages({
-        "string.base": "Status is required",
-        "string.empty": "Status should be string with min 4 chars",
-        "string.min": "Status length should be Min 4 chars",
-        "string.max": "Status length should be Max 20 chars",
-    }),
-    deadline: joi_1.default.date().optional().allow(null, "").messages({
-        "any.required": "Task Deadline is required",
-    }),
-    boardId: joi_1.default.string().optional().min(4).messages({
-        "string.base": "Department is required",
-        "string.empty": "Department should be string with min 4 chars",
-        "string.min": "Department length should be Min 4 chars",
-        "string.max": "Department length should be Max 20 chars",
-        "any.required": "Department is required",
+        .optional(),
+    deadline: joi_1.default.date().optional().allow(null, ""),
+    boardId: joi_1.default.string().required().messages({
+        "string.base": "You should select a department",
+        "any.required": "You should select a department",
     }),
     attachedFiles: joi_1.default.array().optional().allow(null),
+    deleteFiles: joi_1.default.array().optional().allow(null),
     description: joi_1.default.string().optional().allow(""),
 });
 const validateExtentions = (name) => {
@@ -195,6 +155,7 @@ const validateExtentions = (name) => {
         "video/x-f4v",
         "video/divx",
         "video/mov",
+        "application/pkcs8",
     ];
     let format = "";
     switch (extention) {
@@ -266,6 +227,9 @@ const validateExtentions = (name) => {
             break;
         case "mov":
             format = types[22];
+            break;
+        case "key":
+            format = types[23];
             break;
     }
     console.log(format);

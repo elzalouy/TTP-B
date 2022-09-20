@@ -14,7 +14,6 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 Object.defineProperty(exports, "__esModule", { value: true });
 const logger_1 = __importDefault(require("../../logger"));
 const task_1 = __importDefault(require("../controllers/task"));
-const techMember_1 = __importDefault(require("../controllers/techMember"));
 const Procedures = class Procedures {
     static deleteDepartmentProcedure(department) {
         return __awaiter(this, void 0, void 0, function* () {
@@ -22,7 +21,7 @@ const Procedures = class Procedures {
                 let tasksResult = yield task_1.default.deleteTasksWhere({
                     boardId: department.boardId,
                 });
-                let techResult = yield techMember_1.default.deleteTechMemberWhere({
+                let techResult = yield TechMemberController.deleteTechMemberWhere({
                     departmentId: department._id,
                 });
                 logger_1.default.info({

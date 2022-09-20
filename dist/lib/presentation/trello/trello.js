@@ -138,5 +138,20 @@ const BoardReq = class BoardReq extends trello_1.default {
             }
         });
     }
+    static handleWebHookUpdateBoard(req, res) {
+        const _super = Object.create(null, {
+            webhookUpdateBoard: { get: () => super.webhookUpdateBoard }
+        });
+        return __awaiter(this, void 0, void 0, function* () {
+            try {
+                let data = yield _super.webhookUpdateBoard.call(this, req.body);
+                return res.send({ data });
+            }
+            catch (error) {
+                logger_1.default.error({ handleCreateCardInBoardError: error });
+                return res.status(500).send((0, errorUtils_1.customeError)("server_error", 500));
+            }
+        });
+    }
 };
 exports.default = BoardReq;

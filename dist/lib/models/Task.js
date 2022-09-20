@@ -1,7 +1,8 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.TaskFileSchema = exports.FilesSchema = void 0;
 const mongoose_1 = require("mongoose");
-const FilesSchema = new mongoose_1.Schema({
+exports.FilesSchema = new mongoose_1.Schema({
     name: { type: String },
     trelloId: { type: String },
     mimeType: { type: String },
@@ -15,7 +16,8 @@ const TaskSchema = new mongoose_1.Schema({
     projectId: {
         type: mongoose_1.Schema.Types.ObjectId,
         ref: "projects",
-        required: true,
+        required: false,
+        defualt: null,
     },
     categoryId: {
         type: mongoose_1.Schema.Types.ObjectId,
@@ -68,7 +70,7 @@ const TaskSchema = new mongoose_1.Schema({
         default: null,
     },
     attachedFiles: {
-        type: [FilesSchema],
+        type: [exports.FilesSchema],
         default: [],
     },
     attachedCard: {
@@ -87,9 +89,14 @@ const TaskSchema = new mongoose_1.Schema({
         type: String,
         default: null,
     },
+    trelloShortUrl: {
+        type: String,
+        default: null,
+    },
 }, {
     timestamps: true,
     strict: false,
 });
 const Tasks = (0, mongoose_1.model)("tasks", TaskSchema);
+exports.TaskFileSchema = (0, mongoose_1.model)("attachedFiles", exports.FilesSchema);
 exports.default = Tasks;

@@ -5,7 +5,6 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 Object.defineProperty(exports, "__esModule", { value: true });
 const userRoute_1 = __importDefault(require("../routes/user/userRoute"));
 const boardRoute_1 = __importDefault(require("../routes/board/boardRoute"));
-const techMemberRoute_1 = __importDefault(require("../routes/techMember/techMemberRoute"));
 const authRoute_1 = __importDefault(require("../routes/auth/authRoute"));
 const depRoute_1 = __importDefault(require("../routes/department/depRoute"));
 const projectRoute_1 = __importDefault(require("../routes/project/projectRoute"));
@@ -31,7 +30,6 @@ function default_1(app) {
     app.use("/api", taskRoute_1.default);
     app.use("/api", userRoute_1.default);
     app.use("/api", boardRoute_1.default);
-    app.use("/api", techMemberRoute_1.default);
     app.use("/api", depRoute_1.default);
     app.use("/api", projectRoute_1.default);
     app.use("/api", categoryRoute_1.default);

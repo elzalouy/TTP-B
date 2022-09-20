@@ -25,7 +25,6 @@ const TaskReq = class TaskReq extends task_1.default {
         });
         return __awaiter(this, void 0, void 0, function* () {
             try {
-                console.log(req.files, req.body);
                 let TaskData = req.body;
                 if (TaskData.teamId === "")
                     TaskData.teamId = null;
@@ -53,28 +52,26 @@ const TaskReq = class TaskReq extends task_1.default {
         return __awaiter(this, void 0, void 0, function* () {
             try {
                 taskQueue_1.updateTaskQueue.push((cb) => __awaiter(this, void 0, void 0, function* () {
-                    var _a;
                     let TaskData = req.body;
                     if (TaskData.teamId === "" || TaskData.teamId === null)
                         TaskData.teamId = null;
                     let files = req.files;
+                    let deleteFiles;
+                    if (TaskData.deleteFiles)
+                        deleteFiles = TaskData.deleteFiles
+                            ? JSON.parse(TaskData === null || TaskData === void 0 ? void 0 : TaskData.deleteFiles)
+                            : [];
+                    TaskData.deleteFiles = deleteFiles;
                     let validate = validation_1.editTaskSchema.validate(TaskData);
                     if (validate.error)
                         return res.status(400).send(validate.error.details[0]);
-                    let task = yield _super.updateTask.call(this, TaskData, files);
-                    if (task && (task === null || task === void 0 ? void 0 : task.error))
-                        res.status(400).send(task.error);
-                    if ((_a = task === null || task === void 0 ? void 0 : task.task) === null || _a === void 0 ? void 0 : _a._id) {
-                        return res.send(task.task);
-                    }
-                    else {
-                        return res.status(400).send((0, errorUtils_1.customeError)("update_task_error", 400));
-                    }
+                    yield _super.updateTask.call(this, TaskData, files);
+                    return res.send({ message: "Task updated Sucessfully" });
                 }));
-                taskQueue_1.updateTaskQueue.start();
             }
             catch (error) {
                 logger_1.default.error({ handleUpdateCardError: error });
+                return res.status(400).send((0, errorUtils_1.customeError)("update_task_error", 400));
             }
         });
     }
@@ -211,6 +208,28 @@ const TaskReq = class TaskReq extends task_1.default {
             }
             catch (error) {
                 logger_1.default.error({ handleDownloadAttachmentError: error });
+            }
+        });
+    }
+    static hanldeEditTasksProjectId(req, res) {
+        const _super = Object.create(null, {
+            __editTasksProjectId: { get: () => super.__editTasksProjectId }
+        });
+        return __awaiter(this, void 0, void 0, function* () {
+            try {
+                let ids = req.body.ids, projectId = req.body.projectId;
+                if (ids && projectId) {
+                    let response = yield _super.__editTasksProjectId.call(this, ids, projectId);
+                    logger_1.default.info({ ids, count: response.modifiedCount });
+                    if (response.modifiedCount)
+                        return res.send(response);
+                    return res
+                        .status(400)
+                        .send({ message: "something wrong happened", error: response });
+                }
+            }
+            catch (error) {
+                logger_1.default.error({ handleEditTasksProjectIdError: error });
             }
         });
     }

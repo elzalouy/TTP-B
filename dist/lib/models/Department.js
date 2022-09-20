@@ -194,8 +194,8 @@ DepartmentSchema.methods.createDepartmentValidate = function () {
 DepartmentSchema.methods.updateDepartmentValidate = function (data) {
     try {
         let teams = this.teams.filter((item) => item.isDeleted === false);
+        teams = teams.filter((item) => !data.removeTeams.includes(item._id.toString()));
         let teamName = teams.map((item) => item.name);
-        console.log({ teams: this.teams, notDeleted: teams, names: teamName });
         let validateFun = updateDepartmentValidateSchema(teamName);
         let validation = validateFun.validate(data);
         return validation;
@@ -218,6 +218,7 @@ DepartmentSchema.methods.createDepartmentBoard = function () {
             if ((board === null || board === void 0 ? void 0 : board.id) && (board === null || board === void 0 ? void 0 : board.url)) {
                 this.boardId = board.id;
                 this.boardURL = board.url;
+                yield trello_1.default.createWebHook(board.id, "/board");
             }
             //2- create lists
             let listsResult = yield lists.map((list, index) => __awaiter(this, void 0, void 0, function* () {
@@ -274,20 +275,23 @@ DepartmentSchema.methods.updateTeams = function (data, cb) {
     return __awaiter(this, void 0, void 0, function* () {
         try {
             let depTeams = [];
-            data.removeTeams.forEach((item, index) => __awaiter(this, void 0, void 0, function* () {
+            // remove teams
+            yield data.removeTeams.forEach((item, index) => __awaiter(this, void 0, void 0, function* () {
                 let team = this.teams.find((t) => t._id.toString() === item);
-                if (team) {
-                    this.teams[index].isDeleted = true;
-                    yield trello_1.default.addListToArchieve(this.teams[index].listId);
-                }
+                yield trello_1.default.addListToArchieve(team.listId);
             }));
+            this.teams = this.teams.map((item) => {
+                if (data.removeTeams.includes(item._id.toString())) {
+                    item.isDeleted = true;
+                }
+                return item;
+            });
             depTeams = yield Promise.all(data.addTeams.map((item) => __awaiter(this, void 0, void 0, function* () {
                 let list = yield trello_1.default.addListToBoard(this.boardId, item);
                 return { name: item, listId: list.id, isDeleted: false };
             })));
             depTeams = [...this.teams, ...depTeams];
             this.teams = depTeams;
-            cb(this);
             return this;
         }
         catch (error) {

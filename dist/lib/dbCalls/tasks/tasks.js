@@ -1,4 +1,27 @@
 "use strict";
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    __setModuleDefault(result, mod);
+    return result;
+};
 var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
     function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
     return new (P || (P = Promise))(function (resolve, reject) {
@@ -13,10 +36,12 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 const logger_1 = __importDefault(require("../../../logger"));
-const Task_1 = __importDefault(require("../../models/Task"));
+const Task_1 = __importStar(require("../../models/Task"));
 const lodash_1 = __importDefault(require("lodash"));
 const mongoose_1 = __importDefault(require("mongoose"));
 const Tasks_1 = require("../../types/controller/Tasks");
+const mongodb_1 = require("mongodb");
+const __1 = require("../../..");
 class TaskDB {
     static createTaskDB(data) {
         return __awaiter(this, void 0, void 0, function* () {
@@ -261,6 +286,7 @@ class TaskDB {
         });
     }
     static __updateTask(data) {
+        var _a;
         return __awaiter(this, void 0, void 0, function* () {
             try {
                 let id = data.id;
@@ -270,7 +296,7 @@ class TaskDB {
                     return Tasks_1.taskNotFoundError;
                 task.name = data.name ? data.name : task.name;
                 task.description =
-                    data.description.length > 0 ? data.description : task.description;
+                    ((_a = data === null || data === void 0 ? void 0 : data.description) === null || _a === void 0 ? void 0 : _a.length) > 0 ? data.description : task.description;
                 task.deadline = data.deadline ? data.deadline : task.deadline;
                 task.categoryId = data.categoryId
                     ? new mongoose_1.default.Types.ObjectId(data.categoryId)
@@ -282,6 +308,9 @@ class TaskDB {
                 task.cardId = data.cardId ? data.cardId : task.cardId;
                 task.boardId = data.boardId ? data.boardId : task.boardId;
                 task.listId = data.listId ? data.listId : task.listId;
+                task.attachedFiles = data.deleteFiles
+                    ? task.attachedFiles.filter((item) => item.trelloId === data.deleteFiles.trelloId)
+                    : task.attachedFiles;
                 delete task._id;
                 let update = yield Task_1.default.findByIdAndUpdate(id, task, {
                     new: true,
@@ -290,6 +319,17 @@ class TaskDB {
             }
             catch (error) {
                 logger_1.default.error({ updateTaskDBError: error });
+            }
+        });
+    }
+    static __updateTasksProjectId(projectId, ids) {
+        return __awaiter(this, void 0, void 0, function* () {
+            try {
+                let updateResult = yield Task_1.default.updateMany({ _id: { $in: ids } }, { projectId: projectId });
+                return updateResult;
+            }
+            catch (error) {
+                logger_1.default.error({ updateTasksProjectIdError: error });
             }
         });
     }
@@ -333,7 +373,6 @@ class TaskDB {
                     let name = data.name.toLowerCase();
                     filter.name = { $regex: name };
                 }
-                ;
                 if (data.projectManager)
                     filter.projectManager = { $regex: data.projectManager };
                 let tasks = yield Task_1.default.find(filter);
@@ -371,27 +410,25 @@ class TaskDB {
                 task.description = data.description ? data.description : task.description;
                 task.teamId =
                     (data === null || data === void 0 ? void 0 : data.teamId) === null || ((_a = data === null || data === void 0 ? void 0 : data.teamId) === null || _a === void 0 ? void 0 : _a.toString().length) > 0
-                        ? data.teamId
+                        ? new mongodb_1.ObjectId(data.teamId)
                         : task.teamId;
                 task.lastMove = (data === null || data === void 0 ? void 0 : data.lastMove) ? data.lastMove : task.lastMoveDate;
                 task.lastMoveDate = (data === null || data === void 0 ? void 0 : data.lastMoveDate)
                     ? data.lastMoveDate
                     : task.lastMoveDate;
-                if (data.attachedFiles) {
-                    let files = [...task.attachedFiles, ...data.attachedFiles];
-                    task.attachedFiles = files;
+                task.deadline = (data === null || data === void 0 ? void 0 : data.deadline) ? data.deadline : task.deadline;
+                task.start = (data === null || data === void 0 ? void 0 : data.start) ? data.start : task.start;
+                if (data.attachedFile) {
+                    let file = new Task_1.TaskFileSchema(Object.assign({}, data.attachedFile));
+                    task.attachedFiles.push(file);
+                    task = yield task.save();
                 }
                 if (data.deleteFiles && ((_b = data === null || data === void 0 ? void 0 : data.deleteFiles) === null || _b === void 0 ? void 0 : _b.trelloId)) {
                     task.attachedFiles = lodash_1.default.filter(task.attachedFiles, (item) => { var _a; return item.trelloId !== ((_a = data === null || data === void 0 ? void 0 : data.deleteFiles) === null || _a === void 0 ? void 0 : _a.trelloId); });
                 }
-                task.attachedFiles = task.attachedFiles.filter((item) => item.mimeType !== "");
                 task.attachedFiles = lodash_1.default.uniqBy(task.attachedFiles, "trelloId");
-                let id = task._id;
-                let result = yield Task_1.default.findOneAndUpdate({ _id: id }, task, {
-                    new: true,
-                    lean: true,
-                });
-                return result;
+                let result = yield (yield task.save()).toObject();
+                yield __1.io.sockets.emit("update-task", result);
             }
             catch (error) {
                 logger_1.default.error({ __updateTaskByTrelloDBError: error });
@@ -415,10 +452,11 @@ class TaskDB {
         });
     }
     static __deleteTaskByTrelloDB(data) {
+        var _a;
         return __awaiter(this, void 0, void 0, function* () {
             try {
                 let result = yield Task_1.default.findOneAndDelete({ cardId: data.cardId });
-                return result;
+                return (_a = __1.io === null || __1.io === void 0 ? void 0 : __1.io.sockets) === null || _a === void 0 ? void 0 : _a.emit("delete-task", result);
             }
             catch (error) {
                 logger_1.default.error({ __deleteTaskByTrelloDBError: error });
@@ -426,11 +464,12 @@ class TaskDB {
         });
     }
     static __archiveTaskByTrelloDB(data, archive) {
+        var _a;
         return __awaiter(this, void 0, void 0, function* () {
             try {
                 let taskData = archive === true ? { listId: null, status: "Archived" } : data;
                 let archiveTask = yield Task_1.default.findOneAndUpdate({ cardId: data.cardId }, taskData, { new: true, lean: true });
-                return archiveTask;
+                return (_a = __1.io === null || __1.io === void 0 ? void 0 : __1.io.sockets) === null || _a === void 0 ? void 0 : _a.emit("update-task", archiveTask);
             }
             catch (error) {
                 logger_1.default.error({ __archiveTaskByTrelloDBError: error });
