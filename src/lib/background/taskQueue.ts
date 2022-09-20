@@ -80,11 +80,11 @@ export const updateCardJob = (
       logger.ercror({ updateCardDataError: error });
     }
   });
+
   TaskQueue.push(async (cb) => {
     try {
       // wait for both update date in db and upload,delete files to trello
       // if there are deleted files, then delete it from the db
-      let deleteTaskFiles: AttachmentSchema[];
       if (deleteFiles) {
         if (deleteFiles.length > 0) {
           let isDeletedAll = await deleteFiles?.map(async (item) => {
@@ -102,18 +102,19 @@ export const updateCardJob = (
       logger.error({ updateCardDeleteFilesJobError: error });
     }
   });
+
   TaskQueue.push(async (cb) => {
     if (newFiles) {
       await TaskController.__createTaskAttachment(newFiles, data);
     }
     cb(null, true);
   });
+
   TaskQueue.push(async (cb) => {
     let task = await TaskController.updateTaskDB(data);
     if (task.error) cb(new Error(task.error.message), null);
-    await io.sockets.emit("update-task", task);
+    await io.sockets.emit("update-task", task.task);
     deleteAll();
-
     cb(null, task);
   });
 };
@@ -159,7 +160,6 @@ export const updateTaskAttachmentsJob = (task: TaskData) => {
         };
         return file;
       });
-      console.log("change task files to,", newfiles);
       let Task = await TaskDB.__updateTaskAttachments(task, newfiles);
       io.sockets.emit("update-task", Task);
     } catch (error) {

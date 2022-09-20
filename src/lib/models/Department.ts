@@ -230,7 +230,6 @@ DepartmentSchema.methods.updateDepartmentValidate = function (
       (item) => !data.removeTeams.includes(item._id.toString())
     );
     let teamName = teams.map((item) => item.name);
-    console.log({ teams: this.teams, notDeleted: teams, names: teamName });
     let validateFun = updateDepartmentValidateSchema(teamName);
     let validation = validateFun.validate(data);
     return validation;
@@ -257,6 +256,7 @@ DepartmentSchema.methods.createDepartmentBoard = async function (
     if (board?.id && board?.url) {
       this.boardId = board.id;
       this.boardURL = board.url;
+      await BoardController.createWebHook(board.id, "/board");
     }
     //2- create lists
     let listsResult = await lists.map(async (list, index) => {
@@ -278,6 +278,7 @@ DepartmentSchema.methods.createDepartmentBoard = async function (
     logger.error({ createDepartmentBoardError: error });
   }
 };
+
 DepartmentSchema.methods.updateDepartment = async function (
   this: IDepartment,
   data: IDepartmentState

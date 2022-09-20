@@ -5976,3 +5976,3497 @@
   level: 'info',
   timestamp: '2022-09-17 18:23:16'
 }
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-09-18 13:48:38'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-09-18 13:50:52'
+}
+{
+  message: {
+    updateBoardCardError: TypeError: Cannot read properties of undefined (reading 'data')
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:500:43)
+        at Generator.next (<anonymous>)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:8:71
+        at new Promise (<anonymous>)
+        at __awaiter (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:4:12)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:492:46
+        at Queue.start (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/queue/index.js:145:17)
+        at Queue.<computed> [as push] (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/queue/index.js:59:12)
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:492:28)
+        at Generator.next (<anonymous>)
+  },
+  level: 'error',
+  timestamp: '2022-09-18 13:57:18'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-09-18 14:30:47'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-09-18 14:37:46'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-09-18 14:39:40'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-09-18 14:42:33'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-09-18 14:42:59'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-09-18 14:45:18'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-09-18 14:49:06'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-09-18 14:49:47'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-09-18 15:14:35'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-09-18 15:15:04'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-09-18 15:20:54'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-09-18 15:49:26'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-09-18 15:51:39'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-09-18 15:52:19'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-09-18 15:55:15'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-09-18 16:03:30'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-09-18 16:05:55'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-09-18 16:07:19'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-09-18 16:11:27'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-09-18 16:12:46'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-09-18 16:13:48'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-09-18 16:14:30'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-09-18 16:15:39'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-09-18 16:16:36'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-09-18 16:18:08'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-09-18 16:18:30'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-09-18 16:20:32'
+}
+{
+  message: {
+    removeBoard: 'https://api.trello.com/1/boards/63204f7e3b8f1401935aa4d9?response_type=token&key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68'
+  },
+  level: 'info',
+  timestamp: '2022-09-18 16:26:21'
+}
+{
+  message: { deleteTasksOfDepartment: { acknowledged: true, deletedCount: 2 } },
+  level: 'info',
+  timestamp: '2022-09-18 16:26:22'
+}
+{
+  message: {
+    borderData: {
+      id: '63272a9d7f0fd800374ca781',
+      name: 'this is local, not usable for TTP team',
+      desc: '',
+      descData: null,
+      closed: false,
+      idOrganization: '62932bf998452a111d515e0d',
+      idEnterprise: null,
+      pinned: false,
+      url: 'https://trello.com/b/VYdfDaQh/this-is-local-not-usable-for-ttp-team',
+      shortUrl: 'https://trello.com/b/VYdfDaQh',
+      prefs: {
+        permissionLevel: 'private',
+        hideVotes: false,
+        voting: 'disabled',
+        comments: 'members',
+        invitations: 'members',
+        selfJoin: true,
+        cardCovers: true,
+        isTemplate: false,
+        cardAging: 'regular',
+        calendarFeedEnabled: false,
+        hiddenPluginBoardButtons: [],
+        switcherViews: [
+          {
+            _id: '63272a9d7f0fd800374ca782',
+            viewType: 'Board',
+            enabled: true
+          },
+          {
+            _id: '63272a9d7f0fd800374ca783',
+            viewType: 'Table',
+            enabled: true
+          },
+          {
+            _id: '63272a9d7f0fd800374ca784',
+            viewType: 'Calendar',
+            enabled: false
+          },
+          {
+            _id: '63272a9d7f0fd800374ca785',
+            viewType: 'Dashboard',
+            enabled: false
+          },
+          {
+            _id: '63272a9d7f0fd800374ca786',
+            viewType: 'Timeline',
+            enabled: false
+          },
+          {
+            _id: '63272a9d7f0fd800374ca787',
+            viewType: 'Map',
+            enabled: false
+          }
+        ],
+        background: 'blue',
+        backgroundColor: '#0079BF',
+        backgroundImage: null,
+        backgroundImageScaled: null,
+        backgroundTile: false,
+        backgroundBrightness: 'dark',
+        backgroundBottomColor: '#0079BF',
+        backgroundTopColor: '#0079BF',
+        canBePublic: true,
+        canBeEnterprise: true,
+        canBeOrg: true,
+        canBePrivate: true,
+        canInvite: true
+      },
+      labelNames: {
+        green: '',
+        yellow: '',
+        orange: '',
+        red: '',
+        purple: '',
+        blue: '',
+        sky: '',
+        lime: '',
+        pink: '',
+        black: '',
+        green_dark: '',
+        yellow_dark: '',
+        orange_dark: '',
+        red_dark: '',
+        purple_dark: '',
+        blue_dark: '',
+        sky_dark: '',
+        lime_dark: '',
+        pink_dark: '',
+        black_dark: '',
+        green_light: '',
+        yellow_light: '',
+        orange_light: '',
+        red_light: '',
+        purple_light: '',
+        blue_light: '',
+        sky_light: '',
+        lime_light: '',
+        pink_light: '',
+        black_light: ''
+      },
+      limits: {}
+    }
+  },
+  level: 'info',
+  timestamp: '2022-09-18 16:26:38'
+}
+{
+  message: {
+    removeBoard: 'https://api.trello.com/1/boards/63272a9d7f0fd800374ca781?response_type=token&key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68'
+  },
+  level: 'info',
+  timestamp: '2022-09-18 16:27:27'
+}
+{
+  message: { deleteTasksOfDepartment: { acknowledged: true, deletedCount: 0 } },
+  level: 'info',
+  timestamp: '2022-09-18 16:27:28'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-09-18 16:28:27'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-09-18 17:30:25'
+}
+{
+  message: {
+    borderData: {
+      id: '63273c2b5392d6020aeb2016',
+      name: "this is local don't use it  ttp team",
+      desc: '',
+      descData: null,
+      closed: false,
+      idOrganization: '62932bf998452a111d515e0d',
+      idEnterprise: null,
+      pinned: false,
+      url: 'https://trello.com/b/UTRLsxAE/this-is-local-dont-use-it-ttp-team',
+      shortUrl: 'https://trello.com/b/UTRLsxAE',
+      prefs: {
+        permissionLevel: 'private',
+        hideVotes: false,
+        voting: 'disabled',
+        comments: 'members',
+        invitations: 'members',
+        selfJoin: true,
+        cardCovers: true,
+        isTemplate: false,
+        cardAging: 'regular',
+        calendarFeedEnabled: false,
+        hiddenPluginBoardButtons: [],
+        switcherViews: [
+          {
+            _id: '63273c2b5392d6020aeb2017',
+            viewType: 'Board',
+            enabled: true
+          },
+          {
+            _id: '63273c2b5392d6020aeb2018',
+            viewType: 'Table',
+            enabled: true
+          },
+          {
+            _id: '63273c2b5392d6020aeb2019',
+            viewType: 'Calendar',
+            enabled: false
+          },
+          {
+            _id: '63273c2b5392d6020aeb201a',
+            viewType: 'Dashboard',
+            enabled: false
+          },
+          {
+            _id: '63273c2b5392d6020aeb201b',
+            viewType: 'Timeline',
+            enabled: false
+          },
+          {
+            _id: '63273c2b5392d6020aeb201c',
+            viewType: 'Map',
+            enabled: false
+          }
+        ],
+        background: 'blue',
+        backgroundColor: '#0079BF',
+        backgroundImage: null,
+        backgroundImageScaled: null,
+        backgroundTile: false,
+        backgroundBrightness: 'dark',
+        backgroundBottomColor: '#0079BF',
+        backgroundTopColor: '#0079BF',
+        canBePublic: true,
+        canBeEnterprise: true,
+        canBeOrg: true,
+        canBePrivate: true,
+        canInvite: true
+      },
+      labelNames: {
+        green: '',
+        yellow: '',
+        orange: '',
+        red: '',
+        purple: '',
+        blue: '',
+        sky: '',
+        lime: '',
+        pink: '',
+        black: '',
+        green_dark: '',
+        yellow_dark: '',
+        orange_dark: '',
+        red_dark: '',
+        purple_dark: '',
+        blue_dark: '',
+        sky_dark: '',
+        lime_dark: '',
+        pink_dark: '',
+        black_dark: '',
+        green_light: '',
+        yellow_light: '',
+        orange_light: '',
+        red_light: '',
+        purple_light: '',
+        blue_light: '',
+        sky_light: '',
+        lime_light: '',
+        pink_light: '',
+        black_light: ''
+      },
+      limits: {}
+    }
+  },
+  level: 'info',
+  timestamp: '2022-09-18 17:41:32'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-09-18 17:49:26'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-09-18 17:51:09'
+}
+{
+  message: {
+    removeBoard: 'https://api.trello.com/1/boards/63273c2b5392d6020aeb2016?response_type=token&key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68'
+  },
+  level: 'info',
+  timestamp: '2022-09-18 17:52:26'
+}
+{
+  message: { deleteTasksOfDepartment: { acknowledged: true, deletedCount: 0 } },
+  level: 'info',
+  timestamp: '2022-09-18 17:52:28'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-09-18 17:53:03'
+}
+{
+  message: {
+    borderData: {
+      id: '63273f0da6a664004529e49b',
+      name: 'department',
+      desc: '',
+      descData: null,
+      closed: false,
+      idOrganization: '62932bf998452a111d515e0d',
+      idEnterprise: null,
+      pinned: false,
+      url: 'https://trello.com/b/fAMDR5Gb/department',
+      shortUrl: 'https://trello.com/b/fAMDR5Gb',
+      prefs: {
+        permissionLevel: 'private',
+        hideVotes: false,
+        voting: 'disabled',
+        comments: 'members',
+        invitations: 'members',
+        selfJoin: true,
+        cardCovers: true,
+        isTemplate: false,
+        cardAging: 'regular',
+        calendarFeedEnabled: false,
+        hiddenPluginBoardButtons: [],
+        switcherViews: [
+          {
+            _id: '63273f0da6a664004529e49c',
+            viewType: 'Board',
+            enabled: true
+          },
+          {
+            _id: '63273f0da6a664004529e49d',
+            viewType: 'Table',
+            enabled: true
+          },
+          {
+            _id: '63273f0da6a664004529e49e',
+            viewType: 'Calendar',
+            enabled: false
+          },
+          {
+            _id: '63273f0da6a664004529e49f',
+            viewType: 'Dashboard',
+            enabled: false
+          },
+          {
+            _id: '63273f0da6a664004529e4a0',
+            viewType: 'Timeline',
+            enabled: false
+          },
+          {
+            _id: '63273f0da6a664004529e4a1',
+            viewType: 'Map',
+            enabled: false
+          }
+        ],
+        background: 'blue',
+        backgroundColor: '#0079BF',
+        backgroundImage: null,
+        backgroundImageScaled: null,
+        backgroundTile: false,
+        backgroundBrightness: 'dark',
+        backgroundBottomColor: '#0079BF',
+        backgroundTopColor: '#0079BF',
+        canBePublic: true,
+        canBeEnterprise: true,
+        canBeOrg: true,
+        canBePrivate: true,
+        canInvite: true
+      },
+      labelNames: {
+        green: '',
+        yellow: '',
+        orange: '',
+        red: '',
+        purple: '',
+        blue: '',
+        sky: '',
+        lime: '',
+        pink: '',
+        black: '',
+        green_dark: '',
+        yellow_dark: '',
+        orange_dark: '',
+        red_dark: '',
+        purple_dark: '',
+        blue_dark: '',
+        sky_dark: '',
+        lime_dark: '',
+        pink_dark: '',
+        black_dark: '',
+        green_light: '',
+        yellow_light: '',
+        orange_light: '',
+        red_light: '',
+        purple_light: '',
+        blue_light: '',
+        sky_light: '',
+        lime_light: '',
+        pink_light: '',
+        black_light: ''
+      },
+      limits: {}
+    }
+  },
+  level: 'info',
+  timestamp: '2022-09-18 17:53:50'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-09-18 17:56:03'
+}
+{
+  message: {
+    removeBoard: 'https://api.trello.com/1/boards/63273f0da6a664004529e49b?response_type=token&key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68'
+  },
+  level: 'info',
+  timestamp: '2022-09-18 17:56:13'
+}
+{
+  message: { deleteTasksOfDepartment: { acknowledged: true, deletedCount: 0 } },
+  level: 'info',
+  timestamp: '2022-09-18 17:56:14'
+}
+{
+  message: {
+    borderData: {
+      id: '63273fbc9d33ec001e1ee8e2',
+      name: "this is local department, don't use it ttp team",
+      desc: '',
+      descData: null,
+      closed: false,
+      idOrganization: '62932bf998452a111d515e0d',
+      idEnterprise: null,
+      pinned: false,
+      url: 'https://trello.com/b/97m0EUFn/this-is-local-department-dont-use-it-ttp-team',
+      shortUrl: 'https://trello.com/b/97m0EUFn',
+      prefs: {
+        permissionLevel: 'private',
+        hideVotes: false,
+        voting: 'disabled',
+        comments: 'members',
+        invitations: 'members',
+        selfJoin: true,
+        cardCovers: true,
+        isTemplate: false,
+        cardAging: 'regular',
+        calendarFeedEnabled: false,
+        hiddenPluginBoardButtons: [],
+        switcherViews: [
+          {
+            _id: '63273fbc9d33ec001e1ee8e3',
+            viewType: 'Board',
+            enabled: true
+          },
+          {
+            _id: '63273fbc9d33ec001e1ee8e4',
+            viewType: 'Table',
+            enabled: true
+          },
+          {
+            _id: '63273fbc9d33ec001e1ee8e5',
+            viewType: 'Calendar',
+            enabled: false
+          },
+          {
+            _id: '63273fbc9d33ec001e1ee8e6',
+            viewType: 'Dashboard',
+            enabled: false
+          },
+          {
+            _id: '63273fbc9d33ec001e1ee8e7',
+            viewType: 'Timeline',
+            enabled: false
+          },
+          {
+            _id: '63273fbc9d33ec001e1ee8e8',
+            viewType: 'Map',
+            enabled: false
+          }
+        ],
+        background: 'blue',
+        backgroundColor: '#0079BF',
+        backgroundImage: null,
+        backgroundImageScaled: null,
+        backgroundTile: false,
+        backgroundBrightness: 'dark',
+        backgroundBottomColor: '#0079BF',
+        backgroundTopColor: '#0079BF',
+        canBePublic: true,
+        canBeEnterprise: true,
+        canBeOrg: true,
+        canBePrivate: true,
+        canInvite: true
+      },
+      labelNames: {
+        green: '',
+        yellow: '',
+        orange: '',
+        red: '',
+        purple: '',
+        blue: '',
+        sky: '',
+        lime: '',
+        pink: '',
+        black: '',
+        green_dark: '',
+        yellow_dark: '',
+        orange_dark: '',
+        red_dark: '',
+        purple_dark: '',
+        blue_dark: '',
+        sky_dark: '',
+        lime_dark: '',
+        pink_dark: '',
+        black_dark: '',
+        green_light: '',
+        yellow_light: '',
+        orange_light: '',
+        red_light: '',
+        purple_light: '',
+        blue_light: '',
+        sky_light: '',
+        lime_light: '',
+        pink_light: '',
+        black_light: ''
+      },
+      limits: {}
+    }
+  },
+  level: 'info',
+  timestamp: '2022-09-18 17:56:44'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-09-18 17:59:16'
+}
+{
+  message: {
+    removeBoard: 'https://api.trello.com/1/boards/63273fbc9d33ec001e1ee8e2?response_type=token&key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68'
+  },
+  level: 'info',
+  timestamp: '2022-09-18 17:59:36'
+}
+{
+  message: { deleteTasksOfDepartment: { acknowledged: true, deletedCount: 0 } },
+  level: 'info',
+  timestamp: '2022-09-18 17:59:37'
+}
+{
+  message: {
+    borderData: {
+      id: '63274070279c100363cb4d5c',
+      name: "this is local department, don't use it ttp team",
+      desc: '',
+      descData: null,
+      closed: false,
+      idOrganization: '62932bf998452a111d515e0d',
+      idEnterprise: null,
+      pinned: false,
+      url: 'https://trello.com/b/ivYTZRES/this-is-local-department-dont-use-it-ttp-team',
+      shortUrl: 'https://trello.com/b/ivYTZRES',
+      prefs: {
+        permissionLevel: 'private',
+        hideVotes: false,
+        voting: 'disabled',
+        comments: 'members',
+        invitations: 'members',
+        selfJoin: true,
+        cardCovers: true,
+        isTemplate: false,
+        cardAging: 'regular',
+        calendarFeedEnabled: false,
+        hiddenPluginBoardButtons: [],
+        switcherViews: [
+          {
+            _id: '63274070279c100363cb4d5d',
+            viewType: 'Board',
+            enabled: true
+          },
+          {
+            _id: '63274070279c100363cb4d5e',
+            viewType: 'Table',
+            enabled: true
+          },
+          {
+            _id: '63274070279c100363cb4d5f',
+            viewType: 'Calendar',
+            enabled: false
+          },
+          {
+            _id: '63274070279c100363cb4d60',
+            viewType: 'Dashboard',
+            enabled: false
+          },
+          {
+            _id: '63274070279c100363cb4d61',
+            viewType: 'Timeline',
+            enabled: false
+          },
+          {
+            _id: '63274070279c100363cb4d62',
+            viewType: 'Map',
+            enabled: false
+          }
+        ],
+        background: 'blue',
+        backgroundColor: '#0079BF',
+        backgroundImage: null,
+        backgroundImageScaled: null,
+        backgroundTile: false,
+        backgroundBrightness: 'dark',
+        backgroundBottomColor: '#0079BF',
+        backgroundTopColor: '#0079BF',
+        canBePublic: true,
+        canBeEnterprise: true,
+        canBeOrg: true,
+        canBePrivate: true,
+        canInvite: true
+      },
+      labelNames: {
+        green: '',
+        yellow: '',
+        orange: '',
+        red: '',
+        purple: '',
+        blue: '',
+        sky: '',
+        lime: '',
+        pink: '',
+        black: '',
+        green_dark: '',
+        yellow_dark: '',
+        orange_dark: '',
+        red_dark: '',
+        purple_dark: '',
+        blue_dark: '',
+        sky_dark: '',
+        lime_dark: '',
+        pink_dark: '',
+        black_dark: '',
+        green_light: '',
+        yellow_light: '',
+        orange_light: '',
+        red_light: '',
+        purple_light: '',
+        blue_light: '',
+        sky_light: '',
+        lime_light: '',
+        pink_light: '',
+        black_light: ''
+      },
+      limits: {}
+    }
+  },
+  level: 'info',
+  timestamp: '2022-09-18 17:59:44'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-09-18 18:01:28'
+}
+{
+  message: {
+    removeBoard: 'https://api.trello.com/1/boards/63274070279c100363cb4d5c?response_type=token&key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68'
+  },
+  level: 'info',
+  timestamp: '2022-09-18 18:01:36'
+}
+{
+  message: { deleteTasksOfDepartment: { acknowledged: true, deletedCount: 0 } },
+  level: 'info',
+  timestamp: '2022-09-18 18:01:38'
+}
+{
+  message: {
+    borderData: {
+      id: '632740e9aaf210007e7e8961',
+      name: "this is local department, don't use it ttp team",
+      desc: '',
+      descData: null,
+      closed: false,
+      idOrganization: '62932bf998452a111d515e0d',
+      idEnterprise: null,
+      pinned: false,
+      url: 'https://trello.com/b/CPN9tkzh/this-is-local-department-dont-use-it-ttp-team',
+      shortUrl: 'https://trello.com/b/CPN9tkzh',
+      prefs: {
+        permissionLevel: 'private',
+        hideVotes: false,
+        voting: 'disabled',
+        comments: 'members',
+        invitations: 'members',
+        selfJoin: true,
+        cardCovers: true,
+        isTemplate: false,
+        cardAging: 'regular',
+        calendarFeedEnabled: false,
+        hiddenPluginBoardButtons: [],
+        switcherViews: [
+          {
+            _id: '632740e9aaf210007e7e8962',
+            viewType: 'Board',
+            enabled: true
+          },
+          {
+            _id: '632740e9aaf210007e7e8963',
+            viewType: 'Table',
+            enabled: true
+          },
+          {
+            _id: '632740e9aaf210007e7e8964',
+            viewType: 'Calendar',
+            enabled: false
+          },
+          {
+            _id: '632740e9aaf210007e7e8965',
+            viewType: 'Dashboard',
+            enabled: false
+          },
+          {
+            _id: '632740e9aaf210007e7e8966',
+            viewType: 'Timeline',
+            enabled: false
+          },
+          {
+            _id: '632740e9aaf210007e7e8967',
+            viewType: 'Map',
+            enabled: false
+          }
+        ],
+        background: 'blue',
+        backgroundColor: '#0079BF',
+        backgroundImage: null,
+        backgroundImageScaled: null,
+        backgroundTile: false,
+        backgroundBrightness: 'dark',
+        backgroundBottomColor: '#0079BF',
+        backgroundTopColor: '#0079BF',
+        canBePublic: true,
+        canBeEnterprise: true,
+        canBeOrg: true,
+        canBePrivate: true,
+        canInvite: true
+      },
+      labelNames: {
+        green: '',
+        yellow: '',
+        orange: '',
+        red: '',
+        purple: '',
+        blue: '',
+        sky: '',
+        lime: '',
+        pink: '',
+        black: '',
+        green_dark: '',
+        yellow_dark: '',
+        orange_dark: '',
+        red_dark: '',
+        purple_dark: '',
+        blue_dark: '',
+        sky_dark: '',
+        lime_dark: '',
+        pink_dark: '',
+        black_dark: '',
+        green_light: '',
+        yellow_light: '',
+        orange_light: '',
+        red_light: '',
+        purple_light: '',
+        blue_light: '',
+        sky_light: '',
+        lime_light: '',
+        pink_light: '',
+        black_light: ''
+      },
+      limits: {}
+    }
+  },
+  level: 'info',
+  timestamp: '2022-09-18 18:01:45'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-09-18 18:03:03'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-09-18 18:03:23'
+}
+{
+  message: {
+    removeBoard: 'https://api.trello.com/1/boards/632740e9aaf210007e7e8961?response_type=token&key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68'
+  },
+  level: 'info',
+  timestamp: '2022-09-18 18:03:55'
+}
+{
+  message: { deleteTasksOfDepartment: { acknowledged: true, deletedCount: 0 } },
+  level: 'info',
+  timestamp: '2022-09-18 18:03:56'
+}
+{
+  message: {
+    borderData: {
+      id: '63274172c480a8036e657914',
+      name: "this is local department, don't use it ttp team",
+      desc: '',
+      descData: null,
+      closed: false,
+      idOrganization: '62932bf998452a111d515e0d',
+      idEnterprise: null,
+      pinned: false,
+      url: 'https://trello.com/b/3UFxDgHj/this-is-local-department-dont-use-it-ttp-team',
+      shortUrl: 'https://trello.com/b/3UFxDgHj',
+      prefs: {
+        permissionLevel: 'private',
+        hideVotes: false,
+        voting: 'disabled',
+        comments: 'members',
+        invitations: 'members',
+        selfJoin: true,
+        cardCovers: true,
+        isTemplate: false,
+        cardAging: 'regular',
+        calendarFeedEnabled: false,
+        hiddenPluginBoardButtons: [],
+        switcherViews: [
+          {
+            _id: '63274172c480a8036e657915',
+            viewType: 'Board',
+            enabled: true
+          },
+          {
+            _id: '63274172c480a8036e657916',
+            viewType: 'Table',
+            enabled: true
+          },
+          {
+            _id: '63274172c480a8036e657917',
+            viewType: 'Calendar',
+            enabled: false
+          },
+          {
+            _id: '63274172c480a8036e657918',
+            viewType: 'Dashboard',
+            enabled: false
+          },
+          {
+            _id: '63274172c480a8036e657919',
+            viewType: 'Timeline',
+            enabled: false
+          },
+          {
+            _id: '63274172c480a8036e65791a',
+            viewType: 'Map',
+            enabled: false
+          }
+        ],
+        background: 'blue',
+        backgroundColor: '#0079BF',
+        backgroundImage: null,
+        backgroundImageScaled: null,
+        backgroundTile: false,
+        backgroundBrightness: 'dark',
+        backgroundBottomColor: '#0079BF',
+        backgroundTopColor: '#0079BF',
+        canBePublic: true,
+        canBeEnterprise: true,
+        canBeOrg: true,
+        canBePrivate: true,
+        canInvite: true
+      },
+      labelNames: {
+        green: '',
+        yellow: '',
+        orange: '',
+        red: '',
+        purple: '',
+        blue: '',
+        sky: '',
+        lime: '',
+        pink: '',
+        black: '',
+        green_dark: '',
+        yellow_dark: '',
+        orange_dark: '',
+        red_dark: '',
+        purple_dark: '',
+        blue_dark: '',
+        sky_dark: '',
+        lime_dark: '',
+        pink_dark: '',
+        black_dark: '',
+        green_light: '',
+        yellow_light: '',
+        orange_light: '',
+        red_light: '',
+        purple_light: '',
+        blue_light: '',
+        sky_light: '',
+        lime_light: '',
+        pink_light: '',
+        black_light: ''
+      },
+      limits: {}
+    }
+  },
+  level: 'info',
+  timestamp: '2022-09-18 18:04:03'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-09-18 18:05:51'
+}
+{
+  message: {
+    removeBoard: 'https://api.trello.com/1/boards/63274172c480a8036e657914?response_type=token&key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68'
+  },
+  level: 'info',
+  timestamp: '2022-09-18 18:06:24'
+}
+{
+  message: { deleteTasksOfDepartment: { acknowledged: true, deletedCount: 0 } },
+  level: 'info',
+  timestamp: '2022-09-18 18:06:25'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-09-18 18:07:02'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-09-18 18:08:33'
+}
+{
+  message: {
+    removeBoard: 'https://api.trello.com/1/boards/632742432d710000d851fee7?response_type=token&key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68'
+  },
+  level: 'info',
+  timestamp: '2022-09-18 18:08:40'
+}
+{
+  message: { deleteTasksOfDepartment: { acknowledged: true, deletedCount: 0 } },
+  level: 'info',
+  timestamp: '2022-09-18 18:08:41'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-09-18 18:09:51'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-09-18 18:10:15'
+}
+{
+  message: {
+    removeBoard: 'https://api.trello.com/1/boards/6327429f085cc50221ec7d7d?response_type=token&key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68'
+  },
+  level: 'info',
+  timestamp: '2022-09-18 18:13:43'
+}
+{
+  message: { deleteTasksOfDepartment: { acknowledged: true, deletedCount: 0 } },
+  level: 'info',
+  timestamp: '2022-09-18 18:13:44'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-09-18 18:15:44'
+}
+{
+  message: {
+    removeBoard: 'https://api.trello.com/1/boards/632743bd21b5a602161e610a?response_type=token&key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68'
+  },
+  level: 'info',
+  timestamp: '2022-09-18 18:16:17'
+}
+{
+  message: { deleteTasksOfDepartment: { acknowledged: true, deletedCount: 0 } },
+  level: 'info',
+  timestamp: '2022-09-18 18:16:18'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-09-18 18:18:08'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-09-18 18:21:56'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-09-18 18:26:23'
+}
+{
+  message: {
+    removeBoard: 'https://api.trello.com/1/boards/6327445912861b015da310eb?response_type=token&key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68'
+  },
+  level: 'info',
+  timestamp: '2022-09-18 18:26:33'
+}
+{
+  message: { deleteTasksOfDepartment: { acknowledged: true, deletedCount: 0 } },
+  level: 'info',
+  timestamp: '2022-09-18 18:26:34'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-09-18 18:27:30'
+}
+{
+  message: {
+    removeBoard: 'https://api.trello.com/1/boards/632746cbf2165a00304d5b4f?response_type=token&key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68'
+  },
+  level: 'info',
+  timestamp: '2022-09-18 18:27:36'
+}
+{
+  message: { deleteTasksOfDepartment: { acknowledged: true, deletedCount: 0 } },
+  level: 'info',
+  timestamp: '2022-09-18 18:27:37'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-09-18 18:30:08'
+}
+{
+  message: {
+    removeBoard: 'https://api.trello.com/1/boards/63274706000cf901a4ef76d9?response_type=token&key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68'
+  },
+  level: 'info',
+  timestamp: '2022-09-18 18:30:20'
+}
+{
+  message: { deleteTasksOfDepartment: { acknowledged: true, deletedCount: 0 } },
+  level: 'info',
+  timestamp: '2022-09-18 18:30:21'
+}
+{
+  message: {
+    webhookResult: Response {
+      size: 0,
+      timeout: 0,
+      [Symbol(Body internals)]: {
+        body: PassThrough {
+          _readableState: ReadableState {
+            objectMode: false,
+            highWaterMark: 16384,
+            buffer: BufferList { head: [Object], tail: [Object], length: 1 },
+            length: 11,
+            pipes: [],
+            flowing: null,
+            ended: true,
+            endEmitted: false,
+            reading: false,
+            constructed: true,
+            sync: false,
+            needReadable: false,
+            emittedReadable: false,
+            readableListening: false,
+            resumeScheduled: false,
+            errorEmitted: false,
+            emitClose: true,
+            autoDestroy: true,
+            destroyed: false,
+            errored: null,
+            closed: false,
+            closeEmitted: false,
+            defaultEncoding: 'utf8',
+            awaitDrainWriters: null,
+            multiAwaitDrain: false,
+            readingMore: false,
+            dataEmitted: false,
+            decoder: null,
+            encoding: null,
+            [Symbol(kPaused)]: null
+          },
+          _events: [Object: null prototype] {
+            prefinish: [Function: prefinish],
+            error: [Function (anonymous)]
+          },
+          _eventsCount: 2,
+          _maxListeners: undefined,
+          _writableState: WritableState {
+            objectMode: false,
+            highWaterMark: 16384,
+            finalCalled: true,
+            needDrain: false,
+            ending: true,
+            ended: true,
+            finished: true,
+            destroyed: false,
+            decodeStrings: true,
+            defaultEncoding: 'utf8',
+            length: 0,
+            writing: false,
+            corked: 0,
+            sync: false,
+            bufferProcessing: false,
+            onwrite: [Function: bound onwrite],
+            writecb: null,
+            writelen: 0,
+            afterWriteTickInfo: null,
+            buffered: [],
+            bufferedIndex: 0,
+            allBuffers: true,
+            allNoop: true,
+            pendingcb: 0,
+            constructed: true,
+            prefinished: true,
+            errorEmitted: false,
+            emitClose: true,
+            autoDestroy: true,
+            errored: null,
+            closed: false,
+            closeEmitted: false,
+            [Symbol(kOnFinished)]: []
+          },
+          allowHalfOpen: true,
+          [Symbol(kCapture)]: false,
+          [Symbol(kCallback)]: null
+        },
+        disturbed: false,
+        error: null
+      },
+      [Symbol(Response internals)]: {
+        url: 'https://api.trello.com/1//webhooks/?idModel=632747a5cc134a00a260b5d5&callbackURL=https://d6fa-154-239-136-135.ngrok.io/api/webhookUpdate/boardkey=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68',
+        status: 401,
+        statusText: 'Unauthorized',
+        headers: Headers {
+          [Symbol(map)]: [Object: null prototype] {
+            date: [ 'Sun, 18 Sep 2022 16:30:29 GMT' ],
+            'content-type': [ 'text/plain; charset=utf-8' ],
+            'content-length': [ '11' ],
+            'x-dns-prefetch-control': [ 'off' ],
+            'x-frame-options': [ 'DENY' ],
+            'x-download-options': [ 'noopen' ],
+            'x-permitted-cross-domain-policies': [ 'none' ],
+            'referrer-policy': [ 'strict-origin-when-cross-origin' ],
+            'surrogate-control': [ 'no-store' ],
+            'cache-control': [ 'no-store, no-cache, must-revalidate, proxy-revalidate' ],
+            pragma: [ 'no-cache' ],
+            expires: [ '0' ],
+            'x-trello-version': [ '1.156621.0' ],
+            'x-trello-environment': [ 'Production (Micros)' ],
+            'access-control-allow-origin': [ '*' ],
+            'access-control-allow-methods': [ 'GET, PUT, POST, DELETE' ],
+            'access-control-allow-headers': [ 'Authorization, Accept, Content-Type' ],
+            'access-control-expose-headers': [
+              'x-rate-limit-api-key-interval-ms, x-rate-limit-api-key-max, x-rate-limit-api-key-remaining, x-rate-limit-api-token-interval-ms, x-rate-limit-api-token-max, x-rate-limit-api-token-remaining'
+            ],
+            'x-envoy-upstream-service-time': [ '99' ],
+            server: [ 'globaledge-envoy' ],
+            'expect-ct': [
+              'report-uri="https://web-security-reports.services.atlassian.com/expect-ct-report/trello-edge", max-age=86400'
+            ],
+            'strict-transport-security': [ 'max-age=63072000; preload' ],
+            'x-content-type-options': [ 'nosniff' ],
+            'x-xss-protection': [ '1; mode=block' ],
+            'atl-traceid': [ 'b87663693b6a245b' ],
+            'report-to': [
+              '{"endpoints": [{"url": "https://dz8aopenkvv6s.cloudfront.net"}], "group": "endpoint-1", "include_subdomains": true, "max_age": 600}'
+            ],
+            nel: [
+              '{"failure_fraction": 0.001, "include_subdomains": true, "max_age": 600, "report_to": "endpoint-1"}'
+            ],
+            connection: [ 'close' ]
+          }
+        },
+        counter: 0
+      }
+    }
+  },
+  level: 'info',
+  timestamp: '2022-09-18 18:30:30'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-09-18 18:31:39'
+}
+{
+  message: {
+    removeBoard: 'https://api.trello.com/1/boards/632747a5cc134a00a260b5d5?response_type=token&key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68'
+  },
+  level: 'info',
+  timestamp: '2022-09-18 18:31:50'
+}
+{
+  message: { deleteTasksOfDepartment: { acknowledged: true, deletedCount: 0 } },
+  level: 'info',
+  timestamp: '2022-09-18 18:31:50'
+}
+{
+  message: {
+    createWebHookError: FetchError: invalid json response body at https://api.trello.com/1//webhooks/?idModel=632747fb6b684d014106257c&callbackURL=https://d6fa-154-239-136-135.ngrok.io/api/webhookUpdate/boardkey=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68 reason: Unexpected token i in JSON at position 0
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/node-fetch/lib/index.js:273:32
+        at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+      type: 'invalid-json'
+    }
+  },
+  level: 'error',
+  timestamp: '2022-09-18 18:31:55'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-09-18 18:32:46'
+}
+{
+  message: {
+    removeBoard: 'https://api.trello.com/1/boards/632747fb6b684d014106257c?response_type=token&key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68'
+  },
+  level: 'info',
+  timestamp: '2022-09-18 18:33:14'
+}
+{
+  message: { deleteTasksOfDepartment: { acknowledged: true, deletedCount: 0 } },
+  level: 'info',
+  timestamp: '2022-09-18 18:33:15'
+}
+{
+  message: {
+    createWebHookError: FetchError: invalid json response body at https://api.trello.com/1/webhooks/?idModel=6327484f9e477201a9f587fb&callbackURL=https://d6fa-154-239-136-135.ngrok.io/api/webhookUpdate/boardkey=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68 reason: Unexpected token i in JSON at position 0
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/node-fetch/lib/index.js:273:32
+        at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+      type: 'invalid-json'
+    }
+  },
+  level: 'error',
+  timestamp: '2022-09-18 18:33:20'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-09-18 18:34:54'
+}
+{
+  message: {
+    removeBoard: 'https://api.trello.com/1/boards/6327484f9e477201a9f587fb?response_type=token&key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68'
+  },
+  level: 'info',
+  timestamp: '2022-09-18 18:35:11'
+}
+{
+  message: { deleteTasksOfDepartment: { acknowledged: true, deletedCount: 0 } },
+  level: 'info',
+  timestamp: '2022-09-18 18:35:12'
+}
+{
+  message: {
+    webhookResult: {
+      id: '632748c88137cd00d82e4f56',
+      description: '',
+      idModel: '632748c7cc7b98003e315628',
+      callbackURL: 'https://d6fa-154-239-136-135.ngrok.io/api/webhookUpdate/board',
+      active: true,
+      consecutiveFailures: 0,
+      firstConsecutiveFailDate: null
+    }
+  },
+  level: 'info',
+  timestamp: '2022-09-18 18:35:20'
+}
+{
+  message: {
+    createDepartmentBoardError: TypeError: body used already for: https://api.trello.com/1/webhooks/?idModel=632748c7cc7b98003e315628&callbackURL=https://d6fa-154-239-136-135.ngrok.io/api/webhookUpdate/board&key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68
+        at Response.consumeBody (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/node-fetch/lib/index.js:344:30)
+        at Response.json (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/node-fetch/lib/index.js:269:22)
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:311:28)
+        at Generator.next (<anonymous>)
+        at fulfilled (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:5:58)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5)
+  },
+  level: 'error',
+  timestamp: '2022-09-18 18:35:20'
+}
+{
+  message: {
+    createDepartmentError: TypeError: Cannot destructure property 'teams' of '(intermediate value)' as it is undefined.
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/department.ts:87:15)
+        at Generator.next (<anonymous>)
+        at fulfilled (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/department.ts:5:58)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5)
+  },
+  level: 'error',
+  timestamp: '2022-09-18 18:35:20'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-09-18 18:36:22'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-09-18 18:37:31'
+}
+{
+  message: {
+    webhookResult: {
+      id: '632749937d55f000372f0302',
+      description: '',
+      idModel: '63274992579d8d0237af2cf9',
+      callbackURL: 'https://d6fa-154-239-136-135.ngrok.io/api/webhookUpdate/board',
+      active: true,
+      consecutiveFailures: 0,
+      firstConsecutiveFailDate: null
+    }
+  },
+  level: 'info',
+  timestamp: '2022-09-18 18:38:44'
+}
+{
+  message: {
+    createDepartmentBoardError: TypeError: body used already for: https://api.trello.com/1/webhooks/?callbackURL=https://d6fa-154-239-136-135.ngrok.io/api/webhookUpdate/board&idModel=63274992579d8d0237af2cf9&key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68
+        at Response.consumeBody (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/node-fetch/lib/index.js:344:30)
+        at Response.json (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/node-fetch/lib/index.js:269:22)
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:311:28)
+        at Generator.next (<anonymous>)
+        at fulfilled (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:5:58)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5)
+  },
+  level: 'error',
+  timestamp: '2022-09-18 18:38:44'
+}
+{
+  message: {
+    createDepartmentError: TypeError: Cannot destructure property 'teams' of '(intermediate value)' as it is undefined.
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/department.ts:87:15)
+        at Generator.next (<anonymous>)
+        at fulfilled (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/department.ts:5:58)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5)
+  },
+  level: 'error',
+  timestamp: '2022-09-18 18:38:44'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-09-18 18:40:26'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-09-19 08:32:27'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-09-19 08:48:35'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-09-19 08:49:38'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-09-19 08:50:08'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-09-19 08:51:33'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-09-19 08:52:52'
+}
+{
+  message: {
+    webhookResult: {
+      id: '6328122a6635f20182998789',
+      description: '',
+      idModel: '63281229e14c7401d512c21e',
+      callbackURL: 'https://0fa3-154-239-212-50.ngrok.io/api/webhookUpdate/board',
+      active: true,
+      consecutiveFailures: 0,
+      firstConsecutiveFailDate: null
+    }
+  },
+  level: 'info',
+  timestamp: '2022-09-19 08:54:33'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-09-19 08:59:27'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-09-19 08:59:57'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-09-19 09:02:16'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-09-19 09:07:26'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-09-19 09:08:51'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-09-19 09:09:27'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-09-19 09:14:45'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-09-19 09:16:54'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-09-19 09:31:52'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-09-19 09:35:36'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-09-19 09:36:31'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-09-19 09:39:04'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-09-19 09:41:11'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-09-19 09:43:22'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-09-19 10:31:15'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-09-19 10:41:00'
+}
+{
+  message: {
+    removeBoard: 'https://api.trello.com/1/boards/63281229e14c7401d512c21e?response_type=token&key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68'
+  },
+  level: 'info',
+  timestamp: '2022-09-19 10:41:25'
+}
+{
+  message: { deleteTasksOfDepartment: { acknowledged: true, deletedCount: 0 } },
+  level: 'info',
+  timestamp: '2022-09-19 10:41:26'
+}
+{
+  message: {
+    webhookResult: {
+      id: '63282b41bae25400a11baa47',
+      description: '',
+      idModel: '63282b4081f0e70201a68e7a',
+      callbackURL: 'https://caab-154-239-212-50.ngrok.io/api/webhookUpdate/board',
+      active: true,
+      consecutiveFailures: 0,
+      firstConsecutiveFailDate: null
+    }
+  },
+  level: 'info',
+  timestamp: '2022-09-19 10:41:37'
+}
+{
+  message: {
+    __createTaskByTrelloDBError: Error: tasks validation failed: boardId: Path `boardId` is required.
+        at ValidationError.inspect (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/mongoose/lib/error/validation.js:48:26)
+        at formatValue (node:internal/util/inspect:782:19)
+        at formatProperty (node:internal/util/inspect:1819:11)
+        at formatRaw (node:internal/util/inspect:1030:9)
+        at formatValue (node:internal/util/inspect:817:10)
+        at formatProperty (node:internal/util/inspect:1819:11)
+        at formatRaw (node:internal/util/inspect:1030:9)
+        at formatValue (node:internal/util/inspect:817:10)
+        at inspect (node:internal/util/inspect:347:10)
+        at Format.transform (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/logform/pretty-print.js:27:19) {
+      errors: {
+        boardId: ValidatorError: Path `boardId` is required.
+            at validate (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/mongoose/lib/schematype.js:1330:13)
+            at SchemaString.SchemaType.doValidate (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/mongoose/lib/schematype.js:1314:7)
+            at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/mongoose/lib/document.js:2751:18
+            at processTicksAndRejections (node:internal/process/task_queues:78:11) {
+          properties: {
+            validator: [Function (anonymous)],
+            message: 'Path `boardId` is required.',
+            type: 'required',
+            path: 'boardId',
+            value: undefined
+          },
+          kind: 'required',
+          path: 'boardId',
+          value: undefined,
+          reason: undefined,
+          [Symbol(mongoose:validatorError)]: true
+        }
+      },
+      _message: 'tasks validation failed'
+    }
+  },
+  level: 'error',
+  timestamp: '2022-09-19 10:43:59'
+}
+{
+  message: {
+    createTaskByTrelloError: TypeError: Cannot read properties of undefined (reading 'cardId')
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/task.ts:242:52)
+        at Generator.next (<anonymous>)
+        at fulfilled (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/task.ts:5:58)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5)
+  },
+  level: 'error',
+  timestamp: '2022-09-19 10:43:59'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-09-19 10:45:02'
+}
+{
+  message: {
+    webhookResult: {
+      id: '63282c440e1fda0070e2618f',
+      description: '',
+      idModel: '63282c43fee787013928af55',
+      callbackURL: 'https://caab-154-239-212-50.ngrok.io/api/webhookUpdate',
+      active: true,
+      consecutiveFailures: 0,
+      firstConsecutiveFailDate: null
+    }
+  },
+  level: 'info',
+  timestamp: '2022-09-19 10:45:57'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-09-19 10:48:51'
+}
+{
+  message: {
+    webhookResult: {
+      id: '632837a6cf724401fb0816fe',
+      description: '',
+      idModel: '632837a5bfee11010a9451e6',
+      callbackURL: 'https://caab-154-239-212-50.ngrok.io/api/webhookUpdate',
+      active: true,
+      consecutiveFailures: 0,
+      firstConsecutiveFailDate: null
+    }
+  },
+  level: 'info',
+  timestamp: '2022-09-19 11:34:30'
+}
+{
+  message: {
+    webhookResult: {
+      id: '6328389cbef44a03cdc23eaa',
+      description: '',
+      idModel: '6328389bf9f814009afc0fd5',
+      callbackURL: 'https://caab-154-239-212-50.ngrok.io/api/webhookUpdate',
+      active: true,
+      consecutiveFailures: 0,
+      firstConsecutiveFailDate: null
+    }
+  },
+  level: 'info',
+  timestamp: '2022-09-19 11:38:36'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-09-19 11:39:54'
+}
+{
+  message: {
+    webhookResult: {
+      id: '632839054c8830010aa43e24',
+      description: '',
+      idModel: '63283904fed9b9008b7c31a1',
+      callbackURL: 'https://caab-154-239-212-50.ngrok.io/api/webhookUpdate',
+      active: true,
+      consecutiveFailures: 0,
+      firstConsecutiveFailDate: null
+    }
+  },
+  level: 'info',
+  timestamp: '2022-09-19 11:40:21'
+}
+{
+  message: {
+    webhookResult: {
+      id: '632839bd24b54c14cb409c3c',
+      description: '',
+      idModel: '632839bc422c51004c716afc',
+      callbackURL: 'https://caab-154-239-212-50.ngrok.io/api/webhookUpdate',
+      active: true,
+      consecutiveFailures: 0,
+      firstConsecutiveFailDate: null
+    }
+  },
+  level: 'info',
+  timestamp: '2022-09-19 11:43:25'
+}
+{
+  message: {
+    webhookResult: {
+      id: '63283b1d7b1b9c04866847fd',
+      description: '',
+      idModel: '63283b1ccf00db01420e97c9',
+      callbackURL: 'https://caab-154-239-212-50.ngrok.io/api/webhookUpdate',
+      active: true,
+      consecutiveFailures: 0,
+      firstConsecutiveFailDate: null
+    }
+  },
+  level: 'info',
+  timestamp: '2022-09-19 11:49:17'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-09-19 15:00:14'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-09-20 07:36:36'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-09-20 10:54:29'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-09-20 10:57:05'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-09-20 11:09:07'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-09-20 11:22:15'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-09-20 11:22:47'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-09-20 11:23:51'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-09-20 11:25:29'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-09-20 11:27:41'
+}
+{
+  message: { ids: [ '63283b1ce1a79efc36977cc7' ], count: 1 },
+  level: 'info',
+  timestamp: '2022-09-20 11:33:32'
+}
+{
+  message: { ids: [ '63283b1ce1a79efc36977cc7' ], count: 1 },
+  level: 'info',
+  timestamp: '2022-09-20 11:34:03'
+}
+{
+  message: { ids: [ '63283b1ce1a79efc36977cc7' ], count: 1 },
+  level: 'info',
+  timestamp: '2022-09-20 11:35:56'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-09-20 11:36:45'
+}
+{
+  message: {
+    removeBoard: 'https://api.trello.com/1/boards/63282b4081f0e70201a68e7a?response_type=token&key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68'
+  },
+  level: 'info',
+  timestamp: '2022-09-20 11:37:23'
+}
+{
+  message: { deleteTasksOfDepartment: { acknowledged: true, deletedCount: 1 } },
+  level: 'info',
+  timestamp: '2022-09-20 11:37:24'
+}
+{
+  message: {
+    webhookResult: {
+      id: '63298c5e9c198201a96a8d4f',
+      description: '',
+      idModel: '63298c5a5429f200d12a6753',
+      callbackURL: 'https://73a7-62-139-218-130.ngrok.io/api/webhookUpdate/board',
+      active: true,
+      consecutiveFailures: 0,
+      firstConsecutiveFailDate: null
+    }
+  },
+  level: 'info',
+  timestamp: '2022-09-20 11:48:14'
+}
+{
+  message: {
+    webhookResult: {
+      id: '63298c8016c8b4003e11a126',
+      description: '',
+      idModel: '63298c7f43a49c02df8df980',
+      callbackURL: 'https://73a7-62-139-218-130.ngrok.io/api/webhookUpdate',
+      active: true,
+      consecutiveFailures: 0,
+      firstConsecutiveFailDate: null
+    }
+  },
+  level: 'info',
+  timestamp: '2022-09-20 11:48:48'
+}
+{
+  message: {
+    updateBoardCardError: TypeError: Cannot read properties of undefined (reading '_id')
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:629:20
+        at Generator.next (<anonymous>)
+        at fulfilled (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:5:58)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5)
+  },
+  level: 'error',
+  timestamp: '2022-09-20 11:49:26'
+}
+{
+  message: {
+    webhookResult: {
+      id: '63298cda196dcc00773940f0',
+      description: '',
+      idModel: '63298cd9c4ed670132459d6e',
+      callbackURL: 'https://73a7-62-139-218-130.ngrok.io/api/webhookUpdate',
+      active: true,
+      consecutiveFailures: 0,
+      firstConsecutiveFailDate: null
+    }
+  },
+  level: 'info',
+  timestamp: '2022-09-20 11:50:18'
+}
+{
+  message: { ids: [ '63298cd9a2329cbf48b9768b' ], count: 1 },
+  level: 'info',
+  timestamp: '2022-09-20 11:50:56'
+}
+{
+  message: {
+    webhookResult: {
+      id: '63298d1ed59c27003eeb7be1',
+      description: '',
+      idModel: '63298d1d503787014a5756c4',
+      callbackURL: 'https://73a7-62-139-218-130.ngrok.io/api/webhookUpdate',
+      active: true,
+      consecutiveFailures: 0,
+      firstConsecutiveFailDate: null
+    }
+  },
+  level: 'info',
+  timestamp: '2022-09-20 11:51:26'
+}
+{
+  message: {
+    webhookResult: {
+      id: '63298d3c5fb25101df2a7587',
+      description: '',
+      idModel: '63298d3bf8f00f015c98e066',
+      callbackURL: 'https://73a7-62-139-218-130.ngrok.io/api/webhookUpdate',
+      active: true,
+      consecutiveFailures: 0,
+      firstConsecutiveFailDate: null
+    }
+  },
+  level: 'info',
+  timestamp: '2022-09-20 11:51:56'
+}
+{
+  message: {
+    ids: [
+      '63298cd9a2329cbf48b9768b',
+      '63298d1da2329cbf48b9769d',
+      '63298d3ba2329cbf48b976a1'
+    ],
+    count: 3
+  },
+  level: 'info',
+  timestamp: '2022-09-20 11:52:57'
+}
+{
+  message: {
+    webhookResult: {
+      id: '63299f1c44b84902894a0889',
+      description: '',
+      idModel: '63299f1b21521003cc77eaa7',
+      callbackURL: 'https://73a7-62-139-218-130.ngrok.io/api/webhookUpdate',
+      active: true,
+      consecutiveFailures: 0,
+      firstConsecutiveFailDate: null
+    }
+  },
+  level: 'info',
+  timestamp: '2022-09-20 13:08:12'
+}
+{
+  message: {
+    webhookResult: {
+      id: '63299f37a2bde90278a34f9e',
+      description: '',
+      idModel: '63299f369d8109001e4eaa39',
+      callbackURL: 'https://73a7-62-139-218-130.ngrok.io/api/webhookUpdate',
+      active: true,
+      consecutiveFailures: 0,
+      firstConsecutiveFailDate: null
+    }
+  },
+  level: 'info',
+  timestamp: '2022-09-20 13:08:39'
+}
+{
+  message: { ids: [ '63299f1ba2329cbf48b976ce' ], count: 1 },
+  level: 'info',
+  timestamp: '2022-09-20 13:18:39'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-09-20 13:25:12'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-09-20 13:46:09'
+}
+{
+  message: {
+    webhookResult: {
+      id: '6329a9150a1d6101497ea0aa',
+      description: '',
+      idModel: '6329a91421ae360347ed777d',
+      callbackURL: 'https://de4f-62-139-218-130.ngrok.io/api/webhookUpdate',
+      active: true,
+      consecutiveFailures: 0,
+      firstConsecutiveFailDate: null
+    }
+  },
+  level: 'info',
+  timestamp: '2022-09-20 13:50:45'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-09-20 13:54:56'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-09-20 14:11:01'
+}
+{
+  message: {
+    removeBoard: 'https://api.trello.com/1/boards/63298c5a5429f200d12a6753?response_type=token&key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68'
+  },
+  level: 'info',
+  timestamp: '2022-09-20 14:25:35'
+}
+{
+  message: { deleteTasksOfDepartment: { acknowledged: true, deletedCount: 1 } },
+  level: 'info',
+  timestamp: '2022-09-20 14:25:36'
+}
+{
+  message: {
+    webhookResult: {
+      id: '6329b14906839600a1e46978',
+      description: '',
+      idModel: '6329b148950857023d429225',
+      callbackURL: 'https://de4f-62-139-218-130.ngrok.io/api/webhookUpdate/board',
+      active: true,
+      consecutiveFailures: 0,
+      firstConsecutiveFailDate: null
+    }
+  },
+  level: 'info',
+  timestamp: '2022-09-20 14:25:45'
+}
+{
+  message: {
+    webhookResult: {
+      id: '6329b16412261a0091ae0478',
+      description: '',
+      idModel: '6329b1637f905304502ce4e6',
+      callbackURL: 'https://de4f-62-139-218-130.ngrok.io/api/webhookUpdate',
+      active: true,
+      consecutiveFailures: 0,
+      firstConsecutiveFailDate: null
+    }
+  },
+  level: 'info',
+  timestamp: '2022-09-20 14:26:12'
+}
+{
+  message: { ids: [ '6329b1647f9f8f055171a759' ], count: 1 },
+  level: 'info',
+  timestamp: '2022-09-20 14:58:55'
+}
+{
+  message: { ids: [ '6329b1647f9f8f055171a759' ], count: 1 },
+  level: 'info',
+  timestamp: '2022-09-20 14:59:09'
+}
+{
+  message: { ids: [ '6329b1647f9f8f055171a759' ], count: 1 },
+  level: 'info',
+  timestamp: '2022-09-20 15:01:47'
+}
+{
+  message: { ids: [ '6329b1647f9f8f055171a759' ], count: 1 },
+  level: 'info',
+  timestamp: '2022-09-20 15:02:11'
+}
+{
+  message: {
+    webhookResult: {
+      id: '6329badc44447001dbea26cc',
+      description: '',
+      idModel: '6329bada896697013c9c7414',
+      callbackURL: 'https://de4f-62-139-218-130.ngrok.io/api/webhookUpdate',
+      active: true,
+      consecutiveFailures: 0,
+      firstConsecutiveFailDate: null
+    }
+  },
+  level: 'info',
+  timestamp: '2022-09-20 15:06:36'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-09-20 15:56:17'
+}
+{
+  message: {
+    removeBoard: 'https://api.trello.com/1/boards/6329b148950857023d429225?response_type=token&key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68'
+  },
+  level: 'info',
+  timestamp: '2022-09-20 15:56:32'
+}
+{
+  message: { deleteTasksOfDepartment: { acknowledged: true, deletedCount: 0 } },
+  level: 'info',
+  timestamp: '2022-09-20 15:56:34'
+}
+{
+  message: {
+    webhookResult: {
+      id: '6329c6a1c4fe470093e89f1c',
+      description: '',
+      idModel: '6329c6a01238b70016db5320',
+      callbackURL: 'https://895d-62-139-218-130.ngrok.io/api/webhookUpdate/board',
+      active: true,
+      consecutiveFailures: 0,
+      firstConsecutiveFailDate: null
+    }
+  },
+  level: 'info',
+  timestamp: '2022-09-20 15:56:49'
+}
+{
+  message: {
+    webhookResult: {
+      id: '6329c6dcf1c6c8019cb74186',
+      description: '',
+      idModel: '6329c6db5ea3b3001888dcea',
+      callbackURL: 'https://895d-62-139-218-130.ngrok.io/api/webhookUpdate',
+      active: true,
+      consecutiveFailures: 0,
+      firstConsecutiveFailDate: null
+    }
+  },
+  level: 'info',
+  timestamp: '2022-09-20 15:57:48'
+}
+{
+  message: {
+    webhookResult: {
+      id: '6329c6dc16cb8500ca9d067d',
+      description: '',
+      idModel: '6329c6db5ea3b3001888dcea',
+      callbackURL: 'https://895d-62-139-218-130.ngrok.io/api/webhookUpdate',
+      active: true,
+      consecutiveFailures: 0,
+      firstConsecutiveFailDate: null
+    }
+  },
+  level: 'info',
+  timestamp: '2022-09-20 15:57:48'
+}
+{
+  message: {
+    createTaskDBError: MongoServerError: E11000 duplicate key error collection: TTP.tasks index: cardId_1 dup key: { cardId: "6329c6db5ea3b3001888dcea" }
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/mongodb/src/operations/insert.ts:85:25
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/mongodb/src/cmap/connection_pool.ts:482:13
+        at handleOperationResult (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/mongodb/src/sdam/server.ts:538:14)
+        at Connection.onMessage (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/mongodb/src/cmap/connection.ts:452:5)
+        at MessageStream.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/mongodb/src/cmap/connection.ts:267:56)
+        at MessageStream.emit (node:events:527:28)
+        at MessageStream.emit (node:domain:475:12)
+        at processIncomingData (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/mongodb/src/cmap/message_stream.ts:168:12)
+        at MessageStream._write (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/mongodb/src/cmap/message_stream.ts:65:5)
+        at writeOrBuffer (node:internal/streams/writable:389:12) {
+      index: 0,
+      code: 11000,
+      keyPattern: { cardId: 1 },
+      keyValue: { cardId: '6329c6db5ea3b3001888dcea' },
+      [Symbol(errorLabels)]: Set(0) {}
+    }
+  },
+  level: 'error',
+  timestamp: '2022-09-20 15:57:48'
+}
+{
+  message: {
+    webhookResult: {
+      id: '6329c6fd38787b05079457ce',
+      description: '',
+      idModel: '6329c6fc867c6c01429ecb64',
+      callbackURL: 'https://895d-62-139-218-130.ngrok.io/api/webhookUpdate',
+      active: true,
+      consecutiveFailures: 0,
+      firstConsecutiveFailDate: null
+    }
+  },
+  level: 'info',
+  timestamp: '2022-09-20 15:58:21'
+}
+{
+  message: {
+    webhookResult: {
+      id: '6329c7093ba3a6008656ee05',
+      description: '',
+      idModel: '6329c708259137031e7154d8',
+      callbackURL: 'https://895d-62-139-218-130.ngrok.io/api/webhookUpdate',
+      active: true,
+      consecutiveFailures: 0,
+      firstConsecutiveFailDate: null
+    }
+  },
+  level: 'info',
+  timestamp: '2022-09-20 15:58:33'
+}
+{
+  message: {
+    webhookResult: {
+      id: '6329c7d74c48df03e10d976d',
+      description: '',
+      idModel: '6329c7d6bb99b202d1d861da',
+      callbackURL: 'https://895d-62-139-218-130.ngrok.io/api/webhookUpdate',
+      active: true,
+      consecutiveFailures: 0,
+      firstConsecutiveFailDate: null
+    }
+  },
+  level: 'info',
+  timestamp: '2022-09-20 16:01:59'
+}
+{
+  message: {
+    webhookResult: {
+      id: '6329c820870a13009f6cf3e5',
+      description: '',
+      idModel: '6329c81f204b800057737e63',
+      callbackURL: 'https://895d-62-139-218-130.ngrok.io/api/webhookUpdate',
+      active: true,
+      consecutiveFailures: 0,
+      firstConsecutiveFailDate: null
+    }
+  },
+  level: 'info',
+  timestamp: '2022-09-20 16:03:12'
+}
+{
+  message: {
+    webhookResult: {
+      id: '6329c878abdd12011e65f96d',
+      description: '',
+      idModel: '6329c877640d9200d2964edc',
+      callbackURL: 'https://895d-62-139-218-130.ngrok.io/api/webhookUpdate',
+      active: true,
+      consecutiveFailures: 0,
+      firstConsecutiveFailDate: null
+    }
+  },
+  level: 'info',
+  timestamp: '2022-09-20 16:04:40'
+}
+{
+  message: {
+    webhookResult: {
+      id: '6329d22ec687d201738267b9',
+      description: '',
+      idModel: '6329d22d2c7942019e5fa659',
+      callbackURL: 'https://895d-62-139-218-130.ngrok.io/api/webhookUpdate',
+      active: true,
+      consecutiveFailures: 0,
+      firstConsecutiveFailDate: null
+    }
+  },
+  level: 'info',
+  timestamp: '2022-09-20 16:46:06'
+}
+{
+  message: {
+    webhookResult: {
+      id: '6329d26c22a84e049cae8d40',
+      description: '',
+      idModel: '6329d26ae7920500f39309f4',
+      callbackURL: 'https://895d-62-139-218-130.ngrok.io/api/webhookUpdate',
+      active: true,
+      consecutiveFailures: 0,
+      firstConsecutiveFailDate: null
+    }
+  },
+  level: 'info',
+  timestamp: '2022-09-20 16:47:08'
+}
+{
+  message: {
+    webhookResult: {
+      id: '6329d2c33a011a0060a89619',
+      description: '',
+      idModel: '6329d2c1fd0b80022dd4c8ec',
+      callbackURL: 'https://895d-62-139-218-130.ngrok.io/api/webhookUpdate',
+      active: true,
+      consecutiveFailures: 0,
+      firstConsecutiveFailDate: null
+    }
+  },
+  level: 'info',
+  timestamp: '2022-09-20 16:48:35'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-09-20 16:49:35'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-09-20 16:52:00'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-09-20 16:53:44'
+}
+{
+  message: {
+    updateBoardCardError: TypeError: Cannot read properties of undefined (reading 'data')
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:503:43)
+        at Generator.next (<anonymous>)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:8:71
+        at new Promise (<anonymous>)
+        at __awaiter (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:4:12)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:495:46
+        at Queue.start (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/queue/index.js:145:17)
+        at Queue.<computed> [as push] (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/queue/index.js:59:12)
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:495:28)
+        at Generator.next (<anonymous>)
+  },
+  level: 'error',
+  timestamp: '2022-09-20 16:54:10'
+}
+{
+  message: {
+    webhookResult: {
+      id: '6329d41254bef502063912a8',
+      description: '',
+      idModel: '6329d4114604a401f1847896',
+      callbackURL: 'https://895d-62-139-218-130.ngrok.io/api/webhookUpdate',
+      active: true,
+      consecutiveFailures: 0,
+      firstConsecutiveFailDate: null
+    }
+  },
+  level: 'info',
+  timestamp: '2022-09-20 16:54:10'
+}
+{
+  message: {
+    updateBoardCardError: TypeError: Cannot read properties of undefined (reading 'data')
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:503:43)
+        at Generator.next (<anonymous>)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:8:71
+        at new Promise (<anonymous>)
+        at __awaiter (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:4:12)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:495:46
+        at Queue.start (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/queue/index.js:145:17)
+        at Queue.<computed> [as push] (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/queue/index.js:59:12)
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:495:28)
+        at Generator.next (<anonymous>)
+  },
+  level: 'error',
+  timestamp: '2022-09-20 16:54:35'
+}
+{
+  message: {
+    webhookResult: {
+      id: '6329d42bcc5f8c01bac4817b',
+      description: '',
+      idModel: '6329d42bda23a9024d12b790',
+      callbackURL: 'https://895d-62-139-218-130.ngrok.io/api/webhookUpdate',
+      active: true,
+      consecutiveFailures: 0,
+      firstConsecutiveFailDate: null
+    }
+  },
+  level: 'info',
+  timestamp: '2022-09-20 16:54:35'
+}
+{
+  message: {
+    updateBoardCardError: TypeError: Cannot read properties of undefined (reading 'data')
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:503:43)
+        at Generator.next (<anonymous>)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:8:71
+        at new Promise (<anonymous>)
+        at __awaiter (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:4:12)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:495:46
+        at Queue.start (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/queue/index.js:145:17)
+        at Queue.<computed> [as push] (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/queue/index.js:59:12)
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:495:28)
+        at Generator.next (<anonymous>)
+  },
+  level: 'error',
+  timestamp: '2022-09-20 16:54:44'
+}
+{
+  message: {
+    webhookResult: {
+      id: '6329d43457406b0102891249',
+      description: '',
+      idModel: '6329d4333b87290045d76b16',
+      callbackURL: 'https://895d-62-139-218-130.ngrok.io/api/webhookUpdate',
+      active: true,
+      consecutiveFailures: 0,
+      firstConsecutiveFailDate: null
+    }
+  },
+  level: 'info',
+  timestamp: '2022-09-20 16:54:44'
+}
+{
+  message: {
+    updateBoardCardError: TypeError: Cannot read properties of undefined (reading 'data')
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:503:43)
+        at Generator.next (<anonymous>)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:8:71
+        at new Promise (<anonymous>)
+        at __awaiter (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:4:12)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:495:46
+        at Queue.start (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/queue/index.js:145:17)
+        at Queue.<computed> [as push] (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/queue/index.js:59:12)
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:495:28)
+        at Generator.next (<anonymous>)
+  },
+  level: 'error',
+  timestamp: '2022-09-20 16:56:14'
+}
+{
+  message: {
+    webhookResult: {
+      id: '6329d48e6d286402149c827c',
+      description: '',
+      idModel: '6329d48dc4ba100165e6abe8',
+      callbackURL: 'https://895d-62-139-218-130.ngrok.io/api/webhookUpdate',
+      active: true,
+      consecutiveFailures: 0,
+      firstConsecutiveFailDate: null
+    }
+  },
+  level: 'info',
+  timestamp: '2022-09-20 16:56:14'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-09-20 17:00:57'
+}
+{
+  message: {
+    webhookResult: {
+      id: '6329d5e2ea16fa01349cb2d0',
+      description: '',
+      idModel: '6329d5e18fe7c9030d7a46bc',
+      callbackURL: 'https://895d-62-139-218-130.ngrok.io/api/webhookUpdate',
+      active: true,
+      consecutiveFailures: 0,
+      firstConsecutiveFailDate: null
+    }
+  },
+  level: 'info',
+  timestamp: '2022-09-20 17:01:54'
+}
+{
+  message: {
+    updateBoardCardError: TypeError: Cannot read properties of undefined (reading 'data')
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:503:43)
+        at Generator.next (<anonymous>)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:8:71
+        at new Promise (<anonymous>)
+        at __awaiter (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:4:12)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:495:46
+        at Queue.start (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/queue/index.js:145:17)
+        at next (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/queue/index.js:120:16)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:642:9
+        at Generator.next (<anonymous>)
+  },
+  level: 'error',
+  timestamp: '2022-09-20 17:01:54'
+}
+{
+  message: {
+    updateBoardCardError: TypeError: Cannot read properties of undefined (reading '_id')
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:630:22
+        at Generator.next (<anonymous>)
+        at fulfilled (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:5:58)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5)
+  },
+  level: 'error',
+  timestamp: '2022-09-20 17:02:28'
+}
+{
+  message: {
+    webhookResult: {
+      id: '6329d6d793d24b003e137d90',
+      description: '',
+      idModel: '6329d6d73c9b7102613e7929',
+      callbackURL: 'https://895d-62-139-218-130.ngrok.io/api/webhookUpdate',
+      active: true,
+      consecutiveFailures: 0,
+      firstConsecutiveFailDate: null
+    }
+  },
+  level: 'info',
+  timestamp: '2022-09-20 17:06:00'
+}
+{
+  message: {
+    updateBoardCardError: TypeError: Cannot read properties of undefined (reading 'data')
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:503:43)
+        at Generator.next (<anonymous>)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:8:71
+        at new Promise (<anonymous>)
+        at __awaiter (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:4:12)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:495:46
+        at Queue.start (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/queue/index.js:145:17)
+        at next (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/queue/index.js:120:16)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:642:9
+        at Generator.next (<anonymous>)
+  },
+  level: 'error',
+  timestamp: '2022-09-20 17:06:00'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-09-20 17:08:23'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-09-20 17:09:46'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-09-20 17:10:55'
+}
+{
+  message: {
+    updateBoardCardError: TypeError: Cannot read properties of undefined (reading '_id')
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:630:22
+        at Generator.next (<anonymous>)
+        at fulfilled (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:5:58)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5)
+  },
+  level: 'error',
+  timestamp: '2022-09-20 17:11:29'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-09-20 17:12:02'
+}
+{
+  message: {
+    webhookResult: {
+      id: '6329d84b28fe78027c413b0d',
+      description: '',
+      idModel: '6329d84a344f620070d00785',
+      callbackURL: 'https://895d-62-139-218-130.ngrok.io/api/webhookUpdate',
+      active: true,
+      consecutiveFailures: 0,
+      firstConsecutiveFailDate: null
+    }
+  },
+  level: 'info',
+  timestamp: '2022-09-20 17:12:11'
+}
+{
+  message: {
+    updateBoardCardError: TypeError: Cannot read properties of undefined (reading 'data')
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:503:43)
+        at Generator.next (<anonymous>)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:8:71
+        at new Promise (<anonymous>)
+        at __awaiter (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:4:12)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:495:46
+        at Queue.start (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/queue/index.js:145:17)
+        at next (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/queue/index.js:120:16)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:643:9
+        at Generator.next (<anonymous>)
+  },
+  level: 'error',
+  timestamp: '2022-09-20 17:12:11'
+}
+{
+  message: {
+    webhookResult: {
+      id: '6329d867773d6700e5a2c195',
+      description: '',
+      idModel: '6329d86628a231047b404072',
+      callbackURL: 'https://895d-62-139-218-130.ngrok.io/api/webhookUpdate',
+      active: true,
+      consecutiveFailures: 0,
+      firstConsecutiveFailDate: null
+    }
+  },
+  level: 'info',
+  timestamp: '2022-09-20 17:12:39'
+}
+{
+  message: {
+    updateBoardCardError: TypeError: Cannot read properties of undefined (reading 'data')
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:503:43)
+        at Generator.next (<anonymous>)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:8:71
+        at new Promise (<anonymous>)
+        at __awaiter (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:4:12)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:495:46
+        at Queue.start (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/queue/index.js:145:17)
+        at next (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/queue/index.js:120:16)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:643:9
+        at Generator.next (<anonymous>)
+  },
+  level: 'error',
+  timestamp: '2022-09-20 17:12:39'
+}
+{
+  message: {
+    webhookResult: {
+      id: '6329d884a109220120d264e0',
+      description: '',
+      idModel: '6329d883ef426d01396a0a94',
+      callbackURL: 'https://895d-62-139-218-130.ngrok.io/api/webhookUpdate',
+      active: true,
+      consecutiveFailures: 0,
+      firstConsecutiveFailDate: null
+    }
+  },
+  level: 'info',
+  timestamp: '2022-09-20 17:13:08'
+}
+{
+  message: {
+    updateBoardCardError: TypeError: Cannot read properties of undefined (reading 'data')
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:503:43)
+        at Generator.next (<anonymous>)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:8:71
+        at new Promise (<anonymous>)
+        at __awaiter (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:4:12)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:495:46
+        at Queue.start (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/queue/index.js:145:17)
+        at next (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/queue/index.js:120:16)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:643:9
+        at Generator.next (<anonymous>)
+  },
+  level: 'error',
+  timestamp: '2022-09-20 17:13:08'
+}
+{
+  message: {
+    webhookResult: {
+      id: '6329d88ee844780210cfb9ff',
+      description: '',
+      idModel: '6329d88dfc3c8a019560e4c7',
+      callbackURL: 'https://895d-62-139-218-130.ngrok.io/api/webhookUpdate',
+      active: true,
+      consecutiveFailures: 0,
+      firstConsecutiveFailDate: null
+    }
+  },
+  level: 'info',
+  timestamp: '2022-09-20 17:13:18'
+}
+{
+  message: {
+    updateBoardCardError: TypeError: Cannot read properties of undefined (reading 'data')
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:503:43)
+        at Generator.next (<anonymous>)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:8:71
+        at new Promise (<anonymous>)
+        at __awaiter (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:4:12)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:495:46
+        at Queue.start (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/queue/index.js:145:17)
+        at next (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/queue/index.js:120:16)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:643:9
+        at Generator.next (<anonymous>)
+  },
+  level: 'error',
+  timestamp: '2022-09-20 17:13:18'
+}
+{
+  message: {
+    webhookResult: {
+      id: '6329d8964e717901575bd786',
+      description: '',
+      idModel: '6329d89533f93301dee1bf84',
+      callbackURL: 'https://895d-62-139-218-130.ngrok.io/api/webhookUpdate',
+      active: true,
+      consecutiveFailures: 0,
+      firstConsecutiveFailDate: null
+    }
+  },
+  level: 'info',
+  timestamp: '2022-09-20 17:13:26'
+}
+{
+  message: {
+    updateBoardCardError: TypeError: Cannot read properties of undefined (reading 'data')
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:503:43)
+        at Generator.next (<anonymous>)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:8:71
+        at new Promise (<anonymous>)
+        at __awaiter (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:4:12)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:495:46
+        at Queue.start (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/queue/index.js:145:17)
+        at next (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/queue/index.js:120:16)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:643:9
+        at Generator.next (<anonymous>)
+  },
+  level: 'error',
+  timestamp: '2022-09-20 17:13:26'
+}
+{
+  message: {
+    webhookResult: {
+      id: '6329d8a28a0d4100afc0153e',
+      description: '',
+      idModel: '6329d8a17ad10f00add7eadd',
+      callbackURL: 'https://895d-62-139-218-130.ngrok.io/api/webhookUpdate',
+      active: true,
+      consecutiveFailures: 0,
+      firstConsecutiveFailDate: null
+    }
+  },
+  level: 'info',
+  timestamp: '2022-09-20 17:13:38'
+}
+{
+  message: {
+    updateBoardCardError: TypeError: Cannot read properties of undefined (reading 'data')
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:503:43)
+        at Generator.next (<anonymous>)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:8:71
+        at new Promise (<anonymous>)
+        at __awaiter (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:4:12)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:495:46
+        at Queue.start (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/queue/index.js:145:17)
+        at next (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/queue/index.js:120:16)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:643:9
+        at Generator.next (<anonymous>)
+  },
+  level: 'error',
+  timestamp: '2022-09-20 17:13:38'
+}
+{
+  message: {
+    webhookResult: {
+      id: '6329d8a9a05b4501a4113532',
+      description: '',
+      idModel: '6329d8a897db790489637e8b',
+      callbackURL: 'https://895d-62-139-218-130.ngrok.io/api/webhookUpdate',
+      active: true,
+      consecutiveFailures: 0,
+      firstConsecutiveFailDate: null
+    }
+  },
+  level: 'info',
+  timestamp: '2022-09-20 17:13:46'
+}
+{
+  message: {
+    updateBoardCardError: TypeError: Cannot read properties of undefined (reading 'data')
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:503:43)
+        at Generator.next (<anonymous>)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:8:71
+        at new Promise (<anonymous>)
+        at __awaiter (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:4:12)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:495:46
+        at Queue.start (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/queue/index.js:145:17)
+        at next (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/queue/index.js:120:16)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:643:9
+        at Generator.next (<anonymous>)
+  },
+  level: 'error',
+  timestamp: '2022-09-20 17:13:46'
+}
+{
+  message: {
+    webhookResult: {
+      id: '6329d8bb4b292801c6f668de',
+      description: '',
+      idModel: '6329d8ba99475101bff61515',
+      callbackURL: 'https://895d-62-139-218-130.ngrok.io/api/webhookUpdate',
+      active: true,
+      consecutiveFailures: 0,
+      firstConsecutiveFailDate: null
+    }
+  },
+  level: 'info',
+  timestamp: '2022-09-20 17:14:03'
+}
+{
+  message: {
+    updateBoardCardError: TypeError: Cannot read properties of undefined (reading 'data')
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:503:43)
+        at Generator.next (<anonymous>)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:8:71
+        at new Promise (<anonymous>)
+        at __awaiter (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:4:12)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:495:46
+        at Queue.start (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/queue/index.js:145:17)
+        at next (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/queue/index.js:120:16)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:643:9
+        at Generator.next (<anonymous>)
+  },
+  level: 'error',
+  timestamp: '2022-09-20 17:14:03'
+}
+{
+  message: {
+    ids: [
+      '6329d84bc7d90b73ae194855',
+      '6329d866c7d90b73ae194859',
+      '6329d883c7d90b73ae194860',
+      '6329d88dc7d90b73ae194864',
+      '6329d896c7d90b73ae194868',
+      '6329d8a1c7d90b73ae19486c',
+      '6329d8a9c7d90b73ae194870',
+      '6329d8bac7d90b73ae194877'
+    ],
+    count: 8
+  },
+  level: 'info',
+  timestamp: '2022-09-20 17:14:12'
+}
+{
+  message: {
+    webhookResult: {
+      id: '6329d8f67a58dd02c481f0b2',
+      description: '',
+      idModel: '6329d8f5e5c29a0188e12c07',
+      callbackURL: 'https://895d-62-139-218-130.ngrok.io/api/webhookUpdate',
+      active: true,
+      consecutiveFailures: 0,
+      firstConsecutiveFailDate: null
+    }
+  },
+  level: 'info',
+  timestamp: '2022-09-20 17:15:02'
+}
+{
+  message: {
+    updateBoardCardError: TypeError: Cannot read properties of undefined (reading 'data')
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:503:43)
+        at Generator.next (<anonymous>)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:8:71
+        at new Promise (<anonymous>)
+        at __awaiter (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:4:12)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:495:46
+        at Queue.start (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/queue/index.js:145:17)
+        at next (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/queue/index.js:120:16)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:643:9
+        at Generator.next (<anonymous>)
+  },
+  level: 'error',
+  timestamp: '2022-09-20 17:15:02'
+}
+{
+  message: { ids: [ '6329d8f5c7d90b73ae194891' ], count: 1 },
+  level: 'info',
+  timestamp: '2022-09-20 17:15:11'
+}
+{
+  message: {
+    webhookResult: {
+      id: '6329d92f29389d045c3fbf94',
+      description: '',
+      idModel: '6329d92e388a9d040381b06d',
+      callbackURL: 'https://895d-62-139-218-130.ngrok.io/api/webhookUpdate',
+      active: true,
+      consecutiveFailures: 0,
+      firstConsecutiveFailDate: null
+    }
+  },
+  level: 'info',
+  timestamp: '2022-09-20 17:16:00'
+}
+{
+  message: {
+    updateBoardCardError: TypeError: Cannot read properties of undefined (reading 'data')
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:503:43)
+        at Generator.next (<anonymous>)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:8:71
+        at new Promise (<anonymous>)
+        at __awaiter (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:4:12)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:495:46
+        at Queue.start (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/queue/index.js:145:17)
+        at next (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/queue/index.js:120:16)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:643:9
+        at Generator.next (<anonymous>)
+  },
+  level: 'error',
+  timestamp: '2022-09-20 17:16:00'
+}
+{
+  message: {
+    webhookResult: {
+      id: '6329d93794d75004a08e570b',
+      description: '',
+      idModel: '6329d936e1d91802a90c776b',
+      callbackURL: 'https://895d-62-139-218-130.ngrok.io/api/webhookUpdate',
+      active: true,
+      consecutiveFailures: 0,
+      firstConsecutiveFailDate: null
+    }
+  },
+  level: 'info',
+  timestamp: '2022-09-20 17:16:07'
+}
+{
+  message: {
+    updateBoardCardError: TypeError: Cannot read properties of undefined (reading 'data')
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:503:43)
+        at Generator.next (<anonymous>)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:8:71
+        at new Promise (<anonymous>)
+        at __awaiter (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:4:12)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:495:46
+        at Queue.start (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/queue/index.js:145:17)
+        at next (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/queue/index.js:120:16)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:643:9
+        at Generator.next (<anonymous>)
+  },
+  level: 'error',
+  timestamp: '2022-09-20 17:16:07'
+}
+{
+  message: {
+    webhookResult: {
+      id: '6329d940ffc9eb011e54af64',
+      description: '',
+      idModel: '6329d93fa37b23002a7ccd80',
+      callbackURL: 'https://895d-62-139-218-130.ngrok.io/api/webhookUpdate',
+      active: true,
+      consecutiveFailures: 0,
+      firstConsecutiveFailDate: null
+    }
+  },
+  level: 'info',
+  timestamp: '2022-09-20 17:16:16'
+}
+{
+  message: {
+    updateBoardCardError: TypeError: Cannot read properties of undefined (reading 'data')
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:503:43)
+        at Generator.next (<anonymous>)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:8:71
+        at new Promise (<anonymous>)
+        at __awaiter (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:4:12)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:495:46
+        at Queue.start (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/queue/index.js:145:17)
+        at next (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/queue/index.js:120:16)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:643:9
+        at Generator.next (<anonymous>)
+  },
+  level: 'error',
+  timestamp: '2022-09-20 17:16:16'
+}
+{
+  message: {
+    webhookResult: {
+      id: '6329d94914c147018f581c7c',
+      description: '',
+      idModel: '6329d948b450db009164fb12',
+      callbackURL: 'https://895d-62-139-218-130.ngrok.io/api/webhookUpdate',
+      active: true,
+      consecutiveFailures: 0,
+      firstConsecutiveFailDate: null
+    }
+  },
+  level: 'info',
+  timestamp: '2022-09-20 17:16:25'
+}
+{
+  message: {
+    updateBoardCardError: TypeError: Cannot read properties of undefined (reading 'data')
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:503:43)
+        at Generator.next (<anonymous>)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:8:71
+        at new Promise (<anonymous>)
+        at __awaiter (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:4:12)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:495:46
+        at Queue.start (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/queue/index.js:145:17)
+        at next (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/queue/index.js:120:16)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:643:9
+        at Generator.next (<anonymous>)
+  },
+  level: 'error',
+  timestamp: '2022-09-20 17:16:25'
+}
+{
+  message: {
+    webhookResult: {
+      id: '6329d95125028a0341cf4e7c',
+      description: '',
+      idModel: '6329d9504b0d92012e8ece2e',
+      callbackURL: 'https://895d-62-139-218-130.ngrok.io/api/webhookUpdate',
+      active: true,
+      consecutiveFailures: 0,
+      firstConsecutiveFailDate: null
+    }
+  },
+  level: 'info',
+  timestamp: '2022-09-20 17:16:33'
+}
+{
+  message: {
+    updateBoardCardError: TypeError: Cannot read properties of undefined (reading 'data')
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:503:43)
+        at Generator.next (<anonymous>)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:8:71
+        at new Promise (<anonymous>)
+        at __awaiter (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:4:12)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:495:46
+        at Queue.start (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/queue/index.js:145:17)
+        at next (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/queue/index.js:120:16)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:643:9
+        at Generator.next (<anonymous>)
+  },
+  level: 'error',
+  timestamp: '2022-09-20 17:16:33'
+}
+{
+  message: {
+    webhookResult: {
+      id: '6329d95a170daf01a3f9d21c',
+      description: '',
+      idModel: '6329d9598c041501f0001bed',
+      callbackURL: 'https://895d-62-139-218-130.ngrok.io/api/webhookUpdate',
+      active: true,
+      consecutiveFailures: 0,
+      firstConsecutiveFailDate: null
+    }
+  },
+  level: 'info',
+  timestamp: '2022-09-20 17:16:42'
+}
+{
+  message: {
+    updateBoardCardError: TypeError: Cannot read properties of undefined (reading 'data')
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:503:43)
+        at Generator.next (<anonymous>)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:8:71
+        at new Promise (<anonymous>)
+        at __awaiter (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:4:12)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:495:46
+        at Queue.start (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/queue/index.js:145:17)
+        at next (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/queue/index.js:120:16)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:643:9
+        at Generator.next (<anonymous>)
+  },
+  level: 'error',
+  timestamp: '2022-09-20 17:16:42'
+}
+{
+  message: {
+    webhookResult: {
+      id: '6329d9631f896f0142f708be',
+      description: '',
+      idModel: '6329d962408c7a04a047d6fc',
+      callbackURL: 'https://895d-62-139-218-130.ngrok.io/api/webhookUpdate',
+      active: true,
+      consecutiveFailures: 0,
+      firstConsecutiveFailDate: null
+    }
+  },
+  level: 'info',
+  timestamp: '2022-09-20 17:16:51'
+}
+{
+  message: {
+    updateBoardCardError: TypeError: Cannot read properties of undefined (reading 'data')
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:503:43)
+        at Generator.next (<anonymous>)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:8:71
+        at new Promise (<anonymous>)
+        at __awaiter (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:4:12)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:495:46
+        at Queue.start (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/queue/index.js:145:17)
+        at next (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/queue/index.js:120:16)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:643:9
+        at Generator.next (<anonymous>)
+  },
+  level: 'error',
+  timestamp: '2022-09-20 17:16:51'
+}
+{
+  message: {
+    webhookResult: {
+      id: '6329d96d97089400cad9b591',
+      description: '',
+      idModel: '6329d96c9485440016bd9e20',
+      callbackURL: 'https://895d-62-139-218-130.ngrok.io/api/webhookUpdate',
+      active: true,
+      consecutiveFailures: 0,
+      firstConsecutiveFailDate: null
+    }
+  },
+  level: 'info',
+  timestamp: '2022-09-20 17:17:02'
+}
+{
+  message: {
+    updateBoardCardError: TypeError: Cannot read properties of undefined (reading 'data')
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:503:43)
+        at Generator.next (<anonymous>)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:8:71
+        at new Promise (<anonymous>)
+        at __awaiter (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:4:12)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:495:46
+        at Queue.start (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/queue/index.js:145:17)
+        at next (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/queue/index.js:120:16)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:643:9
+        at Generator.next (<anonymous>)
+  },
+  level: 'error',
+  timestamp: '2022-09-20 17:17:02'
+}
+{
+  message: {
+    webhookResult: {
+      id: '6329d985b3dc8a0017b3e86a',
+      description: '',
+      idModel: '6329d984acce2701634aa985',
+      callbackURL: 'https://895d-62-139-218-130.ngrok.io/api/webhookUpdate',
+      active: true,
+      consecutiveFailures: 0,
+      firstConsecutiveFailDate: null
+    }
+  },
+  level: 'info',
+  timestamp: '2022-09-20 17:17:25'
+}
+{
+  message: {
+    updateBoardCardError: TypeError: Cannot read properties of undefined (reading 'data')
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:503:43)
+        at Generator.next (<anonymous>)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:8:71
+        at new Promise (<anonymous>)
+        at __awaiter (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:4:12)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:495:46
+        at Queue.start (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/queue/index.js:145:17)
+        at next (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/queue/index.js:120:16)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:643:9
+        at Generator.next (<anonymous>)
+  },
+  level: 'error',
+  timestamp: '2022-09-20 17:17:25'
+}
+{
+  message: {
+    ids: [
+      '6329d92fc7d90b73ae19489e',
+      '6329d937c7d90b73ae1948a2',
+      '6329d93fc7d90b73ae1948a6',
+      '6329d948c7d90b73ae1948aa',
+      '6329d950c7d90b73ae1948ae',
+      '6329d959c7d90b73ae1948b2',
+      '6329d962c7d90b73ae1948b6',
+      '6329d96dc7d90b73ae1948ba',
+      '6329d984c7d90b73ae1948be'
+    ],
+    count: 9
+  },
+  level: 'info',
+  timestamp: '2022-09-20 17:19:15'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-09-20 17:22:07'
+}
+{
+  message: {
+    webhookResult: {
+      id: '6329db14bcfb1403a097eba8',
+      description: '',
+      idModel: '6329db13d51f68010f03af60',
+      callbackURL: 'https://895d-62-139-218-130.ngrok.io/api/webhookUpdate',
+      active: true,
+      consecutiveFailures: 0,
+      firstConsecutiveFailDate: null
+    }
+  },
+  level: 'info',
+  timestamp: '2022-09-20 17:24:04'
+}
+{
+  message: {
+    updateBoardCardError: TypeError: Cannot read properties of undefined (reading 'data')
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:503:43)
+        at Generator.next (<anonymous>)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:8:71
+        at new Promise (<anonymous>)
+        at __awaiter (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:4:12)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:495:46
+        at Queue.start (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/queue/index.js:145:17)
+        at next (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/queue/index.js:120:16)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:643:9
+        at Generator.next (<anonymous>)
+  },
+  level: 'error',
+  timestamp: '2022-09-20 17:24:04'
+}
+{
+  message: {
+    webhookResult: {
+      id: '6329db262e71c900a2100010',
+      description: '',
+      idModel: '6329db2522f07b0018fba8bf',
+      callbackURL: 'https://895d-62-139-218-130.ngrok.io/api/webhookUpdate',
+      active: true,
+      consecutiveFailures: 0,
+      firstConsecutiveFailDate: null
+    }
+  },
+  level: 'info',
+  timestamp: '2022-09-20 17:24:22'
+}
+{
+  message: {
+    updateBoardCardError: TypeError: Cannot read properties of undefined (reading 'data')
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:503:43)
+        at Generator.next (<anonymous>)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:8:71
+        at new Promise (<anonymous>)
+        at __awaiter (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:4:12)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:495:46
+        at Queue.start (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/queue/index.js:145:17)
+        at next (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/queue/index.js:120:16)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:643:9
+        at Generator.next (<anonymous>)
+  },
+  level: 'error',
+  timestamp: '2022-09-20 17:24:22'
+}
+{
+  message: {
+    webhookResult: {
+      id: '6329db337dce5e01fc40e069',
+      description: '',
+      idModel: '6329db32e0eb1d0064e82b2d',
+      callbackURL: 'https://895d-62-139-218-130.ngrok.io/api/webhookUpdate',
+      active: true,
+      consecutiveFailures: 0,
+      firstConsecutiveFailDate: null
+    }
+  },
+  level: 'info',
+  timestamp: '2022-09-20 17:24:35'
+}
+{
+  message: {
+    updateBoardCardError: TypeError: Cannot read properties of undefined (reading 'data')
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:503:43)
+        at Generator.next (<anonymous>)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:8:71
+        at new Promise (<anonymous>)
+        at __awaiter (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:4:12)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:495:46
+        at Queue.start (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/queue/index.js:145:17)
+        at next (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/queue/index.js:120:16)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:643:9
+        at Generator.next (<anonymous>)
+  },
+  level: 'error',
+  timestamp: '2022-09-20 17:24:35'
+}
+{
+  message: {
+    webhookResult: {
+      id: '6329db3922f9be01b095b9d3',
+      description: '',
+      idModel: '6329db38969eb9002afb05b7',
+      callbackURL: 'https://895d-62-139-218-130.ngrok.io/api/webhookUpdate',
+      active: true,
+      consecutiveFailures: 0,
+      firstConsecutiveFailDate: null
+    }
+  },
+  level: 'info',
+  timestamp: '2022-09-20 17:24:41'
+}
+{
+  message: {
+    updateBoardCardError: TypeError: Cannot read properties of undefined (reading 'data')
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:503:43)
+        at Generator.next (<anonymous>)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:8:71
+        at new Promise (<anonymous>)
+        at __awaiter (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:4:12)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:495:46
+        at Queue.start (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/queue/index.js:145:17)
+        at next (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/queue/index.js:120:16)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:643:9
+        at Generator.next (<anonymous>)
+  },
+  level: 'error',
+  timestamp: '2022-09-20 17:24:41'
+}
+{
+  message: {
+    webhookResult: {
+      id: '6329db40e4c61801abf22c23',
+      description: '',
+      idModel: '6329db3fa461c70428b1422a',
+      callbackURL: 'https://895d-62-139-218-130.ngrok.io/api/webhookUpdate',
+      active: true,
+      consecutiveFailures: 0,
+      firstConsecutiveFailDate: null
+    }
+  },
+  level: 'info',
+  timestamp: '2022-09-20 17:24:48'
+}
+{
+  message: {
+    updateBoardCardError: TypeError: Cannot read properties of undefined (reading 'data')
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:503:43)
+        at Generator.next (<anonymous>)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:8:71
+        at new Promise (<anonymous>)
+        at __awaiter (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:4:12)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:495:46
+        at Queue.start (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/queue/index.js:145:17)
+        at next (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/queue/index.js:120:16)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:643:9
+        at Generator.next (<anonymous>)
+  },
+  level: 'error',
+  timestamp: '2022-09-20 17:24:48'
+}
+{
+  message: {
+    webhookResult: {
+      id: '6329db47b01e31037628ebfa',
+      description: '',
+      idModel: '6329db4674eb6b01b3d38d9d',
+      callbackURL: 'https://895d-62-139-218-130.ngrok.io/api/webhookUpdate',
+      active: true,
+      consecutiveFailures: 0,
+      firstConsecutiveFailDate: null
+    }
+  },
+  level: 'info',
+  timestamp: '2022-09-20 17:24:55'
+}
+{
+  message: {
+    updateBoardCardError: TypeError: Cannot read properties of undefined (reading 'data')
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:503:43)
+        at Generator.next (<anonymous>)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:8:71
+        at new Promise (<anonymous>)
+        at __awaiter (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:4:12)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:495:46
+        at Queue.start (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/queue/index.js:145:17)
+        at next (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/queue/index.js:120:16)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:643:9
+        at Generator.next (<anonymous>)
+  },
+  level: 'error',
+  timestamp: '2022-09-20 17:24:55'
+}
+{
+  message: {
+    webhookResult: {
+      id: '6329db52ada31300e87c3cfd',
+      description: '',
+      idModel: '6329db512280f601cd7ff19e',
+      callbackURL: 'https://895d-62-139-218-130.ngrok.io/api/webhookUpdate',
+      active: true,
+      consecutiveFailures: 0,
+      firstConsecutiveFailDate: null
+    }
+  },
+  level: 'info',
+  timestamp: '2022-09-20 17:25:06'
+}
+{
+  message: {
+    updateBoardCardError: TypeError: Cannot read properties of undefined (reading 'data')
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:503:43)
+        at Generator.next (<anonymous>)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:8:71
+        at new Promise (<anonymous>)
+        at __awaiter (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:4:12)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:495:46
+        at Queue.start (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/queue/index.js:145:17)
+        at next (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/queue/index.js:120:16)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:643:9
+        at Generator.next (<anonymous>)
+  },
+  level: 'error',
+  timestamp: '2022-09-20 17:25:06'
+}
+{
+  message: {
+    webhookResult: {
+      id: '6329db5e8b593204e51dde6f',
+      description: '',
+      idModel: '6329db5dffca2c04d625bc8f',
+      callbackURL: 'https://895d-62-139-218-130.ngrok.io/api/webhookUpdate',
+      active: true,
+      consecutiveFailures: 0,
+      firstConsecutiveFailDate: null
+    }
+  },
+  level: 'info',
+  timestamp: '2022-09-20 17:25:18'
+}
+{
+  message: {
+    updateBoardCardError: TypeError: Cannot read properties of undefined (reading 'data')
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:503:43)
+        at Generator.next (<anonymous>)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:8:71
+        at new Promise (<anonymous>)
+        at __awaiter (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:4:12)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:495:46
+        at Queue.start (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/queue/index.js:145:17)
+        at next (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/queue/index.js:120:16)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:643:9
+        at Generator.next (<anonymous>)
+  },
+  level: 'error',
+  timestamp: '2022-09-20 17:25:18'
+}
+{
+  message: {
+    ids: [
+      '6329db1319306f7989eaf89a',
+      '6329db2519306f7989eaf89f',
+      '6329db3219306f7989eaf8a4',
+      '6329db3819306f7989eaf8a8',
+      '6329db3f19306f7989eaf8ac',
+      '6329db4619306f7989eaf8b0',
+      '6329db5119306f7989eaf8b4',
+      '6329db5e19306f7989eaf8b8'
+    ],
+    count: 8
+  },
+  level: 'info',
+  timestamp: '2022-09-20 17:25:36'
+}

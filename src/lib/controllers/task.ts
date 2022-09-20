@@ -14,6 +14,7 @@ import {
   deleteFilesError,
   provideCardIdError,
 } from "../types/controller/Tasks";
+import { io } from "../..";
 class TaskController extends TaskDB {
   static async getTasks(data: TaskData) {
     return await TaskController.__getTasks(data);
@@ -139,7 +140,6 @@ class TaskController extends TaskDB {
           data.description
         );
       if (createdCard) {
-        console.log(createdCard);
         data.cardId = createdCard.id;
         data.trelloShortUrl = createdCard.shortUrl;
         let response = await BoardController.createWebHook(data.cardId);
@@ -166,6 +166,7 @@ class TaskController extends TaskDB {
       logger.error({ getTasksError: error });
     }
   }
+
   static async __deleteTasksByProjectId(id: string) {
     try {
       let tasks = await super.getTasksDB({
@@ -238,6 +239,8 @@ class TaskController extends TaskDB {
   static async __createTaskByTrello(data: TaskData) {
     try {
       let response = await super.__createTaskByTrelloDB(data);
+      await BoardController.createWebHook(response.cardId);
+      await io.sockets.emit("update-task", response);
       return response;
     } catch (error) {
       logger.error({ createTaskByTrelloError: error });
@@ -249,6 +252,14 @@ class TaskController extends TaskDB {
       return task;
     } catch (error) {
       logger.error({ updateTaskByTrello: error });
+    }
+  }
+  static async __editTasksProjectId(ids: string[], projectId: string) {
+    try {
+      let result = await super.__updateTasksProjectId(projectId, ids);
+      return result;
+    } catch (error) {
+      logger.error({ __updateTasksProjectId: error });
     }
   }
 }

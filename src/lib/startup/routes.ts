@@ -2,7 +2,6 @@ import { Application } from "express";
 
 import userRoutes from "../routes/user/userRoute";
 import boardRoutes from "../routes/board/boardRoute";
-import techMemberRoute from "../routes/techMember/techMemberRoute";
 import authRoute from "../routes/auth/authRoute";
 import depRoute from "../routes/department/depRoute";
 import projectRoute from "../routes/project/projectRoute";
@@ -35,7 +34,6 @@ export default function (app: Application) {
   app.use("/api", taskRoute);
   app.use("/api", userRoutes);
   app.use("/api", boardRoutes);
-  app.use("/api", techMemberRoute);
   app.use("/api", depRoute);
   app.use("/api", projectRoute);
   app.use("/api", categoryRoute);

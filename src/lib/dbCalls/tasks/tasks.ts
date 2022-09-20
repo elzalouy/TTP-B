@@ -242,6 +242,17 @@ class TaskDB {
       logger.error({ updateTaskDBError: error });
     }
   }
+  static async __updateTasksProjectId(projectId: string, ids: string[]) {
+    try {
+      let updateResult = await Tasks.updateMany(
+        { _id: { $in: ids } },
+        { projectId: projectId }
+      );
+      return updateResult;
+    } catch (error) {
+      logger.error({ updateTasksProjectIdError: error });
+    }
+  }
   static async __updateTaskAttachments(
     data: TaskData,
     attachments: AttachmentSchema[]

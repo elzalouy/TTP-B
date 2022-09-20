@@ -142,6 +142,22 @@ const TaskReq = class TaskReq extends TaskController {
       logger.error({ handleDownloadAttachmentError: error });
     }
   }
+  static async hanldeEditTasksProjectId(req: Request, res: Response) {
+    try {
+      let ids: string[] = req.body.ids,
+        projectId = req.body.projectId;
+      if (ids && projectId) {
+        let response = await super.__editTasksProjectId(ids, projectId);
+        logger.info({ ids, count: response.modifiedCount });
+        if (response.modifiedCount) return res.send(response);
+        return res
+          .status(400)
+          .send({ message: "something wrong happened", error: response });
+      }
+    } catch (error) {
+      logger.error({ handleEditTasksProjectIdError: error });
+    }
+  }
 };
 
 export default TaskReq;

@@ -93,6 +93,16 @@ const BoardReq = class BoardReq extends BoardController {
       return res.status(500).send(customeError("server_error", 500));
     }
   }
+
+  static async handleWebHookUpdateBoard(req: Request, res: Response) {
+    try {
+      let data = await super.webhookUpdateBoard(req.body);
+      return res.send({ data });
+    } catch (error) {
+      logger.error({ handleCreateCardInBoardError: error });
+      return res.status(500).send(customeError("server_error", 500));
+    }
+  }
 };
 
 export default BoardReq;

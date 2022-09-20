@@ -47,3 +47,50 @@ export interface createListResponse {
   pos: number;
   limits: any;
 }
+export interface createCardInBoardResponse {
+  model: {
+    id: string;
+    name: string;
+    desc: string;
+    descData: any;
+    closed: boolean;
+    idOrganization: string;
+    idEnterprise: any;
+    pinned: boolean;
+    url: string;
+    shortUrl: string;
+    prefs: Object;
+    labelNames: Object;
+  };
+  action: {
+    id: string;
+    idMemberCreator: string;
+    data: {
+      card: {
+        id: string;
+        name: string;
+        idShort: number;
+        shortLink: string;
+      };
+      list: { id: string; name: string };
+      board: {
+        id: string;
+        name: string;
+        shortLink: string;
+      };
+    };
+    appCreator: string;
+    type: string;
+    date: string;
+    limits: any;
+    display: {
+      translationKey: string;
+      entities: {
+        card: Object;
+        list: Object;
+        memberCreator: Object;
+      };
+    };
+    memberCreator: Object;
+  };
+}

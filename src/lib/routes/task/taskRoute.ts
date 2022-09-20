@@ -15,6 +15,7 @@ const {
   DELETE_TASKS_BY_PROJECT_ID,
   DELETE_TASK,
   DOWNLOAD_ATTACHMENT,
+  EDIT_TASKS_PROJECTID,
 } = apiRoute;
 const {
   handleCreateCard,
@@ -26,6 +27,7 @@ const {
   handleDeleteTasksByProjectId,
   handleDeleteTask,
   handleDownloadAttachment,
+  hanldeEditTasksProjectId,
 } = TaskReq;
 
 router.post(
@@ -41,9 +43,10 @@ router.post(
   multer.array("attachedFiles"),
   handleUpdateCard
 );
-router.put(`${MOVE_TASK}`, Authed, handleMoveCard);
 router.get(`${GET_TASKS}`, Authed, handleGetTasks);
 router.post(`${FILTER_TASKS}`, Authed, handleFilterTasks);
+router.put(`${MOVE_TASK}`, Authed, handleMoveCard);
+router.put(`${EDIT_TASKS_PROJECTID}`, Authed, hanldeEditTasksProjectId);
 router.delete(`${DELETE_TASKS}`, Authed, handleDeleteTasks);
 router.delete(
   `${DELETE_TASKS_BY_PROJECT_ID}`,

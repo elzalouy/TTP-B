@@ -1,6 +1,7 @@
 {
   "name": "TTP development",
-  "Trello_Webhook_Callback_Url": "https://3c04-154-239-176-39.ngrok.io/api/webhookUpdate",
+  "Trello_Webhook_Callback_Url": "https://895d-62-139-218-130.ngrok.io/api/webhookUpdate",
+  "Trello_Webhook_Callback_Url_Board": "https://895d-62-139-218-130.ngrok.io/api/webhookUpdate/board",
   "FrontEndUrl": "http://localhost:3000",
   "monogDb": "mongodb://localhost:27017/TTP",
   "trellKey": "0d05ca858d1bc7893a91aef2712e7568",

@@ -10,4 +10,5 @@ export default {
   DELETE_TASKS_BY_PROJECT_ID: "/deleteTasksByProjectId",
   DELETE_TASK: "/deleteTask",
   DOWNLOAD_ATTACHMENT: "/downloadAttachment",
+  EDIT_TASKS_PROJECTID: "/editTasksProjectId",
 };

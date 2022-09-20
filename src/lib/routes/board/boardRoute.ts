@@ -21,19 +21,16 @@ const {
   handleAddMember,
   handleAddList,
   handleWebhookUpdateCard,
+  handleWebHookUpdateBoard,
 } = Trello;
 
-// router.post(
-//   "/testCreateAttachment",
-//   multer.array("attachedFiles"),
-//   handleCreateAttachmentTest
-// );
 router.get(`${GET_BOARDS}`, handleGetBoards);
 router.get(`${GET_BOARD_INFO}`, handleGetBoardInfo);
 router.get(`${GET_MEMBERS}`, handleGetMembers);
 router.post(`${ADD_MEMBER}`, handleAddMember);
 router.post(`${CREATE_LIST}`, handleAddList);
-router.post(`${WEBHOOK_UPDATES}`, handleWebhookUpdateCard);
 router.get(`${WEBHOOK_UPDATES}`, handleWebhookUpdateCard);
-
+router.post(`${WEBHOOK_UPDATES}`, handleWebhookUpdateCard);
+router.get(`${WEBHOOK_UPDATES}/board`, handleWebHookUpdateBoard);
+router.post(`${WEBHOOK_UPDATES}/board`, handleWebHookUpdateBoard);
 export default router;
