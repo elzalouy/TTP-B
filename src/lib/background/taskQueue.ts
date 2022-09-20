@@ -61,19 +61,16 @@ export const updateCardJob = (
   delete data.attachedFiles;
   TaskQueue.push(async (cb) => {
     try {
-      console.log({
+      console.log(data);
+      let taskData: any = {
         name: data.name,
-        desc: data.description,
         idList: data.listId,
         idBoard: data.boardId,
-      });
-      let response = await BoardController.__updateCard(data.cardId, {
-        name: data.name,
-        desc: data.description,
-        idList: data.listId,
-        idBoard: data.boardId,
-        deadline: new Date(data.deadline).toString(),
-      });
+      };
+      if (data.description) taskData.desc = data.description;
+      if (data.deadline) taskData.deadline = new Date(data.deadline).toString();
+      console.log({ taskData });
+      let response = await BoardController.__updateCard(data.cardId, taskData);
       cb(null, response);
     } catch (error: any) {
       cb(error, null);
