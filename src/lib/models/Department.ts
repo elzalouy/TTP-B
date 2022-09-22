@@ -256,7 +256,10 @@ DepartmentSchema.methods.createDepartmentBoard = async function (
     if (board?.id && board?.url) {
       this.boardId = board.id;
       this.boardURL = board.url;
-      await BoardController.createWebHook(board.id, "/board");
+      await BoardController.createWebHook(
+        board.id,
+        "Trello_Webhook_Callback_Url_Board"
+      );
     }
     //2- create lists
     let listsResult = await lists.map(async (list, index) => {

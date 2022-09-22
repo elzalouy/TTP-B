@@ -272,6 +272,10 @@ class TaskDB {
   }
   static async __createTask(data: TaskData) {
     try {
+      let existed = await Tasks.findOne({ cardId: data.cardId });
+      if (existed) {
+        return await existed.update(data);
+      }
       let task: TaskInfo = new Tasks(data);
       task = await task.save();
       return task;

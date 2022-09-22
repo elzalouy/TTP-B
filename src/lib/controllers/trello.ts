@@ -55,8 +55,8 @@ class BoardController {
     return await BoardController.__archieveList(listId);
   }
 
-  static async createWebHook(idModel: string, route?: string) {
-    return await BoardController.__addWebHook(idModel, route);
+  static async createWebHook(idModel: string, urlInConfig: string) {
+    return await BoardController.__addWebHook(idModel, urlInConfig);
   }
 
   static async deleteBoard(id: string) {
@@ -293,13 +293,11 @@ class BoardController {
     }
   }
 
-  static async __addWebHook(idModel: string, route?: string) {
+  static async __addWebHook(idModel: string, urlInConfig: string) {
     try {
-      let webhookUrl = `webhooks/?callbackURL=${
-        route
-          ? Config.get("Trello_Webhook_Callback_Url_Board")
-          : Config.get("Trello_Webhook_Callback_Url")
-      }&idModel=${idModel}&`;
+      let webhookUrl = `webhooks/?callbackURL=${Config.get(
+        urlInConfig
+      )}&idModel=${idModel}&`;
       let webhookApi = trelloApi(webhookUrl);
       let webhookResult = await fetch(webhookApi, {
         method: "POST",

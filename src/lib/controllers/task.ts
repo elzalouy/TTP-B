@@ -142,7 +142,10 @@ class TaskController extends TaskDB {
       if (createdCard) {
         data.cardId = createdCard.id;
         data.trelloShortUrl = createdCard.shortUrl;
-        let response = await BoardController.createWebHook(data.cardId);
+        let response = await BoardController.createWebHook(
+          data.cardId,
+          "Trello_Webhook_Callback_Url"
+        );
         if (response) {
           if (files.length > 0)
             data = await TaskController.__createTaskAttachment(files, data);
@@ -236,16 +239,21 @@ class TaskController extends TaskDB {
       return { error: "FileError", status: 400 };
     }
   }
+
   static async __createTaskByTrello(data: TaskData) {
     try {
       let response = await super.__createTaskByTrelloDB(data);
-      await BoardController.createWebHook(response.cardId);
-      await io.sockets.emit("update-task", response);
+      await BoardController.createWebHook(
+        response.cardId,
+        "Trello_Webhook_Callback_Url"
+      );
+      await io.sockets.emit("create-task", response);
       return response;
     } catch (error) {
       logger.error({ createTaskByTrelloError: error });
     }
   }
+
   static async __updateTaskByTrello(data: TaskData) {
     try {
       let task = await super.updateTaskByTrelloDB(data);
@@ -254,6 +262,7 @@ class TaskController extends TaskDB {
       logger.error({ updateTaskByTrello: error });
     }
   }
+
   static async __editTasksProjectId(ids: string[], projectId: string) {
     try {
       let result = await super.__updateTasksProjectId(projectId, ids);

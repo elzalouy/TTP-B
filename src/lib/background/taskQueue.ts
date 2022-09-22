@@ -20,6 +20,7 @@ export const TaskQueue = queue({
   autostart: true,
   concurrency: 1,
 });
+
 export const updateTaskQueue = queue({ results: [], autostart: true });
 export function moveTaskJob(
   listId: string,
@@ -126,6 +127,7 @@ export const createTaskFromBoardJob = (data: TaskInfo) => {
     }
   });
 };
+
 export const deleteTaskFromBoardJob = (data: TaskInfo) => {
   TaskQueue.push(async (cb) => {
     try {
@@ -143,6 +145,7 @@ export const deleteTaskFromBoardJob = (data: TaskInfo) => {
     }
   });
 };
+
 export const updateTaskAttachmentsJob = (task: TaskData) => {
   TaskQueue.push(async (cb) => {
     try {
