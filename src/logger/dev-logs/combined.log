@@ -10343,3 +10343,35 @@
   level: 'error',
   timestamp: '2022-09-22 13:02:30'
 }
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-09-24 17:20:43'
+}
+{
+  message: {
+    webhookResult: {
+      message: 'URL (https://2cae-41-176-226-105.ngrok.io/api/webhookUpdate/board) did not return 200 status code, got 404',
+      error: 'ERROR'
+    }
+  },
+  level: 'info',
+  timestamp: '2022-09-25 13:41:52'
+}
+{
+  message: {
+    removeBoard: 'https://api.trello.com/1/boards/63303e7f5e8ac4002ac7c433?response_type=token&key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68'
+  },
+  level: 'info',
+  timestamp: '2022-09-25 13:42:06'
+}
+{
+  message: { deleteTasksOfDepartment: { acknowledged: true, deletedCount: 0 } },
+  level: 'info',
+  timestamp: '2022-09-25 13:42:07'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-09-25 15:09:22'
+}
