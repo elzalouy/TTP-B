@@ -18,6 +18,7 @@ import Tasks from "../models/Task";
 import { TrelloCardActionsQueue } from "../background/boardQueue";
 import { createCardInBoardResponse } from "../types/controller/board";
 import { io } from "../..";
+import { TaskQueue } from "../background/taskQueue";
 
 config();
 var FormData = require("form-data");
@@ -249,12 +250,14 @@ class BoardController {
   static async __createCard(
     listId: string,
     cardName: string,
-    description: string
+    description: string,
+    deadline?: string
   ) {
     try {
       let cardCreateApi = trelloApi(
         `cards?idList=${listId}&name=${cardName}&desc=${description}&attachments=true&`
       );
+      if (deadline) cardCreateApi += `due=${deadline}&`;
       let cardResult = await fetch(cardCreateApi, {
         method: "POST",
         headers: {
@@ -295,9 +298,9 @@ class BoardController {
 
   static async __addWebHook(idModel: string, urlInConfig: string) {
     try {
-      let webhookUrl = `webhooks/?callbackURL=${Config.get(
+      let webhookUrl = `webhooks/?idModel=${idModel}&callbackURL=${Config.get(
         urlInConfig
-      )}&idModel=${idModel}&`;
+      )}&`;
       let webhookApi = trelloApi(webhookUrl);
       let webhookResult = await fetch(webhookApi, {
         method: "POST",
@@ -490,7 +493,7 @@ class BoardController {
    * @param data webhook request data inserted with the webhook call.
    */
   static async __updateBoardCard(data: webhookUpdateInterface) {
-    TrelloCardActionsQueue.push(async (cb) => {
+    TaskQueue.push(async (cb) => {
       try {
         let type = data.action?.type;
 
@@ -603,7 +606,7 @@ class BoardController {
     });
   }
   static async webhookUpdateBoard(data: createCardInBoardResponse) {
-    TrelloCardActionsQueue.push(async (cb) => {
+    TaskQueue.push(async (cb) => {
       try {
         let type = data.action.type;
         let action = data.action.display.translationKey;

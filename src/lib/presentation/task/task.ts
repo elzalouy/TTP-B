@@ -19,12 +19,8 @@ const TaskReq = class TaskReq extends TaskController {
       if (TaskData.teamId === "") TaskData.teamId = null;
       let isValid = createTaskSchema.validate(TaskData);
       if (isValid.error) return res.status(400).send(isValid.error.details[0]);
-      let task = await super.createTask(TaskData, req.files);
-      if (task) {
-        return res.send(task);
-      } else {
-        return res.status(400).send(customeError("create_task_error", 400));
-      }
+      await super.createTask(TaskData, req.files);
+      return res.send("Done");
     } catch (error: any) {
       console.log(new Error(error).message);
       logger.error({ handleCreateCardError: error });

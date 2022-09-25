@@ -13,6 +13,7 @@ import Department from "../../models/Department";
 import { taskNotFoundError } from "../../types/controller/Tasks";
 import { ObjectId } from "mongodb";
 import { io } from "../../..";
+import { TaskQueue } from "../../background/taskQueue";
 class TaskDB {
   static async createTaskDB(data: TaskData) {
     return await TaskDB.__createTask(data);
@@ -278,7 +279,6 @@ class TaskDB {
       }
       let task: TaskInfo = new Tasks(data);
       task = await task.save();
-      return task;
     } catch (error) {
       logger.error({ createTaskDBError: error });
     }

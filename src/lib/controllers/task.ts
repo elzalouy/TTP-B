@@ -1,4 +1,4 @@
-import { AttachmentSchema, TaskData } from "./../types/model/tasks";
+import { AttachmentSchema, TaskData, TaskInfo } from "./../types/model/tasks";
 import logger from "../../logger";
 import TaskDB from "../dbCalls/tasks/tasks";
 import BoardController from "./trello";
@@ -133,29 +133,27 @@ class TaskController extends TaskDB {
 
   static async __CreateNewTask(data: TaskData, files: Express.Multer.File[]) {
     try {
-      let createdCard: { id: string } | any =
-        await BoardController.createCardInList(
-          data.listId,
-          data.name,
-          data.description
-        );
-      if (createdCard) {
-        data.cardId = createdCard.id;
-        data.trelloShortUrl = createdCard.shortUrl;
-        let response = await BoardController.createWebHook(
-          data.cardId,
-          "Trello_Webhook_Callback_Url"
-        );
-        if (response) {
+      await TaskQueue.push(async () => {
+        let createdCard: { id: string } | any =
+          await BoardController.createCardInList(
+            data.listId,
+            data.name,
+            data.description
+          );
+        if (createdCard) {
+          data.cardId = createdCard.id;
+          data.trelloShortUrl = createdCard.shortUrl;
+          let response = await BoardController.createWebHook(
+            data.cardId,
+            "Trello_Webhook_Callback_Url"
+          );
           if (files.length > 0)
             data = await TaskController.__createTaskAttachment(files, data);
           else data.attachedFiles = [];
-        }
-        let task = await super.createTaskDB(data);
-        createTaskFromBoardJob(task);
-        TaskQueue.start();
-        return task;
-      } else throw "Error while creating Card in Trello";
+          let task = await super.createTaskDB(data);
+          io.sockets.emit("create-task", task);
+        } else throw "Error while creating Card in Trello";
+      });
     } catch (error) {
       logger.error({ getTeamsError: error });
     }
