@@ -60,9 +60,9 @@ class BoardController {
             return yield BoardController.__archieveList(listId);
         });
     }
-    static createWebHook(idModel, route) {
+    static createWebHook(idModel, urlInConfig) {
         return __awaiter(this, void 0, void 0, function* () {
-            return yield BoardController.__addWebHook(idModel, route);
+            return yield BoardController.__addWebHook(idModel, urlInConfig);
         });
     }
     static deleteBoard(id) {
@@ -318,12 +318,10 @@ class BoardController {
             }
         });
     }
-    static __addWebHook(idModel, route) {
+    static __addWebHook(idModel, urlInConfig) {
         return __awaiter(this, void 0, void 0, function* () {
             try {
-                let webhookUrl = `webhooks/?callbackURL=${route
-                    ? config_1.default.get("Trello_Webhook_Callback_Url_Board")
-                    : config_1.default.get("Trello_Webhook_Callback_Url")}&idModel=${idModel}&`;
+                let webhookUrl = `webhooks/?callbackURL=${config_1.default.get(urlInConfig)}&idModel=${idModel}&`;
                 let webhookApi = (0, trelloApi_1.trelloApi)(webhookUrl);
                 let webhookResult = yield (0, node_fetch_1.default)(webhookApi, {
                     method: "POST",

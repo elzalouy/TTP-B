@@ -349,6 +349,10 @@ class TaskDB {
     static __createTask(data) {
         return __awaiter(this, void 0, void 0, function* () {
             try {
+                let existed = yield Task_1.default.findOne({ cardId: data.cardId });
+                if (existed) {
+                    return yield existed.update(data);
+                }
                 let task = new Task_1.default(data);
                 task = yield task.save();
                 return task;

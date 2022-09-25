@@ -149,7 +149,7 @@ class TaskController extends tasks_1.default {
                 if (createdCard) {
                     data.cardId = createdCard.id;
                     data.trelloShortUrl = createdCard.shortUrl;
-                    let response = yield trello_1.default.createWebHook(data.cardId);
+                    let response = yield trello_1.default.createWebHook(data.cardId, "Trello_Webhook_Callback_Url");
                     if (response) {
                         if (files.length > 0)
                             data = yield TaskController.__createTaskAttachment(files, data);
@@ -282,8 +282,8 @@ class TaskController extends tasks_1.default {
         return __awaiter(this, void 0, void 0, function* () {
             try {
                 let response = yield _super.__createTaskByTrelloDB.call(this, data);
-                yield trello_1.default.createWebHook(response.cardId);
-                yield __1.io.sockets.emit("update-task", response);
+                yield trello_1.default.createWebHook(response.cardId, "Trello_Webhook_Callback_Url");
+                yield __1.io.sockets.emit("create-task", response);
                 return response;
             }
             catch (error) {

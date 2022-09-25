@@ -61,19 +61,18 @@ const updateCardJob = (data, newFiles) => {
     delete data.attachedFiles;
     exports.TaskQueue.push((cb) => __awaiter(void 0, void 0, void 0, function* () {
         try {
-            console.log({
+            console.log(data);
+            let taskData = {
                 name: data.name,
-                desc: data.description,
                 idList: data.listId,
                 idBoard: data.boardId,
-            });
-            let response = yield trello_1.default.__updateCard(data.cardId, {
-                name: data.name,
-                desc: data.description,
-                idList: data.listId,
-                idBoard: data.boardId,
-                deadline: new Date(data.deadline).toString(),
-            });
+            };
+            if (data.description)
+                taskData.desc = data.description;
+            if (data.deadline)
+                taskData.deadline = new Date(data.deadline).toString();
+            console.log({ taskData });
+            let response = yield trello_1.default.__updateCard(data.cardId, taskData);
             cb(null, response);
         }
         catch (error) {

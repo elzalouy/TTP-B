@@ -218,7 +218,7 @@ DepartmentSchema.methods.createDepartmentBoard = function () {
             if ((board === null || board === void 0 ? void 0 : board.id) && (board === null || board === void 0 ? void 0 : board.url)) {
                 this.boardId = board.id;
                 this.boardURL = board.url;
-                yield trello_1.default.createWebHook(board.id, "/board");
+                yield trello_1.default.createWebHook(board.id, "Trello_Webhook_Callback_Url_Board");
             }
             //2- create lists
             let listsResult = yield lists.map((list, index) => __awaiter(this, void 0, void 0, function* () {
