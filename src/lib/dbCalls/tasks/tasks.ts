@@ -13,7 +13,6 @@ import Department from "../../models/Department";
 import { taskNotFoundError } from "../../types/controller/Tasks";
 import { ObjectId } from "mongodb";
 import { io } from "../../..";
-import { TaskQueue } from "../../background/taskQueue";
 class TaskDB {
   static async createTaskDB(data: TaskData) {
     return await TaskDB.__createTask(data);
@@ -181,7 +180,6 @@ class TaskDB {
   static async __deleteTasksByProjectId(id: String) {
     try {
       let deleteResult = await Tasks.deleteMany({ projectId: id });
-
       return deleteResult;
     } catch (error) {
       logger.error({ deleteTasksByProject: error });
@@ -238,6 +236,7 @@ class TaskDB {
       let update = await Tasks.findByIdAndUpdate(id, task, {
         new: true,
       });
+
       return { error: null, task: update };
     } catch (error) {
       logger.error({ updateTaskDBError: error });
@@ -273,12 +272,9 @@ class TaskDB {
   }
   static async __createTask(data: TaskData) {
     try {
-      let existed = await Tasks.findOne({ cardId: data.cardId });
-      if (existed) {
-        return await existed.update(data);
-      }
       let task: TaskInfo = new Tasks(data);
       task = await task.save();
+      return task;
     } catch (error) {
       logger.error({ createTaskDBError: error });
     }
@@ -297,7 +293,6 @@ class TaskDB {
       if (data.memberId) filter.memberId = data.memberId;
       if (data.status) filter.status = data.status;
       if (data.name) {
-        //Making search value to lower case for case insensitive search
         let name = data.name.toLowerCase();
         filter.name = { $regex: name };
       }
@@ -357,11 +352,17 @@ class TaskDB {
   }
   static async __createTaskByTrelloDB(data: TaskData) {
     try {
-      let result = await Tasks.findOne({ cardId: data.cardId });
-      if (result) return result;
-      else {
+      let task = await Tasks.findOne({ cardId: data.cardId });
+      if (task) {
+        data.status = task.status;
+        task = await task.set(data).save();
+        await io.sockets.emit("update-task", task);
+        return task;
+      } else {
         let task = new Tasks(data);
-        return await task.save();
+        task = await task.save();
+        await io.sockets.emit("create-task", task);
+        return await task;
       }
     } catch (error) {
       logger.error({ __createTaskByTrelloDBError: error });

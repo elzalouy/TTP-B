@@ -1,27 +1,29 @@
-import queue from "queue";
-import logger from "../../logger";
-import BoardController from "../controllers/trello";
-import NotificationController from "../controllers/notification";
-import ProjectDB from "../dbCalls/project/project";
-import TaskDB from "../dbCalls/tasks/tasks";
-import { io } from "../../index";
+import Queue from "queue";
+import logger from "../../../logger";
+import BoardController from "../../controllers/trello";
+import NotificationController from "../../controllers/notification";
+import TaskDB from "../../dbCalls/tasks/tasks";
+import { io } from "../../../index";
 import {
   AttachmentResponse,
   AttachmentSchema,
   TaskData,
   TaskInfo,
-} from "../types/model/tasks";
-import { webhookUpdateInterface } from "../types/controller/Tasks";
-import TaskController from "../controllers/task";
-import { deleteAll } from "../services/upload";
+} from "../../types/model/tasks";
+import TaskController from "../../controllers/task";
+import { deleteAll } from "../../services/upload";
 
-export const TaskQueue = queue({
+export const createTaskQueue = Queue({
   results: [],
   autostart: true,
   concurrency: 1,
 });
 
-export const updateTaskQueue = queue({ results: [], autostart: true });
+export const updateTaskQueue = Queue({
+  results: [],
+  autostart: true,
+  concurrency: 1,
+});
 export function moveTaskJob(
   listId: string,
   cardId: string,
@@ -29,7 +31,7 @@ export function moveTaskJob(
   user: any
 ) {
   var task;
-  TaskQueue.push(async (cb) => {
+  updateTaskQueue.push(async (cb) => {
     try {
       const result = await BoardController.moveTaskToDiffList(cardId, listId);
       cb(null, { message: "move in trello" });
@@ -37,10 +39,10 @@ export function moveTaskJob(
       logger.error({ moveTaskJobError: error });
     }
   });
-  TaskQueue.push(async (cb) => {
+  updateTaskQueue.push(async (cb) => {
     try {
+      ``;
       if (status === "Shared" || status === "Not Clear") {
-        console.log(`move task ${cardId} to ${status}`);
         task = await TaskDB.getOneTaskBy({ cardId: cardId });
         await NotificationController.__MoveTaskNotification(task, status, user);
       }
@@ -60,9 +62,8 @@ export const updateCardJob = (
     : [];
   delete data.deleteFiles;
   delete data.attachedFiles;
-  TaskQueue.push(async (cb) => {
+  updateTaskQueue.push(async (cb) => {
     try {
-      console.log(data);
       let taskData: any = {
         name: data.name,
         idList: data.listId,
@@ -70,7 +71,6 @@ export const updateCardJob = (
       };
       if (data.description) taskData.desc = data.description;
       if (data.deadline) taskData.deadline = new Date(data.deadline).toString();
-      console.log({ taskData });
       let response = await BoardController.__updateCard(data.cardId, taskData);
       cb(null, response);
     } catch (error: any) {
@@ -79,7 +79,7 @@ export const updateCardJob = (
     }
   });
 
-  TaskQueue.push(async (cb) => {
+  updateTaskQueue.push(async (cb) => {
     try {
       // wait for both update date in db and upload,delete files to trello
       // if there are deleted files, then delete it from the db
@@ -101,14 +101,14 @@ export const updateCardJob = (
     }
   });
 
-  TaskQueue.push(async (cb) => {
+  updateTaskQueue.push(async (cb) => {
     if (newFiles) {
       await TaskController.__createTaskAttachment(newFiles, data);
     }
     cb(null, true);
   });
 
-  TaskQueue.push(async (cb) => {
+  updateTaskQueue.push(async (cb) => {
     let task = await TaskController.updateTaskDB(data);
     if (task.error) cb(new Error(task.error.message), null);
     await io.sockets.emit("update-task", task.task);
@@ -117,19 +117,8 @@ export const updateCardJob = (
   });
 };
 
-export const createTaskFromBoardJob = (data: TaskInfo) => {
-  TaskQueue.push(async (cb) => {
-    try {
-      io.sockets.emit("create-task", data);
-      cb(null, data);
-    } catch (error) {
-      logger.ercror({ createCardDataError: error });
-    }
-  });
-};
-
 export const deleteTaskFromBoardJob = (data: TaskInfo) => {
-  TaskQueue.push(async (cb) => {
+  updateTaskQueue.push(async (cb) => {
     try {
       io.sockets.emit("delete-task", data);
       cb(null, data);
@@ -137,7 +126,7 @@ export const deleteTaskFromBoardJob = (data: TaskInfo) => {
       logger.ercror({ deleteCardDataError: error });
     }
   });
-  TaskQueue.push(async (cb) => {
+  updateTaskQueue.push(async (cb) => {
     try {
       await BoardController.removeWebhook(data.cardId);
     } catch (error) {
@@ -147,7 +136,7 @@ export const deleteTaskFromBoardJob = (data: TaskInfo) => {
 };
 
 export const updateTaskAttachmentsJob = (task: TaskData) => {
-  TaskQueue.push(async (cb) => {
+  updateTaskQueue.push(async (cb) => {
     try {
       let attachments: AttachmentResponse[] =
         await BoardController.__getCardAttachments(task.cardId);

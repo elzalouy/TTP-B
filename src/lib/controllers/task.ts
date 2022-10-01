@@ -1,20 +1,17 @@
-import { AttachmentSchema, TaskData, TaskInfo } from "./../types/model/tasks";
+import { TaskData, TaskInfo } from "./../types/model/tasks";
 import logger from "../../logger";
 import TaskDB from "../dbCalls/tasks/tasks";
 import BoardController from "./trello";
-import { deleteAll } from "../services/upload";
 import {
-  createTaskFromBoardJob,
+  createTaskQueue,
   deleteTaskFromBoardJob,
   moveTaskJob,
-  TaskQueue,
   updateCardJob,
-} from "../background/taskQueue";
-import {
-  deleteFilesError,
-  provideCardIdError,
-} from "../types/controller/Tasks";
+  updateTaskQueue,
+} from "../background/actions/taskQueue";
+import { provideCardIdError } from "../types/controller/Tasks";
 import { io } from "../..";
+import { taskRoutesQueue } from "../background/routes/taskRouteQueue";
 class TaskController extends TaskDB {
   static async getTasks(data: TaskData) {
     return await TaskController.__getTasks(data);
@@ -36,6 +33,7 @@ class TaskController extends TaskDB {
     return await TaskController.__deleteTasksByProjectId(id);
   }
   static async deleteTasks(ids: string[]) {
+    ``;
     return await TaskController.__deleteTasks(ids);
   }
 
@@ -76,7 +74,6 @@ class TaskController extends TaskDB {
   ) {
     try {
       moveTaskJob(listId, cardId, status, user);
-      TaskQueue.start();
       return { data: `Task with cardId ${cardId} has moved to list ${list}` };
     } catch (error) {
       logger.error({ moveTaskOnTrelloError: error });
@@ -133,29 +130,29 @@ class TaskController extends TaskDB {
 
   static async __CreateNewTask(data: TaskData, files: Express.Multer.File[]) {
     try {
-      await TaskQueue.push(async () => {
-        let createdCard: { id: string } | any =
-          await BoardController.createCardInList(
-            data.listId,
-            data.name,
-            data.description
-          );
-        if (createdCard) {
-          data.cardId = createdCard.id;
-          data.trelloShortUrl = createdCard.shortUrl;
-          let response = await BoardController.createWebHook(
-            data.cardId,
-            "Trello_Webhook_Callback_Url"
-          );
-          if (files.length > 0)
-            data = await TaskController.__createTaskAttachment(files, data);
-          else data.attachedFiles = [];
-          let task = await super.createTaskDB(data);
-          io.sockets.emit("create-task", task);
-        } else throw "Error while creating Card in Trello";
-      });
+      let task: TaskInfo;
+      data.attachedFiles = [];
+      let createdCard: { id: string } | any =
+        await BoardController.createCardInList(data);
+      if (createdCard) {
+        data.cardId = createdCard.id;
+        task = await super.createTaskDB(data);
+        if (task) {
+          taskRoutesQueue.push(async () => {
+            data.cardId = createdCard.id;
+            data.trelloShortUrl = createdCard.shortUrl;
+            await BoardController.createWebHook(
+              data.cardId,
+              "Trello_Webhook_Callback_Url"
+            );
+            if (files.length > 0)
+              data = await TaskController.__createTaskAttachment(files, data);
+          });
+        }
+      }
+      return task;
     } catch (error) {
-      logger.error({ getTeamsError: error });
+      logger.error({ createTaskError: error });
     }
   }
 
@@ -174,8 +171,10 @@ class TaskController extends TaskDB {
         projectId: id,
       });
       tasks.forEach(async (item) => {
-        await BoardController.deleteCard(item.cardId);
-        await BoardController.removeWebhook(item.cardId);
+        if (item.cardId) {
+          await BoardController.deleteCard(item.cardId);
+          await BoardController.removeWebhook(item.cardId);
+        }
       });
       return await super.deleteTasksByProjectIdDB(id);
     } catch (error) {
@@ -215,7 +214,6 @@ class TaskController extends TaskDB {
       let task = await super.getTaskDB(id);
       if (task) {
         deleteTaskFromBoardJob(task);
-        TaskQueue.start();
         await BoardController.deleteCard(task?.cardId);
         return await super.deleteTaskDB(id);
       }
@@ -240,12 +238,13 @@ class TaskController extends TaskDB {
 
   static async __createTaskByTrello(data: TaskData) {
     try {
+      console.log({ __createTaskByTrello: data });
       let response = await super.__createTaskByTrelloDB(data);
-      await BoardController.createWebHook(
-        response.cardId,
-        "Trello_Webhook_Callback_Url"
-      );
-      await io.sockets.emit("create-task", response);
+      if (response.cardId)
+        await BoardController.createWebHook(
+          response.cardId,
+          "Trello_Webhook_Callback_Url"
+        );
       return response;
     } catch (error) {
       logger.error({ createTaskByTrelloError: error });

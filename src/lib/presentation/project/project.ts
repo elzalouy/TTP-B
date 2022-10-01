@@ -73,22 +73,17 @@ const ProjectReq = class ProjectReq extends ProjectController {
       if (!projectId) {
         return res.status(400).send(customeError("project_missing_data", 400));
       }
-      let tasks = await TaskController.deleteTasksByProjectId(projectId);
-      if (tasks) {
+      let deleteResult = await TaskController.deleteTasksByProjectId(projectId);
+      if (deleteResult) {
         let project = await super.deleteProject(projectId);
         if (project) {
           await Client.updateClientProcedure(project.clientId);
           return res
             .status(200)
             .send(successMsg("projects_and_tasks_deleted", 200));
-        } else {
-          return res
-            .status(400)
-            .send(customeError("delete_project_error", 400));
         }
-      } else {
-        return res.status(400).send(customeError("delete_project_error", 400));
       }
+      return res.status(400).send(customeError("delete_project_error", 400));
     } catch (error) {
       logger.error({ handleDeleteProjectErrors: error });
       return res.status(500).send(customeError("server_error", 500));

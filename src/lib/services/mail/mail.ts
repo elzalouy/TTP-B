@@ -2,8 +2,8 @@ import { config } from "dotenv";
 import nodemailer from "nodemailer";
 import logger from "../../../logger";
 import path from "path";
-import fs from "fs"
-import handlebars from "handlebars"
+import fs from "fs";
+import handlebars from "handlebars";
 import Config from "config";
 
 //reference the plugin
@@ -17,14 +17,13 @@ interface Data {
   image?: string;
 }
 
-
 const sendMail = async (data: Data) => {
-  const filePath = path.join(__dirname, './template/template.hbs');
-  const source = fs.readFileSync(filePath, 'utf-8').toString();
+  const filePath = path.join(__dirname, "./template/template.hbs");
+  const source = fs.readFileSync(filePath, "utf-8").toString();
   const template = handlebars.compile(source);
   const replacements = {
     link: `${Config.get("FrontEndUrl")}/${data.path}/${data.token}`,
-    image: data.image
+    image: data.image,
   };
 
   const htmlToSend = template(replacements);
@@ -40,7 +39,7 @@ const sendMail = async (data: Data) => {
         clientSecret: process.env.CLIENT_SECRET,
       },
       debug: true, // show debug output
-      logger: true // log information in console
+      logger: true, // log information in console
     });
 
     const mailOptions = {
@@ -57,7 +56,6 @@ const sendMail = async (data: Data) => {
     };
 
     const result = await transporter.sendMail(mailOptions);
-    console.log(result);
     return result;
   } catch (error) {
     logger.info({ sendMailError: error });

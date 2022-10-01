@@ -45,7 +45,6 @@ const NotificationReq = class NotificationReq extends NotificationController {
       let decoded: any = await jwtVerify(req.header("Authorization"));
       if (decoded?.user?.id) {
         let updateUnNotified = await super.__updateUnotified(decoded?.user?.id);
-        console.log(updateUnNotified);
         return res.status(200).send(updateUnNotified);
       }
     } catch (error) {

@@ -239,6 +239,5 @@ export const validateExtentions = (name: string) => {
       format = types[23];
       break;
   }
-  console.log(format);
   return format;
 };

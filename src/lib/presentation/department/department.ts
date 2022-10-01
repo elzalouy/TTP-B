@@ -8,7 +8,6 @@ const DepartmentReq = class DepartmentReq extends DepartmentController {
   static async handleCreateDepartment(req: Request, res: Response) {
     try {
       let response: any = await super.createDepartment(req.body);
-      console.log({ response: response });
       if (response?.error || response?.message)
         return res.status(400).send(response?.message);
       if (response) {

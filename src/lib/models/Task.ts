@@ -37,8 +37,8 @@ const TaskSchema = new Schema<TaskInfo, TasksModel>(
     },
     cardId: {
       type: String,
-      required: true,
-      unique: true,
+      default: null,
+      required: false,
     },
     boardId: {
       type: String,

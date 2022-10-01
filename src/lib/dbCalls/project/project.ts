@@ -140,7 +140,6 @@ const ProjectDB = class ProjectDB {
       if (filter.clientId)
         filters.clientId = mongoose.Types.ObjectId(filter.clientId);
       if (filter.name) filters.name = { $regex: filter.name };
-      console.log([filters]);
       let fetch = await Project.aggregate([
         { $match: { $and: [filters] } },
         {
@@ -181,7 +180,6 @@ const ProjectDB = class ProjectDB {
           },
         },
       ]);
-      console.log(fetch);
       fetch = await Project.populate(fetch, {
         path: "projectManager",
         select: "_id name",

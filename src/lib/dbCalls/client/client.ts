@@ -66,7 +66,6 @@ const ClientDB = class ClientDB {
   static async __updateClientProcedureDB(id: any) {
     try {
       let client = await Clients.findById(id);
-      console.log(client);
       if (client) {
         let projects = await Project.find({ clientId: id }).lean();
         if (projects) {

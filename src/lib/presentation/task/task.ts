@@ -4,13 +4,9 @@ import logger from "../../../logger";
 import TaskController from "../../controllers/task";
 import { AttachmentSchema, TaskData } from "../../types/model/tasks";
 import { createTaskSchema, editTaskSchema } from "../../services/validation";
-import { taskResponse } from "../../types/controller/Tasks";
-import {
-  TaskQueue,
-  updateTaskAttachmentsJob,
-  updateTaskQueue,
-} from "../../background/taskQueue";
+import { updateTaskAttachmentsJob } from "../../background/actions/taskQueue";
 import { jwtVerify } from "../../services/auth";
+import { taskRoutesQueue } from "../../background/routes/taskRouteQueue";
 
 const TaskReq = class TaskReq extends TaskController {
   static async handleCreateCard(req: Request, res: Response) {
@@ -19,8 +15,13 @@ const TaskReq = class TaskReq extends TaskController {
       if (TaskData.teamId === "") TaskData.teamId = null;
       let isValid = createTaskSchema.validate(TaskData);
       if (isValid.error) return res.status(400).send(isValid.error.details[0]);
-      await super.createTask(TaskData, req.files);
-      return res.send("Done");
+      let result = await super.createTask(TaskData, req.files);
+      if (result) return res.send(result);
+      else
+        res.status(400).send({
+          error: "createTaskError",
+          message: "Something wrong hapenned while creating the task.",
+        });
     } catch (error: any) {
       console.log(new Error(error).message);
       logger.error({ handleCreateCardError: error });
@@ -29,7 +30,7 @@ const TaskReq = class TaskReq extends TaskController {
 
   static async handleUpdateCard(req: Request, res: Response) {
     try {
-      updateTaskQueue.push(async (cb) => {
+      taskRoutesQueue.push(async (cb) => {
         let TaskData: any = req.body;
         if (TaskData.teamId === "" || TaskData.teamId === null)
           TaskData.teamId = null;
@@ -128,7 +129,6 @@ const TaskReq = class TaskReq extends TaskController {
         console.log(result);
         if (result === undefined) {
           updateTaskAttachmentsJob({ cardId: cardId });
-          TaskQueue.start();
         }
         if (result) return res.send(result);
         return res.status(400).send("Bad Request for downlaoding this file");

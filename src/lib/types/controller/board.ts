@@ -71,6 +71,8 @@ export interface createCardInBoardResponse {
         name: string;
         idShort: number;
         shortLink: string;
+        due?: string;
+        start?: string;
       };
       list: { id: string; name: string };
       board: {
