@@ -212,6 +212,7 @@ class TaskDB {
       delete data.id;
       let task = await Tasks.findOne({ _id: id }).lean();
       if (!task) return taskNotFoundError;
+      console.log({ updateTask: data });
 
       task.name = data.name ? data.name : task.name;
       task.description =
@@ -232,10 +233,12 @@ class TaskDB {
             (item) => item.trelloId === data.deleteFiles.trelloId
           )
         : task.attachedFiles;
+      task.teamId = data.teamId ? new ObjectId(data.teamId) : task.teamId;
       delete task._id;
       let update = await Tasks.findByIdAndUpdate(id, task, {
         new: true,
       });
+      console.log({ updateTask: data, update });
 
       return { error: null, task: update };
     } catch (error) {
@@ -360,6 +363,7 @@ class TaskDB {
         return task;
       } else {
         let task = new Tasks(data);
+        console.log({ __createTaskByTrelloDB: task, data });
         task = await task.save();
         await io.sockets.emit("create-task", task);
         return await task;

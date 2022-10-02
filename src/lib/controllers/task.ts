@@ -238,7 +238,6 @@ class TaskController extends TaskDB {
 
   static async __createTaskByTrello(data: TaskData) {
     try {
-      console.log({ __createTaskByTrello: data });
       let response = await super.__createTaskByTrelloDB(data);
       if (response.cardId)
         await BoardController.createWebHook(

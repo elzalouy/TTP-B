@@ -489,11 +489,12 @@ class BoardController {
         let action = data?.action?.display?.translationKey
           ? data?.action?.display?.translationKey
           : "";
-        console.log({ data: data.action.data });
+        let currentTask = await TaskController.getOneTaskBy({
+          cardId: data.action.data.card.id,
+        });
         if (data?.action?.data) {
           let task: TaskData = {
             name: data.action.data.card.name,
-            listId: data.action.data.list?.id,
             boardId: data.action.data.board.id,
             cardId: data.action.data.card.id,
             deadline: data.action.data.card.due
@@ -509,24 +510,30 @@ class BoardController {
           let department = await Department.findOne({
             boardId: task.boardId,
           });
-          let team = department.teams.find(
-            (item) => item.listId === data.action.data?.list?.id
+          let teamBefore = department.teams.find(
+            (item) => item.listId === currentTask.listId
           );
-
+          let team = department.teams.find(
+            (item) => item.listId === data.action.data.card.idList
+          );
           // delete
           if (type === "deleteCard") {
             return await TaskController.deleteTaskByTrelloDB(task);
           }
           //  move
           if (data.action.data.listAfter) {
-            // check if new list is a team, change the team id to the new one, and the list id
-            // if it's not a team list, change the status and list id and not the status
             task.lastMove = data.action.data.listBefore.name;
             task.lastMoveDate = new Date().toUTCString();
             if (team) {
               task.teamId = team._id;
+              if (!teamBefore) {
+                task.listId = currentTask.listId;
+                task.status = currentTask.status;
+              }
             } else {
+              task.listId = data.action.data.listAfter.id;
               task.status = data.action.data.listAfter.name;
+              task.teamId = currentTask.teamId.toString();
             }
           }
 
@@ -584,39 +591,50 @@ class BoardController {
         let type = data.action.type;
         let action = data.action.display.translationKey;
         if (type === "createCard" && action === "action_create_card") {
-          let dep = await Department.findOne({
-            boardId: data.action.data.board.id,
+          let existed = await TaskController.getOneTaskBy({
+            cardId: data.action.data.card.id,
           });
-          if (dep) {
-            let team = dep.teams.find(
-              (item) => item.listId === data.action.data.list.id
-            );
-            let task: TaskData = {
-              cardId: data.action.data.card.id,
-              listId: data.action.data.list.id,
-              name: data.action.data.card.name,
+          if (!existed) {
+            let dep = await Department.findOne({
               boardId: data.action.data.board.id,
-              trelloShortUrl: `https://trello.com/c/${data.action.data.card.shortLink}`,
-              deadline: data.action.data.card.due
-                ? new Date(data.action.data.card.due)
-                : undefined,
-              start: data.action.data.card.start
-                ? new Date(data.action.data.card.start)
-                : undefined,
-            };
-            if (team && team._id) {
-              task = { ...task, teamId: team._id, status: "Tasks Board" };
-            } else {
-              task = {
-                ...task,
-                teamId: null,
-                status: data.action.data.list.name,
+            });
+            if (dep) {
+              let team = dep.teams.find(
+                (item) => item.listId === data.action.data.list.id
+              );
+              let task: TaskData = {
+                cardId: data.action.data.card.id,
+                name: data.action.data.card.name,
+                boardId: data.action.data.board.id,
+                trelloShortUrl: `https://trello.com/c/${data.action.data.card.shortLink}`,
+                deadline: data.action.data.card.due
+                  ? new Date(data.action.data.card.due)
+                  : undefined,
+                start: data.action.data.card.start
+                  ? new Date(data.action.data.card.start)
+                  : undefined,
               };
+              if (team && team._id) {
+                task = {
+                  ...task,
+                  teamId: team._id,
+                  status: "inProgress",
+                  listId: dep.lists.find((item) => item.name === "inProgress")
+                    .listId,
+                };
+              } else {
+                task = {
+                  ...task,
+                  status: data.action.data.list.name,
+                  listId: data.action.data.list.id,
+                  teamId: null,
+                };
+              }
+              await TaskController.createTaskByTrello(task);
             }
-            await TaskController.createTaskByTrello(task);
           }
+          cb();
         }
-        cb();
       } catch (error: any) {
         logger.error({ updateBoardCardError: error });
         cb(error);

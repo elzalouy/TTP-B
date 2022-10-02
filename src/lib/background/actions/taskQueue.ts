@@ -12,6 +12,8 @@ import {
 } from "../../types/model/tasks";
 import TaskController from "../../controllers/task";
 import { deleteAll } from "../../services/upload";
+import DepartmentController from "../../controllers/department";
+import Department from "../../models/Department";
 
 export const createTaskQueue = Queue({
   results: [],
@@ -66,8 +68,8 @@ export const updateCardJob = (
     try {
       let taskData: any = {
         name: data.name,
-        idList: data.listId,
-        idBoard: data.boardId,
+        boardId: data.boardId,
+        listId: data.listId,
       };
       if (data.description) taskData.desc = data.description;
       if (data.deadline) taskData.deadline = new Date(data.deadline).toString();
