@@ -8,11 +8,10 @@ export default async (req: Request, res: Response, next: any) => {
     // not authorized to perform a task => 403 forbidden
     if (!token) return res.status(401).send("Access denied, No token provided");
     const decoded: any = await jwtVerify(token);
-    if (!decoded?.user?.id) {
+    if (!decoded?.id) {
       return res.status(400).send("Invalid Token");
     }
-    let user = await UserController.getUserById(decoded?.user?.id);
-    if (user.role !== "OM")
+    if (decoded.role !== "OM")
       return res
         .status(401)
         .send("Un-authenticated, you should be authenticated to do this job ");

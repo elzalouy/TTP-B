@@ -61,7 +61,8 @@ const AuthController = class AuthController extends UserDB {
         email: email,
         subject: "Forgot Password : Reset your old password",
         path: "resetPassword",
-        image: "http://drive.google.com/uc?export=view&id=1F7ef1MmFkhOOOwPsYjPu-YT9ab51jR1s",
+        image:
+          "http://drive.google.com/uc?export=view&id=1F7ef1MmFkhOOOwPsYjPu-YT9ab51jR1s",
       });
       return successMsg("email_sent", 200);
     } catch (error) {
@@ -73,7 +74,6 @@ const AuthController = class AuthController extends UserDB {
     try {
       const { email, password } = data;
       let user = await super.findUser({ email });
-      console.log(user);
       if (!user) {
         return null;
       }
@@ -81,7 +81,7 @@ const AuthController = class AuthController extends UserDB {
       if (!passwordCheck) {
         return null;
       }
-      let getToken = createJwtToken(user._id.toString());
+      let getToken = createJwtToken(user);
       let {
         _id,
         email: mail,
@@ -90,6 +90,7 @@ const AuthController = class AuthController extends UserDB {
         image,
         trelloBoardId,
         trelloMemberId,
+        name,
       } = user;
       return {
         _id,
@@ -97,6 +98,7 @@ const AuthController = class AuthController extends UserDB {
         role,
         type,
         image,
+        name,
         trelloBoardId,
         trelloMemberId,
         token: getToken,

@@ -1,4 +1,6 @@
 import { Router } from "express";
+import Authed from "../../middlewares/Auth/Authed";
+import testEnv from "../../middlewares/testEnv";
 import ProjectReq from "../../presentation/project/project";
 import apiRoute from "./apis";
 
@@ -11,6 +13,7 @@ const {
   SORT_PROJECTS,
   FILTER_PROJECTS,
   SEARCH_PROJECTS,
+  DELETE_PROJECTS,
 } = apiRoute;
 const {
   handleCreateProject,
@@ -20,6 +23,7 @@ const {
   handleSortProjects,
   handleFilterProjects,
   handleSearchPorjects,
+  handleDeleteProjects,
 } = ProjectReq;
 
 router.post(`${SORT_PROJECTS}`, handleSortProjects);
@@ -29,4 +33,5 @@ router.get(`${GET_PROJECT}`, handleGetProject);
 router.delete(`${DELETE_PROJECT}`, handleDeleteProject);
 router.post(`${FILTER_PROJECTS}`, handleFilterProjects);
 router.get(`${SEARCH_PROJECTS}`, handleSearchPorjects);
+router.delete(`${DELETE_PROJECTS}`, Authed, testEnv, handleDeleteProjects);
 export default router;

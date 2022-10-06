@@ -28,6 +28,10 @@ const ProjectDB = class ProjectDB {
   static async searchProjectsDB(searchStr: string) {
     return await ProjectDB.__searchProjects(searchStr);
   }
+  static async deleteProjectsDB(data: ProjectData) {
+    let deleteResult = await Project.deleteMany(data);
+    return deleteResult;
+  }
   static async __deleteProject(id: string) {
     try {
       let project = await Project.findByIdAndDelete({ _id: id });

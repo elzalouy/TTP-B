@@ -4,6 +4,7 @@ import { localize } from "../utils/msgLocalize";
 import jwt, { JwtPayload } from "jsonwebtoken";
 import { config } from "dotenv";
 import { customeError } from "../utils/errorUtils";
+import { IUser, UserData } from "../types/model/User";
 
 config();
 
@@ -24,10 +25,12 @@ export const comparePassword: (
   return validPassword;
 };
 
-export const createJwtToken: (id: string) => string = (id: string) => {
+export const createJwtToken: (user: IUser | UserData) => string = (user) => {
   let jwtGenerate = jwt.sign(
     {
-      user: { id },
+      id: user._id,
+      email: user.email,
+      role: user.role,
     },
     process.env.JWT_SECRETE,
     {
