@@ -131,6 +131,16 @@ const ProjectReq = class ProjectReq extends ProjectController {
       return res.status(500).send(customeError("server_error", 500));
     }
   }
+  static async handleDeleteProjects(req: Request, res: Response) {
+    try {
+      let data = req.body;
+      let result = await super.deleteProjects(data);
+      return res.status(200).send(result);
+    } catch (error) {
+      logger.error({ deleteAllProjectsError: error });
+      return res.status(500).send(customeError("server_error", 500));
+    }
+  }
 };
 
 export default ProjectReq;

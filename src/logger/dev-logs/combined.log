@@ -5627,3 +5627,579 @@
   level: 'info',
   timestamp: '2022-10-01 07:47:37'
 }
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-10-02 17:24:03'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-10-03 10:32:34'
+}
+{
+  message: {
+    handleUpdateProjecttErrors: TypeError: Cannot read properties of undefined (reading 'id')
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/presentation/project/project.ts:40:73
+        at Generator.next (<anonymous>)
+        at fulfilled (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/presentation/project/project.ts:5:58)
+        at runMicrotasks (<anonymous>)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5)
+  },
+  level: 'error',
+  timestamp: '2022-10-03 10:43:27'
+}
+{
+  message: {
+    handleUpdateProjecttErrors: TypeError: Cannot read properties of undefined (reading 'id')
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/presentation/project/project.ts:40:73
+        at Generator.next (<anonymous>)
+        at fulfilled (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/presentation/project/project.ts:5:58)
+        at runMicrotasks (<anonymous>)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5)
+  },
+  level: 'error',
+  timestamp: '2022-10-03 12:22:44'
+}
+{
+  message: {
+    handleUpdateProjecttErrors: TypeError: Cannot read properties of undefined (reading 'id')
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/presentation/project/project.ts:40:73
+        at Generator.next (<anonymous>)
+        at fulfilled (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/presentation/project/project.ts:5:58)
+        at runMicrotasks (<anonymous>)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5)
+  },
+  level: 'error',
+  timestamp: '2022-10-03 12:23:10'
+}
+{
+  message: {
+    handleUpdateProjecttErrors: TypeError: Cannot read properties of undefined (reading 'id')
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/presentation/project/project.ts:40:73
+        at Generator.next (<anonymous>)
+        at fulfilled (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/presentation/project/project.ts:5:58)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5)
+  },
+  level: 'error',
+  timestamp: '2022-10-03 12:24:58'
+}
+{
+  message: {
+    handleUpdateProjecttErrors: TypeError: Cannot read properties of undefined (reading 'id')
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/presentation/project/project.ts:40:73
+        at Generator.next (<anonymous>)
+        at fulfilled (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/presentation/project/project.ts:5:58)
+        at runMicrotasks (<anonymous>)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5)
+  },
+  level: 'error',
+  timestamp: '2022-10-03 12:33:40'
+}
+{
+  message: {
+    handleUpdateProjecttErrors: TypeError: Cannot read properties of undefined (reading 'id')
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/presentation/project/project.ts:40:73
+        at Generator.next (<anonymous>)
+        at fulfilled (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/presentation/project/project.ts:5:58)
+        at runMicrotasks (<anonymous>)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5)
+  },
+  level: 'error',
+  timestamp: '2022-10-03 13:11:28'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-10-03 16:25:31'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-10-03 16:33:52'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-10-03 16:35:18'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-10-03 16:36:28'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-10-03 16:37:50'
+}
+{
+  message: {
+    removeBoard: 'https://api.trello.com/1/boards/633af4816acad205670b8d18?response_type=token&key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68'
+  },
+  level: 'info',
+  timestamp: '2022-10-03 16:41:09'
+}
+{
+  message: {
+    removeBoard: 'https://api.trello.com/1/boards/633af538f9e98603e2959168?response_type=token&key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68'
+  },
+  level: 'info',
+  timestamp: '2022-10-03 16:44:11'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-10-04 14:48:16'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-10-04 16:42:53'
+}
+{
+  message: {
+    createProjectDBError: Error: projects validation failed: adminId: Path `adminId` is required., projectStatus: `0` is not a valid enum value for path `projectStatus`.
+        at ValidationError.inspect (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/mongoose/lib/error/validation.js:48:26)
+        at formatValue (node:internal/util/inspect:782:19)
+        at formatProperty (node:internal/util/inspect:1819:11)
+        at formatRaw (node:internal/util/inspect:1030:9)
+        at formatValue (node:internal/util/inspect:817:10)
+        at formatProperty (node:internal/util/inspect:1819:11)
+        at formatRaw (node:internal/util/inspect:1030:9)
+        at formatValue (node:internal/util/inspect:817:10)
+        at inspect (node:internal/util/inspect:347:10)
+        at Format.transform (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/logform/pretty-print.js:27:19) {
+      errors: {
+        adminId: ValidatorError: Path `adminId` is required.
+            at validate (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/mongoose/lib/schematype.js:1330:13)
+            at ObjectId.SchemaType.doValidate (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/mongoose/lib/schematype.js:1314:7)
+            at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/mongoose/lib/document.js:2751:18
+            at processTicksAndRejections (node:internal/process/task_queues:78:11) {
+          properties: {
+            validator: [Function (anonymous)],
+            message: 'Path `adminId` is required.',
+            type: 'required',
+            path: 'adminId',
+            value: null
+          },
+          kind: 'required',
+          path: 'adminId',
+          value: null,
+          reason: undefined,
+          [Symbol(mongoose:validatorError)]: true
+        },
+        projectStatus: ValidatorError: `0` is not a valid enum value for path `projectStatus`.
+            at validate (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/mongoose/lib/schematype.js:1330:13)
+            at SchemaString.SchemaType.doValidate (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/mongoose/lib/schematype.js:1314:7)
+            at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/mongoose/lib/document.js:2751:18
+            at processTicksAndRejections (node:internal/process/task_queues:78:11) {
+          properties: {
+            validator: [Function (anonymous)],
+            message: '`0` is not a valid enum value for path `projectStatus`.',
+            type: 'enum',
+            enumValues: [
+              'Not Started',
+              'inProgress',
+              'late',
+              'delivered on time',
+              'delivered defore deadline',
+              'delivered after deadline'
+            ],
+            path: 'projectStatus',
+            value: '0'
+          },
+          kind: 'enum',
+          path: 'projectStatus',
+          value: '0',
+          reason: undefined,
+          [Symbol(mongoose:validatorError)]: true
+        }
+      },
+      _message: 'projects validation failed'
+    }
+  },
+  level: 'error',
+  timestamp: '2022-10-04 17:34:21'
+}
+{
+  message: {
+    __updateProjectNotificationError: TypeError: Cannot read properties of null (reading 'name')
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/notification.ts:144:68)
+        at Generator.next (<anonymous>)
+        at fulfilled (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/notification.ts:5:58)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5)
+  },
+  level: 'error',
+  timestamp: '2022-10-04 17:34:21'
+}
+{
+  message: {
+    createProjectDBError: Error: projects validation failed: projectStatus: `0` is not a valid enum value for path `projectStatus`.
+        at ValidationError.inspect (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/mongoose/lib/error/validation.js:48:26)
+        at formatValue (node:internal/util/inspect:782:19)
+        at formatProperty (node:internal/util/inspect:1819:11)
+        at formatRaw (node:internal/util/inspect:1030:9)
+        at formatValue (node:internal/util/inspect:817:10)
+        at formatProperty (node:internal/util/inspect:1819:11)
+        at formatRaw (node:internal/util/inspect:1030:9)
+        at formatValue (node:internal/util/inspect:817:10)
+        at inspect (node:internal/util/inspect:347:10)
+        at Format.transform (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/logform/pretty-print.js:27:19) {
+      errors: {
+        projectStatus: ValidatorError: `0` is not a valid enum value for path `projectStatus`.
+            at validate (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/mongoose/lib/schematype.js:1330:13)
+            at SchemaString.SchemaType.doValidate (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/mongoose/lib/schematype.js:1314:7)
+            at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/mongoose/lib/document.js:2751:18
+            at processTicksAndRejections (node:internal/process/task_queues:78:11) {
+          properties: {
+            validator: [Function (anonymous)],
+            message: '`0` is not a valid enum value for path `projectStatus`.',
+            type: 'enum',
+            enumValues: [
+              'Not Started',
+              'inProgress',
+              'late',
+              'delivered on time',
+              'delivered defore deadline',
+              'delivered after deadline'
+            ],
+            path: 'projectStatus',
+            value: '0'
+          },
+          kind: 'enum',
+          path: 'projectStatus',
+          value: '0',
+          reason: undefined,
+          [Symbol(mongoose:validatorError)]: true
+        }
+      },
+      _message: 'projects validation failed'
+    }
+  },
+  level: 'error',
+  timestamp: '2022-10-04 17:35:43'
+}
+{
+  message: {
+    createProjectDBError: Error: projects validation failed: projectStatus: `0` is not a valid enum value for path `projectStatus`.
+        at ValidationError.inspect (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/mongoose/lib/error/validation.js:48:26)
+        at formatValue (node:internal/util/inspect:782:19)
+        at formatProperty (node:internal/util/inspect:1819:11)
+        at formatRaw (node:internal/util/inspect:1030:9)
+        at formatValue (node:internal/util/inspect:817:10)
+        at formatProperty (node:internal/util/inspect:1819:11)
+        at formatRaw (node:internal/util/inspect:1030:9)
+        at formatValue (node:internal/util/inspect:817:10)
+        at inspect (node:internal/util/inspect:347:10)
+        at Format.transform (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/logform/pretty-print.js:27:19) {
+      errors: {
+        projectStatus: ValidatorError: `0` is not a valid enum value for path `projectStatus`.
+            at validate (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/mongoose/lib/schematype.js:1330:13)
+            at SchemaString.SchemaType.doValidate (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/mongoose/lib/schematype.js:1314:7)
+            at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/mongoose/lib/document.js:2751:18
+            at processTicksAndRejections (node:internal/process/task_queues:78:11) {
+          properties: {
+            validator: [Function (anonymous)],
+            message: '`0` is not a valid enum value for path `projectStatus`.',
+            type: 'enum',
+            enumValues: [
+              'Not Started',
+              'inProgress',
+              'late',
+              'delivered on time',
+              'delivered defore deadline',
+              'delivered after deadline'
+            ],
+            path: 'projectStatus',
+            value: '0'
+          },
+          kind: 'enum',
+          path: 'projectStatus',
+          value: '0',
+          reason: undefined,
+          [Symbol(mongoose:validatorError)]: true
+        }
+      },
+      _message: 'projects validation failed'
+    }
+  },
+  level: 'error',
+  timestamp: '2022-10-04 17:35:51'
+}
+{
+  message: {
+    createProjectDBError: Error: projects validation failed: projectStatus: `0` is not a valid enum value for path `projectStatus`.
+        at ValidationError.inspect (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/mongoose/lib/error/validation.js:48:26)
+        at formatValue (node:internal/util/inspect:782:19)
+        at formatProperty (node:internal/util/inspect:1819:11)
+        at formatRaw (node:internal/util/inspect:1030:9)
+        at formatValue (node:internal/util/inspect:817:10)
+        at formatProperty (node:internal/util/inspect:1819:11)
+        at formatRaw (node:internal/util/inspect:1030:9)
+        at formatValue (node:internal/util/inspect:817:10)
+        at inspect (node:internal/util/inspect:347:10)
+        at Format.transform (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/logform/pretty-print.js:27:19) {
+      errors: {
+        projectStatus: ValidatorError: `0` is not a valid enum value for path `projectStatus`.
+            at validate (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/mongoose/lib/schematype.js:1330:13)
+            at SchemaString.SchemaType.doValidate (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/mongoose/lib/schematype.js:1314:7)
+            at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/mongoose/lib/document.js:2751:18
+            at processTicksAndRejections (node:internal/process/task_queues:78:11) {
+          properties: {
+            validator: [Function (anonymous)],
+            message: '`0` is not a valid enum value for path `projectStatus`.',
+            type: 'enum',
+            enumValues: [
+              'Not Started',
+              'inProgress',
+              'late',
+              'delivered on time',
+              'delivered defore deadline',
+              'delivered after deadline'
+            ],
+            path: 'projectStatus',
+            value: '0'
+          },
+          kind: 'enum',
+          path: 'projectStatus',
+          value: '0',
+          reason: undefined,
+          [Symbol(mongoose:validatorError)]: true
+        }
+      },
+      _message: 'projects validation failed'
+    }
+  },
+  level: 'error',
+  timestamp: '2022-10-04 17:36:05'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-10-04 17:57:41'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-10-04 18:03:49'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-10-04 18:04:30'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-10-04 18:07:47'
+}
+{
+  message: {
+    deleteAllProjectsError: RangeError [ERR_HTTP_INVALID_STATUS_CODE]: Invalid status code: 24
+        at new NodeError (node:internal/errors:372:5)
+        at ServerResponse.writeHead (node:_http_server:275:11)
+        at ServerResponse.writeHead (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/on-headers/index.js:44:26)
+        at ServerResponse._implicitHeader (node:_http_server:266:8)
+        at ServerResponse.end (node:_http_outgoing:871:10)
+        at ServerResponse.send (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/express/lib/response.js:232:10)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/presentation/project/project.ts:138:18
+        at Generator.next (<anonymous>)
+        at fulfilled (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/presentation/project/project.ts:5:58)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+      code: 'ERR_HTTP_INVALID_STATUS_CODE'
+    }
+  },
+  level: 'error',
+  timestamp: '2022-10-04 18:08:25'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-10-04 18:10:02'
+}
+{
+  message: {
+    deleteAllProjectsError: RangeError [ERR_HTTP_INVALID_STATUS_CODE]: Invalid status code: 1
+        at new NodeError (node:internal/errors:372:5)
+        at ServerResponse.writeHead (node:_http_server:275:11)
+        at ServerResponse.writeHead (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/on-headers/index.js:44:26)
+        at ServerResponse._implicitHeader (node:_http_server:266:8)
+        at ServerResponse.end (node:_http_outgoing:871:10)
+        at ServerResponse.send (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/express/lib/response.js:232:10)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/presentation/project/project.ts:138:30
+        at Generator.next (<anonymous>)
+        at fulfilled (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/presentation/project/project.ts:5:58)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+      code: 'ERR_HTTP_INVALID_STATUS_CODE'
+    }
+  },
+  level: 'error',
+  timestamp: '2022-10-04 18:10:15'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-10-04 18:11:46'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-10-05 09:02:22'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-10-05 10:25:50'
+}
+{
+  message: {
+    userData: {
+      id: 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjMxOWFlOWNkNWE4ZTY2OGRmNjNmMThhIn0sImlhdCI6MTY2NDk3MDgwNiwiZXhwIjoxNjY3NTYyODA2LCJhdWQiOiJ0cmVsbG90b2tlbjp0cmVsbG9hdWRpZW5jZSIsImlzcyI6InRyZWxsb3Rva2VuOnRyZWxsb2lzdXVlciJ9.kvF57MP0L_sXpZ6BQnX5HDgAFv8WqciiJ3H62uDmhHc',
+      password: '12345678'
+    }
+  },
+  level: 'info',
+  timestamp: '2022-10-05 13:53:50'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-10-05 14:25:14'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-10-05 14:26:33'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-10-05 14:32:58'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-10-05 14:33:40'
+}
+{
+  message: {
+    deleteTaskError: FetchError: invalid json response body at https://api.trello.com/1/cards/null?key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68 reason: Unexpected token i in JSON at position 0
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/node-fetch/lib/index.js:273:32
+        at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+      type: 'invalid-json'
+    }
+  },
+  level: 'error',
+  timestamp: '2022-10-05 14:33:58'
+}
+{
+  message: {
+    handleDeleteTasksError: TypeError: Cannot read properties of undefined (reading '_id')
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/presentation/task/task.ts:117:24
+        at Generator.next (<anonymous>)
+        at fulfilled (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/presentation/task/task.ts:5:58)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5)
+  },
+  level: 'error',
+  timestamp: '2022-10-05 14:33:58'
+}
+{
+  message: {
+    deleteTaskError: FetchError: invalid json response body at https://api.trello.com/1/cards/null?key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68 reason: Unexpected token i in JSON at position 0
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/node-fetch/lib/index.js:273:32
+        at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+      type: 'invalid-json'
+    }
+  },
+  level: 'error',
+  timestamp: '2022-10-05 14:34:11'
+}
+{
+  message: {
+    handleDeleteTasksError: TypeError: Cannot read properties of undefined (reading '_id')
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/presentation/task/task.ts:117:24
+        at Generator.next (<anonymous>)
+        at fulfilled (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/presentation/task/task.ts:5:58)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5)
+  },
+  level: 'error',
+  timestamp: '2022-10-05 14:34:11'
+}
+{
+  message: {
+    deleteTaskError: FetchError: invalid json response body at https://api.trello.com/1/cards/null?key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68 reason: Unexpected token i in JSON at position 0
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/node-fetch/lib/index.js:273:32
+        at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+      type: 'invalid-json'
+    }
+  },
+  level: 'error',
+  timestamp: '2022-10-05 14:34:14'
+}
+{
+  message: {
+    handleDeleteTasksError: TypeError: Cannot read properties of undefined (reading '_id')
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/presentation/task/task.ts:117:24
+        at Generator.next (<anonymous>)
+        at fulfilled (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/presentation/task/task.ts:5:58)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5)
+  },
+  level: 'error',
+  timestamp: '2022-10-05 14:34:14'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-10-06 08:59:11'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-10-06 08:59:59'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-10-06 09:04:17'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-10-06 09:10:33'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-10-06 09:15:30'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-10-06 10:03:02'
+}
+{
+  message: {
+    userData: {
+      id: 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE2NjUwNTI3NTUsImV4cCI6MTY2NzY0NDc1NSwiYXVkIjoidHJlbGxvdG9rZW46dHJlbGxvYXVkaWVuY2UiLCJpc3MiOiJ0cmVsbG90b2tlbjp0cmVsbG9pc3V1ZXIifQ.I-QPyvd2uWETP6uqzsK-qfnkr6UUu55zVdOTTUEQY84',
+      password: '12345678'
+    }
+  },
+  level: 'info',
+  timestamp: '2022-10-06 12:44:11'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-10-06 14:27:17'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-10-06 14:44:46'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-10-06 14:45:13'
+}

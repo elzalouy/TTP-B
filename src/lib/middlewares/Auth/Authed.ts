@@ -8,7 +8,7 @@ export default async (req: Request, res: Response, next: any) => {
     const token = req.header("Authorization");
     if (!token) return res.status(401).send("Access denied, No token provided");
     const decoded: any = await jwtVerify(token);
-    if (!decoded?.user?.id) {
+    if (!decoded?.id) {
       return res.status(401).send("Invalid Token");
     }
     next();

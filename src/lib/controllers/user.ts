@@ -55,8 +55,8 @@ const UserController = class UserController extends UserDB {
           "This is a reminder to set a New Password for your TTP account",
         token: token,
         path: "newPassword",
-        image: "http://drive.google.com/uc?export=view&id=1bfh1fwvqg9JegwTghhuYWIhUS0wGIryj"
-
+        image:
+          "http://drive.google.com/uc?export=view&id=1bfh1fwvqg9JegwTghhuYWIhUS0wGIryj",
       });
     } catch (error) {
       logger.error({ getUsers: error });
@@ -169,16 +169,15 @@ const UserController = class UserController extends UserDB {
       if (!findUser) {
         return null;
       }
-
-      let token = await createJwtToken(id.toString());
-
-      if(data.email){
+      let token = await createJwtToken(data);
+      if (data.email) {
         sendMail({
           email: data.email,
           subject: "Please update your new password",
           token: token,
           path: "newPassword",
-          image: "http://drive.google.com/uc?export=view&id=1bfh1fwvqg9JegwTghhuYWIhUS0wGIryj"
+          image:
+            "http://drive.google.com/uc?export=view&id=1bfh1fwvqg9JegwTghhuYWIhUS0wGIryj",
         });
       }
 
@@ -190,9 +189,9 @@ const UserController = class UserController extends UserDB {
 
   static async __addNewUser(data: UserData): Promise<
     | {
-      msg: string;
-      status: number;
-    }
+        msg: string;
+        status: number;
+      }
     | IUser
   > {
     try {
@@ -221,7 +220,8 @@ const UserController = class UserController extends UserDB {
         subject: "Please update your new password",
         token: token,
         path: "newPassword",
-        image: "http://drive.google.com/uc?export=view&id=1bfh1fwvqg9JegwTghhuYWIhUS0wGIryj"
+        image:
+          "http://drive.google.com/uc?export=view&id=1bfh1fwvqg9JegwTghhuYWIhUS0wGIryj",
       });
 
       return newUser;

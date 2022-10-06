@@ -23,6 +23,10 @@ const ProjectController = class ProjectController extends ProjectDB {
   static async deleteProject(id: string) {
     return await ProjectController.__deleteProjectData(id);
   }
+
+  static async deleteProjects(data: ProjectData) {
+    return await ProjectController.__deleteProjectsData(data);
+  }
   static async sortProjects(sortBy: string) {
     return await ProjectController.__sortProjects(sortBy);
   }
@@ -101,6 +105,15 @@ const ProjectController = class ProjectController extends ProjectDB {
     try {
       let projects = await super.searchProjectsDB(searchStr);
       if (projects) return projects;
+      else return null;
+    } catch (error) {
+      logger.console.error({ searchPrjectsError: error });
+    }
+  }
+  static async __deleteProjectsData(data: ProjectData) {
+    try {
+      let result = await super.deleteProjectsDB(data);
+      if (result) return result;
       else return null;
     } catch (error) {
       logger.console.error({ searchPrjectsError: error });

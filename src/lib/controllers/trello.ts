@@ -242,13 +242,12 @@ class BoardController {
 
   static async __createCard(data: TaskData) {
     try {
-      let cardCreateApi = trelloApi(
-        `cards?idList=${data.listId}&name=${data.name}&desc=${
-          data.description
-        }&due=${new Date(data.deadline).toString()}&start=${new Date(
-          data.start
-        ).toString()}&pos=bottom&attachments=true&`
-      );
+      let url = `cards?idList=${data.listId}&name=${data.name}&desc=${data.description}&pos=bottom&attachments=true&`;
+      if (data.deadline)
+        url = `${url}&due=${new Date(
+          data.deadline
+        ).toString()}&start=${new Date(data.start).toString()}`;
+      let cardCreateApi = trelloApi(url);
       let cardResult = await fetch(cardCreateApi, {
         method: "POST",
         headers: {
