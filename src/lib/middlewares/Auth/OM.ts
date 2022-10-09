@@ -1,5 +1,4 @@
 import { Request, Response } from "express";
-import UserController from "../../controllers/user";
 import { jwtVerify } from "../../services/auth";
 export default async (req: Request, res: Response, next: any) => {
   try {

@@ -7393,3 +7393,227 @@
   level: 'info',
   timestamp: '2022-10-06 15:38:44'
 }
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-10-08 07:30:05'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-10-08 11:23:36'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-10-08 12:46:46'
+}
+{
+  message: {
+    __updateProjectNotificationError: TypeError: Cannot read properties of null (reading 'name')
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/notification.ts:144:68)
+        at Generator.next (<anonymous>)
+        at fulfilled (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/notification.ts:5:58)
+        at runMicrotasks (<anonymous>)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5)
+  },
+  level: 'error',
+  timestamp: '2022-10-09 12:33:14'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-10-09 13:46:00'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-10-09 13:57:11'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-10-09 13:59:14'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-10-09 14:00:30'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-10-09 14:02:16'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-10-09 14:05:23'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-10-09 14:06:38'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-10-09 15:31:36'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-10-09 16:02:45'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-10-09 16:03:54'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-10-09 16:05:40'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-10-09 16:14:12'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-10-09 17:02:02'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-10-09 17:02:33'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-10-09 17:08:46'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-10-09 17:11:01'
+}
+{
+  message: {
+    createTaskError: FetchError: invalid json response body at https://api.trello.com/1/cards?idList=6339a80150b37e00c96e0c47&name=name%20&desc=desc&pos=bottom&attachments=true&&due=Sun%20Oct%2009%202022%2000:00:00%20GMT+0200%20(Eastern%20European%20Standard%20Time)&start=Sun%20Oct%2009%202022%2017:12:30%20GMT+0200%20(Eastern%20European%20Standard%20Time)key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68 reason: Unexpected token i in JSON at position 0
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/node-fetch/lib/index.js:273:32
+        at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+      type: 'invalid-json'
+    }
+  },
+  level: 'error',
+  timestamp: '2022-10-09 17:12:31'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-10-09 18:02:14'
+}
+{
+  message: {
+    createUserError: Error: users validation failed: image: `` is not a valid enum value for path `image`.
+        at ValidationError.inspect (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/mongoose/lib/error/validation.js:48:26)
+        at formatValue (node:internal/util/inspect:782:19)
+        at formatProperty (node:internal/util/inspect:1819:11)
+        at formatRaw (node:internal/util/inspect:1030:9)
+        at formatValue (node:internal/util/inspect:817:10)
+        at formatProperty (node:internal/util/inspect:1819:11)
+        at formatRaw (node:internal/util/inspect:1030:9)
+        at formatValue (node:internal/util/inspect:817:10)
+        at inspect (node:internal/util/inspect:347:10)
+        at Format.transform (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/logform/pretty-print.js:27:19) {
+      errors: {
+        image: ValidatorError: `` is not a valid enum value for path `image`.
+            at validate (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/mongoose/lib/schematype.js:1330:13)
+            at SchemaString.SchemaType.doValidate (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/mongoose/lib/schematype.js:1314:7)
+            at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/mongoose/lib/document.js:2751:18
+            at processTicksAndRejections (node:internal/process/task_queues:78:11) {
+          properties: {
+            validator: [Function (anonymous)],
+            message: '`` is not a valid enum value for path `image`.',
+            type: 'enum',
+            enumValues: [ 'OM', 'PM', 'SM' ],
+            path: 'image',
+            value: ''
+          },
+          kind: 'enum',
+          path: 'image',
+          value: '',
+          reason: undefined,
+          [Symbol(mongoose:validatorError)]: true
+        }
+      },
+      _message: 'users validation failed'
+    }
+  },
+  level: 'error',
+  timestamp: '2022-10-09 18:02:18'
+}
+{
+  message: {
+    createUserError: Error: users validation failed: image: `` is not a valid enum value for path `image`.
+        at ValidationError.inspect (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/mongoose/lib/error/validation.js:48:26)
+        at formatValue (node:internal/util/inspect:782:19)
+        at formatProperty (node:internal/util/inspect:1819:11)
+        at formatRaw (node:internal/util/inspect:1030:9)
+        at formatValue (node:internal/util/inspect:817:10)
+        at formatProperty (node:internal/util/inspect:1819:11)
+        at formatRaw (node:internal/util/inspect:1030:9)
+        at formatValue (node:internal/util/inspect:817:10)
+        at inspect (node:internal/util/inspect:347:10)
+        at Format.transform (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/logform/pretty-print.js:27:19) {
+      errors: {
+        image: ValidatorError: `` is not a valid enum value for path `image`.
+            at validate (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/mongoose/lib/schematype.js:1330:13)
+            at SchemaString.SchemaType.doValidate (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/mongoose/lib/schematype.js:1314:7)
+            at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/mongoose/lib/document.js:2751:18
+            at processTicksAndRejections (node:internal/process/task_queues:78:11) {
+          properties: {
+            validator: [Function (anonymous)],
+            message: '`` is not a valid enum value for path `image`.',
+            type: 'enum',
+            enumValues: [ 'OM', 'PM', 'SM' ],
+            path: 'image',
+            value: ''
+          },
+          kind: 'enum',
+          path: 'image',
+          value: '',
+          reason: undefined,
+          [Symbol(mongoose:validatorError)]: true
+        }
+      },
+      _message: 'users validation failed'
+    }
+  },
+  level: 'error',
+  timestamp: '2022-10-09 18:05:02'
+}
+{
+  message: {
+    addNewUserError: TypeError: Cannot read properties of undefined (reading '_id')
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/user.ts:216:48)
+        at Generator.next (<anonymous>)
+        at fulfilled (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/user.ts:5:58)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5)
+  },
+  level: 'error',
+  timestamp: '2022-10-09 18:05:02'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-10-09 18:05:59'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-10-09 18:14:51'
+}

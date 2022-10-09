@@ -4,14 +4,12 @@ import UserController from "../../controllers/user";
 import { Request, Response } from "express";
 import logger from "../../../logger";
 import { UserData, PasswordUpdate } from "../../types/model/User";
-import { localize } from "../../utils/msgLocalize";
 import { customeError } from "../../utils/errorUtils";
 
 const UserReq = class UserReq extends UserController {
-
   static async handleResendMail(req: any, res: Response) {
     try {
-      let {id} = req.body;
+      let { id } = req.body;
       await super.resendNewUserMail(id);
       return res.status(200).send();
     } catch (error) {
@@ -30,11 +28,49 @@ const UserReq = class UserReq extends UserController {
       return res.status(500).send(customeError("server_error", 500));
     }
   }
-
-  static async handleCreatUser(req: Request, res: Response) {
+  static async handleCreateOM(req: Request, res: Response) {
     try {
       let userData: UserData = req.body;
       if (userData) {
+        userData.role = "OM";
+        let user = await super.addUser(userData);
+        if (user) {
+          return res.send(user);
+        } else {
+          return res.status(400).send(customeError("missing_data", 400));
+        }
+      } else {
+        return res.status(400).send(customeError("missing_data", 400));
+      }
+    } catch (error) {
+      logger.error({ handleCreatUserError: error });
+      return res.status(500).send(customeError("server_error", 500));
+    }
+  }
+  static async handleCreatePM(req: Request, res: Response) {
+    try {
+      let userData: UserData = req.body;
+      if (userData) {
+        userData.role = "PM";
+        let user = await super.addUser(userData);
+        if (user) {
+          return res.send(user);
+        } else {
+          return res.status(400).send(customeError("missing_data", 400));
+        }
+      } else {
+        return res.status(400).send(customeError("missing_data", 400));
+      }
+    } catch (error) {
+      logger.error({ handleCreatUserError: error });
+      return res.status(500).send(customeError("server_error", 500));
+    }
+  }
+  static async handleCreateSM(req: Request, res: Response) {
+    try {
+      let userData: UserData = req.body;
+      if (userData) {
+        userData.role = "SM";
         let user = await super.addUser(userData);
         if (user) {
           return res.send(user);
@@ -128,11 +164,11 @@ const UserReq = class UserReq extends UserController {
     }
   }
 
-  static async handleGetUserPmOrSA(req: Request, res: Response) {
+  static async handleGetUsers(req: Request, res: Response) {
     try {
       let userData: GetUserData = req.query;
       if (userData) {
-        let user = await super.getUsersPmOrSA(userData);
+        let user = await super.getUsers(userData);
         if (user) {
           return res.status(200).send(user);
         } else {
@@ -142,7 +178,7 @@ const UserReq = class UserReq extends UserController {
         return res.status(400).send(customeError("missing_data", 400));
       }
     } catch (error) {
-      logger.error({ handleGetUserPmOrSAError: error });
+      logger.error({ handleGetUsersError: error });
       return res.status(500).send(customeError("server_error", 500));
     }
   }

@@ -34,7 +34,7 @@ const UserController = class UserController extends UserDB {
     return await UserController.__deleteUserDoc(id);
   }
 
-  static async getUsersPmOrSA(data: GetUserData) {
+  static async getUsers(data: GetUserData) {
     return await UserController.__getUsersInfo(data);
   }
 
