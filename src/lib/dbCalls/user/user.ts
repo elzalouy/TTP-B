@@ -83,7 +83,10 @@ const UserDB = class UserDB {
 
   static async __createNewUser(data: UserData) {
     try {
-      let user: IUser = new User({ ...data, verified: false });
+      let user: IUser = new User({
+        ...data,
+        verified: data.verified ? data.verified : false,
+      });
       await user.save();
       return user;
     } catch (error) {
