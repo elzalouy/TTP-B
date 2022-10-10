@@ -45,14 +45,10 @@ export const createJwtToken: (user: IUser | UserData) => string = (user) => {
 export const jwtVerify = async (token: string) => {
   try {
     token = token.split(" ")[1];
-    let jwtVerify: string | JwtPayload = await jwt.verify(
-      token,
-      process.env.JWT_SECRETE,
-      {
-        audience: process.env.JWT_AUDIENCE,
-        issuer: process.env.JWT_ISSUE,
-      }
-    );
+    let jwtVerify: any = await jwt.verify(token, process.env.JWT_SECRETE, {
+      audience: process.env.JWT_AUDIENCE,
+      issuer: process.env.JWT_ISSUE,
+    });
     return jwtVerify;
   } catch (error) {
     return error;

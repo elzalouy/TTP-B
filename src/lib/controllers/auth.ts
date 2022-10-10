@@ -31,7 +31,7 @@ const AuthController = class AuthController extends UserDB {
   static async __newPasswordSet(token: string, password: string) {
     try {
       let verifyToken: JwtPayload = await jwtVerify(token);
-      if (!verifyToken.user) {
+      if (!verifyToken) {
         return customeError("not_valid_token", 400);
       }
       let checkPassword = passwordCheck(password);
@@ -40,8 +40,9 @@ const AuthController = class AuthController extends UserDB {
       }
       let cryptPassword = await hashBassword(password);
       let user = await super.updateUser({
-        id: verifyToken.user.id,
+        id: verifyToken.id,
         password: cryptPassword,
+        verified: true,
       });
       return { user, status: 200 };
     } catch (error) {
@@ -55,7 +56,7 @@ const AuthController = class AuthController extends UserDB {
       if (!user) {
         return customeError("no_user_found", 400);
       }
-      let token = await createJwtToken(user._id.toString());
+      let token = await createJwtToken(user);
       await sendMail({
         token: token,
         email: email,
@@ -74,7 +75,7 @@ const AuthController = class AuthController extends UserDB {
     try {
       const { email, password } = data;
       let user = await super.findUser({ email });
-      if (!user) {
+      if (!user || user.verified === false) {
         return null;
       }
       let passwordCheck = await comparePassword(password, user.password);

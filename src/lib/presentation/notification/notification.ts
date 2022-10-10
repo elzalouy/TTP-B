@@ -19,10 +19,10 @@ const NotificationReq = class NotificationReq extends NotificationController {
 
   static async sendNotifications(req: Request, res: Response) {
     try {
-      let decoded: any = await jwtVerify(req.header("Authorization"));
-      if (decoded?.user?.id) {
+      let decoded: any = await jwtVerify(req.header("authorization"));
+      if (decoded?.id) {
         let notifications = await super.__sendNotifications(
-          decoded?.user?.id,
+          decoded?.id,
           parseInt(req.params.current),
           parseInt(req.params.limit)
         );
@@ -42,9 +42,9 @@ const NotificationReq = class NotificationReq extends NotificationController {
    */
   static async updateNotified(req: Request, res: Response) {
     try {
-      let decoded: any = await jwtVerify(req.header("Authorization"));
-      if (decoded?.user?.id) {
-        let updateUnNotified = await super.__updateUnotified(decoded?.user?.id);
+      let decoded: any = await jwtVerify(req.header("authorization"));
+      if (decoded?.id) {
+        let updateUnNotified = await super.__updateUnotified(decoded?.id);
         return res.status(200).send(updateUnNotified);
       }
     } catch (error) {
@@ -62,9 +62,9 @@ const NotificationReq = class NotificationReq extends NotificationController {
    */
   static async getUnNotified(req: Request, res: Response) {
     try {
-      let decoded: any = await jwtVerify(req.header("Authorization"));
-      if (decoded?.user?.id) {
-        let notified = await super.__getUnNotified(decoded?.user?.id);
+      let decoded: any = await jwtVerify(req.header("authorization"));
+      if (decoded?.id) {
+        let notified = await super.__getUnNotified(decoded?.id);
         return res.status(200).send(notified);
       }
     } catch (error) {

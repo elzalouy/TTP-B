@@ -74,15 +74,15 @@ const TaskReq = class TaskReq extends TaskController {
   }
   static async handleMoveCard(req: Request, res: Response) {
     try {
-      let decoded: any = await jwtVerify(req.header("Authorization"));
-      if (decoded?.user) {
+      let decoded: any = await jwtVerify(req.header("authorization"));
+      if (decoded) {
         let { cardId, listId, status, list }: any = req.body;
         let task: any = await super.moveTaskOnTrello(
           cardId,
           listId,
           status,
           list,
-          decoded?.user
+          decoded
         );
         if (task?.error) return res.status(400).send(task?.message);
         return res.send(task);

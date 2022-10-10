@@ -12,12 +12,12 @@ import { jwtVerify } from "../../services/auth";
 const ProjectReq = class ProjectReq extends ProjectController {
   static async handleCreateProject(req: Request, res: Response) {
     try {
-      let decoded: any = await jwtVerify(req.header("Authorization"));
+      let decoded: any = await jwtVerify(req.header("authorization"));
       let projectData: ProjectData = req.body;
       if (!projectData) {
         return res.status(400).send(customeError("project_missing_data", 400));
       }
-      let project = await super.createProject(projectData, decoded?.user?.id);
+      let project = await super.createProject(projectData, decoded?.id);
       if (project) {
         await Client.updateClientProcedure(projectData.clientId);
         return res.status(200).send(project);
@@ -32,12 +32,12 @@ const ProjectReq = class ProjectReq extends ProjectController {
 
   static async handleUpdateProject(req: Request, res: Response) {
     try {
-      let decoded: any = await jwtVerify(req.header("Authorization"));
+      let decoded: any = await jwtVerify(req.header("authorization"));
       let projectData: ProjectData = req.body;
       if (!projectData._id) {
         return res.status(400).send(customeError("project_missing_data", 400));
       }
-      let project = await super.updateProject(projectData, decoded.user.id);
+      let project = await super.updateProject(projectData, decoded.id);
       if (project) {
         await Client.updateClientProcedure(project.clientId);
         return res.status(200).send(project);

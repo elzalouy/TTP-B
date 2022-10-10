@@ -15,11 +15,16 @@ const UserSchema: Schema = new Schema<IUser>(
     password: {
       type: String,
       required: false,
+      default: null,
     },
     role: {
       type: String,
       required: false,
       enum: ["OM", "PM", "SM"],
+    },
+    verified: {
+      type: Boolean,
+      default: false,
     },
     image: {
       type: String,

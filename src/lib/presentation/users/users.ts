@@ -88,7 +88,12 @@ const UserReq = class UserReq extends UserController {
 
   static async handleUpdateUser(req: Request, res: Response) {
     try {
-      let userData: UserData = req.body;
+      console.log({ data: req.body });
+      let userData: UserData = {
+        name: req.body.name,
+        id: req.body.id,
+        email: req.body.email,
+      };
       if (userData) {
         let user = await super.updateUser(userData);
         if (user) {
@@ -128,7 +133,6 @@ const UserReq = class UserReq extends UserController {
   static async handleResetPassword(req: Request, res: Response) {
     try {
       let userData: PasswordUpdate = req.body;
-      logger.info({ userData });
       if (userData) {
         let user = await super.resetPassword(userData);
         if (user) {

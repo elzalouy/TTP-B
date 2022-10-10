@@ -1,9 +1,1 @@
-TODO add a webhook redirection endpoint, to be called everytime there is a new card that have beed created on trello
-
-TODO test creating a department
-
-TODO test creat task from trello
-
-TODO add endpoint for updating many tasks per ids with the projectId
-
-- update all tasks with condition if projectId was null
+TODO solve create task issue

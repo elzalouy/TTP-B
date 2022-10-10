@@ -32,7 +32,7 @@ const {
 router.post(`${CREATE_SM}`, SM, handleCreateSM);
 router.post(`${CREATE_OM}`, SM, handleCreateOM);
 router.post(`${RESEND_MAIL}`, handleResendMail);
-router.post(`${UPDATE_USER}`, handleUpdateUser);
+router.post(`${UPDATE_USER}`, BothPmOrSm, handleUpdateUser);
 router.post(`${CREATE_PM}`, BothPmOrSm, handleCreatePM);
 router.put(`${UPDATE_PASSWORD}`, handleUpdatePassword);
 router.put(`${RESET_PASSWORD}`, handleResetPassword);

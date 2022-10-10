@@ -48,7 +48,7 @@ const UserController = class UserController extends UserDB {
   static async __resendNewUserMail(id: string) {
     try {
       let user = await super.findUserById(id);
-      let token = await createJwtToken(user._id.toString());
+      let token = await createJwtToken(user);
       await sendMail({
         email: user.email,
         subject:
@@ -96,7 +96,7 @@ const UserController = class UserController extends UserDB {
 
       const token: JwtPayload = await jwtVerify(id);
 
-      if (!token.user) {
+      if (!token.id) {
         return customeError("not_valid_token", 400);
       }
 
@@ -104,7 +104,7 @@ const UserController = class UserController extends UserDB {
         return customeError("password_length", 400);
       }
 
-      let findUser = await super.findUserById(token.user.id);
+      let findUser = await super.findUserById(token.id);
       if (!findUser) {
         return customeError("user_not_exist", 409);
       }
@@ -120,8 +120,9 @@ const UserController = class UserController extends UserDB {
       let passwordHash: string = await hashBassword(password);
 
       let user = await super.updateUser({
-        id: token.user.id,
+        id: token.id,
         password: passwordHash,
+        verified: true,
       });
       return user;
     } catch (error) {
@@ -134,8 +135,8 @@ const UserController = class UserController extends UserDB {
       const { id, password } = data;
 
       const token: JwtPayload = await jwtVerify(id);
-
-      if (!token.user) {
+      console.log({ token });
+      if (!token.id) {
         return customeError("not_valid_token", 400);
       }
 
@@ -143,7 +144,7 @@ const UserController = class UserController extends UserDB {
         return customeError("password_length", 400);
       }
 
-      let findUser = await super.findUserById(token.user.id);
+      let findUser = await super.findUserById(token.id);
       if (!findUser) {
         return customeError("user_not_exist", 409);
       }
@@ -152,8 +153,9 @@ const UserController = class UserController extends UserDB {
       let passwordHash: string = await hashBassword(password);
 
       let user = await super.updateUser({
-        id: token.user.id,
+        id: token.id,
         password: passwordHash,
+        verified: true,
       });
       return user;
     } catch (error) {
@@ -165,7 +167,6 @@ const UserController = class UserController extends UserDB {
     try {
       const { id } = data;
       let findUser = await super.findUserById(id);
-
       if (!findUser) {
         return null;
       }
@@ -173,7 +174,7 @@ const UserController = class UserController extends UserDB {
       if (data.email) {
         sendMail({
           email: data.email,
-          subject: "Please update your new password",
+          subject: "Please set your new password",
           token: token,
           path: "newPassword",
           image:
@@ -181,7 +182,11 @@ const UserController = class UserController extends UserDB {
         });
       }
 
-      return await super.updateUser({ ...data });
+      return await super.updateUser({
+        ...data,
+        verified: false,
+        password: null,
+      });
     } catch (error) {
       logger.error({ updateUserInfoError: error });
     }
@@ -210,10 +215,10 @@ const UserController = class UserController extends UserDB {
       }
 
       let newUser = await super.createUser({
-        ...data /* password: passwordHash  */,
+        ...data,
       });
 
-      let token = await createJwtToken(newUser._id.toString());
+      let token = await createJwtToken(newUser);
 
       sendMail({
         email: email,

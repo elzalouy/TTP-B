@@ -110,7 +110,7 @@ class BoardController {
 
   static async __moveTaskToDiffList(cardId: string, listId: string) {
     try {
-      let moveTask = trelloApi(`cards/${cardId}?idList=${listId}&`);
+      let moveTask = trelloApi(`cards/${cardId}/?idList=${listId}&`);
       await fetch(moveTask, {
         method: "PUT",
         headers: {
@@ -118,6 +118,7 @@ class BoardController {
         },
       })
         .then((res) => {
+          console.log({ res });
           return res;
         })
         .catch((err) => logger.info("error in moving board", err));
@@ -242,11 +243,12 @@ class BoardController {
 
   static async __createCard(data: TaskData) {
     try {
-      let url = `cards?idList=${data.listId}&name=${data.name}&desc=${data.description}&pos=bottom&attachments=true&`;
+      let url = `cards/?idList=${data.listId}&name=${data.name}&desc=${data.description}&`;
       if (data.deadline)
-        url = `${url}&due=${new Date(
-          data.deadline
-        ).toString()}&start=${new Date(data.start).toString()}`;
+        url = `${url}due=${new Date(data.deadline).getTime()}&start=${new Date(
+          data.start
+        ).getTime()}&`;
+      url = `${url}attachments=true&`;
       let cardCreateApi = trelloApi(url);
       let cardResult = await fetch(cardCreateApi, {
         method: "POST",

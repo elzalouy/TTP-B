@@ -12,7 +12,7 @@ const UserDB = class UserDB {
     return await this.__createNewUser(data);
   }
 
-  static async updateUser(data: Object) {
+  static async updateUser(data: UserData) {
     return await this.__updateUserInfo(data);
   }
 
@@ -24,13 +24,15 @@ const UserDB = class UserDB {
     return await this.__deleteUserData(id);
   }
 
-  static async getUsers(data: GetUserData) {
+  static async getUsers(data: UserData) {
     return await this.__getUsersData(data);
   }
 
-  static async __getUsersData(data: GetUserData) {
+  static async __getUsersData(data: UserData) {
     try {
-      let user = await User.find(data).lean();
+      let user = await User.find(data)
+        .select("_id name email verified role image trelloMemberId userTeams")
+        .lean();
       return user;
     } catch (error) {
       logger.error({ getUserError: error });
@@ -72,8 +74,7 @@ const UserDB = class UserDB {
 
   static async __getUserData(data: Object) {
     try {
-      let user: IUser = await User.findOne({ ...data })
-      .lean();
+      let user: IUser = await User.findOne({ ...data }).lean();
       return user;
     } catch (error) {
       logger.error({ findUserError: error });
@@ -82,7 +83,7 @@ const UserDB = class UserDB {
 
   static async __createNewUser(data: UserData) {
     try {
-      let user: IUser = new User(data);
+      let user: IUser = new User({ ...data, verified: false });
       await user.save();
       return user;
     } catch (error) {

@@ -2,7 +2,7 @@ import { Request, Response } from "express";
 import { jwtVerify } from "../../services/auth";
 export default async (req: Request, res: Response, next: any) => {
   try {
-    const token = req.header("Authorization");
+    const token = req.header("authorization");
     // missing or bad authentication => 401 unauthorized
     // not authorized to perform a task => 403 forbidden
     if (!token) return res.status(401).send("Access denied, No token provided");

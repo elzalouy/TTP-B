@@ -36,18 +36,18 @@ export function moveTaskJob(
   updateTaskQueue.push(async (cb) => {
     try {
       const result = await BoardController.moveTaskToDiffList(cardId, listId);
-      cb(null, { message: "move in trello" });
+      cb(null);
     } catch (error) {
       logger.error({ moveTaskJobError: error });
     }
   });
   updateTaskQueue.push(async (cb) => {
     try {
-      ``;
       if (status === "Shared" || status === "Not Clear") {
         task = await TaskDB.getOneTaskBy({ cardId: cardId });
         await NotificationController.__MoveTaskNotification(task, status, user);
       }
+      cb(null);
     } catch (error: any) {
       cb(new Error(error), null);
       logger.ercror({ webHookUpdateMoveTaskJobError: error });

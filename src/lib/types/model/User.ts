@@ -12,6 +12,7 @@ export interface IUser extends Document {
   image: string;
   type: MemberType;
   userTeams?: string[];
+  verified: boolean;
 }
 
 export interface UserData {
@@ -26,6 +27,7 @@ export interface UserData {
   image?: string;
   type?: MemberType;
   userTeams?: string[];
+  verified?: boolean;
 }
 
 export interface PasswordUpdate extends UserData {
