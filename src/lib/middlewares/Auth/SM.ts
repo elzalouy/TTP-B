@@ -8,7 +8,7 @@ export default async (req: Request, res: Response, next: any) => {
     if (!decoded?.id) {
       return res.status(400).send("Invalid Token");
     }
-    if (decoded.role !== "OM")
+    if (decoded.role !== "SM")
       return res
         .status(401)
         .send("Un-authenticated, you should be authenticated to do this job ");
