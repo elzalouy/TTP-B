@@ -9891,3 +9891,172 @@
   level: 'error',
   timestamp: '2022-10-10 19:44:13'
 }
+{
+  message: {
+    findUserById: CastError: Cast to ObjectId failed for value "{ _id: undefined }" (type Object) at path "_id" for model "users"
+        at model.Query.exec (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/mongoose/lib/query.js:4715:21)
+        at model.Query.Query.then (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/mongoose/lib/query.js:4814:15)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+      messageFormat: undefined,
+      stringValue: '"{ _id: undefined }"',
+      kind: 'ObjectId',
+      value: { _id: undefined },
+      path: '_id',
+      reason: BSONTypeError: Argument passed in must be a string of 12 bytes or a string of 24 hex characters or an integer
+          at new BSONTypeError (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/bson/src/error.ts:16:5)
+          at new ObjectId (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/bson/src/objectid.ts:87:15)
+          at castObjectId (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/mongoose/lib/cast/objectid.js:24:12)
+          at ObjectId.cast (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/mongoose/lib/schema/objectid.js:247:12)
+          at ObjectId.SchemaType.applySetters (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/mongoose/lib/schematype.js:1189:12)
+          at ObjectId.SchemaType._castForQuery (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/mongoose/lib/schematype.js:1623:15)
+          at ObjectId.SchemaType.castForQuery (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/mongoose/lib/schematype.js:1613:15)
+          at ObjectId.SchemaType.castForQueryWrapper (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/mongoose/lib/schematype.js:1590:20)
+          at cast (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/mongoose/lib/cast.js:288:34)
+          at model.Query.Query.cast (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/mongoose/lib/query.js:5137:12),
+      valueType: 'Object'
+    }
+  },
+  level: 'error',
+  timestamp: '2022-10-11 14:13:18'
+}
+{
+  message: {
+    findUserById: CastError: Cast to ObjectId failed for value "{ _id: undefined }" (type Object) at path "_id" for model "users"
+        at model.Query.exec (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/mongoose/lib/query.js:4715:21)
+        at model.Query.Query.then (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/mongoose/lib/query.js:4814:15)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+      messageFormat: undefined,
+      stringValue: '"{ _id: undefined }"',
+      kind: 'ObjectId',
+      value: { _id: undefined },
+      path: '_id',
+      reason: BSONTypeError: Argument passed in must be a string of 12 bytes or a string of 24 hex characters or an integer
+          at new BSONTypeError (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/bson/src/error.ts:16:5)
+          at new ObjectId (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/bson/src/objectid.ts:87:15)
+          at castObjectId (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/mongoose/lib/cast/objectid.js:24:12)
+          at ObjectId.cast (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/mongoose/lib/schema/objectid.js:247:12)
+          at ObjectId.SchemaType.applySetters (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/mongoose/lib/schematype.js:1189:12)
+          at ObjectId.SchemaType._castForQuery (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/mongoose/lib/schematype.js:1623:15)
+          at ObjectId.SchemaType.castForQuery (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/mongoose/lib/schematype.js:1613:15)
+          at ObjectId.SchemaType.castForQueryWrapper (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/mongoose/lib/schematype.js:1590:20)
+          at cast (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/mongoose/lib/cast.js:288:34)
+          at model.Query.Query.cast (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/mongoose/lib/query.js:5137:12),
+      valueType: 'Object'
+    }
+  },
+  level: 'error',
+  timestamp: '2022-10-11 14:14:24'
+}
+{
+  message: {
+    findUserById: CastError: Cast to ObjectId failed for value "{ _id: undefined }" (type Object) at path "_id" for model "users"
+        at model.Query.exec (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/mongoose/lib/query.js:4715:21)
+        at model.Query.Query.then (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/mongoose/lib/query.js:4814:15)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+      messageFormat: undefined,
+      stringValue: '"{ _id: undefined }"',
+      kind: 'ObjectId',
+      value: { _id: undefined },
+      path: '_id',
+      reason: BSONTypeError: Argument passed in must be a string of 12 bytes or a string of 24 hex characters or an integer
+          at new BSONTypeError (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/bson/src/error.ts:16:5)
+          at new ObjectId (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/bson/src/objectid.ts:87:15)
+          at castObjectId (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/mongoose/lib/cast/objectid.js:24:12)
+          at ObjectId.cast (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/mongoose/lib/schema/objectid.js:247:12)
+          at ObjectId.SchemaType.applySetters (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/mongoose/lib/schematype.js:1189:12)
+          at ObjectId.SchemaType._castForQuery (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/mongoose/lib/schematype.js:1623:15)
+          at ObjectId.SchemaType.castForQuery (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/mongoose/lib/schematype.js:1613:15)
+          at ObjectId.SchemaType.castForQueryWrapper (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/mongoose/lib/schematype.js:1590:20)
+          at cast (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/mongoose/lib/cast.js:288:34)
+          at model.Query.Query.cast (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/mongoose/lib/query.js:5137:12),
+      valueType: 'Object'
+    }
+  },
+  level: 'error',
+  timestamp: '2022-10-11 14:17:21'
+}
+{
+  message: {
+    findUserById: CastError: Cast to ObjectId failed for value "{ _id: undefined }" (type Object) at path "_id" for model "users"
+        at model.Query.exec (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/mongoose/lib/query.js:4715:21)
+        at model.Query.Query.then (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/mongoose/lib/query.js:4814:15)
+        at runMicrotasks (<anonymous>)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+      messageFormat: undefined,
+      stringValue: '"{ _id: undefined }"',
+      kind: 'ObjectId',
+      value: { _id: undefined },
+      path: '_id',
+      reason: BSONTypeError: Argument passed in must be a string of 12 bytes or a string of 24 hex characters or an integer
+          at new BSONTypeError (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/bson/src/error.ts:16:5)
+          at new ObjectId (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/bson/src/objectid.ts:87:15)
+          at castObjectId (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/mongoose/lib/cast/objectid.js:24:12)
+          at ObjectId.cast (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/mongoose/lib/schema/objectid.js:247:12)
+          at ObjectId.SchemaType.applySetters (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/mongoose/lib/schematype.js:1189:12)
+          at ObjectId.SchemaType._castForQuery (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/mongoose/lib/schematype.js:1623:15)
+          at ObjectId.SchemaType.castForQuery (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/mongoose/lib/schematype.js:1613:15)
+          at ObjectId.SchemaType.castForQueryWrapper (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/mongoose/lib/schematype.js:1590:20)
+          at cast (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/mongoose/lib/cast.js:288:34)
+          at model.Query.Query.cast (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/mongoose/lib/query.js:5137:12),
+      valueType: 'Object'
+    }
+  },
+  level: 'error',
+  timestamp: '2022-10-11 14:20:23'
+}
+{
+  message: {
+    findUserById: CastError: Cast to ObjectId failed for value "{ _id: undefined }" (type Object) at path "_id" for model "users"
+        at model.Query.exec (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/mongoose/lib/query.js:4715:21)
+        at model.Query.Query.then (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/mongoose/lib/query.js:4814:15)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+      messageFormat: undefined,
+      stringValue: '"{ _id: undefined }"',
+      kind: 'ObjectId',
+      value: { _id: undefined },
+      path: '_id',
+      reason: BSONTypeError: Argument passed in must be a string of 12 bytes or a string of 24 hex characters or an integer
+          at new BSONTypeError (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/bson/src/error.ts:16:5)
+          at new ObjectId (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/bson/src/objectid.ts:87:15)
+          at castObjectId (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/mongoose/lib/cast/objectid.js:24:12)
+          at ObjectId.cast (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/mongoose/lib/schema/objectid.js:247:12)
+          at ObjectId.SchemaType.applySetters (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/mongoose/lib/schematype.js:1189:12)
+          at ObjectId.SchemaType._castForQuery (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/mongoose/lib/schematype.js:1623:15)
+          at ObjectId.SchemaType.castForQuery (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/mongoose/lib/schematype.js:1613:15)
+          at ObjectId.SchemaType.castForQueryWrapper (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/mongoose/lib/schematype.js:1590:20)
+          at cast (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/mongoose/lib/cast.js:288:34)
+          at model.Query.Query.cast (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/mongoose/lib/query.js:5137:12),
+      valueType: 'Object'
+    }
+  },
+  level: 'error',
+  timestamp: '2022-10-11 14:22:29'
+}
+{
+  message: {
+    findUserById: CastError: Cast to ObjectId failed for value "{ _id: undefined }" (type Object) at path "_id" for model "users"
+        at model.Query.exec (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/mongoose/lib/query.js:4715:21)
+        at model.Query.Query.then (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/mongoose/lib/query.js:4814:15)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+      messageFormat: undefined,
+      stringValue: '"{ _id: undefined }"',
+      kind: 'ObjectId',
+      value: { _id: undefined },
+      path: '_id',
+      reason: BSONTypeError: Argument passed in must be a string of 12 bytes or a string of 24 hex characters or an integer
+          at new BSONTypeError (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/bson/src/error.ts:16:5)
+          at new ObjectId (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/bson/src/objectid.ts:87:15)
+          at castObjectId (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/mongoose/lib/cast/objectid.js:24:12)
+          at ObjectId.cast (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/mongoose/lib/schema/objectid.js:247:12)
+          at ObjectId.SchemaType.applySetters (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/mongoose/lib/schematype.js:1189:12)
+          at ObjectId.SchemaType._castForQuery (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/mongoose/lib/schematype.js:1623:15)
+          at ObjectId.SchemaType.castForQuery (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/mongoose/lib/schematype.js:1613:15)
+          at ObjectId.SchemaType.castForQueryWrapper (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/mongoose/lib/schematype.js:1590:20)
+          at cast (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/mongoose/lib/cast.js:288:34)
+          at model.Query.Query.cast (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/mongoose/lib/query.js:5137:12),
+      valueType: 'Object'
+    }
+  },
+  level: 'error',
+  timestamp: '2022-10-11 14:23:40'
+}

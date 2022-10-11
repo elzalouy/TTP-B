@@ -5,7 +5,6 @@ import BothPmOrSm from "../../middlewares/Auth/OMOrSM";
 import SM from "../../middlewares/Auth/SM";
 const router = Router();
 const {
-  CREATE_USER,
   UPDATE_USER,
   UPDATE_PASSWORD,
   DELETE_USER,
