@@ -3,6 +3,7 @@ import UserReq from "../../presentation/users/users";
 import apiRoute from "./apis";
 import BothPmOrSm from "../../middlewares/Auth/OMOrSM";
 import SM from "../../middlewares/Auth/SM";
+import Authed from "../../middlewares/Auth/Authed";
 const router = Router();
 const {
   UPDATE_USER,
@@ -36,7 +37,7 @@ router.post(`${CREATE_PM}`, BothPmOrSm, handleCreatePM);
 router.put(`${UPDATE_PASSWORD}`, handleUpdatePassword);
 router.put(`${RESET_PASSWORD}`, handleResetPassword);
 router.delete(`${DELETE_USER}`, BothPmOrSm, handleDeleteUser);
-router.get(`${GET_USERS}`, BothPmOrSm, handleGetUsers);
+router.get(`${GET_USERS}`, Authed, handleGetUsers);
 router.get(`${GET_USER}`, handleGetUserInfo);
 
 export default router;
