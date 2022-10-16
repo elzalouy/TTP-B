@@ -21,6 +21,7 @@ const sendMail = async (data: Data) => {
   const filePath = path.join(__dirname, "./template/template.hbs");
   const source = fs.readFileSync(filePath, "utf-8").toString();
   const template = handlebars.compile(source);
+  // send mail
   const replacements = {
     link: `${Config.get("FrontEndUrl")}/${data.path}/${data.token}`,
     image: data.image,
