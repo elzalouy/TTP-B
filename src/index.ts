@@ -30,10 +30,10 @@ console.log(process.env.NODE_ENV);
 export const http = createServer(app);
 http.listen(port, function () {
   console.log("Welcome to", Config.get("name"));
-  console.log(
-    "web hook url will be,",
-    Config.get("Trello_Webhook_Callback_Url")
-  );
+  console.log({
+    cards_webhook: Config.get("Trello_Webhook_Callback_Url"),
+    board_webhook: Config.get("Trello_Webhook_Callback_Url_Board"),
+  });
   console.log("server listen to port " + port);
 });
 export const io = appSocket(http);
