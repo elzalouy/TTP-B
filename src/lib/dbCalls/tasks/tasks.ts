@@ -212,7 +212,6 @@ class TaskDB {
       delete data.id;
       let task = await Tasks.findOne({ _id: id }).lean();
       if (!task) return taskNotFoundError;
-      console.log({ updateTask: data });
 
       task.name = data.name ? data.name : task.name;
       task.description =
@@ -238,7 +237,6 @@ class TaskDB {
       let update = await Tasks.findByIdAndUpdate(id, task, {
         new: true,
       });
-      console.log({ updateTask: data, update });
 
       return { error: null, task: update };
     } catch (error) {
@@ -333,7 +331,8 @@ class TaskDB {
       task.lastMoveDate = data?.lastMoveDate
         ? data.lastMoveDate
         : task.lastMoveDate;
-      task.deadline = data?.deadline ? data.deadline : task.deadline;
+      task.deadline =
+        data?.deadline !== undefined ? data.deadline : task.deadline;
       task.start = data?.start ? data.start : task.start;
       if (data.attachedFile) {
         let file = new TaskFileSchema({ ...data.attachedFile });
@@ -363,7 +362,6 @@ class TaskDB {
         return task;
       } else {
         let task = new Tasks(data);
-        console.log({ __createTaskByTrelloDB: task, data });
         task = await task.save();
         await io.sockets.emit("create-task", task);
         return await task;

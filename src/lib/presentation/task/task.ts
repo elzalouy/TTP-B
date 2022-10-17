@@ -23,7 +23,6 @@ const TaskReq = class TaskReq extends TaskController {
           message: "Something wrong hapenned while creating the task.",
         });
     } catch (error: any) {
-      console.log(new Error(error).message);
       logger.error({ handleCreateCardError: error });
     }
   }
@@ -126,7 +125,6 @@ const TaskReq = class TaskReq extends TaskController {
       let attachmentId = req.query?.attachmentId.toString();
       if (cardId && attachmentId) {
         let result = await super.downloadAttachment(cardId, attachmentId);
-        console.log(result);
         if (result === undefined) {
           updateTaskAttachmentsJob({ cardId: cardId });
         }
