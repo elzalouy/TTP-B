@@ -12,12 +12,13 @@ import cronJobsBySocket from "./lib/services/cronJobNotifi";
 import listenMultiNodes from "./lib/startup/prod";
 import { DefaultEventsMap } from "socket.io/dist/typed-events";
 import { Server } from "socket.io";
+import prod from "./lib/startup/prod";
 const Config = require("config");
 //Express App
 const app = express();
+prod(app);
 app.use(express.json());
 app.use(cors());
-
 app.use(cookieParser());
 app.use(morgan("dev"));
 app.use(express.urlencoded({ extended: false }));

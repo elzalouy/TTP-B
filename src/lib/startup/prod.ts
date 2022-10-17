@@ -1,47 +1,17 @@
-import { Express } from "express";
-import { Server } from "socket.io";
-import { DefaultEventsMap } from "socket.io/dist/typed-events";
-import cluster from "cluster";
-import { cpus } from "os";
-import { createAdapter, setupPrimary } from "@socket.io/cluster-adapter";
-import { createServer } from "http";
-import appSocket from "./socket";
-import cronJobsBySocket from "../services/cronJobNotifi";
-const { setupMaster, setupWorker } = require("@socket.io/sticky");
-const Config = require("config");
+import { Express, Request, Response } from "express";
+import helmet from "helmet";
+import compression from "compression";
 
-// Server with sticky sessions.
-export default function (app: Express) {
-  let io: Server<DefaultEventsMap, DefaultEventsMap, DefaultEventsMap, any> =
-    null;
-  if (cluster.isPrimary) {
-    console.log(`Primary ${process.pid} is running`);
-    const http = createServer(app);
-    setupMaster(http, { loadBalancingMethod: "least-connection" });
-    setupPrimary();
-    http.listen(process.env.PORT, function () {
-      console.log("Welcome to", Config.get("name"));
-      console.log(
-        "web hook url will be,",
-        Config.get("Trello_Webhook_Callback_Url")
-      );
-      console.log("server listen to port " + process.env.PORT);
-    });
-    for (let i = 0; i < cpus.length; i++) {
-      cluster.fork();
+export default function prod(app: Express) {
+  function shouldCompress(req: Request, res: Response) {
+    if (req.headers["x-no-compression"]) {
+      // don't compress responses with this request header
+      return false;
     }
-    cluster.on("exit", (worker) => {
-      console.log(`Worker ${worker.process.pid} died`);
-      cluster.fork();
-    });
-    return null;
-  } else {
-    console.log(`Worker ${process.pid} started`);
-    const http = createServer(app);
-    let io = appSocket(http);
-    io.adapter(createAdapter());
-    setupWorker(io);
-    cronJobsBySocket(io);
+
+    // fallback to standard filter function
+    return compression.filter(req, res);
   }
-  return io;
+  app.use(compression({ filter: shouldCompress }));
+  app.use(helmet());
 }
