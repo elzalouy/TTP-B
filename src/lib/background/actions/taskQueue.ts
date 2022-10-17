@@ -12,8 +12,6 @@ import {
 } from "../../types/model/tasks";
 import TaskController from "../../controllers/task";
 import { deleteAll } from "../../services/upload";
-import DepartmentController from "../../controllers/department";
-import Department from "../../models/Department";
 
 export const createTaskQueue = Queue({
   results: [],
@@ -70,9 +68,9 @@ export const updateCardJob = (
         name: data.name,
         boardId: data.boardId,
         listId: data.listId,
+        due: data.deadline ? data.deadline : "",
+        desc: data.description ? data.description : "",
       };
-      if (data.description) taskData.desc = data.description;
-      if (data.deadline) taskData.deadline = new Date(data.deadline).toString();
       let response = await BoardController.__updateCard(data.cardId, taskData);
       cb(null, response);
     } catch (error: any) {
@@ -83,7 +81,7 @@ export const updateCardJob = (
 
   updateTaskQueue.push(async (cb) => {
     try {
-      // wait for both update date in db and upload,delete files to trello
+      // wait for both update data in db and upload,delete files to trello
       // if there are deleted files, then delete it from the db
       if (deleteFiles) {
         if (deleteFiles.length > 0) {

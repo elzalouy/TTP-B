@@ -134,7 +134,6 @@ class TaskController extends TaskDB {
       data.attachedFiles = [];
       let createdCard: { id: string } | any =
         await BoardController.createCardInList(data);
-      console.log({ createdCard });
       if (createdCard) {
         data.cardId = createdCard.id;
         data.trelloShortUrl = createdCard.shortUrl;
