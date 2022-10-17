@@ -135,7 +135,6 @@ const UserController = class UserController extends UserDB {
       const { id, password } = data;
 
       const token: JwtPayload = await jwtVerify(id);
-      console.log({ token });
       if (!token.id) {
         return customeError("not_valid_token", 400);
       }

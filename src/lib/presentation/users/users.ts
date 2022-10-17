@@ -88,7 +88,6 @@ const UserReq = class UserReq extends UserController {
 
   static async handleUpdateUser(req: Request, res: Response) {
     try {
-      console.log({ data: req.body });
       let userData: UserData = {
         name: req.body.name,
         id: req.body.id,
