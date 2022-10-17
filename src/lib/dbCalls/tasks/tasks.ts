@@ -295,7 +295,7 @@ class TaskDB {
       if (data.status) filter.status = data.status;
       if (data.name) {
         let name = data.name.toLowerCase();
-        filter.name = { $regex: name };
+        filter.name = { $regex: new RegExp("^" + name, "i") };
       }
       if (data.projectManager)
         filter.projectManager = { $regex: data.projectManager };
