@@ -3,7 +3,7 @@
   "Trello_Webhook_Callback_Url": "https://ttp-back-v1.herokuapp.com/api/webhookUpdate",
   "Trello_Webhook_Callback_Url_Board": "https://ttp-back-v1.herokuapp.com/api/webhookUpdate/board",
   "FrontEndUrl": "https://ttpf.herokuapp.com",
-  "monogDb": "mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/ttp-beta?retryWrites=true&w=majority",
+  "monogDb": "mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/ttp?retryWrites=true&w=majority",
   "trellKey": "0d05ca858d1bc7893a91aef2712e7568",
   "trelloApiKey": "2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68",
   "BoardStatus": [
