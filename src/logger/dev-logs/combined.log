@@ -398,3 +398,108 @@
   level: 'info',
   timestamp: '2022-10-17 16:09:24'
 }
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-10-17 19:09:26'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-10-17 19:10:42'
+}
+{
+  message: {
+    removeBoard: 'https://api.trello.com/1/boards/634d5ec7899b7103a9ca4a29?response_type=token&key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68'
+  },
+  level: 'info',
+  timestamp: '2022-10-17 19:11:45'
+}
+{
+  message: { deleteTasksOfDepartment: { acknowledged: true, deletedCount: 3 } },
+  level: 'info',
+  timestamp: '2022-10-17 19:11:46'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-10-17 19:12:57'
+}
+{
+  message: {
+    removeBoard: 'https://api.trello.com/1/boards/634d8cddb1364500a7cf0b4c?response_type=token&key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68'
+  },
+  level: 'info',
+  timestamp: '2022-10-17 19:15:14'
+}
+{
+  message: { deleteTasksOfDepartment: { acknowledged: true, deletedCount: 0 } },
+  level: 'info',
+  timestamp: '2022-10-17 19:15:15'
+}
+{
+  message: {
+    ids: [
+      '634d8dc1ed232ef9ee62f84a',
+      '634d8efded232ef9ee62f8bb',
+      '634d8f05ed232ef9ee62f8c0',
+      '634d8f10ed232ef9ee62f8c5',
+      '634d8f4ded232ef9ee62f8f0',
+      '634d8f60ed232ef9ee62f8f9',
+      '634d909aed232ef9ee62f960',
+      '634d90c7ed232ef9ee62f965',
+      '634d90d1ed232ef9ee62f96a',
+      '634d90dced232ef9ee62f96f',
+      '634d90deed232ef9ee62f974',
+      '634d90e0ed232ef9ee62f979',
+      '634d90e4ed232ef9ee62f97e'
+    ],
+    count: 13
+  },
+  level: 'info',
+  timestamp: '2022-10-17 19:34:35'
+}
+{
+  message: {
+    ids: [
+      '634d8dc1ed232ef9ee62f84a',
+      '634d8efded232ef9ee62f8bb',
+      '634d8f05ed232ef9ee62f8c0',
+      '634d8f10ed232ef9ee62f8c5',
+      '634d8f4ded232ef9ee62f8f0',
+      '634d8f60ed232ef9ee62f8f9',
+      '634d909aed232ef9ee62f960',
+      '634d90c7ed232ef9ee62f965',
+      '634d90d1ed232ef9ee62f96a',
+      '634d90dced232ef9ee62f96f',
+      '634d90deed232ef9ee62f974',
+      '634d90e0ed232ef9ee62f979',
+      '634d90e4ed232ef9ee62f97e'
+    ],
+    count: 13
+  },
+  level: 'info',
+  timestamp: '2022-10-17 19:39:33'
+}
+{
+  message: {
+    ids: [
+      '634d8dc1ed232ef9ee62f84a',
+      '634d8efded232ef9ee62f8bb',
+      '634d8f05ed232ef9ee62f8c0',
+      '634d8f10ed232ef9ee62f8c5',
+      '634d8f4ded232ef9ee62f8f0',
+      '634d8f60ed232ef9ee62f8f9',
+      '634d909aed232ef9ee62f960',
+      '634d90c7ed232ef9ee62f965',
+      '634d90d1ed232ef9ee62f96a',
+      '634d90dced232ef9ee62f96f',
+      '634d90deed232ef9ee62f974',
+      '634d90e0ed232ef9ee62f979',
+      '634d90e4ed232ef9ee62f97e'
+    ],
+    count: 13
+  },
+  level: 'info',
+  timestamp: '2022-10-17 19:39:43'
+}
