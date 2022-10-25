@@ -8,10 +8,10 @@ import {
   moveTaskJob,
   updateCardJob,
   updateTaskQueue,
-} from "../background/actions/taskQueue";
+} from "../background/actions/task.actions.Queue";
 import { provideCardIdError } from "../types/controller/Tasks";
 import { io } from "../..";
-import { taskRoutesQueue } from "../background/routes/taskRouteQueue";
+import { taskRoutesQueue } from "../background/routes/tasks.Route.Queue";
 class TaskController extends TaskDB {
   static async getTasks(data: TaskData) {
     return await TaskController.__getTasks(data);

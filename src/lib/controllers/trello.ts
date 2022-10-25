@@ -15,7 +15,7 @@ import { validateExtentions } from "../services/validation";
 import Department from "../models/Department";
 import { createCardInBoardResponse } from "../types/controller/board";
 import { io } from "../..";
-import { taskRoutesQueue } from "../background/routes/taskRouteQueue";
+import { taskRoutesQueue } from "../background/routes/tasks.Route.Queue";
 
 config();
 var FormData = require("form-data");

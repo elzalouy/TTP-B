@@ -2,8 +2,9 @@ import config from "config";
 import _ from "lodash";
 import { Server, Socket } from "socket.io";
 import { DefaultEventsMap } from "socket.io/dist/typed-events";
-export let socketClients: any[] = [];
-export let socketOM: any[] = [];
+import { userSocket } from "../types/controller/user";
+export let socketPMs: userSocket[] = [];
+export let socketOM: userSocket[] = [];
 export default function appSocket(http: any) {
   const io = new Server(http, {
     path: "/socket.io",
@@ -20,9 +21,7 @@ export default function appSocket(http: any) {
       socket: Socket<DefaultEventsMap, DefaultEventsMap, DefaultEventsMap, any>
     ) => {
       socket.on("disconnect", () => {
-        socketClients = socketClients.filter(
-          (item) => item.socketId !== socket.id
-        );
+        socketPMs = socketPMs.filter((item) => item.socketId !== socket.id);
         socketOM = socketOM.filter((item) => item.socketId !== socket.id);
         console.log("client disconnected, ", socket.id);
       });
@@ -37,12 +36,12 @@ export default function appSocket(http: any) {
       });
       socket.on("joined-PM", (data: any) => {
         console.log("joined PM");
-        // socketClients = socketClients.filter((item) => item.id !== data._id);
-        socketClients.push({
+        // socketPMs = socketPMs.filter((item) => item.id !== data._id);
+        socketPMs.push({
           id: data._id,
           socketId: socket.id,
         });
-        console.log("PM connected,", socketClients);
+        console.log("PM connected,", socketPMs);
       });
     }
   );

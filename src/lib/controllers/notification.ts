@@ -1,10 +1,13 @@
 import NotificationDB from "../dbCalls/notification/notification";
-import { NotificationData } from "./../types/model/Notification";
+import {
+  NotificationData,
+  NotificationInfo,
+} from "./../types/model/Notification";
 import logger from "../../logger";
 import Project from "../models/Project";
 import User from "../models/User";
 import { io } from "../..";
-import { socketClients, socketOM } from "../startup/socket";
+import { socketPMs, socketOM } from "../startup/socket";
 import { ProjectData } from "../types/model/Project";
 
 const NotificationController = class NotificationController extends NotificationDB {
@@ -38,7 +41,7 @@ const NotificationController = class NotificationController extends Notification
       await super.__createNotification(newNotification);
       // send to current socket clients an update
       // PM
-      let PMid = socketClients.find(
+      let PMid = socketPMs.find(
         (item) => item.id === project.projectManager.toString()
       );
       io.to(PMid.socketId).emit("notification-update");
@@ -62,7 +65,7 @@ const NotificationController = class NotificationController extends Notification
         await super.__createNotification(newNotification);
         // send to current socket clients an update
         // PM
-        let PMid = socketClients
+        let PMid = socketPMs
           .filter((item) => item.id === project.projectManager.toString())
           .map((item) => item.socketId);
         if (PMid && project.projectManager !== id)
@@ -106,7 +109,7 @@ const NotificationController = class NotificationController extends Notification
             description: `${data.name} project is done. Thank you for your hard work.`,
             isNotified: [{ userId: data.projectManager, isNotified: false }],
           });
-          let pm = socketClients
+          let pm = socketPMs
             .filter((item) => item.id === data.projectManager)
             .map((item) => item.socketId);
           if (userId !== data.projectManager)
@@ -144,7 +147,7 @@ const NotificationController = class NotificationController extends Notification
           description: `${data.name} has assigned to you by ${user.name}`,
           isNotified: [{ userId: data.projectManager, isNotified: false }],
         });
-        let pm = socketClients
+        let pm = socketPMs
           .filter((item) => item.id === data.projectManager)
           .map((item) => item.socketId);
         if (userId !== data.projectManager)
@@ -169,6 +172,13 @@ const NotificationController = class NotificationController extends Notification
       logger.error({ __updateProjectNotificationError: error });
     }
   }
+
+  // static async createNotification(data: NotificationData){
+  //   try {
+  //     await
+  //   } catch (error) {
+  //   }
+  // }
 };
 
 export default NotificationController;

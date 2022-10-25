@@ -5,7 +5,7 @@ import ProjectDB from "../dbCalls/project/project";
 import Tasks from "../models/Task";
 import { io } from "../../index";
 import NotificationController from "./notification";
-import { projectQueue } from "../background/projectQueue";
+import { projectQueue } from "../background/actions/project.actions.Queue";
 
 const ProjectController = class ProjectController extends ProjectDB {
   static async createProject(data: ProjectData, userId: string) {

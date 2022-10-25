@@ -1,12 +1,26 @@
 import Notification from "../../models/Notification";
 import logger from "../../../logger";
-import {
-  NotificationInfo,
-  NotificationData,
-} from "../../types/model/Notification";
+import { NotificationData } from "../../types/model/Notification";
 import { ObjectID } from "bson";
 
 const NotificationDB = class NotificationDB {
+  static async __getNotifications(data: object) {
+    try {
+      let notifications = await Notification.find({ data });
+      return notifications;
+    } catch (error) {
+      logger.error({ ___getNotifications: error });
+    }
+  }
+  static async __deleteNotifcations(data: object) {
+    try {
+      let deleteResult = await Notification.deleteMany(data);
+      return deleteResult;
+    } catch (error) {
+      logger.error({ __deleteNotifcationsError: error });
+    }
+  }
+
   static async __sendNotificationsDB({
     userId,
     current,

@@ -4,7 +4,7 @@ import logger from "../../../logger";
 import { localize } from "../../utils/msgLocalize";
 import BoardController from "../../controllers/trello";
 import { webhookUpdateInterface } from "../../types/controller/Tasks";
-import { updateTaskQueue } from "../../background/actions/taskQueue";
+import { updateTaskQueue } from "../../background/actions/task.actions.Queue";
 import { TaskInfo } from "../../types/model/tasks";
 
 const BoardReq = class BoardReq extends BoardController {
