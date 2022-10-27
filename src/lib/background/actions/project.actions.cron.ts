@@ -17,7 +17,7 @@ export function projectsDueDate(
   io: Server<DefaultEventsMap, DefaultEventsMap, DefaultEventsMap, any>
 ) {
   return new CronJob(
-    "* * * * * 6",
+    "* * 9,12,15,18 * * 0-6",
     async () => {
       let today = new Date();
       let dueDateProjects = await Project.find()
@@ -25,8 +25,8 @@ export function projectsDueDate(
         .equals(["inProgress", "late"])
         .where("projectDeadline")
         .lt(new Date(today.getTime() + 30 * 24 * 60 * 60 * 1000).getTime())
-        .where("projectDeadline")
-        .gte(new Date().getTime());
+        .where("startDate")
+        .lt(new Date().getTime());
       console.log({ dueDateProjects });
       if (dueDateProjects && dueDateProjects.length > 0) {
         dueDateProjects.forEach(async (item: ProjectInfo) => {
@@ -60,14 +60,8 @@ export function projectsPassedDate(
   io: Server<DefaultEventsMap, DefaultEventsMap, DefaultEventsMap, any>
 ) {
   return new CronJob(
-    "* * 23 * * *",
+    "* * 9,12,15,18 * * 0-6",
     async () => {
-      // let passedDatesPojects = await ProjectDB.getProjectDB({
-      //   projectStatus: { $in: ["inProgress", "late"] },
-      //   projectDeadline: {
-      //     $lte: new Date().getTime(),
-      //   },
-      // });
       let passedDatesPojects = await Project.find({
         projectStatus: { $in: ["inProgress", "late"] },
       })

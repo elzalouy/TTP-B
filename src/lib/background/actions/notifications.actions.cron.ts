@@ -9,7 +9,7 @@ export function removeOldNotifications(
   io: Server<DefaultEventsMap, DefaultEventsMap, DefaultEventsMap, any>
 ) {
   return new CronJob(
-    "* * * 1 * *",
+    "* * * */20 * *",
     async () => {
       let today = new Date();
       let oldNotifications = await Notification.find()
