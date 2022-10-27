@@ -17,7 +17,7 @@ export function projectsDueDate(
   io: Server<DefaultEventsMap, DefaultEventsMap, DefaultEventsMap, any>
 ) {
   return new CronJob(
-    "* * 9,12,15,18 * * 0-6",
+    "0 9-18/3 * * *",
     async () => {
       let today = new Date();
       let dueDateProjects = await Project.find()
@@ -60,7 +60,7 @@ export function projectsPassedDate(
   io: Server<DefaultEventsMap, DefaultEventsMap, DefaultEventsMap, any>
 ) {
   return new CronJob(
-    "* * 9,12,15,18 * * 0-6",
+    "0 9-18/3 * * *",
     async () => {
       let passedDatesPojects = await Project.find({
         projectStatus: { $in: ["inProgress", "late"] },

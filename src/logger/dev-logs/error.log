@@ -105,3 +105,51 @@
   level: 'error',
   timestamp: '2022-10-23 14:52:00'
 }
+{
+  message: {
+    errorOldNotificationsCron: Error: Field (hour) cannot be parsed
+        at CT._parseField (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/cron/lib/time.js:504:12)
+        at CT._parse (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/cron/lib/time.js:423:10)
+        at new CT (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/cron/lib/time.js:96:9)
+        at new CJ (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/cron/lib/job.js:62:19)
+        at projectsDueDate (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/background/actions/project.actions.cron.ts:19:10)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/startup/cron.ts:14:26
+        at Generator.next (<anonymous>)
+        at fulfilled (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/startup/cron.ts:5:58)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5)
+  },
+  level: 'error',
+  timestamp: '2022-10-27 14:24:48'
+}
+{
+  message: {
+    errorOldNotificationsCron: Error: Field (second) cannot be parsed
+        at CT._parseField (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/cron/lib/time.js:504:12)
+        at CT._parse (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/cron/lib/time.js:423:10)
+        at new CT (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/cron/lib/time.js:96:9)
+        at new CJ (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/cron/lib/job.js:62:19)
+        at projectsDueDate (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/background/actions/project.actions.cron.ts:19:10)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/startup/cron.ts:14:26
+        at Generator.next (<anonymous>)
+        at fulfilled (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/startup/cron.ts:5:58)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5)
+  },
+  level: 'error',
+  timestamp: '2022-10-27 14:26:00'
+}
+{
+  message: {
+    errorOldNotificationsCron: Error: Field (second) cannot be parsed
+        at CT._parseField (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/cron/lib/time.js:504:12)
+        at CT._parse (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/cron/lib/time.js:423:10)
+        at new CT (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/cron/lib/time.js:96:9)
+        at new CJ (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/cron/lib/job.js:62:19)
+        at projectsDueDate (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/background/actions/project.actions.cron.ts:19:10)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/startup/cron.ts:14:26
+        at Generator.next (<anonymous>)
+        at fulfilled (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/startup/cron.ts:5:58)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5)
+  },
+  level: 'error',
+  timestamp: '2022-10-27 14:26:26'
+}
