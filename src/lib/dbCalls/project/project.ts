@@ -90,6 +90,7 @@ const ProjectDB = class ProjectDB {
             cardId: 1,
             listId: 1,
             boardId: 1,
+            associateProjectManager: 1,
           },
         },
       ]);

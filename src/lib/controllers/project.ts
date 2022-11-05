@@ -70,7 +70,6 @@ const ProjectController = class ProjectController extends ProjectDB {
 
   static async __updateProjectData(data: ProjectData, userId: string) {
     try {
-      console.log({ projectData: data });
       projectQueue.push((cb) => {
         TrelloActionsController.__updateCard({
           cardId: data.cardId,

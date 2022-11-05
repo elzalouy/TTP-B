@@ -20,6 +20,7 @@ export interface ProjectInfo extends Document {
   listId: string;
   boardId: string;
   cardId: string;
+  associateProjectManager: string;
 }
 export interface ProjectData {
   _id?: string | ObjectID;
@@ -43,4 +44,5 @@ export interface ProjectData {
   listId?: string;
   boardId?: string;
   cardId?: string;
+  associateProjectManager?: string;
 }

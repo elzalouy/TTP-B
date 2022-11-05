@@ -16,6 +16,7 @@ const ProjectSchema: Schema = new Schema<ProjectInfo>(
       type: String,
       required: true,
     },
+
     adminId: {
       type: Schema.Types.ObjectId,
       ref: "users",
@@ -56,6 +57,11 @@ const ProjectSchema: Schema = new Schema<ProjectInfo>(
     },
     listId: { type: String, default: null },
     cardId: { type: String, default: null },
+    associateProjectManager: {
+      type: String,
+      default: null,
+      required: false,
+    },
   },
   {
     timestamps: true,
