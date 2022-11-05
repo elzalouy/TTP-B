@@ -44,6 +44,8 @@ export interface TaskData {
   projectId?: string | ObjectId;
   categoryId?: string | ObjectId;
   subCategoryId?: string | ObjectId;
+  categoryName?: string;
+  subCategoryName?: string;
   countNotClear?: number;
   countShared?: number;
   listId?: string;
