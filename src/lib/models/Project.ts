@@ -21,7 +21,6 @@ const ProjectSchema: Schema = new Schema<ProjectInfo>(
       ref: "users",
       required: true,
     },
-
     projectDeadline: {
       type: Date,
       default: null,
@@ -51,6 +50,12 @@ const ProjectSchema: Schema = new Schema<ProjectInfo>(
       required: true,
       ref: "clients",
     },
+    boardId: {
+      type: String,
+      default: null,
+    },
+    listId: { type: String, default: null },
+    cardId: { type: String, default: null },
   },
   {
     timestamps: true,

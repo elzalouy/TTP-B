@@ -1,11 +1,14 @@
 import { ProjectData } from "./../types/model/Project";
-import { customeError } from "./../utils/errorUtils";
+import config from "config";
 import logger from "../../logger";
 import ProjectDB from "../dbCalls/project/project";
 import Tasks from "../models/Task";
 import { io } from "../../index";
 import NotificationController from "./notification";
-import { projectQueue } from "../background/actions/project.actions.Queue";
+import { projectQueue } from "../backgroundJobs/actions/project.actions.Queue";
+import DepartmentController from "./department";
+import Department from "../models/Department";
+import TrelloActionsController from "./trello";
 
 const ProjectController = class ProjectController extends ProjectDB {
   static async createProject(data: ProjectData, userId: string) {
@@ -40,6 +43,16 @@ const ProjectController = class ProjectController extends ProjectDB {
   static async __deleteProjectData(id: string) {
     try {
       let project = await super.deleteProjectDB(id);
+      projectQueue.push(() => {
+        Department.findOne({
+          name: new RegExp(config.get("CreativeBoard"), "i"),
+        }).then((res) => {
+          if (res && res.lists.find((item) => item.name === "projects")) {
+            console.log({ project });
+            TrelloActionsController.deleteCard(project.cardId);
+          }
+        });
+      });
       return project;
     } catch (error) {
       logger.error({ getProjectError: error });
@@ -57,11 +70,19 @@ const ProjectController = class ProjectController extends ProjectDB {
 
   static async __updateProjectData(data: ProjectData, userId: string) {
     try {
+      console.log({ projectData: data });
       projectQueue.push((cb) => {
+        TrelloActionsController.__updateCard({
+          cardId: data.cardId,
+          data: {
+            name: data.name,
+            due: data?.projectDeadline?.toString(),
+            start: data?.startDate?.toString(),
+          },
+        });
         NotificationController.__updateProjectNotification(data, userId);
         cb(null, true);
       });
-      projectQueue.start();
       let project = await super.updateProjectDB(data);
       return project;
     } catch (error) {
@@ -72,11 +93,27 @@ const ProjectController = class ProjectController extends ProjectDB {
   static async __createNewProject(data: ProjectData, userId: string) {
     try {
       let project = await super.createProjectDB(data);
-      projectQueue.push((cb) => {
+      projectQueue.push(async (cb) => {
+        let dep = await Department.findOne({
+          name: new RegExp(config.get("CreativeBoard"), "i"),
+        });
+        if (dep) {
+          let projectsList = dep.lists.find((item) => item.name === "projects");
+          let { id } = await TrelloActionsController.__createProject(
+            projectsList.listId,
+            data
+          );
+          await super.updateProjectDB({
+            _id: project._id,
+            cardId: id,
+            boardId: dep.boardId,
+            listId: projectsList.listId,
+          });
+          io.sockets.emit("update-projects");
+        }
         NotificationController.__creatProjectNotification(data, userId);
         cb(null, true);
       });
-      projectQueue.start();
       return project;
     } catch (error) {
       logger.error({ getTeamsError: error });

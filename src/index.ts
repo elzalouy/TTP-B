@@ -2,9 +2,9 @@ import { config } from "dotenv";
 import { createServer } from "http";
 import express from "express";
 import cookieParser from "cookie-parser";
-import mongoDB from "./lib/db/dbConnect";
+import mongoDB from "./lib/startup/db/dbConnect";
 import appSocket from "./lib/startup/socket";
-import i18n from "./lib/i18n/config";
+import i18n from "./lib/startup/i18n/config";
 import morgan from "morgan";
 import cors from "cors";
 import routes from "./lib/startup/routes";
@@ -31,7 +31,6 @@ http.listen(port, function () {
   console.log("Welcome to", Config.get("name"));
   console.log({
     cards_webhook: Config.get("Trello_Webhook_Callback_Url"),
-    board_webhook: Config.get("Trello_Webhook_Callback_Url_Board"),
   });
   console.log("server listen to port " + port);
   cronJobs(io);

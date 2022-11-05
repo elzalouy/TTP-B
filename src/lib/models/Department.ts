@@ -2,8 +2,8 @@ import Joi from "joi";
 import _ from "lodash";
 import { model, Schema } from "mongoose";
 import logger from "../../logger";
-import BoardController from "../controllers/trello";
-import { createBoardResponse } from "../types/controller/board";
+import TrelloActionsController from "../controllers/trello";
+import { createBoardResponse } from "../types/controller/trello";
 import {
   IDepartment,
   IDepartmentState,
@@ -11,6 +11,7 @@ import {
   ITeam,
 } from "../types/model/Department";
 import Tasks from "./Task";
+import config from "config";
 
 const DepartmentSchema = new Schema<IDepartment>(
   {
@@ -51,7 +52,7 @@ const DepartmentSchema = new Schema<IDepartment>(
           name: {
             type: String,
             enum: {
-              values: ListTypes,
+              values: [...ListTypes, "projects"],
               message: `{VALUE} is not one of the list types ["Tasks Board", "inProgress", "Shared", "Review", "Done", "Not Clear","Cancled"]`,
             },
           },
@@ -247,7 +248,7 @@ DepartmentSchema.methods.createDepartmentBoard = async function (
       board: createBoardResponse & { message: string },
       result: { id: string };
     // 1- create board
-    board = await BoardController.createNewBoard(this.name, this.color);
+    board = await TrelloActionsController.createNewBoard(this.name, this.color);
     if (board?.message)
       return {
         error: "Boart Error",
@@ -256,22 +257,39 @@ DepartmentSchema.methods.createDepartmentBoard = async function (
     if (board?.id && board?.url) {
       this.boardId = board.id;
       this.boardURL = board.url;
-      await BoardController.createWebHook(
+      await TrelloActionsController.createWebHook(
         board.id,
-        "Trello_Webhook_Callback_Url_Board"
+        "Trello_Webhook_Callback_Url"
       );
     }
     //2- create lists
-    let listsResult = await lists.map(async (list, index) => {
-      result = await BoardController.addListToBoard(board.id, list.name);
+    let departmentLists =
+      this.name.toLowerCase() === config.get("CreativeBoard")
+        ? [...lists, { name: "projects", listId: "" }]
+        : lists;
+
+    let listsResult = await departmentLists.map(async (list, index) => {
+      result = await TrelloActionsController.addListToBoard(
+        board.id,
+        list.name
+      );
       list.listId = result.id;
       return list;
     });
-
     lists = await Promise.all(listsResult);
+    let CreativeBoard = lists.find((item) => item.name === "projects");
+    console.log({ CreativeBoard });
+    if (CreativeBoard)
+      TrelloActionsController.createWebHook(
+        CreativeBoard.listId,
+        "Trello_Webhook_Callback_Url_Project"
+      );
     // 3- create teams
     let teamsResult = await teams.map(async (team, index) => {
-      result = await BoardController.addListToBoard(board.id, team.name);
+      result = await TrelloActionsController.addListToBoard(
+        board.id,
+        team.name
+      );
       team.listId = result.id;
       return team;
     });
@@ -287,7 +305,7 @@ DepartmentSchema.methods.updateDepartment = async function (
   data: IDepartmentState
 ) {
   try {
-    await BoardController.updateBoard(this.boardId, {
+    await TrelloActionsController.updateBoard(this.boardId, {
       name: data.name,
       color: data.color,
     });
@@ -303,7 +321,7 @@ DepartmentSchema.methods.updateDepartment = async function (
 
 DepartmentSchema.methods.deleteDepartment = async function (this: IDepartment) {
   try {
-    let board = await BoardController.deleteBoard(this.boardId);
+    let board = await TrelloActionsController.deleteBoard(this.boardId);
     return await this.remove();
   } catch (error) {
     logger.error({ deleteDepartmentError: error });
@@ -321,7 +339,7 @@ DepartmentSchema.methods.updateTeams = async function (
     // remove teams
     await data.removeTeams.forEach(async (item, index) => {
       let team = this.teams.find((t) => t._id.toString() === item);
-      await BoardController.addListToArchieve(team.listId);
+      await TrelloActionsController.addListToArchieve(team.listId);
     });
     this.teams = this.teams.map((item) => {
       if (data.removeTeams.includes(item._id.toString())) {
@@ -331,7 +349,7 @@ DepartmentSchema.methods.updateTeams = async function (
     });
     depTeams = await Promise.all(
       data.addTeams.map(async (item) => {
-        let list: { id: string } = await BoardController.addListToBoard(
+        let list: { id: string } = await TrelloActionsController.addListToBoard(
           this.boardId,
           item
         );

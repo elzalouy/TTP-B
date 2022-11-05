@@ -5,4 +5,5 @@ export default {
   ADD_MEMBER: "/addMember",
   CREATE_LIST: "/addList",
   WEBHOOK_UPDATES: "/webhookUpdate",
+  WEBHOOK_UPDATES_PROJECT: "/webhookUpdateProject",
 };

@@ -50,9 +50,6 @@ const ProjectDB = class ProjectDB {
   }
   static async __getProjects(data: object) {
     try {
-      let project = await Project.find(data)
-        .populate({ path: "projectManager", select: "_id name" })
-        .lean();
       let fetch = await Project.aggregate([
         { $match: { $and: [data] } },
         {
@@ -90,6 +87,9 @@ const ProjectDB = class ProjectDB {
             clientId: 1,
             NoOfTasks: { $size: "$tasks" },
             NoOfFinishedTasks: { $size: "$NoOfFinishedTasks" },
+            cardId: 1,
+            listId: 1,
+            boardId: 1,
           },
         },
       ]);

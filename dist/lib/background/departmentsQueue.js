@@ -1,7 +1,9 @@
 "use strict";
-var __importDefault = (this && this.__importDefault) || function (mod) {
-    return (mod && mod.__esModule) ? mod : { "default": mod };
-};
+var __importDefault =
+  (this && this.__importDefault) ||
+  function (mod) {
+    return mod && mod.__esModule ? mod : { default: mod };
+  };
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.DepartmentQueue = void 0;
 const queue_1 = __importDefault(require("queue"));
@@ -30,38 +32,38 @@ exports.DepartmentQueue = (0, queue_1.default)({ results: [] });
 //         let canceldListId: string = "";
 //         let inProgressListId: string = "";
 //         let inprogress: createListResponse =
-//           await BoardController.addListToBoard(
+//           await TrelloController.addListToBoard(
 //             department.boardId,
 //             "inProgress"
 //           );
 //         inProgressListId = inprogress.id;
-//         let cancel: createListResponse = await BoardController.addListToBoard(
+//         let cancel: createListResponse = await TrelloController.addListToBoard(
 //           department.boardId,
 //           "Cancled"
 //         );
 //         canceldListId = cancel.id;
-//         let NotClear: createListResponse = await BoardController.addListToBoard(
+//         let NotClear: createListResponse = await TrelloController.addListToBoard(
 //           department.boardId,
 //           "Not Clear"
 //         );
 //         notClearListId = NotClear.id;
-//         let done: createListResponse = await BoardController.addListToBoard(
+//         let done: createListResponse = await TrelloController.addListToBoard(
 //           department.boardId,
 //           "Done"
 //         );
 //         doneListId = done.id;
-//         let shared: createListResponse = await BoardController.addListToBoard(
+//         let shared: createListResponse = await TrelloController.addListToBoard(
 //           department.boardId,
 //           "Shared"
 //         );
 //         sharedListID = shared.id;
-//         let review: createListResponse = await BoardController.addListToBoard(
+//         let review: createListResponse = await TrelloController.addListToBoard(
 //           department.boardId,
 //           "Review"
 //         );
 //         reviewListId = review.id;
 //         let defaultList: createListResponse =
-//           await BoardController.addListToBoard(
+//           await TrelloController.addListToBoard(
 //             department.boardId,
 //             "Tasks Board"
 //           );
@@ -84,7 +86,7 @@ exports.DepartmentQueue = (0, queue_1.default)({ results: [] });
 //         //   inProgressListId,
 //         // ];
 //         // let webhookCreate = listId.map(async (id) => {
-//         //   return await BoardController.createWebHook(id);
+//         //   return await TrelloController.createWebHook(id);
 //         // });
 //         // Promise.all(webhookCreate).then((res) =>
 //         //   logger.info({ webhookCreateResult: "webhook done" })
@@ -106,7 +108,7 @@ exports.DepartmentQueue = (0, queue_1.default)({ results: [] });
 //         );
 //         if (!department || !result) {
 //           io?.sockets?.emit("new-department-error", { id: department._id });
-//           await BoardController.deleteBoard(department.boardId);
+//           await TrelloController.deleteBoard(department.boardId);
 //           await DepartmentController.deleteDepartment(department._id);
 //           await cb(new Error("Board was not created"), null);
 //         }

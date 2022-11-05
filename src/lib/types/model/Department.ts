@@ -57,7 +57,7 @@ export interface ITeam {
   isDeleted: boolean;
 }
 export interface IList {
-  _id: string;
+  _id?: string;
   name: string;
   listId: string;
 }

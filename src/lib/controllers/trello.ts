@@ -6,31 +6,24 @@ import { trelloApi } from "../services/trelloApi";
 import { MemberType } from "../types/model/User";
 import fetch, { RequestInit } from "node-fetch";
 import { AttachmentResponse, TaskData } from "../types/model/tasks";
-import {
-  updateCardResponse,
-  webhookUpdateInterface,
-} from "../types/controller/Tasks";
-import TaskController from "./task";
-import { validateExtentions } from "../services/validation";
-import Department from "../models/Department";
-import { createCardInBoardResponse } from "../types/controller/board";
-import { io } from "../..";
-import { taskRoutesQueue } from "../background/routes/tasks.Route.Queue";
+import { editCardParams, updateCardResponse } from "../types/controller/trello";
+import { ProjectData, ProjectInfo } from "../types/model/Project";
+import { IDepartment } from "../types/model/Department";
 
 config();
 var FormData = require("form-data");
 
-class BoardController {
+class TrelloActionsController {
   static async getBoardsInTrello() {
-    return await BoardController.__getTrelloBoards();
+    return await TrelloActionsController.__getTrelloBoards();
   }
 
   static async getSingleBoardInfo(id: string, type: string) {
-    return await BoardController.__singleBoardInfo(id, type);
+    return await TrelloActionsController.__singleBoardInfo(id, type);
   }
 
   static async getMembersInTrello() {
-    return await BoardController.__getAllMembers();
+    return await TrelloActionsController.__getAllMembers();
   }
 
   static async addMemberToBoard(
@@ -38,74 +31,64 @@ class BoardController {
     memberId: string,
     type: MemberType
   ) {
-    return await BoardController.__addMember(boardId, memberId, type);
+    return await TrelloActionsController.__addMember(boardId, memberId, type);
   }
 
   static async addListToBoard(boardId: string, listName: string) {
-    return await BoardController.__addList(boardId, listName);
+    return await TrelloActionsController.__addList(boardId, listName);
   }
 
   static async removeMemberFromBoard(boardId: string, memberId: string) {
-    return await BoardController.__removeMember(boardId, memberId);
+    return await TrelloActionsController.__removeMember(boardId, memberId);
   }
 
   static async addListToArchieve(listId: string) {
-    return await BoardController.__archieveList(listId);
+    return await TrelloActionsController.__archieveList(listId);
   }
 
   static async createWebHook(idModel: string, urlInConfig: string) {
-    return await BoardController.__addWebHook(idModel, urlInConfig);
+    return await TrelloActionsController.__addWebHook(idModel, urlInConfig);
   }
 
   static async deleteBoard(id: string) {
-    return await BoardController.__deleteBoard(id);
+    return await TrelloActionsController.__deleteBoard(id);
   }
   static async deleteCard(id: string) {
-    return await BoardController.__deleteCard(id);
+    return await TrelloActionsController.__deleteCard(id);
   }
   static async createCardInList(data: TaskData) {
-    return await BoardController.__createCard(data);
+    return await TrelloActionsController.__createCard(data);
   }
   static async downloadAttachment(cardId: string, attachmentId: string) {
-    return await BoardController.__downloadAttachment(cardId, attachmentId);
+    return await TrelloActionsController.__downloadAttachment(
+      cardId,
+      attachmentId
+    );
   }
   static async createAttachmentOnCard(
     cardId: string,
     file: Express.Multer.File
   ) {
-    return await BoardController.__createAttachment(cardId, file);
+    return await TrelloActionsController.__createAttachment(cardId, file);
   }
 
   static async createNewBoard(name: string, color: string) {
-    return await BoardController.__createNewBoard(name, color);
+    return await TrelloActionsController.__createNewBoard(name, color);
   }
 
   static async updateBoard(
     id: string,
     values: { name: string; color: string }
   ) {
-    return await BoardController.__updateBoard(id, values);
+    return await TrelloActionsController.__updateBoard(id, values);
   }
 
   static async removeWebhook(id: string) {
-    return await BoardController.__removeWebhook(id);
+    return await TrelloActionsController.__removeWebhook(id);
   }
 
   static async moveTaskToDiffList(cardId: string, listId: string) {
-    return await BoardController.__moveTaskToDiffList(cardId, listId);
-  }
-  static async updateBoardCard(data: webhookUpdateInterface) {
-    return await BoardController.__updateBoardCard(data);
-  }
-  static async webhookUpdate(data: webhookUpdateInterface) {
-    return await BoardController.__webhookUpdate(data);
-  }
-  static async __webhookUpdate(data: webhookUpdateInterface) {
-    try {
-      await BoardController.updateBoardCard(data);
-    } catch (error) {
-      logger.error({ webhookUpdateError: error });
-    }
+    return await TrelloActionsController.__moveTaskToDiffList(cardId, listId);
   }
 
   static async __moveTaskToDiffList(cardId: string, listId: string) {
@@ -240,6 +223,27 @@ class BoardController {
     }
   }
 
+  static async __createProject(listId: string, data: ProjectData) {
+    try {
+      let url = `cards/?idList=${listId}&name=${data.name}&`;
+      if (data.projectDeadline)
+        url = `${url}due=${new Date(
+          data.projectDeadline
+        ).getTime()}&start=${new Date(data.startDate).getTime()}&`;
+      url = `${url}attachments=true&`;
+      let cardCreateApi = trelloApi(url);
+      let cardResult = await fetch(cardCreateApi, {
+        method: "POST",
+        headers: {
+          Accept: "application/json",
+        },
+      });
+      return cardResult.json();
+    } catch (error) {
+      logger.error({ createProjectCardError: error });
+    }
+  }
+
   static async __createCard(data: TaskData) {
     try {
       let url = `cards/?idList=${data.listId}&name=${data.name}&desc=${data.description}&`;
@@ -260,6 +264,7 @@ class BoardController {
       logger.error({ createCardInListError: error });
     }
   }
+
   static async __deleteCard(id: string) {
     try {
       let deleteCartApi = trelloApi(`cards/${id}?`);
@@ -274,6 +279,7 @@ class BoardController {
       logger.error({ deleteTasksError: error });
     }
   }
+
   static async __getCardAttachments(cardId: string) {
     try {
       let api = trelloApi(`cards/${cardId}/attachments?`);
@@ -428,17 +434,7 @@ class BoardController {
       logger.error({ downloadAttachment: error });
     }
   }
-  static async __updateCard(
-    cardId: string,
-    data: {
-      name: string;
-      desc: string;
-      idBoard?: string;
-      idList?: string;
-      start?: string;
-      due?: string;
-    }
-  ) {
+  static async __updateCard({ cardId, data }: editCardParams) {
     try {
       let params: RequestInit = {
         method: "PUT",
@@ -448,7 +444,7 @@ class BoardController {
         },
         body: JSON.stringify({
           name: data.name,
-          desc: data.desc,
+          desc: data.desc ? data.desc : undefined,
           idBoard: data.idBoard,
           idList: data.idList,
           due: data.due,
@@ -469,191 +465,6 @@ class BoardController {
       logger.error({ __updateCardError: error });
     }
   }
-
-  /**
-   * updateBoardCard
-   *
-   * Update task with a new data coming from trello,
-   * here is the actions handled here :-
-   * - add/delete Attachment
-   * - change name, description, due data, start date
-   * - move task from list to list
-   * - move task from board to board
-   * - remove task
-   * @param data webhook request data inserted with the webhook call.
-   */
-  static async __updateBoardCard(data: webhookUpdateInterface) {
-    taskRoutesQueue.push(async (cb) => {
-      try {
-        if (data.action && data?.action?.data) {
-          let type = data.action?.type;
-          let action = data?.action?.display?.translationKey
-            ? data?.action?.display?.translationKey
-            : "";
-          let currentTask = await TaskController.getOneTaskBy({
-            cardId: data?.action?.data?.card?.id,
-          });
-          console.log({ updateCardData: data.action.data });
-          if (data?.action?.data) {
-            let task: TaskData = {
-              name: data.action.data.card.name,
-              boardId: data.action.data.board.id,
-              cardId: data.action.data.card.id,
-              deadline:
-                data.action.data.card.due !== undefined
-                  ? data.action?.data?.card?.due === null
-                    ? null
-                    : new Date(data.action.data.card.due)
-                  : currentTask.deadline,
-              start: data.action.data.card.start
-                ? new Date(data.action.data.card.start)
-                : currentTask.start
-                ? currentTask.start
-                : undefined,
-              description: data.action.data.card.desc
-                ? data.action.data.card.desc
-                : currentTask.description
-                ? currentTask.description
-                : undefined,
-            };
-            let department = await Department.findOne({
-              boardId: task.boardId,
-            });
-            let team = department.teams.find(
-              (item) => item.listId === data.action.data.card.idList
-            );
-            // delete
-            if (type === "deleteCard") {
-              return await TaskController.deleteTaskByTrelloDB(task);
-            }
-            //  move
-            if (data.action.data.listAfter) {
-              task.lastMove = data.action.data.listBefore.name;
-              task.lastMoveDate = new Date().toUTCString();
-              if (team) {
-                task.teamId = team._id;
-                let teamBefore = department.teams.find(
-                  (item) => item.listId === currentTask.listId
-                );
-                if (!teamBefore) {
-                  task.listId = currentTask.listId;
-                  task.status = currentTask.status;
-                }
-              } else {
-                task.listId = data.action.data.listAfter.id;
-                task.status = data.action.data.listAfter.name;
-                task.teamId = currentTask?.teamId
-                  ? currentTask.teamId.toString()
-                  : null;
-              }
-            }
-
-            // add or delete files
-            if (data.action.data.attachment) {
-              if (type === "deleteAttachmentFromCard") {
-                task.deleteFiles = {
-                  trelloId: data.action.data.attachment.id,
-                  name: data.action.data.attachment.name,
-                };
-              }
-              if (type === "addAttachmentToCard") {
-                task.attachedFile = {
-                  trelloId: data.action.data?.attachment?.id,
-                  name: data.action.data?.attachment?.name,
-                  url: data.action.data.attachment?.url,
-                  mimeType: validateExtentions(
-                    data.action.data?.attachment?.name
-                  ),
-                };
-              }
-            }
-
-            // archeive
-            if (type === "updateCard" && action === "action_archived_card") {
-              task.listId = null;
-              task.status = "Archived";
-            }
-
-            // move to board
-            if (action === "action_move_card_to_board") {
-              // set the list id, and boardId, and if the list is for a team, set the team id and keep the status as the old one
-              // if the list id isn't for a team change the status and not the team id
-              if (team) {
-                task.teamId = team._id;
-                task.status = "Tasks Board";
-              } else task.status = data.action.data.list.name;
-              // un-archeive
-            }
-            if (action === "action_sent_card_to_board" && team)
-              task.status = "Tasks Board";
-
-            return await TaskController.updateTaskByTrelloDB(task);
-            cb(null, true);
-          }
-        }
-      } catch (error: any) {
-        logger.error({ updateBoardCardError: error });
-        cb(error, null);
-      }
-    });
-  }
-  static async webhookUpdateBoard(data: createCardInBoardResponse) {
-    taskRoutesQueue.push(async (cb) => {
-      try {
-        if (data?.action?.data) {
-          let type = data?.action?.type;
-          let action = data?.action?.display?.translationKey;
-          if (type === "createCard" && action === "action_create_card") {
-            let existed = await TaskController.getOneTaskBy({
-              cardId: data?.action?.data?.card?.id,
-            });
-            if (!existed) {
-              let dep = await Department.findOne({
-                boardId: data?.action?.data?.board?.id,
-              });
-              if (dep) {
-                let team = dep.teams.find(
-                  (item) => item.listId === data?.action?.data?.list?.id
-                );
-                let task: TaskData = {
-                  cardId: data.action.data.card.id,
-                  name: data.action.data.card.name,
-                  boardId: data.action.data.board.id,
-                  trelloShortUrl: `https://trello.com/c/${data.action.data.card.shortLink}`,
-                  deadline: data.action.data.card.due
-                    ? new Date(data.action.data.card.due)
-                    : undefined,
-                  start: data.action.data.card.start
-                    ? new Date(data.action.data.card.start)
-                    : undefined,
-                };
-                if (team && team._id) {
-                  task = {
-                    ...task,
-                    teamId: team._id,
-                    status: "inProgress",
-                    listId: dep.lists.find((item) => item.name === "inProgress")
-                      .listId,
-                  };
-                } else {
-                  task = {
-                    ...task,
-                    status: data.action.data.list.name,
-                    listId: data.action.data.list.id,
-                    teamId: null,
-                  };
-                }
-                await TaskController.createTaskByTrello(task);
-              }
-            }
-            cb();
-          }
-        }
-      } catch (error: any) {
-        logger.error({ updateBoardError: error });
-        cb(error);
-      }
-    });
-  }
 }
-export default BoardController;
+
+export default TrelloActionsController;

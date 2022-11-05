@@ -1,6 +1,6 @@
 import Queue from "queue";
 import logger from "../../../logger";
-import BoardController from "../../controllers/trello";
+import TrelloController from "../../controllers/trello";
 import NotificationController from "../../controllers/notification";
 import TaskDB from "../../dbCalls/tasks/tasks";
 import { io } from "../../../index";
@@ -33,7 +33,7 @@ export function moveTaskJob(
   var task;
   updateTaskQueue.push(async (cb) => {
     try {
-      const result = await BoardController.moveTaskToDiffList(cardId, listId);
+      const result = await TrelloController.moveTaskToDiffList(cardId, listId);
       cb(null);
     } catch (error) {
       logger.error({ moveTaskJobError: error });
@@ -71,7 +71,10 @@ export const updateCardJob = (
         due: data.deadline ? data.deadline : "",
         desc: data.description ? data.description : "",
       };
-      let response = await BoardController.__updateCard(data.cardId, taskData);
+      let response = await TrelloController.__updateCard({
+        cardId: data.cardId,
+        data: taskData,
+      });
       cb(null, response);
     } catch (error: any) {
       cb(error, null);
@@ -86,7 +89,7 @@ export const updateCardJob = (
       if (deleteFiles) {
         if (deleteFiles.length > 0) {
           let isDeletedAll = await deleteFiles?.map(async (item) => {
-            return await BoardController.__deleteAtachment(
+            return await TrelloController.__deleteAtachment(
               data.cardId,
               item.trelloId
             );
@@ -128,7 +131,7 @@ export const deleteTaskFromBoardJob = (data: TaskInfo) => {
   });
   updateTaskQueue.push(async (cb) => {
     try {
-      await BoardController.removeWebhook(data.cardId);
+      await TrelloController.removeWebhook(data.cardId);
     } catch (error) {
       logger.ercror({ deleteCardWebhookError: error });
     }
@@ -139,7 +142,7 @@ export const updateTaskAttachmentsJob = (task: TaskData) => {
   updateTaskQueue.push(async (cb) => {
     try {
       let attachments: AttachmentResponse[] =
-        await BoardController.__getCardAttachments(task.cardId);
+        await TrelloController.__getCardAttachments(task.cardId);
       let newfiles = attachments.map((item) => {
         let file: AttachmentSchema = {
           trelloId: item.id,

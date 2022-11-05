@@ -42,7 +42,7 @@ const errorUtils_1 = require("./../../utils/errorUtils");
 const logger_1 = __importDefault(require("../../../logger"));
 const task_1 = __importDefault(require("../../controllers/task"));
 const validation_1 = require("../../services/validation");
-const taskQueue_1 = require("../../background/taskQueue");
+const taskQueue_1 = require("../../backgroundJobs/taskQueue");
 const auth_1 = require("../../services/auth");
 const TaskReq = class TaskReq extends task_1.default {
   static handleCreateCard(req, res) {
