@@ -1832,3 +1832,35 @@
   level: 'info',
   timestamp: '2022-11-05 11:39:17'
 }
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-11-05 11:46:00'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-11-05 12:47:50'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-11-05 12:54:05'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-11-05 15:00:05'
+}
+{
+  message: {
+    removeBoard: 'https://api.trello.com/1/boards/63662e0b64435f0be866bd7b?response_type=token&key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68'
+  },
+  level: 'info',
+  timestamp: '2022-11-05 15:08:24'
+}
+{
+  message: { deleteTasksOfDepartment: { acknowledged: true, deletedCount: 0 } },
+  level: 'info',
+  timestamp: '2022-11-05 15:08:25'
+}
