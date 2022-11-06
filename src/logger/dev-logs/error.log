@@ -153,3 +153,120 @@
   level: 'error',
   timestamp: '2022-10-27 14:26:26'
 }
+{
+  message: {
+    createNewBoardError: FetchError: invalid json response body at https://api.trello.com/1/boards/?name=local%20to%20test&prefs_background=blue&defaultLists=false&key=0d05ca858d1bc7893a91aef2712e7568&token=e245a7ad9c08ec2c5083becc875097de33227aa9a6fbc04c295e57adc30c3aa2 reason: Unexpected token i in JSON at position 0
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/node-fetch/lib/index.js:273:32
+        at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+      type: 'invalid-json'
+    }
+  },
+  level: 'error',
+  timestamp: '2022-11-06 14:23:15'
+}
+{
+  message: {
+    createDepartmentBoardError: TypeError: Cannot read properties of undefined (reading 'id')
+        at model.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/models/Department.ts:266:59)
+        at Generator.next (<anonymous>)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/models/Department.ts:8:71
+        at new Promise (<anonymous>)
+        at __awaiter (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/models/Department.ts:4:12)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/models/Department.ts:265:61
+        at Array.map (<anonymous>)
+        at model.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/models/Department.ts:265:35)
+        at Generator.next (<anonymous>)
+        at fulfilled (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/models/Department.ts:5:58)
+  },
+  level: 'error',
+  timestamp: '2022-11-06 14:23:15'
+}
+{
+  message: {
+    createDepartmentError: TypeError: Cannot destructure property 'teams' of '(intermediate value)' as it is undefined.
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/department.ts:87:15)
+        at Generator.next (<anonymous>)
+        at fulfilled (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/department.ts:5:58)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5)
+  },
+  level: 'error',
+  timestamp: '2022-11-06 14:23:15'
+}
+{
+  message: {
+    createNewBoardError: FetchError: invalid json response body at https://api.trello.com/1/boards/?name=new%20one&prefs_background=blue&defaultLists=false&key=0d05ca858d1bc7893a91aef2712e7568&token=e245a7ad9c08ec2c5083becc875097de33227aa9a6fbc04c295e57adc30c3aa2 reason: Unexpected token i in JSON at position 0
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/node-fetch/lib/index.js:273:32
+        at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+      type: 'invalid-json'
+    }
+  },
+  level: 'error',
+  timestamp: '2022-11-06 14:35:54'
+}
+{
+  message: {
+    createDepartmentBoardError: TypeError: Cannot read properties of undefined (reading 'id')
+        at model.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/models/Department.ts:266:59)
+        at Generator.next (<anonymous>)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/models/Department.ts:8:71
+        at new Promise (<anonymous>)
+        at __awaiter (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/models/Department.ts:4:12)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/models/Department.ts:265:61
+        at Array.map (<anonymous>)
+        at model.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/models/Department.ts:265:35)
+        at Generator.next (<anonymous>)
+        at fulfilled (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/models/Department.ts:5:58)
+  },
+  level: 'error',
+  timestamp: '2022-11-06 14:35:54'
+}
+{
+  message: {
+    createDepartmentError: TypeError: Cannot destructure property 'teams' of '(intermediate value)' as it is undefined.
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/department.ts:87:15)
+        at Generator.next (<anonymous>)
+        at fulfilled (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/department.ts:5:58)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5)
+  },
+  level: 'error',
+  timestamp: '2022-11-06 14:35:54'
+}
+{
+  message: {
+    createNewBoardError: FetchError: invalid json response body at https://api.trello.com/1/boards/?name=new%20one&prefs_background=blue&defaultLists=false&key=f80168bee6829507c70115caf2126f11&token=050aa1c1ce152660f8ab5967735844c3682f820b2c43e9fca2719ab58f381592 reason: Unexpected token i in JSON at position 0
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/node-fetch/lib/index.js:273:32
+        at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+      type: 'invalid-json'
+    }
+  },
+  level: 'error',
+  timestamp: '2022-11-06 14:36:57'
+}
+{
+  message: {
+    createDepartmentBoardError: TypeError: Cannot read properties of undefined (reading 'id')
+        at model.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/models/Department.ts:266:59)
+        at Generator.next (<anonymous>)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/models/Department.ts:8:71
+        at new Promise (<anonymous>)
+        at __awaiter (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/models/Department.ts:4:12)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/models/Department.ts:265:61
+        at Array.map (<anonymous>)
+        at model.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/models/Department.ts:265:35)
+        at Generator.next (<anonymous>)
+        at fulfilled (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/models/Department.ts:5:58)
+  },
+  level: 'error',
+  timestamp: '2022-11-06 14:36:57'
+}
+{
+  message: {
+    createDepartmentError: TypeError: Cannot destructure property 'teams' of '(intermediate value)' as it is undefined.
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/department.ts:87:15)
+        at Generator.next (<anonymous>)
+        at fulfilled (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/department.ts:5:58)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5)
+  },
+  level: 'error',
+  timestamp: '2022-11-06 14:36:57'
+}
