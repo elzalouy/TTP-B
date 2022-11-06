@@ -265,6 +265,10 @@ class TaskController extends TaskDB {
       logger.error({ __updateTasksProjectId: error });
     }
   }
+  static async getTasksCSV(data: any) {
+    try {
+    } catch (error) {}
+  }
 }
 
 export default TaskController;

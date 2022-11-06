@@ -144,7 +144,7 @@ class TaskDB {
       logger.error({ updateMultiTaskDBError: error });
     }
   }
-  static async getTasksDB(data: TaskData) {
+  static async getTasksDB(data: mongoose.FilterQuery<TaskInfo>) {
     return await TaskDB.__getTasks(data);
   }
   static async getTasksByIdsDB(ids: string[]) {

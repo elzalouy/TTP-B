@@ -152,6 +152,11 @@ const TaskReq = class TaskReq extends TaskController {
       logger.error({ handleEditTasksProjectIdError: error });
     }
   }
+  static async handleGetTasksCSV(req: Request, res: Response) {
+    try {
+      let tasks = await super.getTasks({});
+    } catch (error) {}
+  }
 };
 
 export default TaskReq;
