@@ -49,7 +49,7 @@ export const createTaskSchema = Joi.object({
     "string.min": "Project Id is required",
     "any.required": "Project Id is required",
   }),
-  name: Joi.string().required().min(4).max(128).messages({
+  name: Joi.string().required().min(4).messages({
     "string.base": "Task Name is required",
     "string.empty": "Task name should be string with min 4 chars",
     "string.min": "Task name length should be Min 4 chars",
@@ -97,7 +97,7 @@ export const editTaskSchema = Joi.object({
   id: Joi.string()
     .required()
     .messages({ "any.required": "Task id is required" }),
-  name: Joi.string().optional().min(4).max(50).messages({
+  name: Joi.string().optional().min(4).messages({
     "string.base": "Task Name is required",
     "string.empty": "Task name should be string with min 4 chars",
     "string.min": "Task name length should be Min 4 chars",
