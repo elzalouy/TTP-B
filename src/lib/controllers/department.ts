@@ -1,4 +1,4 @@
-import mongoose from "mongoose";
+import config from "config";
 import logger from "../../logger";
 import Department from "../models/Department";
 import {
@@ -6,6 +6,7 @@ import {
   IDepartmentState,
   ListTypes,
 } from "../types/model/Department";
+import TrelloActionsController from "./trello";
 import BoardController from "./trello";
 export default class DepartmentController {
   static async createDepartment(data: IDepartment) {
@@ -80,8 +81,8 @@ export default class DepartmentController {
         }),
       });
       let validation = depDoc.createDepartmentValidate();
+      console.log({ validation });
       if (validation.error) return validation.error.details[0];
-
       // 2-Create Board/Teams/lists
       if (depDoc) {
         let { teams, lists } = await depDoc.createDepartmentBoard();
@@ -91,17 +92,18 @@ export default class DepartmentController {
       }
     } catch (error: any) {
       if (error?.error === "MongoError" && error?.id) {
-        await BoardController.deleteBoard(error?.boardId);
+        await TrelloActionsController.deleteBoard(error?.boardId);
         return error;
       }
       logger.error({ createDepartmentError: error });
     }
   }
+
   static async __deleteAllDocs() {
     try {
       let boards = await Department.find({}).select("boardId");
       boards.map(
-        async (item) => await BoardController.deleteBoard(item.boardId)
+        async (item) => await TrelloActionsController.deleteBoard(item.boardId)
       );
       await Department.deleteMany({});
     } catch (error) {

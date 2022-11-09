@@ -4,9 +4,9 @@ import logger from "../../../logger";
 import TaskController from "../../controllers/task";
 import { AttachmentSchema, TaskData } from "../../types/model/tasks";
 import { createTaskSchema, editTaskSchema } from "../../services/validation";
-import { updateTaskAttachmentsJob } from "../../background/actions/task.actions.Queue";
+import { updateTaskAttachmentsJob } from "../../backgroundJobs/actions/task.actions.Queue";
 import { jwtVerify } from "../../services/auth";
-import { taskRoutesQueue } from "../../background/routes/tasks.Route.Queue";
+import { taskRoutesQueue } from "../../backgroundJobs/routes/tasks.Route.Queue";
 
 const TaskReq = class TaskReq extends TaskController {
   static async handleCreateCard(req: Request, res: Response) {
@@ -151,6 +151,11 @@ const TaskReq = class TaskReq extends TaskController {
     } catch (error) {
       logger.error({ handleEditTasksProjectIdError: error });
     }
+  }
+  static async handleGetTasksCSV(req: Request, res: Response) {
+    try {
+      let tasks = await super.getTasks({});
+    } catch (error) {}
   }
 };
 

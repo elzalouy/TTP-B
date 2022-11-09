@@ -1,11 +1,11 @@
 import { Server } from "socket.io";
 import { DefaultEventsMap } from "socket.io/dist/typed-events";
 import logger from "../../logger";
-import { removeOldNotifications } from "../background/actions/notifications.actions.cron";
+import { removeOldNotifications } from "../backgroundJobs/actions/notifications.actions.cron";
 import {
   projectsDueDate,
   projectsPassedDate,
-} from "../background/actions/project.actions.cron";
+} from "../backgroundJobs/actions/project.actions.cron";
 export default async function (
   io: Server<DefaultEventsMap, DefaultEventsMap, DefaultEventsMap, any>
 ) {

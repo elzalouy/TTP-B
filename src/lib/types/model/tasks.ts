@@ -41,9 +41,11 @@ export interface TaskData {
   _id?: string;
   id?: string;
   name?: string;
-  projectId?: string;
-  categoryId?: string;
-  subCategoryId?: string;
+  projectId?: string | ObjectId;
+  categoryId?: string | ObjectId;
+  subCategoryId?: string | ObjectId;
+  categoryName?: string;
+  subCategoryName?: string;
   countNotClear?: number;
   countShared?: number;
   listId?: string;
@@ -54,14 +56,14 @@ export interface TaskData {
   done?: Date;
   turnoverTime?: number;
   attachedCard?: string;
-  teamId?: string;
+  teamId?: string | ObjectId;
   cardId?: string;
   boardId?: string;
   trelloShortUrl?: string;
   file?: object;
   description?: string;
-  lastMove?: string;
-  lastMoveDate?: String;
+  lastMove?: string | String;
+  lastMoveDate?: string | String;
   // edit task files only
   attachedFiles?: AttachmentSchema[];
   deleteFiles?: AttachmentSchema[] | any;

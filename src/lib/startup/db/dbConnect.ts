@@ -1,10 +1,12 @@
-import { hashBassword } from "../services/auth";
+import { hashBassword } from "../../services/auth";
 import { connect, ConnectOptions } from "mongoose";
 import { config } from "dotenv";
-import logger from "../../logger";
-import { UserData } from "../types/model/User";
-import UserDB from "../dbCalls/user/user";
+import logger from "../../../logger";
+import { UserData } from "../../types/model/User";
+import UserDB from "../../dbCalls/user/user";
 import Config from "config";
+import Department from "../../models/Department";
+import DepartmentController from "../../controllers/department";
 config();
 
 const db: string = Config.get("monogDb");
@@ -46,8 +48,17 @@ const mongoDB: () => Promise<void> = async () => {
         verified: true,
       };
       await UserDB.createUser(data);
-
-      console.log("Done");
+    }
+    let department = await Department.findOne({
+      name: new RegExp(Config.get("CreativeBoard"), "i"),
+    });
+    if (department === null) {
+      console.log({ department });
+      let dep: any = {
+        name: Config.get("CreativeBoard"),
+        color: "blue",
+      };
+      await DepartmentController.createDepartment(dep);
     }
   } catch (error) {
     console.error({ mongoDBError: error });

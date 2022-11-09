@@ -1,11 +1,9 @@
 import { customeError } from "../../utils/errorUtils";
 import { Request, Response } from "express";
 import logger from "../../../logger";
-import { localize } from "../../utils/msgLocalize";
 import BoardController from "../../controllers/trello";
-import { webhookUpdateInterface } from "../../types/controller/Tasks";
-import { updateTaskQueue } from "../../background/actions/task.actions.Queue";
-import { TaskInfo } from "../../types/model/tasks";
+import { webhookUpdateInterface } from "../../types/controller/trello";
+import { updateTaskQueue } from "../../backgroundJobs/actions/task.actions.Queue";
 
 const BoardReq = class BoardReq extends BoardController {
   static async handleGetBoards(req: Request, res: Response) {
@@ -21,19 +19,6 @@ const BoardReq = class BoardReq extends BoardController {
       return res.status(500).send(customeError("server_error", 500));
     }
   }
-
-  static async handleWebhookUpdateCard(req: Request, res: Response) {
-    try {
-      updateTaskQueue.push(async (cb) => {
-        let trelloData: webhookUpdateInterface = req.body;
-        let task = await super.webhookUpdate(trelloData);
-        return res.status(200).send(task);
-      });
-    } catch (error) {
-      logger.error({ handleWebhookUpdateCardError: error });
-    }
-  }
-
   static async handleGetMembers(req: Request, res: Response) {
     try {
       let members = await super.getMembersInTrello();
@@ -90,16 +75,6 @@ const BoardReq = class BoardReq extends BoardController {
       }
     } catch (error) {
       logger.error({ handleGetBoards: error });
-      return res.status(500).send(customeError("server_error", 500));
-    }
-  }
-
-  static async handleWebHookUpdateBoard(req: Request, res: Response) {
-    try {
-      let data = await super.webhookUpdateBoard(req.body);
-      return res.send({ data });
-    } catch (error) {
-      logger.error({ handleCreateCardInBoardError: error });
       return res.status(500).send(customeError("server_error", 500));
     }
   }

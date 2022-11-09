@@ -144,7 +144,7 @@ class TaskDB {
       logger.error({ updateMultiTaskDBError: error });
     }
   }
-  static async getTasksDB(data: TaskData) {
+  static async getTasksDB(data: mongoose.FilterQuery<TaskInfo>) {
     return await TaskDB.__getTasks(data);
   }
   static async getTasksByIdsDB(ids: string[]) {
@@ -354,6 +354,7 @@ class TaskDB {
   }
   static async __createTaskByTrelloDB(data: TaskData) {
     try {
+      console.log({ data });
       let task = await Tasks.findOne({ cardId: data.cardId });
       if (task) {
         data.status = task.status;

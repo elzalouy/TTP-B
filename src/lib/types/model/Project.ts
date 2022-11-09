@@ -17,6 +17,10 @@ export interface ProjectInfo extends Document {
   numberOfFinishedTasks: number;
   adminId: ObjectId;
   projectManagerName: string;
+  listId: string;
+  boardId: string;
+  cardId: string;
+  associateProjectManager: string;
 }
 export interface ProjectData {
   _id?: string | ObjectID;
@@ -37,4 +41,8 @@ export interface ProjectData {
   projectManagerName?: string;
   adminName?: string;
   adminId?: ObjectId;
+  listId?: string;
+  boardId?: string;
+  cardId?: string;
+  associateProjectManager?: string;
 }

@@ -1,0 +1,14 @@
+TODO Update Project
+
+- edit Project (done)
+- edit card (done)
+- call the hook (Done)
+- update project hook function (done)
+- call the socket (in Progress)
+  TODO create project
+- create project controller update (Done)
+- create project trello action (Done)
+- create project card function in trlloWebhook class (Done)
+  TODO call the socket
+- add a new socket event, and connect with the front end app.
+- update the front-end app to get the updated projects, specifically the projects page.

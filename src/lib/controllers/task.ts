@@ -1,17 +1,15 @@
 import { TaskData, TaskInfo } from "./../types/model/tasks";
 import logger from "../../logger";
 import TaskDB from "../dbCalls/tasks/tasks";
-import BoardController from "./trello";
+import TrelloController from "./trello";
 import {
-  createTaskQueue,
   deleteTaskFromBoardJob,
   moveTaskJob,
   updateCardJob,
-  updateTaskQueue,
-} from "../background/actions/task.actions.Queue";
+} from "../backgroundJobs/actions/task.actions.Queue";
 import { provideCardIdError } from "../types/controller/Tasks";
 import { io } from "../..";
-import { taskRoutesQueue } from "../background/routes/tasks.Route.Queue";
+import { taskRoutesQueue } from "../backgroundJobs/routes/tasks.Route.Queue";
 class TaskController extends TaskDB {
   static async getTasks(data: TaskData) {
     return await TaskController.__getTasks(data);
@@ -33,7 +31,6 @@ class TaskController extends TaskDB {
     return await TaskController.__deleteTasksByProjectId(id);
   }
   static async deleteTasks(ids: string[]) {
-    ``;
     return await TaskController.__deleteTasks(ids);
   }
 
@@ -106,7 +103,7 @@ class TaskController extends TaskDB {
     try {
       if (files && files.length > 0) {
         let newAttachments = await files.map(async (file) => {
-          return await BoardController.createAttachmentOnCard(
+          return await TrelloController.createAttachmentOnCard(
             data.cardId,
             file
           );
@@ -133,7 +130,7 @@ class TaskController extends TaskDB {
       let task: TaskInfo;
       data.attachedFiles = [];
       let createdCard: { id: string } | any =
-        await BoardController.createCardInList(data);
+        await TrelloController.createCardInList(data);
       if (createdCard) {
         data.cardId = createdCard.id;
         data.trelloShortUrl = createdCard.shortUrl;
@@ -142,7 +139,7 @@ class TaskController extends TaskDB {
           taskRoutesQueue.push(async () => {
             data.cardId = createdCard.id;
             data.trelloShortUrl = createdCard.shortUrl;
-            await BoardController.createWebHook(
+            await TrelloController.createWebHook(
               data.cardId,
               "Trello_Webhook_Callback_Url"
             );
@@ -173,8 +170,8 @@ class TaskController extends TaskDB {
       });
       tasks.forEach(async (item) => {
         if (item.cardId) {
-          await BoardController.deleteCard(item.cardId);
-          await BoardController.removeWebhook(item.cardId);
+          await TrelloController.deleteCard(item.cardId);
+          await TrelloController.removeWebhook(item.cardId);
         }
       });
       return await super.deleteTasksByProjectIdDB(id);
@@ -188,7 +185,7 @@ class TaskController extends TaskDB {
       // let tasks = await super.getTasksByIdsDB;
       let deleteResult = await super.deleteTasksWhereDB(data);
       deleteResult.forEach((item) =>
-        BoardController.removeWebhook(item.cardId)
+        TrelloController.removeWebhook(item.cardId)
       );
       if (deleteResult) return deleteResult;
       else throw "Error hapenned while deleting tasks";
@@ -201,8 +198,8 @@ class TaskController extends TaskDB {
     try {
       let tasks = await super.getTasksByIdsDB(ids);
       tasks.forEach(async (item) => {
-        BoardController.deleteCard(item.cardId);
-        BoardController.removeWebhook(item.cardId);
+        TrelloController.deleteCard(item.cardId);
+        TrelloController.removeWebhook(item.cardId);
       });
       return await super.deleteTasksDB(ids);
     } catch (error) {
@@ -215,7 +212,7 @@ class TaskController extends TaskDB {
       let task = await super.getTaskDB(id);
       if (task) {
         deleteTaskFromBoardJob(task);
-        await BoardController.deleteCard(task?.cardId);
+        await TrelloController.deleteCard(task?.cardId);
         return await super.deleteTaskDB(id);
       }
       throw "Task not existed";
@@ -226,7 +223,7 @@ class TaskController extends TaskDB {
 
   static async __downloadAttachment(cardId: string, attachmentId: string) {
     try {
-      let response = await BoardController.downloadAttachment(
+      let response = await TrelloController.downloadAttachment(
         cardId,
         attachmentId
       );
@@ -240,8 +237,8 @@ class TaskController extends TaskDB {
   static async __createTaskByTrello(data: TaskData) {
     try {
       let response = await super.__createTaskByTrelloDB(data);
-      if (response.cardId)
-        await BoardController.createWebHook(
+      if (response?.cardId)
+        await TrelloController.createWebHook(
           response.cardId,
           "Trello_Webhook_Callback_Url"
         );
@@ -267,6 +264,10 @@ class TaskController extends TaskDB {
     } catch (error) {
       logger.error({ __updateTasksProjectId: error });
     }
+  }
+  static async getTasksCSV(data: any) {
+    try {
+    } catch (error) {}
   }
 }
 

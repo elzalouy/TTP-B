@@ -16,12 +16,12 @@ const ProjectSchema: Schema = new Schema<ProjectInfo>(
       type: String,
       required: true,
     },
+
     adminId: {
       type: Schema.Types.ObjectId,
       ref: "users",
       required: true,
     },
-
     projectDeadline: {
       type: Date,
       default: null,
@@ -50,6 +50,17 @@ const ProjectSchema: Schema = new Schema<ProjectInfo>(
       type: Schema.Types.ObjectId,
       required: true,
       ref: "clients",
+    },
+    boardId: {
+      type: String,
+      default: null,
+    },
+    listId: { type: String, default: null },
+    cardId: { type: String, default: null },
+    associateProjectManager: {
+      type: String,
+      default: null,
+      required: false,
     },
   },
   {
