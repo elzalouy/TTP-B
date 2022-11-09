@@ -12,6 +12,7 @@ import {
 } from "../../types/model/tasks";
 import TaskController from "../../controllers/task";
 import { deleteAll } from "../../services/upload";
+import Department from "../../models/Department";
 
 export const createTaskQueue = Queue({
   results: [],
@@ -64,13 +65,32 @@ export const updateCardJob = (
   delete data.attachedFiles;
   updateTaskQueue.push(async (cb) => {
     try {
+      let current = await TaskController.__getTask(data.id);
+      let dep = await Department.findOne({ boardId: data.boardId });
+
+      let isTeamChanged =
+        current?.teamId?.toString() !== data.teamId.toString();
+
+      let newTeamListId = dep?.teams?.find(
+        (item) => item._id.toString() === data.teamId.toString()
+      ).listId;
+
+      // if team is not the same as the current one, so listId equals the new team listId.
+      // If team is the same, will pass the data list id.
       let taskData: any = {
         name: data.name,
-        boardId: data.boardId,
-        listId: data.listId,
-        due: data.deadline ? data.deadline : "",
         desc: data.description ? data.description : "",
+        due: data.deadline ? data.deadline : "",
+        idBoard: data.boardId,
+        idList: isTeamChanged === true ? newTeamListId : data.listId,
       };
+      console.log({
+        data,
+        isTeamChanged,
+        newTeamListId,
+        idList: data.listId,
+        taskData,
+      });
       let response = await TrelloController.__updateCard({
         cardId: data.cardId,
         data: taskData,
