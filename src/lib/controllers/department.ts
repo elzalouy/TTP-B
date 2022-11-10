@@ -41,8 +41,15 @@ export default class DepartmentController {
       let department = await Department.findById(id);
       if (!department)
         return { error: "NotFound", message: "Department was not found" };
-      let response = await department.deleteDepartment();
-      return response;
+      if (department.name.toLocaleLowerCase() !== config.get("CreativeBoard")) {
+        let response = await department.deleteDepartment();
+        return response;
+      } else
+        return {
+          error: "CreativeBoard",
+          message:
+            "Creative department must not be deleted, it includes all projects",
+        };
     } catch (error) {
       logger.error({ deleteDepartmentError: error });
     }
@@ -81,7 +88,6 @@ export default class DepartmentController {
         }),
       });
       let validation = depDoc.createDepartmentValidate();
-      console.log({ validation });
       if (validation.error) return validation.error.details[0];
       // 2-Create Board/Teams/lists
       if (depDoc) {
