@@ -16,5 +16,5 @@
     "Tasks Board"
   ],
   "redis": "redis://localhost:6379",
-  "CreativeBoard": "Creative"
+  "CreativeBoard": "creative"
 }
