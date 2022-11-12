@@ -43,7 +43,7 @@ const AuthController = class AuthController extends user_1.default {
         return __awaiter(this, void 0, void 0, function* () {
             try {
                 let verifyToken = yield (0, auth_1.jwtVerify)(token);
-                if (!verifyToken.user) {
+                if (!verifyToken) {
                     return (0, errorUtils_1.customeError)("not_valid_token", 400);
                 }
                 let checkPassword = (0, validation_1.passwordCheck)(password);
@@ -52,8 +52,9 @@ const AuthController = class AuthController extends user_1.default {
                 }
                 let cryptPassword = yield (0, auth_1.hashBassword)(password);
                 let user = yield _super.updateUser.call(this, {
-                    id: verifyToken.user.id,
+                    id: verifyToken.id,
                     password: cryptPassword,
+                    verified: true,
                 });
                 return { user, status: 200 };
             }
@@ -72,7 +73,7 @@ const AuthController = class AuthController extends user_1.default {
                 if (!user) {
                     return (0, errorUtils_1.customeError)("no_user_found", 400);
                 }
-                let token = yield (0, auth_1.createJwtToken)(user._id.toString());
+                let token = yield (0, auth_1.createJwtToken)(user);
                 yield (0, mail_1.default)({
                     token: token,
                     email: email,
@@ -95,22 +96,22 @@ const AuthController = class AuthController extends user_1.default {
             try {
                 const { email, password } = data;
                 let user = yield _super.findUser.call(this, { email });
-                console.log(user);
-                if (!user) {
+                if (!user || user.verified === false) {
                     return null;
                 }
                 let passwordCheck = yield (0, auth_1.comparePassword)(password, user.password);
                 if (!passwordCheck) {
                     return null;
                 }
-                let getToken = (0, auth_1.createJwtToken)(user._id.toString());
-                let { _id, email: mail, role, type, image, trelloBoardId, trelloMemberId, } = user;
+                let getToken = (0, auth_1.createJwtToken)(user);
+                let { _id, email: mail, role, type, image, trelloBoardId, trelloMemberId, name, } = user;
                 return {
                     _id,
                     email: mail,
                     role,
                     type,
                     image,
+                    name,
                     trelloBoardId,
                     trelloMemberId,
                     token: getToken,

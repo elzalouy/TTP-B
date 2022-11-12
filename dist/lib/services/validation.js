@@ -53,7 +53,7 @@ exports.createTaskSchema = joi_1.default.object({
         "string.min": "Project Id is required",
         "any.required": "Project Id is required",
     }),
-    name: joi_1.default.string().required().min(4).max(50).messages({
+    name: joi_1.default.string().required().min(4).messages({
         "string.base": "Task Name is required",
         "string.empty": "Task name should be string with min 4 chars",
         "string.min": "Task name length should be Min 4 chars",
@@ -100,7 +100,7 @@ exports.editTaskSchema = joi_1.default.object({
     id: joi_1.default.string()
         .required()
         .messages({ "any.required": "Task id is required" }),
-    name: joi_1.default.string().optional().min(4).max(50).messages({
+    name: joi_1.default.string().optional().min(4).messages({
         "string.base": "Task Name is required",
         "string.empty": "Task name should be string with min 4 chars",
         "string.min": "Task name length should be Min 4 chars",
@@ -232,7 +232,6 @@ const validateExtentions = (name) => {
             format = types[23];
             break;
     }
-    console.log(format);
     return format;
 };
 exports.validateExtentions = validateExtentions;

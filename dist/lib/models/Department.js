@@ -19,6 +19,7 @@ const logger_1 = __importDefault(require("../../logger"));
 const trello_1 = __importDefault(require("../controllers/trello"));
 const Department_1 = require("../types/model/Department");
 const Task_1 = __importDefault(require("./Task"));
+const config_1 = __importDefault(require("config"));
 const DepartmentSchema = new mongoose_1.Schema({
     name: {
         type: String,
@@ -57,7 +58,7 @@ const DepartmentSchema = new mongoose_1.Schema({
                 name: {
                     type: String,
                     enum: {
-                        values: Department_1.ListTypes,
+                        values: [...Department_1.ListTypes, "projects"],
                         message: `{VALUE} is not one of the list types ["Tasks Board", "inProgress", "Shared", "Review", "Done", "Not Clear","Cancled"]`,
                     },
                 },
@@ -218,15 +219,22 @@ DepartmentSchema.methods.createDepartmentBoard = function () {
             if ((board === null || board === void 0 ? void 0 : board.id) && (board === null || board === void 0 ? void 0 : board.url)) {
                 this.boardId = board.id;
                 this.boardURL = board.url;
-                yield trello_1.default.createWebHook(board.id, "Trello_Webhook_Callback_Url_Board");
+                yield trello_1.default.createWebHook(board.id, "Trello_Webhook_Callback_Url");
             }
             //2- create lists
-            let listsResult = yield lists.map((list, index) => __awaiter(this, void 0, void 0, function* () {
+            let departmentLists = this.name.toLowerCase() === config_1.default.get("CreativeBoard")
+                ? [...lists, { name: "projects", listId: "" }]
+                : lists;
+            let listsResult = yield departmentLists.map((list, index) => __awaiter(this, void 0, void 0, function* () {
                 result = yield trello_1.default.addListToBoard(board.id, list.name);
                 list.listId = result.id;
                 return list;
             }));
             lists = yield Promise.all(listsResult);
+            let CreativeBoard = lists.find((item) => item.name === "projects");
+            console.log({ CreativeBoard });
+            if (CreativeBoard)
+                trello_1.default.createWebHook(CreativeBoard.listId, "Trello_Webhook_Callback_Url_Project");
             // 3- create teams
             let teamsResult = yield teams.map((team, index) => __awaiter(this, void 0, void 0, function* () {
                 result = yield trello_1.default.addListToBoard(board.id, team.name);

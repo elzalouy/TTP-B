@@ -48,7 +48,9 @@ const UserDB = class UserDB {
     static __getUsersData(data) {
         return __awaiter(this, void 0, void 0, function* () {
             try {
-                let user = yield User_1.default.find(data).lean();
+                let user = yield User_1.default.find(data)
+                    .select("_id name email verified role image trelloMemberId userTeams")
+                    .lean();
                 return user;
             }
             catch (error) {
@@ -94,8 +96,7 @@ const UserDB = class UserDB {
     static __getUserData(data) {
         return __awaiter(this, void 0, void 0, function* () {
             try {
-                let user = yield User_1.default.findOne(Object.assign({}, data))
-                    .lean();
+                let user = yield User_1.default.findOne(Object.assign({}, data)).lean();
                 return user;
             }
             catch (error) {
@@ -106,7 +107,7 @@ const UserDB = class UserDB {
     static __createNewUser(data) {
         return __awaiter(this, void 0, void 0, function* () {
             try {
-                let user = new User_1.default(data);
+                let user = new User_1.default(Object.assign(Object.assign({}, data), { verified: data.verified ? data.verified : false }));
                 yield user.save();
                 return user;
             }

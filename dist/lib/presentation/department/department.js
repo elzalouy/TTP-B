@@ -23,7 +23,6 @@ const DepartmentReq = class DepartmentReq extends department_1.default {
         return __awaiter(this, void 0, void 0, function* () {
             try {
                 let response = yield _super.createDepartment.call(this, req.body);
-                console.log({ response: response });
                 if ((response === null || response === void 0 ? void 0 : response.error) || (response === null || response === void 0 ? void 0 : response.message))
                     return res.status(400).send(response === null || response === void 0 ? void 0 : response.message);
                 if (response) {

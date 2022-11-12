@@ -7,6 +7,10 @@ import UserDB from "../../dbCalls/user/user";
 import Config from "config";
 import Department from "../../models/Department";
 import DepartmentController from "../../controllers/department";
+import ProjectController from "../../controllers/project";
+import TrelloActionsController from "../../controllers/trello";
+import { ProjectData, ProjectInfo } from "../../types/model/Project";
+import { IDepartment } from "../../types/model/Department";
 config();
 
 const db: string = Config.get("monogDb");
@@ -53,12 +57,22 @@ const mongoDB: () => Promise<void> = async () => {
       name: new RegExp(Config.get("CreativeBoard"), "i"),
     });
     if (department === null) {
-      console.log({ department });
       let dep: any = {
         name: Config.get("CreativeBoard"),
         color: "blue",
       };
-      await DepartmentController.createDepartment(dep);
+      let result: IDepartment = await DepartmentController.createDepartment(
+        dep
+      );
+      let listOfProjects = result.lists.find(
+        (item) => item.name.toLocaleLowerCase() === "projects"
+      );
+      if (result && result?._id) {
+        let projects = await ProjectController.getProject({});
+        projects.forEach((item: ProjectData) => {
+          TrelloActionsController.__createProject(listOfProjects.listId, item);
+        });
+      }
     }
   } catch (error) {
     console.error({ mongoDBError: error });

@@ -44,7 +44,7 @@ const UserController = class UserController extends user_1.default {
             return yield UserController.__deleteUserDoc(id);
         });
     }
-    static getUsersPmOrSA(data) {
+    static getUsers(data) {
         return __awaiter(this, void 0, void 0, function* () {
             return yield UserController.__getUsersInfo(data);
         });
@@ -66,13 +66,13 @@ const UserController = class UserController extends user_1.default {
         return __awaiter(this, void 0, void 0, function* () {
             try {
                 let user = yield _super.findUserById.call(this, id);
-                let token = yield (0, auth_1.createJwtToken)(user._id.toString());
+                let token = yield (0, auth_1.createJwtToken)(user);
                 yield (0, mail_1.default)({
                     email: user.email,
                     subject: "This is a reminder to set a New Password for your TTP account",
                     token: token,
                     path: "newPassword",
-                    image: "http://drive.google.com/uc?export=view&id=1bfh1fwvqg9JegwTghhuYWIhUS0wGIryj"
+                    image: "http://drive.google.com/uc?export=view&id=1bfh1fwvqg9JegwTghhuYWIhUS0wGIryj",
                 });
             }
             catch (error) {
@@ -131,13 +131,13 @@ const UserController = class UserController extends user_1.default {
             try {
                 const { id, password, oldPassword } = data;
                 const token = yield (0, auth_1.jwtVerify)(id);
-                if (!token.user) {
+                if (!token.id) {
                     return (0, errorUtils_1.customeError)("not_valid_token", 400);
                 }
                 if ((0, validation_1.passwordCheck)(password)) {
                     return (0, errorUtils_1.customeError)("password_length", 400);
                 }
-                let findUser = yield _super.findUserById.call(this, token.user.id);
+                let findUser = yield _super.findUserById.call(this, token.id);
                 if (!findUser) {
                     return (0, errorUtils_1.customeError)("user_not_exist", 409);
                 }
@@ -148,8 +148,9 @@ const UserController = class UserController extends user_1.default {
                 // hash password
                 let passwordHash = yield (0, auth_1.hashBassword)(password);
                 let user = yield _super.updateUser.call(this, {
-                    id: token.user.id,
+                    id: token.id,
                     password: passwordHash,
+                    verified: true,
                 });
                 return user;
             }
@@ -167,21 +168,22 @@ const UserController = class UserController extends user_1.default {
             try {
                 const { id, password } = data;
                 const token = yield (0, auth_1.jwtVerify)(id);
-                if (!token.user) {
+                if (!token.id) {
                     return (0, errorUtils_1.customeError)("not_valid_token", 400);
                 }
                 if ((0, validation_1.passwordCheck)(password)) {
                     return (0, errorUtils_1.customeError)("password_length", 400);
                 }
-                let findUser = yield _super.findUserById.call(this, token.user.id);
+                let findUser = yield _super.findUserById.call(this, token.id);
                 if (!findUser) {
                     return (0, errorUtils_1.customeError)("user_not_exist", 409);
                 }
                 // hash password
                 let passwordHash = yield (0, auth_1.hashBassword)(password);
                 let user = yield _super.updateUser.call(this, {
-                    id: token.user.id,
+                    id: token.id,
                     password: passwordHash,
+                    verified: true,
                 });
                 return user;
             }
@@ -202,17 +204,17 @@ const UserController = class UserController extends user_1.default {
                 if (!findUser) {
                     return null;
                 }
-                let token = yield (0, auth_1.createJwtToken)(id.toString());
+                let token = yield (0, auth_1.createJwtToken)(data);
                 if (data.email) {
                     (0, mail_1.default)({
                         email: data.email,
-                        subject: "Please update your new password",
+                        subject: "Please set your new password",
                         token: token,
                         path: "newPassword",
-                        image: "http://drive.google.com/uc?export=view&id=1bfh1fwvqg9JegwTghhuYWIhUS0wGIryj"
+                        image: "http://drive.google.com/uc?export=view&id=1bfh1fwvqg9JegwTghhuYWIhUS0wGIryj",
                     });
                 }
-                return yield _super.updateUser.call(this, Object.assign({}, data));
+                return yield _super.updateUser.call(this, Object.assign(Object.assign({}, data), { verified: false, password: null }));
             }
             catch (error) {
                 logger_1.default.error({ updateUserInfoError: error });
@@ -237,14 +239,14 @@ const UserController = class UserController extends user_1.default {
                 if (findUser) {
                     return (0, errorUtils_1.customeError)("user_already_exist", 400);
                 }
-                let newUser = yield _super.createUser.call(this, Object.assign({}, data /* password: passwordHash  */));
-                let token = yield (0, auth_1.createJwtToken)(newUser._id.toString());
+                let newUser = yield _super.createUser.call(this, Object.assign({}, data));
+                let token = yield (0, auth_1.createJwtToken)(newUser);
                 (0, mail_1.default)({
                     email: email,
                     subject: "Please update your new password",
                     token: token,
                     path: "newPassword",
-                    image: "http://drive.google.com/uc?export=view&id=1bfh1fwvqg9JegwTghhuYWIhUS0wGIryj"
+                    image: "http://drive.google.com/uc?export=view&id=1bfh1fwvqg9JegwTghhuYWIhUS0wGIryj",
                 });
                 return newUser;
             }

@@ -8,4 +8,5 @@ exports.default = {
     SORT_PROJECTS: "/sortPorjects",
     FILTER_PROJECTS: "/filterProjects",
     SEARCH_PROJECTS: "/searchProjects/:searchStr",
+    DELETE_PROJECTS: "/deleteProjects",
 };

@@ -14,6 +14,6 @@ const { handleCreateDepartment, handleDeleteDepartment, handleGetDepartment, han
 router.post(`${CREATE_DEP}`, handleCreateDepartment);
 router.put(`${UPDATE_DEP}`, handleUpdateDepartment);
 router.delete(`${DELETE_DEP}`, handleDeleteDepartment);
-router.get(`${GET_DEPS}`, handleGetDepartment);
+router.get(`${GET_DEPS}`, Authed_1.default, handleGetDepartment);
 router.delete(`${DROP_TEST}`, Authed_1.default, testEnv_1.default, handleDropTestCollection);
 exports.default = router;

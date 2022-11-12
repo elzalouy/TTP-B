@@ -13,4 +13,5 @@ exports.default = {
     DELETE_TASK: "/deleteTask",
     DOWNLOAD_ATTACHMENT: "/downloadAttachment",
     EDIT_TASKS_PROJECTID: "/editTasksProjectId",
+    TASKS_CSV: "/tasks/csv",
 };
