@@ -10,7 +10,7 @@ const multer_1 = __importDefault(require("../../middlewares/multer"));
 const Authed_1 = __importDefault(require("../../middlewares/Auth/Authed"));
 const router = (0, express_1.Router)();
 const multer = (0, multer_1.default)();
-const { CREATE_TASK, UPDATE_TASK, GET_TASKS, FILTER_TASKS, MOVE_TASK, DELETE_TASKS, DELETE_TASKS_BY_PROJECT_ID, DELETE_TASK, DOWNLOAD_ATTACHMENT, EDIT_TASKS_PROJECTID, } = apis_1.default;
+const { CREATE_TASK, UPDATE_TASK, GET_TASKS, FILTER_TASKS, MOVE_TASK, DELETE_TASKS, DELETE_TASKS_BY_PROJECT_ID, DELETE_TASK, DOWNLOAD_ATTACHMENT, EDIT_TASKS_PROJECTID, TASKS_CSV, } = apis_1.default;
 const { handleCreateCard, handleUpdateCard, handleGetTasks, handleFilterTasks, handleMoveCard, handleDeleteTasks, handleDeleteTasksByProjectId, handleDeleteTask, handleDownloadAttachment, hanldeEditTasksProjectId, } = task_1.default;
 router.post(`${CREATE_TASK}`, Authed_1.default, multer.array("attachedFiles"), handleCreateCard);
 router.get(`${DOWNLOAD_ATTACHMENT}`, handleDownloadAttachment);

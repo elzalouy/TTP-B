@@ -12,14 +12,17 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const auth_1 = require("../../services/auth");
 exports.default = (req, res, next) => __awaiter(void 0, void 0, void 0, function* () {
     try {
-        // missing or bad authentication => 401 unauthorized
-        const token = req.header("Authorization");
+        const token = req.header("authorization");
         if (!token)
             return res.status(401).send("Access denied, No token provided");
         const decoded = yield (0, auth_1.jwtVerify)(token);
         if (!(decoded === null || decoded === void 0 ? void 0 : decoded.id)) {
-            return res.status(401).send("Invalid Token");
+            return res.status(400).send("Invalid Token");
         }
+        if (decoded.role !== "SM")
+            return res
+                .status(401)
+                .send("Un-authenticated, you should be authenticated to do this job ");
         next();
     }
     catch (error) {

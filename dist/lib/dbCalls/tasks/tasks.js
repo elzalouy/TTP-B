@@ -311,6 +311,7 @@ class TaskDB {
                 task.attachedFiles = data.deleteFiles
                     ? task.attachedFiles.filter((item) => item.trelloId === data.deleteFiles.trelloId)
                     : task.attachedFiles;
+                task.teamId = data.teamId ? new mongodb_1.ObjectId(data.teamId) : task.teamId;
                 delete task._id;
                 let update = yield Task_1.default.findByIdAndUpdate(id, task, {
                     new: true,
@@ -349,10 +350,6 @@ class TaskDB {
     static __createTask(data) {
         return __awaiter(this, void 0, void 0, function* () {
             try {
-                let existed = yield Task_1.default.findOne({ cardId: data.cardId });
-                if (existed) {
-                    return yield existed.update(data);
-                }
                 let task = new Task_1.default(data);
                 task = yield task.save();
                 return task;
@@ -373,9 +370,8 @@ class TaskDB {
                 if (data.status)
                     filter.status = data.status;
                 if (data.name) {
-                    //Making search value to lower case for case insensitive search
                     let name = data.name.toLowerCase();
-                    filter.name = { $regex: name };
+                    filter.name = { $regex: new RegExp("^" + name, "i") };
                 }
                 if (data.projectManager)
                     filter.projectManager = { $regex: data.projectManager };
@@ -420,7 +416,8 @@ class TaskDB {
                 task.lastMoveDate = (data === null || data === void 0 ? void 0 : data.lastMoveDate)
                     ? data.lastMoveDate
                     : task.lastMoveDate;
-                task.deadline = (data === null || data === void 0 ? void 0 : data.deadline) ? data.deadline : task.deadline;
+                task.deadline =
+                    (data === null || data === void 0 ? void 0 : data.deadline) !== undefined ? data.deadline : task.deadline;
                 task.start = (data === null || data === void 0 ? void 0 : data.start) ? data.start : task.start;
                 if (data.attachedFile) {
                     let file = new Task_1.TaskFileSchema(Object.assign({}, data.attachedFile));
@@ -442,12 +439,19 @@ class TaskDB {
     static __createTaskByTrelloDB(data) {
         return __awaiter(this, void 0, void 0, function* () {
             try {
-                let result = yield Task_1.default.findOne({ cardId: data.cardId });
-                if (result)
-                    return result;
+                console.log({ data });
+                let task = yield Task_1.default.findOne({ cardId: data.cardId });
+                if (task) {
+                    data.status = task.status;
+                    task = yield task.set(data).save();
+                    yield __1.io.sockets.emit("update-task", task);
+                    return task;
+                }
                 else {
                     let task = new Task_1.default(data);
-                    return yield task.save();
+                    task = yield task.save();
+                    yield __1.io.sockets.emit("create-task", task);
+                    return yield task;
                 }
             }
             catch (error) {

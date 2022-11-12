@@ -49,6 +49,17 @@ const ProjectSchema = new mongoose_1.Schema({
         required: true,
         ref: "clients",
     },
+    boardId: {
+        type: String,
+        default: null,
+    },
+    listId: { type: String, default: null },
+    cardId: { type: String, default: null },
+    associateProjectManager: {
+        type: String,
+        default: null,
+        required: false,
+    },
 }, {
     timestamps: true,
     strict: false,

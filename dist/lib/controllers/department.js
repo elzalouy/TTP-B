@@ -12,6 +12,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
+const config_1 = __importDefault(require("config"));
 const logger_1 = __importDefault(require("../../logger"));
 const Department_1 = __importDefault(require("../models/Department"));
 const Department_2 = require("../types/model/Department");
@@ -58,8 +59,15 @@ class DepartmentController {
                 let department = yield Department_1.default.findById(id);
                 if (!department)
                     return { error: "NotFound", message: "Department was not found" };
-                let response = yield department.deleteDepartment();
-                return response;
+                if (department.name.toLocaleLowerCase() !== config_1.default.get("CreativeBoard")) {
+                    let response = yield department.deleteDepartment();
+                    return response;
+                }
+                else
+                    return {
+                        error: "CreativeBoard",
+                        message: "Creative department must not be deleted, it includes all projects",
+                    };
             }
             catch (error) {
                 logger_1.default.error({ deleteDepartmentError: error });

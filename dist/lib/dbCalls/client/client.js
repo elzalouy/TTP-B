@@ -92,7 +92,6 @@ const ClientDB = class ClientDB {
         return __awaiter(this, void 0, void 0, function* () {
             try {
                 let client = yield Client_1.default.findById(id);
-                console.log(client);
                 if (client) {
                     let projects = yield Project_1.default.find({ clientId: id }).lean();
                     if (projects) {

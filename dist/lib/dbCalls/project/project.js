@@ -51,6 +51,12 @@ const ProjectDB = class ProjectDB {
             return yield ProjectDB.__searchProjects(searchStr);
         });
     }
+    static deleteProjectsDB(data) {
+        return __awaiter(this, void 0, void 0, function* () {
+            let deleteResult = yield Project_1.default.deleteMany(data);
+            return deleteResult;
+        });
+    }
     static __deleteProject(id) {
         return __awaiter(this, void 0, void 0, function* () {
             try {
@@ -76,9 +82,6 @@ const ProjectDB = class ProjectDB {
     static __getProjects(data) {
         return __awaiter(this, void 0, void 0, function* () {
             try {
-                let project = yield Project_1.default.find(data)
-                    .populate({ path: "projectManager", select: "_id name" })
-                    .lean();
                 let fetch = yield Project_1.default.aggregate([
                     { $match: { $and: [data] } },
                     {
@@ -116,6 +119,10 @@ const ProjectDB = class ProjectDB {
                             clientId: 1,
                             NoOfTasks: { $size: "$tasks" },
                             NoOfFinishedTasks: { $size: "$NoOfFinishedTasks" },
+                            cardId: 1,
+                            listId: 1,
+                            boardId: 1,
+                            associateProjectManager: 1,
                         },
                     },
                 ]);
@@ -182,7 +189,6 @@ const ProjectDB = class ProjectDB {
                     filters.clientId = mongoose.Types.ObjectId(filter.clientId);
                 if (filter.name)
                     filters.name = { $regex: filter.name };
-                console.log([filters]);
                 let fetch = yield Project_1.default.aggregate([
                     { $match: { $and: [filters] } },
                     {
@@ -223,7 +229,6 @@ const ProjectDB = class ProjectDB {
                         },
                     },
                 ]);
-                console.log(fetch);
                 fetch = yield Project_1.default.populate(fetch, {
                     path: "projectManager",
                     select: "_id name",

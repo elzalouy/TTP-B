@@ -49,7 +49,7 @@ const UserReq = class UserReq extends user_1.default {
             }
         });
     }
-    static handleCreatUser(req, res) {
+    static handleCreateOM(req, res) {
         const _super = Object.create(null, {
             addUser: { get: () => super.addUser }
         });
@@ -57,6 +57,61 @@ const UserReq = class UserReq extends user_1.default {
             try {
                 let userData = req.body;
                 if (userData) {
+                    userData.role = "OM";
+                    let user = yield _super.addUser.call(this, userData);
+                    if (user) {
+                        return res.send(user);
+                    }
+                    else {
+                        return res.status(400).send((0, errorUtils_1.customeError)("missing_data", 400));
+                    }
+                }
+                else {
+                    return res.status(400).send((0, errorUtils_1.customeError)("missing_data", 400));
+                }
+            }
+            catch (error) {
+                logger_1.default.error({ handleCreatUserError: error });
+                return res.status(500).send((0, errorUtils_1.customeError)("server_error", 500));
+            }
+        });
+    }
+    static handleCreatePM(req, res) {
+        const _super = Object.create(null, {
+            addUser: { get: () => super.addUser }
+        });
+        return __awaiter(this, void 0, void 0, function* () {
+            try {
+                let userData = req.body;
+                if (userData) {
+                    userData.role = "PM";
+                    let user = yield _super.addUser.call(this, userData);
+                    if (user) {
+                        return res.send(user);
+                    }
+                    else {
+                        return res.status(400).send((0, errorUtils_1.customeError)("missing_data", 400));
+                    }
+                }
+                else {
+                    return res.status(400).send((0, errorUtils_1.customeError)("missing_data", 400));
+                }
+            }
+            catch (error) {
+                logger_1.default.error({ handleCreatUserError: error });
+                return res.status(500).send((0, errorUtils_1.customeError)("server_error", 500));
+            }
+        });
+    }
+    static handleCreateSM(req, res) {
+        const _super = Object.create(null, {
+            addUser: { get: () => super.addUser }
+        });
+        return __awaiter(this, void 0, void 0, function* () {
+            try {
+                let userData = req.body;
+                if (userData) {
+                    userData.role = "SM";
                     let user = yield _super.addUser.call(this, userData);
                     if (user) {
                         return res.send(user);
@@ -81,7 +136,11 @@ const UserReq = class UserReq extends user_1.default {
         });
         return __awaiter(this, void 0, void 0, function* () {
             try {
-                let userData = req.body;
+                let userData = {
+                    name: req.body.name,
+                    id: req.body.id,
+                    email: req.body.email,
+                };
                 if (userData) {
                     let user = yield _super.updateUser.call(this, userData);
                     if (user) {
@@ -135,7 +194,6 @@ const UserReq = class UserReq extends user_1.default {
         return __awaiter(this, void 0, void 0, function* () {
             try {
                 let userData = req.body;
-                logger_1.default.info({ userData });
                 if (userData) {
                     let user = yield _super.resetPassword.call(this, userData);
                     if (user) {
@@ -181,15 +239,15 @@ const UserReq = class UserReq extends user_1.default {
             }
         });
     }
-    static handleGetUserPmOrSA(req, res) {
+    static handleGetUsers(req, res) {
         const _super = Object.create(null, {
-            getUsersPmOrSA: { get: () => super.getUsersPmOrSA }
+            getUsers: { get: () => super.getUsers }
         });
         return __awaiter(this, void 0, void 0, function* () {
             try {
                 let userData = req.query;
                 if (userData) {
-                    let user = yield _super.getUsersPmOrSA.call(this, userData);
+                    let user = yield _super.getUsers.call(this, userData);
                     if (user) {
                         return res.status(200).send(user);
                     }
@@ -202,7 +260,7 @@ const UserReq = class UserReq extends user_1.default {
                 }
             }
             catch (error) {
-                logger_1.default.error({ handleGetUserPmOrSAError: error });
+                logger_1.default.error({ handleGetUsersError: error });
                 return res.status(500).send((0, errorUtils_1.customeError)("server_error", 500));
             }
         });

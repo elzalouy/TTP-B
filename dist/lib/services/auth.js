@@ -29,9 +29,11 @@ const comparePassword = (password, hash) => __awaiter(void 0, void 0, void 0, fu
     return validPassword;
 });
 exports.comparePassword = comparePassword;
-const createJwtToken = (id) => {
+const createJwtToken = (user) => {
     let jwtGenerate = jsonwebtoken_1.default.sign({
-        user: { id },
+        id: user._id,
+        email: user.email,
+        role: user.role,
     }, process.env.JWT_SECRETE, {
         expiresIn: 30 * 24 * 60 * 60,
         audience: process.env.JWT_AUDIENCE,

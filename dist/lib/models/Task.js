@@ -36,8 +36,8 @@ const TaskSchema = new mongoose_1.Schema({
     },
     cardId: {
         type: String,
-        required: true,
-        unique: true,
+        default: null,
+        required: false,
     },
     boardId: {
         type: String,

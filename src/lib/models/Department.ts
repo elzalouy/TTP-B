@@ -278,7 +278,6 @@ DepartmentSchema.methods.createDepartmentBoard = async function (
     });
     lists = await Promise.all(listsResult);
     let CreativeBoard = lists.find((item) => item.name === "projects");
-    console.log({ CreativeBoard });
     if (CreativeBoard)
       TrelloActionsController.createWebHook(
         CreativeBoard.listId,

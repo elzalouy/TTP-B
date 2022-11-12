@@ -22,12 +22,13 @@ const config_1 = __importDefault(require("config"));
 //reference the plugin
 (0, dotenv_1.config)();
 const sendMail = (data) => __awaiter(void 0, void 0, void 0, function* () {
-    const filePath = path_1.default.join(__dirname, './template/template.hbs');
-    const source = fs_1.default.readFileSync(filePath, 'utf-8').toString();
+    const filePath = path_1.default.join(__dirname, "./template/template.hbs");
+    const source = fs_1.default.readFileSync(filePath, "utf-8").toString();
     const template = handlebars_1.default.compile(source);
+    // send mail
     const replacements = {
         link: `${config_1.default.get("FrontEndUrl")}/${data.path}/${data.token}`,
-        image: data.image
+        image: data.image,
     };
     const htmlToSend = template(replacements);
     try {
@@ -41,7 +42,7 @@ const sendMail = (data) => __awaiter(void 0, void 0, void 0, function* () {
                 clientSecret: process.env.CLIENT_SECRET,
             },
             debug: true,
-            logger: true // log information in console
+            logger: true, // log information in console
         });
         const mailOptions = {
             from: process.env.EMAIL_ADDRESS,
@@ -56,7 +57,6 @@ const sendMail = (data) => __awaiter(void 0, void 0, void 0, function* () {
             },
         };
         const result = yield transporter.sendMail(mailOptions);
-        console.log(result);
         return result;
     }
     catch (error) {
