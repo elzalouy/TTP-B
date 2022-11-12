@@ -8,6 +8,7 @@ import Project from "../models/Project";
 import { io } from "../..";
 import TrelloActionsController from "./trello";
 import logger from "../../logger";
+import ProjectController from "./project";
 
 export default class TrelloWebhook {
   actionRequest: webhookUpdateInterface;
@@ -217,39 +218,41 @@ export default class TrelloWebhook {
       Department.findOne({
         boardId: this.actionRequest.action.data.board.id,
       }).then((creativeBoard) => {
-        // if true, then it's an update action, and if not so it's a move action and moving is not allowed
-        let projectsList = creativeBoard.lists.find(
-          (item) => item.name === "projects"
-        ).listId;
-        Project.findOneAndUpdate(
-          { cardId: this.actionRequest.action.data.card.id },
-          {
-            boardId: creativeBoard.boardId,
-            listId: projectsList,
-            cardId: this.actionRequest.action.data.card.id,
-            name: this.actionRequest.action.data.card.name,
-            projectDeadline: this.actionRequest.action.data.card.due,
-            startDate: this.actionRequest.action.data.card.start,
-          },
-          { new: true }
-        ).then((res) => {
-          io.sockets.emit("update-projects", res);
-        });
-        if (
-          creativeBoard.name.toLowerCase() !== config.get("CreativeBoard") ||
-          creativeBoard.lists.find((item) => item.name === "projects")
-            .listId !== this.actionRequest.action.data.card.idList
-        ) {
-          TrelloActionsController.__updateCard({
-            cardId: this.actionRequest.action.data.card.id,
-            data: {
-              idList: projectsList,
-              idBoard: creativeBoard.boardId,
+        if (creativeBoard) {
+          // if true, then it's an update action, and if not so it's a move action and moving is not allowed
+          let projectsList = creativeBoard.lists.find(
+            (item) => item.name === "projects"
+          ).listId;
+          Project.findOneAndUpdate(
+            { cardId: this.actionRequest.action.data.card.id },
+            {
+              boardId: creativeBoard.boardId,
+              listId: projectsList,
+              cardId: this.actionRequest.action.data.card.id,
               name: this.actionRequest.action.data.card.name,
-              due: this.actionRequest.action.data.card.due,
-              start: this.actionRequest.action.data.card.start,
+              projectDeadline: this.actionRequest.action.data.card.due,
+              startDate: this.actionRequest.action.data.card.start,
             },
+            { new: true }
+          ).then((res) => {
+            io.sockets.emit("update-projects", res);
           });
+          if (
+            creativeBoard.name.toLowerCase() !== config.get("CreativeBoard") ||
+            creativeBoard.lists.find((item) => item.name === "projects")
+              .listId !== this.actionRequest.action.data.card.idList
+          ) {
+            TrelloActionsController.__updateCard({
+              cardId: this.actionRequest.action.data.card.id,
+              data: {
+                idList: projectsList,
+                idBoard: creativeBoard.boardId,
+                name: this.actionRequest.action.data.card.name,
+                due: this.actionRequest.action.data.card.due,
+                start: this.actionRequest.action.data.card.start,
+              },
+            });
+          }
         }
       });
     } catch (error) {
@@ -259,14 +262,20 @@ export default class TrelloWebhook {
 
   private async deleteProject() {
     try {
+      // when deleting from ttp, we must make sure that it is working in async with the trello deletion process.
       let data = this.actionRequest.action.data.card;
       let project = await Project.findOne({ cardId: data.id });
-      let deleteResult = await TaskController.deleteTasksByProjectId(
-        project._id
-      );
-      if (project && deleteResult) {
-        await Project.deleteOne({ _id: project._id });
-        io.sockets.emit("delete-project", project);
+      if (project) {
+        await TrelloActionsController.__createProject(data.idList, {
+          name: project.name,
+          projectDeadline: project.projectDeadline,
+          startDate: project.startDate,
+        }).then(async ({ id }: { id: string }) => {
+          project.cardId = id;
+          project.boardId = this.actionRequest.action.data.board.id;
+          project.listId = data.idList;
+          await project.save();
+        });
       }
     } catch (error) {
       logger.error({ deleteProjectHook: error });
