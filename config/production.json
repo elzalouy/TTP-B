@@ -1,8 +1,8 @@
 {
   "name": "TTP production",
-  "Trello_Webhook_Callback_Url": "https://ttp-back-v1.herokuapp.com/api/webhookUpdate",
-  "Trello_Webhook_Callback_Url_Project": "https://ttp-back-v1.herokuapp.com/api/webhookUpdateProject",
-  "FrontEndUrl": "https://ttpf.herokuapp.com",
+  "Trello_Webhook_Callback_Url": "https://ttp-beta.herokuapp.com/api/webhookUpdate",
+  "Trello_Webhook_Callback_Url_Project": "https://ttp-beta.herokuapp.com/api/webhookUpdateProject",
+  "FrontEndUrl": "https://ttpweb-beta.herokuapp.com",
   "monogDb": "mongodb+srv://unicodettp:YFTt2Opqu5Wd2d1C@cluster0.oeari.mongodb.net/ttp?retryWrites=true&w=majority",
   "trellKey": "e6c4e18a33676de983a17b1552a7caee",
   "trelloApiKey": "69983f349355c71c8242ab732bd23fd70d3217e54026336e5e16793f542f044b",
