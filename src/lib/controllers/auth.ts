@@ -75,15 +75,19 @@ const AuthController = class AuthController extends UserDB {
   static async __signIn(data: AuthSignIn): Promise<any> {
     try {
       const { email, password } = data;
+      console.log({ email, password });
       let user = await super.findUser({ email });
       if (!user || user.verified === false) {
+        console.log({ notVerfied: true });
         return null;
       }
       let passwordCheck = await comparePassword(password, user.password);
-      if (!passwordCheck) {
+      console.log({ passwordCheck });
+      if (passwordCheck === false) {
         return null;
       }
       let getToken = createJwtToken(user);
+      console.log({ getToken });
       let {
         _id,
         email: mail,
@@ -94,6 +98,7 @@ const AuthController = class AuthController extends UserDB {
         trelloMemberId,
         name,
       } = user;
+      console.log({ user });
       return {
         _id,
         email: mail,
