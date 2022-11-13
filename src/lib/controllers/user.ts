@@ -199,10 +199,7 @@ const UserController = class UserController extends UserDB {
     | IUser
   > {
     try {
-      const { email /* ,trelloBoardId,trelloMemberId,type='admin' */ } = data;
-      // if (passwordCheck(password)) {
-      //   return customeError("password_length", 400);
-      // }
+      const { email } = data;
 
       if (!emailCheck(email)) {
         return customeError("email_error", 400);

@@ -34,6 +34,7 @@ const AuthController = class AuthController extends UserDB {
       if (!verifyToken) {
         return customeError("not_valid_token", 400);
       }
+      console.log({ password, verifyToken });
       let checkPassword = passwordCheck(password);
       if (checkPassword) {
         return customeError("password_length", 400);
