@@ -77,39 +77,41 @@ const AuthController = class AuthController extends UserDB {
       const { email, password } = data;
       console.log({ email, password });
       let user = await super.findUser({ email });
-      if (!user || user.verified === false) {
-        console.log({ notVerfied: true });
-        return null;
-      }
-      let passwordCheck = await comparePassword(password, user.password);
-      console.log({ passwordCheck });
-      if (passwordCheck === false) {
-        return null;
-      }
-      let getToken = createJwtToken(user);
-      console.log({ getToken });
-      let {
-        _id,
-        email: mail,
-        role,
-        type,
-        image,
-        trelloBoardId,
-        trelloMemberId,
-        name,
-      } = user;
-      console.log({ user });
-      return {
-        _id,
-        email: mail,
-        role,
-        type,
-        image,
-        name,
-        trelloBoardId,
-        trelloMemberId,
-        token: getToken,
-      };
+      if (user && user._id) {
+        if (user.verified === false) {
+          console.log({ notVerfied: true });
+          return null;
+        }
+        let passwordCheck = await comparePassword(password, user.password);
+        console.log({ passwordCheck });
+        if (passwordCheck === false) {
+          return null;
+        }
+        let getToken = createJwtToken(user);
+        console.log({ getToken });
+        let {
+          _id,
+          email: mail,
+          role,
+          type,
+          image,
+          trelloBoardId,
+          trelloMemberId,
+          name,
+        } = user;
+        console.log({ user });
+        return {
+          _id,
+          email: mail,
+          role,
+          type,
+          image,
+          name,
+          trelloBoardId,
+          trelloMemberId,
+          token: getToken,
+        };
+      } else return null;
     } catch (error) {
       logger.error({ signInError: error });
     }
