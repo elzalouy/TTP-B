@@ -38,7 +38,7 @@ const mongoDB: () => Promise<void> = async () => {
 
     // adding superAdmin in db if not exists
     const userInfo: any = await UserDB.findUser({
-      email: process.env.SUPER_ADMIN_EMAIL,
+      email: new RegExp(process.env.SUPER_ADMIN_EMAIL, "i"),
     });
     if (!userInfo) {
       let passwordHash: string = await hashBassword(

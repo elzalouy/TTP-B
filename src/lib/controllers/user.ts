@@ -205,7 +205,9 @@ const UserController = class UserController extends UserDB {
         return customeError("email_error", 400);
       }
 
-      let findUser = await super.findUser({ email: email });
+      let findUser = await super.findUser({
+        email: new RegExp(email, "i"),
+      });
       if (findUser) {
         return customeError("user_already_exist", 400);
       }

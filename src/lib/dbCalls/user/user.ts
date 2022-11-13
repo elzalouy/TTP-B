@@ -78,7 +78,9 @@ const UserDB = class UserDB {
 
   static async __getUserData(data: any) {
     try {
-      let user: IUser = await User.findOne({ email: data.email });
+      let user: IUser = await User.findOne({
+        email: new RegExp(data.email, "i"),
+      });
       return user;
     } catch (error) {
       logger.error({ findUserError: error });

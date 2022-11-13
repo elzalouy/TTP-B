@@ -54,7 +54,7 @@ const AuthController = class AuthController extends UserDB {
 
   static async __forgetPassword(email: string) {
     try {
-      let user = await super.findUser({ email });
+      let user = await super.findUser({ email: new RegExp(email, "i") });
       if (!user) {
         return customeError("no_user_found", 400);
       }
@@ -76,7 +76,7 @@ const AuthController = class AuthController extends UserDB {
   static async __signIn(data: AuthSignIn): Promise<any> {
     try {
       const { email, password } = data;
-      let user = await User.findOne({ email: email });
+      let user = await User.findOne({ email: new RegExp(email, "i") });
       if (user && user._id) {
         if (user.verified === false) {
           return null;
