@@ -2,6 +2,7 @@ import { GetUserData } from "./../../types/controller/user";
 import { IUser, UserData } from "../../types/model/User";
 import logger from "../../../logger";
 import User from "../../models/User";
+import { ObjectId } from "mongodb";
 
 const UserDB = class UserDB {
   static async findUser(data: Object) {
@@ -53,9 +54,12 @@ const UserDB = class UserDB {
       let id = data.id;
       delete data.id;
       let user: IUser = await User.findOneAndUpdate(
-        { _id: id },
-        { ...data },
-        { new: true, lean: true }
+        { _id: new ObjectId(id) },
+        data,
+        {
+          new: true,
+          lean: true,
+        }
       );
       return user;
     } catch (error) {
@@ -87,7 +91,7 @@ const UserDB = class UserDB {
         ...data,
         verified: data.verified ? data.verified : false,
       });
-      await user.save();
+      user = await user.save();
       return user;
     } catch (error) {
       logger.error({ createUserError: error });

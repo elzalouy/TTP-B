@@ -44,14 +44,7 @@ const ProjectController = class ProjectController extends ProjectDB {
     try {
       let project = await super.deleteProjectDB(id);
       projectQueue.push(() => {
-        Department.findOne({
-          name: new RegExp(config.get("CreativeBoard"), "i"),
-        }).then((res) => {
-          if (res && res.lists.find((item) => item.name === "projects")) {
-            console.log({ project });
-            TrelloActionsController.deleteCard(project.cardId);
-          }
-        });
+        if (project.cardId) TrelloActionsController.deleteCard(project.cardId);
       });
       return project;
     } catch (error) {

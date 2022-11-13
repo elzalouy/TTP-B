@@ -201,12 +201,9 @@ export default class TrelloWebhook {
       });
       if (existed) return await this.updateProject();
       else {
-        // there is no option to create a project from trello, cause there is no clientId, or projectManager
-        // let project = new Project({
-        //   name: data.name,
-        //   projectDeadline: data.due,
-        //   clientId
-        // })
+        await TrelloActionsController.deleteCard(
+          this.actionRequest.action.data.card.id
+        );
       }
     } catch (error) {
       logger.error({ createProjectHook: error });
@@ -223,20 +220,6 @@ export default class TrelloWebhook {
           let projectsList = creativeBoard.lists.find(
             (item) => item.name === "projects"
           ).listId;
-          Project.findOneAndUpdate(
-            { cardId: this.actionRequest.action.data.card.id },
-            {
-              boardId: creativeBoard.boardId,
-              listId: projectsList,
-              cardId: this.actionRequest.action.data.card.id,
-              name: this.actionRequest.action.data.card.name,
-              projectDeadline: this.actionRequest.action.data.card.due,
-              startDate: this.actionRequest.action.data.card.start,
-            },
-            { new: true }
-          ).then((res) => {
-            io.sockets.emit("update-projects", res);
-          });
           if (
             creativeBoard.name.toLowerCase() !== config.get("CreativeBoard") ||
             creativeBoard.lists.find((item) => item.name === "projects")
@@ -252,6 +235,21 @@ export default class TrelloWebhook {
                 start: this.actionRequest.action.data.card.start,
               },
             });
+          } else {
+            Project.findOneAndUpdate(
+              { cardId: this.actionRequest.action.data.card.id },
+              {
+                boardId: creativeBoard.boardId,
+                listId: projectsList,
+                cardId: this.actionRequest.action.data.card.id,
+                name: this.actionRequest.action.data.card.name,
+                projectDeadline: this.actionRequest.action.data.card.due,
+                startDate: this.actionRequest.action.data.card.start,
+              },
+              { new: true }
+            ).then((res) => {
+              io.sockets.emit("update-projects", res);
+            });
           }
         }
       });
@@ -266,15 +264,19 @@ export default class TrelloWebhook {
       let data = this.actionRequest.action.data.card;
       let project = await Project.findOne({ cardId: data.id });
       if (project) {
-        await TrelloActionsController.__createProject(data.idList, {
-          name: project.name,
-          projectDeadline: project.projectDeadline,
-          startDate: project.startDate,
-        }).then(async ({ id }: { id: string }) => {
+        await TrelloActionsController.__createProject(
+          this.actionRequest.action.data.list.id,
+          {
+            name: project.name,
+            projectDeadline: project.projectDeadline,
+            startDate: project.startDate,
+          }
+        ).then(async ({ id }: { id: string }) => {
           project.cardId = id;
           project.boardId = this.actionRequest.action.data.board.id;
           project.listId = data.idList;
-          await project.save();
+          let result = await project.save();
+          io.sockets.emit("update-projects", result);
         });
       }
     } catch (error) {

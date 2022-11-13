@@ -8,7 +8,7 @@ export default class TrelloHooks {
   static async handleWebHookUpdateProject(req: Request, res: Response) {
     try {
       let hook = new TrelloWebhook(req.body, "project");
-      let data = await hook.start();
+      await hook.start();
       return res.send("Done");
     } catch (error) {
       logger.error({ handleCreateCardInBoardError: error });
