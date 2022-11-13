@@ -14,6 +14,7 @@ import UserDB from "../dbCalls/user/user";
 import sendMail from "../services/mail/mail";
 import { customeError } from "../utils/errorUtils";
 import { JwtPayload } from "jsonwebtoken";
+import User from "../models/User";
 
 const AuthController = class AuthController extends UserDB {
   static async signInUser(data: AuthSignIn) {
@@ -75,20 +76,16 @@ const AuthController = class AuthController extends UserDB {
   static async __signIn(data: AuthSignIn): Promise<any> {
     try {
       const { email, password } = data;
-      console.log({ email, password });
-      let user = await super.findUser({ email });
+      let user = await User.findOne({ email: email });
       if (user && user._id) {
         if (user.verified === false) {
-          console.log({ notVerfied: true });
           return null;
         }
         let passwordCheck = await comparePassword(password, user.password);
-        console.log({ passwordCheck });
         if (passwordCheck === false) {
           return null;
         }
         let getToken = createJwtToken(user);
-        console.log({ getToken });
         let {
           _id,
           email: mail,
