@@ -87,7 +87,7 @@ const ProjectController = class ProjectController extends ProjectDB {
       let project = await super.createProjectDB(data);
       projectQueue.push(async (cb) => {
         let dep = await Department.findOne({
-          name: new RegExp(config.get("CreativeBoard"), "i"),
+          name: config.get("CreativeBoard"),
         });
         if (dep) {
           let projectsList = dep.lists.find((item) => item.name === "projects");
@@ -95,13 +95,13 @@ const ProjectController = class ProjectController extends ProjectDB {
             projectsList.listId,
             data
           );
-          await super.updateProjectDB({
+          let result = await super.updateProjectDB({
             _id: project._id,
             cardId: id,
             boardId: dep.boardId,
             listId: projectsList.listId,
           });
-          io.sockets.emit("update-projects");
+          io.sockets.emit("update-projects", result);
         }
         NotificationController.__creatProjectNotification(data, userId);
         cb(null, true);

@@ -264,7 +264,7 @@ DepartmentSchema.methods.createDepartmentBoard = async function (
     }
     //2- create lists
     let departmentLists =
-      this.name.toLowerCase() === config.get("CreativeBoard")
+      this.name === config.get("CreativeBoard")
         ? [...lists, { name: "projects", listId: "" }]
         : lists;
 

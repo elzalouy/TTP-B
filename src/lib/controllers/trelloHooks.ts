@@ -214,14 +214,29 @@ export default class TrelloWebhook {
     try {
       Department.findOne({
         boardId: this.actionRequest.action.data.board.id,
-      }).then((creativeBoard) => {
+      }).then(async (creativeBoard) => {
         if (creativeBoard) {
           // if true, then it's an update action, and if not so it's a move action and moving is not allowed
           let projectsList = creativeBoard.lists.find(
             (item) => item.name === "projects"
           ).listId;
+          console.log({ cardId: this.actionRequest.action.data.card.id });
+          let project = await Project.findOneAndUpdate(
+            { cardId: this.actionRequest.action.data.card.id },
+            {
+              boardId: creativeBoard.boardId,
+              listId: projectsList,
+              cardId: this.actionRequest.action.data.card.id,
+              name: this.actionRequest.action.data.card.name,
+              projectDeadline: this.actionRequest.action.data.card.due,
+              startDate: this.actionRequest.action.data.card.start,
+            },
+            { new: true }
+          );
+          console.log({ project });
+          io.sockets.emit("update-projects", project);
           if (
-            creativeBoard.name.toLowerCase() !== config.get("CreativeBoard") ||
+            creativeBoard.name !== config.get("CreativeBoard") ||
             creativeBoard.lists.find((item) => item.name === "projects")
               .listId !== this.actionRequest.action.data.card.idList
           ) {
@@ -234,21 +249,6 @@ export default class TrelloWebhook {
                 due: this.actionRequest.action.data.card.due,
                 start: this.actionRequest.action.data.card.start,
               },
-            });
-          } else {
-            Project.findOneAndUpdate(
-              { cardId: this.actionRequest.action.data.card.id },
-              {
-                boardId: creativeBoard.boardId,
-                listId: projectsList,
-                cardId: this.actionRequest.action.data.card.id,
-                name: this.actionRequest.action.data.card.name,
-                projectDeadline: this.actionRequest.action.data.card.due,
-                startDate: this.actionRequest.action.data.card.start,
-              },
-              { new: true }
-            ).then((res) => {
-              io.sockets.emit("update-projects", res);
             });
           }
         }
