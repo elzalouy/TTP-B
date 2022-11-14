@@ -11,10 +11,8 @@ export const createProjectsCardsInCreativeBoard = (board: IDepartment) => {
   let lists = board.lists;
   departmentsQueue.push(async (cb) => {
     let isProjectsList = lists.find((item) => item.name === "projects");
-    console.log({ isProjectsList });
     if (isProjectsList) {
       let projects = await Project.find({});
-      console.log({ projects });
       projects.forEach(async (item: ProjectInfo) => {
         if (item.cardId === null) {
           let { id } = await TrelloActionsController.__createProject(

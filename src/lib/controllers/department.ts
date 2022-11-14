@@ -1,19 +1,13 @@
 import config from "config";
 import logger from "../../logger";
-import {
-  createProjectsCardsInCreativeBoard,
-  departmentsQueue,
-} from "../backgroundJobs/actions/department,actions.queue";
+import { createProjectsCardsInCreativeBoard } from "../backgroundJobs/actions/department.actions.queue";
 import Department from "../models/Department";
-import Project from "../models/Project";
 import {
   IDepartment,
   IDepartmentState,
   ListTypes,
 } from "../types/model/Department";
-import { ProjectInfo } from "../types/model/Project";
 import TrelloActionsController from "./trello";
-import BoardController from "./trello";
 export default class DepartmentController {
   static async createDepartment(data: IDepartment) {
     return await DepartmentController.__createNewDepartment(data);
@@ -47,7 +41,7 @@ export default class DepartmentController {
       let department = await Department.findById(id);
       if (!department)
         return { error: "NotFound", message: "Department was not found" };
-      if (department.name.toLocaleLowerCase() !== config.get("CreativeBoard")) {
+      if (department.name !== config.get("CreativeBoard")) {
         let response = await department.deleteDepartment();
         return response;
       } else
