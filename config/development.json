@@ -1,7 +1,7 @@
 {
   "name": "TTP development",
-  "Trello_Webhook_Callback_Url": "https://a72e-217-52-189-114.ngrok.io/api/webhookUpdate",
-  "Trello_Webhook_Callback_Url_Project": "https://a72e-217-52-189-114.ngrok.io/api/webhookUpdateProject",
+  "Trello_Webhook_Callback_Url": "https://57bf-154-239-200-67.ngrok.io/api/webhookUpdate",
+  "Trello_Webhook_Callback_Url_Project": "https://57bf-154-239-200-67.ngrok.io/api/webhookUpdateProject",
   "FrontEndUrl": "http://localhost:3000",
   "monogDb": "mongodb://localhost:27017/TTP",
   "trellKey": "0d05ca858d1bc7893a91aef2712e7568",
@@ -16,5 +16,5 @@
     "Tasks Board"
   ],
   "redis": "redis://localhost:6379",
-  "CreativeBoard": "local creative"
+  "CreativeBoard": "TTP Creative"
 }

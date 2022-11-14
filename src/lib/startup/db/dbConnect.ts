@@ -10,7 +10,7 @@ import DepartmentController from "../../controllers/department";
 import ProjectController from "../../controllers/project";
 import TrelloActionsController from "../../controllers/trello";
 import { ProjectData, ProjectInfo } from "../../types/model/Project";
-import { IDepartment } from "../../types/model/Department";
+import { createProjectsCardsInCreativeBoard } from "../../backgroundJobs/actions/department.actions.queue";
 config();
 
 const db: string = Config.get("monogDb");
@@ -35,49 +35,54 @@ const mongoDB: () => Promise<void> = async () => {
 
     await connect(db, options);
     console.log("Mongo DB connected,", Config.get("monogDb"));
-
-    // adding superAdmin in db if not exists
-    const userInfo: any = await UserDB.findUser({
-      email: new RegExp(process.env.SUPER_ADMIN_EMAIL, "i"),
-    });
-    if (!userInfo) {
-      let passwordHash: string = await hashBassword(
-        process.env.SUPER_ADMIN_PASSWORD
-      );
-      const data: UserData = {
-        name: "abdulaziz qannam",
-        email: process.env.SUPER_ADMIN_EMAIL,
-        password: passwordHash,
-        role: "SM",
-        verified: true,
-      };
-      await UserDB.createUser(data);
-    }
-    let department = await Department.findOne({
-      name: new RegExp(Config.get("CreativeBoard"), "i"),
-    });
-    if (department === null) {
-      let dep: any = {
-        name: Config.get("CreativeBoard"),
-        color: "blue",
-      };
-      let result: IDepartment = await DepartmentController.createDepartment(
-        dep
-      );
-      let listOfProjects = result.lists.find(
-        (item) => item.name.toLocaleLowerCase() === "projects"
-      );
-      if (result && result?._id) {
-        let projects = await ProjectController.getProject({});
-        projects.forEach((item: ProjectData) => {
-          TrelloActionsController.__createProject(listOfProjects.listId, item);
-        });
-      }
-    }
+    initializeAdminUser();
+    initializeCreativeBoard();
   } catch (error) {
     console.error({ mongoDBError: error });
     process.exit(1);
   }
 };
+const initializeAdminUser = async () => {
+  // adding superAdmin in db if not exists
+  const userInfo: any = await UserDB.findUser({
+    email: new RegExp(process.env.SUPER_ADMIN_EMAIL, "i"),
+  });
+  if (!userInfo) {
+    let passwordHash: string = await hashBassword(
+      process.env.SUPER_ADMIN_PASSWORD
+    );
 
+    const data: UserData = {
+      name: "abdulaziz qannam",
+      email: process.env.SUPER_ADMIN_EMAIL,
+      password: passwordHash,
+      role: "SM",
+      verified: true,
+    };
+    await UserDB.createUser(data);
+  }
+};
+const initializeCreativeBoard = async () => {
+  let department = await Department.findOne({
+    name: Config.get("CreativeBoard"),
+  });
+  let projects = await ProjectController.getProject({});
+  if (!department) {
+    let dep: any = {
+      name: Config.get("CreativeBoard"),
+      color: "orange",
+    };
+    department = await DepartmentController.createDepartment(dep);
+    let listOfProjects = department.lists.find(
+      (item) => item.name === "projects"
+    );
+    if (department && department?._id && listOfProjects) {
+      projects.forEach((item: ProjectData) => {
+        TrelloActionsController.__createProject(listOfProjects.listId, item);
+      });
+    }
+  } else {
+    createProjectsCardsInCreativeBoard(department);
+  }
+};
 export default mongoDB;
