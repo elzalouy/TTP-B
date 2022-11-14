@@ -189,7 +189,7 @@ export default class TrelloWebhook {
             : this.actionRequest.action.data.listAfter?.name,
         };
         return await TaskController.updateTaskByTrelloDB(this.task);
-      }
+      } else this.updateProject();
     } catch (error) {
       logger.error({ updateCardHook: error });
     }
@@ -224,8 +224,8 @@ export default class TrelloWebhook {
           let project = await Project.findOneAndUpdate(
             { cardId: this.actionRequest.action.data.card.id },
             {
-              boardId: creativeBoard.boardId,
-              listId: projectsList,
+              boardId: this.actionRequest.action.data.board.id,
+              listId: this.actionRequest.action.data.card.idList,
               cardId: this.actionRequest.action.data.card.id,
               name: this.actionRequest.action.data.card.name,
               projectDeadline: this.actionRequest.action.data.card.due,
@@ -235,22 +235,6 @@ export default class TrelloWebhook {
           );
           console.log({ project });
           io.sockets.emit("update-projects", project);
-          if (
-            creativeBoard.name !== config.get("CreativeBoard") ||
-            creativeBoard.lists.find((item) => item.name === "projects")
-              .listId !== this.actionRequest.action.data.card.idList
-          ) {
-            TrelloActionsController.__updateCard({
-              cardId: this.actionRequest.action.data.card.id,
-              data: {
-                idList: projectsList,
-                idBoard: creativeBoard.boardId,
-                name: this.actionRequest.action.data.card.name,
-                due: this.actionRequest.action.data.card.due,
-                start: this.actionRequest.action.data.card.start,
-              },
-            });
-          }
         }
       });
     } catch (error) {
