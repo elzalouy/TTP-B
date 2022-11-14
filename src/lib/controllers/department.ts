@@ -1,11 +1,17 @@
 import config from "config";
 import logger from "../../logger";
+import {
+  createProjectsCardsInCreativeBoard,
+  departmentsQueue,
+} from "../backgroundJobs/actions/department,actions.queue";
 import Department from "../models/Department";
+import Project from "../models/Project";
 import {
   IDepartment,
   IDepartmentState,
   ListTypes,
 } from "../types/model/Department";
+import { ProjectInfo } from "../types/model/Project";
 import TrelloActionsController from "./trello";
 import BoardController from "./trello";
 export default class DepartmentController {
@@ -94,6 +100,7 @@ export default class DepartmentController {
         let { teams, lists } = await depDoc.createDepartmentBoard();
         depDoc.teams = teams;
         depDoc.lists = lists;
+        createProjectsCardsInCreativeBoard(depDoc);
         return await depDoc.save();
       }
     } catch (error: any) {
