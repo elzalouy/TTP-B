@@ -379,7 +379,7 @@ class TrelloActionsController {
   static async __getAllMembers() {
     try {
       let boardApi = trelloApi(
-        `organizations/${process.env.TEST_ORGANIZATION_ID}/members?`
+        `organizations/${Config.get("trelloOrgId")}/members?`
       );
       let members = await fetch(boardApi, {
         method: "GET",
@@ -392,7 +392,7 @@ class TrelloActionsController {
   static async __getTrelloBoards() {
     try {
       let boardsApi = trelloApi(
-        `organizations/${process.env.TEST_ORGANIZATION_ID}/boards?fields=id,name&`
+        `organizations/${Config.get("trelloOrgId")}/boards?fields=id,name&`
       );
       let boards = await fetch(boardsApi, {
         method: "GET",
@@ -424,7 +424,9 @@ class TrelloActionsController {
         method: "GET",
         headers: {
           Accept: "application/json",
-          Authorization: `OAuth oauth_consumer_key=${process.env.TRELLO_KEY}, oauth_token=${process.env.TRELLO_TOKEN}`,
+          Authorization: `OAuth oauth_consumer_key=${Config.get(
+            "trelloKey"
+          )}, oauth_token=${Config.get("trelloToken")}`,
         },
       }).then(async (response) => {
         Response = JSON.parse(await response.text());

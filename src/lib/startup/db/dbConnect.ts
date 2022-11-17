@@ -13,7 +13,7 @@ import { ProjectData, ProjectInfo } from "../../types/model/Project";
 import { createProjectsCardsInCreativeBoard } from "../../backgroundJobs/actions/department.actions.queue";
 config();
 
-const db: string = Config.get("monogDb");
+const db: string = Config.get("mongoDbConnectionString");
 logger.info({ db });
 interface DBOptions {
   useNewUrlParser: Boolean;
@@ -34,7 +34,7 @@ const mongoDB: () => Promise<void> = async () => {
     };
 
     await connect(db, options);
-    console.log("Mongo DB connected,", Config.get("monogDb"));
+    console.log("Mongo DB connected,", Config.get("mongoDbConnectionString"));
     initializeAdminUser();
     initializeCreativeBoard();
   } catch (error) {
@@ -45,7 +45,7 @@ const mongoDB: () => Promise<void> = async () => {
 const initializeAdminUser = async () => {
   // adding superAdmin in db if not exists
   const userInfo: any = await UserDB.findUser({
-    email: new RegExp(process.env.SUPER_ADMIN_EMAIL, "i"),
+    email: new RegExp(Config.get("superAdminEmail"), "i"),
   });
   if (!userInfo) {
     let passwordHash: string = await hashBassword(
@@ -54,8 +54,8 @@ const initializeAdminUser = async () => {
 
     const data: UserData = {
       name: "abdulaziz qannam",
-      email: process.env.SUPER_ADMIN_EMAIL,
-      password: passwordHash,
+      email: Config.get("superAdminEmail"),
+      password: Config.get("superAdminPassword"),
       role: "SM",
       verified: true,
     };

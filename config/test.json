@@ -1,10 +1,10 @@
 {
   "name": "TTP test",
-  "Trello_Webhook_Callback_Url": "https://4b4b-197-120-186-122.ngrok.io/api/webhookUpdate",
-  "FrontEndUrl": "http://localhost:3000",
-  "monogDb": "mongodb://localhost:27017/testTTP",
+  "trelloWebhookUrlTask": "https://4b4b-197-120-186-122.ngrok.io/api/webhookUpdate",
+  "frontEndUrl": "http://localhost:3000",
+  "mongoDbConnectionString": "mongodb://localhost:27017/testTTP",
   "trellKey": "0d05ca858d1bc7893a91aef2712e7568",
-  "trelloApiKey": "2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68",
+  "trelloToken": "2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68",
   "BoardStatus": [
     "inProgress",
     "Cancled",

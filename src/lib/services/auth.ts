@@ -5,7 +5,7 @@ import jwt, { JwtPayload } from "jsonwebtoken";
 import { config } from "dotenv";
 import { customeError } from "../utils/errorUtils";
 import { IUser, UserData } from "../types/model/User";
-
+import Config from "config";
 config();
 
 export const hashBassword: (password: string) => Promise<string> = async (
@@ -32,11 +32,11 @@ export const createJwtToken: (user: IUser | UserData) => string = (user) => {
       email: user.email,
       role: user.role,
     },
-    process.env.JWT_SECRETE,
+    Config.get("jwtSecret"),
     {
       expiresIn: 30 * 24 * 60 * 60, // Our token expires after 30 days
-      audience: process.env.JWT_AUDIENCE,
-      issuer: process.env.JWT_ISSUE,
+      audience: Config.get("jwtAudience"),
+      issuer: Config.get("jwtIssue"),
     }
   );
   return jwtGenerate;
@@ -45,9 +45,9 @@ export const createJwtToken: (user: IUser | UserData) => string = (user) => {
 export const jwtVerify = async (token: string) => {
   try {
     token = token.split(" ")[1];
-    let jwtVerify: any = await jwt.verify(token, process.env.JWT_SECRETE, {
-      audience: process.env.JWT_AUDIENCE,
-      issuer: process.env.JWT_ISSUE,
+    let jwtVerify: any = await jwt.verify(token, Config.get("jwtSecret"), {
+      audience: Config.get("jwtAudience"),
+      issuer: Config.get("jwtIssue"),
     });
     return jwtVerify;
   } catch (error) {

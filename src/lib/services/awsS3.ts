@@ -4,15 +4,13 @@ import logger from "../../logger";
 import multer from "multer";
 import multerS3 from "multer-s3";
 import path from "path";
-import fs from "fs";
-import util from "util";
-
+import Config from "config";
 config();
 
 AWS.config.update({ region: "me-south-1" });
 const s3 = new AWS.S3({
-  accessKeyId: process.env.AWSAccessKeyId,
-  secretAccessKey: process.env.AWSSecretKey,
+  accessKeyId: Config.get("awsAccessKey"),
+  secretAccessKey: Config.get("awsSecretKey"),
   apiVersion: "2022-11-01",
 });
 

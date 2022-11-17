@@ -141,7 +141,7 @@ class TaskController extends TaskDB {
             data.trelloShortUrl = createdCard.shortUrl;
             await TrelloController.createWebHook(
               data.cardId,
-              "Trello_Webhook_Callback_Url"
+              "trelloWebhookUrlTask"
             );
             if (files.length > 0)
               data = await TaskController.__createTaskAttachment(files, data);
@@ -240,7 +240,7 @@ class TaskController extends TaskDB {
       if (response?.cardId)
         await TrelloController.createWebHook(
           response.cardId,
-          "Trello_Webhook_Callback_Url"
+          "trelloWebhookUrlTask"
         );
       return response;
     } catch (error) {

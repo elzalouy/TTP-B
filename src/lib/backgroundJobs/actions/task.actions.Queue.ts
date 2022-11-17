@@ -75,8 +75,6 @@ export const updateCardJob = (
         (item) => item._id.toString() === data.teamId.toString()
       ).listId;
 
-      // if team is not the same as the current one, so listId equals the new team listId.
-      // If team is the same, will pass the data list id.
       let taskData: any = {
         name: data.name,
         desc: data.description ? data.description : "",
@@ -84,13 +82,7 @@ export const updateCardJob = (
         idBoard: data.boardId,
         idList: isTeamChanged === true ? newTeamListId : data.listId,
       };
-      console.log({
-        data,
-        isTeamChanged,
-        newTeamListId,
-        idList: data.listId,
-        taskData,
-      });
+
       let response = await TrelloController.__updateCard({
         cardId: data.cardId,
         data: taskData,

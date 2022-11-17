@@ -1,7 +1,9 @@
 "use strict";
-var __importDefault = (this && this.__importDefault) || function (mod) {
-    return (mod && mod.__esModule) ? mod : { "default": mod };
-};
+var __importDefault =
+  (this && this.__importDefault) ||
+  function (mod) {
+    return mod && mod.__esModule ? mod : { default: mod };
+  };
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.io = exports.http = void 0;
 const dotenv_1 = require("dotenv");
@@ -34,10 +36,10 @@ console.log(process.env.NODE_ENV);
 exports.http = (0, http_1.createServer)(app);
 exports.io = (0, socket_1.default)(exports.http);
 exports.http.listen(port, function () {
-    console.log("Welcome to", Config.get("name"));
-    console.log({
-        cards_webhook: Config.get("Trello_Webhook_Callback_Url"),
-    });
-    console.log("server listen to port " + port);
-    (0, cron_1.default)(exports.io);
+  console.log("Welcome to", Config.get("name"));
+  console.log({
+    cards_webhook: Config.get("trelloWebhookUrlTask"),
+  });
+  console.log("server listen to port " + port);
+  (0, cron_1.default)(exports.io);
 });

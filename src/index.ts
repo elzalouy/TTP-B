@@ -24,13 +24,12 @@ mongoDB();
 routes(app);
 config();
 let port = process.env.PORT || 5000;
-console.log(process.env.NODE_ENV);
 export const http = createServer(app);
 export const io = appSocket(http);
 http.listen(port, function () {
   console.log("Welcome to", Config.get("name"));
   console.log({
-    cards_webhook: Config.get("Trello_Webhook_Callback_Url"),
+    cards_webhook: Config.get("trelloWebhookUrlTask"),
   });
   console.log("server listen to port " + port);
   cronJobs(io);

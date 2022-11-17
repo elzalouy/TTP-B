@@ -9,12 +9,12 @@ import taskRoute from "../routes/task/taskRoute";
 import categoryRoute from "../routes/category/categoryRoute";
 import clientRoute from "../routes/client/clientRoute";
 import notifiRoute from "../routes/notification/notifiRoute";
-
+import Config from "config";
 export default function (app: Application) {
   app.use(function (req, res, next) {
     let allowedOrigins = [
-      "http://" + process.env.FRONT_END_URL,
-      "https://" + process.env.FRONT_END_URL,
+      "http://" + Config.get("frontEndUrl"),
+      "https://" + Config.get("frontEndUrl"),
     ];
     let origin = req.headers.origin;
     if (allowedOrigins.includes(origin)) {

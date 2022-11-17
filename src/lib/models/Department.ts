@@ -259,7 +259,7 @@ DepartmentSchema.methods.createDepartmentBoard = async function (
       this.boardURL = board.url;
       await TrelloActionsController.createWebHook(
         board.id,
-        "Trello_Webhook_Callback_Url"
+        "trelloWebhookUrlTask"
       );
     }
     //2- create lists
@@ -281,7 +281,7 @@ DepartmentSchema.methods.createDepartmentBoard = async function (
     if (CreativeBoard)
       TrelloActionsController.createWebHook(
         CreativeBoard.listId,
-        "Trello_Webhook_Callback_Url_Project"
+        "trelloWebhookUrlProject"
       );
     // 3- create teams
     let teamsResult = await teams.map(async (team, index) => {

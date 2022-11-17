@@ -23,7 +23,7 @@ const sendMail = async (data: Data) => {
   const template = handlebars.compile(source);
   // send mail
   const replacements = {
-    link: `${Config.get("FrontEndUrl")}/${data.path}/${data.token}`,
+    link: `${Config.get("frontEndUrl")}/${data.path}/${data.token}`,
     image: data.image,
   };
 
@@ -36,22 +36,22 @@ const sendMail = async (data: Data) => {
       secure: true,
       auth: {
         type: "OAuth2",
-        clientId: process.env.CLIENT_ID,
-        clientSecret: process.env.CLIENT_SECRET,
+        clientId: Config.get("mailerClientId"),
+        clientSecret: Config.get("mailerClientSecret"),
       },
       debug: true, // show debug output
       logger: true, // log information in console
     });
 
     const mailOptions = {
-      from: process.env.EMAIL_ADDRESS,
+      from: `${Config.get("mailerEmailAddress")}`,
       to: data.email,
       subject: `${data.subject}`,
       html: htmlToSend,
       auth: {
-        user: process.env.EMAIL_ADDRESS,
-        refreshToken: process.env.REFRESH_TOKEN,
-        accessToken: process.env.ACCESS_TOKEN,
+        user: Config.get("mailerEmailAddress"),
+        refreshToken: Config.get("mailerRefreshToken"),
+        accessToken: Config.get("mailerAccessToken"),
         expires: 24 * 60 * 60,
       },
     };

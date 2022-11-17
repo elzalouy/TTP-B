@@ -1,10 +1,19 @@
 {
-  "TRELLO_KEY": "TRELLO_KEY",
-  "TRELLO_TOKEN": "TRELLO_TOKEN",
-  "TRELLO_TEST_KEY": "TRELLO_TEST_KEY",
-  "TRELLO_TEST_TOKEN": "TRELLO_TEST_TOKEN",
-  "ORGANIZATION_ID": "ORGANIZATION_ID",
-  "TEST_ORGANIZATION_ID": "TEST_ORGANIZATION_ID",
-  "JWT_SECRETE": "JWT_SECRETE",
-  "JWT_KEYID": "JWT_KEYID"
+  "trelloKey": "trelloKey",
+  "trelloToken": "trelloToken",
+  "trelloOrgId": "trelloOrgId",
+  "superAdminEmail": "superAdminEmail",
+  "superAdminPassword": "superAdminPassowrd",
+  "jwtSecret": "jwtSecret",
+  "jwtKeyId": "jwtKeyId",
+  "jwtAudience": "jwtAudience",
+  "jwtIssue": "jwtIssue",
+  "mailerClientId": "mailerClientId",
+  "mailerClientSecret": "mailerClientSecret",
+  "mailerRefreshToken": "mailerRefreshToken",
+  "mailerEmailAddress": "mailerEmailAddress",
+  "mailerAccessToken": "mailerAccessToken",
+  "awsAccessKey": "awsAccessKey",
+  "awsSecretKey": "awsSecretKey",
+  "mongoDbConnectionString": "mongoDbConnectionString"
 }
