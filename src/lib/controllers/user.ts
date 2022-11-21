@@ -169,7 +169,7 @@ const UserController = class UserController extends UserDB {
       if (!findUser) {
         return null;
       }
-      let token = await createJwtToken(data);
+      let token = await createJwtToken(findUser);
       if (data.email) {
         sendMail({
           email: data.email,
