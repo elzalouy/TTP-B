@@ -13,6 +13,7 @@ import {
 import TaskController from "../../controllers/task";
 import { deleteAll } from "../../services/upload";
 import Department from "../../models/Department";
+import { IDepartment, IDepartmentState } from "../../types/model/Department";
 
 export const createTaskQueue = Queue({
   results: [],
@@ -29,17 +30,33 @@ export function moveTaskJob(
   listId: string,
   cardId: string,
   status: string,
+  department: IDepartmentState,
   user: any
 ) {
   var task;
   updateTaskQueue.push(async (cb) => {
     try {
-      const result = await TrelloController.moveTaskToDiffList(cardId, listId);
-      cb(null);
+      let currentTask = await TaskController.getOneTaskBy({ cardId: cardId });
+      if (currentTask) {
+        let inProgressList = department.lists.find(
+          (item) => item.name === "inProgress"
+        );
+        let team = department.teams.find(
+          (item) => currentTask?.teamId.toString() === item._id
+        );
+        const result = await TrelloController.moveTaskToDiffList(
+          cardId,
+          listId === inProgressList.listId.toString() && team
+            ? team.listId
+            : listId
+        );
+        cb(null);
+      }
     } catch (error) {
       logger.error({ moveTaskJobError: error });
     }
   });
+
   updateTaskQueue.push(async (cb) => {
     try {
       if (status === "Shared" || status === "Not Clear") {
@@ -75,12 +92,15 @@ export const updateCardJob = (
         (item) => item._id.toString() === data.teamId.toString()
       ).listId;
 
+      let inProgressList = dep.lists.find(
+        (item) => item.listId === data.listId
+      );
       let taskData: any = {
         name: data.name,
         desc: data.description ? data.description : "",
         due: data.deadline ? data.deadline : "",
         idBoard: data.boardId,
-        idList: isTeamChanged === true ? newTeamListId : data.listId,
+        idList: isTeamChanged === true ? newTeamListId : data.teamId,
       };
 
       let response = await TrelloController.__updateCard({

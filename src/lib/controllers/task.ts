@@ -10,6 +10,7 @@ import {
 import { provideCardIdError } from "../types/controller/Tasks";
 import { io } from "../..";
 import { taskRoutesQueue } from "../backgroundJobs/routes/tasks.Route.Queue";
+import { IDepartment, IDepartmentState } from "../types/model/Department";
 class TaskController extends TaskDB {
   static async getTasks(data: TaskData) {
     return await TaskController.__getTasks(data);
@@ -51,6 +52,7 @@ class TaskController extends TaskDB {
     listId: string,
     status: string,
     list: string,
+    department: IDepartment,
     user: any
   ) {
     return await TaskController.__moveTaskOnTrello(
@@ -58,6 +60,7 @@ class TaskController extends TaskDB {
       listId,
       status,
       list,
+      department,
       user
     );
   }
@@ -67,10 +70,11 @@ class TaskController extends TaskDB {
     listId: string,
     status: string,
     list: string,
+    department: IDepartmentState,
     user: any
   ) {
     try {
-      moveTaskJob(listId, cardId, status, user);
+      moveTaskJob(listId, cardId, status, department, user);
       return { data: `Task with cardId ${cardId} has moved to list ${list}` };
     } catch (error) {
       logger.error({ moveTaskOnTrelloError: error });
