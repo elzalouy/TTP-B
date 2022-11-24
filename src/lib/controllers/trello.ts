@@ -246,7 +246,9 @@ class TrelloActionsController {
 
   static async __createCard(data: TaskData) {
     try {
-      let url = `cards/?idList=${data.listId}&name=${data.name}&desc=${data.description}&`;
+      let url = `cards/?idList=${
+        data.teamListId ? data.teamListId : data.listId
+      }&name=${data.name}&desc=${data.description}&`;
       if (data.deadline)
         url = `${url}due=${new Date(data.deadline).getTime()}&start=${new Date(
           data.start

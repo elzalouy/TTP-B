@@ -3,7 +3,7 @@ import Joi from "joi";
 
 export const ListTypes = [
   "Tasks Board",
-  "inProgress",
+  "In Progress",
   "Shared",
   "Review",
   "Done",

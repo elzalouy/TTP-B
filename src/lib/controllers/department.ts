@@ -77,7 +77,6 @@ export default class DepartmentController {
 
   static async __createNewDepartment(data: IDepartment) {
     try {
-      // 1- Validation (Joi & Mongo)
       let depDoc = new Department({
         name: data.name,
         color: data.color,
@@ -89,7 +88,6 @@ export default class DepartmentController {
       });
       let validation = depDoc.createDepartmentValidate();
       if (validation.error) return validation.error.details[0];
-      // 2-Create Board/Teams/lists
       if (depDoc) {
         let { teams, lists } = await depDoc.createDepartmentBoard();
         depDoc.teams = teams;

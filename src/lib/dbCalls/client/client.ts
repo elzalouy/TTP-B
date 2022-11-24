@@ -70,7 +70,7 @@ const ClientDB = class ClientDB {
         let projects = await Project.find({ clientId: id }).lean();
         if (projects) {
           let inProgress = projects.filter(
-            (item) => item.projectStatus === "inProgress"
+            (item) => item.projectStatus === "In Progress"
           ).length;
           let done = projects.filter(
             (item) =>

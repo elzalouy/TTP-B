@@ -86,7 +86,7 @@ const DepartmentSchema = new mongoose_1.Schema(
             type: String,
             enum: {
               values: [...Department_1.ListTypes, "projects"],
-              message: `{VALUE} is not one of the list types ["Tasks Board", "inProgress", "Shared", "Review", "Done", "Not Clear","Cancled"]`,
+              message: `{VALUE} is not one of the list types ["Tasks Board", "In Progress", "Shared", "Review", "Done", "Not Clear","Cancled"]`,
             },
           },
           listId: String,
@@ -141,7 +141,7 @@ const listSchema = joi_1.default
       .string()
       .label("lists.name")
       .valid(
-        "inProgress",
+        "In Progress",
         "Shared",
         "Review",
         "Done",

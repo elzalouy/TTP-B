@@ -110,10 +110,10 @@ export default class TrelloWebhook {
           // check
           teamId: team ? team._id : null,
           status: team
-            ? "inProgress"
+            ? "In Progress"
             : this.actionRequest.action.data.list.name,
           listId: team
-            ? dep.lists.find((item) => item.name === "inProgress").listId
+            ? dep.lists.find((item) => item.name === "In Progress").listId
             : this.actionRequest.action.data.list.id,
         };
         return await TaskController.createTaskByTrello(this.task);
@@ -152,7 +152,7 @@ export default class TrelloWebhook {
             this.actionRequest.action.data?.listBefore?.id === item.listId
         );
         let inProgressList = department.lists.find(
-          (item) => item.name === "inProgress"
+          (item) => item.name === "In Progress"
         );
         this.task = {
           name: this.actionRequest.action.data.card.name,

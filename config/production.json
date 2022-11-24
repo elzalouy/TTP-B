@@ -4,7 +4,7 @@
   "trelloWebhookUrlProject": "https://ttp-beta.herokuapp.com/api/webhookUpdateProject",
   "frontEndUrl": "https://ttpweb-beta.herokuapp.com",
   "BoardStatus": [
-    "inProgress",
+    "In Progress",
     "Cancled",
     "Not Clear",
     "Done",

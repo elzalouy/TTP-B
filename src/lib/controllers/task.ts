@@ -131,6 +131,7 @@ class TaskController extends TaskDB {
 
   static async __CreateNewTask(data: TaskData, files: Express.Multer.File[]) {
     try {
+      console.log({ data });
       let task: TaskInfo;
       data.attachedFiles = [];
       let createdCard: { id: string } | any =

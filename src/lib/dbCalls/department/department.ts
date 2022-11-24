@@ -84,7 +84,7 @@ const DepartmentBD = class DepartmentBD {
                 input: "$tasks",
                 as: "task",
                 cond: {
-                  $in: ["$$task.status", ["inProgress", "Shared", "Review"]],
+                  $in: ["$$task.status", ["In Progress", "Shared", "Review"]],
                 },
               },
             },

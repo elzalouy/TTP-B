@@ -7,7 +7,7 @@ export interface ProjectInfo extends Document {
   startDate?: Date | number;
   completedDate?: Date;
   projectStatus?:
-    | "inProgress"
+    | "In Progress"
     | "deliver on time"
     | "late"
     | "deliver before deadline"
@@ -30,7 +30,7 @@ export interface ProjectData {
   startDate?: Date | number;
   completedDate?: Date;
   projectStatus?:
-    | "inProgress"
+    | "In Progress"
     | "deliver on time"
     | "late"
     | "deliver defore deadline"

@@ -53,7 +53,7 @@ const DepartmentSchema = new Schema<IDepartment>(
             type: String,
             enum: {
               values: [...ListTypes, "projects"],
-              message: `{VALUE} is not one of the list types ["Tasks Board", "inProgress", "Shared", "Review", "Done", "Not Clear","Cancled"]`,
+              message: `{VALUE} is not one of the list types ["Tasks Board", "In Progress", "Shared", "Review", "Done", "Not Clear","Cancled"]`,
             },
           },
           listId: String,
@@ -103,7 +103,7 @@ const listSchema = Joi.array()
     name: Joi.string()
       .label("lists.name")
       .valid(
-        "inProgress",
+        "In Progress",
         "Shared",
         "Review",
         "Done",

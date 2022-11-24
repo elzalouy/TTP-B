@@ -95,11 +95,11 @@ const ClientDB = class ClientDB {
                 if (client) {
                     let projects = yield Project_1.default.find({ clientId: id }).lean();
                     if (projects) {
-                        let inProgress = projects.filter((item) => item.projectStatus === "inProgress").length;
+                        let In Progress = projects.filter((item) => item.projectStatus === "In Progress").length;
                         let done = projects.filter((item) => item.projectStatus === "deliver before deadline" ||
                             item.projectStatus === "deliver on time" ||
                             item.projectStatus === "delivered after deadline").length;
-                        client.inProgressProject = inProgress;
+                        client.In ProgressProject = In Progress;
                         client.doneProject = done;
                         return yield client.save();
                     }

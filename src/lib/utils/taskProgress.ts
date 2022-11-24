@@ -1,11 +1,11 @@
 export const TaskCase = (data: string) => {
   const myCase: any = {
-    inProgress: ["inProgress", "طلب"],
-    delivered: ["done", "deliver"],
-    shared: ["shared"],
-    late: ["late"],
-    "not clear": ["not clear"],
-    cancled: ["cancled"],
+    inProgress: ["In Progress", "طلب"],
+    delivered: ["Done", "deliver"],
+    shared: ["Shared"],
+    late: ["Late"],
+    "not clear": ["Not Clear"],
+    cancled: ["Cancled"],
   };
   let targetCase: string = "";
   for (let item in myCase) {

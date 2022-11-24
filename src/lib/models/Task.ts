@@ -46,9 +46,9 @@ const TaskSchema = new Schema<TaskInfo, TasksModel>(
     },
     status: {
       type: String,
-      default: "inProgress",
+      default: "In Progress",
       enum: [
-        "inProgress",
+        "In Progress",
         "Shared",
         "Done",
         "Tasks Board",

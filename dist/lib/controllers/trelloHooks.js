@@ -119,10 +119,10 @@ class TrelloWebhook {
                         // check
                         teamId: team ? team._id : null,
                         status: team
-                            ? "inProgress"
+                            ? "In Progress"
                             : this.actionRequest.action.data.list.name,
                         listId: team
-                            ? dep.lists.find((item) => item.name === "inProgress").listId
+                            ? dep.lists.find((item) => item.name === "In Progress").listId
                             : this.actionRequest.action.data.list.id,
                     };
                     return yield task_1.default.createTaskByTrello(this.task);
@@ -163,7 +163,7 @@ class TrelloWebhook {
                     });
                     let isNewTeam = department.teams.find((item) => item.listId === this.actionRequest.action.data.card.idList);
                     let isBeforeTeam = department.teams.find((item) => { var _a, _b; return ((_b = (_a = this.actionRequest.action.data) === null || _a === void 0 ? void 0 : _a.listBefore) === null || _b === void 0 ? void 0 : _b.id) === item.listId; });
-                    let inProgressList = department.lists.find((item) => item.name === "inProgress");
+                    let In ProgressList = department.lists.find((item) => item.name === "In Progress");
                     this.task = {
                         name: this.actionRequest.action.data.card.name,
                         boardId: this.actionRequest.action.data.board.id,
@@ -191,10 +191,10 @@ class TrelloWebhook {
                             : new Date().toString(),
                         teamId: isNewTeam ? isNewTeam._id : task.teamId,
                         listId: isNewTeam
-                            ? inProgressList.listId
+                            ? In ProgressList.listId
                             : (_k = this.actionRequest.action.data.listAfter) === null || _k === void 0 ? void 0 : _k.id,
                         status: isNewTeam
-                            ? inProgressList.name
+                            ? In ProgressList.name
                             : (_l = this.actionRequest.action.data.listAfter) === null || _l === void 0 ? void 0 : _l.name,
                     };
                     return yield task_1.default.updateTaskByTrelloDB(this.task);

@@ -22,7 +22,7 @@ export function projectsDueDate(
       let today = new Date();
       let dueDateProjects = await Project.find()
         .where("projectStatus")
-        .equals(["inProgress", "late"])
+        .equals(["In Progress", "late"])
         .where("projectDeadline")
         .lt(new Date(today.getTime() + 30 * 24 * 60 * 60 * 1000).getTime())
         .where("startDate")
@@ -63,10 +63,10 @@ export function projectsPassedDate(
     "0 9-18/3 * * *",
     async () => {
       let passedDatesPojects = await Project.find({
-        projectStatus: { $in: ["inProgress", "late"] },
+        projectStatus: { $in: ["In Progress", "late"] },
       })
         .where("projectStatus")
-        .equals(["inProgress", "late"])
+        .equals(["In Progress", "late"])
         .where("projectDeadline")
         .lte(new Date().getTime());
       console.log(new Date(), "2022-10-24T22:00:00.000+00:00");

@@ -106,12 +106,12 @@ const DepartmentBD = class DepartmentBD {
                     },
                     {
                         $addFields: {
-                            totalInProgress: {
+                            totalIn Progress: {
                                 $filter: {
                                     input: "$tasks",
                                     as: "task",
                                     cond: {
-                                        $in: ["$$task.status", ["inProgress", "Shared", "Review"]],
+                                        $in: ["$$task.status", ["In Progress", "Shared", "Review"]],
                                     },
                                 },
                             },
@@ -141,9 +141,9 @@ const DepartmentBD = class DepartmentBD {
                             reviewListId: 1,
                             sharedListID: 1,
                             notStartedListId: 1,
-                            inProgressListId: 1,
-                            totalInProgress: {
-                                $size: "$totalInProgress",
+                            In ProgressListId: 1,
+                            totalIn Progress: {
+                                $size: "$totalIn Progress",
                             },
                             totalDone: {
                                 $size: "$totalDone",

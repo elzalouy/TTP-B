@@ -4,7 +4,7 @@
   "trelloWebhookUrlProject": "https://ae1a-41-176-229-23.ngrok.io/api/webhookUpdateProject",
   "frontEndUrl": "http://localhost:3000",
   "BoardStatus": [
-    "inProgress",
+    "In Progress",
     "Cancled",
     "Not Clear",
     "Done",

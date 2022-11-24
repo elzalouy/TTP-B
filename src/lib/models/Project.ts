@@ -36,10 +36,10 @@ const ProjectSchema: Schema = new Schema<ProjectInfo>(
     },
     projectStatus: {
       type: String,
-      default: "inProgress",
+      default: "In Progress",
       enum: [
         "Not Started",
-        "inProgress",
+        "In Progress",
         "late",
         "delivered on time",
         "delivered defore deadline",

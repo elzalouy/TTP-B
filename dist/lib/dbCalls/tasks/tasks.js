@@ -141,12 +141,12 @@ class TaskDB {
                 let taskCount = yield Task_1.default.aggregate([
                     {
                         $facet: {
-                            inProgressTasks: [
+                            In ProgressTasks: [
                                 {
                                     $match: {
                                         marchentID: new mongoose_1.default.Types.ObjectId(depId),
                                         status: {
-                                            $in: ["inProgress", "shared", "not clear", "review"],
+                                            $in: ["In Progress", "shared", "not clear", "review"],
                                         },
                                     },
                                 },

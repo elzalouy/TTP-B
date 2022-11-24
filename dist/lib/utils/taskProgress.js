@@ -3,7 +3,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.TaskCase = void 0;
 const TaskCase = (data) => {
     const myCase = {
-        inProgress: ["inProgress", "طلب"],
+        In Progress: ["In Progress", "طلب"],
         delivered: ["done", "deliver"],
         shared: ["shared"],
         late: ["late"],

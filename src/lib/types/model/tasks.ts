@@ -68,6 +68,7 @@ export interface TaskData {
   attachedFiles?: AttachmentSchema[];
   deleteFiles?: AttachmentSchema[] | any;
   attachedFile?: AttachmentSchema;
+  teamListId?: string;
 }
 export interface AttachmentResponse {
   id: string;

@@ -30,13 +30,13 @@ exports.DepartmentQueue = (0, queue_1.default)({ results: [] });
 //         let reviewListId: string = "";
 //         let notClearListId: string = "";
 //         let canceldListId: string = "";
-//         let inProgressListId: string = "";
-//         let inprogress: createListResponse =
+//         let In ProgressListId: string = "";
+//         let In Progress: createListResponse =
 //           await TrelloController.addListToBoard(
 //             department.boardId,
-//             "inProgress"
+//             "In Progress"
 //           );
-//         inProgressListId = inprogress.id;
+//         In ProgressListId = In Progress.id;
 //         let cancel: createListResponse = await TrelloController.addListToBoard(
 //           department.boardId,
 //           "Cancled"
@@ -83,7 +83,7 @@ exports.DepartmentQueue = (0, queue_1.default)({ results: [] });
 //         //   reviewListId,
 //         //   notClearListId,
 //         //   canceldListId,
-//         //   inProgressListId,
+//         //   In ProgressListId,
 //         // ];
 //         // let webhookCreate = listId.map(async (id) => {
 //         //   return await TrelloController.createWebHook(id);
@@ -98,7 +98,7 @@ exports.DepartmentQueue = (0, queue_1.default)({ results: [] });
 //           reviewListId,
 //           notClearListId,
 //           canceldListId,
-//           inProgressListId,
+//           In ProgressListId,
 //           teamsId: teamListIds,
 //         };
 //         let result = await DepartmentController.__createTeamList(

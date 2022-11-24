@@ -39,7 +39,7 @@ export function moveTaskJob(
       let currentTask = await TaskController.getOneTaskBy({ cardId: cardId });
       if (currentTask) {
         let inProgressList = department.lists.find(
-          (item) => item.name === "inProgress"
+          (item) => item.name === "In Progress"
         );
         let team = department.teams.find(
           (item) => currentTask?.teamId.toString() === item._id
