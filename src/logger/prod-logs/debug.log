@@ -89338,3 +89338,11 @@
   service: 'trello',
   timestamp: '2022-08-16T10:35:59.655Z'
 }
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:WFUiEjrljsIDFOmd@cluster0.oeari.mongodb.net/ttp'
+  },
+  level: 'info',
+  service: 'trello',
+  timestamp: '2022-11-24T08:26:57.409Z'
+}

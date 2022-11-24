@@ -72,3 +72,13 @@
   level: 'error',
   timestamp: '2022-11-14 18:16:35'
 }
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-11-24 10:16:39'
+}
+{
+  message: { monthlyDeleteNotifications: 4 },
+  level: 'info',
+  timestamp: '2022-11-24 10:16:41'
+}
