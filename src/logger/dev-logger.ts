@@ -7,7 +7,6 @@ function buildDevLogger() {
   });
 
   return createLogger({
-    level: "debug",
     format: combine(
       // format.colorize(),
       timestamp({ format: "YYYY-MM-DD HH:mm:ss" }),
