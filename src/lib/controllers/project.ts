@@ -63,14 +63,18 @@ const ProjectController = class ProjectController extends ProjectDB {
 
   static async __updateProjectData(data: ProjectData, userId: string) {
     try {
+      let projectData: any = {
+        name: data.name,
+        idBoard: data.boardId,
+        idList: data.listId,
+      };
+      if (data.projectDeadline) projectData.due = data.projectDeadline;
+      if (data.startDate) projectData.start = data.startDate;
+
       projectQueue.push((cb) => {
         TrelloActionsController.__updateCard({
           cardId: data.cardId,
-          data: {
-            name: data.name,
-            due: data?.projectDeadline?.toString(),
-            start: data?.startDate?.toString(),
-          },
+          data: projectData,
         });
         NotificationController.__updateProjectNotification(data, userId);
         cb(null, true);

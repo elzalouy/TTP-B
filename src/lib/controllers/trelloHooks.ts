@@ -220,7 +220,6 @@ export default class TrelloWebhook {
           let projectsList = creativeBoard.lists.find(
             (item) => item.name === "projects"
           ).listId;
-          console.log({ cardId: this.actionRequest.action.data.card.id });
           let project = await Project.findOneAndUpdate(
             { cardId: this.actionRequest.action.data.card.id },
             {
@@ -233,7 +232,6 @@ export default class TrelloWebhook {
             },
             { new: true }
           );
-          console.log({ project });
           io.sockets.emit("update-projects", project);
         }
       });

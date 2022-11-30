@@ -17,7 +17,6 @@ export function removeOldNotifications(
         .lte(new Date(today.getTime() - 30 * 24 * 60 * 60 * 1000).getTime())
         .where("isNotified.isNotified")
         .equals(true);
-      console.log({ oldNotifications });
       let ids = oldNotifications.map((item: NotificationInfo) => item._id);
       if (oldNotifications.length > 0) {
         let result = await NotificationDB.__deleteNotifcations({

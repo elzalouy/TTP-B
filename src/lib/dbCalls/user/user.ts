@@ -51,14 +51,12 @@ const UserDB = class UserDB {
 
   static async __updateUserInfo(data: UserData) {
     try {
-      console.log({ data });
       let id = data.id;
       delete data.id;
       let user: IUser = await User.findByIdAndUpdate(id, data, {
         new: true,
         lean: true,
       });
-      console.log({ user });
       return user;
     } catch (error) {
       logger.error({ updateUserDataError: error });
