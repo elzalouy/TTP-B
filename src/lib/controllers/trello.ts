@@ -148,10 +148,11 @@ class TrelloActionsController {
       let board: any = await fetch(updateBoardApi, {
         method: "PUT",
       }).catch((err) => {
-        throw JSON.stringify({
+        logger.error({ err });
+        return {
           error: "TrelloError",
           message: "Failed to update trello name and color",
-        });
+        };
       });
       return board.json();
     } catch (error) {
@@ -170,8 +171,7 @@ class TrelloActionsController {
           Accept: "application/json",
         },
       });
-      let borderData = await board.json();
-      return borderData;
+      return await board.json();
     } catch (error) {
       logger.error({ createNewBoardError: error });
     }
@@ -198,7 +198,7 @@ class TrelloActionsController {
           Response = JSON.parse(await response.text());
         })
         .catch((err) => {
-          throw err;
+          logger.error(err);
         });
       return Response;
     } catch (error) {
@@ -215,7 +215,8 @@ class TrelloActionsController {
           response = await res.json();
         })
         .catch((err) => {
-          throw err;
+          logger.error({ err });
+          return err;
         });
       return response;
     } catch (error) {
@@ -238,7 +239,7 @@ class TrelloActionsController {
           Accept: "application/json",
         },
       });
-      return cardResult.json();
+      return await cardResult.json();
     } catch (error) {
       logger.error({ createProjectCardError: error });
     }
@@ -261,7 +262,7 @@ class TrelloActionsController {
           Accept: "application/json",
         },
       });
-      return cardResult.json();
+      return await cardResult.json();
     } catch (error) {
       logger.error({ createCardInListError: error });
     }
@@ -276,7 +277,7 @@ class TrelloActionsController {
           Accept: "application/json",
         },
       });
-      return deleteRessult.json();
+      return await deleteRessult.json();
     } catch (error) {
       logger.error({ deleteTasksError: error });
     }
@@ -319,7 +320,7 @@ class TrelloActionsController {
       let archieve = await fetch(archeiveApi, {
         method: "PUT",
       });
-      return archieve.json();
+      return await archieve.json();
     } catch (error) {
       logger.error({ archieveListError: error });
     }
@@ -331,7 +332,7 @@ class TrelloActionsController {
       let remove = await fetch(removeApi, {
         method: "DELETE",
       });
-      return remove.json();
+      return await remove.json();
     } catch (error) {
       logger.error({ removeMemberError: error });
     }
@@ -339,19 +340,22 @@ class TrelloActionsController {
 
   static async __addList(boardId: string, listName: string) {
     try {
+      let result: any;
       let addListApi = trelloApi(`lists?name=${listName}&idBoard=${boardId}&`);
-      let newList = await fetch(addListApi, {
+      await fetch(addListApi, {
         method: "POST",
         headers: {
           Accept: "application/json",
         },
-      }).catch((err) => {
-        throw JSON.stringify({
-          error: "TrelloError",
-          message: "Failed to update trello lists",
+      })
+        .then(async (res: any) => {
+          result = await res.json();
+        })
+        .catch((err: any) => {
+          logger.error({ err });
+          return err;
         });
-      });
-      return newList.json();
+      return result;
     } catch (error) {
       logger.error({ addListError: error });
       return error;
@@ -372,7 +376,7 @@ class TrelloActionsController {
       });
 
       // logger.info({boardId,memberId,type,addMemberApi,newMember})
-      return newMember.json();
+      return await newMember.json();
     } catch (error) {
       logger.error({ addMemberError: error });
     }
@@ -386,7 +390,7 @@ class TrelloActionsController {
       let members = await fetch(boardApi, {
         method: "GET",
       });
-      return members.json();
+      return await members.json();
     } catch (error) {
       logger.error({ getTrelloMombersError: error });
     }
@@ -399,7 +403,7 @@ class TrelloActionsController {
       let boards = await fetch(boardsApi, {
         method: "GET",
       });
-      return boards.json();
+      return await boards.json();
     } catch (error) {
       logger.error({ getTrelloBoardError: error });
     }
@@ -411,7 +415,7 @@ class TrelloActionsController {
       let board = await fetch(boardApi, {
         method: "GET",
       });
-      return board.json();
+      return await board.json();
     } catch (error) {
       logger.error({ singleBoardError: error });
     }
@@ -431,7 +435,7 @@ class TrelloActionsController {
           )}, oauth_token=${Config.get("trelloToken")}`,
         },
       }).then(async (response) => {
-        Response = JSON.parse(await response.text());
+        Response = await response.json();
       });
       return Response;
     } catch (error) {
@@ -440,29 +444,31 @@ class TrelloActionsController {
   }
   static async __updateCard({ cardId, data }: editCardParams) {
     try {
+      let formData = new FormData();
+      if (data.name) formData.append("name", data.name);
+      if (data.desc) formData.append("desc", data.desc);
+      if (data.due) formData.append("desc", data.due);
+      if (data.start) formData.append("desc", data.start);
+      if (data.idBoard) formData.append("desc", data.idBoard);
+      if (data.idList) formData.append("desc", data.idList);
+
       let params: RequestInit = {
         method: "PUT",
         headers: {
           Accept: "*/*",
           "Content-Type": "application/json",
         },
-        body: JSON.stringify({
-          name: data.name,
-          desc: data.desc ? data.desc : undefined,
-          idBoard: data.idBoard,
-          idList: data.idList,
-          due: data.due,
-          start: data.start,
-        }),
+        body: JSON.stringify(data),
       };
       let api = trelloApi(`cards/${cardId}?`);
-      let response = await fetch(api, params)
+      let response: any;
+      await fetch(api, params)
         .then(async (res) => {
-          let result: updateCardResponse = await res.json();
-          return result;
+          response = await res.json();
         })
         .catch((err) => {
-          throw err;
+          logger.error({ err });
+          return err;
         });
       return response;
     } catch (error) {

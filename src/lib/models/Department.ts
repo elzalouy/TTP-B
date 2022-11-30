@@ -245,23 +245,23 @@ DepartmentSchema.methods.createDepartmentBoard = async function (
   try {
     let teams = _.uniqBy([...this.teams], "name"),
       lists = [...this.lists],
-      board: createBoardResponse & { message: string },
-      result: { id: string };
+      board: createBoardResponse | any,
+      result: { id: string } | any;
     // 1- create board
     board = await TrelloActionsController.createNewBoard(this.name, this.color);
-    if (board?.message)
-      return {
-        error: "Boart Error",
-        message: "Board not created, please see Trello roles first.",
-      };
-    if (board?.id && board?.url) {
+    if (board.id && board.url) {
       this.boardId = board.id;
       this.boardURL = board.url;
       await TrelloActionsController.createWebHook(
         board.id,
         "trelloWebhookUrlTask"
       );
-    }
+    } else
+      return {
+        error: "Boart Error",
+        message: "Board not created, please see Trello roles first.",
+      };
+
     //2- create lists
     let departmentLists =
       this.name === config.get("CreativeBoard")
@@ -348,10 +348,8 @@ DepartmentSchema.methods.updateTeams = async function (
     });
     depTeams = await Promise.all(
       data.addTeams.map(async (item) => {
-        let list: { id: string } = await TrelloActionsController.addListToBoard(
-          this.boardId,
-          item
-        );
+        let list: { id: string } | any =
+          await TrelloActionsController.addListToBoard(this.boardId, item);
         return { name: item, listId: list.id, isDeleted: false };
       })
     );

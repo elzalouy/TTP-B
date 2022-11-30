@@ -240,3 +240,7 @@ export type editCardParams = {
     due?: string;
   };
 };
+export type Board = {
+  id: string;
+  name: string;
+};

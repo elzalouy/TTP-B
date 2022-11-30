@@ -11,6 +11,7 @@ import ProjectController from "../../controllers/project";
 import TrelloActionsController from "../../controllers/trello";
 import { ProjectData, ProjectInfo } from "../../types/model/Project";
 import { createProjectsCardsInCreativeBoard } from "../../backgroundJobs/actions/department.actions.queue";
+import { Board } from "../../types/controller/trello";
 config();
 
 const db: string = Config.get("mongoDbConnectionString");
@@ -63,6 +64,14 @@ const initializeAdminUser = async () => {
   }
 };
 const initializeCreativeBoard = async () => {
+  // // create the new boards
+  // let boards: Board[] = await TrelloActionsController.getBoardsInTrello();
+  // let ids = boards.map((item) => item.id);
+  // let departments = await Department.find({});
+  // let depIds = await departments.map((item) => item._id);
+  // let newBoards = ids.filter((item) => !depIds.includes(item));
+  // console.log({ boards, newBoards, currentBoards: depIds });
+
   let department = await Department.findOne({
     name: Config.get("CreativeBoard"),
   });

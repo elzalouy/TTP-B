@@ -354,7 +354,6 @@ class TaskDB {
   }
   static async __createTaskByTrelloDB(data: TaskData) {
     try {
-      console.log({ data });
       let task = await Tasks.findOne({ cardId: data.cardId });
       if (task) {
         data.status = task.status;
