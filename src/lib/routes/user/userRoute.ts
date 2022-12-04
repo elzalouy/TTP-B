@@ -29,15 +29,15 @@ const {
   handleCreatePM,
   handleCreateSM,
 } = UserReq;
-router.post(`${CREATE_SM}`, SM, handleCreateSM);
-router.post(`${CREATE_OM}`, SM, handleCreateOM);
-router.post(`${RESEND_MAIL}`, handleResendMail);
-router.post(`${UPDATE_USER}`, BothPmOrSm, handleUpdateUser);
-router.post(`${CREATE_PM}`, BothPmOrSm, handleCreatePM);
-router.put(`${UPDATE_PASSWORD}`, handleUpdatePassword);
-router.put(`${RESET_PASSWORD}`, handleResetPassword);
-router.delete(`${DELETE_USER}`, BothPmOrSm, handleDeleteUser);
+router.post(`${CREATE_SM}`, Authed, SM, handleCreateSM);
+router.post(`${CREATE_OM}`, Authed, SM, handleCreateOM);
+router.post(`${RESEND_MAIL}`, Authed, handleResendMail);
+router.post(`${UPDATE_USER}`, Authed, BothPmOrSm, handleUpdateUser);
+router.post(`${CREATE_PM}`, Authed, BothPmOrSm, handleCreatePM);
+router.put(`${UPDATE_PASSWORD}`, Authed, handleUpdatePassword);
+router.put(`${RESET_PASSWORD}`, Authed, handleResetPassword);
+router.delete(`${DELETE_USER}`, Authed, BothPmOrSm, handleDeleteUser);
 router.get(`${GET_USERS}`, Authed, handleGetUsers);
-router.get(`${GET_USER}`, handleGetUserInfo);
+router.get(`${GET_USER}`, Authed, handleGetUserInfo);
 
 export default router;

@@ -1,5 +1,6 @@
 import { Router } from "express";
 import Authed from "../../middlewares/Auth/Authed";
+import OMOrSM from "../../middlewares/Auth/OMOrSM";
 import testEnv from "../../middlewares/testEnv";
 import ProjectReq from "../../presentation/project/project";
 import apiRoute from "./apis";
@@ -30,7 +31,7 @@ router.post(`${SORT_PROJECTS}`, Authed, handleSortProjects);
 router.post(`${CREATE_PROJECT}`, Authed, handleCreateProject);
 router.put(`${UPDATE_PROJECT}`, Authed, handleUpdateProject);
 router.get(`${GET_PROJECT}`, Authed, handleGetProject);
-router.delete(`${DELETE_PROJECT}`, Authed, handleDeleteProject);
+router.delete(`${DELETE_PROJECT}`, Authed, OMOrSM, handleDeleteProject);
 router.post(`${FILTER_PROJECTS}`, Authed, handleFilterProjects);
 router.get(`${SEARCH_PROJECTS}`, Authed, handleSearchPorjects);
 router.delete(`${DELETE_PROJECTS}`, Authed, testEnv, handleDeleteProjects);
