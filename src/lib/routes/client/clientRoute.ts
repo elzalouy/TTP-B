@@ -2,6 +2,8 @@ import apis from "./apis";
 import { Router } from "express";
 import ClientReq from "../../presentation/client/client";
 import { imageUpload } from "../../services/awsS3";
+import Authed from "../../middlewares/Auth/Authed";
+import OMOrSM from "../../middlewares/Auth/OMOrSM";
 
 const router = Router();
 
@@ -22,9 +24,15 @@ const {
   handleGetAllClients,
 } = ClientReq;
 
-router.post(`${CREATE_CLIENT}`, clientImage, handleCreateClient);
-router.put(`${UPDATE_CLIENT}`, clientImage, handleUpdateClient);
-router.delete(`${DELETE_CLIENT}`, handleDeleteClient);
-router.get(`${GET_ALL_CLIENTS}`, handleGetAllClients);
+router.post(
+  `${CREATE_CLIENT}`,
+  Authed,
+  OMOrSM,
+  clientImage,
+  handleCreateClient
+);
+router.put(`${UPDATE_CLIENT}`, Authed, OMOrSM, clientImage, handleUpdateClient);
+router.delete(`${DELETE_CLIENT}`, Authed, OMOrSM, handleDeleteClient);
+router.get(`${GET_ALL_CLIENTS}`, Authed, handleGetAllClients);
 
 export default router;
