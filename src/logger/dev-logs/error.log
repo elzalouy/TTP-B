@@ -293,3 +293,984 @@
   level: 'error',
   timestamp: '2022-11-30 12:11:29'
 }
+{
+  message: {
+    __createTaskByTrelloDBError: Error: tasks validation failed: status: `projects` is not a valid enum value for path `status`.
+        at ValidationError.inspect (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/mongoose/lib/error/validation.js:48:26)
+        at formatValue (node:internal/util/inspect:782:19)
+        at formatProperty (node:internal/util/inspect:1819:11)
+        at formatRaw (node:internal/util/inspect:1030:9)
+        at formatValue (node:internal/util/inspect:817:10)
+        at formatProperty (node:internal/util/inspect:1819:11)
+        at formatRaw (node:internal/util/inspect:1030:9)
+        at formatValue (node:internal/util/inspect:817:10)
+        at inspect (node:internal/util/inspect:347:10)
+        at Format.transform (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/logform/pretty-print.js:27:19) {
+      errors: {
+        status: ValidatorError: `projects` is not a valid enum value for path `status`.
+            at validate (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/mongoose/lib/schematype.js:1330:13)
+            at SchemaString.SchemaType.doValidate (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/mongoose/lib/schematype.js:1314:7)
+            at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/mongoose/lib/document.js:2751:18
+            at processTicksAndRejections (node:internal/process/task_queues:78:11) {
+          properties: {
+            validator: [Function (anonymous)],
+            message: '`projects` is not a valid enum value for path `status`.',
+            type: 'enum',
+            enumValues: [
+              'In Progress',
+              'Shared',
+              'Done',
+              'Tasks Board',
+              'Not Clear',
+              'Cancled',
+              'Review',
+              'Archived'
+            ],
+            path: 'status',
+            value: 'projects'
+          },
+          kind: 'enum',
+          path: 'status',
+          value: 'projects',
+          reason: undefined,
+          [Symbol(mongoose:validatorError)]: true
+        }
+      },
+      _message: 'tasks validation failed'
+    }
+  },
+  level: 'error',
+  timestamp: '2022-12-05 16:07:45'
+}
+{
+  message: {
+    __createTaskByTrelloDBError: Error: tasks validation failed: status: `projects` is not a valid enum value for path `status`.
+        at ValidationError.inspect (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/mongoose/lib/error/validation.js:48:26)
+        at formatValue (node:internal/util/inspect:782:19)
+        at formatProperty (node:internal/util/inspect:1819:11)
+        at formatRaw (node:internal/util/inspect:1030:9)
+        at formatValue (node:internal/util/inspect:817:10)
+        at formatProperty (node:internal/util/inspect:1819:11)
+        at formatRaw (node:internal/util/inspect:1030:9)
+        at formatValue (node:internal/util/inspect:817:10)
+        at inspect (node:internal/util/inspect:347:10)
+        at Format.transform (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/logform/pretty-print.js:27:19) {
+      errors: {
+        status: ValidatorError: `projects` is not a valid enum value for path `status`.
+            at validate (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/mongoose/lib/schematype.js:1330:13)
+            at SchemaString.SchemaType.doValidate (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/mongoose/lib/schematype.js:1314:7)
+            at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/mongoose/lib/document.js:2751:18
+            at processTicksAndRejections (node:internal/process/task_queues:78:11) {
+          properties: {
+            validator: [Function (anonymous)],
+            message: '`projects` is not a valid enum value for path `status`.',
+            type: 'enum',
+            enumValues: [
+              'In Progress',
+              'Shared',
+              'Done',
+              'Tasks Board',
+              'Not Clear',
+              'Cancled',
+              'Review',
+              'Archived'
+            ],
+            path: 'status',
+            value: 'projects'
+          },
+          kind: 'enum',
+          path: 'status',
+          value: 'projects',
+          reason: undefined,
+          [Symbol(mongoose:validatorError)]: true
+        }
+      },
+      _message: 'tasks validation failed'
+    }
+  },
+  level: 'error',
+  timestamp: '2022-12-05 16:07:45'
+}
+{
+  message: {
+    __createTaskByTrelloDBError: Error: tasks validation failed: status: `projects` is not a valid enum value for path `status`.
+        at ValidationError.inspect (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/mongoose/lib/error/validation.js:48:26)
+        at formatValue (node:internal/util/inspect:782:19)
+        at formatProperty (node:internal/util/inspect:1819:11)
+        at formatRaw (node:internal/util/inspect:1030:9)
+        at formatValue (node:internal/util/inspect:817:10)
+        at formatProperty (node:internal/util/inspect:1819:11)
+        at formatRaw (node:internal/util/inspect:1030:9)
+        at formatValue (node:internal/util/inspect:817:10)
+        at inspect (node:internal/util/inspect:347:10)
+        at Format.transform (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/logform/pretty-print.js:27:19) {
+      errors: {
+        status: ValidatorError: `projects` is not a valid enum value for path `status`.
+            at validate (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/mongoose/lib/schematype.js:1330:13)
+            at SchemaString.SchemaType.doValidate (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/mongoose/lib/schematype.js:1314:7)
+            at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/mongoose/lib/document.js:2751:18
+            at processTicksAndRejections (node:internal/process/task_queues:78:11) {
+          properties: {
+            validator: [Function (anonymous)],
+            message: '`projects` is not a valid enum value for path `status`.',
+            type: 'enum',
+            enumValues: [
+              'In Progress',
+              'Shared',
+              'Done',
+              'Tasks Board',
+              'Not Clear',
+              'Cancled',
+              'Review',
+              'Archived'
+            ],
+            path: 'status',
+            value: 'projects'
+          },
+          kind: 'enum',
+          path: 'status',
+          value: 'projects',
+          reason: undefined,
+          [Symbol(mongoose:validatorError)]: true
+        }
+      },
+      _message: 'tasks validation failed'
+    }
+  },
+  level: 'error',
+  timestamp: '2022-12-05 16:07:45'
+}
+{
+  message: {
+    __createTaskByTrelloDBError: Error: tasks validation failed: status: `projects` is not a valid enum value for path `status`.
+        at ValidationError.inspect (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/mongoose/lib/error/validation.js:48:26)
+        at formatValue (node:internal/util/inspect:782:19)
+        at formatProperty (node:internal/util/inspect:1819:11)
+        at formatRaw (node:internal/util/inspect:1030:9)
+        at formatValue (node:internal/util/inspect:817:10)
+        at formatProperty (node:internal/util/inspect:1819:11)
+        at formatRaw (node:internal/util/inspect:1030:9)
+        at formatValue (node:internal/util/inspect:817:10)
+        at inspect (node:internal/util/inspect:347:10)
+        at Format.transform (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/logform/pretty-print.js:27:19) {
+      errors: {
+        status: ValidatorError: `projects` is not a valid enum value for path `status`.
+            at validate (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/mongoose/lib/schematype.js:1330:13)
+            at SchemaString.SchemaType.doValidate (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/mongoose/lib/schematype.js:1314:7)
+            at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/mongoose/lib/document.js:2751:18
+            at processTicksAndRejections (node:internal/process/task_queues:78:11) {
+          properties: {
+            validator: [Function (anonymous)],
+            message: '`projects` is not a valid enum value for path `status`.',
+            type: 'enum',
+            enumValues: [
+              'In Progress',
+              'Shared',
+              'Done',
+              'Tasks Board',
+              'Not Clear',
+              'Cancled',
+              'Review',
+              'Archived'
+            ],
+            path: 'status',
+            value: 'projects'
+          },
+          kind: 'enum',
+          path: 'status',
+          value: 'projects',
+          reason: undefined,
+          [Symbol(mongoose:validatorError)]: true
+        }
+      },
+      _message: 'tasks validation failed'
+    }
+  },
+  level: 'error',
+  timestamp: '2022-12-05 17:47:04'
+}
+{
+  message: {
+    __createTaskByTrelloDBError: Error: tasks validation failed: status: `projects` is not a valid enum value for path `status`.
+        at ValidationError.inspect (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/mongoose/lib/error/validation.js:48:26)
+        at formatValue (node:internal/util/inspect:782:19)
+        at formatProperty (node:internal/util/inspect:1819:11)
+        at formatRaw (node:internal/util/inspect:1030:9)
+        at formatValue (node:internal/util/inspect:817:10)
+        at formatProperty (node:internal/util/inspect:1819:11)
+        at formatRaw (node:internal/util/inspect:1030:9)
+        at formatValue (node:internal/util/inspect:817:10)
+        at inspect (node:internal/util/inspect:347:10)
+        at Format.transform (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/logform/pretty-print.js:27:19) {
+      errors: {
+        status: ValidatorError: `projects` is not a valid enum value for path `status`.
+            at validate (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/mongoose/lib/schematype.js:1330:13)
+            at SchemaString.SchemaType.doValidate (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/mongoose/lib/schematype.js:1314:7)
+            at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/mongoose/lib/document.js:2751:18
+            at processTicksAndRejections (node:internal/process/task_queues:78:11) {
+          properties: {
+            validator: [Function (anonymous)],
+            message: '`projects` is not a valid enum value for path `status`.',
+            type: 'enum',
+            enumValues: [
+              'In Progress',
+              'Shared',
+              'Done',
+              'Tasks Board',
+              'Not Clear',
+              'Cancled',
+              'Review',
+              'Archived'
+            ],
+            path: 'status',
+            value: 'projects'
+          },
+          kind: 'enum',
+          path: 'status',
+          value: 'projects',
+          reason: undefined,
+          [Symbol(mongoose:validatorError)]: true
+        }
+      },
+      _message: 'tasks validation failed'
+    }
+  },
+  level: 'error',
+  timestamp: '2022-12-05 17:47:04'
+}
+{
+  message: {
+    __createTaskByTrelloDBError: Error: tasks validation failed: status: `projects` is not a valid enum value for path `status`.
+        at ValidationError.inspect (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/mongoose/lib/error/validation.js:48:26)
+        at formatValue (node:internal/util/inspect:782:19)
+        at formatProperty (node:internal/util/inspect:1819:11)
+        at formatRaw (node:internal/util/inspect:1030:9)
+        at formatValue (node:internal/util/inspect:817:10)
+        at formatProperty (node:internal/util/inspect:1819:11)
+        at formatRaw (node:internal/util/inspect:1030:9)
+        at formatValue (node:internal/util/inspect:817:10)
+        at inspect (node:internal/util/inspect:347:10)
+        at Format.transform (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/logform/pretty-print.js:27:19) {
+      errors: {
+        status: ValidatorError: `projects` is not a valid enum value for path `status`.
+            at validate (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/mongoose/lib/schematype.js:1330:13)
+            at SchemaString.SchemaType.doValidate (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/mongoose/lib/schematype.js:1314:7)
+            at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/mongoose/lib/document.js:2751:18
+            at processTicksAndRejections (node:internal/process/task_queues:78:11) {
+          properties: {
+            validator: [Function (anonymous)],
+            message: '`projects` is not a valid enum value for path `status`.',
+            type: 'enum',
+            enumValues: [
+              'In Progress',
+              'Shared',
+              'Done',
+              'Tasks Board',
+              'Not Clear',
+              'Cancled',
+              'Review',
+              'Archived'
+            ],
+            path: 'status',
+            value: 'projects'
+          },
+          kind: 'enum',
+          path: 'status',
+          value: 'projects',
+          reason: undefined,
+          [Symbol(mongoose:validatorError)]: true
+        }
+      },
+      _message: 'tasks validation failed'
+    }
+  },
+  level: 'error',
+  timestamp: '2022-12-05 17:47:06'
+}
+{
+  message: {
+    __createTaskByTrelloDBError: Error: tasks validation failed: status: `projects` is not a valid enum value for path `status`.
+        at ValidationError.inspect (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/mongoose/lib/error/validation.js:48:26)
+        at formatValue (node:internal/util/inspect:782:19)
+        at formatProperty (node:internal/util/inspect:1819:11)
+        at formatRaw (node:internal/util/inspect:1030:9)
+        at formatValue (node:internal/util/inspect:817:10)
+        at formatProperty (node:internal/util/inspect:1819:11)
+        at formatRaw (node:internal/util/inspect:1030:9)
+        at formatValue (node:internal/util/inspect:817:10)
+        at inspect (node:internal/util/inspect:347:10)
+        at Format.transform (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/logform/pretty-print.js:27:19) {
+      errors: {
+        status: ValidatorError: `projects` is not a valid enum value for path `status`.
+            at validate (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/mongoose/lib/schematype.js:1330:13)
+            at SchemaString.SchemaType.doValidate (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/mongoose/lib/schematype.js:1314:7)
+            at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/mongoose/lib/document.js:2751:18
+            at processTicksAndRejections (node:internal/process/task_queues:78:11) {
+          properties: {
+            validator: [Function (anonymous)],
+            message: '`projects` is not a valid enum value for path `status`.',
+            type: 'enum',
+            enumValues: [
+              'In Progress',
+              'Shared',
+              'Done',
+              'Tasks Board',
+              'Not Clear',
+              'Cancled',
+              'Review',
+              'Archived'
+            ],
+            path: 'status',
+            value: 'projects'
+          },
+          kind: 'enum',
+          path: 'status',
+          value: 'projects',
+          reason: undefined,
+          [Symbol(mongoose:validatorError)]: true
+        }
+      },
+      _message: 'tasks validation failed'
+    }
+  },
+  level: 'error',
+  timestamp: '2022-12-05 19:19:08'
+}
+{
+  message: {
+    __createTaskByTrelloDBError: Error: tasks validation failed: status: `projects` is not a valid enum value for path `status`.
+        at ValidationError.inspect (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/mongoose/lib/error/validation.js:48:26)
+        at formatValue (node:internal/util/inspect:782:19)
+        at formatProperty (node:internal/util/inspect:1819:11)
+        at formatRaw (node:internal/util/inspect:1030:9)
+        at formatValue (node:internal/util/inspect:817:10)
+        at formatProperty (node:internal/util/inspect:1819:11)
+        at formatRaw (node:internal/util/inspect:1030:9)
+        at formatValue (node:internal/util/inspect:817:10)
+        at inspect (node:internal/util/inspect:347:10)
+        at Format.transform (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/logform/pretty-print.js:27:19) {
+      errors: {
+        status: ValidatorError: `projects` is not a valid enum value for path `status`.
+            at validate (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/mongoose/lib/schematype.js:1330:13)
+            at SchemaString.SchemaType.doValidate (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/mongoose/lib/schematype.js:1314:7)
+            at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/mongoose/lib/document.js:2751:18
+            at processTicksAndRejections (node:internal/process/task_queues:78:11) {
+          properties: {
+            validator: [Function (anonymous)],
+            message: '`projects` is not a valid enum value for path `status`.',
+            type: 'enum',
+            enumValues: [
+              'In Progress',
+              'Shared',
+              'Done',
+              'Tasks Board',
+              'Not Clear',
+              'Cancled',
+              'Review',
+              'Archived'
+            ],
+            path: 'status',
+            value: 'projects'
+          },
+          kind: 'enum',
+          path: 'status',
+          value: 'projects',
+          reason: undefined,
+          [Symbol(mongoose:validatorError)]: true
+        }
+      },
+      _message: 'tasks validation failed'
+    }
+  },
+  level: 'error',
+  timestamp: '2022-12-05 19:19:08'
+}
+{
+  message: {
+    __createTaskByTrelloDBError: Error: tasks validation failed: status: `projects` is not a valid enum value for path `status`.
+        at ValidationError.inspect (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/mongoose/lib/error/validation.js:48:26)
+        at formatValue (node:internal/util/inspect:782:19)
+        at formatProperty (node:internal/util/inspect:1819:11)
+        at formatRaw (node:internal/util/inspect:1030:9)
+        at formatValue (node:internal/util/inspect:817:10)
+        at formatProperty (node:internal/util/inspect:1819:11)
+        at formatRaw (node:internal/util/inspect:1030:9)
+        at formatValue (node:internal/util/inspect:817:10)
+        at inspect (node:internal/util/inspect:347:10)
+        at Format.transform (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/logform/pretty-print.js:27:19) {
+      errors: {
+        status: ValidatorError: `projects` is not a valid enum value for path `status`.
+            at validate (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/mongoose/lib/schematype.js:1330:13)
+            at SchemaString.SchemaType.doValidate (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/mongoose/lib/schematype.js:1314:7)
+            at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/mongoose/lib/document.js:2751:18
+            at processTicksAndRejections (node:internal/process/task_queues:78:11) {
+          properties: {
+            validator: [Function (anonymous)],
+            message: '`projects` is not a valid enum value for path `status`.',
+            type: 'enum',
+            enumValues: [
+              'In Progress',
+              'Shared',
+              'Done',
+              'Tasks Board',
+              'Not Clear',
+              'Cancled',
+              'Review',
+              'Archived'
+            ],
+            path: 'status',
+            value: 'projects'
+          },
+          kind: 'enum',
+          path: 'status',
+          value: 'projects',
+          reason: undefined,
+          [Symbol(mongoose:validatorError)]: true
+        }
+      },
+      _message: 'tasks validation failed'
+    }
+  },
+  level: 'error',
+  timestamp: '2022-12-05 19:19:08'
+}
+{
+  message: {
+    deleteTasksError: FetchError: invalid json response body at https://api.trello.com/1/cards/638e1a7a0fee06039a607c23?key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68 reason: Unexpected token T in JSON at position 0
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/node-fetch/lib/index.js:273:32
+        at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+      type: 'invalid-json'
+    }
+  },
+  level: 'error',
+  timestamp: '2022-12-05 19:21:41'
+}
+{
+  message: {
+    createNewBoardError: FetchError: invalid json response body at https://api.trello.com/1/boards/?name=dev%20/%20TTP%20Creative&prefs_background=orange&defaultLists=false&idOrganization=ttpbetalocalkey=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68 reason: Unexpected token i in JSON at position 0
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/node-fetch/lib/index.js:273:32
+        at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+      type: 'invalid-json'
+    }
+  },
+  level: 'error',
+  timestamp: '2022-12-05 21:33:08'
+}
+{
+  message: {
+    __createTaskByTrelloDBError: Error: tasks validation failed: status: `projects` is not a valid enum value for path `status`.
+        at ValidationError.inspect (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/mongoose/lib/error/validation.js:48:26)
+        at formatValue (node:internal/util/inspect:782:19)
+        at formatProperty (node:internal/util/inspect:1819:11)
+        at formatRaw (node:internal/util/inspect:1030:9)
+        at formatValue (node:internal/util/inspect:817:10)
+        at formatProperty (node:internal/util/inspect:1819:11)
+        at formatRaw (node:internal/util/inspect:1030:9)
+        at formatValue (node:internal/util/inspect:817:10)
+        at inspect (node:internal/util/inspect:347:10)
+        at Format.transform (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/logform/pretty-print.js:27:19) {
+      errors: {
+        status: ValidatorError: `projects` is not a valid enum value for path `status`.
+            at validate (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/mongoose/lib/schematype.js:1330:13)
+            at SchemaString.SchemaType.doValidate (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/mongoose/lib/schematype.js:1314:7)
+            at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/mongoose/lib/document.js:2751:18
+            at processTicksAndRejections (node:internal/process/task_queues:78:11) {
+          properties: {
+            validator: [Function (anonymous)],
+            message: '`projects` is not a valid enum value for path `status`.',
+            type: 'enum',
+            enumValues: [
+              'In Progress',
+              'Shared',
+              'Done',
+              'Tasks Board',
+              'Not Clear',
+              'Cancled',
+              'Review',
+              'Archived'
+            ],
+            path: 'status',
+            value: 'projects'
+          },
+          kind: 'enum',
+          path: 'status',
+          value: 'projects',
+          reason: undefined,
+          [Symbol(mongoose:validatorError)]: true
+        }
+      },
+      _message: 'tasks validation failed'
+    }
+  },
+  level: 'error',
+  timestamp: '2022-12-05 21:35:13'
+}
+{
+  message: {
+    __createTaskByTrelloDBError: Error: tasks validation failed: status: `projects` is not a valid enum value for path `status`.
+        at ValidationError.inspect (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/mongoose/lib/error/validation.js:48:26)
+        at formatValue (node:internal/util/inspect:782:19)
+        at formatProperty (node:internal/util/inspect:1819:11)
+        at formatRaw (node:internal/util/inspect:1030:9)
+        at formatValue (node:internal/util/inspect:817:10)
+        at formatProperty (node:internal/util/inspect:1819:11)
+        at formatRaw (node:internal/util/inspect:1030:9)
+        at formatValue (node:internal/util/inspect:817:10)
+        at inspect (node:internal/util/inspect:347:10)
+        at Format.transform (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/logform/pretty-print.js:27:19) {
+      errors: {
+        status: ValidatorError: `projects` is not a valid enum value for path `status`.
+            at validate (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/mongoose/lib/schematype.js:1330:13)
+            at SchemaString.SchemaType.doValidate (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/mongoose/lib/schematype.js:1314:7)
+            at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/mongoose/lib/document.js:2751:18
+            at processTicksAndRejections (node:internal/process/task_queues:78:11) {
+          properties: {
+            validator: [Function (anonymous)],
+            message: '`projects` is not a valid enum value for path `status`.',
+            type: 'enum',
+            enumValues: [
+              'In Progress',
+              'Shared',
+              'Done',
+              'Tasks Board',
+              'Not Clear',
+              'Cancled',
+              'Review',
+              'Archived'
+            ],
+            path: 'status',
+            value: 'projects'
+          },
+          kind: 'enum',
+          path: 'status',
+          value: 'projects',
+          reason: undefined,
+          [Symbol(mongoose:validatorError)]: true
+        }
+      },
+      _message: 'tasks validation failed'
+    }
+  },
+  level: 'error',
+  timestamp: '2022-12-05 21:35:13'
+}
+{
+  message: {
+    __createTaskByTrelloDBError: Error: tasks validation failed: status: `projects` is not a valid enum value for path `status`.
+        at ValidationError.inspect (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/mongoose/lib/error/validation.js:48:26)
+        at formatValue (node:internal/util/inspect:782:19)
+        at formatProperty (node:internal/util/inspect:1819:11)
+        at formatRaw (node:internal/util/inspect:1030:9)
+        at formatValue (node:internal/util/inspect:817:10)
+        at formatProperty (node:internal/util/inspect:1819:11)
+        at formatRaw (node:internal/util/inspect:1030:9)
+        at formatValue (node:internal/util/inspect:817:10)
+        at inspect (node:internal/util/inspect:347:10)
+        at Format.transform (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/logform/pretty-print.js:27:19) {
+      errors: {
+        status: ValidatorError: `projects` is not a valid enum value for path `status`.
+            at validate (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/mongoose/lib/schematype.js:1330:13)
+            at SchemaString.SchemaType.doValidate (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/mongoose/lib/schematype.js:1314:7)
+            at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/mongoose/lib/document.js:2751:18
+            at processTicksAndRejections (node:internal/process/task_queues:78:11) {
+          properties: {
+            validator: [Function (anonymous)],
+            message: '`projects` is not a valid enum value for path `status`.',
+            type: 'enum',
+            enumValues: [
+              'In Progress',
+              'Shared',
+              'Done',
+              'Tasks Board',
+              'Not Clear',
+              'Cancled',
+              'Review',
+              'Archived'
+            ],
+            path: 'status',
+            value: 'projects'
+          },
+          kind: 'enum',
+          path: 'status',
+          value: 'projects',
+          reason: undefined,
+          [Symbol(mongoose:validatorError)]: true
+        }
+      },
+      _message: 'tasks validation failed'
+    }
+  },
+  level: 'error',
+  timestamp: '2022-12-05 21:35:13'
+}
+{
+  message: {
+    getBoardListsError: FetchError: invalid json response body at https://api.trello.com/1/boards/638e47edba804d01c547478f/lists?key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68 reason: Unexpected token i in JSON at position 0
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/node-fetch/lib/index.js:273:32
+        at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+      type: 'invalid-json'
+    }
+  },
+  level: 'error',
+  timestamp: '2022-12-05 22:14:57'
+}
+{
+  message: {
+    __createTaskByTrelloDBError: Error: tasks validation failed: status: `projects` is not a valid enum value for path `status`.
+        at ValidationError.inspect (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/mongoose/lib/error/validation.js:48:26)
+        at formatValue (node:internal/util/inspect:782:19)
+        at formatProperty (node:internal/util/inspect:1819:11)
+        at formatRaw (node:internal/util/inspect:1030:9)
+        at formatValue (node:internal/util/inspect:817:10)
+        at formatProperty (node:internal/util/inspect:1819:11)
+        at formatRaw (node:internal/util/inspect:1030:9)
+        at formatValue (node:internal/util/inspect:817:10)
+        at inspect (node:internal/util/inspect:347:10)
+        at Format.transform (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/logform/pretty-print.js:27:19) {
+      errors: {
+        status: ValidatorError: `projects` is not a valid enum value for path `status`.
+            at validate (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/mongoose/lib/schematype.js:1330:13)
+            at SchemaString.SchemaType.doValidate (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/mongoose/lib/schematype.js:1314:7)
+            at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/mongoose/lib/document.js:2751:18
+            at processTicksAndRejections (node:internal/process/task_queues:78:11) {
+          properties: {
+            validator: [Function (anonymous)],
+            message: '`projects` is not a valid enum value for path `status`.',
+            type: 'enum',
+            enumValues: [
+              'In Progress',
+              'Shared',
+              'Done',
+              'Tasks Board',
+              'Not Clear',
+              'Cancled',
+              'Review',
+              'Archived'
+            ],
+            path: 'status',
+            value: 'projects'
+          },
+          kind: 'enum',
+          path: 'status',
+          value: 'projects',
+          reason: undefined,
+          [Symbol(mongoose:validatorError)]: true
+        }
+      },
+      _message: 'tasks validation failed'
+    }
+  },
+  level: 'error',
+  timestamp: '2022-12-05 22:15:01'
+}
+{
+  message: {
+    __createTaskByTrelloDBError: Error: tasks validation failed: status: `projects` is not a valid enum value for path `status`.
+        at ValidationError.inspect (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/mongoose/lib/error/validation.js:48:26)
+        at formatValue (node:internal/util/inspect:782:19)
+        at formatProperty (node:internal/util/inspect:1819:11)
+        at formatRaw (node:internal/util/inspect:1030:9)
+        at formatValue (node:internal/util/inspect:817:10)
+        at formatProperty (node:internal/util/inspect:1819:11)
+        at formatRaw (node:internal/util/inspect:1030:9)
+        at formatValue (node:internal/util/inspect:817:10)
+        at inspect (node:internal/util/inspect:347:10)
+        at Format.transform (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/logform/pretty-print.js:27:19) {
+      errors: {
+        status: ValidatorError: `projects` is not a valid enum value for path `status`.
+            at validate (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/mongoose/lib/schematype.js:1330:13)
+            at SchemaString.SchemaType.doValidate (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/mongoose/lib/schematype.js:1314:7)
+            at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/mongoose/lib/document.js:2751:18
+            at processTicksAndRejections (node:internal/process/task_queues:78:11) {
+          properties: {
+            validator: [Function (anonymous)],
+            message: '`projects` is not a valid enum value for path `status`.',
+            type: 'enum',
+            enumValues: [
+              'In Progress',
+              'Shared',
+              'Done',
+              'Tasks Board',
+              'Not Clear',
+              'Cancled',
+              'Review',
+              'Archived'
+            ],
+            path: 'status',
+            value: 'projects'
+          },
+          kind: 'enum',
+          path: 'status',
+          value: 'projects',
+          reason: undefined,
+          [Symbol(mongoose:validatorError)]: true
+        }
+      },
+      _message: 'tasks validation failed'
+    }
+  },
+  level: 'error',
+  timestamp: '2022-12-05 22:15:02'
+}
+{
+  message: {
+    __createTaskByTrelloDBError: Error: tasks validation failed: status: `projects` is not a valid enum value for path `status`.
+        at ValidationError.inspect (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/mongoose/lib/error/validation.js:48:26)
+        at formatValue (node:internal/util/inspect:782:19)
+        at formatProperty (node:internal/util/inspect:1819:11)
+        at formatRaw (node:internal/util/inspect:1030:9)
+        at formatValue (node:internal/util/inspect:817:10)
+        at formatProperty (node:internal/util/inspect:1819:11)
+        at formatRaw (node:internal/util/inspect:1030:9)
+        at formatValue (node:internal/util/inspect:817:10)
+        at inspect (node:internal/util/inspect:347:10)
+        at Format.transform (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/logform/pretty-print.js:27:19) {
+      errors: {
+        status: ValidatorError: `projects` is not a valid enum value for path `status`.
+            at validate (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/mongoose/lib/schematype.js:1330:13)
+            at SchemaString.SchemaType.doValidate (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/mongoose/lib/schematype.js:1314:7)
+            at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/mongoose/lib/document.js:2751:18
+            at processTicksAndRejections (node:internal/process/task_queues:78:11) {
+          properties: {
+            validator: [Function (anonymous)],
+            message: '`projects` is not a valid enum value for path `status`.',
+            type: 'enum',
+            enumValues: [
+              'In Progress',
+              'Shared',
+              'Done',
+              'Tasks Board',
+              'Not Clear',
+              'Cancled',
+              'Review',
+              'Archived'
+            ],
+            path: 'status',
+            value: 'projects'
+          },
+          kind: 'enum',
+          path: 'status',
+          value: 'projects',
+          reason: undefined,
+          [Symbol(mongoose:validatorError)]: true
+        }
+      },
+      _message: 'tasks validation failed'
+    }
+  },
+  level: 'error',
+  timestamp: '2022-12-05 22:15:02'
+}
+{
+  message: {
+    __createTaskByTrelloDBError: Error: tasks validation failed: status: `projects` is not a valid enum value for path `status`.
+        at ValidationError.inspect (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/mongoose/lib/error/validation.js:48:26)
+        at formatValue (node:internal/util/inspect:782:19)
+        at formatProperty (node:internal/util/inspect:1819:11)
+        at formatRaw (node:internal/util/inspect:1030:9)
+        at formatValue (node:internal/util/inspect:817:10)
+        at formatProperty (node:internal/util/inspect:1819:11)
+        at formatRaw (node:internal/util/inspect:1030:9)
+        at formatValue (node:internal/util/inspect:817:10)
+        at inspect (node:internal/util/inspect:347:10)
+        at Format.transform (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/logform/pretty-print.js:27:19) {
+      errors: {
+        status: ValidatorError: `projects` is not a valid enum value for path `status`.
+            at validate (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/mongoose/lib/schematype.js:1330:13)
+            at SchemaString.SchemaType.doValidate (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/mongoose/lib/schematype.js:1314:7)
+            at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/mongoose/lib/document.js:2751:18
+            at processTicksAndRejections (node:internal/process/task_queues:78:11) {
+          properties: {
+            validator: [Function (anonymous)],
+            message: '`projects` is not a valid enum value for path `status`.',
+            type: 'enum',
+            enumValues: [
+              'In Progress',
+              'Shared',
+              'Done',
+              'Tasks Board',
+              'Not Clear',
+              'Cancled',
+              'Review',
+              'Archived'
+            ],
+            path: 'status',
+            value: 'projects'
+          },
+          kind: 'enum',
+          path: 'status',
+          value: 'projects',
+          reason: undefined,
+          [Symbol(mongoose:validatorError)]: true
+        }
+      },
+      _message: 'tasks validation failed'
+    }
+  },
+  level: 'error',
+  timestamp: '2022-12-05 22:22:00'
+}
+{
+  message: {
+    __createTaskByTrelloDBError: Error: tasks validation failed: status: `projects` is not a valid enum value for path `status`.
+        at ValidationError.inspect (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/mongoose/lib/error/validation.js:48:26)
+        at formatValue (node:internal/util/inspect:782:19)
+        at formatProperty (node:internal/util/inspect:1819:11)
+        at formatRaw (node:internal/util/inspect:1030:9)
+        at formatValue (node:internal/util/inspect:817:10)
+        at formatProperty (node:internal/util/inspect:1819:11)
+        at formatRaw (node:internal/util/inspect:1030:9)
+        at formatValue (node:internal/util/inspect:817:10)
+        at inspect (node:internal/util/inspect:347:10)
+        at Format.transform (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/logform/pretty-print.js:27:19) {
+      errors: {
+        status: ValidatorError: `projects` is not a valid enum value for path `status`.
+            at validate (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/mongoose/lib/schematype.js:1330:13)
+            at SchemaString.SchemaType.doValidate (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/mongoose/lib/schematype.js:1314:7)
+            at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/mongoose/lib/document.js:2751:18
+            at processTicksAndRejections (node:internal/process/task_queues:78:11) {
+          properties: {
+            validator: [Function (anonymous)],
+            message: '`projects` is not a valid enum value for path `status`.',
+            type: 'enum',
+            enumValues: [
+              'In Progress',
+              'Shared',
+              'Done',
+              'Tasks Board',
+              'Not Clear',
+              'Cancled',
+              'Review',
+              'Archived'
+            ],
+            path: 'status',
+            value: 'projects'
+          },
+          kind: 'enum',
+          path: 'status',
+          value: 'projects',
+          reason: undefined,
+          [Symbol(mongoose:validatorError)]: true
+        }
+      },
+      _message: 'tasks validation failed'
+    }
+  },
+  level: 'error',
+  timestamp: '2022-12-05 22:22:00'
+}
+{
+  message: {
+    __createTaskByTrelloDBError: Error: tasks validation failed: status: `projects` is not a valid enum value for path `status`.
+        at ValidationError.inspect (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/mongoose/lib/error/validation.js:48:26)
+        at formatValue (node:internal/util/inspect:782:19)
+        at formatProperty (node:internal/util/inspect:1819:11)
+        at formatRaw (node:internal/util/inspect:1030:9)
+        at formatValue (node:internal/util/inspect:817:10)
+        at formatProperty (node:internal/util/inspect:1819:11)
+        at formatRaw (node:internal/util/inspect:1030:9)
+        at formatValue (node:internal/util/inspect:817:10)
+        at inspect (node:internal/util/inspect:347:10)
+        at Format.transform (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/logform/pretty-print.js:27:19) {
+      errors: {
+        status: ValidatorError: `projects` is not a valid enum value for path `status`.
+            at validate (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/mongoose/lib/schematype.js:1330:13)
+            at SchemaString.SchemaType.doValidate (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/mongoose/lib/schematype.js:1314:7)
+            at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/mongoose/lib/document.js:2751:18
+            at processTicksAndRejections (node:internal/process/task_queues:78:11) {
+          properties: {
+            validator: [Function (anonymous)],
+            message: '`projects` is not a valid enum value for path `status`.',
+            type: 'enum',
+            enumValues: [
+              'In Progress',
+              'Shared',
+              'Done',
+              'Tasks Board',
+              'Not Clear',
+              'Cancled',
+              'Review',
+              'Archived'
+            ],
+            path: 'status',
+            value: 'projects'
+          },
+          kind: 'enum',
+          path: 'status',
+          value: 'projects',
+          reason: undefined,
+          [Symbol(mongoose:validatorError)]: true
+        }
+      },
+      _message: 'tasks validation failed'
+    }
+  },
+  level: 'error',
+  timestamp: '2022-12-05 22:22:00'
+}
+{
+  message: {
+    getBoardListsError: FetchError: invalid json response body at https://api.trello.com/1/boards/638e53396f6b3803e1449f62/lists?key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68 reason: Unexpected token i in JSON at position 0
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/node-fetch/lib/index.js:273:32
+        at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+      type: 'invalid-json'
+    }
+  },
+  level: 'error',
+  timestamp: '2022-12-05 22:23:55'
+}
+{
+  message: {
+    getBoardListsError: FetchError: invalid json response body at https://api.trello.com/1/boards/638e53396f6b3803e1449f62/lists?key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68 reason: Unexpected token i in JSON at position 0
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/node-fetch/lib/index.js:273:32
+        at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+      type: 'invalid-json'
+    }
+  },
+  level: 'error',
+  timestamp: '2022-12-05 22:26:41'
+}
+{
+  message: {
+    getBoardListsError: FetchError: invalid json response body at https://api.trello.com/1/boards/638e53396f6b3803e1449f62/lists?key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68 reason: Unexpected token i in JSON at position 0
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/node-fetch/lib/index.js:273:32
+        at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+      type: 'invalid-json'
+    }
+  },
+  level: 'error',
+  timestamp: '2022-12-05 22:59:28'
+}
+{
+  message: {
+    getBoardListsError: FetchError: invalid json response body at https://api.trello.com/1/boards/638e53396f6b3803e1449f62/lists?key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68 reason: Unexpected token i in JSON at position 0
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/node-fetch/lib/index.js:273:32
+        at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+      type: 'invalid-json'
+    }
+  },
+  level: 'error',
+  timestamp: '2022-12-05 23:00:03'
+}
+{
+  message: {
+    err: FetchError: invalid json response body at https://api.trello.com/1/lists?name=Shared&idBoard=Shared&key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68 reason: Unexpected token i in JSON at position 0
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/node-fetch/lib/index.js:273:32
+        at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+      type: 'invalid-json'
+    }
+  },
+  level: 'error',
+  timestamp: '2022-12-05 23:31:50'
+}
+{
+  message: {
+    getCardsInBoardError: FetchError: invalid json response body at https://api.trello.com/1/boards/6391bc1e2bc49601012f789c/crads?key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68 reason: Unexpected token C in JSON at position 0
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/node-fetch/lib/index.js:273:32
+        at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+      type: 'invalid-json'
+    }
+  },
+  level: 'error',
+  timestamp: '2022-12-08 15:19:48'
+}

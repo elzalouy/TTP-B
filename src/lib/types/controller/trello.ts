@@ -243,4 +243,26 @@ export type editCardParams = {
 export type Board = {
   id: string;
   name: string;
+  lists?: { id: string; name: string }[];
+};
+export type List = {
+  id: string;
+  name: string;
+  closed: boolean;
+  idBoard: string;
+  pos: number;
+  subscribed: boolean;
+  softLimit: any;
+};
+export type Card = {
+  id: string;
+  desc: string;
+  due: any;
+  idBoard: string;
+  idList: string;
+  name: string;
+  shortLink: "38xqV4u6";
+  shortUrl: "https://trello.com/c/38xqV4u6";
+  start: any;
+  url: string;
 };

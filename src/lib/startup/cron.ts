@@ -6,6 +6,7 @@ import {
   projectsDueDate,
   projectsPassedDate,
 } from "../backgroundJobs/actions/project.actions.cron";
+import { initializeTrelloBoardsJob } from "../backgroundJobs/actions/trello.actions.cron";
 export default async function (
   io: Server<DefaultEventsMap, DefaultEventsMap, DefaultEventsMap, any>
 ) {
@@ -13,6 +14,7 @@ export default async function (
     await removeOldNotifications(io).start();
     await projectsDueDate(io).start();
     await projectsPassedDate(io).start();
+    await initializeTrelloBoardsJob().start();
   } catch (error) {
     logger.error({ errorOldNotificationsCron: error });
   }

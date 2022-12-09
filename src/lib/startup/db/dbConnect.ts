@@ -10,8 +10,13 @@ import DepartmentController from "../../controllers/department";
 import ProjectController from "../../controllers/project";
 import TrelloActionsController from "../../controllers/trello";
 import { ProjectData, ProjectInfo } from "../../types/model/Project";
+import Tasks from "../../models/Task";
 import { createProjectsCardsInCreativeBoard } from "../../backgroundJobs/actions/department.actions.queue";
-import { Board } from "../../types/controller/trello";
+import { Board, Card, List } from "../../types/controller/trello";
+import { ListTypes } from "../../types/model/Department";
+import _ from "lodash";
+import TaskController from "../../controllers/task";
+import { io } from "../../..";
 config();
 
 const db: string = Config.get("mongoDbConnectionString");
@@ -37,7 +42,6 @@ const mongoDB: () => Promise<void> = async () => {
     await connect(db, options);
     console.log("Mongo DB connected,", Config.get("mongoDbConnectionString"));
     initializeAdminUser();
-    initializeCreativeBoard();
   } catch (error) {
     console.error({ mongoDBError: error });
     process.exit(1);
@@ -50,48 +54,112 @@ const initializeAdminUser = async () => {
   });
   if (!userInfo) {
     let passwordHash: string = await hashBassword(
-      process.env.SUPER_ADMIN_PASSWORD
+      Config.get("superAdminPassword")
     );
-
     const data: UserData = {
       name: "abdulaziz qannam",
       email: Config.get("superAdminEmail"),
-      password: Config.get("superAdminPassword"),
+      password: passwordHash,
       role: "SM",
       verified: true,
     };
     await UserDB.createUser(data);
   }
 };
-const initializeCreativeBoard = async () => {
-  // // create the new boards
-  // let boards: Board[] = await TrelloActionsController.getBoardsInTrello();
-  // let ids = boards.map((item) => item.id);
-  // let departments = await Department.find({});
-  // let depIds = await departments.map((item) => item._id);
-  // let newBoards = ids.filter((item) => !depIds.includes(item));
-  // console.log({ boards, newBoards, currentBoards: depIds });
-
-  let department = await Department.findOne({
-    name: Config.get("CreativeBoard"),
-  });
-  let projects = await ProjectController.getProject({});
-  if (!department) {
-    let dep: any = {
-      name: Config.get("CreativeBoard"),
-      color: "orange",
-    };
-    department = await DepartmentController.createDepartment(dep);
-    let listOfProjects = department.lists.find(
-      (item) => item.name === "projects"
+export const initializeTrelloBoards = async () => {
+  let allBoards: Board[] = await TrelloActionsController.getBoardsInTrello();
+  let allDepartments = await Department.find({});
+  allBoards.forEach(async (boardItem) => {
+    let currentDepartment = allDepartments.find(
+      (departmentItem) => departmentItem.boardId === boardItem.id
     );
-    if (department && department?._id && listOfProjects) {
-      projects.forEach((item: ProjectData) => {
-        TrelloActionsController.__createProject(listOfProjects.listId, item);
+    if (currentDepartment) {
+      // get the lists of the board
+      let lists: List[] = await TrelloActionsController.__getBoardLists(
+        boardItem.id
+      );
+      let listsNames = lists.map((item) => item.name);
+      let shouldBeExistedInBoard = _.differenceWith(
+        ListTypes,
+        listsNames,
+        _.isEqual
+      );
+      let createShouldBeExisted = await Promise.all(
+        shouldBeExistedInBoard.map(async (item) => {
+          let list: { id: string } =
+            await TrelloActionsController.addListToBoard(boardItem.id, item);
+          return { listId: list.id, name: item };
+        })
+      );
+      currentDepartment.lists = [
+        ...lists
+          .filter((item) => ListTypes.includes(item.name))
+          .map((item) => {
+            return { listId: item.id, name: item.name };
+          }),
+        ...createShouldBeExisted,
+      ];
+      currentDepartment.teams = lists
+        .filter((item) => !ListTypes.includes(item.name))
+        .map((item) => {
+          return { listId: item.id, name: item.name, isDeleted: false };
+        });
+      currentDepartment = await currentDepartment.save();
+      let cards: Card[] = await TrelloActionsController.__getCardsInBoard(
+        currentDepartment.boardId
+      );
+      let tasks = await TaskController.getAllTasksDB({
+        boardId: currentDepartment.boardId,
       });
+      let ids = tasks.map((item) => item.cardId);
+      let notSavedTasks: Card[] = cards.filter(
+        (item) => !ids.includes(item.id)
+      );
+      let saveTasks = await Promise.all(
+        notSavedTasks.map(async (item) => {
+          let task = new Tasks({
+            name: item.name,
+            due: item.due,
+            start: item.start,
+            description: item.desc,
+            listId: item.idList,
+            boardId: item.idBoard,
+            cardId: item.id,
+          });
+          return await task.save();
+        })
+      );
+    } else {
+      // create the board.
     }
-  } else {
-    createProjectsCardsInCreativeBoard(department);
-  }
+  });
 };
 export default mongoDB;
+
+export const createTTPCreativeMainBoard = async () => {
+  try {
+    let department = await Department.findOne({
+      name: Config.get("CreativeBoard"),
+    });
+    let projects = await ProjectController.getProject({});
+    if (!department) {
+      let dep: any = {
+        name: Config.get("CreativeBoard"),
+        color: "orange",
+      };
+      department = await DepartmentController.createDepartment(dep);
+      let listOfProjects = department.lists.find(
+        (item) => item.name === "projects"
+      );
+      if (department && department?._id && listOfProjects) {
+        projects.forEach((item: ProjectData) => {
+          TrelloActionsController.__createProject(listOfProjects.listId, item);
+        });
+      }
+    } else {
+      createProjectsCardsInCreativeBoard(department);
+    }
+  } catch (error) {
+    logger.error({ createTTPCreativeMainBoardError: error });
+  }
+};

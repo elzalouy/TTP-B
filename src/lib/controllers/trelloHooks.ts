@@ -31,11 +31,15 @@ export default class TrelloWebhook {
           return await this.deleteAttachmentFromCard();
         case "createCard":
           return await this.createCard();
+        case "copyCard":
+          return await this.createCard();
         case "deleteCard":
           return await this.deleteCard();
         case "updateCard":
           return await this.updateCard();
+
         default:
+          logger.info({ noAction: this.actionRequest });
           break;
       }
     else if (this.hookTarget === "project") {
@@ -47,6 +51,7 @@ export default class TrelloWebhook {
         case "updateCard":
           return await this.updateProject();
         default:
+          logger.info({ noAction: this.actionRequest });
           break;
       }
     }

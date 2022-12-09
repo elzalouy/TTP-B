@@ -163,7 +163,9 @@ class TrelloActionsController {
   static async __createNewBoard(name: string, color: string) {
     try {
       let createBoardApi = trelloApi(
-        `boards/?name=${name}&prefs_background=${color}&defaultLists=false&`
+        `boards/?name=${name}&prefs_background=${color}&defaultLists=false&idOrganization=${Config.get(
+          "trelloOrgId"
+        )}&`
       );
       let board: any = await fetch(createBoardApi, {
         method: "POST",
@@ -282,6 +284,20 @@ class TrelloActionsController {
       logger.error({ deleteTasksError: error });
     }
   }
+  static async __getCardsInBoard(boardId: string) {
+    try {
+      let url = trelloApi(`boards/${boardId}/cards?`);
+      let result = await fetch(url, {
+        method: "GET",
+        headers: {
+          Accept: "application/json",
+        },
+      });
+      return await result.json();
+    } catch (error) {
+      logger.error({ getCardsInBoardError: error });
+    }
+  }
 
   static async __getCardAttachments(cardId: string) {
     try {
@@ -313,7 +329,20 @@ class TrelloActionsController {
       logger.error({ createWebHookError: error });
     }
   }
-
+  static async __getBoardLists(boardId: string) {
+    try {
+      let url = await trelloApi(`boards/${boardId}/lists?`);
+      let lists = await fetch(url, {
+        method: "GET",
+        headers: {
+          Accept: "application/json",
+        },
+      });
+      return await lists.json();
+    } catch (error) {
+      logger.error({ getBoardListsError: error });
+    }
+  }
   static async __archieveList(listId: string) {
     try {
       let archeiveApi = trelloApi(`lists/${listId}/closed?value=true&`);

@@ -64,7 +64,7 @@ class TaskDB {
   }
   static async __getAllTasks(data: any) {
     try {
-      let tasks = Tasks.find(data).populate("memberId");
+      let tasks = Tasks.find(data);
       return tasks;
     } catch (error) {
       logger.error({ getAllTasksDBError: error });
