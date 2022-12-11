@@ -98,7 +98,12 @@ export const updateCardJob = (
       let taskData: any = {
         name: data.name,
         idBoard: data.boardId,
-        idList: isTeamChanged === true ? newTeamListId : data.listId,
+        idList:
+          isTeamChanged === true
+            ? newTeamListId
+            : data.teamId && data.status === "In Progress"
+            ? newTeamListId
+            : data.listId,
       };
       if (data.description) taskData.desc = data.description;
       if (data.deadline) taskData.due = data.deadline;

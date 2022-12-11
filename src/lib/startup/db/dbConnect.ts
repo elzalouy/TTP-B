@@ -75,7 +75,9 @@ export const initializeTrelloBoards = async () => {
       (departmentItem) => departmentItem.boardId === boardItem.id
     );
     let listTypes =
-      boardItem.name === "TTP Creative" ? CreativeListTypes : ListTypes;
+      boardItem.name === Config.get("CreativeBoard")
+        ? CreativeListTypes
+        : ListTypes;
     if (currentDepartment) {
       // get the lists of the board
       let lists: List[] = await TrelloActionsController.__getBoardLists(
@@ -83,7 +85,7 @@ export const initializeTrelloBoards = async () => {
       );
       let listsNames = lists.map((item) => item.name);
       let shouldBeExistedInBoard = _.differenceWith(
-        ListTypes,
+        listTypes,
         listsNames,
         _.isEqual
       );
@@ -148,7 +150,7 @@ export const createTTPCreativeMainBoard = async () => {
       Config.get("CreativeBoard")
     );
     let projects = await ProjectController.getProject({});
-    if (!board  && !department) {
+    if (!board && !department) {
       let dep: any = {
         name: Config.get("CreativeBoard"),
         color: "orange",
