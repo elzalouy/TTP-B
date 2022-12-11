@@ -37,7 +37,7 @@ const BoardReq = class BoardReq extends BoardController {
     try {
       const id = req.query.id as string;
       const type = req.query.type as string;
-      let members = await super.getSingleBoardInfo(id, type);
+      let members = await super.getSingleBoardInfo(id);
       if (members) {
         return res.send(members);
       } else {

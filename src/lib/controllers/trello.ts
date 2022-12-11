@@ -18,8 +18,8 @@ class TrelloActionsController {
     return await TrelloActionsController.__getTrelloBoards();
   }
 
-  static async getSingleBoardInfo(id: string, type: string) {
-    return await TrelloActionsController.__singleBoardInfo(id, type);
+  static async getSingleBoardInfo(id: string) {
+    return await TrelloActionsController.__singleBoardInfo(id);
   }
 
   static async getMembersInTrello() {
@@ -438,9 +438,9 @@ class TrelloActionsController {
     }
   }
 
-  static async __singleBoardInfo(id: string, type: string) {
+  static async __singleBoardInfo(id: string) {
     try {
-      let boardApi = trelloApi(`boards/${id}/${type}?`);
+      let boardApi = trelloApi(`boards/${id}?`);
       let board = await fetch(boardApi, {
         method: "GET",
       });
