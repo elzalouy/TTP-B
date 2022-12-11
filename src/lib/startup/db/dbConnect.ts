@@ -13,7 +13,7 @@ import { ProjectData, ProjectInfo } from "../../types/model/Project";
 import Tasks from "../../models/Task";
 import { createProjectsCardsInCreativeBoard } from "../../backgroundJobs/actions/department.actions.queue";
 import { Board, Card, List } from "../../types/controller/trello";
-import { ListTypes } from "../../types/model/Department";
+import { CreativeListTypes, ListTypes } from "../../types/model/Department";
 import _ from "lodash";
 import TaskController from "../../controllers/task";
 import { io } from "../../..";
@@ -42,6 +42,7 @@ const mongoDB: () => Promise<void> = async () => {
     await connect(db, options);
     console.log("Mongo DB connected,", Config.get("mongoDbConnectionString"));
     initializeAdminUser();
+    createTTPCreativeMainBoard();
   } catch (error) {
     console.error({ mongoDBError: error });
     process.exit(1);
@@ -73,6 +74,8 @@ export const initializeTrelloBoards = async () => {
     let currentDepartment = allDepartments.find(
       (departmentItem) => departmentItem.boardId === boardItem.id
     );
+    let listTypes =
+      currentDepartment.name === "TTP Creative" ? CreativeListTypes : ListTypes;
     if (currentDepartment) {
       // get the lists of the board
       let lists: List[] = await TrelloActionsController.__getBoardLists(
@@ -93,14 +96,14 @@ export const initializeTrelloBoards = async () => {
       );
       currentDepartment.lists = [
         ...lists
-          .filter((item) => ListTypes.includes(item.name))
+          .filter((item) => listTypes.includes(item.name))
           .map((item) => {
             return { listId: item.id, name: item.name };
           }),
         ...createShouldBeExisted,
       ];
       currentDepartment.teams = lists
-        .filter((item) => !ListTypes.includes(item.name))
+        .filter((item) => !listTypes.includes(item.name))
         .map((item) => {
           return { listId: item.id, name: item.name, isDeleted: false };
         });
