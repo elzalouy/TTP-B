@@ -144,8 +144,11 @@ export const createTTPCreativeMainBoard = async () => {
     let department = await Department.findOne({
       name: Config.get("CreativeBoard"),
     });
+    let board: Board = await TrelloActionsController.getSingleBoardInfo(
+      Config.get("CreativeBoard")
+    );
     let projects = await ProjectController.getProject({});
-    if (!department) {
+    if (!board  && !department) {
       let dep: any = {
         name: Config.get("CreativeBoard"),
         color: "orange",
