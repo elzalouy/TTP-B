@@ -75,7 +75,7 @@ export const initializeTrelloBoards = async () => {
       (departmentItem) => departmentItem.boardId === boardItem.id
     );
     let listTypes =
-      currentDepartment.name === "TTP Creative" ? CreativeListTypes : ListTypes;
+      boardItem.name === "TTP Creative" ? CreativeListTypes : ListTypes;
     if (currentDepartment) {
       // get the lists of the board
       let lists: List[] = await TrelloActionsController.__getBoardLists(
