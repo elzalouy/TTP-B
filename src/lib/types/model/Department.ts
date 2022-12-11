@@ -10,6 +10,7 @@ export const ListTypes = [
   "Not Clear",
   "Cancled",
 ];
+export const CreativeListTypes = [...ListTypes, "projects"];
 export interface IDepartment extends Document {
   _id?: string;
   name: string;
