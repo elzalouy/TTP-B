@@ -134,8 +134,12 @@ export const initializeTrelloBoards = async () => {
           return await task.save();
         })
       );
+      if (boardItem.name === Config.get("CreativeBoard")) {
+        createProjectsCardsInCreativeBoard(currentDepartment);
+      }
     } else {
       // create the board.
+      // let department=new Department({name:boardItem.name,lists:})
     }
   });
 };
@@ -146,11 +150,12 @@ export const createTTPCreativeMainBoard = async () => {
     let department = await Department.findOne({
       name: Config.get("CreativeBoard"),
     });
-    let board: Board = await TrelloActionsController.getSingleBoardInfo(
-      Config.get("CreativeBoard")
+    let allBoards: Board[] = await TrelloActionsController.getBoardsInTrello();
+    let board = allBoards.find(
+      (item) => item.name === Config.get("CreativeBoard")
     );
-    let projects = await ProjectController.getProject({});
-    if (!board && !department) {
+    console.log({ allBoards, department, board });
+    if (!board && department === null) {
       let dep: any = {
         name: Config.get("CreativeBoard"),
         color: "orange",
@@ -160,12 +165,8 @@ export const createTTPCreativeMainBoard = async () => {
         (item) => item.name === "projects"
       );
       if (department && department?._id && listOfProjects) {
-        projects.forEach((item: ProjectData) => {
-          TrelloActionsController.__createProject(listOfProjects.listId, item);
-        });
+        createProjectsCardsInCreativeBoard(department);
       }
-    } else {
-      createProjectsCardsInCreativeBoard(department);
     }
   } catch (error) {
     logger.error({ createTTPCreativeMainBoardError: error });
