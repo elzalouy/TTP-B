@@ -1,0 +1,11 @@
+@startuml
+Anonymous -> AuthRoute : Sign in request  
+AuthRoute -> Controller: User Data
+Controller -> DBModel: Find User
+DBModel -> Mongo: Find User
+Mongo --> DBModel: Not Found/ Found
+DBModel --> Controller: Not Found/ Found
+Controller --> AuthRoute: Not Found/ Found Response
+AuthRoute --> Anonymous: Not Found/ Found message
+@enduml
+

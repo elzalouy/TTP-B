@@ -161,12 +161,13 @@ export const createTTPCreativeMainBoard = async () => {
         color: "orange",
       };
       department = await DepartmentController.createDepartment(dep);
-      let listOfProjects = department.lists.find(
-        (item) => item.name === "projects"
-      );
-      if (department && department?._id && listOfProjects) {
-        createProjectsCardsInCreativeBoard(department);
-      }
+    }
+    let listOfProjects = department.lists.find(
+      (item) => item.name === "projects"
+    );
+    if (department && listOfProjects) {
+      console.log({ department, listOfProjects });
+      createProjectsCardsInCreativeBoard(department);
     }
   } catch (error) {
     logger.error({ createTTPCreativeMainBoardError: error });
