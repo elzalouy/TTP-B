@@ -471,15 +471,18 @@ class TrelloActionsController {
       logger.error({ downloadAttachment: error });
     }
   }
+
   static async __updateCard({ cardId, data }: editCardParams) {
     try {
-      let formData = new FormData();
-      if (data.name) formData.append("name", data.name);
-      if (data.desc) formData.append("desc", data.desc);
-      if (data.due) formData.append("desc", data.due);
-      if (data.start) formData.append("desc", data.start);
-      if (data.idBoard) formData.append("desc", data.idBoard);
-      if (data.idList) formData.append("desc", data.idList);
+      let body = {
+        name: data.name,
+        desc: data.desc,
+        due: data.due,
+        start: data.start,
+        idList: data.idList,
+        idBoard: data.idBoard,
+      };
+      logger.info({ body });
 
       let params: RequestInit = {
         method: "PUT",
@@ -487,7 +490,7 @@ class TrelloActionsController {
           Accept: "*/*",
           "Content-Type": "application/json",
         },
-        body: JSON.stringify(data),
+        body: JSON.stringify(body),
       };
       let api = trelloApi(`cards/${cardId}?`);
       let response: any;

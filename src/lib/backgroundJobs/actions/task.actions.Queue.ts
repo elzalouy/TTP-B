@@ -84,8 +84,11 @@ export const updateCardJob = (
     try {
       let current = await TaskController.__getTask(data.id);
       let dep = await Department.findOne({ boardId: data.boardId });
+      logger.info({ data });
 
       let isTeamChanged =
+        current.teamId &&
+        data.teamId &&
         current?.teamId?.toString() !== data.teamId.toString();
 
       let newTeamListId =
@@ -104,10 +107,10 @@ export const updateCardJob = (
             : data.teamId && data.status === "In Progress"
             ? newTeamListId
             : data.listId,
+        due: data.deadline ? data.deadline : null,
+        start: data.start ? data.start : null,
+        desc: data.description ? data.description : "",
       };
-      if (data.description) taskData.desc = data.description;
-      if (data.deadline) taskData.due = data.deadline;
-      if (data.start) taskData.start = data.start;
       let response = await TrelloController.__updateCard({
         cardId: data.cardId,
         data: taskData,

@@ -213,10 +213,9 @@ class TaskDB {
       let task = await Tasks.findOne({ _id: id }).lean();
       if (!task) return taskNotFoundError;
 
-      task.name = data.name ? data.name : task.name;
-      task.description =
-        data?.description?.length > 0 ? data.description : task.description;
-      task.deadline = data.deadline ? data.deadline : task.deadline;
+      task.name = data.name;
+      task.description = data.description ? data.description : "";
+      task.deadline = data.deadline ? data.deadline : null;
       task.categoryId = data.categoryId
         ? new mongoose.Types.ObjectId(data.categoryId)
         : task.categoryId;
@@ -322,7 +321,7 @@ class TaskDB {
       task.listId = data?.listId ? data.listId : task.listId;
       task.cardId = data?.cardId ? data.cardId : task.cardId;
       task.boardId = data?.boardId ? data.boardId : task.boardId;
-      task.description = data.description ? data.description : task.description;
+      task.description = data.description;
       task.teamId =
         data?.teamId === null || data?.teamId?.toString().length > 0
           ? new ObjectId(data.teamId)
@@ -331,9 +330,8 @@ class TaskDB {
       task.lastMoveDate = data?.lastMoveDate
         ? data.lastMoveDate
         : task.lastMoveDate;
-      task.deadline =
-        data?.deadline !== undefined ? data.deadline : task.deadline;
-      task.start = data?.start ? data.start : task.start;
+      task.deadline = data.deadline;
+      task.start = data.start ? data.start : null;
       if (data.attachedFile) {
         let file = new TaskFileSchema({ ...data.attachedFile });
         task.attachedFiles.push(file);

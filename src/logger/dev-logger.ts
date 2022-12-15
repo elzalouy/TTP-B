@@ -23,6 +23,7 @@ function buildDevLogger() {
       }),
       new transports.File({
         filename: "src/logger/dev-logs/combined.log",
+        level: "info",
         format: combine(prettyPrint()),
       }),
     ],
