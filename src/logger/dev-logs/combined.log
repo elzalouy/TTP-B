@@ -1575,3 +1575,1917 @@
   level: 'info',
   timestamp: '2022-12-15 12:34:00'
 }
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-12-15 12:36:42'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-12-15 13:52:40'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-12-15 13:57:14'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-12-15 13:58:03'
+}
+{
+  message: {
+    noAction: {
+      model: {
+        id: '639af5881ba2370016b5eba4',
+        name: 'dev / TTP Creative',
+        desc: '',
+        descData: null,
+        closed: false,
+        idOrganization: '638e3ad0a165280188c108f5',
+        idEnterprise: null,
+        pinned: false,
+        url: 'https://trello.com/b/NhaULiEp/dev-ttp-creative',
+        shortUrl: 'https://trello.com/b/NhaULiEp',
+        prefs: {
+          permissionLevel: 'private',
+          hideVotes: false,
+          voting: 'disabled',
+          comments: 'members',
+          invitations: 'members',
+          selfJoin: true,
+          cardCovers: true,
+          isTemplate: false,
+          cardAging: 'regular',
+          calendarFeedEnabled: false,
+          hiddenPluginBoardButtons: [],
+          switcherViews: [
+            {
+              _id: '639af5881ba2370016b5eba5',
+              viewType: 'Board',
+              enabled: true
+            },
+            {
+              _id: '639af5881ba2370016b5eba6',
+              viewType: 'Table',
+              enabled: true
+            },
+            {
+              _id: '639af5881ba2370016b5eba7',
+              viewType: 'Calendar',
+              enabled: false
+            },
+            {
+              _id: '639af5881ba2370016b5eba8',
+              viewType: 'Dashboard',
+              enabled: false
+            },
+            {
+              _id: '639af5881ba2370016b5eba9',
+              viewType: 'Timeline',
+              enabled: false
+            },
+            {
+              _id: '639af5881ba2370016b5ebaa',
+              viewType: 'Map',
+              enabled: false
+            }
+          ],
+          background: 'orange',
+          backgroundColor: '#D29034',
+          backgroundImage: null,
+          backgroundImageScaled: null,
+          backgroundTile: false,
+          backgroundBrightness: 'dark',
+          backgroundBottomColor: '#D29034',
+          backgroundTopColor: '#D29034',
+          canBePublic: true,
+          canBeEnterprise: true,
+          canBeOrg: true,
+          canBePrivate: true,
+          canInvite: true
+        },
+        labelNames: {
+          green: '',
+          yellow: '',
+          orange: '',
+          red: '',
+          purple: '',
+          blue: '',
+          sky: '',
+          lime: '',
+          pink: '',
+          black: '',
+          green_dark: '',
+          yellow_dark: '',
+          orange_dark: '',
+          red_dark: '',
+          purple_dark: '',
+          blue_dark: '',
+          sky_dark: '',
+          lime_dark: '',
+          pink_dark: '',
+          black_dark: '',
+          green_light: '',
+          yellow_light: '',
+          orange_light: '',
+          red_light: '',
+          purple_light: '',
+          blue_light: '',
+          sky_light: '',
+          lime_light: '',
+          pink_light: '',
+          black_light: ''
+        }
+      },
+      action: {
+        id: '639b0beff4664400bbd72612',
+        idMemberCreator: '625c6c7c6fc2b45763b718dc',
+        data: {
+          list: { id: '639b0beff4664400bbd7260e', name: 'team 1' },
+          board: {
+            id: '639af5881ba2370016b5eba4',
+            name: 'dev / TTP Creative',
+            shortLink: 'NhaULiEp'
+          }
+        },
+        appCreator: { id: '625dce5c804a8202138a2cbb' },
+        type: 'createList',
+        date: '2022-12-15T11:58:39.798Z',
+        limits: null,
+        display: {
+          translationKey: 'action_added_list_to_board',
+          entities: {
+            list: {
+              type: 'list',
+              id: '639b0beff4664400bbd7260e',
+              text: 'team 1'
+            },
+            board: {
+              type: 'board',
+              id: '639af5881ba2370016b5eba4',
+              text: 'dev / TTP Creative',
+              shortLink: 'NhaULiEp'
+            },
+            memberCreator: {
+              type: 'member',
+              id: '625c6c7c6fc2b45763b718dc',
+              username: 'unicodettp',
+              text: 'UNICODE.TTP'
+            }
+          }
+        },
+        memberCreator: {
+          id: '625c6c7c6fc2b45763b718dc',
+          activityBlocked: false,
+          avatarHash: 'e6d643031f9f4f4ee4db944dec524d23',
+          avatarUrl: 'https://trello-members.s3.amazonaws.com/625c6c7c6fc2b45763b718dc/e6d643031f9f4f4ee4db944dec524d23',
+          fullName: 'UNICODE.TTP',
+          idMemberReferrer: null,
+          initials: 'U',
+          nonPublic: {},
+          nonPublicAvailable: true,
+          username: 'unicodettp'
+        }
+      }
+    }
+  },
+  level: 'info',
+  timestamp: '2022-12-15 13:58:40'
+}
+{
+  message: {
+    noAction: {
+      model: {
+        id: '639af5881ba2370016b5eba4',
+        name: 'dev / TTP Creative',
+        desc: '',
+        descData: null,
+        closed: false,
+        idOrganization: '638e3ad0a165280188c108f5',
+        idEnterprise: null,
+        pinned: false,
+        url: 'https://trello.com/b/NhaULiEp/dev-ttp-creative',
+        shortUrl: 'https://trello.com/b/NhaULiEp',
+        prefs: {
+          permissionLevel: 'private',
+          hideVotes: false,
+          voting: 'disabled',
+          comments: 'members',
+          invitations: 'members',
+          selfJoin: true,
+          cardCovers: true,
+          isTemplate: false,
+          cardAging: 'regular',
+          calendarFeedEnabled: false,
+          hiddenPluginBoardButtons: [],
+          switcherViews: [
+            {
+              _id: '639af5881ba2370016b5eba5',
+              viewType: 'Board',
+              enabled: true
+            },
+            {
+              _id: '639af5881ba2370016b5eba6',
+              viewType: 'Table',
+              enabled: true
+            },
+            {
+              _id: '639af5881ba2370016b5eba7',
+              viewType: 'Calendar',
+              enabled: false
+            },
+            {
+              _id: '639af5881ba2370016b5eba8',
+              viewType: 'Dashboard',
+              enabled: false
+            },
+            {
+              _id: '639af5881ba2370016b5eba9',
+              viewType: 'Timeline',
+              enabled: false
+            },
+            {
+              _id: '639af5881ba2370016b5ebaa',
+              viewType: 'Map',
+              enabled: false
+            }
+          ],
+          background: 'orange',
+          backgroundColor: '#D29034',
+          backgroundImage: null,
+          backgroundImageScaled: null,
+          backgroundTile: false,
+          backgroundBrightness: 'dark',
+          backgroundBottomColor: '#D29034',
+          backgroundTopColor: '#D29034',
+          canBePublic: true,
+          canBeEnterprise: true,
+          canBeOrg: true,
+          canBePrivate: true,
+          canInvite: true
+        },
+        labelNames: {
+          green: '',
+          yellow: '',
+          orange: '',
+          red: '',
+          purple: '',
+          blue: '',
+          sky: '',
+          lime: '',
+          pink: '',
+          black: '',
+          green_dark: '',
+          yellow_dark: '',
+          orange_dark: '',
+          red_dark: '',
+          purple_dark: '',
+          blue_dark: '',
+          sky_dark: '',
+          lime_dark: '',
+          pink_dark: '',
+          black_dark: '',
+          green_light: '',
+          yellow_light: '',
+          orange_light: '',
+          red_light: '',
+          purple_light: '',
+          blue_light: '',
+          sky_light: '',
+          lime_light: '',
+          pink_light: '',
+          black_light: ''
+        }
+      },
+      action: {
+        id: '639b0bef53dd2f0028905ca5',
+        idMemberCreator: '625c6c7c6fc2b45763b718dc',
+        data: {
+          list: { id: '639b0bef53dd2f0028905ca1', name: 'team' },
+          board: {
+            id: '639af5881ba2370016b5eba4',
+            name: 'dev / TTP Creative',
+            shortLink: 'NhaULiEp'
+          }
+        },
+        appCreator: { id: '625dce5c804a8202138a2cbb' },
+        type: 'createList',
+        date: '2022-12-15T11:58:39.672Z',
+        limits: null,
+        display: {
+          translationKey: 'action_added_list_to_board',
+          entities: {
+            list: {
+              type: 'list',
+              id: '639b0bef53dd2f0028905ca1',
+              text: 'team'
+            },
+            board: {
+              type: 'board',
+              id: '639af5881ba2370016b5eba4',
+              text: 'dev / TTP Creative',
+              shortLink: 'NhaULiEp'
+            },
+            memberCreator: {
+              type: 'member',
+              id: '625c6c7c6fc2b45763b718dc',
+              username: 'unicodettp',
+              text: 'UNICODE.TTP'
+            }
+          }
+        },
+        memberCreator: {
+          id: '625c6c7c6fc2b45763b718dc',
+          activityBlocked: false,
+          avatarHash: 'e6d643031f9f4f4ee4db944dec524d23',
+          avatarUrl: 'https://trello-members.s3.amazonaws.com/625c6c7c6fc2b45763b718dc/e6d643031f9f4f4ee4db944dec524d23',
+          fullName: 'UNICODE.TTP',
+          idMemberReferrer: null,
+          initials: 'U',
+          nonPublic: {},
+          nonPublicAvailable: true,
+          username: 'unicodettp'
+        }
+      }
+    }
+  },
+  level: 'info',
+  timestamp: '2022-12-15 13:58:40'
+}
+{
+  message: { noAction: {} },
+  level: 'info',
+  timestamp: '2022-12-15 13:59:07'
+}
+{
+  message: { ids: [ '639b0c00ccee7f1439219f6b' ], count: 1 },
+  level: 'info',
+  timestamp: '2022-12-15 13:59:10'
+}
+{
+  message: { ids: [ '639b0c00ccee7f1439219f6b' ], count: 1 },
+  level: 'info',
+  timestamp: '2022-12-15 14:00:10'
+}
+{
+  message: {
+    singleBoardError: TypeError: Request with GET/HEAD method cannot have body
+        at new Request (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/node-fetch/lib/index.js:1221:10)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/node-fetch/lib/index.js:1439:19
+        at new Promise (<anonymous>)
+        at fetch (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/node-fetch/lib/index.js:1437:9)
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:459:31)
+        at Generator.next (<anonymous>)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:8:71
+        at new Promise (<anonymous>)
+        at __awaiter (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:4:12)
+        at Function.__moveAllCardsInList (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:487:16)
+  },
+  level: 'error',
+  timestamp: '2022-12-15 14:00:30'
+}
+{
+  message: {
+    noAction: {
+      model: {
+        id: '639af5881ba2370016b5eba4',
+        name: 'dev / TTP Creative',
+        desc: '',
+        descData: null,
+        closed: false,
+        idOrganization: '638e3ad0a165280188c108f5',
+        idEnterprise: null,
+        pinned: false,
+        url: 'https://trello.com/b/NhaULiEp/dev-ttp-creative',
+        shortUrl: 'https://trello.com/b/NhaULiEp',
+        prefs: {
+          permissionLevel: 'private',
+          hideVotes: false,
+          voting: 'disabled',
+          comments: 'members',
+          invitations: 'members',
+          selfJoin: true,
+          cardCovers: true,
+          isTemplate: false,
+          cardAging: 'regular',
+          calendarFeedEnabled: false,
+          hiddenPluginBoardButtons: [],
+          switcherViews: [
+            {
+              _id: '639af5881ba2370016b5eba5',
+              viewType: 'Board',
+              enabled: true
+            },
+            {
+              _id: '639af5881ba2370016b5eba6',
+              viewType: 'Table',
+              enabled: true
+            },
+            {
+              _id: '639af5881ba2370016b5eba7',
+              viewType: 'Calendar',
+              enabled: false
+            },
+            {
+              _id: '639af5881ba2370016b5eba8',
+              viewType: 'Dashboard',
+              enabled: false
+            },
+            {
+              _id: '639af5881ba2370016b5eba9',
+              viewType: 'Timeline',
+              enabled: false
+            },
+            {
+              _id: '639af5881ba2370016b5ebaa',
+              viewType: 'Map',
+              enabled: false
+            }
+          ],
+          background: 'orange',
+          backgroundColor: '#D29034',
+          backgroundImage: null,
+          backgroundImageScaled: null,
+          backgroundTile: false,
+          backgroundBrightness: 'dark',
+          backgroundBottomColor: '#D29034',
+          backgroundTopColor: '#D29034',
+          canBePublic: true,
+          canBeEnterprise: true,
+          canBeOrg: true,
+          canBePrivate: true,
+          canInvite: true
+        },
+        labelNames: {
+          green: '',
+          yellow: '',
+          orange: '',
+          red: '',
+          purple: '',
+          blue: '',
+          sky: '',
+          lime: '',
+          pink: '',
+          black: '',
+          green_dark: '',
+          yellow_dark: '',
+          orange_dark: '',
+          red_dark: '',
+          purple_dark: '',
+          blue_dark: '',
+          sky_dark: '',
+          lime_dark: '',
+          pink_dark: '',
+          black_dark: '',
+          green_light: '',
+          yellow_light: '',
+          orange_light: '',
+          red_light: '',
+          purple_light: '',
+          blue_light: '',
+          sky_light: '',
+          lime_light: '',
+          pink_light: '',
+          black_light: ''
+        }
+      },
+      action: {
+        id: '639b0c5e2bb63100ec39fc5f',
+        idMemberCreator: '625c6c7c6fc2b45763b718dc',
+        data: {
+          list: {
+            closed: true,
+            id: '639b0beff4664400bbd7260e',
+            name: 'team 1'
+          },
+          old: { closed: false },
+          board: {
+            id: '639af5881ba2370016b5eba4',
+            name: 'dev / TTP Creative',
+            shortLink: 'NhaULiEp'
+          }
+        },
+        appCreator: { id: '625dce5c804a8202138a2cbb' },
+        type: 'updateList',
+        date: '2022-12-15T12:00:30.893Z',
+        limits: null,
+        display: {
+          translationKey: 'action_archived_list',
+          entities: {
+            list: {
+              type: 'list',
+              closed: true,
+              id: '639b0beff4664400bbd7260e',
+              text: 'team 1'
+            },
+            memberCreator: {
+              type: 'member',
+              id: '625c6c7c6fc2b45763b718dc',
+              username: 'unicodettp',
+              text: 'UNICODE.TTP'
+            }
+          }
+        },
+        memberCreator: {
+          id: '625c6c7c6fc2b45763b718dc',
+          activityBlocked: false,
+          avatarHash: 'e6d643031f9f4f4ee4db944dec524d23',
+          avatarUrl: 'https://trello-members.s3.amazonaws.com/625c6c7c6fc2b45763b718dc/e6d643031f9f4f4ee4db944dec524d23',
+          fullName: 'UNICODE.TTP',
+          idMemberReferrer: null,
+          initials: 'U',
+          nonPublic: {},
+          nonPublicAvailable: true,
+          username: 'unicodettp'
+        }
+      }
+    }
+  },
+  level: 'info',
+  timestamp: '2022-12-15 14:00:31'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-12-15 14:02:04'
+}
+{
+  message: {
+    singleBoardError: FetchError: invalid json response body at https://api.trello.com/1/lists/639b0bef53dd2f0028905ca1?key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68 reason: Unexpected token C in JSON at position 0
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/node-fetch/lib/index.js:273:32
+        at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+      type: 'invalid-json'
+    }
+  },
+  level: 'error',
+  timestamp: '2022-12-15 14:02:51'
+}
+{
+  message: {
+    noAction: {
+      model: {
+        id: '639af5881ba2370016b5eba4',
+        name: 'dev / TTP Creative',
+        desc: '',
+        descData: null,
+        closed: false,
+        idOrganization: '638e3ad0a165280188c108f5',
+        idEnterprise: null,
+        pinned: false,
+        url: 'https://trello.com/b/NhaULiEp/dev-ttp-creative',
+        shortUrl: 'https://trello.com/b/NhaULiEp',
+        prefs: {
+          permissionLevel: 'private',
+          hideVotes: false,
+          voting: 'disabled',
+          comments: 'members',
+          invitations: 'members',
+          selfJoin: true,
+          cardCovers: true,
+          isTemplate: false,
+          cardAging: 'regular',
+          calendarFeedEnabled: false,
+          hiddenPluginBoardButtons: [],
+          switcherViews: [
+            {
+              _id: '639af5881ba2370016b5eba5',
+              viewType: 'Board',
+              enabled: true
+            },
+            {
+              _id: '639af5881ba2370016b5eba6',
+              viewType: 'Table',
+              enabled: true
+            },
+            {
+              _id: '639af5881ba2370016b5eba7',
+              viewType: 'Calendar',
+              enabled: false
+            },
+            {
+              _id: '639af5881ba2370016b5eba8',
+              viewType: 'Dashboard',
+              enabled: false
+            },
+            {
+              _id: '639af5881ba2370016b5eba9',
+              viewType: 'Timeline',
+              enabled: false
+            },
+            {
+              _id: '639af5881ba2370016b5ebaa',
+              viewType: 'Map',
+              enabled: false
+            }
+          ],
+          background: 'orange',
+          backgroundColor: '#D29034',
+          backgroundImage: null,
+          backgroundImageScaled: null,
+          backgroundTile: false,
+          backgroundBrightness: 'dark',
+          backgroundBottomColor: '#D29034',
+          backgroundTopColor: '#D29034',
+          canBePublic: true,
+          canBeEnterprise: true,
+          canBeOrg: true,
+          canBePrivate: true,
+          canInvite: true
+        },
+        labelNames: {
+          green: '',
+          yellow: '',
+          orange: '',
+          red: '',
+          purple: '',
+          blue: '',
+          sky: '',
+          lime: '',
+          pink: '',
+          black: '',
+          green_dark: '',
+          yellow_dark: '',
+          orange_dark: '',
+          red_dark: '',
+          purple_dark: '',
+          blue_dark: '',
+          sky_dark: '',
+          lime_dark: '',
+          pink_dark: '',
+          black_dark: '',
+          green_light: '',
+          yellow_light: '',
+          orange_light: '',
+          red_light: '',
+          purple_light: '',
+          blue_light: '',
+          sky_light: '',
+          lime_light: '',
+          pink_light: '',
+          black_light: ''
+        }
+      },
+      action: {
+        id: '639b0ceb05738805a181c5ee',
+        idMemberCreator: '625c6c7c6fc2b45763b718dc',
+        data: {
+          list: { id: '639b0ceb05738805a181c5ea', name: 'Ezzat Team' },
+          board: {
+            id: '639af5881ba2370016b5eba4',
+            name: 'dev / TTP Creative',
+            shortLink: 'NhaULiEp'
+          }
+        },
+        appCreator: { id: '625dce5c804a8202138a2cbb' },
+        type: 'createList',
+        date: '2022-12-15T12:02:51.546Z',
+        limits: null,
+        display: {
+          translationKey: 'action_added_list_to_board',
+          entities: {
+            list: {
+              type: 'list',
+              id: '639b0ceb05738805a181c5ea',
+              text: 'Ezzat Team'
+            },
+            board: {
+              type: 'board',
+              id: '639af5881ba2370016b5eba4',
+              text: 'dev / TTP Creative',
+              shortLink: 'NhaULiEp'
+            },
+            memberCreator: {
+              type: 'member',
+              id: '625c6c7c6fc2b45763b718dc',
+              username: 'unicodettp',
+              text: 'UNICODE.TTP'
+            }
+          }
+        },
+        memberCreator: {
+          id: '625c6c7c6fc2b45763b718dc',
+          activityBlocked: false,
+          avatarHash: 'e6d643031f9f4f4ee4db944dec524d23',
+          avatarUrl: 'https://trello-members.s3.amazonaws.com/625c6c7c6fc2b45763b718dc/e6d643031f9f4f4ee4db944dec524d23',
+          fullName: 'UNICODE.TTP',
+          idMemberReferrer: null,
+          initials: 'U',
+          nonPublic: {},
+          nonPublicAvailable: true,
+          username: 'unicodettp'
+        }
+      }
+    }
+  },
+  level: 'info',
+  timestamp: '2022-12-15 14:02:51'
+}
+{
+  message: {
+    noAction: {
+      model: {
+        id: '639af5881ba2370016b5eba4',
+        name: 'dev / TTP Creative',
+        desc: '',
+        descData: null,
+        closed: false,
+        idOrganization: '638e3ad0a165280188c108f5',
+        idEnterprise: null,
+        pinned: false,
+        url: 'https://trello.com/b/NhaULiEp/dev-ttp-creative',
+        shortUrl: 'https://trello.com/b/NhaULiEp',
+        prefs: {
+          permissionLevel: 'private',
+          hideVotes: false,
+          voting: 'disabled',
+          comments: 'members',
+          invitations: 'members',
+          selfJoin: true,
+          cardCovers: true,
+          isTemplate: false,
+          cardAging: 'regular',
+          calendarFeedEnabled: false,
+          hiddenPluginBoardButtons: [],
+          switcherViews: [
+            {
+              _id: '639af5881ba2370016b5eba5',
+              viewType: 'Board',
+              enabled: true
+            },
+            {
+              _id: '639af5881ba2370016b5eba6',
+              viewType: 'Table',
+              enabled: true
+            },
+            {
+              _id: '639af5881ba2370016b5eba7',
+              viewType: 'Calendar',
+              enabled: false
+            },
+            {
+              _id: '639af5881ba2370016b5eba8',
+              viewType: 'Dashboard',
+              enabled: false
+            },
+            {
+              _id: '639af5881ba2370016b5eba9',
+              viewType: 'Timeline',
+              enabled: false
+            },
+            {
+              _id: '639af5881ba2370016b5ebaa',
+              viewType: 'Map',
+              enabled: false
+            }
+          ],
+          background: 'orange',
+          backgroundColor: '#D29034',
+          backgroundImage: null,
+          backgroundImageScaled: null,
+          backgroundTile: false,
+          backgroundBrightness: 'dark',
+          backgroundBottomColor: '#D29034',
+          backgroundTopColor: '#D29034',
+          canBePublic: true,
+          canBeEnterprise: true,
+          canBeOrg: true,
+          canBePrivate: true,
+          canInvite: true
+        },
+        labelNames: {
+          green: '',
+          yellow: '',
+          orange: '',
+          red: '',
+          purple: '',
+          blue: '',
+          sky: '',
+          lime: '',
+          pink: '',
+          black: '',
+          green_dark: '',
+          yellow_dark: '',
+          orange_dark: '',
+          red_dark: '',
+          purple_dark: '',
+          blue_dark: '',
+          sky_dark: '',
+          lime_dark: '',
+          pink_dark: '',
+          black_dark: '',
+          green_light: '',
+          yellow_light: '',
+          orange_light: '',
+          red_light: '',
+          purple_light: '',
+          blue_light: '',
+          sky_light: '',
+          lime_light: '',
+          pink_light: '',
+          black_light: ''
+        }
+      },
+      action: {
+        id: '639b0ceb35ac05006779ed1e',
+        idMemberCreator: '625c6c7c6fc2b45763b718dc',
+        data: {
+          list: {
+            closed: true,
+            id: '639b0bef53dd2f0028905ca1',
+            name: 'team'
+          },
+          old: { closed: false },
+          board: {
+            id: '639af5881ba2370016b5eba4',
+            name: 'dev / TTP Creative',
+            shortLink: 'NhaULiEp'
+          }
+        },
+        appCreator: { id: '625dce5c804a8202138a2cbb' },
+        type: 'updateList',
+        date: '2022-12-15T12:02:51.961Z',
+        limits: null,
+        display: {
+          translationKey: 'action_archived_list',
+          entities: {
+            list: {
+              type: 'list',
+              closed: true,
+              id: '639b0bef53dd2f0028905ca1',
+              text: 'team'
+            },
+            memberCreator: {
+              type: 'member',
+              id: '625c6c7c6fc2b45763b718dc',
+              username: 'unicodettp',
+              text: 'UNICODE.TTP'
+            }
+          }
+        },
+        memberCreator: {
+          id: '625c6c7c6fc2b45763b718dc',
+          activityBlocked: false,
+          avatarHash: 'e6d643031f9f4f4ee4db944dec524d23',
+          avatarUrl: 'https://trello-members.s3.amazonaws.com/625c6c7c6fc2b45763b718dc/e6d643031f9f4f4ee4db944dec524d23',
+          fullName: 'UNICODE.TTP',
+          idMemberReferrer: null,
+          initials: 'U',
+          nonPublic: {},
+          nonPublicAvailable: true,
+          username: 'unicodettp'
+        }
+      }
+    }
+  },
+  level: 'info',
+  timestamp: '2022-12-15 14:02:52'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-12-15 14:04:24'
+}
+{
+  message: {
+    noAction: {
+      model: {
+        id: '639af5881ba2370016b5eba4',
+        name: 'dev / TTP Creative',
+        desc: '',
+        descData: null,
+        closed: false,
+        idOrganization: '638e3ad0a165280188c108f5',
+        idEnterprise: null,
+        pinned: false,
+        url: 'https://trello.com/b/NhaULiEp/dev-ttp-creative',
+        shortUrl: 'https://trello.com/b/NhaULiEp',
+        prefs: {
+          permissionLevel: 'private',
+          hideVotes: false,
+          voting: 'disabled',
+          comments: 'members',
+          invitations: 'members',
+          selfJoin: true,
+          cardCovers: true,
+          isTemplate: false,
+          cardAging: 'regular',
+          calendarFeedEnabled: false,
+          hiddenPluginBoardButtons: [],
+          switcherViews: [
+            {
+              _id: '639af5881ba2370016b5eba5',
+              viewType: 'Board',
+              enabled: true
+            },
+            {
+              _id: '639af5881ba2370016b5eba6',
+              viewType: 'Table',
+              enabled: true
+            },
+            {
+              _id: '639af5881ba2370016b5eba7',
+              viewType: 'Calendar',
+              enabled: false
+            },
+            {
+              _id: '639af5881ba2370016b5eba8',
+              viewType: 'Dashboard',
+              enabled: false
+            },
+            {
+              _id: '639af5881ba2370016b5eba9',
+              viewType: 'Timeline',
+              enabled: false
+            },
+            {
+              _id: '639af5881ba2370016b5ebaa',
+              viewType: 'Map',
+              enabled: false
+            }
+          ],
+          background: 'orange',
+          backgroundColor: '#D29034',
+          backgroundImage: null,
+          backgroundImageScaled: null,
+          backgroundTile: false,
+          backgroundBrightness: 'dark',
+          backgroundBottomColor: '#D29034',
+          backgroundTopColor: '#D29034',
+          canBePublic: true,
+          canBeEnterprise: true,
+          canBeOrg: true,
+          canBePrivate: true,
+          canInvite: true
+        },
+        labelNames: {
+          green: '',
+          yellow: '',
+          orange: '',
+          red: '',
+          purple: '',
+          blue: '',
+          sky: '',
+          lime: '',
+          pink: '',
+          black: '',
+          green_dark: '',
+          yellow_dark: '',
+          orange_dark: '',
+          red_dark: '',
+          purple_dark: '',
+          blue_dark: '',
+          sky_dark: '',
+          lime_dark: '',
+          pink_dark: '',
+          black_dark: '',
+          green_light: '',
+          yellow_light: '',
+          orange_light: '',
+          red_light: '',
+          purple_light: '',
+          blue_light: '',
+          sky_light: '',
+          lime_light: '',
+          pink_light: '',
+          black_light: ''
+        }
+      },
+      action: {
+        id: '639b0d62fe723104a9c9ce05',
+        idMemberCreator: '625c6c7c6fc2b45763b718dc',
+        data: {
+          list: { id: '639b0d62fe723104a9c9ce01', name: 'team' },
+          board: {
+            id: '639af5881ba2370016b5eba4',
+            name: 'dev / TTP Creative',
+            shortLink: 'NhaULiEp'
+          }
+        },
+        appCreator: { id: '625dce5c804a8202138a2cbb' },
+        type: 'createList',
+        date: '2022-12-15T12:04:50.689Z',
+        limits: null,
+        display: {
+          translationKey: 'action_added_list_to_board',
+          entities: {
+            list: {
+              type: 'list',
+              id: '639b0d62fe723104a9c9ce01',
+              text: 'team'
+            },
+            board: {
+              type: 'board',
+              id: '639af5881ba2370016b5eba4',
+              text: 'dev / TTP Creative',
+              shortLink: 'NhaULiEp'
+            },
+            memberCreator: {
+              type: 'member',
+              id: '625c6c7c6fc2b45763b718dc',
+              username: 'unicodettp',
+              text: 'UNICODE.TTP'
+            }
+          }
+        },
+        memberCreator: {
+          id: '625c6c7c6fc2b45763b718dc',
+          activityBlocked: false,
+          avatarHash: 'e6d643031f9f4f4ee4db944dec524d23',
+          avatarUrl: 'https://trello-members.s3.amazonaws.com/625c6c7c6fc2b45763b718dc/e6d643031f9f4f4ee4db944dec524d23',
+          fullName: 'UNICODE.TTP',
+          idMemberReferrer: null,
+          initials: 'U',
+          nonPublic: {},
+          nonPublicAvailable: true,
+          username: 'unicodettp'
+        }
+      }
+    }
+  },
+  level: 'info',
+  timestamp: '2022-12-15 14:04:51'
+}
+{
+  message: {
+    singleBoardError: FetchError: invalid json response body at https://api.trello.com/1/lists/639b0ceb05738805a181c5ea?key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68 reason: Unexpected token C in JSON at position 0
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/node-fetch/lib/index.js:273:32
+        at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+      type: 'invalid-json'
+    }
+  },
+  level: 'error',
+  timestamp: '2022-12-15 14:05:23'
+}
+{
+  message: {
+    noAction: {
+      model: {
+        id: '639af5881ba2370016b5eba4',
+        name: 'dev / TTP Creative',
+        desc: '',
+        descData: null,
+        closed: false,
+        idOrganization: '638e3ad0a165280188c108f5',
+        idEnterprise: null,
+        pinned: false,
+        url: 'https://trello.com/b/NhaULiEp/dev-ttp-creative',
+        shortUrl: 'https://trello.com/b/NhaULiEp',
+        prefs: {
+          permissionLevel: 'private',
+          hideVotes: false,
+          voting: 'disabled',
+          comments: 'members',
+          invitations: 'members',
+          selfJoin: true,
+          cardCovers: true,
+          isTemplate: false,
+          cardAging: 'regular',
+          calendarFeedEnabled: false,
+          hiddenPluginBoardButtons: [],
+          switcherViews: [
+            {
+              _id: '639af5881ba2370016b5eba5',
+              viewType: 'Board',
+              enabled: true
+            },
+            {
+              _id: '639af5881ba2370016b5eba6',
+              viewType: 'Table',
+              enabled: true
+            },
+            {
+              _id: '639af5881ba2370016b5eba7',
+              viewType: 'Calendar',
+              enabled: false
+            },
+            {
+              _id: '639af5881ba2370016b5eba8',
+              viewType: 'Dashboard',
+              enabled: false
+            },
+            {
+              _id: '639af5881ba2370016b5eba9',
+              viewType: 'Timeline',
+              enabled: false
+            },
+            {
+              _id: '639af5881ba2370016b5ebaa',
+              viewType: 'Map',
+              enabled: false
+            }
+          ],
+          background: 'orange',
+          backgroundColor: '#D29034',
+          backgroundImage: null,
+          backgroundImageScaled: null,
+          backgroundTile: false,
+          backgroundBrightness: 'dark',
+          backgroundBottomColor: '#D29034',
+          backgroundTopColor: '#D29034',
+          canBePublic: true,
+          canBeEnterprise: true,
+          canBeOrg: true,
+          canBePrivate: true,
+          canInvite: true
+        },
+        labelNames: {
+          green: '',
+          yellow: '',
+          orange: '',
+          red: '',
+          purple: '',
+          blue: '',
+          sky: '',
+          lime: '',
+          pink: '',
+          black: '',
+          green_dark: '',
+          yellow_dark: '',
+          orange_dark: '',
+          red_dark: '',
+          purple_dark: '',
+          blue_dark: '',
+          sky_dark: '',
+          lime_dark: '',
+          pink_dark: '',
+          black_dark: '',
+          green_light: '',
+          yellow_light: '',
+          orange_light: '',
+          red_light: '',
+          purple_light: '',
+          blue_light: '',
+          sky_light: '',
+          lime_light: '',
+          pink_light: '',
+          black_light: ''
+        }
+      },
+      action: {
+        id: '639b0d83408ac900609a6848',
+        idMemberCreator: '625c6c7c6fc2b45763b718dc',
+        data: {
+          list: {
+            closed: true,
+            id: '639b0ceb05738805a181c5ea',
+            name: 'Ezzat Team'
+          },
+          old: { closed: false },
+          board: {
+            id: '639af5881ba2370016b5eba4',
+            name: 'dev / TTP Creative',
+            shortLink: 'NhaULiEp'
+          }
+        },
+        appCreator: { id: '625dce5c804a8202138a2cbb' },
+        type: 'updateList',
+        date: '2022-12-15T12:05:23.843Z',
+        limits: null,
+        display: {
+          translationKey: 'action_archived_list',
+          entities: {
+            list: {
+              type: 'list',
+              closed: true,
+              id: '639b0ceb05738805a181c5ea',
+              text: 'Ezzat Team'
+            },
+            memberCreator: {
+              type: 'member',
+              id: '625c6c7c6fc2b45763b718dc',
+              username: 'unicodettp',
+              text: 'UNICODE.TTP'
+            }
+          }
+        },
+        memberCreator: {
+          id: '625c6c7c6fc2b45763b718dc',
+          activityBlocked: false,
+          avatarHash: 'e6d643031f9f4f4ee4db944dec524d23',
+          avatarUrl: 'https://trello-members.s3.amazonaws.com/625c6c7c6fc2b45763b718dc/e6d643031f9f4f4ee4db944dec524d23',
+          fullName: 'UNICODE.TTP',
+          idMemberReferrer: null,
+          initials: 'U',
+          nonPublic: {},
+          nonPublicAvailable: true,
+          username: 'unicodettp'
+        }
+      }
+    }
+  },
+  level: 'info',
+  timestamp: '2022-12-15 14:05:24'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-12-15 14:07:38'
+}
+{
+  message: {
+    moveAllCardsInListsError: FetchError: invalid json response body at https://api.trello.com/1/lists/639b0d62fe723104a9c9ce01/moveAllCards?key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68 reason: Unexpected token i in JSON at position 0
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/node-fetch/lib/index.js:273:32
+        at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+      type: 'invalid-json'
+    }
+  },
+  level: 'error',
+  timestamp: '2022-12-15 14:08:42'
+}
+{
+  message: {
+    noAction: {
+      model: {
+        id: '639af5881ba2370016b5eba4',
+        name: 'dev / TTP Creative',
+        desc: '',
+        descData: null,
+        closed: false,
+        idOrganization: '638e3ad0a165280188c108f5',
+        idEnterprise: null,
+        pinned: false,
+        url: 'https://trello.com/b/NhaULiEp/dev-ttp-creative',
+        shortUrl: 'https://trello.com/b/NhaULiEp',
+        prefs: {
+          permissionLevel: 'private',
+          hideVotes: false,
+          voting: 'disabled',
+          comments: 'members',
+          invitations: 'members',
+          selfJoin: true,
+          cardCovers: true,
+          isTemplate: false,
+          cardAging: 'regular',
+          calendarFeedEnabled: false,
+          hiddenPluginBoardButtons: [],
+          switcherViews: [
+            {
+              _id: '639af5881ba2370016b5eba5',
+              viewType: 'Board',
+              enabled: true
+            },
+            {
+              _id: '639af5881ba2370016b5eba6',
+              viewType: 'Table',
+              enabled: true
+            },
+            {
+              _id: '639af5881ba2370016b5eba7',
+              viewType: 'Calendar',
+              enabled: false
+            },
+            {
+              _id: '639af5881ba2370016b5eba8',
+              viewType: 'Dashboard',
+              enabled: false
+            },
+            {
+              _id: '639af5881ba2370016b5eba9',
+              viewType: 'Timeline',
+              enabled: false
+            },
+            {
+              _id: '639af5881ba2370016b5ebaa',
+              viewType: 'Map',
+              enabled: false
+            }
+          ],
+          background: 'orange',
+          backgroundColor: '#D29034',
+          backgroundImage: null,
+          backgroundImageScaled: null,
+          backgroundTile: false,
+          backgroundBrightness: 'dark',
+          backgroundBottomColor: '#D29034',
+          backgroundTopColor: '#D29034',
+          canBePublic: true,
+          canBeEnterprise: true,
+          canBeOrg: true,
+          canBePrivate: true,
+          canInvite: true
+        },
+        labelNames: {
+          green: '',
+          yellow: '',
+          orange: '',
+          red: '',
+          purple: '',
+          blue: '',
+          sky: '',
+          lime: '',
+          pink: '',
+          black: '',
+          green_dark: '',
+          yellow_dark: '',
+          orange_dark: '',
+          red_dark: '',
+          purple_dark: '',
+          blue_dark: '',
+          sky_dark: '',
+          lime_dark: '',
+          pink_dark: '',
+          black_dark: '',
+          green_light: '',
+          yellow_light: '',
+          orange_light: '',
+          red_light: '',
+          purple_light: '',
+          blue_light: '',
+          sky_light: '',
+          lime_light: '',
+          pink_light: '',
+          black_light: ''
+        }
+      },
+      action: {
+        id: '639b0e497a6b1e0228eee67e',
+        idMemberCreator: '625c6c7c6fc2b45763b718dc',
+        data: {
+          list: { id: '639b0e497a6b1e0228eee67a', name: 'ezzat team' },
+          board: {
+            id: '639af5881ba2370016b5eba4',
+            name: 'dev / TTP Creative',
+            shortLink: 'NhaULiEp'
+          }
+        },
+        appCreator: { id: '625dce5c804a8202138a2cbb' },
+        type: 'createList',
+        date: '2022-12-15T12:08:41.896Z',
+        limits: null,
+        display: {
+          translationKey: 'action_added_list_to_board',
+          entities: {
+            list: {
+              type: 'list',
+              id: '639b0e497a6b1e0228eee67a',
+              text: 'ezzat team'
+            },
+            board: {
+              type: 'board',
+              id: '639af5881ba2370016b5eba4',
+              text: 'dev / TTP Creative',
+              shortLink: 'NhaULiEp'
+            },
+            memberCreator: {
+              type: 'member',
+              id: '625c6c7c6fc2b45763b718dc',
+              username: 'unicodettp',
+              text: 'UNICODE.TTP'
+            }
+          }
+        },
+        memberCreator: {
+          id: '625c6c7c6fc2b45763b718dc',
+          activityBlocked: false,
+          avatarHash: 'e6d643031f9f4f4ee4db944dec524d23',
+          avatarUrl: 'https://trello-members.s3.amazonaws.com/625c6c7c6fc2b45763b718dc/e6d643031f9f4f4ee4db944dec524d23',
+          fullName: 'UNICODE.TTP',
+          idMemberReferrer: null,
+          initials: 'U',
+          nonPublic: {},
+          nonPublicAvailable: true,
+          username: 'unicodettp'
+        }
+      }
+    }
+  },
+  level: 'info',
+  timestamp: '2022-12-15 14:08:42'
+}
+{
+  message: {
+    noAction: {
+      model: {
+        id: '639af5881ba2370016b5eba4',
+        name: 'dev / TTP Creative',
+        desc: '',
+        descData: null,
+        closed: false,
+        idOrganization: '638e3ad0a165280188c108f5',
+        idEnterprise: null,
+        pinned: false,
+        url: 'https://trello.com/b/NhaULiEp/dev-ttp-creative',
+        shortUrl: 'https://trello.com/b/NhaULiEp',
+        prefs: {
+          permissionLevel: 'private',
+          hideVotes: false,
+          voting: 'disabled',
+          comments: 'members',
+          invitations: 'members',
+          selfJoin: true,
+          cardCovers: true,
+          isTemplate: false,
+          cardAging: 'regular',
+          calendarFeedEnabled: false,
+          hiddenPluginBoardButtons: [],
+          switcherViews: [
+            {
+              _id: '639af5881ba2370016b5eba5',
+              viewType: 'Board',
+              enabled: true
+            },
+            {
+              _id: '639af5881ba2370016b5eba6',
+              viewType: 'Table',
+              enabled: true
+            },
+            {
+              _id: '639af5881ba2370016b5eba7',
+              viewType: 'Calendar',
+              enabled: false
+            },
+            {
+              _id: '639af5881ba2370016b5eba8',
+              viewType: 'Dashboard',
+              enabled: false
+            },
+            {
+              _id: '639af5881ba2370016b5eba9',
+              viewType: 'Timeline',
+              enabled: false
+            },
+            {
+              _id: '639af5881ba2370016b5ebaa',
+              viewType: 'Map',
+              enabled: false
+            }
+          ],
+          background: 'orange',
+          backgroundColor: '#D29034',
+          backgroundImage: null,
+          backgroundImageScaled: null,
+          backgroundTile: false,
+          backgroundBrightness: 'dark',
+          backgroundBottomColor: '#D29034',
+          backgroundTopColor: '#D29034',
+          canBePublic: true,
+          canBeEnterprise: true,
+          canBeOrg: true,
+          canBePrivate: true,
+          canInvite: true
+        },
+        labelNames: {
+          green: '',
+          yellow: '',
+          orange: '',
+          red: '',
+          purple: '',
+          blue: '',
+          sky: '',
+          lime: '',
+          pink: '',
+          black: '',
+          green_dark: '',
+          yellow_dark: '',
+          orange_dark: '',
+          red_dark: '',
+          purple_dark: '',
+          blue_dark: '',
+          sky_dark: '',
+          lime_dark: '',
+          pink_dark: '',
+          black_dark: '',
+          green_light: '',
+          yellow_light: '',
+          orange_light: '',
+          red_light: '',
+          purple_light: '',
+          blue_light: '',
+          sky_light: '',
+          lime_light: '',
+          pink_light: '',
+          black_light: ''
+        }
+      },
+      action: {
+        id: '639b0e4aa32ee4004a801fb1',
+        idMemberCreator: '625c6c7c6fc2b45763b718dc',
+        data: {
+          list: {
+            closed: true,
+            id: '639b0d62fe723104a9c9ce01',
+            name: 'team'
+          },
+          old: { closed: false },
+          board: {
+            id: '639af5881ba2370016b5eba4',
+            name: 'dev / TTP Creative',
+            shortLink: 'NhaULiEp'
+          }
+        },
+        appCreator: { id: '625dce5c804a8202138a2cbb' },
+        type: 'updateList',
+        date: '2022-12-15T12:08:42.464Z',
+        limits: null,
+        display: {
+          translationKey: 'action_archived_list',
+          entities: {
+            list: {
+              type: 'list',
+              closed: true,
+              id: '639b0d62fe723104a9c9ce01',
+              text: 'team'
+            },
+            memberCreator: {
+              type: 'member',
+              id: '625c6c7c6fc2b45763b718dc',
+              username: 'unicodettp',
+              text: 'UNICODE.TTP'
+            }
+          }
+        },
+        memberCreator: {
+          id: '625c6c7c6fc2b45763b718dc',
+          activityBlocked: false,
+          avatarHash: 'e6d643031f9f4f4ee4db944dec524d23',
+          avatarUrl: 'https://trello-members.s3.amazonaws.com/625c6c7c6fc2b45763b718dc/e6d643031f9f4f4ee4db944dec524d23',
+          fullName: 'UNICODE.TTP',
+          idMemberReferrer: null,
+          initials: 'U',
+          nonPublic: {},
+          nonPublicAvailable: true,
+          username: 'unicodettp'
+        }
+      }
+    }
+  },
+  level: 'info',
+  timestamp: '2022-12-15 14:08:42'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2022-12-15 14:10:39'
+}
+{
+  message: {
+    __updateTaskByTrelloDBError: Error: tasks validation failed: status: `projects` is not a valid enum value for path `status`.
+        at ValidationError.inspect (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/mongoose/lib/error/validation.js:48:26)
+        at formatValue (node:internal/util/inspect:782:19)
+        at formatProperty (node:internal/util/inspect:1819:11)
+        at formatRaw (node:internal/util/inspect:1030:9)
+        at formatValue (node:internal/util/inspect:817:10)
+        at formatProperty (node:internal/util/inspect:1819:11)
+        at formatRaw (node:internal/util/inspect:1030:9)
+        at formatValue (node:internal/util/inspect:817:10)
+        at inspect (node:internal/util/inspect:347:10)
+        at Format.transform (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/logform/pretty-print.js:27:19) {
+      errors: {
+        status: ValidatorError: `projects` is not a valid enum value for path `status`.
+            at validate (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/mongoose/lib/schematype.js:1330:13)
+            at SchemaString.SchemaType.doValidate (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/mongoose/lib/schematype.js:1314:7)
+            at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/mongoose/lib/document.js:2751:18
+            at processTicksAndRejections (node:internal/process/task_queues:78:11) {
+          properties: {
+            validator: [Function (anonymous)],
+            message: '`projects` is not a valid enum value for path `status`.',
+            type: 'enum',
+            enumValues: [
+              'In Progress',
+              'Shared',
+              'Done',
+              'Tasks Board',
+              'Not Clear',
+              'Cancled',
+              'Review',
+              'Archived'
+            ],
+            path: 'status',
+            value: 'projects'
+          },
+          kind: 'enum',
+          path: 'status',
+          value: 'projects',
+          reason: undefined,
+          [Symbol(mongoose:validatorError)]: true
+        }
+      },
+      _message: 'tasks validation failed'
+    }
+  },
+  level: 'error',
+  timestamp: '2022-12-15 14:11:03'
+}
+{
+  message: {
+    noAction: {
+      model: {
+        id: '639af5881ba2370016b5eba4',
+        name: 'dev / TTP Creative',
+        desc: '',
+        descData: null,
+        closed: false,
+        idOrganization: '638e3ad0a165280188c108f5',
+        idEnterprise: null,
+        pinned: false,
+        url: 'https://trello.com/b/NhaULiEp/dev-ttp-creative',
+        shortUrl: 'https://trello.com/b/NhaULiEp',
+        prefs: {
+          permissionLevel: 'private',
+          hideVotes: false,
+          voting: 'disabled',
+          comments: 'members',
+          invitations: 'members',
+          selfJoin: true,
+          cardCovers: true,
+          isTemplate: false,
+          cardAging: 'regular',
+          calendarFeedEnabled: false,
+          hiddenPluginBoardButtons: [],
+          switcherViews: [
+            {
+              _id: '639af5881ba2370016b5eba5',
+              viewType: 'Board',
+              enabled: true
+            },
+            {
+              _id: '639af5881ba2370016b5eba6',
+              viewType: 'Table',
+              enabled: true
+            },
+            {
+              _id: '639af5881ba2370016b5eba7',
+              viewType: 'Calendar',
+              enabled: false
+            },
+            {
+              _id: '639af5881ba2370016b5eba8',
+              viewType: 'Dashboard',
+              enabled: false
+            },
+            {
+              _id: '639af5881ba2370016b5eba9',
+              viewType: 'Timeline',
+              enabled: false
+            },
+            {
+              _id: '639af5881ba2370016b5ebaa',
+              viewType: 'Map',
+              enabled: false
+            }
+          ],
+          background: 'orange',
+          backgroundColor: '#D29034',
+          backgroundImage: null,
+          backgroundImageScaled: null,
+          backgroundTile: false,
+          backgroundBrightness: 'dark',
+          backgroundBottomColor: '#D29034',
+          backgroundTopColor: '#D29034',
+          canBePublic: true,
+          canBeEnterprise: true,
+          canBeOrg: true,
+          canBePrivate: true,
+          canInvite: true
+        },
+        labelNames: {
+          green: '',
+          yellow: '',
+          orange: '',
+          red: '',
+          purple: '',
+          blue: '',
+          sky: '',
+          lime: '',
+          pink: '',
+          black: '',
+          green_dark: '',
+          yellow_dark: '',
+          orange_dark: '',
+          red_dark: '',
+          purple_dark: '',
+          blue_dark: '',
+          sky_dark: '',
+          lime_dark: '',
+          pink_dark: '',
+          black_dark: '',
+          green_light: '',
+          yellow_light: '',
+          orange_light: '',
+          red_light: '',
+          purple_light: '',
+          blue_light: '',
+          sky_light: '',
+          lime_light: '',
+          pink_light: '',
+          black_light: ''
+        }
+      },
+      action: {
+        id: '639b0ef02645f600df96d4bf',
+        idMemberCreator: '625c6c7c6fc2b45763b718dc',
+        data: {
+          list: { id: '639b0ef02645f600df96d4ba', name: 'new team' },
+          board: {
+            id: '639af5881ba2370016b5eba4',
+            name: 'dev / TTP Creative',
+            shortLink: 'NhaULiEp'
+          }
+        },
+        appCreator: { id: '625dce5c804a8202138a2cbb' },
+        type: 'createList',
+        date: '2022-12-15T12:11:28.852Z',
+        limits: null,
+        display: {
+          translationKey: 'action_added_list_to_board',
+          entities: {
+            list: {
+              type: 'list',
+              id: '639b0ef02645f600df96d4ba',
+              text: 'new team'
+            },
+            board: {
+              type: 'board',
+              id: '639af5881ba2370016b5eba4',
+              text: 'dev / TTP Creative',
+              shortLink: 'NhaULiEp'
+            },
+            memberCreator: {
+              type: 'member',
+              id: '625c6c7c6fc2b45763b718dc',
+              username: 'unicodettp',
+              text: 'UNICODE.TTP'
+            }
+          }
+        },
+        memberCreator: {
+          id: '625c6c7c6fc2b45763b718dc',
+          activityBlocked: false,
+          avatarHash: 'e6d643031f9f4f4ee4db944dec524d23',
+          avatarUrl: 'https://trello-members.s3.amazonaws.com/625c6c7c6fc2b45763b718dc/e6d643031f9f4f4ee4db944dec524d23',
+          fullName: 'UNICODE.TTP',
+          idMemberReferrer: null,
+          initials: 'U',
+          nonPublic: {},
+          nonPublicAvailable: true,
+          username: 'unicodettp'
+        }
+      }
+    }
+  },
+  level: 'info',
+  timestamp: '2022-12-15 14:11:29'
+}
+{
+  message: {
+    noAction: {
+      model: {
+        id: '639af5881ba2370016b5eba4',
+        name: 'dev / TTP Creative',
+        desc: '',
+        descData: null,
+        closed: false,
+        idOrganization: '638e3ad0a165280188c108f5',
+        idEnterprise: null,
+        pinned: false,
+        url: 'https://trello.com/b/NhaULiEp/dev-ttp-creative',
+        shortUrl: 'https://trello.com/b/NhaULiEp',
+        prefs: {
+          permissionLevel: 'private',
+          hideVotes: false,
+          voting: 'disabled',
+          comments: 'members',
+          invitations: 'members',
+          selfJoin: true,
+          cardCovers: true,
+          isTemplate: false,
+          cardAging: 'regular',
+          calendarFeedEnabled: false,
+          hiddenPluginBoardButtons: [],
+          switcherViews: [
+            {
+              _id: '639af5881ba2370016b5eba5',
+              viewType: 'Board',
+              enabled: true
+            },
+            {
+              _id: '639af5881ba2370016b5eba6',
+              viewType: 'Table',
+              enabled: true
+            },
+            {
+              _id: '639af5881ba2370016b5eba7',
+              viewType: 'Calendar',
+              enabled: false
+            },
+            {
+              _id: '639af5881ba2370016b5eba8',
+              viewType: 'Dashboard',
+              enabled: false
+            },
+            {
+              _id: '639af5881ba2370016b5eba9',
+              viewType: 'Timeline',
+              enabled: false
+            },
+            {
+              _id: '639af5881ba2370016b5ebaa',
+              viewType: 'Map',
+              enabled: false
+            }
+          ],
+          background: 'orange',
+          backgroundColor: '#D29034',
+          backgroundImage: null,
+          backgroundImageScaled: null,
+          backgroundTile: false,
+          backgroundBrightness: 'dark',
+          backgroundBottomColor: '#D29034',
+          backgroundTopColor: '#D29034',
+          canBePublic: true,
+          canBeEnterprise: true,
+          canBeOrg: true,
+          canBePrivate: true,
+          canInvite: true
+        },
+        labelNames: {
+          green: '',
+          yellow: '',
+          orange: '',
+          red: '',
+          purple: '',
+          blue: '',
+          sky: '',
+          lime: '',
+          pink: '',
+          black: '',
+          green_dark: '',
+          yellow_dark: '',
+          orange_dark: '',
+          red_dark: '',
+          purple_dark: '',
+          blue_dark: '',
+          sky_dark: '',
+          lime_dark: '',
+          pink_dark: '',
+          black_dark: '',
+          green_light: '',
+          yellow_light: '',
+          orange_light: '',
+          red_light: '',
+          purple_light: '',
+          blue_light: '',
+          sky_light: '',
+          lime_light: '',
+          pink_light: '',
+          black_light: ''
+        }
+      },
+      action: {
+        id: '639b0ef1095668019de19805',
+        idMemberCreator: '625c6c7c6fc2b45763b718dc',
+        data: {
+          list: {
+            closed: true,
+            id: '639b0e497a6b1e0228eee67a',
+            name: 'ezzat team'
+          },
+          old: { closed: false },
+          board: {
+            id: '639af5881ba2370016b5eba4',
+            name: 'dev / TTP Creative',
+            shortLink: 'NhaULiEp'
+          }
+        },
+        appCreator: { id: '625dce5c804a8202138a2cbb' },
+        type: 'updateList',
+        date: '2022-12-15T12:11:29.320Z',
+        limits: null,
+        display: {
+          translationKey: 'action_archived_list',
+          entities: {
+            list: {
+              type: 'list',
+              closed: true,
+              id: '639b0e497a6b1e0228eee67a',
+              text: 'ezzat team'
+            },
+            memberCreator: {
+              type: 'member',
+              id: '625c6c7c6fc2b45763b718dc',
+              username: 'unicodettp',
+              text: 'UNICODE.TTP'
+            }
+          }
+        },
+        memberCreator: {
+          id: '625c6c7c6fc2b45763b718dc',
+          activityBlocked: false,
+          avatarHash: 'e6d643031f9f4f4ee4db944dec524d23',
+          avatarUrl: 'https://trello-members.s3.amazonaws.com/625c6c7c6fc2b45763b718dc/e6d643031f9f4f4ee4db944dec524d23',
+          fullName: 'UNICODE.TTP',
+          idMemberReferrer: null,
+          initials: 'U',
+          nonPublic: {},
+          nonPublicAvailable: true,
+          username: 'unicodettp'
+        }
+      }
+    }
+  },
+  level: 'info',
+  timestamp: '2022-12-15 14:11:29'
+}

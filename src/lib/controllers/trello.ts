@@ -449,6 +449,23 @@ class TrelloActionsController {
       logger.error({ singleBoardError: error });
     }
   }
+  static async __moveAllCardsInList(
+    id: string,
+    idBoard: string,
+    idList: string
+  ) {
+    try {
+      let boardApi = trelloApi(
+        `lists/${id}/moveAllCards?idBoard=${idBoard}&idList=${idList}&`
+      );
+      let result = await fetch(boardApi, {
+        method: "POST",
+      });
+      return await result.json();
+    } catch (error) {
+      logger.error({ moveAllCardsInListsError: error });
+    }
+  }
   static async __downloadAttachment(cardId: string, attachmentId: string) {
     try {
       let api = trelloApi(

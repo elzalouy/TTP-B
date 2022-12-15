@@ -334,10 +334,18 @@ DepartmentSchema.methods.updateTeams = async function (
   cb?: (doc: IDepartment) => any
 ) {
   try {
+    let tasksBoardList = this.lists.find(
+      (item) => item.name === "In Progress"
+    ).listId;
     let depTeams: ITeam[] = [];
     // remove teams
     await data.removeTeams.forEach(async (item, index) => {
       let team = this.teams.find((t) => t._id.toString() === item);
+      await TrelloActionsController.__moveAllCardsInList(
+        team.listId,
+        this.boardId,
+        tasksBoardList
+      );
       await TrelloActionsController.addListToArchieve(team.listId);
     });
     this.teams = this.teams.map((item) => {
