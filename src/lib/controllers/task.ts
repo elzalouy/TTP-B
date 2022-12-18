@@ -252,11 +252,11 @@ class TaskController extends TaskDB {
         if (tasks) {
           cards.map(async (item) => {
             let isTaskFound = tasks.find((task) => task.cardId === item.id);
-            let isStatusList = ListTypes.includes(
-              board.lists.find((list) => list.listId === item.idList).name
-            )
-              ? true
-              : false;
+            let isList = board?.lists?.find(
+              (list) => list.listId === item.idList
+            )?.name;
+            let isStatusList =
+              isList && ListTypes.includes(isList) ? true : false;
             let cardList = isStatusList
               ? board.lists.find((list) => list.listId === item.idList)
               : board.teams.find((list) => list.listId === item.idList);
