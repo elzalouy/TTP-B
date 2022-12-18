@@ -11,9 +11,16 @@ import ProjectController from "../../controllers/project";
 import TrelloActionsController from "../../controllers/trello";
 import { ProjectData, ProjectInfo } from "../../types/model/Project";
 import Tasks from "../../models/Task";
+import { IDepartmentState } from "../../types/model/Department";
 import { createProjectsCardsInCreativeBoard } from "../../backgroundJobs/actions/department.actions.queue";
-import { Board, Card, List } from "../../types/controller/trello";
+import {
+  Board,
+  Card,
+  List,
+  createBoardResponse,
+} from "../../types/controller/trello";
 import { CreativeListTypes, ListTypes } from "../../types/model/Department";
+
 import _ from "lodash";
 import TaskController from "../../controllers/task";
 import { io } from "../../..";
@@ -42,7 +49,6 @@ const mongoDB: () => Promise<void> = async () => {
     await connect(db, options);
     console.log("Mongo DB connected,", Config.get("mongoDbConnectionString"));
     initializeAdminUser();
-    createTTPCreativeMainBoard();
   } catch (error) {
     console.error({ mongoDBError: error });
     process.exit(1);
@@ -67,106 +73,93 @@ const initializeAdminUser = async () => {
     await UserDB.createUser(data);
   }
 };
+
 export const initializeTrelloBoards = async () => {
-  let allBoards: Board[] = await TrelloActionsController.getBoardsInTrello();
-  let allDepartments = await Department.find({});
-  allBoards.forEach(async (boardItem) => {
-    let currentDepartment = allDepartments.find(
-      (departmentItem) => departmentItem.boardId === boardItem.id
-    );
-    let listTypes =
-      boardItem.name === Config.get("CreativeBoard")
-        ? CreativeListTypes
-        : ListTypes;
-    if (currentDepartment) {
-      // get the lists of the board
-      let lists: List[] = await TrelloActionsController.__getBoardLists(
-        boardItem.id
-      );
-      let listsNames = lists.map((item) => item.name);
-      let shouldBeExistedInBoard = _.differenceWith(
-        listTypes,
-        listsNames,
-        _.isEqual
-      );
-      let createShouldBeExisted = await Promise.all(
-        shouldBeExistedInBoard.map(async (item) => {
-          let list: { id: string } =
-            await TrelloActionsController.addListToBoard(boardItem.id, item);
-          return { listId: list.id, name: item };
-        })
-      );
-      currentDepartment.lists = [
-        ...lists
-          .filter((item) => listTypes.includes(item.name))
-          .map((item) => {
-            return { listId: item.id, name: item.name };
-          }),
-        ...createShouldBeExisted,
-      ];
-      currentDepartment.teams = lists
-        .filter((item) => !listTypes.includes(item.name))
-        .map((item) => {
-          return { listId: item.id, name: item.name, isDeleted: false };
-        });
-      currentDepartment = await currentDepartment.save();
-      let cards: Card[] = await TrelloActionsController.__getCardsInBoard(
-        currentDepartment.boardId
-      );
-      let tasks = await TaskController.getAllTasksDB({
-        boardId: currentDepartment.boardId,
+  try {
+    let allBoards: Board[] = await TrelloActionsController.getBoardsInTrello();
+    let allDepartments = await Department.find({});
+    if (allBoards.length > 0) {
+      if (!allBoards.find((item) => item.name === Config.get("CreativeBoard")))
+        await createTTPCreativeMainBoard();
+      allBoards.forEach(async (boardItem, index) => {
+        let boardInfo: createBoardResponse =
+          await TrelloActionsController.getSingleBoardInfo(boardItem.id);
+        boardItem = allBoards[index] = {
+          ...allBoards[index],
+          lists: await TrelloActionsController.__getBoardLists(boardItem.id),
+        };
+        let listTypes =
+          boardItem.name === Config.get("CreativeBoard")
+            ? CreativeListTypes
+            : ListTypes;
+        let departmentExisted = allDepartments.find(
+          (item) => item.boardId === boardItem.id
+        );
+
+        let department: IDepartmentState = {
+          name: boardItem.name,
+          boardId: boardItem.id,
+          color: boardInfo.prefs.background,
+          lists: await Promise.all(
+            listTypes.map(async (listName) => {
+              let listExisted = boardItem?.lists?.find(
+                (item) => listName === item.name
+              );
+              return {
+                name: listName,
+                listId:
+                  listExisted && listExisted?.id
+                    ? listExisted.id
+                    : await TrelloActionsController.addListToBoard(
+                        boardItem.id,
+                        listName
+                      ).then((res: { id: string }) => {
+                        return res.id;
+                      }),
+              };
+            })
+          ),
+          teams: boardItem.lists
+            .filter((item) => !listTypes.includes(item.name))
+            .map((item) => {
+              return { name: item.name, listId: item.id, isDeleted: false };
+            }),
+        };
+        if (!departmentExisted) {
+          department = await new Department(department).save();
+          await TrelloActionsController.__addWebHook(
+            department.boardId,
+            "trelloWebhookUrlTask"
+          );
+        } else {
+          let id = departmentExisted._id;
+          department = await Department.findOneAndUpdate(
+            { _id: id },
+            { ...department },
+            { new: true }
+          );
+        }
+        await TaskController.__createNotSavedCardsOnBoard(department);
       });
-      let ids = tasks.map((item) => item.cardId);
-      let notSavedTasks: Card[] = cards.filter(
-        (item) => !ids.includes(item.id)
-      );
-      let saveTasks = await Promise.all(
-        notSavedTasks.map(async (item) => {
-          let task = new Tasks({
-            name: item.name,
-            due: item.due,
-            start: item.start,
-            description: item.desc,
-            listId: item.idList,
-            boardId: item.idBoard,
-            cardId: item.id,
-          });
-          return await task.save();
-        })
-      );
-      if (boardItem.name === Config.get("CreativeBoard")) {
-        createProjectsCardsInCreativeBoard(currentDepartment);
-      }
-    } else {
-      // create the board.
-      // let department=new Department({name:boardItem.name,lists:})
-    }
-  });
+    } else createTTPCreativeMainBoard();
+  } catch (error) {
+    logger.error(error);
+  }
 };
 export default mongoDB;
 
 export const createTTPCreativeMainBoard = async () => {
   try {
-    let department = await Department.findOne({
+    let dep: any = {
       name: Config.get("CreativeBoard"),
-    });
-    let allBoards: Board[] = await TrelloActionsController.getBoardsInTrello();
-    let board = allBoards.find(
-      (item) => item.name === Config.get("CreativeBoard")
-    );
-    console.log({ allBoards, department, board });
-    if (!board && department === null) {
-      let dep: any = {
-        name: Config.get("CreativeBoard"),
-        color: "orange",
-      };
-      department = await DepartmentController.createDepartment(dep);
-    }
-    let listOfProjects = department.lists.find(
-      (item) => item.name === "projects"
-    );
+      color: "orange",
+    };
+    let department = await DepartmentController.createDepartment(dep);
+    let listOfProjects =
+      department &&
+      department?.lists &&
+      department?.lists?.find((item: any) => item.name === "projects");
     if (department && listOfProjects) {
-      console.log({ department, listOfProjects });
       createProjectsCardsInCreativeBoard(department);
     }
   } catch (error) {

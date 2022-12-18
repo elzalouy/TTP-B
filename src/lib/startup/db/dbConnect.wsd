@@ -1,0 +1,120 @@
+
+
+
+@startuml
+
+@startjson board 
+{
+  "name":"board name",
+  "id":"board id",
+  "lists":[
+    {
+      "name":"list name",
+      "id":"list id"
+    }
+  ]
+}
+@endjson
+@enduml
+
+@startuml
+
+ @startjson Department
+ {
+   "_id": " depid",
+  "name": "dep name",
+  "boardId": "board id for the dep",
+  "lists": [
+     {
+      "name":"list name",
+      "id":"list id",
+      "listId":"list id on trello"
+    }
+  ],
+  "color": "blue",
+  "teams": [
+     {
+      "name":"team name",
+      "_id":"id of the team",
+      "listId":"list id of the team on trello",
+      "isDeleted": false
+    }
+  ],
+  "boardId": "id of the board on trello",
+  "boardUrl":"the link of the board on trello"
+ }
+@endjson
+@enduml
+
+@startuml 
+@startjson  Cards
+{
+  "id": "card id",
+  "desc": "card description",
+  "due": "deadline date",
+  "idBoard": "board id",
+  "idList": "list id",
+  "name": "card name",
+  "shortLink": "link string",
+  "shortUrl": "url",
+  "start": "card start date",
+  "url": "card url"
+}
+@endjson
+@enduml
+
+@startuml initializeTrelloBoards
+header InitializeTrelloBoards
+start  
+:getallBoards;
+:getAllDepartments;
+if (boards is empty?) then (yes)
+  :create Creative Board on Trello; 
+else (no)
+  if (creative Board found ? ?) then (No)
+    :create Creative board on Trello;
+  else (Yes)
+    
+  endif
+repeat :loop on allBoards;
+  :getBoardData;
+  if (department existed?) then (Yes)
+  else (No)
+    :createDepartment;
+    :createWebhook;
+  endif
+  fork
+    if (is there Cards not saved ?) then (yes)
+    :create not saved cards;
+    :create webhook for each card;
+    endif
+  fork again
+    if (is there lists not saved?) then (yes)
+      :create not saved lists;
+    else (no)
+    endif
+  end fork
+repeat while (is There are Boards?) is (yes)
+->no;
+endif
+stop
+@enduml
+
+@startuml
+header InitializeTrelloBoards -> Updates tasks
+start
+:getTasksForBoard;
+:getCardsOnBoard;
+while (loop on cards) is (card ? )
+  if (card is saved to tasks?) then (yes)
+    :Update Task on the DB;
+  else (no)
+    : Create the card on the DB;
+    : Create a webhook for the card;
+  endif
+
+endwhile (cards is done ?)
+:return the tasks;
+end
+
+@enduml

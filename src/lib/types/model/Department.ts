@@ -47,6 +47,7 @@ export interface IDepartmentState {
   lists?: IList[];
   color?: string;
   teams?: ITeam[];
+  boardId?: string;
   boardURL?: string;
   removeTeams?: string[];
   addTeams?: string[];

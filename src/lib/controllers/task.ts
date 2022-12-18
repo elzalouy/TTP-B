@@ -10,7 +10,15 @@ import {
 import { provideCardIdError } from "../types/controller/Tasks";
 import { io } from "../..";
 import { taskRoutesQueue } from "../backgroundJobs/routes/tasks.Route.Queue";
-import { IDepartment, IDepartmentState } from "../types/model/Department";
+import {
+  IDepartment,
+  IDepartmentState,
+  ListTypes,
+} from "../types/model/Department";
+import TrelloActionsController from "./trello";
+import { Board, Card } from "../types/controller/trello";
+import _ from "lodash";
+import Tasks from "../models/Task";
 class TaskController extends TaskDB {
   static async getTasks(data: TaskData) {
     return await TaskController.__getTasks(data);
@@ -232,6 +240,49 @@ class TaskController extends TaskDB {
     } catch (error) {
       logger.error({ downloadAttachmentError: error });
       return { error: "FileError", status: 400 };
+    }
+  }
+  static async __createNotSavedCardsOnBoard(board: IDepartmentState) {
+    try {
+      let cards: Card[] = await TrelloActionsController.__getCardsInBoard(
+        board.boardId
+      );
+      if (cards) {
+        let tasks = await TaskController.getTasks({ boardId: board.boardId });
+        if (tasks) {
+          cards.map(async (item) => {
+            let isTaskFound = tasks.find((task) => task.cardId === item.id);
+            let isStatusList = board.lists.find(
+              (list) => list.listId === item.idList
+            )
+              ? true
+              : false;
+            let cardList = isStatusList
+              ? board.lists.find((list) => list.listId === item.idList)
+              : board.teams.find((list) => list.listId === item.idList);
+            let task = {
+              boardId: item.idBoard,
+              cardId: item.id,
+              trelloShortUrl: item.shortUrl,
+              name: item.name,
+              description: item.desc,
+              start: item.start,
+              deadline: item.due,
+              listId: isStatusList
+                ? item.idList
+                : board.lists.find((item) => item.name === "In Progress")
+                    .listId,
+              teamId: isStatusList ? null : item.idList,
+              status: isStatusList ? cardList.name : "In Progress",
+            };
+            if (isTaskFound && isTaskFound._id)
+              task = await Tasks.findOneAndUpdate({ cardId: item.id }, task);
+            else await new Tasks(task).save();
+          });
+        }
+      }
+    } catch (error) {
+      logger.error({ __createNotSavedCardsOnBoardError: error });
     }
   }
 
