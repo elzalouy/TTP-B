@@ -138,6 +138,10 @@ export const initializeTrelloBoards = async () => {
             { ...department },
             { new: true }
           );
+          await TrelloActionsController.__addWebHook(
+            department.boardId,
+            "trelloWebhookUrlTask"
+          );
         }
         await TaskController.__createNotSavedCardsOnBoard(department);
       });

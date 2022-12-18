@@ -329,6 +329,23 @@ class TrelloActionsController {
       logger.error({ createWebHookError: error });
     }
   }
+  static async __getAllWebWebHook(idModel: string, urlInConfig: string) {
+    try {
+      let webhookUrl = `webhooks/?idModel=${idModel}&callbackURL=${Config.get(
+        urlInConfig
+      )}&`;
+      let webhookApi = trelloApi(webhookUrl);
+      let webhookResult = await fetch(webhookApi, {
+        method: "POST",
+        headers: {
+          Accept: "application/json",
+        },
+      });
+      return webhookResult;
+    } catch (error) {
+      logger.error({ createWebHookError: error });
+    }
+  }
   static async __getBoardLists(boardId: string) {
     try {
       let url = await trelloApi(`boards/${boardId}/lists?`);
@@ -424,6 +441,7 @@ class TrelloActionsController {
       logger.error({ getTrelloMombersError: error });
     }
   }
+
   static async __getTrelloBoards() {
     try {
       let boardsApi = trelloApi(
@@ -449,6 +467,7 @@ class TrelloActionsController {
       logger.error({ singleBoardError: error });
     }
   }
+
   static async __moveAllCardsInList(
     id: string,
     idBoard: string,
@@ -466,6 +485,7 @@ class TrelloActionsController {
       logger.error({ moveAllCardsInListsError: error });
     }
   }
+
   static async __downloadAttachment(cardId: string, attachmentId: string) {
     try {
       let api = trelloApi(

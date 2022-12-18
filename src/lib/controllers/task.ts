@@ -275,9 +275,19 @@ class TaskController extends TaskDB {
               teamId: isStatusList ? null : item.idList,
               status: isStatusList ? cardList.name : "In Progress",
             };
-            if (isTaskFound && isTaskFound._id)
+            if (isTaskFound && isTaskFound._id) {
               task = await Tasks.findOneAndUpdate({ cardId: item.id }, task);
-            else await new Tasks(task).save();
+              await TrelloActionsController.__addWebHook(
+                task.cardId,
+                "trelloWebhookUrlTask"
+              );
+            } else {
+              let taskInfo = await new Tasks(task).save();
+              await TrelloActionsController.__addWebHook(
+                taskInfo.cardId,
+                "trelloWebhookUrlTask"
+              );
+            }
           });
         }
       }
