@@ -8,8 +8,8 @@ import {
   updateCardJob,
 } from "../backgroundJobs/actions/task.actions.Queue";
 import { provideCardIdError } from "../types/controller/Tasks";
-import { io } from "../..";
 import { taskRoutesQueue } from "../backgroundJobs/routes/tasks.Route.Queue";
+import config from "config";
 import {
   IDepartment,
   IDepartmentState,
@@ -247,6 +247,13 @@ class TaskController extends TaskDB {
       let cards: Card[] = await TrelloActionsController.__getCardsInBoard(
         board.boardId
       );
+      let projectsList =
+        board.name === config.get("CreativeBoard")
+          ? board?.lists?.find((item) => item.name === "projects").listId
+          : undefined;
+      cards = projectsList
+        ? cards.filter((item) => item.idList !== projectsList)
+        : cards;
       if (cards) {
         let tasks = await TaskController.getTasks({ boardId: board.boardId });
         if (tasks) {
