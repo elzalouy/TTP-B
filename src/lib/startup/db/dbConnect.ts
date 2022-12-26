@@ -54,6 +54,7 @@ const mongoDB: () => Promise<void> = async () => {
     process.exit(1);
   }
 };
+
 const initializeAdminUser = async () => {
   // adding superAdmin in db if not exists
   const userInfo: any = await UserDB.findUser({

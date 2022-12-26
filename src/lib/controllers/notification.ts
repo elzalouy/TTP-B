@@ -137,6 +137,7 @@ const NotificationController = class NotificationController extends Notification
       logger.error({ __updateProjectNotificationError: error });
     }
   }
+
   static async __creatProjectNotification(data: ProjectData, userId: string) {
     // to the PM if not created by him, and other admins without the userId
     try {
