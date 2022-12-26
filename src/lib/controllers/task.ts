@@ -267,7 +267,7 @@ class TaskController extends TaskDB {
             let cardList = isStatusList
               ? board.lists.find((list) => list.listId === item.idList)
               : board.teams.find((list) => list.listId === item.idList);
-            let task = {
+            let task: any = {
               boardId: item.idBoard,
               cardId: item.id,
               trelloShortUrl: item.shortUrl,
@@ -279,16 +279,17 @@ class TaskController extends TaskDB {
                 ? item.idList
                 : board.lists.find((item) => item.name === "In Progress")
                     .listId,
-              teamId: isStatusList ? null : item.idList,
               status: isStatusList ? cardList.name : "In Progress",
             };
             if (isTaskFound && isTaskFound._id) {
+              task.teamId = isStatusList ? isTaskFound.teamId : cardList._id;
               task = await Tasks.findOneAndUpdate({ cardId: item.id }, task);
               await TrelloActionsController.__addWebHook(
                 task.cardId,
                 "trelloWebhookUrlTask"
               );
             } else {
+              task.teamId = null;
               let taskInfo = await new Tasks(task).save();
               await TrelloActionsController.__addWebHook(
                 taskInfo.cardId,
