@@ -289,7 +289,7 @@ class TaskController extends TaskDB {
                 "trelloWebhookUrlTask"
               );
             } else {
-              task.teamId = null;
+              task.teamId = isStatusList ? null : cardList._id;
               let taskInfo = await new Tasks(task).save();
               await TrelloActionsController.__addWebHook(
                 taskInfo.cardId,
