@@ -28,7 +28,7 @@ const ProjectSchema: Schema = new Schema<ProjectInfo>(
     },
     startDate: {
       type: Date,
-      default: Date.now(),
+      default: null,
     },
     completedDate: {
       type: Date,

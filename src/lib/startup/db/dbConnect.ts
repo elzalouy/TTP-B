@@ -79,7 +79,7 @@ export const initializeTrelloBoards = async () => {
   try {
     let allBoards: Board[] = await TrelloActionsController.getBoardsInTrello();
     let allDepartments = await Department.find({});
-    if (allBoards.length > 0) {
+    if (allBoards?.length > 0) {
       if (!allBoards.find((item) => item.name === Config.get("CreativeBoard")))
         await createTTPCreativeMainBoard();
       allBoards.forEach(async (boardItem, index) => {

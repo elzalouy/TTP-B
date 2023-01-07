@@ -128,6 +128,7 @@ const ProjectDB = class ProjectDB {
       logger.error({ createProjectDBError: error });
     }
   }
+
   static async __sortProjects(sortBy: string) {
     try {
       let projects = await Project.find({}).sort(sortBy);
