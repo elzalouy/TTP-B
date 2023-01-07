@@ -16,7 +16,6 @@ const ProjectSchema: Schema = new Schema<ProjectInfo>(
       type: String,
       required: true,
     },
-
     adminId: {
       type: Schema.Types.ObjectId,
       ref: "users",

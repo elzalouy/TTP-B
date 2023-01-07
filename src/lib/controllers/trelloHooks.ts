@@ -221,6 +221,7 @@ export default class TrelloWebhook {
         boardId: this.actionRequest.action.data.board.id,
       }).then(async (creativeBoard) => {
         if (creativeBoard) {
+          console.log({ data: this.actionRequest.action.data.card });
           // if true, then it's an update action, and if not so it's a move action and moving is not allowed
           let project = await Project.findOneAndUpdate(
             { cardId: this.actionRequest.action.data.card.id },
