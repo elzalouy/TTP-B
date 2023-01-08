@@ -42,7 +42,7 @@ export function moveTaskJob(
           (item) => item.name === "In Progress"
         );
         let team = department.teams.find(
-          (item) => currentTask?.teamId.toString() === item._id
+          (item) => currentTask?.teamId?.toString() === item._id
         );
         const result = await TrelloController.moveTaskToDiffList(
           cardId,

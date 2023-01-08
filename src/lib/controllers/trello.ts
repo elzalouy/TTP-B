@@ -230,9 +230,9 @@ class TrelloActionsController {
     try {
       let url = `cards/?idList=${listId}&name=${data.name}&`;
       if (data.projectDeadline)
-        url = `${url}due=${new Date(
-          data.projectDeadline
-        ).getTime()}&start=${new Date(data.startDate).getTime()}&`;
+        url = `${url}due=${new Date(data.projectDeadline).getTime()}&`;
+      if (data.startDate)
+        url = `${url}start=${new Date(data.startDate).getTime()}`;
       url = `${url}attachments=true&`;
       let cardCreateApi = trelloApi(url);
       let cardResult = await fetch(cardCreateApi, {

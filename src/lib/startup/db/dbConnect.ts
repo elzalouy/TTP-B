@@ -54,6 +54,7 @@ const mongoDB: () => Promise<void> = async () => {
     process.exit(1);
   }
 };
+
 const initializeAdminUser = async () => {
   // adding superAdmin in db if not exists
   const userInfo: any = await UserDB.findUser({
@@ -78,7 +79,7 @@ export const initializeTrelloBoards = async () => {
   try {
     let allBoards: Board[] = await TrelloActionsController.getBoardsInTrello();
     let allDepartments = await Department.find({});
-    if (allBoards.length > 0) {
+    if (allBoards?.length > 0) {
       if (!allBoards.find((item) => item.name === Config.get("CreativeBoard")))
         await createTTPCreativeMainBoard();
       allBoards.forEach(async (boardItem, index) => {

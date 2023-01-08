@@ -41,6 +41,7 @@ const UserController = class UserController extends UserDB {
   static async getUserById(id: string) {
     return await UserController.__getUser(id);
   }
+
   static async resendNewUserMail(id: string) {
     return await UserController.__resendNewUserMail(id);
   }

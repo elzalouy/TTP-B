@@ -16,7 +16,6 @@ const ProjectSchema: Schema = new Schema<ProjectInfo>(
       type: String,
       required: true,
     },
-
     adminId: {
       type: Schema.Types.ObjectId,
       ref: "users",
@@ -28,7 +27,7 @@ const ProjectSchema: Schema = new Schema<ProjectInfo>(
     },
     startDate: {
       type: Date,
-      default: Date.now(),
+      default: null,
     },
     completedDate: {
       type: Date,

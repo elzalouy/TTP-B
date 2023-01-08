@@ -143,7 +143,6 @@ const TaskReq = class TaskReq extends TaskController {
         projectId = req.body.projectId;
       if (ids && projectId) {
         let response = await super.__editTasksProjectId(ids, projectId);
-        logger.info({ ids, count: response.modifiedCount });
         if (response.modifiedCount) return res.send(response);
         return res
           .status(400)

@@ -8,8 +8,8 @@ import {
   updateCardJob,
 } from "../backgroundJobs/actions/task.actions.Queue";
 import { provideCardIdError } from "../types/controller/Tasks";
-import { io } from "../..";
 import { taskRoutesQueue } from "../backgroundJobs/routes/tasks.Route.Queue";
+import config from "config";
 import {
   IDepartment,
   IDepartmentState,
@@ -247,20 +247,27 @@ class TaskController extends TaskDB {
       let cards: Card[] = await TrelloActionsController.__getCardsInBoard(
         board.boardId
       );
+      let projectsList =
+        board.name === config.get("CreativeBoard")
+          ? board?.lists?.find((item) => item.name === "projects").listId
+          : undefined;
+      cards = projectsList
+        ? cards.filter((item) => item.idList !== projectsList)
+        : cards;
       if (cards) {
         let tasks = await TaskController.getTasks({ boardId: board.boardId });
         if (tasks) {
           cards.map(async (item) => {
             let isTaskFound = tasks.find((task) => task.cardId === item.id);
-            let isStatusList = board.lists.find(
+            let isList = board?.lists?.find(
               (list) => list.listId === item.idList
-            )
-              ? true
-              : false;
+            )?.name;
+            let isStatusList =
+              isList && ListTypes.includes(isList) ? true : false;
             let cardList = isStatusList
               ? board.lists.find((list) => list.listId === item.idList)
               : board.teams.find((list) => list.listId === item.idList);
-            let task = {
+            let task: any = {
               boardId: item.idBoard,
               cardId: item.id,
               trelloShortUrl: item.shortUrl,
@@ -272,16 +279,17 @@ class TaskController extends TaskDB {
                 ? item.idList
                 : board.lists.find((item) => item.name === "In Progress")
                     .listId,
-              teamId: isStatusList ? null : item.idList,
               status: isStatusList ? cardList.name : "In Progress",
             };
             if (isTaskFound && isTaskFound._id) {
+              task.teamId = isStatusList ? isTaskFound.teamId : cardList._id;
               task = await Tasks.findOneAndUpdate({ cardId: item.id }, task);
               await TrelloActionsController.__addWebHook(
                 task.cardId,
                 "trelloWebhookUrlTask"
               );
             } else {
+              task.teamId = isStatusList ? null : cardList._id;
               let taskInfo = await new Tasks(task).save();
               await TrelloActionsController.__addWebHook(
                 taskInfo.cardId,

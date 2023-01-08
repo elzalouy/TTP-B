@@ -88,6 +88,7 @@ const ProjectController = class ProjectController extends ProjectDB {
 
   static async __createNewProject(data: ProjectData, userId: string) {
     try {
+      console.log({ data });
       let project = await super.createProjectDB(data);
       projectQueue.push(async (cb) => {
         let dep = await Department.findOne({
