@@ -121,7 +121,7 @@ TaskSchema.static("getTasksAsCSV", async function (filterIds: string[]) {
       });
       let data: any = tasks?.map((item) => {
         let project = projects?.find(
-          (project) => project._id.toString() === item.projectId.toString()
+          (project) => project._id.toString() === item?.projectId?.toString()
         );
         return {
           id: item._id.toString(),
@@ -142,9 +142,11 @@ TaskSchema.static("getTasksAsCSV", async function (filterIds: string[]) {
         };
       });
       const convert = [Object.keys(data[0])].concat(data);
-      const csvData = convert.map((item) => {
-        return Object.values(item).toString();
-      });
+      const csvData = convert
+        .map((item) => {
+          return Object.values(item).toString();
+        })
+        .join("\n");
       // const newTaskCsvFile=appendFileSync()
       return csvData;
     }
