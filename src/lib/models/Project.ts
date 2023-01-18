@@ -41,7 +41,7 @@ const ProjectSchema: Schema = new Schema<ProjectInfo>(
         "In Progress",
         "late",
         "delivered on time",
-        "delivered defore deadline",
+        "delivered before deadline",
         "delivered after deadline",
       ],
     },

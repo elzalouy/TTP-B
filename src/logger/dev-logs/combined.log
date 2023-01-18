@@ -9316,3 +9316,2938 @@
   level: 'error',
   timestamp: '2023-01-08 13:37:09'
 }
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2023-01-08 16:42:46'
+}
+{
+  message: { noAction: {} },
+  level: 'info',
+  timestamp: '2023-01-08 16:42:51'
+}
+{
+  message: { noAction: {} },
+  level: 'info',
+  timestamp: '2023-01-08 16:42:52'
+}
+{
+  message: { noAction: {} },
+  level: 'info',
+  timestamp: '2023-01-08 16:42:52'
+}
+{
+  message: { noAction: {} },
+  level: 'info',
+  timestamp: '2023-01-08 16:42:53'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2023-01-10 10:25:06'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2023-01-10 10:25:50'
+}
+{
+  message: { noAction: {} },
+  level: 'info',
+  timestamp: '2023-01-10 10:25:55'
+}
+{
+  message: { noAction: {} },
+  level: 'info',
+  timestamp: '2023-01-10 10:25:59'
+}
+{
+  message: { noAction: {} },
+  level: 'info',
+  timestamp: '2023-01-10 10:25:59'
+}
+{
+  message: { noAction: {} },
+  level: 'info',
+  timestamp: '2023-01-10 10:25:59'
+}
+{
+  message: {
+    clientData: [Object: null prototype] {
+      _id: '63bd2448eecac89aa9ade372',
+      clientName: 'testing client',
+      image: 'null',
+      createdAt: '2023-01-10T08:39:36.720Z'
+    }
+  },
+  level: 'info',
+  timestamp: '2023-01-10 10:43:34'
+}
+{
+  message: {
+    s3File: {
+      fieldname: 'image',
+      originalname: '1634147289303.jpeg',
+      encoding: '7bit',
+      mimetype: 'image/jpeg'
+    }
+  },
+  level: 'info',
+  timestamp: '2023-01-10 10:48:42'
+}
+{
+  message: {
+    s3File: {
+      fieldname: 'image',
+      originalname: '1634147289303.jpeg',
+      encoding: '7bit',
+      mimetype: 'image/jpeg'
+    }
+  },
+  level: 'info',
+  timestamp: '2023-01-10 11:03:08'
+}
+{
+  message: {
+    s3File: {
+      fieldname: 'image',
+      originalname: '1634147289303.jpeg',
+      encoding: '7bit',
+      mimetype: 'image/jpeg'
+    }
+  },
+  level: 'info',
+  timestamp: '2023-01-10 11:11:37'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2023-01-11 14:26:20'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2023-01-12 13:40:32'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2023-01-12 14:52:23'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2023-01-12 17:25:00'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2023-01-14 08:34:35'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2023-01-14 13:24:51'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2023-01-15 13:19:06'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2023-01-15 14:25:31'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2023-01-15 14:35:46'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2023-01-15 15:28:37'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2023-01-15 15:30:35'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2023-01-15 15:31:32'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2023-01-15 15:33:09'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2023-01-15 15:33:53'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2023-01-15 15:35:46'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2023-01-15 15:37:07'
+}
+{
+  message: {
+    getTasksCsvError: TypeError: Cannot convert undefined or null to object
+        at Function.keys (<anonymous>)
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/models/Task.ts:113:29)
+        at Generator.next (<anonymous>)
+        at fulfilled (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/models/Task.ts:5:58)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5)
+  },
+  level: 'error',
+  timestamp: '2023-01-15 15:37:12'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2023-01-15 15:39:18'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2023-01-15 15:45:36'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2023-01-15 15:48:32'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2023-01-15 15:49:31'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2023-01-15 15:51:09'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2023-01-15 15:52:26'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2023-01-15 15:54:35'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2023-01-15 16:10:10'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2023-01-15 16:17:35'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2023-01-15 16:18:11'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2023-01-15 16:19:04'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2023-01-15 16:20:08'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2023-01-15 16:20:59'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2023-01-15 16:21:35'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2023-01-15 16:30:20'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2023-01-15 16:35:00'
+}
+{
+  message: {
+    getTrelloBoardError: FetchError: request to https://api.trello.com/1/organizations/ttpbetalocal/boards?fields=id,name&key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68 failed, reason: read ECONNRESET
+        at ClientRequest.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/node-fetch/lib/index.js:1491:11)
+        at ClientRequest.emit (node:events:527:28)
+        at ClientRequest.emit (node:domain:475:12)
+        at TLSSocket.socketErrorListener (node:_http_client:454:9)
+        at TLSSocket.emit (node:events:527:28)
+        at TLSSocket.emit (node:domain:475:12)
+        at emitErrorNT (node:internal/streams/destroy:157:8)
+        at emitErrorCloseNT (node:internal/streams/destroy:122:3)
+        at processTicksAndRejections (node:internal/process/task_queues:83:21) {
+      type: 'system',
+      errno: 'ECONNRESET',
+      code: 'ECONNRESET'
+    }
+  },
+  level: 'error',
+  timestamp: '2023-01-15 16:35:34'
+}
+{
+  message: {
+    removeBoard: 'https://api.trello.com/1/boards/63c40f37ac89390144fd2552?response_type=token&key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68'
+  },
+  level: 'info',
+  timestamp: '2023-01-15 16:35:38'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2023-01-15 16:43:28'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2023-01-15 16:44:28'
+}
+{
+  message: {
+    getTasksCsvError: TypeError: Cannot read properties of undefined (reading 'projectManagerName')
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/models/Task.ts:129:39
+        at Array.map (<anonymous>)
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/models/Task.ts:122:30)
+        at Generator.next (<anonymous>)
+        at fulfilled (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/models/Task.ts:5:58)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5)
+  },
+  level: 'error',
+  timestamp: '2023-01-15 16:44:33'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2023-01-15 16:45:30'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2023-01-15 16:46:55'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2023-01-15 16:51:06'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2023-01-15 16:57:00'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2023-01-16 10:54:57'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2023-01-16 11:14:17'
+}
+{
+  message: {
+    body: {
+      name: 'Ezzat Elzalouy-testing 2',
+      desc: undefined,
+      due: undefined,
+      start: undefined,
+      idList: '63b9420dd7f73a0076fbaebe',
+      idBoard: '63b9420bdc618601f09c835d'
+    }
+  },
+  level: 'info',
+  timestamp: '2023-01-16 11:42:26'
+}
+{
+  message: {
+    body: {
+      name: 'Ezzat Elzalouy-testing 2',
+      desc: undefined,
+      due: '2023-01-30T22:00:00.000Z',
+      start: '2022-12-31T22:00:00.000Z',
+      idList: '63b9420dd7f73a0076fbaebe',
+      idBoard: '63b9420bdc618601f09c835d'
+    }
+  },
+  level: 'info',
+  timestamp: '2023-01-16 11:42:44'
+}
+{
+  message: {
+    body: {
+      name: 'Ezzat Elzalouy-project',
+      desc: undefined,
+      due: '2023-01-30T22:00:00.000Z',
+      start: '2022-12-31T22:00:00.000Z',
+      idList: '63b9420dd7f73a0076fbaebe',
+      idBoard: '63b9420bdc618601f09c835d'
+    }
+  },
+  level: 'info',
+  timestamp: '2023-01-16 11:42:54'
+}
+{
+  message: {
+    body: {
+      name: 'Ezzat Elzalouy-project one',
+      desc: undefined,
+      due: '2023-07-07T22:00:00.000Z',
+      start: '2022-12-31T22:00:00.000Z',
+      idList: '63b9420dd7f73a0076fbaebe',
+      idBoard: '63b9420bdc618601f09c835d'
+    }
+  },
+  level: 'info',
+  timestamp: '2023-01-16 11:48:08'
+}
+{
+  message: {
+    err: FetchError: invalid json response body at https://api.trello.com/1/cards/63b9423b598d850342411125?key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68 reason: Unexpected token T in JSON at position 0
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/node-fetch/lib/index.js:273:32
+        at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+      type: 'invalid-json'
+    }
+  },
+  level: 'error',
+  timestamp: '2023-01-16 11:48:09'
+}
+{
+  message: {
+    body: {
+      name: undefined,
+      desc: undefined,
+      due: undefined,
+      start: undefined,
+      idList: '63b9420dd7f73a0076fbaebe',
+      idBoard: '63b9420bdc618601f09c835d'
+    }
+  },
+  level: 'info',
+  timestamp: '2023-01-16 11:50:16'
+}
+{
+  message: {
+    body: {
+      name: undefined,
+      desc: undefined,
+      due: undefined,
+      start: undefined,
+      idList: '63b9420dd7f73a0076fbaebe',
+      idBoard: '63b9420bdc618601f09c835d'
+    }
+  },
+  level: 'info',
+  timestamp: '2023-01-16 11:53:06'
+}
+{
+  message: {
+    data: [Object: null prototype] {
+      id: '63c51bd74389004256b74f38',
+      cardId: '63c51bd74b5bbe0064682307',
+      name: 'Ezzat Elzalouy-testing 2-Design- (testing)',
+      categoryId: '6230a00a7c422d81dc39c51c',
+      status: 'Tasks Board',
+      boardId: '63b9420bdc618601f09c835d',
+      listId: '63b9420d6696a403dfcf9fb2',
+      deadline: 'Tue Jan 31 2023 00:00:00 GMT+0200 (Eastern European Standard Time)',
+      subCategoryId: '637bbad9d5a6232d85583b22',
+      teamId: '63c51eed4389004256b74fd5',
+      description: 'desc'
+    }
+  },
+  level: 'info',
+  timestamp: '2023-01-16 11:55:42'
+}
+{
+  message: {
+    body: {
+      name: 'Ezzat Elzalouy-testing 2-Design- (testing)',
+      desc: 'desc',
+      due: 'Tue Jan 31 2023 00:00:00 GMT+0200 (Eastern European Standard Time)',
+      start: null,
+      idList: '63b9420d6696a403dfcf9fb2',
+      idBoard: '63b9420bdc618601f09c835d'
+    }
+  },
+  level: 'info',
+  timestamp: '2023-01-16 11:55:42'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2023-01-16 11:56:45'
+}
+{
+  message: { noAction: {} },
+  level: 'info',
+  timestamp: '2023-01-16 11:56:51'
+}
+{
+  message: { noAction: {} },
+  level: 'info',
+  timestamp: '2023-01-16 11:56:53'
+}
+{
+  message: { noAction: {} },
+  level: 'info',
+  timestamp: '2023-01-16 11:56:53'
+}
+{
+  message: { noAction: {} },
+  level: 'info',
+  timestamp: '2023-01-16 11:56:53'
+}
+{
+  message: { noAction: {} },
+  level: 'info',
+  timestamp: '2023-01-16 11:56:53'
+}
+{
+  message: { noAction: {} },
+  level: 'info',
+  timestamp: '2023-01-16 11:56:53'
+}
+{
+  message: { noAction: {} },
+  level: 'info',
+  timestamp: '2023-01-16 11:56:53'
+}
+{
+  message: {
+    data: [Object: null prototype] {
+      id: '63c51bd74389004256b74f38',
+      cardId: '63c51bd74b5bbe0064682307',
+      name: 'Ezzat Elzalouy-testing 2-Design- (testing)',
+      categoryId: '6230a00a7c422d81dc39c51c',
+      status: 'Tasks Board',
+      boardId: '63b9420bdc618601f09c835d',
+      listId: '63b9420d6696a403dfcf9fb2',
+      deadline: 'Tue Jan 31 2023 00:00:00 GMT+0200 (Eastern European Standard Time)',
+      subCategoryId: '637bbad9d5a6232d85583b22',
+      teamId: '63c51eed4389004256b74fd5',
+      description: 'desc'
+    }
+  },
+  level: 'info',
+  timestamp: '2023-01-16 12:00:57'
+}
+{
+  message: {
+    body: {
+      name: 'Ezzat Elzalouy-testing 2-Design- (testing)',
+      desc: 'desc',
+      due: 'Tue Jan 31 2023 00:00:00 GMT+0200 (Eastern European Standard Time)',
+      start: null,
+      idList: '63b9420d6696a403dfcf9fb2',
+      idBoard: '63b9420bdc618601f09c835d'
+    }
+  },
+  level: 'info',
+  timestamp: '2023-01-16 12:00:57'
+}
+{
+  message: { noAction: {} },
+  level: 'info',
+  timestamp: '2023-01-16 12:01:57'
+}
+{
+  message: { noAction: {} },
+  level: 'info',
+  timestamp: '2023-01-16 12:02:14'
+}
+{
+  message: {
+    data: [Object: null prototype] {
+      id: '63c52095ccda541150f9d40d',
+      cardId: '63c52094f0d90e0048a4723c',
+      name: 'Ezzat Elzalouy-testing 2-Design- (task 0)',
+      categoryId: '6230a00a7c422d81dc39c51c',
+      status: 'Tasks Board',
+      boardId: '63b9420bdc618601f09c835d',
+      listId: '63b9420d6696a403dfcf9fb2',
+      deadline: 'Mon Jan 16 2023 00:00:00 GMT+0200 (Eastern European Standard Time)',
+      teamId: '63c52095ccda541150f9d412',
+      description: 'desc'
+    }
+  },
+  level: 'info',
+  timestamp: '2023-01-16 12:02:21'
+}
+{
+  message: {
+    body: {
+      name: 'Ezzat Elzalouy-testing 2-Design- (task 0)',
+      desc: 'desc',
+      due: 'Mon Jan 16 2023 00:00:00 GMT+0200 (Eastern European Standard Time)',
+      start: null,
+      idList: '63b9420d6696a403dfcf9fb2',
+      idBoard: '63b9420bdc618601f09c835d'
+    }
+  },
+  level: 'info',
+  timestamp: '2023-01-16 12:02:21'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2023-01-16 13:55:50'
+}
+{
+  message: { noAction: {} },
+  level: 'info',
+  timestamp: '2023-01-16 13:55:58'
+}
+{
+  message: { noAction: {} },
+  level: 'info',
+  timestamp: '2023-01-16 13:55:59'
+}
+{
+  message: { noAction: {} },
+  level: 'info',
+  timestamp: '2023-01-16 13:55:59'
+}
+{
+  message: { noAction: {} },
+  level: 'info',
+  timestamp: '2023-01-16 13:55:59'
+}
+{
+  message: { noAction: {} },
+  level: 'info',
+  timestamp: '2023-01-16 13:55:59'
+}
+{
+  message: { noAction: {} },
+  level: 'info',
+  timestamp: '2023-01-16 13:55:59'
+}
+{
+  message: { noAction: {} },
+  level: 'info',
+  timestamp: '2023-01-16 13:55:59'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2023-01-16 14:46:13'
+}
+{
+  message: { noAction: {} },
+  level: 'info',
+  timestamp: '2023-01-16 14:46:18'
+}
+{
+  message: { noAction: {} },
+  level: 'info',
+  timestamp: '2023-01-16 14:46:20'
+}
+{
+  message: { noAction: {} },
+  level: 'info',
+  timestamp: '2023-01-16 14:46:20'
+}
+{
+  message: { noAction: {} },
+  level: 'info',
+  timestamp: '2023-01-16 14:46:20'
+}
+{
+  message: { noAction: {} },
+  level: 'info',
+  timestamp: '2023-01-16 14:46:20'
+}
+{
+  message: { noAction: {} },
+  level: 'info',
+  timestamp: '2023-01-16 14:46:20'
+}
+{
+  message: { noAction: {} },
+  level: 'info',
+  timestamp: '2023-01-16 14:46:20'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2023-01-17 11:27:32'
+}
+{
+  message: {
+    getTrelloBoardError: FetchError: request to https://api.trello.com/1/organizations/ttpbetalocal/boards?fields=id,name&key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68 failed, reason: getaddrinfo EAI_AGAIN api.trello.com
+        at ClientRequest.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/node-fetch/lib/index.js:1491:11)
+        at ClientRequest.emit (node:events:527:28)
+        at ClientRequest.emit (node:domain:475:12)
+        at TLSSocket.socketErrorListener (node:_http_client:454:9)
+        at TLSSocket.emit (node:events:527:28)
+        at TLSSocket.emit (node:domain:475:12)
+        at emitErrorNT (node:internal/streams/destroy:157:8)
+        at emitErrorCloseNT (node:internal/streams/destroy:122:3)
+        at processTicksAndRejections (node:internal/process/task_queues:83:21) {
+      type: 'system',
+      errno: 'EAI_AGAIN',
+      code: 'EAI_AGAIN'
+    }
+  },
+  level: 'error',
+  timestamp: '2023-01-17 11:27:54'
+}
+{
+  message: {
+    createNewBoardError: FetchError: request to https://api.trello.com/1/boards/?name=dev%20/%20TTP%20Creative&prefs_background=orange&defaultLists=false&idOrganization=ttpbetalocal&key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68 failed, reason: getaddrinfo EAI_AGAIN api.trello.com
+        at ClientRequest.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/node-fetch/lib/index.js:1491:11)
+        at ClientRequest.emit (node:events:527:28)
+        at ClientRequest.emit (node:domain:475:12)
+        at TLSSocket.socketErrorListener (node:_http_client:454:9)
+        at TLSSocket.emit (node:events:527:28)
+        at TLSSocket.emit (node:domain:475:12)
+        at emitErrorNT (node:internal/streams/destroy:157:8)
+        at emitErrorCloseNT (node:internal/streams/destroy:122:3)
+        at processTicksAndRejections (node:internal/process/task_queues:83:21) {
+      type: 'system',
+      errno: 'EAI_AGAIN',
+      code: 'EAI_AGAIN'
+    }
+  },
+  level: 'error',
+  timestamp: '2023-01-17 11:28:14'
+}
+{
+  message: {
+    createDepartmentBoardError: TypeError: Cannot read properties of undefined (reading 'id')
+        at model.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/models/Department.ts:252:15)
+        at Generator.next (<anonymous>)
+        at fulfilled (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/models/Department.ts:5:58)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5)
+  },
+  level: 'error',
+  timestamp: '2023-01-17 11:28:14'
+}
+{
+  message: {
+    createDepartmentError: TypeError: Cannot destructure property 'teams' of '(intermediate value)' as it is undefined.
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/department.ts:92:15)
+        at Generator.next (<anonymous>)
+        at fulfilled (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/department.ts:5:58)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5)
+  },
+  level: 'error',
+  timestamp: '2023-01-17 11:28:14'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2023-01-17 14:37:37'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2023-01-17 14:39:28'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2023-01-17 15:35:12'
+}
+{
+  message: {
+    body: {
+      name: 'Ezzat Elzalouy-project one',
+      desc: undefined,
+      due: '2023-07-07T22:00:00.000Z',
+      start: '2022-12-31T22:00:00.000Z',
+      idList: undefined,
+      idBoard: undefined
+    }
+  },
+  level: 'info',
+  timestamp: '2023-01-17 15:42:25'
+}
+{
+  message: {
+    err: FetchError: invalid json response body at https://api.trello.com/1/cards/undefined?key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68 reason: Unexpected token i in JSON at position 0
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/node-fetch/lib/index.js:273:32
+        at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+      type: 'invalid-json'
+    }
+  },
+  level: 'error',
+  timestamp: '2023-01-17 15:42:25'
+}
+{
+  message: {
+    body: {
+      name: 'Ezzat Elzalouy-testing 2',
+      desc: undefined,
+      due: '2023-01-30T22:00:00.000Z',
+      start: '2022-12-31T22:00:00.000Z',
+      idList: undefined,
+      idBoard: undefined
+    }
+  },
+  level: 'info',
+  timestamp: '2023-01-17 15:43:01'
+}
+{
+  message: {
+    err: FetchError: invalid json response body at https://api.trello.com/1/cards/undefined?key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68 reason: Unexpected token i in JSON at position 0
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/node-fetch/lib/index.js:273:32
+        at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+      type: 'invalid-json'
+    }
+  },
+  level: 'error',
+  timestamp: '2023-01-17 15:43:02'
+}
+{
+  message: {
+    body: {
+      name: 'Ezzat Elzalouy-testttt',
+      desc: undefined,
+      due: '2023-01-30T22:00:00.000Z',
+      start: '2023-01-15T22:00:00.000Z',
+      idList: undefined,
+      idBoard: undefined
+    }
+  },
+  level: 'info',
+  timestamp: '2023-01-17 15:56:13'
+}
+{
+  message: {
+    err: FetchError: invalid json response body at https://api.trello.com/1/cards/undefined?key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68 reason: Unexpected token i in JSON at position 0
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/node-fetch/lib/index.js:273:32
+        at runMicrotasks (<anonymous>)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+      type: 'invalid-json'
+    }
+  },
+  level: 'error',
+  timestamp: '2023-01-17 15:56:13'
+}
+{
+  message: {
+    body: {
+      name: 'Ezzat Elzalouy-project',
+      desc: undefined,
+      due: '2023-01-30T22:00:00.000Z',
+      start: '2022-12-31T22:00:00.000Z',
+      idList: undefined,
+      idBoard: undefined
+    }
+  },
+  level: 'info',
+  timestamp: '2023-01-17 15:56:40'
+}
+{
+  message: {
+    err: FetchError: invalid json response body at https://api.trello.com/1/cards/undefined?key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68 reason: Unexpected token i in JSON at position 0
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/node-fetch/lib/index.js:273:32
+        at runMicrotasks (<anonymous>)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+      type: 'invalid-json'
+    }
+  },
+  level: 'error',
+  timestamp: '2023-01-17 15:56:40'
+}
+{
+  message: {
+    body: {
+      name: 'Ezzat Elzalouy-project edit name',
+      desc: undefined,
+      due: '2023-01-30T22:00:00.000Z',
+      start: '2022-12-31T22:00:00.000Z',
+      idList: undefined,
+      idBoard: undefined
+    }
+  },
+  level: 'info',
+  timestamp: '2023-01-17 15:56:59'
+}
+{
+  message: {
+    err: FetchError: invalid json response body at https://api.trello.com/1/cards/undefined?key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68 reason: Unexpected token i in JSON at position 0
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/node-fetch/lib/index.js:273:32
+        at runMicrotasks (<anonymous>)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+      type: 'invalid-json'
+    }
+  },
+  level: 'error',
+  timestamp: '2023-01-17 15:57:00'
+}
+{
+  message: {
+    body: {
+      name: 'Nawaf Elmohsem-testing ',
+      desc: undefined,
+      due: '2023-01-30T22:00:00.000Z',
+      start: '2022-12-31T22:00:00.000Z',
+      idList: undefined,
+      idBoard: undefined
+    }
+  },
+  level: 'info',
+  timestamp: '2023-01-17 15:58:14'
+}
+{
+  message: {
+    err: FetchError: invalid json response body at https://api.trello.com/1/cards/undefined?key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68 reason: Unexpected token i in JSON at position 0
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/node-fetch/lib/index.js:273:32
+        at runMicrotasks (<anonymous>)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+      type: 'invalid-json'
+    }
+  },
+  level: 'error',
+  timestamp: '2023-01-17 15:58:15'
+}
+{
+  message: {
+    body: {
+      name: 'Ezzat Elzalouy-testing 2',
+      desc: undefined,
+      due: '2023-01-30T22:00:00.000Z',
+      start: '2022-12-31T22:00:00.000Z',
+      idList: undefined,
+      idBoard: undefined
+    }
+  },
+  level: 'info',
+  timestamp: '2023-01-17 15:58:24'
+}
+{
+  message: {
+    err: FetchError: invalid json response body at https://api.trello.com/1/cards/undefined?key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68 reason: Unexpected token i in JSON at position 0
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/node-fetch/lib/index.js:273:32
+        at runMicrotasks (<anonymous>)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+      type: 'invalid-json'
+    }
+  },
+  level: 'error',
+  timestamp: '2023-01-17 15:58:25'
+}
+{
+  message: {
+    body: {
+      name: 'Ezzat Elzalouy-testttt',
+      desc: undefined,
+      due: 'Tue Jan 31 2023',
+      start: undefined,
+      idList: undefined,
+      idBoard: undefined
+    }
+  },
+  level: 'info',
+  timestamp: '2023-01-17 16:21:06'
+}
+{
+  message: {
+    err: FetchError: invalid json response body at https://api.trello.com/1/cards/undefined?key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68 reason: Unexpected token i in JSON at position 0
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/node-fetch/lib/index.js:273:32
+        at runMicrotasks (<anonymous>)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+      type: 'invalid-json'
+    }
+  },
+  level: 'error',
+  timestamp: '2023-01-17 16:21:07'
+}
+{
+  message: {
+    body: {
+      name: 'Ezzat Elzalouy-testttt',
+      desc: undefined,
+      due: 'Tue Jan 31 2023',
+      start: undefined,
+      idList: undefined,
+      idBoard: undefined
+    }
+  },
+  level: 'info',
+  timestamp: '2023-01-17 16:57:56'
+}
+{
+  message: {
+    err: FetchError: invalid json response body at https://api.trello.com/1/cards/undefined?key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68 reason: Unexpected token i in JSON at position 0
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/node-fetch/lib/index.js:273:32
+        at runMicrotasks (<anonymous>)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+      type: 'invalid-json'
+    }
+  },
+  level: 'error',
+  timestamp: '2023-01-17 16:57:57'
+}
+{
+  message: {
+    body: {
+      name: 'Ezzat Elzalouy-testttt',
+      desc: undefined,
+      due: 'Tue Jan 31 2023',
+      start: undefined,
+      idList: undefined,
+      idBoard: undefined
+    }
+  },
+  level: 'info',
+  timestamp: '2023-01-17 16:58:22'
+}
+{
+  message: {
+    err: FetchError: invalid json response body at https://api.trello.com/1/cards/undefined?key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68 reason: Unexpected token i in JSON at position 0
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/node-fetch/lib/index.js:273:32
+        at runMicrotasks (<anonymous>)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+      type: 'invalid-json'
+    }
+  },
+  level: 'error',
+  timestamp: '2023-01-17 16:58:23'
+}
+{
+  message: {
+    body: {
+      name: 'Ezzat Elzalouy-testttt',
+      desc: undefined,
+      due: 'Tue Jan 31 2023',
+      start: undefined,
+      idList: undefined,
+      idBoard: undefined
+    }
+  },
+  level: 'info',
+  timestamp: '2023-01-17 17:15:28'
+}
+{
+  message: {
+    err: FetchError: invalid json response body at https://api.trello.com/1/cards/undefined?key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68 reason: Unexpected token i in JSON at position 0
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/node-fetch/lib/index.js:273:32
+        at runMicrotasks (<anonymous>)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+      type: 'invalid-json'
+    }
+  },
+  level: 'error',
+  timestamp: '2023-01-17 17:15:29'
+}
+{
+  message: {
+    body: {
+      name: 'Ezzat Elzalouy-testttt',
+      desc: undefined,
+      due: 'Tue Jan 31 2023',
+      start: undefined,
+      idList: undefined,
+      idBoard: undefined
+    }
+  },
+  level: 'info',
+  timestamp: '2023-01-17 17:17:05'
+}
+{
+  message: {
+    err: FetchError: invalid json response body at https://api.trello.com/1/cards/undefined?key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68 reason: Unexpected token i in JSON at position 0
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/node-fetch/lib/index.js:273:32
+        at runMicrotasks (<anonymous>)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+      type: 'invalid-json'
+    }
+  },
+  level: 'error',
+  timestamp: '2023-01-17 17:17:06'
+}
+{
+  message: {
+    body: {
+      name: 'Ezzat Elzalouy-testttt',
+      desc: undefined,
+      due: 'Tue Jan 31 2023',
+      start: undefined,
+      idList: undefined,
+      idBoard: undefined
+    }
+  },
+  level: 'info',
+  timestamp: '2023-01-17 17:19:21'
+}
+{
+  message: {
+    err: FetchError: invalid json response body at https://api.trello.com/1/cards/undefined?key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68 reason: Unexpected token i in JSON at position 0
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/node-fetch/lib/index.js:273:32
+        at runMicrotasks (<anonymous>)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+      type: 'invalid-json'
+    }
+  },
+  level: 'error',
+  timestamp: '2023-01-17 17:19:22'
+}
+{
+  message: {
+    body: {
+      name: 'Ezzat Elzalouy-project',
+      desc: undefined,
+      due: undefined,
+      start: '2022-12-31T22:00:00.000Z',
+      idList: undefined,
+      idBoard: undefined
+    }
+  },
+  level: 'info',
+  timestamp: '2023-01-17 19:21:31'
+}
+{
+  message: {
+    err: FetchError: invalid json response body at https://api.trello.com/1/cards/undefined?key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68 reason: Unexpected token i in JSON at position 0
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/node-fetch/lib/index.js:273:32
+        at runMicrotasks (<anonymous>)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+      type: 'invalid-json'
+    }
+  },
+  level: 'error',
+  timestamp: '2023-01-17 19:21:31'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2023-01-18 09:56:35'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2023-01-18 09:58:21'
+}
+{
+  message: { noAction: {} },
+  level: 'info',
+  timestamp: '2023-01-18 09:58:32'
+}
+{
+  message: { noAction: {} },
+  level: 'info',
+  timestamp: '2023-01-18 09:58:34'
+}
+{
+  message: { noAction: {} },
+  level: 'info',
+  timestamp: '2023-01-18 09:58:34'
+}
+{
+  message: { noAction: {} },
+  level: 'info',
+  timestamp: '2023-01-18 09:58:34'
+}
+{
+  message: { noAction: {} },
+  level: 'info',
+  timestamp: '2023-01-18 09:58:34'
+}
+{
+  message: { noAction: {} },
+  level: 'info',
+  timestamp: '2023-01-18 09:58:34'
+}
+{
+  message: { noAction: {} },
+  level: 'info',
+  timestamp: '2023-01-18 09:58:34'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2023-01-18 10:10:10'
+}
+{
+  message: { noAction: {} },
+  level: 'info',
+  timestamp: '2023-01-18 10:10:18'
+}
+{
+  message: { noAction: {} },
+  level: 'info',
+  timestamp: '2023-01-18 10:10:20'
+}
+{
+  message: { noAction: {} },
+  level: 'info',
+  timestamp: '2023-01-18 10:10:20'
+}
+{
+  message: { noAction: {} },
+  level: 'info',
+  timestamp: '2023-01-18 10:10:20'
+}
+{
+  message: { noAction: {} },
+  level: 'info',
+  timestamp: '2023-01-18 10:10:20'
+}
+{
+  message: { noAction: {} },
+  level: 'info',
+  timestamp: '2023-01-18 10:10:20'
+}
+{
+  message: { noAction: {} },
+  level: 'info',
+  timestamp: '2023-01-18 10:10:20'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2023-01-18 10:17:56'
+}
+{
+  message: { noAction: {} },
+  level: 'info',
+  timestamp: '2023-01-18 10:18:05'
+}
+{
+  message: { noAction: {} },
+  level: 'info',
+  timestamp: '2023-01-18 10:18:07'
+}
+{
+  message: { noAction: {} },
+  level: 'info',
+  timestamp: '2023-01-18 10:18:07'
+}
+{
+  message: { noAction: {} },
+  level: 'info',
+  timestamp: '2023-01-18 10:18:07'
+}
+{
+  message: { noAction: {} },
+  level: 'info',
+  timestamp: '2023-01-18 10:18:07'
+}
+{
+  message: { noAction: {} },
+  level: 'info',
+  timestamp: '2023-01-18 10:18:07'
+}
+{
+  message: { noAction: {} },
+  level: 'info',
+  timestamp: '2023-01-18 10:18:08'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2023-01-18 10:19:36'
+}
+{
+  message: { noAction: {} },
+  level: 'info',
+  timestamp: '2023-01-18 10:19:43'
+}
+{
+  message: { noAction: {} },
+  level: 'info',
+  timestamp: '2023-01-18 10:19:45'
+}
+{
+  message: { noAction: {} },
+  level: 'info',
+  timestamp: '2023-01-18 10:19:45'
+}
+{
+  message: { noAction: {} },
+  level: 'info',
+  timestamp: '2023-01-18 10:19:45'
+}
+{
+  message: { noAction: {} },
+  level: 'info',
+  timestamp: '2023-01-18 10:19:45'
+}
+{
+  message: { noAction: {} },
+  level: 'info',
+  timestamp: '2023-01-18 10:19:45'
+}
+{
+  message: { noAction: {} },
+  level: 'info',
+  timestamp: '2023-01-18 10:19:45'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2023-01-18 10:55:49'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2023-01-18 10:58:48'
+}
+{
+  message: { noAction: {} },
+  level: 'info',
+  timestamp: '2023-01-18 10:58:55'
+}
+{
+  message: { noAction: {} },
+  level: 'info',
+  timestamp: '2023-01-18 10:58:59'
+}
+{
+  message: { noAction: {} },
+  level: 'info',
+  timestamp: '2023-01-18 10:58:59'
+}
+{
+  message: { noAction: {} },
+  level: 'info',
+  timestamp: '2023-01-18 10:58:59'
+}
+{
+  message: { noAction: {} },
+  level: 'info',
+  timestamp: '2023-01-18 10:58:59'
+}
+{
+  message: { noAction: {} },
+  level: 'info',
+  timestamp: '2023-01-18 10:58:59'
+}
+{
+  message: { noAction: {} },
+  level: 'info',
+  timestamp: '2023-01-18 10:58:59'
+}
+{
+  message: {
+    getTasksCsvError: TypeError: Cannot convert undefined or null to object
+        at Function.keys (<anonymous>)
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/models/Task.ts:144:31)
+        at Generator.next (<anonymous>)
+        at fulfilled (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/models/Task.ts:5:58)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5)
+  },
+  level: 'error',
+  timestamp: '2023-01-18 11:01:33'
+}
+{
+  message: {
+    getTasksCsvError: TypeError: Cannot convert undefined or null to object
+        at Function.keys (<anonymous>)
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/models/Task.ts:144:31)
+        at Generator.next (<anonymous>)
+        at fulfilled (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/models/Task.ts:5:58)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5)
+  },
+  level: 'error',
+  timestamp: '2023-01-18 11:02:13'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2023-01-18 11:16:50'
+}
+{
+  message: { noAction: {} },
+  level: 'info',
+  timestamp: '2023-01-18 11:16:55'
+}
+{
+  message: { noAction: {} },
+  level: 'info',
+  timestamp: '2023-01-18 11:16:57'
+}
+{
+  message: { noAction: {} },
+  level: 'info',
+  timestamp: '2023-01-18 11:16:57'
+}
+{
+  message: { noAction: {} },
+  level: 'info',
+  timestamp: '2023-01-18 11:16:57'
+}
+{
+  message: { noAction: {} },
+  level: 'info',
+  timestamp: '2023-01-18 11:16:57'
+}
+{
+  message: { noAction: {} },
+  level: 'info',
+  timestamp: '2023-01-18 11:16:57'
+}
+{
+  message: { noAction: {} },
+  level: 'info',
+  timestamp: '2023-01-18 11:16:57'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2023-01-18 11:17:58'
+}
+{
+  message: { noAction: {} },
+  level: 'info',
+  timestamp: '2023-01-18 11:18:03'
+}
+{
+  message: { noAction: {} },
+  level: 'info',
+  timestamp: '2023-01-18 11:18:04'
+}
+{
+  message: { noAction: {} },
+  level: 'info',
+  timestamp: '2023-01-18 11:18:04'
+}
+{
+  message: { noAction: {} },
+  level: 'info',
+  timestamp: '2023-01-18 11:18:04'
+}
+{
+  message: { noAction: {} },
+  level: 'info',
+  timestamp: '2023-01-18 11:18:04'
+}
+{
+  message: { noAction: {} },
+  level: 'info',
+  timestamp: '2023-01-18 11:18:04'
+}
+{
+  message: { noAction: {} },
+  level: 'info',
+  timestamp: '2023-01-18 11:18:04'
+}
+{
+  message: {
+    getTasksCsvError: TypeError: Cannot convert undefined or null to object
+        at Function.keys (<anonymous>)
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/models/Task.ts:144:31)
+        at Generator.next (<anonymous>)
+        at fulfilled (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/models/Task.ts:5:58)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5)
+  },
+  level: 'error',
+  timestamp: '2023-01-18 11:18:22'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2023-01-18 11:21:54'
+}
+{
+  message: { noAction: {} },
+  level: 'info',
+  timestamp: '2023-01-18 11:22:01'
+}
+{
+  message: { noAction: {} },
+  level: 'info',
+  timestamp: '2023-01-18 11:22:03'
+}
+{
+  message: { noAction: {} },
+  level: 'info',
+  timestamp: '2023-01-18 11:22:03'
+}
+{
+  message: { noAction: {} },
+  level: 'info',
+  timestamp: '2023-01-18 11:22:03'
+}
+{
+  message: { noAction: {} },
+  level: 'info',
+  timestamp: '2023-01-18 11:22:03'
+}
+{
+  message: { noAction: {} },
+  level: 'info',
+  timestamp: '2023-01-18 11:22:03'
+}
+{
+  message: { noAction: {} },
+  level: 'info',
+  timestamp: '2023-01-18 11:22:03'
+}
+{
+  message: {
+    getTasksCsvError: TypeError: Cannot convert undefined or null to object
+        at Function.keys (<anonymous>)
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/models/Task.ts:144:31)
+        at Generator.next (<anonymous>)
+        at fulfilled (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/models/Task.ts:5:58)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5)
+  },
+  level: 'error',
+  timestamp: '2023-01-18 11:22:15'
+}
+{
+  message: {
+    _getTasksCsv: TypeError [ERR_INVALID_ARG_TYPE]: The "data" argument must be of type string or an instance of Buffer, TypedArray, or DataView. Received an instance of TypeError
+        at writeFile (node:fs:2123:5)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/task.ts:349:18
+        at Generator.next (<anonymous>)
+        at fulfilled (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/task.ts:5:58)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+      code: 'ERR_INVALID_ARG_TYPE'
+    }
+  },
+  level: 'error',
+  timestamp: '2023-01-18 11:22:15'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2023-01-18 11:26:08'
+}
+{
+  message: { noAction: {} },
+  level: 'info',
+  timestamp: '2023-01-18 11:26:14'
+}
+{
+  message: { noAction: {} },
+  level: 'info',
+  timestamp: '2023-01-18 11:26:16'
+}
+{
+  message: { noAction: {} },
+  level: 'info',
+  timestamp: '2023-01-18 11:26:16'
+}
+{
+  message: { noAction: {} },
+  level: 'info',
+  timestamp: '2023-01-18 11:26:16'
+}
+{
+  message: { noAction: {} },
+  level: 'info',
+  timestamp: '2023-01-18 11:26:16'
+}
+{
+  message: { noAction: {} },
+  level: 'info',
+  timestamp: '2023-01-18 11:26:16'
+}
+{
+  message: { noAction: {} },
+  level: 'info',
+  timestamp: '2023-01-18 11:26:16'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2023-01-18 11:26:37'
+}
+{
+  message: {
+    getTasksCsvError: TypeError: Cannot convert undefined or null to object
+        at Function.keys (<anonymous>)
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/models/Task.ts:144:31)
+        at Generator.next (<anonymous>)
+        at fulfilled (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/models/Task.ts:5:58)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5)
+  },
+  level: 'error',
+  timestamp: '2023-01-18 11:35:04'
+}
+{
+  message: {
+    _getTasksCsv: TypeError [ERR_INVALID_ARG_TYPE]: The "data" argument must be of type string or an instance of Buffer, TypedArray, or DataView. Received an instance of TypeError
+        at writeFile (node:fs:2123:5)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/task.ts:349:18
+        at Generator.next (<anonymous>)
+        at fulfilled (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/task.ts:5:58)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+      code: 'ERR_INVALID_ARG_TYPE'
+    }
+  },
+  level: 'error',
+  timestamp: '2023-01-18 11:35:04'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2023-01-18 11:36:34'
+}
+{
+  message: {
+    getTasksCsvError: TypeError: Cannot convert undefined or null to object
+        at Function.keys (<anonymous>)
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/models/Task.ts:144:31)
+        at Generator.next (<anonymous>)
+        at fulfilled (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/models/Task.ts:5:58)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5)
+  },
+  level: 'error',
+  timestamp: '2023-01-18 11:37:51'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2023-01-18 11:40:03'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2023-01-18 11:44:09'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2023-01-18 11:45:47'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2023-01-18 11:47:00'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2023-01-18 12:34:32'
+}
+{
+  message: { noAction: {} },
+  level: 'info',
+  timestamp: '2023-01-18 12:34:38'
+}
+{
+  message: { noAction: {} },
+  level: 'info',
+  timestamp: '2023-01-18 12:34:40'
+}
+{
+  message: { noAction: {} },
+  level: 'info',
+  timestamp: '2023-01-18 12:34:40'
+}
+{
+  message: { noAction: {} },
+  level: 'info',
+  timestamp: '2023-01-18 12:34:40'
+}
+{
+  message: { noAction: {} },
+  level: 'info',
+  timestamp: '2023-01-18 12:34:40'
+}
+{
+  message: { noAction: {} },
+  level: 'info',
+  timestamp: '2023-01-18 12:34:40'
+}
+{
+  message: { noAction: {} },
+  level: 'info',
+  timestamp: '2023-01-18 12:34:40'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2023-01-18 12:37:43'
+}
+{
+  message: { noAction: {} },
+  level: 'info',
+  timestamp: '2023-01-18 12:37:48'
+}
+{
+  message: { noAction: {} },
+  level: 'info',
+  timestamp: '2023-01-18 12:37:49'
+}
+{
+  message: { noAction: {} },
+  level: 'info',
+  timestamp: '2023-01-18 12:37:49'
+}
+{
+  message: { noAction: {} },
+  level: 'info',
+  timestamp: '2023-01-18 12:37:49'
+}
+{
+  message: { noAction: {} },
+  level: 'info',
+  timestamp: '2023-01-18 12:37:49'
+}
+{
+  message: { noAction: {} },
+  level: 'info',
+  timestamp: '2023-01-18 12:37:49'
+}
+{
+  message: { noAction: {} },
+  level: 'info',
+  timestamp: '2023-01-18 12:37:49'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2023-01-18 12:41:23'
+}
+{
+  message: { noAction: {} },
+  level: 'info',
+  timestamp: '2023-01-18 12:41:28'
+}
+{
+  message: { noAction: {} },
+  level: 'info',
+  timestamp: '2023-01-18 12:41:29'
+}
+{
+  message: { noAction: {} },
+  level: 'info',
+  timestamp: '2023-01-18 12:41:29'
+}
+{
+  message: { noAction: {} },
+  level: 'info',
+  timestamp: '2023-01-18 12:41:29'
+}
+{
+  message: { noAction: {} },
+  level: 'info',
+  timestamp: '2023-01-18 12:41:29'
+}
+{
+  message: { noAction: {} },
+  level: 'info',
+  timestamp: '2023-01-18 12:41:29'
+}
+{
+  message: { noAction: {} },
+  level: 'info',
+  timestamp: '2023-01-18 12:41:29'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2023-01-18 12:45:38'
+}
+{
+  message: { noAction: {} },
+  level: 'info',
+  timestamp: '2023-01-18 12:45:43'
+}
+{
+  message: { noAction: {} },
+  level: 'info',
+  timestamp: '2023-01-18 12:45:44'
+}
+{
+  message: { noAction: {} },
+  level: 'info',
+  timestamp: '2023-01-18 12:45:44'
+}
+{
+  message: { noAction: {} },
+  level: 'info',
+  timestamp: '2023-01-18 12:45:44'
+}
+{
+  message: { noAction: {} },
+  level: 'info',
+  timestamp: '2023-01-18 12:45:44'
+}
+{
+  message: { noAction: {} },
+  level: 'info',
+  timestamp: '2023-01-18 12:45:44'
+}
+{
+  message: { noAction: {} },
+  level: 'info',
+  timestamp: '2023-01-18 12:45:44'
+}
+{
+  message: {
+    handleGetTasksCsvError: TypeError: path must be absolute or specify root to res.sendFile
+        at ServerResponse.sendFile (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/express/lib/response.js:441:11)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/presentation/task/task.ts:158:11
+        at Generator.next (<anonymous>)
+        at fulfilled (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/presentation/task/task.ts:5:58)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5)
+  },
+  level: 'error',
+  timestamp: '2023-01-18 12:46:12'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2023-01-18 12:47:12'
+}
+{
+  message: { noAction: {} },
+  level: 'info',
+  timestamp: '2023-01-18 12:47:18'
+}
+{
+  message: { noAction: {} },
+  level: 'info',
+  timestamp: '2023-01-18 12:47:19'
+}
+{
+  message: { noAction: {} },
+  level: 'info',
+  timestamp: '2023-01-18 12:47:19'
+}
+{
+  message: { noAction: {} },
+  level: 'info',
+  timestamp: '2023-01-18 12:47:20'
+}
+{
+  message: { noAction: {} },
+  level: 'info',
+  timestamp: '2023-01-18 12:47:20'
+}
+{
+  message: { noAction: {} },
+  level: 'info',
+  timestamp: '2023-01-18 12:47:20'
+}
+{
+  message: { noAction: {} },
+  level: 'info',
+  timestamp: '2023-01-18 12:47:20'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2023-01-18 12:48:15'
+}
+{
+  message: { noAction: {} },
+  level: 'info',
+  timestamp: '2023-01-18 12:48:20'
+}
+{
+  message: { noAction: {} },
+  level: 'info',
+  timestamp: '2023-01-18 12:48:21'
+}
+{
+  message: { noAction: {} },
+  level: 'info',
+  timestamp: '2023-01-18 12:48:21'
+}
+{
+  message: { noAction: {} },
+  level: 'info',
+  timestamp: '2023-01-18 12:48:22'
+}
+{
+  message: { noAction: {} },
+  level: 'info',
+  timestamp: '2023-01-18 12:48:22'
+}
+{
+  message: { noAction: {} },
+  level: 'info',
+  timestamp: '2023-01-18 12:48:22'
+}
+{
+  message: { noAction: {} },
+  level: 'info',
+  timestamp: '2023-01-18 12:48:22'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2023-01-18 12:48:40'
+}
+{
+  message: { noAction: {} },
+  level: 'info',
+  timestamp: '2023-01-18 12:48:45'
+}
+{
+  message: { noAction: {} },
+  level: 'info',
+  timestamp: '2023-01-18 12:48:46'
+}
+{
+  message: { noAction: {} },
+  level: 'info',
+  timestamp: '2023-01-18 12:48:46'
+}
+{
+  message: { noAction: {} },
+  level: 'info',
+  timestamp: '2023-01-18 12:48:46'
+}
+{
+  message: { noAction: {} },
+  level: 'info',
+  timestamp: '2023-01-18 12:48:46'
+}
+{
+  message: { noAction: {} },
+  level: 'info',
+  timestamp: '2023-01-18 12:48:46'
+}
+{
+  message: { noAction: {} },
+  level: 'info',
+  timestamp: '2023-01-18 12:48:46'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2023-01-18 13:04:39'
+}
+{
+  message: { noAction: {} },
+  level: 'info',
+  timestamp: '2023-01-18 13:04:45'
+}
+{
+  message: { noAction: {} },
+  level: 'info',
+  timestamp: '2023-01-18 13:04:46'
+}
+{
+  message: { noAction: {} },
+  level: 'info',
+  timestamp: '2023-01-18 13:04:46'
+}
+{
+  message: { noAction: {} },
+  level: 'info',
+  timestamp: '2023-01-18 13:04:46'
+}
+{
+  message: { noAction: {} },
+  level: 'info',
+  timestamp: '2023-01-18 13:04:46'
+}
+{
+  message: { noAction: {} },
+  level: 'info',
+  timestamp: '2023-01-18 13:04:46'
+}
+{
+  message: { noAction: {} },
+  level: 'info',
+  timestamp: '2023-01-18 13:04:46'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2023-01-18 13:11:03'
+}
+{
+  message: { noAction: {} },
+  level: 'info',
+  timestamp: '2023-01-18 13:11:10'
+}
+{
+  message: { noAction: {} },
+  level: 'info',
+  timestamp: '2023-01-18 13:11:11'
+}
+{
+  message: { noAction: {} },
+  level: 'info',
+  timestamp: '2023-01-18 13:11:11'
+}
+{
+  message: { noAction: {} },
+  level: 'info',
+  timestamp: '2023-01-18 13:11:11'
+}
+{
+  message: { noAction: {} },
+  level: 'info',
+  timestamp: '2023-01-18 13:11:11'
+}
+{
+  message: { noAction: {} },
+  level: 'info',
+  timestamp: '2023-01-18 13:11:11'
+}
+{
+  message: { noAction: {} },
+  level: 'info',
+  timestamp: '2023-01-18 13:11:11'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2023-01-18 13:11:34'
+}
+{
+  message: { noAction: {} },
+  level: 'info',
+  timestamp: '2023-01-18 13:11:40'
+}
+{
+  message: { noAction: {} },
+  level: 'info',
+  timestamp: '2023-01-18 13:11:42'
+}
+{
+  message: { noAction: {} },
+  level: 'info',
+  timestamp: '2023-01-18 13:11:42'
+}
+{
+  message: { noAction: {} },
+  level: 'info',
+  timestamp: '2023-01-18 13:11:42'
+}
+{
+  message: { noAction: {} },
+  level: 'info',
+  timestamp: '2023-01-18 13:11:42'
+}
+{
+  message: { noAction: {} },
+  level: 'info',
+  timestamp: '2023-01-18 13:11:42'
+}
+{
+  message: { noAction: {} },
+  level: 'info',
+  timestamp: '2023-01-18 13:11:42'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2023-01-18 13:20:16'
+}
+{
+  message: { noAction: {} },
+  level: 'info',
+  timestamp: '2023-01-18 13:20:21'
+}
+{
+  message: { noAction: {} },
+  level: 'info',
+  timestamp: '2023-01-18 13:20:22'
+}
+{
+  message: { noAction: {} },
+  level: 'info',
+  timestamp: '2023-01-18 13:20:22'
+}
+{
+  message: { noAction: {} },
+  level: 'info',
+  timestamp: '2023-01-18 13:20:23'
+}
+{
+  message: { noAction: {} },
+  level: 'info',
+  timestamp: '2023-01-18 13:20:23'
+}
+{
+  message: { noAction: {} },
+  level: 'info',
+  timestamp: '2023-01-18 13:20:23'
+}
+{
+  message: { noAction: {} },
+  level: 'info',
+  timestamp: '2023-01-18 13:20:23'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2023-01-18 13:24:16'
+}
+{
+  message: { noAction: {} },
+  level: 'info',
+  timestamp: '2023-01-18 13:24:20'
+}
+{
+  message: { noAction: {} },
+  level: 'info',
+  timestamp: '2023-01-18 13:24:21'
+}
+{
+  message: { noAction: {} },
+  level: 'info',
+  timestamp: '2023-01-18 13:24:21'
+}
+{
+  message: { noAction: {} },
+  level: 'info',
+  timestamp: '2023-01-18 13:24:21'
+}
+{
+  message: { noAction: {} },
+  level: 'info',
+  timestamp: '2023-01-18 13:24:21'
+}
+{
+  message: { noAction: {} },
+  level: 'info',
+  timestamp: '2023-01-18 13:24:21'
+}
+{
+  message: { noAction: {} },
+  level: 'info',
+  timestamp: '2023-01-18 13:24:21'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2023-01-18 13:36:06'
+}
+{
+  message: { noAction: {} },
+  level: 'info',
+  timestamp: '2023-01-18 13:36:12'
+}
+{
+  message: { noAction: {} },
+  level: 'info',
+  timestamp: '2023-01-18 13:36:13'
+}
+{
+  message: { noAction: {} },
+  level: 'info',
+  timestamp: '2023-01-18 13:36:13'
+}
+{
+  message: { noAction: {} },
+  level: 'info',
+  timestamp: '2023-01-18 13:36:13'
+}
+{
+  message: { noAction: {} },
+  level: 'info',
+  timestamp: '2023-01-18 13:36:13'
+}
+{
+  message: { noAction: {} },
+  level: 'info',
+  timestamp: '2023-01-18 13:36:13'
+}
+{
+  message: { noAction: {} },
+  level: 'info',
+  timestamp: '2023-01-18 13:36:13'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2023-01-18 13:47:04'
+}
+{
+  message: { noAction: {} },
+  level: 'info',
+  timestamp: '2023-01-18 13:47:08'
+}
+{
+  message: { noAction: {} },
+  level: 'info',
+  timestamp: '2023-01-18 13:47:09'
+}
+{
+  message: { noAction: {} },
+  level: 'info',
+  timestamp: '2023-01-18 13:47:09'
+}
+{
+  message: { noAction: {} },
+  level: 'info',
+  timestamp: '2023-01-18 13:47:09'
+}
+{
+  message: { noAction: {} },
+  level: 'info',
+  timestamp: '2023-01-18 13:47:10'
+}
+{
+  message: { noAction: {} },
+  level: 'info',
+  timestamp: '2023-01-18 13:47:10'
+}
+{
+  message: { noAction: {} },
+  level: 'info',
+  timestamp: '2023-01-18 13:47:10'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2023-01-18 13:50:01'
+}
+{
+  message: { noAction: {} },
+  level: 'info',
+  timestamp: '2023-01-18 13:50:06'
+}
+{
+  message: { noAction: {} },
+  level: 'info',
+  timestamp: '2023-01-18 13:50:07'
+}
+{
+  message: { noAction: {} },
+  level: 'info',
+  timestamp: '2023-01-18 13:50:07'
+}
+{
+  message: { noAction: {} },
+  level: 'info',
+  timestamp: '2023-01-18 13:50:07'
+}
+{
+  message: { noAction: {} },
+  level: 'info',
+  timestamp: '2023-01-18 13:50:07'
+}
+{
+  message: { noAction: {} },
+  level: 'info',
+  timestamp: '2023-01-18 13:50:07'
+}
+{
+  message: { noAction: {} },
+  level: 'info',
+  timestamp: '2023-01-18 13:50:07'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2023-01-18 13:50:55'
+}
+{
+  message: { noAction: {} },
+  level: 'info',
+  timestamp: '2023-01-18 13:50:59'
+}
+{
+  message: { noAction: {} },
+  level: 'info',
+  timestamp: '2023-01-18 13:51:01'
+}
+{
+  message: { noAction: {} },
+  level: 'info',
+  timestamp: '2023-01-18 13:51:01'
+}
+{
+  message: { noAction: {} },
+  level: 'info',
+  timestamp: '2023-01-18 13:51:01'
+}
+{
+  message: { noAction: {} },
+  level: 'info',
+  timestamp: '2023-01-18 13:51:01'
+}
+{
+  message: { noAction: {} },
+  level: 'info',
+  timestamp: '2023-01-18 13:51:01'
+}
+{
+  message: { noAction: {} },
+  level: 'info',
+  timestamp: '2023-01-18 13:51:01'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2023-01-18 13:53:35'
+}
+{
+  message: { noAction: {} },
+  level: 'info',
+  timestamp: '2023-01-18 13:53:41'
+}
+{
+  message: { noAction: {} },
+  level: 'info',
+  timestamp: '2023-01-18 13:53:43'
+}
+{
+  message: { noAction: {} },
+  level: 'info',
+  timestamp: '2023-01-18 13:53:43'
+}
+{
+  message: { noAction: {} },
+  level: 'info',
+  timestamp: '2023-01-18 13:53:43'
+}
+{
+  message: { noAction: {} },
+  level: 'info',
+  timestamp: '2023-01-18 13:53:43'
+}
+{
+  message: { noAction: {} },
+  level: 'info',
+  timestamp: '2023-01-18 13:53:43'
+}
+{
+  message: { noAction: {} },
+  level: 'info',
+  timestamp: '2023-01-18 13:53:43'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2023-01-18 13:55:22'
+}
+{
+  message: { noAction: {} },
+  level: 'info',
+  timestamp: '2023-01-18 13:55:26'
+}
+{
+  message: { noAction: {} },
+  level: 'info',
+  timestamp: '2023-01-18 13:55:27'
+}
+{
+  message: { noAction: {} },
+  level: 'info',
+  timestamp: '2023-01-18 13:55:27'
+}
+{
+  message: { noAction: {} },
+  level: 'info',
+  timestamp: '2023-01-18 13:55:28'
+}
+{
+  message: { noAction: {} },
+  level: 'info',
+  timestamp: '2023-01-18 13:55:28'
+}
+{
+  message: { noAction: {} },
+  level: 'info',
+  timestamp: '2023-01-18 13:55:28'
+}
+{
+  message: { noAction: {} },
+  level: 'info',
+  timestamp: '2023-01-18 13:55:28'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2023-01-18 13:56:55'
+}
+{
+  message: { noAction: {} },
+  level: 'info',
+  timestamp: '2023-01-18 13:57:00'
+}
+{
+  message: { noAction: {} },
+  level: 'info',
+  timestamp: '2023-01-18 13:57:01'
+}
+{
+  message: { noAction: {} },
+  level: 'info',
+  timestamp: '2023-01-18 13:57:01'
+}
+{
+  message: { noAction: {} },
+  level: 'info',
+  timestamp: '2023-01-18 13:57:01'
+}
+{
+  message: { noAction: {} },
+  level: 'info',
+  timestamp: '2023-01-18 13:57:01'
+}
+{
+  message: { noAction: {} },
+  level: 'info',
+  timestamp: '2023-01-18 13:57:01'
+}
+{
+  message: { noAction: {} },
+  level: 'info',
+  timestamp: '2023-01-18 13:57:01'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2023-01-18 13:57:49'
+}
+{
+  message: { noAction: {} },
+  level: 'info',
+  timestamp: '2023-01-18 13:57:54'
+}
+{
+  message: { noAction: {} },
+  level: 'info',
+  timestamp: '2023-01-18 13:57:55'
+}
+{
+  message: { noAction: {} },
+  level: 'info',
+  timestamp: '2023-01-18 13:57:55'
+}
+{
+  message: { noAction: {} },
+  level: 'info',
+  timestamp: '2023-01-18 13:57:56'
+}
+{
+  message: { noAction: {} },
+  level: 'info',
+  timestamp: '2023-01-18 13:57:56'
+}
+{
+  message: { noAction: {} },
+  level: 'info',
+  timestamp: '2023-01-18 13:57:56'
+}
+{
+  message: { noAction: {} },
+  level: 'info',
+  timestamp: '2023-01-18 13:57:56'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2023-01-18 14:00:37'
+}
+{
+  message: { noAction: {} },
+  level: 'info',
+  timestamp: '2023-01-18 14:00:42'
+}
+{
+  message: { noAction: {} },
+  level: 'info',
+  timestamp: '2023-01-18 14:00:43'
+}
+{
+  message: { noAction: {} },
+  level: 'info',
+  timestamp: '2023-01-18 14:00:43'
+}
+{
+  message: { noAction: {} },
+  level: 'info',
+  timestamp: '2023-01-18 14:00:43'
+}
+{
+  message: { noAction: {} },
+  level: 'info',
+  timestamp: '2023-01-18 14:00:43'
+}
+{
+  message: { noAction: {} },
+  level: 'info',
+  timestamp: '2023-01-18 14:00:43'
+}
+{
+  message: { noAction: {} },
+  level: 'info',
+  timestamp: '2023-01-18 14:00:43'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2023-01-18 14:01:18'
+}
+{
+  message: { noAction: {} },
+  level: 'info',
+  timestamp: '2023-01-18 14:01:23'
+}
+{
+  message: { noAction: {} },
+  level: 'info',
+  timestamp: '2023-01-18 14:01:25'
+}
+{
+  message: { noAction: {} },
+  level: 'info',
+  timestamp: '2023-01-18 14:01:25'
+}
+{
+  message: { noAction: {} },
+  level: 'info',
+  timestamp: '2023-01-18 14:01:25'
+}
+{
+  message: { noAction: {} },
+  level: 'info',
+  timestamp: '2023-01-18 14:01:25'
+}
+{
+  message: { noAction: {} },
+  level: 'info',
+  timestamp: '2023-01-18 14:01:25'
+}
+{
+  message: { noAction: {} },
+  level: 'info',
+  timestamp: '2023-01-18 14:01:25'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2023-01-18 14:02:33'
+}
+{
+  message: { noAction: {} },
+  level: 'info',
+  timestamp: '2023-01-18 14:02:39'
+}
+{
+  message: { noAction: {} },
+  level: 'info',
+  timestamp: '2023-01-18 14:02:40'
+}
+{
+  message: { noAction: {} },
+  level: 'info',
+  timestamp: '2023-01-18 14:02:40'
+}
+{
+  message: { noAction: {} },
+  level: 'info',
+  timestamp: '2023-01-18 14:02:40'
+}
+{
+  message: { noAction: {} },
+  level: 'info',
+  timestamp: '2023-01-18 14:02:40'
+}
+{
+  message: { noAction: {} },
+  level: 'info',
+  timestamp: '2023-01-18 14:02:40'
+}
+{
+  message: { noAction: {} },
+  level: 'info',
+  timestamp: '2023-01-18 14:02:40'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2023-01-18 14:12:04'
+}
+{
+  message: { noAction: {} },
+  level: 'info',
+  timestamp: '2023-01-18 14:12:08'
+}
+{
+  message: { noAction: {} },
+  level: 'info',
+  timestamp: '2023-01-18 14:12:10'
+}
+{
+  message: { noAction: {} },
+  level: 'info',
+  timestamp: '2023-01-18 14:12:10'
+}
+{
+  message: { noAction: {} },
+  level: 'info',
+  timestamp: '2023-01-18 14:12:10'
+}
+{
+  message: { noAction: {} },
+  level: 'info',
+  timestamp: '2023-01-18 14:12:10'
+}
+{
+  message: { noAction: {} },
+  level: 'info',
+  timestamp: '2023-01-18 14:12:10'
+}
+{
+  message: { noAction: {} },
+  level: 'info',
+  timestamp: '2023-01-18 14:12:10'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2023-01-18 14:17:43'
+}
+{
+  message: { noAction: {} },
+  level: 'info',
+  timestamp: '2023-01-18 14:17:47'
+}
+{
+  message: { noAction: {} },
+  level: 'info',
+  timestamp: '2023-01-18 14:17:49'
+}
+{
+  message: { noAction: {} },
+  level: 'info',
+  timestamp: '2023-01-18 14:17:49'
+}
+{
+  message: { noAction: {} },
+  level: 'info',
+  timestamp: '2023-01-18 14:17:49'
+}
+{
+  message: { noAction: {} },
+  level: 'info',
+  timestamp: '2023-01-18 14:17:49'
+}
+{
+  message: { noAction: {} },
+  level: 'info',
+  timestamp: '2023-01-18 14:17:49'
+}
+{
+  message: { noAction: {} },
+  level: 'info',
+  timestamp: '2023-01-18 14:17:49'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2023-01-18 14:49:30'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2023-01-18 14:51:31'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2023-01-18 14:52:00'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2023-01-18 15:28:08'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2023-01-18 15:36:50'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2023-01-18 15:39:29'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2023-01-18 16:23:30'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2023-01-18 16:28:36'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2023-01-18 16:29:00'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2023-01-18 16:30:58'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2023-01-18 16:32:54'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2023-01-18 16:40:16'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2023-01-18 16:41:25'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2023-01-18 16:43:00'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2023-01-18 16:45:06'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2023-01-18 16:46:36'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2023-01-18 16:49:35'
+}
+{
+  message: {
+    handleGetTasksCsvError: TypeError: Cannot destructure property 'fileName' of '(intermediate value)' as it is undefined.
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/presentation/task/task.ts:161:13
+        at Generator.next (<anonymous>)
+        at fulfilled (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/presentation/task/task.ts:5:58)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5)
+  },
+  level: 'error',
+  timestamp: '2023-01-18 16:50:52'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2023-01-18 16:57:57'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2023-01-18 17:01:41'
+}
+{
+  message: {
+    handleGetTasksCsvError: Error: ENOENT: no such file or directory, open '/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/uploads/tasksSatatistics-d2ded638-d2d1-488b-8055-36c2fd337af1.csv'
+        at Object.openSync (node:fs:585:3)
+        at readFileSync (node:fs:453:35)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/presentation/task/task.ts:162:30
+        at Generator.next (<anonymous>)
+        at fulfilled (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/presentation/task/task.ts:5:58)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+      errno: -2,
+      syscall: 'open',
+      code: 'ENOENT',
+      path: '/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/uploads/tasksSatatistics-d2ded638-d2d1-488b-8055-36c2fd337af1.csv'
+    }
+  },
+  level: 'error',
+  timestamp: '2023-01-18 17:02:20'
+}
+{
+  message: {
+    handleGetTasksCsvError: Error: ENOENT: no such file or directory, open '/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/uploads/tasksSatatistics-2c5007fe-f352-4988-a2e3-561551c48d12.csv'
+        at Object.openSync (node:fs:585:3)
+        at readFileSync (node:fs:453:35)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/presentation/task/task.ts:162:30
+        at Generator.next (<anonymous>)
+        at fulfilled (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/presentation/task/task.ts:5:58)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+      errno: -2,
+      syscall: 'open',
+      code: 'ENOENT',
+      path: '/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/uploads/tasksSatatistics-2c5007fe-f352-4988-a2e3-561551c48d12.csv'
+    }
+  },
+  level: 'error',
+  timestamp: '2023-01-18 17:02:20'
+}
+{
+  message: {
+    handleGetTasksCsvError: Error: ENOENT: no such file or directory, open '/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/uploads/tasksSatatistics-f1a355a7-ab45-426c-ade8-29987f9c070b.csv'
+        at Object.openSync (node:fs:585:3)
+        at readFileSync (node:fs:453:35)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/presentation/task/task.ts:162:30
+        at Generator.next (<anonymous>)
+        at fulfilled (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/presentation/task/task.ts:5:58)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+      errno: -2,
+      syscall: 'open',
+      code: 'ENOENT',
+      path: '/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/uploads/tasksSatatistics-f1a355a7-ab45-426c-ade8-29987f9c070b.csv'
+    }
+  },
+  level: 'error',
+  timestamp: '2023-01-18 17:02:49'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2023-01-18 17:03:22'
+}
+{
+  message: {
+    handleGetTasksCsvError: Error: ENOENT: no such file or directory, open '/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/uploads/tasksSatatistics-42489c5b-e1e0-4588-8b71-f5624bca139a.csv'
+        at Object.openSync (node:fs:585:3)
+        at readFileSync (node:fs:453:35)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/presentation/task/task.ts:162:36
+        at Generator.next (<anonymous>)
+        at fulfilled (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/presentation/task/task.ts:5:58)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+      errno: -2,
+      syscall: 'open',
+      code: 'ENOENT',
+      path: '/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/uploads/tasksSatatistics-42489c5b-e1e0-4588-8b71-f5624bca139a.csv'
+    }
+  },
+  level: 'error',
+  timestamp: '2023-01-18 17:03:32'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2023-01-18 17:04:31'
+}
+{
+  message: {
+    handleGetTasksCsvError: Error: ENOENT: no such file or directory, open '/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/uploads/tasksSatatistics-48617a85-8ff9-4630-b882-f27ca005bb58.csv'
+        at Object.openSync (node:fs:585:3)
+        at readFileSync (node:fs:453:35)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/presentation/task/task.ts:162:36
+        at Generator.next (<anonymous>)
+        at fulfilled (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/presentation/task/task.ts:5:58)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+      errno: -2,
+      syscall: 'open',
+      code: 'ENOENT',
+      path: '/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/uploads/tasksSatatistics-48617a85-8ff9-4630-b882-f27ca005bb58.csv'
+    }
+  },
+  level: 'error',
+  timestamp: '2023-01-18 17:04:45'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2023-01-18 17:05:17'
+}
+{
+  message: {
+    getTrelloBoardError: FetchError: request to https://api.trello.com/1/organizations/ttpbetalocal/boards?fields=id,name&key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68 failed, reason: connect ETIMEDOUT 185.166.143.26:443
+        at ClientRequest.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/node-fetch/lib/index.js:1491:11)
+        at ClientRequest.emit (node:events:527:28)
+        at ClientRequest.emit (node:domain:475:12)
+        at TLSSocket.socketErrorListener (node:_http_client:454:9)
+        at TLSSocket.emit (node:events:527:28)
+        at TLSSocket.emit (node:domain:475:12)
+        at emitErrorNT (node:internal/streams/destroy:157:8)
+        at emitErrorCloseNT (node:internal/streams/destroy:122:3)
+        at processTicksAndRejections (node:internal/process/task_queues:83:21) {
+      type: 'system',
+      errno: 'ETIMEDOUT',
+      code: 'ETIMEDOUT'
+    }
+  },
+  level: 'error',
+  timestamp: '2023-01-18 17:07:29'
+}
+{
+  message: {
+    removeBoard: 'https://api.trello.com/1/boards/63c80b32a8d20e0222f124d4?response_type=token&key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68'
+  },
+  level: 'info',
+  timestamp: '2023-01-18 17:07:32'
+}
+{
+  message: {
+    handleGetTasksCsvError: Error: ENOENT: no such file or directory, open '/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/uploads/tasksSatatistics-03f3eb61-5cf1-480a-b606-dfcaa833d8dd.csv'
+        at Object.openSync (node:fs:585:3)
+        at readFileSync (node:fs:453:35)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/presentation/task/task.ts:162:36
+        at Generator.next (<anonymous>)
+        at fulfilled (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/presentation/task/task.ts:5:58)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+      errno: -2,
+      syscall: 'open',
+      code: 'ENOENT',
+      path: '/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/uploads/tasksSatatistics-03f3eb61-5cf1-480a-b606-dfcaa833d8dd.csv'
+    }
+  },
+  level: 'error',
+  timestamp: '2023-01-18 17:27:30'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2023-01-18 17:28:27'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2023-01-18 17:33:18'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2023-01-18 17:36:30'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2023-01-18 17:37:29'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2023-01-18 17:39:15'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2023-01-18 17:41:11'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2023-01-18 17:44:17'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2023-01-18 17:46:00'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2023-01-18 17:50:26'
+}

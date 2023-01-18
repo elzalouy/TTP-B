@@ -41,7 +41,7 @@ const ProjectSchema = new mongoose_1.Schema(
         "In Progress",
         "late",
         "delivered on time",
-        "delivered defore deadline",
+        "delivered before deadline",
         "delivered after deadline",
       ],
     },

@@ -7,6 +7,9 @@ import { createTaskSchema, editTaskSchema } from "../../services/validation";
 import { updateTaskAttachmentsJob } from "../../backgroundJobs/actions/task.actions.Queue";
 import { jwtVerify } from "../../services/auth";
 import { taskRoutesQueue } from "../../backgroundJobs/routes/tasks.Route.Queue";
+import { deleteAll } from "../../services/upload";
+import path from "path";
+import { createReadStream, readFileSync, statSync } from "fs";
 
 const TaskReq = class TaskReq extends TaskController {
   static async handleCreateCard(req: Request, res: Response) {
@@ -154,8 +157,15 @@ const TaskReq = class TaskReq extends TaskController {
   }
   static async handleGetTasksCSV(req: Request, res: Response) {
     try {
-      let tasks = await super.getTasks({});
-    } catch (error) {}
+      await deleteAll();
+      let { fileName, root } = await super.getTasksCSV(req.body.ids);
+      let file = createReadStream(root + fileName);
+      res.setHeader("Content-disposition", `attachment; filename=${fileName}`);
+      res.contentType("text/csv");
+      file.pipe(res);
+    } catch (error) {
+      logger.error({ handleGetTasksCsvError: error });
+    }
   }
 };
 

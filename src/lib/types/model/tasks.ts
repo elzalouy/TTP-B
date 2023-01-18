@@ -4,6 +4,7 @@ import { Document, Model } from "mongoose";
 
 export interface TasksModel extends Model<TaskInfo> {
   updateHistory(cardId: string, cb?: (doc: TaskInfo) => any): TaskInfo;
+  getTasksAsCSV(filterIds: string[]): Promise<string>;
 }
 export interface TaskInfo extends Document {
   name: string;
@@ -26,6 +27,7 @@ export interface TaskInfo extends Document {
   lastMoveDate?: string | String;
   trelloShortUrl?: string;
 }
+
 export interface TaskHistory {
   listId: string;
   boardId: string;
