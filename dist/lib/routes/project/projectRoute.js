@@ -5,6 +5,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 Object.defineProperty(exports, "__esModule", { value: true });
 const express_1 = require("express");
 const Authed_1 = __importDefault(require("../../middlewares/Auth/Authed"));
+const OMOrSM_1 = __importDefault(require("../../middlewares/Auth/OMOrSM"));
 const testEnv_1 = __importDefault(require("../../middlewares/testEnv"));
 const project_1 = __importDefault(require("../../presentation/project/project"));
 const apis_1 = __importDefault(require("./apis"));
@@ -15,7 +16,7 @@ router.post(`${SORT_PROJECTS}`, Authed_1.default, handleSortProjects);
 router.post(`${CREATE_PROJECT}`, Authed_1.default, handleCreateProject);
 router.put(`${UPDATE_PROJECT}`, Authed_1.default, handleUpdateProject);
 router.get(`${GET_PROJECT}`, Authed_1.default, handleGetProject);
-router.delete(`${DELETE_PROJECT}`, Authed_1.default, handleDeleteProject);
+router.delete(`${DELETE_PROJECT}`, Authed_1.default, OMOrSM_1.default, handleDeleteProject);
 router.post(`${FILTER_PROJECTS}`, Authed_1.default, handleFilterProjects);
 router.get(`${SEARCH_PROJECTS}`, Authed_1.default, handleSearchPorjects);
 router.delete(`${DELETE_PROJECTS}`, Authed_1.default, testEnv_1.default, handleDeleteProjects);

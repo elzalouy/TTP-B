@@ -15,7 +15,6 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const Department_1 = __importDefault(require("../models/Department"));
 const validation_1 = require("../services/validation");
 const task_1 = __importDefault(require("./task"));
-const config_1 = __importDefault(require("config"));
 const Project_1 = __importDefault(require("../models/Project"));
 const __1 = require("../..");
 const trello_1 = __importDefault(require("./trello"));
@@ -38,11 +37,14 @@ class TrelloWebhook {
                         return yield this.deleteAttachmentFromCard();
                     case "createCard":
                         return yield this.createCard();
+                    case "copyCard":
+                        return yield this.createCard();
                     case "deleteCard":
                         return yield this.deleteCard();
                     case "updateCard":
                         return yield this.updateCard();
                     default:
+                        logger_1.default.info({ noAction: this.actionRequest });
                         break;
                 }
             else if (this.hookTarget === "project") {
@@ -54,6 +56,7 @@ class TrelloWebhook {
                     case "updateCard":
                         return yield this.updateProject();
                     default:
+                        logger_1.default.info({ noAction: this.actionRequest });
                         break;
                 }
             }
@@ -163,7 +166,7 @@ class TrelloWebhook {
                     });
                     let isNewTeam = department.teams.find((item) => item.listId === this.actionRequest.action.data.card.idList);
                     let isBeforeTeam = department.teams.find((item) => { var _a, _b; return ((_b = (_a = this.actionRequest.action.data) === null || _a === void 0 ? void 0 : _a.listBefore) === null || _b === void 0 ? void 0 : _b.id) === item.listId; });
-                    let In ProgressList = department.lists.find((item) => item.name === "In Progress");
+                    let inProgressList = department.lists.find((item) => item.name === "In Progress");
                     this.task = {
                         name: this.actionRequest.action.data.card.name,
                         boardId: this.actionRequest.action.data.board.id,
@@ -191,14 +194,16 @@ class TrelloWebhook {
                             : new Date().toString(),
                         teamId: isNewTeam ? isNewTeam._id : task.teamId,
                         listId: isNewTeam
-                            ? In ProgressList.listId
+                            ? inProgressList.listId
                             : (_k = this.actionRequest.action.data.listAfter) === null || _k === void 0 ? void 0 : _k.id,
                         status: isNewTeam
-                            ? In ProgressList.name
+                            ? inProgressList.name
                             : (_l = this.actionRequest.action.data.listAfter) === null || _l === void 0 ? void 0 : _l.name,
                     };
                     return yield task_1.default.updateTaskByTrelloDB(this.task);
                 }
+                else
+                    this.updateProject();
             }
             catch (error) {
                 logger_1.default.error({ updateCardHook: error });
@@ -214,12 +219,7 @@ class TrelloWebhook {
                 if (existed)
                     return yield this.updateProject();
                 else {
-                    // there is no option to create a project from trello, cause there is no clientId, or projectManager
-                    // let project = new Project({
-                    //   name: data.name,
-                    //   projectDeadline: data.due,
-                    //   clientId
-                    // })
+                    yield trello_1.default.deleteCard(this.actionRequest.action.data.card.id);
                 }
             }
             catch (error) {
@@ -231,34 +231,21 @@ class TrelloWebhook {
         try {
             Department_1.default.findOne({
                 boardId: this.actionRequest.action.data.board.id,
-            }).then((creativeBoard) => {
-                // if true, then it's an update action, and if not so it's a move action and moving is not allowed
-                let projectsList = creativeBoard.lists.find((item) => item.name === "projects").listId;
-                Project_1.default.findOneAndUpdate({ cardId: this.actionRequest.action.data.card.id }, {
-                    boardId: creativeBoard.boardId,
-                    listId: projectsList,
-                    cardId: this.actionRequest.action.data.card.id,
-                    name: this.actionRequest.action.data.card.name,
-                    projectDeadline: this.actionRequest.action.data.card.due,
-                    startDate: this.actionRequest.action.data.card.start,
-                }, { new: true }).then((res) => {
-                    __1.io.sockets.emit("update-projects", res);
-                });
-                if (creativeBoard.name.toLowerCase() !== config_1.default.get("CreativeBoard") ||
-                    creativeBoard.lists.find((item) => item.name === "projects")
-                        .listId !== this.actionRequest.action.data.card.idList) {
-                    trello_1.default.__updateCard({
+            }).then((creativeBoard) => __awaiter(this, void 0, void 0, function* () {
+                if (creativeBoard) {
+                    console.log({ data: this.actionRequest.action.data.card });
+                    // if true, then it's an update action, and if not so it's a move action and moving is not allowed
+                    let project = yield Project_1.default.findOneAndUpdate({ cardId: this.actionRequest.action.data.card.id }, {
+                        boardId: this.actionRequest.action.data.board.id,
+                        listId: this.actionRequest.action.data.card.idList,
                         cardId: this.actionRequest.action.data.card.id,
-                        data: {
-                            idList: projectsList,
-                            idBoard: creativeBoard.boardId,
-                            name: this.actionRequest.action.data.card.name,
-                            due: this.actionRequest.action.data.card.due,
-                            start: this.actionRequest.action.data.card.start,
-                        },
-                    });
+                        name: this.actionRequest.action.data.card.name,
+                        projectDeadline: this.actionRequest.action.data.card.due,
+                        startDate: this.actionRequest.action.data.card.start,
+                    }, { new: true });
+                    __1.io.sockets.emit("update-projects", project);
                 }
-            });
+            }));
         }
         catch (error) {
             logger_1.default.error({ updateProjectHook: error });
@@ -267,12 +254,21 @@ class TrelloWebhook {
     deleteProject() {
         return __awaiter(this, void 0, void 0, function* () {
             try {
+                // when deleting from ttp, we must make sure that it is working in async with the trello deletion process.
                 let data = this.actionRequest.action.data.card;
                 let project = yield Project_1.default.findOne({ cardId: data.id });
-                let deleteResult = yield task_1.default.deleteTasksByProjectId(project._id);
-                if (project && deleteResult) {
-                    yield Project_1.default.deleteOne({ _id: project._id });
-                    __1.io.sockets.emit("delete-project", project);
+                if (project) {
+                    yield trello_1.default.__createProject(this.actionRequest.action.data.list.id, {
+                        name: project.name,
+                        projectDeadline: project.projectDeadline,
+                        startDate: project.startDate,
+                    }).then(({ id }) => __awaiter(this, void 0, void 0, function* () {
+                        project.cardId = id;
+                        project.boardId = this.actionRequest.action.data.board.id;
+                        project.listId = data.idList;
+                        let result = yield project.save();
+                        __1.io.sockets.emit("update-projects", result);
+                    }));
                 }
             }
             catch (error) {

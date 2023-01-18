@@ -10,11 +10,12 @@ const logger_1 = __importDefault(require("../../logger"));
 const multer_1 = __importDefault(require("multer"));
 const multer_s3_1 = __importDefault(require("multer-s3"));
 const path_1 = __importDefault(require("path"));
+const config_1 = __importDefault(require("config"));
 (0, dotenv_1.config)();
 aws_sdk_1.default.config.update({ region: "me-south-1" });
 const s3 = new aws_sdk_1.default.S3({
-    accessKeyId: process.env.AWSAccessKeyId,
-    secretAccessKey: process.env.AWSSecretKey,
+    accessKeyId: config_1.default.get("awsAccessKey"),
+    secretAccessKey: config_1.default.get("awsSecretKey"),
     apiVersion: "2022-11-01",
 });
 // export const uploadFiles = async (file:string,fileName:string,type:string) => {

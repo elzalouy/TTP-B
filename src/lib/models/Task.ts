@@ -114,7 +114,7 @@ TaskSchema.static("getTasksAsCSV", async function (filterIds: string[]) {
     );
 
     if (tasks && tasks.length > 0) {
-      let porjectsIds = tasks.map((item) => item.projectId.toString());
+      let porjectsIds = tasks.map((item) => item?.projectId?.toString());
       // i am taking the first id cause our filter is based on selecting a specific project's tasks or getting all tasks with the remained filter options.
       let projects = await Project.find({
         _id: { $in: porjectsIds },
@@ -124,7 +124,7 @@ TaskSchema.static("getTasksAsCSV", async function (filterIds: string[]) {
           (project) => project._id.toString() === item?.projectId?.toString()
         );
         return {
-          id: item._id.toString(),
+          id: item?._id?.toString(),
           name: item.name,
           ProjectManagerName: project?.projectManagerName
             ? project.projectManagerName
@@ -144,7 +144,7 @@ TaskSchema.static("getTasksAsCSV", async function (filterIds: string[]) {
       const convert = [Object.keys(data[0])].concat(data);
       const csvData = convert
         .map((item) => {
-          return Object.values(item).toString();
+          return Object?.values(item)?.toString();
         })
         .join("\n");
       // const newTaskCsvFile=appendFileSync()

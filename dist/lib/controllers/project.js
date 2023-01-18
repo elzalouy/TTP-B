@@ -69,14 +69,8 @@ const ProjectController = class ProjectController extends project_1.default {
             try {
                 let project = yield _super.deleteProjectDB.call(this, id);
                 project_actions_Queue_1.projectQueue.push(() => {
-                    Department_1.default.findOne({
-                        name: new RegExp(config_1.default.get("CreativeBoard"), "i"),
-                    }).then((res) => {
-                        if (res && res.lists.find((item) => item.name === "projects")) {
-                            console.log({ project });
-                            trello_1.default.deleteCard(project.cardId);
-                        }
-                    });
+                    if (project.cardId)
+                        trello_1.default.deleteCard(project.cardId);
                 });
                 return project;
             }
@@ -105,15 +99,20 @@ const ProjectController = class ProjectController extends project_1.default {
         });
         return __awaiter(this, void 0, void 0, function* () {
             try {
+                let projectData = {
+                    name: data.name,
+                    idBoard: data.boardId,
+                    idList: data.listId,
+                };
+                console.log({ data });
+                if (data.projectDeadline)
+                    projectData.due = data.projectDeadline;
+                if (data.startDate)
+                    projectData.start = data.startDate;
                 project_actions_Queue_1.projectQueue.push((cb) => {
-                    var _a, _b;
                     trello_1.default.__updateCard({
                         cardId: data.cardId,
-                        data: {
-                            name: data.name,
-                            due: (_a = data === null || data === void 0 ? void 0 : data.projectDeadline) === null || _a === void 0 ? void 0 : _a.toString(),
-                            start: (_b = data === null || data === void 0 ? void 0 : data.startDate) === null || _b === void 0 ? void 0 : _b.toString(),
-                        },
+                        data: projectData,
                     });
                     notification_1.default.__updateProjectNotification(data, userId);
                     cb(null, true);
@@ -133,21 +132,22 @@ const ProjectController = class ProjectController extends project_1.default {
         });
         return __awaiter(this, void 0, void 0, function* () {
             try {
+                console.log({ data });
                 let project = yield _super.createProjectDB.call(this, data);
                 project_actions_Queue_1.projectQueue.push((cb) => __awaiter(this, void 0, void 0, function* () {
                     let dep = yield Department_1.default.findOne({
-                        name: new RegExp(config_1.default.get("CreativeBoard"), "i"),
+                        name: config_1.default.get("CreativeBoard"),
                     });
                     if (dep) {
                         let projectsList = dep.lists.find((item) => item.name === "projects");
                         let { id } = yield trello_1.default.__createProject(projectsList.listId, data);
-                        yield _super.updateProjectDB.call(this, {
+                        let result = yield _super.updateProjectDB.call(this, {
                             _id: project._id,
                             cardId: id,
                             boardId: dep.boardId,
                             listId: projectsList.listId,
                         });
-                        index_1.io.sockets.emit("update-projects");
+                        index_1.io.sockets.emit("update-projects", result);
                     }
                     notification_1.default.__creatProjectNotification(data, userId);
                     cb(null, true);

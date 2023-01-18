@@ -25,7 +25,6 @@ function removeOldNotifications(io) {
             .lte(new Date(today.getTime() - 30 * 24 * 60 * 60 * 1000).getTime())
             .where("isNotified.isNotified")
             .equals(true);
-        console.log({ oldNotifications });
         let ids = oldNotifications.map((item) => item._id);
         if (oldNotifications.length > 0) {
             let result = yield notification_1.default.__deleteNotifcations({

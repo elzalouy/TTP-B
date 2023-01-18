@@ -16,6 +16,7 @@ exports.jwtVerify = exports.createJwtToken = exports.comparePassword = exports.h
 const bcrypt_1 = __importDefault(require("bcrypt"));
 const jsonwebtoken_1 = __importDefault(require("jsonwebtoken"));
 const dotenv_1 = require("dotenv");
+const config_1 = __importDefault(require("config"));
 (0, dotenv_1.config)();
 const hashBassword = (password) => __awaiter(void 0, void 0, void 0, function* () {
     const saltRound = 10;
@@ -34,10 +35,10 @@ const createJwtToken = (user) => {
         id: user._id,
         email: user.email,
         role: user.role,
-    }, process.env.JWT_SECRETE, {
+    }, config_1.default.get("jwtSecret"), {
         expiresIn: 30 * 24 * 60 * 60,
-        audience: process.env.JWT_AUDIENCE,
-        issuer: process.env.JWT_ISSUE,
+        audience: config_1.default.get("jwtAudience"),
+        issuer: config_1.default.get("jwtIssue"),
     });
     return jwtGenerate;
 };
@@ -45,9 +46,9 @@ exports.createJwtToken = createJwtToken;
 const jwtVerify = (token) => __awaiter(void 0, void 0, void 0, function* () {
     try {
         token = token.split(" ")[1];
-        let jwtVerify = yield jsonwebtoken_1.default.verify(token, process.env.JWT_SECRETE, {
-            audience: process.env.JWT_AUDIENCE,
-            issuer: process.env.JWT_ISSUE,
+        let jwtVerify = yield jsonwebtoken_1.default.verify(token, config_1.default.get("jwtSecret"), {
+            audience: config_1.default.get("jwtAudience"),
+            issuer: config_1.default.get("jwtIssue"),
         });
         return jwtVerify;
     }

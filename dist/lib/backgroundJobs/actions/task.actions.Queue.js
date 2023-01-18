@@ -32,12 +32,19 @@ exports.updateTaskQueue = (0, queue_1.default)({
     autostart: true,
     concurrency: 1,
 });
-function moveTaskJob(listId, cardId, status, user) {
+function moveTaskJob(listId, cardId, status, department, user) {
     var task;
     exports.updateTaskQueue.push((cb) => __awaiter(this, void 0, void 0, function* () {
         try {
-            const result = yield trello_1.default.moveTaskToDiffList(cardId, listId);
-            cb(null);
+            let currentTask = yield task_1.default.getOneTaskBy({ cardId: cardId });
+            if (currentTask) {
+                let inProgressList = department.lists.find((item) => item.name === "In Progress");
+                let team = department.teams.find((item) => { var _a; return ((_a = currentTask === null || currentTask === void 0 ? void 0 : currentTask.teamId) === null || _a === void 0 ? void 0 : _a.toString()) === item._id; });
+                const result = yield trello_1.default.moveTaskToDiffList(cardId, listId === inProgressList.listId.toString() && team
+                    ? team.listId
+                    : listId);
+                cb(null);
+            }
         }
         catch (error) {
             logger_1.default.error({ moveTaskJobError: error });
@@ -65,28 +72,29 @@ const updateCardJob = (data, newFiles) => {
     delete data.deleteFiles;
     delete data.attachedFiles;
     exports.updateTaskQueue.push((cb) => __awaiter(void 0, void 0, void 0, function* () {
-        var _a, _b;
+        var _a;
         try {
             let current = yield task_1.default.__getTask(data.id);
             let dep = yield Department_1.default.findOne({ boardId: data.boardId });
-            let isTeamChanged = ((_a = current === null || current === void 0 ? void 0 : current.teamId) === null || _a === void 0 ? void 0 : _a.toString()) !== data.teamId.toString();
-            let newTeamListId = (_b = dep === null || dep === void 0 ? void 0 : dep.teams) === null || _b === void 0 ? void 0 : _b.find((item) => item._id.toString() === data.teamId.toString()).listId;
-            // if team is not the same as the current one, so listId equals the new team listId.
-            // If team is the same, will pass the data list id.
+            logger_1.default.info({ data });
+            let isTeamChanged = current.teamId &&
+                data.teamId &&
+                ((_a = current === null || current === void 0 ? void 0 : current.teamId) === null || _a === void 0 ? void 0 : _a.toString()) !== data.teamId.toString();
+            let newTeamListId = isTeamChanged && dep && dep.teams
+                ? dep.teams.find((item) => item._id.toString() === data.teamId.toString()).listId
+                : null;
             let taskData = {
                 name: data.name,
-                desc: data.description ? data.description : "",
-                due: data.deadline ? data.deadline : "",
                 idBoard: data.boardId,
-                idList: isTeamChanged === true ? newTeamListId : data.listId,
+                idList: isTeamChanged === true
+                    ? newTeamListId
+                    : data.teamId && data.status === "In Progress"
+                        ? newTeamListId
+                        : data.listId,
+                due: data.deadline ? data.deadline : null,
+                start: data.start ? data.start : null,
+                desc: data.description ? data.description : "",
             };
-            console.log({
-                data,
-                isTeamChanged,
-                newTeamListId,
-                idList: data.listId,
-                taskData,
-            });
             let response = yield trello_1.default.__updateCard({
                 cardId: data.cardId,
                 data: taskData,

@@ -21,7 +21,7 @@ class TrelloHooks {
         return __awaiter(this, void 0, void 0, function* () {
             try {
                 let hook = new trelloHooks_1.default(req.body, "project");
-                let data = yield hook.start();
+                yield hook.start();
                 return res.send("Done");
             }
             catch (error) {

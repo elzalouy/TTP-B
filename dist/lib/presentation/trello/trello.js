@@ -64,7 +64,7 @@ const BoardReq = class BoardReq extends trello_1.default {
             try {
                 const id = req.query.id;
                 const type = req.query.type;
-                let members = yield _super.getSingleBoardInfo.call(this, id, type);
+                let members = yield _super.getSingleBoardInfo.call(this, id);
                 if (members) {
                     return res.send(members);
                 }

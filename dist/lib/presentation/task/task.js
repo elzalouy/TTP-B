@@ -19,6 +19,8 @@ const validation_1 = require("../../services/validation");
 const task_actions_Queue_1 = require("../../backgroundJobs/actions/task.actions.Queue");
 const auth_1 = require("../../services/auth");
 const tasks_Route_Queue_1 = require("../../backgroundJobs/routes/tasks.Route.Queue");
+const upload_1 = require("../../services/upload");
+const fs_1 = require("fs");
 const TaskReq = class TaskReq extends task_1.default {
     static handleCreateCard(req, res) {
         const _super = Object.create(null, {
@@ -120,8 +122,8 @@ const TaskReq = class TaskReq extends task_1.default {
             try {
                 let decoded = yield (0, auth_1.jwtVerify)(req.header("authorization"));
                 if (decoded) {
-                    let { cardId, listId, status, list } = req.body;
-                    let task = yield _super.moveTaskOnTrello.call(this, cardId, listId, status, list, decoded);
+                    let { cardId, listId, status, list, department } = req.body;
+                    let task = yield _super.moveTaskOnTrello.call(this, cardId, listId, status, list, department, decoded);
                     if (task === null || task === void 0 ? void 0 : task.error)
                         return res.status(400).send(task === null || task === void 0 ? void 0 : task.message);
                     return res.send(task);
@@ -219,7 +221,6 @@ const TaskReq = class TaskReq extends task_1.default {
                 let ids = req.body.ids, projectId = req.body.projectId;
                 if (ids && projectId) {
                     let response = yield _super.__editTasksProjectId.call(this, ids, projectId);
-                    logger_1.default.info({ ids, count: response.modifiedCount });
                     if (response.modifiedCount)
                         return res.send(response);
                     return res
@@ -234,13 +235,20 @@ const TaskReq = class TaskReq extends task_1.default {
     }
     static handleGetTasksCSV(req, res) {
         const _super = Object.create(null, {
-            getTasks: { get: () => super.getTasks }
+            getTasksCSV: { get: () => super.getTasksCSV }
         });
         return __awaiter(this, void 0, void 0, function* () {
             try {
-                let tasks = yield _super.getTasks.call(this, {});
+                yield (0, upload_1.deleteAll)();
+                let { fileName, root } = yield _super.getTasksCSV.call(this, req.body.ids);
+                let file = (0, fs_1.createReadStream)(root + fileName);
+                res.setHeader("Content-disposition", `attachment; filename=${fileName}`);
+                res.contentType("text/csv");
+                file.pipe(res);
             }
-            catch (error) { }
+            catch (error) {
+                logger_1.default.error({ handleGetTasksCsvError: error });
+            }
         });
     }
 };

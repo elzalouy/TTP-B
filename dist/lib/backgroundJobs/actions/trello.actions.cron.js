@@ -9,18 +9,12 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
     });
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-const auth_1 = require("../../services/auth");
-exports.default = (req, res, next) => __awaiter(void 0, void 0, void 0, function* () {
-    try {
-        const token = req.header("authorization");
-        const decoded = yield (0, auth_1.jwtVerify)(token);
-        if (decoded.role !== "PM")
-            return res
-                .status(403)
-                .send("Un-authenticated, you should be a project manager to do this job ");
-        next();
-    }
-    catch (error) {
-        res.status(401).send("Invalid Token");
-    }
-});
+exports.initializeTrelloBoardsJob = void 0;
+const cron_1 = require("cron");
+const dbConnect_1 = require("../../startup/db/dbConnect");
+function initializeTrelloBoardsJob(io) {
+    return new cron_1.CronJob("0 6 * * *", () => __awaiter(this, void 0, void 0, function* () {
+        (0, dbConnect_1.initializeTrelloBoards)();
+    }), null, true, "Asia/Riyadh", null, true);
+}
+exports.initializeTrelloBoardsJob = initializeTrelloBoardsJob;

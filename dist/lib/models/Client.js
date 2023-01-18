@@ -11,7 +11,7 @@ const ClientSchema = new mongoose_1.Schema({
         default: {},
     },
     doneProject: { type: Number, default: 0 },
-    In ProgressProject: { type: Number, default: 0 },
+    inProgressProject: { type: Number, default: 0 },
 }, {
     // createdAt, updatedAt properties
     timestamps: true,

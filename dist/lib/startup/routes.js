@@ -12,12 +12,10 @@ const taskRoute_1 = __importDefault(require("../routes/task/taskRoute"));
 const categoryRoute_1 = __importDefault(require("../routes/category/categoryRoute"));
 const clientRoute_1 = __importDefault(require("../routes/client/clientRoute"));
 const notifiRoute_1 = __importDefault(require("../routes/notification/notifiRoute"));
+const config_1 = __importDefault(require("config"));
 function default_1(app) {
     app.use(function (req, res, next) {
-        let allowedOrigins = [
-            "http://" + process.env.FRONT_END_URL,
-            "https://" + process.env.FRONT_END_URL,
-        ];
+        let allowedOrigins = [config_1.default.get("frontEndUrl")];
         let origin = req.headers.origin;
         if (allowedOrigins.includes(origin)) {
             res.header("Access-Control-Allow-Origin", origin);

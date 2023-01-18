@@ -7,7 +7,6 @@ function buildDevLogger() {
         return `${timestamp} ${level}: ${stack || message}`;
     });
     return (0, winston_1.createLogger)({
-        level: "debug",
         format: combine(
         // format.colorize(),
         timestamp({ format: "YYYY-MM-DD HH:mm:ss" }), errors({ stack: true }), logFormat, prettyPrint()),
@@ -20,6 +19,7 @@ function buildDevLogger() {
             }),
             new winston_1.transports.File({
                 filename: "src/logger/dev-logs/combined.log",
+                level: "info",
                 format: combine(prettyPrint()),
             }),
         ],
