@@ -3,6 +3,7 @@ import TaskReq from "../../presentation/task/task";
 import apiRoute from "./apis";
 import Multer from "../../middlewares/multer";
 import Authed from "../../middlewares/Auth/Authed";
+import OMOrSM from "../../middlewares/Auth/OMOrSM";
 const router = Router();
 const multer = Multer();
 const {
@@ -52,5 +53,5 @@ router.put(EDIT_TASKS_PROJECTID, Authed, hanldeEditTasksProjectId);
 router.delete(DELETE_TASKS, Authed, handleDeleteTasks);
 router.delete(DELETE_TASKS_BY_PROJECT_ID, Authed, handleDeleteTasksByProjectId);
 router.delete(DELETE_TASK, Authed, handleDeleteTask);
-router.post(TASKS_CSV, Authed, handleGetTasksCSV);
+router.post(TASKS_CSV, Authed, OMOrSM, handleGetTasksCSV);
 export default router;
