@@ -137,8 +137,6 @@ TaskSchema.static("getTasksAsCSV", async function (filterIds: string[]) {
           deadline: item.deadline,
           lastMove: item.lastMove,
           lastMoveDate: item.lastMoveDate,
-          description: item.description,
-          trelloShortUrl: item.trelloShortUrl,
         };
       });
       const convert = [Object.keys(data[0])].concat(data);
