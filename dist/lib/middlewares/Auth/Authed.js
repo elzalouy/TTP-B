@@ -8,7 +8,11 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
         step((generator = generator.apply(thisArg, _arguments || [])).next());
     });
 };
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
 Object.defineProperty(exports, "__esModule", { value: true });
+const user_1 = __importDefault(require("../../controllers/user"));
 const auth_1 = require("../../services/auth");
 exports.default = (req, res, next) => __awaiter(void 0, void 0, void 0, function* () {
     try {
@@ -20,7 +24,16 @@ exports.default = (req, res, next) => __awaiter(void 0, void 0, void 0, function
         if (!(decoded === null || decoded === void 0 ? void 0 : decoded.id)) {
             return res.status(401).send("Invalid Token");
         }
-        next();
+        else {
+            let user = yield user_1.default.findUserById(decoded.id);
+            if (user) {
+                next();
+            }
+            else
+                return res
+                    .status(401)
+                    .send("Your account is not existed anymore in our database");
+        }
     }
     catch (error) {
         res.status(401).send("Invalid Token");

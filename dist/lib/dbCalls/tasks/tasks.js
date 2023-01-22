@@ -116,7 +116,7 @@ class TaskDB {
     static __getAllTasks(data) {
         return __awaiter(this, void 0, void 0, function* () {
             try {
-                let tasks = Task_1.default.find(data).populate("memberId");
+                let tasks = Task_1.default.find(data);
                 return tasks;
             }
             catch (error) {
@@ -141,7 +141,7 @@ class TaskDB {
                 let taskCount = yield Task_1.default.aggregate([
                     {
                         $facet: {
-                            In ProgressTasks: [
+                            inProgressTasks: [
                                 {
                                     $match: {
                                         marchentID: new mongoose_1.default.Types.ObjectId(depId),
@@ -286,7 +286,6 @@ class TaskDB {
         });
     }
     static __updateTask(data) {
-        var _a;
         return __awaiter(this, void 0, void 0, function* () {
             try {
                 let id = data.id;
@@ -294,10 +293,9 @@ class TaskDB {
                 let task = yield Task_1.default.findOne({ _id: id }).lean();
                 if (!task)
                     return Tasks_1.taskNotFoundError;
-                task.name = data.name ? data.name : task.name;
-                task.description =
-                    ((_a = data === null || data === void 0 ? void 0 : data.description) === null || _a === void 0 ? void 0 : _a.length) > 0 ? data.description : task.description;
-                task.deadline = data.deadline ? data.deadline : task.deadline;
+                task.name = data.name;
+                task.description = data.description ? data.description : "";
+                task.deadline = data.deadline ? data.deadline : null;
                 task.categoryId = data.categoryId
                     ? new mongoose_1.default.Types.ObjectId(data.categoryId)
                     : task.categoryId;
@@ -407,7 +405,7 @@ class TaskDB {
                 task.listId = (data === null || data === void 0 ? void 0 : data.listId) ? data.listId : task.listId;
                 task.cardId = (data === null || data === void 0 ? void 0 : data.cardId) ? data.cardId : task.cardId;
                 task.boardId = (data === null || data === void 0 ? void 0 : data.boardId) ? data.boardId : task.boardId;
-                task.description = data.description ? data.description : task.description;
+                task.description = data.description;
                 task.teamId =
                     (data === null || data === void 0 ? void 0 : data.teamId) === null || ((_a = data === null || data === void 0 ? void 0 : data.teamId) === null || _a === void 0 ? void 0 : _a.toString().length) > 0
                         ? new mongodb_1.ObjectId(data.teamId)
@@ -416,9 +414,8 @@ class TaskDB {
                 task.lastMoveDate = (data === null || data === void 0 ? void 0 : data.lastMoveDate)
                     ? data.lastMoveDate
                     : task.lastMoveDate;
-                task.deadline =
-                    (data === null || data === void 0 ? void 0 : data.deadline) !== undefined ? data.deadline : task.deadline;
-                task.start = (data === null || data === void 0 ? void 0 : data.start) ? data.start : task.start;
+                task.deadline = data.deadline;
+                task.start = data.start ? data.start : null;
                 if (data.attachedFile) {
                     let file = new Task_1.TaskFileSchema(Object.assign({}, data.attachedFile));
                     task.attachedFiles.push(file);
@@ -439,7 +436,6 @@ class TaskDB {
     static __createTaskByTrelloDB(data) {
         return __awaiter(this, void 0, void 0, function* () {
             try {
-                console.log({ data });
                 let task = yield Task_1.default.findOne({ cardId: data.cardId });
                 if (task) {
                     data.status = task.status;

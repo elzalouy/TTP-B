@@ -26,9 +26,9 @@ class TrelloActionsController {
             return yield TrelloActionsController.__getTrelloBoards();
         });
     }
-    static getSingleBoardInfo(id, type) {
+    static getSingleBoardInfo(id) {
         return __awaiter(this, void 0, void 0, function* () {
-            return yield TrelloActionsController.__singleBoardInfo(id, type);
+            return yield TrelloActionsController.__singleBoardInfo(id);
         });
     }
     static getMembersInTrello() {
@@ -165,10 +165,11 @@ class TrelloActionsController {
                 let board = yield (0, node_fetch_1.default)(updateBoardApi, {
                     method: "PUT",
                 }).catch((err) => {
-                    throw JSON.stringify({
+                    logger_1.default.error({ err });
+                    return {
                         error: "TrelloError",
                         message: "Failed to update trello name and color",
-                    });
+                    };
                 });
                 return board.json();
             }
@@ -180,15 +181,14 @@ class TrelloActionsController {
     static __createNewBoard(name, color) {
         return __awaiter(this, void 0, void 0, function* () {
             try {
-                let createBoardApi = (0, trelloApi_1.trelloApi)(`boards/?name=${name}&prefs_background=${color}&defaultLists=false&`);
+                let createBoardApi = (0, trelloApi_1.trelloApi)(`boards/?name=${name}&prefs_background=${color}&defaultLists=false&idOrganization=${config_1.default.get("trelloOrgId")}&`);
                 let board = yield (0, node_fetch_1.default)(createBoardApi, {
                     method: "POST",
                     headers: {
                         Accept: "application/json",
                     },
                 });
-                let borderData = yield board.json();
-                return borderData;
+                return yield board.json();
             }
             catch (error) {
                 logger_1.default.error({ createNewBoardError: error });
@@ -217,7 +217,7 @@ class TrelloActionsController {
                     Response = JSON.parse(yield response.text());
                 }))
                     .catch((err) => {
-                    throw err;
+                    logger_1.default.error(err);
                 });
                 return Response;
             }
@@ -236,7 +236,8 @@ class TrelloActionsController {
                     response = yield res.json();
                 }))
                     .catch((err) => {
-                    throw err;
+                    logger_1.default.error({ err });
+                    return err;
                 });
                 return response;
             }
@@ -250,7 +251,9 @@ class TrelloActionsController {
             try {
                 let url = `cards/?idList=${listId}&name=${data.name}&`;
                 if (data.projectDeadline)
-                    url = `${url}due=${new Date(data.projectDeadline).getTime()}&start=${new Date(data.startDate).getTime()}&`;
+                    url = `${url}due=${new Date(data.projectDeadline).getTime()}&`;
+                if (data.startDate)
+                    url = `${url}start=${new Date(data.startDate).getTime()}`;
                 url = `${url}attachments=true&`;
                 let cardCreateApi = (0, trelloApi_1.trelloApi)(url);
                 let cardResult = yield (0, node_fetch_1.default)(cardCreateApi, {
@@ -259,7 +262,7 @@ class TrelloActionsController {
                         Accept: "application/json",
                     },
                 });
-                return cardResult.json();
+                return yield cardResult.json();
             }
             catch (error) {
                 logger_1.default.error({ createProjectCardError: error });
@@ -269,7 +272,7 @@ class TrelloActionsController {
     static __createCard(data) {
         return __awaiter(this, void 0, void 0, function* () {
             try {
-                let url = `cards/?idList=${data.listId}&name=${data.name}&desc=${data.description}&`;
+                let url = `cards/?idList=${data.teamListId ? data.teamListId : data.listId}&name=${data.name}&desc=${data.description}&`;
                 if (data.deadline)
                     url = `${url}due=${new Date(data.deadline).getTime()}&start=${new Date(data.start).getTime()}&`;
                 url = `${url}attachments=true&`;
@@ -280,7 +283,7 @@ class TrelloActionsController {
                         Accept: "application/json",
                     },
                 });
-                return cardResult.json();
+                return yield cardResult.json();
             }
             catch (error) {
                 logger_1.default.error({ createCardInListError: error });
@@ -297,10 +300,27 @@ class TrelloActionsController {
                         Accept: "application/json",
                     },
                 });
-                return deleteRessult.json();
+                return yield deleteRessult.json();
             }
             catch (error) {
                 logger_1.default.error({ deleteTasksError: error });
+            }
+        });
+    }
+    static __getCardsInBoard(boardId) {
+        return __awaiter(this, void 0, void 0, function* () {
+            try {
+                let url = (0, trelloApi_1.trelloApi)(`boards/${boardId}/cards?`);
+                let result = yield (0, node_fetch_1.default)(url, {
+                    method: "GET",
+                    headers: {
+                        Accept: "application/json",
+                    },
+                });
+                return yield result.json();
+            }
+            catch (error) {
+                logger_1.default.error({ getCardsInBoardError: error });
             }
         });
     }
@@ -337,6 +357,41 @@ class TrelloActionsController {
             }
         });
     }
+    static __getAllWebWebHook(idModel, urlInConfig) {
+        return __awaiter(this, void 0, void 0, function* () {
+            try {
+                let webhookUrl = `webhooks/?idModel=${idModel}&callbackURL=${config_1.default.get(urlInConfig)}&`;
+                let webhookApi = (0, trelloApi_1.trelloApi)(webhookUrl);
+                let webhookResult = yield (0, node_fetch_1.default)(webhookApi, {
+                    method: "POST",
+                    headers: {
+                        Accept: "application/json",
+                    },
+                });
+                return webhookResult;
+            }
+            catch (error) {
+                logger_1.default.error({ createWebHookError: error });
+            }
+        });
+    }
+    static __getBoardLists(boardId) {
+        return __awaiter(this, void 0, void 0, function* () {
+            try {
+                let url = yield (0, trelloApi_1.trelloApi)(`boards/${boardId}/lists?`);
+                let lists = yield (0, node_fetch_1.default)(url, {
+                    method: "GET",
+                    headers: {
+                        Accept: "application/json",
+                    },
+                });
+                return yield lists.json();
+            }
+            catch (error) {
+                logger_1.default.error({ getBoardListsError: error });
+            }
+        });
+    }
     static __archieveList(listId) {
         return __awaiter(this, void 0, void 0, function* () {
             try {
@@ -344,7 +399,7 @@ class TrelloActionsController {
                 let archieve = yield (0, node_fetch_1.default)(archeiveApi, {
                     method: "PUT",
                 });
-                return archieve.json();
+                return yield archieve.json();
             }
             catch (error) {
                 logger_1.default.error({ archieveListError: error });
@@ -358,7 +413,7 @@ class TrelloActionsController {
                 let remove = yield (0, node_fetch_1.default)(removeApi, {
                     method: "DELETE",
                 });
-                return remove.json();
+                return yield remove.json();
             }
             catch (error) {
                 logger_1.default.error({ removeMemberError: error });
@@ -368,19 +423,22 @@ class TrelloActionsController {
     static __addList(boardId, listName) {
         return __awaiter(this, void 0, void 0, function* () {
             try {
+                let result;
                 let addListApi = (0, trelloApi_1.trelloApi)(`lists?name=${listName}&idBoard=${boardId}&`);
-                let newList = yield (0, node_fetch_1.default)(addListApi, {
+                yield (0, node_fetch_1.default)(addListApi, {
                     method: "POST",
                     headers: {
                         Accept: "application/json",
                     },
-                }).catch((err) => {
-                    throw JSON.stringify({
-                        error: "TrelloError",
-                        message: "Failed to update trello lists",
-                    });
+                })
+                    .then((res) => __awaiter(this, void 0, void 0, function* () {
+                    result = yield res.json();
+                }))
+                    .catch((err) => {
+                    logger_1.default.error({ err });
+                    return err;
                 });
-                return newList.json();
+                return result;
             }
             catch (error) {
                 logger_1.default.error({ addListError: error });
@@ -396,7 +454,7 @@ class TrelloActionsController {
                     method: "PUT",
                 });
                 // logger.info({boardId,memberId,type,addMemberApi,newMember})
-                return newMember.json();
+                return yield newMember.json();
             }
             catch (error) {
                 logger_1.default.error({ addMemberError: error });
@@ -406,11 +464,11 @@ class TrelloActionsController {
     static __getAllMembers() {
         return __awaiter(this, void 0, void 0, function* () {
             try {
-                let boardApi = (0, trelloApi_1.trelloApi)(`organizations/${process.env.TEST_ORGANIZATION_ID}/members?`);
+                let boardApi = (0, trelloApi_1.trelloApi)(`organizations/${config_1.default.get("trelloOrgId")}/members?`);
                 let members = yield (0, node_fetch_1.default)(boardApi, {
                     method: "GET",
                 });
-                return members.json();
+                return yield members.json();
             }
             catch (error) {
                 logger_1.default.error({ getTrelloMombersError: error });
@@ -420,28 +478,42 @@ class TrelloActionsController {
     static __getTrelloBoards() {
         return __awaiter(this, void 0, void 0, function* () {
             try {
-                let boardsApi = (0, trelloApi_1.trelloApi)(`organizations/${process.env.TEST_ORGANIZATION_ID}/boards?fields=id,name&`);
+                let boardsApi = (0, trelloApi_1.trelloApi)(`organizations/${config_1.default.get("trelloOrgId")}/boards?fields=id,name&`);
                 let boards = yield (0, node_fetch_1.default)(boardsApi, {
                     method: "GET",
                 });
-                return boards.json();
+                return yield boards.json();
             }
             catch (error) {
                 logger_1.default.error({ getTrelloBoardError: error });
             }
         });
     }
-    static __singleBoardInfo(id, type) {
+    static __singleBoardInfo(id) {
         return __awaiter(this, void 0, void 0, function* () {
             try {
-                let boardApi = (0, trelloApi_1.trelloApi)(`boards/${id}/${type}?`);
+                let boardApi = (0, trelloApi_1.trelloApi)(`boards/${id}?`);
                 let board = yield (0, node_fetch_1.default)(boardApi, {
                     method: "GET",
                 });
-                return board.json();
+                return yield board.json();
             }
             catch (error) {
                 logger_1.default.error({ singleBoardError: error });
+            }
+        });
+    }
+    static __moveAllCardsInList(id, idBoard, idList) {
+        return __awaiter(this, void 0, void 0, function* () {
+            try {
+                let boardApi = (0, trelloApi_1.trelloApi)(`lists/${id}/moveAllCards?idBoard=${idBoard}&idList=${idList}&`);
+                let result = yield (0, node_fetch_1.default)(boardApi, {
+                    method: "POST",
+                });
+                return yield result.json();
+            }
+            catch (error) {
+                logger_1.default.error({ moveAllCardsInListsError: error });
             }
         });
     }
@@ -454,10 +526,10 @@ class TrelloActionsController {
                     method: "GET",
                     headers: {
                         Accept: "application/json",
-                        Authorization: `OAuth oauth_consumer_key=${process.env.TRELLO_KEY}, oauth_token=${process.env.TRELLO_TOKEN}`,
+                        Authorization: `OAuth oauth_consumer_key=${config_1.default.get("trelloKey")}, oauth_token=${config_1.default.get("trelloToken")}`,
                     },
                 }).then((response) => __awaiter(this, void 0, void 0, function* () {
-                    Response = JSON.parse(yield response.text());
+                    Response = yield response.json();
                 }));
                 return Response;
             }
@@ -469,29 +541,32 @@ class TrelloActionsController {
     static __updateCard({ cardId, data }) {
         return __awaiter(this, void 0, void 0, function* () {
             try {
+                let body = {
+                    name: data.name,
+                    desc: data.desc,
+                    due: data.due,
+                    start: data.start,
+                    idList: data.idList,
+                    idBoard: data.idBoard,
+                };
+                logger_1.default.info({ body });
                 let params = {
                     method: "PUT",
                     headers: {
                         Accept: "*/*",
                         "Content-Type": "application/json",
                     },
-                    body: JSON.stringify({
-                        name: data.name,
-                        desc: data.desc ? data.desc : undefined,
-                        idBoard: data.idBoard,
-                        idList: data.idList,
-                        due: data.due,
-                        start: data.start,
-                    }),
+                    body: JSON.stringify(body),
                 };
                 let api = (0, trelloApi_1.trelloApi)(`cards/${cardId}?`);
-                let response = yield (0, node_fetch_1.default)(api, params)
+                let response;
+                yield (0, node_fetch_1.default)(api, params)
                     .then((res) => __awaiter(this, void 0, void 0, function* () {
-                    let result = yield res.json();
-                    return result;
+                    response = yield res.json();
                 }))
                     .catch((err) => {
-                    throw err;
+                    logger_1.default.error({ err });
+                    return err;
                 });
                 return response;
             }

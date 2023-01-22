@@ -13,16 +13,11 @@ const auth_1 = require("../../services/auth");
 exports.default = (req, res, next) => __awaiter(void 0, void 0, void 0, function* () {
     try {
         const token = req.header("authorization");
-        if (!token)
-            return res.status(401).send("Access denied, No token provided");
         const decoded = yield (0, auth_1.jwtVerify)(token);
-        if (!(decoded === null || decoded === void 0 ? void 0 : decoded.id)) {
-            return res.status(400).send("Invalid Token");
-        }
         if (decoded.role !== "SM")
             return res
-                .status(401)
-                .send("Un-authenticated, you should be authenticated to do this job ");
+                .status(403)
+                .send("Un-authenticated, you should be an Super manager to access this action");
         next();
     }
     catch (error) {

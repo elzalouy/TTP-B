@@ -17,8 +17,10 @@ import {
 } from "../types/model/Department";
 import TrelloActionsController from "./trello";
 import { Board, Card } from "../types/controller/trello";
-import _ from "lodash";
+import _, { uniqueId } from "lodash";
 import Tasks from "../models/Task";
+import { writeFile } from "fs";
+import { randomUUID } from "crypto";
 class TaskController extends TaskDB {
   static async getTasks(data: TaskData) {
     return await TaskController.__getTasks(data);
@@ -166,6 +168,11 @@ class TaskController extends TaskDB {
   static async __getTasks(data: TaskData) {
     try {
       let tasks = await super.getTasksDB(data);
+      let csvData = await Tasks.getTasksAsCSV(
+        tasks
+          .filter((item) => item.status === "Not Clear")
+          .map((item) => item._id)
+      );
       return tasks;
     } catch (error) {
       logger.error({ getTasksError: error });
@@ -335,9 +342,23 @@ class TaskController extends TaskDB {
       logger.error({ __updateTasksProjectId: error });
     }
   }
-  static async getTasksCSV(data: any) {
+  static async getTasksCSV(data: string[]) {
     try {
-    } catch (error) {}
+      let csvData = await Tasks.getTasksAsCSV(data);
+      if (csvData) {
+        let root = __dirname.split("/controllers")[0].concat("/uploads/");
+        let fileName = `tasksSatatistics-${randomUUID()}.csv`;
+        writeFile(
+          root + fileName,
+          csvData.toString(),
+          { encoding: "utf8" },
+          () => {}
+        );
+        return { fileName, root, csvData };
+      }
+    } catch (error) {
+      logger.error({ _getTasksCsv: error });
+    }
   }
 }
 

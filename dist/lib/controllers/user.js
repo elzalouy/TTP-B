@@ -204,7 +204,7 @@ const UserController = class UserController extends user_1.default {
                 if (!findUser) {
                     return null;
                 }
-                let token = yield (0, auth_1.createJwtToken)(data);
+                let token = yield (0, auth_1.createJwtToken)(findUser);
                 if (data.email) {
                     (0, mail_1.default)({
                         email: data.email,
@@ -228,14 +228,13 @@ const UserController = class UserController extends user_1.default {
         });
         return __awaiter(this, void 0, void 0, function* () {
             try {
-                const { email /* ,trelloBoardId,trelloMemberId,type='admin' */ } = data;
-                // if (passwordCheck(password)) {
-                //   return customeError("password_length", 400);
-                // }
+                const { email } = data;
                 if (!(0, validation_1.emailCheck)(email)) {
                     return (0, errorUtils_1.customeError)("email_error", 400);
                 }
-                let findUser = yield _super.findUser.call(this, { email: email });
+                let findUser = yield _super.findUser.call(this, {
+                    email: new RegExp(email, "i"),
+                });
                 if (findUser) {
                     return (0, errorUtils_1.customeError)("user_already_exist", 400);
                 }

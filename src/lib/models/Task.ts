@@ -1,6 +1,8 @@
 import { model, Schema, Model } from "mongoose";
 import logger from "../../logger";
 import { TaskInfo, TasksModel } from "../types/model/tasks";
+import Project from "./Project";
+import { appendFile, appendFileSync } from "fs";
 export const FilesSchema: Schema = new Schema({
   name: { type: String },
   trelloId: { type: String },
@@ -100,6 +102,59 @@ const TaskSchema = new Schema<TaskInfo, TasksModel>(
     strict: false,
   }
 );
+
+TaskSchema.static("getTasksAsCSV", async function (filterIds: string[]) {
+  try {
+    let tasks = await Tasks.find(
+      {
+        _id: { $in: filterIds },
+      },
+      {},
+      { lean: true }
+    );
+
+    if (tasks && tasks.length > 0) {
+      let porjectsIds = tasks.map((item) => item?.projectId?.toString());
+      // i am taking the first id cause our filter is based on selecting a specific project's tasks or getting all tasks with the remained filter options.
+      let projects = await Project.find({
+        _id: { $in: porjectsIds },
+      });
+      let data: any = tasks?.map((item) => {
+        let project = projects?.find(
+          (project) => project._id.toString() === item?.projectId?.toString()
+        );
+        return {
+          id: item?._id?.toString(),
+          name: item.name,
+          ProjectManagerName: project?.projectManagerName
+            ? project.projectManagerName
+            : "Un Assigned to any Project",
+          projectName: project?.name
+            ? project.name
+            : "Un Assigned to any project",
+          status: item.status,
+          startDate: item.start,
+          deadline: item.deadline,
+          lastMove: item.lastMove,
+          lastMoveDate: item.lastMoveDate,
+          description: item.description,
+          trelloShortUrl: item.trelloShortUrl,
+        };
+      });
+      const convert = [Object.keys(data[0])].concat(data);
+      const csvData = convert
+        .map((item) => {
+          return Object?.values(item)?.toString();
+        })
+        .join("\n");
+      // const newTaskCsvFile=appendFileSync()
+      return csvData;
+    }
+  } catch (error) {
+    logger.error({ getTasksCsvError: error });
+    return error;
+  }
+});
 
 const Tasks = model<TaskInfo, TasksModel>("tasks", TaskSchema);
 export const TaskFileSchema = model("attachedFiles", FilesSchema);

@@ -74,7 +74,10 @@ const UserDB = class UserDB {
             try {
                 let id = data.id;
                 delete data.id;
-                let user = yield User_1.default.findOneAndUpdate({ _id: id }, Object.assign({}, data), { new: true, lean: true });
+                let user = yield User_1.default.findByIdAndUpdate(id, data, {
+                    new: true,
+                    lean: true,
+                });
                 return user;
             }
             catch (error) {
@@ -96,7 +99,9 @@ const UserDB = class UserDB {
     static __getUserData(data) {
         return __awaiter(this, void 0, void 0, function* () {
             try {
-                let user = yield User_1.default.findOne(Object.assign({}, data)).lean();
+                let user = yield User_1.default.findOne({
+                    email: new RegExp(data.email, "i"),
+                });
                 return user;
             }
             catch (error) {
@@ -108,7 +113,7 @@ const UserDB = class UserDB {
         return __awaiter(this, void 0, void 0, function* () {
             try {
                 let user = new User_1.default(Object.assign(Object.assign({}, data), { verified: data.verified ? data.verified : false }));
-                yield user.save();
+                user = yield user.save();
                 return user;
             }
             catch (error) {

@@ -14,6 +14,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 Object.defineProperty(exports, "__esModule", { value: true });
 const config_1 = __importDefault(require("config"));
 const logger_1 = __importDefault(require("../../logger"));
+const department_actions_queue_1 = require("../backgroundJobs/actions/department.actions.queue");
 const Department_1 = __importDefault(require("../models/Department"));
 const Department_2 = require("../types/model/Department");
 const trello_1 = __importDefault(require("./trello"));
@@ -59,7 +60,7 @@ class DepartmentController {
                 let department = yield Department_1.default.findById(id);
                 if (!department)
                     return { error: "NotFound", message: "Department was not found" };
-                if (department.name.toLocaleLowerCase() !== config_1.default.get("CreativeBoard")) {
+                if (department.name !== config_1.default.get("CreativeBoard")) {
                     let response = yield department.deleteDepartment();
                     return response;
                 }
@@ -100,7 +101,6 @@ class DepartmentController {
     static __createNewDepartment(data) {
         return __awaiter(this, void 0, void 0, function* () {
             try {
-                // 1- Validation (Joi & Mongo)
                 let depDoc = new Department_1.default({
                     name: data.name,
                     color: data.color,
@@ -113,11 +113,11 @@ class DepartmentController {
                 let validation = depDoc.createDepartmentValidate();
                 if (validation.error)
                     return validation.error.details[0];
-                // 2-Create Board/Teams/lists
                 if (depDoc) {
                     let { teams, lists } = yield depDoc.createDepartmentBoard();
                     depDoc.teams = teams;
                     depDoc.lists = lists;
+                    (0, department_actions_queue_1.createProjectsCardsInCreativeBoard)(depDoc);
                     return yield depDoc.save();
                 }
             }

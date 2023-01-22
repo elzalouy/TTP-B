@@ -3,7 +3,7 @@
   "trelloToken": "trelloToken",
   "trelloOrgId": "trelloOrgId",
   "superAdminEmail": "superAdminEmail",
-  "superAdminPassword": "superAdminPassowrd",
+  "superAdminPassword": "superAdminPassword",
   "jwtSecret": "jwtSecret",
   "jwtKeyId": "jwtKeyId",
   "jwtAudience": "jwtAudience",

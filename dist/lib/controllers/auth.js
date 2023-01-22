@@ -20,6 +20,7 @@ const user_1 = __importDefault(require("../dbCalls/user/user"));
 //NodeMailer
 const mail_1 = __importDefault(require("../services/mail/mail"));
 const errorUtils_1 = require("../utils/errorUtils");
+const User_1 = __importDefault(require("../models/User"));
 const AuthController = class AuthController extends user_1.default {
     static signInUser(data) {
         return __awaiter(this, void 0, void 0, function* () {
@@ -46,6 +47,7 @@ const AuthController = class AuthController extends user_1.default {
                 if (!verifyToken) {
                     return (0, errorUtils_1.customeError)("not_valid_token", 400);
                 }
+                console.log({ password, verifyToken });
                 let checkPassword = (0, validation_1.passwordCheck)(password);
                 if (checkPassword) {
                     return (0, errorUtils_1.customeError)("password_length", 400);
@@ -69,7 +71,7 @@ const AuthController = class AuthController extends user_1.default {
         });
         return __awaiter(this, void 0, void 0, function* () {
             try {
-                let user = yield _super.findUser.call(this, { email });
+                let user = yield _super.findUser.call(this, { email: new RegExp(email, "i") });
                 if (!user) {
                     return (0, errorUtils_1.customeError)("no_user_found", 400);
                 }
@@ -89,33 +91,35 @@ const AuthController = class AuthController extends user_1.default {
         });
     }
     static __signIn(data) {
-        const _super = Object.create(null, {
-            findUser: { get: () => super.findUser }
-        });
         return __awaiter(this, void 0, void 0, function* () {
             try {
                 const { email, password } = data;
-                let user = yield _super.findUser.call(this, { email });
-                if (!user || user.verified === false) {
-                    return null;
+                let user = yield User_1.default.findOne({ email: new RegExp(email, "i") });
+                if (user && user._id) {
+                    if (user.verified === false) {
+                        return null;
+                    }
+                    let passwordCheck = yield (0, auth_1.comparePassword)(password, user.password);
+                    if (passwordCheck === false) {
+                        return null;
+                    }
+                    let getToken = (0, auth_1.createJwtToken)(user);
+                    let { _id, email: mail, role, type, image, trelloBoardId, trelloMemberId, name, } = user;
+                    console.log({ user });
+                    return {
+                        _id,
+                        email: mail,
+                        role,
+                        type,
+                        image,
+                        name,
+                        trelloBoardId,
+                        trelloMemberId,
+                        token: getToken,
+                    };
                 }
-                let passwordCheck = yield (0, auth_1.comparePassword)(password, user.password);
-                if (!passwordCheck) {
+                else
                     return null;
-                }
-                let getToken = (0, auth_1.createJwtToken)(user);
-                let { _id, email: mail, role, type, image, trelloBoardId, trelloMemberId, name, } = user;
-                return {
-                    _id,
-                    email: mail,
-                    role,
-                    type,
-                    image,
-                    name,
-                    trelloBoardId,
-                    trelloMemberId,
-                    token: getToken,
-                };
             }
             catch (error) {
                 logger_1.default.error({ signInError: error });

@@ -970,3 +970,720 @@
   level: 'error',
   timestamp: '2023-01-07 18:49:34'
 }
+{
+  message: {
+    signInError: Error: data and hash arguments required
+        at Object.compare (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/bcrypt/bcrypt.js:208:17)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/bcrypt/promises.js:29:12
+        at new Promise (<anonymous>)
+        at Object.module.exports.promise (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/bcrypt/promises.js:20:12)
+        at Object.compare (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/bcrypt/bcrypt.js:204:25)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/services/auth.ts:24:38
+        at Generator.next (<anonymous>)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/services/auth.ts:8:71
+        at new Promise (<anonymous>)
+        at __awaiter (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/services/auth.ts:4:12)
+  },
+  level: 'error',
+  timestamp: '2023-01-08 13:37:02'
+}
+{
+  message: {
+    signInError: Error: data and hash arguments required
+        at Object.compare (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/bcrypt/bcrypt.js:208:17)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/bcrypt/promises.js:29:12
+        at new Promise (<anonymous>)
+        at Object.module.exports.promise (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/bcrypt/promises.js:20:12)
+        at Object.compare (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/bcrypt/bcrypt.js:204:25)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/services/auth.ts:24:38
+        at Generator.next (<anonymous>)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/services/auth.ts:8:71
+        at new Promise (<anonymous>)
+        at __awaiter (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/services/auth.ts:4:12)
+  },
+  level: 'error',
+  timestamp: '2023-01-08 13:37:07'
+}
+{
+  message: {
+    signInError: Error: data and hash arguments required
+        at Object.compare (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/bcrypt/bcrypt.js:208:17)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/bcrypt/promises.js:29:12
+        at new Promise (<anonymous>)
+        at Object.module.exports.promise (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/bcrypt/promises.js:20:12)
+        at Object.compare (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/bcrypt/bcrypt.js:204:25)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/services/auth.ts:24:38
+        at Generator.next (<anonymous>)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/services/auth.ts:8:71
+        at new Promise (<anonymous>)
+        at __awaiter (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/services/auth.ts:4:12)
+  },
+  level: 'error',
+  timestamp: '2023-01-08 13:37:09'
+}
+{
+  message: {
+    getTasksCsvError: TypeError: Cannot convert undefined or null to object
+        at Function.keys (<anonymous>)
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/models/Task.ts:113:29)
+        at Generator.next (<anonymous>)
+        at fulfilled (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/models/Task.ts:5:58)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5)
+  },
+  level: 'error',
+  timestamp: '2023-01-15 15:37:12'
+}
+{
+  message: {
+    getTrelloBoardError: FetchError: request to https://api.trello.com/1/organizations/ttpbetalocal/boards?fields=id,name&key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68 failed, reason: read ECONNRESET
+        at ClientRequest.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/node-fetch/lib/index.js:1491:11)
+        at ClientRequest.emit (node:events:527:28)
+        at ClientRequest.emit (node:domain:475:12)
+        at TLSSocket.socketErrorListener (node:_http_client:454:9)
+        at TLSSocket.emit (node:events:527:28)
+        at TLSSocket.emit (node:domain:475:12)
+        at emitErrorNT (node:internal/streams/destroy:157:8)
+        at emitErrorCloseNT (node:internal/streams/destroy:122:3)
+        at processTicksAndRejections (node:internal/process/task_queues:83:21) {
+      type: 'system',
+      errno: 'ECONNRESET',
+      code: 'ECONNRESET'
+    }
+  },
+  level: 'error',
+  timestamp: '2023-01-15 16:35:34'
+}
+{
+  message: {
+    getTasksCsvError: TypeError: Cannot read properties of undefined (reading 'projectManagerName')
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/models/Task.ts:129:39
+        at Array.map (<anonymous>)
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/models/Task.ts:122:30)
+        at Generator.next (<anonymous>)
+        at fulfilled (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/models/Task.ts:5:58)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5)
+  },
+  level: 'error',
+  timestamp: '2023-01-15 16:44:33'
+}
+{
+  message: {
+    err: FetchError: invalid json response body at https://api.trello.com/1/cards/63b9423b598d850342411125?key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68 reason: Unexpected token T in JSON at position 0
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/node-fetch/lib/index.js:273:32
+        at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+      type: 'invalid-json'
+    }
+  },
+  level: 'error',
+  timestamp: '2023-01-16 11:48:09'
+}
+{
+  message: {
+    getTrelloBoardError: FetchError: request to https://api.trello.com/1/organizations/ttpbetalocal/boards?fields=id,name&key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68 failed, reason: getaddrinfo EAI_AGAIN api.trello.com
+        at ClientRequest.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/node-fetch/lib/index.js:1491:11)
+        at ClientRequest.emit (node:events:527:28)
+        at ClientRequest.emit (node:domain:475:12)
+        at TLSSocket.socketErrorListener (node:_http_client:454:9)
+        at TLSSocket.emit (node:events:527:28)
+        at TLSSocket.emit (node:domain:475:12)
+        at emitErrorNT (node:internal/streams/destroy:157:8)
+        at emitErrorCloseNT (node:internal/streams/destroy:122:3)
+        at processTicksAndRejections (node:internal/process/task_queues:83:21) {
+      type: 'system',
+      errno: 'EAI_AGAIN',
+      code: 'EAI_AGAIN'
+    }
+  },
+  level: 'error',
+  timestamp: '2023-01-17 11:27:54'
+}
+{
+  message: {
+    createNewBoardError: FetchError: request to https://api.trello.com/1/boards/?name=dev%20/%20TTP%20Creative&prefs_background=orange&defaultLists=false&idOrganization=ttpbetalocal&key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68 failed, reason: getaddrinfo EAI_AGAIN api.trello.com
+        at ClientRequest.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/node-fetch/lib/index.js:1491:11)
+        at ClientRequest.emit (node:events:527:28)
+        at ClientRequest.emit (node:domain:475:12)
+        at TLSSocket.socketErrorListener (node:_http_client:454:9)
+        at TLSSocket.emit (node:events:527:28)
+        at TLSSocket.emit (node:domain:475:12)
+        at emitErrorNT (node:internal/streams/destroy:157:8)
+        at emitErrorCloseNT (node:internal/streams/destroy:122:3)
+        at processTicksAndRejections (node:internal/process/task_queues:83:21) {
+      type: 'system',
+      errno: 'EAI_AGAIN',
+      code: 'EAI_AGAIN'
+    }
+  },
+  level: 'error',
+  timestamp: '2023-01-17 11:28:14'
+}
+{
+  message: {
+    createDepartmentBoardError: TypeError: Cannot read properties of undefined (reading 'id')
+        at model.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/models/Department.ts:252:15)
+        at Generator.next (<anonymous>)
+        at fulfilled (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/models/Department.ts:5:58)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5)
+  },
+  level: 'error',
+  timestamp: '2023-01-17 11:28:14'
+}
+{
+  message: {
+    createDepartmentError: TypeError: Cannot destructure property 'teams' of '(intermediate value)' as it is undefined.
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/department.ts:92:15)
+        at Generator.next (<anonymous>)
+        at fulfilled (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/department.ts:5:58)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5)
+  },
+  level: 'error',
+  timestamp: '2023-01-17 11:28:14'
+}
+{
+  message: {
+    err: FetchError: invalid json response body at https://api.trello.com/1/cards/undefined?key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68 reason: Unexpected token i in JSON at position 0
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/node-fetch/lib/index.js:273:32
+        at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+      type: 'invalid-json'
+    }
+  },
+  level: 'error',
+  timestamp: '2023-01-17 15:42:25'
+}
+{
+  message: {
+    err: FetchError: invalid json response body at https://api.trello.com/1/cards/undefined?key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68 reason: Unexpected token i in JSON at position 0
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/node-fetch/lib/index.js:273:32
+        at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+      type: 'invalid-json'
+    }
+  },
+  level: 'error',
+  timestamp: '2023-01-17 15:43:02'
+}
+{
+  message: {
+    err: FetchError: invalid json response body at https://api.trello.com/1/cards/undefined?key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68 reason: Unexpected token i in JSON at position 0
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/node-fetch/lib/index.js:273:32
+        at runMicrotasks (<anonymous>)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+      type: 'invalid-json'
+    }
+  },
+  level: 'error',
+  timestamp: '2023-01-17 15:56:13'
+}
+{
+  message: {
+    err: FetchError: invalid json response body at https://api.trello.com/1/cards/undefined?key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68 reason: Unexpected token i in JSON at position 0
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/node-fetch/lib/index.js:273:32
+        at runMicrotasks (<anonymous>)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+      type: 'invalid-json'
+    }
+  },
+  level: 'error',
+  timestamp: '2023-01-17 15:56:40'
+}
+{
+  message: {
+    err: FetchError: invalid json response body at https://api.trello.com/1/cards/undefined?key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68 reason: Unexpected token i in JSON at position 0
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/node-fetch/lib/index.js:273:32
+        at runMicrotasks (<anonymous>)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+      type: 'invalid-json'
+    }
+  },
+  level: 'error',
+  timestamp: '2023-01-17 15:57:00'
+}
+{
+  message: {
+    err: FetchError: invalid json response body at https://api.trello.com/1/cards/undefined?key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68 reason: Unexpected token i in JSON at position 0
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/node-fetch/lib/index.js:273:32
+        at runMicrotasks (<anonymous>)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+      type: 'invalid-json'
+    }
+  },
+  level: 'error',
+  timestamp: '2023-01-17 15:58:15'
+}
+{
+  message: {
+    err: FetchError: invalid json response body at https://api.trello.com/1/cards/undefined?key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68 reason: Unexpected token i in JSON at position 0
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/node-fetch/lib/index.js:273:32
+        at runMicrotasks (<anonymous>)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+      type: 'invalid-json'
+    }
+  },
+  level: 'error',
+  timestamp: '2023-01-17 15:58:25'
+}
+{
+  message: {
+    err: FetchError: invalid json response body at https://api.trello.com/1/cards/undefined?key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68 reason: Unexpected token i in JSON at position 0
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/node-fetch/lib/index.js:273:32
+        at runMicrotasks (<anonymous>)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+      type: 'invalid-json'
+    }
+  },
+  level: 'error',
+  timestamp: '2023-01-17 16:21:07'
+}
+{
+  message: {
+    err: FetchError: invalid json response body at https://api.trello.com/1/cards/undefined?key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68 reason: Unexpected token i in JSON at position 0
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/node-fetch/lib/index.js:273:32
+        at runMicrotasks (<anonymous>)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+      type: 'invalid-json'
+    }
+  },
+  level: 'error',
+  timestamp: '2023-01-17 16:57:57'
+}
+{
+  message: {
+    err: FetchError: invalid json response body at https://api.trello.com/1/cards/undefined?key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68 reason: Unexpected token i in JSON at position 0
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/node-fetch/lib/index.js:273:32
+        at runMicrotasks (<anonymous>)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+      type: 'invalid-json'
+    }
+  },
+  level: 'error',
+  timestamp: '2023-01-17 16:58:23'
+}
+{
+  message: {
+    err: FetchError: invalid json response body at https://api.trello.com/1/cards/undefined?key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68 reason: Unexpected token i in JSON at position 0
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/node-fetch/lib/index.js:273:32
+        at runMicrotasks (<anonymous>)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+      type: 'invalid-json'
+    }
+  },
+  level: 'error',
+  timestamp: '2023-01-17 17:15:29'
+}
+{
+  message: {
+    err: FetchError: invalid json response body at https://api.trello.com/1/cards/undefined?key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68 reason: Unexpected token i in JSON at position 0
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/node-fetch/lib/index.js:273:32
+        at runMicrotasks (<anonymous>)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+      type: 'invalid-json'
+    }
+  },
+  level: 'error',
+  timestamp: '2023-01-17 17:17:06'
+}
+{
+  message: {
+    err: FetchError: invalid json response body at https://api.trello.com/1/cards/undefined?key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68 reason: Unexpected token i in JSON at position 0
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/node-fetch/lib/index.js:273:32
+        at runMicrotasks (<anonymous>)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+      type: 'invalid-json'
+    }
+  },
+  level: 'error',
+  timestamp: '2023-01-17 17:19:22'
+}
+{
+  message: {
+    err: FetchError: invalid json response body at https://api.trello.com/1/cards/undefined?key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68 reason: Unexpected token i in JSON at position 0
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/node-fetch/lib/index.js:273:32
+        at runMicrotasks (<anonymous>)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+      type: 'invalid-json'
+    }
+  },
+  level: 'error',
+  timestamp: '2023-01-17 19:21:31'
+}
+{
+  message: {
+    getTasksCsvError: TypeError: Cannot convert undefined or null to object
+        at Function.keys (<anonymous>)
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/models/Task.ts:144:31)
+        at Generator.next (<anonymous>)
+        at fulfilled (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/models/Task.ts:5:58)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5)
+  },
+  level: 'error',
+  timestamp: '2023-01-18 11:01:33'
+}
+{
+  message: {
+    getTasksCsvError: TypeError: Cannot convert undefined or null to object
+        at Function.keys (<anonymous>)
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/models/Task.ts:144:31)
+        at Generator.next (<anonymous>)
+        at fulfilled (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/models/Task.ts:5:58)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5)
+  },
+  level: 'error',
+  timestamp: '2023-01-18 11:02:13'
+}
+{
+  message: {
+    getTasksCsvError: TypeError: Cannot convert undefined or null to object
+        at Function.keys (<anonymous>)
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/models/Task.ts:144:31)
+        at Generator.next (<anonymous>)
+        at fulfilled (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/models/Task.ts:5:58)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5)
+  },
+  level: 'error',
+  timestamp: '2023-01-18 11:18:22'
+}
+{
+  message: {
+    getTasksCsvError: TypeError: Cannot convert undefined or null to object
+        at Function.keys (<anonymous>)
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/models/Task.ts:144:31)
+        at Generator.next (<anonymous>)
+        at fulfilled (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/models/Task.ts:5:58)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5)
+  },
+  level: 'error',
+  timestamp: '2023-01-18 11:22:15'
+}
+{
+  message: {
+    _getTasksCsv: TypeError [ERR_INVALID_ARG_TYPE]: The "data" argument must be of type string or an instance of Buffer, TypedArray, or DataView. Received an instance of TypeError
+        at writeFile (node:fs:2123:5)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/task.ts:349:18
+        at Generator.next (<anonymous>)
+        at fulfilled (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/task.ts:5:58)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+      code: 'ERR_INVALID_ARG_TYPE'
+    }
+  },
+  level: 'error',
+  timestamp: '2023-01-18 11:22:15'
+}
+{
+  message: {
+    getTasksCsvError: TypeError: Cannot convert undefined or null to object
+        at Function.keys (<anonymous>)
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/models/Task.ts:144:31)
+        at Generator.next (<anonymous>)
+        at fulfilled (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/models/Task.ts:5:58)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5)
+  },
+  level: 'error',
+  timestamp: '2023-01-18 11:35:04'
+}
+{
+  message: {
+    _getTasksCsv: TypeError [ERR_INVALID_ARG_TYPE]: The "data" argument must be of type string or an instance of Buffer, TypedArray, or DataView. Received an instance of TypeError
+        at writeFile (node:fs:2123:5)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/task.ts:349:18
+        at Generator.next (<anonymous>)
+        at fulfilled (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/task.ts:5:58)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+      code: 'ERR_INVALID_ARG_TYPE'
+    }
+  },
+  level: 'error',
+  timestamp: '2023-01-18 11:35:04'
+}
+{
+  message: {
+    getTasksCsvError: TypeError: Cannot convert undefined or null to object
+        at Function.keys (<anonymous>)
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/models/Task.ts:144:31)
+        at Generator.next (<anonymous>)
+        at fulfilled (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/models/Task.ts:5:58)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5)
+  },
+  level: 'error',
+  timestamp: '2023-01-18 11:37:51'
+}
+{
+  message: {
+    handleGetTasksCsvError: TypeError: path must be absolute or specify root to res.sendFile
+        at ServerResponse.sendFile (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/express/lib/response.js:441:11)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/presentation/task/task.ts:158:11
+        at Generator.next (<anonymous>)
+        at fulfilled (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/presentation/task/task.ts:5:58)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5)
+  },
+  level: 'error',
+  timestamp: '2023-01-18 12:46:12'
+}
+{
+  message: {
+    handleGetTasksCsvError: TypeError: Cannot destructure property 'fileName' of '(intermediate value)' as it is undefined.
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/presentation/task/task.ts:161:13
+        at Generator.next (<anonymous>)
+        at fulfilled (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/presentation/task/task.ts:5:58)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5)
+  },
+  level: 'error',
+  timestamp: '2023-01-18 16:50:52'
+}
+{
+  message: {
+    handleGetTasksCsvError: Error: ENOENT: no such file or directory, open '/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/uploads/tasksSatatistics-d2ded638-d2d1-488b-8055-36c2fd337af1.csv'
+        at Object.openSync (node:fs:585:3)
+        at readFileSync (node:fs:453:35)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/presentation/task/task.ts:162:30
+        at Generator.next (<anonymous>)
+        at fulfilled (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/presentation/task/task.ts:5:58)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+      errno: -2,
+      syscall: 'open',
+      code: 'ENOENT',
+      path: '/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/uploads/tasksSatatistics-d2ded638-d2d1-488b-8055-36c2fd337af1.csv'
+    }
+  },
+  level: 'error',
+  timestamp: '2023-01-18 17:02:20'
+}
+{
+  message: {
+    handleGetTasksCsvError: Error: ENOENT: no such file or directory, open '/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/uploads/tasksSatatistics-2c5007fe-f352-4988-a2e3-561551c48d12.csv'
+        at Object.openSync (node:fs:585:3)
+        at readFileSync (node:fs:453:35)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/presentation/task/task.ts:162:30
+        at Generator.next (<anonymous>)
+        at fulfilled (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/presentation/task/task.ts:5:58)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+      errno: -2,
+      syscall: 'open',
+      code: 'ENOENT',
+      path: '/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/uploads/tasksSatatistics-2c5007fe-f352-4988-a2e3-561551c48d12.csv'
+    }
+  },
+  level: 'error',
+  timestamp: '2023-01-18 17:02:20'
+}
+{
+  message: {
+    handleGetTasksCsvError: Error: ENOENT: no such file or directory, open '/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/uploads/tasksSatatistics-f1a355a7-ab45-426c-ade8-29987f9c070b.csv'
+        at Object.openSync (node:fs:585:3)
+        at readFileSync (node:fs:453:35)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/presentation/task/task.ts:162:30
+        at Generator.next (<anonymous>)
+        at fulfilled (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/presentation/task/task.ts:5:58)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+      errno: -2,
+      syscall: 'open',
+      code: 'ENOENT',
+      path: '/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/uploads/tasksSatatistics-f1a355a7-ab45-426c-ade8-29987f9c070b.csv'
+    }
+  },
+  level: 'error',
+  timestamp: '2023-01-18 17:02:49'
+}
+{
+  message: {
+    handleGetTasksCsvError: Error: ENOENT: no such file or directory, open '/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/uploads/tasksSatatistics-42489c5b-e1e0-4588-8b71-f5624bca139a.csv'
+        at Object.openSync (node:fs:585:3)
+        at readFileSync (node:fs:453:35)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/presentation/task/task.ts:162:36
+        at Generator.next (<anonymous>)
+        at fulfilled (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/presentation/task/task.ts:5:58)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+      errno: -2,
+      syscall: 'open',
+      code: 'ENOENT',
+      path: '/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/uploads/tasksSatatistics-42489c5b-e1e0-4588-8b71-f5624bca139a.csv'
+    }
+  },
+  level: 'error',
+  timestamp: '2023-01-18 17:03:32'
+}
+{
+  message: {
+    handleGetTasksCsvError: Error: ENOENT: no such file or directory, open '/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/uploads/tasksSatatistics-48617a85-8ff9-4630-b882-f27ca005bb58.csv'
+        at Object.openSync (node:fs:585:3)
+        at readFileSync (node:fs:453:35)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/presentation/task/task.ts:162:36
+        at Generator.next (<anonymous>)
+        at fulfilled (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/presentation/task/task.ts:5:58)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+      errno: -2,
+      syscall: 'open',
+      code: 'ENOENT',
+      path: '/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/uploads/tasksSatatistics-48617a85-8ff9-4630-b882-f27ca005bb58.csv'
+    }
+  },
+  level: 'error',
+  timestamp: '2023-01-18 17:04:45'
+}
+{
+  message: {
+    getTrelloBoardError: FetchError: request to https://api.trello.com/1/organizations/ttpbetalocal/boards?fields=id,name&key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68 failed, reason: connect ETIMEDOUT 185.166.143.26:443
+        at ClientRequest.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/node-fetch/lib/index.js:1491:11)
+        at ClientRequest.emit (node:events:527:28)
+        at ClientRequest.emit (node:domain:475:12)
+        at TLSSocket.socketErrorListener (node:_http_client:454:9)
+        at TLSSocket.emit (node:events:527:28)
+        at TLSSocket.emit (node:domain:475:12)
+        at emitErrorNT (node:internal/streams/destroy:157:8)
+        at emitErrorCloseNT (node:internal/streams/destroy:122:3)
+        at processTicksAndRejections (node:internal/process/task_queues:83:21) {
+      type: 'system',
+      errno: 'ETIMEDOUT',
+      code: 'ETIMEDOUT'
+    }
+  },
+  level: 'error',
+  timestamp: '2023-01-18 17:07:29'
+}
+{
+  message: {
+    handleGetTasksCsvError: Error: ENOENT: no such file or directory, open '/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/uploads/tasksSatatistics-03f3eb61-5cf1-480a-b606-dfcaa833d8dd.csv'
+        at Object.openSync (node:fs:585:3)
+        at readFileSync (node:fs:453:35)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/presentation/task/task.ts:162:36
+        at Generator.next (<anonymous>)
+        at fulfilled (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/presentation/task/task.ts:5:58)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+      errno: -2,
+      syscall: 'open',
+      code: 'ENOENT',
+      path: '/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/uploads/tasksSatatistics-03f3eb61-5cf1-480a-b606-dfcaa833d8dd.csv'
+    }
+  },
+  level: 'error',
+  timestamp: '2023-01-18 17:27:30'
+}
+{
+  message: {
+    err: FetchError: invalid json response body at https://api.trello.com/1/cards/undefined?key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68 reason: Unexpected token i in JSON at position 0
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/node-fetch/lib/index.js:273:32
+        at runMicrotasks (<anonymous>)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+      type: 'invalid-json'
+    }
+  },
+  level: 'error',
+  timestamp: '2023-01-20 14:55:42'
+}
+{
+  message: {
+    err: FetchError: invalid json response body at https://api.trello.com/1/cards/undefined?key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68 reason: Unexpected token i in JSON at position 0
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/node-fetch/lib/index.js:273:32
+        at runMicrotasks (<anonymous>)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+      type: 'invalid-json'
+    }
+  },
+  level: 'error',
+  timestamp: '2023-01-21 06:28:55'
+}
+{
+  message: {
+    err: FetchError: invalid json response body at https://api.trello.com/1/cards/undefined?key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68 reason: Unexpected token i in JSON at position 0
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/node-fetch/lib/index.js:273:32
+        at runMicrotasks (<anonymous>)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+      type: 'invalid-json'
+    }
+  },
+  level: 'error',
+  timestamp: '2023-01-21 06:29:02'
+}
+{
+  message: {
+    err: FetchError: invalid json response body at https://api.trello.com/1/cards/undefined?key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68 reason: Unexpected token i in JSON at position 0
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/node-fetch/lib/index.js:273:32
+        at runMicrotasks (<anonymous>)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+      type: 'invalid-json'
+    }
+  },
+  level: 'error',
+  timestamp: '2023-01-21 06:29:11'
+}
+{
+  message: {
+    err: FetchError: invalid json response body at https://api.trello.com/1/cards/undefined?key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68 reason: Unexpected token i in JSON at position 0
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/node-fetch/lib/index.js:273:32
+        at runMicrotasks (<anonymous>)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+      type: 'invalid-json'
+    }
+  },
+  level: 'error',
+  timestamp: '2023-01-22 07:38:24'
+}
+{
+  message: {
+    err: FetchError: invalid json response body at https://api.trello.com/1/cards/undefined?key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68 reason: Unexpected token i in JSON at position 0
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/node-fetch/lib/index.js:273:32
+        at runMicrotasks (<anonymous>)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+      type: 'invalid-json'
+    }
+  },
+  level: 'error',
+  timestamp: '2023-01-22 07:38:44'
+}
+{
+  message: {
+    err: FetchError: invalid json response body at https://api.trello.com/1/cards/undefined?key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68 reason: Unexpected token i in JSON at position 0
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/node-fetch/lib/index.js:273:32
+        at runMicrotasks (<anonymous>)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+      type: 'invalid-json'
+    }
+  },
+  level: 'error',
+  timestamp: '2023-01-22 07:38:57'
+}
+{
+  message: {
+    err: FetchError: invalid json response body at https://api.trello.com/1/cards/undefined?key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68 reason: Unexpected token i in JSON at position 0
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/node-fetch/lib/index.js:273:32
+        at runMicrotasks (<anonymous>)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+      type: 'invalid-json'
+    }
+  },
+  level: 'error',
+  timestamp: '2023-01-22 07:39:04'
+}
+{
+  message: {
+    err: FetchError: invalid json response body at https://api.trello.com/1/cards/undefined?key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68 reason: Unexpected token i in JSON at position 0
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/node-fetch/lib/index.js:273:32
+        at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+      type: 'invalid-json'
+    }
+  },
+  level: 'error',
+  timestamp: '2023-01-22 09:39:03'
+}
+{
+  message: {
+    err: FetchError: invalid json response body at https://api.trello.com/1/cards/63ba8648dbbb4c0155f58b19?key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68 reason: Unexpected token L in JSON at position 0
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/node-fetch/lib/index.js:273:32
+        at runMicrotasks (<anonymous>)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+      type: 'invalid-json'
+    }
+  },
+  level: 'error',
+  timestamp: '2023-01-22 10:36:37'
+}
+{
+  message: {
+    err: FetchError: invalid json response body at https://api.trello.com/1/cards/63ba8648dbbb4c0155f58b19?key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68 reason: Unexpected token L in JSON at position 0
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/node-fetch/lib/index.js:273:32
+        at runMicrotasks (<anonymous>)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+      type: 'invalid-json'
+    }
+  },
+  level: 'error',
+  timestamp: '2023-01-22 10:39:54'
+}

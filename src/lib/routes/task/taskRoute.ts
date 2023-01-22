@@ -29,30 +29,28 @@ const {
   handleDeleteTask,
   handleDownloadAttachment,
   hanldeEditTasksProjectId,
+  handleGetTasksCSV,
 } = TaskReq;
 
 router.post(
-  `${CREATE_TASK}`,
+  CREATE_TASK,
   Authed,
   multer.array("attachedFiles"),
   handleCreateCard
 );
-router.get(`${DOWNLOAD_ATTACHMENT}`, handleDownloadAttachment);
+router.get(DOWNLOAD_ATTACHMENT, handleDownloadAttachment);
 router.post(
-  `${UPDATE_TASK}`,
+  UPDATE_TASK,
   Authed,
   multer.array("attachedFiles"),
   handleUpdateCard
 );
-router.get(`${GET_TASKS}`, Authed, handleGetTasks);
-router.post(`${FILTER_TASKS}`, Authed, handleFilterTasks);
-router.put(`${MOVE_TASK}`, Authed, handleMoveCard);
-router.put(`${EDIT_TASKS_PROJECTID}`, Authed, hanldeEditTasksProjectId);
-router.delete(`${DELETE_TASKS}`, Authed, handleDeleteTasks);
-router.delete(
-  `${DELETE_TASKS_BY_PROJECT_ID}`,
-  Authed,
-  handleDeleteTasksByProjectId
-);
-router.delete(`${DELETE_TASK}`, Authed, handleDeleteTask);
+router.get(GET_TASKS, Authed, handleGetTasks);
+router.post(FILTER_TASKS, Authed, handleFilterTasks);
+router.put(MOVE_TASK, Authed, handleMoveCard);
+router.put(EDIT_TASKS_PROJECTID, Authed, hanldeEditTasksProjectId);
+router.delete(DELETE_TASKS, Authed, handleDeleteTasks);
+router.delete(DELETE_TASKS_BY_PROJECT_ID, Authed, handleDeleteTasksByProjectId);
+router.delete(DELETE_TASK, Authed, handleDeleteTask);
+router.post(TASKS_CSV, Authed, handleGetTasksCSV);
 export default router;

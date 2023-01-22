@@ -68,6 +68,7 @@ const ProjectController = class ProjectController extends ProjectDB {
         idBoard: data.boardId,
         idList: data.listId,
       };
+      console.log({ data });
       if (data.projectDeadline) projectData.due = data.projectDeadline;
       if (data.startDate) projectData.start = data.startDate;
 
