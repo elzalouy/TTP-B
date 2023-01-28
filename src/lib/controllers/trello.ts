@@ -228,20 +228,24 @@ class TrelloActionsController {
 
   static async __createProject(listId: string, data: ProjectData) {
     try {
+      let response: any;
       let url = `cards/?idList=${listId}&name=${data.name}&`;
       if (data.projectDeadline)
         url = `${url}due=${new Date(data.projectDeadline).getTime()}&`;
       if (data.startDate)
         url = `${url}start=${new Date(data.startDate).getTime()}`;
-      url = `${url}attachments=true&`;
+      url = `${url}&attachments=true&`;
       let cardCreateApi = trelloApi(url);
       let cardResult = await fetch(cardCreateApi, {
         method: "POST",
         headers: {
           Accept: "application/json",
         },
+      }).then((res) => {
+        response = res;
+        return res;
       });
-      return await cardResult.json();
+      return await response.json();
     } catch (error) {
       logger.error({ createProjectCardError: error });
     }
@@ -256,7 +260,7 @@ class TrelloActionsController {
         url = `${url}due=${new Date(data.deadline).getTime()}&start=${new Date(
           data.start
         ).getTime()}&`;
-      url = `${url}attachments=true&`;
+      url = `${url}`;
       let cardCreateApi = trelloApi(url);
       let cardResult = await fetch(cardCreateApi, {
         method: "POST",

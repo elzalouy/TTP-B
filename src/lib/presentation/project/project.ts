@@ -17,7 +17,7 @@ const ProjectReq = class ProjectReq extends ProjectController {
       if (!projectData) {
         return res.status(400).send(customeError("project_missing_data", 400));
       }
-      let project = await super.createProject(projectData, decoded?.id);
+      let project = await super.createProject(projectData, decoded);
       if (project) {
         await Client.updateClientProcedure(projectData.clientId);
         return res.status(200).send(project);
@@ -37,7 +37,7 @@ const ProjectReq = class ProjectReq extends ProjectController {
       if (!projectData._id) {
         return res.status(400).send(customeError("project_missing_data", 400));
       }
-      let project = await super.updateProject(projectData, decoded.id);
+      let project = await super.updateProject(projectData, decoded);
       if (project) {
         await Client.updateClientProcedure(project.clientId);
         return res.status(200).send(project);

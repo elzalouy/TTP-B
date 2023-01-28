@@ -11,12 +11,12 @@ import Department from "../models/Department";
 import TrelloActionsController from "./trello";
 
 const ProjectController = class ProjectController extends ProjectDB {
-  static async createProject(data: ProjectData, userId: string) {
-    return await ProjectController.__createNewProject(data, userId);
+  static async createProject(data: ProjectData, user: any) {
+    return await ProjectController.__createNewProject(data, user);
   }
 
-  static async updateProject(data: ProjectData, userId: string) {
-    return await ProjectController.__updateProjectData(data, userId);
+  static async updateProject(data: ProjectData, user: any) {
+    return await ProjectController.__updateProjectData(data, user);
   }
 
   static async getProject(data: object) {
@@ -61,36 +61,33 @@ const ProjectController = class ProjectController extends ProjectDB {
     }
   }
 
-  static async __updateProjectData(data: ProjectData, userId: string) {
+  static async __updateProjectData(data: ProjectData, user: any) {
     try {
       let projectData: any = {
         name: data.name,
         idBoard: data.boardId,
         idList: data.listId,
       };
-      console.log({ data });
       if (data.projectDeadline) projectData.due = data.projectDeadline;
       if (data.startDate) projectData.start = data.startDate;
-
       projectQueue.push((cb) => {
         TrelloActionsController.__updateCard({
           cardId: data.cardId,
           data: projectData,
         });
-        NotificationController.__updateProjectNotification(data, userId);
+        NotificationController.__updateProjectNotification(data, user.id);
         cb(null, true);
       });
-      let project = await super.updateProjectDB(data);
+      let project = await super.updateProjectDB(data, user);
       return project;
     } catch (error) {
       logger.error({ updateProjectError: error });
     }
   }
 
-  static async __createNewProject(data: ProjectData, userId: string) {
+  static async __createNewProject(data: ProjectData, user: any) {
     try {
-      console.log({ data });
-      let project = await super.createProjectDB(data);
+      let project = await super.createProjectDB(data, user);
       projectQueue.push(async (cb) => {
         let dep = await Department.findOne({
           name: config.get("CreativeBoard"),
@@ -101,15 +98,19 @@ const ProjectController = class ProjectController extends ProjectDB {
             projectsList.listId,
             data
           );
-          let result = await super.updateProjectDB({
-            _id: project._id,
-            cardId: id,
-            boardId: dep.boardId,
-            listId: projectsList.listId,
-          });
+
+          let result = await super.updateProjectDB(
+            {
+              _id: project._id,
+              cardId: id,
+              boardId: dep.boardId,
+              listId: projectsList.listId,
+            },
+            user
+          );
           io.sockets.emit("update-projects", result);
         }
-        NotificationController.__creatProjectNotification(data, userId);
+        NotificationController.__creatProjectNotification(data, user.id);
         cb(null, true);
       });
       return project;

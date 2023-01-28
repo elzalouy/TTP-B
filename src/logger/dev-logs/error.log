@@ -1687,3 +1687,1242 @@
   level: 'error',
   timestamp: '2023-01-22 10:39:54'
 }
+{
+  message: {
+    err: FetchError: invalid json response body at https://api.trello.com/1/cards/undefined?key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68 reason: Unexpected token i in JSON at position 0
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/node-fetch/lib/index.js:273:32
+        at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+      type: 'invalid-json'
+    }
+  },
+  level: 'error',
+  timestamp: '2023-01-23 13:59:26'
+}
+{
+  message: {
+    err: FetchError: invalid json response body at https://api.trello.com/1/cards/undefined?key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68 reason: Unexpected token i in JSON at position 0
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/node-fetch/lib/index.js:273:32
+        at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+      type: 'invalid-json'
+    }
+  },
+  level: 'error',
+  timestamp: '2023-01-23 13:59:58'
+}
+{
+  message: {
+    err: FetchError: invalid json response body at https://api.trello.com/1/cards/undefined?key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68 reason: Unexpected token i in JSON at position 0
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/node-fetch/lib/index.js:273:32
+        at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+      type: 'invalid-json'
+    }
+  },
+  level: 'error',
+  timestamp: '2023-01-23 14:00:27'
+}
+{
+  message: {
+    getTrelloBoardError: FetchError: request to https://api.trello.com/1/organizations/ttpbetalocal/boards?fields=id,name&key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68 failed, reason: getaddrinfo EAI_AGAIN api.trello.com
+        at ClientRequest.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/node-fetch/lib/index.js:1491:11)
+        at ClientRequest.emit (node:events:527:28)
+        at ClientRequest.emit (node:domain:475:12)
+        at TLSSocket.socketErrorListener (node:_http_client:454:9)
+        at TLSSocket.emit (node:events:527:28)
+        at TLSSocket.emit (node:domain:475:12)
+        at emitErrorNT (node:internal/streams/destroy:157:8)
+        at emitErrorCloseNT (node:internal/streams/destroy:122:3)
+        at processTicksAndRejections (node:internal/process/task_queues:83:21) {
+      type: 'system',
+      errno: 'EAI_AGAIN',
+      code: 'EAI_AGAIN'
+    }
+  },
+  level: 'error',
+  timestamp: '2023-01-23 16:14:47'
+}
+{
+  message: {
+    getTrelloBoardError: FetchError: request to https://api.trello.com/1/organizations/ttpbetalocal/boards?fields=id,name&key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68 failed, reason: getaddrinfo EAI_AGAIN api.trello.com
+        at ClientRequest.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/node-fetch/lib/index.js:1491:11)
+        at ClientRequest.emit (node:events:527:28)
+        at ClientRequest.emit (node:domain:475:12)
+        at TLSSocket.socketErrorListener (node:_http_client:454:9)
+        at TLSSocket.emit (node:events:527:28)
+        at TLSSocket.emit (node:domain:475:12)
+        at emitErrorNT (node:internal/streams/destroy:157:8)
+        at emitErrorCloseNT (node:internal/streams/destroy:122:3)
+        at processTicksAndRejections (node:internal/process/task_queues:83:21) {
+      type: 'system',
+      errno: 'EAI_AGAIN',
+      code: 'EAI_AGAIN'
+    }
+  },
+  level: 'error',
+  timestamp: '2023-01-23 16:15:42'
+}
+{
+  message: {
+    createNewBoardError: FetchError: request to https://api.trello.com/1/boards/?name=dev%20/%20TTP%20Creative&prefs_background=orange&defaultLists=false&idOrganization=ttpbetalocal&key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68 failed, reason: getaddrinfo EAI_AGAIN api.trello.com
+        at ClientRequest.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/node-fetch/lib/index.js:1491:11)
+        at ClientRequest.emit (node:events:527:28)
+        at ClientRequest.emit (node:domain:475:12)
+        at TLSSocket.socketErrorListener (node:_http_client:454:9)
+        at TLSSocket.emit (node:events:527:28)
+        at TLSSocket.emit (node:domain:475:12)
+        at emitErrorNT (node:internal/streams/destroy:157:8)
+        at emitErrorCloseNT (node:internal/streams/destroy:122:3)
+        at processTicksAndRejections (node:internal/process/task_queues:83:21) {
+      type: 'system',
+      errno: 'EAI_AGAIN',
+      code: 'EAI_AGAIN'
+    }
+  },
+  level: 'error',
+  timestamp: '2023-01-23 16:16:02'
+}
+{
+  message: {
+    createDepartmentBoardError: TypeError: Cannot read properties of undefined (reading 'id')
+        at model.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/models/Department.ts:252:15)
+        at Generator.next (<anonymous>)
+        at fulfilled (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/models/Department.ts:5:58)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5)
+  },
+  level: 'error',
+  timestamp: '2023-01-23 16:16:02'
+}
+{
+  message: {
+    createDepartmentError: TypeError: Cannot destructure property 'teams' of '(intermediate value)' as it is undefined.
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/department.ts:92:15)
+        at Generator.next (<anonymous>)
+        at fulfilled (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/department.ts:5:58)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5)
+  },
+  level: 'error',
+  timestamp: '2023-01-23 16:16:02'
+}
+{
+  message: {
+    err: FetchError: invalid json response body at https://api.trello.com/1/cards/undefined?key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68 reason: Unexpected token i in JSON at position 0
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/node-fetch/lib/index.js:273:32
+        at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+      type: 'invalid-json'
+    }
+  },
+  level: 'error',
+  timestamp: '2023-01-25 13:26:16'
+}
+{
+  message: {
+    err: FetchError: invalid json response body at https://api.trello.com/1/cards/undefined?key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68 reason: Unexpected token i in JSON at position 0
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/node-fetch/lib/index.js:273:32
+        at runMicrotasks (<anonymous>)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+      type: 'invalid-json'
+    }
+  },
+  level: 'error',
+  timestamp: '2023-01-25 13:26:48'
+}
+{
+  message: {
+    err: FetchError: invalid json response body at https://api.trello.com/1/cards/undefined?key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68 reason: Unexpected token i in JSON at position 0
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/node-fetch/lib/index.js:273:32
+        at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+      type: 'invalid-json'
+    }
+  },
+  level: 'error',
+  timestamp: '2023-01-25 13:30:24'
+}
+{
+  message: {
+    err: FetchError: invalid json response body at https://api.trello.com/1/cards/undefined?key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68 reason: Unexpected token i in JSON at position 0
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/node-fetch/lib/index.js:273:32
+        at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+      type: 'invalid-json'
+    }
+  },
+  level: 'error',
+  timestamp: '2023-01-25 13:32:57'
+}
+{
+  message: {
+    err: FetchError: invalid json response body at https://api.trello.com/1/cards/63b9423b598d850342411125?key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68 reason: Unexpected token T in JSON at position 0
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/node-fetch/lib/index.js:273:32
+        at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+      type: 'invalid-json'
+    }
+  },
+  level: 'error',
+  timestamp: '2023-01-25 13:39:14'
+}
+{
+  message: {
+    err: FetchError: invalid json response body at https://api.trello.com/1/cards/63b9423b598d850342411125?key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68 reason: Unexpected token T in JSON at position 0
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/node-fetch/lib/index.js:273:32
+        at runMicrotasks (<anonymous>)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+      type: 'invalid-json'
+    }
+  },
+  level: 'error',
+  timestamp: '2023-01-25 13:40:18'
+}
+{
+  message: {
+    updateProjectDBError: TypeError: project.save is not a function
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/dbCalls/project/project.ts:133:33)
+        at Generator.next (<anonymous>)
+        at fulfilled (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/dbCalls/project/project.ts:5:58)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5)
+  },
+  level: 'error',
+  timestamp: '2023-01-25 14:26:20'
+}
+{
+  message: {
+    updateProjectDBError: TypeError: project.save is not a function
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/dbCalls/project/project.ts:133:33)
+        at Generator.next (<anonymous>)
+        at fulfilled (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/dbCalls/project/project.ts:5:58)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5)
+  },
+  level: 'error',
+  timestamp: '2023-01-25 14:28:15'
+}
+{
+  message: {
+    err: FetchError: invalid json response body at https://api.trello.com/1/cards/63b9423b598d850342411125?key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68 reason: Unexpected token T in JSON at position 0
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/node-fetch/lib/index.js:273:32
+        at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+      type: 'invalid-json'
+    }
+  },
+  level: 'error',
+  timestamp: '2023-01-25 14:39:57'
+}
+{
+  message: {
+    err: FetchError: invalid json response body at https://api.trello.com/1/cards/63b9423b598d850342411125?key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68 reason: Unexpected token T in JSON at position 0
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/node-fetch/lib/index.js:273:32
+        at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+      type: 'invalid-json'
+    }
+  },
+  level: 'error',
+  timestamp: '2023-01-25 14:40:29'
+}
+{
+  message: {
+    err: FetchError: invalid json response body at https://api.trello.com/1/cards/63b9423b598d850342411125?key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68 reason: Unexpected token T in JSON at position 0
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/node-fetch/lib/index.js:273:32
+        at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+      type: 'invalid-json'
+    }
+  },
+  level: 'error',
+  timestamp: '2023-01-25 14:46:28'
+}
+{
+  message: {
+    err: FetchError: invalid json response body at https://api.trello.com/1/cards/63b9423b598d850342411125?key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68 reason: Unexpected token T in JSON at position 0
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/node-fetch/lib/index.js:273:32
+        at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+      type: 'invalid-json'
+    }
+  },
+  level: 'error',
+  timestamp: '2023-01-25 14:47:17'
+}
+{
+  message: {
+    err: FetchError: invalid json response body at https://api.trello.com/1/cards/63b9423b598d850342411125?key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68 reason: Unexpected token T in JSON at position 0
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/node-fetch/lib/index.js:273:32
+        at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+      type: 'invalid-json'
+    }
+  },
+  level: 'error',
+  timestamp: '2023-01-25 14:49:01'
+}
+{
+  message: {
+    err: FetchError: invalid json response body at https://api.trello.com/1/cards/63b9423b598d850342411125?key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68 reason: Unexpected token T in JSON at position 0
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/node-fetch/lib/index.js:273:32
+        at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+      type: 'invalid-json'
+    }
+  },
+  level: 'error',
+  timestamp: '2023-01-25 14:51:20'
+}
+{
+  message: {
+    err: FetchError: invalid json response body at https://api.trello.com/1/cards/63b9423b598d850342411125?key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68 reason: Unexpected token T in JSON at position 0
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/node-fetch/lib/index.js:273:32
+        at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+      type: 'invalid-json'
+    }
+  },
+  level: 'error',
+  timestamp: '2023-01-25 14:51:53'
+}
+{
+  message: {
+    err: FetchError: invalid json response body at https://api.trello.com/1/cards/63b9423b598d850342411125?key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68 reason: Unexpected token T in JSON at position 0
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/node-fetch/lib/index.js:273:32
+        at runMicrotasks (<anonymous>)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+      type: 'invalid-json'
+    }
+  },
+  level: 'error',
+  timestamp: '2023-01-25 15:37:58'
+}
+{
+  message: {
+    err: FetchError: invalid json response body at https://api.trello.com/1/cards/63b9423b598d850342411125?key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68 reason: Unexpected token T in JSON at position 0
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/node-fetch/lib/index.js:273:32
+        at runMicrotasks (<anonymous>)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+      type: 'invalid-json'
+    }
+  },
+  level: 'error',
+  timestamp: '2023-01-25 15:38:14'
+}
+{
+  message: {
+    err: FetchError: invalid json response body at https://api.trello.com/1/cards/63b9423b598d850342411125?key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68 reason: Unexpected token T in JSON at position 0
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/node-fetch/lib/index.js:273:32
+        at runMicrotasks (<anonymous>)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+      type: 'invalid-json'
+    }
+  },
+  level: 'error',
+  timestamp: '2023-01-25 15:38:50'
+}
+{
+  message: {
+    err: FetchError: invalid json response body at https://api.trello.com/1/cards/63b9423b598d850342411125?key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68 reason: Unexpected token T in JSON at position 0
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/node-fetch/lib/index.js:273:32
+        at runMicrotasks (<anonymous>)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+      type: 'invalid-json'
+    }
+  },
+  level: 'error',
+  timestamp: '2023-01-25 15:40:11'
+}
+{
+  message: {
+    err: FetchError: invalid json response body at https://api.trello.com/1/cards/63b9423b598d850342411125?key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68 reason: Unexpected token T in JSON at position 0
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/node-fetch/lib/index.js:273:32
+        at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+      type: 'invalid-json'
+    }
+  },
+  level: 'error',
+  timestamp: '2023-01-25 15:59:40'
+}
+{
+  message: {
+    err: FetchError: invalid json response body at https://api.trello.com/1/cards/63b9423b598d850342411125?key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68 reason: Unexpected token T in JSON at position 0
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/node-fetch/lib/index.js:273:32
+        at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+      type: 'invalid-json'
+    }
+  },
+  level: 'error',
+  timestamp: '2023-01-25 16:02:27'
+}
+{
+  message: {
+    getProjectDBError: MongoServerError: Invalid $project :: caused by :: Cannot do exclusion on field deadlineChain in inclusion projection
+        at Connection.onMessage (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/mongodb/src/cmap/connection.ts:440:20)
+        at MessageStream.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/mongodb/src/cmap/connection.ts:267:56)
+        at MessageStream.emit (node:events:527:28)
+        at MessageStream.emit (node:domain:475:12)
+        at processIncomingData (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/mongodb/src/cmap/message_stream.ts:168:12)
+        at MessageStream._write (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/mongodb/src/cmap/message_stream.ts:65:5)
+        at writeOrBuffer (node:internal/streams/writable:389:12)
+        at _write (node:internal/streams/writable:330:10)
+        at MessageStream.Writable.write (node:internal/streams/writable:334:10)
+        at Socket.ondata (node:internal/streams/readable:754:22) {
+      ok: 0,
+      code: 31254,
+      codeName: 'Location31254',
+      [Symbol(errorLabels)]: Set(0) {}
+    }
+  },
+  level: 'error',
+  timestamp: '2023-01-25 16:34:20'
+}
+{
+  message: {
+    getProjectDBError: MongoServerError: Invalid $project :: caused by :: Cannot do exclusion on field deadlineChain in inclusion projection
+        at Connection.onMessage (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/mongodb/src/cmap/connection.ts:440:20)
+        at MessageStream.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/mongodb/src/cmap/connection.ts:267:56)
+        at MessageStream.emit (node:events:527:28)
+        at MessageStream.emit (node:domain:475:12)
+        at processIncomingData (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/mongodb/src/cmap/message_stream.ts:168:12)
+        at MessageStream._write (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/mongodb/src/cmap/message_stream.ts:65:5)
+        at writeOrBuffer (node:internal/streams/writable:389:12)
+        at _write (node:internal/streams/writable:330:10)
+        at MessageStream.Writable.write (node:internal/streams/writable:334:10)
+        at Socket.ondata (node:internal/streams/readable:754:22) {
+      ok: 0,
+      code: 31254,
+      codeName: 'Location31254',
+      [Symbol(errorLabels)]: Set(0) {}
+    }
+  },
+  level: 'error',
+  timestamp: '2023-01-25 16:34:39'
+}
+{
+  message: {
+    getProjectDBError: MongoServerError: Invalid $project :: caused by :: Cannot do exclusion on field deadlineChain in inclusion projection
+        at Connection.onMessage (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/mongodb/src/cmap/connection.ts:440:20)
+        at MessageStream.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/mongodb/src/cmap/connection.ts:267:56)
+        at MessageStream.emit (node:events:527:28)
+        at MessageStream.emit (node:domain:475:12)
+        at processIncomingData (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/mongodb/src/cmap/message_stream.ts:168:12)
+        at MessageStream._write (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/mongodb/src/cmap/message_stream.ts:65:5)
+        at writeOrBuffer (node:internal/streams/writable:389:12)
+        at _write (node:internal/streams/writable:330:10)
+        at MessageStream.Writable.write (node:internal/streams/writable:334:10)
+        at Socket.ondata (node:internal/streams/readable:754:22) {
+      ok: 0,
+      code: 31254,
+      codeName: 'Location31254',
+      [Symbol(errorLabels)]: Set(0) {}
+    }
+  },
+  level: 'error',
+  timestamp: '2023-01-25 16:44:53'
+}
+{
+  message: {
+    updateTaskDBError: TypeError: Cannot read properties of undefined (reading 'push')
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/dbCalls/tasks/tasks.ts:219:28)
+        at Generator.next (<anonymous>)
+        at fulfilled (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/dbCalls/tasks/tasks.ts:28:58)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5)
+  },
+  level: 'error',
+  timestamp: '2023-01-26 12:54:46'
+}
+{
+  message: {
+    updateTaskDBError: TypeError: Cannot read properties of undefined (reading 'push')
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/dbCalls/tasks/tasks.ts:219:28)
+        at Generator.next (<anonymous>)
+        at fulfilled (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/dbCalls/tasks/tasks.ts:28:58)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5)
+  },
+  level: 'error',
+  timestamp: '2023-01-26 13:33:11'
+}
+{
+  message: {
+    createWebHookError: FetchError: request to https://api.trello.com/1/webhooks/?idModel=63b9420bdc618601f09c835d&callbackURL=https://712f-154-239-150-20.ngrok.io/api/webhookUpdate&key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68 failed, reason: getaddrinfo EAI_AGAIN api.trello.com
+        at ClientRequest.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/node-fetch/lib/index.js:1491:11)
+        at ClientRequest.emit (node:events:527:28)
+        at ClientRequest.emit (node:domain:475:12)
+        at TLSSocket.socketErrorListener (node:_http_client:454:9)
+        at TLSSocket.emit (node:events:527:28)
+        at TLSSocket.emit (node:domain:475:12)
+        at emitErrorNT (node:internal/streams/destroy:157:8)
+        at emitErrorCloseNT (node:internal/streams/destroy:122:3)
+        at processTicksAndRejections (node:internal/process/task_queues:83:21) {
+      type: 'system',
+      errno: 'EAI_AGAIN',
+      code: 'EAI_AGAIN'
+    }
+  },
+  level: 'error',
+  timestamp: '2023-01-26 13:38:23'
+}
+{
+  message: {
+    createWebHookError: FetchError: request to https://api.trello.com/1/webhooks/?idModel=63cce8993851f700578ae5e6&callbackURL=https://712f-154-239-150-20.ngrok.io/api/webhookUpdate&key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68 failed, reason: getaddrinfo EAI_AGAIN api.trello.com
+        at ClientRequest.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/node-fetch/lib/index.js:1491:11)
+        at ClientRequest.emit (node:events:527:28)
+        at ClientRequest.emit (node:domain:475:12)
+        at TLSSocket.socketErrorListener (node:_http_client:454:9)
+        at TLSSocket.emit (node:events:527:28)
+        at TLSSocket.emit (node:domain:475:12)
+        at emitErrorNT (node:internal/streams/destroy:157:8)
+        at emitErrorCloseNT (node:internal/streams/destroy:122:3)
+        at processTicksAndRejections (node:internal/process/task_queues:83:21) {
+      type: 'system',
+      errno: 'EAI_AGAIN',
+      code: 'EAI_AGAIN'
+    }
+  },
+  level: 'error',
+  timestamp: '2023-01-26 13:38:23'
+}
+{
+  message: {
+    updateTaskDBError: TypeError: Cannot read properties of undefined (reading 'push')
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/dbCalls/tasks/tasks.ts:219:28)
+        at Generator.next (<anonymous>)
+        at fulfilled (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/dbCalls/tasks/tasks.ts:28:58)
+        at runMicrotasks (<anonymous>)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5)
+  },
+  level: 'error',
+  timestamp: '2023-01-26 14:11:12'
+}
+{
+  message: {
+    err: FetchError: invalid json response body at https://api.trello.com/1/cards/63b9423b598d850342411125?key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68 reason: Unexpected token T in JSON at position 0
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/node-fetch/lib/index.js:273:32
+        at runMicrotasks (<anonymous>)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+      type: 'invalid-json'
+    }
+  },
+  level: 'error',
+  timestamp: '2023-01-26 14:34:06'
+}
+{
+  message: {
+    err: FetchError: invalid json response body at https://api.trello.com/1/cards/63b9423b598d850342411125?key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68 reason: Unexpected token T in JSON at position 0
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/node-fetch/lib/index.js:273:32
+        at runMicrotasks (<anonymous>)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+      type: 'invalid-json'
+    }
+  },
+  level: 'error',
+  timestamp: '2023-01-26 14:34:13'
+}
+{
+  message: {
+    err: FetchError: invalid json response body at https://api.trello.com/1/cards/63b9423b598d850342411125?key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68 reason: Unexpected token T in JSON at position 0
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/node-fetch/lib/index.js:273:32
+        at runMicrotasks (<anonymous>)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+      type: 'invalid-json'
+    }
+  },
+  level: 'error',
+  timestamp: '2023-01-26 14:34:14'
+}
+{
+  message: {
+    err: FetchError: invalid json response body at https://api.trello.com/1/cards/63b9423b598d850342411125?key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68 reason: Unexpected token T in JSON at position 0
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/node-fetch/lib/index.js:273:32
+        at runMicrotasks (<anonymous>)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+      type: 'invalid-json'
+    }
+  },
+  level: 'error',
+  timestamp: '2023-01-26 14:37:39'
+}
+{
+  message: {
+    err: FetchError: invalid json response body at https://api.trello.com/1/cards/null?key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68 reason: Unexpected token i in JSON at position 0
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/node-fetch/lib/index.js:273:32
+        at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+      type: 'invalid-json'
+    }
+  },
+  level: 'error',
+  timestamp: '2023-01-26 14:51:24'
+}
+{
+  message: {
+    err: FetchError: invalid json response body at https://api.trello.com/1/cards/63b9423b598d850342411125?key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68 reason: Unexpected token T in JSON at position 0
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/node-fetch/lib/index.js:273:32
+        at runMicrotasks (<anonymous>)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+      type: 'invalid-json'
+    }
+  },
+  level: 'error',
+  timestamp: '2023-01-26 14:51:38'
+}
+{
+  message: {
+    err: FetchError: invalid json response body at https://api.trello.com/1/cards/63b9423b598d850342411125?key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68 reason: Unexpected token T in JSON at position 0
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/node-fetch/lib/index.js:273:32
+        at runMicrotasks (<anonymous>)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+      type: 'invalid-json'
+    }
+  },
+  level: 'error',
+  timestamp: '2023-01-26 14:53:44'
+}
+{
+  message: {
+    err: FetchError: invalid json response body at https://api.trello.com/1/cards/63b9423b598d850342411125?key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68 reason: Unexpected token T in JSON at position 0
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/node-fetch/lib/index.js:273:32
+        at runMicrotasks (<anonymous>)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+      type: 'invalid-json'
+    }
+  },
+  level: 'error',
+  timestamp: '2023-01-26 14:53:45'
+}
+{
+  message: {
+    err: FetchError: invalid json response body at https://api.trello.com/1/cards/63b9423b598d850342411125?key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68 reason: Unexpected token T in JSON at position 0
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/node-fetch/lib/index.js:273:32
+        at runMicrotasks (<anonymous>)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+      type: 'invalid-json'
+    }
+  },
+  level: 'error',
+  timestamp: '2023-01-26 14:53:46'
+}
+{
+  message: {
+    err: FetchError: invalid json response body at https://api.trello.com/1/cards/63b9423b598d850342411125?key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68 reason: Unexpected token T in JSON at position 0
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/node-fetch/lib/index.js:273:32
+        at runMicrotasks (<anonymous>)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+      type: 'invalid-json'
+    }
+  },
+  level: 'error',
+  timestamp: '2023-01-26 15:01:00'
+}
+{
+  message: {
+    err: FetchError: invalid json response body at https://api.trello.com/1/cards/null?key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68 reason: Unexpected token i in JSON at position 0
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/node-fetch/lib/index.js:273:32
+        at runMicrotasks (<anonymous>)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+      type: 'invalid-json'
+    }
+  },
+  level: 'error',
+  timestamp: '2023-01-26 15:32:49'
+}
+{
+  message: {
+    err: FetchError: invalid json response body at https://api.trello.com/1/cards/null?key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68 reason: Unexpected token i in JSON at position 0
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/node-fetch/lib/index.js:273:32
+        at runMicrotasks (<anonymous>)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+      type: 'invalid-json'
+    }
+  },
+  level: 'error',
+  timestamp: '2023-01-26 15:33:02'
+}
+{
+  message: {
+    err: FetchError: invalid json response body at https://api.trello.com/1/cards/null?key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68 reason: Unexpected token i in JSON at position 0
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/node-fetch/lib/index.js:273:32
+        at runMicrotasks (<anonymous>)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+      type: 'invalid-json'
+    }
+  },
+  level: 'error',
+  timestamp: '2023-01-26 15:33:29'
+}
+{
+  message: {
+    err: FetchError: invalid json response body at https://api.trello.com/1/cards/null?key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68 reason: Unexpected token i in JSON at position 0
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/node-fetch/lib/index.js:273:32
+        at runMicrotasks (<anonymous>)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+      type: 'invalid-json'
+    }
+  },
+  level: 'error',
+  timestamp: '2023-01-26 15:33:41'
+}
+{
+  message: {
+    err: FetchError: invalid json response body at https://api.trello.com/1/cards/null?key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68 reason: Unexpected token i in JSON at position 0
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/node-fetch/lib/index.js:273:32
+        at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+      type: 'invalid-json'
+    }
+  },
+  level: 'error',
+  timestamp: '2023-01-26 15:37:04'
+}
+{
+  message: {
+    createProjectCardError: FetchError: request to https://api.trello.com/1/cards/?idList=63d28328d3447c7a63ec8cf4&name=Ezzat%20Elzalouy-project%201&due=1684965600000&start=1674684000000attachments=true&key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68 failed, reason: getaddrinfo EAI_AGAIN api.trello.com
+        at ClientRequest.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/node-fetch/lib/index.js:1491:11)
+        at ClientRequest.emit (node:events:527:28)
+        at ClientRequest.emit (node:domain:475:12)
+        at TLSSocket.socketErrorListener (node:_http_client:454:9)
+        at TLSSocket.emit (node:events:527:28)
+        at TLSSocket.emit (node:domain:475:12)
+        at emitErrorNT (node:internal/streams/destroy:157:8)
+        at emitErrorCloseNT (node:internal/streams/destroy:122:3)
+        at processTicksAndRejections (node:internal/process/task_queues:83:21) {
+      type: 'system',
+      errno: 'EAI_AGAIN',
+      code: 'EAI_AGAIN'
+    }
+  },
+  level: 'error',
+  timestamp: '2023-01-26 15:50:09'
+}
+{
+  message: {
+    createProjectCardError: TypeError: body used already for: https://api.trello.com/1/cards/?idList=63d28328d3447c7a63ec8cf4&name=Nawaf%20Elmohsem-new%20name&due=1675202400000&start=1674684000000attachments=true&key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68
+        at Response.consumeBody (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/node-fetch/lib/index.js:344:30)
+        at Response.json (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/node-fetch/lib/index.js:269:22)
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:245:31)
+        at Generator.next (<anonymous>)
+        at fulfilled (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:5:58)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5)
+  },
+  level: 'error',
+  timestamp: '2023-01-26 16:13:44'
+}
+{
+  message: {
+    __createTaskByTrelloDBError: Error: tasks validation failed: status: `projects` is not a valid enum value for path `status`.
+        at ValidationError.inspect (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/mongoose/lib/error/validation.js:48:26)
+        at formatValue (node:internal/util/inspect:782:19)
+        at formatProperty (node:internal/util/inspect:1819:11)
+        at formatRaw (node:internal/util/inspect:1030:9)
+        at formatValue (node:internal/util/inspect:817:10)
+        at formatProperty (node:internal/util/inspect:1819:11)
+        at formatRaw (node:internal/util/inspect:1030:9)
+        at formatValue (node:internal/util/inspect:817:10)
+        at inspect (node:internal/util/inspect:347:10)
+        at Format.transform (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/logform/pretty-print.js:27:19) {
+      errors: {
+        status: ValidatorError: `projects` is not a valid enum value for path `status`.
+            at validate (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/mongoose/lib/schematype.js:1330:13)
+            at SchemaString.SchemaType.doValidate (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/mongoose/lib/schematype.js:1314:7)
+            at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/mongoose/lib/document.js:2751:18
+            at processTicksAndRejections (node:internal/process/task_queues:78:11) {
+          properties: {
+            validator: [Function (anonymous)],
+            message: '`projects` is not a valid enum value for path `status`.',
+            type: 'enum',
+            enumValues: [
+              'In Progress',
+              'Shared',
+              'Done',
+              'Tasks Board',
+              'Not Clear',
+              'Cancled',
+              'Review',
+              'Archived'
+            ],
+            path: 'status',
+            value: 'projects'
+          },
+          kind: 'enum',
+          path: 'status',
+          value: 'projects',
+          reason: undefined,
+          [Symbol(mongoose:validatorError)]: true
+        }
+      },
+      _message: 'tasks validation failed'
+    }
+  },
+  level: 'error',
+  timestamp: '2023-01-26 16:31:08'
+}
+{
+  message: {
+    createProjectCardError: TypeError: body used already for: https://api.trello.com/1/cards/?idList=63d28328d3447c7a63ec8cf4&name=Ezzat%20Elzalouy-project&due=1675116000000&start=1673301600000attachments=true&key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68
+        at Response.consumeBody (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/node-fetch/lib/index.js:344:30)
+        at Response.json (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/node-fetch/lib/index.js:269:22)
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:245:31)
+        at Generator.next (<anonymous>)
+        at fulfilled (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:5:58)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5)
+  },
+  level: 'error',
+  timestamp: '2023-01-26 16:40:39'
+}
+{
+  message: {
+    createProjectCardError: TypeError: body used already for: https://api.trello.com/1/cards/?idList=63d28328d3447c7a63ec8cf4&name=Ezzat%20Elzalouy-project&due=1675116000000&start=1672524000000&attachments=true&key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68
+        at Response.consumeBody (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/node-fetch/lib/index.js:344:30)
+        at Response.json (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/node-fetch/lib/index.js:269:22)
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:245:31)
+        at Generator.next (<anonymous>)
+        at fulfilled (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:5:58)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5)
+  },
+  level: 'error',
+  timestamp: '2023-01-26 16:48:55'
+}
+{
+  message: {
+    err: FetchError: invalid json response body at https://api.trello.com/1/cards/null?key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68 reason: Unexpected token i in JSON at position 0
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/node-fetch/lib/index.js:273:32
+        at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+      type: 'invalid-json'
+    }
+  },
+  level: 'error',
+  timestamp: '2023-01-26 16:51:06'
+}
+{
+  message: {
+    err: FetchError: invalid json response body at https://api.trello.com/1/cards/null?key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68 reason: Unexpected token i in JSON at position 0
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/node-fetch/lib/index.js:273:32
+        at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+      type: 'invalid-json'
+    }
+  },
+  level: 'error',
+  timestamp: '2023-01-26 16:51:33'
+}
+{
+  message: {
+    createProjectCardError: TypeError: body used already for: https://api.trello.com/1/cards/?idList=63d28328d3447c7a63ec8cf4&name=Ezzat%20Elzalouy-project&due=1678312800000&start=1673820000000&attachments=true&key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68
+        at Response.consumeBody (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/node-fetch/lib/index.js:344:30)
+        at Response.json (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/node-fetch/lib/index.js:269:22)
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:245:31)
+        at Generator.next (<anonymous>)
+        at fulfilled (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:5:58)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5)
+  },
+  level: 'error',
+  timestamp: '2023-01-26 16:52:51'
+}
+{
+  message: {
+    createProjectCardError: TypeError: body used already for: https://api.trello.com/1/cards/?idList=63d28328d3447c7a63ec8cf4&name=Nawaf%20Elmohsem-project&due=1675202400000&start=1674684000000&attachments=true&key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68
+        at Response.consumeBody (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/node-fetch/lib/index.js:344:30)
+        at Response.json (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/node-fetch/lib/index.js:269:22)
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:245:31)
+        at Generator.next (<anonymous>)
+        at fulfilled (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:5:58)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5)
+  },
+  level: 'error',
+  timestamp: '2023-01-26 16:55:28'
+}
+{
+  message: {
+    createProjectCardError: TypeError: body used already for: https://api.trello.com/1/cards/?idList=63d28328d3447c7a63ec8cf4&name=Nawaf%20Elmohsem-project&due=1674079200000&start=1673733600000&attachments=true&key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68
+        at Response.consumeBody (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/node-fetch/lib/index.js:344:30)
+        at Response.json (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/node-fetch/lib/index.js:269:22)
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:246:33)
+        at Generator.next (<anonymous>)
+        at fulfilled (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:5:58)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5)
+  },
+  level: 'error',
+  timestamp: '2023-01-26 16:59:07'
+}
+{
+  message: {
+    createProjectCardError: TypeError: body used already for: https://api.trello.com/1/cards/?idList=63d28328d3447c7a63ec8cf4&name=Nawaf%20Elmohsem-project%20&due=1675202400000&start=1674684000000&attachments=true&key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68
+        at Response.consumeBody (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/node-fetch/lib/index.js:344:30)
+        at Response.json (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/node-fetch/lib/index.js:269:22)
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:248:33)
+        at Generator.next (<anonymous>)
+        at fulfilled (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:5:58)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5)
+  },
+  level: 'error',
+  timestamp: '2023-01-26 17:02:52'
+}
+{
+  message: {
+    __createTaskByTrelloDBError: Error: tasks validation failed: status: `projects` is not a valid enum value for path `status`.
+        at ValidationError.inspect (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/mongoose/lib/error/validation.js:48:26)
+        at formatValue (node:internal/util/inspect:782:19)
+        at formatProperty (node:internal/util/inspect:1819:11)
+        at formatRaw (node:internal/util/inspect:1030:9)
+        at formatValue (node:internal/util/inspect:817:10)
+        at formatProperty (node:internal/util/inspect:1819:11)
+        at formatRaw (node:internal/util/inspect:1030:9)
+        at formatValue (node:internal/util/inspect:817:10)
+        at inspect (node:internal/util/inspect:347:10)
+        at Format.transform (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/logform/pretty-print.js:27:19) {
+      errors: {
+        status: ValidatorError: `projects` is not a valid enum value for path `status`.
+            at validate (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/mongoose/lib/schematype.js:1330:13)
+            at SchemaString.SchemaType.doValidate (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/mongoose/lib/schematype.js:1314:7)
+            at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/mongoose/lib/document.js:2751:18
+            at processTicksAndRejections (node:internal/process/task_queues:78:11) {
+          properties: {
+            validator: [Function (anonymous)],
+            message: '`projects` is not a valid enum value for path `status`.',
+            type: 'enum',
+            enumValues: [
+              'In Progress',
+              'Shared',
+              'Done',
+              'Tasks Board',
+              'Not Clear',
+              'Cancled',
+              'Review',
+              'Archived'
+            ],
+            path: 'status',
+            value: 'projects'
+          },
+          kind: 'enum',
+          path: 'status',
+          value: 'projects',
+          reason: undefined,
+          [Symbol(mongoose:validatorError)]: true
+        }
+      },
+      _message: 'tasks validation failed'
+    }
+  },
+  level: 'error',
+  timestamp: '2023-01-26 17:04:24'
+}
+{
+  message: {
+    __createTaskByTrelloDBError: Error: tasks validation failed: status: `projects` is not a valid enum value for path `status`.
+        at ValidationError.inspect (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/mongoose/lib/error/validation.js:48:26)
+        at formatValue (node:internal/util/inspect:782:19)
+        at formatProperty (node:internal/util/inspect:1819:11)
+        at formatRaw (node:internal/util/inspect:1030:9)
+        at formatValue (node:internal/util/inspect:817:10)
+        at formatProperty (node:internal/util/inspect:1819:11)
+        at formatRaw (node:internal/util/inspect:1030:9)
+        at formatValue (node:internal/util/inspect:817:10)
+        at inspect (node:internal/util/inspect:347:10)
+        at Format.transform (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/logform/pretty-print.js:27:19) {
+      errors: {
+        status: ValidatorError: `projects` is not a valid enum value for path `status`.
+            at validate (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/mongoose/lib/schematype.js:1330:13)
+            at SchemaString.SchemaType.doValidate (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/mongoose/lib/schematype.js:1314:7)
+            at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/mongoose/lib/document.js:2751:18
+            at processTicksAndRejections (node:internal/process/task_queues:78:11) {
+          properties: {
+            validator: [Function (anonymous)],
+            message: '`projects` is not a valid enum value for path `status`.',
+            type: 'enum',
+            enumValues: [
+              'In Progress',
+              'Shared',
+              'Done',
+              'Tasks Board',
+              'Not Clear',
+              'Cancled',
+              'Review',
+              'Archived'
+            ],
+            path: 'status',
+            value: 'projects'
+          },
+          kind: 'enum',
+          path: 'status',
+          value: 'projects',
+          reason: undefined,
+          [Symbol(mongoose:validatorError)]: true
+        }
+      },
+      _message: 'tasks validation failed'
+    }
+  },
+  level: 'error',
+  timestamp: '2023-01-26 17:04:24'
+}
+{
+  message: {
+    __createTaskByTrelloDBError: Error: tasks validation failed: status: `projects` is not a valid enum value for path `status`.
+        at ValidationError.inspect (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/mongoose/lib/error/validation.js:48:26)
+        at formatValue (node:internal/util/inspect:782:19)
+        at formatProperty (node:internal/util/inspect:1819:11)
+        at formatRaw (node:internal/util/inspect:1030:9)
+        at formatValue (node:internal/util/inspect:817:10)
+        at formatProperty (node:internal/util/inspect:1819:11)
+        at formatRaw (node:internal/util/inspect:1030:9)
+        at formatValue (node:internal/util/inspect:817:10)
+        at inspect (node:internal/util/inspect:347:10)
+        at Format.transform (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/logform/pretty-print.js:27:19) {
+      errors: {
+        status: ValidatorError: `projects` is not a valid enum value for path `status`.
+            at validate (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/mongoose/lib/schematype.js:1330:13)
+            at SchemaString.SchemaType.doValidate (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/mongoose/lib/schematype.js:1314:7)
+            at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/mongoose/lib/document.js:2751:18
+            at processTicksAndRejections (node:internal/process/task_queues:78:11) {
+          properties: {
+            validator: [Function (anonymous)],
+            message: '`projects` is not a valid enum value for path `status`.',
+            type: 'enum',
+            enumValues: [
+              'In Progress',
+              'Shared',
+              'Done',
+              'Tasks Board',
+              'Not Clear',
+              'Cancled',
+              'Review',
+              'Archived'
+            ],
+            path: 'status',
+            value: 'projects'
+          },
+          kind: 'enum',
+          path: 'status',
+          value: 'projects',
+          reason: undefined,
+          [Symbol(mongoose:validatorError)]: true
+        }
+      },
+      _message: 'tasks validation failed'
+    }
+  },
+  level: 'error',
+  timestamp: '2023-01-26 17:08:54'
+}
+{
+  message: {
+    __createTaskByTrelloDBError: Error: tasks validation failed: status: `projects` is not a valid enum value for path `status`.
+        at ValidationError.inspect (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/mongoose/lib/error/validation.js:48:26)
+        at formatValue (node:internal/util/inspect:782:19)
+        at formatProperty (node:internal/util/inspect:1819:11)
+        at formatRaw (node:internal/util/inspect:1030:9)
+        at formatValue (node:internal/util/inspect:817:10)
+        at formatProperty (node:internal/util/inspect:1819:11)
+        at formatRaw (node:internal/util/inspect:1030:9)
+        at formatValue (node:internal/util/inspect:817:10)
+        at inspect (node:internal/util/inspect:347:10)
+        at Format.transform (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/logform/pretty-print.js:27:19) {
+      errors: {
+        status: ValidatorError: `projects` is not a valid enum value for path `status`.
+            at validate (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/mongoose/lib/schematype.js:1330:13)
+            at SchemaString.SchemaType.doValidate (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/mongoose/lib/schematype.js:1314:7)
+            at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/mongoose/lib/document.js:2751:18
+            at processTicksAndRejections (node:internal/process/task_queues:78:11) {
+          properties: {
+            validator: [Function (anonymous)],
+            message: '`projects` is not a valid enum value for path `status`.',
+            type: 'enum',
+            enumValues: [
+              'In Progress',
+              'Shared',
+              'Done',
+              'Tasks Board',
+              'Not Clear',
+              'Cancled',
+              'Review',
+              'Archived'
+            ],
+            path: 'status',
+            value: 'projects'
+          },
+          kind: 'enum',
+          path: 'status',
+          value: 'projects',
+          reason: undefined,
+          [Symbol(mongoose:validatorError)]: true
+        }
+      },
+      _message: 'tasks validation failed'
+    }
+  },
+  level: 'error',
+  timestamp: '2023-01-26 17:08:54'
+}
+{
+  message: {
+    getTrelloBoardError: FetchError: request to https://api.trello.com/1/organizations/ttpbetalocal/boards?fields=id,name&key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68 failed, reason: getaddrinfo EAI_AGAIN api.trello.com
+        at ClientRequest.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/node-fetch/lib/index.js:1491:11)
+        at ClientRequest.emit (node:events:527:28)
+        at ClientRequest.emit (node:domain:475:12)
+        at TLSSocket.socketErrorListener (node:_http_client:454:9)
+        at TLSSocket.emit (node:events:527:28)
+        at TLSSocket.emit (node:domain:475:12)
+        at emitErrorNT (node:internal/streams/destroy:157:8)
+        at emitErrorCloseNT (node:internal/streams/destroy:122:3)
+        at processTicksAndRejections (node:internal/process/task_queues:83:21) {
+      type: 'system',
+      errno: 'EAI_AGAIN',
+      code: 'EAI_AGAIN'
+    }
+  },
+  level: 'error',
+  timestamp: '2023-01-27 11:04:53'
+}
+{
+  message: {
+    createNewBoardError: FetchError: request to https://api.trello.com/1/boards/?name=dev%20/%20TTP%20Creative&prefs_background=orange&defaultLists=false&idOrganization=ttpbetalocal&key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68 failed, reason: getaddrinfo EAI_AGAIN api.trello.com
+        at ClientRequest.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/node-fetch/lib/index.js:1491:11)
+        at ClientRequest.emit (node:events:527:28)
+        at ClientRequest.emit (node:domain:475:12)
+        at TLSSocket.socketErrorListener (node:_http_client:454:9)
+        at TLSSocket.emit (node:events:527:28)
+        at TLSSocket.emit (node:domain:475:12)
+        at emitErrorNT (node:internal/streams/destroy:157:8)
+        at emitErrorCloseNT (node:internal/streams/destroy:122:3)
+        at processTicksAndRejections (node:internal/process/task_queues:83:21) {
+      type: 'system',
+      errno: 'EAI_AGAIN',
+      code: 'EAI_AGAIN'
+    }
+  },
+  level: 'error',
+  timestamp: '2023-01-27 11:04:53'
+}
+{
+  message: {
+    createDepartmentBoardError: TypeError: Cannot read properties of undefined (reading 'id')
+        at model.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/models/Department.ts:252:15)
+        at Generator.next (<anonymous>)
+        at fulfilled (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/models/Department.ts:5:58)
+        at runMicrotasks (<anonymous>)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5)
+  },
+  level: 'error',
+  timestamp: '2023-01-27 11:04:53'
+}
+{
+  message: {
+    createDepartmentError: TypeError: Cannot destructure property 'teams' of '(intermediate value)' as it is undefined.
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/department.ts:92:15)
+        at Generator.next (<anonymous>)
+        at fulfilled (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/department.ts:5:58)
+        at runMicrotasks (<anonymous>)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5)
+  },
+  level: 'error',
+  timestamp: '2023-01-27 11:04:53'
+}
+{
+  message: {
+    __createTaskByTrelloDBError: Error: tasks validation failed: status: `projects` is not a valid enum value for path `status`.
+        at ValidationError.inspect (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/mongoose/lib/error/validation.js:48:26)
+        at formatValue (node:internal/util/inspect:782:19)
+        at formatProperty (node:internal/util/inspect:1819:11)
+        at formatRaw (node:internal/util/inspect:1030:9)
+        at formatValue (node:internal/util/inspect:817:10)
+        at formatProperty (node:internal/util/inspect:1819:11)
+        at formatRaw (node:internal/util/inspect:1030:9)
+        at formatValue (node:internal/util/inspect:817:10)
+        at inspect (node:internal/util/inspect:347:10)
+        at Format.transform (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/logform/pretty-print.js:27:19) {
+      errors: {
+        status: ValidatorError: `projects` is not a valid enum value for path `status`.
+            at validate (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/mongoose/lib/schematype.js:1330:13)
+            at SchemaString.SchemaType.doValidate (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/mongoose/lib/schematype.js:1314:7)
+            at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/mongoose/lib/document.js:2751:18
+            at processTicksAndRejections (node:internal/process/task_queues:78:11) {
+          properties: {
+            validator: [Function (anonymous)],
+            message: '`projects` is not a valid enum value for path `status`.',
+            type: 'enum',
+            enumValues: [
+              'In Progress',
+              'Shared',
+              'Done',
+              'Tasks Board',
+              'Not Clear',
+              'Cancled',
+              'Review',
+              'Archived'
+            ],
+            path: 'status',
+            value: 'projects'
+          },
+          kind: 'enum',
+          path: 'status',
+          value: 'projects',
+          reason: undefined,
+          [Symbol(mongoose:validatorError)]: true
+        }
+      },
+      _message: 'tasks validation failed'
+    }
+  },
+  level: 'error',
+  timestamp: '2023-01-28 10:54:48'
+}
+{
+  message: {
+    __updateTaskByTrelloDBError: Error: tasks validation failed: deadlineChain.0.current: Path `current` is required.
+        at ValidationError.inspect (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/mongoose/lib/error/validation.js:48:26)
+        at formatValue (node:internal/util/inspect:782:19)
+        at formatProperty (node:internal/util/inspect:1819:11)
+        at formatRaw (node:internal/util/inspect:1030:9)
+        at formatValue (node:internal/util/inspect:817:10)
+        at formatProperty (node:internal/util/inspect:1819:11)
+        at formatRaw (node:internal/util/inspect:1030:9)
+        at formatValue (node:internal/util/inspect:817:10)
+        at inspect (node:internal/util/inspect:347:10)
+        at Format.transform (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/logform/pretty-print.js:27:19) {
+      errors: {
+        'deadlineChain.0.current': ValidatorError: Path `current` is required.
+            at validate (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/mongoose/lib/schematype.js:1330:13)
+            at SchemaDate.SchemaType.doValidate (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/mongoose/lib/schematype.js:1314:7)
+            at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/mongoose/lib/document.js:2751:18
+            at processTicksAndRejections (node:internal/process/task_queues:78:11) {
+          properties: {
+            validator: [Function (anonymous)],
+            message: 'Path `current` is required.',
+            type: 'required',
+            path: 'current',
+            value: undefined
+          },
+          kind: 'required',
+          path: 'current',
+          value: undefined,
+          reason: undefined,
+          [Symbol(mongoose:validatorError)]: true
+        }
+      },
+      _message: 'tasks validation failed'
+    }
+  },
+  level: 'error',
+  timestamp: '2023-01-28 10:55:51'
+}
+{
+  message: {
+    __updateTaskByTrelloDBError: Error: tasks validation failed: deadlineChain.0.current: Path `current` is required.
+        at ValidationError.inspect (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/mongoose/lib/error/validation.js:48:26)
+        at formatValue (node:internal/util/inspect:782:19)
+        at formatProperty (node:internal/util/inspect:1819:11)
+        at formatRaw (node:internal/util/inspect:1030:9)
+        at formatValue (node:internal/util/inspect:817:10)
+        at formatProperty (node:internal/util/inspect:1819:11)
+        at formatRaw (node:internal/util/inspect:1030:9)
+        at formatValue (node:internal/util/inspect:817:10)
+        at inspect (node:internal/util/inspect:347:10)
+        at Format.transform (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/logform/pretty-print.js:27:19) {
+      errors: {
+        'deadlineChain.0.current': ValidatorError: Path `current` is required.
+            at validate (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/mongoose/lib/schematype.js:1330:13)
+            at SchemaDate.SchemaType.doValidate (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/mongoose/lib/schematype.js:1314:7)
+            at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/mongoose/lib/document.js:2751:18
+            at processTicksAndRejections (node:internal/process/task_queues:78:11) {
+          properties: {
+            validator: [Function (anonymous)],
+            message: 'Path `current` is required.',
+            type: 'required',
+            path: 'current',
+            value: undefined
+          },
+          kind: 'required',
+          path: 'current',
+          value: undefined,
+          reason: undefined,
+          [Symbol(mongoose:validatorError)]: true
+        }
+      },
+      _message: 'tasks validation failed'
+    }
+  },
+  level: 'error',
+  timestamp: '2023-01-28 10:55:51'
+}

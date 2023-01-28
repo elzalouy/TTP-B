@@ -33,6 +33,7 @@ const TaskReq = class TaskReq extends TaskController {
   static async handleUpdateCard(req: Request, res: Response) {
     try {
       taskRoutesQueue.push(async (cb) => {
+        let tokenUser = await jwtVerify(req.header("Authorization"));
         let TaskData: any = req.body;
         if (TaskData.teamId === "" || TaskData.teamId === null)
           TaskData.teamId = null;
@@ -46,7 +47,7 @@ const TaskReq = class TaskReq extends TaskController {
         let validate = editTaskSchema.validate(TaskData);
         if (validate.error)
           return res.status(400).send(validate.error.details[0]);
-        await super.updateTask(TaskData, files);
+        await super.updateTask(TaskData, files, tokenUser);
         return res.send({ message: "Task updated Sucessfully" });
       });
     } catch (error) {

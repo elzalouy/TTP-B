@@ -1,7 +1,14 @@
-import { ProjectInfo } from "./../types/model/Project";
+import { ProjectInfo, DeadlineChain } from "./../types/model/Project";
 import { model, Schema, Model } from "mongoose";
+type ProjectModelType = Model<ProjectInfo>;
+const DeadlineChainSchema: Schema = new Schema<DeadlineChain>({
+  userId: { type: Schema.Types.ObjectId, required: true },
+  name: { type: String, required: true },
+  before: { type: Date, required: true },
+  current: { type: Date, required: true },
+});
 
-const ProjectSchema: Schema = new Schema<ProjectInfo>(
+const ProjectSchema: Schema = new Schema<ProjectInfo, ProjectModelType>(
   {
     name: {
       type: String,
@@ -61,13 +68,17 @@ const ProjectSchema: Schema = new Schema<ProjectInfo>(
       default: null,
       required: false,
     },
+    deadlineChain: {
+      type: [DeadlineChainSchema],
+      required: true,
+      default: [],
+      min: 0,
+    },
   },
   {
     timestamps: true,
     strict: false,
   }
 );
-
 const Project: Model<ProjectInfo> = model("projects", ProjectSchema);
-
 export default Project;

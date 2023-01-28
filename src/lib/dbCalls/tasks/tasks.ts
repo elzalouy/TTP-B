@@ -1,15 +1,9 @@
-import {
-  AttachmentResponse,
-  AttachmentSchema,
-  TaskInfo,
-  TasksStatistics,
-} from "./../../types/model/tasks";
+import { AttachmentSchema, TaskInfo } from "./../../types/model/tasks";
 import logger from "../../../logger";
 import Tasks, { FilesSchema, TaskFileSchema } from "../../models/Task";
 import { TaskData } from "../../types/model/tasks";
 import _ from "lodash";
 import mongoose from "mongoose";
-import Department from "../../models/Department";
 import { taskNotFoundError } from "../../types/controller/Tasks";
 import { ObjectId } from "mongodb";
 import { io } from "../../..";
@@ -18,8 +12,8 @@ class TaskDB {
     return await TaskDB.__createTask(data);
   }
 
-  static async updateTaskDB(data: any) {
-    return await TaskDB.__updateTask(data);
+  static async updateTaskDB(data: any, user: any) {
+    return await TaskDB.__updateTask(data, user);
   }
 
   static async deleteTaskDB(id: string) {
@@ -42,6 +36,7 @@ class TaskDB {
   static async getTaskDB(id: string) {
     return await TaskDB.__getTask(id);
   }
+
   static async getOneTaskBy(data: TaskData) {
     return await TaskDB.__getOneTaskBy(data);
   }
@@ -144,6 +139,7 @@ class TaskDB {
       logger.error({ updateMultiTaskDBError: error });
     }
   }
+
   static async getTasksDB(data: mongoose.FilterQuery<TaskInfo>) {
     return await TaskDB.__getTasks(data);
   }
@@ -206,13 +202,25 @@ class TaskDB {
       logger.error({ deleteTaskDBError: error });
     }
   }
-  static async __updateTask(data: TaskData) {
+  static async __updateTask(data: TaskData, user: any) {
     try {
       let id = data.id;
       delete data.id;
-      let task = await Tasks.findOne({ _id: id }).lean();
+      let task = await Tasks.findOne({ _id: id });
       if (!task) return taskNotFoundError;
-
+      if (
+        task.deadline &&
+        data.deadline &&
+        new Date(task.deadline).toDateString() !==
+          new Date(data.deadline).toDateString()
+      ) {
+        task.deadlineChain.push({
+          userId: user.id,
+          name: user.name,
+          before: new Date(task.deadline),
+          after: new Date(data.deadline),
+        });
+      }
       task.name = data.name;
       task.description = data.description ? data.description : "";
       task.deadline = data.deadline ? data.deadline : null;
@@ -233,15 +241,18 @@ class TaskDB {
         : task.attachedFiles;
       task.teamId = data.teamId ? new ObjectId(data.teamId) : task.teamId;
       delete task._id;
+
       let update = await Tasks.findByIdAndUpdate(id, task, {
         new: true,
+        lean: true,
+        upsert: true,
       });
-
       return { error: null, task: update };
     } catch (error) {
       logger.error({ updateTaskDBError: error });
     }
   }
+
   static async __updateTasksProjectId(projectId: string, ids: string[]) {
     try {
       let updateResult = await Tasks.updateMany(

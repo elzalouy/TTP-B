@@ -28,8 +28,8 @@ class TaskController extends TaskDB {
   static async createTask(data: TaskData, files: any) {
     return await TaskController.__CreateNewTask(data, files);
   }
-  static async updateTask(data: object, files: any) {
-    return await TaskController.__updateTaskData(data, files);
+  static async updateTask(data: object, files: any, tokenUser: any) {
+    return await TaskController.__updateTaskData(data, files, tokenUser);
   }
 
   static async filterTasks(data: any) {
@@ -91,10 +91,14 @@ class TaskController extends TaskDB {
     }
   }
 
-  static async __updateTaskData(data: TaskData, files: Express.Multer.File[]) {
+  static async __updateTaskData(
+    data: TaskData,
+    files: Express.Multer.File[],
+    tokenUser: any
+  ) {
     try {
       if (!data.cardId) return provideCardIdError;
-      updateCardJob(data, files);
+      updateCardJob(data, files, tokenUser);
     } catch (error) {
       logger.error({ updateTaskError: error });
     }

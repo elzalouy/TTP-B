@@ -6,6 +6,13 @@ export interface TasksModel extends Model<TaskInfo> {
   updateHistory(cardId: string, cb?: (doc: TaskInfo) => any): TaskInfo;
   getTasksAsCSV(filterIds: string[]): Promise<string>;
 }
+
+export interface TaskDeadlineChain {
+  name: string;
+  userId: string;
+  before: Date;
+  after: Date;
+}
 export interface TaskInfo extends Document {
   name: string;
   projectId: ObjectId;
@@ -26,6 +33,7 @@ export interface TaskInfo extends Document {
   lastMove?: string | String;
   lastMoveDate?: string | String;
   trelloShortUrl?: string;
+  deadlineChain: TaskDeadlineChain[];
 }
 
 export interface TaskHistory {

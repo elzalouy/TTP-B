@@ -1,5 +1,13 @@
 import { ObjectID, ObjectId } from "bson";
 import { Document } from "mongoose";
+
+export interface DeadlineChain {
+  userId: ObjectId;
+  name: string;
+  before: Date;
+  current: Date;
+}
+
 export interface ProjectInfo extends Document {
   name: string;
   projectManager: ObjectId;
@@ -21,7 +29,9 @@ export interface ProjectInfo extends Document {
   boardId: string;
   cardId: string;
   associateProjectManager: string;
+  deadlineChain: DeadlineChain[];
 }
+
 export interface ProjectData {
   _id?: string | ObjectID;
   name?: string;

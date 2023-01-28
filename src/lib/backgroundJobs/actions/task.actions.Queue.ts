@@ -73,7 +73,8 @@ export function moveTaskJob(
 
 export const updateCardJob = (
   data: TaskData,
-  newFiles: Express.Multer.File[]
+  newFiles: Express.Multer.File[],
+  tokenUser: any
 ) => {
   const deleteFiles: AttachmentSchema[] = data.deleteFiles
     ? data.deleteFiles
@@ -152,7 +153,7 @@ export const updateCardJob = (
   });
 
   updateTaskQueue.push(async (cb) => {
-    let task = await TaskController.updateTaskDB(data);
+    let task = await TaskController.updateTaskDB(data, tokenUser);
     if (task.error) cb(new Error(task.error.message), null);
     await io.sockets.emit("update-task", task.task);
     deleteAll();

@@ -3,11 +3,19 @@ import logger from "../../logger";
 import { TaskInfo, TasksModel } from "../types/model/tasks";
 import Project from "./Project";
 import { appendFile, appendFileSync } from "fs";
+import { DeadlineChain } from "../types/model/Project";
 export const FilesSchema: Schema = new Schema({
   name: { type: String },
   trelloId: { type: String },
   mimeType: { type: String },
   url: { type: String },
+});
+
+const deadlineChainSchema: Schema = new Schema<DeadlineChain>({
+  userId: { type: Schema.Types.ObjectId, required: true },
+  name: { type: String, required: true },
+  before: { type: Date, required: true },
+  current: { type: Date, required: true },
 });
 
 const TaskSchema = new Schema<TaskInfo, TasksModel>(
@@ -95,6 +103,12 @@ const TaskSchema = new Schema<TaskInfo, TasksModel>(
     trelloShortUrl: {
       type: String,
       default: null,
+    },
+    deadlineChain: {
+      type: [deadlineChainSchema],
+      required: true,
+      default: [],
+      min: 0,
     },
   },
   {

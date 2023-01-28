@@ -31,6 +31,7 @@ export const createJwtToken: (user: IUser | UserData) => string = (user) => {
       id: user._id,
       email: user.email,
       role: user.role,
+      name: user.name,
     },
     Config.get("jwtSecret"),
     {

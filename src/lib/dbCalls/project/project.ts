@@ -4,12 +4,12 @@ import { ProjectData, ProjectInfo } from "../../types/model/Project";
 const mongoose = require("mongoose");
 
 const ProjectDB = class ProjectDB {
-  static async createProjectDB(data: ProjectData) {
-    return await ProjectDB.__createProject(data);
+  static async createProjectDB(data: ProjectData, user: any) {
+    return await ProjectDB.__createProject(data, user);
   }
 
-  static async updateProjectDB(data: ProjectData) {
-    return await ProjectDB.__updateProject(data);
+  static async updateProjectDB(data: ProjectData, user: any) {
+    return await ProjectDB.__updateProject(data, user);
   }
 
   static async getProjectDB(data: object) {
@@ -91,6 +91,7 @@ const ProjectDB = class ProjectDB {
             listId: 1,
             boardId: 1,
             associateProjectManager: 1,
+            deadlineChain: -1,
           },
         },
       ]);
@@ -104,25 +105,41 @@ const ProjectDB = class ProjectDB {
     }
   }
 
-  static async __updateProject(data: ProjectData) {
+  static async __updateProject(data: ProjectData, user: any) {
     try {
       let id = data._id;
       delete data._id;
       let query: any = data;
-      let project = await Project.findByIdAndUpdate({ _id: id }, query, {
-        new: true,
-        lean: true,
-      });
-      return project;
+      let project = await Project.findById(id);
+      if (project) {
+        if (
+          new Date(project.projectDeadline).toDateString() !==
+          new Date(data.projectDeadline).toDateString()
+        ) {
+          project.deadlineChain.push({
+            userId: user.id,
+            name: user.name,
+            before: project.projectDeadline,
+            current: data.projectDeadline,
+          });
+        }
+        project.set(query);
+        project = await Project.findOneAndUpdate({ _id: id }, project, {
+          new: true,
+          lean: true,
+          upsert: true,
+        });
+        return project;
+      }
     } catch (error) {
       logger.error({ updateProjectDBError: error });
     }
   }
 
-  static async __createProject(data: ProjectData) {
+  static async __createProject(data: ProjectData, user: any) {
     try {
       let project: ProjectInfo = new Project(data);
-      await project.save();
+      project = await project.save();
       return project;
     } catch (error) {
       logger.error({ createProjectDBError: error });
