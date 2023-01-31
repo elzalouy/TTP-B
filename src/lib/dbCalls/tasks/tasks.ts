@@ -48,8 +48,11 @@ class TaskDB {
   static async deleteTasksWhereDB(data: TaskData) {
     return await TaskDB.__deleteTasksWhereDB(data);
   }
-  static async updateTaskByTrelloDB(data: TaskData) {
-    return await TaskDB.__updateTaskByTrelloDB(data);
+  static async updateTaskByTrelloDB(
+    data: TaskData,
+    user: { name: string; id: string }
+  ) {
+    return await TaskDB.__updateTaskByTrelloDB(data, user);
   }
   static async deleteTaskByTrelloDB(data: TaskData) {
     return await TaskDB.__deleteTaskByTrelloDB(data);
@@ -167,7 +170,11 @@ class TaskDB {
   }
   static async __getTasks(data: TaskData) {
     try {
-      let tasks = await Tasks.find(data).lean();
+      let tasks = await Tasks.find(data)
+        .select(
+          "_id name projectId categoryId teamId listId  cardId boardId status start deadline deliveryDate attachedFiles   lastMove lastMoveDate description trelloShortUrl createdAt updatedAt"
+        )
+        .lean();
       return tasks;
     } catch (error) {
       logger.error({ getTaskDBError: error });
@@ -208,6 +215,9 @@ class TaskDB {
       delete data.id;
       let task = await Tasks.findOne({ _id: id });
       if (!task) return taskNotFoundError;
+      console.log({
+        unClear: task.status !== "Not Clear" && data.status === "Not Clear",
+      });
       if (
         task.deadline &&
         data.deadline &&
@@ -218,9 +228,31 @@ class TaskDB {
           userId: user.id,
           name: user.name,
           before: new Date(task.deadline),
-          after: new Date(data.deadline),
+          current: new Date(data.deadline),
         });
       }
+      if (
+        !["Done", "Cancled", "Shared"].includes(task.status) &&
+        data.status === "Shared"
+      ) {
+        task.noOfRevisions = task.noOfRevisions ? ++task.noOfRevisions : 1;
+      }
+      if (data.status === "Done") {
+        let deadline = new Date(data.deadline).getTime();
+        task.deliveryDate = new Date(Date.now());
+        task.turnOver =
+          deadline < new Date(Date.now()).getTime()
+            ? Math.floor(
+                (task.deliveryDate.getTime() - deadline) / (1000 * 60 * 60 * 24)
+              )
+            : 0;
+      } else {
+        task.deliveryDate = null;
+        task.turnOver = 0;
+      }
+      if (data.status === "Not Clear" && task.status !== "Not Clear")
+        task.unClear = task.unClear ? ++task.unClear : 1;
+
       task.name = data.name;
       task.description = data.description ? data.description : "";
       task.deadline = data.deadline ? data.deadline : null;
@@ -315,6 +347,7 @@ class TaskDB {
       logger.error({ filterTasksError: error });
     }
   }
+
   static async __getOneTaskBy(data: TaskData) {
     try {
       let task = await Tasks.findOne(data).lean();
@@ -324,15 +357,58 @@ class TaskDB {
       logger.error({ getOneTaskError: error });
     }
   }
-  static async __updateTaskByTrelloDB(data: TaskData) {
+
+  static async __updateTaskByTrelloDB(
+    data: TaskData,
+    user: { id: string; name: string }
+  ) {
     try {
       let task = await Tasks.findOne({ cardId: data.cardId });
+      console.log({
+        unClear: task.status !== "Not Clear" && data.status === "Not Clear",
+      });
+      if (
+        task?.deadline &&
+        data?.deadline &&
+        new Date(task.deadline).toDateString() !==
+          new Date(data.deadline).toDateString()
+      ) {
+        task.deadlineChain.push({
+          userId: user.id,
+          name: user.name,
+          before: new Date(task.deadline),
+          current: new Date(data.deadline),
+        });
+      }
+
+      if (
+        !["Done", "Cancled", "Shared"].includes(task?.status) &&
+        data.status === "Shared"
+      ) {
+        task.noOfRevisions = task?.noOfRevisions ? ++task.noOfRevisions : 1;
+      }
+      if (data.status === "Done") {
+        let deadline = new Date(data.deadline).getTime();
+        task.deliveryDate = new Date(Date.now());
+        task.turnOver =
+          deadline < new Date(Date.now()).getTime()
+            ? Math.floor(
+                (task.deliveryDate.getTime() - deadline) / (1000 * 60 * 60 * 24)
+              )
+            : 0;
+      } else {
+        task.deliveryDate = null;
+        task.turnOver = 0;
+      }
+      if (data.status === "Not Clear" && task.status !== "Not Clear")
+        task.unClear = task.unClear ? ++task.unClear : 1;
       task.name = data?.name ? data?.name : task.name;
       task.status = data?.status ? data.status : task.status;
       task.listId = data?.listId ? data.listId : task.listId;
       task.cardId = data?.cardId ? data.cardId : task.cardId;
       task.boardId = data?.boardId ? data.boardId : task.boardId;
       task.description = data.description;
+      task.deadlineChain = task.deadlineChain;
       task.teamId =
         data?.teamId === null || data?.teamId?.toString().length > 0
           ? new ObjectId(data.teamId)
@@ -346,7 +422,6 @@ class TaskDB {
       if (data.attachedFile) {
         let file = new TaskFileSchema({ ...data.attachedFile });
         task.attachedFiles.push(file);
-        task = await task.save();
       }
       if (data.deleteFiles && data?.deleteFiles?.trelloId) {
         task.attachedFiles = _.filter(
@@ -354,6 +429,7 @@ class TaskDB {
           (item) => item.trelloId !== data?.deleteFiles?.trelloId
         );
       }
+
       task.attachedFiles = _.uniqBy(task.attachedFiles, "trelloId");
       let result = await (await task.save()).toObject();
       await io.sockets.emit("update-task", result);
@@ -361,6 +437,7 @@ class TaskDB {
       logger.error({ __updateTaskByTrelloDBError: error });
     }
   }
+
   static async __createTaskByTrelloDB(data: TaskData) {
     try {
       let task = await Tasks.findOne({ cardId: data.cardId });
@@ -379,6 +456,7 @@ class TaskDB {
       logger.error({ __createTaskByTrelloDBError: error });
     }
   }
+
   static async __deleteTaskByTrelloDB(data: TaskData) {
     try {
       let result = await Tasks.findOneAndDelete({ cardId: data.cardId });
@@ -387,6 +465,7 @@ class TaskDB {
       logger.error({ __deleteTaskByTrelloDBError: error });
     }
   }
+
   static async __archiveTaskByTrelloDB(data: TaskData, archive: boolean) {
     try {
       let taskData =

@@ -11,7 +11,7 @@ export interface TaskDeadlineChain {
   name: string;
   userId: string;
   before: Date;
-  after: Date;
+  current: Date;
 }
 export interface TaskInfo extends Document {
   name: string;
@@ -26,7 +26,6 @@ export interface TaskInfo extends Document {
   deliveryDate?: Date;
   done?: Date;
   attachedFiles?: AttachmentSchema[];
-  attachedCard?: string;
   cardId?: string;
   boardId?: string;
   description?: string;
@@ -34,6 +33,9 @@ export interface TaskInfo extends Document {
   lastMoveDate?: string | String;
   trelloShortUrl?: string;
   deadlineChain: TaskDeadlineChain[];
+  turnOver?: number;
+  unClear?: number;
+  noOfRevisions?: number;
 }
 
 export interface TaskHistory {
@@ -64,8 +66,7 @@ export interface TaskData {
   deadline?: Date | number;
   deliveryDate?: Date;
   done?: Date;
-  turnoverTime?: number;
-  attachedCard?: string;
+  turnover?: Number;
   teamId?: string | ObjectId;
   cardId?: string;
   boardId?: string;
@@ -79,6 +80,10 @@ export interface TaskData {
   deleteFiles?: AttachmentSchema[] | any;
   attachedFile?: AttachmentSchema;
   teamListId?: string;
+  deadlineChain?: TaskDeadlineChain[];
+  turnOver?: number;
+  unClear?: number;
+  noOfRevisions?: number;
 }
 export interface AttachmentResponse {
   id: string;

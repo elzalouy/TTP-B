@@ -1,9 +1,8 @@
-import { model, Schema, Model } from "mongoose";
+import { model, Schema } from "mongoose";
 import logger from "../../logger";
-import { TaskInfo, TasksModel } from "../types/model/tasks";
+import { TaskData, TaskInfo, TasksModel } from "../types/model/tasks";
 import Project from "./Project";
-import { appendFile, appendFileSync } from "fs";
-import { DeadlineChain } from "../types/model/Project";
+import { TaskDeadlineChain } from "../types/model/tasks";
 export const FilesSchema: Schema = new Schema({
   name: { type: String },
   trelloId: { type: String },
@@ -11,7 +10,7 @@ export const FilesSchema: Schema = new Schema({
   url: { type: String },
 });
 
-const deadlineChainSchema: Schema = new Schema<DeadlineChain>({
+const deadlineChainSchema: Schema = new Schema<TaskDeadlineChain>({
   userId: { type: Schema.Types.ObjectId, required: true },
   name: { type: String, required: true },
   before: { type: Date, required: true },
@@ -84,10 +83,6 @@ const TaskSchema = new Schema<TaskInfo, TasksModel>(
       type: [FilesSchema],
       default: [],
     },
-    attachedCard: {
-      type: String,
-      default: null,
-    },
     lastMove: {
       type: String,
       default: null,
@@ -109,6 +104,18 @@ const TaskSchema = new Schema<TaskInfo, TasksModel>(
       required: true,
       default: [],
       min: 0,
+    },
+    turnOver: {
+      type: Number,
+      default: null,
+    },
+    unClear: {
+      type: Number,
+      default: null,
+    },
+    noOfRevisions: {
+      type: Number,
+      default: 0,
     },
   },
   {
