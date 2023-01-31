@@ -15,12 +15,17 @@ export default class TrelloWebhook {
   type: string;
   action: string;
   task: TaskData;
+  user: { id: string; name: string };
   hookTarget: "project" | "task";
   constructor(action: webhookUpdateInterface, target?: "project" | "task") {
     this.hookTarget = target;
     this.type = action.action?.type;
     this.action = action.action?.display?.translationKey;
     this.actionRequest = action;
+    this.user = {
+      id: action?.action?.memberCreator?.id,
+      name: action?.action?.memberCreator?.fullName,
+    };
   }
   async start() {
     if (this.hookTarget === "task")
@@ -71,7 +76,7 @@ export default class TrelloWebhook {
           this.actionRequest.action.data?.attachment?.name
         ),
       };
-      return await TaskController.updateTaskByTrelloDB(this.task);
+      return await TaskController.updateTaskByTrelloDB(this.task, this.user);
     }
   }
 
@@ -85,7 +90,7 @@ export default class TrelloWebhook {
         trelloId: this.actionRequest.action.data.attachment.id,
         name: this.actionRequest.action.data.attachment.name,
       };
-      return await TaskController.updateTaskByTrelloDB(this.task);
+      return await TaskController.updateTaskByTrelloDB(this.task, this.user);
     }
   }
 
@@ -193,7 +198,10 @@ export default class TrelloWebhook {
             ? inProgressList.name
             : this.actionRequest.action.data.listAfter?.name,
         };
-        return await TaskController.updateTaskByTrelloDB(this.task);
+        return await TaskController.updateTaskByTrelloDB(this.task, {
+          id: this.user.id,
+          name: this.user.name,
+        });
       } else this.updateProject();
     } catch (error) {
       logger.error({ updateCardHook: error });

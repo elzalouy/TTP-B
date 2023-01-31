@@ -54,9 +54,7 @@ class TaskController extends TaskDB {
   static async createTaskByTrello(data: TaskData) {
     return await TaskController.__createTaskByTrello(data);
   }
-  static async updateTaskDataByTrello(data: TaskData) {
-    return await TaskController.__updateTaskByTrello(data);
-  }
+
   static async moveTaskOnTrello(
     cardId: string,
     listId: string,
@@ -326,15 +324,6 @@ class TaskController extends TaskDB {
       return response;
     } catch (error) {
       logger.error({ createTaskByTrelloError: error });
-    }
-  }
-
-  static async __updateTaskByTrello(data: TaskData) {
-    try {
-      let task = await super.updateTaskByTrelloDB(data);
-      return task;
-    } catch (error) {
-      logger.error({ updateTaskByTrello: error });
     }
   }
 
