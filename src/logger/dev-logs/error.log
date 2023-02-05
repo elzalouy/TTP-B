@@ -4927,3 +4927,173 @@
   level: 'error',
   timestamp: '2023-01-31 11:54:18'
 }
+{
+  message: {
+    __createTaskByTrelloDBError: Error: tasks validation failed: status: `projects` is not a valid enum value for path `status`.
+        at ValidationError.inspect (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/mongoose/lib/error/validation.js:48:26)
+        at formatValue (node:internal/util/inspect:782:19)
+        at formatProperty (node:internal/util/inspect:1819:11)
+        at formatRaw (node:internal/util/inspect:1030:9)
+        at formatValue (node:internal/util/inspect:817:10)
+        at formatProperty (node:internal/util/inspect:1819:11)
+        at formatRaw (node:internal/util/inspect:1030:9)
+        at formatValue (node:internal/util/inspect:817:10)
+        at inspect (node:internal/util/inspect:347:10)
+        at Format.transform (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/logform/pretty-print.js:27:19) {
+      errors: {
+        status: ValidatorError: `projects` is not a valid enum value for path `status`.
+            at validate (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/mongoose/lib/schematype.js:1330:13)
+            at SchemaString.SchemaType.doValidate (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/mongoose/lib/schematype.js:1314:7)
+            at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/mongoose/lib/document.js:2751:18
+            at processTicksAndRejections (node:internal/process/task_queues:78:11) {
+          properties: {
+            validator: [Function (anonymous)],
+            message: '`projects` is not a valid enum value for path `status`.',
+            type: 'enum',
+            enumValues: [
+              'In Progress',
+              'Shared',
+              'Done',
+              'Tasks Board',
+              'Not Clear',
+              'Cancled',
+              'Review',
+              'Archived'
+            ],
+            path: 'status',
+            value: 'projects'
+          },
+          kind: 'enum',
+          path: 'status',
+          value: 'projects',
+          reason: undefined,
+          [Symbol(mongoose:validatorError)]: true
+        }
+      },
+      _message: 'tasks validation failed'
+    }
+  },
+  level: 'error',
+  timestamp: '2023-02-05 11:28:56'
+}
+{
+  message: {
+    __createTaskByTrelloDBError: Error: tasks validation failed: status: `projects` is not a valid enum value for path `status`.
+        at ValidationError.inspect (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/mongoose/lib/error/validation.js:48:26)
+        at formatValue (node:internal/util/inspect:782:19)
+        at formatProperty (node:internal/util/inspect:1819:11)
+        at formatRaw (node:internal/util/inspect:1030:9)
+        at formatValue (node:internal/util/inspect:817:10)
+        at formatProperty (node:internal/util/inspect:1819:11)
+        at formatRaw (node:internal/util/inspect:1030:9)
+        at formatValue (node:internal/util/inspect:817:10)
+        at inspect (node:internal/util/inspect:347:10)
+        at Format.transform (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/logform/pretty-print.js:27:19) {
+      errors: {
+        status: ValidatorError: `projects` is not a valid enum value for path `status`.
+            at validate (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/mongoose/lib/schematype.js:1330:13)
+            at SchemaString.SchemaType.doValidate (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/mongoose/lib/schematype.js:1314:7)
+            at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/mongoose/lib/document.js:2751:18
+            at processTicksAndRejections (node:internal/process/task_queues:78:11) {
+          properties: {
+            validator: [Function (anonymous)],
+            message: '`projects` is not a valid enum value for path `status`.',
+            type: 'enum',
+            enumValues: [
+              'In Progress',
+              'Shared',
+              'Done',
+              'Tasks Board',
+              'Not Clear',
+              'Cancled',
+              'Review',
+              'Archived'
+            ],
+            path: 'status',
+            value: 'projects'
+          },
+          kind: 'enum',
+          path: 'status',
+          value: 'projects',
+          reason: undefined,
+          [Symbol(mongoose:validatorError)]: true
+        }
+      },
+      _message: 'tasks validation failed'
+    }
+  },
+  level: 'error',
+  timestamp: '2023-02-05 11:29:40'
+}
+{
+  message: {
+    __createTaskByTrelloDBError: Error: tasks validation failed: status: `projects` is not a valid enum value for path `status`.
+        at ValidationError.inspect (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/mongoose/lib/error/validation.js:48:26)
+        at formatValue (node:internal/util/inspect:782:19)
+        at formatProperty (node:internal/util/inspect:1819:11)
+        at formatRaw (node:internal/util/inspect:1030:9)
+        at formatValue (node:internal/util/inspect:817:10)
+        at formatProperty (node:internal/util/inspect:1819:11)
+        at formatRaw (node:internal/util/inspect:1030:9)
+        at formatValue (node:internal/util/inspect:817:10)
+        at inspect (node:internal/util/inspect:347:10)
+        at Format.transform (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/logform/pretty-print.js:27:19) {
+      errors: {
+        status: ValidatorError: `projects` is not a valid enum value for path `status`.
+            at validate (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/mongoose/lib/schematype.js:1330:13)
+            at SchemaString.SchemaType.doValidate (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/mongoose/lib/schematype.js:1314:7)
+            at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/mongoose/lib/document.js:2751:18
+            at processTicksAndRejections (node:internal/process/task_queues:78:11) {
+          properties: {
+            validator: [Function (anonymous)],
+            message: '`projects` is not a valid enum value for path `status`.',
+            type: 'enum',
+            enumValues: [
+              'In Progress',
+              'Shared',
+              'Done',
+              'Tasks Board',
+              'Not Clear',
+              'Cancled',
+              'Review',
+              'Archived'
+            ],
+            path: 'status',
+            value: 'projects'
+          },
+          kind: 'enum',
+          path: 'status',
+          value: 'projects',
+          reason: undefined,
+          [Symbol(mongoose:validatorError)]: true
+        }
+      },
+      _message: 'tasks validation failed'
+    }
+  },
+  level: 'error',
+  timestamp: '2023-02-05 11:29:58'
+}
+{
+  message: {
+    createCategoryDBError: MongoServerError: E11000 duplicate key error collection: TTP.categories index: category_1 dup key: { category: "Strategy" }
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/mongodb/src/operations/insert.ts:85:25
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/mongodb/src/cmap/connection_pool.ts:482:13
+        at handleOperationResult (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/mongodb/src/sdam/server.ts:538:14)
+        at Connection.onMessage (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/mongodb/src/cmap/connection.ts:452:5)
+        at MessageStream.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/mongodb/src/cmap/connection.ts:267:56)
+        at MessageStream.emit (node:events:527:28)
+        at MessageStream.emit (node:domain:475:12)
+        at processIncomingData (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/mongodb/src/cmap/message_stream.ts:168:12)
+        at MessageStream._write (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/mongodb/src/cmap/message_stream.ts:65:5)
+        at writeOrBuffer (node:internal/streams/writable:389:12) {
+      index: 0,
+      code: 11000,
+      keyPattern: { category: 1 },
+      keyValue: { category: 'Strategy' },
+      [Symbol(errorLabels)]: Set(0) {}
+    }
+  },
+  level: 'error',
+  timestamp: '2023-02-05 14:49:25'
+}

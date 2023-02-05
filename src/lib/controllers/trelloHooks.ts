@@ -42,6 +42,8 @@ export default class TrelloWebhook {
           return await this.deleteCard();
         case "updateCard":
           return await this.updateCard();
+        case "moveCardToBoard":
+          return await this.updateCard();
 
         default:
           logger.info({ noAction: this.actionRequest });
@@ -164,6 +166,7 @@ export default class TrelloWebhook {
         let inProgressList = department.lists.find(
           (item) => item.name === "In Progress"
         );
+        console.log({ board: this.actionRequest.action.data });
         this.task = {
           name: this.actionRequest.action.data.card.name,
           boardId: this.actionRequest.action.data.board.id,
