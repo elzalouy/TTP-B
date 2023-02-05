@@ -12585,3 +12585,4701 @@
   level: 'info',
   timestamp: '2023-01-31 12:46:55'
 }
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2023-01-31 12:51:09'
+}
+{
+  message: { noAction: {} },
+  level: 'info',
+  timestamp: '2023-01-31 12:51:14'
+}
+{
+  message: { noAction: {} },
+  level: 'info',
+  timestamp: '2023-01-31 12:51:14'
+}
+{
+  message: { noAction: {} },
+  level: 'info',
+  timestamp: '2023-01-31 12:51:15'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2023-01-31 13:08:09'
+}
+{
+  message: { noAction: {} },
+  level: 'info',
+  timestamp: '2023-01-31 13:08:14'
+}
+{
+  message: { noAction: {} },
+  level: 'info',
+  timestamp: '2023-01-31 13:08:14'
+}
+{
+  message: { noAction: {} },
+  level: 'info',
+  timestamp: '2023-01-31 13:08:15'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2023-02-02 10:53:27'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2023-02-02 10:59:39'
+}
+{
+  message: { noAction: {} },
+  level: 'info',
+  timestamp: '2023-02-02 10:59:43'
+}
+{
+  message: { noAction: {} },
+  level: 'info',
+  timestamp: '2023-02-02 10:59:43'
+}
+{
+  message: { noAction: {} },
+  level: 'info',
+  timestamp: '2023-02-02 10:59:44'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2023-02-02 12:53:02'
+}
+{
+  message: { noAction: {} },
+  level: 'info',
+  timestamp: '2023-02-02 12:53:12'
+}
+{
+  message: { noAction: {} },
+  level: 'info',
+  timestamp: '2023-02-02 12:53:12'
+}
+{
+  message: { noAction: {} },
+  level: 'info',
+  timestamp: '2023-02-02 12:53:19'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2023-02-04 10:40:46'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2023-02-04 10:41:07'
+}
+{
+  message: { noAction: {} },
+  level: 'info',
+  timestamp: '2023-02-04 10:41:11'
+}
+{
+  message: { noAction: {} },
+  level: 'info',
+  timestamp: '2023-02-04 10:41:11'
+}
+{
+  message: { noAction: {} },
+  level: 'info',
+  timestamp: '2023-02-04 10:41:12'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2023-02-05 11:02:05'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2023-02-05 11:02:54'
+}
+{
+  message: { noAction: {} },
+  level: 'info',
+  timestamp: '2023-02-05 11:02:58'
+}
+{
+  message: { noAction: {} },
+  level: 'info',
+  timestamp: '2023-02-05 11:02:58'
+}
+{
+  message: { noAction: {} },
+  level: 'info',
+  timestamp: '2023-02-05 11:03:00'
+}
+{
+  message: {
+    __createTaskByTrelloDBError: Error: tasks validation failed: status: `projects` is not a valid enum value for path `status`.
+        at ValidationError.inspect (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/mongoose/lib/error/validation.js:48:26)
+        at formatValue (node:internal/util/inspect:782:19)
+        at formatProperty (node:internal/util/inspect:1819:11)
+        at formatRaw (node:internal/util/inspect:1030:9)
+        at formatValue (node:internal/util/inspect:817:10)
+        at formatProperty (node:internal/util/inspect:1819:11)
+        at formatRaw (node:internal/util/inspect:1030:9)
+        at formatValue (node:internal/util/inspect:817:10)
+        at inspect (node:internal/util/inspect:347:10)
+        at Format.transform (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/logform/pretty-print.js:27:19) {
+      errors: {
+        status: ValidatorError: `projects` is not a valid enum value for path `status`.
+            at validate (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/mongoose/lib/schematype.js:1330:13)
+            at SchemaString.SchemaType.doValidate (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/mongoose/lib/schematype.js:1314:7)
+            at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/mongoose/lib/document.js:2751:18
+            at processTicksAndRejections (node:internal/process/task_queues:78:11) {
+          properties: {
+            validator: [Function (anonymous)],
+            message: '`projects` is not a valid enum value for path `status`.',
+            type: 'enum',
+            enumValues: [
+              'In Progress',
+              'Shared',
+              'Done',
+              'Tasks Board',
+              'Not Clear',
+              'Cancled',
+              'Review',
+              'Archived'
+            ],
+            path: 'status',
+            value: 'projects'
+          },
+          kind: 'enum',
+          path: 'status',
+          value: 'projects',
+          reason: undefined,
+          [Symbol(mongoose:validatorError)]: true
+        }
+      },
+      _message: 'tasks validation failed'
+    }
+  },
+  level: 'error',
+  timestamp: '2023-02-05 11:28:56'
+}
+{
+  message: {
+    body: {
+      name: 'Ezzat Elzalouy-not started yet',
+      desc: undefined,
+      due: undefined,
+      start: '2023-02-06T22:00:00.000Z',
+      idList: '63d28328d3447c7a63ec8cf4',
+      idBoard: '63d28327791560ed05f1c2e1'
+    }
+  },
+  level: 'info',
+  timestamp: '2023-02-05 11:29:19'
+}
+{
+  message: {
+    __createTaskByTrelloDBError: Error: tasks validation failed: status: `projects` is not a valid enum value for path `status`.
+        at ValidationError.inspect (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/mongoose/lib/error/validation.js:48:26)
+        at formatValue (node:internal/util/inspect:782:19)
+        at formatProperty (node:internal/util/inspect:1819:11)
+        at formatRaw (node:internal/util/inspect:1030:9)
+        at formatValue (node:internal/util/inspect:817:10)
+        at formatProperty (node:internal/util/inspect:1819:11)
+        at formatRaw (node:internal/util/inspect:1030:9)
+        at formatValue (node:internal/util/inspect:817:10)
+        at inspect (node:internal/util/inspect:347:10)
+        at Format.transform (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/logform/pretty-print.js:27:19) {
+      errors: {
+        status: ValidatorError: `projects` is not a valid enum value for path `status`.
+            at validate (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/mongoose/lib/schematype.js:1330:13)
+            at SchemaString.SchemaType.doValidate (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/mongoose/lib/schematype.js:1314:7)
+            at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/mongoose/lib/document.js:2751:18
+            at processTicksAndRejections (node:internal/process/task_queues:78:11) {
+          properties: {
+            validator: [Function (anonymous)],
+            message: '`projects` is not a valid enum value for path `status`.',
+            type: 'enum',
+            enumValues: [
+              'In Progress',
+              'Shared',
+              'Done',
+              'Tasks Board',
+              'Not Clear',
+              'Cancled',
+              'Review',
+              'Archived'
+            ],
+            path: 'status',
+            value: 'projects'
+          },
+          kind: 'enum',
+          path: 'status',
+          value: 'projects',
+          reason: undefined,
+          [Symbol(mongoose:validatorError)]: true
+        }
+      },
+      _message: 'tasks validation failed'
+    }
+  },
+  level: 'error',
+  timestamp: '2023-02-05 11:29:40'
+}
+{
+  message: {
+    __createTaskByTrelloDBError: Error: tasks validation failed: status: `projects` is not a valid enum value for path `status`.
+        at ValidationError.inspect (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/mongoose/lib/error/validation.js:48:26)
+        at formatValue (node:internal/util/inspect:782:19)
+        at formatProperty (node:internal/util/inspect:1819:11)
+        at formatRaw (node:internal/util/inspect:1030:9)
+        at formatValue (node:internal/util/inspect:817:10)
+        at formatProperty (node:internal/util/inspect:1819:11)
+        at formatRaw (node:internal/util/inspect:1030:9)
+        at formatValue (node:internal/util/inspect:817:10)
+        at inspect (node:internal/util/inspect:347:10)
+        at Format.transform (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/logform/pretty-print.js:27:19) {
+      errors: {
+        status: ValidatorError: `projects` is not a valid enum value for path `status`.
+            at validate (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/mongoose/lib/schematype.js:1330:13)
+            at SchemaString.SchemaType.doValidate (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/mongoose/lib/schematype.js:1314:7)
+            at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/mongoose/lib/document.js:2751:18
+            at processTicksAndRejections (node:internal/process/task_queues:78:11) {
+          properties: {
+            validator: [Function (anonymous)],
+            message: '`projects` is not a valid enum value for path `status`.',
+            type: 'enum',
+            enumValues: [
+              'In Progress',
+              'Shared',
+              'Done',
+              'Tasks Board',
+              'Not Clear',
+              'Cancled',
+              'Review',
+              'Archived'
+            ],
+            path: 'status',
+            value: 'projects'
+          },
+          kind: 'enum',
+          path: 'status',
+          value: 'projects',
+          reason: undefined,
+          [Symbol(mongoose:validatorError)]: true
+        }
+      },
+      _message: 'tasks validation failed'
+    }
+  },
+  level: 'error',
+  timestamp: '2023-02-05 11:29:58'
+}
+{
+  message: { noAction: {} },
+  level: 'info',
+  timestamp: '2023-02-05 11:51:27'
+}
+{
+  message: {
+    body: {
+      name: 'Ezzat Elzalouy-not started yet',
+      desc: undefined,
+      due: undefined,
+      start: '2023-02-06T22:00:00.000Z',
+      idList: '63d28328d3447c7a63ec8cf4',
+      idBoard: '63d28327791560ed05f1c2e1'
+    }
+  },
+  level: 'info',
+  timestamp: '2023-02-05 11:52:32'
+}
+{
+  message: {
+    body: {
+      name: 'Ezzat Elzalouy-not started yet',
+      desc: undefined,
+      due: '2023-02-27T22:00:00.000Z',
+      start: '2023-02-06T22:00:00.000Z',
+      idList: '63d28328d3447c7a63ec8cf4',
+      idBoard: '63d28327791560ed05f1c2e1'
+    }
+  },
+  level: 'info',
+  timestamp: '2023-02-05 11:52:42'
+}
+{
+  message: {
+    body: {
+      name: 'Ezzat Elzalouy-project',
+      desc: undefined,
+      due: undefined,
+      start: '2022-12-31T22:00:00.000Z',
+      idList: '63d28328d3447c7a63ec8cf4',
+      idBoard: '63d28327791560ed05f1c2e1'
+    }
+  },
+  level: 'info',
+  timestamp: '2023-02-05 12:45:15'
+}
+{
+  message: {
+    body: {
+      name: 'Ezzat Elzalouy-project',
+      desc: undefined,
+      due: '2023-02-27T22:00:00.000Z',
+      start: '2022-12-31T22:00:00.000Z',
+      idList: '63d28328d3447c7a63ec8cf4',
+      idBoard: '63d28327791560ed05f1c2e1'
+    }
+  },
+  level: 'info',
+  timestamp: '2023-02-05 12:46:57'
+}
+{
+  message: {
+    body: {
+      name: 'Ezzat Elzalouy-project',
+      desc: undefined,
+      due: undefined,
+      start: '2023-01-07T22:00:00.000Z',
+      idList: '63d28328d3447c7a63ec8cf4',
+      idBoard: '63d28327791560ed05f1c2e1'
+    }
+  },
+  level: 'info',
+  timestamp: '2023-02-05 12:47:09'
+}
+{
+  message: {
+    body: {
+      name: 'Ezzat Elzalouy-project',
+      desc: undefined,
+      due: '2023-02-27T22:00:00.000Z',
+      start: '2023-01-07T22:00:00.000Z',
+      idList: '63d28328d3447c7a63ec8cf4',
+      idBoard: '63d28327791560ed05f1c2e1'
+    }
+  },
+  level: 'info',
+  timestamp: '2023-02-05 12:47:28'
+}
+{
+  message: {
+    body: {
+      name: 'Nawaf Elmohsem-not started yet',
+      desc: undefined,
+      due: undefined,
+      start: undefined,
+      idList: '63d28328d3447c7a63ec8cf4',
+      idBoard: '63d28327791560ed05f1c2e1'
+    }
+  },
+  level: 'info',
+  timestamp: '2023-02-05 12:47:34'
+}
+{
+  message: {
+    body: {
+      name: 'Nawaf Elmohsem-not started yet',
+      desc: undefined,
+      due: undefined,
+      start: '2023-02-04T22:00:00.000Z',
+      idList: '63d28328d3447c7a63ec8cf4',
+      idBoard: '63d28327791560ed05f1c2e1'
+    }
+  },
+  level: 'info',
+  timestamp: '2023-02-05 12:47:48'
+}
+{
+  message: {
+    body: {
+      name: 'Nawaf Elmohsem-not started yet',
+      desc: undefined,
+      due: '2023-02-27T22:00:00.000Z',
+      start: '2023-02-04T22:00:00.000Z',
+      idList: '63d28328d3447c7a63ec8cf4',
+      idBoard: '63d28327791560ed05f1c2e1'
+    }
+  },
+  level: 'info',
+  timestamp: '2023-02-05 12:50:15'
+}
+{
+  message: {
+    body: {
+      name: 'Nawaf Elmohsem-b not start yet',
+      desc: undefined,
+      due: undefined,
+      start: '2023-02-11T22:00:00.000Z',
+      idList: '63d28328d3447c7a63ec8cf4',
+      idBoard: '63d28327791560ed05f1c2e1'
+    }
+  },
+  level: 'info',
+  timestamp: '2023-02-05 12:50:31'
+}
+{
+  message: {
+    noAction: {
+      model: {
+        id: '63d28327791560ed05f1c2e1',
+        name: 'dev / TTP Creative',
+        desc: '',
+        descData: null,
+        closed: false,
+        idOrganization: '638e3ad0a165280188c108f5',
+        idEnterprise: null,
+        pinned: false,
+        url: 'https://trello.com/b/VsonknlZ/dev-ttp-creative',
+        shortUrl: 'https://trello.com/b/VsonknlZ',
+        prefs: {
+          permissionLevel: 'private',
+          hideVotes: false,
+          voting: 'disabled',
+          comments: 'members',
+          invitations: 'members',
+          selfJoin: true,
+          cardCovers: true,
+          isTemplate: false,
+          cardAging: 'regular',
+          calendarFeedEnabled: false,
+          hiddenPluginBoardButtons: [],
+          switcherViews: [
+            {
+              viewType: 'Board',
+              enabled: true,
+              _id: '63d28327791560ed05f1c2e2'
+            },
+            {
+              viewType: 'Table',
+              enabled: true,
+              _id: '63d28327791560ed05f1c2e3'
+            },
+            {
+              viewType: 'Calendar',
+              enabled: false,
+              _id: '63d28327791560ed05f1c2e4'
+            },
+            {
+              viewType: 'Dashboard',
+              enabled: false,
+              _id: '63d28327791560ed05f1c2e5'
+            },
+            {
+              viewType: 'Timeline',
+              enabled: false,
+              _id: '63d28327791560ed05f1c2e6'
+            },
+            {
+              viewType: 'Map',
+              enabled: false,
+              _id: '63d28327791560ed05f1c2e7'
+            }
+          ],
+          background: 'blue',
+          backgroundColor: '#0079BF',
+          backgroundImage: null,
+          backgroundImageScaled: null,
+          backgroundTile: false,
+          backgroundBrightness: 'dark',
+          backgroundBottomColor: '#0079BF',
+          backgroundTopColor: '#0079BF',
+          canBePublic: true,
+          canBeEnterprise: true,
+          canBeOrg: true,
+          canBePrivate: true,
+          canInvite: true
+        },
+        labelNames: {
+          green: '',
+          yellow: '',
+          orange: '',
+          red: '',
+          purple: '',
+          blue: '',
+          sky: '',
+          lime: '',
+          pink: '',
+          black: '',
+          green_dark: '',
+          yellow_dark: '',
+          orange_dark: '',
+          red_dark: '',
+          purple_dark: '',
+          blue_dark: '',
+          sky_dark: '',
+          lime_dark: '',
+          pink_dark: '',
+          black_dark: '',
+          green_light: '',
+          yellow_light: '',
+          orange_light: '',
+          red_light: '',
+          purple_light: '',
+          blue_light: '',
+          sky_light: '',
+          lime_light: '',
+          pink_light: '',
+          black_light: ''
+        }
+      },
+      action: {
+        id: '63df8a1fe8d568d74d2fc9a9',
+        idMemberCreator: '625c6c7c6fc2b45763b718dc',
+        data: {
+          board: {
+            prefs: { background: 'blue' },
+            id: '63d28327791560ed05f1c2e1',
+            name: 'dev / TTP Creative',
+            shortLink: 'VsonknlZ'
+          },
+          old: { prefs: { background: 'orange' } }
+        },
+        appCreator: { id: '625dce5c804a8202138a2cbb' },
+        type: 'updateBoard',
+        date: '2023-02-05T10:51:11.930Z',
+        limits: null,
+        display: {
+          translationKey: 'action_changed_board_background',
+          entities: {
+            board: {
+              type: 'board',
+              id: '63d28327791560ed05f1c2e1',
+              text: 'dev / TTP Creative',
+              shortLink: 'VsonknlZ'
+            },
+            memberCreator: {
+              type: 'member',
+              id: '625c6c7c6fc2b45763b718dc',
+              username: 'unicodettp',
+              text: 'UNICODE.TTP'
+            }
+          }
+        },
+        memberCreator: {
+          id: '625c6c7c6fc2b45763b718dc',
+          activityBlocked: false,
+          avatarHash: 'f6a6a1149513f4cd488ccf88d2c0e9fb',
+          avatarUrl: 'https://trello-members.s3.amazonaws.com/625c6c7c6fc2b45763b718dc/f6a6a1149513f4cd488ccf88d2c0e9fb',
+          fullName: 'UNICODE.TTP',
+          idMemberReferrer: null,
+          initials: 'U',
+          nonPublic: {},
+          nonPublicAvailable: true,
+          username: 'unicodettp'
+        }
+      }
+    }
+  },
+  level: 'info',
+  timestamp: '2023-02-05 12:51:12'
+}
+{
+  message: {
+    noAction: {
+      model: {
+        id: '63d28327791560ed05f1c2e1',
+        name: 'dev / TTP Creative',
+        desc: '',
+        descData: null,
+        closed: false,
+        idOrganization: '638e3ad0a165280188c108f5',
+        idEnterprise: null,
+        pinned: false,
+        url: 'https://trello.com/b/VsonknlZ/dev-ttp-creative',
+        shortUrl: 'https://trello.com/b/VsonknlZ',
+        prefs: {
+          permissionLevel: 'private',
+          hideVotes: false,
+          voting: 'disabled',
+          comments: 'members',
+          invitations: 'members',
+          selfJoin: true,
+          cardCovers: true,
+          isTemplate: false,
+          cardAging: 'regular',
+          calendarFeedEnabled: false,
+          hiddenPluginBoardButtons: [],
+          switcherViews: [
+            {
+              viewType: 'Board',
+              enabled: true,
+              _id: '63d28327791560ed05f1c2e2'
+            },
+            {
+              viewType: 'Table',
+              enabled: true,
+              _id: '63d28327791560ed05f1c2e3'
+            },
+            {
+              viewType: 'Calendar',
+              enabled: false,
+              _id: '63d28327791560ed05f1c2e4'
+            },
+            {
+              viewType: 'Dashboard',
+              enabled: false,
+              _id: '63d28327791560ed05f1c2e5'
+            },
+            {
+              viewType: 'Timeline',
+              enabled: false,
+              _id: '63d28327791560ed05f1c2e6'
+            },
+            {
+              viewType: 'Map',
+              enabled: false,
+              _id: '63d28327791560ed05f1c2e7'
+            }
+          ],
+          background: 'blue',
+          backgroundColor: '#0079BF',
+          backgroundImage: null,
+          backgroundImageScaled: null,
+          backgroundTile: false,
+          backgroundBrightness: 'dark',
+          backgroundBottomColor: '#0079BF',
+          backgroundTopColor: '#0079BF',
+          canBePublic: true,
+          canBeEnterprise: true,
+          canBeOrg: true,
+          canBePrivate: true,
+          canInvite: true
+        },
+        labelNames: {
+          green: '',
+          yellow: '',
+          orange: '',
+          red: '',
+          purple: '',
+          blue: '',
+          sky: '',
+          lime: '',
+          pink: '',
+          black: '',
+          green_dark: '',
+          yellow_dark: '',
+          orange_dark: '',
+          red_dark: '',
+          purple_dark: '',
+          blue_dark: '',
+          sky_dark: '',
+          lime_dark: '',
+          pink_dark: '',
+          black_dark: '',
+          green_light: '',
+          yellow_light: '',
+          orange_light: '',
+          red_light: '',
+          purple_light: '',
+          blue_light: '',
+          sky_light: '',
+          lime_light: '',
+          pink_light: '',
+          black_light: ''
+        }
+      },
+      action: {
+        id: '63df8a2392f73497255fab9a',
+        idMemberCreator: '625c6c7c6fc2b45763b718dc',
+        data: {
+          list: { id: '63df8a2392f73497255fab96', name: 'team s' },
+          board: {
+            id: '63d28327791560ed05f1c2e1',
+            name: 'dev / TTP Creative',
+            shortLink: 'VsonknlZ'
+          }
+        },
+        appCreator: { id: '625dce5c804a8202138a2cbb' },
+        type: 'createList',
+        date: '2023-02-05T10:51:15.715Z',
+        limits: null,
+        display: {
+          translationKey: 'action_added_list_to_board',
+          entities: {
+            list: {
+              type: 'list',
+              id: '63df8a2392f73497255fab96',
+              text: 'team s'
+            },
+            board: {
+              type: 'board',
+              id: '63d28327791560ed05f1c2e1',
+              text: 'dev / TTP Creative',
+              shortLink: 'VsonknlZ'
+            },
+            memberCreator: {
+              type: 'member',
+              id: '625c6c7c6fc2b45763b718dc',
+              username: 'unicodettp',
+              text: 'UNICODE.TTP'
+            }
+          }
+        },
+        memberCreator: {
+          id: '625c6c7c6fc2b45763b718dc',
+          activityBlocked: false,
+          avatarHash: 'f6a6a1149513f4cd488ccf88d2c0e9fb',
+          avatarUrl: 'https://trello-members.s3.amazonaws.com/625c6c7c6fc2b45763b718dc/f6a6a1149513f4cd488ccf88d2c0e9fb',
+          fullName: 'UNICODE.TTP',
+          idMemberReferrer: null,
+          initials: 'U',
+          nonPublic: {},
+          nonPublicAvailable: true,
+          username: 'unicodettp'
+        }
+      }
+    }
+  },
+  level: 'info',
+  timestamp: '2023-02-05 12:51:16'
+}
+{
+  message: {
+    noAction: {
+      model: {
+        id: '63d4e48b4a41505953a69bb1',
+        name: 'Design',
+        desc: '',
+        descData: null,
+        closed: false,
+        idOrganization: '638e3ad0a165280188c108f5',
+        idEnterprise: null,
+        pinned: false,
+        url: 'https://trello.com/b/kmLCEYLw/design',
+        shortUrl: 'https://trello.com/b/kmLCEYLw',
+        prefs: {
+          permissionLevel: 'private',
+          hideVotes: false,
+          voting: 'disabled',
+          comments: 'members',
+          invitations: 'members',
+          selfJoin: true,
+          cardCovers: true,
+          isTemplate: false,
+          cardAging: 'regular',
+          calendarFeedEnabled: false,
+          hiddenPluginBoardButtons: [],
+          switcherViews: [
+            {
+              viewType: 'Board',
+              enabled: true,
+              _id: '63d4e48b4a41505953a69bb2'
+            },
+            {
+              viewType: 'Table',
+              enabled: true,
+              _id: '63d4e48b4a41505953a69bb3'
+            },
+            {
+              viewType: 'Calendar',
+              enabled: false,
+              _id: '63d4e48b4a41505953a69bb4'
+            },
+            {
+              viewType: 'Dashboard',
+              enabled: false,
+              _id: '63d4e48b4a41505953a69bb5'
+            },
+            {
+              viewType: 'Timeline',
+              enabled: false,
+              _id: '63d4e48b4a41505953a69bb6'
+            },
+            {
+              viewType: 'Map',
+              enabled: false,
+              _id: '63d4e48b4a41505953a69bb7'
+            }
+          ],
+          background: 'orange',
+          backgroundColor: '#D29034',
+          backgroundImage: null,
+          backgroundImageScaled: null,
+          backgroundTile: false,
+          backgroundBrightness: 'dark',
+          backgroundBottomColor: '#D29034',
+          backgroundTopColor: '#D29034',
+          canBePublic: true,
+          canBeEnterprise: true,
+          canBeOrg: true,
+          canBePrivate: true,
+          canInvite: true
+        },
+        labelNames: {
+          green: '',
+          yellow: '',
+          orange: '',
+          red: '',
+          purple: '',
+          blue: '',
+          sky: '',
+          lime: '',
+          pink: '',
+          black: '',
+          green_dark: '',
+          yellow_dark: '',
+          orange_dark: '',
+          red_dark: '',
+          purple_dark: '',
+          blue_dark: '',
+          sky_dark: '',
+          lime_dark: '',
+          pink_dark: '',
+          black_dark: '',
+          green_light: '',
+          yellow_light: '',
+          orange_light: '',
+          red_light: '',
+          purple_light: '',
+          blue_light: '',
+          sky_light: '',
+          lime_light: '',
+          pink_light: '',
+          black_light: ''
+        }
+      },
+      action: {
+        id: '63df8a10a4b9d489ac11c4bb',
+        idMemberCreator: '625c6c7c6fc2b45763b718dc',
+        data: {
+          board: {
+            prefs: { background: 'orange' },
+            id: '63d4e48b4a41505953a69bb1',
+            name: 'Design',
+            shortLink: 'kmLCEYLw'
+          },
+          old: { prefs: { background: 'blue' } }
+        },
+        appCreator: { id: '625dce5c804a8202138a2cbb' },
+        type: 'updateBoard',
+        date: '2023-02-05T10:50:56.678Z',
+        limits: null,
+        display: {
+          translationKey: 'action_changed_board_background',
+          entities: {
+            board: {
+              type: 'board',
+              id: '63d4e48b4a41505953a69bb1',
+              text: 'Design',
+              shortLink: 'kmLCEYLw'
+            },
+            memberCreator: {
+              type: 'member',
+              id: '625c6c7c6fc2b45763b718dc',
+              username: 'unicodettp',
+              text: 'UNICODE.TTP'
+            }
+          }
+        },
+        memberCreator: {
+          id: '625c6c7c6fc2b45763b718dc',
+          activityBlocked: false,
+          avatarHash: 'f6a6a1149513f4cd488ccf88d2c0e9fb',
+          avatarUrl: 'https://trello-members.s3.amazonaws.com/625c6c7c6fc2b45763b718dc/f6a6a1149513f4cd488ccf88d2c0e9fb',
+          fullName: 'UNICODE.TTP',
+          idMemberReferrer: null,
+          initials: 'U',
+          nonPublic: {},
+          nonPublicAvailable: true,
+          username: 'unicodettp'
+        }
+      }
+    }
+  },
+  level: 'info',
+  timestamp: '2023-02-05 12:51:27'
+}
+{
+  message: {
+    noAction: {
+      model: {
+        id: '63d4e48b4a41505953a69bb1',
+        name: 'Design',
+        desc: '',
+        descData: null,
+        closed: false,
+        idOrganization: '638e3ad0a165280188c108f5',
+        idEnterprise: null,
+        pinned: false,
+        url: 'https://trello.com/b/kmLCEYLw/design',
+        shortUrl: 'https://trello.com/b/kmLCEYLw',
+        prefs: {
+          permissionLevel: 'private',
+          hideVotes: false,
+          voting: 'disabled',
+          comments: 'members',
+          invitations: 'members',
+          selfJoin: true,
+          cardCovers: true,
+          isTemplate: false,
+          cardAging: 'regular',
+          calendarFeedEnabled: false,
+          hiddenPluginBoardButtons: [],
+          switcherViews: [
+            {
+              viewType: 'Board',
+              enabled: true,
+              _id: '63d4e48b4a41505953a69bb2'
+            },
+            {
+              viewType: 'Table',
+              enabled: true,
+              _id: '63d4e48b4a41505953a69bb3'
+            },
+            {
+              viewType: 'Calendar',
+              enabled: false,
+              _id: '63d4e48b4a41505953a69bb4'
+            },
+            {
+              viewType: 'Dashboard',
+              enabled: false,
+              _id: '63d4e48b4a41505953a69bb5'
+            },
+            {
+              viewType: 'Timeline',
+              enabled: false,
+              _id: '63d4e48b4a41505953a69bb6'
+            },
+            {
+              viewType: 'Map',
+              enabled: false,
+              _id: '63d4e48b4a41505953a69bb7'
+            }
+          ],
+          background: 'orange',
+          backgroundColor: '#D29034',
+          backgroundImage: null,
+          backgroundImageScaled: null,
+          backgroundTile: false,
+          backgroundBrightness: 'dark',
+          backgroundBottomColor: '#D29034',
+          backgroundTopColor: '#D29034',
+          canBePublic: true,
+          canBeEnterprise: true,
+          canBeOrg: true,
+          canBePrivate: true,
+          canInvite: true
+        },
+        labelNames: {
+          green: '',
+          yellow: '',
+          orange: '',
+          red: '',
+          purple: '',
+          blue: '',
+          sky: '',
+          lime: '',
+          pink: '',
+          black: '',
+          green_dark: '',
+          yellow_dark: '',
+          orange_dark: '',
+          red_dark: '',
+          purple_dark: '',
+          blue_dark: '',
+          sky_dark: '',
+          lime_dark: '',
+          pink_dark: '',
+          black_dark: '',
+          green_light: '',
+          yellow_light: '',
+          orange_light: '',
+          red_light: '',
+          purple_light: '',
+          blue_light: '',
+          sky_light: '',
+          lime_light: '',
+          pink_light: '',
+          black_light: ''
+        }
+      },
+      action: {
+        id: '63df8a13eacaa23674f7e6cb',
+        idMemberCreator: '625c6c7c6fc2b45763b718dc',
+        data: {
+          list: { id: '63df8a13eacaa23674f7e6c7', name: 'team 2' },
+          board: {
+            id: '63d4e48b4a41505953a69bb1',
+            name: 'Design',
+            shortLink: 'kmLCEYLw'
+          }
+        },
+        appCreator: { id: '625dce5c804a8202138a2cbb' },
+        type: 'createList',
+        date: '2023-02-05T10:50:59.833Z',
+        limits: null,
+        display: {
+          translationKey: 'action_added_list_to_board',
+          entities: {
+            list: {
+              type: 'list',
+              id: '63df8a13eacaa23674f7e6c7',
+              text: 'team 2'
+            },
+            board: {
+              type: 'board',
+              id: '63d4e48b4a41505953a69bb1',
+              text: 'Design',
+              shortLink: 'kmLCEYLw'
+            },
+            memberCreator: {
+              type: 'member',
+              id: '625c6c7c6fc2b45763b718dc',
+              username: 'unicodettp',
+              text: 'UNICODE.TTP'
+            }
+          }
+        },
+        memberCreator: {
+          id: '625c6c7c6fc2b45763b718dc',
+          activityBlocked: false,
+          avatarHash: 'f6a6a1149513f4cd488ccf88d2c0e9fb',
+          avatarUrl: 'https://trello-members.s3.amazonaws.com/625c6c7c6fc2b45763b718dc/f6a6a1149513f4cd488ccf88d2c0e9fb',
+          fullName: 'UNICODE.TTP',
+          idMemberReferrer: null,
+          initials: 'U',
+          nonPublic: {},
+          nonPublicAvailable: true,
+          username: 'unicodettp'
+        }
+      }
+    }
+  },
+  level: 'info',
+  timestamp: '2023-02-05 12:51:30'
+}
+{
+  message: { noAction: {} },
+  level: 'info',
+  timestamp: '2023-02-05 12:53:46'
+}
+{
+  message: {
+    noAction: {
+      model: {
+        id: '63df8ab7205126de2ee04cc0',
+        name: 'test delete dep',
+        desc: '',
+        descData: null,
+        closed: false,
+        idOrganization: '638e3ad0a165280188c108f5',
+        idEnterprise: null,
+        pinned: false,
+        url: 'https://trello.com/b/E4suJ6vF/test-delete-dep',
+        shortUrl: 'https://trello.com/b/E4suJ6vF',
+        prefs: {
+          permissionLevel: 'private',
+          hideVotes: false,
+          voting: 'disabled',
+          comments: 'members',
+          invitations: 'members',
+          selfJoin: true,
+          cardCovers: true,
+          isTemplate: false,
+          cardAging: 'regular',
+          calendarFeedEnabled: false,
+          hiddenPluginBoardButtons: [],
+          switcherViews: [
+            {
+              viewType: 'Board',
+              enabled: true,
+              _id: '63df8ab7205126de2ee04cc1'
+            },
+            {
+              viewType: 'Table',
+              enabled: true,
+              _id: '63df8ab7205126de2ee04cc2'
+            },
+            {
+              viewType: 'Calendar',
+              enabled: false,
+              _id: '63df8ab7205126de2ee04cc3'
+            },
+            {
+              viewType: 'Dashboard',
+              enabled: false,
+              _id: '63df8ab7205126de2ee04cc4'
+            },
+            {
+              viewType: 'Timeline',
+              enabled: false,
+              _id: '63df8ab7205126de2ee04cc5'
+            },
+            {
+              viewType: 'Map',
+              enabled: false,
+              _id: '63df8ab7205126de2ee04cc6'
+            }
+          ],
+          background: 'blue',
+          backgroundColor: '#0079BF',
+          backgroundImage: null,
+          backgroundImageScaled: null,
+          backgroundTile: false,
+          backgroundBrightness: 'dark',
+          backgroundBottomColor: '#0079BF',
+          backgroundTopColor: '#0079BF',
+          canBePublic: true,
+          canBeEnterprise: true,
+          canBeOrg: true,
+          canBePrivate: true,
+          canInvite: true
+        },
+        labelNames: {
+          green: '',
+          yellow: '',
+          orange: '',
+          red: '',
+          purple: '',
+          blue: '',
+          sky: '',
+          lime: '',
+          pink: '',
+          black: '',
+          green_dark: '',
+          yellow_dark: '',
+          orange_dark: '',
+          red_dark: '',
+          purple_dark: '',
+          blue_dark: '',
+          sky_dark: '',
+          lime_dark: '',
+          pink_dark: '',
+          black_dark: '',
+          green_light: '',
+          yellow_light: '',
+          orange_light: '',
+          red_light: '',
+          purple_light: '',
+          blue_light: '',
+          sky_light: '',
+          lime_light: '',
+          pink_light: '',
+          black_light: ''
+        }
+      },
+      action: {
+        id: '63df8abf7fbe04844dba79c5',
+        idMemberCreator: '625c6c7c6fc2b45763b718dc',
+        data: {
+          list: { id: '63df8abf7fbe04844dba79c1', name: 'Review' },
+          board: {
+            id: '63df8ab7205126de2ee04cc0',
+            name: 'test delete dep',
+            shortLink: 'E4suJ6vF'
+          }
+        },
+        appCreator: { id: '625dce5c804a8202138a2cbb' },
+        type: 'createList',
+        date: '2023-02-05T10:53:51.596Z',
+        limits: null,
+        display: {
+          translationKey: 'action_added_list_to_board',
+          entities: {
+            list: {
+              type: 'list',
+              id: '63df8abf7fbe04844dba79c1',
+              text: 'Review'
+            },
+            board: {
+              type: 'board',
+              id: '63df8ab7205126de2ee04cc0',
+              text: 'test delete dep',
+              shortLink: 'E4suJ6vF'
+            },
+            memberCreator: {
+              type: 'member',
+              id: '625c6c7c6fc2b45763b718dc',
+              username: 'unicodettp',
+              text: 'UNICODE.TTP'
+            }
+          }
+        },
+        memberCreator: {
+          id: '625c6c7c6fc2b45763b718dc',
+          activityBlocked: false,
+          avatarHash: 'f6a6a1149513f4cd488ccf88d2c0e9fb',
+          avatarUrl: 'https://trello-members.s3.amazonaws.com/625c6c7c6fc2b45763b718dc/f6a6a1149513f4cd488ccf88d2c0e9fb',
+          fullName: 'UNICODE.TTP',
+          idMemberReferrer: null,
+          initials: 'U',
+          nonPublic: {},
+          nonPublicAvailable: true,
+          username: 'unicodettp'
+        }
+      }
+    }
+  },
+  level: 'info',
+  timestamp: '2023-02-05 12:53:52'
+}
+{
+  message: {
+    noAction: {
+      model: {
+        id: '63df8ab7205126de2ee04cc0',
+        name: 'test delete dep',
+        desc: '',
+        descData: null,
+        closed: false,
+        idOrganization: '638e3ad0a165280188c108f5',
+        idEnterprise: null,
+        pinned: false,
+        url: 'https://trello.com/b/E4suJ6vF/test-delete-dep',
+        shortUrl: 'https://trello.com/b/E4suJ6vF',
+        prefs: {
+          permissionLevel: 'private',
+          hideVotes: false,
+          voting: 'disabled',
+          comments: 'members',
+          invitations: 'members',
+          selfJoin: true,
+          cardCovers: true,
+          isTemplate: false,
+          cardAging: 'regular',
+          calendarFeedEnabled: false,
+          hiddenPluginBoardButtons: [],
+          switcherViews: [
+            {
+              viewType: 'Board',
+              enabled: true,
+              _id: '63df8ab7205126de2ee04cc1'
+            },
+            {
+              viewType: 'Table',
+              enabled: true,
+              _id: '63df8ab7205126de2ee04cc2'
+            },
+            {
+              viewType: 'Calendar',
+              enabled: false,
+              _id: '63df8ab7205126de2ee04cc3'
+            },
+            {
+              viewType: 'Dashboard',
+              enabled: false,
+              _id: '63df8ab7205126de2ee04cc4'
+            },
+            {
+              viewType: 'Timeline',
+              enabled: false,
+              _id: '63df8ab7205126de2ee04cc5'
+            },
+            {
+              viewType: 'Map',
+              enabled: false,
+              _id: '63df8ab7205126de2ee04cc6'
+            }
+          ],
+          background: 'blue',
+          backgroundColor: '#0079BF',
+          backgroundImage: null,
+          backgroundImageScaled: null,
+          backgroundTile: false,
+          backgroundBrightness: 'dark',
+          backgroundBottomColor: '#0079BF',
+          backgroundTopColor: '#0079BF',
+          canBePublic: true,
+          canBeEnterprise: true,
+          canBeOrg: true,
+          canBePrivate: true,
+          canInvite: true
+        },
+        labelNames: {
+          green: '',
+          yellow: '',
+          orange: '',
+          red: '',
+          purple: '',
+          blue: '',
+          sky: '',
+          lime: '',
+          pink: '',
+          black: '',
+          green_dark: '',
+          yellow_dark: '',
+          orange_dark: '',
+          red_dark: '',
+          purple_dark: '',
+          blue_dark: '',
+          sky_dark: '',
+          lime_dark: '',
+          pink_dark: '',
+          black_dark: '',
+          green_light: '',
+          yellow_light: '',
+          orange_light: '',
+          red_light: '',
+          purple_light: '',
+          blue_light: '',
+          sky_light: '',
+          lime_light: '',
+          pink_light: '',
+          black_light: ''
+        }
+      },
+      action: {
+        id: '63df8abfcaacbb63685b2b45',
+        idMemberCreator: '625c6c7c6fc2b45763b718dc',
+        data: {
+          list: { id: '63df8abfcaacbb63685b2b41', name: 'Done' },
+          board: {
+            id: '63df8ab7205126de2ee04cc0',
+            name: 'test delete dep',
+            shortLink: 'E4suJ6vF'
+          }
+        },
+        appCreator: { id: '625dce5c804a8202138a2cbb' },
+        type: 'createList',
+        date: '2023-02-05T10:53:51.634Z',
+        limits: null,
+        display: {
+          translationKey: 'action_added_list_to_board',
+          entities: {
+            list: {
+              type: 'list',
+              id: '63df8abfcaacbb63685b2b41',
+              text: 'Done'
+            },
+            board: {
+              type: 'board',
+              id: '63df8ab7205126de2ee04cc0',
+              text: 'test delete dep',
+              shortLink: 'E4suJ6vF'
+            },
+            memberCreator: {
+              type: 'member',
+              id: '625c6c7c6fc2b45763b718dc',
+              username: 'unicodettp',
+              text: 'UNICODE.TTP'
+            }
+          }
+        },
+        memberCreator: {
+          id: '625c6c7c6fc2b45763b718dc',
+          activityBlocked: false,
+          avatarHash: 'f6a6a1149513f4cd488ccf88d2c0e9fb',
+          avatarUrl: 'https://trello-members.s3.amazonaws.com/625c6c7c6fc2b45763b718dc/f6a6a1149513f4cd488ccf88d2c0e9fb',
+          fullName: 'UNICODE.TTP',
+          idMemberReferrer: null,
+          initials: 'U',
+          nonPublic: {},
+          nonPublicAvailable: true,
+          username: 'unicodettp'
+        }
+      }
+    }
+  },
+  level: 'info',
+  timestamp: '2023-02-05 12:53:52'
+}
+{
+  message: {
+    noAction: {
+      model: {
+        id: '63df8ab7205126de2ee04cc0',
+        name: 'test delete dep',
+        desc: '',
+        descData: null,
+        closed: false,
+        idOrganization: '638e3ad0a165280188c108f5',
+        idEnterprise: null,
+        pinned: false,
+        url: 'https://trello.com/b/E4suJ6vF/test-delete-dep',
+        shortUrl: 'https://trello.com/b/E4suJ6vF',
+        prefs: {
+          permissionLevel: 'private',
+          hideVotes: false,
+          voting: 'disabled',
+          comments: 'members',
+          invitations: 'members',
+          selfJoin: true,
+          cardCovers: true,
+          isTemplate: false,
+          cardAging: 'regular',
+          calendarFeedEnabled: false,
+          hiddenPluginBoardButtons: [],
+          switcherViews: [
+            {
+              viewType: 'Board',
+              enabled: true,
+              _id: '63df8ab7205126de2ee04cc1'
+            },
+            {
+              viewType: 'Table',
+              enabled: true,
+              _id: '63df8ab7205126de2ee04cc2'
+            },
+            {
+              viewType: 'Calendar',
+              enabled: false,
+              _id: '63df8ab7205126de2ee04cc3'
+            },
+            {
+              viewType: 'Dashboard',
+              enabled: false,
+              _id: '63df8ab7205126de2ee04cc4'
+            },
+            {
+              viewType: 'Timeline',
+              enabled: false,
+              _id: '63df8ab7205126de2ee04cc5'
+            },
+            {
+              viewType: 'Map',
+              enabled: false,
+              _id: '63df8ab7205126de2ee04cc6'
+            }
+          ],
+          background: 'blue',
+          backgroundColor: '#0079BF',
+          backgroundImage: null,
+          backgroundImageScaled: null,
+          backgroundTile: false,
+          backgroundBrightness: 'dark',
+          backgroundBottomColor: '#0079BF',
+          backgroundTopColor: '#0079BF',
+          canBePublic: true,
+          canBeEnterprise: true,
+          canBeOrg: true,
+          canBePrivate: true,
+          canInvite: true
+        },
+        labelNames: {
+          green: '',
+          yellow: '',
+          orange: '',
+          red: '',
+          purple: '',
+          blue: '',
+          sky: '',
+          lime: '',
+          pink: '',
+          black: '',
+          green_dark: '',
+          yellow_dark: '',
+          orange_dark: '',
+          red_dark: '',
+          purple_dark: '',
+          blue_dark: '',
+          sky_dark: '',
+          lime_dark: '',
+          pink_dark: '',
+          black_dark: '',
+          green_light: '',
+          yellow_light: '',
+          orange_light: '',
+          red_light: '',
+          purple_light: '',
+          blue_light: '',
+          sky_light: '',
+          lime_light: '',
+          pink_light: '',
+          black_light: ''
+        }
+      },
+      action: {
+        id: '63df8abf171757736715df10',
+        idMemberCreator: '625c6c7c6fc2b45763b718dc',
+        data: {
+          list: { id: '63df8abf171757736715df0c', name: 'Tasks Board' },
+          board: {
+            id: '63df8ab7205126de2ee04cc0',
+            name: 'test delete dep',
+            shortLink: 'E4suJ6vF'
+          }
+        },
+        appCreator: { id: '625dce5c804a8202138a2cbb' },
+        type: 'createList',
+        date: '2023-02-05T10:53:51.697Z',
+        limits: null,
+        display: {
+          translationKey: 'action_added_list_to_board',
+          entities: {
+            list: {
+              type: 'list',
+              id: '63df8abf171757736715df0c',
+              text: 'Tasks Board'
+            },
+            board: {
+              type: 'board',
+              id: '63df8ab7205126de2ee04cc0',
+              text: 'test delete dep',
+              shortLink: 'E4suJ6vF'
+            },
+            memberCreator: {
+              type: 'member',
+              id: '625c6c7c6fc2b45763b718dc',
+              username: 'unicodettp',
+              text: 'UNICODE.TTP'
+            }
+          }
+        },
+        memberCreator: {
+          id: '625c6c7c6fc2b45763b718dc',
+          activityBlocked: false,
+          avatarHash: 'f6a6a1149513f4cd488ccf88d2c0e9fb',
+          avatarUrl: 'https://trello-members.s3.amazonaws.com/625c6c7c6fc2b45763b718dc/f6a6a1149513f4cd488ccf88d2c0e9fb',
+          fullName: 'UNICODE.TTP',
+          idMemberReferrer: null,
+          initials: 'U',
+          nonPublic: {},
+          nonPublicAvailable: true,
+          username: 'unicodettp'
+        }
+      }
+    }
+  },
+  level: 'info',
+  timestamp: '2023-02-05 12:53:52'
+}
+{
+  message: {
+    noAction: {
+      model: {
+        id: '63df8ab7205126de2ee04cc0',
+        name: 'test delete dep',
+        desc: '',
+        descData: null,
+        closed: false,
+        idOrganization: '638e3ad0a165280188c108f5',
+        idEnterprise: null,
+        pinned: false,
+        url: 'https://trello.com/b/E4suJ6vF/test-delete-dep',
+        shortUrl: 'https://trello.com/b/E4suJ6vF',
+        prefs: {
+          permissionLevel: 'private',
+          hideVotes: false,
+          voting: 'disabled',
+          comments: 'members',
+          invitations: 'members',
+          selfJoin: true,
+          cardCovers: true,
+          isTemplate: false,
+          cardAging: 'regular',
+          calendarFeedEnabled: false,
+          hiddenPluginBoardButtons: [],
+          switcherViews: [
+            {
+              viewType: 'Board',
+              enabled: true,
+              _id: '63df8ab7205126de2ee04cc1'
+            },
+            {
+              viewType: 'Table',
+              enabled: true,
+              _id: '63df8ab7205126de2ee04cc2'
+            },
+            {
+              viewType: 'Calendar',
+              enabled: false,
+              _id: '63df8ab7205126de2ee04cc3'
+            },
+            {
+              viewType: 'Dashboard',
+              enabled: false,
+              _id: '63df8ab7205126de2ee04cc4'
+            },
+            {
+              viewType: 'Timeline',
+              enabled: false,
+              _id: '63df8ab7205126de2ee04cc5'
+            },
+            {
+              viewType: 'Map',
+              enabled: false,
+              _id: '63df8ab7205126de2ee04cc6'
+            }
+          ],
+          background: 'blue',
+          backgroundColor: '#0079BF',
+          backgroundImage: null,
+          backgroundImageScaled: null,
+          backgroundTile: false,
+          backgroundBrightness: 'dark',
+          backgroundBottomColor: '#0079BF',
+          backgroundTopColor: '#0079BF',
+          canBePublic: true,
+          canBeEnterprise: true,
+          canBeOrg: true,
+          canBePrivate: true,
+          canInvite: true
+        },
+        labelNames: {
+          green: '',
+          yellow: '',
+          orange: '',
+          red: '',
+          purple: '',
+          blue: '',
+          sky: '',
+          lime: '',
+          pink: '',
+          black: '',
+          green_dark: '',
+          yellow_dark: '',
+          orange_dark: '',
+          red_dark: '',
+          purple_dark: '',
+          blue_dark: '',
+          sky_dark: '',
+          lime_dark: '',
+          pink_dark: '',
+          black_dark: '',
+          green_light: '',
+          yellow_light: '',
+          orange_light: '',
+          red_light: '',
+          purple_light: '',
+          blue_light: '',
+          sky_light: '',
+          lime_light: '',
+          pink_light: '',
+          black_light: ''
+        }
+      },
+      action: {
+        id: '63df8abfe92e7379a65559e7',
+        idMemberCreator: '625c6c7c6fc2b45763b718dc',
+        data: {
+          list: { id: '63df8abfe92e7379a65559e3', name: 'Cancled' },
+          board: {
+            id: '63df8ab7205126de2ee04cc0',
+            name: 'test delete dep',
+            shortLink: 'E4suJ6vF'
+          }
+        },
+        appCreator: { id: '625dce5c804a8202138a2cbb' },
+        type: 'createList',
+        date: '2023-02-05T10:53:51.749Z',
+        limits: null,
+        display: {
+          translationKey: 'action_added_list_to_board',
+          entities: {
+            list: {
+              type: 'list',
+              id: '63df8abfe92e7379a65559e3',
+              text: 'Cancled'
+            },
+            board: {
+              type: 'board',
+              id: '63df8ab7205126de2ee04cc0',
+              text: 'test delete dep',
+              shortLink: 'E4suJ6vF'
+            },
+            memberCreator: {
+              type: 'member',
+              id: '625c6c7c6fc2b45763b718dc',
+              username: 'unicodettp',
+              text: 'UNICODE.TTP'
+            }
+          }
+        },
+        memberCreator: {
+          id: '625c6c7c6fc2b45763b718dc',
+          activityBlocked: false,
+          avatarHash: 'f6a6a1149513f4cd488ccf88d2c0e9fb',
+          avatarUrl: 'https://trello-members.s3.amazonaws.com/625c6c7c6fc2b45763b718dc/f6a6a1149513f4cd488ccf88d2c0e9fb',
+          fullName: 'UNICODE.TTP',
+          idMemberReferrer: null,
+          initials: 'U',
+          nonPublic: {},
+          nonPublicAvailable: true,
+          username: 'unicodettp'
+        }
+      }
+    }
+  },
+  level: 'info',
+  timestamp: '2023-02-05 12:53:52'
+}
+{
+  message: {
+    noAction: {
+      model: {
+        id: '63df8ab7205126de2ee04cc0',
+        name: 'test delete dep',
+        desc: '',
+        descData: null,
+        closed: false,
+        idOrganization: '638e3ad0a165280188c108f5',
+        idEnterprise: null,
+        pinned: false,
+        url: 'https://trello.com/b/E4suJ6vF/test-delete-dep',
+        shortUrl: 'https://trello.com/b/E4suJ6vF',
+        prefs: {
+          permissionLevel: 'private',
+          hideVotes: false,
+          voting: 'disabled',
+          comments: 'members',
+          invitations: 'members',
+          selfJoin: true,
+          cardCovers: true,
+          isTemplate: false,
+          cardAging: 'regular',
+          calendarFeedEnabled: false,
+          hiddenPluginBoardButtons: [],
+          switcherViews: [
+            {
+              viewType: 'Board',
+              enabled: true,
+              _id: '63df8ab7205126de2ee04cc1'
+            },
+            {
+              viewType: 'Table',
+              enabled: true,
+              _id: '63df8ab7205126de2ee04cc2'
+            },
+            {
+              viewType: 'Calendar',
+              enabled: false,
+              _id: '63df8ab7205126de2ee04cc3'
+            },
+            {
+              viewType: 'Dashboard',
+              enabled: false,
+              _id: '63df8ab7205126de2ee04cc4'
+            },
+            {
+              viewType: 'Timeline',
+              enabled: false,
+              _id: '63df8ab7205126de2ee04cc5'
+            },
+            {
+              viewType: 'Map',
+              enabled: false,
+              _id: '63df8ab7205126de2ee04cc6'
+            }
+          ],
+          background: 'blue',
+          backgroundColor: '#0079BF',
+          backgroundImage: null,
+          backgroundImageScaled: null,
+          backgroundTile: false,
+          backgroundBrightness: 'dark',
+          backgroundBottomColor: '#0079BF',
+          backgroundTopColor: '#0079BF',
+          canBePublic: true,
+          canBeEnterprise: true,
+          canBeOrg: true,
+          canBePrivate: true,
+          canInvite: true
+        },
+        labelNames: {
+          green: '',
+          yellow: '',
+          orange: '',
+          red: '',
+          purple: '',
+          blue: '',
+          sky: '',
+          lime: '',
+          pink: '',
+          black: '',
+          green_dark: '',
+          yellow_dark: '',
+          orange_dark: '',
+          red_dark: '',
+          purple_dark: '',
+          blue_dark: '',
+          sky_dark: '',
+          lime_dark: '',
+          pink_dark: '',
+          black_dark: '',
+          green_light: '',
+          yellow_light: '',
+          orange_light: '',
+          red_light: '',
+          purple_light: '',
+          blue_light: '',
+          sky_light: '',
+          lime_light: '',
+          pink_light: '',
+          black_light: ''
+        }
+      },
+      action: {
+        id: '63df8abfc36d783674ff3716',
+        idMemberCreator: '625c6c7c6fc2b45763b718dc',
+        data: {
+          list: { id: '63df8abfc36d783674ff3712', name: 'In Progress' },
+          board: {
+            id: '63df8ab7205126de2ee04cc0',
+            name: 'test delete dep',
+            shortLink: 'E4suJ6vF'
+          }
+        },
+        appCreator: { id: '625dce5c804a8202138a2cbb' },
+        type: 'createList',
+        date: '2023-02-05T10:53:51.809Z',
+        limits: null,
+        display: {
+          translationKey: 'action_added_list_to_board',
+          entities: {
+            list: {
+              type: 'list',
+              id: '63df8abfc36d783674ff3712',
+              text: 'In Progress'
+            },
+            board: {
+              type: 'board',
+              id: '63df8ab7205126de2ee04cc0',
+              text: 'test delete dep',
+              shortLink: 'E4suJ6vF'
+            },
+            memberCreator: {
+              type: 'member',
+              id: '625c6c7c6fc2b45763b718dc',
+              username: 'unicodettp',
+              text: 'UNICODE.TTP'
+            }
+          }
+        },
+        memberCreator: {
+          id: '625c6c7c6fc2b45763b718dc',
+          activityBlocked: false,
+          avatarHash: 'f6a6a1149513f4cd488ccf88d2c0e9fb',
+          avatarUrl: 'https://trello-members.s3.amazonaws.com/625c6c7c6fc2b45763b718dc/f6a6a1149513f4cd488ccf88d2c0e9fb',
+          fullName: 'UNICODE.TTP',
+          idMemberReferrer: null,
+          initials: 'U',
+          nonPublic: {},
+          nonPublicAvailable: true,
+          username: 'unicodettp'
+        }
+      }
+    }
+  },
+  level: 'info',
+  timestamp: '2023-02-05 12:53:52'
+}
+{
+  message: {
+    noAction: {
+      model: {
+        id: '63df8ab7205126de2ee04cc0',
+        name: 'test delete dep',
+        desc: '',
+        descData: null,
+        closed: false,
+        idOrganization: '638e3ad0a165280188c108f5',
+        idEnterprise: null,
+        pinned: false,
+        url: 'https://trello.com/b/E4suJ6vF/test-delete-dep',
+        shortUrl: 'https://trello.com/b/E4suJ6vF',
+        prefs: {
+          permissionLevel: 'private',
+          hideVotes: false,
+          voting: 'disabled',
+          comments: 'members',
+          invitations: 'members',
+          selfJoin: true,
+          cardCovers: true,
+          isTemplate: false,
+          cardAging: 'regular',
+          calendarFeedEnabled: false,
+          hiddenPluginBoardButtons: [],
+          switcherViews: [
+            {
+              viewType: 'Board',
+              enabled: true,
+              _id: '63df8ab7205126de2ee04cc1'
+            },
+            {
+              viewType: 'Table',
+              enabled: true,
+              _id: '63df8ab7205126de2ee04cc2'
+            },
+            {
+              viewType: 'Calendar',
+              enabled: false,
+              _id: '63df8ab7205126de2ee04cc3'
+            },
+            {
+              viewType: 'Dashboard',
+              enabled: false,
+              _id: '63df8ab7205126de2ee04cc4'
+            },
+            {
+              viewType: 'Timeline',
+              enabled: false,
+              _id: '63df8ab7205126de2ee04cc5'
+            },
+            {
+              viewType: 'Map',
+              enabled: false,
+              _id: '63df8ab7205126de2ee04cc6'
+            }
+          ],
+          background: 'blue',
+          backgroundColor: '#0079BF',
+          backgroundImage: null,
+          backgroundImageScaled: null,
+          backgroundTile: false,
+          backgroundBrightness: 'dark',
+          backgroundBottomColor: '#0079BF',
+          backgroundTopColor: '#0079BF',
+          canBePublic: true,
+          canBeEnterprise: true,
+          canBeOrg: true,
+          canBePrivate: true,
+          canInvite: true
+        },
+        labelNames: {
+          green: '',
+          yellow: '',
+          orange: '',
+          red: '',
+          purple: '',
+          blue: '',
+          sky: '',
+          lime: '',
+          pink: '',
+          black: '',
+          green_dark: '',
+          yellow_dark: '',
+          orange_dark: '',
+          red_dark: '',
+          purple_dark: '',
+          blue_dark: '',
+          sky_dark: '',
+          lime_dark: '',
+          pink_dark: '',
+          black_dark: '',
+          green_light: '',
+          yellow_light: '',
+          orange_light: '',
+          red_light: '',
+          purple_light: '',
+          blue_light: '',
+          sky_light: '',
+          lime_light: '',
+          pink_light: '',
+          black_light: ''
+        }
+      },
+      action: {
+        id: '63df8abfbf318029c5496942',
+        idMemberCreator: '625c6c7c6fc2b45763b718dc',
+        data: {
+          list: { id: '63df8abfbf318029c549693e', name: 'Shared' },
+          board: {
+            id: '63df8ab7205126de2ee04cc0',
+            name: 'test delete dep',
+            shortLink: 'E4suJ6vF'
+          }
+        },
+        appCreator: { id: '625dce5c804a8202138a2cbb' },
+        type: 'createList',
+        date: '2023-02-05T10:53:51.928Z',
+        limits: null,
+        display: {
+          translationKey: 'action_added_list_to_board',
+          entities: {
+            list: {
+              type: 'list',
+              id: '63df8abfbf318029c549693e',
+              text: 'Shared'
+            },
+            board: {
+              type: 'board',
+              id: '63df8ab7205126de2ee04cc0',
+              text: 'test delete dep',
+              shortLink: 'E4suJ6vF'
+            },
+            memberCreator: {
+              type: 'member',
+              id: '625c6c7c6fc2b45763b718dc',
+              username: 'unicodettp',
+              text: 'UNICODE.TTP'
+            }
+          }
+        },
+        memberCreator: {
+          id: '625c6c7c6fc2b45763b718dc',
+          activityBlocked: false,
+          avatarHash: 'f6a6a1149513f4cd488ccf88d2c0e9fb',
+          avatarUrl: 'https://trello-members.s3.amazonaws.com/625c6c7c6fc2b45763b718dc/f6a6a1149513f4cd488ccf88d2c0e9fb',
+          fullName: 'UNICODE.TTP',
+          idMemberReferrer: null,
+          initials: 'U',
+          nonPublic: {},
+          nonPublicAvailable: true,
+          username: 'unicodettp'
+        }
+      }
+    }
+  },
+  level: 'info',
+  timestamp: '2023-02-05 12:53:52'
+}
+{
+  message: {
+    noAction: {
+      model: {
+        id: '63df8ab7205126de2ee04cc0',
+        name: 'test delete dep',
+        desc: '',
+        descData: null,
+        closed: false,
+        idOrganization: '638e3ad0a165280188c108f5',
+        idEnterprise: null,
+        pinned: false,
+        url: 'https://trello.com/b/E4suJ6vF/test-delete-dep',
+        shortUrl: 'https://trello.com/b/E4suJ6vF',
+        prefs: {
+          permissionLevel: 'private',
+          hideVotes: false,
+          voting: 'disabled',
+          comments: 'members',
+          invitations: 'members',
+          selfJoin: true,
+          cardCovers: true,
+          isTemplate: false,
+          cardAging: 'regular',
+          calendarFeedEnabled: false,
+          hiddenPluginBoardButtons: [],
+          switcherViews: [
+            {
+              viewType: 'Board',
+              enabled: true,
+              _id: '63df8ab7205126de2ee04cc1'
+            },
+            {
+              viewType: 'Table',
+              enabled: true,
+              _id: '63df8ab7205126de2ee04cc2'
+            },
+            {
+              viewType: 'Calendar',
+              enabled: false,
+              _id: '63df8ab7205126de2ee04cc3'
+            },
+            {
+              viewType: 'Dashboard',
+              enabled: false,
+              _id: '63df8ab7205126de2ee04cc4'
+            },
+            {
+              viewType: 'Timeline',
+              enabled: false,
+              _id: '63df8ab7205126de2ee04cc5'
+            },
+            {
+              viewType: 'Map',
+              enabled: false,
+              _id: '63df8ab7205126de2ee04cc6'
+            }
+          ],
+          background: 'blue',
+          backgroundColor: '#0079BF',
+          backgroundImage: null,
+          backgroundImageScaled: null,
+          backgroundTile: false,
+          backgroundBrightness: 'dark',
+          backgroundBottomColor: '#0079BF',
+          backgroundTopColor: '#0079BF',
+          canBePublic: true,
+          canBeEnterprise: true,
+          canBeOrg: true,
+          canBePrivate: true,
+          canInvite: true
+        },
+        labelNames: {
+          green: '',
+          yellow: '',
+          orange: '',
+          red: '',
+          purple: '',
+          blue: '',
+          sky: '',
+          lime: '',
+          pink: '',
+          black: '',
+          green_dark: '',
+          yellow_dark: '',
+          orange_dark: '',
+          red_dark: '',
+          purple_dark: '',
+          blue_dark: '',
+          sky_dark: '',
+          lime_dark: '',
+          pink_dark: '',
+          black_dark: '',
+          green_light: '',
+          yellow_light: '',
+          orange_light: '',
+          red_light: '',
+          purple_light: '',
+          blue_light: '',
+          sky_light: '',
+          lime_light: '',
+          pink_light: '',
+          black_light: ''
+        }
+      },
+      action: {
+        id: '63df8ac091a403dca79f82f0',
+        idMemberCreator: '625c6c7c6fc2b45763b718dc',
+        data: {
+          list: { id: '63df8ac091a403dca79f82ec', name: 'Not Clear' },
+          board: {
+            id: '63df8ab7205126de2ee04cc0',
+            name: 'test delete dep',
+            shortLink: 'E4suJ6vF'
+          }
+        },
+        appCreator: { id: '625dce5c804a8202138a2cbb' },
+        type: 'createList',
+        date: '2023-02-05T10:53:52.020Z',
+        limits: null,
+        display: {
+          translationKey: 'action_added_list_to_board',
+          entities: {
+            list: {
+              type: 'list',
+              id: '63df8ac091a403dca79f82ec',
+              text: 'Not Clear'
+            },
+            board: {
+              type: 'board',
+              id: '63df8ab7205126de2ee04cc0',
+              text: 'test delete dep',
+              shortLink: 'E4suJ6vF'
+            },
+            memberCreator: {
+              type: 'member',
+              id: '625c6c7c6fc2b45763b718dc',
+              username: 'unicodettp',
+              text: 'UNICODE.TTP'
+            }
+          }
+        },
+        memberCreator: {
+          id: '625c6c7c6fc2b45763b718dc',
+          activityBlocked: false,
+          avatarHash: 'f6a6a1149513f4cd488ccf88d2c0e9fb',
+          avatarUrl: 'https://trello-members.s3.amazonaws.com/625c6c7c6fc2b45763b718dc/f6a6a1149513f4cd488ccf88d2c0e9fb',
+          fullName: 'UNICODE.TTP',
+          idMemberReferrer: null,
+          initials: 'U',
+          nonPublic: {},
+          nonPublicAvailable: true,
+          username: 'unicodettp'
+        }
+      }
+    }
+  },
+  level: 'info',
+  timestamp: '2023-02-05 12:53:52'
+}
+{
+  message: {
+    noAction: {
+      model: {
+        id: '63df8ab7205126de2ee04cc0',
+        name: 'test delete dep',
+        desc: '',
+        descData: null,
+        closed: false,
+        idOrganization: '638e3ad0a165280188c108f5',
+        idEnterprise: null,
+        pinned: false,
+        url: 'https://trello.com/b/E4suJ6vF/test-delete-dep',
+        shortUrl: 'https://trello.com/b/E4suJ6vF',
+        prefs: {
+          permissionLevel: 'private',
+          hideVotes: false,
+          voting: 'disabled',
+          comments: 'members',
+          invitations: 'members',
+          selfJoin: true,
+          cardCovers: true,
+          isTemplate: false,
+          cardAging: 'regular',
+          calendarFeedEnabled: false,
+          hiddenPluginBoardButtons: [],
+          switcherViews: [
+            {
+              viewType: 'Board',
+              enabled: true,
+              _id: '63df8ab7205126de2ee04cc1'
+            },
+            {
+              viewType: 'Table',
+              enabled: true,
+              _id: '63df8ab7205126de2ee04cc2'
+            },
+            {
+              viewType: 'Calendar',
+              enabled: false,
+              _id: '63df8ab7205126de2ee04cc3'
+            },
+            {
+              viewType: 'Dashboard',
+              enabled: false,
+              _id: '63df8ab7205126de2ee04cc4'
+            },
+            {
+              viewType: 'Timeline',
+              enabled: false,
+              _id: '63df8ab7205126de2ee04cc5'
+            },
+            {
+              viewType: 'Map',
+              enabled: false,
+              _id: '63df8ab7205126de2ee04cc6'
+            }
+          ],
+          background: 'blue',
+          backgroundColor: '#0079BF',
+          backgroundImage: null,
+          backgroundImageScaled: null,
+          backgroundTile: false,
+          backgroundBrightness: 'dark',
+          backgroundBottomColor: '#0079BF',
+          backgroundTopColor: '#0079BF',
+          canBePublic: true,
+          canBeEnterprise: true,
+          canBeOrg: true,
+          canBePrivate: true,
+          canInvite: true
+        },
+        labelNames: {
+          green: '',
+          yellow: '',
+          orange: '',
+          red: '',
+          purple: '',
+          blue: '',
+          sky: '',
+          lime: '',
+          pink: '',
+          black: '',
+          green_dark: '',
+          yellow_dark: '',
+          orange_dark: '',
+          red_dark: '',
+          purple_dark: '',
+          blue_dark: '',
+          sky_dark: '',
+          lime_dark: '',
+          pink_dark: '',
+          black_dark: '',
+          green_light: '',
+          yellow_light: '',
+          orange_light: '',
+          red_light: '',
+          purple_light: '',
+          blue_light: '',
+          sky_light: '',
+          lime_light: '',
+          pink_light: '',
+          black_light: ''
+        }
+      },
+      action: {
+        id: '63df8ac2395ffaf29f7b4879',
+        idMemberCreator: '625c6c7c6fc2b45763b718dc',
+        data: {
+          list: { id: '63df8ac2395ffaf29f7b4875', name: 'ttt' },
+          board: {
+            id: '63df8ab7205126de2ee04cc0',
+            name: 'test delete dep',
+            shortLink: 'E4suJ6vF'
+          }
+        },
+        appCreator: { id: '625dce5c804a8202138a2cbb' },
+        type: 'createList',
+        date: '2023-02-05T10:53:54.662Z',
+        limits: null,
+        display: {
+          translationKey: 'action_added_list_to_board',
+          entities: {
+            list: {
+              type: 'list',
+              id: '63df8ac2395ffaf29f7b4875',
+              text: 'ttt'
+            },
+            board: {
+              type: 'board',
+              id: '63df8ab7205126de2ee04cc0',
+              text: 'test delete dep',
+              shortLink: 'E4suJ6vF'
+            },
+            memberCreator: {
+              type: 'member',
+              id: '625c6c7c6fc2b45763b718dc',
+              username: 'unicodettp',
+              text: 'UNICODE.TTP'
+            }
+          }
+        },
+        memberCreator: {
+          id: '625c6c7c6fc2b45763b718dc',
+          activityBlocked: false,
+          avatarHash: 'f6a6a1149513f4cd488ccf88d2c0e9fb',
+          avatarUrl: 'https://trello-members.s3.amazonaws.com/625c6c7c6fc2b45763b718dc/f6a6a1149513f4cd488ccf88d2c0e9fb',
+          fullName: 'UNICODE.TTP',
+          idMemberReferrer: null,
+          initials: 'U',
+          nonPublic: {},
+          nonPublicAvailable: true,
+          username: 'unicodettp'
+        }
+      }
+    }
+  },
+  level: 'info',
+  timestamp: '2023-02-05 12:53:54'
+}
+{
+  message: {
+    removeBoard: 'https://api.trello.com/1/boards/63df8ab7205126de2ee04cc0?response_type=token&key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68'
+  },
+  level: 'info',
+  timestamp: '2023-02-05 12:54:16'
+}
+{
+  message: {
+    noAction: {
+      model: {
+        id: '63df8ab7205126de2ee04cc0',
+        name: 'test delete dep',
+        desc: '',
+        descData: null,
+        closed: false,
+        idOrganization: null,
+        idEnterprise: null,
+        pinned: false,
+        url: 'https://trello.com/b/E4suJ6vF/test-delete-dep',
+        shortUrl: 'https://trello.com/b/E4suJ6vF',
+        prefs: {
+          permissionLevel: 'private',
+          hideVotes: false,
+          voting: 'disabled',
+          comments: 'members',
+          invitations: 'members',
+          selfJoin: true,
+          cardCovers: true,
+          isTemplate: false,
+          cardAging: 'regular',
+          calendarFeedEnabled: false,
+          hiddenPluginBoardButtons: [],
+          switcherViews: [
+            {
+              viewType: 'Board',
+              enabled: true,
+              _id: '63df8ab7205126de2ee04cc1'
+            },
+            {
+              viewType: 'Table',
+              enabled: true,
+              _id: '63df8ab7205126de2ee04cc2'
+            },
+            {
+              viewType: 'Calendar',
+              enabled: false,
+              _id: '63df8ab7205126de2ee04cc3'
+            },
+            {
+              viewType: 'Dashboard',
+              enabled: false,
+              _id: '63df8ab7205126de2ee04cc4'
+            },
+            {
+              viewType: 'Timeline',
+              enabled: false,
+              _id: '63df8ab7205126de2ee04cc5'
+            },
+            {
+              viewType: 'Map',
+              enabled: false,
+              _id: '63df8ab7205126de2ee04cc6'
+            }
+          ],
+          background: 'blue',
+          backgroundColor: '#0079BF',
+          backgroundImage: null,
+          backgroundImageScaled: null,
+          backgroundTile: false,
+          backgroundBrightness: 'dark',
+          backgroundBottomColor: '#0079BF',
+          backgroundTopColor: '#0079BF',
+          canBePublic: true,
+          canBeEnterprise: true,
+          canBeOrg: true,
+          canBePrivate: true,
+          canInvite: true
+        },
+        labelNames: {
+          green: '',
+          yellow: '',
+          orange: '',
+          red: '',
+          purple: '',
+          blue: '',
+          sky: '',
+          lime: '',
+          pink: '',
+          black: '',
+          green_dark: '',
+          yellow_dark: '',
+          orange_dark: '',
+          red_dark: '',
+          purple_dark: '',
+          blue_dark: '',
+          sky_dark: '',
+          lime_dark: '',
+          pink_dark: '',
+          black_dark: '',
+          green_light: '',
+          yellow_light: '',
+          orange_light: '',
+          red_light: '',
+          purple_light: '',
+          blue_light: '',
+          sky_light: '',
+          lime_light: '',
+          pink_light: '',
+          black_light: ''
+        }
+      },
+      action: {
+        id: '63df8ad9e023d5bdd4214587',
+        idMemberCreator: '625c6c7c6fc2b45763b718dc',
+        data: {
+          board: {
+            id: '63df8ab7205126de2ee04cc0',
+            name: 'test delete dep',
+            shortLink: 'E4suJ6vF'
+          },
+          organization: { id: '638e3ad0a165280188c108f5', name: 'ttpbetalocal' }
+        },
+        appCreator: null,
+        type: 'removeFromOrganizationBoard',
+        date: '2023-02-05T10:54:17.116Z',
+        limits: null,
+        display: {
+          translationKey: 'action_remove_from_organization_board',
+          entities: {
+            board: {
+              type: 'board',
+              id: '63df8ab7205126de2ee04cc0',
+              text: 'test delete dep',
+              shortLink: 'E4suJ6vF'
+            },
+            organization: {
+              type: 'organization',
+              id: '638e3ad0a165280188c108f5',
+              text: 'ttpbetalocal'
+            },
+            memberCreator: {
+              type: 'member',
+              id: '625c6c7c6fc2b45763b718dc',
+              username: 'unicodettp',
+              text: 'UNICODE.TTP'
+            }
+          }
+        },
+        memberCreator: {
+          id: '625c6c7c6fc2b45763b718dc',
+          activityBlocked: false,
+          avatarHash: 'f6a6a1149513f4cd488ccf88d2c0e9fb',
+          avatarUrl: 'https://trello-members.s3.amazonaws.com/625c6c7c6fc2b45763b718dc/f6a6a1149513f4cd488ccf88d2c0e9fb',
+          fullName: 'UNICODE.TTP',
+          idMemberReferrer: null,
+          initials: 'U',
+          nonPublic: {},
+          nonPublicAvailable: true,
+          username: 'unicodettp'
+        }
+      }
+    }
+  },
+  level: 'info',
+  timestamp: '2023-02-05 12:54:17'
+}
+{
+  message: { deleteTasksOfDepartment: { acknowledged: true, deletedCount: 0 } },
+  level: 'info',
+  timestamp: '2023-02-05 12:54:18'
+}
+{
+  message: {
+    noAction: {
+      model: {
+        id: '63d4e48b4a41505953a69bb1',
+        name: 'Design',
+        desc: '',
+        descData: null,
+        closed: false,
+        idOrganization: '638e3ad0a165280188c108f5',
+        idEnterprise: null,
+        pinned: false,
+        url: 'https://trello.com/b/kmLCEYLw/design',
+        shortUrl: 'https://trello.com/b/kmLCEYLw',
+        prefs: {
+          permissionLevel: 'private',
+          hideVotes: false,
+          voting: 'disabled',
+          comments: 'members',
+          invitations: 'members',
+          selfJoin: true,
+          cardCovers: true,
+          isTemplate: false,
+          cardAging: 'regular',
+          calendarFeedEnabled: false,
+          hiddenPluginBoardButtons: [],
+          switcherViews: [
+            {
+              viewType: 'Board',
+              enabled: true,
+              _id: '63d4e48b4a41505953a69bb2'
+            },
+            {
+              viewType: 'Table',
+              enabled: true,
+              _id: '63d4e48b4a41505953a69bb3'
+            },
+            {
+              viewType: 'Calendar',
+              enabled: false,
+              _id: '63d4e48b4a41505953a69bb4'
+            },
+            {
+              viewType: 'Dashboard',
+              enabled: false,
+              _id: '63d4e48b4a41505953a69bb5'
+            },
+            {
+              viewType: 'Timeline',
+              enabled: false,
+              _id: '63d4e48b4a41505953a69bb6'
+            },
+            {
+              viewType: 'Map',
+              enabled: false,
+              _id: '63d4e48b4a41505953a69bb7'
+            }
+          ],
+          background: 'orange',
+          backgroundColor: '#D29034',
+          backgroundImage: null,
+          backgroundImageScaled: null,
+          backgroundTile: false,
+          backgroundBrightness: 'dark',
+          backgroundBottomColor: '#D29034',
+          backgroundTopColor: '#D29034',
+          canBePublic: true,
+          canBeEnterprise: true,
+          canBeOrg: true,
+          canBePrivate: true,
+          canInvite: true
+        },
+        labelNames: {
+          green: '',
+          yellow: '',
+          orange: '',
+          red: '',
+          purple: '',
+          blue: '',
+          sky: '',
+          lime: '',
+          pink: '',
+          black: '',
+          green_dark: '',
+          yellow_dark: '',
+          orange_dark: '',
+          red_dark: '',
+          purple_dark: '',
+          blue_dark: '',
+          sky_dark: '',
+          lime_dark: '',
+          pink_dark: '',
+          black_dark: '',
+          green_light: '',
+          yellow_light: '',
+          orange_light: '',
+          red_light: '',
+          purple_light: '',
+          blue_light: '',
+          sky_light: '',
+          lime_light: '',
+          pink_light: '',
+          black_light: ''
+        }
+      },
+      action: {
+        id: '63df8b2545985f16b2fd3faa',
+        idMemberCreator: '625c6c7c6fc2b45763b718dc',
+        data: {
+          list: {
+            closed: true,
+            id: '63d4e48e19fadb606b6ff855',
+            name: 'team'
+          },
+          old: { closed: false },
+          board: {
+            id: '63d4e48b4a41505953a69bb1',
+            name: 'Design',
+            shortLink: 'kmLCEYLw'
+          }
+        },
+        appCreator: { id: '625dce5c804a8202138a2cbb' },
+        type: 'updateList',
+        date: '2023-02-05T10:55:33.011Z',
+        limits: null,
+        display: {
+          translationKey: 'action_archived_list',
+          entities: {
+            list: {
+              type: 'list',
+              closed: true,
+              id: '63d4e48e19fadb606b6ff855',
+              text: 'team'
+            },
+            memberCreator: {
+              type: 'member',
+              id: '625c6c7c6fc2b45763b718dc',
+              username: 'unicodettp',
+              text: 'UNICODE.TTP'
+            }
+          }
+        },
+        memberCreator: {
+          id: '625c6c7c6fc2b45763b718dc',
+          activityBlocked: false,
+          avatarHash: 'f6a6a1149513f4cd488ccf88d2c0e9fb',
+          avatarUrl: 'https://trello-members.s3.amazonaws.com/625c6c7c6fc2b45763b718dc/f6a6a1149513f4cd488ccf88d2c0e9fb',
+          fullName: 'UNICODE.TTP',
+          idMemberReferrer: null,
+          initials: 'U',
+          nonPublic: {},
+          nonPublicAvailable: true,
+          username: 'unicodettp'
+        }
+      }
+    }
+  },
+  level: 'info',
+  timestamp: '2023-02-05 12:55:33'
+}
+{
+  message: {
+    body: {
+      name: 'Nawaf Elmohsem-not started yet',
+      desc: undefined,
+      due: '2023-02-27T22:00:00.000Z',
+      start: '2023-02-04T22:00:00.000Z',
+      idList: '63d28328d3447c7a63ec8cf4',
+      idBoard: '63d28327791560ed05f1c2e1'
+    }
+  },
+  level: 'info',
+  timestamp: '2023-02-05 13:06:57'
+}
+{
+  message: {
+    body: {
+      name: 'Nawaf Elmohsem-not started yet',
+      desc: undefined,
+      due: '2023-02-27T22:00:00.000Z',
+      start: '2023-02-04T22:00:00.000Z',
+      idList: '63d28328d3447c7a63ec8cf4',
+      idBoard: '63d28327791560ed05f1c2e1'
+    }
+  },
+  level: 'info',
+  timestamp: '2023-02-05 13:07:30'
+}
+{
+  message: {
+    body: {
+      name: 'Ezzat Elzalouy-not started yet',
+      desc: undefined,
+      due: '2023-02-27T22:00:00.000Z',
+      start: '2023-02-06T22:00:00.000Z',
+      idList: '63d28328d3447c7a63ec8cf4',
+      idBoard: '63d28327791560ed05f1c2e1'
+    }
+  },
+  level: 'info',
+  timestamp: '2023-02-05 13:11:31'
+}
+{
+  message: {
+    body: {
+      name: 'Nawaf Elmohsem-b not start yet',
+      desc: undefined,
+      due: undefined,
+      start: '2023-02-11T22:00:00.000Z',
+      idList: '63d28328d3447c7a63ec8cf4',
+      idBoard: '63d28327791560ed05f1c2e1'
+    }
+  },
+  level: 'info',
+  timestamp: '2023-02-05 13:11:39'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2023-02-05 13:17:11'
+}
+{
+  message: {
+    body: {
+      name: 'Nawaf Elmohsem-project',
+      desc: undefined,
+      due: '2023-03-10T22:00:00.000Z',
+      start: '2023-01-15T22:00:00.000Z',
+      idList: '63d28328d3447c7a63ec8cf4',
+      idBoard: '63d28327791560ed05f1c2e1'
+    }
+  },
+  level: 'info',
+  timestamp: '2023-02-05 13:18:13'
+}
+{
+  message: {
+    body: {
+      name: 'Nawaf Elmohsem-b not start yet',
+      desc: undefined,
+      due: undefined,
+      start: '2023-02-11T22:00:00.000Z',
+      idList: '63d28328d3447c7a63ec8cf4',
+      idBoard: '63d28327791560ed05f1c2e1'
+    }
+  },
+  level: 'info',
+  timestamp: '2023-02-05 13:18:28'
+}
+{
+  message: {
+    s3File: {
+      fieldname: 'image',
+      originalname: '5be93044-652d-4f5b-89ac-7abd554c7b54.jpeg',
+      encoding: '7bit',
+      mimetype: 'image/jpeg'
+    }
+  },
+  level: 'info',
+  timestamp: '2023-02-05 13:19:22'
+}
+{
+  message: {
+    clientData: [Object: null prototype] {
+      _id: '637f82bb2e89dae2ff512dd4',
+      clientName: 'Ezzat Elzalouy',
+      createdAt: '2022-11-24T14:42:03.947Z',
+      image: 'https://bucketttp.s3.me-south-1.amazonaws.com/5be93044-652d-4f5b-89ac-7abd554c7b54-1675595962339.jpeg'
+    }
+  },
+  level: 'info',
+  timestamp: '2023-02-05 13:19:23'
+}
+{
+  message: {
+    s3File: {
+      fieldname: 'image',
+      originalname: '1634147289303-1673254752052.jpeg',
+      encoding: '7bit',
+      mimetype: 'image/jpeg'
+    }
+  },
+  level: 'info',
+  timestamp: '2023-02-05 13:19:48'
+}
+{
+  message: {
+    body: {
+      name: 'Nawaf Elmohsem-not started yet',
+      desc: undefined,
+      due: '2023-02-27T22:00:00.000Z',
+      start: '2023-02-04T22:00:00.000Z',
+      idList: '63d28328d3447c7a63ec8cf4',
+      idBoard: '63d28327791560ed05f1c2e1'
+    }
+  },
+  level: 'info',
+  timestamp: '2023-02-05 13:20:48'
+}
+{
+  message: {
+    body: {
+      name: 'Nawaf Elmohsem-fix ',
+      desc: undefined,
+      due: '2023-01-08T22:00:00.000Z',
+      start: '2023-01-07T22:00:00.000Z',
+      idList: '63d28328d3447c7a63ec8cf4',
+      idBoard: '63d28327791560ed05f1c2e1'
+    }
+  },
+  level: 'info',
+  timestamp: '2023-02-05 13:20:56'
+}
+{
+  message: {
+    body: {
+      name: 'Nawaf Elmohsem-b not start yet',
+      desc: undefined,
+      due: undefined,
+      start: '2023-02-11T22:00:00.000Z',
+      idList: '63d28328d3447c7a63ec8cf4',
+      idBoard: '63d28327791560ed05f1c2e1'
+    }
+  },
+  level: 'info',
+  timestamp: '2023-02-05 13:21:05'
+}
+{
+  message: {
+    body: {
+      name: 'Nawaf Elmohsem-project',
+      desc: undefined,
+      due: '2023-03-10T22:00:00.000Z',
+      start: '2023-01-15T22:00:00.000Z',
+      idList: '63d28328d3447c7a63ec8cf4',
+      idBoard: '63d28327791560ed05f1c2e1'
+    }
+  },
+  level: 'info',
+  timestamp: '2023-02-05 13:21:12'
+}
+{
+  message: {
+    body: {
+      name: 'Ezzat Elzalouy-not started yet',
+      desc: undefined,
+      due: '2023-02-27T22:00:00.000Z',
+      start: '2023-02-06T22:00:00.000Z',
+      idList: '63d28328d3447c7a63ec8cf4',
+      idBoard: '63d28327791560ed05f1c2e1'
+    }
+  },
+  level: 'info',
+  timestamp: '2023-02-05 13:21:24'
+}
+{
+  message: {
+    body: {
+      name: 'Ezzat Elzalouy-project',
+      desc: undefined,
+      due: '2023-02-27T22:00:00.000Z',
+      start: '2022-12-31T22:00:00.000Z',
+      idList: '63d28328d3447c7a63ec8cf4',
+      idBoard: '63d28327791560ed05f1c2e1'
+    }
+  },
+  level: 'info',
+  timestamp: '2023-02-05 13:21:32'
+}
+{
+  message: {
+    body: {
+      name: 'Ezzat Elzalouy-project',
+      desc: undefined,
+      due: '2023-02-27T22:00:00.000Z',
+      start: '2023-01-07T22:00:00.000Z',
+      idList: '63d28328d3447c7a63ec8cf4',
+      idBoard: '63d28327791560ed05f1c2e1'
+    }
+  },
+  level: 'info',
+  timestamp: '2023-02-05 13:21:39'
+}
+{
+  message: {
+    body: {
+      name: 'Nawaf Elmohsem-project',
+      desc: undefined,
+      due: '2023-03-10T22:00:00.000Z',
+      start: '2023-01-15T22:00:00.000Z',
+      idList: '63d28328d3447c7a63ec8cf4',
+      idBoard: '63d28327791560ed05f1c2e1'
+    }
+  },
+  level: 'info',
+  timestamp: '2023-02-05 13:28:42'
+}
+{
+  message: {
+    body: {
+      name: 'Ezzat Elzalouy-project',
+      desc: undefined,
+      due: '2023-02-27T22:00:00.000Z',
+      start: '2022-12-31T22:00:00.000Z',
+      idList: '63d28328d3447c7a63ec8cf4',
+      idBoard: '63d28327791560ed05f1c2e1'
+    }
+  },
+  level: 'info',
+  timestamp: '2023-02-05 13:28:56'
+}
+{
+  message: {
+    body: {
+      name: 'Ezzat Elzalouy-project',
+      desc: undefined,
+      due: '2023-02-27T22:00:00.000Z',
+      start: '2023-01-07T22:00:00.000Z',
+      idList: '63d28328d3447c7a63ec8cf4',
+      idBoard: '63d28327791560ed05f1c2e1'
+    }
+  },
+  level: 'info',
+  timestamp: '2023-02-05 13:29:05'
+}
+{
+  message: {
+    body: {
+      name: 'Nawaf Elmohsem-project',
+      desc: undefined,
+      due: '2023-03-10T22:00:00.000Z',
+      start: '2023-01-15T22:00:00.000Z',
+      idList: '63d28328d3447c7a63ec8cf4',
+      idBoard: '63d28327791560ed05f1c2e1'
+    }
+  },
+  level: 'info',
+  timestamp: '2023-02-05 14:25:17'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2023-02-05 14:27:58'
+}
+{
+  message: { noAction: {} },
+  level: 'info',
+  timestamp: '2023-02-05 14:28:03'
+}
+{
+  message: { noAction: {} },
+  level: 'info',
+  timestamp: '2023-02-05 14:28:03'
+}
+{
+  message: { noAction: {} },
+  level: 'info',
+  timestamp: '2023-02-05 14:28:04'
+}
+{
+  message: { noAction: {} },
+  level: 'info',
+  timestamp: '2023-02-05 14:28:04'
+}
+{
+  message: {
+    data: [Object: null prototype] {
+      id: '63d4e4a69f8764c33e6f3cfe',
+      cardId: '63d4e4a68941c09a94d4a2a0',
+      name: 'Nawaf Elmohsem-project-Design- (task)',
+      categoryId: '6230a00a7c422d81dc39c51c',
+      status: 'Shared',
+      boardId: '63d28327791560ed05f1c2e1',
+      listId: '63d28329bc01edc155c710ce',
+      deadline: 'Sun Jan 22 2023 00:00:00 GMT+0200 (Eastern European Standard Time)',
+      teamId: '63d4e4a69f8764c33e6f3d03',
+      description: 'description'
+    }
+  },
+  level: 'info',
+  timestamp: '2023-02-05 14:29:06'
+}
+{
+  message: {
+    body: {
+      name: 'Nawaf Elmohsem-project-Design- (task)',
+      desc: 'description',
+      due: 'Sun Jan 22 2023 00:00:00 GMT+0200 (Eastern European Standard Time)',
+      start: null,
+      idList: '63d28329bc01edc155c710ce',
+      idBoard: '63d28327791560ed05f1c2e1'
+    }
+  },
+  level: 'info',
+  timestamp: '2023-02-05 14:29:06'
+}
+{
+  message: {
+    body: {
+      name: 'Ezzat Elzalouy-project',
+      desc: undefined,
+      due: '2023-02-27T22:00:00.000Z',
+      start: '2022-12-31T22:00:00.000Z',
+      idList: '63d28328d3447c7a63ec8cf4',
+      idBoard: '63d28327791560ed05f1c2e1'
+    }
+  },
+  level: 'info',
+  timestamp: '2023-02-05 14:30:02'
+}
+{
+  message: {
+    createCategoryDBError: MongoServerError: E11000 duplicate key error collection: TTP.categories index: category_1 dup key: { category: "Strategy" }
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/mongodb/src/operations/insert.ts:85:25
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/mongodb/src/cmap/connection_pool.ts:482:13
+        at handleOperationResult (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/mongodb/src/sdam/server.ts:538:14)
+        at Connection.onMessage (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/mongodb/src/cmap/connection.ts:452:5)
+        at MessageStream.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/mongodb/src/cmap/connection.ts:267:56)
+        at MessageStream.emit (node:events:527:28)
+        at MessageStream.emit (node:domain:475:12)
+        at processIncomingData (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/mongodb/src/cmap/message_stream.ts:168:12)
+        at MessageStream._write (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/mongodb/src/cmap/message_stream.ts:65:5)
+        at writeOrBuffer (node:internal/streams/writable:389:12) {
+      index: 0,
+      code: 11000,
+      keyPattern: { category: 1 },
+      keyValue: { category: 'Strategy' },
+      [Symbol(errorLabels)]: Set(0) {}
+    }
+  },
+  level: 'error',
+  timestamp: '2023-02-05 14:49:25'
+}
+{
+  message: {
+    subCategory: {
+      subCategory: 'tas',
+      _id: new ObjectId("63dfa61ef36aa22ac01c62df"),
+      createdAt: 2023-02-05T12:50:38.474Z,
+      updatedAt: 2023-02-05T12:50:38.474Z,
+      __v: 0
+    }
+  },
+  level: 'info',
+  timestamp: '2023-02-05 14:50:38'
+}
+{
+  message: {
+    subCategory: {
+      subCategory: 'startegy 1',
+      _id: new ObjectId("63dfa628f36aa22ac01c62e5"),
+      createdAt: 2023-02-05T12:50:48.573Z,
+      updatedAt: 2023-02-05T12:50:48.573Z,
+      __v: 0
+    }
+  },
+  level: 'info',
+  timestamp: '2023-02-05 14:50:48'
+}
+{
+  message: {
+    data: [Object: null prototype] {
+      id: '63df7c1e980d01be4a06018b',
+      cardId: '63df7c1e94cbff0b8a868e7b',
+      name: 'Ezzat Elzalouy-project-Design-sub 5 (task)',
+      categoryId: '6230a00a7c422d81dc39c51c',
+      status: 'In Progress',
+      boardId: '63d4e48b4a41505953a69bb1',
+      listId: '63d4e48df2c565225fa95f25',
+      deadline: 'Sun Feb 05 2023 00:00:00 GMT+0200 (Eastern European Standard Time)',
+      subCategoryId: '637bbad9d5a6232d85583b20',
+      teamId: '63dfa0d2f36aa22ac01c60c4',
+      description: 'desc'
+    }
+  },
+  level: 'info',
+  timestamp: '2023-02-05 14:52:12'
+}
+{
+  message: {
+    body: {
+      name: 'Ezzat Elzalouy-project-Design-sub 5 (task)',
+      desc: 'desc',
+      due: 'Sun Feb 05 2023 00:00:00 GMT+0200 (Eastern European Standard Time)',
+      start: null,
+      idList: '63df8a13eacaa23674f7e6c7',
+      idBoard: '63d4e48b4a41505953a69bb1'
+    }
+  },
+  level: 'info',
+  timestamp: '2023-02-05 14:52:12'
+}
+{
+  message: { noAction: {} },
+  level: 'info',
+  timestamp: '2023-02-05 14:52:55'
+}
+{
+  message: {
+    data: [Object: null prototype] {
+      id: '63dfa6a7f36aa22ac01c6312',
+      cardId: '63dfa6a69eb15b0393cc14e5',
+      name: 'Nawaf Elmohsem-project-Strategry 2-startegy 1 (task)',
+      categoryId: '63dfa613f36aa22ac01c62be',
+      status: 'In Progress',
+      boardId: '63d28327791560ed05f1c2e1',
+      listId: '63d28329f5624215ca41d9c3',
+      deadline: 'Thu Feb 23 2023 00:00:00 GMT+0200 (Eastern European Standard Time)',
+      subCategoryId: '63dfa628f36aa22ac01c62e5',
+      teamId: '63dfa0d2f36aa22ac01c60bb',
+      description: 'desc'
+    }
+  },
+  level: 'info',
+  timestamp: '2023-02-05 14:53:23'
+}
+{
+  message: {
+    body: {
+      name: 'Nawaf Elmohsem-project-Strategry 2-startegy 1 (task)',
+      desc: 'desc',
+      due: 'Thu Feb 23 2023 00:00:00 GMT+0200 (Eastern European Standard Time)',
+      start: null,
+      idList: null,
+      idBoard: '63d28327791560ed05f1c2e1'
+    }
+  },
+  level: 'info',
+  timestamp: '2023-02-05 14:53:23'
+}
+{
+  message: {
+    data: [Object: null prototype] {
+      id: '63dfa6a7f36aa22ac01c6312',
+      cardId: '63dfa6a69eb15b0393cc14e5',
+      name: 'Nawaf Elmohsem-project-Strategry 2-startegy 1 (task)',
+      categoryId: '63dfa613f36aa22ac01c62be',
+      status: 'In Progress',
+      boardId: '63d28327791560ed05f1c2e1',
+      listId: '63d28329f5624215ca41d9c3',
+      subCategoryId: '63dfa628f36aa22ac01c62e5',
+      teamId: '63dfa0d2f36aa22ac01c60bb',
+      description: 'desc'
+    }
+  },
+  level: 'info',
+  timestamp: '2023-02-05 14:53:31'
+}
+{
+  message: {
+    body: {
+      name: 'Nawaf Elmohsem-project-Strategry 2-startegy 1 (task)',
+      desc: 'desc',
+      due: null,
+      start: null,
+      idList: null,
+      idBoard: '63d28327791560ed05f1c2e1'
+    }
+  },
+  level: 'info',
+  timestamp: '2023-02-05 14:53:31'
+}
+{
+  message: {
+    noAction: {
+      model: {
+        id: '63d28327791560ed05f1c2e1',
+        name: 'dev / TTP Creative',
+        desc: '',
+        descData: null,
+        closed: false,
+        idOrganization: '638e3ad0a165280188c108f5',
+        idEnterprise: null,
+        pinned: false,
+        url: 'https://trello.com/b/VsonknlZ/dev-ttp-creative',
+        shortUrl: 'https://trello.com/b/VsonknlZ',
+        prefs: {
+          permissionLevel: 'private',
+          hideVotes: false,
+          voting: 'disabled',
+          comments: 'members',
+          invitations: 'members',
+          selfJoin: true,
+          cardCovers: true,
+          isTemplate: false,
+          cardAging: 'regular',
+          calendarFeedEnabled: false,
+          hiddenPluginBoardButtons: [],
+          switcherViews: [
+            {
+              viewType: 'Board',
+              enabled: true,
+              _id: '63d28327791560ed05f1c2e2'
+            },
+            {
+              viewType: 'Table',
+              enabled: true,
+              _id: '63d28327791560ed05f1c2e3'
+            },
+            {
+              viewType: 'Calendar',
+              enabled: false,
+              _id: '63d28327791560ed05f1c2e4'
+            },
+            {
+              viewType: 'Dashboard',
+              enabled: false,
+              _id: '63d28327791560ed05f1c2e5'
+            },
+            {
+              viewType: 'Timeline',
+              enabled: false,
+              _id: '63d28327791560ed05f1c2e6'
+            },
+            {
+              viewType: 'Map',
+              enabled: false,
+              _id: '63d28327791560ed05f1c2e7'
+            }
+          ],
+          background: 'blue',
+          backgroundColor: '#0079BF',
+          backgroundImage: null,
+          backgroundImageScaled: null,
+          backgroundTile: false,
+          backgroundBrightness: 'dark',
+          backgroundBottomColor: '#0079BF',
+          backgroundTopColor: '#0079BF',
+          canBePublic: true,
+          canBeEnterprise: true,
+          canBeOrg: true,
+          canBePrivate: true,
+          canInvite: true
+        },
+        labelNames: {
+          green: '',
+          yellow: '',
+          orange: '',
+          red: '',
+          purple: '',
+          blue: '',
+          sky: '',
+          lime: '',
+          pink: '',
+          black: '',
+          green_dark: '',
+          yellow_dark: '',
+          orange_dark: '',
+          red_dark: '',
+          purple_dark: '',
+          blue_dark: '',
+          sky_dark: '',
+          lime_dark: '',
+          pink_dark: '',
+          black_dark: '',
+          green_light: '',
+          yellow_light: '',
+          orange_light: '',
+          red_light: '',
+          purple_light: '',
+          blue_light: '',
+          sky_light: '',
+          lime_light: '',
+          pink_light: '',
+          black_light: ''
+        }
+      },
+      action: {
+        id: '63dfa72a84f3201f442ccdf9',
+        idMemberCreator: '625c6c7c6fc2b45763b718dc',
+        data: {
+          card: {
+            id: '63dfa6a69eb15b0393cc14e5',
+            name: 'Nawaf Elmohsem-project-Strategry 2-startegy 1 (task)',
+            idShort: 2,
+            shortLink: '2mBI7KRu'
+          },
+          board: {
+            id: '63d28327791560ed05f1c2e1',
+            name: 'dev / TTP Creative',
+            shortLink: 'VsonknlZ'
+          },
+          boardTarget: { id: '63d4e48b4a41505953a69bb1' },
+          list: { id: '63d283297b944812a4157c83', name: 'Cancled' },
+          member: { id: '625c6c7c6fc2b45763b718dc', name: 'UNICODE.TTP' }
+        },
+        appCreator: null,
+        type: 'moveCardFromBoard',
+        date: '2023-02-05T12:55:06.692Z',
+        limits: null,
+        display: {
+          translationKey: 'action_move_card_from_board',
+          entities: {
+            board: {
+              type: 'board',
+              id: '63d4e48b4a41505953a69bb1',
+              text: 'Design',
+              shortLink: 'kmLCEYLw'
+            },
+            card: {
+              type: 'card',
+              id: '63dfa6a69eb15b0393cc14e5',
+              shortLink: '2mBI7KRu',
+              text: 'Nawaf Elmohsem-project-Strategry 2-startegy 1 (task)'
+            },
+            memberCreator: {
+              type: 'member',
+              id: '625c6c7c6fc2b45763b718dc',
+              username: 'unicodettp',
+              text: 'UNICODE.TTP'
+            }
+          }
+        },
+        memberCreator: {
+          id: '625c6c7c6fc2b45763b718dc',
+          activityBlocked: false,
+          avatarHash: 'f6a6a1149513f4cd488ccf88d2c0e9fb',
+          avatarUrl: 'https://trello-members.s3.amazonaws.com/625c6c7c6fc2b45763b718dc/f6a6a1149513f4cd488ccf88d2c0e9fb',
+          fullName: 'UNICODE.TTP',
+          idMemberReferrer: null,
+          initials: 'U',
+          nonPublic: {},
+          nonPublicAvailable: true,
+          username: 'unicodettp'
+        }
+      }
+    }
+  },
+  level: 'info',
+  timestamp: '2023-02-05 14:55:07'
+}
+{
+  message: {
+    noAction: {
+      model: {
+        id: '63dfa6a69eb15b0393cc14e5',
+        badges: {
+          attachmentsByType: { trello: { board: 0, card: 0 } },
+          location: false,
+          votes: 0,
+          viewingMemberVoted: false,
+          subscribed: false,
+          fogbugz: '',
+          checkItems: 0,
+          checkItemsChecked: 0,
+          checkItemsEarliestDue: null,
+          comments: 0,
+          attachments: 1,
+          description: true,
+          due: null,
+          dueComplete: false,
+          start: null
+        },
+        checkItemStates: [],
+        closed: false,
+        dueComplete: false,
+        dateLastActivity: '2023-02-05T12:55:06.768Z',
+        desc: 'desc',
+        descData: { emoji: {} },
+        due: null,
+        dueReminder: -1,
+        email: null,
+        idBoard: '63d4e48b4a41505953a69bb1',
+        idChecklists: [],
+        idList: '63df8a13eacaa23674f7e6c7',
+        idMembers: [],
+        idMembersVoted: [],
+        idShort: 2,
+        idAttachmentCover: null,
+        labels: [],
+        idLabels: [],
+        manualCoverAttachment: false,
+        name: 'Nawaf Elmohsem-project-Strategry 2-startegy 1 (task)',
+        pos: 32768,
+        shortLink: '2mBI7KRu',
+        shortUrl: 'https://trello.com/c/2mBI7KRu',
+        start: null,
+        subscribed: false,
+        url: 'https://trello.com/c/2mBI7KRu/2-nawaf-elmohsem-project-strategry-2-startegy-1-task',
+        cover: {
+          idAttachment: null,
+          color: null,
+          idUploadedBackground: null,
+          size: 'normal',
+          brightness: 'dark',
+          idPlugin: null
+        },
+        isTemplate: false,
+        cardRole: null
+      },
+      action: {
+        id: '63dfa72a84f3201f442ccdf9',
+        idMemberCreator: '625c6c7c6fc2b45763b718dc',
+        data: {
+          card: {
+            id: '63dfa6a69eb15b0393cc14e5',
+            name: 'Nawaf Elmohsem-project-Strategry 2-startegy 1 (task)',
+            idShort: 2,
+            shortLink: '2mBI7KRu'
+          },
+          board: {
+            id: '63d28327791560ed05f1c2e1',
+            name: 'dev / TTP Creative',
+            shortLink: 'VsonknlZ'
+          },
+          boardTarget: { id: '63d4e48b4a41505953a69bb1' },
+          list: { id: '63d283297b944812a4157c83', name: 'Cancled' },
+          member: { id: '625c6c7c6fc2b45763b718dc', name: 'UNICODE.TTP' }
+        },
+        appCreator: null,
+        type: 'moveCardFromBoard',
+        date: '2023-02-05T12:55:06.692Z',
+        limits: null,
+        display: {
+          translationKey: 'action_move_card_from_board',
+          entities: {
+            board: {
+              type: 'board',
+              id: '63d4e48b4a41505953a69bb1',
+              text: 'Design',
+              shortLink: 'kmLCEYLw'
+            },
+            card: {
+              type: 'card',
+              id: '63dfa6a69eb15b0393cc14e5',
+              shortLink: '2mBI7KRu',
+              text: 'Nawaf Elmohsem-project-Strategry 2-startegy 1 (task)'
+            },
+            memberCreator: {
+              type: 'member',
+              id: '625c6c7c6fc2b45763b718dc',
+              username: 'unicodettp',
+              text: 'UNICODE.TTP'
+            }
+          }
+        },
+        memberCreator: {
+          id: '625c6c7c6fc2b45763b718dc',
+          activityBlocked: false,
+          avatarHash: 'f6a6a1149513f4cd488ccf88d2c0e9fb',
+          avatarUrl: 'https://trello-members.s3.amazonaws.com/625c6c7c6fc2b45763b718dc/f6a6a1149513f4cd488ccf88d2c0e9fb',
+          fullName: 'UNICODE.TTP',
+          idMemberReferrer: null,
+          initials: 'U',
+          nonPublic: {},
+          nonPublicAvailable: true,
+          username: 'unicodettp'
+        }
+      }
+    }
+  },
+  level: 'info',
+  timestamp: '2023-02-05 14:55:07'
+}
+{
+  message: {
+    noAction: {
+      model: {
+        id: '63d4e48b4a41505953a69bb1',
+        name: 'Design',
+        desc: '',
+        descData: null,
+        closed: false,
+        idOrganization: '638e3ad0a165280188c108f5',
+        idEnterprise: null,
+        pinned: false,
+        url: 'https://trello.com/b/kmLCEYLw/design',
+        shortUrl: 'https://trello.com/b/kmLCEYLw',
+        prefs: {
+          permissionLevel: 'private',
+          hideVotes: false,
+          voting: 'disabled',
+          comments: 'members',
+          invitations: 'members',
+          selfJoin: true,
+          cardCovers: true,
+          isTemplate: false,
+          cardAging: 'regular',
+          calendarFeedEnabled: false,
+          hiddenPluginBoardButtons: [],
+          switcherViews: [
+            {
+              viewType: 'Board',
+              enabled: true,
+              _id: '63d4e48b4a41505953a69bb2'
+            },
+            {
+              viewType: 'Table',
+              enabled: true,
+              _id: '63d4e48b4a41505953a69bb3'
+            },
+            {
+              viewType: 'Calendar',
+              enabled: false,
+              _id: '63d4e48b4a41505953a69bb4'
+            },
+            {
+              viewType: 'Dashboard',
+              enabled: false,
+              _id: '63d4e48b4a41505953a69bb5'
+            },
+            {
+              viewType: 'Timeline',
+              enabled: false,
+              _id: '63d4e48b4a41505953a69bb6'
+            },
+            {
+              viewType: 'Map',
+              enabled: false,
+              _id: '63d4e48b4a41505953a69bb7'
+            }
+          ],
+          background: 'orange',
+          backgroundColor: '#D29034',
+          backgroundImage: null,
+          backgroundImageScaled: null,
+          backgroundTile: false,
+          backgroundBrightness: 'dark',
+          backgroundBottomColor: '#D29034',
+          backgroundTopColor: '#D29034',
+          canBePublic: true,
+          canBeEnterprise: true,
+          canBeOrg: true,
+          canBePrivate: true,
+          canInvite: true
+        },
+        labelNames: {
+          green: '',
+          yellow: '',
+          orange: '',
+          red: '',
+          purple: '',
+          blue: '',
+          sky: '',
+          lime: '',
+          pink: '',
+          black: '',
+          green_dark: '',
+          yellow_dark: '',
+          orange_dark: '',
+          red_dark: '',
+          purple_dark: '',
+          blue_dark: '',
+          sky_dark: '',
+          lime_dark: '',
+          pink_dark: '',
+          black_dark: '',
+          green_light: '',
+          yellow_light: '',
+          orange_light: '',
+          red_light: '',
+          purple_light: '',
+          blue_light: '',
+          sky_light: '',
+          lime_light: '',
+          pink_light: '',
+          black_light: ''
+        }
+      },
+      action: {
+        id: '63dfa72a84f3201f442ccdff',
+        idMemberCreator: '625c6c7c6fc2b45763b718dc',
+        data: {
+          card: {
+            id: '63dfa6a69eb15b0393cc14e5',
+            name: 'Nawaf Elmohsem-project-Strategry 2-startegy 1 (task)',
+            idShort: 2,
+            shortLink: '2mBI7KRu'
+          },
+          board: {
+            id: '63d4e48b4a41505953a69bb1',
+            name: 'Design',
+            shortLink: 'kmLCEYLw'
+          },
+          boardSource: { id: '63d28327791560ed05f1c2e1' },
+          list: { id: '63df8a13eacaa23674f7e6c7', name: 'team 2' }
+        },
+        appCreator: null,
+        type: 'moveCardToBoard',
+        date: '2023-02-05T12:55:06.700Z',
+        limits: null,
+        display: {
+          translationKey: 'action_move_card_to_board',
+          entities: {
+            board: {
+              type: 'board',
+              id: '63d28327791560ed05f1c2e1',
+              text: 'dev / TTP Creative',
+              shortLink: 'VsonknlZ'
+            },
+            card: {
+              type: 'card',
+              id: '63dfa6a69eb15b0393cc14e5',
+              shortLink: '2mBI7KRu',
+              text: 'Nawaf Elmohsem-project-Strategry 2-startegy 1 (task)'
+            },
+            memberCreator: {
+              type: 'member',
+              id: '625c6c7c6fc2b45763b718dc',
+              username: 'unicodettp',
+              text: 'UNICODE.TTP'
+            }
+          }
+        },
+        memberCreator: {
+          id: '625c6c7c6fc2b45763b718dc',
+          activityBlocked: false,
+          avatarHash: 'f6a6a1149513f4cd488ccf88d2c0e9fb',
+          avatarUrl: 'https://trello-members.s3.amazonaws.com/625c6c7c6fc2b45763b718dc/f6a6a1149513f4cd488ccf88d2c0e9fb',
+          fullName: 'UNICODE.TTP',
+          idMemberReferrer: null,
+          initials: 'U',
+          nonPublic: {},
+          nonPublicAvailable: true,
+          username: 'unicodettp'
+        }
+      }
+    }
+  },
+  level: 'info',
+  timestamp: '2023-02-05 14:55:07'
+}
+{
+  message: {
+    noAction: {
+      model: {
+        id: '63dfa6a69eb15b0393cc14e5',
+        badges: {
+          attachmentsByType: { trello: { board: 0, card: 0 } },
+          location: false,
+          votes: 0,
+          viewingMemberVoted: false,
+          subscribed: false,
+          fogbugz: '',
+          checkItems: 0,
+          checkItemsChecked: 0,
+          checkItemsEarliestDue: null,
+          comments: 0,
+          attachments: 1,
+          description: true,
+          due: null,
+          dueComplete: false,
+          start: null
+        },
+        checkItemStates: [],
+        closed: false,
+        dueComplete: false,
+        dateLastActivity: '2023-02-05T12:55:06.768Z',
+        desc: 'desc',
+        descData: { emoji: {} },
+        due: null,
+        dueReminder: -1,
+        email: null,
+        idBoard: '63d4e48b4a41505953a69bb1',
+        idChecklists: [],
+        idList: '63df8a13eacaa23674f7e6c7',
+        idMembers: [],
+        idMembersVoted: [],
+        idShort: 2,
+        idAttachmentCover: null,
+        labels: [],
+        idLabels: [],
+        manualCoverAttachment: false,
+        name: 'Nawaf Elmohsem-project-Strategry 2-startegy 1 (task)',
+        pos: 32768,
+        shortLink: '2mBI7KRu',
+        shortUrl: 'https://trello.com/c/2mBI7KRu',
+        start: null,
+        subscribed: false,
+        url: 'https://trello.com/c/2mBI7KRu/2-nawaf-elmohsem-project-strategry-2-startegy-1-task',
+        cover: {
+          idAttachment: null,
+          color: null,
+          idUploadedBackground: null,
+          size: 'normal',
+          brightness: 'dark',
+          idPlugin: null
+        },
+        isTemplate: false,
+        cardRole: null
+      },
+      action: {
+        id: '63dfa72a84f3201f442ccdff',
+        idMemberCreator: '625c6c7c6fc2b45763b718dc',
+        data: {
+          card: {
+            id: '63dfa6a69eb15b0393cc14e5',
+            name: 'Nawaf Elmohsem-project-Strategry 2-startegy 1 (task)',
+            idShort: 2,
+            shortLink: '2mBI7KRu'
+          },
+          board: {
+            id: '63d4e48b4a41505953a69bb1',
+            name: 'Design',
+            shortLink: 'kmLCEYLw'
+          },
+          boardSource: { id: '63d28327791560ed05f1c2e1' },
+          list: { id: '63df8a13eacaa23674f7e6c7', name: 'team 2' }
+        },
+        appCreator: null,
+        type: 'moveCardToBoard',
+        date: '2023-02-05T12:55:06.700Z',
+        limits: null,
+        display: {
+          translationKey: 'action_move_card_to_board',
+          entities: {
+            board: {
+              type: 'board',
+              id: '63d28327791560ed05f1c2e1',
+              text: 'dev / TTP Creative',
+              shortLink: 'VsonknlZ'
+            },
+            card: {
+              type: 'card',
+              id: '63dfa6a69eb15b0393cc14e5',
+              shortLink: '2mBI7KRu',
+              text: 'Nawaf Elmohsem-project-Strategry 2-startegy 1 (task)'
+            },
+            memberCreator: {
+              type: 'member',
+              id: '625c6c7c6fc2b45763b718dc',
+              username: 'unicodettp',
+              text: 'UNICODE.TTP'
+            }
+          }
+        },
+        memberCreator: {
+          id: '625c6c7c6fc2b45763b718dc',
+          activityBlocked: false,
+          avatarHash: 'f6a6a1149513f4cd488ccf88d2c0e9fb',
+          avatarUrl: 'https://trello-members.s3.amazonaws.com/625c6c7c6fc2b45763b718dc/f6a6a1149513f4cd488ccf88d2c0e9fb',
+          fullName: 'UNICODE.TTP',
+          idMemberReferrer: null,
+          initials: 'U',
+          nonPublic: {},
+          nonPublicAvailable: true,
+          username: 'unicodettp'
+        }
+      }
+    }
+  },
+  level: 'info',
+  timestamp: '2023-02-05 14:55:08'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2023-02-05 14:58:39'
+}
+{
+  message: { noAction: {} },
+  level: 'info',
+  timestamp: '2023-02-05 14:58:43'
+}
+{
+  message: { noAction: {} },
+  level: 'info',
+  timestamp: '2023-02-05 14:58:43'
+}
+{
+  message: { noAction: {} },
+  level: 'info',
+  timestamp: '2023-02-05 14:58:44'
+}
+{
+  message: { noAction: {} },
+  level: 'info',
+  timestamp: '2023-02-05 14:58:44'
+}
+{
+  message: {
+    noAction: {
+      model: {
+        id: '63d4e48b4a41505953a69bb1',
+        name: 'Design',
+        desc: '',
+        descData: null,
+        closed: false,
+        idOrganization: '638e3ad0a165280188c108f5',
+        idEnterprise: null,
+        pinned: false,
+        url: 'https://trello.com/b/kmLCEYLw/design',
+        shortUrl: 'https://trello.com/b/kmLCEYLw',
+        prefs: {
+          permissionLevel: 'private',
+          hideVotes: false,
+          voting: 'disabled',
+          comments: 'members',
+          invitations: 'members',
+          selfJoin: true,
+          cardCovers: true,
+          isTemplate: false,
+          cardAging: 'regular',
+          calendarFeedEnabled: false,
+          hiddenPluginBoardButtons: [],
+          switcherViews: [
+            {
+              viewType: 'Board',
+              enabled: true,
+              _id: '63d4e48b4a41505953a69bb2'
+            },
+            {
+              viewType: 'Table',
+              enabled: true,
+              _id: '63d4e48b4a41505953a69bb3'
+            },
+            {
+              viewType: 'Calendar',
+              enabled: false,
+              _id: '63d4e48b4a41505953a69bb4'
+            },
+            {
+              viewType: 'Dashboard',
+              enabled: false,
+              _id: '63d4e48b4a41505953a69bb5'
+            },
+            {
+              viewType: 'Timeline',
+              enabled: false,
+              _id: '63d4e48b4a41505953a69bb6'
+            },
+            {
+              viewType: 'Map',
+              enabled: false,
+              _id: '63d4e48b4a41505953a69bb7'
+            }
+          ],
+          background: 'orange',
+          backgroundColor: '#D29034',
+          backgroundImage: null,
+          backgroundImageScaled: null,
+          backgroundTile: false,
+          backgroundBrightness: 'dark',
+          backgroundBottomColor: '#D29034',
+          backgroundTopColor: '#D29034',
+          canBePublic: true,
+          canBeEnterprise: true,
+          canBeOrg: true,
+          canBePrivate: true,
+          canInvite: true
+        },
+        labelNames: {
+          green: '',
+          yellow: '',
+          orange: '',
+          red: '',
+          purple: '',
+          blue: '',
+          sky: '',
+          lime: '',
+          pink: '',
+          black: '',
+          green_dark: '',
+          yellow_dark: '',
+          orange_dark: '',
+          red_dark: '',
+          purple_dark: '',
+          blue_dark: '',
+          sky_dark: '',
+          lime_dark: '',
+          pink_dark: '',
+          black_dark: '',
+          green_light: '',
+          yellow_light: '',
+          orange_light: '',
+          red_light: '',
+          purple_light: '',
+          blue_light: '',
+          sky_light: '',
+          lime_light: '',
+          pink_light: '',
+          black_light: ''
+        }
+      },
+      action: {
+        id: '63dfa825f67ee2de918719c0',
+        idMemberCreator: '625c6c7c6fc2b45763b718dc',
+        data: {
+          card: {
+            id: '63dfa6a69eb15b0393cc14e5',
+            name: 'Nawaf Elmohsem-project-Strategry 2-startegy 1 (task)',
+            idShort: 16,
+            shortLink: '2mBI7KRu'
+          },
+          board: {
+            id: '63d4e48b4a41505953a69bb1',
+            name: 'Design',
+            shortLink: 'kmLCEYLw'
+          },
+          boardTarget: { id: '63d28327791560ed05f1c2e1' },
+          list: { id: '63d4e48d27617f5008a35e19', name: 'Tasks Board' },
+          member: { id: '625c6c7c6fc2b45763b718dc', name: 'UNICODE.TTP' }
+        },
+        appCreator: null,
+        type: 'moveCardFromBoard',
+        date: '2023-02-05T12:59:17.769Z',
+        limits: null,
+        display: {
+          translationKey: 'action_move_card_from_board',
+          entities: {
+            board: {
+              type: 'board',
+              id: '63d28327791560ed05f1c2e1',
+              text: 'dev / TTP Creative',
+              shortLink: 'VsonknlZ'
+            },
+            card: {
+              type: 'card',
+              id: '63dfa6a69eb15b0393cc14e5',
+              shortLink: '2mBI7KRu',
+              text: 'Nawaf Elmohsem-project-Strategry 2-startegy 1 (task)'
+            },
+            memberCreator: {
+              type: 'member',
+              id: '625c6c7c6fc2b45763b718dc',
+              username: 'unicodettp',
+              text: 'UNICODE.TTP'
+            }
+          }
+        },
+        memberCreator: {
+          id: '625c6c7c6fc2b45763b718dc',
+          activityBlocked: false,
+          avatarHash: 'f6a6a1149513f4cd488ccf88d2c0e9fb',
+          avatarUrl: 'https://trello-members.s3.amazonaws.com/625c6c7c6fc2b45763b718dc/f6a6a1149513f4cd488ccf88d2c0e9fb',
+          fullName: 'UNICODE.TTP',
+          idMemberReferrer: null,
+          initials: 'U',
+          nonPublic: {},
+          nonPublicAvailable: true,
+          username: 'unicodettp'
+        }
+      }
+    }
+  },
+  level: 'info',
+  timestamp: '2023-02-05 14:59:18'
+}
+{
+  message: {
+    noAction: {
+      model: {
+        id: '63dfa6a69eb15b0393cc14e5',
+        badges: {
+          attachmentsByType: { trello: { board: 0, card: 0 } },
+          location: false,
+          votes: 0,
+          viewingMemberVoted: false,
+          subscribed: false,
+          fogbugz: '',
+          checkItems: 0,
+          checkItemsChecked: 0,
+          checkItemsEarliestDue: null,
+          comments: 0,
+          attachments: 1,
+          description: true,
+          due: null,
+          dueComplete: false,
+          start: null
+        },
+        checkItemStates: [],
+        closed: false,
+        dueComplete: false,
+        dateLastActivity: '2023-02-05T12:59:17.848Z',
+        desc: 'desc',
+        descData: { emoji: {} },
+        due: null,
+        dueReminder: -1,
+        email: null,
+        idBoard: '63d28327791560ed05f1c2e1',
+        idChecklists: [],
+        idList: '63df8a2392f73497255fab96',
+        idMembers: [],
+        idMembersVoted: [],
+        idShort: 16,
+        idAttachmentCover: null,
+        labels: [],
+        idLabels: [],
+        manualCoverAttachment: false,
+        name: 'Nawaf Elmohsem-project-Strategry 2-startegy 1 (task)',
+        pos: 16384,
+        shortLink: '2mBI7KRu',
+        shortUrl: 'https://trello.com/c/2mBI7KRu',
+        start: null,
+        subscribed: false,
+        url: 'https://trello.com/c/2mBI7KRu/16-nawaf-elmohsem-project-strategry-2-startegy-1-task',
+        cover: {
+          idAttachment: null,
+          color: null,
+          idUploadedBackground: null,
+          size: 'normal',
+          brightness: 'dark',
+          idPlugin: null
+        },
+        isTemplate: false,
+        cardRole: null
+      },
+      action: {
+        id: '63dfa825f67ee2de918719c0',
+        idMemberCreator: '625c6c7c6fc2b45763b718dc',
+        data: {
+          card: {
+            id: '63dfa6a69eb15b0393cc14e5',
+            name: 'Nawaf Elmohsem-project-Strategry 2-startegy 1 (task)',
+            idShort: 16,
+            shortLink: '2mBI7KRu'
+          },
+          board: {
+            id: '63d4e48b4a41505953a69bb1',
+            name: 'Design',
+            shortLink: 'kmLCEYLw'
+          },
+          boardTarget: { id: '63d28327791560ed05f1c2e1' },
+          list: { id: '63d4e48d27617f5008a35e19', name: 'Tasks Board' },
+          member: { id: '625c6c7c6fc2b45763b718dc', name: 'UNICODE.TTP' }
+        },
+        appCreator: null,
+        type: 'moveCardFromBoard',
+        date: '2023-02-05T12:59:17.769Z',
+        limits: null,
+        display: {
+          translationKey: 'action_move_card_from_board',
+          entities: {
+            board: {
+              type: 'board',
+              id: '63d28327791560ed05f1c2e1',
+              text: 'dev / TTP Creative',
+              shortLink: 'VsonknlZ'
+            },
+            card: {
+              type: 'card',
+              id: '63dfa6a69eb15b0393cc14e5',
+              shortLink: '2mBI7KRu',
+              text: 'Nawaf Elmohsem-project-Strategry 2-startegy 1 (task)'
+            },
+            memberCreator: {
+              type: 'member',
+              id: '625c6c7c6fc2b45763b718dc',
+              username: 'unicodettp',
+              text: 'UNICODE.TTP'
+            }
+          }
+        },
+        memberCreator: {
+          id: '625c6c7c6fc2b45763b718dc',
+          activityBlocked: false,
+          avatarHash: 'f6a6a1149513f4cd488ccf88d2c0e9fb',
+          avatarUrl: 'https://trello-members.s3.amazonaws.com/625c6c7c6fc2b45763b718dc/f6a6a1149513f4cd488ccf88d2c0e9fb',
+          fullName: 'UNICODE.TTP',
+          idMemberReferrer: null,
+          initials: 'U',
+          nonPublic: {},
+          nonPublicAvailable: true,
+          username: 'unicodettp'
+        }
+      }
+    }
+  },
+  level: 'info',
+  timestamp: '2023-02-05 14:59:18'
+}
+{
+  message: {
+    noAction: {
+      model: {
+        id: '63d28327791560ed05f1c2e1',
+        name: 'dev / TTP Creative',
+        desc: '',
+        descData: null,
+        closed: false,
+        idOrganization: '638e3ad0a165280188c108f5',
+        idEnterprise: null,
+        pinned: false,
+        url: 'https://trello.com/b/VsonknlZ/dev-ttp-creative',
+        shortUrl: 'https://trello.com/b/VsonknlZ',
+        prefs: {
+          permissionLevel: 'private',
+          hideVotes: false,
+          voting: 'disabled',
+          comments: 'members',
+          invitations: 'members',
+          selfJoin: true,
+          cardCovers: true,
+          isTemplate: false,
+          cardAging: 'regular',
+          calendarFeedEnabled: false,
+          hiddenPluginBoardButtons: [],
+          switcherViews: [
+            {
+              viewType: 'Board',
+              enabled: true,
+              _id: '63d28327791560ed05f1c2e2'
+            },
+            {
+              viewType: 'Table',
+              enabled: true,
+              _id: '63d28327791560ed05f1c2e3'
+            },
+            {
+              viewType: 'Calendar',
+              enabled: false,
+              _id: '63d28327791560ed05f1c2e4'
+            },
+            {
+              viewType: 'Dashboard',
+              enabled: false,
+              _id: '63d28327791560ed05f1c2e5'
+            },
+            {
+              viewType: 'Timeline',
+              enabled: false,
+              _id: '63d28327791560ed05f1c2e6'
+            },
+            {
+              viewType: 'Map',
+              enabled: false,
+              _id: '63d28327791560ed05f1c2e7'
+            }
+          ],
+          background: 'blue',
+          backgroundColor: '#0079BF',
+          backgroundImage: null,
+          backgroundImageScaled: null,
+          backgroundTile: false,
+          backgroundBrightness: 'dark',
+          backgroundBottomColor: '#0079BF',
+          backgroundTopColor: '#0079BF',
+          canBePublic: true,
+          canBeEnterprise: true,
+          canBeOrg: true,
+          canBePrivate: true,
+          canInvite: true
+        },
+        labelNames: {
+          green: '',
+          yellow: '',
+          orange: '',
+          red: '',
+          purple: '',
+          blue: '',
+          sky: '',
+          lime: '',
+          pink: '',
+          black: '',
+          green_dark: '',
+          yellow_dark: '',
+          orange_dark: '',
+          red_dark: '',
+          purple_dark: '',
+          blue_dark: '',
+          sky_dark: '',
+          lime_dark: '',
+          pink_dark: '',
+          black_dark: '',
+          green_light: '',
+          yellow_light: '',
+          orange_light: '',
+          red_light: '',
+          purple_light: '',
+          blue_light: '',
+          sky_light: '',
+          lime_light: '',
+          pink_light: '',
+          black_light: ''
+        }
+      },
+      action: {
+        id: '63dfa825f67ee2de918719c6',
+        idMemberCreator: '625c6c7c6fc2b45763b718dc',
+        data: {
+          card: {
+            id: '63dfa6a69eb15b0393cc14e5',
+            name: 'Nawaf Elmohsem-project-Strategry 2-startegy 1 (task)',
+            idShort: 16,
+            shortLink: '2mBI7KRu'
+          },
+          board: {
+            id: '63d28327791560ed05f1c2e1',
+            name: 'dev / TTP Creative',
+            shortLink: 'VsonknlZ'
+          },
+          boardSource: { id: '63d4e48b4a41505953a69bb1' },
+          list: { id: '63df8a2392f73497255fab96', name: 'team s' }
+        },
+        appCreator: null,
+        type: 'moveCardToBoard',
+        date: '2023-02-05T12:59:17.775Z',
+        limits: null,
+        display: {
+          translationKey: 'action_move_card_to_board',
+          entities: {
+            board: {
+              type: 'board',
+              id: '63d4e48b4a41505953a69bb1',
+              text: 'Design',
+              shortLink: 'kmLCEYLw'
+            },
+            card: {
+              type: 'card',
+              id: '63dfa6a69eb15b0393cc14e5',
+              shortLink: '2mBI7KRu',
+              text: 'Nawaf Elmohsem-project-Strategry 2-startegy 1 (task)'
+            },
+            memberCreator: {
+              type: 'member',
+              id: '625c6c7c6fc2b45763b718dc',
+              username: 'unicodettp',
+              text: 'UNICODE.TTP'
+            }
+          }
+        },
+        memberCreator: {
+          id: '625c6c7c6fc2b45763b718dc',
+          activityBlocked: false,
+          avatarHash: 'f6a6a1149513f4cd488ccf88d2c0e9fb',
+          avatarUrl: 'https://trello-members.s3.amazonaws.com/625c6c7c6fc2b45763b718dc/f6a6a1149513f4cd488ccf88d2c0e9fb',
+          fullName: 'UNICODE.TTP',
+          idMemberReferrer: null,
+          initials: 'U',
+          nonPublic: {},
+          nonPublicAvailable: true,
+          username: 'unicodettp'
+        }
+      }
+    }
+  },
+  level: 'info',
+  timestamp: '2023-02-05 14:59:18'
+}
+{
+  message: {
+    noAction: {
+      model: {
+        id: '63dfa6a69eb15b0393cc14e5',
+        badges: {
+          attachmentsByType: { trello: { board: 0, card: 0 } },
+          location: false,
+          votes: 0,
+          viewingMemberVoted: false,
+          subscribed: false,
+          fogbugz: '',
+          checkItems: 0,
+          checkItemsChecked: 0,
+          checkItemsEarliestDue: null,
+          comments: 0,
+          attachments: 1,
+          description: true,
+          due: null,
+          dueComplete: false,
+          start: null
+        },
+        checkItemStates: [],
+        closed: false,
+        dueComplete: false,
+        dateLastActivity: '2023-02-05T12:59:17.848Z',
+        desc: 'desc',
+        descData: { emoji: {} },
+        due: null,
+        dueReminder: -1,
+        email: null,
+        idBoard: '63d28327791560ed05f1c2e1',
+        idChecklists: [],
+        idList: '63df8a2392f73497255fab96',
+        idMembers: [],
+        idMembersVoted: [],
+        idShort: 16,
+        idAttachmentCover: null,
+        labels: [],
+        idLabels: [],
+        manualCoverAttachment: false,
+        name: 'Nawaf Elmohsem-project-Strategry 2-startegy 1 (task)',
+        pos: 16384,
+        shortLink: '2mBI7KRu',
+        shortUrl: 'https://trello.com/c/2mBI7KRu',
+        start: null,
+        subscribed: false,
+        url: 'https://trello.com/c/2mBI7KRu/16-nawaf-elmohsem-project-strategry-2-startegy-1-task',
+        cover: {
+          idAttachment: null,
+          color: null,
+          idUploadedBackground: null,
+          size: 'normal',
+          brightness: 'dark',
+          idPlugin: null
+        },
+        isTemplate: false,
+        cardRole: null
+      },
+      action: {
+        id: '63dfa825f67ee2de918719c6',
+        idMemberCreator: '625c6c7c6fc2b45763b718dc',
+        data: {
+          card: {
+            id: '63dfa6a69eb15b0393cc14e5',
+            name: 'Nawaf Elmohsem-project-Strategry 2-startegy 1 (task)',
+            idShort: 16,
+            shortLink: '2mBI7KRu'
+          },
+          board: {
+            id: '63d28327791560ed05f1c2e1',
+            name: 'dev / TTP Creative',
+            shortLink: 'VsonknlZ'
+          },
+          boardSource: { id: '63d4e48b4a41505953a69bb1' },
+          list: { id: '63df8a2392f73497255fab96', name: 'team s' }
+        },
+        appCreator: null,
+        type: 'moveCardToBoard',
+        date: '2023-02-05T12:59:17.775Z',
+        limits: null,
+        display: {
+          translationKey: 'action_move_card_to_board',
+          entities: {
+            board: {
+              type: 'board',
+              id: '63d4e48b4a41505953a69bb1',
+              text: 'Design',
+              shortLink: 'kmLCEYLw'
+            },
+            card: {
+              type: 'card',
+              id: '63dfa6a69eb15b0393cc14e5',
+              shortLink: '2mBI7KRu',
+              text: 'Nawaf Elmohsem-project-Strategry 2-startegy 1 (task)'
+            },
+            memberCreator: {
+              type: 'member',
+              id: '625c6c7c6fc2b45763b718dc',
+              username: 'unicodettp',
+              text: 'UNICODE.TTP'
+            }
+          }
+        },
+        memberCreator: {
+          id: '625c6c7c6fc2b45763b718dc',
+          activityBlocked: false,
+          avatarHash: 'f6a6a1149513f4cd488ccf88d2c0e9fb',
+          avatarUrl: 'https://trello-members.s3.amazonaws.com/625c6c7c6fc2b45763b718dc/f6a6a1149513f4cd488ccf88d2c0e9fb',
+          fullName: 'UNICODE.TTP',
+          idMemberReferrer: null,
+          initials: 'U',
+          nonPublic: {},
+          nonPublicAvailable: true,
+          username: 'unicodettp'
+        }
+      }
+    }
+  },
+  level: 'info',
+  timestamp: '2023-02-05 14:59:18'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2023-02-05 15:02:46'
+}
+{
+  message: { noAction: {} },
+  level: 'info',
+  timestamp: '2023-02-05 15:02:50'
+}
+{
+  message: { noAction: {} },
+  level: 'info',
+  timestamp: '2023-02-05 15:02:51'
+}
+{
+  message: { noAction: {} },
+  level: 'info',
+  timestamp: '2023-02-05 15:02:52'
+}
+{
+  message: { noAction: {} },
+  level: 'info',
+  timestamp: '2023-02-05 15:02:52'
+}
+{
+  message: {
+    noAction: {
+      model: {
+        id: '63d28327791560ed05f1c2e1',
+        name: 'dev / TTP Creative',
+        desc: '',
+        descData: null,
+        closed: false,
+        idOrganization: '638e3ad0a165280188c108f5',
+        idEnterprise: null,
+        pinned: false,
+        url: 'https://trello.com/b/VsonknlZ/dev-ttp-creative',
+        shortUrl: 'https://trello.com/b/VsonknlZ',
+        prefs: {
+          permissionLevel: 'private',
+          hideVotes: false,
+          voting: 'disabled',
+          comments: 'members',
+          invitations: 'members',
+          selfJoin: true,
+          cardCovers: true,
+          isTemplate: false,
+          cardAging: 'regular',
+          calendarFeedEnabled: false,
+          hiddenPluginBoardButtons: [],
+          switcherViews: [
+            {
+              viewType: 'Board',
+              enabled: true,
+              _id: '63d28327791560ed05f1c2e2'
+            },
+            {
+              viewType: 'Table',
+              enabled: true,
+              _id: '63d28327791560ed05f1c2e3'
+            },
+            {
+              viewType: 'Calendar',
+              enabled: false,
+              _id: '63d28327791560ed05f1c2e4'
+            },
+            {
+              viewType: 'Dashboard',
+              enabled: false,
+              _id: '63d28327791560ed05f1c2e5'
+            },
+            {
+              viewType: 'Timeline',
+              enabled: false,
+              _id: '63d28327791560ed05f1c2e6'
+            },
+            {
+              viewType: 'Map',
+              enabled: false,
+              _id: '63d28327791560ed05f1c2e7'
+            }
+          ],
+          background: 'blue',
+          backgroundColor: '#0079BF',
+          backgroundImage: null,
+          backgroundImageScaled: null,
+          backgroundTile: false,
+          backgroundBrightness: 'dark',
+          backgroundBottomColor: '#0079BF',
+          backgroundTopColor: '#0079BF',
+          canBePublic: true,
+          canBeEnterprise: true,
+          canBeOrg: true,
+          canBePrivate: true,
+          canInvite: true
+        },
+        labelNames: {
+          green: '',
+          yellow: '',
+          orange: '',
+          red: '',
+          purple: '',
+          blue: '',
+          sky: '',
+          lime: '',
+          pink: '',
+          black: '',
+          green_dark: '',
+          yellow_dark: '',
+          orange_dark: '',
+          red_dark: '',
+          purple_dark: '',
+          blue_dark: '',
+          sky_dark: '',
+          lime_dark: '',
+          pink_dark: '',
+          black_dark: '',
+          green_light: '',
+          yellow_light: '',
+          orange_light: '',
+          red_light: '',
+          purple_light: '',
+          blue_light: '',
+          sky_light: '',
+          lime_light: '',
+          pink_light: '',
+          black_light: ''
+        }
+      },
+      action: {
+        id: '63dfa9108ce9228aba9f1e0a',
+        idMemberCreator: '625c6c7c6fc2b45763b718dc',
+        data: {
+          card: {
+            id: '63dfa6a69eb15b0393cc14e5',
+            name: 'Nawaf Elmohsem-project-Strategry 2-startegy 1 (task)',
+            idShort: 2,
+            shortLink: '2mBI7KRu'
+          },
+          board: {
+            id: '63d28327791560ed05f1c2e1',
+            name: 'dev / TTP Creative',
+            shortLink: 'VsonknlZ'
+          },
+          boardTarget: { id: '63d4e48b4a41505953a69bb1' },
+          list: { id: '63df8a2392f73497255fab96', name: 'team s' },
+          member: { id: '625c6c7c6fc2b45763b718dc', name: 'UNICODE.TTP' }
+        },
+        appCreator: null,
+        type: 'moveCardFromBoard',
+        date: '2023-02-05T13:03:12.975Z',
+        limits: null,
+        display: {
+          translationKey: 'action_move_card_from_board',
+          entities: {
+            board: {
+              type: 'board',
+              id: '63d4e48b4a41505953a69bb1',
+              text: 'Design',
+              shortLink: 'kmLCEYLw'
+            },
+            card: {
+              type: 'card',
+              id: '63dfa6a69eb15b0393cc14e5',
+              shortLink: '2mBI7KRu',
+              text: 'Nawaf Elmohsem-project-Strategry 2-startegy 1 (task)'
+            },
+            memberCreator: {
+              type: 'member',
+              id: '625c6c7c6fc2b45763b718dc',
+              username: 'unicodettp',
+              text: 'UNICODE.TTP'
+            }
+          }
+        },
+        memberCreator: {
+          id: '625c6c7c6fc2b45763b718dc',
+          activityBlocked: false,
+          avatarHash: 'f6a6a1149513f4cd488ccf88d2c0e9fb',
+          avatarUrl: 'https://trello-members.s3.amazonaws.com/625c6c7c6fc2b45763b718dc/f6a6a1149513f4cd488ccf88d2c0e9fb',
+          fullName: 'UNICODE.TTP',
+          idMemberReferrer: null,
+          initials: 'U',
+          nonPublic: {},
+          nonPublicAvailable: true,
+          username: 'unicodettp'
+        }
+      }
+    }
+  },
+  level: 'info',
+  timestamp: '2023-02-05 15:03:14'
+}
+{
+  message: {
+    noAction: {
+      model: {
+        id: '63dfa6a69eb15b0393cc14e5',
+        badges: {
+          attachmentsByType: { trello: { board: 0, card: 0 } },
+          location: false,
+          votes: 0,
+          viewingMemberVoted: false,
+          subscribed: false,
+          fogbugz: '',
+          checkItems: 0,
+          checkItemsChecked: 0,
+          checkItemsEarliestDue: null,
+          comments: 0,
+          attachments: 1,
+          description: true,
+          due: null,
+          dueComplete: false,
+          start: null
+        },
+        checkItemStates: [],
+        closed: false,
+        dueComplete: false,
+        dateLastActivity: '2023-02-05T13:03:13.155Z',
+        desc: 'desc',
+        descData: { emoji: {} },
+        due: null,
+        dueReminder: -1,
+        email: null,
+        idBoard: '63d4e48b4a41505953a69bb1',
+        idChecklists: [],
+        idList: '63df8a13eacaa23674f7e6c7',
+        idMembers: [],
+        idMembersVoted: [],
+        idShort: 2,
+        idAttachmentCover: null,
+        labels: [],
+        idLabels: [],
+        manualCoverAttachment: false,
+        name: 'Nawaf Elmohsem-project-Strategry 2-startegy 1 (task)',
+        pos: 32768,
+        shortLink: '2mBI7KRu',
+        shortUrl: 'https://trello.com/c/2mBI7KRu',
+        start: null,
+        subscribed: false,
+        url: 'https://trello.com/c/2mBI7KRu/2-nawaf-elmohsem-project-strategry-2-startegy-1-task',
+        cover: {
+          idAttachment: null,
+          color: null,
+          idUploadedBackground: null,
+          size: 'normal',
+          brightness: 'dark',
+          idPlugin: null
+        },
+        isTemplate: false,
+        cardRole: null
+      },
+      action: {
+        id: '63dfa9108ce9228aba9f1e0a',
+        idMemberCreator: '625c6c7c6fc2b45763b718dc',
+        data: {
+          card: {
+            id: '63dfa6a69eb15b0393cc14e5',
+            name: 'Nawaf Elmohsem-project-Strategry 2-startegy 1 (task)',
+            idShort: 2,
+            shortLink: '2mBI7KRu'
+          },
+          board: {
+            id: '63d28327791560ed05f1c2e1',
+            name: 'dev / TTP Creative',
+            shortLink: 'VsonknlZ'
+          },
+          boardTarget: { id: '63d4e48b4a41505953a69bb1' },
+          list: { id: '63df8a2392f73497255fab96', name: 'team s' },
+          member: { id: '625c6c7c6fc2b45763b718dc', name: 'UNICODE.TTP' }
+        },
+        appCreator: null,
+        type: 'moveCardFromBoard',
+        date: '2023-02-05T13:03:12.975Z',
+        limits: null,
+        display: {
+          translationKey: 'action_move_card_from_board',
+          entities: {
+            board: {
+              type: 'board',
+              id: '63d4e48b4a41505953a69bb1',
+              text: 'Design',
+              shortLink: 'kmLCEYLw'
+            },
+            card: {
+              type: 'card',
+              id: '63dfa6a69eb15b0393cc14e5',
+              shortLink: '2mBI7KRu',
+              text: 'Nawaf Elmohsem-project-Strategry 2-startegy 1 (task)'
+            },
+            memberCreator: {
+              type: 'member',
+              id: '625c6c7c6fc2b45763b718dc',
+              username: 'unicodettp',
+              text: 'UNICODE.TTP'
+            }
+          }
+        },
+        memberCreator: {
+          id: '625c6c7c6fc2b45763b718dc',
+          activityBlocked: false,
+          avatarHash: 'f6a6a1149513f4cd488ccf88d2c0e9fb',
+          avatarUrl: 'https://trello-members.s3.amazonaws.com/625c6c7c6fc2b45763b718dc/f6a6a1149513f4cd488ccf88d2c0e9fb',
+          fullName: 'UNICODE.TTP',
+          idMemberReferrer: null,
+          initials: 'U',
+          nonPublic: {},
+          nonPublicAvailable: true,
+          username: 'unicodettp'
+        }
+      }
+    }
+  },
+  level: 'info',
+  timestamp: '2023-02-05 15:03:14'
+}

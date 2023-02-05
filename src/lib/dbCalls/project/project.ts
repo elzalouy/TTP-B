@@ -95,10 +95,6 @@ const ProjectDB = class ProjectDB {
           },
         },
       ]);
-      fetch = await Project.populate(fetch, {
-        path: "projectManager",
-        select: "_id name",
-      });
       return fetch;
     } catch (error) {
       logger.error({ getProjectDBError: error });
