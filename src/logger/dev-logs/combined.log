@@ -20895,3 +20895,386 @@
   level: 'info',
   timestamp: '2023-02-06 14:56:47'
 }
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2023-02-06 14:58:33'
+}
+{
+  message: { noAction: {} },
+  level: 'info',
+  timestamp: '2023-02-06 14:58:39'
+}
+{
+  message: { noAction: {} },
+  level: 'info',
+  timestamp: '2023-02-06 14:58:39'
+}
+{
+  message: { noAction: {} },
+  level: 'info',
+  timestamp: '2023-02-06 14:58:41'
+}
+{
+  message: { noAction: {} },
+  level: 'info',
+  timestamp: '2023-02-06 14:58:41'
+}
+{
+  message: {
+    noAction: {
+      model: {
+        id: '63dfc64ed87739e906b08207',
+        name: 'board',
+        desc: '',
+        descData: null,
+        closed: false,
+        idOrganization: '638e3ad0a165280188c108f5',
+        idEnterprise: null,
+        pinned: false,
+        url: 'https://trello.com/b/b8uXqUO2/board',
+        shortUrl: 'https://trello.com/b/b8uXqUO2',
+        prefs: {
+          permissionLevel: 'private',
+          hideVotes: false,
+          voting: 'disabled',
+          comments: 'members',
+          invitations: 'members',
+          selfJoin: true,
+          cardCovers: true,
+          isTemplate: false,
+          cardAging: 'regular',
+          calendarFeedEnabled: false,
+          hiddenPluginBoardButtons: [],
+          switcherViews: [
+            {
+              viewType: 'Board',
+              enabled: true,
+              _id: '63dfc64ed87739e906b08208'
+            },
+            {
+              viewType: 'Table',
+              enabled: true,
+              _id: '63dfc64ed87739e906b08209'
+            },
+            {
+              viewType: 'Calendar',
+              enabled: false,
+              _id: '63dfc64ed87739e906b0820a'
+            },
+            {
+              viewType: 'Dashboard',
+              enabled: false,
+              _id: '63dfc64ed87739e906b0820b'
+            },
+            {
+              viewType: 'Timeline',
+              enabled: false,
+              _id: '63dfc64ed87739e906b0820c'
+            },
+            {
+              viewType: 'Map',
+              enabled: false,
+              _id: '63dfc64ed87739e906b0820d'
+            }
+          ],
+          background: 'blue',
+          backgroundColor: '#0079BF',
+          backgroundImage: null,
+          backgroundImageScaled: null,
+          backgroundTile: false,
+          backgroundBrightness: 'dark',
+          backgroundBottomColor: '#0079BF',
+          backgroundTopColor: '#0079BF',
+          canBePublic: true,
+          canBeEnterprise: true,
+          canBeOrg: true,
+          canBePrivate: true,
+          canInvite: true
+        },
+        labelNames: {
+          green: '',
+          yellow: '',
+          orange: '',
+          red: '',
+          purple: '',
+          blue: '',
+          sky: '',
+          lime: '',
+          pink: '',
+          black: '',
+          green_dark: '',
+          yellow_dark: '',
+          orange_dark: '',
+          red_dark: '',
+          purple_dark: '',
+          blue_dark: '',
+          sky_dark: '',
+          lime_dark: '',
+          pink_dark: '',
+          black_dark: '',
+          green_light: '',
+          yellow_light: '',
+          orange_light: '',
+          red_light: '',
+          purple_light: '',
+          blue_light: '',
+          sky_light: '',
+          lime_light: '',
+          pink_light: '',
+          black_light: ''
+        }
+      },
+      action: {
+        id: '63e0f9aea9d7a3bb5986a1a1',
+        idMemberCreator: '625c6c7c6fc2b45763b718dc',
+        data: {
+          card: {
+            id: '63e0cfc6977e18d186378968',
+            name: 'create card',
+            idShort: 21,
+            shortLink: 'OJFvZJga'
+          },
+          board: {
+            id: '63dfc64ed87739e906b08207',
+            name: 'board',
+            shortLink: 'b8uXqUO2'
+          },
+          boardTarget: { id: '63d28327791560ed05f1c2e1' },
+          list: { id: '63dfc650f5f42e57e8b76c60', name: 'Review' },
+          member: { id: '625c6c7c6fc2b45763b718dc', name: 'UNICODE.TTP' }
+        },
+        appCreator: null,
+        type: 'moveCardFromBoard',
+        date: '2023-02-06T12:59:26.884Z',
+        limits: null,
+        display: {
+          translationKey: 'action_move_card_from_board',
+          entities: {
+            board: {
+              type: 'board',
+              id: '63d28327791560ed05f1c2e1',
+              text: 'dev / TTP Creative',
+              shortLink: 'VsonknlZ'
+            },
+            card: {
+              type: 'card',
+              id: '63e0cfc6977e18d186378968',
+              shortLink: 'OJFvZJga',
+              text: 'create card'
+            },
+            memberCreator: {
+              type: 'member',
+              id: '625c6c7c6fc2b45763b718dc',
+              username: 'unicodettp',
+              text: 'UNICODE.TTP'
+            }
+          }
+        },
+        memberCreator: {
+          id: '625c6c7c6fc2b45763b718dc',
+          activityBlocked: false,
+          avatarHash: 'f6a6a1149513f4cd488ccf88d2c0e9fb',
+          avatarUrl: 'https://trello-members.s3.amazonaws.com/625c6c7c6fc2b45763b718dc/f6a6a1149513f4cd488ccf88d2c0e9fb',
+          fullName: 'UNICODE.TTP',
+          idMemberReferrer: null,
+          initials: 'U',
+          nonPublic: {},
+          nonPublicAvailable: true,
+          username: 'unicodettp'
+        }
+      }
+    }
+  },
+  level: 'info',
+  timestamp: '2023-02-06 14:59:28'
+}
+{
+  message: {
+    noAction: {
+      model: {
+        id: '63e0cfc6977e18d186378968',
+        badges: {
+          attachmentsByType: { trello: { board: 0, card: 0 } },
+          location: false,
+          votes: 0,
+          viewingMemberVoted: false,
+          subscribed: false,
+          fogbugz: '',
+          checkItems: 0,
+          checkItemsChecked: 0,
+          checkItemsEarliestDue: null,
+          comments: 0,
+          attachments: 1,
+          description: false,
+          due: '2023-02-08T11:21:00.000Z',
+          dueComplete: false,
+          start: null
+        },
+        checkItemStates: [],
+        closed: false,
+        dueComplete: false,
+        dateLastActivity: '2023-02-06T12:59:27.011Z',
+        desc: '',
+        descData: { emoji: {} },
+        due: '2023-02-08T11:21:00.000Z',
+        dueReminder: -1,
+        email: null,
+        idBoard: '63d28327791560ed05f1c2e1',
+        idChecklists: [],
+        idList: '63df8a2392f73497255fab96',
+        idMembers: [],
+        idMembersVoted: [],
+        idShort: 21,
+        idAttachmentCover: '63e0f7eb0d2b427a7d2c9890',
+        labels: [],
+        idLabels: [],
+        manualCoverAttachment: false,
+        name: 'create card',
+        pos: 32768,
+        shortLink: 'OJFvZJga',
+        shortUrl: 'https://trello.com/c/OJFvZJga',
+        start: null,
+        subscribed: false,
+        url: 'https://trello.com/c/OJFvZJga/21-create-card',
+        cover: {
+          idAttachment: '63e0f7eb0d2b427a7d2c9890',
+          color: null,
+          idUploadedBackground: null,
+          size: 'normal',
+          brightness: 'dark',
+          scaled: [
+            {
+              _id: '63e0f7ec0d2b427a7d2c989b',
+              id: '63e0f7ec0d2b427a7d2c989b',
+              scaled: false,
+              url: 'https://trello.com/1/cards/63e0cfc6977e18d186378968/attachments/63e0f7eb0d2b427a7d2c9890/previews/63e0f7ec0d2b427a7d2c989b/download/me.jpg',
+              bytes: 3941,
+              height: 50,
+              width: 70
+            },
+            {
+              _id: '63e0f7ec0d2b427a7d2c989d',
+              id: '63e0f7ec0d2b427a7d2c989d',
+              scaled: true,
+              url: 'https://trello.com/1/cards/63e0cfc6977e18d186378968/attachments/63e0f7eb0d2b427a7d2c9890/previews/63e0f7ec0d2b427a7d2c989d/download/me.jpg',
+              bytes: 6698,
+              height: 200,
+              width: 150
+            },
+            {
+              _id: '63e0f7ec0d2b427a7d2c989c',
+              id: '63e0f7ec0d2b427a7d2c989c',
+              scaled: false,
+              url: 'https://trello.com/1/cards/63e0cfc6977e18d186378968/attachments/63e0f7eb0d2b427a7d2c9890/previews/63e0f7ec0d2b427a7d2c989c/download/me.jpg',
+              bytes: 6065,
+              height: 150,
+              width: 250
+            },
+            {
+              _id: '63e0f7ec0d2b427a7d2c989e',
+              id: '63e0f7ec0d2b427a7d2c989e',
+              scaled: true,
+              url: 'https://trello.com/1/cards/63e0cfc6977e18d186378968/attachments/63e0f7eb0d2b427a7d2c9890/previews/63e0f7ec0d2b427a7d2c989e/download/me.jpg',
+              bytes: 12536,
+              height: 400,
+              width: 300
+            },
+            {
+              _id: '63e0f7ec0d2b427a7d2c989f',
+              id: '63e0f7ec0d2b427a7d2c989f',
+              scaled: true,
+              url: 'https://trello.com/1/cards/63e0cfc6977e18d186378968/attachments/63e0f7eb0d2b427a7d2c9890/previews/63e0f7ec0d2b427a7d2c989f/download/me.jpg',
+              bytes: 31744,
+              height: 800,
+              width: 600
+            },
+            {
+              _id: '63e0f7ec0d2b427a7d2c98a0',
+              id: '63e0f7ec0d2b427a7d2c98a0',
+              scaled: true,
+              url: 'https://trello.com/1/cards/63e0cfc6977e18d186378968/attachments/63e0f7eb0d2b427a7d2c9890/previews/63e0f7ec0d2b427a7d2c98a0/download/me.jpg',
+              bytes: 136829,
+              height: 1600,
+              width: 1200
+            },
+            {
+              _id: '63e0f7ec0d2b427a7d2c98a1',
+              id: '63e0f7ec0d2b427a7d2c98a1',
+              scaled: true,
+              url: 'https://trello.com/1/cards/63e0cfc6977e18d186378968/attachments/63e0f7eb0d2b427a7d2c9890/previews/63e0f7ec0d2b427a7d2c98a1/download/me.jpg',
+              bytes: 389011,
+              height: 2015,
+              width: 1511
+            }
+          ],
+          edgeColor: '#46747f',
+          idPlugin: null
+        },
+        isTemplate: false,
+        cardRole: null
+      },
+      action: {
+        id: '63e0f9aea9d7a3bb5986a1a1',
+        idMemberCreator: '625c6c7c6fc2b45763b718dc',
+        data: {
+          card: {
+            id: '63e0cfc6977e18d186378968',
+            name: 'create card',
+            idShort: 21,
+            shortLink: 'OJFvZJga'
+          },
+          board: {
+            id: '63dfc64ed87739e906b08207',
+            name: 'board',
+            shortLink: 'b8uXqUO2'
+          },
+          boardTarget: { id: '63d28327791560ed05f1c2e1' },
+          list: { id: '63dfc650f5f42e57e8b76c60', name: 'Review' },
+          member: { id: '625c6c7c6fc2b45763b718dc', name: 'UNICODE.TTP' }
+        },
+        appCreator: null,
+        type: 'moveCardFromBoard',
+        date: '2023-02-06T12:59:26.884Z',
+        limits: null,
+        display: {
+          translationKey: 'action_move_card_from_board',
+          entities: {
+            board: {
+              type: 'board',
+              id: '63d28327791560ed05f1c2e1',
+              text: 'dev / TTP Creative',
+              shortLink: 'VsonknlZ'
+            },
+            card: {
+              type: 'card',
+              id: '63e0cfc6977e18d186378968',
+              shortLink: 'OJFvZJga',
+              text: 'create card'
+            },
+            memberCreator: {
+              type: 'member',
+              id: '625c6c7c6fc2b45763b718dc',
+              username: 'unicodettp',
+              text: 'UNICODE.TTP'
+            }
+          }
+        },
+        memberCreator: {
+          id: '625c6c7c6fc2b45763b718dc',
+          activityBlocked: false,
+          avatarHash: 'f6a6a1149513f4cd488ccf88d2c0e9fb',
+          avatarUrl: 'https://trello-members.s3.amazonaws.com/625c6c7c6fc2b45763b718dc/f6a6a1149513f4cd488ccf88d2c0e9fb',
+          fullName: 'UNICODE.TTP',
+          idMemberReferrer: null,
+          initials: 'U',
+          nonPublic: {},
+          nonPublicAvailable: true,
+          username: 'unicodettp'
+        }
+      }
+    }
+  },
+  level: 'info',
+  timestamp: '2023-02-06 14:59:28'
+}
