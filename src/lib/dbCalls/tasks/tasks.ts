@@ -215,9 +215,6 @@ class TaskDB {
       delete data.id;
       let task = await Tasks.findOne({ _id: id });
       if (!task) return taskNotFoundError;
-      console.log({
-        unClear: task.status !== "Not Clear" && data.status === "Not Clear",
-      });
       if (
         task.deadline &&
         data.deadline &&
