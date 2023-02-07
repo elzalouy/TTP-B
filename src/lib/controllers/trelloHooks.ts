@@ -26,7 +26,13 @@ export default class TrelloWebhook {
       id: action?.action?.memberCreator?.id,
       name: action?.action?.memberCreator?.fullName,
     };
+    this.task = {
+      cardId: action.action?.data?.card?.id,
+      name: action.action?.data?.card?.name,
+      boardId: action.action?.data?.board?.id,
+    };
   }
+
   async start() {
     if (this.hookTarget === "task")
       switch (this.type) {
@@ -42,9 +48,9 @@ export default class TrelloWebhook {
           return await this.deleteCard();
         case "updateCard":
           return await this.updateCard();
+
         case "moveCardToBoard":
           return await this.updateCard();
-
         default:
           logger.info({ noAction: this.actionRequest });
           break;
@@ -105,13 +111,11 @@ export default class TrelloWebhook {
         boardId: this.actionRequest.action.data?.board?.id,
       });
       let team = await dep.teams.find(
-        (item) => this.actionRequest.action.data?.list?.id === item.listId
+        (item) => this.actionRequest.action.data.list.id === item.listId
       );
       if (!task && dep) {
         this.task = {
-          cardId: this.actionRequest.action.data.card.id,
-          name: this.actionRequest.action.data.card.name,
-          boardId: this.actionRequest.action.data.board.id,
+          ...this.task,
           trelloShortUrl: `https://trello.com/c/${this.actionRequest.action.data.card.shortLink}`,
           deadline: this.actionRequest.action.data.card.due
             ? new Date(this.actionRequest.action.data.card.due)
@@ -119,7 +123,6 @@ export default class TrelloWebhook {
           start: this.actionRequest.action.data.card.start
             ? new Date(this.actionRequest.action.data.card.start)
             : undefined,
-          // check
           teamId: team ? team._id : null,
           status: team
             ? "In Progress"
@@ -152,21 +155,38 @@ export default class TrelloWebhook {
       let task = await TaskController.getOneTaskBy({
         cardId: this.actionRequest?.action?.data?.card?.id,
       });
+      console.log({ req: this.actionRequest.action.display });
       if (task) {
         let department = await Department.findOne({
           boardId: task.boardId,
         });
-        let isNewTeam = department.teams.find(
-          (item) => item.listId === this.actionRequest.action.data.card.idList
+        let isNewDep = this.actionRequest.action.data.board !== task.boardId;
+        let listId = isNewDep
+          ? this.actionRequest.action.data.list?.id
+            ? this.actionRequest.action.data.list?.id
+            : this.actionRequest.action.data.card?.idList
+            ? this.actionRequest.action.data.card?.idList
+            : this.actionRequest.action.data.list?.id
+          : task.listId;
+
+        let newDep = isNewDep
+          ? await Department.findOne({
+              boardId: this.actionRequest.action.data.board.id,
+            })
+          : null;
+        let isNewTeam = (isNewDep ? newDep : department).teams.find(
+          (item) => item.listId === listId
         );
+
         let isBeforeTeam = department.teams.find(
           (item) =>
-            this.actionRequest.action.data?.listBefore?.id === item.listId
+            this.actionRequest.action.data?.listSource?.id === item.listId
         );
+
         let inProgressList = department.lists.find(
           (item) => item.name === "In Progress"
         );
-        console.log({ board: this.actionRequest.action.data });
+
         this.task = {
           name: this.actionRequest.action.data.card.name,
           boardId: this.actionRequest.action.data.board.id,
@@ -189,17 +209,15 @@ export default class TrelloWebhook {
             : undefined,
           lastMove: isBeforeTeam
             ? task.lastMove
-            : this.actionRequest.action.data?.listBefore?.name,
+            : this.actionRequest.action.data?.listSource?.id,
           lastMoveDate: isBeforeTeam
             ? task.lastMoveDate
             : new Date().toString(),
           teamId: isNewTeam ? isNewTeam._id : task.teamId,
-          listId: isNewTeam
-            ? inProgressList.listId
-            : this.actionRequest.action.data.listAfter?.id,
+          listId: isNewTeam ? inProgressList.listId : listId,
           status: isNewTeam
             ? inProgressList.name
-            : this.actionRequest.action.data.listAfter?.name,
+            : this.actionRequest.action.data.list?.name,
         };
         return await TaskController.updateTaskByTrelloDB(this.task, {
           id: this.user.id,
@@ -210,6 +228,7 @@ export default class TrelloWebhook {
       logger.error({ updateCardHook: error });
     }
   }
+
   private async createProject() {
     try {
       let existed = await Project.find({
@@ -232,7 +251,6 @@ export default class TrelloWebhook {
         boardId: this.actionRequest.action.data.board.id,
       }).then(async (creativeBoard) => {
         if (creativeBoard) {
-          console.log({ data: this.actionRequest.action.data.card });
           // if true, then it's an update action, and if not so it's a move action and moving is not allowed
           let project = await Project.findOneAndUpdate(
             { cardId: this.actionRequest.action.data.card.id },

@@ -140,8 +140,7 @@ export interface webhookUpdateInterface {
         previewUrl: string;
         previewUrl2x: string;
       };
-      listBefore?: { id: string; name: string };
-      listAfter?: { id: string; name: string };
+      listSource?: { id: string };
       list?: { id: string; name: string };
     };
     appCreator: any;

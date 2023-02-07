@@ -8,9 +8,9 @@ import { ProjectInfo } from "../../types/model/Project";
 export const departmentsQueue = queue({ results: [], autostart: true });
 
 export const createProjectsCardsInCreativeBoard = (board: IDepartment) => {
-  let lists = board.lists;
+  let lists = board?.lists;
   departmentsQueue.push(async (cb) => {
-    let isProjectsList = lists.find((item) => item.name === "projects");
+    let isProjectsList = lists?.find((item) => item.name === "projects");
     if (isProjectsList) {
       let projects = await Project.find({});
       projects.forEach(async (item: ProjectInfo) => {
