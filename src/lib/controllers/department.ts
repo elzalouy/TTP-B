@@ -90,10 +90,16 @@ export default class DepartmentController {
       if (validation.error) return validation.error.details[0];
       if (depDoc) {
         let { teams, lists } = await depDoc.createDepartmentBoard();
-        depDoc.teams = teams;
-        depDoc.lists = lists;
-        createProjectsCardsInCreativeBoard(depDoc);
-        return await depDoc.save();
+        if (teams && lists) {
+          depDoc.teams = teams;
+          depDoc.lists = lists;
+          createProjectsCardsInCreativeBoard(depDoc);
+          return await depDoc.save();
+        } else
+          return {
+            error: "trelloError",
+            message: "Trello didn't create the board for a reason.",
+          };
       }
     } catch (error: any) {
       if (error?.error === "MongoError" && error?.id) {

@@ -27,7 +27,7 @@ export default class TrelloWebhook {
       name: action?.action?.memberCreator?.fullName,
     };
     this.task = {
-      cardId: action.action?.data?.card.id,
+      cardId: action.action?.data?.card?.id,
       name: action.action?.data?.card?.name,
       boardId: action.action?.data?.board?.id,
     };
