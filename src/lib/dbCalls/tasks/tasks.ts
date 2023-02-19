@@ -361,9 +361,6 @@ class TaskDB {
   ) {
     try {
       let task = await Tasks.findOne({ cardId: data.cardId });
-      console.log({
-        unClear: task.status !== "Not Clear" && data.status === "Not Clear",
-      });
       if (
         task?.deadline &&
         data?.deadline &&
@@ -429,6 +426,7 @@ class TaskDB {
 
       task.attachedFiles = _.uniqBy(task.attachedFiles, "trelloId");
       let result = await (await task.save()).toObject();
+      console.log({ result });
       await io.sockets.emit("update-task", result);
     } catch (error) {
       logger.error({ __updateTaskByTrelloDBError: error });

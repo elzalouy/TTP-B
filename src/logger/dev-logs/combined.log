@@ -22787,3 +22787,2318 @@
   level: 'info',
   timestamp: '2023-02-07 14:37:16'
 }
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2023-02-07 14:40:28'
+}
+{
+  message: { noAction: {} },
+  level: 'info',
+  timestamp: '2023-02-07 14:40:34'
+}
+{
+  message: { noAction: {} },
+  level: 'info',
+  timestamp: '2023-02-07 14:40:34'
+}
+{
+  message: { noAction: {} },
+  level: 'info',
+  timestamp: '2023-02-07 14:40:34'
+}
+{
+  message: { noAction: {} },
+  level: 'info',
+  timestamp: '2023-02-07 14:40:34'
+}
+{
+  message: { noAction: {} },
+  level: 'info',
+  timestamp: '2023-02-07 14:40:34'
+}
+{
+  message: { noAction: {} },
+  level: 'info',
+  timestamp: '2023-02-07 14:40:34'
+}
+{
+  message: { noAction: {} },
+  level: 'info',
+  timestamp: '2023-02-07 14:40:34'
+}
+{
+  message: { noAction: {} },
+  level: 'info',
+  timestamp: '2023-02-07 14:40:34'
+}
+{
+  message: { noAction: {} },
+  level: 'info',
+  timestamp: '2023-02-07 14:40:34'
+}
+{
+  message: { noAction: {} },
+  level: 'info',
+  timestamp: '2023-02-07 14:40:34'
+}
+{
+  message: { noAction: {} },
+  level: 'info',
+  timestamp: '2023-02-07 14:40:35'
+}
+{
+  message: { noAction: {} },
+  level: 'info',
+  timestamp: '2023-02-07 14:40:35'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2023-02-19 07:10:47'
+}
+{
+  message: { monthlyDeleteNotifications: 23 },
+  level: 'info',
+  timestamp: '2023-02-19 07:10:51'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2023-02-19 07:42:55'
+}
+{
+  message: { noAction: {} },
+  level: 'info',
+  timestamp: '2023-02-19 07:43:01'
+}
+{
+  message: { noAction: {} },
+  level: 'info',
+  timestamp: '2023-02-19 07:43:01'
+}
+{
+  message: { noAction: {} },
+  level: 'info',
+  timestamp: '2023-02-19 07:43:01'
+}
+{
+  message: { noAction: {} },
+  level: 'info',
+  timestamp: '2023-02-19 07:43:02'
+}
+{
+  message: { noAction: {} },
+  level: 'info',
+  timestamp: '2023-02-19 07:43:02'
+}
+{
+  message: { noAction: {} },
+  level: 'info',
+  timestamp: '2023-02-19 07:43:02'
+}
+{
+  message: { noAction: {} },
+  level: 'info',
+  timestamp: '2023-02-19 07:43:02'
+}
+{
+  message: { noAction: {} },
+  level: 'info',
+  timestamp: '2023-02-19 07:43:02'
+}
+{
+  message: { noAction: {} },
+  level: 'info',
+  timestamp: '2023-02-19 07:43:02'
+}
+{
+  message: { noAction: {} },
+  level: 'info',
+  timestamp: '2023-02-19 07:43:02'
+}
+{
+  message: { noAction: {} },
+  level: 'info',
+  timestamp: '2023-02-19 07:43:03'
+}
+{
+  message: { noAction: {} },
+  level: 'info',
+  timestamp: '2023-02-19 07:43:03'
+}
+{
+  message: {
+    removeBoard: 'https://api.trello.com/1/boards/63e23ccffbcd1370d9c42c22?response_type=token&key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68'
+  },
+  level: 'info',
+  timestamp: '2023-02-19 07:44:09'
+}
+{
+  message: {
+    noAction: {
+      model: {
+        id: '63e23ccffbcd1370d9c42c22',
+        name: 'board 6',
+        desc: '',
+        descData: null,
+        closed: false,
+        idOrganization: null,
+        idEnterprise: null,
+        pinned: false,
+        url: 'https://trello.com/b/zS5flfmn/board-6',
+        shortUrl: 'https://trello.com/b/zS5flfmn',
+        prefs: {
+          permissionLevel: 'private',
+          hideVotes: false,
+          voting: 'disabled',
+          comments: 'members',
+          invitations: 'members',
+          selfJoin: true,
+          cardCovers: true,
+          isTemplate: false,
+          cardAging: 'regular',
+          calendarFeedEnabled: false,
+          hiddenPluginBoardButtons: [],
+          switcherViews: [
+            {
+              viewType: 'Board',
+              enabled: true,
+              _id: '63e23ccffbcd1370d9c42c23'
+            },
+            {
+              viewType: 'Table',
+              enabled: true,
+              _id: '63e23ccffbcd1370d9c42c24'
+            },
+            {
+              viewType: 'Calendar',
+              enabled: false,
+              _id: '63e23ccffbcd1370d9c42c25'
+            },
+            {
+              viewType: 'Dashboard',
+              enabled: false,
+              _id: '63e23ccffbcd1370d9c42c26'
+            },
+            {
+              viewType: 'Timeline',
+              enabled: false,
+              _id: '63e23ccffbcd1370d9c42c27'
+            },
+            {
+              viewType: 'Map',
+              enabled: false,
+              _id: '63e23ccffbcd1370d9c42c28'
+            }
+          ],
+          background: '63e235bbf38bf62fcabf53db',
+          backgroundColor: null,
+          backgroundImage: 'https://trello-backgrounds.s3.amazonaws.com/SharedBackground/original/021e41348ecd99de301771dbff05c8cd/photo-1675025844397-9819eb7091ff',
+          backgroundImageScaled: [
+            {
+              width: 67,
+              height: 100,
+              url: 'https://trello-backgrounds.s3.amazonaws.com/SharedBackground/67x100/a50789c553579269fef8f59679b95bbb/photo-1675025844397-9819eb7091ff.jpg'
+            },
+            {
+              width: 128,
+              height: 192,
+              url: 'https://trello-backgrounds.s3.amazonaws.com/SharedBackground/128x192/a50789c553579269fef8f59679b95bbb/photo-1675025844397-9819eb7091ff.jpg'
+            },
+            {
+              width: 320,
+              height: 480,
+              url: 'https://trello-backgrounds.s3.amazonaws.com/SharedBackground/320x480/a50789c553579269fef8f59679b95bbb/photo-1675025844397-9819eb7091ff.jpg'
+            },
+            {
+              width: 640,
+              height: 960,
+              url: 'https://trello-backgrounds.s3.amazonaws.com/SharedBackground/640x960/a50789c553579269fef8f59679b95bbb/photo-1675025844397-9819eb7091ff.jpg'
+            },
+            {
+              width: 683,
+              height: 1024,
+              url: 'https://trello-backgrounds.s3.amazonaws.com/SharedBackground/683x1024/a50789c553579269fef8f59679b95bbb/photo-1675025844397-9819eb7091ff.jpg'
+            },
+            {
+              width: 853,
+              height: 1280,
+              url: 'https://trello-backgrounds.s3.amazonaws.com/SharedBackground/853x1280/a50789c553579269fef8f59679b95bbb/photo-1675025844397-9819eb7091ff.jpg'
+            },
+            {
+              width: 1066,
+              height: 1600,
+              url: 'https://trello-backgrounds.s3.amazonaws.com/SharedBackground/1066x1600/a50789c553579269fef8f59679b95bbb/photo-1675025844397-9819eb7091ff.jpg'
+            },
+            {
+              width: 1280,
+              height: 1920,
+              url: 'https://trello-backgrounds.s3.amazonaws.com/SharedBackground/1280x1920/a50789c553579269fef8f59679b95bbb/photo-1675025844397-9819eb7091ff.jpg'
+            },
+            {
+              width: 1365,
+              height: 2048,
+              url: 'https://trello-backgrounds.s3.amazonaws.com/SharedBackground/original/021e41348ecd99de301771dbff05c8cd/photo-1675025844397-9819eb7091ff'
+            }
+          ],
+          backgroundTile: false,
+          backgroundBrightness: 'dark',
+          backgroundBottomColor: '#0b0d13',
+          backgroundTopColor: '#06192d',
+          canBePublic: true,
+          canBeEnterprise: true,
+          canBeOrg: true,
+          canBePrivate: true,
+          canInvite: true
+        },
+        labelNames: {
+          green: '',
+          yellow: '',
+          orange: '',
+          red: '',
+          purple: '',
+          blue: '',
+          sky: '',
+          lime: '',
+          pink: '',
+          black: '',
+          green_dark: '',
+          yellow_dark: '',
+          orange_dark: '',
+          red_dark: '',
+          purple_dark: '',
+          blue_dark: '',
+          sky_dark: '',
+          lime_dark: '',
+          pink_dark: '',
+          black_dark: '',
+          green_light: '',
+          yellow_light: '',
+          orange_light: '',
+          red_light: '',
+          purple_light: '',
+          blue_light: '',
+          sky_light: '',
+          lime_light: '',
+          pink_light: '',
+          black_light: ''
+        }
+      },
+      action: {
+        id: '63f1b72afd106a1c7c4dd45d',
+        idMemberCreator: '625c6c7c6fc2b45763b718dc',
+        data: {
+          board: {
+            id: '63e23ccffbcd1370d9c42c22',
+            name: 'board 6',
+            shortLink: 'zS5flfmn'
+          },
+          organization: { id: '638e3ad0a165280188c108f5', name: 'ttpbetalocal' }
+        },
+        appCreator: null,
+        type: 'removeFromOrganizationBoard',
+        date: '2023-02-19T05:44:10.509Z',
+        limits: null,
+        display: {
+          translationKey: 'action_remove_from_organization_board',
+          entities: {
+            board: {
+              type: 'board',
+              id: '63e23ccffbcd1370d9c42c22',
+              text: 'board 6',
+              shortLink: 'zS5flfmn'
+            },
+            organization: {
+              type: 'organization',
+              id: '638e3ad0a165280188c108f5',
+              text: 'ttpbetalocal'
+            },
+            memberCreator: {
+              type: 'member',
+              id: '625c6c7c6fc2b45763b718dc',
+              username: 'unicodettp',
+              text: 'UNICODE.TTP'
+            }
+          }
+        },
+        memberCreator: {
+          id: '625c6c7c6fc2b45763b718dc',
+          activityBlocked: false,
+          avatarHash: 'd309b49df035456ea94b890b2abb94e3',
+          avatarUrl: 'https://trello-members.s3.amazonaws.com/625c6c7c6fc2b45763b718dc/d309b49df035456ea94b890b2abb94e3',
+          fullName: 'UNICODE.TTP',
+          idMemberReferrer: null,
+          initials: 'U',
+          nonPublic: {},
+          nonPublicAvailable: true,
+          username: 'unicodettp'
+        }
+      }
+    }
+  },
+  level: 'info',
+  timestamp: '2023-02-19 07:44:10'
+}
+{
+  message: { deleteTasksOfDepartment: { acknowledged: true, deletedCount: 0 } },
+  level: 'info',
+  timestamp: '2023-02-19 07:44:11'
+}
+{
+  message: {
+    removeBoard: 'https://api.trello.com/1/boards/63e23cba3c2fbaa9c4f90ef2?response_type=token&key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68'
+  },
+  level: 'info',
+  timestamp: '2023-02-19 07:44:14'
+}
+{
+  message: {
+    noAction: {
+      model: {
+        id: '63e23cba3c2fbaa9c4f90ef2',
+        name: 'board 4',
+        desc: '',
+        descData: null,
+        closed: false,
+        idOrganization: null,
+        idEnterprise: null,
+        pinned: false,
+        url: 'https://trello.com/b/y4FruXAq/board-4',
+        shortUrl: 'https://trello.com/b/y4FruXAq',
+        prefs: {
+          permissionLevel: 'private',
+          hideVotes: false,
+          voting: 'disabled',
+          comments: 'members',
+          invitations: 'members',
+          selfJoin: true,
+          cardCovers: true,
+          isTemplate: false,
+          cardAging: 'regular',
+          calendarFeedEnabled: false,
+          hiddenPluginBoardButtons: [],
+          switcherViews: [
+            {
+              viewType: 'Board',
+              enabled: true,
+              _id: '63e23cba3c2fbaa9c4f90ef3'
+            },
+            {
+              viewType: 'Table',
+              enabled: true,
+              _id: '63e23cba3c2fbaa9c4f90ef4'
+            },
+            {
+              viewType: 'Calendar',
+              enabled: false,
+              _id: '63e23cba3c2fbaa9c4f90ef5'
+            },
+            {
+              viewType: 'Dashboard',
+              enabled: false,
+              _id: '63e23cba3c2fbaa9c4f90ef6'
+            },
+            {
+              viewType: 'Timeline',
+              enabled: false,
+              _id: '63e23cba3c2fbaa9c4f90ef7'
+            },
+            {
+              viewType: 'Map',
+              enabled: false,
+              _id: '63e23cba3c2fbaa9c4f90ef8'
+            }
+          ],
+          background: '63e235bbf38bf62fcabf53db',
+          backgroundColor: null,
+          backgroundImage: 'https://trello-backgrounds.s3.amazonaws.com/SharedBackground/original/021e41348ecd99de301771dbff05c8cd/photo-1675025844397-9819eb7091ff',
+          backgroundImageScaled: [
+            {
+              width: 67,
+              height: 100,
+              url: 'https://trello-backgrounds.s3.amazonaws.com/SharedBackground/67x100/a50789c553579269fef8f59679b95bbb/photo-1675025844397-9819eb7091ff.jpg'
+            },
+            {
+              width: 128,
+              height: 192,
+              url: 'https://trello-backgrounds.s3.amazonaws.com/SharedBackground/128x192/a50789c553579269fef8f59679b95bbb/photo-1675025844397-9819eb7091ff.jpg'
+            },
+            {
+              width: 320,
+              height: 480,
+              url: 'https://trello-backgrounds.s3.amazonaws.com/SharedBackground/320x480/a50789c553579269fef8f59679b95bbb/photo-1675025844397-9819eb7091ff.jpg'
+            },
+            {
+              width: 640,
+              height: 960,
+              url: 'https://trello-backgrounds.s3.amazonaws.com/SharedBackground/640x960/a50789c553579269fef8f59679b95bbb/photo-1675025844397-9819eb7091ff.jpg'
+            },
+            {
+              width: 683,
+              height: 1024,
+              url: 'https://trello-backgrounds.s3.amazonaws.com/SharedBackground/683x1024/a50789c553579269fef8f59679b95bbb/photo-1675025844397-9819eb7091ff.jpg'
+            },
+            {
+              width: 853,
+              height: 1280,
+              url: 'https://trello-backgrounds.s3.amazonaws.com/SharedBackground/853x1280/a50789c553579269fef8f59679b95bbb/photo-1675025844397-9819eb7091ff.jpg'
+            },
+            {
+              width: 1066,
+              height: 1600,
+              url: 'https://trello-backgrounds.s3.amazonaws.com/SharedBackground/1066x1600/a50789c553579269fef8f59679b95bbb/photo-1675025844397-9819eb7091ff.jpg'
+            },
+            {
+              width: 1280,
+              height: 1920,
+              url: 'https://trello-backgrounds.s3.amazonaws.com/SharedBackground/1280x1920/a50789c553579269fef8f59679b95bbb/photo-1675025844397-9819eb7091ff.jpg'
+            },
+            {
+              width: 1365,
+              height: 2048,
+              url: 'https://trello-backgrounds.s3.amazonaws.com/SharedBackground/original/021e41348ecd99de301771dbff05c8cd/photo-1675025844397-9819eb7091ff'
+            }
+          ],
+          backgroundTile: false,
+          backgroundBrightness: 'dark',
+          backgroundBottomColor: '#0b0d13',
+          backgroundTopColor: '#06192d',
+          canBePublic: true,
+          canBeEnterprise: true,
+          canBeOrg: true,
+          canBePrivate: true,
+          canInvite: true
+        },
+        labelNames: {
+          green: '',
+          yellow: '',
+          orange: '',
+          red: '',
+          purple: '',
+          blue: '',
+          sky: '',
+          lime: '',
+          pink: '',
+          black: '',
+          green_dark: '',
+          yellow_dark: '',
+          orange_dark: '',
+          red_dark: '',
+          purple_dark: '',
+          blue_dark: '',
+          sky_dark: '',
+          lime_dark: '',
+          pink_dark: '',
+          black_dark: '',
+          green_light: '',
+          yellow_light: '',
+          orange_light: '',
+          red_light: '',
+          purple_light: '',
+          blue_light: '',
+          sky_light: '',
+          lime_light: '',
+          pink_light: '',
+          black_light: ''
+        }
+      },
+      action: {
+        id: '63f1b72f0e626f31938337b2',
+        idMemberCreator: '625c6c7c6fc2b45763b718dc',
+        data: {
+          board: {
+            id: '63e23cba3c2fbaa9c4f90ef2',
+            name: 'board 4',
+            shortLink: 'y4FruXAq'
+          },
+          organization: { id: '638e3ad0a165280188c108f5', name: 'ttpbetalocal' }
+        },
+        appCreator: null,
+        type: 'removeFromOrganizationBoard',
+        date: '2023-02-19T05:44:15.096Z',
+        limits: null,
+        display: {
+          translationKey: 'action_remove_from_organization_board',
+          entities: {
+            board: {
+              type: 'board',
+              id: '63e23cba3c2fbaa9c4f90ef2',
+              text: 'board 4',
+              shortLink: 'y4FruXAq'
+            },
+            organization: {
+              type: 'organization',
+              id: '638e3ad0a165280188c108f5',
+              text: 'ttpbetalocal'
+            },
+            memberCreator: {
+              type: 'member',
+              id: '625c6c7c6fc2b45763b718dc',
+              username: 'unicodettp',
+              text: 'UNICODE.TTP'
+            }
+          }
+        },
+        memberCreator: {
+          id: '625c6c7c6fc2b45763b718dc',
+          activityBlocked: false,
+          avatarHash: 'd309b49df035456ea94b890b2abb94e3',
+          avatarUrl: 'https://trello-members.s3.amazonaws.com/625c6c7c6fc2b45763b718dc/d309b49df035456ea94b890b2abb94e3',
+          fullName: 'UNICODE.TTP',
+          idMemberReferrer: null,
+          initials: 'U',
+          nonPublic: {},
+          nonPublicAvailable: true,
+          username: 'unicodettp'
+        }
+      }
+    }
+  },
+  level: 'info',
+  timestamp: '2023-02-19 07:44:15'
+}
+{
+  message: { deleteTasksOfDepartment: { acknowledged: true, deletedCount: 0 } },
+  level: 'info',
+  timestamp: '2023-02-19 07:44:15'
+}
+{
+  message: {
+    removeBoard: 'https://api.trello.com/1/boards/63e23cfe1210661066b18f38?response_type=token&key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68'
+  },
+  level: 'info',
+  timestamp: '2023-02-19 07:44:20'
+}
+{
+  message: {
+    noAction: {
+      model: {
+        id: '63e23cfe1210661066b18f38',
+        name: 'board 9',
+        desc: '',
+        descData: null,
+        closed: false,
+        idOrganization: null,
+        idEnterprise: null,
+        pinned: false,
+        url: 'https://trello.com/b/2GYsapak/board-9',
+        shortUrl: 'https://trello.com/b/2GYsapak',
+        prefs: {
+          permissionLevel: 'private',
+          hideVotes: false,
+          voting: 'disabled',
+          comments: 'members',
+          invitations: 'members',
+          selfJoin: true,
+          cardCovers: true,
+          isTemplate: false,
+          cardAging: 'regular',
+          calendarFeedEnabled: false,
+          hiddenPluginBoardButtons: [],
+          switcherViews: [
+            {
+              viewType: 'Board',
+              enabled: true,
+              _id: '63e23cfe1210661066b18f39'
+            },
+            {
+              viewType: 'Table',
+              enabled: true,
+              _id: '63e23cfe1210661066b18f3a'
+            },
+            {
+              viewType: 'Calendar',
+              enabled: false,
+              _id: '63e23cfe1210661066b18f3b'
+            },
+            {
+              viewType: 'Dashboard',
+              enabled: false,
+              _id: '63e23cfe1210661066b18f3c'
+            },
+            {
+              viewType: 'Timeline',
+              enabled: false,
+              _id: '63e23cfe1210661066b18f3d'
+            },
+            {
+              viewType: 'Map',
+              enabled: false,
+              _id: '63e23cfe1210661066b18f3e'
+            }
+          ],
+          background: '63e235bbf38bf62fcabf53db',
+          backgroundColor: null,
+          backgroundImage: 'https://trello-backgrounds.s3.amazonaws.com/SharedBackground/original/021e41348ecd99de301771dbff05c8cd/photo-1675025844397-9819eb7091ff',
+          backgroundImageScaled: [
+            {
+              width: 67,
+              height: 100,
+              url: 'https://trello-backgrounds.s3.amazonaws.com/SharedBackground/67x100/a50789c553579269fef8f59679b95bbb/photo-1675025844397-9819eb7091ff.jpg'
+            },
+            {
+              width: 128,
+              height: 192,
+              url: 'https://trello-backgrounds.s3.amazonaws.com/SharedBackground/128x192/a50789c553579269fef8f59679b95bbb/photo-1675025844397-9819eb7091ff.jpg'
+            },
+            {
+              width: 320,
+              height: 480,
+              url: 'https://trello-backgrounds.s3.amazonaws.com/SharedBackground/320x480/a50789c553579269fef8f59679b95bbb/photo-1675025844397-9819eb7091ff.jpg'
+            },
+            {
+              width: 640,
+              height: 960,
+              url: 'https://trello-backgrounds.s3.amazonaws.com/SharedBackground/640x960/a50789c553579269fef8f59679b95bbb/photo-1675025844397-9819eb7091ff.jpg'
+            },
+            {
+              width: 683,
+              height: 1024,
+              url: 'https://trello-backgrounds.s3.amazonaws.com/SharedBackground/683x1024/a50789c553579269fef8f59679b95bbb/photo-1675025844397-9819eb7091ff.jpg'
+            },
+            {
+              width: 853,
+              height: 1280,
+              url: 'https://trello-backgrounds.s3.amazonaws.com/SharedBackground/853x1280/a50789c553579269fef8f59679b95bbb/photo-1675025844397-9819eb7091ff.jpg'
+            },
+            {
+              width: 1066,
+              height: 1600,
+              url: 'https://trello-backgrounds.s3.amazonaws.com/SharedBackground/1066x1600/a50789c553579269fef8f59679b95bbb/photo-1675025844397-9819eb7091ff.jpg'
+            },
+            {
+              width: 1280,
+              height: 1920,
+              url: 'https://trello-backgrounds.s3.amazonaws.com/SharedBackground/1280x1920/a50789c553579269fef8f59679b95bbb/photo-1675025844397-9819eb7091ff.jpg'
+            },
+            {
+              width: 1365,
+              height: 2048,
+              url: 'https://trello-backgrounds.s3.amazonaws.com/SharedBackground/original/021e41348ecd99de301771dbff05c8cd/photo-1675025844397-9819eb7091ff'
+            }
+          ],
+          backgroundTile: false,
+          backgroundBrightness: 'dark',
+          backgroundBottomColor: '#0b0d13',
+          backgroundTopColor: '#06192d',
+          canBePublic: true,
+          canBeEnterprise: true,
+          canBeOrg: true,
+          canBePrivate: true,
+          canInvite: true
+        },
+        labelNames: {
+          green: '',
+          yellow: '',
+          orange: '',
+          red: '',
+          purple: '',
+          blue: '',
+          sky: '',
+          lime: '',
+          pink: '',
+          black: '',
+          green_dark: '',
+          yellow_dark: '',
+          orange_dark: '',
+          red_dark: '',
+          purple_dark: '',
+          blue_dark: '',
+          sky_dark: '',
+          lime_dark: '',
+          pink_dark: '',
+          black_dark: '',
+          green_light: '',
+          yellow_light: '',
+          orange_light: '',
+          red_light: '',
+          purple_light: '',
+          blue_light: '',
+          sky_light: '',
+          lime_light: '',
+          pink_light: '',
+          black_light: ''
+        }
+      },
+      action: {
+        id: '63f1b7345f9b23e95b90d53d',
+        idMemberCreator: '625c6c7c6fc2b45763b718dc',
+        data: {
+          board: {
+            id: '63e23cfe1210661066b18f38',
+            name: 'board 9',
+            shortLink: '2GYsapak'
+          },
+          organization: { id: '638e3ad0a165280188c108f5', name: 'ttpbetalocal' }
+        },
+        appCreator: null,
+        type: 'removeFromOrganizationBoard',
+        date: '2023-02-19T05:44:20.771Z',
+        limits: null,
+        display: {
+          translationKey: 'action_remove_from_organization_board',
+          entities: {
+            board: {
+              type: 'board',
+              id: '63e23cfe1210661066b18f38',
+              text: 'board 9',
+              shortLink: '2GYsapak'
+            },
+            organization: {
+              type: 'organization',
+              id: '638e3ad0a165280188c108f5',
+              text: 'ttpbetalocal'
+            },
+            memberCreator: {
+              type: 'member',
+              id: '625c6c7c6fc2b45763b718dc',
+              username: 'unicodettp',
+              text: 'UNICODE.TTP'
+            }
+          }
+        },
+        memberCreator: {
+          id: '625c6c7c6fc2b45763b718dc',
+          activityBlocked: false,
+          avatarHash: 'd309b49df035456ea94b890b2abb94e3',
+          avatarUrl: 'https://trello-members.s3.amazonaws.com/625c6c7c6fc2b45763b718dc/d309b49df035456ea94b890b2abb94e3',
+          fullName: 'UNICODE.TTP',
+          idMemberReferrer: null,
+          initials: 'U',
+          nonPublic: {},
+          nonPublicAvailable: true,
+          username: 'unicodettp'
+        }
+      }
+    }
+  },
+  level: 'info',
+  timestamp: '2023-02-19 07:44:21'
+}
+{
+  message: { deleteTasksOfDepartment: { acknowledged: true, deletedCount: 0 } },
+  level: 'info',
+  timestamp: '2023-02-19 07:44:21'
+}
+{
+  message: {
+    removeBoard: 'https://api.trello.com/1/boards/63e244c979a963cb4b0ebf4c?response_type=token&key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68'
+  },
+  level: 'info',
+  timestamp: '2023-02-19 07:44:25'
+}
+{
+  message: {
+    noAction: {
+      model: {
+        id: '63e244c979a963cb4b0ebf4c',
+        name: 'board 10',
+        desc: '',
+        descData: null,
+        closed: false,
+        idOrganization: null,
+        idEnterprise: null,
+        pinned: false,
+        url: 'https://trello.com/b/10HwxmL6/board-10',
+        shortUrl: 'https://trello.com/b/10HwxmL6',
+        prefs: {
+          permissionLevel: 'private',
+          hideVotes: false,
+          voting: 'disabled',
+          comments: 'members',
+          invitations: 'members',
+          selfJoin: true,
+          cardCovers: true,
+          isTemplate: false,
+          cardAging: 'regular',
+          calendarFeedEnabled: false,
+          hiddenPluginBoardButtons: [],
+          switcherViews: [
+            {
+              viewType: 'Board',
+              enabled: true,
+              _id: '63e244c979a963cb4b0ebf4d'
+            },
+            {
+              viewType: 'Table',
+              enabled: true,
+              _id: '63e244c979a963cb4b0ebf4e'
+            },
+            {
+              viewType: 'Calendar',
+              enabled: false,
+              _id: '63e244c979a963cb4b0ebf4f'
+            },
+            {
+              viewType: 'Dashboard',
+              enabled: false,
+              _id: '63e244c979a963cb4b0ebf50'
+            },
+            {
+              viewType: 'Timeline',
+              enabled: false,
+              _id: '63e244c979a963cb4b0ebf51'
+            },
+            {
+              viewType: 'Map',
+              enabled: false,
+              _id: '63e244c979a963cb4b0ebf52'
+            }
+          ],
+          background: 'blue',
+          backgroundColor: '#0079BF',
+          backgroundImage: null,
+          backgroundImageScaled: null,
+          backgroundTile: false,
+          backgroundBrightness: 'dark',
+          backgroundBottomColor: '#0079BF',
+          backgroundTopColor: '#0079BF',
+          canBePublic: true,
+          canBeEnterprise: true,
+          canBeOrg: true,
+          canBePrivate: true,
+          canInvite: true
+        },
+        labelNames: {
+          green: '',
+          yellow: '',
+          orange: '',
+          red: '',
+          purple: '',
+          blue: '',
+          sky: '',
+          lime: '',
+          pink: '',
+          black: '',
+          green_dark: '',
+          yellow_dark: '',
+          orange_dark: '',
+          red_dark: '',
+          purple_dark: '',
+          blue_dark: '',
+          sky_dark: '',
+          lime_dark: '',
+          pink_dark: '',
+          black_dark: '',
+          green_light: '',
+          yellow_light: '',
+          orange_light: '',
+          red_light: '',
+          purple_light: '',
+          blue_light: '',
+          sky_light: '',
+          lime_light: '',
+          pink_light: '',
+          black_light: ''
+        }
+      },
+      action: {
+        id: '63f1b73a2db7ed6ffe47ff47',
+        idMemberCreator: '625c6c7c6fc2b45763b718dc',
+        data: {
+          board: {
+            id: '63e244c979a963cb4b0ebf4c',
+            name: 'board 10',
+            shortLink: '10HwxmL6'
+          },
+          organization: { id: '638e3ad0a165280188c108f5', name: 'ttpbetalocal' }
+        },
+        appCreator: null,
+        type: 'removeFromOrganizationBoard',
+        date: '2023-02-19T05:44:26.386Z',
+        limits: null,
+        display: {
+          translationKey: 'action_remove_from_organization_board',
+          entities: {
+            board: {
+              type: 'board',
+              id: '63e244c979a963cb4b0ebf4c',
+              text: 'board 10',
+              shortLink: '10HwxmL6'
+            },
+            organization: {
+              type: 'organization',
+              id: '638e3ad0a165280188c108f5',
+              text: 'ttpbetalocal'
+            },
+            memberCreator: {
+              type: 'member',
+              id: '625c6c7c6fc2b45763b718dc',
+              username: 'unicodettp',
+              text: 'UNICODE.TTP'
+            }
+          }
+        },
+        memberCreator: {
+          id: '625c6c7c6fc2b45763b718dc',
+          activityBlocked: false,
+          avatarHash: 'd309b49df035456ea94b890b2abb94e3',
+          avatarUrl: 'https://trello-members.s3.amazonaws.com/625c6c7c6fc2b45763b718dc/d309b49df035456ea94b890b2abb94e3',
+          fullName: 'UNICODE.TTP',
+          idMemberReferrer: null,
+          initials: 'U',
+          nonPublic: {},
+          nonPublicAvailable: true,
+          username: 'unicodettp'
+        }
+      }
+    }
+  },
+  level: 'info',
+  timestamp: '2023-02-19 07:44:26'
+}
+{
+  message: { deleteTasksOfDepartment: { acknowledged: true, deletedCount: 0 } },
+  level: 'info',
+  timestamp: '2023-02-19 07:44:27'
+}
+{
+  message: {
+    removeBoard: 'https://api.trello.com/1/boards/63e23cb19dc15144910726e1?response_type=token&key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68'
+  },
+  level: 'info',
+  timestamp: '2023-02-19 07:44:53'
+}
+{
+  message: {
+    noAction: {
+      model: {
+        id: '63e23cb19dc15144910726e1',
+        name: 'board 3',
+        desc: '',
+        descData: null,
+        closed: false,
+        idOrganization: null,
+        idEnterprise: null,
+        pinned: false,
+        url: 'https://trello.com/b/vrYWu58O/board-3',
+        shortUrl: 'https://trello.com/b/vrYWu58O',
+        prefs: {
+          permissionLevel: 'private',
+          hideVotes: false,
+          voting: 'disabled',
+          comments: 'members',
+          invitations: 'members',
+          selfJoin: true,
+          cardCovers: true,
+          isTemplate: false,
+          cardAging: 'regular',
+          calendarFeedEnabled: false,
+          hiddenPluginBoardButtons: [],
+          switcherViews: [
+            {
+              viewType: 'Board',
+              enabled: true,
+              _id: '63e23cb19dc15144910726e2'
+            },
+            {
+              viewType: 'Table',
+              enabled: true,
+              _id: '63e23cb19dc15144910726e3'
+            },
+            {
+              viewType: 'Calendar',
+              enabled: false,
+              _id: '63e23cb19dc15144910726e4'
+            },
+            {
+              viewType: 'Dashboard',
+              enabled: false,
+              _id: '63e23cb19dc15144910726e5'
+            },
+            {
+              viewType: 'Timeline',
+              enabled: false,
+              _id: '63e23cb19dc15144910726e6'
+            },
+            {
+              viewType: 'Map',
+              enabled: false,
+              _id: '63e23cb19dc15144910726e7'
+            }
+          ],
+          background: '63e235bbf38bf62fcabf53db',
+          backgroundColor: null,
+          backgroundImage: 'https://trello-backgrounds.s3.amazonaws.com/SharedBackground/original/021e41348ecd99de301771dbff05c8cd/photo-1675025844397-9819eb7091ff',
+          backgroundImageScaled: [
+            {
+              width: 67,
+              height: 100,
+              url: 'https://trello-backgrounds.s3.amazonaws.com/SharedBackground/67x100/a50789c553579269fef8f59679b95bbb/photo-1675025844397-9819eb7091ff.jpg'
+            },
+            {
+              width: 128,
+              height: 192,
+              url: 'https://trello-backgrounds.s3.amazonaws.com/SharedBackground/128x192/a50789c553579269fef8f59679b95bbb/photo-1675025844397-9819eb7091ff.jpg'
+            },
+            {
+              width: 320,
+              height: 480,
+              url: 'https://trello-backgrounds.s3.amazonaws.com/SharedBackground/320x480/a50789c553579269fef8f59679b95bbb/photo-1675025844397-9819eb7091ff.jpg'
+            },
+            {
+              width: 640,
+              height: 960,
+              url: 'https://trello-backgrounds.s3.amazonaws.com/SharedBackground/640x960/a50789c553579269fef8f59679b95bbb/photo-1675025844397-9819eb7091ff.jpg'
+            },
+            {
+              width: 683,
+              height: 1024,
+              url: 'https://trello-backgrounds.s3.amazonaws.com/SharedBackground/683x1024/a50789c553579269fef8f59679b95bbb/photo-1675025844397-9819eb7091ff.jpg'
+            },
+            {
+              width: 853,
+              height: 1280,
+              url: 'https://trello-backgrounds.s3.amazonaws.com/SharedBackground/853x1280/a50789c553579269fef8f59679b95bbb/photo-1675025844397-9819eb7091ff.jpg'
+            },
+            {
+              width: 1066,
+              height: 1600,
+              url: 'https://trello-backgrounds.s3.amazonaws.com/SharedBackground/1066x1600/a50789c553579269fef8f59679b95bbb/photo-1675025844397-9819eb7091ff.jpg'
+            },
+            {
+              width: 1280,
+              height: 1920,
+              url: 'https://trello-backgrounds.s3.amazonaws.com/SharedBackground/1280x1920/a50789c553579269fef8f59679b95bbb/photo-1675025844397-9819eb7091ff.jpg'
+            },
+            {
+              width: 1365,
+              height: 2048,
+              url: 'https://trello-backgrounds.s3.amazonaws.com/SharedBackground/original/021e41348ecd99de301771dbff05c8cd/photo-1675025844397-9819eb7091ff'
+            }
+          ],
+          backgroundTile: false,
+          backgroundBrightness: 'dark',
+          backgroundBottomColor: '#0b0d13',
+          backgroundTopColor: '#06192d',
+          canBePublic: true,
+          canBeEnterprise: true,
+          canBeOrg: true,
+          canBePrivate: true,
+          canInvite: true
+        },
+        labelNames: {
+          green: '',
+          yellow: '',
+          orange: '',
+          red: '',
+          purple: '',
+          blue: '',
+          sky: '',
+          lime: '',
+          pink: '',
+          black: '',
+          green_dark: '',
+          yellow_dark: '',
+          orange_dark: '',
+          red_dark: '',
+          purple_dark: '',
+          blue_dark: '',
+          sky_dark: '',
+          lime_dark: '',
+          pink_dark: '',
+          black_dark: '',
+          green_light: '',
+          yellow_light: '',
+          orange_light: '',
+          red_light: '',
+          purple_light: '',
+          blue_light: '',
+          sky_light: '',
+          lime_light: '',
+          pink_light: '',
+          black_light: ''
+        }
+      },
+      action: {
+        id: '63f1b755266eb6c9c8d37e75',
+        idMemberCreator: '625c6c7c6fc2b45763b718dc',
+        data: {
+          board: {
+            id: '63e23cb19dc15144910726e1',
+            name: 'board 3',
+            shortLink: 'vrYWu58O'
+          },
+          organization: { id: '638e3ad0a165280188c108f5', name: 'ttpbetalocal' }
+        },
+        appCreator: null,
+        type: 'removeFromOrganizationBoard',
+        date: '2023-02-19T05:44:53.929Z',
+        limits: null,
+        display: {
+          translationKey: 'action_remove_from_organization_board',
+          entities: {
+            board: {
+              type: 'board',
+              id: '63e23cb19dc15144910726e1',
+              text: 'board 3',
+              shortLink: 'vrYWu58O'
+            },
+            organization: {
+              type: 'organization',
+              id: '638e3ad0a165280188c108f5',
+              text: 'ttpbetalocal'
+            },
+            memberCreator: {
+              type: 'member',
+              id: '625c6c7c6fc2b45763b718dc',
+              username: 'unicodettp',
+              text: 'UNICODE.TTP'
+            }
+          }
+        },
+        memberCreator: {
+          id: '625c6c7c6fc2b45763b718dc',
+          activityBlocked: false,
+          avatarHash: 'd309b49df035456ea94b890b2abb94e3',
+          avatarUrl: 'https://trello-members.s3.amazonaws.com/625c6c7c6fc2b45763b718dc/d309b49df035456ea94b890b2abb94e3',
+          fullName: 'UNICODE.TTP',
+          idMemberReferrer: null,
+          initials: 'U',
+          nonPublic: {},
+          nonPublicAvailable: true,
+          username: 'unicodettp'
+        }
+      }
+    }
+  },
+  level: 'info',
+  timestamp: '2023-02-19 07:44:54'
+}
+{
+  message: { deleteTasksOfDepartment: { acknowledged: true, deletedCount: 0 } },
+  level: 'info',
+  timestamp: '2023-02-19 07:44:54'
+}
+{
+  message: {
+    removeBoard: 'https://api.trello.com/1/boards/63dfc64ed87739e906b08207?response_type=token&key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68'
+  },
+  level: 'info',
+  timestamp: '2023-02-19 07:44:59'
+}
+{
+  message: {
+    noAction: {
+      model: {
+        id: '63dfc64ed87739e906b08207',
+        name: 'board',
+        desc: '',
+        descData: null,
+        closed: false,
+        idOrganization: null,
+        idEnterprise: null,
+        pinned: false,
+        url: 'https://trello.com/b/b8uXqUO2/board',
+        shortUrl: 'https://trello.com/b/b8uXqUO2',
+        prefs: {
+          permissionLevel: 'private',
+          hideVotes: false,
+          voting: 'disabled',
+          comments: 'members',
+          invitations: 'members',
+          selfJoin: true,
+          cardCovers: true,
+          isTemplate: false,
+          cardAging: 'regular',
+          calendarFeedEnabled: false,
+          hiddenPluginBoardButtons: [],
+          switcherViews: [
+            {
+              viewType: 'Board',
+              enabled: true,
+              _id: '63dfc64ed87739e906b08208'
+            },
+            {
+              viewType: 'Table',
+              enabled: true,
+              _id: '63dfc64ed87739e906b08209'
+            },
+            {
+              viewType: 'Calendar',
+              enabled: false,
+              _id: '63dfc64ed87739e906b0820a'
+            },
+            {
+              viewType: 'Dashboard',
+              enabled: false,
+              _id: '63dfc64ed87739e906b0820b'
+            },
+            {
+              viewType: 'Timeline',
+              enabled: false,
+              _id: '63dfc64ed87739e906b0820c'
+            },
+            {
+              viewType: 'Map',
+              enabled: false,
+              _id: '63dfc64ed87739e906b0820d'
+            }
+          ],
+          background: 'blue',
+          backgroundColor: '#0079BF',
+          backgroundImage: null,
+          backgroundImageScaled: null,
+          backgroundTile: false,
+          backgroundBrightness: 'dark',
+          backgroundBottomColor: '#0079BF',
+          backgroundTopColor: '#0079BF',
+          canBePublic: true,
+          canBeEnterprise: true,
+          canBeOrg: true,
+          canBePrivate: true,
+          canInvite: true
+        },
+        labelNames: {
+          green: '',
+          yellow: '',
+          orange: '',
+          red: '',
+          purple: '',
+          blue: '',
+          sky: '',
+          lime: '',
+          pink: '',
+          black: '',
+          green_dark: '',
+          yellow_dark: '',
+          orange_dark: '',
+          red_dark: '',
+          purple_dark: '',
+          blue_dark: '',
+          sky_dark: '',
+          lime_dark: '',
+          pink_dark: '',
+          black_dark: '',
+          green_light: '',
+          yellow_light: '',
+          orange_light: '',
+          red_light: '',
+          purple_light: '',
+          blue_light: '',
+          sky_light: '',
+          lime_light: '',
+          pink_light: '',
+          black_light: ''
+        }
+      },
+      action: {
+        id: '63f1b75b79c4a1c43e2bfa24',
+        idMemberCreator: '625c6c7c6fc2b45763b718dc',
+        data: {
+          board: {
+            id: '63dfc64ed87739e906b08207',
+            name: 'board',
+            shortLink: 'b8uXqUO2'
+          },
+          organization: { id: '638e3ad0a165280188c108f5', name: 'ttpbetalocal' }
+        },
+        appCreator: null,
+        type: 'removeFromOrganizationBoard',
+        date: '2023-02-19T05:44:59.717Z',
+        limits: null,
+        display: {
+          translationKey: 'action_remove_from_organization_board',
+          entities: {
+            board: {
+              type: 'board',
+              id: '63dfc64ed87739e906b08207',
+              text: 'board',
+              shortLink: 'b8uXqUO2'
+            },
+            organization: {
+              type: 'organization',
+              id: '638e3ad0a165280188c108f5',
+              text: 'ttpbetalocal'
+            },
+            memberCreator: {
+              type: 'member',
+              id: '625c6c7c6fc2b45763b718dc',
+              username: 'unicodettp',
+              text: 'UNICODE.TTP'
+            }
+          }
+        },
+        memberCreator: {
+          id: '625c6c7c6fc2b45763b718dc',
+          activityBlocked: false,
+          avatarHash: 'd309b49df035456ea94b890b2abb94e3',
+          avatarUrl: 'https://trello-members.s3.amazonaws.com/625c6c7c6fc2b45763b718dc/d309b49df035456ea94b890b2abb94e3',
+          fullName: 'UNICODE.TTP',
+          idMemberReferrer: null,
+          initials: 'U',
+          nonPublic: {},
+          nonPublicAvailable: true,
+          username: 'unicodettp'
+        }
+      }
+    }
+  },
+  level: 'info',
+  timestamp: '2023-02-19 07:45:00'
+}
+{
+  message: { deleteTasksOfDepartment: { acknowledged: true, deletedCount: 0 } },
+  level: 'info',
+  timestamp: '2023-02-19 07:45:00'
+}
+{
+  message: {
+    removeBoard: 'https://api.trello.com/1/boards/63e23ce8d8746985b244c0d0?response_type=token&key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68'
+  },
+  level: 'info',
+  timestamp: '2023-02-19 07:45:03'
+}
+{
+  message: {
+    noAction: {
+      model: {
+        id: '63e23ce8d8746985b244c0d0',
+        name: 'board  8',
+        desc: '',
+        descData: null,
+        closed: false,
+        idOrganization: null,
+        idEnterprise: null,
+        pinned: false,
+        url: 'https://trello.com/b/iYl6VbMl/board-8',
+        shortUrl: 'https://trello.com/b/iYl6VbMl',
+        prefs: {
+          permissionLevel: 'private',
+          hideVotes: false,
+          voting: 'disabled',
+          comments: 'members',
+          invitations: 'members',
+          selfJoin: true,
+          cardCovers: true,
+          isTemplate: false,
+          cardAging: 'regular',
+          calendarFeedEnabled: false,
+          hiddenPluginBoardButtons: [],
+          switcherViews: [
+            {
+              viewType: 'Board',
+              enabled: true,
+              _id: '63e23ce8d8746985b244c0d1'
+            },
+            {
+              viewType: 'Table',
+              enabled: true,
+              _id: '63e23ce8d8746985b244c0d2'
+            },
+            {
+              viewType: 'Calendar',
+              enabled: false,
+              _id: '63e23ce8d8746985b244c0d3'
+            },
+            {
+              viewType: 'Dashboard',
+              enabled: false,
+              _id: '63e23ce8d8746985b244c0d4'
+            },
+            {
+              viewType: 'Timeline',
+              enabled: false,
+              _id: '63e23ce8d8746985b244c0d5'
+            },
+            {
+              viewType: 'Map',
+              enabled: false,
+              _id: '63e23ce8d8746985b244c0d6'
+            }
+          ],
+          background: '63e235bbf38bf62fcabf53db',
+          backgroundColor: null,
+          backgroundImage: 'https://trello-backgrounds.s3.amazonaws.com/SharedBackground/original/021e41348ecd99de301771dbff05c8cd/photo-1675025844397-9819eb7091ff',
+          backgroundImageScaled: [
+            {
+              width: 67,
+              height: 100,
+              url: 'https://trello-backgrounds.s3.amazonaws.com/SharedBackground/67x100/a50789c553579269fef8f59679b95bbb/photo-1675025844397-9819eb7091ff.jpg'
+            },
+            {
+              width: 128,
+              height: 192,
+              url: 'https://trello-backgrounds.s3.amazonaws.com/SharedBackground/128x192/a50789c553579269fef8f59679b95bbb/photo-1675025844397-9819eb7091ff.jpg'
+            },
+            {
+              width: 320,
+              height: 480,
+              url: 'https://trello-backgrounds.s3.amazonaws.com/SharedBackground/320x480/a50789c553579269fef8f59679b95bbb/photo-1675025844397-9819eb7091ff.jpg'
+            },
+            {
+              width: 640,
+              height: 960,
+              url: 'https://trello-backgrounds.s3.amazonaws.com/SharedBackground/640x960/a50789c553579269fef8f59679b95bbb/photo-1675025844397-9819eb7091ff.jpg'
+            },
+            {
+              width: 683,
+              height: 1024,
+              url: 'https://trello-backgrounds.s3.amazonaws.com/SharedBackground/683x1024/a50789c553579269fef8f59679b95bbb/photo-1675025844397-9819eb7091ff.jpg'
+            },
+            {
+              width: 853,
+              height: 1280,
+              url: 'https://trello-backgrounds.s3.amazonaws.com/SharedBackground/853x1280/a50789c553579269fef8f59679b95bbb/photo-1675025844397-9819eb7091ff.jpg'
+            },
+            {
+              width: 1066,
+              height: 1600,
+              url: 'https://trello-backgrounds.s3.amazonaws.com/SharedBackground/1066x1600/a50789c553579269fef8f59679b95bbb/photo-1675025844397-9819eb7091ff.jpg'
+            },
+            {
+              width: 1280,
+              height: 1920,
+              url: 'https://trello-backgrounds.s3.amazonaws.com/SharedBackground/1280x1920/a50789c553579269fef8f59679b95bbb/photo-1675025844397-9819eb7091ff.jpg'
+            },
+            {
+              width: 1365,
+              height: 2048,
+              url: 'https://trello-backgrounds.s3.amazonaws.com/SharedBackground/original/021e41348ecd99de301771dbff05c8cd/photo-1675025844397-9819eb7091ff'
+            }
+          ],
+          backgroundTile: false,
+          backgroundBrightness: 'dark',
+          backgroundBottomColor: '#0b0d13',
+          backgroundTopColor: '#06192d',
+          canBePublic: true,
+          canBeEnterprise: true,
+          canBeOrg: true,
+          canBePrivate: true,
+          canInvite: true
+        },
+        labelNames: {
+          green: '',
+          yellow: '',
+          orange: '',
+          red: '',
+          purple: '',
+          blue: '',
+          sky: '',
+          lime: '',
+          pink: '',
+          black: '',
+          green_dark: '',
+          yellow_dark: '',
+          orange_dark: '',
+          red_dark: '',
+          purple_dark: '',
+          blue_dark: '',
+          sky_dark: '',
+          lime_dark: '',
+          pink_dark: '',
+          black_dark: '',
+          green_light: '',
+          yellow_light: '',
+          orange_light: '',
+          red_light: '',
+          purple_light: '',
+          blue_light: '',
+          sky_light: '',
+          lime_light: '',
+          pink_light: '',
+          black_light: ''
+        }
+      },
+      action: {
+        id: '63f1b75ff5367e35e2d2f708',
+        idMemberCreator: '625c6c7c6fc2b45763b718dc',
+        data: {
+          board: {
+            id: '63e23ce8d8746985b244c0d0',
+            name: 'board  8',
+            shortLink: 'iYl6VbMl'
+          },
+          organization: { id: '638e3ad0a165280188c108f5', name: 'ttpbetalocal' }
+        },
+        appCreator: null,
+        type: 'removeFromOrganizationBoard',
+        date: '2023-02-19T05:45:03.753Z',
+        limits: null,
+        display: {
+          translationKey: 'action_remove_from_organization_board',
+          entities: {
+            board: {
+              type: 'board',
+              id: '63e23ce8d8746985b244c0d0',
+              text: 'board  8',
+              shortLink: 'iYl6VbMl'
+            },
+            organization: {
+              type: 'organization',
+              id: '638e3ad0a165280188c108f5',
+              text: 'ttpbetalocal'
+            },
+            memberCreator: {
+              type: 'member',
+              id: '625c6c7c6fc2b45763b718dc',
+              username: 'unicodettp',
+              text: 'UNICODE.TTP'
+            }
+          }
+        },
+        memberCreator: {
+          id: '625c6c7c6fc2b45763b718dc',
+          activityBlocked: false,
+          avatarHash: 'd309b49df035456ea94b890b2abb94e3',
+          avatarUrl: 'https://trello-members.s3.amazonaws.com/625c6c7c6fc2b45763b718dc/d309b49df035456ea94b890b2abb94e3',
+          fullName: 'UNICODE.TTP',
+          idMemberReferrer: null,
+          initials: 'U',
+          nonPublic: {},
+          nonPublicAvailable: true,
+          username: 'unicodettp'
+        }
+      }
+    }
+  },
+  level: 'info',
+  timestamp: '2023-02-19 07:45:04'
+}
+{
+  message: { deleteTasksOfDepartment: { acknowledged: true, deletedCount: 0 } },
+  level: 'info',
+  timestamp: '2023-02-19 07:45:04'
+}
+{
+  message: {
+    removeBoard: 'https://api.trello.com/1/boards/63e23cda4443dfc46ada232d?response_type=token&key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68'
+  },
+  level: 'info',
+  timestamp: '2023-02-19 07:45:11'
+}
+{
+  message: {
+    noAction: {
+      model: {
+        id: '63e23cda4443dfc46ada232d',
+        name: 'board 7',
+        desc: '',
+        descData: null,
+        closed: false,
+        idOrganization: null,
+        idEnterprise: null,
+        pinned: false,
+        url: 'https://trello.com/b/IVbQXcq2/board-7',
+        shortUrl: 'https://trello.com/b/IVbQXcq2',
+        prefs: {
+          permissionLevel: 'private',
+          hideVotes: false,
+          voting: 'disabled',
+          comments: 'members',
+          invitations: 'members',
+          selfJoin: true,
+          cardCovers: true,
+          isTemplate: false,
+          cardAging: 'regular',
+          calendarFeedEnabled: false,
+          hiddenPluginBoardButtons: [],
+          switcherViews: [
+            {
+              viewType: 'Board',
+              enabled: true,
+              _id: '63e23cda4443dfc46ada232e'
+            },
+            {
+              viewType: 'Table',
+              enabled: true,
+              _id: '63e23cda4443dfc46ada232f'
+            },
+            {
+              viewType: 'Calendar',
+              enabled: false,
+              _id: '63e23cda4443dfc46ada2330'
+            },
+            {
+              viewType: 'Dashboard',
+              enabled: false,
+              _id: '63e23cda4443dfc46ada2331'
+            },
+            {
+              viewType: 'Timeline',
+              enabled: false,
+              _id: '63e23cda4443dfc46ada2332'
+            },
+            {
+              viewType: 'Map',
+              enabled: false,
+              _id: '63e23cda4443dfc46ada2333'
+            }
+          ],
+          background: '63e235bbf38bf62fcabf53db',
+          backgroundColor: null,
+          backgroundImage: 'https://trello-backgrounds.s3.amazonaws.com/SharedBackground/original/021e41348ecd99de301771dbff05c8cd/photo-1675025844397-9819eb7091ff',
+          backgroundImageScaled: [
+            {
+              width: 67,
+              height: 100,
+              url: 'https://trello-backgrounds.s3.amazonaws.com/SharedBackground/67x100/a50789c553579269fef8f59679b95bbb/photo-1675025844397-9819eb7091ff.jpg'
+            },
+            {
+              width: 128,
+              height: 192,
+              url: 'https://trello-backgrounds.s3.amazonaws.com/SharedBackground/128x192/a50789c553579269fef8f59679b95bbb/photo-1675025844397-9819eb7091ff.jpg'
+            },
+            {
+              width: 320,
+              height: 480,
+              url: 'https://trello-backgrounds.s3.amazonaws.com/SharedBackground/320x480/a50789c553579269fef8f59679b95bbb/photo-1675025844397-9819eb7091ff.jpg'
+            },
+            {
+              width: 640,
+              height: 960,
+              url: 'https://trello-backgrounds.s3.amazonaws.com/SharedBackground/640x960/a50789c553579269fef8f59679b95bbb/photo-1675025844397-9819eb7091ff.jpg'
+            },
+            {
+              width: 683,
+              height: 1024,
+              url: 'https://trello-backgrounds.s3.amazonaws.com/SharedBackground/683x1024/a50789c553579269fef8f59679b95bbb/photo-1675025844397-9819eb7091ff.jpg'
+            },
+            {
+              width: 853,
+              height: 1280,
+              url: 'https://trello-backgrounds.s3.amazonaws.com/SharedBackground/853x1280/a50789c553579269fef8f59679b95bbb/photo-1675025844397-9819eb7091ff.jpg'
+            },
+            {
+              width: 1066,
+              height: 1600,
+              url: 'https://trello-backgrounds.s3.amazonaws.com/SharedBackground/1066x1600/a50789c553579269fef8f59679b95bbb/photo-1675025844397-9819eb7091ff.jpg'
+            },
+            {
+              width: 1280,
+              height: 1920,
+              url: 'https://trello-backgrounds.s3.amazonaws.com/SharedBackground/1280x1920/a50789c553579269fef8f59679b95bbb/photo-1675025844397-9819eb7091ff.jpg'
+            },
+            {
+              width: 1365,
+              height: 2048,
+              url: 'https://trello-backgrounds.s3.amazonaws.com/SharedBackground/original/021e41348ecd99de301771dbff05c8cd/photo-1675025844397-9819eb7091ff'
+            }
+          ],
+          backgroundTile: false,
+          backgroundBrightness: 'dark',
+          backgroundBottomColor: '#0b0d13',
+          backgroundTopColor: '#06192d',
+          canBePublic: true,
+          canBeEnterprise: true,
+          canBeOrg: true,
+          canBePrivate: true,
+          canInvite: true
+        },
+        labelNames: {
+          green: '',
+          yellow: '',
+          orange: '',
+          red: '',
+          purple: '',
+          blue: '',
+          sky: '',
+          lime: '',
+          pink: '',
+          black: '',
+          green_dark: '',
+          yellow_dark: '',
+          orange_dark: '',
+          red_dark: '',
+          purple_dark: '',
+          blue_dark: '',
+          sky_dark: '',
+          lime_dark: '',
+          pink_dark: '',
+          black_dark: '',
+          green_light: '',
+          yellow_light: '',
+          orange_light: '',
+          red_light: '',
+          purple_light: '',
+          blue_light: '',
+          sky_light: '',
+          lime_light: '',
+          pink_light: '',
+          black_light: ''
+        }
+      },
+      action: {
+        id: '63f1b768dc8a435f15107981',
+        idMemberCreator: '625c6c7c6fc2b45763b718dc',
+        data: {
+          board: {
+            id: '63e23cda4443dfc46ada232d',
+            name: 'board 7',
+            shortLink: 'IVbQXcq2'
+          },
+          organization: { id: '638e3ad0a165280188c108f5', name: 'ttpbetalocal' }
+        },
+        appCreator: null,
+        type: 'removeFromOrganizationBoard',
+        date: '2023-02-19T05:45:12.089Z',
+        limits: null,
+        display: {
+          translationKey: 'action_remove_from_organization_board',
+          entities: {
+            board: {
+              type: 'board',
+              id: '63e23cda4443dfc46ada232d',
+              text: 'board 7',
+              shortLink: 'IVbQXcq2'
+            },
+            organization: {
+              type: 'organization',
+              id: '638e3ad0a165280188c108f5',
+              text: 'ttpbetalocal'
+            },
+            memberCreator: {
+              type: 'member',
+              id: '625c6c7c6fc2b45763b718dc',
+              username: 'unicodettp',
+              text: 'UNICODE.TTP'
+            }
+          }
+        },
+        memberCreator: {
+          id: '625c6c7c6fc2b45763b718dc',
+          activityBlocked: false,
+          avatarHash: 'd309b49df035456ea94b890b2abb94e3',
+          avatarUrl: 'https://trello-members.s3.amazonaws.com/625c6c7c6fc2b45763b718dc/d309b49df035456ea94b890b2abb94e3',
+          fullName: 'UNICODE.TTP',
+          idMemberReferrer: null,
+          initials: 'U',
+          nonPublic: {},
+          nonPublicAvailable: true,
+          username: 'unicodettp'
+        }
+      }
+    }
+  },
+  level: 'info',
+  timestamp: '2023-02-19 07:45:12'
+}
+{
+  message: { deleteTasksOfDepartment: { acknowledged: true, deletedCount: 0 } },
+  level: 'info',
+  timestamp: '2023-02-19 07:45:12'
+}
+{
+  message: {
+    removeBoard: 'https://api.trello.com/1/boards/63e23cc28e272f08003d9194?response_type=token&key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68'
+  },
+  level: 'info',
+  timestamp: '2023-02-19 07:45:15'
+}
+{
+  message: {
+    noAction: {
+      model: {
+        id: '63e23cc28e272f08003d9194',
+        name: 'board 5',
+        desc: '',
+        descData: null,
+        closed: false,
+        idOrganization: null,
+        idEnterprise: null,
+        pinned: false,
+        url: 'https://trello.com/b/U52ttIBv/board-5',
+        shortUrl: 'https://trello.com/b/U52ttIBv',
+        prefs: {
+          permissionLevel: 'private',
+          hideVotes: false,
+          voting: 'disabled',
+          comments: 'members',
+          invitations: 'members',
+          selfJoin: true,
+          cardCovers: true,
+          isTemplate: false,
+          cardAging: 'regular',
+          calendarFeedEnabled: false,
+          hiddenPluginBoardButtons: [],
+          switcherViews: [
+            {
+              viewType: 'Board',
+              enabled: true,
+              _id: '63e23cc28e272f08003d9195'
+            },
+            {
+              viewType: 'Table',
+              enabled: true,
+              _id: '63e23cc28e272f08003d9196'
+            },
+            {
+              viewType: 'Calendar',
+              enabled: false,
+              _id: '63e23cc28e272f08003d9197'
+            },
+            {
+              viewType: 'Dashboard',
+              enabled: false,
+              _id: '63e23cc28e272f08003d9198'
+            },
+            {
+              viewType: 'Timeline',
+              enabled: false,
+              _id: '63e23cc28e272f08003d9199'
+            },
+            {
+              viewType: 'Map',
+              enabled: false,
+              _id: '63e23cc28e272f08003d919a'
+            }
+          ],
+          background: '63e235bbf38bf62fcabf53db',
+          backgroundColor: null,
+          backgroundImage: 'https://trello-backgrounds.s3.amazonaws.com/SharedBackground/original/021e41348ecd99de301771dbff05c8cd/photo-1675025844397-9819eb7091ff',
+          backgroundImageScaled: [
+            {
+              width: 67,
+              height: 100,
+              url: 'https://trello-backgrounds.s3.amazonaws.com/SharedBackground/67x100/a50789c553579269fef8f59679b95bbb/photo-1675025844397-9819eb7091ff.jpg'
+            },
+            {
+              width: 128,
+              height: 192,
+              url: 'https://trello-backgrounds.s3.amazonaws.com/SharedBackground/128x192/a50789c553579269fef8f59679b95bbb/photo-1675025844397-9819eb7091ff.jpg'
+            },
+            {
+              width: 320,
+              height: 480,
+              url: 'https://trello-backgrounds.s3.amazonaws.com/SharedBackground/320x480/a50789c553579269fef8f59679b95bbb/photo-1675025844397-9819eb7091ff.jpg'
+            },
+            {
+              width: 640,
+              height: 960,
+              url: 'https://trello-backgrounds.s3.amazonaws.com/SharedBackground/640x960/a50789c553579269fef8f59679b95bbb/photo-1675025844397-9819eb7091ff.jpg'
+            },
+            {
+              width: 683,
+              height: 1024,
+              url: 'https://trello-backgrounds.s3.amazonaws.com/SharedBackground/683x1024/a50789c553579269fef8f59679b95bbb/photo-1675025844397-9819eb7091ff.jpg'
+            },
+            {
+              width: 853,
+              height: 1280,
+              url: 'https://trello-backgrounds.s3.amazonaws.com/SharedBackground/853x1280/a50789c553579269fef8f59679b95bbb/photo-1675025844397-9819eb7091ff.jpg'
+            },
+            {
+              width: 1066,
+              height: 1600,
+              url: 'https://trello-backgrounds.s3.amazonaws.com/SharedBackground/1066x1600/a50789c553579269fef8f59679b95bbb/photo-1675025844397-9819eb7091ff.jpg'
+            },
+            {
+              width: 1280,
+              height: 1920,
+              url: 'https://trello-backgrounds.s3.amazonaws.com/SharedBackground/1280x1920/a50789c553579269fef8f59679b95bbb/photo-1675025844397-9819eb7091ff.jpg'
+            },
+            {
+              width: 1365,
+              height: 2048,
+              url: 'https://trello-backgrounds.s3.amazonaws.com/SharedBackground/original/021e41348ecd99de301771dbff05c8cd/photo-1675025844397-9819eb7091ff'
+            }
+          ],
+          backgroundTile: false,
+          backgroundBrightness: 'dark',
+          backgroundBottomColor: '#0b0d13',
+          backgroundTopColor: '#06192d',
+          canBePublic: true,
+          canBeEnterprise: true,
+          canBeOrg: true,
+          canBePrivate: true,
+          canInvite: true
+        },
+        labelNames: {
+          green: '',
+          yellow: '',
+          orange: '',
+          red: '',
+          purple: '',
+          blue: '',
+          sky: '',
+          lime: '',
+          pink: '',
+          black: '',
+          green_dark: '',
+          yellow_dark: '',
+          orange_dark: '',
+          red_dark: '',
+          purple_dark: '',
+          blue_dark: '',
+          sky_dark: '',
+          lime_dark: '',
+          pink_dark: '',
+          black_dark: '',
+          green_light: '',
+          yellow_light: '',
+          orange_light: '',
+          red_light: '',
+          purple_light: '',
+          blue_light: '',
+          sky_light: '',
+          lime_light: '',
+          pink_light: '',
+          black_light: ''
+        }
+      },
+      action: {
+        id: '63f1b76c2dc85b217f835de9',
+        idMemberCreator: '625c6c7c6fc2b45763b718dc',
+        data: {
+          board: {
+            id: '63e23cc28e272f08003d9194',
+            name: 'board 5',
+            shortLink: 'U52ttIBv'
+          },
+          organization: { id: '638e3ad0a165280188c108f5', name: 'ttpbetalocal' }
+        },
+        appCreator: null,
+        type: 'removeFromOrganizationBoard',
+        date: '2023-02-19T05:45:16.352Z',
+        limits: null,
+        display: {
+          translationKey: 'action_remove_from_organization_board',
+          entities: {
+            board: {
+              type: 'board',
+              id: '63e23cc28e272f08003d9194',
+              text: 'board 5',
+              shortLink: 'U52ttIBv'
+            },
+            organization: {
+              type: 'organization',
+              id: '638e3ad0a165280188c108f5',
+              text: 'ttpbetalocal'
+            },
+            memberCreator: {
+              type: 'member',
+              id: '625c6c7c6fc2b45763b718dc',
+              username: 'unicodettp',
+              text: 'UNICODE.TTP'
+            }
+          }
+        },
+        memberCreator: {
+          id: '625c6c7c6fc2b45763b718dc',
+          activityBlocked: false,
+          avatarHash: 'd309b49df035456ea94b890b2abb94e3',
+          avatarUrl: 'https://trello-members.s3.amazonaws.com/625c6c7c6fc2b45763b718dc/d309b49df035456ea94b890b2abb94e3',
+          fullName: 'UNICODE.TTP',
+          idMemberReferrer: null,
+          initials: 'U',
+          nonPublic: {},
+          nonPublicAvailable: true,
+          username: 'unicodettp'
+        }
+      }
+    }
+  },
+  level: 'info',
+  timestamp: '2023-02-19 07:45:16'
+}
+{
+  message: { deleteTasksOfDepartment: { acknowledged: true, deletedCount: 0 } },
+  level: 'info',
+  timestamp: '2023-02-19 07:45:17'
+}
+{
+  message: { noAction: {} },
+  level: 'info',
+  timestamp: '2023-02-19 07:46:01'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2023-02-19 07:51:57'
+}
+{
+  message: { noAction: {} },
+  level: 'info',
+  timestamp: '2023-02-19 07:52:01'
+}
+{
+  message: { noAction: {} },
+  level: 'info',
+  timestamp: '2023-02-19 07:52:02'
+}
+{
+  message: { noAction: {} },
+  level: 'info',
+  timestamp: '2023-02-19 07:52:02'
+}
+{
+  message: { noAction: {} },
+  level: 'info',
+  timestamp: '2023-02-19 07:52:02'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2023-02-19 07:59:05'
+}
+{
+  message: { noAction: {} },
+  level: 'info',
+  timestamp: '2023-02-19 07:59:09'
+}
+{
+  message: { noAction: {} },
+  level: 'info',
+  timestamp: '2023-02-19 07:59:11'
+}
+{
+  message: { noAction: {} },
+  level: 'info',
+  timestamp: '2023-02-19 07:59:11'
+}
+{
+  message: { noAction: {} },
+  level: 'info',
+  timestamp: '2023-02-19 07:59:11'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2023-02-19 08:02:46'
+}
+{
+  message: { noAction: {} },
+  level: 'info',
+  timestamp: '2023-02-19 08:02:51'
+}
+{
+  message: { noAction: {} },
+  level: 'info',
+  timestamp: '2023-02-19 08:02:52'
+}
+{
+  message: { noAction: {} },
+  level: 'info',
+  timestamp: '2023-02-19 08:02:52'
+}
+{
+  message: { noAction: {} },
+  level: 'info',
+  timestamp: '2023-02-19 08:02:52'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2023-02-19 08:05:43'
+}
+{
+  message: { noAction: {} },
+  level: 'info',
+  timestamp: '2023-02-19 08:05:49'
+}
+{
+  message: { noAction: {} },
+  level: 'info',
+  timestamp: '2023-02-19 08:05:51'
+}
+{
+  message: { noAction: {} },
+  level: 'info',
+  timestamp: '2023-02-19 08:05:51'
+}
+{
+  message: { noAction: {} },
+  level: 'info',
+  timestamp: '2023-02-19 08:05:51'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2023-02-19 08:08:47'
+}
+{
+  message: { noAction: {} },
+  level: 'info',
+  timestamp: '2023-02-19 08:08:52'
+}
+{
+  message: { noAction: {} },
+  level: 'info',
+  timestamp: '2023-02-19 08:08:53'
+}
+{
+  message: { noAction: {} },
+  level: 'info',
+  timestamp: '2023-02-19 08:08:53'
+}
+{
+  message: { noAction: {} },
+  level: 'info',
+  timestamp: '2023-02-19 08:08:53'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2023-02-19 08:27:06'
+}
+{
+  message: { noAction: {} },
+  level: 'info',
+  timestamp: '2023-02-19 08:27:12'
+}
+{
+  message: { noAction: {} },
+  level: 'info',
+  timestamp: '2023-02-19 08:27:14'
+}
+{
+  message: { noAction: {} },
+  level: 'info',
+  timestamp: '2023-02-19 08:27:14'
+}
+{
+  message: { noAction: {} },
+  level: 'info',
+  timestamp: '2023-02-19 08:27:14'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2023-02-19 08:28:36'
+}
+{
+  message: { noAction: {} },
+  level: 'info',
+  timestamp: '2023-02-19 08:28:41'
+}
+{
+  message: { noAction: {} },
+  level: 'info',
+  timestamp: '2023-02-19 08:28:42'
+}
+{
+  message: { noAction: {} },
+  level: 'info',
+  timestamp: '2023-02-19 08:28:42'
+}
+{
+  message: { noAction: {} },
+  level: 'info',
+  timestamp: '2023-02-19 08:28:42'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2023-02-19 08:31:57'
+}
+{
+  message: { noAction: {} },
+  level: 'info',
+  timestamp: '2023-02-19 08:32:02'
+}
+{
+  message: { noAction: {} },
+  level: 'info',
+  timestamp: '2023-02-19 08:32:03'
+}
+{
+  message: { noAction: {} },
+  level: 'info',
+  timestamp: '2023-02-19 08:32:03'
+}
+{
+  message: { noAction: {} },
+  level: 'info',
+  timestamp: '2023-02-19 08:32:04'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2023-02-19 08:38:51'
+}
+{
+  message: { noAction: {} },
+  level: 'info',
+  timestamp: '2023-02-19 08:38:55'
+}
+{
+  message: { noAction: {} },
+  level: 'info',
+  timestamp: '2023-02-19 08:38:56'
+}
+{
+  message: { noAction: {} },
+  level: 'info',
+  timestamp: '2023-02-19 08:38:56'
+}
+{
+  message: { noAction: {} },
+  level: 'info',
+  timestamp: '2023-02-19 08:38:56'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2023-02-19 08:59:37'
+}
+{
+  message: { noAction: {} },
+  level: 'info',
+  timestamp: '2023-02-19 08:59:41'
+}
+{
+  message: { noAction: {} },
+  level: 'info',
+  timestamp: '2023-02-19 08:59:42'
+}
+{
+  message: { noAction: {} },
+  level: 'info',
+  timestamp: '2023-02-19 08:59:42'
+}
+{
+  message: { noAction: {} },
+  level: 'info',
+  timestamp: '2023-02-19 08:59:43'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2023-02-19 09:03:21'
+}
+{
+  message: { noAction: {} },
+  level: 'info',
+  timestamp: '2023-02-19 09:03:27'
+}
+{
+  message: { noAction: {} },
+  level: 'info',
+  timestamp: '2023-02-19 09:03:28'
+}
+{
+  message: { noAction: {} },
+  level: 'info',
+  timestamp: '2023-02-19 09:03:28'
+}
+{
+  message: { noAction: {} },
+  level: 'info',
+  timestamp: '2023-02-19 09:03:29'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2023-02-19 09:05:12'
+}
+{
+  message: { noAction: {} },
+  level: 'info',
+  timestamp: '2023-02-19 09:05:17'
+}
+{
+  message: { noAction: {} },
+  level: 'info',
+  timestamp: '2023-02-19 09:05:18'
+}
+{
+  message: { noAction: {} },
+  level: 'info',
+  timestamp: '2023-02-19 09:05:18'
+}
+{
+  message: { noAction: {} },
+  level: 'info',
+  timestamp: '2023-02-19 09:05:18'
+}

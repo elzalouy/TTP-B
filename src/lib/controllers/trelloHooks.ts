@@ -17,6 +17,7 @@ export default class TrelloWebhook {
   task: TaskData;
   user: { id: string; name: string };
   hookTarget: "project" | "task";
+
   constructor(action: webhookUpdateInterface, target?: "project" | "task") {
     this.hookTarget = target;
     this.type = action.action?.type;
@@ -155,20 +156,24 @@ export default class TrelloWebhook {
       let task = await TaskController.getOneTaskBy({
         cardId: this.actionRequest?.action?.data?.card?.id,
       });
-      console.log({ req: this.actionRequest.action.display });
+      console.log({
+        card: this.actionRequest.action.data.card,
+        data: this.actionRequest.action.data,
+      });
       if (task) {
         let department = await Department.findOne({
           boardId: task.boardId,
         });
-        let isNewDep = this.actionRequest.action.data.board !== task.boardId;
-        let listId = isNewDep
+        let isNewDep =
+          this.actionRequest.action.data.board?.id !== task.boardId;
+        let listId = this.actionRequest.action.data.list?.id
           ? this.actionRequest.action.data.list?.id
-            ? this.actionRequest.action.data.list?.id
-            : this.actionRequest.action.data.card?.idList
-            ? this.actionRequest.action.data.card?.idList
-            : this.actionRequest.action.data.list?.id
-          : task.listId;
-
+          : this.actionRequest.action.data.card?.idList
+          ? this.actionRequest.action.data.card?.idList
+          : this.actionRequest.action.data.list?.id;
+        let status = this.actionRequest.action.data?.list
+          ? this.actionRequest.action.data?.list.name
+          : this.actionRequest.action.data?.listAfter?.name;
         let newDep = isNewDep
           ? await Department.findOne({
               boardId: this.actionRequest.action.data.board.id,
@@ -186,7 +191,6 @@ export default class TrelloWebhook {
         let inProgressList = department.lists.find(
           (item) => item.name === "In Progress"
         );
-
         this.task = {
           name: this.actionRequest.action.data.card.name,
           boardId: this.actionRequest.action.data.board.id,
@@ -217,8 +221,9 @@ export default class TrelloWebhook {
           listId: isNewTeam ? inProgressList.listId : listId,
           status: isNewTeam
             ? inProgressList.name
-            : this.actionRequest.action.data.list?.name,
+            : status,
         };
+        console.log({ task, listId });
         return await TaskController.updateTaskByTrelloDB(this.task, {
           id: this.user.id,
           name: this.user.name,
