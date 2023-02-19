@@ -142,6 +142,8 @@ export interface webhookUpdateInterface {
       };
       listSource?: { id: string };
       list?: { id: string; name: string };
+      listAfter?: { id: string; name: string };
+      listBefore?: { id: string; name: string };
     };
     appCreator: any;
     type: string; // like 'updateCard'
