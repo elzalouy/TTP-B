@@ -262,8 +262,8 @@ export type Card = {
   idBoard: string;
   idList: string;
   name: string;
-  shortLink: "38xqV4u6";
-  shortUrl: "https://trello.com/c/38xqV4u6";
+  shortLink: string;
+  shortUrl: string;
   start: any;
   url: string;
 };

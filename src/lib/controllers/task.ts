@@ -268,7 +268,7 @@ class TaskController extends TaskDB {
         if (tasks) {
           cards.map(async (item) => {
             let isTaskFound = tasks.find((task) => task.cardId === item.id);
-            let isList = board?.lists?.find(
+            let isList = board.lists.find(
               (list) => list.listId === item.idList
             )?.name;
             let isStatusList =
@@ -281,15 +281,29 @@ class TaskController extends TaskDB {
               cardId: item.id,
               trelloShortUrl: item.shortUrl,
               name: item.name,
-              description: item.desc,
-              start: item.start,
-              deadline: item.due,
+              description: item.desc ?? "",
+              start: item.start ?? null,
+              deadline: item.due ?? null,
               listId: isStatusList
                 ? item.idList
                 : board.lists.find((item) => item.name === "In Progress")
                     .listId,
-              status: isStatusList ? cardList.name : "In Progress",
+              status: isList ?? "In Progress",
+              deliveryDate:
+                isList && isList === "Done"
+                  ? isTaskFound?.deliveryDate ?? new Date(Date.now())
+                  : null,
             };
+            let deadline = item.due ?? null;
+            let deliveryDate = isTaskFound.deliveryDate ?? null;
+            task.turnOver =
+              deadline && deliveryDate
+                ? Math.floor(
+                    (new Date(deliveryDate).getTime() -
+                      new Date(deadline).getTime()) /
+                      (1000 * 60 * 60 * 24)
+                  )
+                : 0;
             if (isTaskFound && isTaskFound._id) {
               task.teamId = isStatusList ? isTaskFound.teamId : cardList._id;
               task = await Tasks.findOneAndUpdate({ cardId: item.id }, task);
