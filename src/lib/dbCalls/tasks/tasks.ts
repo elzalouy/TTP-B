@@ -362,7 +362,8 @@ class TaskDB {
     try {
       let task = await Tasks.findOne({ cardId: data.cardId });
       if (
-        task?.deadline &&
+        task?.deadline !== null &&
+        task.deadline !== undefined &&
         data?.deadline &&
         new Date(task.deadline).toDateString() !==
           new Date(data.deadline).toDateString()
@@ -382,14 +383,18 @@ class TaskDB {
         task.noOfRevisions = task?.noOfRevisions ? ++task.noOfRevisions : 1;
       }
       if (data.status === "Done") {
-        let deadline = new Date(data.deadline).getTime();
         task.deliveryDate = new Date(Date.now());
-        task.turnOver =
-          deadline < new Date(Date.now()).getTime()
-            ? Math.floor(
-                (task.deliveryDate.getTime() - deadline) / (1000 * 60 * 60 * 24)
-              )
-            : 0;
+        let deadlineStr = data.deadline ?? task.deadline ?? null;
+        if (deadlineStr !== null) {
+          let deadline = new Date(deadlineStr).getTime();
+          task.turnOver =
+            deadline < new Date(Date.now()).getTime()
+              ? Math.floor(
+                  (task.deliveryDate.getTime() - deadline) /
+                    (1000 * 60 * 60 * 24)
+                )
+              : 0;
+        }
       } else {
         task.deliveryDate = null;
         task.turnOver = 0;

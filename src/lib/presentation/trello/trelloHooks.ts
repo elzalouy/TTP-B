@@ -18,11 +18,9 @@ export default class TrelloHooks {
 
   static async handleWebhookUpdateCard(req: Request, res: Response) {
     try {
-      updateTaskQueue.push(async (cb) => {
-        let hook = new TrelloWebhook(req.body, "task");
-        let data = await hook.start();
-        return res.send("Done");
-      });
+      let hook = new TrelloWebhook(req.body, "task");
+      let data = await hook.start();
+      return res.send("Done");
     } catch (error) {
       logger.error({ handleWebhookUpdateCardError: error });
     }

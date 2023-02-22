@@ -156,10 +156,6 @@ export default class TrelloWebhook {
       let task = await TaskController.getOneTaskBy({
         cardId: this.actionRequest?.action?.data?.card?.id,
       });
-      console.log({
-        card: this.actionRequest.action.data.card,
-        data: this.actionRequest.action.data,
-      });
       if (task) {
         let department = await Department.findOne({
           boardId: task.boardId,
@@ -219,11 +215,8 @@ export default class TrelloWebhook {
             : new Date().toString(),
           teamId: isNewTeam ? isNewTeam._id : task.teamId,
           listId: isNewTeam ? inProgressList.listId : listId,
-          status: isNewTeam
-            ? inProgressList.name
-            : status,
+          status: isNewTeam ? inProgressList.name : status,
         };
-        console.log({ task, listId });
         return await TaskController.updateTaskByTrelloDB(this.task, {
           id: this.user.id,
           name: this.user.name,
