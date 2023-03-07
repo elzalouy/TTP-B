@@ -295,7 +295,7 @@ class TaskController extends TaskDB {
                   : null,
             };
             let deadline = item.due ?? null;
-            let deliveryDate = isTaskFound.deliveryDate ?? null;
+            let deliveryDate = isTaskFound?.deliveryDate ?? null;
             task.turnOver =
               deadline && deliveryDate
                 ? Math.floor(
