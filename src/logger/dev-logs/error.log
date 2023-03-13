@@ -5365,3 +5365,14 @@
   level: 'error',
   timestamp: '2023-02-07 14:33:30'
 }
+{
+  message: {
+    __createNotSavedCardsOnBoardError: TypeError: cards.filter is not a function
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/task.ts:265:17)
+        at Generator.next (<anonymous>)
+        at fulfilled (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/task.ts:5:58)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5)
+  },
+  level: 'error',
+  timestamp: '2023-03-13 10:26:41'
+}

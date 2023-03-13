@@ -431,7 +431,6 @@ class TaskDB {
 
       task.attachedFiles = _.uniqBy(task.attachedFiles, "trelloId");
       let result = await (await task.save()).toObject();
-      console.log({ result });
       await io.sockets.emit("update-task", result);
     } catch (error) {
       logger.error({ __updateTaskByTrelloDBError: error });

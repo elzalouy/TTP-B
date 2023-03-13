@@ -11,7 +11,7 @@ import ProjectController from "../../controllers/project";
 import TrelloActionsController from "../../controllers/trello";
 import { ProjectData, ProjectInfo } from "../../types/model/Project";
 import Tasks from "../../models/Task";
-import { IDepartmentState } from "../../types/model/Department";
+import { IDepartment, IDepartmentState } from "../../types/model/Department";
 import { createProjectsCardsInCreativeBoard } from "../../backgroundJobs/actions/department.actions.queue";
 import {
   Board,
@@ -77,33 +77,44 @@ const initializeAdminUser = async () => {
 
 export const initializeTrelloBoards = async () => {
   try {
-    let allBoards: Board[] = await TrelloActionsController.getBoardsInTrello();
-    let allDepartments = await Department.find({});
+    let allBoards: Board[],
+      allDepartments: IDepartment[],
+      departmentExisted: IDepartment,
+      boardInfo: createBoardResponse,
+      listTypes: string[],
+      department: IDepartmentState,
+      listExisted: {
+        id: string;
+        name: string;
+      };
+    allBoards = await TrelloActionsController.getBoardsInTrello();
+    allDepartments = await Department.find({});
     if (allBoards?.length > 0) {
       if (!allBoards.find((item) => item.name === Config.get("CreativeBoard")))
         await createTTPCreativeMainBoard();
       allBoards.forEach(async (boardItem, index) => {
-        let boardInfo: createBoardResponse =
-          await TrelloActionsController.getSingleBoardInfo(boardItem.id);
+        boardInfo = await TrelloActionsController.getSingleBoardInfo(
+          boardItem.id
+        );
         boardItem = allBoards[index] = {
           ...allBoards[index],
           lists: await TrelloActionsController.__getBoardLists(boardItem.id),
         };
-        let listTypes =
+        listTypes =
           boardItem.name === Config.get("CreativeBoard")
             ? CreativeListTypes
             : ListTypes;
-        let departmentExisted = allDepartments.find(
+        departmentExisted = allDepartments.find(
           (item) => item.boardId === boardItem.id
         );
 
-        let department: IDepartmentState = {
+        department = {
           name: boardItem.name,
           boardId: boardItem.id,
           color: boardInfo.prefs.background,
           lists: await Promise.all(
             listTypes.map(async (listName) => {
-              let listExisted = boardItem?.lists?.find(
+              listExisted = boardItem?.lists?.find(
                 (item) => listName === item.name
               );
               return {

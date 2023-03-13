@@ -13,7 +13,7 @@ import {
 import TaskController from "../../controllers/task";
 import { deleteAll } from "../../services/upload";
 import Department from "../../models/Department";
-import { IDepartment, IDepartmentState } from "../../types/model/Department";
+import { IDepartmentState } from "../../types/model/Department";
 
 export const createTaskQueue = Queue({
   results: [],
@@ -85,7 +85,6 @@ export const updateCardJob = (
     try {
       let current = await TaskController.__getTask(data.id);
       let dep = await Department.findOne({ boardId: data.boardId });
-      logger.info({ data });
 
       let isTeamChanged =
         current.teamId &&
@@ -125,8 +124,6 @@ export const updateCardJob = (
 
   updateTaskQueue.push(async (cb) => {
     try {
-      // wait for both update data in db and upload,delete files to trello
-      // if there are deleted files, then delete it from the db
       if (deleteFiles) {
         if (deleteFiles.length > 0) {
           let isDeletedAll = await deleteFiles?.map(async (item) => {
