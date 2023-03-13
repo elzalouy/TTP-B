@@ -267,9 +267,9 @@ class TaskController extends TaskDB {
         let tasks = await TaskController.getTasks({ boardId: board.boardId });
         if (tasks) {
           cards.map(async (item) => {
-            let cardAttachments = await TrelloController.__getCardAttachments(
-              item.id
-            );
+            // let cardAttachments = await TrelloController.__getCardAttachments(
+            //   item.id
+            // );
             let isTaskFound = tasks.find((task) => task.cardId === item.id);
             let isList = board.lists.find(
               (list) => list.listId === item.idList
@@ -296,14 +296,14 @@ class TaskController extends TaskDB {
                 isList && isList === "Done"
                   ? isTaskFound?.deliveryDate ?? new Date(Date.now())
                   : null,
-              attachedFiles: cardAttachments.map((file) => {
-                return {
-                  name: file.fileName,
-                  url: file.url,
-                  trelloId: file.id,
-                  mimeType: file.mimeType,
-                };
-              }),
+              // attachedFiles: cardAttachments.map((file) => {
+              //   return {
+              //     name: file.fileName,
+              //     url: file.url,
+              //     trelloId: file.id,
+              //     mimeType: file.mimeType,
+              //   };
+              // }),
             };
             let deadline = item.due ?? null;
             let deliveryDate = isTaskFound?.deliveryDate ?? null;
