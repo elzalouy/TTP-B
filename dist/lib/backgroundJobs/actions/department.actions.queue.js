@@ -18,9 +18,9 @@ const trello_1 = __importDefault(require("../../controllers/trello"));
 const Project_1 = __importDefault(require("../../models/Project"));
 exports.departmentsQueue = (0, queue_1.default)({ results: [], autostart: true });
 const createProjectsCardsInCreativeBoard = (board) => {
-    let lists = board.lists;
+    let lists = board === null || board === void 0 ? void 0 : board.lists;
     exports.departmentsQueue.push((cb) => __awaiter(void 0, void 0, void 0, function* () {
-        let isProjectsList = lists.find((item) => item.name === "projects");
+        let isProjectsList = lists === null || lists === void 0 ? void 0 : lists.find((item) => item.name === "projects");
         if (isProjectsList) {
             let projects = yield Project_1.default.find({});
             projects.forEach((item) => __awaiter(void 0, void 0, void 0, function* () {

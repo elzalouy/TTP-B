@@ -15,14 +15,23 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const logger_1 = __importDefault(require("../../logger"));
 const notifications_actions_cron_1 = require("../backgroundJobs/actions/notifications.actions.cron");
 const project_actions_cron_1 = require("../backgroundJobs/actions/project.actions.cron");
-const trello_actions_cron_1 = require("../backgroundJobs/actions/trello.actions.cron");
+const init_actions_queue_1 = require("../backgroundJobs/actions/init.actions.queue");
+const dbConnect_1 = require("./db/dbConnect");
 function default_1(io) {
     return __awaiter(this, void 0, void 0, function* () {
         try {
-            yield (0, notifications_actions_cron_1.removeOldNotifications)(io).start();
-            yield (0, project_actions_cron_1.projectsDueDate)(io).start();
-            yield (0, project_actions_cron_1.projectsPassedDate)(io).start();
-            yield (0, trello_actions_cron_1.initializeTrelloBoardsJob)().start();
+            init_actions_queue_1.initializeQueue.push(() => {
+                (0, notifications_actions_cron_1.removeOldNotifications)(io).start();
+            });
+            init_actions_queue_1.initializeQueue.push(() => {
+                (0, project_actions_cron_1.projectsDueDate)(io).start();
+            });
+            init_actions_queue_1.initializeQueue.push(() => {
+                (0, project_actions_cron_1.projectsPassedDate)(io).start();
+            });
+            init_actions_queue_1.initializeQueue.push((cb) => __awaiter(this, void 0, void 0, function* () {
+                yield (0, dbConnect_1.initializeTrelloBoards)().then(() => (0, dbConnect_1.initializeTTPTasks)().then(() => cb(null, true)));
+            }));
         }
         catch (error) {
             logger_1.default.error({ errorOldNotificationsCron: error });

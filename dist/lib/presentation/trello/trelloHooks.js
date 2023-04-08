@@ -14,30 +14,54 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 Object.defineProperty(exports, "__esModule", { value: true });
 const errorUtils_1 = require("../../utils/errorUtils");
 const logger_1 = __importDefault(require("../../../logger"));
-const task_actions_Queue_1 = require("../../backgroundJobs/actions/task.actions.Queue");
 const trelloHooks_1 = __importDefault(require("../../controllers/trelloHooks"));
+const processedEvents = new Set();
 class TrelloHooks {
     static handleWebHookUpdateProject(req, res) {
+        var _a;
         return __awaiter(this, void 0, void 0, function* () {
             try {
-                let hook = new trelloHooks_1.default(req.body, "project");
-                yield hook.start();
-                return res.send("Done");
+                let payload = req.body;
+                let eventId = (_a = payload === null || payload === void 0 ? void 0 : payload.action) === null || _a === void 0 ? void 0 : _a.id;
+                if (!processedEvents.has(eventId)) {
+                    processedEvents.add(eventId);
+                    let hook = new trelloHooks_1.default(req.body, "project");
+                    yield hook.start();
+                    const timeoutPromise = new Promise((resolve) => {
+                        setTimeout(() => {
+                            processedEvents.delete(eventId);
+                        }, 50000);
+                    });
+                    res.send("Done");
+                }
+                else
+                    res.status(400).send("Implemented before");
             }
             catch (error) {
-                logger_1.default.error({ handleCreateCardInBoardError: error });
+                logger_1.default.error({ handleWebHookUpdateProjectError: error });
                 return res.status(500).send((0, errorUtils_1.customeError)("server_error", 500));
             }
         });
     }
     static handleWebhookUpdateCard(req, res) {
+        var _a;
         return __awaiter(this, void 0, void 0, function* () {
             try {
-                task_actions_Queue_1.updateTaskQueue.push((cb) => __awaiter(this, void 0, void 0, function* () {
+                let payload = req.body;
+                let eventId = (_a = payload === null || payload === void 0 ? void 0 : payload.action) === null || _a === void 0 ? void 0 : _a.id;
+                if (!processedEvents.has(eventId)) {
+                    processedEvents.add(eventId);
                     let hook = new trelloHooks_1.default(req.body, "task");
-                    let data = yield hook.start();
-                    return res.send("Done");
-                }));
+                    yield hook.start();
+                    const timeoutPromise = new Promise((resolve) => {
+                        setTimeout(() => {
+                            processedEvents.delete(eventId);
+                        }, 50000);
+                    });
+                    res.send("Done");
+                }
+                else
+                    res.status(400).send("Implemented before");
             }
             catch (error) {
                 logger_1.default.error({ handleWebhookUpdateCardError: error });

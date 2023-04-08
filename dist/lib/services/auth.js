@@ -35,6 +35,7 @@ const createJwtToken = (user) => {
         id: user._id,
         email: user.email,
         role: user.role,
+        name: user.name,
     }, config_1.default.get("jwtSecret"), {
         expiresIn: 30 * 24 * 60 * 60,
         audience: config_1.default.get("jwtAudience"),

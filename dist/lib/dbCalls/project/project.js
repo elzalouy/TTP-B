@@ -16,14 +16,14 @@ const logger_1 = __importDefault(require("../../../logger"));
 const Project_1 = __importDefault(require("../../models/Project"));
 const mongoose = require("mongoose");
 const ProjectDB = class ProjectDB {
-    static createProjectDB(data) {
+    static createProjectDB(data, user) {
         return __awaiter(this, void 0, void 0, function* () {
-            return yield ProjectDB.__createProject(data);
+            return yield ProjectDB.__createProject(data, user);
         });
     }
-    static updateProjectDB(data) {
+    static updateProjectDB(data, user) {
         return __awaiter(this, void 0, void 0, function* () {
-            return yield ProjectDB.__updateProject(data);
+            return yield ProjectDB.__updateProject(data, user);
         });
     }
     static getProjectDB(data) {
@@ -123,13 +123,10 @@ const ProjectDB = class ProjectDB {
                             listId: 1,
                             boardId: 1,
                             associateProjectManager: 1,
+                            deadlineChain: -1,
                         },
                     },
                 ]);
-                fetch = yield Project_1.default.populate(fetch, {
-                    path: "projectManager",
-                    select: "_id name",
-                });
                 return fetch;
             }
             catch (error) {
@@ -137,28 +134,42 @@ const ProjectDB = class ProjectDB {
             }
         });
     }
-    static __updateProject(data) {
+    static __updateProject(data, user) {
         return __awaiter(this, void 0, void 0, function* () {
             try {
                 let id = data._id;
                 delete data._id;
                 let query = data;
-                let project = yield Project_1.default.findByIdAndUpdate({ _id: id }, query, {
-                    new: true,
-                    lean: true,
-                });
-                return project;
+                let project = yield Project_1.default.findById(id);
+                if (project) {
+                    if (new Date(project.projectDeadline).toDateString() !==
+                        new Date(data.projectDeadline).toDateString()) {
+                        project.deadlineChain.push({
+                            userId: user.id,
+                            name: user.name,
+                            before: project.projectDeadline,
+                            current: data.projectDeadline,
+                        });
+                    }
+                    project.set(query);
+                    project = yield Project_1.default.findOneAndUpdate({ _id: id }, project, {
+                        new: true,
+                        lean: true,
+                        upsert: true,
+                    });
+                    return project;
+                }
             }
             catch (error) {
                 logger_1.default.error({ updateProjectDBError: error });
             }
         });
     }
-    static __createProject(data) {
+    static __createProject(data, user) {
         return __awaiter(this, void 0, void 0, function* () {
             try {
                 let project = new Project_1.default(data);
-                yield project.save();
+                project = yield project.save();
                 return project;
             }
             catch (error) {

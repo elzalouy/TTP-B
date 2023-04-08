@@ -32,7 +32,7 @@ const ProjectReq = class ProjectReq extends project_1.default {
                 if (!projectData) {
                     return res.status(400).send((0, errorUtils_1.customeError)("project_missing_data", 400));
                 }
-                let project = yield _super.createProject.call(this, projectData, decoded === null || decoded === void 0 ? void 0 : decoded.id);
+                let project = yield _super.createProject.call(this, projectData, decoded);
                 if (project) {
                     yield client_1.default.updateClientProcedure(projectData.clientId);
                     return res.status(200).send(project);
@@ -58,7 +58,7 @@ const ProjectReq = class ProjectReq extends project_1.default {
                 if (!projectData._id) {
                     return res.status(400).send((0, errorUtils_1.customeError)("project_missing_data", 400));
                 }
-                let project = yield _super.updateProject.call(this, projectData, decoded.id);
+                let project = yield _super.updateProject.call(this, projectData, decoded);
                 if (project) {
                     yield client_1.default.updateClientProcedure(project.clientId);
                     return res.status(200).send(project);

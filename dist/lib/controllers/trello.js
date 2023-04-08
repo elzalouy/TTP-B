@@ -249,20 +249,24 @@ class TrelloActionsController {
     static __createProject(listId, data) {
         return __awaiter(this, void 0, void 0, function* () {
             try {
+                let response;
                 let url = `cards/?idList=${listId}&name=${data.name}&`;
                 if (data.projectDeadline)
                     url = `${url}due=${new Date(data.projectDeadline).getTime()}&`;
                 if (data.startDate)
                     url = `${url}start=${new Date(data.startDate).getTime()}`;
-                url = `${url}attachments=true&`;
+                url = `${url}&attachments=true&`;
                 let cardCreateApi = (0, trelloApi_1.trelloApi)(url);
                 let cardResult = yield (0, node_fetch_1.default)(cardCreateApi, {
                     method: "POST",
                     headers: {
                         Accept: "application/json",
                     },
+                }).then((res) => {
+                    response = res;
+                    return res;
                 });
-                return yield cardResult.json();
+                return yield response.json();
             }
             catch (error) {
                 logger_1.default.error({ createProjectCardError: error });
@@ -272,10 +276,9 @@ class TrelloActionsController {
     static __createCard(data) {
         return __awaiter(this, void 0, void 0, function* () {
             try {
-                let url = `cards/?idList=${data.teamListId ? data.teamListId : data.listId}&name=${data.name}&desc=${data.description}&`;
+                let url = `cards/?idList=${data.teamListId ? data.teamListId : data.listId}&name=${data.name}&desc=${data.description}&start=${new Date(data.start ? data.start : Date.now()).getTime()}&`;
                 if (data.deadline)
-                    url = `${url}due=${new Date(data.deadline).getTime()}&start=${new Date(data.start).getTime()}&`;
-                url = `${url}attachments=true&`;
+                    url = `${url}due=${new Date(data.deadline).getTime()}&`;
                 let cardCreateApi = (0, trelloApi_1.trelloApi)(url);
                 let cardResult = yield (0, node_fetch_1.default)(cardCreateApi, {
                     method: "POST",
@@ -453,7 +456,6 @@ class TrelloActionsController {
                 let newMember = yield (0, node_fetch_1.default)(addMemberApi, {
                     method: "PUT",
                 });
-                // logger.info({boardId,memberId,type,addMemberApi,newMember})
                 return yield newMember.json();
             }
             catch (error) {
@@ -464,7 +466,7 @@ class TrelloActionsController {
     static __getAllMembers() {
         return __awaiter(this, void 0, void 0, function* () {
             try {
-                let boardApi = (0, trelloApi_1.trelloApi)(`organizations/${config_1.default.get("trelloOrgId")}/members?`);
+                let boardApi = (0, trelloApi_1.trelloApi)(`organizations/${config_1.default.get("trelloOrgId")}/memberships?member=true&`);
                 let members = yield (0, node_fetch_1.default)(boardApi, {
                     method: "GET",
                 });

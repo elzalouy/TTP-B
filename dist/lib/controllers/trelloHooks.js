@@ -21,11 +21,20 @@ const trello_1 = __importDefault(require("./trello"));
 const logger_1 = __importDefault(require("../../logger"));
 class TrelloWebhook {
     constructor(action, target) {
-        var _a, _b, _c;
+        var _a, _b, _c, _d, _e, _f, _g, _h, _j, _k, _l, _m, _o, _p, _q, _r;
         this.hookTarget = target;
         this.type = (_a = action.action) === null || _a === void 0 ? void 0 : _a.type;
         this.action = (_c = (_b = action.action) === null || _b === void 0 ? void 0 : _b.display) === null || _c === void 0 ? void 0 : _c.translationKey;
         this.actionRequest = action;
+        this.user = {
+            id: (_e = (_d = action === null || action === void 0 ? void 0 : action.action) === null || _d === void 0 ? void 0 : _d.memberCreator) === null || _e === void 0 ? void 0 : _e.id,
+            name: (_g = (_f = action === null || action === void 0 ? void 0 : action.action) === null || _f === void 0 ? void 0 : _f.memberCreator) === null || _g === void 0 ? void 0 : _g.fullName,
+        };
+        this.task = {
+            cardId: (_k = (_j = (_h = action.action) === null || _h === void 0 ? void 0 : _h.data) === null || _j === void 0 ? void 0 : _j.card) === null || _k === void 0 ? void 0 : _k.id,
+            name: (_o = (_m = (_l = action.action) === null || _l === void 0 ? void 0 : _l.data) === null || _m === void 0 ? void 0 : _m.card) === null || _o === void 0 ? void 0 : _o.name,
+            boardId: (_r = (_q = (_p = action.action) === null || _p === void 0 ? void 0 : _p.data) === null || _q === void 0 ? void 0 : _q.board) === null || _r === void 0 ? void 0 : _r.id,
+        };
     }
     start() {
         return __awaiter(this, void 0, void 0, function* () {
@@ -43,8 +52,9 @@ class TrelloWebhook {
                         return yield this.deleteCard();
                     case "updateCard":
                         return yield this.updateCard();
+                    case "moveCardToBoard":
+                        return yield this.updateCard();
                     default:
-                        logger_1.default.info({ noAction: this.actionRequest });
                         break;
                 }
             else if (this.hookTarget === "project") {
@@ -56,7 +66,6 @@ class TrelloWebhook {
                     case "updateCard":
                         return yield this.updateProject();
                     default:
-                        logger_1.default.info({ noAction: this.actionRequest });
                         break;
                 }
             }
@@ -76,7 +85,7 @@ class TrelloWebhook {
                     url: (_j = this.actionRequest.action.data.attachment) === null || _j === void 0 ? void 0 : _j.url,
                     mimeType: (0, validation_1.validateExtentions)((_l = (_k = this.actionRequest.action.data) === null || _k === void 0 ? void 0 : _k.attachment) === null || _l === void 0 ? void 0 : _l.name),
                 };
-                return yield task_1.default.updateTaskByTrelloDB(this.task);
+                return yield task_1.default.updateTaskByTrelloDB(this.task, this.user);
             }
         });
     }
@@ -92,12 +101,12 @@ class TrelloWebhook {
                     trelloId: this.actionRequest.action.data.attachment.id,
                     name: this.actionRequest.action.data.attachment.name,
                 };
-                return yield task_1.default.updateTaskByTrelloDB(this.task);
+                return yield task_1.default.updateTaskByTrelloDB(this.task, this.user);
             }
         });
     }
     createCard() {
-        var _a, _b, _c, _d, _e, _f;
+        var _a, _b, _c, _d, _e, _f, _g, _h, _j, _k, _l, _m, _o, _p, _q, _r, _s, _t, _u;
         return __awaiter(this, void 0, void 0, function* () {
             try {
                 let task = yield task_1.default.getOneTaskBy({
@@ -106,28 +115,24 @@ class TrelloWebhook {
                 let dep = yield Department_1.default.findOne({
                     boardId: (_f = (_e = this.actionRequest.action.data) === null || _e === void 0 ? void 0 : _e.board) === null || _f === void 0 ? void 0 : _f.id,
                 });
-                let team = yield dep.teams.find((item) => { var _a, _b; return ((_b = (_a = this.actionRequest.action.data) === null || _a === void 0 ? void 0 : _a.list) === null || _b === void 0 ? void 0 : _b.id) === item.listId; });
+                let team = yield dep.teams.find((item) => this.actionRequest.action.data.list.id === item.listId);
                 if (!task && dep) {
-                    this.task = {
-                        cardId: this.actionRequest.action.data.card.id,
-                        name: this.actionRequest.action.data.card.name,
-                        boardId: this.actionRequest.action.data.board.id,
-                        trelloShortUrl: `https://trello.com/c/${this.actionRequest.action.data.card.shortLink}`,
-                        deadline: this.actionRequest.action.data.card.due
-                            ? new Date(this.actionRequest.action.data.card.due)
-                            : undefined,
-                        start: this.actionRequest.action.data.card.start
-                            ? new Date(this.actionRequest.action.data.card.start)
-                            : undefined,
-                        // check
-                        teamId: team ? team._id : null,
-                        status: team
+                    this.task = Object.assign(Object.assign({}, this.task), { trelloShortUrl: `https://trello.com/c/${this.actionRequest.action.data.card.shortLink}`, deadline: ((_j = (_h = (_g = this.actionRequest.action) === null || _g === void 0 ? void 0 : _g.data) === null || _h === void 0 ? void 0 : _h.card) === null || _j === void 0 ? void 0 : _j.due)
+                            ? new Date((_m = (_l = (_k = this.actionRequest.action) === null || _k === void 0 ? void 0 : _k.data) === null || _l === void 0 ? void 0 : _l.card) === null || _m === void 0 ? void 0 : _m.due)
+                            : undefined, start: ((_q = (_p = (_o = this.actionRequest.action) === null || _o === void 0 ? void 0 : _o.data) === null || _p === void 0 ? void 0 : _p.card) === null || _q === void 0 ? void 0 : _q.start)
+                            ? new Date((_t = (_s = (_r = this.actionRequest.action) === null || _r === void 0 ? void 0 : _r.data) === null || _s === void 0 ? void 0 : _s.card) === null || _t === void 0 ? void 0 : _t.start)
+                            : undefined, teamId: (_u = team === null || team === void 0 ? void 0 : team._id) !== null && _u !== void 0 ? _u : null, status: team
                             ? "In Progress"
-                            : this.actionRequest.action.data.list.name,
-                        listId: team
+                            : this.actionRequest.action.data.list.name, listId: team
                             ? dep.lists.find((item) => item.name === "In Progress").listId
-                            : this.actionRequest.action.data.list.id,
-                    };
+                            : this.actionRequest.action.data.list.id, movements: [
+                            {
+                                status: team
+                                    ? "In Progress"
+                                    : this.actionRequest.action.data.list.name,
+                                movedAt: new Date(Date.now()),
+                            },
+                        ] });
                     return yield task_1.default.createTaskByTrello(this.task);
                 }
             }
@@ -154,7 +159,7 @@ class TrelloWebhook {
         });
     }
     updateCard() {
-        var _a, _b, _c, _d, _e, _f, _g, _h, _j, _k, _l;
+        var _a, _b, _c, _d, _e, _f, _g, _h, _j, _k, _l, _m, _o, _p, _q, _r, _s, _t, _u, _v, _w, _x, _y, _z, _0, _1, _2, _3, _4, _5, _6, _7, _8;
         return __awaiter(this, void 0, void 0, function* () {
             try {
                 let task = yield task_1.default.getOneTaskBy({
@@ -164,43 +169,40 @@ class TrelloWebhook {
                     let department = yield Department_1.default.findOne({
                         boardId: task.boardId,
                     });
-                    let isNewTeam = department.teams.find((item) => item.listId === this.actionRequest.action.data.card.idList);
-                    let isBeforeTeam = department.teams.find((item) => { var _a, _b; return ((_b = (_a = this.actionRequest.action.data) === null || _a === void 0 ? void 0 : _a.listBefore) === null || _b === void 0 ? void 0 : _b.id) === item.listId; });
-                    let inProgressList = department.lists.find((item) => item.name === "In Progress");
+                    let listId = (_f = (_e = this.actionRequest.action.data.list) === null || _e === void 0 ? void 0 : _e.id) !== null && _f !== void 0 ? _f : (_g = this.actionRequest.action.data.card) === null || _g === void 0 ? void 0 : _g.idList;
+                    let status = (_k = (_j = (_h = this.actionRequest.action.data) === null || _h === void 0 ? void 0 : _h.list) === null || _j === void 0 ? void 0 : _j.name) !== null && _k !== void 0 ? _k : (_m = (_l = this.actionRequest.action.data) === null || _l === void 0 ? void 0 : _l.listAfter) === null || _m === void 0 ? void 0 : _m.name;
+                    let newDep = (_o = (yield Department_1.default.findOne({
+                        boardId: this.actionRequest.action.data.board.id,
+                    }))) !== null && _o !== void 0 ? _o : null;
+                    let isNewTeam = (_p = (newDep !== null && newDep !== void 0 ? newDep : department).teams.find((item) => item.listId === listId)) !== null && _p !== void 0 ? _p : null;
+                    let inProgressList = (newDep !== null && newDep !== void 0 ? newDep : department).lists.find((item) => (isNewTeam === null || isNewTeam === void 0 ? void 0 : isNewTeam.listId) && item.name === "In Progress");
+                    console.log({ task: this.task });
                     this.task = {
                         name: this.actionRequest.action.data.card.name,
                         boardId: this.actionRequest.action.data.board.id,
                         cardId: this.actionRequest.action.data.card.id,
-                        deadline: this.actionRequest.action.data.card.due !== undefined
-                            ? ((_g = (_f = (_e = this.actionRequest.action) === null || _e === void 0 ? void 0 : _e.data) === null || _f === void 0 ? void 0 : _f.card) === null || _g === void 0 ? void 0 : _g.due) === null
-                                ? null
-                                : new Date(this.actionRequest.action.data.card.due)
-                            : task.deadline,
-                        start: this.actionRequest.action.data.card.start
-                            ? new Date(this.actionRequest.action.data.card.start)
-                            : task.start
-                                ? task.start
-                                : undefined,
-                        description: this.actionRequest.action.data.card.desc
-                            ? this.actionRequest.action.data.card.desc
-                            : task.description
-                                ? task.description
-                                : undefined,
-                        lastMove: isBeforeTeam
-                            ? task.lastMove
-                            : (_j = (_h = this.actionRequest.action.data) === null || _h === void 0 ? void 0 : _h.listBefore) === null || _j === void 0 ? void 0 : _j.name,
-                        lastMoveDate: isBeforeTeam
-                            ? task.lastMoveDate
-                            : new Date().toString(),
-                        teamId: isNewTeam ? isNewTeam._id : task.teamId,
-                        listId: isNewTeam
-                            ? inProgressList.listId
-                            : (_k = this.actionRequest.action.data.listAfter) === null || _k === void 0 ? void 0 : _k.id,
-                        status: isNewTeam
-                            ? inProgressList.name
-                            : (_l = this.actionRequest.action.data.listAfter) === null || _l === void 0 ? void 0 : _l.name,
+                        deadline: ((_t = (_s = (_r = (_q = this.actionRequest) === null || _q === void 0 ? void 0 : _q.action) === null || _r === void 0 ? void 0 : _r.data) === null || _s === void 0 ? void 0 : _s.card) === null || _t === void 0 ? void 0 : _t.due)
+                            ? new Date((_x = (_w = (_v = (_u = this.actionRequest) === null || _u === void 0 ? void 0 : _u.action) === null || _v === void 0 ? void 0 : _v.data) === null || _w === void 0 ? void 0 : _w.card) === null || _x === void 0 ? void 0 : _x.due)
+                            : null,
+                        start: ((_0 = (_z = (_y = this.actionRequest.action) === null || _y === void 0 ? void 0 : _y.data) === null || _z === void 0 ? void 0 : _z.card) === null || _0 === void 0 ? void 0 : _0.start)
+                            ? new Date((_3 = (_2 = (_1 = this.actionRequest.action) === null || _1 === void 0 ? void 0 : _1.data) === null || _2 === void 0 ? void 0 : _2.card) === null || _3 === void 0 ? void 0 : _3.start)
+                            : task.start,
+                        description: (_4 = this.actionRequest.action.data.card.desc) !== null && _4 !== void 0 ? _4 : task.description,
+                        teamId: (_5 = isNewTeam === null || isNewTeam === void 0 ? void 0 : isNewTeam._id) !== null && _5 !== void 0 ? _5 : task.teamId,
+                        listId: (_6 = isNewTeam === null || isNewTeam === void 0 ? void 0 : isNewTeam.listId) !== null && _6 !== void 0 ? _6 : listId,
+                        status: (_7 = inProgressList === null || inProgressList === void 0 ? void 0 : inProgressList.name) !== null && _7 !== void 0 ? _7 : status,
+                        movements: [
+                            ...task.movements,
+                            {
+                                status: (_8 = inProgressList === null || inProgressList === void 0 ? void 0 : inProgressList.name) !== null && _8 !== void 0 ? _8 : status,
+                                movedAt: new Date(Date.now()),
+                            },
+                        ],
                     };
-                    return yield task_1.default.updateTaskByTrelloDB(this.task);
+                    return yield task_1.default.updateTaskByTrelloDB(this.task, {
+                        id: this.user.id,
+                        name: this.user.name,
+                    });
                 }
                 else
                     this.updateProject();
@@ -233,7 +235,6 @@ class TrelloWebhook {
                 boardId: this.actionRequest.action.data.board.id,
             }).then((creativeBoard) => __awaiter(this, void 0, void 0, function* () {
                 if (creativeBoard) {
-                    console.log({ data: this.actionRequest.action.data.card });
                     // if true, then it's an update action, and if not so it's a move action and moving is not allowed
                     let project = yield Project_1.default.findOneAndUpdate({ cardId: this.actionRequest.action.data.card.id }, {
                         boardId: this.actionRequest.action.data.board.id,

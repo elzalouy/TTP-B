@@ -22,6 +22,28 @@ exports.FilesSchema = new mongoose_1.Schema({
     mimeType: { type: String },
     url: { type: String },
 });
+const movementSchema = new mongoose_1.Schema({
+    status: {
+        type: String,
+        enum: [
+            "In Progress",
+            "Done",
+            "Review",
+            "Shared",
+            "Not Clear",
+            "Cancled",
+            "Tasks Board",
+        ],
+        default: "Tasks Board",
+    },
+    movedAt: { Type: Date },
+});
+const deadlineChainSchema = new mongoose_1.Schema({
+    userId: { type: mongoose_1.Schema.Types.ObjectId, required: true },
+    name: { type: String, required: true },
+    before: { type: Date, required: true },
+    current: { type: Date, required: true },
+});
 const TaskSchema = new mongoose_1.Schema({
     name: {
         type: String,
@@ -79,25 +101,9 @@ const TaskSchema = new mongoose_1.Schema({
         type: Date,
         default: null,
     },
-    deliveryDate: {
-        type: Date,
-        default: null,
-    },
     attachedFiles: {
         type: [exports.FilesSchema],
         default: [],
-    },
-    attachedCard: {
-        type: String,
-        default: null,
-    },
-    lastMove: {
-        type: String,
-        default: null,
-    },
-    lastMoveDate: {
-        type: String,
-        default: null,
     },
     description: {
         type: String,
@@ -107,6 +113,13 @@ const TaskSchema = new mongoose_1.Schema({
         type: String,
         default: null,
     },
+    deadlineChain: {
+        type: [deadlineChainSchema],
+        required: true,
+        default: [],
+        min: 0,
+    },
+    movements: { type: [movementSchema], min: 1, required: true },
 }, {
     timestamps: true,
     strict: false,
@@ -118,15 +131,16 @@ TaskSchema.static("getTasksAsCSV", function (filterIds) {
                 _id: { $in: filterIds },
             }, {}, { lean: true });
             if (tasks && tasks.length > 0) {
-                let porjectsIds = tasks.map((item) => item.projectId.toString());
+                let porjectsIds = tasks.map((item) => { var _a; return (_a = item === null || item === void 0 ? void 0 : item.projectId) === null || _a === void 0 ? void 0 : _a.toString(); });
                 // i am taking the first id cause our filter is based on selecting a specific project's tasks or getting all tasks with the remained filter options.
                 let projects = yield Project_1.default.find({
                     _id: { $in: porjectsIds },
                 });
                 let data = tasks === null || tasks === void 0 ? void 0 : tasks.map((item) => {
+                    var _a;
                     let project = projects === null || projects === void 0 ? void 0 : projects.find((project) => { var _a; return project._id.toString() === ((_a = item === null || item === void 0 ? void 0 : item.projectId) === null || _a === void 0 ? void 0 : _a.toString()); });
                     return {
-                        id: item._id.toString(),
+                        id: (_a = item === null || item === void 0 ? void 0 : item._id) === null || _a === void 0 ? void 0 : _a.toString(),
                         name: item.name,
                         ProjectManagerName: (project === null || project === void 0 ? void 0 : project.projectManagerName)
                             ? project.projectManagerName
@@ -137,16 +151,13 @@ TaskSchema.static("getTasksAsCSV", function (filterIds) {
                         status: item.status,
                         startDate: item.start,
                         deadline: item.deadline,
-                        lastMove: item.lastMove,
-                        lastMoveDate: item.lastMoveDate,
-                        description: item.description,
-                        trelloShortUrl: item.trelloShortUrl,
                     };
                 });
                 const convert = [Object.keys(data[0])].concat(data);
                 const csvData = convert
                     .map((item) => {
-                    return Object.values(item).toString();
+                    var _a;
+                    return (_a = Object === null || Object === void 0 ? void 0 : Object.values(item)) === null || _a === void 0 ? void 0 : _a.toString();
                 })
                     .join("\n");
                 // const newTaskCsvFile=appendFileSync()

@@ -35,14 +35,13 @@ exports.updateTaskQueue = (0, queue_1.default)({
 function moveTaskJob(listId, cardId, status, department, user) {
     var task;
     exports.updateTaskQueue.push((cb) => __awaiter(this, void 0, void 0, function* () {
+        var _a;
         try {
             let currentTask = yield task_1.default.getOneTaskBy({ cardId: cardId });
             if (currentTask) {
-                let inProgressList = department.lists.find((item) => item.name === "In Progress");
-                let team = department.teams.find((item) => { var _a; return ((_a = currentTask === null || currentTask === void 0 ? void 0 : currentTask.teamId) === null || _a === void 0 ? void 0 : _a.toString()) === item._id; });
-                const result = yield trello_1.default.moveTaskToDiffList(cardId, listId === inProgressList.listId.toString() && team
-                    ? team.listId
-                    : listId);
+                let teamList = department.teams.find((item) => item.listId === listId);
+                let statusList = department.lists.find((item) => item.listId === listId);
+                const result = yield trello_1.default.moveTaskToDiffList(cardId, (_a = teamList === null || teamList === void 0 ? void 0 : teamList.listId) !== null && _a !== void 0 ? _a : statusList === null || statusList === void 0 ? void 0 : statusList.listId);
                 cb(null);
             }
         }
@@ -65,32 +64,26 @@ function moveTaskJob(listId, cardId, status, department, user) {
     }));
 }
 exports.moveTaskJob = moveTaskJob;
-const updateCardJob = (data, newFiles) => {
+const updateCardJob = (data, newFiles, tokenUser) => {
     const deleteFiles = data.deleteFiles
         ? data.deleteFiles
         : [];
     delete data.deleteFiles;
     delete data.attachedFiles;
     exports.updateTaskQueue.push((cb) => __awaiter(void 0, void 0, void 0, function* () {
-        var _a;
         try {
             let current = yield task_1.default.__getTask(data.id);
             let dep = yield Department_1.default.findOne({ boardId: data.boardId });
-            logger_1.default.info({ data });
-            let isTeamChanged = current.teamId &&
-                data.teamId &&
-                ((_a = current === null || current === void 0 ? void 0 : current.teamId) === null || _a === void 0 ? void 0 : _a.toString()) !== data.teamId.toString();
-            let newTeamListId = isTeamChanged && dep && dep.teams
-                ? dep.teams.find((item) => item._id.toString() === data.teamId.toString()).listId
-                : null;
+            let teamListId = dep.teams.find((item) => item.listId === data.listId);
+            let statusListId = dep.lists.find((item) => item.listId === data.listId);
             let taskData = {
                 name: data.name,
                 idBoard: data.boardId,
-                idList: isTeamChanged === true
-                    ? newTeamListId
-                    : data.teamId && data.status === "In Progress"
-                        ? newTeamListId
-                        : data.listId,
+                idList: teamListId
+                    ? teamListId
+                    : statusListId
+                        ? statusListId
+                        : current.listId,
                 due: data.deadline ? data.deadline : null,
                 start: data.start ? data.start : null,
                 desc: data.description ? data.description : "",
@@ -108,8 +101,6 @@ const updateCardJob = (data, newFiles) => {
     }));
     exports.updateTaskQueue.push((cb) => __awaiter(void 0, void 0, void 0, function* () {
         try {
-            // wait for both update data in db and upload,delete files to trello
-            // if there are deleted files, then delete it from the db
             if (deleteFiles) {
                 if (deleteFiles.length > 0) {
                     let isDeletedAll = yield (deleteFiles === null || deleteFiles === void 0 ? void 0 : deleteFiles.map((item) => __awaiter(void 0, void 0, void 0, function* () {
@@ -132,7 +123,7 @@ const updateCardJob = (data, newFiles) => {
         cb(null, true);
     }));
     exports.updateTaskQueue.push((cb) => __awaiter(void 0, void 0, void 0, function* () {
-        let task = yield task_1.default.updateTaskDB(data);
+        let task = yield task_1.default.updateTaskDB(data, tokenUser);
         if (task.error)
             cb(new Error(task.error.message), null);
         yield index_1.io.sockets.emit("update-task", task.task);
