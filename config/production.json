@@ -2,7 +2,7 @@
   "name": "TTP production",
   "trelloWebhookUrlTask": "https://ttp-back-v1.herokuapp.com/api/webhookUpdate",
   "trelloWebhookUrlProject": "https://ttp-back-v1.herokuapp.com/api/webhookUpdateProject",
-  "frontEndUrl": "https://ttp-back-v1.herokuapp.com",
+  "frontEndUrl": "https://ttpf.herokuapp.com",
   "BoardStatus": [
     "In Progress",
     "Cancled",
