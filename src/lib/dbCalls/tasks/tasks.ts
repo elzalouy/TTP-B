@@ -130,8 +130,8 @@ class TaskDB {
       let task = await Tasks.findOne(data);
       let newdata = {
         ...value,
-        lastMove: task.status,
-        lastMoveDate: data.lastMoveDate,
+        // lastMove: task.status,
+        // lastMoveDate: data.lastMoveDate,
       };
       let result = await Tasks.findOneAndUpdate(data, newdata, {
         new: true,
@@ -170,11 +170,7 @@ class TaskDB {
   }
   static async __getTasks(data: TaskData) {
     try {
-      let tasks = await Tasks.find(data)
-        .select(
-          "_id name projectId categoryId teamId listId  cardId boardId status start deadline deliveryDate attachedFiles   lastMove lastMoveDate description trelloShortUrl createdAt updatedAt"
-        )
-        .lean();
+      let tasks = await Tasks.find(data).lean();
       return tasks;
     } catch (error) {
       logger.error({ getTaskDBError: error });
@@ -215,6 +211,8 @@ class TaskDB {
       delete data.id;
       let task = await Tasks.findOne({ _id: id });
       if (!task) return taskNotFoundError;
+
+      // Update the task deadlineChain
       if (
         task.deadline &&
         data.deadline &&
@@ -228,49 +226,33 @@ class TaskDB {
           current: new Date(data.deadline),
         });
       }
-      if (
-        !["Done", "Cancled", "Shared"].includes(task.status) &&
-        data.status === "Shared"
-      ) {
-        task.noOfRevisions = task.noOfRevisions ? ++task.noOfRevisions : 1;
-      }
-      if (data.status === "Done") {
-        let deadline = new Date(data.deadline).getTime();
-        task.deliveryDate = new Date(Date.now());
-        task.turnOver =
-          deadline < new Date(Date.now()).getTime()
-            ? Math.floor(
-                (task.deliveryDate.getTime() - deadline) / (1000 * 60 * 60 * 24)
-              )
-            : 0;
-      } else {
-        task.deliveryDate = null;
-        task.turnOver = 0;
-      }
-      if (data.status === "Not Clear" && task.status !== "Not Clear")
-        task.unClear = task.unClear ? ++task.unClear : 1;
 
       task.name = data.name;
-      task.description = data.description ? data.description : "";
-      task.deadline = data.deadline ? data.deadline : null;
-      task.categoryId = data.categoryId
-        ? new mongoose.Types.ObjectId(data.categoryId)
-        : task.categoryId;
-      task.subCategoryId = data.subCategoryId
-        ? new mongoose.Types.ObjectId(data.subCategoryId)
-        : task.subCategoryId;
-      task.status = data.status ? data.status : task.status;
-      task.cardId = data.cardId ? data.cardId : task.cardId;
-      task.boardId = data.boardId ? data.boardId : task.boardId;
-      task.listId = data.listId ? data.listId : task.listId;
+      task.description = data.description ?? "";
+      task.deadline = data.deadline ?? null;
+      task.categoryId =
+        new mongoose.Types.ObjectId(data?.categoryId) ?? task.categoryId;
+      task.subCategoryId =
+        new mongoose.Types.ObjectId(data?.subCategoryId) ?? task.subCategoryId;
+      task.status = data.status ?? task.status;
+      task.cardId = data.cardId ?? task.cardId;
+      task.boardId = data.boardId ?? task.boardId;
+      task.listId = data.listId ?? task.listId;
       task.attachedFiles = data.deleteFiles
         ? task.attachedFiles.filter(
             (item) => item.trelloId === data.deleteFiles.trelloId
           )
         : task.attachedFiles;
-      task.teamId = data.teamId ? new ObjectId(data.teamId) : task.teamId;
+      task.teamId = new ObjectId(data.teamId) ?? task.teamId;
+      task.movements = [
+        ...task.movements,
+        data.status !== task.status && {
+          status: data.status,
+          movedAt: new Date(Date.now()),
+        },
+      ];
+      console.log({ task });
       delete task._id;
-
       let update = await Tasks.findByIdAndUpdate(id, task, {
         new: true,
         lean: true,
@@ -376,31 +358,6 @@ class TaskDB {
         });
       }
 
-      if (
-        !["Done", "Cancled", "Shared"].includes(task?.status) &&
-        data.status === "Shared"
-      ) {
-        task.noOfRevisions = task?.noOfRevisions ? ++task.noOfRevisions : 1;
-      }
-      if (data.status === "Done") {
-        task.deliveryDate = new Date(Date.now());
-        let deadlineStr = data.deadline ?? task.deadline ?? null;
-        if (deadlineStr !== null) {
-          let deadline = new Date(deadlineStr).getTime();
-          task.turnOver =
-            deadline < new Date(Date.now()).getTime()
-              ? Math.floor(
-                  (task.deliveryDate.getTime() - deadline) /
-                    (1000 * 60 * 60 * 24)
-                )
-              : 0;
-        }
-      } else {
-        task.deliveryDate = null;
-        task.turnOver = 0;
-      }
-      if (data.status === "Not Clear" && task.status !== "Not Clear")
-        task.unClear = task.unClear ? ++task.unClear : 1;
       task.name = data?.name ? data?.name : task.name;
       task.status = data?.status ? data.status : task.status;
       task.listId = data?.listId ? data.listId : task.listId;
@@ -412,10 +369,6 @@ class TaskDB {
         data?.teamId === null || data?.teamId?.toString().length > 0
           ? new ObjectId(data.teamId)
           : task.teamId;
-      task.lastMove = data?.lastMove ? data.lastMove : task.lastMoveDate;
-      task.lastMoveDate = data?.lastMoveDate
-        ? data.lastMoveDate
-        : task.lastMoveDate;
       task.deadline = data.deadline;
       task.start = data.start ? data.start : null;
       if (data.attachedFile) {
@@ -428,7 +381,7 @@ class TaskDB {
           (item) => item.trelloId !== data?.deleteFiles?.trelloId
         );
       }
-
+      task.movements = data.movements ?? task.movements;
       task.attachedFiles = _.uniqBy(task.attachedFiles, "trelloId");
       let result = await (await task.save()).toObject();
       await io.sockets.emit("update-task", result);
@@ -441,12 +394,14 @@ class TaskDB {
     try {
       let task = await Tasks.findOne({ cardId: data.cardId });
       if (task) {
-        data.status = task.status;
         task = await task.set(data).save();
         await io.sockets.emit("update-task", task);
         return task;
       } else {
         let task = new Tasks(data);
+        task.movements = [
+          { status: data.status, movedAt: new Date(Date.now()) },
+        ];
         task = await task.save();
         await io.sockets.emit("create-task", task);
         return await task;

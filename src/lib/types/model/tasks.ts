@@ -23,19 +23,13 @@ export interface TaskInfo extends Document {
   status?: string;
   start?: Date | number;
   deadline?: Date | number;
-  deliveryDate?: Date;
-  done?: Date;
-  attachedFiles?: AttachmentSchema[];
   cardId?: string;
   boardId?: string;
   description?: string;
-  lastMove?: string | String;
-  lastMoveDate?: string | String;
   trelloShortUrl?: string;
+  attachedFiles?: AttachmentSchema[];
   deadlineChain: TaskDeadlineChain[];
-  turnOver?: number;
-  unClear?: number;
-  noOfRevisions?: number;
+  movements?: Movement[];
 }
 
 export interface TaskHistory {
@@ -43,12 +37,14 @@ export interface TaskHistory {
   boardId: string;
   date: string;
 }
+
 export interface TasksStatistics {
   id?: ObjectId;
   numberOfTasks: number | null;
   numberOfFinishedTasks: number | null;
   progress: number | null;
 }
+
 export interface TaskData {
   _id?: string;
   id?: string;
@@ -56,35 +52,24 @@ export interface TaskData {
   projectId?: string | ObjectId;
   categoryId?: string | ObjectId;
   subCategoryId?: string | ObjectId;
-  categoryName?: string;
-  subCategoryName?: string;
-  countNotClear?: number;
-  countShared?: number;
   listId?: string;
   status?: string;
   start?: Date | number;
   deadline?: Date | number;
-  deliveryDate?: Date;
-  done?: Date;
-  turnover?: Number;
   teamId?: string | ObjectId;
   cardId?: string;
   boardId?: string;
   trelloShortUrl?: string;
   file?: object;
   description?: string;
-  lastMove?: string | String;
-  lastMoveDate?: string | String;
-  // edit task files only
   attachedFiles?: AttachmentSchema[];
   deleteFiles?: AttachmentSchema[] | any;
   attachedFile?: AttachmentSchema;
   teamListId?: string;
   deadlineChain?: TaskDeadlineChain[];
-  turnOver?: number;
-  unClear?: number;
-  noOfRevisions?: number;
+  movements?: Movement[];
 }
+
 export interface AttachmentResponse {
   id: string;
   bytes: number;
@@ -108,6 +93,7 @@ export interface AttachmentResponse {
   fileName: string;
   limits: any;
 }
+
 export interface AttachmentSchema {
   _id?: string | ObjectId;
   name?: string;
@@ -115,4 +101,10 @@ export interface AttachmentSchema {
   mimeType: string;
   url: string;
 }
+
 export interface DownloadAttachmentResponse {}
+
+export interface Movement {
+  status: string;
+  movedAt: Date;
+}

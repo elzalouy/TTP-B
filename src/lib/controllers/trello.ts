@@ -255,12 +255,11 @@ class TrelloActionsController {
     try {
       let url = `cards/?idList=${
         data.teamListId ? data.teamListId : data.listId
-      }&name=${data.name}&desc=${data.description}&`;
+      }&name=${data.name}&desc=${data.description}&start=${new Date(
+        data.start ? data.start : Date.now()
+      ).getTime()}&`;
       if (data.deadline)
-        url = `${url}due=${new Date(data.deadline).getTime()}&start=${new Date(
-          data.start
-        ).getTime()}&`;
-      url = `${url}`;
+        url = `${url}due=${new Date(data.deadline).getTime()}&`;
       let cardCreateApi = trelloApi(url);
       let cardResult = await fetch(cardCreateApi, {
         method: "POST",
@@ -424,8 +423,6 @@ class TrelloActionsController {
       let newMember = await fetch(addMemberApi, {
         method: "PUT",
       });
-
-      // logger.info({boardId,memberId,type,addMemberApi,newMember})
       return await newMember.json();
     } catch (error) {
       logger.error({ addMemberError: error });
@@ -435,7 +432,7 @@ class TrelloActionsController {
   static async __getAllMembers() {
     try {
       let boardApi = trelloApi(
-        `organizations/${Config.get("trelloOrgId")}/members?`
+        `organizations/${Config.get("trelloOrgId")}/memberships?member=true&`
       );
       let members = await fetch(boardApi, {
         method: "GET",

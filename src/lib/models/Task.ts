@@ -1,6 +1,6 @@
 import { model, Schema } from "mongoose";
 import logger from "../../logger";
-import { TaskData, TaskInfo, TasksModel } from "../types/model/tasks";
+import { Movement, TaskData, TaskInfo, TasksModel } from "../types/model/tasks";
 import Project from "./Project";
 import { TaskDeadlineChain } from "../types/model/tasks";
 export const FilesSchema: Schema = new Schema({
@@ -8,6 +8,22 @@ export const FilesSchema: Schema = new Schema({
   trelloId: { type: String },
   mimeType: { type: String },
   url: { type: String },
+});
+const movementSchema: Schema = new Schema<Movement>({
+  status: {
+    type: String,
+    enum: [
+      "In Progress",
+      "Done",
+      "Review",
+      "Shared",
+      "Not Clear",
+      "Cancled",
+      "Tasks Board",
+    ],
+    default: "Tasks Board",
+  },
+  movedAt: { Type: Date },
 });
 
 const deadlineChainSchema: Schema = new Schema<TaskDeadlineChain>({
@@ -75,21 +91,9 @@ const TaskSchema = new Schema<TaskInfo, TasksModel>(
       type: Date,
       default: null,
     },
-    deliveryDate: {
-      type: Date,
-      default: null,
-    },
     attachedFiles: {
       type: [FilesSchema],
       default: [],
-    },
-    lastMove: {
-      type: String,
-      default: null,
-    },
-    lastMoveDate: {
-      type: String,
-      default: null,
     },
     description: {
       type: String,
@@ -105,18 +109,7 @@ const TaskSchema = new Schema<TaskInfo, TasksModel>(
       default: [],
       min: 0,
     },
-    turnOver: {
-      type: Number,
-      default: null,
-    },
-    unClear: {
-      type: Number,
-      default: null,
-    },
-    noOfRevisions: {
-      type: Number,
-      default: 0,
-    },
+    movements: { type: [movementSchema], min: 1, required: true },
   },
   {
     timestamps: true,
@@ -156,8 +149,6 @@ TaskSchema.static("getTasksAsCSV", async function (filterIds: string[]) {
           status: item.status,
           startDate: item.start,
           deadline: item.deadline,
-          lastMove: item.lastMove,
-          lastMoveDate: item.lastMoveDate,
         };
       });
       const convert = [Object.keys(data[0])].concat(data);
