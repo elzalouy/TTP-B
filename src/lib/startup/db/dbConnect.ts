@@ -347,6 +347,12 @@ export const initializeTTPTasks = async () => {
         item.start = card.start;
         item.deadline = card.due;
         item.trelloShortUrl = card.shortUrl;
+        item.movements ??= [
+          {
+            movedAt: new Date(Date.now()),
+            status: status?.name ?? "In Progress",
+          },
+        ];
         item.attachedFiles =
           card.attachments.length > 0
             ? card?.attachments?.map((item) => {
@@ -429,6 +435,17 @@ export const initializeTTPTasks = async () => {
         item.boardId = boardId;
         item.listId = listId;
         item.cardId = card.id;
+        item.movements ??= [
+          {
+            movedAt: new Date(Date.now()),
+            status: list
+              ? list.name
+              : board?.lists.find((l) => l.name === item.status).name
+              ? board?.lists.find((l) => l.name === item.status).name
+              : creativeBoard?.lists.find((l) => l.name === item.status)
+                  ?.name ?? "In Progress",
+          },
+        ];
         return item;
       })
     );
