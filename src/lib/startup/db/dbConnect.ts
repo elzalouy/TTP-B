@@ -307,8 +307,8 @@ export const initializeTTPTasks = async () => {
         let boardCards: Card[] =
           await TrelloActionsController.__getCardsInBoard(item.id);
         if (item.name === Config.get("CreativeBoard")) {
-          let list = item.lists.find((l) => l.name === "projects");
-          boardCards = boardCards.filter((item) => item.idList);
+          let list = item.lists.find((l) => l.name === "projects").id;
+          boardCards = boardCards.filter((item) => item.idList !== list);
         }
         return boardCards;
       })
