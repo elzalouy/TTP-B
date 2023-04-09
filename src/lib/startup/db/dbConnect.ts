@@ -257,6 +257,7 @@ export const initializeTrelloBoards = async () => {
         };
       }),
     ];
+    console.log({ update });
     await Department.bulkWrite(update);
     await allDepartments.forEach((item) =>
       TrelloActionsController.__addWebHook(item.boardId, "trelloWebhookUrlTask")
@@ -383,7 +384,7 @@ export const initializeTTPTasks = async () => {
           boardId: item.idBoard,
           listId: item.idList,
           status: status?.name ? status.name : "In Progress",
-          teamId: team?._id ?? null,
+          teamId: team?._id ? team._id : null,
           cardId: item.id,
           description: item.desc ? item.desc : "",
           start: item.start,
@@ -427,8 +428,9 @@ export const initializeTTPTasks = async () => {
           ? list.name
           : board?.lists.find((l) => l.name === item.status).name
           ? board?.lists.find((l) => l.name === item.status).name
-          : creativeBoard?.lists.find((l) => l.name === item.status)?.name ??
-            "In Progress";
+          : creativeBoard?.lists.find((l) => l.name === item.status)?.name
+          ? creativeBoard?.lists.find((l) => l.name === item.status)?.name
+          : "In Progress";
         let card: Card = await TrelloActionsController.__createCard({
           boardId: boardId,
           listId: listId,
@@ -501,6 +503,7 @@ export const initializeTTPTasks = async () => {
         };
       }),
     ];
+    console.log({ update });
     Tasks.bulkWrite(update, {});
     tasks.forEach((item) => {
       TrelloActionsController.__addWebHook(item.cardId, "trelloWebhookUrlTask");
