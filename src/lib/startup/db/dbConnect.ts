@@ -463,27 +463,25 @@ export const initializeTTPTasks = async () => {
       }),
       ...tasks.map((item) => {
         return {
-          updateOne: {
+          replaceOne: {
             filter: { _id: item._id },
-            update: {
-              $set: {
-                name: item.name,
-                projectId: item.projectId,
-                categoryId: item.categoryId,
-                subCategoryId: item.subCategoryId,
-                teamId: item.teamId,
-                listId: item.listId,
-                status: item.status,
-                start: item.start,
-                deadline: item.deadline,
-                cardId: item.cardId,
-                boardId: item.boardId,
-                description: item?.description ? item.description : "",
-                trelloShortUrl: item.trelloShortUrl,
-                attachedFiles: item.attachedFiles,
-                deadlineChain: item.deadlineChain,
-                movements: item.movements,
-              },
+            replacement: {
+              name: item.name,
+              projectId: item.projectId,
+              categoryId: item.categoryId,
+              subCategoryId: item.subCategoryId,
+              teamId: item.teamId,
+              listId: item.listId,
+              status: item.status,
+              start: item.start,
+              deadline: item.deadline,
+              cardId: item.cardId,
+              boardId: item.boardId,
+              description: item?.description ? item.description : "",
+              trelloShortUrl: item.trelloShortUrl,
+              attachedFiles: item.attachedFiles,
+              deadlineChain: item.deadlineChain,
+              movements: item.movements,
             },
           },
         };
