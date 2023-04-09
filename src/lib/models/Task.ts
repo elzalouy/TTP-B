@@ -9,7 +9,7 @@ export const FilesSchema: Schema = new Schema({
   mimeType: { type: String },
   url: { type: String },
 });
-const movementSchema: Schema = new Schema<Movement>({
+export const movementSchema: Schema = new Schema<Movement>({
   status: {
     type: String,
     enum: [
@@ -26,7 +26,7 @@ const movementSchema: Schema = new Schema<Movement>({
   movedAt: { Type: Date },
 });
 
-const deadlineChainSchema: Schema = new Schema<TaskDeadlineChain>({
+export const deadlineChainSchema: Schema = new Schema<TaskDeadlineChain>({
   userId: { type: Schema.Types.ObjectId, required: true },
   name: { type: String, required: true },
   before: { type: Date, required: true },

@@ -17,7 +17,7 @@ import _ from "lodash";
 import { TaskData, TaskInfo } from "../../types/model/tasks";
 import TaskController from "../../controllers/task";
 import TaskDB from "../../dbCalls/tasks/tasks";
-import Tasks from "../../models/Task";
+import Tasks, { movementSchema } from "../../models/Task";
 import mongoose from "mongoose";
 import { ObjectId } from "mongodb";
 config();
@@ -317,8 +317,10 @@ export const initializeTTPTasks = async () => {
     cards = _.flattenDeep(newCards);
     cards = await Promise.all(
       cards.map(async (item) => {
-        item.attachments =
-          (await TrelloActionsController.__getCardAttachments(item.id)) ?? [];
+        let attachments = await TrelloActionsController.__getCardAttachments(
+          item.id
+        );
+        item.attachments = attachments ? attachments : [];
         return item;
       })
     );
@@ -342,13 +344,13 @@ export const initializeTTPTasks = async () => {
           name: item.name,
           boardId: card.idBoard,
           listId: card.idList,
-          status: status?.name ?? "In Progress",
+          status: status?.name ? status.name : "In Progress",
           teamId: team?._id ? new ObjectId(team?._id) : null,
           cardId: card.id,
-          description: card.desc ?? "",
-          start: card.start ?? null,
-          deadline: card.due ?? null,
-          trelloShortUrl: card.shortUrl ?? "",
+          description: card.desc ? card.desc : "",
+          start: card.start ? card.start : null,
+          deadline: card.due ? card.due : null,
+          trelloShortUrl: card.shortUrl ? card.shortUrl : "",
           movements: item.movements
             ? item.movements
             : [
@@ -357,15 +359,14 @@ export const initializeTTPTasks = async () => {
                   status: status.name ?? "In Progress",
                 },
               ],
-          attachedFiles:
-            card?.attachments?.map((item) => {
-              return {
-                name: item.fileName,
-                trelloId: item.id,
-                mimeType: item.mimeType,
-                url: item.url,
-              };
-            }) ?? [],
+          attachedFiles: card?.attachments?.map((item) => {
+            return {
+              name: item.fileName,
+              trelloId: item.id,
+              mimeType: item.mimeType,
+              url: item.url,
+            };
+          }),
         });
         return replacement;
       })
@@ -385,7 +386,7 @@ export const initializeTTPTasks = async () => {
           name: item.name,
           boardId: item.idBoard,
           listId: item.idList,
-          status: status?.name ?? "In Progress",
+          status: status?.name ? status.name : "In Progress",
           teamId: team?._id ?? null,
           cardId: item.id,
           description: item.desc ? item.desc : "",
@@ -406,7 +407,7 @@ export const initializeTTPTasks = async () => {
               : [],
           movements: [
             {
-              status: status?.name ?? "In Progress",
+              status: status?.name ? status.name : "In Progress",
               movedAt: new Date(Date.now()),
             },
           ],
@@ -444,12 +445,14 @@ export const initializeTTPTasks = async () => {
           _id: item._id,
           boardId: boardId,
           listId: listId,
-          movements: item.movements ?? [
-            {
-              movedAt: new Date(Date.now()),
-              status: status,
-            },
-          ],
+          movements: item.movements
+            ? item.movements
+            : [
+                {
+                  movedAt: new Date(Date.now()),
+                  status: status,
+                },
+              ],
           name: item.name,
           status: status,
           teamId: item?.teamId,
