@@ -356,7 +356,7 @@ export const initializeTTPTasks = async () => {
             : [
                 {
                   movedAt: new Date(Date.now()),
-                  status: status.name ?? "In Progress",
+                  status: status.name ? status.name : "In Progress",
                 },
               ],
           attachedFiles: card?.attachments?.map((item) => {
