@@ -159,7 +159,7 @@ class TrelloWebhook {
         });
     }
     updateCard() {
-        var _a, _b, _c, _d, _e, _f, _g, _h, _j, _k, _l, _m, _o, _p, _q, _r, _s, _t, _u, _v, _w, _x, _y, _z, _0, _1, _2, _3, _4, _5, _6, _7, _8;
+        var _a, _b, _c, _d, _e, _f, _g, _h, _j, _k, _l, _m, _o, _p, _q, _r, _s, _t, _u, _v, _w, _x, _y, _z, _0, _1, _2, _3, _4, _5, _6, _7;
         return __awaiter(this, void 0, void 0, function* () {
             try {
                 let task = yield task_1.default.getOneTaskBy({
@@ -194,7 +194,7 @@ class TrelloWebhook {
                         movements: [
                             ...task.movements,
                             {
-                                status: (_8 = inProgressList === null || inProgressList === void 0 ? void 0 : inProgressList.name) !== null && _8 !== void 0 ? _8 : status,
+                                status: (inProgressList === null || inProgressList === void 0 ? void 0 : inProgressList.name) ? inProgressList.name : status,
                                 movedAt: new Date(Date.now()),
                             },
                         ],

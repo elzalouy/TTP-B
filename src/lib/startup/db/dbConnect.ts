@@ -505,10 +505,7 @@ export const initializeTTPTasks = async () => {
         };
       }),
     ];
-    Tasks.bulkWrite(update, {}, function (res, err) {
-      if (err) console.log(err);
-      else console.log(res);
-    });
+    Tasks.bulkWrite(update, {});
     tasks.forEach((item) => {
       TrelloActionsController.__addWebHook(item.cardId, "trelloWebhookUrlTask");
     });

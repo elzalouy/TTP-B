@@ -12,7 +12,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.TaskFileSchema = exports.FilesSchema = void 0;
+exports.TaskFileSchema = exports.deadlineChainSchema = exports.movementSchema = exports.FilesSchema = void 0;
 const mongoose_1 = require("mongoose");
 const logger_1 = __importDefault(require("../../logger"));
 const Project_1 = __importDefault(require("./Project"));
@@ -22,7 +22,7 @@ exports.FilesSchema = new mongoose_1.Schema({
     mimeType: { type: String },
     url: { type: String },
 });
-const movementSchema = new mongoose_1.Schema({
+exports.movementSchema = new mongoose_1.Schema({
     status: {
         type: String,
         enum: [
@@ -38,8 +38,8 @@ const movementSchema = new mongoose_1.Schema({
     },
     movedAt: { Type: Date },
 });
-const deadlineChainSchema = new mongoose_1.Schema({
-    userId: { type: mongoose_1.Schema.Types.ObjectId, required: true },
+exports.deadlineChainSchema = new mongoose_1.Schema({
+    userId: { type: String, required: true },
     name: { type: String, required: true },
     before: { type: Date, required: true },
     current: { type: Date, required: true },
@@ -66,7 +66,7 @@ const TaskSchema = new mongoose_1.Schema({
         default: null,
     },
     listId: {
-        type: mongoose_1.Schema.Types.ObjectId,
+        type: String,
         required: true,
         default: null,
     },
@@ -114,12 +114,12 @@ const TaskSchema = new mongoose_1.Schema({
         default: null,
     },
     deadlineChain: {
-        type: [deadlineChainSchema],
+        type: [exports.deadlineChainSchema],
         required: true,
         default: [],
         min: 0,
     },
-    movements: { type: [movementSchema], min: 1, required: true },
+    movements: { type: [exports.movementSchema], min: 1, required: true },
 }, {
     timestamps: true,
     strict: false,

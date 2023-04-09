@@ -157,9 +157,10 @@ DepartmentSchema.post("save", function (error, doc, next) {
         }
     });
 });
-DepartmentSchema.pre("remove", function () {
+DepartmentSchema.pre("remove", function (next) {
     return __awaiter(this, void 0, void 0, function* () {
-        let boardId = this.boardId;
+        const current = this;
+        let boardId = current.boardId;
         let result = yield Task_1.default.deleteMany({ boardId: boardId });
         logger_1.default.info({ deleteTasksOfDepartment: result });
     });

@@ -8,7 +8,10 @@ const DeadlineChainSchema: Schema = new Schema<DeadlineChain>({
   current: { type: Date, required: true },
 });
 
-const ProjectSchema: Schema = new Schema<ProjectInfo, ProjectModelType>(
+const ProjectSchema: Schema<ProjectInfo, ProjectModelType> = new Schema<
+  ProjectInfo,
+  ProjectModelType
+>(
   {
     name: {
       type: String,

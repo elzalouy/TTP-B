@@ -345,7 +345,7 @@ class TaskController extends tasks_1.default {
                                 status: isList !== null && isList !== void 0 ? isList : "In Progress",
                                 movements: (_f = isTaskFound === null || isTaskFound === void 0 ? void 0 : isTaskFound.movements) !== null && _f !== void 0 ? _f : [
                                     {
-                                        status: isList !== null && isList !== void 0 ? isList : "In Progress",
+                                        status: isList ? isList : "In Progress",
                                         movedAt: new Date(Date.now()),
                                     },
                                 ],

@@ -1,9 +1,16 @@
 import { model, Schema } from "mongoose";
 import logger from "../../logger";
-import { Movement, TaskData, TaskInfo, TasksModel } from "../types/model/tasks";
+import {
+  AttachmentSchema,
+  Movement,
+  TaskData,
+  TaskInfo,
+  TasksModel,
+} from "../types/model/tasks";
 import Project from "./Project";
 import { TaskDeadlineChain } from "../types/model/tasks";
-export const FilesSchema: Schema = new Schema({
+import { ObjectId } from "mongodb";
+export const FilesSchema: Schema<AttachmentSchema> = new Schema({
   name: { type: String },
   trelloId: { type: String },
   mimeType: { type: String },
@@ -27,7 +34,7 @@ export const movementSchema: Schema = new Schema<Movement>({
 });
 
 export const deadlineChainSchema: Schema = new Schema<TaskDeadlineChain>({
-  userId: { type: Schema.Types.ObjectId, required: true },
+  userId: { type: String, required: true },
   name: { type: String, required: true },
   before: { type: Date, required: true },
   current: { type: Date, required: true },
@@ -56,7 +63,7 @@ const TaskSchema = new Schema<TaskInfo, TasksModel>(
       default: null,
     },
     listId: {
-      type: Schema.Types.ObjectId,
+      type: String,
       required: true,
       default: null,
     },
