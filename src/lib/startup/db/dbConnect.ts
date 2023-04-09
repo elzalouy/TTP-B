@@ -337,34 +337,37 @@ export const initializeTTPTasks = async () => {
         let dep = departments.find((d) => d.boardId === card.idBoard);
         let status = dep.lists.find((list) => list.listId === card.idList);
         let team = dep.teams.find((team) => team.listId === card.idList);
-        item.name = card.name;
-        item.boardId = card.idBoard;
-        item.listId = card.idList;
-        item.status = status?.name ?? "In Progress";
-        item.teamId = new ObjectId(team?._id) ?? null;
-        item.cardId = card.id;
-        item.description = card.desc ? card.desc : "";
-        item.start = card.start;
-        item.deadline = card.due;
-        item.trelloShortUrl = card.shortUrl;
-        item.movements ??= [
-          {
-            movedAt: new Date(Date.now()),
-            status: status?.name ?? "In Progress",
-          },
-        ];
-        item.attachedFiles =
-          card.attachments.length > 0
-            ? card?.attachments?.map((item) => {
-                return {
-                  name: item.fileName,
-                  trelloId: item.id,
-                  mimeType: item.mimeType,
-                  url: item.url,
-                };
-              })
-            : [];
-        return item;
+        let replacement = new Tasks({
+          _id: item._id,
+          name: item.name,
+          boardId: card.idBoard,
+          listId: card.idList,
+          status: status?.name ?? "In Progress",
+          teamId: team?._id ? new ObjectId(team?._id) : null,
+          cardId: card.id,
+          description: card.desc ?? "",
+          start: card.start ?? null,
+          deadline: card.due ?? null,
+          trelloShortUrl: card.shortUrl ?? "",
+          movements: item.movements
+            ? item.movements
+            : [
+                {
+                  movedAt: new Date(Date.now()),
+                  status: status.name ?? "In Progress",
+                },
+              ],
+          attachedFiles:
+            card?.attachments?.map((item) => {
+              return {
+                name: item.fileName,
+                trelloId: item.id,
+                mimeType: item.mimeType,
+                url: item.url,
+              };
+            }) ?? [],
+        });
+        return replacement;
       })
     );
     tasks = tasks.map((item) => {
@@ -405,7 +408,6 @@ export const initializeTTPTasks = async () => {
             {
               status: status?.name ?? "In Progress",
               movedAt: new Date(Date.now()),
-              index: 0,
             },
           ],
         });
@@ -424,6 +426,12 @@ export const initializeTTPTasks = async () => {
           : board?.lists.find((l) => l.name === item.status).id
           ? board?.lists.find((l) => l.name === item.status).id
           : creativeBoard?.lists.find((l) => l.name === item.status)?.id;
+        let status = list
+          ? list.name
+          : board?.lists.find((l) => l.name === item.status).name
+          ? board?.lists.find((l) => l.name === item.status).name
+          : creativeBoard?.lists.find((l) => l.name === item.status)?.name ??
+            "In Progress";
         let card: Card = await TrelloActionsController.__createCard({
           boardId: boardId,
           listId: listId,
@@ -432,21 +440,28 @@ export const initializeTTPTasks = async () => {
           start: item?.start,
           name: item.name,
         });
-        item.boardId = boardId;
-        item.listId = listId;
-        item.cardId = card.id;
-        item.movements ??= [
-          {
-            movedAt: new Date(Date.now()),
-            status: list
-              ? list.name
-              : board?.lists.find((l) => l.name === item.status).name
-              ? board?.lists.find((l) => l.name === item.status).name
-              : creativeBoard?.lists.find((l) => l.name === item.status)
-                  ?.name ?? "In Progress",
-          },
-        ];
-        return item;
+        let replacement = new Tasks({
+          _id: item._id,
+          boardId: boardId,
+          listId: listId,
+          movements: item.movements ?? [
+            {
+              movedAt: new Date(Date.now()),
+              status: status,
+            },
+          ],
+          name: item.name,
+          status: status,
+          teamId: item?.teamId,
+          cardId: card.id,
+          description: item.description,
+          start: item.start,
+          deadline: item.deadline,
+          trelloShortUrl: card.shortUrl,
+          deliveryDate: status === "Done" ? new Date(Date.now()) : null,
+          attachedFiles: [],
+        });
+        return replacement;
       })
     );
     tasks = tasks.map((item) => {

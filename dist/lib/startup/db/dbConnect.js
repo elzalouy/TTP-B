@@ -244,7 +244,7 @@ const initializeTTPTasks = () => __awaiter(void 0, void 0, void 0, function* () 
         // execute the function
         // Existed on TTP & Trello > make it same
         intersection = yield Promise.all(intersection.map((item) => __awaiter(void 0, void 0, void 0, function* () {
-            var _h, _j, _k;
+            var _h, _j, _k, _l, _m;
             let card = cards.find((c) => c.id === item.cardId);
             let dep = departments.find((d) => d.boardId === card.idBoard);
             let status = dep.lists.find((list) => list.listId === card.idList);
@@ -259,9 +259,15 @@ const initializeTTPTasks = () => __awaiter(void 0, void 0, void 0, function* () 
             item.start = card.start;
             item.deadline = card.due;
             item.trelloShortUrl = card.shortUrl;
+            (_k = item.movements) !== null && _k !== void 0 ? _k : (item.movements = [
+                {
+                    movedAt: new Date(Date.now()),
+                    status: (_l = status === null || status === void 0 ? void 0 : status.name) !== null && _l !== void 0 ? _l : "In Progress",
+                },
+            ]);
             item.attachedFiles =
                 card.attachments.length > 0
-                    ? (_k = card === null || card === void 0 ? void 0 : card.attachments) === null || _k === void 0 ? void 0 : _k.map((item) => {
+                    ? (_m = card === null || card === void 0 ? void 0 : card.attachments) === null || _m === void 0 ? void 0 : _m.map((item) => {
                         return {
                             name: item.fileName,
                             trelloId: item.id,
@@ -319,7 +325,7 @@ const initializeTTPTasks = () => __awaiter(void 0, void 0, void 0, function* () 
         tasks = [...tasks, ...newTasks];
         // not Existed on Trello > create it on Trello
         notExistedOnTrello = yield Promise.all(notExistedOnTrello.map((item) => __awaiter(void 0, void 0, void 0, function* () {
-            var _l;
+            var _o, _p, _q, _r;
             let board = boards.find((b) => b.id === item.boardId);
             let boardId = board ? board.id : creativeBoard === null || creativeBoard === void 0 ? void 0 : creativeBoard.id;
             let list = board === null || board === void 0 ? void 0 : board.lists.find((l) => l.id === item.listId);
@@ -327,7 +333,7 @@ const initializeTTPTasks = () => __awaiter(void 0, void 0, void 0, function* () 
                 ? list.id
                 : (board === null || board === void 0 ? void 0 : board.lists.find((l) => l.name === item.status).id)
                     ? board === null || board === void 0 ? void 0 : board.lists.find((l) => l.name === item.status).id
-                    : (_l = creativeBoard === null || creativeBoard === void 0 ? void 0 : creativeBoard.lists.find((l) => l.name === item.status)) === null || _l === void 0 ? void 0 : _l.id;
+                    : (_o = creativeBoard === null || creativeBoard === void 0 ? void 0 : creativeBoard.lists.find((l) => l.name === item.status)) === null || _o === void 0 ? void 0 : _o.id;
             let card = yield trello_1.default.__createCard({
                 boardId: boardId,
                 listId: listId,
@@ -339,6 +345,16 @@ const initializeTTPTasks = () => __awaiter(void 0, void 0, void 0, function* () 
             item.boardId = boardId;
             item.listId = listId;
             item.cardId = card.id;
+            (_p = item.movements) !== null && _p !== void 0 ? _p : (item.movements = [
+                {
+                    movedAt: new Date(Date.now()),
+                    status: list
+                        ? list.name
+                        : (board === null || board === void 0 ? void 0 : board.lists.find((l) => l.name === item.status).name)
+                            ? board === null || board === void 0 ? void 0 : board.lists.find((l) => l.name === item.status).name
+                            : (_r = (_q = creativeBoard === null || creativeBoard === void 0 ? void 0 : creativeBoard.lists.find((l) => l.name === item.status)) === null || _q === void 0 ? void 0 : _q.name) !== null && _r !== void 0 ? _r : "In Progress",
+                },
+            ]);
             return item;
         })));
         tasks = tasks.map((item) => {
@@ -355,27 +371,25 @@ const initializeTTPTasks = () => __awaiter(void 0, void 0, void 0, function* () 
             }),
             ...tasks.map((item) => {
                 return {
-                    updateOne: {
+                    replaceOne: {
                         filter: { _id: item._id },
-                        update: {
-                            $set: {
-                                name: item.name,
-                                projectId: item.projectId,
-                                categoryId: item.categoryId,
-                                subCategoryId: item.subCategoryId,
-                                teamId: item.teamId,
-                                listId: item.listId,
-                                status: item.status,
-                                start: item.start,
-                                deadline: item.deadline,
-                                cardId: item.cardId,
-                                boardId: item.boardId,
-                                description: (item === null || item === void 0 ? void 0 : item.description) ? item.description : "",
-                                trelloShortUrl: item.trelloShortUrl,
-                                attachedFiles: item.attachedFiles,
-                                deadlineChain: item.deadlineChain,
-                                movements: item.movements,
-                            },
+                        replacement: {
+                            name: item.name,
+                            projectId: item.projectId,
+                            categoryId: item.categoryId,
+                            subCategoryId: item.subCategoryId,
+                            teamId: item.teamId,
+                            listId: item.listId,
+                            status: item.status,
+                            start: item.start,
+                            deadline: item.deadline,
+                            cardId: item.cardId,
+                            boardId: item.boardId,
+                            description: (item === null || item === void 0 ? void 0 : item.description) ? item.description : "",
+                            trelloShortUrl: item.trelloShortUrl,
+                            attachedFiles: item.attachedFiles,
+                            deadlineChain: item.deadlineChain,
+                            movements: item.movements,
                         },
                     },
                 };
@@ -397,7 +411,7 @@ const initializeTTPTasks = () => __awaiter(void 0, void 0, void 0, function* () 
 });
 exports.initializeTTPTasks = initializeTTPTasks;
 const createTTPCreativeMainBoard = () => __awaiter(void 0, void 0, void 0, function* () {
-    var _m;
+    var _s;
     try {
         let dep = {
             name: config_1.default.get("CreativeBoard"),
@@ -406,7 +420,7 @@ const createTTPCreativeMainBoard = () => __awaiter(void 0, void 0, void 0, funct
         let department = yield department_1.default.createDepartment(dep);
         let listOfProjects = department &&
             (department === null || department === void 0 ? void 0 : department.lists) &&
-            ((_m = department === null || department === void 0 ? void 0 : department.lists) === null || _m === void 0 ? void 0 : _m.find((item) => item.name === "projects"));
+            ((_s = department === null || department === void 0 ? void 0 : department.lists) === null || _s === void 0 ? void 0 : _s.find((item) => item.name === "projects"));
         if (department && listOfProjects) {
             (0, department_actions_queue_1.createProjectsCardsInCreativeBoard)(department);
         }
