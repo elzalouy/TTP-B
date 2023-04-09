@@ -13,5 +13,5 @@
     "Tasks Board"
   ],
   "redis": "redis://localhost:6379",
-  "CreativeBoard": "TTP Creative"
+  "CreativeBoard": "dev / TTP Creative"
 }
