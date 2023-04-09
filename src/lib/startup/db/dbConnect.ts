@@ -12,13 +12,9 @@ import { IDepartment, IDepartmentState } from "../../types/model/Department";
 import { createProjectsCardsInCreativeBoard } from "../../backgroundJobs/actions/department.actions.queue";
 import { Board, Card, List } from "../../types/controller/trello";
 import { CreativeListTypes, ListTypes } from "../../types/model/Department";
-import { LeanDocument } from "mongoose";
 import _ from "lodash";
-import { TaskData, TaskInfo } from "../../types/model/tasks";
-import TaskController from "../../controllers/task";
-import TaskDB from "../../dbCalls/tasks/tasks";
-import Tasks, { movementSchema } from "../../models/Task";
-import mongoose from "mongoose";
+import { TaskInfo } from "../../types/model/tasks";
+import Tasks from "../../models/Task";
 import { ObjectId } from "mongodb";
 config();
 

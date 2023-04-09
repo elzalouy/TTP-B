@@ -18,7 +18,7 @@ const app = express();
 prod(app);
 export const http = createServer(app);
 export const io = appSocket(http);
-mongoose.set("strictQuery", true);
+mongoose.set("strictQuery", false);
 function server() {
   try {
     //Express App
