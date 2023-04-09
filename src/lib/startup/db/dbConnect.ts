@@ -229,11 +229,6 @@ export const initializeTrelloBoards = async () => {
       return index >= 0 ? intersection[index] : item;
     });
 
-    let creative = allDepartments.find(
-      (item) => item.name === Config.get("CreativeBoard")
-    );
-    if (!creative) createTTPCreativeMainBoard();
-    // allDepartments.map((item) => item.save());
     let update = [
       ...allDepartments.map((item) => {
         return {
@@ -261,6 +256,9 @@ export const initializeTrelloBoards = async () => {
     await Department.bulkWrite(update);
     await allDepartments.forEach((item) =>
       TrelloActionsController.__addWebHook(item.boardId, "trelloWebhookUrlTask")
+    );
+    let creative = allDepartments.find(
+      (item) => item.name === Config.get("CreativeBoard")
     );
   } catch (error) {
     logger.error(error);
@@ -308,6 +306,10 @@ export const initializeTTPTasks = async () => {
       boards.map(async (item) => {
         let boardCards: Card[] =
           await TrelloActionsController.__getCardsInBoard(item.id);
+        if (item.name === Config.get("CreativeBoard")) {
+          let list = item.lists.find((l) => l.name === "projects");
+          boardCards = boardCards.filter((item) => item.idList);
+        }
         return boardCards;
       })
     );
