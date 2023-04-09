@@ -478,6 +478,11 @@ export const initializeTTPTasks = async () => {
         };
       }),
       ...tasks.map((item) => {
+        console.log({
+          itemFiles: item.attachedFiles,
+          itemDeadlineChain: item.deadlineChain,
+          itemMovements: item.movements,
+        });
         return {
           replaceOne: {
             filter: { _id: item._id },
@@ -503,7 +508,6 @@ export const initializeTTPTasks = async () => {
         };
       }),
     ];
-    console.log({ update });
     Tasks.bulkWrite(update, {});
     tasks.forEach((item) => {
       TrelloActionsController.__addWebHook(item.cardId, "trelloWebhookUrlTask");

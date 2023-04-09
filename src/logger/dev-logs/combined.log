@@ -50325,3 +50325,17 @@
   level: 'info',
   timestamp: '2023-04-09 23:38:06'
 }
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:WFUiEjrljsIDFOmd@cluster0.oeari.mongodb.net/ttp-beta'
+  },
+  level: 'info',
+  timestamp: '2023-04-09 23:44:52'
+}
+{
+  message: {
+    removeBoard: 'https://api.trello.com/1/boards/643331e0e8b7dd5e37f9ce6e?response_type=token&key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68'
+  },
+  level: 'info',
+  timestamp: '2023-04-09 23:45:07'
+}
