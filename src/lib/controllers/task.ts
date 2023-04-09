@@ -319,7 +319,7 @@ class TaskController extends TaskDB {
               status: isList ?? "In Progress",
               movements: isTaskFound?.movements ?? [
                 {
-                  status: isList ?? "In Progress",
+                  status: isList ? isList : "In Progress",
                   movedAt: new Date(Date.now()),
                 },
               ],

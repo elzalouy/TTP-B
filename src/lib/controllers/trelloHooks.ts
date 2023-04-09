@@ -201,7 +201,7 @@ export default class TrelloWebhook {
           movements: [
             ...task.movements,
             {
-              status: inProgressList?.name ?? status,
+              status: inProgressList?.name ? inProgressList.name : status,
               movedAt: new Date(Date.now()),
             },
           ],
