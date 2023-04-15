@@ -255,9 +255,8 @@ class TrelloActionsController {
     try {
       let url = `cards/?idList=${
         data.teamListId ? data.teamListId : data.listId
-      }&name=${data.name}&desc=${data.description}&start=${new Date(
-        data.start ? data.start : Date.now()
-      ).getTime()}&`;
+      }&name=${data.name}&desc=${data.description}&`;
+      if (data.start) url = `${url}start=${data.start}&`;
       if (data.deadline)
         url = `${url}due=${new Date(data.deadline).getTime()}&`;
       let cardCreateApi = trelloApi(url);

@@ -130,8 +130,6 @@ class TaskDB {
       let task = await Tasks.findOne(data);
       let newdata = {
         ...value,
-        // lastMove: task.status,
-        // lastMoveDate: data.lastMoveDate,
       };
       let result = await Tasks.findOneAndUpdate(data, newdata, {
         new: true,
@@ -146,9 +144,11 @@ class TaskDB {
   static async getTasksDB(data: mongoose.FilterQuery<TaskInfo>) {
     return await TaskDB.__getTasks(data);
   }
+
   static async getTasksByIdsDB(ids: string[]) {
     return await TaskDB.__getTasksByIds(ids);
   }
+
   static async __getTasksByIds(ids: string[]) {
     try {
       let tasks = await Tasks.find({ _id: { $in: ids } }).lean();
@@ -158,6 +158,7 @@ class TaskDB {
       logger.error({ getTasksByIdDBError: error });
     }
   }
+
   static async __deleteTasksWhereDB(data: TaskData) {
     try {
       let tasks = await Tasks.find(data);
@@ -168,6 +169,7 @@ class TaskDB {
       logger.error({ deleteTasksWhereError: error });
     }
   }
+
   static async __getTasks(data: TaskData) {
     try {
       let tasks = await Tasks.find(data).lean();
@@ -176,6 +178,7 @@ class TaskDB {
       logger.error({ getTaskDBError: error });
     }
   }
+
   static async __deleteTasksByProjectId(id: String) {
     try {
       let deleteResult = await Tasks.deleteMany({ projectId: id });
@@ -205,6 +208,7 @@ class TaskDB {
       logger.error({ deleteTaskDBError: error });
     }
   }
+
   static async __updateTask(data: TaskData, user: any) {
     try {
       let id = data.id;
@@ -248,10 +252,9 @@ class TaskDB {
         ...task.movements,
         data.status !== task.status && {
           status: data.status,
-          movedAt: new Date(Date.now()),
+          movedAt: new Date(Date.now()).toDateString(),
         },
       ];
-      console.log({ task });
       delete task._id;
       let update = await Tasks.findByIdAndUpdate(id, task, {
         new: true,
@@ -400,7 +403,7 @@ class TaskDB {
       } else {
         let task = new Tasks(data);
         task.movements = [
-          { status: data.status, movedAt: new Date(Date.now()) },
+          { status: data.status, movedAt: new Date(Date.now()).toDateString() },
         ];
         task = await task.save();
         await io.sockets.emit("create-task", task);

@@ -6,12 +6,9 @@ import {
   projectsDueDate,
   projectsPassedDate,
 } from "../backgroundJobs/actions/project.actions.cron";
-import {
-  initializeSystemTasksJob,
-  initializeTrelloBoardsJob,
-} from "../backgroundJobs/actions/trello.actions.cron";
 import { initializeQueue } from "../backgroundJobs/actions/init.actions.queue";
 import { initializeTTPTasks, initializeTrelloBoards } from "./db/dbConnect";
+
 export default async function (
   io: Server<DefaultEventsMap, DefaultEventsMap, DefaultEventsMap, any>
 ) {

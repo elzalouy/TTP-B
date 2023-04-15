@@ -134,9 +134,13 @@ export default class TrelloWebhook {
               status: team
                 ? "In Progress"
                 : this.actionRequest.action.data.list.name,
-              movedAt: new Date(Date.now()),
+              movedAt: new Date(Date.now()).toDateString(),
             },
           ],
+          assignedAt:
+            team && this.actionRequest?.action?.data?.listBefore?.id
+              ? new Date(Date.now())
+              : this.task.assignedAt,
         };
         return await TaskController.createTaskByTrello(this.task);
       }
@@ -166,6 +170,9 @@ export default class TrelloWebhook {
         let department = await Department.findOne({
           boardId: task.boardId,
         });
+        let isMoved = this.actionRequest.action.data?.listBefore?.id
+          ? true
+          : false;
         let listId =
           this.actionRequest.action.data.list?.id ??
           this.actionRequest.action.data.card?.idList;
@@ -198,14 +205,14 @@ export default class TrelloWebhook {
           teamId: isNewTeam?._id ?? task.teamId,
           listId: isNewTeam?.listId ?? listId,
           status: inProgressList?.name ?? status,
-          movements: [
-            ...task.movements,
-            {
-              status: inProgressList?.name ? inProgressList.name : status,
-              movedAt: new Date(Date.now()),
-            },
-          ],
+          movements: task.movements,
         };
+        if (isMoved)
+          this.task.movements.push({
+            status: inProgressList?.name ? inProgressList.name : status,
+            movedAt: new Date(Date.now()).toDateString(),
+          });
+        console.log({ movements: this.task.movements });
         return await TaskController.updateTaskByTrelloDB(this.task, {
           id: this.user.id,
           name: this.user.name,

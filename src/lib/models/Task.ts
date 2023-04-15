@@ -10,13 +10,15 @@ import {
 import Project from "./Project";
 import { TaskDeadlineChain } from "../types/model/tasks";
 import { ObjectId } from "mongodb";
+
 export const FilesSchema: Schema<AttachmentSchema> = new Schema({
   name: { type: String },
   trelloId: { type: String },
   mimeType: { type: String },
   url: { type: String },
 });
-export const movementSchema: Schema = new Schema<Movement>({
+
+export const movementSchema: Schema<Movement> = new Schema<Movement>({
   status: {
     type: String,
     enum: [
@@ -30,7 +32,11 @@ export const movementSchema: Schema = new Schema<Movement>({
     ],
     default: "Tasks Board",
   },
-  movedAt: { Type: Date },
+  movedAt: {
+    type: String,
+    required: true,
+    default: new Date(Date.now()).toDateString(),
+  },
 });
 
 export const deadlineChainSchema: Schema = new Schema<TaskDeadlineChain>({
@@ -55,6 +61,11 @@ const TaskSchema = new Schema<TaskInfo, TasksModel>(
     categoryId: {
       type: Schema.Types.ObjectId,
       ref: "categories",
+      default: null,
+    },
+    subCategoryId: {
+      type: Schema.Types.ObjectId,
+      ref: "subcategories",
       default: null,
     },
     teamId: {
@@ -117,6 +128,7 @@ const TaskSchema = new Schema<TaskInfo, TasksModel>(
       min: 0,
     },
     movements: { type: [movementSchema], min: 1, required: true },
+    assignedAt: { type: Date, required: false, default: null },
   },
   {
     timestamps: true,

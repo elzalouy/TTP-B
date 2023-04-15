@@ -50339,3 +50339,407 @@
   level: 'info',
   timestamp: '2023-04-09 23:45:07'
 }
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2023-04-10 00:27:16'
+}
+{
+  message: {
+    body: {
+      name: 'card 1',
+      desc: '',
+      due: null,
+      start: null,
+      idList: {
+        name: 'Tasks Board',
+        listId: '64333bcb0b63cd8f0ce17bf8',
+        _id: new ObjectId("64333042864c2f53802415b9")
+      },
+      idBoard: '64333bcaf79ebc92a673a4c8'
+    }
+  },
+  level: 'info',
+  timestamp: '2023-04-10 15:37:10'
+}
+{
+  message: {
+    body: {
+      name: 'card 1',
+      desc: '',
+      due: null,
+      start: null,
+      idList: {
+        name: 'Tasks Board',
+        listId: '64333bcb0b63cd8f0ce17bf8',
+        _id: new ObjectId("64333042864c2f53802415b9")
+      },
+      idBoard: '64333bcaf79ebc92a673a4c8'
+    }
+  },
+  level: 'info',
+  timestamp: '2023-04-10 16:02:41'
+}
+{
+  message: {
+    body: {
+      name: 'card 1',
+      desc: '',
+      due: null,
+      start: null,
+      idList: {
+        name: 'Tasks Board',
+        listId: '64333bcb0b63cd8f0ce17bf8',
+        _id: new ObjectId("64333042864c2f53802415b9")
+      },
+      idBoard: '64333bcaf79ebc92a673a4c8'
+    }
+  },
+  level: 'info',
+  timestamp: '2023-04-10 16:03:01'
+}
+{
+  message: {
+    body: {
+      name: 'card 1',
+      desc: '',
+      due: 'Mon Apr 10 2023 00:00:00 GMT+0200 (Eastern European Standard Time)',
+      start: null,
+      idList: {
+        name: 'Tasks Board',
+        listId: '64333bcb0b63cd8f0ce17bf8',
+        _id: new ObjectId("64333042864c2f53802415b9")
+      },
+      idBoard: '64333bcaf79ebc92a673a4c8'
+    }
+  },
+  level: 'info',
+  timestamp: '2023-04-10 16:03:19'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2023-04-10 16:04:15'
+}
+{
+  message: { monthlyDeleteNotifications: 8 },
+  level: 'info',
+  timestamp: '2023-04-10 16:04:18'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2023-04-11 05:44:39'
+}
+{
+  message: { monthlyDeleteNotifications: 6 },
+  level: 'info',
+  timestamp: '2023-04-11 05:44:43'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2023-04-11 05:46:21'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2023-04-11 05:46:56'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2023-04-11 05:47:36'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2023-04-11 05:51:20'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2023-04-11 05:51:53'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2023-04-11 06:02:44'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2023-04-11 06:03:24'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2023-04-11 06:04:07'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2023-04-11 06:04:43'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2023-04-11 06:23:27'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2023-04-11 06:24:35'
+}
+{
+  message: {
+    body: {
+      name: 'card',
+      desc: 'desc',
+      due: 'Tue Apr 11 2023 00:00:00 GMT+0200 (Eastern European Standard Time)',
+      start: null,
+      idList: {
+        name: 'In Progress',
+        listId: '64333bcb70e28bc2788d797e',
+        _id: new ObjectId("6434e1060e970b3869e65814")
+      },
+      idBoard: '64333bcaf79ebc92a673a4c8'
+    }
+  },
+  level: 'info',
+  timestamp: '2023-04-11 06:26:08'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2023-04-11 07:20:50'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2023-04-11 07:43:11'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2023-04-11 09:18:44'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2023-04-11 09:19:19'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2023-04-11 09:31:02'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2023-04-11 09:32:54'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2023-04-11 09:33:52'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2023-04-11 09:36:16'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2023-04-11 09:40:53'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2023-04-11 09:57:03'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2023-04-11 09:57:37'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2023-04-11 09:59:08'
+}
+{
+  message: {
+    body: {
+      name: 'Nawaf Elmohsem-project-Design- (task name)',
+      desc: 'desc',
+      due: 'Sun Apr 30 2023 00:00:00 GMT+0200 (Eastern European Standard Time)',
+      start: null,
+      idList: {
+        name: 'Tasks Board',
+        listId: '6424b737e0bce38b66a30e84',
+        _id: new ObjectId("643513503fa93a22dc9c4e7c")
+      },
+      idBoard: '6424b705e5796122b2a2392f'
+    }
+  },
+  level: 'info',
+  timestamp: '2023-04-11 10:00:46'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2023-04-11 10:02:57'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2023-04-11 10:06:39'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2023-04-11 10:08:51'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2023-04-12 11:35:47'
+}
+{
+  message: { monthlyDeleteNotifications: 17 },
+  level: 'info',
+  timestamp: '2023-04-12 11:35:50'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2023-04-12 11:46:14'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2023-04-12 11:47:26'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2023-04-12 11:48:26'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2023-04-12 11:50:32'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2023-04-12 11:51:19'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2023-04-12 12:51:14'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2023-04-12 12:54:54'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2023-04-12 14:04:32'
+}
+{
+  message: { monthlyDeleteNotifications: 4 },
+  level: 'info',
+  timestamp: '2023-04-12 14:04:37'
+}
+{
+  message: {
+    body: {
+      name: 'card 1',
+      desc: 'My description should be displayed here, I am a Result-Driven Software Engineer who always aims to get involved and developed over time. My Expertise is wider about the FrontEnd and Backend development of the Web and Mobile Application ',
+      due: null,
+      start: null,
+      idList: {
+        name: 'Tasks Board',
+        listId: '64333bcb0b63cd8f0ce17bf8',
+        _id: new ObjectId("64369e561e22964ca42c9b70")
+      },
+      idBoard: '64333bcaf79ebc92a673a4c8'
+    }
+  },
+  level: 'info',
+  timestamp: '2023-04-12 14:12:19'
+}
+{
+  message: {
+    body: {
+      name: 'card 1',
+      desc: 'My description should be displayed here, I am a Result-Driven Software Engineer who always aims to get involved and developed over time. My Expertise is wider about the FrontEnd and Backend development of the Web and Mobile Application ',
+      due: 'Sun Apr 30 2023 00:00:00 GMT+0200 (Eastern European Standard Time)',
+      start: null,
+      idList: {
+        name: 'Tasks Board',
+        listId: '64333bcb0b63cd8f0ce17bf8',
+        _id: new ObjectId("64369e561e22964ca42c9b70")
+      },
+      idBoard: '64333bcaf79ebc92a673a4c8'
+    }
+  },
+  level: 'info',
+  timestamp: '2023-04-12 15:07:28'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2023-04-13 07:34:03'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2023-04-13 10:20:13'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2023-04-13 10:21:03'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2023-04-14 06:22:34'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2023-04-15 04:58:26'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2023-04-15 10:10:02'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2023-04-15 10:11:26'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2023-04-15 10:13:21'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2023-04-15 10:14:48'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2023-04-15 12:30:12'
+}

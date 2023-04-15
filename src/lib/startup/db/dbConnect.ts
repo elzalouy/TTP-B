@@ -341,7 +341,10 @@ export const initializeTTPTasks = async () => {
         let replacement = new Tasks({
           _id: item._id,
           name: item.name,
+          categoryId: item.categoryId,
+          subCategoryId: item.subCategoryId,
           boardId: card.idBoard,
+          projectId: item.projectId,
           listId: card.idList,
           status: status?.name ? status.name : "In Progress",
           teamId: team?._id ? new ObjectId(team?._id) : null,
@@ -354,7 +357,7 @@ export const initializeTTPTasks = async () => {
             ? item.movements
             : [
                 {
-                  movedAt: new Date(Date.now()),
+                  movedAt: new Date(Date.now()).toDateString(),
                   status: status.name ? status.name : "In Progress",
                 },
               ],
@@ -407,7 +410,7 @@ export const initializeTTPTasks = async () => {
           movements: [
             {
               status: status?.name ? status.name : "In Progress",
-              movedAt: new Date(Date.now()),
+              movedAt: new Date(Date.now()).toDateString(),
             },
           ],
         });
@@ -449,7 +452,7 @@ export const initializeTTPTasks = async () => {
             ? item.movements
             : [
                 {
-                  movedAt: new Date(Date.now()),
+                  movedAt: new Date(Date.now()).toDateString(),
                   status: status,
                 },
               ],
@@ -463,6 +466,9 @@ export const initializeTTPTasks = async () => {
           trelloShortUrl: card.shortUrl,
           deliveryDate: status === "Done" ? new Date(Date.now()) : null,
           attachedFiles: [],
+          projectId: item.projectId,
+          categoryId: item.categoryId,
+          subCategoryId: item.subCategoryId,
         });
         return replacement;
       })
@@ -480,11 +486,6 @@ export const initializeTTPTasks = async () => {
         };
       }),
       ...tasks.map((item) => {
-        console.log({
-          itemFiles: item.attachedFiles,
-          itemDeadlineChain: item.deadlineChain,
-          itemMovements: item.movements,
-        });
         return {
           replaceOne: {
             filter: { _id: item._id },

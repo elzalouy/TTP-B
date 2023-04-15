@@ -178,6 +178,10 @@ class TaskController extends TaskDB {
       if (createdCard) {
         data.cardId = createdCard.id;
         data.trelloShortUrl = createdCard.shortUrl;
+        data.movements = [
+          { movedAt: new Date(data.start).toDateString(), status: data.status },
+        ];
+        if (data.teamId) data.assignedAt = new Date(Date.now());
         task = await super.createTaskDB(data);
         if (task) {
           taskRoutesQueue.push(async () => {
@@ -320,7 +324,7 @@ class TaskController extends TaskDB {
               movements: isTaskFound?.movements ?? [
                 {
                   status: isList ? isList : "In Progress",
-                  movedAt: new Date(Date.now()),
+                  movedAt: new Date(Date.now()).toDateString(),
                 },
               ],
             };

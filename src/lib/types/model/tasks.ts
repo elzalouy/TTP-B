@@ -30,6 +30,7 @@ export interface TaskInfo extends Document {
   attachedFiles?: AttachmentSchema[];
   deadlineChain: TaskDeadlineChain[];
   movements?: Movement[];
+  assignedAt?: Date | number;
 }
 
 export interface TaskHistory {
@@ -68,6 +69,7 @@ export interface TaskData {
   teamListId?: string;
   deadlineChain?: TaskDeadlineChain[];
   movements?: Movement[];
+  assignedAt?: Date | number;
 }
 
 export interface AttachmentResponse {
@@ -106,5 +108,5 @@ export interface DownloadAttachmentResponse {}
 
 export interface Movement {
   status: string;
-  movedAt: Date;
+  movedAt: string;
 }
