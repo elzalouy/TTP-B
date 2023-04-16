@@ -50743,3 +50743,147 @@
   level: 'info',
   timestamp: '2023-04-15 12:30:12'
 }
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2023-04-15 23:51:59'
+}
+{
+  message: {
+    body: {
+      name: 'card 1',
+      desc: '',
+      due: null,
+      start: null,
+      idList: {
+        name: 'Tasks Board',
+        listId: '64333bcb0b63cd8f0ce17bf8',
+        _id: new ObjectId("643b1c8300cec94116dadb9c")
+      },
+      idBoard: '64333bcaf79ebc92a673a4c8'
+    }
+  },
+  level: 'info',
+  timestamp: '2023-04-16 00:56:30'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2023-04-16 01:00:52'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2023-04-16 01:02:24'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2023-04-16 01:02:51'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2023-04-16 01:04:55'
+}
+{
+  message: {
+    body: {
+      name: 'card 1',
+      desc: '',
+      due: null,
+      start: null,
+      idList: '64333bcb0b63cd8f0ce17bf8',
+      idBoard: '64333bcaf79ebc92a673a4c8'
+    }
+  },
+  level: 'info',
+  timestamp: '2023-04-16 01:05:17'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2023-04-16 01:07:04'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2023-04-16 01:07:54'
+}
+{
+  message: {
+    body: {
+      name: 'card 1',
+      desc: '',
+      due: null,
+      start: 2023-04-09T22:27:25.890Z,
+      idList: '64333bcb0b63cd8f0ce17bf8',
+      idBoard: '64333bcaf79ebc92a673a4c8'
+    }
+  },
+  level: 'info',
+  timestamp: '2023-04-16 01:08:51'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2023-04-16 01:11:13'
+}
+{
+  message: {
+    body: {
+      name: 'card 1',
+      desc: '',
+      due: null,
+      start: 2023-04-09T22:27:25.890Z,
+      idList: '64333bcb0b63cd8f0ce17bf8',
+      idBoard: '64333bcaf79ebc92a673a4c8'
+    }
+  },
+  level: 'info',
+  timestamp: '2023-04-16 01:11:42'
+}
+{
+  message: {
+    body: {
+      name: 'card 1',
+      desc: '',
+      due: null,
+      start: 2023-04-09T22:27:25.890Z,
+      idList: '64333bcb0b63cd8f0ce17bf8',
+      idBoard: '64333bcaf79ebc92a673a4c8'
+    }
+  },
+  level: 'info',
+  timestamp: '2023-04-16 01:51:11'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2023-04-16 01:52:07'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2023-04-16 01:54:10'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2023-04-16 01:55:04'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2023-04-16 10:05:23'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2023-04-16 10:07:41'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2023-04-16 10:09:02'
+}

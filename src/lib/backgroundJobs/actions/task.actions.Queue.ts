@@ -87,15 +87,12 @@ export const updateCardJob = (
       let taskData: any = {
         name: data.name,
         idBoard: data.boardId,
-        idList: teamListId
-          ? teamListId
-          : statusListId
-          ? statusListId
-          : current.listId,
-        due: data.deadline ? data.deadline : null,
-        start: data.start ? data.start : null,
-        desc: data.description ? data.description : "",
+        idList: teamListId?.listId ?? statusListId?.listId ?? current.listId,
+        due: data?.deadline ?? current?.deadline ?? null,
+        start: data?.start ?? current?.start ?? null,
+        desc: data?.description ?? "",
       };
+      console.log({ taskData, data });
       let response = await TrelloController.__updateCard({
         cardId: data.cardId,
         data: taskData,

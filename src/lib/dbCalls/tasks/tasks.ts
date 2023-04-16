@@ -248,13 +248,12 @@ class TaskDB {
           )
         : task.attachedFiles;
       task.teamId = new ObjectId(data.teamId) ?? task.teamId;
-      task.movements = [
-        ...task.movements,
-        data.status !== task.status && {
+      task.movements = [...task.movements];
+      if (data.status !== task.status)
+        task.movements.push({
           status: data.status,
           movedAt: new Date(Date.now()).toDateString(),
-        },
-      ];
+        });
       delete task._id;
       let update = await Tasks.findByIdAndUpdate(id, task, {
         new: true,
