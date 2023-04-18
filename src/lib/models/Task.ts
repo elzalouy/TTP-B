@@ -35,7 +35,7 @@ export const movementSchema: Schema<Movement> = new Schema<Movement>({
   movedAt: {
     type: String,
     required: true,
-    default: new Date(Date.now()).toDateString(),
+    default: new Date(Date.now()).toString(),
   },
 });
 

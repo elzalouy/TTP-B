@@ -357,7 +357,7 @@ export const initializeTTPTasks = async () => {
             ? item.movements
             : [
                 {
-                  movedAt: new Date(Date.now()).toDateString(),
+                  movedAt: new Date(Date.now()).toString(),
                   status: status.name ? status.name : "In Progress",
                 },
               ],
@@ -410,7 +410,7 @@ export const initializeTTPTasks = async () => {
           movements: [
             {
               status: status?.name ? status.name : "In Progress",
-              movedAt: new Date(Date.now()).toDateString(),
+              movedAt: new Date(Date.now()).toString(),
             },
           ],
         });
@@ -452,7 +452,7 @@ export const initializeTTPTasks = async () => {
             ? item.movements
             : [
                 {
-                  movedAt: new Date(Date.now()).toDateString(),
+                  movedAt: new Date(Date.now()).toString(),
                   status: status,
                 },
               ],

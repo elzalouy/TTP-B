@@ -220,8 +220,8 @@ class TaskDB {
       if (
         task.deadline &&
         data.deadline &&
-        new Date(task.deadline).toDateString() !==
-          new Date(data.deadline).toDateString()
+        new Date(task.deadline).toString() !==
+          new Date(data.deadline).toString()
       ) {
         task.deadlineChain.push({
           userId: user.id,
@@ -252,7 +252,7 @@ class TaskDB {
       if (data.status !== task.status)
         task.movements.push({
           status: data.status,
-          movedAt: new Date(Date.now()).toDateString(),
+          movedAt: new Date(Date.now()).toString(),
         });
       delete task._id;
       let update = await Tasks.findByIdAndUpdate(id, task, {
@@ -349,8 +349,8 @@ class TaskDB {
         task?.deadline !== null &&
         task.deadline !== undefined &&
         data?.deadline &&
-        new Date(task.deadline).toDateString() !==
-          new Date(data.deadline).toDateString()
+        new Date(task.deadline).toString() !==
+          new Date(data.deadline).toString()
       ) {
         task.deadlineChain.push({
           userId: user.id,
@@ -402,7 +402,7 @@ class TaskDB {
       } else {
         let task = new Tasks(data);
         task.movements = [
-          { status: data.status, movedAt: new Date(Date.now()).toDateString() },
+          { status: data.status, movedAt: new Date(Date.now()).toString() },
         ];
         task = await task.save();
         await io.sockets.emit("create-task", task);

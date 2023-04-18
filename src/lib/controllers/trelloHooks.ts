@@ -134,7 +134,7 @@ export default class TrelloWebhook {
               status: team
                 ? "In Progress"
                 : this.actionRequest.action.data.list.name,
-              movedAt: new Date(Date.now()).toDateString(),
+              movedAt: new Date(Date.now()).toString(),
             },
           ],
           assignedAt:
@@ -210,7 +210,7 @@ export default class TrelloWebhook {
         if (isMoved)
           this.task.movements.push({
             status: inProgressList?.name ? inProgressList.name : status,
-            movedAt: new Date(Date.now()).toDateString(),
+            movedAt: new Date(Date.now()).toString(),
           });
         console.log({ movements: this.task.movements });
         return await TaskController.updateTaskByTrelloDB(this.task, {
