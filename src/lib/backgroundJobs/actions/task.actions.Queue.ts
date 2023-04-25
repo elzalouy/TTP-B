@@ -92,7 +92,6 @@ export const updateCardJob = (
         start: data?.start ?? current?.start ?? null,
         desc: data?.description ?? "",
       };
-      console.log({ taskData, data });
       let response = await TrelloController.__updateCard({
         cardId: data.cardId,
         data: taskData,

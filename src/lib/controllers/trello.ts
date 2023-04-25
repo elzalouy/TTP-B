@@ -2,9 +2,9 @@ import fs from "fs";
 import Config from "config";
 import logger from "../../logger";
 import { config } from "dotenv";
-import { trelloApi } from "../services/trelloApi";
+import { trelloApi, trelloApiWithUrl } from "../services/trelloApi";
 import { MemberType } from "../types/model/User";
-import fetch, { RequestInit } from "node-fetch";
+import fetch, { RequestInit, Response } from "node-fetch";
 import { AttachmentResponse, TaskData } from "../types/model/tasks";
 import { editCardParams, updateCardResponse } from "../types/controller/trello";
 import { ProjectData, ProjectInfo } from "../types/model/Project";
@@ -100,7 +100,7 @@ class TrelloActionsController {
           Accept: "application/json",
         },
       })
-        .then((res) => {
+        .then(async (res) => {
           return res;
         })
         .catch((err) => logger.info("error in moving board", err));
@@ -316,21 +316,24 @@ class TrelloActionsController {
 
   static async __addWebHook(idModel: string, urlInConfig: string) {
     try {
-      let webhookUrl = `webhooks/?idModel=${idModel}&callbackURL=${Config.get(
-        urlInConfig
-      )}&`;
-      let webhookApi = trelloApi(webhookUrl);
-      let webhookResult = await fetch(webhookApi, {
+      let route = "webhooks";
+      let params = `idModel=${idModel}&callbackURL=${Config.get(urlInConfig)}`;
+      let webhookApi = trelloApiWithUrl(route, params);
+      fetch(webhookApi, {
         method: "POST",
         headers: {
           Accept: "application/json",
         },
-      });
-      return webhookResult;
+      })
+        .then(async (res: Response) => {
+          return res.text();
+        })
+        .catch((err) => console.log({ err }));
     } catch (error) {
       logger.error({ createWebHookError: error });
     }
   }
+
   static async __getAllWebWebHook(idModel: string, urlInConfig: string) {
     try {
       let webhookUrl = `webhooks/?idModel=${idModel}&callbackURL=${Config.get(
@@ -348,6 +351,7 @@ class TrelloActionsController {
       logger.error({ createWebHookError: error });
     }
   }
+
   static async __getBoardLists(boardId: string) {
     try {
       let url = await trelloApi(`boards/${boardId}/lists?`);
@@ -362,6 +366,7 @@ class TrelloActionsController {
       logger.error({ getBoardListsError: error });
     }
   }
+
   static async __archieveList(listId: string) {
     try {
       let archeiveApi = trelloApi(`lists/${listId}/closed?value=true&`);

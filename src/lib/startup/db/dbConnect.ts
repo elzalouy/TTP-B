@@ -147,7 +147,6 @@ export const initializeTrelloBoards = async () => {
 
     // Not Existed on TTP > create it on TTP
     notExistedOnTTP = allBoards.filter((item) => !depsIds.includes(item.id));
-    console.log({ notExistedOnTTP });
     let newDeps: IDepartment[] = await Promise.all(
       notExistedOnTTP?.map(async (item) => {
         let lists: List[] = await TrelloActionsController.__getBoardLists(
@@ -252,13 +251,13 @@ export const initializeTrelloBoards = async () => {
         };
       }),
     ];
-    console.log({ update });
     await Department.bulkWrite(update);
-    await allDepartments.forEach((item) =>
-      TrelloActionsController.__addWebHook(item.boardId, "trelloWebhookUrlTask")
-    );
-    let creative = allDepartments.find(
-      (item) => item.name === Config.get("CreativeBoard")
+    await allDepartments.forEach(
+      async (item) =>
+        await TrelloActionsController.__addWebHook(
+          item.boardId,
+          "trelloWebhookUrlTask"
+        )
     );
   } catch (error) {
     logger.error(error);
@@ -512,8 +511,11 @@ export const initializeTTPTasks = async () => {
       }),
     ];
     Tasks.bulkWrite(update, {});
-    tasks.forEach((item) => {
-      TrelloActionsController.__addWebHook(item.cardId, "trelloWebhookUrlTask");
+    await tasks.forEach(async (item) => {
+      await TrelloActionsController.__addWebHook(
+        item.cardId,
+        "trelloWebhookUrlTask"
+      );
     });
   } catch (error) {
     logger.error({ error });
@@ -538,4 +540,5 @@ export const createTTPCreativeMainBoard = async () => {
     logger.error({ createTTPCreativeMainBoardError: error });
   }
 };
+
 export default mongoDB;

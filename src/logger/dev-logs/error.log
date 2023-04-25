@@ -11416,3 +11416,442 @@
   level: 'error',
   timestamp: '2023-04-09 22:18:06'
 }
+{
+  message: {
+    handleWebhookUpdateCardError: TypeError: Cannot read properties of undefined (reading 'id')
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/presentation/trello/trelloHooks.ts:32:42
+        at Generator.next (<anonymous>)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/presentation/trello/trelloHooks.ts:8:71
+        at new Promise (<anonymous>)
+        at __awaiter (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/presentation/trello/trelloHooks.ts:4:12)
+        at handleWebhookUpdateCard (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/presentation/trello/trelloHooks.ts:48:16)
+        at Layer.handle [as handle_request] (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/express/lib/router/layer.js:95:5)
+        at next (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/express/lib/router/route.js:144:13)
+        at Route.dispatch (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/express/lib/router/route.js:114:3)
+        at Layer.handle [as handle_request] (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/express/lib/router/layer.js:95:5)
+  },
+  level: 'error',
+  timestamp: '2023-04-24 13:44:03'
+}
+{
+  message: {
+    handleWebhookUpdateCardError: TypeError: Cannot read properties of undefined (reading 'id')
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/presentation/trello/trelloHooks.ts:32:42
+        at Generator.next (<anonymous>)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/presentation/trello/trelloHooks.ts:8:71
+        at new Promise (<anonymous>)
+        at __awaiter (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/presentation/trello/trelloHooks.ts:4:12)
+        at handleWebhookUpdateCard (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/presentation/trello/trelloHooks.ts:48:16)
+        at Layer.handle [as handle_request] (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/express/lib/router/layer.js:95:5)
+        at next (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/express/lib/router/route.js:144:13)
+        at Route.dispatch (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/express/lib/router/route.js:114:3)
+        at Layer.handle [as handle_request] (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/express/lib/router/layer.js:95:5)
+  },
+  level: 'error',
+  timestamp: '2023-04-24 13:44:03'
+}
+{
+  message: {
+    handleWebhookUpdateCardError: TypeError: Cannot read properties of undefined (reading 'id')
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/presentation/trello/trelloHooks.ts:32:42
+        at Generator.next (<anonymous>)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/presentation/trello/trelloHooks.ts:8:71
+        at new Promise (<anonymous>)
+        at __awaiter (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/presentation/trello/trelloHooks.ts:4:12)
+        at handleWebhookUpdateCard (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/presentation/trello/trelloHooks.ts:48:16)
+        at Layer.handle [as handle_request] (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/express/lib/router/layer.js:95:5)
+        at next (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/express/lib/router/route.js:144:13)
+        at Route.dispatch (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/express/lib/router/route.js:114:3)
+        at Layer.handle [as handle_request] (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/express/lib/router/layer.js:95:5)
+  },
+  level: 'error',
+  timestamp: '2023-04-24 13:44:05'
+}
+{
+  message: {
+    handleWebhookUpdateCardError: TypeError: Cannot read properties of undefined (reading 'id')
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/presentation/trello/trelloHooks.ts:32:42
+        at Generator.next (<anonymous>)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/presentation/trello/trelloHooks.ts:8:71
+        at new Promise (<anonymous>)
+        at __awaiter (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/presentation/trello/trelloHooks.ts:4:12)
+        at handleWebhookUpdateCard (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/presentation/trello/trelloHooks.ts:48:16)
+        at Layer.handle [as handle_request] (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/express/lib/router/layer.js:95:5)
+        at next (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/express/lib/router/route.js:144:13)
+        at Route.dispatch (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/express/lib/router/route.js:114:3)
+        at Layer.handle [as handle_request] (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/express/lib/router/layer.js:95:5)
+  },
+  level: 'error',
+  timestamp: '2023-04-24 13:44:05'
+}
+{
+  message: {
+    handleWebhookUpdateCardError: TypeError: Cannot read properties of undefined (reading 'id')
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/presentation/trello/trelloHooks.ts:32:42
+        at Generator.next (<anonymous>)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/presentation/trello/trelloHooks.ts:8:71
+        at new Promise (<anonymous>)
+        at __awaiter (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/presentation/trello/trelloHooks.ts:4:12)
+        at handleWebhookUpdateCard (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/presentation/trello/trelloHooks.ts:48:16)
+        at Layer.handle [as handle_request] (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/express/lib/router/layer.js:95:5)
+        at next (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/express/lib/router/route.js:144:13)
+        at Route.dispatch (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/express/lib/router/route.js:114:3)
+        at Layer.handle [as handle_request] (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/express/lib/router/layer.js:95:5)
+  },
+  level: 'error',
+  timestamp: '2023-04-24 13:44:05'
+}
+{
+  message: {
+    handleWebhookUpdateCardError: TypeError: Cannot read properties of undefined (reading 'id')
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/presentation/trello/trelloHooks.ts:32:42
+        at Generator.next (<anonymous>)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/presentation/trello/trelloHooks.ts:8:71
+        at new Promise (<anonymous>)
+        at __awaiter (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/presentation/trello/trelloHooks.ts:4:12)
+        at handleWebhookUpdateCard (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/presentation/trello/trelloHooks.ts:48:16)
+        at Layer.handle [as handle_request] (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/express/lib/router/layer.js:95:5)
+        at next (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/express/lib/router/route.js:144:13)
+        at Route.dispatch (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/express/lib/router/route.js:114:3)
+        at Layer.handle [as handle_request] (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/express/lib/router/layer.js:95:5)
+  },
+  level: 'error',
+  timestamp: '2023-04-24 13:44:05'
+}
+{
+  message: {
+    handleWebhookUpdateCardError: TypeError: Cannot read properties of undefined (reading 'id')
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/presentation/trello/trelloHooks.ts:32:42
+        at Generator.next (<anonymous>)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/presentation/trello/trelloHooks.ts:8:71
+        at new Promise (<anonymous>)
+        at __awaiter (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/presentation/trello/trelloHooks.ts:4:12)
+        at handleWebhookUpdateCard (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/presentation/trello/trelloHooks.ts:48:16)
+        at Layer.handle [as handle_request] (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/express/lib/router/layer.js:95:5)
+        at next (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/express/lib/router/route.js:144:13)
+        at Route.dispatch (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/express/lib/router/route.js:114:3)
+        at Layer.handle [as handle_request] (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/express/lib/router/layer.js:95:5)
+  },
+  level: 'error',
+  timestamp: '2023-04-24 13:44:05'
+}
+{
+  message: {
+    createWebHookError: FetchError: invalid json response body at https://api.trello.com/1/webhooks/?idModel=64333bcaf79ebc92a673a4c8&callbackURL=https://6934-156-206-128-238.ngrok.io/api/webhookUpdate&key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68 reason: Unexpected token A in JSON at position 0
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/node-fetch/lib/index.js:273:32
+        at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+      type: 'invalid-json'
+    }
+  },
+  level: 'error',
+  timestamp: '2023-04-24 17:42:37'
+}
+{
+  message: {
+    createWebHookError: FetchError: invalid json response body at https://api.trello.com/1/webhooks/?idModel=6424b705e5796122b2a2392f&callbackURL=https://6934-156-206-128-238.ngrok.io/api/webhookUpdate&key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68 reason: Unexpected token A in JSON at position 0
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/node-fetch/lib/index.js:273:32
+        at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+      type: 'invalid-json'
+    }
+  },
+  level: 'error',
+  timestamp: '2023-04-24 17:42:37'
+}
+{
+  message: {
+    createWebHookError: FetchError: invalid json response body at https://api.trello.com/1/webhooks/?idModel=64333bceea372cb852b266f7&callbackURL=https://6934-156-206-128-238.ngrok.io/api/webhookUpdate&key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68 reason: Unexpected token A in JSON at position 0
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/node-fetch/lib/index.js:273:32
+        at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+      type: 'invalid-json'
+    }
+  },
+  level: 'error',
+  timestamp: '2023-04-24 17:42:40'
+}
+{
+  message: {
+    createWebHookError: FetchError: invalid json response body at https://api.trello.com/1/webhooks/?idModel=643515a99fd1ea463683d963&callbackURL=https://6934-156-206-128-238.ngrok.io/api/webhookUpdate&key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68 reason: Unexpected token A in JSON at position 0
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/node-fetch/lib/index.js:273:32
+        at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+      type: 'invalid-json'
+    }
+  },
+  level: 'error',
+  timestamp: '2023-04-24 17:42:40'
+}
+{
+  message: {
+    createWebHookError: FetchError: invalid json response body at https://api.trello.com/1/webhooks/?idModel=6435137b850f9209eff0ff78&callbackURL=https://6934-156-206-128-238.ngrok.io/api/webhookUpdate&key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68 reason: Unexpected token A in JSON at position 0
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/node-fetch/lib/index.js:273:32
+        at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+      type: 'invalid-json'
+    }
+  },
+  level: 'error',
+  timestamp: '2023-04-24 17:42:40'
+}
+{
+  message: {
+    createWebHookError: FetchError: invalid json response body at https://api.trello.com/1/webhooks/?idModel=6435152ebb8166a64612a1f4&callbackURL=https://6934-156-206-128-238.ngrok.io/api/webhookUpdate&key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68 reason: Unexpected token A in JSON at position 0
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/node-fetch/lib/index.js:273:32
+        at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+      type: 'invalid-json'
+    }
+  },
+  level: 'error',
+  timestamp: '2023-04-24 17:42:40'
+}
+{
+  message: {
+    createWebHookError: FetchError: invalid json response body at https://api.trello.com/1/webhooks/?idModel=64333bce56f82cdbae21fa6e&callbackURL=https://6934-156-206-128-238.ngrok.io/api/webhookUpdate&key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68 reason: Unexpected token A in JSON at position 0
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/node-fetch/lib/index.js:273:32
+        at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+      type: 'invalid-json'
+    }
+  },
+  level: 'error',
+  timestamp: '2023-04-24 17:42:41'
+}
+{
+  message: {
+    createWebHookError: FetchError: invalid json response body at https://api.trello.com/1/webhooks/?idModel=6424b705e5796122b2a2392f&callbackURL=https://6934-156-206-128-238.ngrok.io/api/webhookUpdate&key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68 reason: Unexpected token A in JSON at position 0
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/node-fetch/lib/index.js:273:32
+        at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+      type: 'invalid-json'
+    }
+  },
+  level: 'error',
+  timestamp: '2023-04-24 17:43:53'
+}
+{
+  message: {
+    createWebHookError: FetchError: invalid json response body at https://api.trello.com/1/webhooks/?idModel=64333bcaf79ebc92a673a4c8&callbackURL=https://6934-156-206-128-238.ngrok.io/api/webhookUpdate&key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68 reason: Unexpected token A in JSON at position 0
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/node-fetch/lib/index.js:273:32
+        at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+      type: 'invalid-json'
+    }
+  },
+  level: 'error',
+  timestamp: '2023-04-24 17:43:53'
+}
+{
+  message: {
+    createWebHookError: FetchError: invalid json response body at https://api.trello.com/1/webhooks/?idModel=64333bceea372cb852b266f7&callbackURL=https://6934-156-206-128-238.ngrok.io/api/webhookUpdate&key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68 reason: Unexpected token A in JSON at position 0
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/node-fetch/lib/index.js:273:32
+        at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+      type: 'invalid-json'
+    }
+  },
+  level: 'error',
+  timestamp: '2023-04-24 17:43:55'
+}
+{
+  message: {
+    createWebHookError: FetchError: invalid json response body at https://api.trello.com/1/webhooks/?idModel=64333bce56f82cdbae21fa6e&callbackURL=https://6934-156-206-128-238.ngrok.io/api/webhookUpdate&key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68 reason: Unexpected token A in JSON at position 0
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/node-fetch/lib/index.js:273:32
+        at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+      type: 'invalid-json'
+    }
+  },
+  level: 'error',
+  timestamp: '2023-04-24 17:43:55'
+}
+{
+  message: {
+    createWebHookError: FetchError: invalid json response body at https://api.trello.com/1/webhooks/?idModel=6435137b850f9209eff0ff78&callbackURL=https://6934-156-206-128-238.ngrok.io/api/webhookUpdate&key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68 reason: Unexpected token A in JSON at position 0
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/node-fetch/lib/index.js:273:32
+        at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+      type: 'invalid-json'
+    }
+  },
+  level: 'error',
+  timestamp: '2023-04-24 17:43:55'
+}
+{
+  message: {
+    createWebHookError: FetchError: invalid json response body at https://api.trello.com/1/webhooks/?idModel=6435152ebb8166a64612a1f4&callbackURL=https://6934-156-206-128-238.ngrok.io/api/webhookUpdate&key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68 reason: Unexpected token A in JSON at position 0
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/node-fetch/lib/index.js:273:32
+        at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+      type: 'invalid-json'
+    }
+  },
+  level: 'error',
+  timestamp: '2023-04-24 17:43:55'
+}
+{
+  message: {
+    createWebHookError: FetchError: invalid json response body at https://api.trello.com/1/webhooks/?idModel=643515a99fd1ea463683d963&callbackURL=https://6934-156-206-128-238.ngrok.io/api/webhookUpdate&key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68 reason: Unexpected token A in JSON at position 0
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/node-fetch/lib/index.js:273:32
+        at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+      type: 'invalid-json'
+    }
+  },
+  level: 'error',
+  timestamp: '2023-04-24 17:43:55'
+}
+{
+  message: {
+    createWebHookError: FetchError: invalid json response body at https://api.trello.com/1/webhooks/?idModel=64333bcaf79ebc92a673a4c8&callbackURL=https://6934-156-206-128-238.ngrok.io/api/webhookUpdate&key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68 reason: Unexpected token A in JSON at position 0
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/node-fetch/lib/index.js:273:32
+        at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+      type: 'invalid-json'
+    }
+  },
+  level: 'error',
+  timestamp: '2023-04-24 17:47:46'
+}
+{
+  message: {
+    createWebHookError: FetchError: invalid json response body at https://api.trello.com/1/webhooks/?idModel=6424b705e5796122b2a2392f&callbackURL=https://6934-156-206-128-238.ngrok.io/api/webhookUpdate&key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68 reason: Unexpected token A in JSON at position 0
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/node-fetch/lib/index.js:273:32
+        at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+      type: 'invalid-json'
+    }
+  },
+  level: 'error',
+  timestamp: '2023-04-24 17:47:46'
+}
+{
+  message: {
+    createWebHookError: FetchError: invalid json response body at https://api.trello.com/1/webhooks/?idModel=64333bce56f82cdbae21fa6e&callbackURL=https://6934-156-206-128-238.ngrok.io/api/webhookUpdate&key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68 reason: Unexpected token A in JSON at position 0
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/node-fetch/lib/index.js:273:32
+        at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+      type: 'invalid-json'
+    }
+  },
+  level: 'error',
+  timestamp: '2023-04-24 17:47:48'
+}
+{
+  message: {
+    createWebHookError: FetchError: invalid json response body at https://api.trello.com/1/webhooks/?idModel=64333bceea372cb852b266f7&callbackURL=https://6934-156-206-128-238.ngrok.io/api/webhookUpdate&key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68 reason: Unexpected token A in JSON at position 0
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/node-fetch/lib/index.js:273:32
+        at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+      type: 'invalid-json'
+    }
+  },
+  level: 'error',
+  timestamp: '2023-04-24 17:47:48'
+}
+{
+  message: {
+    createWebHookError: FetchError: invalid json response body at https://api.trello.com/1/webhooks/?idModel=6435152ebb8166a64612a1f4&callbackURL=https://6934-156-206-128-238.ngrok.io/api/webhookUpdate&key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68 reason: Unexpected token A in JSON at position 0
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/node-fetch/lib/index.js:273:32
+        at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+      type: 'invalid-json'
+    }
+  },
+  level: 'error',
+  timestamp: '2023-04-24 17:47:48'
+}
+{
+  message: {
+    createWebHookError: FetchError: invalid json response body at https://api.trello.com/1/webhooks/?idModel=6435137b850f9209eff0ff78&callbackURL=https://6934-156-206-128-238.ngrok.io/api/webhookUpdate&key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68 reason: Unexpected token A in JSON at position 0
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/node-fetch/lib/index.js:273:32
+        at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+      type: 'invalid-json'
+    }
+  },
+  level: 'error',
+  timestamp: '2023-04-24 17:47:48'
+}
+{
+  message: {
+    createWebHookError: FetchError: invalid json response body at https://api.trello.com/1/webhooks/?idModel=643515a99fd1ea463683d963&callbackURL=https://6934-156-206-128-238.ngrok.io/api/webhookUpdate&key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68 reason: Unexpected token A in JSON at position 0
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/node-fetch/lib/index.js:273:32
+        at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+      type: 'invalid-json'
+    }
+  },
+  level: 'error',
+  timestamp: '2023-04-24 17:47:48'
+}
+{
+  message: {
+    deleteTasksError: FetchError: invalid json response body at https://api.trello.com/1/cards/63d297851855617794d396b5?key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68 reason: Unexpected token T in JSON at position 0
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/node-fetch/lib/index.js:273:32
+        at runMicrotasks (<anonymous>)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+      type: 'invalid-json'
+    }
+  },
+  level: 'error',
+  timestamp: '2023-04-25 14:07:38'
+}
+{
+  message: {
+    deleteTasksError: FetchError: invalid json response body at https://api.trello.com/1/cards/63d4e2d8db78df9c12054303?key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68 reason: Unexpected token T in JSON at position 0
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/node-fetch/lib/index.js:273:32
+        at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+      type: 'invalid-json'
+    }
+  },
+  level: 'error',
+  timestamp: '2023-04-25 14:07:43'
+}
+{
+  message: {
+    deleteTasksError: FetchError: invalid json response body at https://api.trello.com/1/cards/63d4fe5cee07b47ff09c6798?key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68 reason: Unexpected token T in JSON at position 0
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/node-fetch/lib/index.js:273:32
+        at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+      type: 'invalid-json'
+    }
+  },
+  level: 'error',
+  timestamp: '2023-04-25 14:07:47'
+}
+{
+  message: {
+    deleteTasksError: FetchError: invalid json response body at https://api.trello.com/1/cards/63df77036526c6a5508bd51d?key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68 reason: Unexpected token T in JSON at position 0
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/node-fetch/lib/index.js:273:32
+        at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+      type: 'invalid-json'
+    }
+  },
+  level: 'error',
+  timestamp: '2023-04-25 14:07:50'
+}
+{
+  message: {
+    deleteTasksError: FetchError: invalid json response body at https://api.trello.com/1/cards/63df77152d11db201f66d29d?key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68 reason: Unexpected token T in JSON at position 0
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/node-fetch/lib/index.js:273:32
+        at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+      type: 'invalid-json'
+    }
+  },
+  level: 'error',
+  timestamp: '2023-04-25 14:07:54'
+}
+{
+  message: {
+    deleteTasksError: FetchError: invalid json response body at https://api.trello.com/1/cards/640dec19967b176ce23b0c1f?key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68 reason: Unexpected token T in JSON at position 0
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/node-fetch/lib/index.js:273:32
+        at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+      type: 'invalid-json'
+    }
+  },
+  level: 'error',
+  timestamp: '2023-04-25 14:07:58'
+}
+{
+  message: {
+    deleteTasksError: FetchError: invalid json response body at https://api.trello.com/1/cards/63d500e348899f5a26227465?key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68 reason: Unexpected token T in JSON at position 0
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/node-fetch/lib/index.js:273:32
+        at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+      type: 'invalid-json'
+    }
+  },
+  level: 'error',
+  timestamp: '2023-04-25 14:08:03'
+}
+{
+  message: {
+    deleteTasksError: FetchError: invalid json response body at https://api.trello.com/1/cards/63df76d7a5139efdb5fe6e45?key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68 reason: Unexpected token T in JSON at position 0
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/node-fetch/lib/index.js:273:32
+        at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+      type: 'invalid-json'
+    }
+  },
+  level: 'error',
+  timestamp: '2023-04-25 14:08:07'
+}

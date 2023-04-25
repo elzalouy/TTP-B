@@ -1,7 +1,6 @@
 import { customeError } from "../../utils/errorUtils";
 import { Request, Response } from "express";
 import logger from "../../../logger";
-import { updateTaskQueue } from "../../backgroundJobs/actions/task.actions.Queue";
 import TrelloWebhook from "../../controllers/trelloHooks";
 
 const processedEvents = new Set();
@@ -20,7 +19,7 @@ export default class TrelloHooks {
           }, 50000);
         });
         res.send("Done");
-      } else res.status(400).send("Implemented before");
+      } else res.send("Implemented before");
     } catch (error) {
       logger.error({ handleWebHookUpdateProjectError: error });
       return res.status(500).send(customeError("server_error", 500));
@@ -41,7 +40,7 @@ export default class TrelloHooks {
           }, 50000);
         });
         res.send("Done");
-      } else res.status(400).send("Implemented before");
+      } else res.send("Implemented before");
     } catch (error) {
       logger.error({ handleWebhookUpdateCardError: error });
     }
