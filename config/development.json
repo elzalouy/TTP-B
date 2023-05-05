@@ -1,7 +1,7 @@
 {
   "name": "TTP development",
-  "trelloWebhookUrlTask": "https://d806-156-206-128-238.ngrok.io/api/webhookUpdate",
-  "trelloWebhookUrlProject": "https://d806-156-206-128-238.ngrok.io/api/webhookUpdateProject",
+  "trelloWebhookUrlTask": "https://acf8-156-206-72-252.ngrok.io/api/webhookUpdate",
+  "trelloWebhookUrlProject": "https://acf8-156-206-72-252.ngrok.io/api/webhookUpdateProject",
   "frontEndUrl": "http://localhost:3000",
   "BoardStatus": [
     "In Progress",

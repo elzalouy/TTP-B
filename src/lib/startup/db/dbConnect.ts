@@ -349,7 +349,7 @@ export const initializeTTPTasks = async () => {
           teamId: team?._id ? new ObjectId(team?._id) : item.teamId,
           cardId: card.id,
           description: card.desc ? card.desc : "",
-          start: card.start ?? new Date(Date.now()),
+          start: card.start,
           deadline: card.due ? card.due : null,
           trelloShortUrl: card.shortUrl ? card.shortUrl : "",
           movements: item.movements
@@ -391,7 +391,7 @@ export const initializeTTPTasks = async () => {
           teamId: team?._id ? team._id : null,
           cardId: item.id,
           description: item.desc ?? "",
-          start: item.start ?? new Date(Date.now()),
+          start: item.start,
           deadline: item.due,
           trelloShortUrl: item.shortUrl,
           deliveryDate: status?.name === "Done" ? new Date(Date.now()) : null,
@@ -440,7 +440,7 @@ export const initializeTTPTasks = async () => {
           listId: listId,
           description: item?.description ? item.description : "",
           deadline: item.deadline,
-          start: item?.start ?? new Date(Date.now()),
+          start: item?.start,
           name: item.name,
         });
         let replacement = new Tasks({
@@ -460,7 +460,7 @@ export const initializeTTPTasks = async () => {
           teamId: item?.teamId,
           cardId: card.id,
           description: item.description,
-          start: item.start ?? new Date(Date.now()),
+          start: item.start,
           deadline: item.deadline,
           trelloShortUrl: card.shortUrl,
           deliveryDate: status === "Done" ? new Date(Date.now()) : null,
