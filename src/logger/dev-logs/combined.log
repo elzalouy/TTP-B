@@ -52030,3 +52030,76 @@
   level: 'info',
   timestamp: '2023-05-13 13:16:52'
 }
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2023-05-13 14:45:23'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2023-05-13 15:22:10'
+}
+{
+  message: {
+    getTrelloBoardError: FetchError: request to https://api.trello.com/1/organizations/ttpbetalocal/boards?fields=id,name&key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68 failed, reason: getaddrinfo EAI_AGAIN api.trello.com
+        at ClientRequest.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/node-fetch/lib/index.js:1505:11)
+        at ClientRequest.emit (node:events:527:28)
+        at ClientRequest.emit (node:domain:475:12)
+        at TLSSocket.socketErrorListener (node:_http_client:454:9)
+        at TLSSocket.emit (node:events:527:28)
+        at TLSSocket.emit (node:domain:475:12)
+        at emitErrorNT (node:internal/streams/destroy:157:8)
+        at emitErrorCloseNT (node:internal/streams/destroy:122:3)
+        at processTicksAndRejections (node:internal/process/task_queues:83:21) {
+      type: 'system',
+      errno: 'EAI_AGAIN',
+      code: 'EAI_AGAIN'
+    }
+  },
+  level: 'error',
+  timestamp: '2023-05-13 15:22:14'
+}
+{
+  level: 'error',
+  timestamp: '2023-05-13 15:22:14',
+  message: "Cannot read properties of undefined (reading 'includes')",
+  stack: "TypeError: Cannot read properties of undefined (reading 'includes')\n" +
+    '    at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/startup/db/dbConnect.ts:101:17\n' +
+    '    at Array.filter (<anonymous>)\n' +
+    '    at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/startup/db/dbConnect.ts:100:35\n' +
+    '    at Generator.next (<anonymous>)\n' +
+    '    at fulfilled (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/startup/db/dbConnect.ts:5:58)\n' +
+    '    at processTicksAndRejections (node:internal/process/task_queues:96:5)'
+}
+{
+  message: {
+    getTrelloBoardError: FetchError: request to https://api.trello.com/1/organizations/ttpbetalocal/boards?fields=id,name&key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68 failed, reason: getaddrinfo EAI_AGAIN api.trello.com
+        at ClientRequest.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/node-fetch/lib/index.js:1505:11)
+        at ClientRequest.emit (node:events:527:28)
+        at ClientRequest.emit (node:domain:475:12)
+        at TLSSocket.socketErrorListener (node:_http_client:454:9)
+        at TLSSocket.emit (node:events:527:28)
+        at TLSSocket.emit (node:domain:475:12)
+        at emitErrorNT (node:internal/streams/destroy:157:8)
+        at emitErrorCloseNT (node:internal/streams/destroy:122:3)
+        at processTicksAndRejections (node:internal/process/task_queues:83:21) {
+      type: 'system',
+      errno: 'EAI_AGAIN',
+      code: 'EAI_AGAIN'
+    }
+  },
+  level: 'error',
+  timestamp: '2023-05-13 15:22:14'
+}
+{
+  message: {
+    error: TypeError: Cannot read properties of undefined (reading 'map')
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/startup/db/dbConnect.ts:285:14
+        at Generator.next (<anonymous>)
+        at fulfilled (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/startup/db/dbConnect.ts:5:58)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5)
+  },
+  level: 'error',
+  timestamp: '2023-05-13 15:22:14'
+}
