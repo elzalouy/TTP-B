@@ -46,13 +46,13 @@ export function moveTaskJob(
           cardId,
           teamList?.listId ?? statusList?.listId
         );
+        console.log({ moveResult: result });
         cb(null);
       }
     } catch (error) {
       logger.error({ moveTaskJobError: error });
     }
   });
-
   updateTaskQueue.push(async (cb) => {
     try {
       if (status === "Shared" || status === "Not Clear") {
@@ -83,7 +83,6 @@ export const updateCardJob = (
       let dep = await Department.findOne({ boardId: data.boardId });
       let teamListId = dep.teams.find((item) => item.listId === data.listId);
       let statusListId = dep.lists.find((item) => item.listId === data.listId);
-
       let taskData: any = {
         name: data.name,
         idBoard: data.boardId,

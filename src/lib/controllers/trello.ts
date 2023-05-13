@@ -94,16 +94,20 @@ class TrelloActionsController {
   static async __moveTaskToDiffList(cardId: string, listId: string) {
     try {
       let moveTask = trelloApi(`cards/${cardId}/?idList=${listId}&`);
-      await fetch(moveTask, {
+      let result = await fetch(moveTask, {
         method: "PUT",
         headers: {
           Accept: "application/json",
         },
       })
         .then(async (res) => {
-          return res;
+          return res.json();
+        })
+        .then((value) => {
+          return value;
         })
         .catch((err) => logger.info("error in moving board", err));
+      return result;
     } catch (error) {
       logger.error({ moveTaskToDiffListError: error });
     }

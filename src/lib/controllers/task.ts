@@ -62,7 +62,6 @@ class TaskController extends TaskDB {
     cardId: string,
     listId: string,
     status: string,
-    list: string,
     department: IDepartment,
     user: any
   ) {
@@ -71,7 +70,6 @@ class TaskController extends TaskDB {
       cardId,
       listId,
       status,
-      list,
       department,
       user
     );
@@ -81,13 +79,16 @@ class TaskController extends TaskDB {
     cardId: string,
     listId: string,
     status: string,
-    list: string,
     department: IDepartmentState,
     user: any
   ) {
     try {
       moveTaskJob(listId, cardId, status, department, user);
-      return { data: `Task with cardId ${cardId} has moved to list ${list}` };
+      return {
+        data: `Task with cardId ${cardId} has moved to list ${
+          department.lists.find((list) => list.listId === listId).name
+        }`,
+      };
     } catch (error) {
       logger.error({ moveTaskOnTrelloError: error });
     }

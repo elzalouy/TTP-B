@@ -81,12 +81,11 @@ const TaskReq = class TaskReq extends TaskController {
     try {
       let decoded: any = await jwtVerify(req.header("authorization"));
       if (decoded) {
-        let { cardId, listId, status, list, department }: any = req.body;
+        let { cardId, listId, status, department }: any = req.body;
         let task: any = await super.moveTaskOnTrello(
           cardId,
           listId,
           status,
-          list,
           department,
           decoded
         );
