@@ -103,7 +103,7 @@ const TaskSchema = new Schema<TaskInfo, TasksModel>(
     },
     start: {
       type: Date,
-      default: Date.now(),
+      default: null,
     },
     deadline: {
       type: Date,

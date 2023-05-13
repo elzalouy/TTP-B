@@ -212,7 +212,6 @@ export default class TrelloWebhook {
             status: inProgressList?.name ? inProgressList.name : status,
             movedAt: new Date(Date.now()).toString(),
           });
-        console.log({ movements: this.task.movements });
         return await TaskController.updateTaskByTrelloDB(this.task, {
           id: this.user.id,
           name: this.user.name,
