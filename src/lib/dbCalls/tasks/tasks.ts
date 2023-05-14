@@ -228,6 +228,7 @@ class TaskDB {
           name: user.name,
           before: new Date(task.deadline),
           current: new Date(data.deadline),
+          trelloMember: false,
         });
       }
 
@@ -357,6 +358,7 @@ class TaskDB {
           name: user.name,
           before: new Date(task.deadline),
           current: new Date(data.deadline),
+          trelloMember: true,
         });
       }
 

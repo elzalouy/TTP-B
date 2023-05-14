@@ -117,6 +117,7 @@ const ProjectDB = class ProjectDB {
             name: user.name,
             before: project.projectDeadline,
             current: data.projectDeadline,
+            trelloMember: false,
           });
         }
         project.set(query);

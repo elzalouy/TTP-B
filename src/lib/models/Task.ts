@@ -44,6 +44,7 @@ export const deadlineChainSchema: Schema = new Schema<TaskDeadlineChain>({
   name: { type: String, required: true },
   before: { type: Date, required: true },
   current: { type: Date, required: true },
+  trelloMember: { type: Boolean, required: true, default: true },
 });
 
 const TaskSchema = new Schema<TaskInfo, TasksModel>(

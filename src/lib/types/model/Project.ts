@@ -6,6 +6,7 @@ export interface DeadlineChain {
   name: string;
   before: Date;
   current: Date;
+  trelloMember: boolean;
 }
 
 export interface ProjectInfo extends Document {

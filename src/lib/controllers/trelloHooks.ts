@@ -121,7 +121,7 @@ export default class TrelloWebhook {
             : undefined,
           start: this.actionRequest.action?.data?.card?.start
             ? new Date(this.actionRequest.action?.data?.card?.start)
-            : undefined,
+            : new Date(Date.now()),
           teamId: team?._id ?? null,
           status: team
             ? "In Progress"
@@ -189,7 +189,6 @@ export default class TrelloWebhook {
         let inProgressList = (newDep ?? department).lists.find(
           (item) => isNewTeam?.listId && item.name === "In Progress"
         );
-        console.log({ task: this.task });
         this.task = {
           name: this.actionRequest.action.data.card.name,
           boardId: this.actionRequest.action.data.board.id,

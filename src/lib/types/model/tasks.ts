@@ -12,7 +12,9 @@ export interface TaskDeadlineChain {
   userId: string;
   before: Date;
   current: Date;
+  trelloMember?: boolean;
 }
+
 export interface TaskInfo extends Document {
   name: string;
   projectId: ObjectId;
