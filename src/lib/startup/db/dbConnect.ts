@@ -344,7 +344,9 @@ export const initializeTTPTasks = async () => {
           subCategoryId: item.subCategoryId,
           boardId: card.idBoard,
           projectId: item.projectId,
-          listId: card.idList,
+          listId: status
+            ? status.listId
+            : dep.lists.find((ls) => ls.name === "In Progress").listId,
           status: status?.name ? status.name : "In Progress",
           teamId: team?._id ? new ObjectId(team?._id) : item.teamId,
           cardId: card.id,
