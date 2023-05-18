@@ -112,3 +112,13 @@ export interface Movement {
   status: string;
   movedAt: string;
 }
+export const statusLists = [
+  "In Progress",
+  "Shared",
+  "Done",
+  "Tasks Board",
+  "Not Clear",
+  "Cancled",
+  "Review",
+  "Archived",
+];

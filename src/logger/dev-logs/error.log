@@ -74,3 +74,588 @@
   level: 'error',
   timestamp: '2023-05-18 14:01:16'
 }
+{
+  message: {
+    error: ReferenceError: status is not defined
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/startup/db/dbConnect.ts:450:19
+        at Generator.next (<anonymous>)
+        at fulfilled (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/startup/db/dbConnect.ts:5:58)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5)
+  },
+  level: 'error',
+  timestamp: '2023-05-18 16:41:10'
+}
+{
+  message: {
+    error: TypeError: Cannot read properties of undefined (reading 'name')
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/startup/db/dbConnect.ts:393:26
+        at Array.map (<anonymous>)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/startup/db/dbConnect.ts:385:26
+        at Generator.next (<anonymous>)
+        at fulfilled (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/startup/db/dbConnect.ts:5:58)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5)
+  },
+  level: 'error',
+  timestamp: '2023-05-18 16:42:51'
+}
+{
+  message: {
+    error: TypeError: Cannot read properties of undefined (reading 'listId')
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/startup/db/dbConnect.ts:393:26
+        at Array.map (<anonymous>)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/startup/db/dbConnect.ts:385:26
+        at Generator.next (<anonymous>)
+        at fulfilled (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/startup/db/dbConnect.ts:5:58)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5)
+  },
+  level: 'error',
+  timestamp: '2023-05-18 16:46:03'
+}
+{
+  message: {
+    error: ReferenceError: status is not defined
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/startup/db/dbConnect.ts:451:19
+        at Generator.next (<anonymous>)
+        at fulfilled (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/startup/db/dbConnect.ts:5:58)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5)
+  },
+  level: 'error',
+  timestamp: '2023-05-18 16:49:32'
+}
+{
+  message: {
+    deleteTasksError: FetchError: invalid json response body at https://api.trello.com/1/cards/64663afc09ab127076cea0b5?key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68 reason: Unexpected token T in JSON at position 0
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/node-fetch/lib/index.js:273:32
+        at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+      type: 'invalid-json'
+    }
+  },
+  level: 'error',
+  timestamp: '2023-05-18 16:58:08'
+}
+{
+  message: {
+    deleteTasksError: FetchError: invalid json response body at https://api.trello.com/1/cards/64664058798eeeb3d3f30e07?key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68 reason: Unexpected token T in JSON at position 0
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/node-fetch/lib/index.js:273:32
+        at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+      type: 'invalid-json'
+    }
+  },
+  level: 'error',
+  timestamp: '2023-05-18 17:17:08'
+}
+{
+  code: 9,
+  writeErrors: [
+    WriteError {
+      err: {
+        index: 0,
+        code: 9,
+        errmsg: `The array filter for identifier 'key' was not used in the update { $setOnInsert: { createdAt: new Date(1684426361504) }, $set: { updatedAt: new Date(1684426361504), color: "blue", teams.$[]: { name: "team s", listId: "64333bcc74f7838bda29deee", isDeleted: false, _id: ObjectId('64664e79731655341a622561') }, lists: [ { name: "Tasks Board", listId: "64333bcb0b63cd8f0ce17bf8", _id: ObjectId('64664e79731655341a622559') }, { name: "In Progress", listId: "64333bcb70e28bc2788d797e", _id: ObjectId('64664e79731655341a62255a') }, { name: "Shared", listId: "64333bcb583d1190b289e4f5", _id: ObjectId('64664e79731655341a62255b') }, { name: "Review", listId: "64333bcb2f34f7b1a40a8fba", _id: ObjectId('64664e79731655341a62255c') }, { name: "Done", listId: "64333bcb5e1dd5bab3eda60e", _id: ObjectId('64664e79731655341a62255d') }, { name: "Not Clear", listId: "64333bcaffd0170bbb9e0410", _id: ObjectId('64664e79731655341a62255e') }, { name: "Cancled", listId: "64333bcbd5e5fc5930eef4f4", _id: ObjectId('64664e79731655341a62255f') }, { name: "projects", listId: "64333bcbb3917f2cffdfb551", _id: ObjectId('64664e79731655341a622560') } ], boardId: "64333bcaf79ebc92a673a4c8", name: "dev / TTP Creative" } }`,
+        errInfo: undefined,
+        op: {
+          q: { _id: new ObjectId("642ab6bfb8e035eabbeea136") },
+          u: {
+            '$setOnInsert': { createdAt: 2023-05-18T16:12:41.504Z },
+            '$set': {
+              updatedAt: 2023-05-18T16:12:41.504Z,
+              color: 'blue',
+              'teams.$[]': {
+                name: 'team s',
+                listId: '64333bcc74f7838bda29deee',
+                isDeleted: false,
+                _id: new ObjectId("64664e79731655341a622561")
+              },
+              lists: [
+                {
+                  name: 'Tasks Board',
+                  listId: '64333bcb0b63cd8f0ce17bf8',
+                  _id: new ObjectId("64664e79731655341a622559")
+                },
+                {
+                  name: 'In Progress',
+                  listId: '64333bcb70e28bc2788d797e',
+                  _id: new ObjectId("64664e79731655341a62255a")
+                },
+                {
+                  name: 'Shared',
+                  listId: '64333bcb583d1190b289e4f5',
+                  _id: new ObjectId("64664e79731655341a62255b")
+                },
+                {
+                  name: 'Review',
+                  listId: '64333bcb2f34f7b1a40a8fba',
+                  _id: new ObjectId("64664e79731655341a62255c")
+                },
+                {
+                  name: 'Done',
+                  listId: '64333bcb5e1dd5bab3eda60e',
+                  _id: new ObjectId("64664e79731655341a62255d")
+                },
+                {
+                  name: 'Not Clear',
+                  listId: '64333bcaffd0170bbb9e0410',
+                  _id: new ObjectId("64664e79731655341a62255e")
+                },
+                {
+                  name: 'Cancled',
+                  listId: '64333bcbd5e5fc5930eef4f4',
+                  _id: new ObjectId("64664e79731655341a62255f")
+                },
+                {
+                  name: 'projects',
+                  listId: '64333bcbb3917f2cffdfb551',
+                  _id: new ObjectId("64664e79731655341a622560")
+                }
+              ],
+              boardId: '64333bcaf79ebc92a673a4c8',
+              name: 'dev / TTP Creative'
+            }
+          },
+          arrayFilters: [ { key: new ObjectId("64664e79731655341a622561") } ]
+        }
+      }
+    }
+  ],
+  result: BulkWriteResult {
+    result: {
+      ok: 1,
+      writeErrors: [
+        WriteError {
+          err: {
+            index: 0,
+            code: 9,
+            errmsg: `The array filter for identifier 'key' was not used in the update { $setOnInsert: { createdAt: new Date(1684426361504) }, $set: { updatedAt: new Date(1684426361504), color: "blue", teams.$[]: { name: "team s", listId: "64333bcc74f7838bda29deee", isDeleted: false, _id: ObjectId('64664e79731655341a622561') }, lists: [ { name: "Tasks Board", listId: "64333bcb0b63cd8f0ce17bf8", _id: ObjectId('64664e79731655341a622559') }, { name: "In Progress", listId: "64333bcb70e28bc2788d797e", _id: ObjectId('64664e79731655341a62255a') }, { name: "Shared", listId: "64333bcb583d1190b289e4f5", _id: ObjectId('64664e79731655341a62255b') }, { name: "Review", listId: "64333bcb2f34f7b1a40a8fba", _id: ObjectId('64664e79731655341a62255c') }, { name: "Done", listId: "64333bcb5e1dd5bab3eda60e", _id: ObjectId('64664e79731655341a62255d') }, { name: "Not Clear", listId: "64333bcaffd0170bbb9e0410", _id: ObjectId('64664e79731655341a62255e') }, { name: "Cancled", listId: "64333bcbd5e5fc5930eef4f4", _id: ObjectId('64664e79731655341a62255f') }, { name: "projects", listId: "64333bcbb3917f2cffdfb551", _id: ObjectId('64664e79731655341a622560') } ], boardId: "64333bcaf79ebc92a673a4c8", name: "dev / TTP Creative" } }`,
+            errInfo: undefined,
+            op: {
+              q: { _id: new ObjectId("642ab6bfb8e035eabbeea136") },
+              u: {
+                '$setOnInsert': { createdAt: 2023-05-18T16:12:41.504Z },
+                '$set': {
+                  updatedAt: 2023-05-18T16:12:41.504Z,
+                  color: 'blue',
+                  'teams.$[]': {
+                    name: 'team s',
+                    listId: '64333bcc74f7838bda29deee',
+                    isDeleted: false,
+                    _id: new ObjectId("64664e79731655341a622561")
+                  },
+                  lists: [
+                    {
+                      name: 'Tasks Board',
+                      listId: '64333bcb0b63cd8f0ce17bf8',
+                      _id: new ObjectId("64664e79731655341a622559")
+                    },
+                    {
+                      name: 'In Progress',
+                      listId: '64333bcb70e28bc2788d797e',
+                      _id: new ObjectId("64664e79731655341a62255a")
+                    },
+                    {
+                      name: 'Shared',
+                      listId: '64333bcb583d1190b289e4f5',
+                      _id: new ObjectId("64664e79731655341a62255b")
+                    },
+                    {
+                      name: 'Review',
+                      listId: '64333bcb2f34f7b1a40a8fba',
+                      _id: new ObjectId("64664e79731655341a62255c")
+                    },
+                    {
+                      name: 'Done',
+                      listId: '64333bcb5e1dd5bab3eda60e',
+                      _id: new ObjectId("64664e79731655341a62255d")
+                    },
+                    {
+                      name: 'Not Clear',
+                      listId: '64333bcaffd0170bbb9e0410',
+                      _id: new ObjectId("64664e79731655341a62255e")
+                    },
+                    {
+                      name: 'Cancled',
+                      listId: '64333bcbd5e5fc5930eef4f4',
+                      _id: new ObjectId("64664e79731655341a62255f")
+                    },
+                    {
+                      name: 'projects',
+                      listId: '64333bcbb3917f2cffdfb551',
+                      _id: new ObjectId("64664e79731655341a622560")
+                    }
+                  ],
+                  boardId: '64333bcaf79ebc92a673a4c8',
+                  name: 'dev / TTP Creative'
+                }
+              },
+              arrayFilters: [ { key: new ObjectId("64664e79731655341a622561") } ]
+            }
+          }
+        }
+      ],
+      writeConcernErrors: [],
+      insertedIds: [],
+      nInserted: 0,
+      nUpserted: 0,
+      nMatched: 0,
+      nModified: 0,
+      nRemoved: 0,
+      upserted: []
+    }
+  },
+  level: 'error',
+  timestamp: '2023-05-18 18:12:41',
+  message: `The array filter for identifier 'key' was not used in the update { $setOnInsert: { createdAt: new Date(1684426361504) }, $set: { updatedAt: new Date(1684426361504), color: "blue", teams.$[]: { name: "team s", listId: "64333bcc74f7838bda29deee", isDeleted: false, _id: ObjectId('64664e79731655341a622561') }, lists: [ { name: "Tasks Board", listId: "64333bcb0b63cd8f0ce17bf8", _id: ObjectId('64664e79731655341a622559') }, { name: "In Progress", listId: "64333bcb70e28bc2788d797e", _id: ObjectId('64664e79731655341a62255a') }, { name: "Shared", listId: "64333bcb583d1190b289e4f5", _id: ObjectId('64664e79731655341a62255b') }, { name: "Review", listId: "64333bcb2f34f7b1a40a8fba", _id: ObjectId('64664e79731655341a62255c') }, { name: "Done", listId: "64333bcb5e1dd5bab3eda60e", _id: ObjectId('64664e79731655341a62255d') }, { name: "Not Clear", listId: "64333bcaffd0170bbb9e0410", _id: ObjectId('64664e79731655341a62255e') }, { name: "Cancled", listId: "64333bcbd5e5fc5930eef4f4", _id: ObjectId('64664e79731655341a62255f') }, { name: "projects", listId: "64333bcbb3917f2cffdfb551", _id: ObjectId('64664e79731655341a622560') } ], boardId: "64333bcaf79ebc92a673a4c8", name: "dev / TTP Creative" } }`,
+  stack: `MongoBulkWriteError: The array filter for identifier 'key' was not used in the update { $setOnInsert: { createdAt: new Date(1684426361504) }, $set: { updatedAt: new Date(1684426361504), color: "blue", teams.$[]: { name: "team s", listId: "64333bcc74f7838bda29deee", isDeleted: false, _id: ObjectId('64664e79731655341a622561') }, lists: [ { name: "Tasks Board", listId: "64333bcb0b63cd8f0ce17bf8", _id: ObjectId('64664e79731655341a622559') }, { name: "In Progress", listId: "64333bcb70e28bc2788d797e", _id: ObjectId('64664e79731655341a62255a') }, { name: "Shared", listId: "64333bcb583d1190b289e4f5", _id: ObjectId('64664e79731655341a62255b') }, { name: "Review", listId: "64333bcb2f34f7b1a40a8fba", _id: ObjectId('64664e79731655341a62255c') }, { name: "Done", listId: "64333bcb5e1dd5bab3eda60e", _id: ObjectId('64664e79731655341a62255d') }, { name: "Not Clear", listId: "64333bcaffd0170bbb9e0410", _id: ObjectId('64664e79731655341a62255e') }, { name: "Cancled", listId: "64333bcbd5e5fc5930eef4f4", _id: ObjectId('64664e79731655341a62255f') }, { name: "projects", listId: "64333bcbb3917f2cffdfb551", _id: ObjectId('64664e79731655341a622560') } ], boardId: "64333bcaf79ebc92a673a4c8", name: "dev / TTP Creative" } }\n` +
+    '    at OrderedBulkOperation.handleWriteError (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/mongoose/node_modules/mongodb/src/bulk/common.ts:1333:9)\n' +
+    '    at resultHandler (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/mongoose/node_modules/mongodb/src/bulk/common.ts:625:23)\n' +
+    '    at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/mongoose/node_modules/mongodb/src/utils.ts:462:15\n' +
+    '    at processTicksAndRejections (node:internal/process/task_queues:96:5)',
+  [Symbol(errorLabels)]: Set(0) {}
+}
+{
+  code: 28,
+  writeErrors: [
+    WriteError {
+      err: {
+        index: 0,
+        code: 28,
+        errmsg: `Cannot create field '[]' in element {teams: [ { name: "team s", listId: "64333bcc74f7838bda29deee", isDeleted: false, _id: ObjectId('646651dca419f843f64bce14') } ]}`,
+        errInfo: undefined,
+        op: {
+          q: { _id: new ObjectId("642ab6bfb8e035eabbeea136") },
+          u: {
+            '$setOnInsert': { createdAt: 2023-05-18T16:28:03.060Z },
+            '$set': {
+              updatedAt: 2023-05-18T16:28:03.060Z,
+              color: 'blue',
+              'teams.[]': [
+                {
+                  _id: new ObjectId("64665213978d5d2661c04d92"),
+                  listId: '64333bcc74f7838bda29deee',
+                  isDeleted: false,
+                  name: 'team s'
+                }
+              ],
+              lists: [
+                {
+                  name: 'Tasks Board',
+                  listId: '64333bcb0b63cd8f0ce17bf8',
+                  _id: new ObjectId("64665213978d5d2661c04d8a")
+                },
+                {
+                  name: 'In Progress',
+                  listId: '64333bcb70e28bc2788d797e',
+                  _id: new ObjectId("64665213978d5d2661c04d8b")
+                },
+                {
+                  name: 'Shared',
+                  listId: '64333bcb583d1190b289e4f5',
+                  _id: new ObjectId("64665213978d5d2661c04d8c")
+                },
+                {
+                  name: 'Review',
+                  listId: '64333bcb2f34f7b1a40a8fba',
+                  _id: new ObjectId("64665213978d5d2661c04d8d")
+                },
+                {
+                  name: 'Done',
+                  listId: '64333bcb5e1dd5bab3eda60e',
+                  _id: new ObjectId("64665213978d5d2661c04d8e")
+                },
+                {
+                  name: 'Not Clear',
+                  listId: '64333bcaffd0170bbb9e0410',
+                  _id: new ObjectId("64665213978d5d2661c04d8f")
+                },
+                {
+                  name: 'Cancled',
+                  listId: '64333bcbd5e5fc5930eef4f4',
+                  _id: new ObjectId("64665213978d5d2661c04d90")
+                },
+                {
+                  name: 'projects',
+                  listId: '64333bcbb3917f2cffdfb551',
+                  _id: new ObjectId("64665213978d5d2661c04d91")
+                }
+              ],
+              boardId: '64333bcaf79ebc92a673a4c8',
+              name: 'dev / TTP Creative'
+            }
+          }
+        }
+      }
+    }
+  ],
+  result: BulkWriteResult {
+    result: {
+      ok: 1,
+      writeErrors: [
+        WriteError {
+          err: {
+            index: 0,
+            code: 28,
+            errmsg: `Cannot create field '[]' in element {teams: [ { name: "team s", listId: "64333bcc74f7838bda29deee", isDeleted: false, _id: ObjectId('646651dca419f843f64bce14') } ]}`,
+            errInfo: undefined,
+            op: {
+              q: { _id: new ObjectId("642ab6bfb8e035eabbeea136") },
+              u: {
+                '$setOnInsert': { createdAt: 2023-05-18T16:28:03.060Z },
+                '$set': {
+                  updatedAt: 2023-05-18T16:28:03.060Z,
+                  color: 'blue',
+                  'teams.[]': [
+                    {
+                      _id: new ObjectId("64665213978d5d2661c04d92"),
+                      listId: '64333bcc74f7838bda29deee',
+                      isDeleted: false,
+                      name: 'team s'
+                    }
+                  ],
+                  lists: [
+                    {
+                      name: 'Tasks Board',
+                      listId: '64333bcb0b63cd8f0ce17bf8',
+                      _id: new ObjectId("64665213978d5d2661c04d8a")
+                    },
+                    {
+                      name: 'In Progress',
+                      listId: '64333bcb70e28bc2788d797e',
+                      _id: new ObjectId("64665213978d5d2661c04d8b")
+                    },
+                    {
+                      name: 'Shared',
+                      listId: '64333bcb583d1190b289e4f5',
+                      _id: new ObjectId("64665213978d5d2661c04d8c")
+                    },
+                    {
+                      name: 'Review',
+                      listId: '64333bcb2f34f7b1a40a8fba',
+                      _id: new ObjectId("64665213978d5d2661c04d8d")
+                    },
+                    {
+                      name: 'Done',
+                      listId: '64333bcb5e1dd5bab3eda60e',
+                      _id: new ObjectId("64665213978d5d2661c04d8e")
+                    },
+                    {
+                      name: 'Not Clear',
+                      listId: '64333bcaffd0170bbb9e0410',
+                      _id: new ObjectId("64665213978d5d2661c04d8f")
+                    },
+                    {
+                      name: 'Cancled',
+                      listId: '64333bcbd5e5fc5930eef4f4',
+                      _id: new ObjectId("64665213978d5d2661c04d90")
+                    },
+                    {
+                      name: 'projects',
+                      listId: '64333bcbb3917f2cffdfb551',
+                      _id: new ObjectId("64665213978d5d2661c04d91")
+                    }
+                  ],
+                  boardId: '64333bcaf79ebc92a673a4c8',
+                  name: 'dev / TTP Creative'
+                }
+              }
+            }
+          }
+        }
+      ],
+      writeConcernErrors: [],
+      insertedIds: [],
+      nInserted: 0,
+      nUpserted: 0,
+      nMatched: 0,
+      nModified: 0,
+      nRemoved: 0,
+      upserted: []
+    }
+  },
+  level: 'error',
+  timestamp: '2023-05-18 18:28:03',
+  message: `Cannot create field '[]' in element {teams: [ { name: "team s", listId: "64333bcc74f7838bda29deee", isDeleted: false, _id: ObjectId('646651dca419f843f64bce14') } ]}`,
+  stack: `MongoBulkWriteError: Cannot create field '[]' in element {teams: [ { name: "team s", listId: "64333bcc74f7838bda29deee", isDeleted: false, _id: ObjectId('646651dca419f843f64bce14') } ]}\n` +
+    '    at OrderedBulkOperation.handleWriteError (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/mongoose/node_modules/mongodb/src/bulk/common.ts:1333:9)\n' +
+    '    at resultHandler (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/mongoose/node_modules/mongodb/src/bulk/common.ts:625:23)\n' +
+    '    at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/mongoose/node_modules/mongodb/src/utils.ts:462:15\n' +
+    '    at processTicksAndRejections (node:internal/process/task_queues:96:5)',
+  [Symbol(errorLabels)]: Set(0) {}
+}
+{
+  code: 28,
+  writeErrors: [
+    WriteError {
+      err: {
+        index: 0,
+        code: 28,
+        errmsg: `Cannot create field '[]' in element {teams: [ { name: "team s", listId: "64333bcc74f7838bda29deee", isDeleted: false, _id: ObjectId('646651dca419f843f64bce14') } ]}`,
+        errInfo: undefined,
+        op: {
+          q: { _id: new ObjectId("642ab6bfb8e035eabbeea136") },
+          u: {
+            '$setOnInsert': { createdAt: 2023-05-18T16:34:16.527Z },
+            '$set': {
+              updatedAt: 2023-05-18T16:34:16.527Z,
+              color: 'blue',
+              'teams.[]': [
+                {
+                  updateOne: {
+                    filter: { _id: new ObjectId("646653884f33e4532bd7c563") },
+                    update: {
+                      listId: '64333bcc74f7838bda29deee',
+                      isDeleted: false,
+                      name: 'team s'
+                    }
+                  }
+                }
+              ],
+              lists: [
+                {
+                  name: 'Tasks Board',
+                  listId: '64333bcb0b63cd8f0ce17bf8',
+                  _id: new ObjectId("646653884f33e4532bd7c55b")
+                },
+                {
+                  name: 'In Progress',
+                  listId: '64333bcb70e28bc2788d797e',
+                  _id: new ObjectId("646653884f33e4532bd7c55c")
+                },
+                {
+                  name: 'Shared',
+                  listId: '64333bcb583d1190b289e4f5',
+                  _id: new ObjectId("646653884f33e4532bd7c55d")
+                },
+                {
+                  name: 'Review',
+                  listId: '64333bcb2f34f7b1a40a8fba',
+                  _id: new ObjectId("646653884f33e4532bd7c55e")
+                },
+                {
+                  name: 'Done',
+                  listId: '64333bcb5e1dd5bab3eda60e',
+                  _id: new ObjectId("646653884f33e4532bd7c55f")
+                },
+                {
+                  name: 'Not Clear',
+                  listId: '64333bcaffd0170bbb9e0410',
+                  _id: new ObjectId("646653884f33e4532bd7c560")
+                },
+                {
+                  name: 'Cancled',
+                  listId: '64333bcbd5e5fc5930eef4f4',
+                  _id: new ObjectId("646653884f33e4532bd7c561")
+                },
+                {
+                  name: 'projects',
+                  listId: '64333bcbb3917f2cffdfb551',
+                  _id: new ObjectId("646653884f33e4532bd7c562")
+                }
+              ],
+              boardId: '64333bcaf79ebc92a673a4c8',
+              name: 'dev / TTP Creative'
+            }
+          }
+        }
+      }
+    }
+  ],
+  result: BulkWriteResult {
+    result: {
+      ok: 1,
+      writeErrors: [
+        WriteError {
+          err: {
+            index: 0,
+            code: 28,
+            errmsg: `Cannot create field '[]' in element {teams: [ { name: "team s", listId: "64333bcc74f7838bda29deee", isDeleted: false, _id: ObjectId('646651dca419f843f64bce14') } ]}`,
+            errInfo: undefined,
+            op: {
+              q: { _id: new ObjectId("642ab6bfb8e035eabbeea136") },
+              u: {
+                '$setOnInsert': { createdAt: 2023-05-18T16:34:16.527Z },
+                '$set': {
+                  updatedAt: 2023-05-18T16:34:16.527Z,
+                  color: 'blue',
+                  'teams.[]': [
+                    {
+                      updateOne: {
+                        filter: {
+                          _id: new ObjectId("646653884f33e4532bd7c563")
+                        },
+                        update: {
+                          listId: '64333bcc74f7838bda29deee',
+                          isDeleted: false,
+                          name: 'team s'
+                        }
+                      }
+                    }
+                  ],
+                  lists: [
+                    {
+                      name: 'Tasks Board',
+                      listId: '64333bcb0b63cd8f0ce17bf8',
+                      _id: new ObjectId("646653884f33e4532bd7c55b")
+                    },
+                    {
+                      name: 'In Progress',
+                      listId: '64333bcb70e28bc2788d797e',
+                      _id: new ObjectId("646653884f33e4532bd7c55c")
+                    },
+                    {
+                      name: 'Shared',
+                      listId: '64333bcb583d1190b289e4f5',
+                      _id: new ObjectId("646653884f33e4532bd7c55d")
+                    },
+                    {
+                      name: 'Review',
+                      listId: '64333bcb2f34f7b1a40a8fba',
+                      _id: new ObjectId("646653884f33e4532bd7c55e")
+                    },
+                    {
+                      name: 'Done',
+                      listId: '64333bcb5e1dd5bab3eda60e',
+                      _id: new ObjectId("646653884f33e4532bd7c55f")
+                    },
+                    {
+                      name: 'Not Clear',
+                      listId: '64333bcaffd0170bbb9e0410',
+                      _id: new ObjectId("646653884f33e4532bd7c560")
+                    },
+                    {
+                      name: 'Cancled',
+                      listId: '64333bcbd5e5fc5930eef4f4',
+                      _id: new ObjectId("646653884f33e4532bd7c561")
+                    },
+                    {
+                      name: 'projects',
+                      listId: '64333bcbb3917f2cffdfb551',
+                      _id: new ObjectId("646653884f33e4532bd7c562")
+                    }
+                  ],
+                  boardId: '64333bcaf79ebc92a673a4c8',
+                  name: 'dev / TTP Creative'
+                }
+              }
+            }
+          }
+        }
+      ],
+      writeConcernErrors: [],
+      insertedIds: [],
+      nInserted: 0,
+      nUpserted: 0,
+      nMatched: 0,
+      nModified: 0,
+      nRemoved: 0,
+      upserted: []
+    }
+  },
+  level: 'error',
+  timestamp: '2023-05-18 18:34:16',
+  message: `Cannot create field '[]' in element {teams: [ { name: "team s", listId: "64333bcc74f7838bda29deee", isDeleted: false, _id: ObjectId('646651dca419f843f64bce14') } ]}`,
+  stack: `MongoBulkWriteError: Cannot create field '[]' in element {teams: [ { name: "team s", listId: "64333bcc74f7838bda29deee", isDeleted: false, _id: ObjectId('646651dca419f843f64bce14') } ]}\n` +
+    '    at OrderedBulkOperation.handleWriteError (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/mongoose/node_modules/mongodb/src/bulk/common.ts:1333:9)\n' +
+    '    at resultHandler (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/mongoose/node_modules/mongodb/src/bulk/common.ts:625:23)\n' +
+    '    at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/mongoose/node_modules/mongodb/src/utils.ts:462:15\n' +
+    '    at processTicksAndRejections (node:internal/process/task_queues:96:5)',
+  [Symbol(errorLabels)]: Set(0) {}
+}

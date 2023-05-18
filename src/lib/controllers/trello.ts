@@ -257,6 +257,7 @@ class TrelloActionsController {
 
   static async __createCard(data: TaskData) {
     try {
+      console.log({ data });
       let url = `cards/?idList=${
         data.teamListId ? data.teamListId : data.listId
       }&name=${data.name}&desc=${data.description}&`;
