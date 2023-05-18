@@ -112,6 +112,7 @@ export default class TrelloWebhook {
       let team = await dep.teams.find(
         (item) => this.actionRequest.action.data.list.id === item.listId
       );
+      console.log({ data: this.actionRequest.action.data });
       if (!task && dep) {
         this.task = {
           ...this.task,
