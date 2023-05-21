@@ -264,7 +264,6 @@ class TrelloActionsController {
       if (data.deadline)
         url = `${url}due=${new Date(data.deadline).getTime()}&`;
       let cardCreateApi = trelloApi(url);
-      console.log({ url });
       let cardResult = await fetch(cardCreateApi, {
         method: "POST",
         headers: {

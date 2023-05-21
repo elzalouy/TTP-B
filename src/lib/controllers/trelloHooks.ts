@@ -167,7 +167,6 @@ export default class TrelloWebhook {
       let task = await TaskController.getOneTaskBy({
         cardId: this.actionRequest?.action?.data?.card?.id,
       });
-      console.log({ updateData: this.actionRequest.action.data });
       if (task) {
         let department = await Department.findOne({
           boardId: task.boardId,
