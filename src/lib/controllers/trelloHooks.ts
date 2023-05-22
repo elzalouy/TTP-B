@@ -171,6 +171,7 @@ export default class TrelloWebhook {
         let department = await Department.findOne({
           boardId: task.boardId,
         });
+        console.log({ data: this.actionRequest.action.data });
         let isMoved = this.actionRequest.action.data?.listBefore?.id
           ? true
           : false;
