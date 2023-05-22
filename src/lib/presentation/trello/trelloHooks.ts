@@ -30,6 +30,7 @@ export default class TrelloHooks {
     try {
       let payload = req.body;
       let eventId = payload?.action?.id;
+      console.log({ eventId });
       if (!processedEvents.has(eventId)) {
         processedEvents.add(eventId);
         let hook = new TrelloWebhook(req.body, "task");
