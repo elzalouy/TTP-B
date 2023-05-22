@@ -172,9 +172,9 @@ export default class TrelloWebhook {
           boardId: task.boardId,
         });
         let listId =
-          this.actionRequest.action.data.list.id ??
-          this.actionRequest.action.data.card.idList ??
-          this.actionRequest.action.data.listAfter.id;
+          this.actionRequest.action.data?.list?.id ??
+          this.actionRequest.action.data?.card?.idList ??
+          this.actionRequest.action.data?.listAfter?.id;
         console.log({
           data: this.actionRequest.action.data,
           taskList: task.listId,
