@@ -1219,3 +1219,95 @@
   level: 'info',
   timestamp: '2023-05-21 17:55:40'
 }
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2023-05-22 07:56:29'
+}
+{
+  message: { monthlyDeleteNotifications: 141 },
+  level: 'info',
+  timestamp: '2023-05-22 07:56:34'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2023-05-22 08:03:52'
+}
+{
+  message: {
+    body: {
+      name: 'Nawaf Elmohsem-Nawaf project / pm nawaf2-Strategry 2-startegy 1 (t3)',
+      desc: 'desc',
+      due: 'Wed May 31 2023 00:00:00 GMT+0300 (Eastern European Summer Time)',
+      start: 2023-05-18T15:34:01.000Z,
+      idList: '64333bcb583d1190b289e4f5',
+      idBoard: '64333bcaf79ebc92a673a4c8'
+    }
+  },
+  level: 'info',
+  timestamp: '2023-05-22 08:04:56'
+}
+{
+  message: {
+    body: {
+      name: 'testing',
+      desc: 'desc',
+      due: 'Mon May 22 2023 00:00:00 GMT+0300 (Eastern European Summer Time)',
+      start: 2023-05-18T15:34:01.000Z,
+      idList: '64333bcb70e28bc2788d797e',
+      idBoard: '64333bcaf79ebc92a673a4c8'
+    }
+  },
+  level: 'info',
+  timestamp: '2023-05-22 08:29:12'
+}
+{
+  message: {
+    body: {
+      name: 'Ezzat Elzalouy-new -Strategry 2- (task)',
+      desc: 'desc',
+      due: 'Mon May 22 2023 00:00:00 GMT+0300 (Eastern European Summer Time)',
+      start: 2023-05-18T17:56:13.000Z,
+      idList: '64333bcb0b63cd8f0ce17bf8',
+      idBoard: '64333bcaf79ebc92a673a4c8'
+    }
+  },
+  level: 'info',
+  timestamp: '2023-05-22 09:00:14'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2023-05-22 12:42:54'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2023-05-22 12:45:31'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2023-05-22 12:47:09'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2023-05-22 12:47:58'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2023-05-22 12:49:03'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2023-05-22 12:53:25'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2023-05-22 13:15:12'
+}

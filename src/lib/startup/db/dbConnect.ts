@@ -230,8 +230,44 @@ export const initializeTrelloBoards = async () => {
       let index = intersection.findIndex((dep) => dep._id === item._id);
       return index >= 0 ? intersection[index] : item;
     });
-
+    let updateTeams = _.flattenDeep(
+      allDepartments.map((item) => {
+        return item.teams.map((team) => {
+          return {
+            updateOne: {
+              filter: { _id: item._id, "teams.listId": team.listId },
+              update: {
+                $set: {
+                  "teams.$.listId": team.listId,
+                  "teams.$.name": team.name,
+                  "teams.$.isDeleted": team.isDeleted,
+                },
+              },
+            },
+          };
+        });
+      })
+    );
+    let updateLists = _.flattenDeep(
+      allDepartments.map((item) => {
+        return item.lists.map((list) => {
+          return {
+            updateOne: {
+              filter: { _id: item._id, "lists._id": list._id },
+              update: {
+                $set: {
+                  "lists.$.listId": list.listId,
+                  "lists.$.name": list.name,
+                },
+              },
+            },
+          };
+        });
+      })
+    );
     let update = [
+      ...updateLists,
+      ...updateTeams,
       ...allDepartments.map((item) => {
         return {
           updateOne: {
@@ -239,8 +275,6 @@ export const initializeTrelloBoards = async () => {
             update: {
               name: item.name,
               boardId: item.boardId,
-              lists: item.lists,
-              teams: item.teams,
               color: item.color,
             },
           },
@@ -254,6 +288,7 @@ export const initializeTrelloBoards = async () => {
         };
       }),
     ];
+    console.log({ allDepartments, update, teams: allDepartments[0].teams });
     await Department.bulkWrite(update);
     await allDepartments.forEach(
       async (item) =>
