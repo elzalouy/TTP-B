@@ -207,6 +207,7 @@ export default class TrelloWebhook {
           status: inProgressList?.name ?? status,
           movements: task.movements,
         };
+        console.log({ isMoved });
         if (isMoved)
           this.task.movements.push({
             status: inProgressList?.name ? inProgressList.name : status,
