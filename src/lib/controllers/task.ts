@@ -179,9 +179,6 @@ class TaskController extends TaskDB {
       if (createdCard) {
         data.cardId = createdCard.id;
         data.trelloShortUrl = createdCard.shortUrl;
-        data.movements = [
-          { movedAt: new Date(data.start).toString(), status: data.status },
-        ];
         if (data.teamId) data.assignedAt = new Date(Date.now());
         task = await super.createTaskDB(data);
         if (task) {

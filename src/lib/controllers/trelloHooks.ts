@@ -207,11 +207,11 @@ export default class TrelloWebhook {
           movements: task.movements,
           teamListId: isNewTeam ? listId : task.teamListId,
         };
-        // if (isMoved)
-        //   this.task.movements.push({
-        //     status: inProgressList?.name ? inProgressList.name : status,
-        //     movedAt: new Date(Date.now()).toString(),
-        //   });
+        if (isMoved)
+          this.task.movements.push({
+            status: inProgressList?.name ? inProgressList.name : status,
+            movedAt: new Date(Date.now()).toString(),
+          });
         console.log({ updateTask: listId, movements: this.task.movements });
 
         return await TaskController.updateTaskByTrelloDB(this.task, {
