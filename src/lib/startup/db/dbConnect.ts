@@ -385,7 +385,7 @@ export const initializeTTPTasks = async () => {
           listId: card.idList,
           status: status?.name ?? "In Progress",
           teamId: team?._id ?? item.teamId,
-          teamListId: team.listId ?? item.teamListId,
+          teamListId: team?.listId ?? item?.teamListId,
           cardId: card.id,
           description: card.desc ? card.desc : "",
           start: card.start,

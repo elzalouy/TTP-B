@@ -35,6 +35,7 @@ export default class TrelloWebhook {
   }
 
   async start() {
+    console.log({ webHookAction: this.action, type: this.type });
     if (this.hookTarget === "task")
       switch (this.type) {
         case "addAttachmentToCard":
@@ -207,7 +208,7 @@ export default class TrelloWebhook {
           movements: task.movements,
           teamListId: isNewTeam ? listId : task.teamListId,
         };
-        if (isMoved)
+        if (isMoved || task.movements.length === 0)
           this.task.movements.push({
             status: inProgressList?.name ? inProgressList.name : status,
             movedAt: new Date(Date.now()).toString(),
