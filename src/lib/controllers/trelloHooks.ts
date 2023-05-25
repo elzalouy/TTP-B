@@ -103,16 +103,18 @@ export default class TrelloWebhook {
 
   private async createCard() {
     try {
+      let listId =
+        this.actionRequest.action.data?.list?.id ??
+        this.actionRequest.action.data?.card?.idList ??
+        this.actionRequest.action.data?.listAfter?.id;
       let task = await TaskController.getOneTaskBy({
         cardId: this.actionRequest?.action?.data?.card?.id,
       });
       let dep = await Department.findOne({
         boardId: this.actionRequest.action.data?.board?.id,
       });
-      let team = await dep.teams.find(
-        (item) => this.actionRequest.action.data.list.id === item.listId
-      );
-      console.log({ data: this.actionRequest.action.data });
+      let team = await dep.teams.find((item) => listId === item.listId);
+
       if (!task && dep) {
         this.task = {
           ...this.task,
@@ -127,9 +129,7 @@ export default class TrelloWebhook {
           status: team
             ? "In Progress"
             : this.actionRequest.action.data.list.name,
-          listId: team
-            ? dep.lists.find((item) => item.name === "In Progress").listId
-            : this.actionRequest.action.data.list.id,
+          listId: listId,
           movements: [
             {
               status: team
@@ -175,11 +175,6 @@ export default class TrelloWebhook {
           this.actionRequest.action.data?.list?.id ??
           this.actionRequest.action.data?.card?.idList ??
           this.actionRequest.action.data?.listAfter?.id;
-        console.log({
-          data: this.actionRequest.action.data,
-          taskList: task.listId,
-          cardList: listId,
-        });
         let isMoved = listId !== task.listId;
         let status =
           this.actionRequest.action.data?.list?.name ??
@@ -207,9 +202,10 @@ export default class TrelloWebhook {
           description:
             this.actionRequest.action.data.card.desc ?? task.description,
           teamId: isNewTeam?._id ?? task.teamId,
-          listId: isNewTeam?.listId ?? listId,
+          listId: listId,
           status: inProgressList?.name ?? status,
           movements: task.movements,
+          teamListId: isNewTeam ? listId : task.teamListId,
         };
         console.log({ isMoved });
         if (isMoved)

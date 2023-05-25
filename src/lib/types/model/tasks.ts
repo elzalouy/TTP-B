@@ -33,6 +33,7 @@ export interface TaskInfo extends Document {
   deadlineChain: TaskDeadlineChain[];
   movements?: Movement[];
   assignedAt?: Date | number;
+  teamListId?: string;
 }
 
 export interface TaskHistory {

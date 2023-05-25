@@ -1351,3 +1351,72 @@
   level: 'info',
   timestamp: '2023-05-22 19:45:27'
 }
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2023-05-22 19:46:02'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2023-05-24 10:21:40'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2023-05-25 08:05:05'
+}
+{
+  message: { monthlyDeleteNotifications: 21 },
+  level: 'info',
+  timestamp: '2023-05-25 08:05:08'
+}
+{
+  message: {
+    body: {
+      name: 'Ezzat Elzalouy-new -Strategry 2-Ezzat Elzalouy-new -Strategry 2-Ezzat Elzalouy-new -Strategry 2- (task)',
+      desc: 'desc',
+      due: 'Mon May 22 2023 00:00:00 GMT+0300 (Eastern European Summer Time)',
+      start: 2023-05-18T17:56:13.000Z,
+      idList: '64333bcb0b63cd8f0ce17bf8',
+      idBoard: '64333bcaf79ebc92a673a4c8'
+    }
+  },
+  level: 'info',
+  timestamp: '2023-05-25 17:17:25'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2023-05-25 17:21:55'
+}
+{
+  message: { monthlyDeleteNotifications: 6 },
+  level: 'info',
+  timestamp: '2023-05-25 17:21:58'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2023-05-25 17:31:48'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2023-05-25 17:33:25'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2023-05-25 17:33:58'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2023-05-25 17:42:15'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2023-05-25 17:42:52'
+}
