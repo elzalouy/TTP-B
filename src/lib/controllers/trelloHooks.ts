@@ -114,7 +114,6 @@ export default class TrelloWebhook {
         boardId: this.actionRequest.action.data?.board?.id,
       });
       let team = await dep.teams.find((item) => listId === item.listId);
-
       if (!task && dep) {
         this.task = {
           ...this.task,
@@ -143,6 +142,7 @@ export default class TrelloWebhook {
               ? new Date(Date.now())
               : this.task.assignedAt,
         };
+        console.log({ createTask: listId, movements: this.task.movements });
         return await TaskController.createTaskByTrello(this.task);
       }
     } catch (error) {
@@ -207,12 +207,13 @@ export default class TrelloWebhook {
           movements: task.movements,
           teamListId: isNewTeam ? listId : task.teamListId,
         };
-        console.log({ isMoved });
         if (isMoved)
           this.task.movements.push({
             status: inProgressList?.name ? inProgressList.name : status,
             movedAt: new Date(Date.now()).toString(),
           });
+        console.log({ updateTask: listId, movements: this.task.movements });
+
         return await TaskController.updateTaskByTrelloDB(this.task, {
           id: this.user.id,
           name: this.user.name,
