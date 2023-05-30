@@ -289,14 +289,14 @@ export const initializeTrelloBoards = async () => {
       }),
     ];
     console.log({ allDepartments, update, teams: allDepartments[0].teams });
-    await Department.bulkWrite(update);
-    await allDepartments.forEach(
-      async (item) =>
-        await TrelloActionsController.__addWebHook(
-          item.boardId,
-          "trelloWebhookUrlTask"
-        )
-    );
+    Department.bulkWrite(update);
+    // allDepartments.forEach(
+    //   async (item) =>
+    //     TrelloActionsController.__addWebHook(
+    //       item.boardId,
+    //       "trelloWebhookUrlTask"
+    //     )
+    // );
   } catch (error) {
     logger.error(error);
   }
@@ -544,12 +544,9 @@ export const initializeTTPTasks = async () => {
       }),
     ];
     Tasks.bulkWrite(update, {});
-    await tasks.forEach(async (item) => {
-      await TrelloActionsController.__addWebHook(
-        item.cardId,
-        "trelloWebhookUrlTask"
-      );
-    });
+    // tasks.forEach(async (item) => {
+    //   TrelloActionsController.__addWebHook(item.cardId, "trelloWebhookUrlTask");
+    // });
   } catch (error) {
     logger.error({ error });
   }
