@@ -110,16 +110,20 @@ class TrelloActionsController {
         return __awaiter(this, void 0, void 0, function* () {
             try {
                 let moveTask = (0, trelloApi_1.trelloApi)(`cards/${cardId}/?idList=${listId}&`);
-                yield (0, node_fetch_1.default)(moveTask, {
+                let result = yield (0, node_fetch_1.default)(moveTask, {
                     method: "PUT",
                     headers: {
                         Accept: "application/json",
                     },
                 })
-                    .then((res) => {
-                    return res;
+                    .then((res) => __awaiter(this, void 0, void 0, function* () {
+                    return res.json();
+                }))
+                    .then((value) => {
+                    return value;
                 })
                     .catch((err) => logger_1.default.info("error in moving board", err));
+                return result;
             }
             catch (error) {
                 logger_1.default.error({ moveTaskToDiffListError: error });
@@ -274,9 +278,12 @@ class TrelloActionsController {
         });
     }
     static __createCard(data) {
+        var _a;
         return __awaiter(this, void 0, void 0, function* () {
             try {
-                let url = `cards/?idList=${data.teamListId ? data.teamListId : data.listId}&name=${data.name}&desc=${data.description}&start=${new Date(data.start ? data.start : Date.now()).getTime()}&`;
+                let url = `cards/?idList=${(_a = data.teamListId) !== null && _a !== void 0 ? _a : data.listId}&name=${data.name}&desc=${data.description}&`;
+                if (data.start)
+                    url = `${url}start=${new Date(data.start).getTime()}&`;
                 if (data.deadline)
                     url = `${url}due=${new Date(data.deadline).getTime()}&`;
                 let cardCreateApi = (0, trelloApi_1.trelloApi)(url);
@@ -345,15 +352,19 @@ class TrelloActionsController {
     static __addWebHook(idModel, urlInConfig) {
         return __awaiter(this, void 0, void 0, function* () {
             try {
-                let webhookUrl = `webhooks/?idModel=${idModel}&callbackURL=${config_1.default.get(urlInConfig)}&`;
-                let webhookApi = (0, trelloApi_1.trelloApi)(webhookUrl);
-                let webhookResult = yield (0, node_fetch_1.default)(webhookApi, {
+                let route = "webhooks";
+                let params = `idModel=${idModel}&callbackURL=${config_1.default.get(urlInConfig)}`;
+                let webhookApi = (0, trelloApi_1.trelloApiWithUrl)(route, params);
+                (0, node_fetch_1.default)(webhookApi, {
                     method: "POST",
                     headers: {
                         Accept: "application/json",
                     },
-                });
-                return webhookResult;
+                })
+                    .then((res) => __awaiter(this, void 0, void 0, function* () {
+                    return res.text();
+                }))
+                    .catch((err) => console.log({ err }));
             }
             catch (error) {
                 logger_1.default.error({ createWebHookError: error });

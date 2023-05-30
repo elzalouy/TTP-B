@@ -42,6 +42,7 @@ function moveTaskJob(listId, cardId, status, department, user) {
                 let teamList = department.teams.find((item) => item.listId === listId);
                 let statusList = department.lists.find((item) => item.listId === listId);
                 const result = yield trello_1.default.moveTaskToDiffList(cardId, (_a = teamList === null || teamList === void 0 ? void 0 : teamList.listId) !== null && _a !== void 0 ? _a : statusList === null || statusList === void 0 ? void 0 : statusList.listId);
+                console.log({ moveResult: result });
                 cb(null);
             }
         }
@@ -71,6 +72,7 @@ const updateCardJob = (data, newFiles, tokenUser) => {
     delete data.deleteFiles;
     delete data.attachedFiles;
     exports.updateTaskQueue.push((cb) => __awaiter(void 0, void 0, void 0, function* () {
+        var _a, _b, _c, _d, _e, _f, _g;
         try {
             let current = yield task_1.default.__getTask(data.id);
             let dep = yield Department_1.default.findOne({ boardId: data.boardId });
@@ -79,14 +81,10 @@ const updateCardJob = (data, newFiles, tokenUser) => {
             let taskData = {
                 name: data.name,
                 idBoard: data.boardId,
-                idList: teamListId
-                    ? teamListId
-                    : statusListId
-                        ? statusListId
-                        : current.listId,
-                due: data.deadline ? data.deadline : null,
-                start: data.start ? data.start : null,
-                desc: data.description ? data.description : "",
+                idList: (_b = (_a = teamListId === null || teamListId === void 0 ? void 0 : teamListId.listId) !== null && _a !== void 0 ? _a : statusListId === null || statusListId === void 0 ? void 0 : statusListId.listId) !== null && _b !== void 0 ? _b : current.listId,
+                due: (_d = (_c = data === null || data === void 0 ? void 0 : data.deadline) !== null && _c !== void 0 ? _c : current === null || current === void 0 ? void 0 : current.deadline) !== null && _d !== void 0 ? _d : null,
+                start: (_f = (_e = data === null || data === void 0 ? void 0 : data.start) !== null && _e !== void 0 ? _e : current === null || current === void 0 ? void 0 : current.start) !== null && _f !== void 0 ? _f : null,
+                desc: (_g = data === null || data === void 0 ? void 0 : data.description) !== null && _g !== void 0 ? _g : "",
             };
             let response = yield trello_1.default.__updateCard({
                 cardId: data.cardId,

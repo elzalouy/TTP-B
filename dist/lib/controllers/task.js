@@ -78,17 +78,19 @@ class TaskController extends tasks_1.default {
             return yield TaskController.__createTaskByTrello(data);
         });
     }
-    static moveTaskOnTrello(cardId, listId, status, list, department, user) {
+    static moveTaskOnTrello(cardId, listId, status, department, user) {
         return __awaiter(this, void 0, void 0, function* () {
             // TODO update this function with the new implementation
-            return yield TaskController.__moveTaskOnTrello(cardId, listId, status, list, department, user);
+            return yield TaskController.__moveTaskOnTrello(cardId, listId, status, department, user);
         });
     }
-    static __moveTaskOnTrello(cardId, listId, status, list, department, user) {
+    static __moveTaskOnTrello(cardId, listId, status, department, user) {
         return __awaiter(this, void 0, void 0, function* () {
             try {
                 (0, task_actions_Queue_1.moveTaskJob)(listId, cardId, status, department, user);
-                return { data: `Task with cardId ${cardId} has moved to list ${list}` };
+                return {
+                    data: `Task with cardId ${cardId} has moved to list ${department.lists.find((list) => list.listId === listId).name}`,
+                };
             }
             catch (error) {
                 logger_1.default.error({ moveTaskOnTrelloError: error });
@@ -180,6 +182,8 @@ class TaskController extends tasks_1.default {
                 if (createdCard) {
                     data.cardId = createdCard.id;
                     data.trelloShortUrl = createdCard.shortUrl;
+                    if (data.teamId)
+                        data.assignedAt = new Date(Date.now());
                     task = yield _super.createTaskDB.call(this, data);
                     if (task) {
                         tasks_Route_Queue_1.taskRoutesQueue.push(() => __awaiter(this, void 0, void 0, function* () {
@@ -346,7 +350,7 @@ class TaskController extends tasks_1.default {
                                 movements: (_f = isTaskFound === null || isTaskFound === void 0 ? void 0 : isTaskFound.movements) !== null && _f !== void 0 ? _f : [
                                     {
                                         status: isList ? isList : "In Progress",
-                                        movedAt: new Date(Date.now()),
+                                        movedAt: new Date(Date.now()).toString(),
                                     },
                                 ],
                             };

@@ -36,13 +36,18 @@ exports.movementSchema = new mongoose_1.Schema({
         ],
         default: "Tasks Board",
     },
-    movedAt: { Type: Date },
+    movedAt: {
+        type: String,
+        required: true,
+        default: new Date(Date.now()).toString(),
+    },
 });
 exports.deadlineChainSchema = new mongoose_1.Schema({
     userId: { type: String, required: true },
     name: { type: String, required: true },
     before: { type: Date, required: true },
     current: { type: Date, required: true },
+    trelloMember: { type: Boolean, required: true, default: true },
 });
 const TaskSchema = new mongoose_1.Schema({
     name: {
@@ -58,6 +63,11 @@ const TaskSchema = new mongoose_1.Schema({
     categoryId: {
         type: mongoose_1.Schema.Types.ObjectId,
         ref: "categories",
+        default: null,
+    },
+    subCategoryId: {
+        type: mongoose_1.Schema.Types.ObjectId,
+        ref: "subcategories",
         default: null,
     },
     teamId: {
@@ -95,7 +105,7 @@ const TaskSchema = new mongoose_1.Schema({
     },
     start: {
         type: Date,
-        default: Date.now(),
+        default: null,
     },
     deadline: {
         type: Date,
@@ -120,6 +130,7 @@ const TaskSchema = new mongoose_1.Schema({
         min: 0,
     },
     movements: { type: [exports.movementSchema], min: 1, required: true },
+    assignedAt: { type: Date, required: false, default: null },
 }, {
     timestamps: true,
     strict: false,

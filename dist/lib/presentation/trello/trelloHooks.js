@@ -35,7 +35,7 @@ class TrelloHooks {
                     res.send("Done");
                 }
                 else
-                    res.status(400).send("Implemented before");
+                    res.send("Implemented before");
             }
             catch (error) {
                 logger_1.default.error({ handleWebHookUpdateProjectError: error });
@@ -49,6 +49,7 @@ class TrelloHooks {
             try {
                 let payload = req.body;
                 let eventId = (_a = payload === null || payload === void 0 ? void 0 : payload.action) === null || _a === void 0 ? void 0 : _a.id;
+                console.log({ eventId });
                 if (!processedEvents.has(eventId)) {
                     processedEvents.add(eventId);
                     let hook = new trelloHooks_1.default(req.body, "task");
@@ -61,7 +62,7 @@ class TrelloHooks {
                     res.send("Done");
                 }
                 else
-                    res.status(400).send("Implemented before");
+                    res.send("Implemented before");
             }
             catch (error) {
                 logger_1.default.error({ handleWebhookUpdateCardError: error });

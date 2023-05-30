@@ -26,7 +26,6 @@ const department_actions_queue_1 = require("../../backgroundJobs/actions/departm
 const Department_2 = require("../../types/model/Department");
 const lodash_1 = __importDefault(require("lodash"));
 const Task_1 = __importDefault(require("../../models/Task"));
-const mongodb_1 = require("mongodb");
 (0, dotenv_1.config)();
 const db = config_1.default.get("mongoDbConnectionString");
 logger_1.default.info({ db });
@@ -88,18 +87,19 @@ const initializeTrelloBoards = () => __awaiter(void 0, void 0, void 0, function*
         // Not Existed on Trello > create it on trello
         notExistedOnTrello = allDepartments.filter((item) => !boardsIds.includes(item.boardId));
         notExistedOnTrello = yield Promise.all(lodash_1.default.flatMap(notExistedOnTrello, (item) => __awaiter(void 0, void 0, void 0, function* () {
+            var _a, _b;
             let board = yield trello_1.default.createNewBoard(item.name, item.color);
             item.boardId = board.id;
             listTypes =
                 item.name === config_1.default.get("CreativeBoard")
                     ? Department_2.CreativeListTypes
                     : Department_2.ListTypes;
-            item.lists = yield Promise.all(item.lists.map((list) => __awaiter(void 0, void 0, void 0, function* () {
+            item.lists = yield Promise.all((_a = item.lists) === null || _a === void 0 ? void 0 : _a.map((list) => __awaiter(void 0, void 0, void 0, function* () {
                 let listInBoard = yield trello_1.default.addListToBoard(board.id, list.name);
                 list.listId = listInBoard.id;
                 return list;
             })));
-            item.teams = yield Promise.all(item.teams.map((team) => __awaiter(void 0, void 0, void 0, function* () {
+            item.teams = yield Promise.all((_b = item.teams) === null || _b === void 0 ? void 0 : _b.map((team) => __awaiter(void 0, void 0, void 0, function* () {
                 let teamInBoard = yield trello_1.default.addListToBoard(board.id, team.name);
                 team.listId = teamInBoard.id;
                 return team;
@@ -112,7 +112,6 @@ const initializeTrelloBoards = () => __awaiter(void 0, void 0, void 0, function*
         });
         // Not Existed on TTP > create it on TTP
         notExistedOnTTP = allBoards.filter((item) => !depsIds.includes(item.id));
-        console.log({ notExistedOnTTP });
         let newDeps = yield Promise.all(notExistedOnTTP === null || notExistedOnTTP === void 0 ? void 0 : notExistedOnTTP.map((item) => __awaiter(void 0, void 0, void 0, function* () {
             let lists = yield trello_1.default.__getBoardLists(item.id);
             item.lists = lists;
@@ -125,9 +124,9 @@ const initializeTrelloBoards = () => __awaiter(void 0, void 0, void 0, function*
                 boardId: item.id,
                 name: item.name,
                 color: "blue",
-                lists: yield Promise.all(listTypes.map((listName) => __awaiter(void 0, void 0, void 0, function* () {
-                    var _a;
-                    listExisted = (_a = item === null || item === void 0 ? void 0 : item.lists) === null || _a === void 0 ? void 0 : _a.find((list) => listName === list.name);
+                lists: yield Promise.all(listTypes === null || listTypes === void 0 ? void 0 : listTypes.map((listName) => __awaiter(void 0, void 0, void 0, function* () {
+                    var _c;
+                    listExisted = (_c = item === null || item === void 0 ? void 0 : item.lists) === null || _c === void 0 ? void 0 : _c.find((list) => listName === list.name);
                     return {
                         name: listName,
                         listId: listExisted && (listExisted === null || listExisted === void 0 ? void 0 : listExisted.id)
@@ -137,23 +136,23 @@ const initializeTrelloBoards = () => __awaiter(void 0, void 0, void 0, function*
                             }),
                     };
                 }))),
-                teams: teams.map((tem) => {
+                teams: teams === null || teams === void 0 ? void 0 : teams.map((tem) => {
                     return { name: tem.name, listId: tem.id, isDeleted: false };
                 }),
             });
         })));
         // existed on TTP & TRELLO > make it same
         intersection = yield Promise.all(intersection === null || intersection === void 0 ? void 0 : intersection.map((item) => __awaiter(void 0, void 0, void 0, function* () {
-            var _b, _c;
-            let board = allBoards.find((board) => board.id === item.boardId);
+            var _d, _e;
+            let board = allBoards === null || allBoards === void 0 ? void 0 : allBoards.find((board) => board.id === item.boardId);
             board.lists = yield trello_1.default.__getBoardLists(item.boardId);
             listTypes =
                 item.name === config_1.default.get("CreativeBoard")
                     ? Department_2.CreativeListTypes
                     : Department_2.ListTypes;
-            item.lists = yield Promise.all(listTypes.map((listName) => __awaiter(void 0, void 0, void 0, function* () {
-                var _d;
-                let listExisted = (_d = board === null || board === void 0 ? void 0 : board.lists) === null || _d === void 0 ? void 0 : _d.find((list) => listName === list.name);
+            item.lists = yield Promise.all(listTypes === null || listTypes === void 0 ? void 0 : listTypes.map((listName) => __awaiter(void 0, void 0, void 0, function* () {
+                var _f;
+                let listExisted = (_f = board === null || board === void 0 ? void 0 : board.lists) === null || _f === void 0 ? void 0 : _f.find((list) => listName === list.name);
                 return {
                     name: listName,
                     listId: listExisted && (listExisted === null || listExisted === void 0 ? void 0 : listExisted.id)
@@ -163,35 +162,64 @@ const initializeTrelloBoards = () => __awaiter(void 0, void 0, void 0, function*
                         }),
                 };
             })));
-            item.teams = (_c = (_b = board.lists) === null || _b === void 0 ? void 0 : _b.filter((item) => !listTypes.includes(item.name))) === null || _c === void 0 ? void 0 : _c.map((item) => {
+            item.teams = (_e = (_d = board.lists) === null || _d === void 0 ? void 0 : _d.filter((item) => !listTypes.includes(item.name))) === null || _e === void 0 ? void 0 : _e.map((item) => {
                 return { name: item.name, listId: item.id, isDeleted: false };
             });
             return item;
         })));
-        allDepartments = allDepartments.map((item) => {
+        allDepartments = allDepartments === null || allDepartments === void 0 ? void 0 : allDepartments.map((item) => {
             let index = intersection.findIndex((dep) => dep._id === item._id);
             return index >= 0 ? intersection[index] : item;
         });
-        let creative = allDepartments.find((item) => item.name === config_1.default.get("CreativeBoard"));
-        if (!creative)
-            (0, exports.createTTPCreativeMainBoard)();
-        // allDepartments.map((item) => item.save());
-        let update = [
-            ...allDepartments.map((item) => {
+        let updateTeams = lodash_1.default.flattenDeep(allDepartments === null || allDepartments === void 0 ? void 0 : allDepartments.map((item) => {
+            var _a;
+            return (_a = item.teams) === null || _a === void 0 ? void 0 : _a.map((team) => {
                 return {
-                    replaceOne: {
+                    updateOne: {
+                        filter: { _id: item._id, "teams.listId": team.listId },
+                        update: {
+                            $set: {
+                                "teams.$.listId": team.listId,
+                                "teams.$.name": team.name,
+                                "teams.$.isDeleted": team.isDeleted,
+                            },
+                        },
+                    },
+                };
+            });
+        }));
+        let updateLists = lodash_1.default.flattenDeep(allDepartments === null || allDepartments === void 0 ? void 0 : allDepartments.map((item) => {
+            var _a;
+            return (_a = item.lists) === null || _a === void 0 ? void 0 : _a.map((list) => {
+                return {
+                    updateOne: {
+                        filter: { _id: item._id, "lists._id": list._id },
+                        update: {
+                            $set: {
+                                "lists.$.listId": list.listId,
+                                "lists.$.name": list.name,
+                            },
+                        },
+                    },
+                };
+            });
+        }));
+        let update = [
+            ...updateLists,
+            ...updateTeams,
+            ...allDepartments === null || allDepartments === void 0 ? void 0 : allDepartments.map((item) => {
+                return {
+                    updateOne: {
                         filter: { _id: item._id },
-                        replacement: {
+                        update: {
                             name: item.name,
                             boardId: item.boardId,
-                            lists: item.lists,
-                            teams: item.teams,
                             color: item.color,
                         },
                     },
                 };
             }),
-            ...newDeps.map((item) => {
+            ...newDeps === null || newDeps === void 0 ? void 0 : newDeps.map((item) => {
                 return {
                     insertOne: {
                         document: item,
@@ -199,8 +227,11 @@ const initializeTrelloBoards = () => __awaiter(void 0, void 0, void 0, function*
                 };
             }),
         ];
+        console.log({ allDepartments, update, teams: allDepartments[0].teams });
         yield Department_1.default.bulkWrite(update);
-        yield allDepartments.forEach((item) => trello_1.default.__addWebHook(item.boardId, "trelloWebhookUrlTask"));
+        yield allDepartments.forEach((item) => __awaiter(void 0, void 0, void 0, function* () {
+            return yield trello_1.default.__addWebHook(item.boardId, "trelloWebhookUrlTask");
+        }));
     }
     catch (error) {
         logger_1.default.error(error);
@@ -208,67 +239,76 @@ const initializeTrelloBoards = () => __awaiter(void 0, void 0, void 0, function*
 });
 exports.initializeTrelloBoards = initializeTrelloBoards;
 const initializeTTPTasks = () => __awaiter(void 0, void 0, void 0, function* () {
-    var _e, _f;
+    var _g, _h;
     try {
         let tasks, boards, departments, creativeBoard, creativeDepartment, projectsListId, cards, cardsIds, tasksIds, intersection, notExistedOnTrello, notExistedOnTTP;
         // get the data
         boards = yield trello_1.default.getBoardsInTrello();
-        boards = yield Promise.all(boards.map((item) => __awaiter(void 0, void 0, void 0, function* () {
+        boards = yield Promise.all(boards === null || boards === void 0 ? void 0 : boards.map((item) => __awaiter(void 0, void 0, void 0, function* () {
             let lists = yield trello_1.default.__getBoardLists(item.id);
             item.lists = lists;
             return item;
         })));
         departments = yield Department_1.default.find({});
-        creativeBoard = boards.find((item) => item.name === config_1.default.get("CreativeBoard"));
+        creativeBoard = boards === null || boards === void 0 ? void 0 : boards.find((item) => item.name === config_1.default.get("CreativeBoard"));
         tasks = yield Task_1.default.find({});
         creativeDepartment = yield Department_1.default.findOne({
             boardId: creativeBoard === null || creativeBoard === void 0 ? void 0 : creativeBoard.id,
         });
-        projectsListId = (_f = (_e = creativeDepartment === null || creativeDepartment === void 0 ? void 0 : creativeDepartment.lists) === null || _e === void 0 ? void 0 : _e.find((item) => item.name === "projects")) === null || _f === void 0 ? void 0 : _f._id;
-        let newCards = yield Promise.all(boards.map((item) => __awaiter(void 0, void 0, void 0, function* () {
+        projectsListId = (_h = (_g = creativeDepartment === null || creativeDepartment === void 0 ? void 0 : creativeDepartment.lists) === null || _g === void 0 ? void 0 : _g.find((item) => item.name === "projects")) === null || _h === void 0 ? void 0 : _h._id;
+        let newCards = yield Promise.all(boards === null || boards === void 0 ? void 0 : boards.map((item) => __awaiter(void 0, void 0, void 0, function* () {
+            var _j;
             let boardCards = yield trello_1.default.__getCardsInBoard(item.id);
+            if (item.name === config_1.default.get("CreativeBoard")) {
+                let list = (_j = item === null || item === void 0 ? void 0 : item.lists) === null || _j === void 0 ? void 0 : _j.find((l) => l.name === "projects").id;
+                boardCards = boardCards.filter((item) => item.idList !== list);
+            }
             return boardCards;
         })));
         cards = lodash_1.default.flattenDeep(newCards);
-        cards = yield Promise.all(cards.map((item) => __awaiter(void 0, void 0, void 0, function* () {
+        cards = yield Promise.all(cards === null || cards === void 0 ? void 0 : cards.map((item) => __awaiter(void 0, void 0, void 0, function* () {
             let attachments = yield trello_1.default.__getCardAttachments(item.id);
-            item.attachments = attachments ? attachments : [];
+            item.attachments = attachments !== null && attachments !== void 0 ? attachments : [];
             return item;
         })));
-        tasksIds = tasks.map((item) => item.cardId);
-        cardsIds = cards.map((item) => item.id);
+        tasksIds = tasks === null || tasks === void 0 ? void 0 : tasks.map((item) => item.cardId);
+        cardsIds = cards === null || cards === void 0 ? void 0 : cards.map((item) => item.id);
         notExistedOnTTP = cards.filter((item) => !tasksIds.includes(item.id));
         notExistedOnTrello = tasks.filter((item) => !cardsIds.includes(item.cardId));
         intersection = tasks.filter((item) => cardsIds.includes(item.cardId));
         // execute the function
         // Existed on TTP & Trello > make it same
-        intersection = yield Promise.all(intersection.map((item) => __awaiter(void 0, void 0, void 0, function* () {
-            var _g;
-            let card = cards.find((c) => c.id === item.cardId);
-            let dep = departments.find((d) => d.boardId === card.idBoard);
-            let status = dep.lists.find((list) => list.listId === card.idList);
-            let team = dep.teams.find((team) => team.listId === card.idList);
+        intersection = yield Promise.all(intersection === null || intersection === void 0 ? void 0 : intersection.map((item) => __awaiter(void 0, void 0, void 0, function* () {
+            var _k, _l, _m, _o, _p, _q, _r;
+            let card = cards === null || cards === void 0 ? void 0 : cards.find((c) => c.id === item.cardId);
+            let dep = departments === null || departments === void 0 ? void 0 : departments.find((d) => d.boardId === card.idBoard);
+            let status = (_k = dep.lists) === null || _k === void 0 ? void 0 : _k.find((list) => list.listId === card.idList);
+            let team = (_l = dep.teams) === null || _l === void 0 ? void 0 : _l.find((team) => team.listId === card.idList);
             let replacement = new Task_1.default({
                 _id: item._id,
                 name: item.name,
+                categoryId: item.categoryId,
+                subCategoryId: item.subCategoryId,
                 boardId: card.idBoard,
+                projectId: item.projectId,
                 listId: card.idList,
-                status: (status === null || status === void 0 ? void 0 : status.name) ? status.name : "In Progress",
-                teamId: (team === null || team === void 0 ? void 0 : team._id) ? new mongodb_1.ObjectId(team === null || team === void 0 ? void 0 : team._id) : null,
+                status: (_m = status === null || status === void 0 ? void 0 : status.name) !== null && _m !== void 0 ? _m : "In Progress",
+                teamId: (_o = team === null || team === void 0 ? void 0 : team._id) !== null && _o !== void 0 ? _o : item.teamId,
+                teamListId: (_p = team === null || team === void 0 ? void 0 : team.listId) !== null && _p !== void 0 ? _p : item === null || item === void 0 ? void 0 : item.teamListId,
                 cardId: card.id,
                 description: card.desc ? card.desc : "",
-                start: card.start ? card.start : null,
+                start: card.start,
                 deadline: card.due ? card.due : null,
                 trelloShortUrl: card.shortUrl ? card.shortUrl : "",
-                movements: item.movements
+                movements: ((_q = item === null || item === void 0 ? void 0 : item.movements) === null || _q === void 0 ? void 0 : _q.length) > 0
                     ? item.movements
                     : [
                         {
-                            movedAt: new Date(Date.now()),
+                            movedAt: new Date(Date.now()).toString(),
                             status: status.name ? status.name : "In Progress",
                         },
                     ],
-                attachedFiles: (_g = card === null || card === void 0 ? void 0 : card.attachments) === null || _g === void 0 ? void 0 : _g.map((item) => {
+                attachedFiles: (_r = card === null || card === void 0 ? void 0 : card.attachments) === null || _r === void 0 ? void 0 : _r.map((item) => {
                     return {
                         name: item.fileName,
                         trelloId: item.id,
@@ -279,31 +319,30 @@ const initializeTTPTasks = () => __awaiter(void 0, void 0, void 0, function* () 
             });
             return replacement;
         })));
-        tasks = tasks.map((item) => {
-            let index = intersection.findIndex((task) => task._id === item._id);
+        tasks = tasks === null || tasks === void 0 ? void 0 : tasks.map((item) => {
+            let index = intersection === null || intersection === void 0 ? void 0 : intersection.findIndex((task) => task._id === item._id);
             return index >= 0 ? intersection[index] : item;
         });
         // not Existed on TTP > create it on TTP
         let newTasks = [
-            ...notExistedOnTTP.map((item) => {
-                var _a, _b;
-                let dep = departments.find((d) => d.boardId === item.idBoard);
-                let status = dep === null || dep === void 0 ? void 0 : dep.lists.find((list) => list.listId === item.idList);
-                let team = dep === null || dep === void 0 ? void 0 : dep.teams.find((team) => team.listId === item.idList);
+            ...notExistedOnTTP === null || notExistedOnTTP === void 0 ? void 0 : notExistedOnTTP.map((item) => {
+                var _a, _b, _c, _d, _e, _f, _g;
+                let dep = departments === null || departments === void 0 ? void 0 : departments.find((d) => d.boardId === item.idBoard);
+                let status = (_a = dep === null || dep === void 0 ? void 0 : dep.lists) === null || _a === void 0 ? void 0 : _a.find((list) => list.listId === item.idList);
+                let team = (_b = dep === null || dep === void 0 ? void 0 : dep.teams) === null || _b === void 0 ? void 0 : _b.find((team) => team.listId === item.idList);
                 let task = new Task_1.default({
                     name: item.name,
                     boardId: item.idBoard,
-                    listId: item.idList,
-                    status: (status === null || status === void 0 ? void 0 : status.name) ? status.name : "In Progress",
-                    teamId: (_a = team === null || team === void 0 ? void 0 : team._id) !== null && _a !== void 0 ? _a : null,
+                    listId: (_c = status === null || status === void 0 ? void 0 : status.listId) !== null && _c !== void 0 ? _c : team === null || team === void 0 ? void 0 : team.listId,
+                    status: (_d = status === null || status === void 0 ? void 0 : status.name) !== null && _d !== void 0 ? _d : "In Progress",
+                    teamId: (_e = team === null || team === void 0 ? void 0 : team._id) !== null && _e !== void 0 ? _e : null,
                     cardId: item.id,
-                    description: item.desc ? item.desc : "",
-                    start: item.start,
+                    description: (_f = item.desc) !== null && _f !== void 0 ? _f : "",
+                    start: item.start ? item.start : null,
                     deadline: item.due,
                     trelloShortUrl: item.shortUrl,
-                    deliveryDate: (status === null || status === void 0 ? void 0 : status.name) === "Done" ? new Date(Date.now()) : null,
                     attachedFiles: item.attachments.length > 0
-                        ? (_b = item === null || item === void 0 ? void 0 : item.attachments) === null || _b === void 0 ? void 0 : _b.map((item) => {
+                        ? (_g = item === null || item === void 0 ? void 0 : item.attachments) === null || _g === void 0 ? void 0 : _g.map((item) => {
                             return {
                                 name: item.fileName,
                                 trelloId: item.id,
@@ -315,7 +354,7 @@ const initializeTTPTasks = () => __awaiter(void 0, void 0, void 0, function* () 
                     movements: [
                         {
                             status: (status === null || status === void 0 ? void 0 : status.name) ? status.name : "In Progress",
-                            movedAt: new Date(Date.now()),
+                            movedAt: new Date(Date.now()).toString(),
                         },
                     ],
                 });
@@ -324,21 +363,11 @@ const initializeTTPTasks = () => __awaiter(void 0, void 0, void 0, function* () 
         ];
         tasks = [...tasks, ...newTasks];
         // not Existed on Trello > create it on Trello
-        notExistedOnTrello = yield Promise.all(notExistedOnTrello.map((item) => __awaiter(void 0, void 0, void 0, function* () {
-            var _h, _j, _k;
-            let board = boards.find((b) => b.id === item.boardId);
+        notExistedOnTrello = yield Promise.all(notExistedOnTrello === null || notExistedOnTrello === void 0 ? void 0 : notExistedOnTrello.map((item) => __awaiter(void 0, void 0, void 0, function* () {
+            var _s;
+            let board = boards === null || boards === void 0 ? void 0 : boards.find((b) => b.id === item.boardId);
             let boardId = board ? board.id : creativeBoard === null || creativeBoard === void 0 ? void 0 : creativeBoard.id;
-            let list = board === null || board === void 0 ? void 0 : board.lists.find((l) => l.id === item.listId);
-            let listId = list
-                ? list.id
-                : (board === null || board === void 0 ? void 0 : board.lists.find((l) => l.name === item.status).id)
-                    ? board === null || board === void 0 ? void 0 : board.lists.find((l) => l.name === item.status).id
-                    : (_h = creativeBoard === null || creativeBoard === void 0 ? void 0 : creativeBoard.lists.find((l) => l.name === item.status)) === null || _h === void 0 ? void 0 : _h.id;
-            let status = list
-                ? list.name
-                : (board === null || board === void 0 ? void 0 : board.lists.find((l) => l.name === item.status).name)
-                    ? board === null || board === void 0 ? void 0 : board.lists.find((l) => l.name === item.status).name
-                    : (_k = (_j = creativeBoard === null || creativeBoard === void 0 ? void 0 : creativeBoard.lists.find((l) => l.name === item.status)) === null || _j === void 0 ? void 0 : _j.name) !== null && _k !== void 0 ? _k : "In Progress";
+            let listId = item.listId;
             let card = yield trello_1.default.__createCard({
                 boardId: boardId,
                 listId: listId,
@@ -351,44 +380,46 @@ const initializeTTPTasks = () => __awaiter(void 0, void 0, void 0, function* () 
                 _id: item._id,
                 boardId: boardId,
                 listId: listId,
-                movements: item.movements
+                movements: ((_s = item === null || item === void 0 ? void 0 : item.movements) === null || _s === void 0 ? void 0 : _s.length) > 0
                     ? item.movements
                     : [
                         {
-                            movedAt: new Date(Date.now()),
-                            status: status,
+                            movedAt: new Date(Date.now()).toString(),
+                            status: item.status,
                         },
                     ],
                 name: item.name,
-                status: status,
-                teamId: item === null || item === void 0 ? void 0 : item.teamId,
+                status: item.status,
+                teamId: null,
                 cardId: card.id,
                 description: item.description,
-                start: item.start,
+                start: item.start ? item.start : null,
                 deadline: item.deadline,
                 trelloShortUrl: card.shortUrl,
-                deliveryDate: status === "Done" ? new Date(Date.now()) : null,
                 attachedFiles: [],
+                projectId: item.projectId,
+                categoryId: item.categoryId,
+                subCategoryId: item.subCategoryId,
             });
             return replacement;
         })));
-        tasks = tasks.map((item) => {
+        tasks = tasks === null || tasks === void 0 ? void 0 : tasks.map((item) => {
             let index = notExistedOnTrello.findIndex((i) => i._id === item._id);
             return index >= 0 ? notExistedOnTrello[index] : item;
         });
         let update = [
-            ...newTasks.map((item) => {
+            ...newTasks === null || newTasks === void 0 ? void 0 : newTasks.map((item) => {
                 return {
                     insertOne: {
                         document: item,
                     },
                 };
             }),
-            ...tasks.map((item) => {
+            ...tasks === null || tasks === void 0 ? void 0 : tasks.map((item) => {
                 return {
-                    replaceOne: {
+                    updateOne: {
                         filter: { _id: item._id },
-                        replacement: {
+                        update: {
                             name: item.name,
                             projectId: item.projectId,
                             categoryId: item.categoryId,
@@ -396,7 +427,7 @@ const initializeTTPTasks = () => __awaiter(void 0, void 0, void 0, function* () 
                             teamId: item.teamId,
                             listId: item.listId,
                             status: item.status,
-                            start: item.start,
+                            start: item.start ? item.start : null,
                             deadline: item.deadline,
                             cardId: item.cardId,
                             boardId: item.boardId,
@@ -411,9 +442,9 @@ const initializeTTPTasks = () => __awaiter(void 0, void 0, void 0, function* () 
             }),
         ];
         Task_1.default.bulkWrite(update, {});
-        tasks.forEach((item) => {
-            trello_1.default.__addWebHook(item.cardId, "trelloWebhookUrlTask");
-        });
+        yield tasks.forEach((item) => __awaiter(void 0, void 0, void 0, function* () {
+            yield trello_1.default.__addWebHook(item.cardId, "trelloWebhookUrlTask");
+        }));
     }
     catch (error) {
         logger_1.default.error({ error });
@@ -421,7 +452,7 @@ const initializeTTPTasks = () => __awaiter(void 0, void 0, void 0, function* () 
 });
 exports.initializeTTPTasks = initializeTTPTasks;
 const createTTPCreativeMainBoard = () => __awaiter(void 0, void 0, void 0, function* () {
-    var _l;
+    var _t;
     try {
         let dep = {
             name: config_1.default.get("CreativeBoard"),
@@ -430,7 +461,7 @@ const createTTPCreativeMainBoard = () => __awaiter(void 0, void 0, void 0, funct
         let department = yield department_1.default.createDepartment(dep);
         let listOfProjects = department &&
             (department === null || department === void 0 ? void 0 : department.lists) &&
-            ((_l = department === null || department === void 0 ? void 0 : department.lists) === null || _l === void 0 ? void 0 : _l.find((item) => item.name === "projects"));
+            ((_t = department === null || department === void 0 ? void 0 : department.lists) === null || _t === void 0 ? void 0 : _t.find((item) => item.name === "projects"));
         if (department && listOfProjects) {
             (0, department_actions_queue_1.createProjectsCardsInCreativeBoard)(department);
         }

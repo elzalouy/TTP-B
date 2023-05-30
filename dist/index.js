@@ -17,11 +17,13 @@ const routes_1 = __importDefault(require("./lib/startup/routes"));
 const prod_1 = __importDefault(require("./lib/startup/prod"));
 const cron_1 = __importDefault(require("./lib/startup/cron"));
 const logger_1 = __importDefault(require("./logger"));
+const mongoose_1 = __importDefault(require("mongoose"));
 const Config = require("config");
 const app = (0, express_1.default)();
 (0, prod_1.default)(app);
 exports.http = (0, http_1.createServer)(app);
 exports.io = (0, socket_1.default)(exports.http);
+mongoose_1.default.set("strictQuery", false);
 function server() {
     try {
         //Express App
