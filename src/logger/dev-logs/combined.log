@@ -1,0 +1,15 @@
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2023-05-30 14:50:18'
+}
+{
+  message: { monthlyDeleteNotifications: 1 },
+  level: 'info',
+  timestamp: '2023-05-30 14:50:22'
+}
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2023-05-30 14:50:55'
+}

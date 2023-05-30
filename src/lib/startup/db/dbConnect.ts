@@ -391,14 +391,15 @@ export const initializeTTPTasks = async () => {
           start: card.start,
           deadline: card.due ? card.due : null,
           trelloShortUrl: card.shortUrl ? card.shortUrl : "",
-          movements: item.movements
-            ? item.movements
-            : [
-                {
-                  movedAt: new Date(Date.now()).toString(),
-                  status: status.name ? status.name : "In Progress",
-                },
-              ],
+          movements:
+            item?.movements?.length > 0
+              ? item.movements
+              : [
+                  {
+                    movedAt: new Date(Date.now()).toString(),
+                    status: status.name ? status.name : "In Progress",
+                  },
+                ],
           attachedFiles: card?.attachments?.map((item) => {
             return {
               name: item.fileName,
@@ -474,14 +475,15 @@ export const initializeTTPTasks = async () => {
           _id: item._id,
           boardId: boardId,
           listId: listId,
-          movements: item.movements
-            ? item.movements
-            : [
-                {
-                  movedAt: new Date(Date.now()).toString(),
-                  status: item.status,
-                },
-              ],
+          movements:
+            item?.movements?.length > 0
+              ? item.movements
+              : [
+                  {
+                    movedAt: new Date(Date.now()).toString(),
+                    status: item.status,
+                  },
+                ],
           name: item.name,
           status: item.status,
           teamId: null,
