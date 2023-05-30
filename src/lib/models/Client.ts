@@ -1,7 +1,7 @@
 import { Client } from "./../types/model/Client";
 import { model, Schema, Model } from "mongoose";
 
-const ClientSchema: Schema = new Schema<Client>(
+const ClientSchema: Schema<Client> = new Schema<Client>(
   {
     clientName: {
       type: String,

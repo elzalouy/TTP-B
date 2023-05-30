@@ -115,10 +115,17 @@ class DepartmentController {
                     return validation.error.details[0];
                 if (depDoc) {
                     let { teams, lists } = yield depDoc.createDepartmentBoard();
-                    depDoc.teams = teams;
-                    depDoc.lists = lists;
-                    (0, department_actions_queue_1.createProjectsCardsInCreativeBoard)(depDoc);
-                    return yield depDoc.save();
+                    if (teams && lists) {
+                        depDoc.teams = teams;
+                        depDoc.lists = lists;
+                        (0, department_actions_queue_1.createProjectsCardsInCreativeBoard)(depDoc);
+                        return yield depDoc.save();
+                    }
+                    else
+                        return {
+                            error: "trelloError",
+                            message: "Trello didn't create the board for a reason.",
+                        };
                 }
             }
             catch (error) {

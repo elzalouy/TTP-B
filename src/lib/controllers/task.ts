@@ -26,9 +26,11 @@ class TaskController extends TaskDB {
     return await TaskController.__getTasks(data);
   }
   static async createTask(data: TaskData, files: any) {
+    // TODO update this function with the new implementation
     return await TaskController.__CreateNewTask(data, files);
   }
   static async updateTask(data: object, files: any, tokenUser: any) {
+    // TODO update this function with the new implementation
     return await TaskController.__updateTaskData(data, files, tokenUser);
   }
 
@@ -52,6 +54,7 @@ class TaskController extends TaskDB {
     return await TaskController.__downloadAttachment(cardId, attachmentId);
   }
   static async createTaskByTrello(data: TaskData) {
+    // TODO update this function with the new implementation
     return await TaskController.__createTaskByTrello(data);
   }
 
@@ -59,15 +62,14 @@ class TaskController extends TaskDB {
     cardId: string,
     listId: string,
     status: string,
-    list: string,
     department: IDepartment,
     user: any
   ) {
+    // TODO update this function with the new implementation
     return await TaskController.__moveTaskOnTrello(
       cardId,
       listId,
       status,
-      list,
       department,
       user
     );
@@ -77,13 +79,16 @@ class TaskController extends TaskDB {
     cardId: string,
     listId: string,
     status: string,
-    list: string,
     department: IDepartmentState,
     user: any
   ) {
     try {
       moveTaskJob(listId, cardId, status, department, user);
-      return { data: `Task with cardId ${cardId} has moved to list ${list}` };
+      return {
+        data: `Task with cardId ${cardId} has moved to list ${
+          department.lists.find((list) => list.listId === listId).name
+        }`,
+      };
     } catch (error) {
       logger.error({ moveTaskOnTrelloError: error });
     }
@@ -138,6 +143,33 @@ class TaskController extends TaskDB {
     }
   }
 
+  /**
+   * Create New Task
+   * Create task with the initial data needed, it takes the initial data (taskData, and files)
+   * * name (required)
+   * * projectId (required)
+   * * categoryId (optional)
+   * * subCategoryId (optional)
+   * * boardId (required)
+   * * cardId (required)
+   * * listId (required)
+   * * status (required)
+   * * start (required)
+   * * description (optional)
+   * * AttachedFiles [Array]
+   *   * mimeType
+   *   * id
+   *   * name
+   *   * url
+   *   * fileName
+   * * movements (at least 1)
+   *   * index
+   *   * status
+   *   * movedAt
+   * @param data TaskData
+   * @param files TaskFiles
+   * @returns Task
+   */
   static async __CreateNewTask(data: TaskData, files: Express.Multer.File[]) {
     try {
       let task: TaskInfo;
@@ -147,17 +179,15 @@ class TaskController extends TaskDB {
       if (createdCard) {
         data.cardId = createdCard.id;
         data.trelloShortUrl = createdCard.shortUrl;
+        if (data.teamId) data.assignedAt = new Date(Date.now());
         task = await super.createTaskDB(data);
         if (task) {
           taskRoutesQueue.push(async () => {
             data.cardId = createdCard.id;
             data.trelloShortUrl = createdCard.shortUrl;
-            await TrelloController.createWebHook(
-              data.cardId,
-              "trelloWebhookUrlTask"
-            );
             if (files.length > 0)
               data = await TaskController.__createTaskAttachment(files, data);
+            TrelloController.createWebHook(data.cardId, "trelloWebhookUrlTask");
           });
         }
       }
@@ -267,16 +297,13 @@ class TaskController extends TaskDB {
         let tasks = await TaskController.getTasks({ boardId: board.boardId });
         if (tasks) {
           cards.map(async (item) => {
-            // let cardAttachments = await TrelloController.__getCardAttachments(
-            //   item.id
-            // );
             let isTaskFound = tasks.find((task) => task.cardId === item.id);
             let isList = board.lists.find(
               (list) => list.listId === item.idList
             )?.name;
             let isStatusList =
               isList && ListTypes.includes(isList) ? true : false;
-            let cardList = isStatusList
+            let cardList = isList
               ? board.lists.find((list) => list.listId === item.idList)
               : board.teams.find((list) => list.listId === item.idList);
             let task: TaskData = {
@@ -287,49 +314,29 @@ class TaskController extends TaskDB {
               description: item.desc ?? "",
               start: item.start ?? null,
               deadline: item.due ?? null,
-              listId: isStatusList
+              listId: isList
                 ? item.idList
                 : board.lists.find((item) => item.name === "In Progress")
                     .listId,
               status: isList ?? "In Progress",
-              deliveryDate:
-                isList && isList === "Done"
-                  ? isTaskFound?.deliveryDate ?? new Date(Date.now())
-                  : null,
-              // attachedFiles: cardAttachments.map((file) => {
-              //   return {
-              //     name: file.fileName,
-              //     url: file.url,
-              //     trelloId: file.id,
-              //     mimeType: file.mimeType,
-              //   };
-              // }),
+              movements: isTaskFound?.movements ?? [
+                {
+                  status: isList ? isList : "In Progress",
+                  movedAt: new Date(Date.now()).toString(),
+                },
+              ],
             };
-            let deadline = item.due ?? null;
-            let deliveryDate = isTaskFound?.deliveryDate ?? null;
-            task.turnOver =
-              deadline && deliveryDate
-                ? Math.floor(
-                    (new Date(deliveryDate).getTime() -
-                      new Date(deadline).getTime()) /
-                      (1000 * 60 * 60 * 24)
-                  )
-                : 0;
-            if (isTaskFound && isTaskFound._id) {
+            if (isTaskFound?._id) {
               task.teamId = isStatusList ? isTaskFound.teamId : cardList._id;
               task = await Tasks.findOneAndUpdate({ cardId: item.id }, task);
-              await TrelloActionsController.__addWebHook(
-                task.cardId,
-                "trelloWebhookUrlTask"
-              );
             } else {
               task.teamId = isStatusList ? null : cardList._id;
-              let taskInfo = await new Tasks(task).save();
-              await TrelloActionsController.__addWebHook(
-                taskInfo.cardId,
-                "trelloWebhookUrlTask"
-              );
+              await new Tasks(task).save();
             }
+            await TrelloActionsController.__addWebHook(
+              task.cardId,
+              "trelloWebhookUrlTask"
+            );
           });
         }
       }

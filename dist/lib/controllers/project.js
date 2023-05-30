@@ -21,14 +21,14 @@ const project_actions_Queue_1 = require("../backgroundJobs/actions/project.actio
 const Department_1 = __importDefault(require("../models/Department"));
 const trello_1 = __importDefault(require("./trello"));
 const ProjectController = class ProjectController extends project_1.default {
-    static createProject(data, userId) {
+    static createProject(data, user) {
         return __awaiter(this, void 0, void 0, function* () {
-            return yield ProjectController.__createNewProject(data, userId);
+            return yield ProjectController.__createNewProject(data, user);
         });
     }
-    static updateProject(data, userId) {
+    static updateProject(data, user) {
         return __awaiter(this, void 0, void 0, function* () {
-            return yield ProjectController.__updateProjectData(data, userId);
+            return yield ProjectController.__updateProjectData(data, user);
         });
     }
     static getProject(data) {
@@ -93,7 +93,7 @@ const ProjectController = class ProjectController extends project_1.default {
             }
         });
     }
-    static __updateProjectData(data, userId) {
+    static __updateProjectData(data, user) {
         const _super = Object.create(null, {
             updateProjectDB: { get: () => super.updateProjectDB }
         });
@@ -104,7 +104,6 @@ const ProjectController = class ProjectController extends project_1.default {
                     idBoard: data.boardId,
                     idList: data.listId,
                 };
-                console.log({ data });
                 if (data.projectDeadline)
                     projectData.due = data.projectDeadline;
                 if (data.startDate)
@@ -114,10 +113,10 @@ const ProjectController = class ProjectController extends project_1.default {
                         cardId: data.cardId,
                         data: projectData,
                     });
-                    notification_1.default.__updateProjectNotification(data, userId);
+                    notification_1.default.__updateProjectNotification(data, user.id);
                     cb(null, true);
                 });
-                let project = yield _super.updateProjectDB.call(this, data);
+                let project = yield _super.updateProjectDB.call(this, data, user);
                 return project;
             }
             catch (error) {
@@ -125,15 +124,14 @@ const ProjectController = class ProjectController extends project_1.default {
             }
         });
     }
-    static __createNewProject(data, userId) {
+    static __createNewProject(data, user) {
         const _super = Object.create(null, {
             createProjectDB: { get: () => super.createProjectDB },
             updateProjectDB: { get: () => super.updateProjectDB }
         });
         return __awaiter(this, void 0, void 0, function* () {
             try {
-                console.log({ data });
-                let project = yield _super.createProjectDB.call(this, data);
+                let project = yield _super.createProjectDB.call(this, data, user);
                 project_actions_Queue_1.projectQueue.push((cb) => __awaiter(this, void 0, void 0, function* () {
                     let dep = yield Department_1.default.findOne({
                         name: config_1.default.get("CreativeBoard"),
@@ -146,10 +144,10 @@ const ProjectController = class ProjectController extends project_1.default {
                             cardId: id,
                             boardId: dep.boardId,
                             listId: projectsList.listId,
-                        });
+                        }, user);
                         index_1.io.sockets.emit("update-projects", result);
                     }
-                    notification_1.default.__creatProjectNotification(data, userId);
+                    notification_1.default.__creatProjectNotification(data, user.id);
                     cb(null, true);
                 }));
                 return project;

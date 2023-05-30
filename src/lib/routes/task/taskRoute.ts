@@ -20,7 +20,7 @@ const {
   TASKS_CSV,
 } = apiRoute;
 const {
-  handleCreateCard,
+  handleCreateTask,
   handleUpdateCard,
   handleGetTasks,
   handleFilterTasks,
@@ -37,8 +37,9 @@ router.post(
   CREATE_TASK,
   Authed,
   multer.array("attachedFiles"),
-  handleCreateCard
+  handleCreateTask
 );
+
 router.get(DOWNLOAD_ATTACHMENT, handleDownloadAttachment);
 router.post(
   UPDATE_TASK,
@@ -46,6 +47,7 @@ router.post(
   multer.array("attachedFiles"),
   handleUpdateCard
 );
+
 router.get(GET_TASKS, Authed, handleGetTasks);
 router.post(FILTER_TASKS, Authed, handleFilterTasks);
 router.put(MOVE_TASK, Authed, handleMoveCard);
@@ -54,4 +56,5 @@ router.delete(DELETE_TASKS, Authed, handleDeleteTasks);
 router.delete(DELETE_TASKS_BY_PROJECT_ID, Authed, handleDeleteTasksByProjectId);
 router.delete(DELETE_TASK, Authed, handleDeleteTask);
 router.post(TASKS_CSV, Authed, OMOrSM, handleGetTasksCSV);
+
 export default router;

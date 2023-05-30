@@ -12,10 +12,9 @@ import path from "path";
 import { createReadStream, readFileSync, statSync } from "fs";
 
 const TaskReq = class TaskReq extends TaskController {
-  static async handleCreateCard(req: Request, res: Response) {
+  static async handleCreateTask(req: Request, res: Response) {
     try {
       let TaskData: TaskData = req.body;
-      if (TaskData.teamId === "") TaskData.teamId = null;
       let isValid = createTaskSchema.validate(TaskData);
       if (isValid.error) return res.status(400).send(isValid.error.details[0]);
       let result = await super.createTask(TaskData, req.files);
@@ -26,7 +25,7 @@ const TaskReq = class TaskReq extends TaskController {
           message: "Something wrong hapenned while creating the task.",
         });
     } catch (error: any) {
-      logger.error({ handleCreateCardError: error });
+      logger.error({ handleCreateTaskError: error });
     }
   }
 
@@ -55,6 +54,7 @@ const TaskReq = class TaskReq extends TaskController {
       return res.status(400).send(customeError("update_task_error", 400));
     }
   }
+
   static async handleGetTasks(req: Request, res: Response) {
     try {
       let data: TaskData = req.query;
@@ -65,6 +65,7 @@ const TaskReq = class TaskReq extends TaskController {
       logger.error({ handleGetTasksError: error });
     }
   }
+
   static async handleFilterTasks(req: Request, res: Response) {
     try {
       let data: any = req.body;
@@ -75,16 +76,16 @@ const TaskReq = class TaskReq extends TaskController {
       logger.error({ handleGetTasksError: error });
     }
   }
+
   static async handleMoveCard(req: Request, res: Response) {
     try {
       let decoded: any = await jwtVerify(req.header("authorization"));
       if (decoded) {
-        let { cardId, listId, status, list, department }: any = req.body;
+        let { cardId, listId, status, department }: any = req.body;
         let task: any = await super.moveTaskOnTrello(
           cardId,
           listId,
           status,
-          list,
           department,
           decoded
         );

@@ -22,15 +22,13 @@ const tasks_Route_Queue_1 = require("../../backgroundJobs/routes/tasks.Route.Que
 const upload_1 = require("../../services/upload");
 const fs_1 = require("fs");
 const TaskReq = class TaskReq extends task_1.default {
-    static handleCreateCard(req, res) {
+    static handleCreateTask(req, res) {
         const _super = Object.create(null, {
             createTask: { get: () => super.createTask }
         });
         return __awaiter(this, void 0, void 0, function* () {
             try {
                 let TaskData = req.body;
-                if (TaskData.teamId === "")
-                    TaskData.teamId = null;
                 let isValid = validation_1.createTaskSchema.validate(TaskData);
                 if (isValid.error)
                     return res.status(400).send(isValid.error.details[0]);
@@ -44,7 +42,7 @@ const TaskReq = class TaskReq extends task_1.default {
                     });
             }
             catch (error) {
-                logger_1.default.error({ handleCreateCardError: error });
+                logger_1.default.error({ handleCreateTaskError: error });
             }
         });
     }
@@ -55,6 +53,7 @@ const TaskReq = class TaskReq extends task_1.default {
         return __awaiter(this, void 0, void 0, function* () {
             try {
                 tasks_Route_Queue_1.taskRoutesQueue.push((cb) => __awaiter(this, void 0, void 0, function* () {
+                    let tokenUser = yield (0, auth_1.jwtVerify)(req.header("Authorization"));
                     let TaskData = req.body;
                     if (TaskData.teamId === "" || TaskData.teamId === null)
                         TaskData.teamId = null;
@@ -68,7 +67,7 @@ const TaskReq = class TaskReq extends task_1.default {
                     let validate = validation_1.editTaskSchema.validate(TaskData);
                     if (validate.error)
                         return res.status(400).send(validate.error.details[0]);
-                    yield _super.updateTask.call(this, TaskData, files);
+                    yield _super.updateTask.call(this, TaskData, files, tokenUser);
                     return res.send({ message: "Task updated Sucessfully" });
                 }));
             }

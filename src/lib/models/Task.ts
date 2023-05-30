@@ -1,20 +1,50 @@
 import { model, Schema } from "mongoose";
 import logger from "../../logger";
-import { TaskData, TaskInfo, TasksModel } from "../types/model/tasks";
+import {
+  AttachmentSchema,
+  Movement,
+  TaskData,
+  TaskInfo,
+  TasksModel,
+} from "../types/model/tasks";
 import Project from "./Project";
 import { TaskDeadlineChain } from "../types/model/tasks";
-export const FilesSchema: Schema = new Schema({
+import { ObjectId } from "mongodb";
+
+export const FilesSchema: Schema<AttachmentSchema> = new Schema({
   name: { type: String },
   trelloId: { type: String },
   mimeType: { type: String },
   url: { type: String },
 });
 
-const deadlineChainSchema: Schema = new Schema<TaskDeadlineChain>({
-  userId: { type: Schema.Types.ObjectId, required: true },
+export const movementSchema: Schema<Movement> = new Schema<Movement>({
+  status: {
+    type: String,
+    enum: [
+      "In Progress",
+      "Done",
+      "Review",
+      "Shared",
+      "Not Clear",
+      "Cancled",
+      "Tasks Board",
+    ],
+    default: "Tasks Board",
+  },
+  movedAt: {
+    type: String,
+    required: true,
+    default: new Date(Date.now()).toString(),
+  },
+});
+
+export const deadlineChainSchema: Schema = new Schema<TaskDeadlineChain>({
+  userId: { type: String, required: true },
   name: { type: String, required: true },
   before: { type: Date, required: true },
   current: { type: Date, required: true },
+  trelloMember: { type: Boolean, required: true, default: true },
 });
 
 const TaskSchema = new Schema<TaskInfo, TasksModel>(
@@ -34,13 +64,18 @@ const TaskSchema = new Schema<TaskInfo, TasksModel>(
       ref: "categories",
       default: null,
     },
+    subCategoryId: {
+      type: Schema.Types.ObjectId,
+      ref: "subcategories",
+      default: null,
+    },
     teamId: {
       type: Schema.Types.ObjectId,
       ref: "teams",
       default: null,
     },
     listId: {
-      type: Schema.Types.ObjectId,
+      type: String,
       required: true,
       default: null,
     },
@@ -69,27 +104,15 @@ const TaskSchema = new Schema<TaskInfo, TasksModel>(
     },
     start: {
       type: Date,
-      default: Date.now(),
-    },
-    deadline: {
-      type: Date,
       default: null,
     },
-    deliveryDate: {
+    deadline: {
       type: Date,
       default: null,
     },
     attachedFiles: {
       type: [FilesSchema],
       default: [],
-    },
-    lastMove: {
-      type: String,
-      default: null,
-    },
-    lastMoveDate: {
-      type: String,
-      default: null,
     },
     description: {
       type: String,
@@ -105,18 +128,8 @@ const TaskSchema = new Schema<TaskInfo, TasksModel>(
       default: [],
       min: 0,
     },
-    turnOver: {
-      type: Number,
-      default: null,
-    },
-    unClear: {
-      type: Number,
-      default: null,
-    },
-    noOfRevisions: {
-      type: Number,
-      default: 0,
-    },
+    movements: { type: [movementSchema], min: 1, required: true },
+    assignedAt: { type: Date, required: false, default: null },
   },
   {
     timestamps: true,
@@ -156,8 +169,6 @@ TaskSchema.static("getTasksAsCSV", async function (filterIds: string[]) {
           status: item.status,
           startDate: item.start,
           deadline: item.deadline,
-          lastMove: item.lastMove,
-          lastMoveDate: item.lastMoveDate,
         };
       });
       const convert = [Object.keys(data[0])].concat(data);

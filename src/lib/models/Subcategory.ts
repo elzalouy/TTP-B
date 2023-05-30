@@ -1,7 +1,7 @@
 import { Subcategory } from "./../types/model/Subcategory";
 import { model, Schema, Model } from "mongoose";
 
-const SubcategorySchema: Schema = new Schema<Subcategory>(
+const SubcategorySchema: Schema<Subcategory> = new Schema<Subcategory>(
   {
     subCategory: {
       type: String,

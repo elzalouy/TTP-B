@@ -32,12 +32,14 @@ class TaskController extends tasks_1.default {
     }
     static createTask(data, files) {
         return __awaiter(this, void 0, void 0, function* () {
+            // TODO update this function with the new implementation
             return yield TaskController.__CreateNewTask(data, files);
         });
     }
-    static updateTask(data, files) {
+    static updateTask(data, files, tokenUser) {
         return __awaiter(this, void 0, void 0, function* () {
-            return yield TaskController.__updateTaskData(data, files);
+            // TODO update this function with the new implementation
+            return yield TaskController.__updateTaskData(data, files, tokenUser);
         });
     }
     static filterTasks(data) {
@@ -72,16 +74,13 @@ class TaskController extends tasks_1.default {
     }
     static createTaskByTrello(data) {
         return __awaiter(this, void 0, void 0, function* () {
+            // TODO update this function with the new implementation
             return yield TaskController.__createTaskByTrello(data);
-        });
-    }
-    static updateTaskDataByTrello(data) {
-        return __awaiter(this, void 0, void 0, function* () {
-            return yield TaskController.__updateTaskByTrello(data);
         });
     }
     static moveTaskOnTrello(cardId, listId, status, list, department, user) {
         return __awaiter(this, void 0, void 0, function* () {
+            // TODO update this function with the new implementation
             return yield TaskController.__moveTaskOnTrello(cardId, listId, status, list, department, user);
         });
     }
@@ -96,12 +95,12 @@ class TaskController extends tasks_1.default {
             }
         });
     }
-    static __updateTaskData(data, files) {
+    static __updateTaskData(data, files, tokenUser) {
         return __awaiter(this, void 0, void 0, function* () {
             try {
                 if (!data.cardId)
                     return Tasks_1.provideCardIdError;
-                (0, task_actions_Queue_1.updateCardJob)(data, files);
+                (0, task_actions_Queue_1.updateCardJob)(data, files, tokenUser);
             }
             catch (error) {
                 logger_1.default.error({ updateTaskError: error });
@@ -142,6 +141,33 @@ class TaskController extends tasks_1.default {
             }
         });
     }
+    /**
+     * Create New Task
+     * Create task with the initial data needed, it takes the initial data (taskData, and files)
+     * * name (required)
+     * * projectId (required)
+     * * categoryId (optional)
+     * * subCategoryId (optional)
+     * * boardId (required)
+     * * cardId (required)
+     * * listId (required)
+     * * status (required)
+     * * start (required)
+     * * description (optional)
+     * * AttachedFiles [Array]
+     *   * mimeType
+     *   * id
+     *   * name
+     *   * url
+     *   * fileName
+     * * movements (at least 1)
+     *   * index
+     *   * status
+     *   * movedAt
+     * @param data TaskData
+     * @param files TaskFiles
+     * @returns Task
+     */
     static __CreateNewTask(data, files) {
         const _super = Object.create(null, {
             createTaskDB: { get: () => super.createTaskDB }
@@ -159,9 +185,9 @@ class TaskController extends tasks_1.default {
                         tasks_Route_Queue_1.taskRoutesQueue.push(() => __awaiter(this, void 0, void 0, function* () {
                             data.cardId = createdCard.id;
                             data.trelloShortUrl = createdCard.shortUrl;
-                            yield trello_1.default.createWebHook(data.cardId, "trelloWebhookUrlTask");
                             if (files.length > 0)
                                 data = yield TaskController.__createTaskAttachment(files, data);
+                            trello_1.default.createWebHook(data.cardId, "trelloWebhookUrlTask");
                         }));
                     }
                 }
@@ -297,11 +323,11 @@ class TaskController extends tasks_1.default {
                     let tasks = yield TaskController.getTasks({ boardId: board.boardId });
                     if (tasks) {
                         cards.map((item) => __awaiter(this, void 0, void 0, function* () {
-                            var _b, _c;
+                            var _b, _c, _d, _e, _f;
                             let isTaskFound = tasks.find((task) => task.cardId === item.id);
-                            let isList = (_c = (_b = board === null || board === void 0 ? void 0 : board.lists) === null || _b === void 0 ? void 0 : _b.find((list) => list.listId === item.idList)) === null || _c === void 0 ? void 0 : _c.name;
+                            let isList = (_b = board.lists.find((list) => list.listId === item.idList)) === null || _b === void 0 ? void 0 : _b.name;
                             let isStatusList = isList && Department_1.ListTypes.includes(isList) ? true : false;
-                            let cardList = isStatusList
+                            let cardList = isList
                                 ? board.lists.find((list) => list.listId === item.idList)
                                 : board.teams.find((list) => list.listId === item.idList);
                             let task = {
@@ -309,25 +335,30 @@ class TaskController extends tasks_1.default {
                                 cardId: item.id,
                                 trelloShortUrl: item.shortUrl,
                                 name: item.name,
-                                description: item.desc,
-                                start: item.start,
-                                deadline: item.due,
-                                listId: isStatusList
+                                description: (_c = item.desc) !== null && _c !== void 0 ? _c : "",
+                                start: (_d = item.start) !== null && _d !== void 0 ? _d : null,
+                                deadline: (_e = item.due) !== null && _e !== void 0 ? _e : null,
+                                listId: isList
                                     ? item.idList
                                     : board.lists.find((item) => item.name === "In Progress")
                                         .listId,
-                                status: isStatusList ? cardList.name : "In Progress",
+                                status: isList !== null && isList !== void 0 ? isList : "In Progress",
+                                movements: (_f = isTaskFound === null || isTaskFound === void 0 ? void 0 : isTaskFound.movements) !== null && _f !== void 0 ? _f : [
+                                    {
+                                        status: isList ? isList : "In Progress",
+                                        movedAt: new Date(Date.now()),
+                                    },
+                                ],
                             };
-                            if (isTaskFound && isTaskFound._id) {
+                            if (isTaskFound === null || isTaskFound === void 0 ? void 0 : isTaskFound._id) {
                                 task.teamId = isStatusList ? isTaskFound.teamId : cardList._id;
                                 task = yield Task_1.default.findOneAndUpdate({ cardId: item.id }, task);
-                                yield trello_2.default.__addWebHook(task.cardId, "trelloWebhookUrlTask");
                             }
                             else {
                                 task.teamId = isStatusList ? null : cardList._id;
-                                let taskInfo = yield new Task_1.default(task).save();
-                                yield trello_2.default.__addWebHook(taskInfo.cardId, "trelloWebhookUrlTask");
+                                yield new Task_1.default(task).save();
                             }
+                            yield trello_2.default.__addWebHook(task.cardId, "trelloWebhookUrlTask");
                         }));
                     }
                 }
@@ -350,20 +381,6 @@ class TaskController extends tasks_1.default {
             }
             catch (error) {
                 logger_1.default.error({ createTaskByTrelloError: error });
-            }
-        });
-    }
-    static __updateTaskByTrello(data) {
-        const _super = Object.create(null, {
-            updateTaskByTrelloDB: { get: () => super.updateTaskByTrelloDB }
-        });
-        return __awaiter(this, void 0, void 0, function* () {
-            try {
-                let task = yield _super.updateTaskByTrelloDB.call(this, data);
-                return task;
-            }
-            catch (error) {
-                logger_1.default.error({ updateTaskByTrello: error });
             }
         });
     }

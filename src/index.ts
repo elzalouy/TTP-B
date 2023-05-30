@@ -11,12 +11,14 @@ import routes from "./lib/startup/routes";
 import prod from "./lib/startup/prod";
 import cronJobs from "./lib/startup/cron";
 import logger from "./logger";
+import mongoose from "mongoose";
 const Config = require("config");
 
 const app = express();
 prod(app);
 export const http = createServer(app);
 export const io = appSocket(http);
+mongoose.set("strictQuery", false);
 function server() {
   try {
     //Express App

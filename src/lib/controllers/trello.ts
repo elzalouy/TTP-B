@@ -2,9 +2,9 @@ import fs from "fs";
 import Config from "config";
 import logger from "../../logger";
 import { config } from "dotenv";
-import { trelloApi } from "../services/trelloApi";
+import { trelloApi, trelloApiWithUrl } from "../services/trelloApi";
 import { MemberType } from "../types/model/User";
-import fetch, { RequestInit } from "node-fetch";
+import fetch, { RequestInit, Response } from "node-fetch";
 import { AttachmentResponse, TaskData } from "../types/model/tasks";
 import { editCardParams, updateCardResponse } from "../types/controller/trello";
 import { ProjectData, ProjectInfo } from "../types/model/Project";
@@ -94,16 +94,20 @@ class TrelloActionsController {
   static async __moveTaskToDiffList(cardId: string, listId: string) {
     try {
       let moveTask = trelloApi(`cards/${cardId}/?idList=${listId}&`);
-      await fetch(moveTask, {
+      let result = await fetch(moveTask, {
         method: "PUT",
         headers: {
           Accept: "application/json",
         },
       })
-        .then((res) => {
-          return res;
+        .then(async (res) => {
+          return res.json();
+        })
+        .then((value) => {
+          return value;
         })
         .catch((err) => logger.info("error in moving board", err));
+      return result;
     } catch (error) {
       logger.error({ moveTaskToDiffListError: error });
     }
@@ -253,14 +257,12 @@ class TrelloActionsController {
 
   static async __createCard(data: TaskData) {
     try {
-      let url = `cards/?idList=${
-        data.teamListId ? data.teamListId : data.listId
-      }&name=${data.name}&desc=${data.description}&`;
+      let url = `cards/?idList=${data.teamListId ?? data.listId}&name=${
+        data.name
+      }&desc=${data.description}&`;
+      if (data.start) url = `${url}start=${new Date(data.start).getTime()}&`;
       if (data.deadline)
-        url = `${url}due=${new Date(data.deadline).getTime()}&start=${new Date(
-          data.start
-        ).getTime()}&`;
-      url = `${url}`;
+        url = `${url}due=${new Date(data.deadline).getTime()}&`;
       let cardCreateApi = trelloApi(url);
       let cardResult = await fetch(cardCreateApi, {
         method: "POST",
@@ -318,21 +320,24 @@ class TrelloActionsController {
 
   static async __addWebHook(idModel: string, urlInConfig: string) {
     try {
-      let webhookUrl = `webhooks/?idModel=${idModel}&callbackURL=${Config.get(
-        urlInConfig
-      )}&`;
-      let webhookApi = trelloApi(webhookUrl);
-      let webhookResult = await fetch(webhookApi, {
+      let route = "webhooks";
+      let params = `idModel=${idModel}&callbackURL=${Config.get(urlInConfig)}`;
+      let webhookApi = trelloApiWithUrl(route, params);
+      fetch(webhookApi, {
         method: "POST",
         headers: {
           Accept: "application/json",
         },
-      });
-      return webhookResult;
+      })
+        .then(async (res: Response) => {
+          return res.text();
+        })
+        .catch((err) => console.log({ err }));
     } catch (error) {
       logger.error({ createWebHookError: error });
     }
   }
+
   static async __getAllWebWebHook(idModel: string, urlInConfig: string) {
     try {
       let webhookUrl = `webhooks/?idModel=${idModel}&callbackURL=${Config.get(
@@ -350,6 +355,7 @@ class TrelloActionsController {
       logger.error({ createWebHookError: error });
     }
   }
+
   static async __getBoardLists(boardId: string) {
     try {
       let url = await trelloApi(`boards/${boardId}/lists?`);
@@ -364,6 +370,7 @@ class TrelloActionsController {
       logger.error({ getBoardListsError: error });
     }
   }
+
   static async __archieveList(listId: string) {
     try {
       let archeiveApi = trelloApi(`lists/${listId}/closed?value=true&`);
@@ -424,8 +431,6 @@ class TrelloActionsController {
       let newMember = await fetch(addMemberApi, {
         method: "PUT",
       });
-
-      // logger.info({boardId,memberId,type,addMemberApi,newMember})
       return await newMember.json();
     } catch (error) {
       logger.error({ addMemberError: error });
@@ -435,7 +440,7 @@ class TrelloActionsController {
   static async __getAllMembers() {
     try {
       let boardApi = trelloApi(
-        `organizations/${Config.get("trelloOrgId")}/members?`
+        `organizations/${Config.get("trelloOrgId")}/memberships?member=true&`
       );
       let members = await fetch(boardApi, {
         method: "GET",

@@ -6,15 +6,27 @@ import {
   projectsDueDate,
   projectsPassedDate,
 } from "../backgroundJobs/actions/project.actions.cron";
-import { initializeTrelloBoardsJob } from "../backgroundJobs/actions/trello.actions.cron";
+import { initializeQueue } from "../backgroundJobs/actions/init.actions.queue";
+import { initializeTTPTasks, initializeTrelloBoards } from "./db/dbConnect";
+
 export default async function (
   io: Server<DefaultEventsMap, DefaultEventsMap, DefaultEventsMap, any>
 ) {
   try {
-    await removeOldNotifications(io).start();
-    await projectsDueDate(io).start();
-    await projectsPassedDate(io).start();
-    await initializeTrelloBoardsJob().start();
+    initializeQueue.push(() => {
+      removeOldNotifications(io).start();
+    });
+    initializeQueue.push(() => {
+      projectsDueDate(io).start();
+    });
+    initializeQueue.push(() => {
+      projectsPassedDate(io).start();
+    });
+    initializeQueue.push(async (cb) => {
+      await initializeTrelloBoards().then(() =>
+        initializeTTPTasks().then(() => cb(null, true))
+      );
+    });
   } catch (error) {
     logger.error({ errorOldNotificationsCron: error });
   }

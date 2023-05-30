@@ -1,3 +1,5 @@
+import { AttachmentResponse } from "../model/tasks";
+
 export interface createBoardResponse {
   id: string;
   name: string;
@@ -270,13 +272,13 @@ export type Card = {
   checkItemStates: null;
   closed: false;
   dueComplete: false;
-  dateLastActivity: "2023-02-22T12:30:23.278Z";
+  dateLastActivity: string;
   descData: [Object];
   dueReminder: any;
   email: any;
   idChecklists: [];
-  idMembers: [];
-  idMembersVoted: [];
+  idMembers: any[];
+  idMembersVoted: any[];
   idShort: number;
   idAttachmentCover: string;
   labels: any[];
@@ -287,4 +289,5 @@ export type Card = {
   cover: [Object];
   isTemplate: boolean;
   cardRole: boolean;
+  attachments?: AttachmentResponse[];
 };

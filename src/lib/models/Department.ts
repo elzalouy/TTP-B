@@ -186,8 +186,9 @@ DepartmentSchema.post(
     }
   }
 );
-DepartmentSchema.pre("remove", async function () {
-  let boardId = this.boardId;
+DepartmentSchema.pre<IDepartment>("remove", async function (next) {
+  const current = this as IDepartment;
+  let boardId = current.boardId;
   let result = await Tasks.deleteMany({ boardId: boardId });
   logger.info({ deleteTasksOfDepartment: result });
 });

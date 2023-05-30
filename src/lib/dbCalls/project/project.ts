@@ -109,14 +109,15 @@ const ProjectDB = class ProjectDB {
       let project = await Project.findById(id);
       if (project) {
         if (
-          new Date(project.projectDeadline).toDateString() !==
-          new Date(data.projectDeadline).toDateString()
+          new Date(project.projectDeadline).toString() !==
+          new Date(data.projectDeadline).toString()
         ) {
           project.deadlineChain.push({
             userId: user.id,
             name: user.name,
             before: project.projectDeadline,
             current: data.projectDeadline,
+            trelloMember: false,
           });
         }
         project.set(query);

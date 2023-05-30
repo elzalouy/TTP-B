@@ -38,25 +38,21 @@ export function moveTaskJob(
     try {
       let currentTask = await TaskController.getOneTaskBy({ cardId: cardId });
       if (currentTask) {
-        let inProgressList = department.lists.find(
-          (item) => item.name === "In Progress"
-        );
-        let team = department.teams.find(
-          (item) => currentTask?.teamId?.toString() === item._id
+        let teamList = department.teams.find((item) => item.listId === listId);
+        let statusList = department.lists.find(
+          (item) => item.listId === listId
         );
         const result = await TrelloController.moveTaskToDiffList(
           cardId,
-          listId === inProgressList.listId.toString() && team
-            ? team.listId
-            : listId
+          teamList?.listId ?? statusList?.listId
         );
+        console.log({ moveResult: result });
         cb(null);
       }
     } catch (error) {
       logger.error({ moveTaskJobError: error });
     }
   });
-
   updateTaskQueue.push(async (cb) => {
     try {
       if (status === "Shared" || status === "Not Clear") {
@@ -85,31 +81,15 @@ export const updateCardJob = (
     try {
       let current = await TaskController.__getTask(data.id);
       let dep = await Department.findOne({ boardId: data.boardId });
-
-      let isTeamChanged =
-        current.teamId &&
-        data.teamId &&
-        current?.teamId?.toString() !== data.teamId.toString();
-
-      let newTeamListId =
-        isTeamChanged && dep && dep.teams
-          ? dep.teams.find(
-              (item) => item._id.toString() === data.teamId.toString()
-            ).listId
-          : null;
-
+      let teamListId = dep.teams.find((item) => item.listId === data.listId);
+      let statusListId = dep.lists.find((item) => item.listId === data.listId);
       let taskData: any = {
         name: data.name,
         idBoard: data.boardId,
-        idList:
-          isTeamChanged === true
-            ? newTeamListId
-            : data.teamId && data.status === "In Progress"
-            ? newTeamListId
-            : data.listId,
-        due: data.deadline ? data.deadline : null,
-        start: data.start ? data.start : null,
-        desc: data.description ? data.description : "",
+        idList: teamListId?.listId ?? statusListId?.listId ?? current.listId,
+        due: data?.deadline ?? current?.deadline ?? null,
+        start: data?.start ?? current?.start ?? null,
+        desc: data?.description ?? "",
       };
       let response = await TrelloController.__updateCard({
         cardId: data.cardId,

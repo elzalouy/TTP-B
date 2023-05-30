@@ -6,7 +6,7 @@ const IsNotifiedUsers: Schema = new Schema<IsNotified>({
   isNotified: { type: Schema.Types.Boolean, required: true, default: false },
 });
 
-const NotificationSchema: Schema = new Schema<NotificationInfo>(
+const NotificationSchema: Schema<NotificationInfo> = new Schema<NotificationInfo>(
   {
     title: {
       type: String,
