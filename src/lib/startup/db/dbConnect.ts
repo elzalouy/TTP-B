@@ -400,18 +400,22 @@ export const initializeTTPTasks = async () => {
                     status: status.name ? status.name : "In Progress",
                   },
                 ],
-          attachedFiles: card?.attachments?.map((item) => {
-            return {
-              name: item.fileName,
-              trelloId: item.id,
-              mimeType: item.mimeType,
-              url: item.url,
-            };
-          }),
+          attachedFiles:
+            card?.attachments?.length > 0
+              ? card?.attachments?.map((item) => {
+                  return {
+                    name: item.fileName,
+                    trelloId: item.id,
+                    mimeType: item.mimeType,
+                    url: item.url,
+                  };
+                })
+              : [],
         });
         return replacement;
       })
     );
+    console.log({ tasks });
     tasks = tasks?.map((item) => {
       let index = intersection?.findIndex((task) => task._id === item._id);
       return index >= 0 ? intersection[index] : item;
@@ -435,17 +439,16 @@ export const initializeTTPTasks = async () => {
           start: item.start ? item.start : null,
           deadline: item.due,
           trelloShortUrl: item.shortUrl,
-          attachedFiles:
-            item.attachments.length > 0
-              ? item?.attachments?.map((item) => {
-                  return {
-                    name: item.fileName,
-                    trelloId: item.id,
-                    mimeType: item.mimeType,
-                    url: item.url,
-                  };
-                })
-              : [],
+          attachedFiles: item?.attachments?.length
+            ? item?.attachments?.map((item) => {
+                return {
+                  name: item.fileName,
+                  trelloId: item.id,
+                  mimeType: item.mimeType,
+                  url: item.url,
+                };
+              })
+            : [],
           movements: [
             {
               status: status?.name ? status.name : "In Progress",
