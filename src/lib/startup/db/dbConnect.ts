@@ -119,7 +119,7 @@ export const initializeTrelloBoards = async () => {
             ? CreativeListTypes
             : ListTypes;
         item.lists = await Promise.all(
-          item.lists.map(async (list) => {
+          item.lists?.map(async (list) => {
             let listInBoard = await TrelloActionsController.addListToBoard(
               board.id,
               list.name
@@ -129,7 +129,7 @@ export const initializeTrelloBoards = async () => {
           })
         );
         item.teams = await Promise.all(
-          item.teams.map(async (team) => {
+          item.teams?.map(async (team) => {
             let teamInBoard = await TrelloActionsController.addListToBoard(
               board.id,
               team.name
@@ -164,7 +164,7 @@ export const initializeTrelloBoards = async () => {
           name: item.name,
           color: "blue",
           lists: await Promise.all(
-            listTypes.map(async (listName) => {
+            listTypes?.map(async (listName) => {
               listExisted = item?.lists?.find((list) => listName === list.name);
               return {
                 name: listName,
@@ -180,7 +180,7 @@ export const initializeTrelloBoards = async () => {
               };
             })
           ),
-          teams: teams.map((tem) => {
+          teams: teams?.map((tem) => {
             return { name: tem.name, listId: tem.id, isDeleted: false };
           }),
         });
@@ -190,7 +190,7 @@ export const initializeTrelloBoards = async () => {
     // existed on TTP & TRELLO > make it same
     intersection = await Promise.all(
       intersection?.map(async (item) => {
-        let board = allBoards.find((board) => board.id === item.boardId);
+        let board = allBoards?.find((board) => board.id === item.boardId);
         board.lists = await TrelloActionsController.__getBoardLists(
           item.boardId
         );
@@ -199,7 +199,7 @@ export const initializeTrelloBoards = async () => {
             ? CreativeListTypes
             : ListTypes;
         item.lists = await Promise.all(
-          listTypes.map(async (listName) => {
+          listTypes?.map(async (listName) => {
             let listExisted = board?.lists?.find(
               (list) => listName === list.name
             );
@@ -226,13 +226,13 @@ export const initializeTrelloBoards = async () => {
       })
     );
 
-    allDepartments = allDepartments.map((item) => {
+    allDepartments = allDepartments?.map((item) => {
       let index = intersection.findIndex((dep) => dep._id === item._id);
       return index >= 0 ? intersection[index] : item;
     });
     let updateTeams = _.flattenDeep(
-      allDepartments.map((item) => {
-        return item.teams.map((team) => {
+      allDepartments?.map((item) => {
+        return item.teams?.map((team) => {
           return {
             updateOne: {
               filter: { _id: item._id, "teams.listId": team.listId },
@@ -249,8 +249,8 @@ export const initializeTrelloBoards = async () => {
       })
     );
     let updateLists = _.flattenDeep(
-      allDepartments.map((item) => {
-        return item.lists.map((list) => {
+      allDepartments?.map((item) => {
+        return item.lists?.map((list) => {
           return {
             updateOne: {
               filter: { _id: item._id, "lists._id": list._id },
@@ -268,7 +268,7 @@ export const initializeTrelloBoards = async () => {
     let update = [
       ...updateLists,
       ...updateTeams,
-      ...allDepartments.map((item) => {
+      ...allDepartments?.map((item) => {
         return {
           updateOne: {
             filter: { _id: item._id },
@@ -280,7 +280,7 @@ export const initializeTrelloBoards = async () => {
           },
         };
       }),
-      ...newDeps.map((item) => {
+      ...newDeps?.map((item) => {
         return {
           insertOne: {
             document: item,
@@ -320,7 +320,7 @@ export const initializeTTPTasks = async () => {
     // get the data
     boards = await TrelloActionsController.getBoardsInTrello();
     boards = await Promise.all(
-      boards.map(async (item) => {
+      boards?.map(async (item) => {
         let lists: List[] = await TrelloActionsController.__getBoardLists(
           item.id
         );
@@ -329,7 +329,7 @@ export const initializeTTPTasks = async () => {
       })
     );
     departments = await Department.find({});
-    creativeBoard = boards.find(
+    creativeBoard = boards?.find(
       (item) => item.name === Config.get("CreativeBoard")
     );
     tasks = await Tasks.find({});
@@ -340,11 +340,11 @@ export const initializeTTPTasks = async () => {
       (item) => item.name === "projects"
     )?._id;
     let newCards = await Promise.all(
-      boards.map(async (item) => {
+      boards?.map(async (item) => {
         let boardCards: Card[] =
           await TrelloActionsController.__getCardsInBoard(item.id);
         if (item.name === Config.get("CreativeBoard")) {
-          let list = item.lists.find((l) => l.name === "projects").id;
+          let list = item?.lists?.find((l) => l.name === "projects").id;
           boardCards = boardCards.filter((item) => item.idList !== list);
         }
         return boardCards;
@@ -352,7 +352,7 @@ export const initializeTTPTasks = async () => {
     );
     cards = _.flattenDeep(newCards);
     cards = await Promise.all(
-      cards.map(async (item) => {
+      cards?.map(async (item) => {
         let attachments = await TrelloActionsController.__getCardAttachments(
           item.id
         );
@@ -360,8 +360,8 @@ export const initializeTTPTasks = async () => {
         return item;
       })
     );
-    tasksIds = tasks.map((item) => item.cardId);
-    cardsIds = cards.map((item) => item.id);
+    tasksIds = tasks?.map((item) => item.cardId);
+    cardsIds = cards?.map((item) => item.id);
     notExistedOnTTP = cards.filter((item) => !tasksIds.includes(item.id));
     notExistedOnTrello = tasks.filter(
       (item) => !cardsIds.includes(item.cardId)
@@ -370,11 +370,11 @@ export const initializeTTPTasks = async () => {
     // execute the function
     // Existed on TTP & Trello > make it same
     intersection = await Promise.all(
-      intersection.map(async (item) => {
-        let card = cards.find((c) => c.id === item.cardId);
-        let dep = departments.find((d) => d.boardId === card.idBoard);
-        let status = dep.lists.find((list) => list.listId === card.idList);
-        let team = dep.teams.find((team) => team.listId === card.idList);
+      intersection?.map(async (item) => {
+        let card = cards?.find((c) => c.id === item.cardId);
+        let dep = departments?.find((d) => d.boardId === card.idBoard);
+        let status = dep.lists?.find((list) => list.listId === card.idList);
+        let team = dep.teams?.find((team) => team.listId === card.idList);
         let replacement = new Tasks({
           _id: item._id,
           name: item.name,
@@ -412,17 +412,17 @@ export const initializeTTPTasks = async () => {
         return replacement;
       })
     );
-    tasks = tasks.map((item) => {
-      let index = intersection.findIndex((task) => task._id === item._id);
+    tasks = tasks?.map((item) => {
+      let index = intersection?.findIndex((task) => task._id === item._id);
       return index >= 0 ? intersection[index] : item;
     });
 
     // not Existed on TTP > create it on TTP
     let newTasks = [
-      ...notExistedOnTTP.map((item) => {
-        let dep = departments.find((d) => d.boardId === item.idBoard);
-        let status = dep?.lists.find((list) => list.listId === item.idList);
-        let team = dep?.teams.find((team) => team.listId === item.idList);
+      ...notExistedOnTTP?.map((item) => {
+        let dep = departments?.find((d) => d.boardId === item.idBoard);
+        let status = dep?.lists?.find((list) => list.listId === item.idList);
+        let team = dep?.teams?.find((team) => team.listId === item.idList);
 
         let task: TaskInfo = new Tasks({
           name: item.name,
@@ -459,8 +459,8 @@ export const initializeTTPTasks = async () => {
     tasks = [...tasks, ...newTasks];
     // not Existed on Trello > create it on Trello
     notExistedOnTrello = await Promise.all(
-      notExistedOnTrello.map(async (item) => {
-        let board = boards.find((b) => b.id === item.boardId);
+      notExistedOnTrello?.map(async (item) => {
+        let board = boards?.find((b) => b.id === item.boardId);
         let boardId = board ? board.id : creativeBoard?.id;
         let listId = item.listId;
         let card: Card = await TrelloActionsController.__createCard({
@@ -501,20 +501,20 @@ export const initializeTTPTasks = async () => {
       })
     );
 
-    tasks = tasks.map((item) => {
+    tasks = tasks?.map((item) => {
       let index = notExistedOnTrello.findIndex((i) => i._id === item._id);
       return index >= 0 ? notExistedOnTrello[index] : item;
     });
 
     let update = [
-      ...newTasks.map((item) => {
+      ...newTasks?.map((item) => {
         return {
           insertOne: {
             document: item,
           },
         };
       }),
-      ...tasks.map((item) => {
+      ...tasks?.map((item) => {
         return {
           updateOne: {
             filter: { _id: item._id },
