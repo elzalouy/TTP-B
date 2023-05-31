@@ -8,7 +8,7 @@ const dev_logger_1 = __importDefault(require("./dev-logger"));
 const prod_logger_1 = __importDefault(require("./prod-logger"));
 (0, dotenv_1.config)();
 let logger = null;
-if (process.env.NODE_ENV === 'development') {
+if (process.env.NODE_ENV === "development") {
     logger = dev_logger_1.default;
 }
 else {

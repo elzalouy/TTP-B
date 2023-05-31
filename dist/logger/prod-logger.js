@@ -8,17 +8,17 @@ function buildProdLogger() {
         transports: [
             new winston_1.transports.Console(),
             new winston_1.transports.File({
-                filename: "src/logger/prod-logs/error.log",
+                filename: `${__dirname}/prod-logs/error.log`,
                 level: "error",
                 format: json(),
             }),
             new winston_1.transports.File({
-                filename: "src/logger/prod-logs/debug.log",
+                filename: `${__dirname}/prod-logs/debug.log`,
                 level: "debug",
                 format: combine(prettyPrint()),
             }),
             new winston_1.transports.File({
-                filename: "src/logger/prod-logs/combined.log",
+                filename: `${__dirname}/prod-logs/combined.log`,
                 format: combine(prettyPrint()),
             }),
         ],

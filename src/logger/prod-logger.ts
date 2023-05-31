@@ -2,7 +2,6 @@ import { format, createLogger, transports } from "winston";
 const { combine, timestamp, errors, json, prettyPrint } = format;
 
 function buildProdLogger() {
-  console.log({ logger: `${__dirname}/prod-logs/combined.log` });
   return createLogger({
     format: combine(timestamp(), errors({ stack: true }), prettyPrint()),
     transports: [

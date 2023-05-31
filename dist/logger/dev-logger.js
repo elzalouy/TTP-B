@@ -13,12 +13,12 @@ function buildDevLogger() {
         transports: [
             new winston_1.transports.Console(),
             new winston_1.transports.File({
-                filename: "src/logger/dev-logs/error.log",
+                filename: `${__dirname}/dev-logs/error.log`,
                 level: "error",
                 format: combine(prettyPrint()),
             }),
             new winston_1.transports.File({
-                filename: "src/logger/dev-logs/combined.log",
+                filename: `${__dirname}/dev-logs/combined.log`,
                 level: "info",
                 format: combine(prettyPrint()),
             }),

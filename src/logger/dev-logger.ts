@@ -2,8 +2,6 @@ import { format, createLogger, transports } from "winston";
 const { combine, timestamp, printf, errors, json, prettyPrint } = format;
 
 function buildDevLogger() {
-  console.log({ logger: `${__dirname}/src/logger/prod-logs/combined.log` });
-
   const logFormat = printf(({ level, message, timestamp, stack }) => {
     return `${timestamp} ${level}: ${stack || message}`;
   });
@@ -19,12 +17,12 @@ function buildDevLogger() {
     transports: [
       new transports.Console(),
       new transports.File({
-        filename: "src/logger/dev-logs/error.log",
+        filename: `${__dirname}/dev-logs/error.log`,
         level: "error",
         format: combine(prettyPrint()),
       }),
       new transports.File({
-        filename: "src/logger/dev-logs/combined.log",
+        filename: `${__dirname}/dev-logs/combined.log`,
         level: "info",
         format: combine(prettyPrint()),
       }),
