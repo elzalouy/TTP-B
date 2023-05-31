@@ -88,31 +88,7 @@ const ProjectController = class ProjectController extends ProjectDB {
   static async __createNewProject(data: ProjectData, user: any) {
     try {
       let project = await super.createProjectDB(data, user);
-      projectQueue.push(async (cb) => {
-        let dep = await Department.findOne({
-          name: config.get("CreativeBoard"),
-        });
-        if (dep) {
-          let projectsList = dep.lists.find((item) => item.name === "projects");
-          let { id } = await TrelloActionsController.__createProject(
-            projectsList.listId,
-            data
-          );
-
-          let result = await super.updateProjectDB(
-            {
-              _id: project._id,
-              cardId: id,
-              boardId: dep.boardId,
-              listId: projectsList.listId,
-            },
-            user
-          );
-          io.sockets.emit("update-projects", result);
-        }
-        NotificationController.__creatProjectNotification(data, user.id);
-        cb(null, true);
-      });
+      NotificationController.__creatProjectNotification(data, user.id);
       return project;
     } catch (error) {
       logger.error({ getTeamsError: error });

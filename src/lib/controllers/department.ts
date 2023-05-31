@@ -1,6 +1,5 @@
 import config from "config";
 import logger from "../../logger";
-import { createProjectsCardsInCreativeBoard } from "../backgroundJobs/actions/department.actions.queue";
 import Department from "../models/Department";
 import {
   IDepartment,
@@ -93,7 +92,6 @@ export default class DepartmentController {
         if (teams && lists) {
           depDoc.teams = teams;
           depDoc.lists = lists;
-          createProjectsCardsInCreativeBoard(depDoc);
           return await depDoc.save();
         } else
           return {

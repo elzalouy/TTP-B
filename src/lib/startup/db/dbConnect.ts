@@ -9,7 +9,6 @@ import Department from "../../models/Department";
 import DepartmentController from "../../controllers/department";
 import TrelloActionsController from "../../controllers/trello";
 import { IDepartment, IDepartmentState } from "../../types/model/Department";
-import { createProjectsCardsInCreativeBoard } from "../../backgroundJobs/actions/department.actions.queue";
 import { Board, Card, List } from "../../types/controller/trello";
 import { CreativeListTypes, ListTypes } from "../../types/model/Department";
 import _ from "lodash";
@@ -114,10 +113,7 @@ export const initializeTrelloBoards = async () => {
           item.color
         );
         item.boardId = board.id;
-        listTypes =
-          item.name === Config.get("CreativeBoard")
-            ? CreativeListTypes
-            : ListTypes;
+        listTypes = ListTypes;
         item.lists = await Promise.all(
           item.lists?.map(async (list) => {
             let listInBoard = await TrelloActionsController.addListToBoard(
@@ -141,6 +137,7 @@ export const initializeTrelloBoards = async () => {
         return item;
       })
     );
+
     allDepartments = allDepartments?.map((item) => {
       let index = _.findIndex(notExistedOnTrello, { boardId: item.boardId });
       return index >= 0 ? notExistedOnTrello[index] : item;
@@ -154,10 +151,7 @@ export const initializeTrelloBoards = async () => {
           item.id
         );
         item.lists = lists;
-        listTypes =
-          item.name === Config.get("CreativeBoard")
-            ? CreativeListTypes
-            : ListTypes;
+        listTypes = ListTypes;
         let teams = lists.filter((item) => !listTypes.includes(item.name));
         return new Department({
           boardId: item.id,
@@ -194,10 +188,7 @@ export const initializeTrelloBoards = async () => {
         board.lists = await TrelloActionsController.__getBoardLists(
           item.boardId
         );
-        listTypes =
-          item.name === Config.get("CreativeBoard")
-            ? CreativeListTypes
-            : ListTypes;
+        listTypes = ListTypes;
         item.lists = await Promise.all(
           listTypes?.map(async (listName) => {
             let listExisted = board?.lists?.find(
@@ -307,7 +298,6 @@ export const initializeTTPTasks = async () => {
     let tasks: TaskInfo[],
       boards: Board[],
       departments: IDepartment[],
-      creativeBoard: Board,
       creativeDepartment: IDepartment,
       projectsListId: string,
       cards: Card[],
@@ -329,13 +319,8 @@ export const initializeTTPTasks = async () => {
       })
     );
     departments = await Department.find({});
-    creativeBoard = boards?.find(
-      (item) => item.name === Config.get("CreativeBoard")
-    );
+
     tasks = await Tasks.find({});
-    creativeDepartment = await Department.findOne({
-      boardId: creativeBoard?.id,
-    });
     projectsListId = creativeDepartment?.lists?.find(
       (item) => item.name === "projects"
     )?.listId;
@@ -462,11 +447,10 @@ export const initializeTTPTasks = async () => {
     notExistedOnTrello = await Promise.all(
       notExistedOnTrello?.map(async (item) => {
         let board = boards?.find((b) => b.id === item.boardId);
-        let boardId = board ? board.id : creativeBoard?.id;
         let listId = item.listId;
         console.log({ item });
         let card: Card = await TrelloActionsController.__createCard({
-          boardId: boardId,
+          boardId: board.id,
           listId: listId,
           description: item?.description ? item.description : "",
           deadline: item.deadline,
@@ -475,7 +459,7 @@ export const initializeTTPTasks = async () => {
         });
         let replacement = new Tasks({
           _id: item._id,
-          boardId: boardId,
+          boardId: board.id,
           listId: listId,
           movements:
             item?.movements?.length > 0
@@ -551,23 +535,23 @@ export const initializeTTPTasks = async () => {
   }
 };
 
-export const createTTPCreativeMainBoard = async () => {
-  try {
-    let dep: any = {
-      name: Config.get("CreativeBoard"),
-      color: "orange",
-    };
-    let department = await DepartmentController.createDepartment(dep);
-    let listOfProjects =
-      department &&
-      department?.lists &&
-      department?.lists?.find((item: any) => item.name === "projects");
-    if (department && listOfProjects) {
-      createProjectsCardsInCreativeBoard(department);
-    }
-  } catch (error) {
-    logger.error({ createTTPCreativeMainBoardError: error });
-  }
-};
+// export const createTTPCreativeMainBoard = async () => {
+//   try {
+//     let dep: any = {
+//       name: Config.get("CreativeBoard"),
+//       color: "orange",
+//     };
+//     let department = await DepartmentController.createDepartment(dep);
+//     let listOfProjects =
+//       department &&
+//       department?.lists &&
+//       department?.lists?.find((item: any) => item.name === "projects");
+//     if (department && listOfProjects) {
+//       createProjectsCardsInCreativeBoard(department);
+//     }
+//   } catch (error) {
+//     logger.error({ createTTPCreativeMainBoardError: error });
+//   }
+// };
 
 export default mongoDB;

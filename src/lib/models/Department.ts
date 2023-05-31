@@ -264,11 +264,7 @@ DepartmentSchema.methods.createDepartmentBoard = async function (
       };
 
     //2- create lists
-    let departmentLists =
-      this.name === config.get("CreativeBoard")
-        ? [...lists, { name: "projects", listId: "" }]
-        : lists;
-
+    let departmentLists = lists;
     let listsResult = await departmentLists.map(async (list, index) => {
       result = await TrelloActionsController.addListToBoard(
         board.id,
@@ -278,12 +274,6 @@ DepartmentSchema.methods.createDepartmentBoard = async function (
       return list;
     });
     lists = await Promise.all(listsResult);
-    let CreativeBoard = lists.find((item) => item.name === "projects");
-    if (CreativeBoard)
-      TrelloActionsController.createWebHook(
-        CreativeBoard.listId,
-        "trelloWebhookUrlProject"
-      );
     // 3- create teams
     let teamsResult = await teams.map(async (team, index) => {
       result = await TrelloActionsController.addListToBoard(
