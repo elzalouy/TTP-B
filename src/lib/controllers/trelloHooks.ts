@@ -114,8 +114,11 @@ export default class TrelloWebhook {
       let dep = await Department.findOne({
         boardId: this.actionRequest.action.data?.board?.id,
       });
+      let projectList = dep.lists.find(
+        (list) => list.name === "projects" && list.listId === listId
+      );
       let team = await dep.teams.find((item) => listId === item.listId);
-      if (!task && dep) {
+      if (!task && dep && !projectList) {
         this.task = {
           ...this.task,
           trelloShortUrl: `https://trello.com/c/${this.actionRequest.action.data.card.shortLink}`,
@@ -190,35 +193,40 @@ export default class TrelloWebhook {
         let inProgressList = (newDep ?? department).lists.find(
           (item) => isNewTeam?.listId && item.name === "In Progress"
         );
-        this.task = {
-          name: this.actionRequest.action.data.card.name,
-          boardId: this.actionRequest.action.data.board.id,
-          cardId: this.actionRequest.action.data.card.id,
-          deadline: this.actionRequest?.action?.data?.card?.due
-            ? new Date(this.actionRequest?.action?.data?.card?.due)
-            : task.deadline ?? null,
-          start: this.actionRequest.action?.data?.card?.start
-            ? new Date(this.actionRequest.action?.data?.card?.start)
-            : task.start ?? null,
-          description:
-            this.actionRequest.action.data.card.desc ?? task.description,
-          teamId: isNewTeam?._id ?? task.teamId,
-          listId: listId,
-          status: inProgressList?.name ?? status,
-          movements: task.movements,
-          teamListId: isNewTeam ? listId : task.teamListId,
-        };
-        if (isMoved || task.movements.length === 0)
-          this.task.movements.push({
-            status: inProgressList?.name ? inProgressList.name : status,
-            movedAt: new Date(Date.now()).toString(),
-          });
-        console.log({ updateTask: listId, movements: this.task.movements });
+        let isProject = (newDep ?? department).lists.find(
+          (l) => l.listId === listId && l.name === "projects"
+        );
+        if (!isProject) {
+          this.task = {
+            name: this.actionRequest.action.data.card.name,
+            boardId: this.actionRequest.action.data.board.id,
+            cardId: this.actionRequest.action.data.card.id,
+            deadline: this.actionRequest?.action?.data?.card?.due
+              ? new Date(this.actionRequest?.action?.data?.card?.due)
+              : task.deadline ?? null,
+            start: this.actionRequest.action?.data?.card?.start
+              ? new Date(this.actionRequest.action?.data?.card?.start)
+              : task.start ?? null,
+            description:
+              this.actionRequest.action.data.card.desc ?? task.description,
+            teamId: isNewTeam?._id ?? task.teamId,
+            listId: listId,
+            status: inProgressList?.name ?? status,
+            movements: task.movements,
+            teamListId: isNewTeam ? listId : task.teamListId,
+          };
+          if (isMoved || task.movements.length === 0)
+            this.task.movements.push({
+              status: inProgressList?.name ? inProgressList.name : status,
+              movedAt: new Date(Date.now()).toString(),
+            });
+          console.log({ updateTask: listId, movements: this.task.movements });
 
-        return await TaskController.updateTaskByTrelloDB(this.task, {
-          id: this.user.id,
-          name: this.user.name,
-        });
+          return await TaskController.updateTaskByTrelloDB(this.task, {
+            id: this.user.id,
+            name: this.user.name,
+          });
+        } else this.updateProject();
       } else this.updateProject();
     } catch (error) {
       logger.error({ updateCardHook: error });

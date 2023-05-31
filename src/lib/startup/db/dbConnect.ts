@@ -99,7 +99,7 @@ export const initializeTrelloBoards = async () => {
     depsIds = allDepartments?.map((item) => item.boardId);
 
     intersection = allDepartments.filter((item) =>
-      boardsIds.includes(item.boardId)
+      boardsIds?.includes(item.boardId)
     );
 
     // Not Existed on Trello > create it on trello
