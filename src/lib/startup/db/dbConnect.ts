@@ -375,6 +375,7 @@ export const initializeTTPTasks = async () => {
         let dep = departments?.find((d) => d.boardId === card.idBoard);
         let status = dep.lists?.find((list) => list.listId === card.idList);
         let team = dep.teams?.find((team) => team.listId === card.idList);
+        console.log({ status, team });
         let replacement = new Tasks({
           _id: item._id,
           name: item.name,
@@ -427,6 +428,7 @@ export const initializeTTPTasks = async () => {
         let dep = departments?.find((d) => d.boardId === item.idBoard);
         let status = dep?.lists?.find((list) => list.listId === item.idList);
         let team = dep?.teams?.find((team) => team.listId === item.idList);
+        console.log({ status, team });
 
         let task: TaskInfo = new Tasks({
           name: item.name,
@@ -466,6 +468,7 @@ export const initializeTTPTasks = async () => {
         let board = boards?.find((b) => b.id === item.boardId);
         let boardId = board ? board.id : creativeBoard?.id;
         let listId = item.listId;
+        console.log({ item });
         let card: Card = await TrelloActionsController.__createCard({
           boardId: boardId,
           listId: listId,
