@@ -338,15 +338,12 @@ export const initializeTTPTasks = async () => {
     });
     projectsListId = creativeDepartment?.lists?.find(
       (item) => item.name === "projects"
-    )?._id;
+    )?.listId;
     let newCards = await Promise.all(
       boards?.map(async (item) => {
         let boardCards: Card[] =
           await TrelloActionsController.__getCardsInBoard(item.id);
-        if (item.name === Config.get("CreativeBoard")) {
-          let list = item?.lists?.find((l) => l.name === "projects").id;
-          boardCards = boardCards.filter((item) => item.idList !== list);
-        }
+        boardCards = boardCards.filter((c) => c.idList !== projectsListId);
         return boardCards;
       })
     );
@@ -388,7 +385,7 @@ export const initializeTTPTasks = async () => {
           teamId: team?._id ?? item.teamId,
           teamListId: team?.listId ?? item?.teamListId,
           cardId: card.id,
-          description: card.desc ? card.desc : "",
+          description: card.desc ?? item.description ?? "",
           start: card.start,
           deadline: card.due ? card.due : null,
           trelloShortUrl: card.shortUrl ? card.shortUrl : "",
@@ -416,7 +413,6 @@ export const initializeTTPTasks = async () => {
         return replacement;
       })
     );
-    console.log({ tasks });
     tasks = tasks?.map((item) => {
       let index = intersection?.findIndex((task) => task._id === item._id);
       return index >= 0 ? intersection[index] : item;
