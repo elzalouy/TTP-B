@@ -1,0 +1,5 @@
+{
+  message: { db: 'mongodb://localhost:27017/TTP' },
+  level: 'info',
+  timestamp: '2023-05-31 10:16:00'
+}

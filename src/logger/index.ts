@@ -1,15 +1,15 @@
-import { config } from 'dotenv';
-import buildDevLogger from './dev-logger'
-import buildProdLogger from './prod-logger'
+import { config } from "dotenv";
+import buildDevLogger from "./dev-logger";
+import buildProdLogger from "./prod-logger";
 
-config()
+config();
 
-let logger:any = null
+let logger: any = null;
 
-if (process.env.NODE_ENV === 'development') {
-    logger = buildDevLogger
+if (process.env.NODE_ENV === "development") {
+  logger = buildDevLogger;
 } else {
-    logger = buildProdLogger
+  logger = buildProdLogger;
 }
 
-export default logger
+export default logger;
