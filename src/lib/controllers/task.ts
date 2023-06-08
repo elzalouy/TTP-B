@@ -286,13 +286,6 @@ class TaskController extends TaskDB {
       let cards: Card[] = await TrelloActionsController.__getCardsInBoard(
         board.boardId
       );
-      let projectsList =
-        board.name === config.get("CreativeBoard")
-          ? board?.lists?.find((item) => item.name === "projects").listId
-          : undefined;
-      cards = projectsList
-        ? cards.filter((item) => item.idList !== projectsList)
-        : cards;
       if (cards) {
         let tasks = await TaskController.getTasks({ boardId: board.boardId });
         if (tasks) {
