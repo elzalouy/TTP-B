@@ -279,7 +279,6 @@ export const initializeTrelloBoards = async () => {
         };
       }),
     ];
-    console.log({ allDepartments, update, teams: allDepartments[0].teams });
     Department.bulkWrite(update);
     // allDepartments.forEach(
     //   async (item) =>
@@ -321,14 +320,10 @@ export const initializeTTPTasks = async () => {
     departments = await Department.find({});
 
     tasks = await Tasks.find({});
-    projectsListId = creativeDepartment?.lists?.find(
-      (item) => item.name === "projects"
-    )?.listId;
     let newCards = await Promise.all(
       boards?.map(async (item) => {
         let boardCards: Card[] =
           await TrelloActionsController.__getCardsInBoard(item.id);
-        boardCards = boardCards.filter((c) => c.idList !== projectsListId);
         return boardCards;
       })
     );
@@ -354,10 +349,9 @@ export const initializeTTPTasks = async () => {
     intersection = await Promise.all(
       intersection?.map(async (item) => {
         let card = cards?.find((c) => c.id === item.cardId);
-        let dep = departments?.find((d) => d.boardId === card.idBoard);
-        let status = dep.lists?.find((list) => list.listId === card.idList);
-        let team = dep.teams?.find((team) => team.listId === card.idList);
-        console.log({ status, team });
+        let dep = departments?.find((d) => d.boardId === card?.idBoard);
+        let status = dep.lists?.find((list) => list?.listId === card?.idList);
+        let team = dep.teams?.find((team) => team?.listId === card?.idList);
         let replacement = new Tasks({
           _id: item._id,
           name: item.name,
@@ -409,8 +403,7 @@ export const initializeTTPTasks = async () => {
         let dep = departments?.find((d) => d.boardId === item.idBoard);
         let status = dep?.lists?.find((list) => list.listId === item.idList);
         let team = dep?.teams?.find((team) => team.listId === item.idList);
-        console.log({ status, team });
-
+        console.log({ listId: status.listId ?? team.listId });
         let task: TaskInfo = new Tasks({
           name: item.name,
           boardId: item.idBoard,
@@ -448,7 +441,6 @@ export const initializeTTPTasks = async () => {
       notExistedOnTrello?.map(async (item) => {
         let board = boards?.find((b) => b.id === item.boardId);
         let listId = item.listId;
-        console.log({ item });
         let card: Card = await TrelloActionsController.__createCard({
           boardId: board.id,
           listId: listId,
