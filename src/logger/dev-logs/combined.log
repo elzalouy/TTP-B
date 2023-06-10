@@ -256,3 +256,10 @@
   level: 'info',
   timestamp: '2023-06-08 16:15:27'
 }
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:WFUiEjrljsIDFOmd@cluster0.oeari.mongodb.net/ttp-beta'
+  },
+  level: 'info',
+  timestamp: '2023-06-10 14:29:56'
+}
