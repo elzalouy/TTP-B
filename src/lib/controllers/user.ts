@@ -141,17 +141,18 @@ const UserController = class UserController extends UserDB {
       }
 
       if (passwordCheck(password)) {
+        console.log("password pattern error");
         return customeError("password_length", 400);
       }
 
       let findUser = await super.findUserById(token.id);
       if (!findUser) {
+        console.log("user not existed error");
         return customeError("user_not_exist", 409);
       }
 
       // hash password
       let passwordHash: string = await hashBassword(password);
-
       let user = await super.updateUser({
         id: token.id,
         password: passwordHash,

@@ -4003,3 +4003,29 @@
   level: 'info',
   timestamp: '2023-07-08 10:08:26'
 }
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:WFUiEjrljsIDFOmd@cluster0.oeari.mongodb.net/ttp-beta'
+  },
+  level: 'info',
+  timestamp: '2023-07-08 11:38:29'
+}
+{
+  message: { monthlyDeleteNotifications: 2 },
+  level: 'info',
+  timestamp: '2023-07-08 11:38:37'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:WFUiEjrljsIDFOmd@cluster0.oeari.mongodb.net/ttp-beta'
+  },
+  level: 'info',
+  timestamp: '2023-07-08 11:43:07'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:WFUiEjrljsIDFOmd@cluster0.oeari.mongodb.net/ttp-beta'
+  },
+  level: 'info',
+  timestamp: '2023-07-08 12:22:46'
+}
