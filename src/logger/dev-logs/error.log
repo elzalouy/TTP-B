@@ -3542,3 +3542,37 @@ errors will be here{
   level: 'error',
   timestamp: '2023-06-25 12:50:48'
 }
+{
+  message: {
+    _updateDepartmentsPriority: TypeError: Cannot read properties of undefined (reading 'map')
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/department.ts:126:27
+        at Generator.next (<anonymous>)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/department.ts:8:71
+        at new Promise (<anonymous>)
+        at __awaiter (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/department.ts:4:12)
+        at _updateDepartmentsPriority (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/department.ts:152:16)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/presentation/department/department.ts:10:57
+        at Generator.next (<anonymous>)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/presentation/department/department.ts:8:71
+        at new Promise (<anonymous>)
+  },
+  level: 'error',
+  timestamp: '2023-07-10 11:40:36'
+}
+{
+  message: {
+    _updateDepartmentsPriority: TypeError: Cannot read properties of undefined (reading 'map')
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/department.ts:126:27
+        at Generator.next (<anonymous>)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/department.ts:8:71
+        at new Promise (<anonymous>)
+        at __awaiter (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/department.ts:4:12)
+        at _updateDepartmentsPriority (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/department.ts:152:16)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/presentation/department/department.ts:11:58
+        at Generator.next (<anonymous>)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/presentation/department/department.ts:8:71
+        at new Promise (<anonymous>)
+  },
+  level: 'error',
+  timestamp: '2023-07-10 11:47:42'
+}

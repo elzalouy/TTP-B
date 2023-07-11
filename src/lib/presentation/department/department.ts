@@ -5,6 +5,15 @@ import DepartmentController from "../../controllers/department";
 import { IDepartmentState } from "../../types/model/Department";
 
 const DepartmentReq = class DepartmentReq extends DepartmentController {
+  static async handleUpdateDepartmentsPriority(req: Request, res: Response) {
+    try {
+      console.log({ body: req.body });
+      let result = await super._updateDepartmentsPriority(req.body.ids);
+      res.send(result);
+    } catch (error) {
+      logger.error({ handleUpdateDepartmentsPriorityError: error });
+    }
+  }
   static async handleCreateDepartment(req: Request, res: Response) {
     try {
       let response: any = await super.createDepartment(req.body);

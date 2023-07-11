@@ -4036,3 +4036,172 @@
   level: 'info',
   timestamp: '2023-07-08 12:24:09'
 }
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:WFUiEjrljsIDFOmd@cluster0.oeari.mongodb.net/ttp-beta'
+  },
+  level: 'info',
+  timestamp: '2023-07-08 12:42:35'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:WFUiEjrljsIDFOmd@cluster0.oeari.mongodb.net/ttp-beta'
+  },
+  level: 'info',
+  timestamp: '2023-07-09 11:59:27'
+}
+{
+  message: { monthlyDeleteNotifications: 8 },
+  level: 'info',
+  timestamp: '2023-07-09 11:59:38'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:WFUiEjrljsIDFOmd@cluster0.oeari.mongodb.net/ttp-beta'
+  },
+  level: 'info',
+  timestamp: '2023-07-09 13:00:53'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:WFUiEjrljsIDFOmd@cluster0.oeari.mongodb.net/ttp-beta'
+  },
+  level: 'info',
+  timestamp: '2023-07-09 13:04:40'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:WFUiEjrljsIDFOmd@cluster0.oeari.mongodb.net/ttp-beta'
+  },
+  level: 'info',
+  timestamp: '2023-07-10 07:54:22'
+}
+{
+  message: { monthlyDeleteNotifications: 4 },
+  level: 'info',
+  timestamp: '2023-07-10 07:54:31'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:WFUiEjrljsIDFOmd@cluster0.oeari.mongodb.net/ttp-beta'
+  },
+  level: 'info',
+  timestamp: '2023-07-10 07:58:13'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:WFUiEjrljsIDFOmd@cluster0.oeari.mongodb.net/ttp-beta'
+  },
+  level: 'info',
+  timestamp: '2023-07-10 08:07:18'
+}
+{
+  message: { monthlyDeleteNotifications: 2 },
+  level: 'info',
+  timestamp: '2023-07-10 08:07:26'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:WFUiEjrljsIDFOmd@cluster0.oeari.mongodb.net/ttp-beta'
+  },
+  level: 'info',
+  timestamp: '2023-07-10 08:28:14'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:WFUiEjrljsIDFOmd@cluster0.oeari.mongodb.net/ttp-beta'
+  },
+  level: 'info',
+  timestamp: '2023-07-10 08:29:06'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:WFUiEjrljsIDFOmd@cluster0.oeari.mongodb.net/ttp-beta'
+  },
+  level: 'info',
+  timestamp: '2023-07-10 10:48:16'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:WFUiEjrljsIDFOmd@cluster0.oeari.mongodb.net/ttp-beta'
+  },
+  level: 'info',
+  timestamp: '2023-07-10 10:51:52'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:WFUiEjrljsIDFOmd@cluster0.oeari.mongodb.net/ttp-beta'
+  },
+  level: 'info',
+  timestamp: '2023-07-10 11:39:38'
+}
+{
+  message: { monthlyDeleteNotifications: 2 },
+  level: 'info',
+  timestamp: '2023-07-10 11:39:45'
+}
+{
+  message: {
+    _updateDepartmentsPriority: TypeError: Cannot read properties of undefined (reading 'map')
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/department.ts:126:27
+        at Generator.next (<anonymous>)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/department.ts:8:71
+        at new Promise (<anonymous>)
+        at __awaiter (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/department.ts:4:12)
+        at _updateDepartmentsPriority (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/department.ts:152:16)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/presentation/department/department.ts:10:57
+        at Generator.next (<anonymous>)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/presentation/department/department.ts:8:71
+        at new Promise (<anonymous>)
+  },
+  level: 'error',
+  timestamp: '2023-07-10 11:40:36'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:WFUiEjrljsIDFOmd@cluster0.oeari.mongodb.net/ttp-beta'
+  },
+  level: 'info',
+  timestamp: '2023-07-10 11:41:42'
+}
+{
+  message: {
+    _updateDepartmentsPriority: TypeError: Cannot read properties of undefined (reading 'map')
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/department.ts:126:27
+        at Generator.next (<anonymous>)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/department.ts:8:71
+        at new Promise (<anonymous>)
+        at __awaiter (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/department.ts:4:12)
+        at _updateDepartmentsPriority (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/department.ts:152:16)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/presentation/department/department.ts:11:58
+        at Generator.next (<anonymous>)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/presentation/department/department.ts:8:71
+        at new Promise (<anonymous>)
+  },
+  level: 'error',
+  timestamp: '2023-07-10 11:47:42'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:WFUiEjrljsIDFOmd@cluster0.oeari.mongodb.net/ttp-beta'
+  },
+  level: 'info',
+  timestamp: '2023-07-11 08:00:15'
+}
+{
+  message: { monthlyDeleteNotifications: 8 },
+  level: 'info',
+  timestamp: '2023-07-11 08:00:23'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:WFUiEjrljsIDFOmd@cluster0.oeari.mongodb.net/ttp-beta'
+  },
+  level: 'info',
+  timestamp: '2023-07-11 11:45:03'
+}
+{
+  message: { monthlyDeleteNotifications: 4 },
+  level: 'info',
+  timestamp: '2023-07-11 11:45:11'
+}

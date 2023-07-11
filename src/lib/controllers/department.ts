@@ -7,6 +7,7 @@ import {
   ListTypes,
 } from "../types/model/Department";
 import TrelloActionsController from "./trello";
+import { ObjectId } from "mongodb";
 export default class DepartmentController {
   static async createDepartment(data: IDepartment) {
     return await DepartmentController.__createNewDepartment(data);
@@ -117,6 +118,33 @@ export default class DepartmentController {
       await Department.deleteMany({});
     } catch (error) {
       logger.error({ dropCollectionError: error });
+    }
+  }
+  static async _updateDepartmentsPriority(ids: string[]) {
+    try {
+      // write a bulkwrite operation instead
+      let update = [
+        {
+          updateMany: {
+            filter: { boardId: { $in: ids } },
+            update: {
+              $set: { priority: 1 },
+            },
+          },
+        },
+        {
+          updateMany: {
+            filter: { boardId: { $not: { $in: ids } } },
+            update: {
+              $set: { priority: 0 },
+            },
+          },
+        },
+      ];
+      let result = await Department.bulkWrite(update, { ordered: true });
+      return await Department.find();
+    } catch (error) {
+      logger.error({ _updateDepartmentsPriority: error });
     }
   }
 }
