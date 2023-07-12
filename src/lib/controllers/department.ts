@@ -81,6 +81,7 @@ export default class DepartmentController {
         name: data.name,
         color: data.color,
         teams: data.teams,
+        sideLists: data.sideLists,
         boardId: "",
         lists: ListTypes.map((item) => {
           return { name: item, listId: "" };
@@ -89,10 +90,11 @@ export default class DepartmentController {
       let validation = depDoc.createDepartmentValidate();
       if (validation.error) return validation.error.details[0];
       if (depDoc) {
-        let { teams, lists } = await depDoc.createDepartmentBoard();
-        if (teams && lists) {
+        let { teams, lists, sideLists } = await depDoc.createDepartmentBoard();
+        if (teams && lists && sideLists) {
           depDoc.teams = teams;
           depDoc.lists = lists;
+          depDoc.sideLists = sideLists;
           return await depDoc.save();
         } else
           return {

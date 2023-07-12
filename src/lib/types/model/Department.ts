@@ -19,6 +19,7 @@ export interface IDepartment extends Document {
   color: string;
   teams: ITeam[];
   boardURL?: string;
+  sideLists: IList[];
   /**
    * createDepartmentValidate
    *

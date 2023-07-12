@@ -46,6 +46,16 @@ const DepartmentSchema = new Schema<IDepartment>(
       required: true,
       default: [],
     },
+    sideLists: {
+      type: [
+        {
+          name: { type: String, required: true },
+          listId: { type: String, required: true },
+        },
+      ],
+      required: true,
+      default: [],
+    },
     lists: {
       type: [
         {
@@ -113,6 +123,15 @@ const listSchema = Joi.array()
       ),
     listId: Joi.string().required().allow("").label("list id"),
   });
+
+const sideListSchema = Joi.array()
+  .required()
+  .items({
+    _id: Joi.object().optional(),
+    name: Joi.string().label("list name"),
+    listId: Joi.string().required().allow("").label("list id"),
+  });
+
 const createDepartmentValidationSchema = Joi.object({
   _id: Joi.object().optional(),
   name: Joi.string().required().max(64).min(2).label("Department name"),
@@ -132,7 +151,13 @@ const createDepartmentValidationSchema = Joi.object({
     .label("Department color"),
   boardUrl: Joi.optional().allow(null),
   boardId: Joi.string().label("board id").allow(""),
-}).concat(Joi.object({ teams: teamsSchema([]), lists: listSchema }));
+}).concat(
+  Joi.object({
+    teams: teamsSchema([]),
+    lists: listSchema,
+    sideLists: sideListSchema,
+  })
+);
 
 const updateDepartmentValidateSchema = (teams: string[]) =>
   Joi.object({
@@ -245,6 +270,7 @@ DepartmentSchema.methods.createDepartmentBoard = async function (
 ) {
   try {
     let teams = _.uniqBy([...this.teams], "name"),
+      sideLists = _.uniqBy([...this.sideLists], "name"),
       lists = [...this.lists],
       board: createBoardResponse | any,
       result: { id: string } | any;
@@ -273,7 +299,17 @@ DepartmentSchema.methods.createDepartmentBoard = async function (
       list.listId = result.id;
       return list;
     });
+    let sideListsIds = await sideLists.map(async (item) => {
+      result = await TrelloActionsController.addListToBoard(
+        board.id,
+        item.name
+      );
+      item.listId = result.id;
+      return item;
+    });
     lists = await Promise.all(listsResult);
+    sideLists = await Promise.all(sideListsIds);
+    console.log({ sideLists });
     // 3- create teams
     let teamsResult = await teams.map(async (team, index) => {
       result = await TrelloActionsController.addListToBoard(
@@ -284,7 +320,7 @@ DepartmentSchema.methods.createDepartmentBoard = async function (
       return team;
     });
     teams = await Promise.all(teamsResult);
-    return { teams: teams, lists: lists };
+    return { teams, lists, sideLists };
   } catch (error) {
     logger.error({ createDepartmentBoardError: error });
   }
