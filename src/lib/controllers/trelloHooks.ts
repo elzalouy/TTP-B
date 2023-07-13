@@ -212,7 +212,11 @@ export default class TrelloWebhook {
               this.actionRequest.action.data.card.desc ?? task.description,
             teamId: isNewTeam?._id ?? task.teamId,
             listId: listId,
-            status: sideList ? "Tasks Board" : inProgressList?.name ?? status,
+            status: sideList
+              ? "Tasks Board"
+              : inProgressList?.name
+              ? inProgressList.name
+              : status,
             movements: task.movements,
             teamListId: isNewTeam ? listId : task.teamListId,
           };
