@@ -40,6 +40,11 @@ export interface IDepartment extends Document {
     data: IDepartmentState,
     cb?: (doc: IDepartment) => any
   ): IDepartment;
+  updateSideLists(
+    this: IDepartment,
+    data: IDepartmentState,
+    cb?: (doc: IDepartment) => any
+  ): IDepartment;
 }
 
 export interface IDepartmentState {
@@ -52,6 +57,8 @@ export interface IDepartmentState {
   boardURL?: string;
   removeTeams?: string[];
   addTeams?: string[];
+  removeSideLists?: string[];
+  addSideLists?: string[];
 }
 export interface ITeam {
   _id?: string;

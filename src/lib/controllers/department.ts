@@ -58,6 +58,7 @@ export default class DepartmentController {
   static async __updateDepartmentData(id: string, data: IDepartmentState) {
     try {
       // 1- get department
+      console.log({ data });
       let department: IDepartment = await Department.findOne({ _id: id });
       if (!department)
         return { error: "NotFound", message: "Department was not found" };

@@ -187,6 +187,8 @@ const updateDepartmentValidateSchema = (teams: string[]) =>
       )
       .optional(),
     removeTeams: Joi.array().items(Joi.string()).optional(),
+    removeSideLists: Joi.array().items(Joi.string()).optional(),
+    addSideLists: Joi.array().items(Joi.string()).optional(),
   });
 // Validate hooks
 DepartmentSchema.post(
@@ -338,6 +340,7 @@ DepartmentSchema.methods.updateDepartment = async function (
     this.name = data.name;
     this.color = data.color;
     await this.updateTeams(data);
+    await this.updateSideLists(data);
     return this;
   } catch (error) {
     logger.error({ updateDepartmentError: error });
@@ -393,6 +396,34 @@ DepartmentSchema.methods.updateTeams = async function (
     return this;
   } catch (error: any) {
     logger.error({ updateTeamsError: error });
+    return error;
+  }
+};
+
+DepartmentSchema.methods.updateSideLists = async function (
+  this: IDepartment,
+  data: IDepartmentState,
+  cb?: (doc: IDepartment) => any
+) {
+  try {
+    await data.removeSideLists.forEach(async (item, index) => {
+      let list = this.sideLists.find((l) => l._id.toString() === item);
+      await TrelloActionsController.addListToArchieve(list.listId);
+    });
+    this.sideLists = this.sideLists.filter(
+      (item) => !data.removeSideLists.includes(item._id.toString())
+    );
+    let depSideLists = await Promise.all(
+      await data.addSideLists.map(async (item, index) => {
+        let list: { id: string } | any =
+          await TrelloActionsController.addListToBoard(this.boardId, item);
+        return { name: item, listId: list.id };
+      })
+    );
+    this.sideLists = [...this.sideLists, ...depSideLists];
+    return this;
+  } catch (error) {
+    logger.error({ updateSideListsError: error });
     return error;
   }
 };
