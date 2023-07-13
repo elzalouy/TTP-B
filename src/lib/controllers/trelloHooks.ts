@@ -197,7 +197,6 @@ export default class TrelloWebhook {
         let sideList = (newDep ?? department).sideLists.find(
           (list) => list.listId === listId
         );
-        console.log({ isNewTeam, sideList, department, task, listId });
 
         if (!isProject) {
           this.task = {
