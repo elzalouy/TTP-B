@@ -136,6 +136,8 @@ export default class TrelloWebhook {
             {
               status: team
                 ? "In Progress"
+                : isSideList
+                ? "Tasks Board"
                 : this.actionRequest.action.data.list.name,
               movedAt: new Date(Date.now()).toString(),
             },
@@ -223,7 +225,11 @@ export default class TrelloWebhook {
           };
           if (isMoved || task.movements.length === 0)
             this.task.movements.push({
-              status: inProgressList?.name ? inProgressList.name : status,
+              status: sideList
+                ? "Tasks Board"
+                : inProgressList?.name
+                ? inProgressList.name
+                : status,
               movedAt: new Date(Date.now()).toString(),
             });
 
