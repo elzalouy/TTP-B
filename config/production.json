@@ -1,8 +1,8 @@
 {
   "name": "TTP beta",
-  "trelloWebhookUrlTask": "https://ttp-beta.herokuapp.com/api/webhookUpdate",
-  "trelloWebhookUrlProject": "https://ttp-beta.herokuapp.com/api/webhookUpdateProject",
-  "frontEndUrl": "https://ttpweb-beta.herokuapp.com",
+  "trelloWebhookUrlTask": "https://ttp-back-v1.herokuapp.com/api/webhookUpdate",
+  "trelloWebhookUrlProject": "https://ttp-back-v1.herokuapp.com/api/webhookUpdateProject",
+  "frontEndUrl": "https://ttpf.herokuapp.com",
   "BoardStatus": [
     "In Progress",
     "Cancled",
