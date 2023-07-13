@@ -115,7 +115,6 @@ export default class TrelloWebhook {
       });
       let isSideList = dep.sideLists.find((item) => item.listId === listId);
       let team = await dep.teams.find((item) => listId === item.listId);
-      console.log({ team, isSideList, dep, task, listId });
       if (!task && dep) {
         this.task = {
           ...this.task,
@@ -127,9 +126,9 @@ export default class TrelloWebhook {
             ? new Date(this.actionRequest.action?.data?.card?.start)
             : new Date(Date.now()),
           teamId: team?._id ?? null,
-          status: team.listId
+          status: team
             ? "In Progress"
-            : isSideList.listId
+            : isSideList
             ? "Tasks Board"
             : this.actionRequest.action.data.list.name,
           listId: listId,
