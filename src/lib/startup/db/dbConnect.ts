@@ -102,6 +102,7 @@ export const initializeTrelloBoards = async () => {
     );
 
     // Not Existed on Trello > create it on trello
+
     notExistedOnTrello = allDepartments.filter(
       (item) => !boardsIds.includes(item.boardId)
     );
@@ -208,11 +209,30 @@ export const initializeTrelloBoards = async () => {
             };
           })
         );
+        let sideListsIds = item.sideLists.map((i) => i.listId);
         item.teams = board.lists
-          ?.filter((item) => !listTypes.includes(item.name))
+          ?.filter(
+            (item) =>
+              !listTypes.includes(item.name) && !sideListsIds.includes(item.id)
+          )
           ?.map((item) => {
             return { name: item.name, listId: item.id, isDeleted: false };
           });
+        item.sideLists = await Promise.all(
+          item.sideLists.map(async (sideI) => {
+            let listExisted = board.lists.find((i) => i.id === sideI.listId);
+            return {
+              name: sideI.name,
+              listId:
+                listExisted && listExisted?.id
+                  ? listExisted.id
+                  : await TrelloActionsController.addListToBoard(
+                      item.boardId,
+                      sideI.name
+                    ),
+            };
+          })
+        );
         return item;
       })
     );
@@ -256,9 +276,27 @@ export const initializeTrelloBoards = async () => {
         });
       })
     );
+    let updateSideLists = _.flattenDeep(
+      allDepartments.map((item) => {
+        return item.sideLists.map((list) => {
+          return {
+            updateOne: {
+              filter: { _id: item._id, "sideLists._id": list._id },
+              update: {
+                $set: {
+                  "sideLists.$.listId": list.listId,
+                  "sideLists.$.name": list.name,
+                },
+              },
+            },
+          };
+        });
+      })
+    );
     let update = [
       ...updateLists,
       ...updateTeams,
+      ...updateSideLists,
       ...allDepartments?.map((item) => {
         return {
           updateOne: {
@@ -348,6 +386,10 @@ export const initializeTTPTasks = async () => {
         let dep = departments?.find((d) => d.boardId === card?.idBoard);
         let status = dep.lists?.find((list) => list?.listId === card?.idList);
         let team = dep.teams?.find((team) => team?.listId === card?.idList);
+        let sideList = dep.sideLists.find(
+          (sideList) => sideList.listId === card.idList
+        );
+
         let replacement = new Tasks({
           _id: item._id,
           name: item.name,
@@ -356,7 +398,13 @@ export const initializeTTPTasks = async () => {
           boardId: card.idBoard,
           projectId: item.projectId,
           listId: card.idList,
-          status: status?.name ?? "In Progress",
+          status: sideList
+            ? "Tasks Board"
+            : status
+            ? status.name
+            : team
+            ? "In Progress"
+            : "Tasks Board",
           teamId: team?._id ?? item.teamId,
           teamListId: team?.listId ?? item?.teamListId,
           cardId: card.id,
@@ -370,7 +418,13 @@ export const initializeTTPTasks = async () => {
               : [
                   {
                     movedAt: new Date(Date.now()).toString(),
-                    status: status?.name ?? "In Progress",
+                    status: sideList
+                      ? "Tasks Board"
+                      : status
+                      ? status.name
+                      : team
+                      ? "In Progress"
+                      : "Tasks Board",
                   },
                 ],
           attachedFiles:
@@ -399,12 +453,20 @@ export const initializeTTPTasks = async () => {
         let dep = departments?.find((d) => d.boardId === item.idBoard);
         let status = dep?.lists?.find((list) => list.listId === item.idList);
         let team = dep?.teams?.find((team) => team.listId === item.idList);
-        console.log({ listId: status.listId ?? team.listId });
+        let sideList = dep.sideLists.find(
+          (sideList) => sideList.listId === item.idList
+        );
         let task: TaskInfo = new Tasks({
           name: item.name,
           boardId: item.idBoard,
-          listId: status?.listId ?? team?.listId,
-          status: status?.name ?? "In Progress",
+          listId: item.idList,
+          status: sideList
+            ? "Tasks Board"
+            : status
+            ? status.name
+            : team
+            ? "In Progress"
+            : "Tasks Board",
           teamId: team?._id ?? null,
           cardId: item.id,
           description: item.desc ?? "",
@@ -423,7 +485,13 @@ export const initializeTTPTasks = async () => {
             : [],
           movements: [
             {
-              status: status?.name ?? "In Progress",
+              status: sideList
+                ? "Tasks Board"
+                : status
+                ? status.name
+                : team
+                ? "In Progress"
+                : "Tasks Board",
               movedAt: new Date(Date.now()).toString(),
             },
           ],
