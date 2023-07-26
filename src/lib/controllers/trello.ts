@@ -106,7 +106,9 @@ class TrelloActionsController {
   ) {
     try {
       let moveTask = trelloApi(
-        `cards/${cardId}/?idList=${listId}&due=${due ?? ""}`
+        `cards/${cardId}/?idList=${listId}&${
+          due ? "due=" + new Date(due).getTime() : ""
+        }&`
       );
       let result = await fetch(moveTask, {
         method: "PUT",
