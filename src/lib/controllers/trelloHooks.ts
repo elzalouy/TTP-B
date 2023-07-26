@@ -172,7 +172,7 @@ export default class TrelloWebhook {
   private async updateCard() {
     try {
       console.log({ data: this.actionRequest.action.data, type: this.action });
-      let journeyDeadline: string,
+      let isNewJourney: boolean,
         task: LeanDocument<TaskInfo & { _id: ObjectId }>,
         department: IDepartment,
         listId: string,
@@ -217,23 +217,20 @@ export default class TrelloWebhook {
           (list) => list.listId === listId
         );
         listBefore = this.actionRequest.action.data.listBefore.name ?? "";
-        journeyDeadline =
+        isNewJourney =
           (sideList || status === "Tasks Board") &&
-          ["Done", "Shared", "Cancled"].includes(listBefore)
-            ? new Date(task.deadline).toString()
-            : undefined;
+          ["Done", "Shared", "Cancled"].includes(listBefore);
         cardDeadline =
           new Date(this.actionRequest?.action?.data?.card?.due) ?? null;
+
+        console.log({ isNewJourney, cardDeadline });
+
         if (!isProject) {
           this.task = {
             name: this.actionRequest.action.data.card.name,
             boardId: this.actionRequest.action.data.board.id,
             cardId: this.actionRequest.action.data.card.id,
-            deadline:
-              journeyDeadline &&
-              cardDeadline.getTime() !== new Date(task.deadline).getTime()
-                ? cardDeadline
-                : null,
+            deadline: isNewJourney ? null : cardDeadline,
             start: this.actionRequest.action?.data?.card?.start
               ? new Date(this.actionRequest.action?.data?.card?.start)
               : task.start ?? null,
@@ -258,8 +255,8 @@ export default class TrelloWebhook {
                 : status,
               movedAt: new Date(Date.now()).toString(),
             };
-            if (journeyDeadline)
-              move.journeyDeadline = new Date(journeyDeadline).toString();
+            if (isNewJourney)
+              move.journeyDeadline = new Date(task.deadline).toString();
             this.task.movements.push(move);
           }
           return await TaskController.updateTaskByTrelloDB(this.task, {
