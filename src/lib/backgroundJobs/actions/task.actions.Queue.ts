@@ -31,7 +31,8 @@ export function moveTaskJob(
   cardId: string,
   status: string,
   department: IDepartmentState,
-  user: any
+  user: any,
+  deadline?: string
 ) {
   var task;
   updateTaskQueue.push(async (cb) => {
@@ -44,9 +45,9 @@ export function moveTaskJob(
         );
         const result = await TrelloController.moveTaskToDiffList(
           cardId,
-          teamList?.listId ?? statusList?.listId
+          teamList?.listId ?? statusList?.listId,
+          deadline ?? undefined
         );
-        console.log({ moveResult: result });
         cb(null);
       }
     } catch (error) {

@@ -1,7 +1,7 @@
 import Department from "../models/Department";
 import { validateExtentions } from "../services/validation";
 import { webhookUpdateInterface } from "../types/controller/trello";
-import { TaskData } from "../types/model/tasks";
+import { Movement, TaskData, TaskInfo } from "../types/model/tasks";
 import TaskController from "./task";
 import config from "config";
 import Project from "../models/Project";
@@ -9,6 +9,9 @@ import { io } from "../..";
 import TrelloActionsController from "./trello";
 import logger from "../../logger";
 import ProjectController from "./project";
+import { IDepartment, IList, ITeam } from "../types/model/Department";
+import { LeanDocument } from "mongoose";
+import { ObjectId } from "mongoose";
 
 export default class TrelloWebhook {
   actionRequest: webhookUpdateInterface;
@@ -168,46 +171,72 @@ export default class TrelloWebhook {
 
   private async updateCard() {
     try {
-      let task = await TaskController.getOneTaskBy({
+      let journeyDeadline: string,
+        task: LeanDocument<TaskInfo & { _id: ObjectId }>,
+        department: IDepartment,
+        listId: string,
+        isMoved: boolean,
+        status: string,
+        newDep: IDepartment,
+        isNewTeam: ITeam,
+        inProgressList: IList,
+        isProject: IList,
+        sideList: IList,
+        listBefore: string,
+        cardDeadline: Date | number;
+      task = await TaskController.getOneTaskBy({
         cardId: this.actionRequest?.action?.data?.card?.id,
       });
       if (task) {
-        let department = await Department.findOne({
+        department = await Department.findOne({
           boardId: task.boardId,
         });
-        let listId =
+        listId =
           this.actionRequest.action.data?.list?.id ??
           this.actionRequest.action.data?.card?.idList ??
           this.actionRequest.action.data?.listAfter?.id;
-        let isMoved = listId !== task.listId;
-        let status =
+        isMoved = listId !== task.listId;
+        status =
           this.actionRequest.action.data?.list?.name ??
           this.actionRequest.action.data?.listAfter?.name;
-        let newDep =
+        newDep =
           (await Department.findOne({
             boardId: this.actionRequest.action.data.board.id,
           })) ?? null;
-        let isNewTeam =
+        isNewTeam =
           (newDep ?? department).teams.find((item) => item.listId === listId) ??
           null;
-        let inProgressList = (newDep ?? department).lists.find(
+        inProgressList = (newDep ?? department).lists.find(
           (item) => isNewTeam?.listId && item.name === "In Progress"
         );
-        let isProject = (newDep ?? department).lists.find(
+        isProject = (newDep ?? department).lists.find(
           (l) => l.listId === listId && l.name === "projects"
         );
-        let sideList = (newDep ?? department).sideLists.find(
+        sideList = (newDep ?? department).sideLists.find(
           (list) => list.listId === listId
         );
-
+        listBefore = this.actionRequest.action.data.listBefore.name ?? "";
+        journeyDeadline =
+          (sideList || status === "Tasks Board") &&
+          ["Done", "Shared", "Cancled"].includes(listBefore)
+            ? new Date(task.deadline).toString()
+            : undefined;
+        cardDeadline =
+          new Date(this.actionRequest?.action?.data?.card?.due) ?? null;
+        console.log({
+          deadlineFromCard: cardDeadline.getTime(),
+          taskDeadline: new Date(task.deadline).getTime(),
+        });
         if (!isProject) {
           this.task = {
             name: this.actionRequest.action.data.card.name,
             boardId: this.actionRequest.action.data.board.id,
             cardId: this.actionRequest.action.data.card.id,
-            deadline: this.actionRequest?.action?.data?.card?.due
-              ? new Date(this.actionRequest?.action?.data?.card?.due)
-              : task.deadline ?? null,
+            deadline:
+              journeyDeadline &&
+              cardDeadline.getTime() !== new Date(task.deadline).getTime()
+                ? cardDeadline
+                : null,
             start: this.actionRequest.action?.data?.card?.start
               ? new Date(this.actionRequest.action?.data?.card?.start)
               : task.start ?? null,
@@ -223,16 +252,19 @@ export default class TrelloWebhook {
             movements: task.movements,
             teamListId: isNewTeam ? listId : task.teamListId,
           };
-          if (isMoved || task.movements.length === 0)
-            this.task.movements.push({
+          if (isMoved || task.movements.length === 0) {
+            let move: Movement = {
               status: sideList
                 ? "Tasks Board"
                 : inProgressList?.name
                 ? inProgressList.name
                 : status,
               movedAt: new Date(Date.now()).toString(),
-            });
-
+            };
+            if (journeyDeadline)
+              move.journeyDeadline = new Date(journeyDeadline).toString();
+            this.task.movements.push(move);
+          }
           return await TaskController.updateTaskByTrelloDB(this.task, {
             id: this.user.id,
             name: this.user.name,

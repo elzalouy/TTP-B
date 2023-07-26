@@ -575,7 +575,6 @@ export const initializeTTPTasks = async () => {
               description: item?.description ? item.description : "",
               trelloShortUrl: item.trelloShortUrl,
               attachedFiles: item.attachedFiles,
-              deadlineChain: item.deadlineChain,
               movements: item.movements,
             },
           },

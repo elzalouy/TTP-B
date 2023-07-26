@@ -7,14 +7,6 @@ export interface TasksModel extends Model<TaskInfo> {
   getTasksAsCSV(filterIds: string[]): Promise<string>;
 }
 
-export interface TaskDeadlineChain {
-  name: string;
-  userId: string;
-  before: Date;
-  current: Date;
-  trelloMember?: boolean;
-}
-
 export interface TaskInfo extends Document {
   name: string;
   projectId: ObjectId;
@@ -30,7 +22,6 @@ export interface TaskInfo extends Document {
   description?: string;
   trelloShortUrl?: string;
   attachedFiles?: AttachmentSchema[];
-  deadlineChain: TaskDeadlineChain[];
   movements?: Movement[];
   assignedAt?: Date | number;
   teamListId?: string;
@@ -70,7 +61,6 @@ export interface TaskData {
   deleteFiles?: AttachmentSchema[] | any;
   attachedFile?: AttachmentSchema;
   teamListId?: string;
-  deadlineChain?: TaskDeadlineChain[];
   movements?: Movement[];
   assignedAt?: Date | number;
 }
@@ -112,6 +102,7 @@ export interface DownloadAttachmentResponse {}
 export interface Movement {
   status: string;
   movedAt: string;
+  journeyDeadline?: string;
 }
 export const statusLists = [
   "In Progress",

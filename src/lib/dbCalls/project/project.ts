@@ -91,7 +91,6 @@ const ProjectDB = class ProjectDB {
             listId: 1,
             boardId: 1,
             associateProjectManager: 1,
-            deadlineChain: -1,
           },
         },
       ]);
@@ -108,18 +107,6 @@ const ProjectDB = class ProjectDB {
       let query: any = data;
       let project = await Project.findById(id);
       if (project) {
-        if (
-          new Date(project.projectDeadline).toString() !==
-          new Date(data.projectDeadline).toString()
-        ) {
-          project.deadlineChain.push({
-            userId: user.id,
-            name: user.name,
-            before: project.projectDeadline,
-            current: data.projectDeadline,
-            trelloMember: false,
-          });
-        }
         project.set(query);
         project = await Project.findOneAndUpdate({ _id: id }, project, {
           new: true,
