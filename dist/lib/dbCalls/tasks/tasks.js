@@ -294,19 +294,6 @@ class TaskDB {
                 let task = yield Task_1.default.findOne({ _id: id });
                 if (!task)
                     return Tasks_1.taskNotFoundError;
-                // Update the task deadlineChain
-                if (task.deadline &&
-                    data.deadline &&
-                    new Date(task.deadline).toString() !==
-                        new Date(data.deadline).toString()) {
-                    task.deadlineChain.push({
-                        userId: user.id,
-                        name: user.name,
-                        before: new Date(task.deadline),
-                        current: new Date(data.deadline),
-                        trelloMember: false,
-                    });
-                }
                 task.name = data.name;
                 task.description = (_a = data.description) !== null && _a !== void 0 ? _a : "";
                 task.deadline = (_b = data.deadline) !== null && _b !== void 0 ? _b : null;
@@ -420,26 +407,12 @@ class TaskDB {
         return __awaiter(this, void 0, void 0, function* () {
             try {
                 let task = yield Task_1.default.findOne({ cardId: data.cardId });
-                if ((task === null || task === void 0 ? void 0 : task.deadline) !== null &&
-                    task.deadline !== undefined &&
-                    (data === null || data === void 0 ? void 0 : data.deadline) &&
-                    new Date(task.deadline).toString() !==
-                        new Date(data.deadline).toString()) {
-                    task.deadlineChain.push({
-                        userId: user.id,
-                        name: user.name,
-                        before: new Date(task.deadline),
-                        current: new Date(data.deadline),
-                        trelloMember: true,
-                    });
-                }
                 task.name = (data === null || data === void 0 ? void 0 : data.name) ? data === null || data === void 0 ? void 0 : data.name : task.name;
                 task.status = (data === null || data === void 0 ? void 0 : data.status) ? data.status : task.status;
                 task.listId = (data === null || data === void 0 ? void 0 : data.listId) ? data.listId : task.listId;
                 task.cardId = (data === null || data === void 0 ? void 0 : data.cardId) ? data.cardId : task.cardId;
                 task.boardId = (data === null || data === void 0 ? void 0 : data.boardId) ? data.boardId : task.boardId;
                 task.description = data.description;
-                task.deadlineChain = task.deadlineChain;
                 task.teamId =
                     (data === null || data === void 0 ? void 0 : data.teamId) === null || ((_a = data === null || data === void 0 ? void 0 : data.teamId) === null || _a === void 0 ? void 0 : _a.toString().length) > 0
                         ? new mongodb_1.ObjectId(data.teamId)

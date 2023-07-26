@@ -87,13 +87,27 @@ class TrelloActionsController {
     return await TrelloActionsController.__removeWebhook(id);
   }
 
-  static async moveTaskToDiffList(cardId: string, listId: string) {
-    return await TrelloActionsController.__moveTaskToDiffList(cardId, listId);
+  static async moveTaskToDiffList(
+    cardId: string,
+    listId: string,
+    due?: string
+  ) {
+    return await TrelloActionsController.__moveTaskToDiffList(
+      cardId,
+      listId,
+      due ?? undefined
+    );
   }
 
-  static async __moveTaskToDiffList(cardId: string, listId: string) {
+  static async __moveTaskToDiffList(
+    cardId: string,
+    listId: string,
+    due?: string
+  ) {
     try {
-      let moveTask = trelloApi(`cards/${cardId}/?idList=${listId}&`);
+      let url = `cards/${cardId}/?idList=${listId}&`;
+      if (due) url = `${url}due=${new Date(due).getTime()}&`;
+      let moveTask = trelloApi(url);
       let result = await fetch(moveTask, {
         method: "PUT",
         headers: {

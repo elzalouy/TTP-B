@@ -63,7 +63,8 @@ class TaskController extends TaskDB {
     listId: string,
     status: string,
     department: IDepartment,
-    user: any
+    user: any,
+    deadline?: string
   ) {
     // TODO update this function with the new implementation
     return await TaskController.__moveTaskOnTrello(
@@ -71,7 +72,8 @@ class TaskController extends TaskDB {
       listId,
       status,
       department,
-      user
+      user,
+      deadline
     );
   }
 
@@ -80,10 +82,11 @@ class TaskController extends TaskDB {
     listId: string,
     status: string,
     department: IDepartmentState,
-    user: any
+    user: any,
+    deadline?: string
   ) {
     try {
-      moveTaskJob(listId, cardId, status, department, user);
+      moveTaskJob(listId, cardId, status, department, user, deadline);
       return {
         data: `Task with cardId ${cardId} has moved to list ${
           department.lists.find((list) => list.listId === listId).name

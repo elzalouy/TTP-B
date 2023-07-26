@@ -16,6 +16,20 @@ const errorUtils_1 = require("../../utils/errorUtils");
 const logger_1 = __importDefault(require("../../../logger"));
 const department_1 = __importDefault(require("../../controllers/department"));
 const DepartmentReq = class DepartmentReq extends department_1.default {
+    static handleUpdateDepartmentsPriority(req, res) {
+        const _super = Object.create(null, {
+            _updateDepartmentsPriority: { get: () => super._updateDepartmentsPriority }
+        });
+        return __awaiter(this, void 0, void 0, function* () {
+            try {
+                let result = yield _super._updateDepartmentsPriority.call(this, req.body.ids);
+                res.send(result);
+            }
+            catch (error) {
+                logger_1.default.error({ handleUpdateDepartmentsPriorityError: error });
+            }
+        });
+    }
     static handleCreateDepartment(req, res) {
         const _super = Object.create(null, {
             createDepartment: { get: () => super.createDepartment }

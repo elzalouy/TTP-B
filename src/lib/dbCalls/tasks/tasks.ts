@@ -216,22 +216,6 @@ class TaskDB {
       let task = await Tasks.findOne({ _id: id });
       if (!task) return taskNotFoundError;
 
-      // Update the task deadlineChain
-      if (
-        task.deadline &&
-        data.deadline &&
-        new Date(task.deadline).toString() !==
-          new Date(data.deadline).toString()
-      ) {
-        task.deadlineChain.push({
-          userId: user.id,
-          name: user.name,
-          before: new Date(task.deadline),
-          current: new Date(data.deadline),
-          trelloMember: false,
-        });
-      }
-
       task.name = data.name;
       task.description = data.description ?? "";
       task.deadline = data.deadline ?? null;
@@ -346,21 +330,6 @@ class TaskDB {
   ) {
     try {
       let task = await Tasks.findOne({ cardId: data.cardId });
-      if (
-        task?.deadline !== null &&
-        task.deadline !== undefined &&
-        data?.deadline &&
-        new Date(task.deadline).toString() !==
-          new Date(data.deadline).toString()
-      ) {
-        task.deadlineChain.push({
-          userId: user.id,
-          name: user.name,
-          before: new Date(task.deadline),
-          current: new Date(data.deadline),
-          trelloMember: true,
-        });
-      }
 
       task.name = data?.name ? data?.name : task.name;
       task.status = data?.status ? data.status : task.status;
@@ -368,7 +337,6 @@ class TaskDB {
       task.cardId = data?.cardId ? data.cardId : task.cardId;
       task.boardId = data?.boardId ? data.boardId : task.boardId;
       task.description = data.description;
-      task.deadlineChain = task.deadlineChain;
       task.teamId =
         data?.teamId === null || data?.teamId?.toString().length > 0
           ? new ObjectId(data.teamId)
@@ -388,7 +356,6 @@ class TaskDB {
       task.movements = data.movements ?? task.movements;
       task.attachedFiles = _.uniqBy(task.attachedFiles, "trelloId");
       let result = await (await task.save()).toObject();
-      console.log({ result });
       await io.sockets.emit("update-task", result);
     } catch (error) {
       logger.error({ __updateTaskByTrelloDBError: error });

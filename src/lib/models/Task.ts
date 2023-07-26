@@ -8,7 +8,6 @@ import {
   TasksModel,
 } from "../types/model/tasks";
 import Project from "./Project";
-import { TaskDeadlineChain } from "../types/model/tasks";
 import { ObjectId } from "mongodb";
 
 export const FilesSchema: Schema<AttachmentSchema> = new Schema({
@@ -37,14 +36,10 @@ export const movementSchema: Schema<Movement> = new Schema<Movement>({
     required: true,
     default: new Date(Date.now()).toString(),
   },
-});
-
-export const deadlineChainSchema: Schema = new Schema<TaskDeadlineChain>({
-  userId: { type: String, required: true },
-  name: { type: String, required: true },
-  before: { type: Date, required: true },
-  current: { type: Date, required: true },
-  trelloMember: { type: Boolean, required: true, default: true },
+  journeyDeadline: {
+    type: String,
+    required: false,
+  },
 });
 
 const TaskSchema = new Schema<TaskInfo, TasksModel>(
@@ -121,12 +116,6 @@ const TaskSchema = new Schema<TaskInfo, TasksModel>(
     trelloShortUrl: {
       type: String,
       default: null,
-    },
-    deadlineChain: {
-      type: [deadlineChainSchema],
-      required: true,
-      default: [],
-      min: 0,
     },
     movements: { type: [movementSchema], min: 1, required: true },
     assignedAt: { type: Date, required: false, default: null },

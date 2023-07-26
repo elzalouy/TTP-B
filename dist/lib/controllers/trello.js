@@ -101,15 +101,18 @@ class TrelloActionsController {
             return yield TrelloActionsController.__removeWebhook(id);
         });
     }
-    static moveTaskToDiffList(cardId, listId) {
+    static moveTaskToDiffList(cardId, listId, due) {
         return __awaiter(this, void 0, void 0, function* () {
-            return yield TrelloActionsController.__moveTaskToDiffList(cardId, listId);
+            return yield TrelloActionsController.__moveTaskToDiffList(cardId, listId, due !== null && due !== void 0 ? due : undefined);
         });
     }
-    static __moveTaskToDiffList(cardId, listId) {
+    static __moveTaskToDiffList(cardId, listId, due) {
         return __awaiter(this, void 0, void 0, function* () {
             try {
-                let moveTask = (0, trelloApi_1.trelloApi)(`cards/${cardId}/?idList=${listId}&`);
+                let url = `cards/${cardId}/?idList=${listId}&`;
+                if (due)
+                    url = `${url}due=${new Date(due).getTime()}&`;
+                let moveTask = (0, trelloApi_1.trelloApi)(url);
                 let result = yield (0, node_fetch_1.default)(moveTask, {
                     method: "PUT",
                     headers: {

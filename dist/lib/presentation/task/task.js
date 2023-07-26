@@ -121,8 +121,9 @@ const TaskReq = class TaskReq extends task_1.default {
             try {
                 let decoded = yield (0, auth_1.jwtVerify)(req.header("authorization"));
                 if (decoded) {
-                    let { cardId, listId, status, department } = req.body;
-                    let task = yield _super.moveTaskOnTrello.call(this, cardId, listId, status, department, decoded);
+                    let { cardId, listId, status, department, deadline } = req.body;
+                    console.log({ body: req.body });
+                    let task = yield _super.moveTaskOnTrello.call(this, cardId, listId, status, department, decoded, deadline);
                     if (task === null || task === void 0 ? void 0 : task.error)
                         return res.status(400).send(task === null || task === void 0 ? void 0 : task.message);
                     return res.send(task);
