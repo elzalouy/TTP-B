@@ -15645,3 +15645,22 @@
     '    at processTicksAndRejections (node:internal/process/task_queues:96:5)',
   timestamp: '2023-07-26 10:38:55'
 }
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:WFUiEjrljsIDFOmd@cluster0.oeari.mongodb.net/ttp-beta'
+  },
+  level: 'info',
+  timestamp: '2023-07-26 10:51:45'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:WFUiEjrljsIDFOmd@cluster0.oeari.mongodb.net/ttp-beta'
+  },
+  level: 'info',
+  timestamp: '2023-07-26 11:03:33'
+}
+{
+  message: { monthlyDeleteNotifications: 2 },
+  level: 'info',
+  timestamp: '2023-07-26 11:03:41'
+}
