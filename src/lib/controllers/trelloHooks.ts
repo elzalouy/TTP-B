@@ -171,7 +171,6 @@ export default class TrelloWebhook {
 
   private async updateCard() {
     try {
-      console.log({ data: this.actionRequest.action.data, type: this.action });
       let isNewJourney: boolean,
         task: LeanDocument<TaskInfo & { _id: ObjectId }>,
         department: IDepartment,
@@ -216,7 +215,7 @@ export default class TrelloWebhook {
         sideList = (newDep ?? department).sideLists.find(
           (list) => list.listId === listId
         );
-        listBefore = this.actionRequest.action.data.listBefore.name ?? "";
+        listBefore = this.actionRequest.action.data.listBefore?.name ?? "";
         isNewJourney =
           (sideList || status === "Tasks Board") &&
           ["Done", "Shared", "Cancled"].includes(listBefore);
@@ -259,6 +258,11 @@ export default class TrelloWebhook {
               move.journeyDeadline = new Date(task.deadline).toString();
             this.task.movements.push(move);
           }
+          console.log({
+            data: this.actionRequest.action.data,
+            type: this.action,
+            task: this.task,
+          });
           return await TaskController.updateTaskByTrelloDB(this.task, {
             id: this.user.id,
             name: this.user?.name,

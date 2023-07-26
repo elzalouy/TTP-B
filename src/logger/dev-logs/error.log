@@ -14295,3 +14295,30 @@ errors will be here{
   level: 'error',
   timestamp: '2023-07-26 08:35:16'
 }
+{
+  message: {
+    updateCardHook: TypeError: Cannot read properties of undefined (reading 'name')
+        at TrelloWebhook.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trelloHooks.ts:218:64)
+        at Generator.next (<anonymous>)
+        at fulfilled (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trelloHooks.ts:5:58)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5)
+  },
+  level: 'error',
+  timestamp: '2023-07-26 14:43:57'
+}
+{
+  message: {
+    __updateTaskByTrelloDBError: VersionError: No matching document found for id "646cbfc740b8173c151b6081" version 8 modifiedPaths "status, listId, deadline, movements"
+        at generateVersionError (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/mongoose/lib/model.js:462:10)
+        at model.Model.save (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/mongoose/lib/model.js:521:28)
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/dbCalls/tasks/tasks.ts:358:38)
+        at Generator.next (<anonymous>)
+        at fulfilled (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/dbCalls/tasks/tasks.ts:28:58)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+      version: 8,
+      modifiedPaths: [ 'status', 'listId', 'deadline', 'movements' ]
+    }
+  },
+  level: 'error',
+  timestamp: '2023-07-26 14:49:38'
+}
