@@ -46,12 +46,13 @@ export function moveTaskJob(
         const result = await TrelloController.moveTaskToDiffList(
           cardId,
           teamList?.listId ?? statusList?.listId
-        );
-        if (deadline)
-          TrelloController.__updateCard({
-            cardId,
-            data: { name: currentTask.name, due: deadline },
-          });
+        ).then((res) => {
+          if (deadline)
+            TrelloController.__updateCard({
+              cardId,
+              data: { name: currentTask.name, due: deadline },
+            });
+        });
         cb(null);
       }
     } catch (error) {
