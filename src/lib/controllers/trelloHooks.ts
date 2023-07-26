@@ -228,9 +228,10 @@ export default class TrelloWebhook {
           isNewJourney &&
           cardDeadline &&
           task.deadline &&
-          cardDeadline.getTime() !== new Date(task.deadline).getTime()
-            ? cardDeadline
-            : task.deadline;
+          cardDeadline.getTime() === new Date(task.deadline).getTime()
+            ? null
+            : cardDeadline;
+
         if (!isProject) {
           this.task = {
             name: this.actionRequest.action.data.card.name,
