@@ -254,8 +254,9 @@ export default class TrelloWebhook {
                 : status,
               movedAt: new Date(Date.now()).toString(),
             };
-            if (isNewJourney)
-              move.journeyDeadline = new Date(task.deadline).toString();
+            if (isNewJourney && task.movements[task.movements.length - 1])
+              task.movements[task.movements.length - 1].journeyDeadline =
+                new Date(task.deadline).toString();
             this.task.movements.push(move);
           }
           console.log({
