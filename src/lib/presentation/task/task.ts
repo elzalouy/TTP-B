@@ -82,6 +82,7 @@ const TaskReq = class TaskReq extends TaskController {
       let decoded: any = await jwtVerify(req.header("authorization"));
       if (decoded) {
         let { cardId, listId, status, department, deadline }: any = req.body;
+        console.log({ body: req.body });
         let task: any = await super.moveTaskOnTrello(
           cardId,
           listId,

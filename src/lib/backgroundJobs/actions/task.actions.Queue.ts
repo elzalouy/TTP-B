@@ -47,6 +47,7 @@ export function moveTaskJob(
           cardId,
           teamList?.listId ?? statusList?.listId
         ).then((res) => {
+          console.log({ deadline });
           if (deadline)
             TrelloController.__updateCard({
               cardId,
