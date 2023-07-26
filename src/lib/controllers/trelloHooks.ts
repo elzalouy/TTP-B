@@ -220,8 +220,9 @@ export default class TrelloWebhook {
         isNewJourney =
           (sideList || status === "Tasks Board") &&
           ["Done", "Shared", "Cancled"].includes(listBefore);
-        cardDeadline =
-          new Date(this.actionRequest?.action?.data?.card?.due) ?? null;
+        cardDeadline = this.actionRequest.action.data.card.due
+          ? new Date(this.actionRequest.action.data.card.due)
+          : null;
 
         console.log({ isNewJourney, cardDeadline });
 
@@ -261,7 +262,7 @@ export default class TrelloWebhook {
           }
           return await TaskController.updateTaskByTrelloDB(this.task, {
             id: this.user.id,
-            name: this.user.name,
+            name: this.user?.name,
           });
         } else this.updateProject();
       } else this.updateProject();
