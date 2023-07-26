@@ -15873,3 +15873,299 @@
   level: 'error',
   timestamp: '2023-07-26 14:49:38'
 }
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:WFUiEjrljsIDFOmd@cluster0.oeari.mongodb.net/ttp-beta'
+  },
+  level: 'info',
+  timestamp: '2023-07-26 16:31:35'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:WFUiEjrljsIDFOmd@cluster0.oeari.mongodb.net/ttp-beta'
+  },
+  level: 'info',
+  timestamp: '2023-07-26 16:32:33'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:WFUiEjrljsIDFOmd@cluster0.oeari.mongodb.net/ttp-beta'
+  },
+  level: 'info',
+  timestamp: '2023-07-26 16:33:44'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:WFUiEjrljsIDFOmd@cluster0.oeari.mongodb.net/ttp-beta'
+  },
+  level: 'info',
+  timestamp: '2023-07-26 16:35:00'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:WFUiEjrljsIDFOmd@cluster0.oeari.mongodb.net/ttp-beta'
+  },
+  level: 'info',
+  timestamp: '2023-07-26 16:46:15'
+}
+{
+  message: {
+    body: {
+      name: 'Ray-leena=test-new category 44-sub new (late scheduling 4:30pm )',
+      desc: undefined,
+      due: undefined,
+      start: undefined,
+      idList: undefined,
+      idBoard: undefined
+    }
+  },
+  level: 'info',
+  timestamp: '2023-07-26 16:53:24'
+}
+{
+  message: {
+    body: {
+      name: 'Ray-leena=test-new category 44-sub new (late scheduling 4:30pm )',
+      desc: undefined,
+      due: undefined,
+      start: undefined,
+      idList: undefined,
+      idBoard: undefined
+    }
+  },
+  level: 'info',
+  timestamp: '2023-07-26 16:53:34'
+}
+{
+  message: {
+    __updateTaskByTrelloDBError: VersionError: No matching document found for id "646cbfc740b8173c151b6081" version 11 modifiedPaths "status, listId, movements"
+        at generateVersionError (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/mongoose/lib/model.js:462:10)
+        at model.Model.save (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/mongoose/lib/model.js:521:28)
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/dbCalls/tasks/tasks.ts:358:38)
+        at Generator.next (<anonymous>)
+        at fulfilled (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/dbCalls/tasks/tasks.ts:28:58)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+      version: 11,
+      modifiedPaths: [ 'status', 'listId', 'movements' ]
+    }
+  },
+  level: 'error',
+  timestamp: '2023-07-26 16:53:35'
+}
+{
+  message: {
+    body: {
+      name: 'Ray-leena=test-new category 44-sub new (late scheduling 4:30pm )',
+      desc: undefined,
+      due: undefined,
+      start: undefined,
+      idList: undefined,
+      idBoard: undefined
+    }
+  },
+  level: 'info',
+  timestamp: '2023-07-26 16:53:40'
+}
+{
+  message: {
+    __updateTaskByTrelloDBError: VersionError: No matching document found for id "646cbfc740b8173c151b6081" version 12 modifiedPaths "status, listId, movements"
+        at generateVersionError (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/mongoose/lib/model.js:462:10)
+        at model.Model.save (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/mongoose/lib/model.js:521:28)
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/dbCalls/tasks/tasks.ts:358:38)
+        at Generator.next (<anonymous>)
+        at fulfilled (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/dbCalls/tasks/tasks.ts:28:58)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+      version: 12,
+      modifiedPaths: [ 'status', 'listId', 'movements' ]
+    }
+  },
+  level: 'error',
+  timestamp: '2023-07-26 16:53:41'
+}
+{
+  message: {
+    body: {
+      name: 'Ray-leena=test-new category 44-sub new (late scheduling 4:30pm )',
+      desc: undefined,
+      due: undefined,
+      start: undefined,
+      idList: undefined,
+      idBoard: undefined
+    }
+  },
+  level: 'info',
+  timestamp: '2023-07-26 16:53:45'
+}
+{
+  message: {
+    body: {
+      name: 'Ray-leena=test-new category 44-sub new (late scheduling 4:30pm )',
+      desc: undefined,
+      due: '2023-07-30T21:00:00.000Z',
+      start: undefined,
+      idList: undefined,
+      idBoard: undefined
+    }
+  },
+  level: 'info',
+  timestamp: '2023-07-26 16:53:59'
+}
+{
+  message: {
+    body: {
+      name: 'Late scheduling *******',
+      desc: undefined,
+      due: undefined,
+      start: undefined,
+      idList: undefined,
+      idBoard: undefined
+    }
+  },
+  level: 'info',
+  timestamp: '2023-07-26 16:54:14'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:WFUiEjrljsIDFOmd@cluster0.oeari.mongodb.net/ttp-beta'
+  },
+  level: 'info',
+  timestamp: '2023-07-26 16:56:02'
+}
+{
+  message: {
+    body: {
+      name: 'Ray-leena=test-new category 44-sub new (late scheduling 4:30pm )',
+      desc: undefined,
+      due: undefined,
+      start: undefined,
+      idList: undefined,
+      idBoard: undefined
+    }
+  },
+  level: 'info',
+  timestamp: '2023-07-26 16:56:54'
+}
+{
+  message: {
+    body: {
+      name: 'Ray-leena=test-Animation -Storyboards  (task unclear 4:30pm )',
+      desc: 'gh',
+      due: 'Mon Jul 31 2023 00:00:00 GMT+0300 (Eastern European Summer Time)',
+      start: 2023-05-23T13:34:25.000Z,
+      idList: '643334de6f1ace0546c1e81a',
+      idBoard: '643334de2c1cb419ae2cde02'
+    }
+  },
+  level: 'info',
+  timestamp: '2023-07-26 16:59:16'
+}
+{
+  message: {
+    body: {
+      name: 'Ray-leena=test-Animation -Storyboards  (task unclear 4:30pm )',
+      desc: undefined,
+      due: undefined,
+      start: undefined,
+      idList: undefined,
+      idBoard: undefined
+    }
+  },
+  level: 'info',
+  timestamp: '2023-07-26 16:59:25'
+}
+{
+  message: {
+    body: {
+      name: 'Ray-leena=test-Animation -Storyboards  (task unclear 4:30pm )',
+      desc: undefined,
+      due: undefined,
+      start: undefined,
+      idList: undefined,
+      idBoard: undefined
+    }
+  },
+  level: 'info',
+  timestamp: '2023-07-26 16:59:35'
+}
+{
+  message: {
+    body: {
+      name: 'Ray-leena=test-Animation -Storyboards  (task unclear 4:30pm )',
+      desc: undefined,
+      due: undefined,
+      start: undefined,
+      idList: undefined,
+      idBoard: undefined
+    }
+  },
+  level: 'info',
+  timestamp: '2023-07-26 16:59:41'
+}
+{
+  message: {
+    body: {
+      name: 'Ray-leena=test-Animation -Storyboards  (task unclear 4:30pm )',
+      desc: undefined,
+      due: undefined,
+      start: undefined,
+      idList: undefined,
+      idBoard: undefined
+    }
+  },
+  level: 'info',
+  timestamp: '2023-07-26 16:59:46'
+}
+{
+  message: {
+    body: {
+      name: 'Ray-leena=test-Animation -Storyboards  (task unclear 4:30pm )',
+      desc: undefined,
+      due: '2023-08-30T21:00:00.000Z',
+      start: undefined,
+      idList: undefined,
+      idBoard: undefined
+    }
+  },
+  level: 'info',
+  timestamp: '2023-07-26 16:59:58'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:WFUiEjrljsIDFOmd@cluster0.oeari.mongodb.net/ttp-beta'
+  },
+  level: 'info',
+  timestamp: '2023-07-26 17:21:25'
+}
+{
+  message: { monthlyDeleteNotifications: 2 },
+  level: 'info',
+  timestamp: '2023-07-26 17:21:34'
+}
+{
+  message: {
+    body: {
+      name: 'Ray-leena=test-Copy -Translation  (Task 3)',
+      desc: undefined,
+      due: undefined,
+      start: undefined,
+      idList: undefined,
+      idBoard: undefined
+    }
+  },
+  level: 'info',
+  timestamp: '2023-07-26 17:27:56'
+}
+{
+  message: {
+    body: {
+      name: 'Ray-leena=test-Copy -Translation  (Task 3)',
+      desc: undefined,
+      due: '2023-07-30T21:00:00.000Z',
+      start: undefined,
+      idList: undefined,
+      idBoard: undefined
+    }
+  },
+  level: 'info',
+  timestamp: '2023-07-26 17:28:10'
+}

@@ -14322,3 +14322,35 @@ errors will be here{
   level: 'error',
   timestamp: '2023-07-26 14:49:38'
 }
+{
+  message: {
+    __updateTaskByTrelloDBError: VersionError: No matching document found for id "646cbfc740b8173c151b6081" version 11 modifiedPaths "status, listId, movements"
+        at generateVersionError (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/mongoose/lib/model.js:462:10)
+        at model.Model.save (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/mongoose/lib/model.js:521:28)
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/dbCalls/tasks/tasks.ts:358:38)
+        at Generator.next (<anonymous>)
+        at fulfilled (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/dbCalls/tasks/tasks.ts:28:58)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+      version: 11,
+      modifiedPaths: [ 'status', 'listId', 'movements' ]
+    }
+  },
+  level: 'error',
+  timestamp: '2023-07-26 16:53:35'
+}
+{
+  message: {
+    __updateTaskByTrelloDBError: VersionError: No matching document found for id "646cbfc740b8173c151b6081" version 12 modifiedPaths "status, listId, movements"
+        at generateVersionError (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/mongoose/lib/model.js:462:10)
+        at model.Model.save (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/mongoose/lib/model.js:521:28)
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/dbCalls/tasks/tasks.ts:358:38)
+        at Generator.next (<anonymous>)
+        at fulfilled (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/dbCalls/tasks/tasks.ts:28:58)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+      version: 12,
+      modifiedPaths: [ 'status', 'listId', 'movements' ]
+    }
+  },
+  level: 'error',
+  timestamp: '2023-07-26 16:53:41'
+}

@@ -221,7 +221,7 @@ export default class TrelloWebhook {
           ["Done", "Shared", "Cancled"].includes(listBefore);
         cardDeadline = this.actionRequest.action.data.card.due
           ? new Date(this.actionRequest.action.data.card.due)
-          : null;
+          : task.deadline;
 
         if (!isProject) {
           this.task = {
