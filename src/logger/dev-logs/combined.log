@@ -15685,3 +15685,10 @@
   level: 'info',
   timestamp: '2023-07-26 11:38:41'
 }
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:WFUiEjrljsIDFOmd@cluster0.oeari.mongodb.net/ttp-beta'
+  },
+  level: 'info',
+  timestamp: '2023-07-26 11:53:53'
+}

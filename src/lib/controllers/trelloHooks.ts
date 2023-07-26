@@ -171,6 +171,7 @@ export default class TrelloWebhook {
 
   private async updateCard() {
     try {
+      console.log({ data: this.actionRequest.action.data, type: this.action });
       let journeyDeadline: string,
         task: LeanDocument<TaskInfo & { _id: ObjectId }>,
         department: IDepartment,
