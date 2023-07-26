@@ -1,12 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 const mongoose_1 = require("mongoose");
-const DeadlineChainSchema = new mongoose_1.Schema({
-    userId: { type: mongoose_1.Schema.Types.ObjectId, required: true },
-    name: { type: String, required: true },
-    before: { type: Date, required: true },
-    current: { type: Date, required: true },
-});
 const ProjectSchema = new mongoose_1.Schema({
     name: {
         type: String,
@@ -65,12 +59,6 @@ const ProjectSchema = new mongoose_1.Schema({
         type: String,
         default: null,
         required: false,
-    },
-    deadlineChain: {
-        type: [DeadlineChainSchema],
-        required: true,
-        default: [],
-        min: 0,
     },
 }, {
     timestamps: true,

@@ -226,15 +226,11 @@ export default class TrelloWebhook {
 
         let deadline =
           isNewJourney &&
-          cardDeadline.getTime() === new Date(task.deadline).getTime()
+          cardDeadline &&
+          task.deadline &&
+          cardDeadline.getTime() !== new Date(task.deadline).getTime()
             ? cardDeadline
             : task.deadline;
-        console.log({
-          deadline,
-          isNewJourney,
-          cardDeadline: cardDeadline.getTime(),
-          taskDeadline: new Date(task.deadline).getTime(),
-        });
         if (!isProject) {
           this.task = {
             name: this.actionRequest.action.data.card.name,
@@ -256,6 +252,7 @@ export default class TrelloWebhook {
             movements: task.movements,
             teamListId: isNewTeam ? listId : task.teamListId,
           };
+
           if (isMoved || task.movements.length === 0) {
             let move: Movement = {
               status: sideList

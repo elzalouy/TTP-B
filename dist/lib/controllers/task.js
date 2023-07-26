@@ -18,7 +18,6 @@ const trello_1 = __importDefault(require("./trello"));
 const task_actions_Queue_1 = require("../backgroundJobs/actions/task.actions.Queue");
 const Tasks_1 = require("../types/controller/Tasks");
 const tasks_Route_Queue_1 = require("../backgroundJobs/routes/tasks.Route.Queue");
-const config_1 = __importDefault(require("config"));
 const Department_1 = require("../types/model/Department");
 const trello_2 = __importDefault(require("./trello"));
 const Task_1 = __importDefault(require("../models/Task"));
@@ -78,16 +77,16 @@ class TaskController extends tasks_1.default {
             return yield TaskController.__createTaskByTrello(data);
         });
     }
-    static moveTaskOnTrello(cardId, listId, status, department, user) {
+    static moveTaskOnTrello(cardId, listId, status, department, user, deadline) {
         return __awaiter(this, void 0, void 0, function* () {
             // TODO update this function with the new implementation
-            return yield TaskController.__moveTaskOnTrello(cardId, listId, status, department, user);
+            return yield TaskController.__moveTaskOnTrello(cardId, listId, status, department, user, deadline);
         });
     }
-    static __moveTaskOnTrello(cardId, listId, status, department, user) {
+    static __moveTaskOnTrello(cardId, listId, status, department, user, deadline) {
         return __awaiter(this, void 0, void 0, function* () {
             try {
-                (0, task_actions_Queue_1.moveTaskJob)(listId, cardId, status, department, user);
+                (0, task_actions_Queue_1.moveTaskJob)(listId, cardId, status, department, user, deadline);
                 return {
                     data: `Task with cardId ${cardId} has moved to list ${department.lists.find((list) => list.listId === listId).name}`,
                 };
@@ -313,23 +312,16 @@ class TaskController extends tasks_1.default {
         });
     }
     static __createNotSavedCardsOnBoard(board) {
-        var _a;
         return __awaiter(this, void 0, void 0, function* () {
             try {
                 let cards = yield trello_2.default.__getCardsInBoard(board.boardId);
-                let projectsList = board.name === config_1.default.get("CreativeBoard")
-                    ? (_a = board === null || board === void 0 ? void 0 : board.lists) === null || _a === void 0 ? void 0 : _a.find((item) => item.name === "projects").listId
-                    : undefined;
-                cards = projectsList
-                    ? cards.filter((item) => item.idList !== projectsList)
-                    : cards;
                 if (cards) {
                     let tasks = yield TaskController.getTasks({ boardId: board.boardId });
                     if (tasks) {
                         cards.map((item) => __awaiter(this, void 0, void 0, function* () {
-                            var _b, _c, _d, _e, _f;
+                            var _a, _b, _c, _d, _e;
                             let isTaskFound = tasks.find((task) => task.cardId === item.id);
-                            let isList = (_b = board.lists.find((list) => list.listId === item.idList)) === null || _b === void 0 ? void 0 : _b.name;
+                            let isList = (_a = board.lists.find((list) => list.listId === item.idList)) === null || _a === void 0 ? void 0 : _a.name;
                             let isStatusList = isList && Department_1.ListTypes.includes(isList) ? true : false;
                             let cardList = isList
                                 ? board.lists.find((list) => list.listId === item.idList)
@@ -339,15 +331,15 @@ class TaskController extends tasks_1.default {
                                 cardId: item.id,
                                 trelloShortUrl: item.shortUrl,
                                 name: item.name,
-                                description: (_c = item.desc) !== null && _c !== void 0 ? _c : "",
-                                start: (_d = item.start) !== null && _d !== void 0 ? _d : null,
-                                deadline: (_e = item.due) !== null && _e !== void 0 ? _e : null,
+                                description: (_b = item.desc) !== null && _b !== void 0 ? _b : "",
+                                start: (_c = item.start) !== null && _c !== void 0 ? _c : null,
+                                deadline: (_d = item.due) !== null && _d !== void 0 ? _d : null,
                                 listId: isList
                                     ? item.idList
                                     : board.lists.find((item) => item.name === "In Progress")
                                         .listId,
                                 status: isList !== null && isList !== void 0 ? isList : "In Progress",
-                                movements: (_f = isTaskFound === null || isTaskFound === void 0 ? void 0 : isTaskFound.movements) !== null && _f !== void 0 ? _f : [
+                                movements: (_e = isTaskFound === null || isTaskFound === void 0 ? void 0 : isTaskFound.movements) !== null && _e !== void 0 ? _e : [
                                     {
                                         status: isList ? isList : "In Progress",
                                         movedAt: new Date(Date.now()).toString(),

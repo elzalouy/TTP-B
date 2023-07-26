@@ -172,10 +172,12 @@ const UserController = class UserController extends user_1.default {
                     return (0, errorUtils_1.customeError)("not_valid_token", 400);
                 }
                 if ((0, validation_1.passwordCheck)(password)) {
+                    console.log("password pattern error");
                     return (0, errorUtils_1.customeError)("password_length", 400);
                 }
                 let findUser = yield _super.findUserById.call(this, token.id);
                 if (!findUser) {
+                    console.log("user not existed error");
                     return (0, errorUtils_1.customeError)("user_not_exist", 409);
                 }
                 // hash password

@@ -19,7 +19,6 @@ const logger_1 = __importDefault(require("../../logger"));
 const trello_1 = __importDefault(require("../controllers/trello"));
 const Department_1 = require("../types/model/Department");
 const Task_1 = __importDefault(require("./Task"));
-const config_1 = __importDefault(require("config"));
 const DepartmentSchema = new mongoose_1.Schema({
     name: {
         type: String,
@@ -47,6 +46,16 @@ const DepartmentSchema = new mongoose_1.Schema({
                 },
                 listId: String,
                 isDeleted: Boolean,
+            },
+        ],
+        required: true,
+        default: [],
+    },
+    sideLists: {
+        type: [
+            {
+                name: { type: String, required: true },
+                listId: { type: String, required: true },
             },
         ],
         required: true,
@@ -106,6 +115,13 @@ const listSchema = joi_1.default.array()
         .valid("In Progress", "Shared", "Review", "Done", "Not Clear", "Tasks Board", "Cancled"),
     listId: joi_1.default.string().required().allow("").label("list id"),
 });
+const sideListSchema = joi_1.default.array()
+    .required()
+    .items({
+    _id: joi_1.default.object().optional(),
+    name: joi_1.default.string().label("list name"),
+    listId: joi_1.default.string().required().allow("").label("list id"),
+});
 const createDepartmentValidationSchema = joi_1.default.object({
     _id: joi_1.default.object().optional(),
     name: joi_1.default.string().required().max(64).min(2).label("Department name"),
@@ -115,7 +131,11 @@ const createDepartmentValidationSchema = joi_1.default.object({
         .label("Department color"),
     boardUrl: joi_1.default.optional().allow(null),
     boardId: joi_1.default.string().label("board id").allow(""),
-}).concat(joi_1.default.object({ teams: teamsSchema([]), lists: listSchema }));
+}).concat(joi_1.default.object({
+    teams: teamsSchema([]),
+    lists: listSchema,
+    sideLists: sideListSchema,
+}));
 const updateDepartmentValidateSchema = (teams) => joi_1.default.object({
     name: joi_1.default.string().required().max(64).min(2).label("Department name"),
     color: joi_1.default.string()
@@ -131,6 +151,8 @@ const updateDepartmentValidateSchema = (teams) => joi_1.default.object({
     }))
         .optional(),
     removeTeams: joi_1.default.array().items(joi_1.default.string()).optional(),
+    removeSideLists: joi_1.default.array().items(joi_1.default.string()).optional(),
+    addSideLists: joi_1.default.array().items(joi_1.default.string()).optional(),
 });
 // Validate hooks
 DepartmentSchema.post("save", function (error, doc, next) {
@@ -209,7 +231,7 @@ DepartmentSchema.methods.updateDepartmentValidate = function (data) {
 DepartmentSchema.methods.createDepartmentBoard = function () {
     return __awaiter(this, void 0, void 0, function* () {
         try {
-            let teams = lodash_1.default.uniqBy([...this.teams], "name"), lists = [...this.lists], board, result;
+            let teams = lodash_1.default.uniqBy([...this.teams], "name"), sideLists = lodash_1.default.uniqBy([...this.sideLists], "name"), lists = [...this.lists], board, result;
             // 1- create board
             board = yield trello_1.default.createNewBoard(this.name, this.color);
             if (board.id && board.url) {
@@ -223,18 +245,20 @@ DepartmentSchema.methods.createDepartmentBoard = function () {
                     message: "Board not created, please see Trello roles first.",
                 };
             //2- create lists
-            let departmentLists = this.name === config_1.default.get("CreativeBoard")
-                ? [...lists, { name: "projects", listId: "" }]
-                : lists;
+            let departmentLists = lists;
             let listsResult = yield departmentLists.map((list, index) => __awaiter(this, void 0, void 0, function* () {
                 result = yield trello_1.default.addListToBoard(board.id, list.name);
                 list.listId = result.id;
                 return list;
             }));
+            let sideListsIds = yield sideLists.map((item) => __awaiter(this, void 0, void 0, function* () {
+                result = yield trello_1.default.addListToBoard(board.id, item.name);
+                item.listId = result.id;
+                return item;
+            }));
             lists = yield Promise.all(listsResult);
-            let CreativeBoard = lists.find((item) => item.name === "projects");
-            if (CreativeBoard)
-                trello_1.default.createWebHook(CreativeBoard.listId, "trelloWebhookUrlProject");
+            sideLists = yield Promise.all(sideListsIds);
+            console.log({ sideLists });
             // 3- create teams
             let teamsResult = yield teams.map((team, index) => __awaiter(this, void 0, void 0, function* () {
                 result = yield trello_1.default.addListToBoard(board.id, team.name);
@@ -242,7 +266,7 @@ DepartmentSchema.methods.createDepartmentBoard = function () {
                 return team;
             }));
             teams = yield Promise.all(teamsResult);
-            return { teams: teams, lists: lists };
+            return { teams, lists, sideLists };
         }
         catch (error) {
             logger_1.default.error({ createDepartmentBoardError: error });
@@ -259,6 +283,7 @@ DepartmentSchema.methods.updateDepartment = function (data) {
             this.name = data.name;
             this.color = data.color;
             yield this.updateTeams(data);
+            yield this.updateSideLists(data);
             return this;
         }
         catch (error) {
@@ -306,6 +331,27 @@ DepartmentSchema.methods.updateTeams = function (data, cb) {
         }
         catch (error) {
             logger_1.default.error({ updateTeamsError: error });
+            return error;
+        }
+    });
+};
+DepartmentSchema.methods.updateSideLists = function (data, cb) {
+    return __awaiter(this, void 0, void 0, function* () {
+        try {
+            yield data.removeSideLists.forEach((item, index) => __awaiter(this, void 0, void 0, function* () {
+                let list = this.sideLists.find((l) => l._id.toString() === item);
+                yield trello_1.default.addListToArchieve(list.listId);
+            }));
+            this.sideLists = this.sideLists.filter((item) => !data.removeSideLists.includes(item._id.toString()));
+            let depSideLists = yield Promise.all(yield data.addSideLists.map((item, index) => __awaiter(this, void 0, void 0, function* () {
+                let list = yield trello_1.default.addListToBoard(this.boardId, item);
+                return { name: item, listId: list.id };
+            })));
+            this.sideLists = [...this.sideLists, ...depSideLists];
+            return this;
+        }
+        catch (error) {
+            logger_1.default.error({ updateSideListsError: error });
             return error;
         }
     });

@@ -12,7 +12,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.TaskFileSchema = exports.deadlineChainSchema = exports.movementSchema = exports.FilesSchema = void 0;
+exports.TaskFileSchema = exports.movementSchema = exports.FilesSchema = void 0;
 const mongoose_1 = require("mongoose");
 const logger_1 = __importDefault(require("../../logger"));
 const Project_1 = __importDefault(require("./Project"));
@@ -41,13 +41,10 @@ exports.movementSchema = new mongoose_1.Schema({
         required: true,
         default: new Date(Date.now()).toString(),
     },
-});
-exports.deadlineChainSchema = new mongoose_1.Schema({
-    userId: { type: String, required: true },
-    name: { type: String, required: true },
-    before: { type: Date, required: true },
-    current: { type: Date, required: true },
-    trelloMember: { type: Boolean, required: true, default: true },
+    journeyDeadline: {
+        type: String,
+        required: false,
+    },
 });
 const TaskSchema = new mongoose_1.Schema({
     name: {
@@ -122,12 +119,6 @@ const TaskSchema = new mongoose_1.Schema({
     trelloShortUrl: {
         type: String,
         default: null,
-    },
-    deadlineChain: {
-        type: [exports.deadlineChainSchema],
-        required: true,
-        default: [],
-        min: 0,
     },
     movements: { type: [exports.movementSchema], min: 1, required: true },
     assignedAt: { type: Date, required: false, default: null },

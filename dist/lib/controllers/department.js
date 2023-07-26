@@ -14,7 +14,6 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 Object.defineProperty(exports, "__esModule", { value: true });
 const config_1 = __importDefault(require("config"));
 const logger_1 = __importDefault(require("../../logger"));
-const department_actions_queue_1 = require("../backgroundJobs/actions/department.actions.queue");
 const Department_1 = __importDefault(require("../models/Department"));
 const Department_2 = require("../types/model/Department");
 const trello_1 = __importDefault(require("./trello"));
@@ -79,6 +78,7 @@ class DepartmentController {
         return __awaiter(this, void 0, void 0, function* () {
             try {
                 // 1- get department
+                console.log({ data });
                 let department = yield Department_1.default.findOne({ _id: id });
                 if (!department)
                     return { error: "NotFound", message: "Department was not found" };
@@ -105,6 +105,7 @@ class DepartmentController {
                     name: data.name,
                     color: data.color,
                     teams: data.teams,
+                    sideLists: data.sideLists,
                     boardId: "",
                     lists: Department_2.ListTypes.map((item) => {
                         return { name: item, listId: "" };
@@ -114,11 +115,11 @@ class DepartmentController {
                 if (validation.error)
                     return validation.error.details[0];
                 if (depDoc) {
-                    let { teams, lists } = yield depDoc.createDepartmentBoard();
-                    if (teams && lists) {
+                    let { teams, lists, sideLists } = yield depDoc.createDepartmentBoard();
+                    if (teams && lists && sideLists) {
                         depDoc.teams = teams;
                         depDoc.lists = lists;
-                        (0, department_actions_queue_1.createProjectsCardsInCreativeBoard)(depDoc);
+                        depDoc.sideLists = sideLists;
                         return yield depDoc.save();
                     }
                     else
@@ -146,6 +147,36 @@ class DepartmentController {
             }
             catch (error) {
                 logger_1.default.error({ dropCollectionError: error });
+            }
+        });
+    }
+    static _updateDepartmentsPriority(ids) {
+        return __awaiter(this, void 0, void 0, function* () {
+            try {
+                // write a bulkwrite operation instead
+                let update = [
+                    {
+                        updateMany: {
+                            filter: { boardId: { $in: ids } },
+                            update: {
+                                $set: { priority: 1 },
+                            },
+                        },
+                    },
+                    {
+                        updateMany: {
+                            filter: { boardId: { $not: { $in: ids } } },
+                            update: {
+                                $set: { priority: 0 },
+                            },
+                        },
+                    },
+                ];
+                let result = yield Department_1.default.bulkWrite(update, { ordered: true });
+                return yield Department_1.default.find();
+            }
+            catch (error) {
+                logger_1.default.error({ _updateDepartmentsPriority: error });
             }
         });
     }

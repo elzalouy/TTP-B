@@ -12,13 +12,10 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-const config_1 = __importDefault(require("config"));
 const logger_1 = __importDefault(require("../../logger"));
 const project_1 = __importDefault(require("../dbCalls/project/project"));
-const index_1 = require("../../index");
 const notification_1 = __importDefault(require("./notification"));
 const project_actions_Queue_1 = require("../backgroundJobs/actions/project.actions.Queue");
-const Department_1 = __importDefault(require("../models/Department"));
 const trello_1 = __importDefault(require("./trello"));
 const ProjectController = class ProjectController extends project_1.default {
     static createProject(data, user) {
@@ -126,30 +123,12 @@ const ProjectController = class ProjectController extends project_1.default {
     }
     static __createNewProject(data, user) {
         const _super = Object.create(null, {
-            createProjectDB: { get: () => super.createProjectDB },
-            updateProjectDB: { get: () => super.updateProjectDB }
+            createProjectDB: { get: () => super.createProjectDB }
         });
         return __awaiter(this, void 0, void 0, function* () {
             try {
                 let project = yield _super.createProjectDB.call(this, data, user);
-                project_actions_Queue_1.projectQueue.push((cb) => __awaiter(this, void 0, void 0, function* () {
-                    let dep = yield Department_1.default.findOne({
-                        name: config_1.default.get("CreativeBoard"),
-                    });
-                    if (dep) {
-                        let projectsList = dep.lists.find((item) => item.name === "projects");
-                        let { id } = yield trello_1.default.__createProject(projectsList.listId, data);
-                        let result = yield _super.updateProjectDB.call(this, {
-                            _id: project._id,
-                            cardId: id,
-                            boardId: dep.boardId,
-                            listId: projectsList.listId,
-                        }, user);
-                        index_1.io.sockets.emit("update-projects", result);
-                    }
-                    notification_1.default.__creatProjectNotification(data, user.id);
-                    cb(null, true);
-                }));
+                notification_1.default.__creatProjectNotification(data, user.id);
                 return project;
             }
             catch (error) {
