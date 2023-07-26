@@ -223,10 +223,6 @@ export default class TrelloWebhook {
             : undefined;
         cardDeadline =
           new Date(this.actionRequest?.action?.data?.card?.due) ?? null;
-        console.log({
-          deadlineFromCard: this.actionRequest.action.data,
-          taskDeadline: new Date(task.deadline).getTime(),
-        });
         if (!isProject) {
           this.task = {
             name: this.actionRequest.action.data.card.name,
