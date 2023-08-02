@@ -126,26 +126,17 @@ export default class DepartmentController {
   static async _updateDepartmentsPriority(ids: string[]) {
     try {
       // write a bulkwrite operation instead
-      let update = [
-        {
-          updateMany: {
-            filter: { boardId: { $in: ids } },
-            update: {
-              $set: { priority: 1 },
-            },
-          },
-        },
-        {
-          updateMany: {
-            filter: { boardId: { $not: { $in: ids } } },
-            update: {
-              $set: { priority: 0 },
-            },
-          },
-        },
-      ];
-      let result = await Department.bulkWrite(update, { ordered: true });
-      return await Department.find();
+      let result = await Department.updateMany(
+        { _id: { $in: ids } },
+        { priority: 1 }
+      );
+      let updateResult = await Department.updateMany(
+        { _id: { $nin: ids } },
+        { priority: 0 }
+      );
+      if (updateResult.acknowledged && result.acknowledged)
+        return await Department.find();
+      else return null;
     } catch (error) {
       logger.error({ _updateDepartmentsPriority: error });
     }
