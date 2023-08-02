@@ -7,8 +7,13 @@ import { IDepartmentState } from "../../types/model/Department";
 const DepartmentReq = class DepartmentReq extends DepartmentController {
   static async handleUpdateDepartmentsPriority(req: Request, res: Response) {
     try {
+      console.log({ ids: req.body.ids });
       let result = await super._updateDepartmentsPriority(req.body.ids);
-      res.send(result);
+      if (result) res.send(result);
+      else
+        return res
+          .status(400)
+          .send("Issue hapenned while updating the priority of departments");
     } catch (error) {
       logger.error({ handleUpdateDepartmentsPriorityError: error });
     }
