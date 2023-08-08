@@ -506,7 +506,7 @@ export const initializeTTPTasks = async () => {
     // not Existed on Trello > create it on Trello
     notExistedOnTrello = await Promise.all(
       notExistedOnTrello
-        // .filter((i) => i.archivedCard === false)
+        .filter((i) => i.archivedCard === false)
         ?.map(async (item) => {
           let board = boards?.find((b) => b.id === item.boardId);
           let listId = item.listId;
