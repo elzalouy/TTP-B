@@ -352,7 +352,7 @@ export const initializeTTPTasks = async () => {
       })
     );
     departments = await Department.find({});
-    tasks = await Tasks.find({});
+    tasks = await Tasks.find({ archivedCard: false });
     let newCards = await Promise.all(
       boards?.map(async (item) => {
         let boardCards: Card[] =
@@ -548,7 +548,6 @@ export const initializeTTPTasks = async () => {
       let index = notExistedOnTrello.findIndex((i) => i._id === item._id);
       return index >= 0 ? notExistedOnTrello[index] : item;
     });
-
     let update = [
       ...newTasks?.map((item) => {
         return {
