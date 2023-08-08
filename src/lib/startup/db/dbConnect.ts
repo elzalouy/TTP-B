@@ -195,6 +195,7 @@ export const initializeTrelloBoards = async () => {
             let listExisted = board?.lists?.find(
               (list) => listName === list.name
             );
+
             return {
               name: listName,
               listId:
@@ -264,7 +265,7 @@ export const initializeTrelloBoards = async () => {
         return item.lists?.map((list) => {
           return {
             updateOne: {
-              filter: { _id: item._id, "lists._id": list._id },
+              filter: { _id: item._id, "lists.listId": list.listId },
               update: {
                 $set: {
                   "lists.$.listId": list.listId,
@@ -294,9 +295,6 @@ export const initializeTrelloBoards = async () => {
       })
     );
     let update = [
-      ...updateLists,
-      ...updateTeams,
-      ...updateSideLists,
       ...allDepartments?.map((item) => {
         return {
           updateOne: {
@@ -305,6 +303,9 @@ export const initializeTrelloBoards = async () => {
               name: item.name,
               boardId: item.boardId,
               color: item.color,
+              lists: item.lists,
+              teams: item.teams,
+              sideLists: item.sideLists,
             },
           },
         };
@@ -317,7 +318,7 @@ export const initializeTrelloBoards = async () => {
         };
       }),
     ];
-    Department.bulkWrite(update);
+    Department.bulkWrite(update, {});
     allDepartments.forEach(async (item) =>
       TrelloActionsController.__addWebHook(item.boardId, "trelloWebhookUrlTask")
     );
