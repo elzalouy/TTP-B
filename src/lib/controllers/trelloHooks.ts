@@ -261,9 +261,7 @@ export default class TrelloWebhook {
             this.task.movements.push(move);
           }
           console.log({
-            data: this.actionRequest.action.data,
-            type: this.action,
-            task: this.task,
+            data: this.actionRequest.action.data.card.name,
           });
           return await TaskController.updateTaskByTrelloDB(this.task, {
             id: this.user.id,
