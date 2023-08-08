@@ -34796,3 +34796,272 @@
   level: 'info',
   timestamp: '2023-08-08 16:29:33'
 }
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:WFUiEjrljsIDFOmd@cluster0.oeari.mongodb.net/ttp-beta'
+  },
+  level: 'info',
+  timestamp: '2023-08-08 16:32:09'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:WFUiEjrljsIDFOmd@cluster0.oeari.mongodb.net/ttp-beta'
+  },
+  level: 'info',
+  timestamp: '2023-08-08 16:33:34'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:WFUiEjrljsIDFOmd@cluster0.oeari.mongodb.net/ttp-beta'
+  },
+  level: 'info',
+  timestamp: '2023-08-08 16:35:59'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:WFUiEjrljsIDFOmd@cluster0.oeari.mongodb.net/ttp-beta'
+  },
+  level: 'info',
+  timestamp: '2023-08-08 16:37:18'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:WFUiEjrljsIDFOmd@cluster0.oeari.mongodb.net/ttp-beta'
+  },
+  level: 'info',
+  timestamp: '2023-08-08 16:39:04'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:WFUiEjrljsIDFOmd@cluster0.oeari.mongodb.net/ttp-beta'
+  },
+  level: 'info',
+  timestamp: '2023-08-08 16:41:42'
+}
+{
+  message: {
+    deleteTasksError: FetchError: invalid json response body at https://api.trello.com/1/cards/646c8165450c82fcd84ff927?key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68 reason: Unexpected token T in JSON at position 0
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/node-fetch/lib/index.js:273:32
+        at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+      type: 'invalid-json'
+    }
+  },
+  level: 'error',
+  timestamp: '2023-08-08 16:49:13'
+}
+{
+  message: {
+    deleteTasksError: FetchError: invalid json response body at https://api.trello.com/1/cards/6485bb2269e7763c23fcad27?key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68 reason: Unexpected token T in JSON at position 0
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/node-fetch/lib/index.js:273:32
+        at runMicrotasks (<anonymous>)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+      type: 'invalid-json'
+    }
+  },
+  level: 'error',
+  timestamp: '2023-08-08 16:49:14'
+}
+{
+  message: {
+    deleteTasksError: FetchError: invalid json response body at https://api.trello.com/1/cards/649726fcaef948f8a0943cd2?key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68 reason: Unexpected token T in JSON at position 0
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/node-fetch/lib/index.js:273:32
+        at runMicrotasks (<anonymous>)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+      type: 'invalid-json'
+    }
+  },
+  level: 'error',
+  timestamp: '2023-08-08 16:49:14'
+}
+{
+  message: {
+    deleteTasksError: FetchError: invalid json response body at https://api.trello.com/1/cards/646baae6c1914afead84157e?key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68 reason: Unexpected token T in JSON at position 0
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/node-fetch/lib/index.js:273:32
+        at runMicrotasks (<anonymous>)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+      type: 'invalid-json'
+    }
+  },
+  level: 'error',
+  timestamp: '2023-08-08 16:49:14'
+}
+{
+  message: {
+    deleteTasksError: FetchError: invalid json response body at https://api.trello.com/1/cards/646cbd418ae8c36f66805365?key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68 reason: Unexpected token T in JSON at position 0
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/node-fetch/lib/index.js:273:32
+        at runMicrotasks (<anonymous>)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+      type: 'invalid-json'
+    }
+  },
+  level: 'error',
+  timestamp: '2023-08-08 16:49:14'
+}
+{
+  message: {
+    deleteTasksError: FetchError: invalid json response body at https://api.trello.com/1/cards/646f8ae278944589fd64ad7c?key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68 reason: Unexpected token T in JSON at position 0
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/node-fetch/lib/index.js:273:32
+        at runMicrotasks (<anonymous>)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+      type: 'invalid-json'
+    }
+  },
+  level: 'error',
+  timestamp: '2023-08-08 16:49:14'
+}
+{
+  message: {
+    deleteTasksError: FetchError: invalid json response body at https://api.trello.com/1/cards/646cc0e2a37d0f74628d8cfa?key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68 reason: Unexpected token T in JSON at position 0
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/node-fetch/lib/index.js:273:32
+        at runMicrotasks (<anonymous>)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+      type: 'invalid-json'
+    }
+  },
+  level: 'error',
+  timestamp: '2023-08-08 16:49:14'
+}
+{
+  message: {
+    deleteTasksError: FetchError: invalid json response body at https://api.trello.com/1/cards/646cc43f5d0ba14988562264?key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68 reason: Unexpected token T in JSON at position 0
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/node-fetch/lib/index.js:273:32
+        at runMicrotasks (<anonymous>)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+      type: 'invalid-json'
+    }
+  },
+  level: 'error',
+  timestamp: '2023-08-08 16:49:14'
+}
+{
+  message: {
+    deleteTasksError: FetchError: invalid json response body at https://api.trello.com/1/cards/646d1f6cb50c6ce5c133b9e1?key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68 reason: Unexpected token T in JSON at position 0
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/node-fetch/lib/index.js:273:32
+        at runMicrotasks (<anonymous>)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+      type: 'invalid-json'
+    }
+  },
+  level: 'error',
+  timestamp: '2023-08-08 16:49:14'
+}
+{
+  message: {
+    deleteTasksError: FetchError: invalid json response body at https://api.trello.com/1/cards/646cc3eff412bad6a846f947?key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68 reason: Unexpected token T in JSON at position 0
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/node-fetch/lib/index.js:273:32
+        at runMicrotasks (<anonymous>)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+      type: 'invalid-json'
+    }
+  },
+  level: 'error',
+  timestamp: '2023-08-08 16:49:14'
+}
+{
+  message: {
+    deleteTasksError: FetchError: invalid json response body at https://api.trello.com/1/cards/6474d7e31f56d1dc102743c2?key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68 reason: Unexpected token T in JSON at position 0
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/node-fetch/lib/index.js:273:32
+        at runMicrotasks (<anonymous>)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+      type: 'invalid-json'
+    }
+  },
+  level: 'error',
+  timestamp: '2023-08-08 16:49:14'
+}
+{
+  message: {
+    deleteTasksError: FetchError: invalid json response body at https://api.trello.com/1/cards/64d2515e23fc7cda4194d383?key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68 reason: Unexpected token T in JSON at position 0
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/node-fetch/lib/index.js:273:32
+        at runMicrotasks (<anonymous>)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+      type: 'invalid-json'
+    }
+  },
+  level: 'error',
+  timestamp: '2023-08-08 16:49:14'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:WFUiEjrljsIDFOmd@cluster0.oeari.mongodb.net/ttp-beta'
+  },
+  level: 'info',
+  timestamp: '2023-08-08 16:50:29'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:WFUiEjrljsIDFOmd@cluster0.oeari.mongodb.net/ttp-beta'
+  },
+  level: 'info',
+  timestamp: '2023-08-08 16:53:19'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:WFUiEjrljsIDFOmd@cluster0.oeari.mongodb.net/ttp-beta'
+  },
+  level: 'info',
+  timestamp: '2023-08-08 17:01:34'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:WFUiEjrljsIDFOmd@cluster0.oeari.mongodb.net/ttp-beta'
+  },
+  level: 'info',
+  timestamp: '2023-08-08 17:07:40'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:WFUiEjrljsIDFOmd@cluster0.oeari.mongodb.net/ttp-beta'
+  },
+  level: 'info',
+  timestamp: '2023-08-08 17:09:51'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:WFUiEjrljsIDFOmd@cluster0.oeari.mongodb.net/ttp-beta'
+  },
+  level: 'info',
+  timestamp: '2023-08-08 17:14:09'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:WFUiEjrljsIDFOmd@cluster0.oeari.mongodb.net/ttp-beta'
+  },
+  level: 'info',
+  timestamp: '2023-08-08 17:17:04'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:WFUiEjrljsIDFOmd@cluster0.oeari.mongodb.net/ttp-beta'
+  },
+  level: 'info',
+  timestamp: '2023-08-08 18:27:59'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:WFUiEjrljsIDFOmd@cluster0.oeari.mongodb.net/ttp-beta'
+  },
+  level: 'info',
+  timestamp: '2023-08-08 18:30:47'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:WFUiEjrljsIDFOmd@cluster0.oeari.mongodb.net/ttp-beta'
+  },
+  level: 'info',
+  timestamp: '2023-08-08 18:33:26'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:WFUiEjrljsIDFOmd@cluster0.oeari.mongodb.net/ttp-beta'
+  },
+  level: 'info',
+  timestamp: '2023-08-08 18:37:16'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:WFUiEjrljsIDFOmd@cluster0.oeari.mongodb.net/ttp-beta'
+  },
+  level: 'info',
+  timestamp: '2023-08-08 18:38:38'
+}
