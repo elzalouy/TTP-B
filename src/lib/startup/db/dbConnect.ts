@@ -503,7 +503,6 @@ export const initializeTTPTasks = async () => {
       }),
     ];
     tasks = [...tasks, ...newTasks];
-    console.log({ notExistedOnTrello });
     // not Existed on Trello > create it on Trello
     notExistedOnTrello = await Promise.all(
       notExistedOnTrello
