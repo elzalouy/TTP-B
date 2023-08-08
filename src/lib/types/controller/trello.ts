@@ -115,6 +115,7 @@ export interface webhookUpdateInterface {
     idMemberCreator: string;
     data: {
       card: {
+        closed?: boolean;
         start?: string;
         due?: string;
         idList?: string;

@@ -352,7 +352,6 @@ export const initializeTTPTasks = async () => {
       })
     );
     departments = await Department.find({});
-
     tasks = await Tasks.find({});
     let newCards = await Promise.all(
       boards?.map(async (item) => {
@@ -364,6 +363,7 @@ export const initializeTTPTasks = async () => {
     cards = _.flattenDeep(newCards);
     cards = await Promise.all(
       cards?.map(async (item) => {
+        console.log({ item: item });
         let attachments = await TrelloActionsController.__getCardAttachments(
           item.id
         );
@@ -378,6 +378,7 @@ export const initializeTTPTasks = async () => {
       (item) => !cardsIds.includes(item.cardId)
     );
     intersection = tasks.filter((item) => cardsIds.includes(item.cardId));
+
     // execute the function
     // Existed on TTP & Trello > make it same
     intersection = await Promise.all(
@@ -581,7 +582,7 @@ export const initializeTTPTasks = async () => {
         };
       }),
     ];
-    Tasks.bulkWrite(update, {});
+    Tasks.bulkWrite(update, { willRetryWrite: false, retryWrites: false });
     tasks.forEach(async (item) => {
       TrelloActionsController.__addWebHook(item.cardId, "trelloWebhookUrlTask");
     });
