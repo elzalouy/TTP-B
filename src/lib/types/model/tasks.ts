@@ -25,6 +25,7 @@ export interface TaskInfo extends Document {
   movements?: Movement[];
   assignedAt?: Date | number;
   teamListId?: string;
+  archivedCard?: boolean;
 }
 
 export interface TaskHistory {
@@ -63,6 +64,7 @@ export interface TaskData {
   teamListId?: string;
   movements?: Movement[];
   assignedAt?: Date | number;
+  archivedCard?: boolean;
 }
 
 export interface AttachmentResponse {

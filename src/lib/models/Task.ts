@@ -119,6 +119,7 @@ const TaskSchema = new Schema<TaskInfo, TasksModel>(
     },
     movements: { type: [movementSchema], min: 1, required: true },
     assignedAt: { type: Date, required: false, default: null },
+    archivedCard: { type: Boolean, requried: true, default: false },
   },
   {
     timestamps: true,

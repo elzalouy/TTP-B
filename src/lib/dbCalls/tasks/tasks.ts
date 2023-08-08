@@ -355,6 +355,7 @@ class TaskDB {
       }
       task.movements = data.movements ?? task.movements;
       task.attachedFiles = _.uniqBy(task.attachedFiles, "trelloId");
+      task.archivedCard = data.archivedCard ?? false;
       let result = await (await task.save()).toObject();
       await io.sockets.emit("update-task", result);
     } catch (error) {
