@@ -443,7 +443,6 @@ export const initializeTTPTasks = async () => {
         return replacement;
       })
     );
-    console.log({ intersection });
     tasks = tasks?.map((item) => {
       let index = intersection?.findIndex((task) => task._id === item._id);
       return index >= 0 ? intersection[index] : item;

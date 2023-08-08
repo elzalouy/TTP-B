@@ -32435,3 +32435,31 @@ errors will be here{
   level: 'error',
   timestamp: '2023-08-08 16:49:14'
 }
+{
+  message: {
+    createCardInListError: FetchError: invalid json response body at https://api.trello.com/1/cards/?idList=643334de6f1ace0546c1e81a&name=Barbell-t2ff-Copy%20-%20(50%%20cachback)&desc=desc&start=1691517395000&due=1691442000000&key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68 reason: Unexpected token M in JSON at position 0
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/node-fetch/lib/index.js:273:32
+        at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+      type: 'invalid-json'
+    }
+  },
+  level: 'error',
+  timestamp: '2023-08-08 19:56:36'
+}
+{
+  message: {
+    createCardInListError: URIError: URI malformed
+        at decodeURIComponent (<anonymous>)
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:276:16)
+        at Generator.next (<anonymous>)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:8:71
+        at new Promise (<anonymous>)
+        at __awaiter (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:4:12)
+        at Function.__createCard (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:285:16)
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:60:42)
+        at Generator.next (<anonymous>)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:8:71
+  },
+  level: 'error',
+  timestamp: '2023-08-08 20:00:12'
+}
