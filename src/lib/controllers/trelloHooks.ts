@@ -116,7 +116,7 @@ export default class TrelloWebhook {
       let dep = await Department.findOne({
         boardId: this.actionRequest.action.data?.board?.id,
       });
-      let isSideList = dep.sideLists.find((item) => item.listId === listId);
+      let isSideList = dep?.sideLists?.find((item) => item.listId === listId);
       let team = await dep.teams.find((item) => listId === item.listId);
       if (!task && dep) {
         this.task = {

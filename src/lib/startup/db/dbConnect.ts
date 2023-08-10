@@ -113,7 +113,6 @@ export const initializeTrelloBoards = async () => {
           item.name,
           item.color
         );
-        console.log({ board });
         item.boardId = board.id;
         listTypes = ListTypes;
         item.lists = await Promise.all(
@@ -344,6 +343,7 @@ export const initializeTTPTasks = async () => {
 
     // get the data
     boards = await TrelloActionsController.getBoardsInTrello();
+    console.log({ boards });
     boards = await Promise.all(
       boards?.map(async (item) => {
         let lists: List[] = await TrelloActionsController.__getBoardLists(
