@@ -113,6 +113,7 @@ export const initializeTrelloBoards = async () => {
           item.name,
           item.color
         );
+        console.log({ board });
         item.boardId = board.id;
         listTypes = ListTypes;
         item.lists = await Promise.all(
@@ -455,7 +456,7 @@ export const initializeTTPTasks = async () => {
         let dep = departments?.find((d) => d.boardId === item.idBoard);
         let status = dep?.lists?.find((list) => list.listId === item.idList);
         let team = dep?.teams?.find((team) => team.listId === item.idList);
-        let sideList = dep.sideLists.find(
+        let sideList = dep?.sideLists.find(
           (sideList) => sideList.listId === item.idList
         );
         let task: TaskInfo = new Tasks({
@@ -510,43 +511,46 @@ export const initializeTTPTasks = async () => {
         ?.map(async (item) => {
           let board = boards?.find((b) => b.id === item.boardId);
           let listId = item.listId;
-          let card: Card = await TrelloActionsController.__createCard({
-            boardId: board.id,
-            listId: listId,
-            description: item?.description ? item.description : "",
-            deadline: item.deadline,
-            start: item?.start,
-            name: item.name,
-          });
-          let replacement = new Tasks({
-            _id: item._id,
-            boardId: board.id,
-            listId: listId,
-            movements:
-              item?.movements?.length > 0
-                ? item.movements
-                : [
-                    {
-                      movedAt: new Date(Date.now()).toString(),
-                      status: item?.status,
-                    },
-                  ],
-            name: item.name,
-            status: item.status,
-            teamId: null,
-            cardId: card.id,
-            description: item.description,
-            start: item.start ? item.start : null,
-            deadline: item.deadline,
-            trelloShortUrl: card.shortUrl,
-            attachedFiles: [],
-            projectId: item.projectId,
-            categoryId: item.categoryId,
-            subCategoryId: item.subCategoryId,
-          });
-          return replacement;
+          if (board) {
+            let card: Card = await TrelloActionsController.__createCard({
+              boardId: board.id,
+              listId: listId,
+              description: item?.description ? item.description : "",
+              deadline: item.deadline,
+              start: item?.start,
+              name: item.name,
+            });
+            let replacement = new Tasks({
+              _id: item._id,
+              boardId: board.id,
+              listId: listId,
+              movements:
+                item?.movements?.length > 0
+                  ? item.movements
+                  : [
+                      {
+                        movedAt: new Date(Date.now()).toString(),
+                        status: item?.status,
+                      },
+                    ],
+              name: item.name,
+              status: item.status,
+              teamId: null,
+              cardId: card.id,
+              description: item.description,
+              start: item.start ? item.start : null,
+              deadline: item.deadline,
+              trelloShortUrl: card.shortUrl,
+              attachedFiles: [],
+              projectId: item.projectId,
+              categoryId: item.categoryId,
+              subCategoryId: item.subCategoryId,
+            });
+            return replacement;
+          } else return null;
         })
     );
+    notExistedOnTrello = notExistedOnTrello.filter((i) => i !== null);
 
     tasks = tasks?.map((item) => {
       let index = notExistedOnTrello.findIndex((i) => i._id === item._id);
