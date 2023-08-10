@@ -42735,3 +42735,86 @@
   level: 'info',
   timestamp: '2023-08-10 22:51:59'
 }
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:WFUiEjrljsIDFOmd@cluster1.oeari.mongodb.net/ttp'
+  },
+  level: 'info',
+  timestamp: '2023-08-10 22:55:18'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:WFUiEjrljsIDFOmd@cluster1.oeari.mongodb.net/ttp'
+  },
+  level: 'info',
+  timestamp: '2023-08-10 22:56:06'
+}
+{
+  level: 'error',
+  timestamp: '2023-08-10 22:56:35',
+  message: '_f.find is not a function',
+  stack: 'TypeError: _f.find is not a function\n' +
+    '    at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/startup/db/dbConnect.ts:210:45\n' +
+    '    at Generator.next (<anonymous>)\n' +
+    '    at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/startup/db/dbConnect.ts:8:71\n' +
+    '    at new Promise (<anonymous>)\n' +
+    '    at __awaiter (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/startup/db/dbConnect.ts:4:12)\n' +
+    '    at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/startup/db/dbConnect.ts:209:45\n' +
+    '    at Array.map (<anonymous>)\n' +
+    '    at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/startup/db/dbConnect.ts:209:22\n' +
+    '    at Generator.next (<anonymous>)\n' +
+    '    at fulfilled (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/startup/db/dbConnect.ts:5:58)'
+}
+{
+  message: {
+    error: TypeError: boards.map is not a function
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/startup/db/dbConnect.ts:363:15
+        at Generator.next (<anonymous>)
+        at fulfilled (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/startup/db/dbConnect.ts:5:58)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5)
+  },
+  level: 'error',
+  timestamp: '2023-08-10 22:56:36'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:WFUiEjrljsIDFOmd@cluster1.oeari.mongodb.net/ttp'
+  },
+  level: 'info',
+  timestamp: '2023-08-10 22:58:22'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:WFUiEjrljsIDFOmd@cluster1.oeari.mongodb.net/ttp'
+  },
+  level: 'info',
+  timestamp: '2023-08-10 22:59:45'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:WFUiEjrljsIDFOmd@cluster1.oeari.mongodb.net/ttp'
+  },
+  level: 'info',
+  timestamp: '2023-08-10 23:02:47'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:WFUiEjrljsIDFOmd@cluster1.oeari.mongodb.net/ttp'
+  },
+  level: 'info',
+  timestamp: '2023-08-10 23:04:16'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:WFUiEjrljsIDFOmd@cluster1.oeari.mongodb.net/ttp'
+  },
+  level: 'info',
+  timestamp: '2023-08-10 23:06:35'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:WFUiEjrljsIDFOmd@cluster1.oeari.mongodb.net/ttp'
+  },
+  level: 'info',
+  timestamp: '2023-08-10 23:10:07'
+}

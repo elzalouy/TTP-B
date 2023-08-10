@@ -258,58 +258,59 @@ export const initializeTrelloBoards = async () => {
       let index = intersection.findIndex((dep) => dep._id === item._id);
       return index >= 0 ? intersection[index] : item;
     });
-    let updateTeams = _.flattenDeep(
-      allDepartments?.map((item) => {
-        return item.teams?.map((team) => {
-          return {
-            updateOne: {
-              filter: { _id: item._id, "teams.listId": team.listId },
-              update: {
-                $set: {
-                  "teams.$.listId": team.listId,
-                  "teams.$.name": team.name,
-                  "teams.$.isDeleted": team.isDeleted,
-                },
-              },
-            },
-          };
-        });
-      })
-    );
-    let updateLists = _.flattenDeep(
-      allDepartments?.map((item) => {
-        return item.lists?.map((list) => {
-          return {
-            updateOne: {
-              filter: { _id: item._id, "lists.listId": list.listId },
-              update: {
-                $set: {
-                  "lists.$.listId": list.listId,
-                  "lists.$.name": list.name,
-                },
-              },
-            },
-          };
-        });
-      })
-    );
-    let updateSideLists = _.flattenDeep(
-      allDepartments.map((item) => {
-        return item.sideLists.map((list) => {
-          return {
-            updateOne: {
-              filter: { _id: item._id, "sideLists._id": list._id },
-              update: {
-                $set: {
-                  "sideLists.$.listId": list.listId,
-                  "sideLists.$.name": list.name,
-                },
-              },
-            },
-          };
-        });
-      })
-    );
+
+    // let updateTeams = _.flattenDeep(
+    //   allDepartments?.map((item) => {
+    //     return item.teams?.map((team) => {
+    //       return {
+    //         updateOne: {
+    //           filter: { _id: item._id, "teams.listId": team.listId },
+    //           update: {
+    //             $set: {
+    //               "teams.$.listId": team.listId,
+    //               "teams.$.name": team.name,
+    //               "teams.$.isDeleted": team.isDeleted,
+    //             },
+    //           },
+    //         },
+    //       };
+    //     });
+    //   })
+    // );
+    // let updateLists = _.flattenDeep(
+    //   allDepartments?.map((item) => {
+    //     return item.lists?.map((list) => {
+    //       return {
+    //         updateOne: {
+    //           filter: { _id: item._id, "lists.listId": list.listId },
+    //           update: {
+    //             $set: {
+    //               "lists.$.listId": list.listId,
+    //               "lists.$.name": list.name,
+    //             },
+    //           },
+    //         },
+    //       };
+    //     });
+    //   })
+    // );
+    // let updateSideLists = _.flattenDeep(
+    //   allDepartments.map((item) => {
+    //     return item.sideLists.map((list) => {
+    //       return {
+    //         updateOne: {
+    //           filter: { _id: item._id, "sideLists._id": list._id },
+    //           update: {
+    //             $set: {
+    //               "sideLists.$.listId": list.listId,
+    //               "sideLists.$.name": list.name,
+    //             },
+    //           },
+    //         },
+    //       };
+    //     });
+    //   })
+    // );
     let update = [
       ...allDepartments?.map((item) => {
         return {
@@ -394,11 +395,11 @@ export const initializeTTPTasks = async () => {
       (item) => !cardsIds.includes(item.cardId) || item.cardId === null
     );
     intersection = tasks.filter((item) => cardsIds.includes(item.cardId));
-    console.log({ intersection: intersection.length });
     // execute the function
     // Existed on TTP & Trello > make it same
     intersection = await Promise.all(
       intersection?.map(async (item) => {
+        console.log({ intersectionItem: item });
         let card = cards?.find((c) => c.id === item.cardId);
         let dep = departments?.find((d) => d.boardId === card?.idBoard);
         let status = dep.lists?.find((list) => list?.listId === card?.idList);
@@ -464,12 +465,7 @@ export const initializeTTPTasks = async () => {
       let index = intersection?.findIndex((task) => task._id === item._id);
       return index >= 0 ? intersection[index] : item;
     });
-    console.log({ intersectionAfter: intersection });
 
-    console.log({
-      notExistedOnTTP: notExistedOnTTP.length,
-      notExistedOnTrello: notExistedOnTrello.length,
-    });
     // not Existed on TTP > create it on TTP
     let newTasks = [
       ...notExistedOnTTP?.map((item) => {
@@ -532,6 +528,7 @@ export const initializeTTPTasks = async () => {
           let board = boards?.find((b) => b.id === item.boardId);
           let listId = item.listId;
           if (board) {
+            console.log({ item });
             let card: Card = await TrelloActionsController.__createCard({
               boardId: board.id,
               listId: listId,
@@ -573,8 +570,6 @@ export const initializeTTPTasks = async () => {
     );
     notExistedOnTrello = notExistedOnTrello.filter((i) => i !== null);
 
-    console.log({ notExistedOnTrelloAfter: notExistedOnTrello.length });
-
     tasks = tasks?.map((item) => {
       let index = notExistedOnTrello.findIndex((i) => i._id === item._id);
       return index >= 0 ? notExistedOnTrello[index] : item;
@@ -613,7 +608,6 @@ export const initializeTTPTasks = async () => {
         };
       }),
     ];
-    console.log({ update });
     Tasks.bulkWrite(update, {});
     tasks.forEach(async (item) => {
       TrelloActionsController.__addWebHook(item.cardId, "trelloWebhookUrlTask");

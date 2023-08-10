@@ -286,6 +286,7 @@ class TrelloActionsController {
           Accept: "application/json",
         },
       });
+      console.log({ card: await cardResult.json() });
       return await cardResult.json();
     } catch (error) {
       logger.error({ createCardInListError: error });
@@ -374,7 +375,7 @@ class TrelloActionsController {
 
   static async __getBoardLists(boardId: string) {
     try {
-      let url = await trelloApi(`boards/${boardId}/lists/open?`);
+      let url = await trelloApi(`boards/${boardId}/lists/all?`);
       let lists = await fetch(url, {
         method: "GET",
         headers: {
