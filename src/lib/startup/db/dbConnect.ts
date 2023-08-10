@@ -394,7 +394,7 @@ export const initializeTTPTasks = async () => {
       (item) => !cardsIds.includes(item.cardId) || item.cardId === null
     );
     intersection = tasks.filter((item) => cardsIds.includes(item.cardId));
-    console.log({ intersection });
+    console.log({ intersection: intersection.length });
     // execute the function
     // Existed on TTP & Trello > make it same
     intersection = await Promise.all(
@@ -466,7 +466,10 @@ export const initializeTTPTasks = async () => {
     });
     console.log({ intersectionAfter: intersection });
 
-    console.log({ notExistedOnTTP });
+    console.log({
+      notExistedOnTTP: notExistedOnTTP.length,
+      notExistedOnTrello: notExistedOnTrello.length,
+    });
     // not Existed on TTP > create it on TTP
     let newTasks = [
       ...notExistedOnTTP?.map((item) => {
@@ -521,7 +524,7 @@ export const initializeTTPTasks = async () => {
       }),
     ];
     tasks = [...tasks, ...newTasks];
-    console.log({ notExistedOnTTPAfter: tasks });
+    console.log({ notExistedOnTTPAfter: tasks.length });
     // not Existed on Trello > create it on Trello
     notExistedOnTrello = await Promise.all(
       notExistedOnTrello
@@ -570,7 +573,7 @@ export const initializeTTPTasks = async () => {
     );
     notExistedOnTrello = notExistedOnTrello.filter((i) => i !== null);
 
-    console.log({ notExistedOnTrelloAfter: notExistedOnTrello });
+    console.log({ notExistedOnTrelloAfter: notExistedOnTrello.length });
 
     tasks = tasks?.map((item) => {
       let index = notExistedOnTrello.findIndex((i) => i._id === item._id);
