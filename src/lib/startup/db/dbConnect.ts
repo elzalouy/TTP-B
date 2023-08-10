@@ -210,7 +210,6 @@ export const initializeTrelloBoards = async () => {
             let listExisted = board?.lists?.find(
               (list) => listName === list.name && list.closed === false
             );
-
             return {
               name: listName,
               listId:
@@ -360,7 +359,6 @@ export const initializeTTPTasks = async () => {
 
     // get the data
     boards = await TrelloActionsController.getBoardsInTrello();
-    console.log({ boards });
     boards = await Promise.all(
       boards?.map(async (item) => {
         let lists: List[] = await TrelloActionsController.__getBoardLists(
@@ -396,7 +394,7 @@ export const initializeTTPTasks = async () => {
       (item) => !cardsIds.includes(item.cardId) || item.cardId === null
     );
     intersection = tasks.filter((item) => cardsIds.includes(item.cardId));
-
+    console.log({ intersection });
     // execute the function
     // Existed on TTP & Trello > make it same
     intersection = await Promise.all(
@@ -466,7 +464,9 @@ export const initializeTTPTasks = async () => {
       let index = intersection?.findIndex((task) => task._id === item._id);
       return index >= 0 ? intersection[index] : item;
     });
+    console.log({ intersectionAfter: intersection });
 
+    console.log({ notExistedOnTTP });
     // not Existed on TTP > create it on TTP
     let newTasks = [
       ...notExistedOnTTP?.map((item) => {
@@ -521,6 +521,7 @@ export const initializeTTPTasks = async () => {
       }),
     ];
     tasks = [...tasks, ...newTasks];
+    console.log({ notExistedOnTTPAfter: tasks });
     // not Existed on Trello > create it on Trello
     notExistedOnTrello = await Promise.all(
       notExistedOnTrello
@@ -569,6 +570,8 @@ export const initializeTTPTasks = async () => {
     );
     notExistedOnTrello = notExistedOnTrello.filter((i) => i !== null);
 
+    console.log({ notExistedOnTrelloAfter: notExistedOnTrello });
+
     tasks = tasks?.map((item) => {
       let index = notExistedOnTrello.findIndex((i) => i._id === item._id);
       return index >= 0 ? notExistedOnTrello[index] : item;
@@ -607,6 +610,7 @@ export const initializeTTPTasks = async () => {
         };
       }),
     ];
+    console.log({ update });
     Tasks.bulkWrite(update, {});
     tasks.forEach(async (item) => {
       TrelloActionsController.__addWebHook(item.cardId, "trelloWebhookUrlTask");
