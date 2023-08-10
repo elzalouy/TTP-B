@@ -524,7 +524,6 @@ export const initializeTTPTasks = async () => {
       }),
     ];
     tasks = [...tasks, ...newTasks];
-    console.log({ notExistedOnTTPAfter: tasks.length });
     // not Existed on Trello > create it on Trello
     notExistedOnTrello = await Promise.all(
       notExistedOnTrello
@@ -541,6 +540,7 @@ export const initializeTTPTasks = async () => {
               start: item?.start,
               name: item.name,
             });
+            console.log({ card });
             let replacement = new Tasks({
               _id: item._id,
               boardId: board.id,
