@@ -260,11 +260,6 @@ export default class TrelloWebhook {
                 new Date(task.deadline).toString();
             this.task.movements.push(move);
           }
-          console.log({
-            data: this.actionRequest.action.data,
-            type: this.action,
-            task: this.task,
-          });
           return await TaskController.updateTaskByTrelloDB(this.task, {
             id: this.user.id,
             name: this.user?.name,

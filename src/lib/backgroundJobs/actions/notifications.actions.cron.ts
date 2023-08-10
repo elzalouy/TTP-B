@@ -5,6 +5,7 @@ import NotificationDB from "../../dbCalls/notification/notification";
 import { NotificationInfo } from "../../types/model/Notification";
 import logger from "../../../logger";
 import Notification from "../../models/Notification";
+
 export function removeOldNotifications(
   io: Server<DefaultEventsMap, DefaultEventsMap, DefaultEventsMap, any>
 ) {

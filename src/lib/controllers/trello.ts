@@ -271,9 +271,11 @@ class TrelloActionsController {
 
   static async __createCard(data: TaskData) {
     try {
-      let url = `cards/?idList=${data.teamListId ?? data.listId}&name=${
-        data.name
-      }&desc=${data.description}&`;
+      let url = `cards/?idList=${
+        data.teamListId ?? data.listId
+      }&name=${encodeURIComponent(data.name)}&desc=${encodeURIComponent(
+        data.description
+      )}&`;
       if (data.start) url = `${url}start=${new Date(data.start).getTime()}&`;
       if (data.deadline)
         url = `${url}due=${new Date(data.deadline).getTime()}&`;
@@ -535,8 +537,8 @@ class TrelloActionsController {
   static async __updateCard({ cardId, data }: editCardParams) {
     try {
       let body = {
-        name: data.name,
-        desc: data.desc,
+        name: encodeURIComponent(data.name),
+        desc: encodeURIComponent(data.desc),
         due: data.due,
         start: data.start,
         idList: data.idList,
