@@ -42688,3 +42688,10 @@
   level: 'info',
   timestamp: '2023-08-10 15:12:58'
 }
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:WFUiEjrljsIDFOmd@cluster1.oeari.mongodb.net/ttp'
+  },
+  level: 'info',
+  timestamp: '2023-08-10 15:31:18'
+}

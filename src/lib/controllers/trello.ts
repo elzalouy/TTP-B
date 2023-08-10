@@ -374,7 +374,7 @@ class TrelloActionsController {
 
   static async __getBoardLists(boardId: string) {
     try {
-      let url = await trelloApi(`boards/${boardId}/lists?`);
+      let url = await trelloApi(`boards/${boardId}/lists/open?`);
       let lists = await fetch(url, {
         method: "GET",
         headers: {
