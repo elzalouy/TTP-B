@@ -42695,3 +42695,15 @@
   level: 'info',
   timestamp: '2023-08-10 15:31:18'
 }
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:WFUiEjrljsIDFOmd@cluster1.oeari.mongodb.net/ttp'
+  },
+  level: 'info',
+  timestamp: '2023-08-10 21:19:47'
+}
+{
+  message: { monthlyDeleteNotifications: 11 },
+  level: 'info',
+  timestamp: '2023-08-10 21:20:05'
+}

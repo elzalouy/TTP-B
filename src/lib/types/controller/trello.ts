@@ -247,7 +247,7 @@ export type editCardParams = {
 export type Board = {
   id: string;
   name: string;
-  lists?: { id: string; name: string }[];
+  lists?: List[];
 };
 export type List = {
   id: string;

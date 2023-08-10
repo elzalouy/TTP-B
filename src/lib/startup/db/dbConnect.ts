@@ -126,13 +126,25 @@ export const initializeTrelloBoards = async () => {
           })
         );
         item.teams = await Promise.all(
-          item.teams?.map(async (team) => {
+          item.teams
+            .filter((t) => t.isDeleted === false)
+            ?.map(async (team) => {
+              let teamInBoard = await TrelloActionsController.addListToBoard(
+                board.id,
+                team.name
+              );
+              team.listId = teamInBoard.id;
+              return team;
+            })
+        );
+        item.sideLists = await Promise.all(
+          item.sideLists.map(async (list) => {
             let teamInBoard = await TrelloActionsController.addListToBoard(
               board.id,
-              team.name
+              list.name
             );
-            team.listId = teamInBoard.id;
-            return team;
+            list.listId = teamInBoard.id;
+            return list;
           })
         );
         return item;
@@ -175,8 +187,11 @@ export const initializeTrelloBoards = async () => {
               };
             })
           ),
+          // in case of creating any MAIN list (Main > Tasks Board) ,
+          // and for any reason this list wasn't created by the webhook of trello as a sideList.
+          // In the next initialization time it will be considered as a Team.
           teams: teams?.map((tem) => {
-            return { name: tem.name, listId: tem.id, isDeleted: false };
+            return { name: tem.name, listId: tem.id, isDeleted: tem.closed };
           }),
         });
       })
@@ -193,7 +208,7 @@ export const initializeTrelloBoards = async () => {
         item.lists = await Promise.all(
           listTypes?.map(async (listName) => {
             let listExisted = board?.lists?.find(
-              (list) => listName === list.name
+              (list) => listName === list.name && list.closed === false
             );
 
             return {
@@ -217,11 +232,13 @@ export const initializeTrelloBoards = async () => {
               !listTypes.includes(item.name) && !sideListsIds.includes(item.id)
           )
           ?.map((item) => {
-            return { name: item.name, listId: item.id, isDeleted: false };
+            return { name: item.name, listId: item.id, isDeleted: item.closed };
           });
         item.sideLists = await Promise.all(
           item.sideLists.map(async (sideI) => {
-            let listExisted = board.lists.find((i) => i.id === sideI.listId);
+            let listExisted = board.lists.find(
+              (i) => i.id === sideI.listId && i.closed === false
+            );
             return {
               name: sideI.name,
               listId:
