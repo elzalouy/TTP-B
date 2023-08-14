@@ -171,7 +171,10 @@ export default class TrelloWebhook {
 
   private async updateCard() {
     try {
-      console.log({ action: this.actionRequest.action.display.translationKey });
+      console.log({
+        action: this.actionRequest.action.display.translationKey,
+        cardId: this.task.cardId,
+      });
       let action = this.actionRequest.action.display.translationKey;
       let isNewJourney: boolean,
         task: LeanDocument<TaskInfo & { _id: ObjectId }>,
