@@ -22,7 +22,7 @@ const DepartmentSchema = new Schema<IDepartment>(
     },
     boardId: {
       type: String,
-      default: "",
+      unique: true,
     },
     color: {
       type: String,
@@ -39,7 +39,7 @@ const DepartmentSchema = new Schema<IDepartment>(
             required: [true, "Team name is required with min length 2 chars"],
             minlength: [2, "Team name is required with min length 2 chars"],
           },
-          listId: String,
+          listId: { type: String, unique: true },
           isDeleted: Boolean,
         },
       ],
@@ -50,7 +50,7 @@ const DepartmentSchema = new Schema<IDepartment>(
       type: [
         {
           name: { type: String, required: true },
-          listId: { type: String, required: true },
+          listId: { type: String, required: true, unique: true },
         },
       ],
       required: true,
@@ -66,7 +66,7 @@ const DepartmentSchema = new Schema<IDepartment>(
               message: `{VALUE} is not one of the list types ["Tasks Board", "In Progress", "Shared", "Review", "Done", "Not Clear","Cancled"]`,
             },
           },
-          listId: String,
+          listId: { type: String, required: true, unique: true },
         },
       ],
       required: true,

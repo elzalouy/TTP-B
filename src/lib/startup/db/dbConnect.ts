@@ -248,7 +248,6 @@ export const initializeTrelloBoards = async () => {
         );
         teamsLists?.forEach((list) => {
           let teamIndex = item.teams.findIndex((i) => i.listId === list.id);
-          console.log({ teamIndex });
           if (teamIndex >= 0) {
             item.teams[teamIndex].isDeleted = list.closed;
             item.teams[teamIndex].name = list.name;
@@ -392,7 +391,6 @@ export const initializeTTPTasks = async () => {
     );
 
     intersection = tasks.filter((item) => cardsIds.includes(item.cardId));
-    console.log({ intersection, notExistedOnTrello });
     // execute the function
     // Existed on TTP & Trello > make it same
     intersection = await Promise.all(
