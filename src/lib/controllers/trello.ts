@@ -14,8 +14,8 @@ config();
 var FormData = require("form-data");
 
 class TrelloActionsController {
-  static async getBoardsInTrello() {
-    return await TrelloActionsController.__getTrelloBoards();
+  static async getBoardsInTrello(filter: string) {
+    return await TrelloActionsController.__getTrelloBoards(filter);
   }
 
   static async getSingleBoardInfo(id: string) {
@@ -375,7 +375,7 @@ class TrelloActionsController {
 
   static async __getBoardLists(boardId: string) {
     try {
-      let url = await trelloApi(`boards/${boardId}/lists/all?`);
+      let url = await trelloApi(`boards/${boardId}/lists?filter=all&`);
       let lists = await fetch(url, {
         method: "GET",
         headers: {
@@ -385,6 +385,46 @@ class TrelloActionsController {
       return await lists.json();
     } catch (error) {
       logger.error({ getBoardListsError: error });
+    }
+  }
+  static async _getCreationActionOfCard(cardId: string) {
+    try {
+      let url = await trelloApi(`cards/${cardId}/actions/?filter=createCard&`);
+      let actions = await fetch(url, {
+        method: "GET",
+        headers: { Accept: "application/json" },
+      });
+      return await actions.json();
+    } catch (error) {
+      logger.error({ error });
+    }
+  }
+  static async _getCardMovementsActions(cardId: string) {
+    try {
+      let url = await trelloApi(
+        `cards/${cardId}/actions/?filter=updateCard:idList&`
+      );
+      let actions = await fetch(url, {
+        method: "GET",
+        headers: { Accept: "application/json" },
+      });
+      return await actions.json();
+    } catch (error) {
+      logger.error({ _getCardMovementsActionsError: error });
+    }
+  }
+  static async _getCardDeadlineActions(cardId: string) {
+    try {
+      let url = await trelloApi(
+        `cards/${cardId}/actions/?filter=updateCard:idList&`
+      );
+      let actions = await fetch(url, {
+        method: "GET",
+        headers: { Accept: "application/json" },
+      });
+      return await actions.json();
+    } catch (error) {
+      logger.error({ _getCardMovementsActionsError: error });
     }
   }
 
@@ -468,10 +508,12 @@ class TrelloActionsController {
     }
   }
 
-  static async __getTrelloBoards() {
+  static async __getTrelloBoards(filter: string) {
     try {
       let boardsApi = trelloApi(
-        `organizations/${Config.get("trelloOrgId")}/boards?fields=id,name&`
+        `organizations/${Config.get(
+          "trelloOrgId"
+        )}/boards/?filter=${filter}&fields=id,name,closed&`
       );
       let boards = await fetch(boardsApi, {
         method: "GET",

@@ -8,7 +8,7 @@ import { updateTaskQueue } from "../../backgroundJobs/actions/task.actions.Queue
 const BoardReq = class BoardReq extends BoardController {
   static async handleGetBoards(req: Request, res: Response) {
     try {
-      let boards = await super.getBoardsInTrello();
+      let boards = await super.getBoardsInTrello("all");
       if (boards) {
         return res.send(boards);
       } else {

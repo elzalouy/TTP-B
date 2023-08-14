@@ -171,6 +171,8 @@ export default class TrelloWebhook {
 
   private async updateCard() {
     try {
+      console.log({ action: this.actionRequest.action.display.translationKey });
+      let action = this.actionRequest.action.display.translationKey;
       let isNewJourney: boolean,
         task: LeanDocument<TaskInfo & { _id: ObjectId }>,
         department: IDepartment,
@@ -183,6 +185,7 @@ export default class TrelloWebhook {
         isProject: IList,
         sideList: IList,
         listBefore: string,
+        listAfter: string,
         cardDeadline: Date | number;
       task = await TaskController.getOneTaskBy({
         cardId: this.actionRequest?.action?.data?.card?.id,
@@ -216,12 +219,19 @@ export default class TrelloWebhook {
           (list) => list.listId === listId
         );
         listBefore = this.actionRequest.action.data.listBefore?.name ?? "";
+        listAfter = this.actionRequest.action.data.listAfter?.name ?? "";
         isNewJourney =
           (sideList || status === "Tasks Board") &&
           ["Done", "Shared", "Cancled"].includes(listBefore);
         cardDeadline = this.actionRequest.action.data.card.due
           ? new Date(this.actionRequest.action.data.card.due)
           : task.deadline;
+
+        let { movements, currentTeam } = await TaskController.getActionsOfTask(
+          task.cardId,
+          await Department.find({}),
+          new Date(cardDeadline).toLocaleDateString()
+        );
 
         if (!isProject) {
           this.task = {
@@ -234,19 +244,25 @@ export default class TrelloWebhook {
               : task.start ?? null,
             description:
               this.actionRequest.action.data.card.desc ?? task.description,
-            teamId: isNewTeam?._id ?? task.teamId,
+            teamId: isNewTeam?._id ?? task.teamId ?? currentTeam?._id,
             listId: listId,
             status: sideList
               ? "Tasks Board"
               : inProgressList?.name
               ? inProgressList.name
               : status,
-            movements: task.movements,
+            movements:
+              action === "action_sent_card_to_board"
+                ? movements
+                : task.movements,
             teamListId: isNewTeam ? listId : task.teamListId,
             archivedCard: this.actionRequest.action.data.card.closed,
           };
 
-          if (isMoved || task.movements.length === 0) {
+          if (
+            (isMoved || task.movements.length === 0) &&
+            action !== "action_sent_card_to_board"
+          ) {
             let move: Movement = {
               status: sideList
                 ? "Tasks Board"
@@ -255,9 +271,10 @@ export default class TrelloWebhook {
                 : status,
               movedAt: new Date(Date.now()).toString(),
             };
-            if (isNewJourney && task.movements[task.movements.length - 1])
-              task.movements[task.movements.length - 1].journeyDeadline =
-                new Date(task.deadline).toString();
+            if (["Done", "Shared", "Cancled"].includes(listAfter))
+              move.journeyDeadline = cardDeadline
+                ? new Date(cardDeadline).toDateString()
+                : null;
             this.task.movements.push(move);
           }
           return await TaskController.updateTaskByTrelloDB(this.task, {

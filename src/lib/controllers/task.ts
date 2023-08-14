@@ -1,4 +1,4 @@
-import { TaskData, TaskInfo } from "./../types/model/tasks";
+import { Movement, TaskData, TaskInfo } from "./../types/model/tasks";
 import logger from "../../logger";
 import TaskDB from "../dbCalls/tasks/tasks";
 import TrelloController from "./trello";
@@ -13,10 +13,11 @@ import config from "config";
 import {
   IDepartment,
   IDepartmentState,
+  ITeam,
   ListTypes,
 } from "../types/model/Department";
 import TrelloActionsController from "./trello";
-import { Board, Card } from "../types/controller/trello";
+import { Board, Card, cardMovementAction } from "../types/controller/trello";
 import _, { uniqueId } from "lodash";
 import Tasks from "../models/Task";
 import { writeFile } from "fs";
@@ -56,6 +57,93 @@ class TaskController extends TaskDB {
   static async createTaskByTrello(data: TaskData) {
     // TODO update this function with the new implementation
     return await TaskController.__createTaskByTrello(data);
+  }
+  static async getActionsOfTask(
+    cardId: string,
+    departments: IDepartment[],
+    due: string
+  ) {
+    try {
+      let currentTeam: ITeam;
+      let createAction: cardMovementAction[] =
+        await TrelloActionsController._getCreationActionOfCard(cardId);
+      let actions: cardMovementAction[] =
+        await TrelloActionsController._getCardMovementsActions(cardId);
+      actions = _.sortBy(actions, "date");
+
+      let dueChanges: cardMovementAction[] =
+        await TrelloActionsController._getCardDeadlineActions(cardId);
+      /// First create status
+      let board = departments.find(
+        (i) => i.boardId === createAction[0].data.board.id
+      );
+      if (board) {
+        let listId = createAction[0].data.list.id;
+        let sideList = board?.sideLists?.find((l) => l.listId === listId);
+        let team = board.teams.find((t) => t.listId === listId);
+        let list = board.lists.find((l) => l.listId === listId);
+        let status = list
+          ? list.name
+          : team
+          ? "In Progress"
+          : sideList
+          ? "Tasks Board"
+          : "";
+        if (team) currentTeam = team;
+        let movements: Movement[] = [
+          {
+            status,
+            listId: listId,
+            movedAt: createAction[0].date,
+            isTeam: team ? true : false,
+          },
+        ];
+        // next actions
+        movements = [
+          ...movements,
+          ...actions.map((action, index) => {
+            let board = departments.find(
+              (i) => i.boardId === action.data.board.id
+            );
+            let listId = action.data.listAfter.id;
+            let sideList = board?.sideLists.find((l) => l.listId === listId);
+            let team = board.teams.find((t) => t.listId === listId);
+            let list = board.lists.find((l) => l.listId === listId);
+            let status = list
+              ? list.name
+              : team
+              ? "In Progress"
+              : sideList
+              ? "Tasks Board"
+              : "";
+
+            let movement: Movement = {
+              movedAt: action.date,
+              status: status,
+              isTeam: team ? true : false,
+            };
+
+            if (["Done", "Shared", "Cancled"].includes(status)) {
+              let journeyDeadline = dueChanges[0]
+                ? dueChanges[0].data.card.due
+                : due;
+              delete dueChanges[0];
+              movement.journeyDeadline = journeyDeadline;
+            }
+            return movement;
+          }),
+        ];
+        // console.log({ movements });
+        return { movements, currentTeam };
+      } else {
+        return {
+          movements: [],
+          currentTeam: null,
+        };
+      }
+    } catch (error) {
+      logger.error({ error });
+    }
   }
 
   static async moveTaskOnTrello(

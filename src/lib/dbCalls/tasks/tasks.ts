@@ -337,10 +337,7 @@ class TaskDB {
       task.cardId = data?.cardId ? data.cardId : task.cardId;
       task.boardId = data?.boardId ? data.boardId : task.boardId;
       task.description = data.description;
-      task.teamId =
-        data?.teamId === null || data?.teamId?.toString().length > 0
-          ? new ObjectId(data.teamId)
-          : task.teamId;
+      task.teamId = data.teamId ? new ObjectId(data.teamId) : task.teamId;
       task.deadline = data.deadline;
       task.start = data.start ? data.start : null;
       if (data.attachedFile) {
@@ -366,6 +363,7 @@ class TaskDB {
   static async __createTaskByTrelloDB(data: TaskData) {
     try {
       let task = await Tasks.findOne({ cardId: data.cardId });
+      console.log({ task });
       if (task) {
         task = await task.set(data).save();
         await io.sockets.emit("update-task", task);

@@ -29,12 +29,12 @@ export default class TrelloHooks {
 
   static async handleWebhookUpdateCard(req: Request, res: Response) {
     try {
-      taskRoutesQueue.push(async (cb) => {
-        let payload = req.body;
-        let eventId = payload?.action?.id;
-        console.log({ eventId });
-        if (!processedEvents.has(eventId)) {
-          processedEvents.add(eventId);
+      let payload = req.body;
+      let eventId = payload?.action?.id;
+      console.log({ eventId, eventHappened: processedEvents.has(eventId) });
+      if (!processedEvents.has(eventId) && eventId !== undefined) {
+        processedEvents.add(eventId);
+        taskRoutesQueue.push(async (cb) => {
           let hook = new TrelloWebhook(req.body, "task");
           await hook.start();
           const timeoutPromise = new Promise((resolve) => {
@@ -43,8 +43,8 @@ export default class TrelloHooks {
             }, 50000);
           });
           res.send("Done");
-        } else res.send("Implemented before");
-      });
+        });
+      } else res.send("Implemented before");
     } catch (error) {
       logger.error({ handleWebhookUpdateCardError: error });
     }

@@ -311,7 +311,6 @@ DepartmentSchema.methods.createDepartmentBoard = async function (
     });
     lists = await Promise.all(listsResult);
     sideLists = await Promise.all(sideListsIds);
-    console.log({ sideLists });
     // 3- create teams
     let teamsResult = await teams.map(async (team, index) => {
       result = await TrelloActionsController.addListToBoard(

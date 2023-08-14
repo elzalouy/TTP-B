@@ -53,6 +53,8 @@ export interface IDepartmentState {
   lists?: IList[];
   color?: string;
   teams?: ITeam[];
+  sideLists?: IList[];
+  teamsFromTrello?: ITeam[];
   boardId?: string;
   boardURL?: string;
   removeTeams?: string[];

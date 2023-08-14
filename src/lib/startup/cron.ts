@@ -8,6 +8,7 @@ import {
 } from "../backgroundJobs/actions/project.actions.cron";
 import { initializeQueue } from "../backgroundJobs/actions/init.actions.queue";
 import { initializeTTPTasks, initializeTrelloBoards } from "./db/dbConnect";
+import { taskRoutesQueue } from "../backgroundJobs/routes/tasks.Route.Queue";
 
 export default async function (
   io: Server<DefaultEventsMap, DefaultEventsMap, DefaultEventsMap, any>
@@ -23,9 +24,9 @@ export default async function (
       projectsPassedDate(io).start();
     });
     initializeQueue.push(async (cb) => {
-      await initializeTrelloBoards().then(() =>
-        initializeTTPTasks().then(() => cb(null, true))
-      );
+      await initializeTrelloBoards().then(() => {
+        initializeTTPTasks().then(() => cb(null, true));
+      });
     });
   } catch (error) {
     logger.error({ errorOldNotificationsCron: error });

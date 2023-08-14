@@ -105,6 +105,8 @@ export interface Movement {
   status: string;
   movedAt: string;
   journeyDeadline?: string;
+  listId?: string;
+  isTeam?: boolean;
 }
 export const statusLists = [
   "In Progress",

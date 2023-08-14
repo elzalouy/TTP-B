@@ -248,6 +248,7 @@ export type Board = {
   id: string;
   name: string;
   lists?: List[];
+  closed?: boolean;
 };
 export type List = {
   id: string;
@@ -292,3 +293,46 @@ export type Card = {
   cardRole: boolean;
   attachments?: AttachmentResponse[];
 };
+
+export interface cardMovementAction {
+  id: string;
+  idMemberCreator: string;
+  data: {
+    card: {
+      closed?: boolean;
+      start?: string;
+      due?: string;
+      idList?: string;
+      id: string;
+      name?: string;
+      idShort?: number;
+      shortLink?: string;
+      desc?: string;
+    };
+    board: {
+      id?: string;
+      name?: string;
+      shortLink?: string;
+    };
+    listSource?: { id: string };
+    list?: { id: string; name: string };
+    listAfter?: { id: string; name: string };
+    listBefore?: { id: string; name: string };
+  };
+  appCreator: any;
+  type: string; // like 'updateCard'
+  date: string;
+  limits: any;
+  memberCreator: {
+    id: string;
+    activityBlocked: boolean;
+    avatarHash: string;
+    avatarUrl: string;
+    fullName: string;
+    idMemberReferrer: any;
+    initials: string;
+    nonPublic: any;
+    nonPublicAvailable: boolean;
+    username: string;
+  };
+}

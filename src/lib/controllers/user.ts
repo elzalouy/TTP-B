@@ -147,7 +147,6 @@ const UserController = class UserController extends UserDB {
 
       let findUser = await super.findUserById(token.id);
       if (!findUser) {
-        console.log("user not existed error");
         return customeError("user_not_exist", 409);
       }
 

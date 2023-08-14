@@ -39,6 +39,15 @@ export const movementSchema: Schema<Movement> = new Schema<Movement>({
   journeyDeadline: {
     type: String,
     required: false,
+    default: null,
+  },
+  listId: {
+    type: String,
+    required: false,
+  },
+  isTeam: {
+    type: Boolean,
+    required: false,
   },
 });
 
