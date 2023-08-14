@@ -286,7 +286,6 @@ class TrelloActionsController {
           Accept: "application/json",
         },
       });
-      console.log({ card: await cardResult.json() });
       return await cardResult.json();
     } catch (error) {
       logger.error({ createCardInListError: error });

@@ -28,8 +28,8 @@ export default class TrelloHooks {
   }
 
   static async handleWebhookUpdateCard(req: Request, res: Response) {
-    try {
-      taskRoutesQueue.push(async (cb) => {
+    taskRoutesQueue.push(async (cb) => {
+      try {
         let payload = req.body;
         let eventId = payload?.action?.id;
         // console.log({ eventId, eventHappened: processedEvents.has(eventId) });
@@ -44,9 +44,9 @@ export default class TrelloHooks {
         // });
         res.send("Done");
         // } else res.send("Implemented before");
-      });
-    } catch (error) {
-      logger.error({ handleWebhookUpdateCardError: error });
-    }
+      } catch (error) {
+        logger.error({ handleWebhookUpdateCardError: error });
+      }
+    });
   }
 }

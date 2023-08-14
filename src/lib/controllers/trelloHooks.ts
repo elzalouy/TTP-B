@@ -257,6 +257,7 @@ export default class TrelloWebhook {
                 : task.movements,
             teamListId: isNewTeam ? listId : task.teamListId,
             archivedCard: this.actionRequest.action.data.card.closed,
+            projectId: task.projectId,
           };
 
           if (

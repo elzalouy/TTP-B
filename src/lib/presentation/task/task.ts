@@ -13,20 +13,24 @@ import { createReadStream, readFileSync, statSync } from "fs";
 
 const TaskReq = class TaskReq extends TaskController {
   static async handleCreateTask(req: Request, res: Response) {
-    try {
-      let TaskData: TaskData = req.body;
-      let isValid = createTaskSchema.validate(TaskData);
-      if (isValid.error) return res.status(400).send(isValid.error.details[0]);
-      let result = await super.createTask(TaskData, req.files);
-      if (result) return res.send(result);
-      else
-        res.status(400).send({
-          error: "createTaskError",
-          message: "Something wrong hapenned while creating the task.",
-        });
-    } catch (error: any) {
-      logger.error({ handleCreateTaskError: error });
-    }
+    taskRoutesQueue.push(async (cb) => {
+      try {
+        let TaskData: TaskData = req.body;
+        let isValid = createTaskSchema.validate(TaskData);
+        if (isValid.error)
+          return res.status(400).send(isValid.error.details[0]);
+        let result = await super.createTask(TaskData, req.files);
+        console.log({ result });
+        if (result) return res.send(result);
+        else
+          res.status(400).send({
+            error: "createTaskError",
+            message: "Something wrong hapenned while creating the task.",
+          });
+      } catch (error: any) {
+        logger.error({ handleCreateTaskError: error });
+      }
+    });
   }
 
   static async handleUpdateCard(req: Request, res: Response) {
