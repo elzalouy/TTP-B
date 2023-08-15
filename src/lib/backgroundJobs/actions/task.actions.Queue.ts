@@ -37,23 +37,11 @@ export function moveTaskJob(
   var task;
   updateTaskQueue.push(async (cb) => {
     try {
-      let currentTask = await TaskController.getOneTaskBy({ cardId: cardId });
-      if (currentTask) {
-        let teamList = department.teams.find((item) => item.listId === listId);
-        let statusList = department.lists.find(
-          (item) => item.listId === listId
-        );
-        const result = await TrelloController.moveTaskToDiffList(
-          cardId,
-          teamList?.listId ?? statusList?.listId
-        ).then(() => {
-          TrelloController.__updateCard({
-            cardId: cardId,
-            data: { name: currentTask.name, due: deadline },
-          });
-        });
-        cb(null);
-      }
+      const result = await TrelloController.moveTaskToDiffList(
+        cardId,
+        listId
+      ).then(() => {});
+      cb(null);
     } catch (error) {
       logger.error({ moveTaskJobError: error });
     }

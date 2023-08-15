@@ -428,7 +428,7 @@ export const initializeTTPTasks = async () => {
         );
         let replacement = new Tasks({
           _id: item._id,
-          name: card.name,
+          name: decodeURIComponent(card.name),
           categoryId: item.categoryId,
           subCategoryId: item.subCategoryId,
           boardId: card.idBoard,
@@ -510,7 +510,7 @@ export const initializeTTPTasks = async () => {
           card.due
         );
         let task: TaskInfo = new Tasks({
-          name: card.name,
+          name: decodeURIComponent(card.name),
           boardId: card.idBoard,
           listId: card.idList,
           status: sideList
@@ -523,7 +523,7 @@ export const initializeTTPTasks = async () => {
           teamId: team?._id ?? currentTeam?._id ?? null,
           teamListId: team?.listId ?? currentTeam?.listId ?? null,
           cardId: card.id,
-          description: card?.desc ?? "",
+          description: decodeURIComponent(card?.desc) ?? "",
           start: card?.start ?? null,
           deadline: card?.due ?? null,
           trelloShortUrl: card?.shortUrl,

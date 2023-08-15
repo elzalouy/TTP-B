@@ -175,6 +175,7 @@ export default class TrelloWebhook {
         action: this.actionRequest.action.display.translationKey,
         cardId: this.task.cardId,
       });
+
       let action = this.actionRequest.action.display.translationKey;
       let isNewJourney: boolean,
         task: LeanDocument<TaskInfo & { _id: ObjectId }>,
@@ -235,7 +236,10 @@ export default class TrelloWebhook {
           await Department.find({}),
           new Date(cardDeadline).toLocaleDateString()
         );
-
+        console.log({
+          desc: this.actionRequest.action.data.card.desc,
+          taskDEsc: task.description,
+        });
         if (!isProject) {
           this.task = {
             name: this.actionRequest.action.data.card.name,
