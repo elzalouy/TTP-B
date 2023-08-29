@@ -29,9 +29,9 @@ export default async function (
         initializeTTPTasks().then(() => cb(null, true));
       });
     });
-    initializeQueue.push(async (cb) => {
-      postAsnaphotOfTrelloActions().start();
-    });
+    // initializeQueue.push(async (cb) => {
+    //   postAsnaphotOfTrelloActions().start();
+    // });
   } catch (error) {
     logger.error({ errorOldNotificationsCron: error });
   }
