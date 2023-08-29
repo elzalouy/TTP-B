@@ -1,6 +1,6 @@
 import { AttachmentSchema, TaskInfo } from "./../../types/model/tasks";
 import logger from "../../../logger";
-import Tasks, { FilesSchema, TaskFileSchema } from "../../models/Task";
+import Tasks, { FilesSchema } from "../../models/Task";
 import { TaskData } from "../../types/model/tasks";
 import _ from "lodash";
 import mongoose from "mongoose";
@@ -330,7 +330,6 @@ class TaskDB {
   ) {
     try {
       let task = await Tasks.findOne({ cardId: data.cardId });
-
       task.name = data?.name ? data?.name : task.name;
       task.status = data?.status ? data.status : task.status;
       task.listId = data?.listId ? data.listId : task.listId;
@@ -341,8 +340,7 @@ class TaskDB {
       task.deadline = data.deadline;
       task.start = data.start ? data.start : null;
       if (data.attachedFile) {
-        let file = new TaskFileSchema({ ...data.attachedFile });
-        task.attachedFiles.push(file);
+        task.attachedFiles.push({ ...data.attachedFile });
       }
       if (data.deleteFiles && data?.deleteFiles?.trelloId) {
         task.attachedFiles = _.filter(
@@ -363,7 +361,6 @@ class TaskDB {
   static async __createTaskByTrelloDB(data: TaskData) {
     try {
       let task = await Tasks.findOne({ cardId: data.cardId });
-      console.log({ task });
       if (task) {
         task = await task.set(data).save();
         await io.sockets.emit("update-task", task);
@@ -384,7 +381,9 @@ class TaskDB {
 
   static async __deleteTaskByTrelloDB(data: TaskData) {
     try {
-      let result = await Tasks.findOneAndDelete({ cardId: data.cardId });
+      let result = await Tasks.findOneAndDelete({
+        cardId: data.cardId,
+      });
       return io?.sockets?.emit("delete-task", result);
     } catch (error) {
       logger.error({ __deleteTaskByTrelloDBError: error });

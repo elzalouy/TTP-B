@@ -8,7 +8,7 @@ import NotificationController from "./notification";
 import { projectQueue } from "../backgroundJobs/actions/project.actions.Queue";
 import DepartmentController from "./department";
 import Department from "../models/Department";
-import TrelloActionsController from "./trello";
+import TrelloController from "./trello";
 
 const ProjectController = class ProjectController extends ProjectDB {
   static async createProject(data: ProjectData, user: any) {
@@ -44,7 +44,7 @@ const ProjectController = class ProjectController extends ProjectDB {
     try {
       let project = await super.deleteProjectDB(id);
       projectQueue.push(() => {
-        if (project.cardId) TrelloActionsController.deleteCard(project.cardId);
+        if (project.cardId) TrelloController.deleteCard(project.cardId);
       });
       return project;
     } catch (error) {
@@ -71,7 +71,7 @@ const ProjectController = class ProjectController extends ProjectDB {
       if (data.projectDeadline) projectData.due = data.projectDeadline;
       if (data.startDate) projectData.start = data.startDate;
       projectQueue.push((cb) => {
-        TrelloActionsController.__updateCard({
+        TrelloController.__updateCard({
           cardId: data.cardId,
           data: projectData,
         });

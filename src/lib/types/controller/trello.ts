@@ -242,6 +242,7 @@ export type editCardParams = {
     idList?: string;
     start?: string;
     due?: string;
+    closed?: boolean;
   };
 };
 export type Board = {
@@ -272,8 +273,8 @@ export type Card = {
   url: string;
   badges: [Object];
   checkItemStates: null;
-  closed: false;
-  dueComplete: false;
+  closed: boolean;
+  dueComplete: boolean;
   dateLastActivity: string;
   descData: [Object];
   dueReminder: any;
@@ -294,7 +295,7 @@ export type Card = {
   attachments?: AttachmentResponse[];
 };
 
-export interface cardMovementAction {
+export type TrelloAction = {
   id: string;
   idMemberCreator: string;
   data: {
@@ -319,7 +320,9 @@ export interface cardMovementAction {
     listAfter?: { id: string; name: string };
     listBefore?: { id: string; name: string };
   };
-  appCreator: any;
+  appCreator: {
+    id: string;
+  };
   type: string; // like 'updateCard'
   date: string;
   limits: any;
@@ -335,4 +338,4 @@ export interface cardMovementAction {
     nonPublicAvailable: boolean;
     username: string;
   };
-}
+};

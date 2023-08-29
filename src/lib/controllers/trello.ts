@@ -5,25 +5,38 @@ import { config } from "dotenv";
 import { trelloApi, trelloApiWithUrl } from "../services/trelloApi";
 import { MemberType } from "../types/model/User";
 import fetch, { RequestInit, Response } from "node-fetch";
-import { AttachmentResponse, TaskData } from "../types/model/tasks";
-import { editCardParams, updateCardResponse } from "../types/controller/trello";
+import { AttachmentResponse, TaskData, TaskInfo } from "../types/model/tasks";
+import {
+  Board,
+  Card,
+  List,
+  TrelloAction,
+  editCardParams,
+  updateCardResponse,
+} from "../types/controller/trello";
 import { ProjectData, ProjectInfo } from "../types/model/Project";
-import { IDepartment } from "../types/model/Department";
+import { IDepartment, ListTypes } from "../types/model/Department";
+import _ from "lodash";
+import { ITrelloActionsOfSnapshot } from "../types/model/TrelloActionsSnapshots";
+import TrelloSnapshot from "../models/TrelloSnapshots";
+import Tasks from "../models/Task";
+import { ObjectId } from "mongodb";
+import { postAsnaphotOfTrelloActions } from "../backgroundJobs/actions/trello.actions.cron";
 
 config();
 var FormData = require("form-data");
 
-class TrelloActionsController {
+class TrelloController {
   static async getBoardsInTrello(filter: string) {
-    return await TrelloActionsController.__getTrelloBoards(filter);
+    return await TrelloController.__getTrelloBoards(filter);
   }
 
   static async getSingleBoardInfo(id: string) {
-    return await TrelloActionsController.__singleBoardInfo(id);
+    return await TrelloController.__singleBoardInfo(id);
   }
 
   static async getMembersInTrello() {
-    return await TrelloActionsController.__getAllMembers();
+    return await TrelloController.__getAllMembers();
   }
 
   static async addMemberToBoard(
@@ -31,60 +44,57 @@ class TrelloActionsController {
     memberId: string,
     type: MemberType
   ) {
-    return await TrelloActionsController.__addMember(boardId, memberId, type);
+    return await TrelloController.__addMember(boardId, memberId, type);
   }
 
   static async addListToBoard(boardId: string, listName: string) {
-    return await TrelloActionsController.__addList(boardId, listName);
+    return await TrelloController.__addList(boardId, listName);
   }
 
   static async removeMemberFromBoard(boardId: string, memberId: string) {
-    return await TrelloActionsController.__removeMember(boardId, memberId);
+    return await TrelloController.__removeMember(boardId, memberId);
   }
 
   static async addListToArchieve(listId: string) {
-    return await TrelloActionsController.__archieveList(listId);
+    return await TrelloController.__archieveList(listId);
   }
 
   static async createWebHook(idModel: string, urlInConfig: string) {
-    return await TrelloActionsController.__addWebHook(idModel, urlInConfig);
+    return await TrelloController.__addWebHook(idModel, urlInConfig);
   }
 
   static async deleteBoard(id: string) {
-    return await TrelloActionsController.__deleteBoard(id);
+    return await TrelloController.__deleteBoard(id);
   }
   static async deleteCard(id: string) {
-    return await TrelloActionsController.__deleteCard(id);
+    return await TrelloController.__deleteCard(id);
   }
   static async createCardInList(data: TaskData) {
-    return await TrelloActionsController.__createCard(data);
+    return await TrelloController.__createCard(data);
   }
   static async downloadAttachment(cardId: string, attachmentId: string) {
-    return await TrelloActionsController.__downloadAttachment(
-      cardId,
-      attachmentId
-    );
+    return await TrelloController.__downloadAttachment(cardId, attachmentId);
   }
   static async createAttachmentOnCard(
     cardId: string,
     file: Express.Multer.File
   ) {
-    return await TrelloActionsController.__createAttachment(cardId, file);
+    return await TrelloController.__createAttachment(cardId, file);
   }
 
   static async createNewBoard(name: string, color: string) {
-    return await TrelloActionsController.__createNewBoard(name, color);
+    return await TrelloController.__createNewBoard(name, color);
   }
 
   static async updateBoard(
     id: string,
     values: { name: string; color: string }
   ) {
-    return await TrelloActionsController.__updateBoard(id, values);
+    return await TrelloController.__updateBoard(id, values);
   }
 
   static async removeWebhook(id: string) {
-    return await TrelloActionsController.__removeWebhook(id);
+    return await TrelloController.__removeWebhook(id);
   }
 
   static async moveTaskToDiffList(
@@ -92,11 +102,34 @@ class TrelloActionsController {
     listId: string,
     due?: string
   ) {
-    return await TrelloActionsController.__moveTaskToDiffList(
+    return await TrelloController.__moveTaskToDiffList(
       cardId,
       listId,
       due ?? undefined
     );
+  }
+  static async getBoardsActions(
+    boardId: string,
+    format: "list" | "count",
+    limit?: number,
+    page?: number
+  ) {
+    try {
+      let url = `boards/${boardId}/actions/?format=${format}&`;
+      let apiUrl = trelloApi(url);
+      let result;
+      await fetch(apiUrl, {
+        method: "GET",
+        headers: {
+          Accept: "application/json",
+        },
+      }).then(async (res) => {
+        result = await res.json();
+      });
+      return result;
+    } catch (error) {
+      logger.error({ getBoardsActionsError: error });
+    }
   }
 
   static async __moveTaskToDiffList(
@@ -306,6 +339,7 @@ class TrelloActionsController {
       logger.error({ deleteTasksError: error });
     }
   }
+
   static async __getCardsInBoard(boardId: string) {
     try {
       let url = trelloApi(`boards/${boardId}/cards/all?`);
@@ -506,7 +540,16 @@ class TrelloActionsController {
       logger.error({ getTrelloMombersError: error });
     }
   }
-
+  static async __getCard(cardId: string) {
+    try {
+      let url = trelloApi(`cards/${cardId}?`);
+      let card = await fetch(url, { method: "GET" });
+      if (card.ok === true) return await card.json();
+      else return null;
+    } catch (error) {
+      logger.error({ getCardError: error });
+    }
+  }
   static async __getTrelloBoards(filter: string) {
     try {
       let boardsApi = trelloApi(
@@ -575,6 +618,42 @@ class TrelloActionsController {
       logger.error({ downloadAttachment: error });
     }
   }
+  static async addCommentToCard(id: string, text: string) {
+    let trelloApi = `cards/${id}/actions/comments?text=${text}&`;
+    let result = await fetch(trelloApi, {
+      method: "POST",
+      headers: {
+        Accept: "*/*",
+        "Content-Type": "application/json",
+      },
+    });
+    if (result.ok) return await result.json();
+    else return null;
+  }
+  static async uodateCommentToCard(id: string, text: string, idAction: string) {
+    let trelloApi = `cards/${id}/actions/${idAction}/comments?text=${text}&`;
+    let result = await fetch(trelloApi, {
+      method: "PUT",
+      headers: {
+        Accept: "*/*",
+        "Content-Type": "application/json",
+      },
+    });
+    if (result.ok) return await result.json();
+    else return null;
+  }
+  static async deleteCommentToCard(id: string, text: string, idAction: string) {
+    let trelloApi = `cards/${id}/actions/${idAction}/comments?`;
+    let result = await fetch(trelloApi, {
+      method: "DELETE",
+      headers: {
+        Accept: "*/*",
+        "Content-Type": "application/json",
+      },
+    });
+    if (result.ok) return await result.json();
+    else return null;
+  }
 
   static async __updateCard({ cardId, data }: editCardParams) {
     try {
@@ -585,8 +664,10 @@ class TrelloActionsController {
         start: data.start,
         idList: data.idList,
         idBoard: data.idBoard,
+        closed: false,
       };
-      logger.info({ body });
+      if (data?.closed === true) body.closed = true;
+      else body.closed = false;
 
       let params: RequestInit = {
         method: "PUT",
@@ -596,6 +677,7 @@ class TrelloActionsController {
         },
         body: JSON.stringify(body),
       };
+
       let api = trelloApi(`cards/${cardId}?`);
       let response: any;
       await fetch(api, params)
@@ -611,6 +693,137 @@ class TrelloActionsController {
       logger.error({ __updateCardError: error });
     }
   }
+
+  static async __postSnapshotOfActions() {
+    try {
+      let boards: Board[] = await TrelloController.getBoardsInTrello("open");
+      let pages = [];
+      let actionsByBoards = await Promise.all(
+        boards.map(async (i) => {
+          let count: number = await TrelloController.getBoardsActions(
+            i.id,
+            "count"
+          ).then((res: any) => res._value);
+          pages = new Array(Math.ceil(count / 1000)).fill(0);
+          let actions: ITrelloActionsOfSnapshot[] = _.flattenDeep(
+            await Promise.all(
+              pages.map(async (page, index) => {
+                return await TrelloController.getBoardsActions(
+                  i.id,
+                  "list",
+                  1000,
+                  index + 1
+                );
+              })
+            )
+          );
+          return { total: count, actions };
+        })
+      );
+      let snapShot = new TrelloSnapshot({
+        actions: _.flattenDeep(
+          actionsByBoards.map((actions) => actions.actions)
+        ),
+        createdAt: new Date(Date.now()),
+      });
+      await snapShot.save();
+      return actionsByBoards;
+    } catch (error) {
+      logger.log({ __postSnapshotOfActionsError: error });
+    }
+  }
+
+  static async restoreTrelloCards(id: string) {
+    try {
+      let boards: Board[] = await TrelloController.getBoardsInTrello("open");
+      boards = await Promise.all(
+        boards?.map(async (item: Board) => {
+          let lists: List[] = await TrelloController.__getBoardLists(item.id);
+          item.lists = lists;
+          return item;
+        })
+      );
+      let activities = await TrelloSnapshot.findOne({
+        _id: new ObjectId(id),
+      });
+      let actions = activities?.actions?.filter((i) =>
+        ["createCard", "updateCard", "deleteCard"].includes(i.type)
+      );
+
+      TrelloController.__restoreTaskActions(actions, boards);
+      return { activities };
+    } catch (error) {
+      logger.error({ error });
+    }
+  }
+
+  static async __restoreTaskActions(
+    actions: ITrelloActionsOfSnapshot[],
+    boards: Board[]
+  ) {
+    try {
+      let creativeBoard = boards.find(
+        (board) => board.name === Config.get("CreativeBoard")
+      );
+      let deletedCards = actions?.filter((i) => i.type === "deleteCard");
+      console.log({ deletedCards });
+      let newCards: Card[] = await Promise.all(
+        deletedCards.map(async (cardAction) => {
+          let cardActions = actions.filter(
+            (action) => action.data.card.id === cardAction.data.card.id
+          );
+          let board =
+            boards.find((board) => board.id === cardAction.data.board.id) ??
+            creativeBoard;
+          let list =
+            board.lists.find((i) => i.name === cardAction.data.list.name) ??
+            creativeBoard.lists.find((list) => list.name === "Tasks Board");
+          let card: Card = await TrelloController.__createCard({
+            name: cardAction.data?.card?.name ?? "",
+            listId: list?.id,
+            boardId: board?.id,
+          });
+          await TrelloController.__addWebHook(card.id, "trelloWebhookUrlTask");
+          await cardActions.map(async (action) => {
+            console.log({ actionType: action.type });
+            if (action.type === "updateCard")
+              await TrelloController.__updateCard({
+                cardId: card.id,
+                data: {
+                  name: action.data.card.name,
+                  idList: ListTypes.includes(action.data.list.name)
+                    ? board.lists.find(
+                        (list) => list.name === action.data.list.name
+                      ).id
+                    : list.id,
+                  idBoard: board.id,
+                  desc: action.data?.card?.desc ?? card?.desc ?? undefined,
+                  due: action.data?.card?.due ?? card?.due ?? undefined,
+                  start: action.data?.card?.start ?? card?.start ?? undefined,
+                },
+              });
+            else if (action.type === "commentCard")
+              await TrelloController.addCommentToCard(
+                card.id,
+                action.data.text
+              );
+          });
+          return card;
+        })
+      );
+    } catch (error) {
+      logger.error({ restoreTaskActionsError: error });
+    }
+  }
+
+  static async deleteOldSnapshots() {
+    try {
+      let snapshots = await TrelloSnapshot.find({}).sort({ createdAt: 1 });
+      // if(snapshots.length>15)
+    } catch (error) {
+      logger.error({ error });
+    }
+  }
 }
 
-export default TrelloActionsController;
+export default TrelloController;

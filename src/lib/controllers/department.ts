@@ -6,7 +6,7 @@ import {
   IDepartmentState,
   ListTypes,
 } from "../types/model/Department";
-import TrelloActionsController from "./trello";
+import TrelloController from "./trello";
 import { ObjectId } from "mongodb";
 export default class DepartmentController {
   static async createDepartment(data: IDepartment) {
@@ -104,7 +104,7 @@ export default class DepartmentController {
       }
     } catch (error: any) {
       if (error?.error === "MongoError" && error?.id) {
-        await TrelloActionsController.deleteBoard(error?.boardId);
+        await TrelloController.deleteBoard(error?.boardId);
         return error;
       }
       logger.error({ createDepartmentError: error });
@@ -115,7 +115,7 @@ export default class DepartmentController {
     try {
       let boards = await Department.find({}).select("boardId");
       boards.map(
-        async (item) => await TrelloActionsController.deleteBoard(item.boardId)
+        async (item) => await TrelloController.deleteBoard(item.boardId)
       );
       await Department.deleteMany({});
     } catch (error) {

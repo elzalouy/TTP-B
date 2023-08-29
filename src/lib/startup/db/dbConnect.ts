@@ -7,14 +7,9 @@ import UserDB from "../../dbCalls/user/user";
 import Config from "config";
 import Department from "../../models/Department";
 import DepartmentController from "../../controllers/department";
-import TrelloActionsController from "../../controllers/trello";
+import TrelloController from "../../controllers/trello";
 import { IDepartment, IDepartmentState } from "../../types/model/Department";
-import {
-  Board,
-  Card,
-  cardMovementAction,
-  List,
-} from "../../types/controller/trello";
+import { Board, Card, TrelloAction, List } from "../../types/controller/trello";
 import { ListTypes } from "../../types/model/Department";
 import _, { create } from "lodash";
 import { TaskInfo } from "../../types/model/tasks";
@@ -73,7 +68,7 @@ const initializeAdminUser = async () => {
 };
 export const initializeTrelloMembers = async () => {
   try {
-    // let members = await TrelloActionsController.__getAllMembers();
+    // let members = await TrelloController.__getAllMembers();
   } catch (error) {
     logger.error(error);
   }
@@ -95,7 +90,7 @@ export const initializeTrelloBoards = async () => {
       intersection: IDepartmentState[];
     let newDeps: IDepartmentState[] = [];
 
-    allBoards = await TrelloActionsController.getBoardsInTrello("open");
+    allBoards = await TrelloController.getBoardsInTrello("open");
     boardsIds = allBoards?.map((item) => item.id);
     allDepartments = await Department.find({});
 
@@ -112,7 +107,7 @@ export const initializeTrelloBoards = async () => {
     );
     notExistedOnTrello = await Promise.all(
       await notExistedOnTrello.map(async (item) => {
-        let board = await TrelloActionsController.createNewBoard(
+        let board = await TrelloController.createNewBoard(
           item.name,
           item.color
         );
@@ -120,7 +115,7 @@ export const initializeTrelloBoards = async () => {
         listTypes = ListTypes;
         await Promise.all(
           listTypes?.map(async (list) => {
-            let listInBoard = await TrelloActionsController.addListToBoard(
+            let listInBoard = await TrelloController.addListToBoard(
               board.id,
               list
             );
@@ -132,7 +127,7 @@ export const initializeTrelloBoards = async () => {
           item.teams
             .filter((t) => t.isDeleted === false)
             ?.map(async (team, index) => {
-              let teamInBoard = await TrelloActionsController.addListToBoard(
+              let teamInBoard = await TrelloController.addListToBoard(
                 board.id,
                 team.name
               );
@@ -141,7 +136,7 @@ export const initializeTrelloBoards = async () => {
         );
         await Promise.all(
           item.sideLists.map(async (list, index) => {
-            let teamInBoard = await TrelloActionsController.addListToBoard(
+            let teamInBoard = await TrelloController.addListToBoard(
               board.id,
               list.name
             );
@@ -168,9 +163,7 @@ export const initializeTrelloBoards = async () => {
     notExistedOnTTP = allBoards.filter((item) => !depsIds.includes(item.id));
     newDeps = await Promise.all(
       await notExistedOnTTP?.map(async (item) => {
-        let lists: List[] = await TrelloActionsController.__getBoardLists(
-          item.id
-        );
+        let lists: List[] = await TrelloController.__getBoardLists(item.id);
         item.lists = lists;
         listTypes = ListTypes;
         let teams = lists.filter((item) => !listTypes.includes(item.name));
@@ -183,12 +176,7 @@ export const initializeTrelloBoards = async () => {
               listExisted = item?.lists?.find((list) => listName === list.name);
               let listId =
                 listExisted?.id ??
-                (
-                  await TrelloActionsController.addListToBoard(
-                    item.id,
-                    listName
-                  )
-                )?.id;
+                (await TrelloController.addListToBoard(item.id, listName))?.id;
               return {
                 name: listName,
                 listId: listId,
@@ -218,7 +206,7 @@ export const initializeTrelloBoards = async () => {
     intersection = await Promise.all(
       intersection?.map(async (item) => {
         let board = allBoards?.find((board) => board.id === item.boardId);
-        board.lists = await TrelloActionsController.__getBoardLists(board.id);
+        board.lists = await TrelloController.__getBoardLists(board.id);
         listTypes = ListTypes;
         item.name = board.name;
         item.boardId = board.id;
@@ -230,12 +218,7 @@ export const initializeTrelloBoards = async () => {
             let list = item.lists.find((i) => i.name === listName);
             let listId = listExisted
               ? listExisted.id
-              : (
-                  await TrelloActionsController.addListToBoard(
-                    board.id,
-                    listName
-                  )
-                ).id;
+              : (await TrelloController.addListToBoard(board.id, listName)).id;
             list.listId = listId;
             return list;
           })
@@ -267,12 +250,8 @@ export const initializeTrelloBoards = async () => {
             );
             let listID = listExisted
               ? listExisted.id
-              : (
-                  await TrelloActionsController.addListToBoard(
-                    board.id,
-                    sideI.name
-                  )
-                ).id;
+              : (await TrelloController.addListToBoard(board.id, sideI.name))
+                  .id;
             sideI.listId = listID;
             return sideI;
           })
@@ -331,7 +310,7 @@ export const initializeTrelloBoards = async () => {
       console.log({ err: err.writeErrors[0].err });
     });
     allDepartments.forEach(async (item) =>
-      TrelloActionsController.__addWebHook(item.boardId, "trelloWebhookUrlTask")
+      TrelloController.__addWebHook(item.boardId, "trelloWebhookUrlTask")
     );
   } catch (error) {
     logger.error(error);
@@ -353,12 +332,10 @@ export const initializeTTPTasks = async () => {
       notExistedOnTTP: Card[];
 
     // get the data
-    boards = await TrelloActionsController.getBoardsInTrello("all");
+    boards = await TrelloController.getBoardsInTrello("all");
     boards = await Promise.all(
       boards?.map(async (item) => {
-        let lists: List[] = await TrelloActionsController.__getBoardLists(
-          item.id
-        );
+        let lists: List[] = await TrelloController.__getBoardLists(item.id);
         item.lists = lists;
         return item;
       })
@@ -368,17 +345,16 @@ export const initializeTTPTasks = async () => {
     cards = _.flattenDeep(
       await Promise.all(
         boards?.map(async (item) => {
-          let boardCards: Card[] =
-            await TrelloActionsController.__getCardsInBoard(item.id);
+          let boardCards: Card[] = await TrelloController.__getCardsInBoard(
+            item.id
+          );
           return boardCards;
         })
       )
     );
     cards = await Promise.all(
       cards?.map(async (item) => {
-        let attachments = await TrelloActionsController.__getCardAttachments(
-          item.id
-        );
+        let attachments = await TrelloController.__getCardAttachments(item.id);
         item.attachments = attachments ?? [];
         return item;
       })
@@ -583,7 +559,7 @@ export const initializeTTPTasks = async () => {
         item.archivedCard = true;
         return item;
         // if (list && board) {
-        //   let card: Card = await TrelloActionsController.__createCard({
+        //   let card: Card = await TrelloController.__createCard({
         //     boardId: board.id,
         //     listId: list.id,
         //     description: item?.description ? item.description : "",
@@ -664,7 +640,7 @@ export const initializeTTPTasks = async () => {
     Tasks.bulkWrite(update, {});
     console.log("update hooks");
     tasks.forEach(async (item) => {
-      TrelloActionsController.__addWebHook(item.cardId, "trelloWebhookUrlTask");
+      TrelloController.__addWebHook(item.cardId, "trelloWebhookUrlTask");
     });
   } catch (error) {
     logger.error({ error });

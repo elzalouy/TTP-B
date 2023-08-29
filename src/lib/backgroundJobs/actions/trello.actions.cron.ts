@@ -7,6 +7,7 @@ import {
   initializeTrelloBoards,
   initializeTrelloMembers,
 } from "../../startup/db/dbConnect";
+import TrelloController from "../../controllers/trello";
 export function initializeTrelloBoardsJob() {
   return new CronJob(
     "0 6 * * *",
@@ -39,6 +40,20 @@ export function initializeSystemTasksJob() {
     "0 6 * * *",
     async () => {
       await initializeTTPTasks();
+    },
+    null,
+    true,
+    "Asia/Riyadh",
+    null,
+    true
+  );
+}
+
+export function postAsnaphotOfTrelloActions() {
+  return new CronJob(
+    "* 12 * * *",
+    async () => {
+      await TrelloController.__postSnapshotOfActions();
     },
     null,
     true,

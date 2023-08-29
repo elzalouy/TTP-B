@@ -176,7 +176,6 @@ TaskSchema.static("getTasksAsCSV", async function (filterIds: string[]) {
           return Object?.values(item)?.toString();
         })
         .join("\n");
-      // const newTaskCsvFile=appendFileSync()
       return csvData;
     }
   } catch (error) {
@@ -186,5 +185,4 @@ TaskSchema.static("getTasksAsCSV", async function (filterIds: string[]) {
 });
 
 const Tasks = model<TaskInfo, TasksModel>("tasks", TaskSchema);
-export const TaskFileSchema = model("attachedFiles", FilesSchema);
 export default Tasks;
