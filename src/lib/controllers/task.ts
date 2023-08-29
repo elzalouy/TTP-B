@@ -1,7 +1,6 @@
 import { Movement, TaskData, TaskInfo } from "./../types/model/tasks";
 import logger from "../../logger";
 import TaskDB from "../dbCalls/tasks/tasks";
-import TrelloController from "./trello";
 import {
   deleteTaskFromBoardJob,
   moveTaskJob,
@@ -16,8 +15,8 @@ import {
   ITeam,
   ListTypes,
 } from "../types/model/Department";
-import TrelloActionsController from "./trello";
-import { Board, Card, cardMovementAction } from "../types/controller/trello";
+import TrelloController from "./trello";
+import { Board, Card, TrelloAction } from "../types/controller/trello";
 import _, { uniqueId } from "lodash";
 import Tasks from "../models/Task";
 import { writeFile } from "fs";
@@ -65,20 +64,20 @@ class TaskController extends TaskDB {
   ) {
     try {
       let currentTeam: ITeam;
-      let createAction: cardMovementAction[] =
-        await TrelloActionsController._getCreationActionOfCard(cardId);
-      let actions: cardMovementAction[] =
-        await TrelloActionsController._getCardMovementsActions(cardId);
+      let createAction: TrelloAction[] =
+        await TrelloController._getCreationActionOfCard(cardId);
+      let actions: TrelloAction[] =
+        await TrelloController._getCardMovementsActions(cardId);
       actions = _.sortBy(actions, "date");
 
-      let dueChanges: cardMovementAction[] =
-        await TrelloActionsController._getCardDeadlineActions(cardId);
+      let dueChanges: TrelloAction[] =
+        await TrelloController._getCardDeadlineActions(cardId);
       /// First create status
       let board = departments.find(
-        (i) => i.boardId === createAction[0].data.board.id
+        (i) => i.boardId === createAction[0]?.data.board.id
       );
       if (board) {
-        let listId = createAction[0].data.list.id;
+        let listId = createAction[0]?.data?.list?.id;
         let sideList = board?.sideLists?.find((l) => l.listId === listId);
         let team = board.teams.find((t) => t.listId === listId);
         let list = board.lists.find((l) => l.listId === listId);
@@ -103,9 +102,9 @@ class TaskController extends TaskDB {
           ...movements,
           ...actions.map((action, index) => {
             let board = departments.find(
-              (i) => i.boardId === action.data.board.id
+              (i) => i.boardId === action?.data?.board?.id
             );
-            let listId = action.data.listAfter.id;
+            let listId = action?.data?.listAfter?.id;
             let sideList = board?.sideLists.find((l) => l.listId === listId);
             let team = board.teams.find((t) => t.listId === listId);
             let list = board.lists.find((l) => l.listId === listId);
@@ -125,7 +124,7 @@ class TaskController extends TaskDB {
 
             if (["Done", "Shared", "Cancled"].includes(status)) {
               let journeyDeadline = dueChanges[0]
-                ? dueChanges[0].data.card.due
+                ? dueChanges[0]?.data?.card.due
                 : due;
               delete dueChanges[0];
               movement.journeyDeadline = journeyDeadline;
@@ -374,7 +373,7 @@ class TaskController extends TaskDB {
   }
   static async __createNotSavedCardsOnBoard(board: IDepartmentState) {
     try {
-      let cards: Card[] = await TrelloActionsController.__getCardsInBoard(
+      let cards: Card[] = await TrelloController.__getCardsInBoard(
         board.boardId
       );
       if (cards) {
@@ -417,7 +416,7 @@ class TaskController extends TaskDB {
               task.teamId = isStatusList ? null : cardList._id;
               await new Tasks(task).save();
             }
-            await TrelloActionsController.__addWebHook(
+            await TrelloController.__addWebHook(
               task.cardId,
               "trelloWebhookUrlTask"
             );

@@ -2,8 +2,10 @@ import { customeError } from "../../utils/errorUtils";
 import { Request, Response } from "express";
 import logger from "../../../logger";
 import BoardController from "../../controllers/trello";
-import { webhookUpdateInterface } from "../../types/controller/trello";
+import { Board, webhookUpdateInterface } from "../../types/controller/trello";
 import { updateTaskQueue } from "../../backgroundJobs/actions/task.actions.Queue";
+import _ from "lodash";
+import { taskRoutesQueue } from "../../backgroundJobs/routes/tasks.Route.Queue";
 
 const BoardReq = class BoardReq extends BoardController {
   static async handleGetBoards(req: Request, res: Response) {
@@ -19,6 +21,7 @@ const BoardReq = class BoardReq extends BoardController {
       return res.status(500).send(customeError("server_error", 500));
     }
   }
+
   static async handleGetMembers(req: Request, res: Response) {
     try {
       let members = await super.getMembersInTrello();
@@ -76,6 +79,26 @@ const BoardReq = class BoardReq extends BoardController {
     } catch (error) {
       logger.error({ handleGetBoards: error });
       return res.status(500).send(customeError("server_error", 500));
+    }
+  }
+
+  static async postSnapshotOfActionsFromTrello(req: Request, res: Response) {
+    try {
+      let actionsByBoards = await super.__postSnapshotOfActions();
+      return res.send(actionsByBoards);
+    } catch (error) {
+      logger.error({ getBackupCardsFromTrelloError: error });
+    }
+  }
+
+  static async restoreNotExistedOnTrello(req: Request, res: Response) {
+    try {
+      taskRoutesQueue.push(async (cb) => {
+        let { activities } = await super.restoreTrelloCards(req.params.id);
+      });
+      res.send({ process: "Done" });
+    } catch (error) {
+      logger.error({ restoreNotExistedOnTrelloError: error });
     }
   }
 };

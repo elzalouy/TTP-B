@@ -6,7 +6,7 @@ import TaskController from "./task";
 import config from "config";
 import Project from "../models/Project";
 import { io } from "../..";
-import TrelloActionsController from "./trello";
+import TrelloController from "./trello";
 import logger from "../../logger";
 import ProjectController from "./project";
 import { IDepartment, IList, ITeam } from "../types/model/Department";
@@ -52,7 +52,6 @@ export default class TrelloWebhook {
           return await this.deleteCard();
         case "updateCard":
           return await this.updateCard();
-
         case "moveCardToBoard":
           return await this.updateCard();
         default:
@@ -149,6 +148,7 @@ export default class TrelloWebhook {
             team && this.actionRequest?.action?.data?.listBefore?.id
               ? new Date(Date.now())
               : this.task.assignedAt,
+          archivedCard: this.actionRequest.action.data.card?.closed ?? false,
         };
         return await TaskController.createTaskByTrello(this.task);
       }
@@ -303,7 +303,7 @@ export default class TrelloWebhook {
       });
       if (existed) return await this.updateProject();
       else {
-        await TrelloActionsController.deleteCard(
+        await TrelloController.deleteCard(
           this.actionRequest.action.data.card.id
         );
       }
@@ -345,7 +345,7 @@ export default class TrelloWebhook {
       let data = this.actionRequest.action.data.card;
       let project = await Project.findOne({ cardId: data.id });
       if (project) {
-        await TrelloActionsController.__createProject(
+        await TrelloController.__createProject(
           this.actionRequest.action.data.list.id,
           {
             name: project.name,

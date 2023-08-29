@@ -2,7 +2,7 @@ import Joi from "joi";
 import _ from "lodash";
 import { model, Schema } from "mongoose";
 import logger from "../../logger";
-import TrelloActionsController from "../controllers/trello";
+import TrelloController from "../controllers/trello";
 import { createBoardResponse } from "../types/controller/trello";
 import {
   IDepartment,
@@ -277,14 +277,11 @@ DepartmentSchema.methods.createDepartmentBoard = async function (
       board: createBoardResponse | any,
       result: { id: string } | any;
     // 1- create board
-    board = await TrelloActionsController.createNewBoard(this.name, this.color);
+    board = await TrelloController.createNewBoard(this.name, this.color);
     if (board.id && board.url) {
       this.boardId = board.id;
       this.boardURL = board.url;
-      await TrelloActionsController.createWebHook(
-        board.id,
-        "trelloWebhookUrlTask"
-      );
+      await TrelloController.createWebHook(board.id, "trelloWebhookUrlTask");
     } else
       return {
         error: "Boart Error",
@@ -294,18 +291,12 @@ DepartmentSchema.methods.createDepartmentBoard = async function (
     //2- create lists
     let departmentLists = lists;
     let listsResult = await departmentLists.map(async (list, index) => {
-      result = await TrelloActionsController.addListToBoard(
-        board.id,
-        list.name
-      );
+      result = await TrelloController.addListToBoard(board.id, list.name);
       list.listId = result.id;
       return list;
     });
     let sideListsIds = await sideLists.map(async (item) => {
-      result = await TrelloActionsController.addListToBoard(
-        board.id,
-        item.name
-      );
+      result = await TrelloController.addListToBoard(board.id, item.name);
       item.listId = result.id;
       return item;
     });
@@ -313,10 +304,7 @@ DepartmentSchema.methods.createDepartmentBoard = async function (
     sideLists = await Promise.all(sideListsIds);
     // 3- create teams
     let teamsResult = await teams.map(async (team, index) => {
-      result = await TrelloActionsController.addListToBoard(
-        board.id,
-        team.name
-      );
+      result = await TrelloController.addListToBoard(board.id, team.name);
       team.listId = result.id;
       return team;
     });
@@ -332,7 +320,7 @@ DepartmentSchema.methods.updateDepartment = async function (
   data: IDepartmentState
 ) {
   try {
-    await TrelloActionsController.updateBoard(this.boardId, {
+    await TrelloController.updateBoard(this.boardId, {
       name: data.name,
       color: data.color,
     });
@@ -349,7 +337,7 @@ DepartmentSchema.methods.updateDepartment = async function (
 
 DepartmentSchema.methods.deleteDepartment = async function (this: IDepartment) {
   try {
-    let board = await TrelloActionsController.deleteBoard(this.boardId);
+    let board = await TrelloController.deleteBoard(this.boardId);
     return await this.remove();
   } catch (error) {
     logger.error({ deleteDepartmentError: error });
@@ -370,12 +358,12 @@ DepartmentSchema.methods.updateTeams = async function (
     // remove teams
     await data.removeTeams.forEach(async (item, index) => {
       let team = this.teams.find((t) => t._id.toString() === item);
-      await TrelloActionsController.__moveAllCardsInList(
+      await TrelloController.__moveAllCardsInList(
         team.listId,
         this.boardId,
         tasksBoardList
       );
-      await TrelloActionsController.addListToArchieve(team.listId);
+      await TrelloController.addListToArchieve(team.listId);
     });
     this.teams = this.teams.map((item) => {
       if (data.removeTeams.includes(item._id.toString())) {
@@ -385,8 +373,10 @@ DepartmentSchema.methods.updateTeams = async function (
     });
     depTeams = await Promise.all(
       data.addTeams.map(async (item) => {
-        let list: { id: string } | any =
-          await TrelloActionsController.addListToBoard(this.boardId, item);
+        let list: { id: string } | any = await TrelloController.addListToBoard(
+          this.boardId,
+          item
+        );
         return { name: item, listId: list.id, isDeleted: false };
       })
     );
@@ -407,15 +397,17 @@ DepartmentSchema.methods.updateSideLists = async function (
   try {
     await data.removeSideLists.forEach(async (item, index) => {
       let list = this.sideLists.find((l) => l._id.toString() === item);
-      await TrelloActionsController.addListToArchieve(list.listId);
+      await TrelloController.addListToArchieve(list.listId);
     });
     this.sideLists = this.sideLists.filter(
       (item) => !data.removeSideLists.includes(item._id.toString())
     );
     let depSideLists = await Promise.all(
       await data.addSideLists.map(async (item, index) => {
-        let list: { id: string } | any =
-          await TrelloActionsController.addListToBoard(this.boardId, item);
+        let list: { id: string } | any = await TrelloController.addListToBoard(
+          this.boardId,
+          item
+        );
         return { name: item, listId: list.id };
       })
     );

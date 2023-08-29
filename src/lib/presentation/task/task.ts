@@ -10,6 +10,9 @@ import { taskRoutesQueue } from "../../backgroundJobs/routes/tasks.Route.Queue";
 import { deleteAll } from "../../services/upload";
 import path from "path";
 import { createReadStream, readFileSync, statSync } from "fs";
+import TrelloController from "../../controllers/trello";
+import { Board, TrelloAction } from "../../types/controller/trello";
+import _ from "lodash";
 
 const TaskReq = class TaskReq extends TaskController {
   static async handleCreateTask(req: Request, res: Response) {
@@ -20,7 +23,6 @@ const TaskReq = class TaskReq extends TaskController {
         if (isValid.error)
           return res.status(400).send(isValid.error.details[0]);
         let result = await super.createTask(TaskData, req.files);
-        console.log({ result });
         if (result) return res.send(result);
         else
           res.status(400).send({
@@ -101,6 +103,7 @@ const TaskReq = class TaskReq extends TaskController {
       logger.error({ handleMoveCardError: error });
     }
   }
+
   static async handleDeleteTasksByProjectId(req: Request, res: Response) {
     try {
       let id = req.body.id;
@@ -110,6 +113,7 @@ const TaskReq = class TaskReq extends TaskController {
       logger.error({ handleDeleteTasksByProjectIdError: error });
     }
   }
+
   static async handleDeleteTasks(req: Request, res: Response) {
     try {
       let ids = req.body.ids;
@@ -120,6 +124,7 @@ const TaskReq = class TaskReq extends TaskController {
       logger.error({ handleDeleteTasksError: error });
     }
   }
+
   static async handleDeleteTask(req: Request, res: Response) {
     try {
       let id = req.body.id;
@@ -130,6 +135,7 @@ const TaskReq = class TaskReq extends TaskController {
       logger.error({ handleDeleteTasksError: error });
     }
   }
+
   static async handleDownloadAttachment(req: Request, res: Response) {
     try {
       let cardId: string = req.query?.cardId.toString();
@@ -147,6 +153,7 @@ const TaskReq = class TaskReq extends TaskController {
       logger.error({ handleDownloadAttachmentError: error });
     }
   }
+
   static async hanldeEditTasksProjectId(req: Request, res: Response) {
     try {
       let ids: string[] = req.body.ids,
@@ -162,6 +169,7 @@ const TaskReq = class TaskReq extends TaskController {
       logger.error({ handleEditTasksProjectIdError: error });
     }
   }
+
   static async handleGetTasksCSV(req: Request, res: Response) {
     try {
       await deleteAll();
