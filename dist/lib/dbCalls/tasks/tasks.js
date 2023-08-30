@@ -1,27 +1,4 @@
 "use strict";
-var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
-    if (k2 === undefined) k2 = k;
-    var desc = Object.getOwnPropertyDescriptor(m, k);
-    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
-      desc = { enumerable: true, get: function() { return m[k]; } };
-    }
-    Object.defineProperty(o, k2, desc);
-}) : (function(o, m, k, k2) {
-    if (k2 === undefined) k2 = k;
-    o[k2] = m[k];
-}));
-var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
-    Object.defineProperty(o, "default", { enumerable: true, value: v });
-}) : function(o, v) {
-    o["default"] = v;
-});
-var __importStar = (this && this.__importStar) || function (mod) {
-    if (mod && mod.__esModule) return mod;
-    var result = {};
-    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
-    __setModuleDefault(result, mod);
-    return result;
-};
 var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
     function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
     return new (P || (P = Promise))(function (resolve, reject) {
@@ -36,7 +13,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 const logger_1 = __importDefault(require("../../../logger"));
-const Task_1 = __importStar(require("../../models/Task"));
+const Task_1 = __importDefault(require("../../models/Task"));
 const lodash_1 = __importDefault(require("lodash"));
 const mongoose_1 = __importDefault(require("mongoose"));
 const Tasks_1 = require("../../types/controller/Tasks");
@@ -413,23 +390,19 @@ class TaskDB {
                 task.cardId = (data === null || data === void 0 ? void 0 : data.cardId) ? data.cardId : task.cardId;
                 task.boardId = (data === null || data === void 0 ? void 0 : data.boardId) ? data.boardId : task.boardId;
                 task.description = data.description;
-                task.teamId =
-                    (data === null || data === void 0 ? void 0 : data.teamId) === null || ((_a = data === null || data === void 0 ? void 0 : data.teamId) === null || _a === void 0 ? void 0 : _a.toString().length) > 0
-                        ? new mongodb_1.ObjectId(data.teamId)
-                        : task.teamId;
+                task.teamId = data.teamId ? new mongodb_1.ObjectId(data.teamId) : task.teamId;
                 task.deadline = data.deadline;
                 task.start = data.start ? data.start : null;
                 if (data.attachedFile) {
-                    let file = new Task_1.TaskFileSchema(Object.assign({}, data.attachedFile));
-                    task.attachedFiles.push(file);
+                    task.attachedFiles.push(Object.assign({}, data.attachedFile));
                 }
-                if (data.deleteFiles && ((_b = data === null || data === void 0 ? void 0 : data.deleteFiles) === null || _b === void 0 ? void 0 : _b.trelloId)) {
+                if (data.deleteFiles && ((_a = data === null || data === void 0 ? void 0 : data.deleteFiles) === null || _a === void 0 ? void 0 : _a.trelloId)) {
                     task.attachedFiles = lodash_1.default.filter(task.attachedFiles, (item) => { var _a; return item.trelloId !== ((_a = data === null || data === void 0 ? void 0 : data.deleteFiles) === null || _a === void 0 ? void 0 : _a.trelloId); });
                 }
-                task.movements = (_c = data.movements) !== null && _c !== void 0 ? _c : task.movements;
+                task.movements = (_b = data.movements) !== null && _b !== void 0 ? _b : task.movements;
                 task.attachedFiles = lodash_1.default.uniqBy(task.attachedFiles, "trelloId");
+                task.archivedCard = (_c = data.archivedCard) !== null && _c !== void 0 ? _c : false;
                 let result = yield (yield task.save()).toObject();
-                console.log({ result });
                 yield __1.io.sockets.emit("update-task", result);
             }
             catch (error) {
@@ -465,7 +438,9 @@ class TaskDB {
         var _a;
         return __awaiter(this, void 0, void 0, function* () {
             try {
-                let result = yield Task_1.default.findOneAndDelete({ cardId: data.cardId });
+                let result = yield Task_1.default.findOneAndDelete({
+                    cardId: data.cardId,
+                });
                 return (_a = __1.io === null || __1.io === void 0 ? void 0 : __1.io.sockets) === null || _a === void 0 ? void 0 : _a.emit("delete-task", result);
             }
             catch (error) {

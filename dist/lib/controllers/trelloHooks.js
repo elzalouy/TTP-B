@@ -106,7 +106,7 @@ class TrelloWebhook {
         });
     }
     createCard() {
-        var _a, _b, _c, _d, _e, _f, _g, _h, _j, _k, _l, _m, _o, _p, _q, _r, _s, _t, _u, _v, _w, _x, _y, _z, _0, _1, _2, _3, _4, _5, _6;
+        var _a, _b, _c, _d, _e, _f, _g, _h, _j, _k, _l, _m, _o, _p, _q, _r, _s, _t, _u, _v, _w, _x, _y, _z, _0, _1, _2, _3, _4, _5, _6, _7, _8, _9;
         return __awaiter(this, void 0, void 0, function* () {
             try {
                 let listId = (_f = (_c = (_b = (_a = this.actionRequest.action.data) === null || _a === void 0 ? void 0 : _a.list) === null || _b === void 0 ? void 0 : _b.id) !== null && _c !== void 0 ? _c : (_e = (_d = this.actionRequest.action.data) === null || _d === void 0 ? void 0 : _d.card) === null || _e === void 0 ? void 0 : _e.idList) !== null && _f !== void 0 ? _f : (_h = (_g = this.actionRequest.action.data) === null || _g === void 0 ? void 0 : _g.listAfter) === null || _h === void 0 ? void 0 : _h.id;
@@ -116,14 +116,14 @@ class TrelloWebhook {
                 let dep = yield Department_1.default.findOne({
                     boardId: (_p = (_o = this.actionRequest.action.data) === null || _o === void 0 ? void 0 : _o.board) === null || _p === void 0 ? void 0 : _p.id,
                 });
-                let isSideList = dep.sideLists.find((item) => item.listId === listId);
+                let isSideList = (_q = dep === null || dep === void 0 ? void 0 : dep.sideLists) === null || _q === void 0 ? void 0 : _q.find((item) => item.listId === listId);
                 let team = yield dep.teams.find((item) => listId === item.listId);
                 if (!task && dep) {
-                    this.task = Object.assign(Object.assign({}, this.task), { trelloShortUrl: `https://trello.com/c/${this.actionRequest.action.data.card.shortLink}`, deadline: ((_s = (_r = (_q = this.actionRequest.action) === null || _q === void 0 ? void 0 : _q.data) === null || _r === void 0 ? void 0 : _r.card) === null || _s === void 0 ? void 0 : _s.due)
-                            ? new Date((_v = (_u = (_t = this.actionRequest.action) === null || _t === void 0 ? void 0 : _t.data) === null || _u === void 0 ? void 0 : _u.card) === null || _v === void 0 ? void 0 : _v.due)
-                            : undefined, start: ((_y = (_x = (_w = this.actionRequest.action) === null || _w === void 0 ? void 0 : _w.data) === null || _x === void 0 ? void 0 : _x.card) === null || _y === void 0 ? void 0 : _y.start)
-                            ? new Date((_1 = (_0 = (_z = this.actionRequest.action) === null || _z === void 0 ? void 0 : _z.data) === null || _0 === void 0 ? void 0 : _0.card) === null || _1 === void 0 ? void 0 : _1.start)
-                            : new Date(Date.now()), teamId: (_2 = team === null || team === void 0 ? void 0 : team._id) !== null && _2 !== void 0 ? _2 : null, status: team
+                    this.task = Object.assign(Object.assign({}, this.task), { trelloShortUrl: `https://trello.com/c/${this.actionRequest.action.data.card.shortLink}`, deadline: ((_t = (_s = (_r = this.actionRequest.action) === null || _r === void 0 ? void 0 : _r.data) === null || _s === void 0 ? void 0 : _s.card) === null || _t === void 0 ? void 0 : _t.due)
+                            ? new Date((_w = (_v = (_u = this.actionRequest.action) === null || _u === void 0 ? void 0 : _u.data) === null || _v === void 0 ? void 0 : _v.card) === null || _w === void 0 ? void 0 : _w.due)
+                            : undefined, start: ((_z = (_y = (_x = this.actionRequest.action) === null || _x === void 0 ? void 0 : _x.data) === null || _y === void 0 ? void 0 : _y.card) === null || _z === void 0 ? void 0 : _z.start)
+                            ? new Date((_2 = (_1 = (_0 = this.actionRequest.action) === null || _0 === void 0 ? void 0 : _0.data) === null || _1 === void 0 ? void 0 : _1.card) === null || _2 === void 0 ? void 0 : _2.start)
+                            : new Date(Date.now()), teamId: (_3 = team === null || team === void 0 ? void 0 : team._id) !== null && _3 !== void 0 ? _3 : null, status: team
                             ? "In Progress"
                             : isSideList
                                 ? "Tasks Board"
@@ -136,9 +136,9 @@ class TrelloWebhook {
                                         : this.actionRequest.action.data.list.name,
                                 movedAt: new Date(Date.now()).toString(),
                             },
-                        ], assignedAt: team && ((_6 = (_5 = (_4 = (_3 = this.actionRequest) === null || _3 === void 0 ? void 0 : _3.action) === null || _4 === void 0 ? void 0 : _4.data) === null || _5 === void 0 ? void 0 : _5.listBefore) === null || _6 === void 0 ? void 0 : _6.id)
+                        ], assignedAt: team && ((_7 = (_6 = (_5 = (_4 = this.actionRequest) === null || _4 === void 0 ? void 0 : _4.action) === null || _5 === void 0 ? void 0 : _5.data) === null || _6 === void 0 ? void 0 : _6.listBefore) === null || _7 === void 0 ? void 0 : _7.id)
                             ? new Date(Date.now())
-                            : this.task.assignedAt });
+                            : this.task.assignedAt, archivedCard: (_9 = (_8 = this.actionRequest.action.data.card) === null || _8 === void 0 ? void 0 : _8.closed) !== null && _9 !== void 0 ? _9 : false });
                     return yield task_1.default.createTaskByTrello(this.task);
                 }
             }
@@ -165,11 +165,15 @@ class TrelloWebhook {
         });
     }
     updateCard() {
-        var _a, _b, _c, _d, _e, _f, _g, _h, _j, _k, _l, _m, _o, _p, _q, _r, _s, _t, _u, _v, _w, _x, _y, _z, _0, _1, _2, _3, _4, _5;
+        var _a, _b, _c, _d, _e, _f, _g, _h, _j, _k, _l, _m, _o, _p, _q, _r, _s, _t, _u, _v, _w, _x, _y, _z, _0, _1, _2, _3, _4, _5, _6, _7, _8, _9;
         return __awaiter(this, void 0, void 0, function* () {
             try {
-                console.log({ data: this.actionRequest.action.data, type: this.action });
-                let isNewJourney, task, department, listId, isMoved, status, newDep, isNewTeam, inProgressList, isProject, sideList, listBefore, cardDeadline;
+                console.log({
+                    action: this.actionRequest.action.display.translationKey,
+                    cardId: this.task.cardId,
+                });
+                let action = this.actionRequest.action.display.translationKey;
+                let isNewJourney, task, department, listId, isMoved, status, newDep, isNewTeam, inProgressList, isProject, sideList, listBefore, listAfter, cardDeadline;
                 task = yield task_1.default.getOneTaskBy({
                     cardId: (_d = (_c = (_b = (_a = this.actionRequest) === null || _a === void 0 ? void 0 : _a.action) === null || _b === void 0 ? void 0 : _b.data) === null || _c === void 0 ? void 0 : _c.card) === null || _d === void 0 ? void 0 : _d.id,
                 });
@@ -191,44 +195,45 @@ class TrelloWebhook {
                     inProgressList = (newDep !== null && newDep !== void 0 ? newDep : department).lists.find((item) => (isNewTeam === null || isNewTeam === void 0 ? void 0 : isNewTeam.listId) && item.name === "In Progress");
                     isProject = (newDep !== null && newDep !== void 0 ? newDep : department).lists.find((l) => l.listId === listId && l.name === "projects");
                     sideList = (newDep !== null && newDep !== void 0 ? newDep : department).sideLists.find((list) => list.listId === listId);
-                    listBefore = (_v = this.actionRequest.action.data.listBefore.name) !== null && _v !== void 0 ? _v : "";
+                    listBefore = (_w = (_v = this.actionRequest.action.data.listBefore) === null || _v === void 0 ? void 0 : _v.name) !== null && _w !== void 0 ? _w : "";
+                    listAfter = (_y = (_x = this.actionRequest.action.data.listAfter) === null || _x === void 0 ? void 0 : _x.name) !== null && _y !== void 0 ? _y : "";
                     isNewJourney =
                         (sideList || status === "Tasks Board") &&
                             ["Done", "Shared", "Cancled"].includes(listBefore);
                     cardDeadline = this.actionRequest.action.data.card.due
                         ? new Date(this.actionRequest.action.data.card.due)
-                        : null;
-                    let deadline = isNewJourney &&
-                        cardDeadline.getTime() === new Date(task.deadline).getTime()
-                        ? cardDeadline
                         : task.deadline;
+                    let { movements, currentTeam } = yield task_1.default.getActionsOfTask(task.cardId, yield Department_1.default.find({}), new Date(cardDeadline).toLocaleDateString());
                     console.log({
-                        deadline,
-                        isNewJourney,
-                        cardDeadline: cardDeadline.getTime(),
-                        taskDeadline: new Date(task.deadline).getTime(),
+                        desc: this.actionRequest.action.data.card.desc,
+                        taskDEsc: task.description,
                     });
                     if (!isProject) {
                         this.task = {
                             name: this.actionRequest.action.data.card.name,
                             boardId: this.actionRequest.action.data.board.id,
                             cardId: this.actionRequest.action.data.card.id,
-                            deadline: deadline,
-                            start: ((_y = (_x = (_w = this.actionRequest.action) === null || _w === void 0 ? void 0 : _w.data) === null || _x === void 0 ? void 0 : _x.card) === null || _y === void 0 ? void 0 : _y.start)
-                                ? new Date((_1 = (_0 = (_z = this.actionRequest.action) === null || _z === void 0 ? void 0 : _z.data) === null || _0 === void 0 ? void 0 : _0.card) === null || _1 === void 0 ? void 0 : _1.start)
-                                : (_2 = task.start) !== null && _2 !== void 0 ? _2 : null,
-                            description: (_3 = this.actionRequest.action.data.card.desc) !== null && _3 !== void 0 ? _3 : task.description,
-                            teamId: (_4 = isNewTeam === null || isNewTeam === void 0 ? void 0 : isNewTeam._id) !== null && _4 !== void 0 ? _4 : task.teamId,
+                            deadline: isNewJourney ? null : cardDeadline,
+                            start: ((_1 = (_0 = (_z = this.actionRequest.action) === null || _z === void 0 ? void 0 : _z.data) === null || _0 === void 0 ? void 0 : _0.card) === null || _1 === void 0 ? void 0 : _1.start)
+                                ? new Date((_4 = (_3 = (_2 = this.actionRequest.action) === null || _2 === void 0 ? void 0 : _2.data) === null || _3 === void 0 ? void 0 : _3.card) === null || _4 === void 0 ? void 0 : _4.start)
+                                : (_5 = task.start) !== null && _5 !== void 0 ? _5 : null,
+                            description: (_6 = this.actionRequest.action.data.card.desc) !== null && _6 !== void 0 ? _6 : task.description,
+                            teamId: (_8 = (_7 = isNewTeam === null || isNewTeam === void 0 ? void 0 : isNewTeam._id) !== null && _7 !== void 0 ? _7 : task.teamId) !== null && _8 !== void 0 ? _8 : currentTeam === null || currentTeam === void 0 ? void 0 : currentTeam._id,
                             listId: listId,
                             status: sideList
                                 ? "Tasks Board"
                                 : (inProgressList === null || inProgressList === void 0 ? void 0 : inProgressList.name)
                                     ? inProgressList.name
                                     : status,
-                            movements: task.movements,
+                            movements: action === "action_sent_card_to_board"
+                                ? movements
+                                : task.movements,
                             teamListId: isNewTeam ? listId : task.teamListId,
+                            archivedCard: this.actionRequest.action.data.card.closed,
+                            projectId: task.projectId,
                         };
-                        if (isMoved || task.movements.length === 0) {
+                        if ((isMoved || task.movements.length === 0) &&
+                            action !== "action_sent_card_to_board") {
                             let move = {
                                 status: sideList
                                     ? "Tasks Board"
@@ -237,13 +242,15 @@ class TrelloWebhook {
                                         : status,
                                 movedAt: new Date(Date.now()).toString(),
                             };
-                            if (isNewJourney)
-                                move.journeyDeadline = new Date(task.deadline).toString();
+                            if (["Done", "Shared", "Cancled"].includes(listAfter))
+                                move.journeyDeadline = cardDeadline
+                                    ? new Date(cardDeadline).toDateString()
+                                    : null;
                             this.task.movements.push(move);
                         }
                         return yield task_1.default.updateTaskByTrelloDB(this.task, {
                             id: this.user.id,
-                            name: (_5 = this.user) === null || _5 === void 0 ? void 0 : _5.name,
+                            name: (_9 = this.user) === null || _9 === void 0 ? void 0 : _9.name,
                         });
                     }
                     else

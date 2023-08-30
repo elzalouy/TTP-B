@@ -79,8 +79,8 @@ class TaskController extends TaskDB {
       if (board) {
         let listId = createAction[0]?.data?.list?.id;
         let sideList = board?.sideLists?.find((l) => l.listId === listId);
-        let team = board.teams.find((t) => t.listId === listId);
-        let list = board.lists.find((l) => l.listId === listId);
+        let team = board?.teams?.find((t) => t.listId === listId);
+        let list = board?.lists?.find((l) => l.listId === listId);
         let status = list
           ? list.name
           : team
@@ -106,8 +106,8 @@ class TaskController extends TaskDB {
             );
             let listId = action?.data?.listAfter?.id;
             let sideList = board?.sideLists.find((l) => l.listId === listId);
-            let team = board.teams.find((t) => t.listId === listId);
-            let list = board.lists.find((l) => l.listId === listId);
+            let team = board?.teams?.find((t) => t.listId === listId);
+            let list = board?.lists?.find((l) => l.listId === listId);
             let status = list
               ? list.name
               : team

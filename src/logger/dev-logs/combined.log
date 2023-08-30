@@ -1888,3 +1888,10 @@
   level: 'error',
   timestamp: '2023-08-24 10:53:29'
 }
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:WFUiEjrljsIDFOmd@cluster1.oeari.mongodb.net/ttp'
+  },
+  level: 'info',
+  timestamp: '2023-08-30 20:02:24'
+}

@@ -27,7 +27,7 @@ const DepartmentSchema = new mongoose_1.Schema({
     },
     boardId: {
         type: String,
-        default: "",
+        unique: true,
     },
     color: {
         type: String,
@@ -44,7 +44,7 @@ const DepartmentSchema = new mongoose_1.Schema({
                     required: [true, "Team name is required with min length 2 chars"],
                     minlength: [2, "Team name is required with min length 2 chars"],
                 },
-                listId: String,
+                listId: { type: String, unique: true },
                 isDeleted: Boolean,
             },
         ],
@@ -55,7 +55,7 @@ const DepartmentSchema = new mongoose_1.Schema({
         type: [
             {
                 name: { type: String, required: true },
-                listId: { type: String, required: true },
+                listId: { type: String, required: true, unique: true },
             },
         ],
         required: true,
@@ -71,7 +71,7 @@ const DepartmentSchema = new mongoose_1.Schema({
                         message: `{VALUE} is not one of the list types ["Tasks Board", "In Progress", "Shared", "Review", "Done", "Not Clear","Cancled"]`,
                     },
                 },
-                listId: String,
+                listId: { type: String, required: true, unique: true },
             },
         ],
         required: true,
@@ -258,7 +258,6 @@ DepartmentSchema.methods.createDepartmentBoard = function () {
             }));
             lists = yield Promise.all(listsResult);
             sideLists = yield Promise.all(sideListsIds);
-            console.log({ sideLists });
             // 3- create teams
             let teamsResult = yield teams.map((team, index) => __awaiter(this, void 0, void 0, function* () {
                 result = yield trello_1.default.addListToBoard(board.id, team.name);

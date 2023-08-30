@@ -8,4 +8,6 @@ exports.default = {
     CREATE_LIST: "/addList",
     WEBHOOK_UPDATES: "/webhookUpdate",
     WEBHOOK_UPDATES_PROJECT: "/webhookUpdateProject",
+    POST_BACKUP_FROM_TRELLO: "/postSnapshotOfActionsFromTrello",
+    RESTORE_TASKS_ON_TRELLO: "/restoreTasksOnTrello/:id",
 };

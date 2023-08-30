@@ -78,7 +78,6 @@ class DepartmentController {
         return __awaiter(this, void 0, void 0, function* () {
             try {
                 // 1- get department
-                console.log({ data });
                 let department = yield Department_1.default.findOne({ _id: id });
                 if (!department)
                     return { error: "NotFound", message: "Department was not found" };
@@ -154,26 +153,12 @@ class DepartmentController {
         return __awaiter(this, void 0, void 0, function* () {
             try {
                 // write a bulkwrite operation instead
-                let update = [
-                    {
-                        updateMany: {
-                            filter: { boardId: { $in: ids } },
-                            update: {
-                                $set: { priority: 1 },
-                            },
-                        },
-                    },
-                    {
-                        updateMany: {
-                            filter: { boardId: { $not: { $in: ids } } },
-                            update: {
-                                $set: { priority: 0 },
-                            },
-                        },
-                    },
-                ];
-                let result = yield Department_1.default.bulkWrite(update, { ordered: true });
-                return yield Department_1.default.find();
+                let result = yield Department_1.default.updateMany({ _id: { $in: ids } }, { priority: 1 });
+                let updateResult = yield Department_1.default.updateMany({ _id: { $nin: ids } }, { priority: 0 });
+                if (updateResult.acknowledged && result.acknowledged)
+                    return yield Department_1.default.find();
+                else
+                    return null;
             }
             catch (error) {
                 logger_1.default.error({ _updateDepartmentsPriority: error });

@@ -15,6 +15,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const errorUtils_1 = require("../../utils/errorUtils");
 const logger_1 = __importDefault(require("../../../logger"));
 const trelloHooks_1 = __importDefault(require("../../controllers/trelloHooks"));
+const tasks_Route_Queue_1 = require("../../backgroundJobs/routes/tasks.Route.Queue");
 const processedEvents = new Set();
 class TrelloHooks {
     static handleWebHookUpdateProject(req, res) {
@@ -44,29 +45,31 @@ class TrelloHooks {
         });
     }
     static handleWebhookUpdateCard(req, res) {
-        var _a;
         return __awaiter(this, void 0, void 0, function* () {
-            try {
-                let payload = req.body;
-                let eventId = (_a = payload === null || payload === void 0 ? void 0 : payload.action) === null || _a === void 0 ? void 0 : _a.id;
-                console.log({ eventId });
-                if (!processedEvents.has(eventId)) {
-                    processedEvents.add(eventId);
-                    let hook = new trelloHooks_1.default(req.body, "task");
-                    yield hook.start();
-                    const timeoutPromise = new Promise((resolve) => {
-                        setTimeout(() => {
-                            processedEvents.delete(eventId);
-                        }, 50000);
-                    });
-                    res.send("Done");
+            tasks_Route_Queue_1.taskRoutesQueue.push((cb) => __awaiter(this, void 0, void 0, function* () {
+                var _a;
+                try {
+                    let payload = req.body;
+                    let eventId = (_a = payload === null || payload === void 0 ? void 0 : payload.action) === null || _a === void 0 ? void 0 : _a.id;
+                    console.log({ eventId, eventHappened: processedEvents.has(eventId) });
+                    if (!processedEvents.has(eventId) && eventId !== undefined) {
+                        processedEvents.add(eventId);
+                        let hook = new trelloHooks_1.default(req.body, "task");
+                        yield hook.start();
+                        const timeoutPromise = new Promise((resolve) => {
+                            setTimeout(() => {
+                                processedEvents.delete(eventId);
+                            }, 50000);
+                        });
+                        res.send("Done");
+                    }
+                    else
+                        res.send("Implemented before");
                 }
-                else
-                    res.send("Implemented before");
-            }
-            catch (error) {
-                logger_1.default.error({ handleWebhookUpdateCardError: error });
-            }
+                catch (error) {
+                    logger_1.default.error({ handleWebhookUpdateCardError: error });
+                }
+            }));
         });
     }
 }

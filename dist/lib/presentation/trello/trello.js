@@ -15,6 +15,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const errorUtils_1 = require("../../utils/errorUtils");
 const logger_1 = __importDefault(require("../../../logger"));
 const trello_1 = __importDefault(require("../../controllers/trello"));
+const tasks_Route_Queue_1 = require("../../backgroundJobs/routes/tasks.Route.Queue");
 const BoardReq = class BoardReq extends trello_1.default {
     static handleGetBoards(req, res) {
         const _super = Object.create(null, {
@@ -22,7 +23,7 @@ const BoardReq = class BoardReq extends trello_1.default {
         });
         return __awaiter(this, void 0, void 0, function* () {
             try {
-                let boards = yield _super.getBoardsInTrello.call(this);
+                let boards = yield _super.getBoardsInTrello.call(this, "all");
                 if (boards) {
                     return res.send(boards);
                 }
@@ -117,6 +118,36 @@ const BoardReq = class BoardReq extends trello_1.default {
             catch (error) {
                 logger_1.default.error({ handleGetBoards: error });
                 return res.status(500).send((0, errorUtils_1.customeError)("server_error", 500));
+            }
+        });
+    }
+    static postSnapshotOfActionsFromTrello(req, res) {
+        const _super = Object.create(null, {
+            __postSnapshotOfActions: { get: () => super.__postSnapshotOfActions }
+        });
+        return __awaiter(this, void 0, void 0, function* () {
+            try {
+                let actionsByBoards = yield _super.__postSnapshotOfActions.call(this);
+                return res.send(actionsByBoards);
+            }
+            catch (error) {
+                logger_1.default.error({ getBackupCardsFromTrelloError: error });
+            }
+        });
+    }
+    static restoreNotExistedOnTrello(req, res) {
+        const _super = Object.create(null, {
+            restoreTrelloCards: { get: () => super.restoreTrelloCards }
+        });
+        return __awaiter(this, void 0, void 0, function* () {
+            try {
+                tasks_Route_Queue_1.taskRoutesQueue.push((cb) => __awaiter(this, void 0, void 0, function* () {
+                    let { activities } = yield _super.restoreTrelloCards.call(this, req.params.id);
+                }));
+                res.send({ process: "Done" });
+            }
+            catch (error) {
+                logger_1.default.error({ restoreNotExistedOnTrelloError: error });
             }
         });
     }

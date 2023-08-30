@@ -177,7 +177,6 @@ const UserController = class UserController extends user_1.default {
                 }
                 let findUser = yield _super.findUserById.call(this, token.id);
                 if (!findUser) {
-                    console.log("user not existed error");
                     return (0, errorUtils_1.customeError)("user_not_exist", 409);
                 }
                 // hash password

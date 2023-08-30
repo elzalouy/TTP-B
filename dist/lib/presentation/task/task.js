@@ -27,23 +27,25 @@ const TaskReq = class TaskReq extends task_1.default {
             createTask: { get: () => super.createTask }
         });
         return __awaiter(this, void 0, void 0, function* () {
-            try {
-                let TaskData = req.body;
-                let isValid = validation_1.createTaskSchema.validate(TaskData);
-                if (isValid.error)
-                    return res.status(400).send(isValid.error.details[0]);
-                let result = yield _super.createTask.call(this, TaskData, req.files);
-                if (result)
-                    return res.send(result);
-                else
-                    res.status(400).send({
-                        error: "createTaskError",
-                        message: "Something wrong hapenned while creating the task.",
-                    });
-            }
-            catch (error) {
-                logger_1.default.error({ handleCreateTaskError: error });
-            }
+            tasks_Route_Queue_1.taskRoutesQueue.push((cb) => __awaiter(this, void 0, void 0, function* () {
+                try {
+                    let TaskData = req.body;
+                    let isValid = validation_1.createTaskSchema.validate(TaskData);
+                    if (isValid.error)
+                        return res.status(400).send(isValid.error.details[0]);
+                    let result = yield _super.createTask.call(this, TaskData, req.files);
+                    if (result)
+                        return res.send(result);
+                    else
+                        res.status(400).send({
+                            error: "createTaskError",
+                            message: "Something wrong hapenned while creating the task.",
+                        });
+                }
+                catch (error) {
+                    logger_1.default.error({ handleCreateTaskError: error });
+                }
+            }));
         });
     }
     static handleUpdateCard(req, res) {
@@ -122,7 +124,6 @@ const TaskReq = class TaskReq extends task_1.default {
                 let decoded = yield (0, auth_1.jwtVerify)(req.header("authorization"));
                 if (decoded) {
                     let { cardId, listId, status, department, deadline } = req.body;
-                    console.log({ body: req.body });
                     let task = yield _super.moveTaskOnTrello.call(this, cardId, listId, status, department, decoded, deadline);
                     if (task === null || task === void 0 ? void 0 : task.error)
                         return res.status(400).send(task === null || task === void 0 ? void 0 : task.message);

@@ -30,8 +30,13 @@ function default_1(io) {
                 (0, project_actions_cron_1.projectsPassedDate)(io).start();
             });
             init_actions_queue_1.initializeQueue.push((cb) => __awaiter(this, void 0, void 0, function* () {
-                yield (0, dbConnect_1.initializeTrelloBoards)().then(() => (0, dbConnect_1.initializeTTPTasks)().then(() => cb(null, true)));
+                yield (0, dbConnect_1.initializeTrelloBoards)().then(() => {
+                    (0, dbConnect_1.initializeTTPTasks)().then(() => cb(null, true));
+                });
             }));
+            // initializeQueue.push(async (cb) => {
+            //   postAsnaphotOfTrelloActions().start();
+            // });
         }
         catch (error) {
             logger_1.default.error({ errorOldNotificationsCron: error });

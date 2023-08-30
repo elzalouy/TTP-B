@@ -35,15 +35,9 @@ exports.updateTaskQueue = (0, queue_1.default)({
 function moveTaskJob(listId, cardId, status, department, user, deadline) {
     var task;
     exports.updateTaskQueue.push((cb) => __awaiter(this, void 0, void 0, function* () {
-        var _a;
         try {
-            let currentTask = yield task_1.default.getOneTaskBy({ cardId: cardId });
-            if (currentTask) {
-                let teamList = department.teams.find((item) => item.listId === listId);
-                let statusList = department.lists.find((item) => item.listId === listId);
-                const result = yield trello_1.default.moveTaskToDiffList(cardId, (_a = teamList === null || teamList === void 0 ? void 0 : teamList.listId) !== null && _a !== void 0 ? _a : statusList === null || statusList === void 0 ? void 0 : statusList.listId, deadline);
-                cb(null);
-            }
+            const result = yield trello_1.default.moveTaskToDiffList(cardId, listId).then(() => { });
+            cb(null);
         }
         catch (error) {
             logger_1.default.error({ moveTaskJobError: error });

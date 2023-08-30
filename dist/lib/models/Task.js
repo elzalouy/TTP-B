@@ -12,7 +12,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.TaskFileSchema = exports.movementSchema = exports.FilesSchema = void 0;
+exports.movementSchema = exports.FilesSchema = void 0;
 const mongoose_1 = require("mongoose");
 const logger_1 = __importDefault(require("../../logger"));
 const Project_1 = __importDefault(require("./Project"));
@@ -43,6 +43,15 @@ exports.movementSchema = new mongoose_1.Schema({
     },
     journeyDeadline: {
         type: String,
+        required: false,
+        default: null,
+    },
+    listId: {
+        type: String,
+        required: false,
+    },
+    isTeam: {
+        type: Boolean,
         required: false,
     },
 });
@@ -79,8 +88,8 @@ const TaskSchema = new mongoose_1.Schema({
     },
     cardId: {
         type: String,
-        default: null,
-        required: false,
+        required: true,
+        unique: true,
     },
     boardId: {
         type: String,
@@ -122,6 +131,7 @@ const TaskSchema = new mongoose_1.Schema({
     },
     movements: { type: [exports.movementSchema], min: 1, required: true },
     assignedAt: { type: Date, required: false, default: null },
+    archivedCard: { type: Boolean, requried: true, default: false },
 }, {
     timestamps: true,
     strict: false,
@@ -162,7 +172,6 @@ TaskSchema.static("getTasksAsCSV", function (filterIds) {
                     return (_a = Object === null || Object === void 0 ? void 0 : Object.values(item)) === null || _a === void 0 ? void 0 : _a.toString();
                 })
                     .join("\n");
-                // const newTaskCsvFile=appendFileSync()
                 return csvData;
             }
         }
@@ -173,5 +182,4 @@ TaskSchema.static("getTasksAsCSV", function (filterIds) {
     });
 });
 const Tasks = (0, mongoose_1.model)("tasks", TaskSchema);
-exports.TaskFileSchema = (0, mongoose_1.model)("attachedFiles", exports.FilesSchema);
 exports.default = Tasks;

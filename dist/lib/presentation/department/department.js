@@ -22,8 +22,14 @@ const DepartmentReq = class DepartmentReq extends department_1.default {
         });
         return __awaiter(this, void 0, void 0, function* () {
             try {
+                console.log({ ids: req.body.ids });
                 let result = yield _super._updateDepartmentsPriority.call(this, req.body.ids);
-                res.send(result);
+                if (result)
+                    res.send(result);
+                else
+                    return res
+                        .status(400)
+                        .send("Issue hapenned while updating the priority of departments");
             }
             catch (error) {
                 logger_1.default.error({ handleUpdateDepartmentsPriorityError: error });
