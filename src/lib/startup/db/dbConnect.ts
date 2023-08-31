@@ -397,11 +397,12 @@ export const initializeTTPTasks = async () => {
             : dep?.sideLists.find(
                 (sideList) => sideList?.listId === card.idList
               );
-        let { movements, currentTeam } = await TaskController.getActionsOfTask(
-          card.id,
-          departments,
-          card.due
-        );
+        let { movements, currentTeam } =
+          await TrelloController.getActionsOfCard(
+            card.id,
+            departments,
+            card.due
+          );
         let replacement = new Tasks({
           _id: item._id,
           name: card.name,
@@ -480,11 +481,12 @@ export const initializeTTPTasks = async () => {
             : dep?.sideLists.find(
                 (sideList) => sideList?.listId === card.idList
               );
-        let { movements, currentTeam } = await TaskController.getActionsOfTask(
-          card.id,
-          departments,
-          card.due
-        );
+        let { movements, currentTeam } =
+          await TrelloController.getActionsOfCard(
+            card.id,
+            departments,
+            card.due
+          );
         let task: TaskInfo = new Tasks({
           name: card.name,
           boardId: card.idBoard,

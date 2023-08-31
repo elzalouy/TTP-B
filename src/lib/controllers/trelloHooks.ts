@@ -231,11 +231,12 @@ export default class TrelloWebhook {
           ? new Date(this.actionRequest.action.data.card.due)
           : task.deadline;
 
-        let { movements, currentTeam } = await TaskController.getActionsOfTask(
-          task.cardId,
-          await Department.find({}),
-          new Date(cardDeadline).toLocaleDateString()
-        );
+        let { movements, currentTeam } =
+          await TrelloController.getActionsOfCard(
+            task.cardId,
+            await Department.find({}),
+            new Date(cardDeadline).toLocaleDateString()
+          );
         console.log({
           desc: this.actionRequest.action.data.card.desc,
           taskDEsc: task.description,

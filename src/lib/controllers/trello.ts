@@ -5,7 +5,12 @@ import { config } from "dotenv";
 import { trelloApi, trelloApiWithUrl } from "../services/trelloApi";
 import { MemberType } from "../types/model/User";
 import fetch, { RequestInit, Response } from "node-fetch";
-import { AttachmentResponse, TaskData, TaskInfo } from "../types/model/tasks";
+import {
+  AttachmentResponse,
+  Movement,
+  TaskData,
+  TaskInfo,
+} from "../types/model/tasks";
 import {
   Board,
   Card,
@@ -15,7 +20,7 @@ import {
   updateCardResponse,
 } from "../types/controller/trello";
 import { ProjectData, ProjectInfo } from "../types/model/Project";
-import { IDepartment, ListTypes } from "../types/model/Department";
+import { IDepartment, ITeam, ListTypes } from "../types/model/Department";
 import _ from "lodash";
 import { ITrelloActionsOfSnapshot } from "../types/model/TrelloActionsSnapshots";
 import TrelloSnapshot from "../models/TrelloSnapshots";
@@ -820,6 +825,99 @@ class TrelloController {
     try {
       let snapshots = await TrelloSnapshot.find({}).sort({ createdAt: 1 });
       // if(snapshots.length>15)
+    } catch (error) {
+      logger.error({ error });
+    }
+  }
+  static async getActionsOfCard(
+    cardId: string,
+    departments: IDepartment[],
+    due: string
+  ) {
+    try {
+      let currentTeam: ITeam;
+      let createAction: TrelloAction[] =
+        await TrelloController._getCreationActionOfCard(cardId);
+      let actions: TrelloAction[] =
+        await TrelloController._getCardMovementsActions(cardId);
+      actions = _.sortBy(actions, "date");
+
+      let dueChanges: TrelloAction[] =
+        await TrelloController._getCardDeadlineActions(cardId);
+      /// First create status
+      let board = departments.find(
+        (i) => i.boardId === createAction[0]?.data.board.id
+      );
+      if (board) {
+        let listId = createAction[0]?.data?.list?.id;
+        let sideList = board?.sideLists?.find((l) => l.listId === listId);
+        let team = board?.teams?.find((t) => t.listId === listId);
+        let list = board?.lists?.find((l) => l.listId === listId);
+        console.log({ actionData: createAction[0].data });
+        let status = list
+          ? list.name
+          : team
+          ? "In Progress"
+          : sideList
+          ? "Tasks Board"
+          : "";
+        if (team) currentTeam = team;
+        let movements: Movement[] = [
+          {
+            status,
+            listId: listId,
+            movedAt: createAction[0].date,
+            isTeam: team ? true : false,
+          },
+        ];
+        // next actions
+        movements = [
+          ...movements,
+          ...actions.map((action, index) => {
+            let board = departments.find(
+              (i) => i.boardId === action?.data?.board?.id
+            );
+            let listId = action?.data?.listAfter?.id;
+            let sideList = board?.sideLists.find((l) => l.listId === listId);
+            let team = board?.teams?.find((t) => t.listId === listId);
+            let list = board?.lists?.find((l) => l.listId === listId);
+            console.log({
+              actionData: action.data,
+              actionType: action.type,
+              actionDate: action.date,
+            });
+            let status = list
+              ? list.name
+              : team
+              ? "In Progress"
+              : sideList
+              ? "Tasks Board"
+              : "";
+
+            let movement: Movement = {
+              movedAt: action.date,
+              status: status,
+              isTeam: team ? true : false,
+            };
+
+            if (["Done", "Shared", "Cancled"].includes(status)) {
+              let journeyDeadline = dueChanges[0]
+                ? dueChanges[0]?.data?.card.due
+                : due;
+              delete dueChanges[0];
+              movement.journeyDeadline = journeyDeadline;
+            }
+            return movement;
+          }),
+        ];
+        // console.log({ movements });
+        return { movements, currentTeam };
+      } else {
+        return {
+          movements: [],
+          currentTeam: null,
+        };
+      }
     } catch (error) {
       logger.error({ error });
     }
