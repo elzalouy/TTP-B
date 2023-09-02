@@ -53,11 +53,12 @@ function moveTaskJob(listId, cardId, status, department, user, deadline) {
         }
         catch (error) {
             cb(new Error(error), null);
-            logger_1.default.ercror({ webHookUpdateMoveTaskJobError: error });
+            logger_1.default.error({ webHookUpdateMoveTaskJobError: error });
         }
     }));
 }
 exports.moveTaskJob = moveTaskJob;
+j;
 const updateCardJob = (data, newFiles, tokenUser) => {
     const deleteFiles = data.deleteFiles
         ? data.deleteFiles
@@ -87,7 +88,7 @@ const updateCardJob = (data, newFiles, tokenUser) => {
         }
         catch (error) {
             cb(error, null);
-            logger_1.default.ercror({ updateCardDataError: error });
+            logger_1.default.error({ updateCardDataError: error });
         }
     }));
     exports.updateTaskQueue.push((cb) => __awaiter(void 0, void 0, void 0, function* () {
@@ -160,7 +161,7 @@ const updateTaskAttachmentsJob = (task) => {
             index_1.io.sockets.emit("update-task", Task);
         }
         catch (error) {
-            logger_1.default.ercror({ updateTaskAttachmentsError: error });
+            logger_1.default.error({ updateTaskAttachmentsError: error });
         }
     }));
 };

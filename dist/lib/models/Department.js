@@ -184,7 +184,7 @@ DepartmentSchema.pre("remove", function (next) {
         const current = this;
         let boardId = current.boardId;
         let result = yield Task_1.default.deleteMany({ boardId: boardId });
-        logger_1.default.info({ deleteTasksOfDepartment: result });
+        logger_1.default.warning({ deleteTasksOfDepartment: result });
     });
 });
 DepartmentSchema.post("updateOne", { document: true, query: false }, function (error, doc, next) {

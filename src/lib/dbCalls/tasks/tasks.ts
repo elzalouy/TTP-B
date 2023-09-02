@@ -6,7 +6,7 @@ import _ from "lodash";
 import mongoose from "mongoose";
 import { taskNotFoundError } from "../../types/controller/Tasks";
 import { ObjectId } from "mongodb";
-import { io } from "../../..";
+import { io } from "../../../index";
 class TaskDB {
   static async createTaskDB(data: TaskData) {
     return await TaskDB.__createTask(data);

@@ -89,7 +89,7 @@ exports.DepartmentQueue = (0, queue_1.default)({ results: [] });
 //         //   return await TrelloController.createWebHook(id);
 //         // });
 //         // Promise.all(webhookCreate).then((res) =>
-//         //   logger.info({ webhookCreateResult: "webhook done" })
+//         //   logger.warn({ webhookCreateResult: "webhook done" })
 //         // );
 //         let data = {
 //           defaultListId,

@@ -119,7 +119,7 @@ const ProjectController = class ProjectController extends ProjectDB {
       if (projects) return projects;
       else return null;
     } catch (error) {
-      logger.console.error({ searchPrjectsError: error });
+      logger.error({ searchPrjectsError: error });
     }
   }
   static async __deleteProjectsData(data: ProjectData) {
@@ -128,7 +128,7 @@ const ProjectController = class ProjectController extends ProjectDB {
       if (result) return result;
       else return null;
     } catch (error) {
-      logger.console.error({ searchPrjectsError: error });
+      logger.error({ searchPrjectsError: error });
     }
   }
 };

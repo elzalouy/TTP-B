@@ -60,7 +60,7 @@ const sendMail = (data) => __awaiter(void 0, void 0, void 0, function* () {
         return result;
     }
     catch (error) {
-        logger_1.default.info({ sendMailError: error });
+        logger_1.default.warning({ sendMailError: error });
     }
 });
 exports.default = sendMail;

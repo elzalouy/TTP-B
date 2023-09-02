@@ -30,7 +30,7 @@ function removeOldNotifications(io) {
             let result = yield notification_1.default.__deleteNotifcations({
                 _id: { $in: ids },
             });
-            logger_1.default.info({ monthlyDeleteNotifications: result.deletedCount });
+            logger_1.default.warning({ monthlyDeleteNotifications: result.deletedCount });
         }
     }), null, true, "Asia/Riyadh", null, true);
 }

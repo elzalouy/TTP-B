@@ -1,17 +1,34 @@
 "use strict";
-var __importDefault = (this && this.__importDefault) || function (mod) {
-    return (mod && mod.__esModule) ? mod : { "default": mod };
-};
 Object.defineProperty(exports, "__esModule", { value: true });
+const winston_1 = require("winston");
 const dotenv_1 = require("dotenv");
-const dev_logger_1 = __importDefault(require("./dev-logger"));
-const prod_logger_1 = __importDefault(require("./prod-logger"));
 (0, dotenv_1.config)();
-let logger = null;
-if (process.env.NODE_ENV === "development") {
-    logger = dev_logger_1.default;
+function buildLogger() {
+    console.log({ ErrorLogFile: `${__dirname}/error.log` });
+    const logger = (0, winston_1.createLogger)({
+        format: winston_1.format.json(),
+        transports: [
+            new winston_1.transports.File({}),
+            new winston_1.transports.File({
+                filename: `error.log`,
+                level: "error",
+                format: winston_1.format.json(),
+            }),
+            new winston_1.transports.File({
+                filename: `debug.log`,
+                level: "debug",
+                format: winston_1.format.json(),
+            }),
+            new winston_1.transports.File({
+                filename: `warning.log`,
+                level: "warning",
+                format: winston_1.format.json(),
+            }),
+        ],
+    });
+    if (process.env.NODE_ENV === "production")
+        logger.add(new winston_1.transports.Console());
+    return logger;
 }
-else {
-    logger = prod_logger_1.default;
-}
+const logger = buildLogger();
 exports.default = logger;

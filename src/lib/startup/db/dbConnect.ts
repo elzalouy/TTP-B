@@ -19,7 +19,7 @@ import { AnyBulkWriteOperation } from "mongodb";
 config();
 
 const db: string = Config.get("mongoDbConnectionString");
-logger.info({ db });
+logger.warn({ db: db });
 interface DBOptions {
   useNewUrlParser: Boolean;
   useUnifiedTopology: Boolean;

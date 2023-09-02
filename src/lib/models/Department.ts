@@ -217,7 +217,7 @@ DepartmentSchema.pre<IDepartment>("remove", async function (next) {
   const current = this as IDepartment;
   let boardId = current.boardId;
   let result = await Tasks.deleteMany({ boardId: boardId });
-  logger.info({ deleteTasksOfDepartment: result });
+  logger.warn({ deleteTasksOfDepartment: result });
 });
 DepartmentSchema.post(
   "updateOne",

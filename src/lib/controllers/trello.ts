@@ -158,7 +158,7 @@ class TrelloController {
         .then((value) => {
           return value;
         })
-        .catch((err) => logger.info("error in moving board", err));
+        .catch((err) => logger.warn("error in moving board", err));
       return result;
     } catch (error) {
       logger.error({ moveTaskToDiffListError: error });
@@ -168,14 +168,14 @@ class TrelloController {
   static async __deleteBoard(id: string) {
     try {
       let removeBoard = trelloApi(`boards/${id}?response_type=token&`);
-      logger.info({ removeBoard });
+      logger.warn({ removeBoard });
       return await fetch(removeBoard, {
         method: "DELETE",
       })
         .then((response) => {
           return response.text();
         })
-        .catch((err) => logger.info("error in delete board", err));
+        .catch((err) => logger.warn("error in delete board", err));
     } catch (error) {
       logger.error({ deleteBoardError: error });
     }
@@ -744,8 +744,8 @@ class TrelloController {
       });
       await snapShot.save();
       return actionsByBoards;
-    } catch (error) {
-      logger.log({ __postSnapshotOfActionsError: error });
+    } catch (error: any) {
+      logger.error({ __postSnapshotOfActionsError: error });
     }
   }
 
@@ -928,7 +928,7 @@ class CardAction {
     if (list) {
       this.action.listType = "list";
       this.action.status = list.name;
-      console.log({
+      logger.info({
         type: "existed_in_current_list_status",
         name: this.action.data.card.name,
         list: listName,
@@ -936,7 +936,7 @@ class CardAction {
     } else {
       list = board?.teams?.find((t) => t.listId === listId);
       if (list) {
-        console.log({
+        logger.info({
           type: "existed_in_current_list_team",
           name: this.action.data.card.name,
           list: listName,
@@ -947,7 +947,7 @@ class CardAction {
       } else {
         list = board.sideLists.find((i) => i.listId === listId);
         if (list) {
-          console.log({
+          logger.info({
             type: "existed_in_current_list_sideList",
             name: this.action.data.card.name,
             list: listName,
@@ -957,7 +957,7 @@ class CardAction {
         } else {
           list = board.lists.find((l) => l.name === listName);
           if (list) {
-            console.log({
+            logger.info({
               type: "existed_in_archived_list_status",
               name: this.action.data.card.name,
               list: listName,

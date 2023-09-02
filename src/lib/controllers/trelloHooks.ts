@@ -5,7 +5,7 @@ import { Movement, TaskData, TaskInfo } from "../types/model/tasks";
 import TaskController from "./task";
 import config from "config";
 import Project from "../models/Project";
-import { io } from "../..";
+import { io } from "../../index";
 import TrelloController from "./trello";
 import logger from "../../logger";
 import ProjectController from "./project";
@@ -171,7 +171,7 @@ export default class TrelloWebhook {
 
   private async updateCard() {
     try {
-      console.log({
+      logger.info({
         action: this.actionRequest.action.display.translationKey,
         cardId: this.task.cardId,
       });
@@ -237,10 +237,6 @@ export default class TrelloWebhook {
             await Department.find({}),
             cardDeadline ? new Date(cardDeadline) : null
           );
-        console.log({
-          desc: this.actionRequest.action.data.card.desc,
-          taskDEsc: task.description,
-        });
         if (!isProject) {
           this.task = {
             name: this.actionRequest.action.data.card.name,

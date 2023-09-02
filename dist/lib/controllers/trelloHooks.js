@@ -16,7 +16,7 @@ const Department_1 = __importDefault(require("../models/Department"));
 const validation_1 = require("../services/validation");
 const task_1 = __importDefault(require("./task"));
 const Project_1 = __importDefault(require("../models/Project"));
-const __1 = require("../..");
+const index_1 = require("../../index");
 const trello_1 = __importDefault(require("./trello"));
 const logger_1 = __importDefault(require("../../logger"));
 class TrelloWebhook {
@@ -296,7 +296,7 @@ class TrelloWebhook {
                         projectDeadline: this.actionRequest.action.data.card.due,
                         startDate: this.actionRequest.action.data.card.start,
                     }, { new: true });
-                    __1.io.sockets.emit("update-projects", project);
+                    index_1.io.sockets.emit("update-projects", project);
                 }
             }));
         }
@@ -320,7 +320,7 @@ class TrelloWebhook {
                         project.boardId = this.actionRequest.action.data.board.id;
                         project.listId = data.idList;
                         let result = yield project.save();
-                        __1.io.sockets.emit("update-projects", result);
+                        index_1.io.sockets.emit("update-projects", result);
                     }));
                 }
             }

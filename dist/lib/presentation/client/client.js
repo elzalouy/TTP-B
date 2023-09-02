@@ -16,7 +16,7 @@ const client_1 = __importDefault(require("../../controllers/client"));
 const successMsg_1 = require("../../utils/successMsg");
 const errorUtils_1 = require("../../utils/errorUtils");
 const logger_1 = __importDefault(require("../../../logger"));
-const __1 = require("../../..");
+const index_1 = require("../../../index");
 const ClientReq = class ClientReq extends client_1.default {
     static handleCreateClient(req, res) {
         const _super = Object.create(null, {
@@ -30,7 +30,7 @@ const ClientReq = class ClientReq extends client_1.default {
                 }
                 let Client = yield _super.createClient.call(this, req.body);
                 if (Client) {
-                    __1.io.sockets.emit("create-client", Client);
+                    index_1.io.sockets.emit("create-client", Client);
                     return res.status(200).send(Client);
                 }
                 else {
@@ -54,7 +54,7 @@ const ClientReq = class ClientReq extends client_1.default {
                 if (file.image && file.image[0]) {
                     clientData.image = file.image[0].location;
                 }
-                logger_1.default.info({ clientData });
+                logger_1.default.warning({ clientData });
                 if (!clientData) {
                     return res.status(400).send((0, errorUtils_1.customeError)("update_client_error", 400));
                 }

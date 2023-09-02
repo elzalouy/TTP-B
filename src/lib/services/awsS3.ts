@@ -15,7 +15,7 @@ const s3 = new AWS.S3({
 });
 
 // export const uploadFiles = async (file:string,fileName:string,type:string) => {
-//   logger.info(file,fileName,type)
+//   logger.warn(file,fileName,type)
 //     const params = {
 //         Bucket: 'zidbacketnew',
 //         Key:fileName,
@@ -23,10 +23,10 @@ const s3 = new AWS.S3({
 //         ContentType:type,
 //         acl:'public-read',
 //     }
-//     logger.info({params})
+//     logger.warn({params})
 //     const makePromise = util.promisify(s3.upload.bind(s3))
 //     let data:any = await makePromise(params)
-//     logger.info({uploadData:data})
+//     logger.warn({uploadData:data})
 //     return data
 // }
 
@@ -38,7 +38,7 @@ export const imageUpload = multer({
     bucket: "bucketttp",
     acl: "public-read",
     key: function (req, file, cb) {
-      logger.info({ s3File: file });
+      logger.warn({ s3File: file });
       cb(
         null,
         path.basename(file.originalname, path.extname(file.originalname)) +

@@ -59,7 +59,7 @@ const sendMail = async (data: Data) => {
     const result = await transporter.sendMail(mailOptions);
     return result;
   } catch (error) {
-    logger.info({ sendMailError: error });
+    logger.warn({ sendMailError: error });
   }
 };
 

@@ -23,7 +23,7 @@ export function removeOldNotifications(
         let result = await NotificationDB.__deleteNotifcations({
           _id: { $in: ids },
         });
-        logger.info({ monthlyDeleteNotifications: result.deletedCount });
+        logger.warn({ monthlyDeleteNotifications: result.deletedCount });
       }
     },
     null,

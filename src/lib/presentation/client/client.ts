@@ -4,7 +4,7 @@ import { successMsg } from "../../utils/successMsg";
 import { customeError } from "../../utils/errorUtils";
 import { Request, Response } from "express";
 import logger from "../../../logger";
-import { io } from "../../..";
+import { io } from "../../../index";
 
 const ClientReq = class ClientReq extends ClientController {
   static async handleCreateClient(req: Request, res: Response) {
@@ -33,7 +33,7 @@ const ClientReq = class ClientReq extends ClientController {
       if (file.image && file.image[0]) {
         clientData.image = file.image[0].location;
       }
-      logger.info({ clientData });
+      logger.warn({ clientData });
       if (!clientData) {
         return res.status(400).send(customeError("update_client_error", 400));
       }

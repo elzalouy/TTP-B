@@ -177,7 +177,7 @@ const ProjectController = class ProjectController extends project_1.default {
                     return null;
             }
             catch (error) {
-                logger_1.default.console.error({ searchPrjectsError: error });
+                logger_1.default.error({ searchPrjectsError: error });
             }
         });
     }
@@ -194,7 +194,7 @@ const ProjectController = class ProjectController extends project_1.default {
                     return null;
             }
             catch (error) {
-                logger_1.default.console.error({ searchPrjectsError: error });
+                logger_1.default.error({ searchPrjectsError: error });
             }
         });
     }

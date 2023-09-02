@@ -55,7 +55,7 @@ export function moveTaskJob(
       cb(null);
     } catch (error: any) {
       cb(new Error(error), null);
-      logger.ercror({ webHookUpdateMoveTaskJobError: error });
+      logger.error({ webHookUpdateMoveTaskJobError: error });
     }
   });
 }
@@ -91,7 +91,7 @@ export const updateCardJob = (
       cb(null, response);
     } catch (error: any) {
       cb(error, null);
-      logger.ercror({ updateCardDataError: error });
+      logger.error({ updateCardDataError: error });
     }
   });
 
@@ -137,14 +137,14 @@ export const deleteTaskFromBoardJob = (data: TaskInfo) => {
       io.sockets.emit("delete-task", data);
       cb(null, data);
     } catch (error) {
-      logger.ercror({ deleteCardDataError: error });
+      logger.error({ deleteCardDataError: error });
     }
   });
   updateTaskQueue.push(async (cb) => {
     try {
       await TrelloController.removeWebhook(data.cardId);
     } catch (error) {
-      logger.ercror({ deleteCardWebhookError: error });
+      logger.error({ deleteCardWebhookError: error });
     }
   });
 };
@@ -166,7 +166,7 @@ export const updateTaskAttachmentsJob = (task: TaskData) => {
       let Task = await TaskDB.__updateTaskAttachments(task, newfiles);
       io.sockets.emit("update-task", Task);
     } catch (error) {
-      logger.ercror({ updateTaskAttachmentsError: error });
+      logger.error({ updateTaskAttachmentsError: error });
     }
   });
 };

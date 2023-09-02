@@ -150,7 +150,7 @@ class TrelloController {
                     .then((value) => {
                     return value;
                 })
-                    .catch((err) => logger_1.default.info("error in moving board", err));
+                    .catch((err) => logger_1.default.warning("error in moving board", err));
                 return result;
             }
             catch (error) {
@@ -162,14 +162,14 @@ class TrelloController {
         return __awaiter(this, void 0, void 0, function* () {
             try {
                 let removeBoard = (0, trelloApi_1.trelloApi)(`boards/${id}?response_type=token&`);
-                logger_1.default.info({ removeBoard });
+                logger_1.default.warning({ removeBoard });
                 return yield (0, node_fetch_1.default)(removeBoard, {
                     method: "DELETE",
                 })
                     .then((response) => {
                     return response.text();
                 })
-                    .catch((err) => logger_1.default.info("error in delete board", err));
+                    .catch((err) => logger_1.default.warning("error in delete board", err));
             }
             catch (error) {
                 logger_1.default.error({ deleteBoardError: error });
@@ -759,7 +759,7 @@ class TrelloController {
                 return actionsByBoards;
             }
             catch (error) {
-                logger_1.default.log({ __postSnapshotOfActionsError: error });
+                logger_1.default.error({ __postSnapshotOfActionsError: error });
             }
         });
     }
@@ -945,7 +945,7 @@ class CardAction {
                             this.action.listType = "list";
                         }
                         else
-                            this.action.deleteAction = true;
+                            this.action.deleteAction = this.action && true;
                     }
                 }
             }

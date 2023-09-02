@@ -18,7 +18,7 @@ const lodash_1 = __importDefault(require("lodash"));
 const mongoose_1 = __importDefault(require("mongoose"));
 const Tasks_1 = require("../../types/controller/Tasks");
 const mongodb_1 = require("mongodb");
-const __1 = require("../../..");
+const index_1 = require("../../../index");
 class TaskDB {
     static createTaskDB(data) {
         return __awaiter(this, void 0, void 0, function* () {
@@ -403,7 +403,7 @@ class TaskDB {
                 task.attachedFiles = lodash_1.default.uniqBy(task.attachedFiles, "trelloId");
                 task.archivedCard = (_c = data.archivedCard) !== null && _c !== void 0 ? _c : false;
                 let result = yield (yield task.save()).toObject();
-                yield __1.io.sockets.emit("update-task", result);
+                yield index_1.io.sockets.emit("update-task", result);
             }
             catch (error) {
                 logger_1.default.error({ __updateTaskByTrelloDBError: error });
@@ -416,7 +416,7 @@ class TaskDB {
                 let task = yield Task_1.default.findOne({ cardId: data.cardId });
                 if (task) {
                     task = yield task.set(data).save();
-                    yield __1.io.sockets.emit("update-task", task);
+                    yield index_1.io.sockets.emit("update-task", task);
                     return task;
                 }
                 else {
@@ -425,7 +425,7 @@ class TaskDB {
                         { status: data.status, movedAt: new Date(Date.now()).toString() },
                     ];
                     task = yield task.save();
-                    yield __1.io.sockets.emit("create-task", task);
+                    yield index_1.io.sockets.emit("create-task", task);
                     return yield task;
                 }
             }
@@ -441,7 +441,7 @@ class TaskDB {
                 let result = yield Task_1.default.findOneAndDelete({
                     cardId: data.cardId,
                 });
-                return (_a = __1.io === null || __1.io === void 0 ? void 0 : __1.io.sockets) === null || _a === void 0 ? void 0 : _a.emit("delete-task", result);
+                return (_a = index_1.io === null || index_1.io === void 0 ? void 0 : index_1.io.sockets) === null || _a === void 0 ? void 0 : _a.emit("delete-task", result);
             }
             catch (error) {
                 logger_1.default.error({ __deleteTaskByTrelloDBError: error });
@@ -454,7 +454,7 @@ class TaskDB {
             try {
                 let taskData = archive === true ? { listId: null, status: "Archived" } : data;
                 let archiveTask = yield Task_1.default.findOneAndUpdate({ cardId: data.cardId }, taskData, { new: true, lean: true });
-                return (_a = __1.io === null || __1.io === void 0 ? void 0 : __1.io.sockets) === null || _a === void 0 ? void 0 : _a.emit("update-task", archiveTask);
+                return (_a = index_1.io === null || index_1.io === void 0 ? void 0 : index_1.io.sockets) === null || _a === void 0 ? void 0 : _a.emit("update-task", archiveTask);
             }
             catch (error) {
                 logger_1.default.error({ __archiveTaskByTrelloDBError: error });

@@ -112,7 +112,7 @@ const UserReq = class UserReq extends UserController {
   static async handleUpdatePassword(req: Request, res: Response) {
     try {
       let userData: PasswordUpdate = req.body;
-      logger.info({ userData });
+      logger.warn({ userData });
       if (userData) {
         let user = await super.updatePassword(userData);
         if (user) {

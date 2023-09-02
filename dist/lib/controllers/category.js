@@ -103,7 +103,7 @@ const CategoryController = class CategoryController extends category_1.default {
                     let updatedCategory = [];
                     for (let i = 0; i < data.newSubCategory.length; i++) {
                         let subCategory = yield CategoryController.createSubcategory(data.newSubCategory[i]);
-                        logger_1.default.info({ subCategory });
+                        logger_1.default.warning({ subCategory });
                         updatedCategory[i] = subCategory._id;
                     }
                     data.subCategoriesId = updatedCategory;
