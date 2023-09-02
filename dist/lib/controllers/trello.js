@@ -790,7 +790,6 @@ class TrelloController {
             try {
                 let creativeBoard = boards.find((board) => board.name === config_1.default.get("CreativeBoard"));
                 let deletedCards = actions === null || actions === void 0 ? void 0 : actions.filter((i) => i.type === "deleteCard");
-                console.log({ deletedCards });
                 let newCards = yield Promise.all(deletedCards.map((cardAction) => __awaiter(this, void 0, void 0, function* () {
                     var _a, _b, _c, _d, _e;
                     let cardActions = actions.filter((action) => action.data.card.id === cardAction.data.card.id);
@@ -804,7 +803,6 @@ class TrelloController {
                     yield TrelloController.__addWebHook(card.id, "trelloWebhookUrlTask");
                     yield cardActions.map((action) => __awaiter(this, void 0, void 0, function* () {
                         var _f, _g, _h, _j, _k, _l, _m, _o, _p, _q, _r, _s;
-                        console.log({ actionType: action.type });
                         if (action.type === "updateCard")
                             yield TrelloController.__updateCard({
                                 cardId: card.id,
@@ -881,7 +879,6 @@ class TrelloController {
                         journeyDeadline: cardAction.action.dueChange,
                     };
                 });
-                console.log({ movements });
                 return { movements, currentTeam };
             }
             catch (error) {
@@ -907,22 +904,42 @@ class CardAction {
             if (list) {
                 this.action.listType = "list";
                 this.action.status = list.name;
+                console.log({
+                    type: "existed_in_current_list_status",
+                    name: this.action.data.card.name,
+                    list: listName,
+                });
             }
             else {
                 list = (_m = board === null || board === void 0 ? void 0 : board.teams) === null || _m === void 0 ? void 0 : _m.find((t) => t.listId === listId);
                 if (list) {
+                    console.log({
+                        type: "existed_in_current_list_team",
+                        name: this.action.data.card.name,
+                        list: listName,
+                    });
                     this.action.listType = "team";
                     this.action.status = "In Progress";
                 }
                 else {
                     list = board.sideLists.find((i) => i.listId === listId);
                     if (list) {
+                        console.log({
+                            type: "existed_in_current_list_sideList",
+                            name: this.action.data.card.name,
+                            list: listName,
+                        });
                         this.action.listType = "sidelist";
                         this.action.status = "Tasks Board";
                     }
                     else {
                         list = board.lists.find((l) => l.name === listName);
                         if (list) {
+                            console.log({
+                                type: "existed_in_archived_list_status",
+                                name: this.action.data.card.name,
+                                list: listName,
+                            });
                             this.action.data.list.id = list.listId;
                             this.action.status = list.name;
                             this.action.listType = "list";

@@ -2424,3 +2424,342 @@
   level: 'error',
   timestamp: '2023-09-02 14:00:07'
 }
+{
+  message: {
+    getAttachmentsError: FetchError: request to https://api.trello.com/1/cards/64d9cf3d5325753ebb9cfc0b/attachments?key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68 failed, reason: connect ETIMEDOUT 185.166.143.25:443
+        at ClientRequest.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/node-fetch/lib/index.js:1505:11)
+        at ClientRequest.emit (node:events:527:28)
+        at ClientRequest.emit (node:domain:475:12)
+        at TLSSocket.socketErrorListener (node:_http_client:454:9)
+        at TLSSocket.emit (node:events:527:28)
+        at TLSSocket.emit (node:domain:475:12)
+        at emitErrorNT (node:internal/streams/destroy:157:8)
+        at emitErrorCloseNT (node:internal/streams/destroy:122:3)
+        at processTicksAndRejections (node:internal/process/task_queues:83:21) {
+      type: 'system',
+      errno: 'ETIMEDOUT',
+      code: 'ETIMEDOUT'
+    }
+  },
+  level: 'error',
+  timestamp: '2023-09-02 17:51:49'
+}
+{
+  message: {
+    error: FetchError: request to https://api.trello.com/1/cards/64d9cf3d5325753ebb9cfc0b/actions/?filter=createCard&key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68 failed, reason: connect ETIMEDOUT 185.166.143.25:443
+        at ClientRequest.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/node-fetch/lib/index.js:1505:11)
+        at ClientRequest.emit (node:events:527:28)
+        at ClientRequest.emit (node:domain:475:12)
+        at TLSSocket.socketErrorListener (node:_http_client:454:9)
+        at TLSSocket.emit (node:events:527:28)
+        at TLSSocket.emit (node:domain:475:12)
+        at emitErrorNT (node:internal/streams/destroy:157:8)
+        at emitErrorCloseNT (node:internal/streams/destroy:122:3)
+        at processTicksAndRejections (node:internal/process/task_queues:83:21) {
+      type: 'system',
+      errno: 'ETIMEDOUT',
+      code: 'ETIMEDOUT'
+    }
+  },
+  level: 'error',
+  timestamp: '2023-09-02 17:54:00'
+}
+{
+  message: {
+    error: FetchError: request to https://api.trello.com/1/cards/64da35ca24d272e5bfd031a2/actions/?filter=createCard&key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68 failed, reason: connect ETIMEDOUT 185.166.143.25:443
+        at ClientRequest.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/node-fetch/lib/index.js:1505:11)
+        at ClientRequest.emit (node:events:527:28)
+        at ClientRequest.emit (node:domain:475:12)
+        at TLSSocket.socketErrorListener (node:_http_client:454:9)
+        at TLSSocket.emit (node:events:527:28)
+        at TLSSocket.emit (node:domain:475:12)
+        at emitErrorNT (node:internal/streams/destroy:157:8)
+        at emitErrorCloseNT (node:internal/streams/destroy:122:3)
+        at processTicksAndRejections (node:internal/process/task_queues:83:21) {
+      type: 'system',
+      errno: 'ETIMEDOUT',
+      code: 'ETIMEDOUT'
+    }
+  },
+  level: 'error',
+  timestamp: '2023-09-02 17:54:00'
+}
+{
+  message: {
+    error: FetchError: request to https://api.trello.com/1/cards/64da31c8231983fafb4f0491/actions/?filter=createCard&key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68 failed, reason: connect ETIMEDOUT 185.166.143.25:443
+        at ClientRequest.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/node-fetch/lib/index.js:1505:11)
+        at ClientRequest.emit (node:events:527:28)
+        at ClientRequest.emit (node:domain:475:12)
+        at TLSSocket.socketErrorListener (node:_http_client:454:9)
+        at TLSSocket.emit (node:events:527:28)
+        at TLSSocket.emit (node:domain:475:12)
+        at emitErrorNT (node:internal/streams/destroy:157:8)
+        at emitErrorCloseNT (node:internal/streams/destroy:122:3)
+        at processTicksAndRejections (node:internal/process/task_queues:83:21) {
+      type: 'system',
+      errno: 'ETIMEDOUT',
+      code: 'ETIMEDOUT'
+    }
+  },
+  level: 'error',
+  timestamp: '2023-09-02 17:54:00'
+}
+{
+  message: {
+    error: FetchError: request to https://api.trello.com/1/cards/64da37db7ca6f3f46c3c65ce/actions/?filter=createCard&key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68 failed, reason: connect ETIMEDOUT 185.166.143.25:443
+        at ClientRequest.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/node-fetch/lib/index.js:1505:11)
+        at ClientRequest.emit (node:events:527:28)
+        at ClientRequest.emit (node:domain:475:12)
+        at TLSSocket.socketErrorListener (node:_http_client:454:9)
+        at TLSSocket.emit (node:events:527:28)
+        at TLSSocket.emit (node:domain:475:12)
+        at emitErrorNT (node:internal/streams/destroy:157:8)
+        at emitErrorCloseNT (node:internal/streams/destroy:122:3)
+        at processTicksAndRejections (node:internal/process/task_queues:83:21) {
+      type: 'system',
+      errno: 'ETIMEDOUT',
+      code: 'ETIMEDOUT'
+    }
+  },
+  level: 'error',
+  timestamp: '2023-09-02 17:54:00'
+}
+{
+  message: {
+    error: FetchError: request to https://api.trello.com/1/cards/64db224ca868eb6d9e716c8b/actions/?filter=createCard&key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68 failed, reason: connect ETIMEDOUT 185.166.143.25:443
+        at ClientRequest.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/node-fetch/lib/index.js:1505:11)
+        at ClientRequest.emit (node:events:527:28)
+        at ClientRequest.emit (node:domain:475:12)
+        at TLSSocket.socketErrorListener (node:_http_client:454:9)
+        at TLSSocket.emit (node:events:527:28)
+        at TLSSocket.emit (node:domain:475:12)
+        at emitErrorNT (node:internal/streams/destroy:157:8)
+        at emitErrorCloseNT (node:internal/streams/destroy:122:3)
+        at processTicksAndRejections (node:internal/process/task_queues:83:21) {
+      type: 'system',
+      errno: 'ETIMEDOUT',
+      code: 'ETIMEDOUT'
+    }
+  },
+  level: 'error',
+  timestamp: '2023-09-02 17:54:00'
+}
+{
+  message: {
+    error: TypeError: Cannot read properties of undefined (reading '0')
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:872:23)
+        at Generator.next (<anonymous>)
+        at fulfilled (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:5:58)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5)
+  },
+  level: 'error',
+  timestamp: '2023-09-02 17:54:01'
+}
+{
+  message: {
+    error: TypeError: Cannot destructure property 'movements' of '(intermediate value)' as it is undefined.
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/startup/db/dbConnect.ts:400:15
+        at Generator.next (<anonymous>)
+        at fulfilled (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/startup/db/dbConnect.ts:5:58)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5)
+  },
+  level: 'error',
+  timestamp: '2023-09-02 17:54:01'
+}
+{
+  message: {
+    error: TypeError: Cannot read properties of undefined (reading '0')
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:872:23)
+        at Generator.next (<anonymous>)
+        at fulfilled (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:5:58)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5)
+  },
+  level: 'error',
+  timestamp: '2023-09-02 17:54:01'
+}
+{
+  message: {
+    error: TypeError: Cannot read properties of undefined (reading '0')
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:872:23)
+        at Generator.next (<anonymous>)
+        at fulfilled (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:5:58)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5)
+  },
+  level: 'error',
+  timestamp: '2023-09-02 17:54:02'
+}
+{
+  message: {
+    error: TypeError: Cannot read properties of undefined (reading '0')
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:872:23)
+        at Generator.next (<anonymous>)
+        at fulfilled (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:5:58)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5)
+  },
+  level: 'error',
+  timestamp: '2023-09-02 17:54:02'
+}
+{
+  message: {
+    error: TypeError: Cannot read properties of undefined (reading '0')
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:872:23)
+        at Generator.next (<anonymous>)
+        at fulfilled (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:5:58)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5)
+  },
+  level: 'error',
+  timestamp: '2023-09-02 17:54:02'
+}
+{
+  message: {
+    _getCardMovementsActionsError: FetchError: request to https://api.trello.com/1/cards/64da344af85546b6e63e7490/actions/?filter=updateCard:idList&page=0&key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68 failed, reason: connect ETIMEDOUT 185.166.143.25:443
+        at ClientRequest.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/node-fetch/lib/index.js:1505:11)
+        at ClientRequest.emit (node:events:527:28)
+        at ClientRequest.emit (node:domain:475:12)
+        at TLSSocket.socketErrorListener (node:_http_client:454:9)
+        at TLSSocket.emit (node:events:527:28)
+        at TLSSocket.emit (node:domain:475:12)
+        at emitErrorNT (node:internal/streams/destroy:157:8)
+        at emitErrorCloseNT (node:internal/streams/destroy:122:3)
+        at processTicksAndRejections (node:internal/process/task_queues:83:21) {
+      type: 'system',
+      errno: 'ETIMEDOUT',
+      code: 'ETIMEDOUT'
+    }
+  },
+  level: 'error',
+  timestamp: '2023-09-02 17:54:02'
+}
+{
+  message: {
+    _getCardMovementsActionsError: FetchError: request to https://api.trello.com/1/cards/64d9c63865a85bfec4794b0d/actions/?filter=updateCard:idList&page=0&key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68 failed, reason: connect ETIMEDOUT 185.166.143.25:443
+        at ClientRequest.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/node-fetch/lib/index.js:1505:11)
+        at ClientRequest.emit (node:events:527:28)
+        at ClientRequest.emit (node:domain:475:12)
+        at TLSSocket.socketErrorListener (node:_http_client:454:9)
+        at TLSSocket.emit (node:events:527:28)
+        at TLSSocket.emit (node:domain:475:12)
+        at emitErrorNT (node:internal/streams/destroy:157:8)
+        at emitErrorCloseNT (node:internal/streams/destroy:122:3)
+        at processTicksAndRejections (node:internal/process/task_queues:83:21) {
+      type: 'system',
+      errno: 'ETIMEDOUT',
+      code: 'ETIMEDOUT'
+    }
+  },
+  level: 'error',
+  timestamp: '2023-09-02 17:54:02'
+}
+{
+  message: {
+    _getCardMovementsActionsError: FetchError: request to https://api.trello.com/1/cards/64d9c777744a9930ecca5393/actions/?filter=updateCard:idList&page=0&key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68 failed, reason: connect ETIMEDOUT 185.166.143.25:443
+        at ClientRequest.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/node-fetch/lib/index.js:1505:11)
+        at ClientRequest.emit (node:events:527:28)
+        at ClientRequest.emit (node:domain:475:12)
+        at TLSSocket.socketErrorListener (node:_http_client:454:9)
+        at TLSSocket.emit (node:events:527:28)
+        at TLSSocket.emit (node:domain:475:12)
+        at emitErrorNT (node:internal/streams/destroy:157:8)
+        at emitErrorCloseNT (node:internal/streams/destroy:122:3)
+        at processTicksAndRejections (node:internal/process/task_queues:83:21) {
+      type: 'system',
+      errno: 'ETIMEDOUT',
+      code: 'ETIMEDOUT'
+    }
+  },
+  level: 'error',
+  timestamp: '2023-09-02 17:54:02'
+}
+{
+  message: {
+    _getCardMovementsActionsError: FetchError: request to https://api.trello.com/1/cards/64d9c776fa520ed95d23163a/actions/?filter=updateCard:idList&key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68 failed, reason: connect ETIMEDOUT 185.166.143.25:443
+        at ClientRequest.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/node-fetch/lib/index.js:1505:11)
+        at ClientRequest.emit (node:events:527:28)
+        at ClientRequest.emit (node:domain:475:12)
+        at TLSSocket.socketErrorListener (node:_http_client:454:9)
+        at TLSSocket.emit (node:events:527:28)
+        at TLSSocket.emit (node:domain:475:12)
+        at emitErrorNT (node:internal/streams/destroy:157:8)
+        at emitErrorCloseNT (node:internal/streams/destroy:122:3)
+        at processTicksAndRejections (node:internal/process/task_queues:83:21) {
+      type: 'system',
+      errno: 'ETIMEDOUT',
+      code: 'ETIMEDOUT'
+    }
+  },
+  level: 'error',
+  timestamp: '2023-09-02 17:54:02'
+}
+{
+  message: {
+    error: TypeError: Cannot read properties of undefined (reading 'length')
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:858:20)
+        at Generator.next (<anonymous>)
+        at fulfilled (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:5:58)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5)
+  },
+  level: 'error',
+  timestamp: '2023-09-02 17:54:02'
+}
+{
+  message: {
+    _getCardMovementsActionsError: FetchError: request to https://api.trello.com/1/cards/64d9e1e23e2d146b874e61a5/actions/?filter=updateCard:idList&key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68 failed, reason: connect ETIMEDOUT 185.166.143.25:443
+        at ClientRequest.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/node-fetch/lib/index.js:1505:11)
+        at ClientRequest.emit (node:events:527:28)
+        at ClientRequest.emit (node:domain:475:12)
+        at TLSSocket.socketErrorListener (node:_http_client:454:9)
+        at TLSSocket.emit (node:events:527:28)
+        at TLSSocket.emit (node:domain:475:12)
+        at emitErrorNT (node:internal/streams/destroy:157:8)
+        at emitErrorCloseNT (node:internal/streams/destroy:122:3)
+        at processTicksAndRejections (node:internal/process/task_queues:83:21) {
+      type: 'system',
+      errno: 'ETIMEDOUT',
+      code: 'ETIMEDOUT'
+    }
+  },
+  level: 'error',
+  timestamp: '2023-09-02 17:54:02'
+}
+{
+  message: {
+    error: TypeError: Cannot read properties of undefined (reading 'length')
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:858:20)
+        at Generator.next (<anonymous>)
+        at fulfilled (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:5:58)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5)
+  },
+  level: 'error',
+  timestamp: '2023-09-02 17:54:02'
+}
+{
+  message: {
+    _getCardMovementsActionsError: FetchError: request to https://api.trello.com/1/cards/64da3849f9d1940b2477420f/actions/?filter=updateCard:idList&key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68 failed, reason: connect ETIMEDOUT 185.166.143.25:443
+        at ClientRequest.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/node-fetch/lib/index.js:1505:11)
+        at ClientRequest.emit (node:events:527:28)
+        at ClientRequest.emit (node:domain:475:12)
+        at TLSSocket.socketErrorListener (node:_http_client:454:9)
+        at TLSSocket.emit (node:events:527:28)
+        at TLSSocket.emit (node:domain:475:12)
+        at emitErrorNT (node:internal/streams/destroy:157:8)
+        at emitErrorCloseNT (node:internal/streams/destroy:122:3)
+        at processTicksAndRejections (node:internal/process/task_queues:83:21) {
+      type: 'system',
+      errno: 'ETIMEDOUT',
+      code: 'ETIMEDOUT'
+    }
+  },
+  level: 'error',
+  timestamp: '2023-09-02 17:54:04'
+}
+{
+  message: {
+    error: TypeError: Cannot read properties of undefined (reading 'length')
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:858:20)
+        at Generator.next (<anonymous>)
+        at fulfilled (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:5:58)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5)
+  },
+  level: 'error',
+  timestamp: '2023-09-02 17:54:04'
+}

@@ -965,7 +965,7 @@ class CardAction {
             this.action.data.list.id = list.listId;
             this.action.status = list.name;
             this.action.listType = "list";
-          } else this.action.deleteAction = true;
+          } else this.action.deleteAction = this.action && true;
         }
       }
     }
