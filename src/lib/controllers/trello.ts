@@ -898,6 +898,7 @@ class TrelloController {
           journeyDeadline: cardAction.action.dueChange,
         };
       });
+      console.log({ movements });
       return { movements, currentTeam };
     } catch (error) {
       logger.error({ error });
