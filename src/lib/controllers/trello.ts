@@ -888,7 +888,7 @@ class TrelloController {
       );
       /// First create status
       cardsActions = cardsActions.filter(
-        (i) => i.action.deleteAction && i.action.deleteAction === false
+        (i) => i?.action?.deleteAction === false
       );
       let movements: Movement[] = cardsActions.map((cardAction) => {
         return {
