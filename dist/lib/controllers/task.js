@@ -19,7 +19,6 @@ const Tasks_1 = require("../types/controller/Tasks");
 const tasks_Route_Queue_1 = require("../backgroundJobs/routes/tasks.Route.Queue");
 const Department_1 = require("../types/model/Department");
 const trello_1 = __importDefault(require("./trello"));
-const lodash_1 = __importDefault(require("lodash"));
 const Task_1 = __importDefault(require("../models/Task"));
 const fs_1 = require("fs");
 const crypto_1 = require("crypto");
@@ -75,86 +74,6 @@ class TaskController extends tasks_1.default {
         return __awaiter(this, void 0, void 0, function* () {
             // TODO update this function with the new implementation
             return yield TaskController.__createTaskByTrello(data);
-        });
-    }
-    static getActionsOfTask(cardId, departments, due) {
-        var _a, _b, _c, _d;
-        return __awaiter(this, void 0, void 0, function* () {
-            try {
-                let currentTeam;
-                let createAction = yield trello_1.default._getCreationActionOfCard(cardId);
-                let actions = yield trello_1.default._getCardMovementsActions(cardId);
-                actions = lodash_1.default.sortBy(actions, "date");
-                let dueChanges = yield trello_1.default._getCardDeadlineActions(cardId);
-                /// First create status
-                let board = departments.find((i) => { var _a; return i.boardId === ((_a = createAction[0]) === null || _a === void 0 ? void 0 : _a.data.board.id); });
-                if (board) {
-                    let listId = (_c = (_b = (_a = createAction[0]) === null || _a === void 0 ? void 0 : _a.data) === null || _b === void 0 ? void 0 : _b.list) === null || _c === void 0 ? void 0 : _c.id;
-                    let sideList = (_d = board === null || board === void 0 ? void 0 : board.sideLists) === null || _d === void 0 ? void 0 : _d.find((l) => l.listId === listId);
-                    let team = board.teams.find((t) => t.listId === listId);
-                    let list = board.lists.find((l) => l.listId === listId);
-                    let status = list
-                        ? list.name
-                        : team
-                            ? "In Progress"
-                            : sideList
-                                ? "Tasks Board"
-                                : "";
-                    if (team)
-                        currentTeam = team;
-                    let movements = [
-                        {
-                            status,
-                            listId: listId,
-                            movedAt: createAction[0].date,
-                            isTeam: team ? true : false,
-                        },
-                    ];
-                    // next actions
-                    movements = [
-                        ...movements,
-                        ...actions.map((action, index) => {
-                            var _a, _b, _c, _d;
-                            let board = departments.find((i) => { var _a, _b; return i.boardId === ((_b = (_a = action === null || action === void 0 ? void 0 : action.data) === null || _a === void 0 ? void 0 : _a.board) === null || _b === void 0 ? void 0 : _b.id); });
-                            let listId = (_b = (_a = action === null || action === void 0 ? void 0 : action.data) === null || _a === void 0 ? void 0 : _a.listAfter) === null || _b === void 0 ? void 0 : _b.id;
-                            let sideList = board === null || board === void 0 ? void 0 : board.sideLists.find((l) => l.listId === listId);
-                            let team = board.teams.find((t) => t.listId === listId);
-                            let list = board.lists.find((l) => l.listId === listId);
-                            let status = list
-                                ? list.name
-                                : team
-                                    ? "In Progress"
-                                    : sideList
-                                        ? "Tasks Board"
-                                        : "";
-                            let movement = {
-                                movedAt: action.date,
-                                status: status,
-                                isTeam: team ? true : false,
-                            };
-                            if (["Done", "Shared", "Cancled"].includes(status)) {
-                                let journeyDeadline = dueChanges[0]
-                                    ? (_d = (_c = dueChanges[0]) === null || _c === void 0 ? void 0 : _c.data) === null || _d === void 0 ? void 0 : _d.card.due
-                                    : due;
-                                delete dueChanges[0];
-                                movement.journeyDeadline = journeyDeadline;
-                            }
-                            return movement;
-                        }),
-                    ];
-                    // console.log({ movements });
-                    return { movements, currentTeam };
-                }
-                else {
-                    return {
-                        movements: [],
-                        currentTeam: null,
-                    };
-                }
-            }
-            catch (error) {
-                logger_1.default.error({ error });
-            }
         });
     }
     static moveTaskOnTrello(cardId, listId, status, department, user, deadline) {

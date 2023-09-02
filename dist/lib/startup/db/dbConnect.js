@@ -25,7 +25,6 @@ const trello_1 = __importDefault(require("../../controllers/trello"));
 const Department_2 = require("../../types/model/Department");
 const lodash_1 = __importDefault(require("lodash"));
 const Task_1 = __importDefault(require("../../models/Task"));
-const task_1 = __importDefault(require("../../controllers/task"));
 (0, dotenv_1.config)();
 const db = config_1.default.get("mongoDbConnectionString");
 logger_1.default.info({ db });
@@ -299,10 +298,10 @@ const initializeTTPTasks = () => __awaiter(void 0, void 0, void 0, function* () 
             let sideList = isBoardArchived || isListArchived
                 ? null
                 : dep === null || dep === void 0 ? void 0 : dep.sideLists.find((sideList) => (sideList === null || sideList === void 0 ? void 0 : sideList.listId) === card.idList);
-            let { movements, currentTeam } = yield task_1.default.getActionsOfTask(card.id, departments, card.due);
+            let { movements, currentTeam } = yield trello_1.default.getActionsOfCard(card.id, departments, card.due ? new Date(card.due) : null);
             let replacement = new Task_1.default({
                 _id: item._id,
-                name: decodeURIComponent(card.name),
+                name: card.name,
                 categoryId: item.categoryId,
                 subCategoryId: item.subCategoryId,
                 boardId: card.idBoard,
@@ -364,9 +363,9 @@ const initializeTTPTasks = () => __awaiter(void 0, void 0, void 0, function* () 
                 let sideList = isBoardArchived || isListArchived
                     ? null
                     : dep === null || dep === void 0 ? void 0 : dep.sideLists.find((sideList) => (sideList === null || sideList === void 0 ? void 0 : sideList.listId) === card.idList);
-                let { movements, currentTeam } = yield task_1.default.getActionsOfTask(card.id, departments, card.due);
+                let { movements, currentTeam } = yield trello_1.default.getActionsOfCard(card.id, departments, card.due ? new Date(card.due) : null);
                 let task = new Task_1.default({
-                    name: decodeURIComponent(card.name),
+                    name: card.name,
                     boardId: card.idBoard,
                     listId: card.idList,
                     status: sideList
@@ -379,7 +378,7 @@ const initializeTTPTasks = () => __awaiter(void 0, void 0, void 0, function* () 
                     teamId: (_7 = (_6 = team === null || team === void 0 ? void 0 : team._id) !== null && _6 !== void 0 ? _6 : currentTeam === null || currentTeam === void 0 ? void 0 : currentTeam._id) !== null && _7 !== void 0 ? _7 : null,
                     teamListId: (_9 = (_8 = team === null || team === void 0 ? void 0 : team.listId) !== null && _8 !== void 0 ? _8 : currentTeam === null || currentTeam === void 0 ? void 0 : currentTeam.listId) !== null && _9 !== void 0 ? _9 : null,
                     cardId: card.id,
-                    description: (_10 = decodeURIComponent(card === null || card === void 0 ? void 0 : card.desc)) !== null && _10 !== void 0 ? _10 : "",
+                    description: (_10 = card === null || card === void 0 ? void 0 : card.desc) !== null && _10 !== void 0 ? _10 : "",
                     start: (_11 = card === null || card === void 0 ? void 0 : card.start) !== null && _11 !== void 0 ? _11 : null,
                     deadline: (_12 = card === null || card === void 0 ? void 0 : card.due) !== null && _12 !== void 0 ? _12 : null,
                     trelloShortUrl: card === null || card === void 0 ? void 0 : card.shortUrl,

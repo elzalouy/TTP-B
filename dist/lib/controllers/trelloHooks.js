@@ -203,7 +203,7 @@ class TrelloWebhook {
                     cardDeadline = this.actionRequest.action.data.card.due
                         ? new Date(this.actionRequest.action.data.card.due)
                         : task.deadline;
-                    let { movements, currentTeam } = yield task_1.default.getActionsOfTask(task.cardId, yield Department_1.default.find({}), new Date(cardDeadline).toLocaleDateString());
+                    let { movements, currentTeam } = yield trello_1.default.getActionsOfCard(task.cardId, yield Department_1.default.find({}), cardDeadline ? new Date(cardDeadline) : null);
                     console.log({
                         desc: this.actionRequest.action.data.card.desc,
                         taskDEsc: task.description,

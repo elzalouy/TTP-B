@@ -452,12 +452,22 @@ class TrelloController {
     static _getCardMovementsActions(cardId) {
         return __awaiter(this, void 0, void 0, function* () {
             try {
-                let url = yield (0, trelloApi_1.trelloApi)(`cards/${cardId}/actions/?filter=updateCard:idList&`);
-                let actions = yield (0, node_fetch_1.default)(url, {
-                    method: "GET",
-                    headers: { Accept: "application/json" },
-                });
-                return yield actions.json();
+                let page = 0;
+                let actions = [];
+                for (page; page <= 19; page++) {
+                    let url = yield (0, trelloApi_1.trelloApi)(`cards/${cardId}/actions/?filter=updateCard:idList&page=${page}&`);
+                    let newActions = yield (0, node_fetch_1.default)(url, {
+                        method: "GET",
+                        headers: { Accept: "application/json" },
+                    }).then((res) => __awaiter(this, void 0, void 0, function* () {
+                        return yield res.json();
+                    }));
+                    if (newActions && newActions.length > 0)
+                        actions = [...actions, ...newActions];
+                    if (newActions.length < 50)
+                        break;
+                }
+                return actions;
             }
             catch (error) {
                 logger_1.default.error({ _getCardMovementsActionsError: error });
@@ -830,6 +840,107 @@ class TrelloController {
                 logger_1.default.error({ error });
             }
         });
+    }
+    static getActionsOfCard(cardId, departments, due) {
+        var _a;
+        return __awaiter(this, void 0, void 0, function* () {
+            try {
+                let currentTeam;
+                let createAction = yield TrelloController._getCreationActionOfCard(cardId);
+                let actions = yield TrelloController._getCardMovementsActions(cardId);
+                actions = lodash_1.default.sortBy(actions, "date");
+                let dueChanges = yield TrelloController._getCardDeadlineActions(cardId);
+                dueChanges =
+                    dueChanges.length > 0
+                        ? dueChanges.map((i) => {
+                            return Object.assign(Object.assign({}, i), { date: new Date(i.date).getTime() });
+                        })
+                        : [];
+                dueChanges =
+                    dueChanges.length > 0 ? lodash_1.default.orderBy(dueChanges, "date", "desc") : [];
+                let dueDates = dueChanges.length > 0
+                    ? dueChanges.map((i) => new Date(i.data.card.due).getTime())
+                    : [];
+                dueDates = dueDates.sort((a, b) => b - a);
+                let cardsActions = [
+                    new CardAction(createAction[0], ((_a = dueDates[0]) !== null && _a !== void 0 ? _a : due) ? new Date(due).toDateString() : null),
+                    ...actions.map((action, index) => {
+                        var _a;
+                        return new CardAction(action, ((_a = dueDates[index]) !== null && _a !== void 0 ? _a : due) ? new Date(due).toDateString() : null);
+                    }),
+                ];
+                cardsActions = cardsActions.map((cardAction) => cardAction.validate(departments));
+                /// First create status
+                cardsActions = cardsActions.filter((i) => { var _a; return ((_a = i === null || i === void 0 ? void 0 : i.action) === null || _a === void 0 ? void 0 : _a.deleteAction) === false; });
+                let movements = cardsActions.map((cardAction) => {
+                    return {
+                        movedAt: new Date(cardAction.action.date).toDateString(),
+                        listId: cardAction.action.listId,
+                        status: cardAction.action.status,
+                        isTeam: cardAction.action.listType === "team",
+                        journeyDeadline: cardAction.action.dueChange,
+                    };
+                });
+                console.log({ movements });
+                return { movements, currentTeam };
+            }
+            catch (error) {
+                logger_1.default.error({ error });
+            }
+        });
+    }
+}
+class CardAction {
+    constructor(action, dueDate) {
+        this.validate = (deps) => {
+            var _a, _b, _c, _d, _e, _f, _g, _h, _j, _k, _l, _m;
+            let board = deps.find((i) => i.boardId === this.action.data.board.id);
+            let date = this.action.date;
+            let listId = (_c = (_b = (_a = this.action.data) === null || _a === void 0 ? void 0 : _a.list) === null || _b === void 0 ? void 0 : _b.id) !== null && _c !== void 0 ? _c : (_e = (_d = this.action.data) === null || _d === void 0 ? void 0 : _d.listAfter) === null || _e === void 0 ? void 0 : _e.id;
+            this.action.listId = listId;
+            let listName = (_h = (_g = (_f = this.action.data) === null || _f === void 0 ? void 0 : _f.list) === null || _g === void 0 ? void 0 : _g.name) !== null && _h !== void 0 ? _h : (_k = (_j = this.action.data) === null || _j === void 0 ? void 0 : _j.listAfter) === null || _k === void 0 ? void 0 : _k.name;
+            if (!board || !date) {
+                this.action.deleteAction = true;
+                return this;
+            }
+            let list = (_l = board === null || board === void 0 ? void 0 : board.lists) === null || _l === void 0 ? void 0 : _l.find((l) => l.listId === listId);
+            if (list) {
+                this.action.listType = "list";
+                this.action.status = list.name;
+            }
+            else {
+                list = (_m = board === null || board === void 0 ? void 0 : board.teams) === null || _m === void 0 ? void 0 : _m.find((t) => t.listId === listId);
+                if (list) {
+                    this.action.listType = "team";
+                    this.action.status = "In Progress";
+                }
+                else {
+                    list = board.sideLists.find((i) => i.listId === listId);
+                    if (list) {
+                        this.action.listType = "sidelist";
+                        this.action.status = "Tasks Board";
+                    }
+                    else {
+                        list = board.lists.find((l) => l.name === listName);
+                        if (list) {
+                            this.action.data.list.id = list.listId;
+                            this.action.status = list.name;
+                            this.action.listType = "list";
+                        }
+                        else
+                            this.action.deleteAction = true;
+                    }
+                }
+            }
+            if (["Shared", "Done", "Cancled"].includes(this.action.status) &&
+                this.dueDate) {
+                this.action.dueChange = new Date(this.dueDate).toDateString();
+            }
+            return this;
+        };
+        this.action = action;
+        this.action.deleteAction = false;
+        this.dueDate = dueDate;
     }
 }
 exports.default = TrelloController;

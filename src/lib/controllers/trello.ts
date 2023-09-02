@@ -782,7 +782,6 @@ class TrelloController {
         (board) => board.name === Config.get("CreativeBoard")
       );
       let deletedCards = actions?.filter((i) => i.type === "deleteCard");
-      console.log({ deletedCards });
       let newCards: Card[] = await Promise.all(
         deletedCards.map(async (cardAction) => {
           let cardActions = actions.filter(
@@ -801,7 +800,6 @@ class TrelloController {
           });
           await TrelloController.__addWebHook(card.id, "trelloWebhookUrlTask");
           await cardActions.map(async (action) => {
-            console.log({ actionType: action.type });
             if (action.type === "updateCard")
               await TrelloController.__updateCard({
                 cardId: card.id,
@@ -899,7 +897,6 @@ class TrelloController {
           journeyDeadline: cardAction.action.dueChange,
         };
       });
-      console.log({ movements });
       return { movements, currentTeam };
     } catch (error) {
       logger.error({ error });
@@ -931,19 +928,40 @@ class CardAction {
     if (list) {
       this.action.listType = "list";
       this.action.status = list.name;
+      console.log({
+        type: "existed_in_current_list_status",
+        name: this.action.data.card.name,
+        list: listName,
+      });
     } else {
       list = board?.teams?.find((t) => t.listId === listId);
       if (list) {
+        console.log({
+          type: "existed_in_current_list_team",
+          name: this.action.data.card.name,
+          list: listName,
+        });
+
         this.action.listType = "team";
         this.action.status = "In Progress";
       } else {
         list = board.sideLists.find((i) => i.listId === listId);
         if (list) {
+          console.log({
+            type: "existed_in_current_list_sideList",
+            name: this.action.data.card.name,
+            list: listName,
+          });
           this.action.listType = "sidelist";
           this.action.status = "Tasks Board";
         } else {
           list = board.lists.find((l) => l.name === listName);
           if (list) {
+            console.log({
+              type: "existed_in_archived_list_status",
+              name: this.action.data.card.name,
+              list: listName,
+            });
             this.action.data.list.id = list.listId;
             this.action.status = list.name;
             this.action.listType = "list";
