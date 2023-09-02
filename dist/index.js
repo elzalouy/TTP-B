@@ -44,7 +44,7 @@ function server() {
                 cards_webhook: Config.get("trelloWebhookUrlTask"),
             });
             console.log("server listen to port " + port);
-            logger_1.default.warning("Server worked");
+            logger_1.default.warn("Server worked");
             (0, cron_1.default)(exports.io);
         });
     }

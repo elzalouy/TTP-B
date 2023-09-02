@@ -1,9 +1,7 @@
 "use strict";
-var __importDefault =
-  (this && this.__importDefault) ||
-  function (mod) {
-    return mod && mod.__esModule ? mod : { default: mod };
-  };
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.imageUpload = void 0;
 const aws_sdk_1 = __importDefault(require("aws-sdk"));
@@ -16,9 +14,9 @@ const config_1 = __importDefault(require("config"));
 (0, dotenv_1.config)();
 aws_sdk_1.default.config.update({ region: "me-south-1" });
 const s3 = new aws_sdk_1.default.S3({
-  accessKeyId: config_1.default.get("awsAccessKey"),
-  secretAccessKey: config_1.default.get("awsSecretKey"),
-  apiVersion: "2022-11-01",
+    accessKeyId: config_1.default.get("awsAccessKey"),
+    secretAccessKey: config_1.default.get("awsSecretKey"),
+    apiVersion: "2022-11-01",
 });
 // export const uploadFiles = async (file:string,fileName:string,type:string) => {
 //   logger.warn(file,fileName,type)
@@ -37,23 +35,17 @@ const s3 = new aws_sdk_1.default.S3({
 // }
 // single upload
 exports.imageUpload = (0, multer_1.default)({
-  storage: (0, multer_s3_1.default)({
-    s3: s3,
-    bucket: "bucketttp",
-    acl: "public-read",
-    key: function (req, file, cb) {
-      logger_1.default.warning({ s3File: file });
-      cb(
-        null,
-        path_1.default.basename(
-          file.originalname,
-          path_1.default.extname(file.originalname)
-        ) +
-          "-" +
-          Date.now() +
-          path_1.default.extname(file.originalname)
-      );
-    },
-  }),
-  //   limits: { fileSize: 150000000 }, // In bytes: 2000000 bytes = 2 MB
+    storage: (0, multer_s3_1.default)({
+        s3: s3,
+        bucket: "bucketttp",
+        acl: "public-read",
+        key: function (req, file, cb) {
+            logger_1.default.warn({ s3File: file });
+            cb(null, path_1.default.basename(file.originalname, path_1.default.extname(file.originalname)) +
+                "-" +
+                Date.now() +
+                path_1.default.extname(file.originalname));
+        },
+    }),
+    //   limits: { fileSize: 150000000 }, // In bytes: 2000000 bytes = 2 MB
 });

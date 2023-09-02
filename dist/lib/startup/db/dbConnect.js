@@ -27,7 +27,7 @@ const lodash_1 = __importDefault(require("lodash"));
 const Task_1 = __importDefault(require("../../models/Task"));
 (0, dotenv_1.config)();
 const db = config_1.default.get("mongoDbConnectionString");
-logger_1.default.warning({ db: db });
+logger_1.default.warn({ db: db });
 const mongoDB = () => __awaiter(void 0, void 0, void 0, function* () {
     try {
         const options = {

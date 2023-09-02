@@ -168,7 +168,7 @@ class TrelloWebhook {
         var _a, _b, _c, _d, _e, _f, _g, _h, _j, _k, _l, _m, _o, _p, _q, _r, _s, _t, _u, _v, _w, _x, _y, _z, _0, _1, _2, _3, _4, _5, _6, _7, _8, _9;
         return __awaiter(this, void 0, void 0, function* () {
             try {
-                console.log({
+                logger_1.default.info({
                     action: this.actionRequest.action.display.translationKey,
                     cardId: this.task.cardId,
                 });
@@ -204,10 +204,6 @@ class TrelloWebhook {
                         ? new Date(this.actionRequest.action.data.card.due)
                         : task.deadline;
                     let { movements, currentTeam } = yield trello_1.default.getActionsOfCard(task.cardId, yield Department_1.default.find({}), cardDeadline ? new Date(cardDeadline) : null);
-                    console.log({
-                        desc: this.actionRequest.action.data.card.desc,
-                        taskDEsc: task.description,
-                    });
                     if (!isProject) {
                         this.task = {
                             name: this.actionRequest.action.data.card.name,

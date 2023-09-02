@@ -167,7 +167,7 @@ const UserReq = class UserReq extends user_1.default {
         return __awaiter(this, void 0, void 0, function* () {
             try {
                 let userData = req.body;
-                logger_1.default.warning({ userData });
+                logger_1.default.warn({ userData });
                 if (userData) {
                     let user = yield _super.updatePassword.call(this, userData);
                     if (user) {

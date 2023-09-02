@@ -7,21 +7,21 @@ function buildLogger() {
     console.log({ ErrorLogFile: `${__dirname}/error.log` });
     const logger = (0, winston_1.createLogger)({
         format: winston_1.format.json(),
+        level: "info",
         transports: [
-            new winston_1.transports.File({}),
             new winston_1.transports.File({
-                filename: `error.log`,
+                filename: `${__dirname}/error.log`,
                 level: "error",
                 format: winston_1.format.json(),
             }),
             new winston_1.transports.File({
-                filename: `debug.log`,
-                level: "debug",
+                filename: `${__dirname}/debug.log`,
+                level: "info",
                 format: winston_1.format.json(),
             }),
             new winston_1.transports.File({
-                filename: `warning.log`,
-                level: "warning",
+                filename: `${__dirname}/warning.log`,
+                level: "warn",
                 format: winston_1.format.json(),
             }),
         ],

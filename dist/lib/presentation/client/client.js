@@ -54,7 +54,7 @@ const ClientReq = class ClientReq extends client_1.default {
                 if (file.image && file.image[0]) {
                     clientData.image = file.image[0].location;
                 }
-                logger_1.default.warning({ clientData });
+                logger_1.default.warn({ clientData });
                 if (!clientData) {
                     return res.status(400).send((0, errorUtils_1.customeError)("update_client_error", 400));
                 }

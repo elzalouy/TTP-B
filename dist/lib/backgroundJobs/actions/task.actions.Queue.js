@@ -58,7 +58,6 @@ function moveTaskJob(listId, cardId, status, department, user, deadline) {
     }));
 }
 exports.moveTaskJob = moveTaskJob;
-j;
 const updateCardJob = (data, newFiles, tokenUser) => {
     const deleteFiles = data.deleteFiles
         ? data.deleteFiles
@@ -131,7 +130,7 @@ const deleteTaskFromBoardJob = (data) => {
             cb(null, data);
         }
         catch (error) {
-            logger_1.default.ercror({ deleteCardDataError: error });
+            logger_1.default.error({ deleteCardDataError: error });
         }
     }));
     exports.updateTaskQueue.push((cb) => __awaiter(void 0, void 0, void 0, function* () {
@@ -139,7 +138,7 @@ const deleteTaskFromBoardJob = (data) => {
             yield trello_1.default.removeWebhook(data.cardId);
         }
         catch (error) {
-            logger_1.default.ercror({ deleteCardWebhookError: error });
+            logger_1.default.error({ deleteCardWebhookError: error });
         }
     }));
 };
