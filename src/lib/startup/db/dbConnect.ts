@@ -70,7 +70,7 @@ export const initializeTrelloMembers = async () => {
   try {
     // let members = await TrelloController.__getAllMembers();
   } catch (error) {
-    logger.error(error);
+    logger.error({ error });
   }
 };
 
@@ -313,7 +313,7 @@ export const initializeTrelloBoards = async () => {
       TrelloController.__addWebHook(item.boardId, "trelloWebhookUrlTask")
     );
   } catch (error) {
-    logger.error(error);
+    logger.error({ initializeTrelloBoardsError: error });
   }
 };
 
@@ -647,7 +647,7 @@ export const initializeTTPTasks = async () => {
       TrelloController.__addWebHook(item.cardId, "trelloWebhookUrlTask");
     });
   } catch (error) {
-    logger.error({ error });
+    logger.error({ initializeTTPTasksError: error });
   }
 };
 
