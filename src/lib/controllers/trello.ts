@@ -446,13 +446,14 @@ class TrelloController {
         let url = await trelloApi(
           `cards/${cardId}/actions/?filter=updateCard:idList&page=${page}&`
         );
-        let newActions = await fetch(url, {
+        let newActions: TrelloAction[] = await fetch(url, {
           method: "GET",
           headers: { Accept: "application/json" },
         }).then(async (res) => {
           return await res.json();
         });
-        actions = [...actions, ...newActions];
+        if (newActions && newActions.length > 0)
+          actions = [...actions, ...newActions];
         if (newActions.length < 50) break;
       }
       return actions;
@@ -887,7 +888,7 @@ class TrelloController {
       );
       /// First create status
       cardsActions = cardsActions.filter(
-        (i) => i.action.deleteAction === false
+        (i) => i.action.deleteAction && i.action.deleteAction === false
       );
       let movements: Movement[] = cardsActions.map((cardAction) => {
         return {
