@@ -932,6 +932,8 @@ class CardAction {
         type: "existed_in_current_list_status",
         name: this.action.data.card.name,
         list: listName,
+        listId,
+        cardId: this.action.data.card.id,
       });
     } else {
       list = board?.teams?.find((t) => t.listId === listId);
@@ -940,6 +942,8 @@ class CardAction {
           type: "existed_in_current_list_team",
           name: this.action.data.card.name,
           list: listName,
+          listId,
+          cardId: this.action.data.card.id,
         });
 
         this.action.listType = "team";
@@ -951,6 +955,8 @@ class CardAction {
             type: "existed_in_current_list_sideList",
             name: this.action.data.card.name,
             list: listName,
+            listId,
+            cardId: this.action.data.card.id,
           });
           this.action.listType = "sidelist";
           this.action.status = "Tasks Board";
@@ -961,11 +967,21 @@ class CardAction {
               type: "existed_in_archived_list_status",
               name: this.action.data.card.name,
               list: listName,
+              listId,
+              cardId: this.action.data.card.id,
             });
             this.action.data.list.id = list.listId;
             this.action.status = list.name;
             this.action.listType = "list";
-          } else this.action.deleteAction = this.action && true;
+          } else {
+            logger.info({
+              type: "not_existed_in_any_list_and_will_be_delete_this_action",
+              name: this.action.data.card.name,
+              listName: listName,
+              listId,
+              cardId: this.action.data.card.id,
+            });
+          }
         }
       }
     }
