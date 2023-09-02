@@ -401,7 +401,7 @@ export const initializeTTPTasks = async () => {
           await TrelloController.getActionsOfCard(
             card.id,
             departments,
-            card.due
+            card.due ? new Date(card.due) : null
           );
         let replacement = new Tasks({
           _id: item._id,
@@ -485,7 +485,7 @@ export const initializeTTPTasks = async () => {
           await TrelloController.getActionsOfCard(
             card.id,
             departments,
-            card.due
+            card.due ? new Date(card.due) : null
           );
         let task: TaskInfo = new Tasks({
           name: card.name,
@@ -533,9 +533,11 @@ export const initializeTTPTasks = async () => {
     notExistedOnTrello = notExistedOnTrello.filter(
       (i) => i.archivedCard === false
     );
+
     let creativeBoard = boards.find(
       (board) => board.name === Config.get("CreativeBoard")
     );
+
     notExistedOnTrello = await Promise.all(
       notExistedOnTrello?.map(async (item) => {
         let isBoardArchived =

@@ -437,20 +437,30 @@ class TrelloController {
       logger.error({ error });
     }
   }
+
   static async _getCardMovementsActions(cardId: string) {
     try {
-      let url = await trelloApi(
-        `cards/${cardId}/actions/?filter=updateCard:idList&`
-      );
-      let actions = await fetch(url, {
-        method: "GET",
-        headers: { Accept: "application/json" },
-      });
-      return await actions.json();
+      let page = 0;
+      let actions: TrelloAction[] = [];
+      for (page; page <= 19; page++) {
+        let url = await trelloApi(
+          `cards/${cardId}/actions/?filter=updateCard:idList&page=${page}&`
+        );
+        let newActions = await fetch(url, {
+          method: "GET",
+          headers: { Accept: "application/json" },
+        }).then(async (res) => {
+          return await res.json();
+        });
+        actions = [...actions, ...newActions];
+        if (newActions.length < 50) break;
+      }
+      return actions;
     } catch (error) {
       logger.error({ _getCardMovementsActionsError: error });
     }
   }
+
   static async _getCardDeadlineActions(cardId: string) {
     try {
       let url = await trelloApi(
@@ -829,10 +839,11 @@ class TrelloController {
       logger.error({ error });
     }
   }
+
   static async getActionsOfCard(
     cardId: string,
     departments: IDepartment[],
-    due: string
+    due: Date | null
   ) {
     try {
       let currentTeam: ITeam;
@@ -844,84 +855,107 @@ class TrelloController {
 
       let dueChanges: TrelloAction[] =
         await TrelloController._getCardDeadlineActions(cardId);
-      /// First create status
-      let board = departments.find(
-        (i) => i.boardId === createAction[0]?.data.board.id
+      dueChanges =
+        dueChanges.length > 0
+          ? dueChanges.map((i) => {
+              return { ...i, date: new Date(i.date).getTime() };
+            })
+          : [];
+      dueChanges =
+        dueChanges.length > 0 ? _.orderBy(dueChanges, "date", "desc") : [];
+      let dueDates =
+        dueChanges.length > 0
+          ? dueChanges.map((i) => new Date(i.data.card.due).getTime())
+          : [];
+      dueDates = dueDates.sort((a, b) => b - a);
+      let cardsActions: CardAction[] = [
+        new CardAction(
+          createAction[0],
+          dueDates[0] ?? due ? new Date(due).toDateString() : null
+        ),
+        ...actions.map(
+          (action, index) =>
+            new CardAction(
+              action,
+              dueDates[index] ?? due ? new Date(due).toDateString() : null
+            )
+        ),
+      ];
+
+      cardsActions = cardsActions.map((cardAction) =>
+        cardAction.validate(departments)
       );
-      if (board) {
-        let listId = createAction[0]?.data?.list?.id;
-        let sideList = board?.sideLists?.find((l) => l.listId === listId);
-        let team = board?.teams?.find((t) => t.listId === listId);
-        let list = board?.lists?.find((l) => l.listId === listId);
-        console.log({ actionData: createAction[0].data });
-        let status = list
-          ? list.name
-          : team
-          ? "In Progress"
-          : sideList
-          ? "Tasks Board"
-          : "";
-        if (team) currentTeam = team;
-        let movements: Movement[] = [
-          {
-            status,
-            listId: listId,
-            movedAt: createAction[0].date,
-            isTeam: team ? true : false,
-          },
-        ];
-        // next actions
-        movements = [
-          ...movements,
-          ...actions.map((action, index) => {
-            let board = departments.find(
-              (i) => i.boardId === action?.data?.board?.id
-            );
-            let listId = action?.data?.listAfter?.id;
-            let sideList = board?.sideLists.find((l) => l.listId === listId);
-            let team = board?.teams?.find((t) => t.listId === listId);
-            let list = board?.lists?.find((l) => l.listId === listId);
-            console.log({
-              actionData: action.data,
-              actionType: action.type,
-              actionDate: action.date,
-            });
-            let status = list
-              ? list.name
-              : team
-              ? "In Progress"
-              : sideList
-              ? "Tasks Board"
-              : "";
-
-            let movement: Movement = {
-              movedAt: action.date,
-              status: status,
-              isTeam: team ? true : false,
-            };
-
-            if (["Done", "Shared", "Cancled"].includes(status)) {
-              let journeyDeadline = dueChanges[0]
-                ? dueChanges[0]?.data?.card.due
-                : due;
-              delete dueChanges[0];
-              movement.journeyDeadline = journeyDeadline;
-            }
-            return movement;
-          }),
-        ];
-        // console.log({ movements });
-        return { movements, currentTeam };
-      } else {
+      /// First create status
+      cardsActions = cardsActions.filter(
+        (i) => i.action.deleteAction === false
+      );
+      let movements: Movement[] = cardsActions.map((cardAction) => {
         return {
-          movements: [],
-          currentTeam: null,
+          movedAt: new Date(cardAction.action.date).toDateString(),
+          listId: cardAction.action.listId,
+          status: cardAction.action.status,
+          isTeam: cardAction.action.listType === "team",
+          journeyDeadline: cardAction.action.dueChange,
         };
-      }
+      });
+      return { movements, currentTeam };
     } catch (error) {
       logger.error({ error });
     }
   }
 }
 
+class CardAction {
+  action: TrelloAction;
+  dueDate: string | number | null;
+  constructor(action: TrelloAction, dueDate: number | string) {
+    this.action = action;
+    this.action.deleteAction = false;
+    this.dueDate = dueDate;
+  }
+
+  validate = (deps: IDepartment[]) => {
+    let board = deps.find((i) => i.boardId === this.action.data.board.id);
+    let date = this.action.date;
+    let listId = this.action.data?.list?.id ?? this.action.data?.listAfter?.id;
+    this.action.listId = listId;
+    let listName =
+      this.action.data?.list?.name ?? this.action.data?.listAfter?.name;
+    if (!board || !date) {
+      this.action.deleteAction = true;
+      return this;
+    }
+    let list = board?.lists?.find((l) => l.listId === listId);
+    if (list) {
+      this.action.listType = "list";
+      this.action.status = list.name;
+    } else {
+      list = board?.teams?.find((t) => t.listId === listId);
+      if (list) {
+        this.action.listType = "team";
+        this.action.status = "In Progress";
+      } else {
+        list = board.sideLists.find((i) => i.listId === listId);
+        if (list) {
+          this.action.listType = "sidelist";
+          this.action.status = "Tasks Board";
+        } else {
+          list = board.lists.find((l) => l.name === listName);
+          if (list) {
+            this.action.data.list.id = list.listId;
+            this.action.status = list.name;
+            this.action.listType = "list";
+          } else this.action.deleteAction = true;
+        }
+      }
+    }
+    if (
+      ["Shared", "Done", "Cancled"].includes(this.action.status) &&
+      this.dueDate
+    ) {
+      this.action.dueChange = new Date(this.dueDate).toDateString();
+    }
+    return this;
+  };
+}
 export default TrelloController;

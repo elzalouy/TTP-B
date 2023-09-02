@@ -298,6 +298,11 @@ export type Card = {
 export type TrelloAction = {
   id: string;
   idMemberCreator: string;
+  deleteAction?: boolean;
+  listType?: "list" | "team" | "sidelist";
+  status?: string;
+  dueChange?: string;
+  listId?: string;
   data: {
     card: {
       closed?: boolean;
@@ -324,7 +329,7 @@ export type TrelloAction = {
     id: string;
   };
   type: string; // like 'updateCard'
-  date: string;
+  date: string | number;
   limits: any;
   memberCreator: {
     id: string;

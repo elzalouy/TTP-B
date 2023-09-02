@@ -25,9 +25,9 @@ export default async function (
       projectsPassedDate(io).start();
     });
     initializeQueue.push(async (cb) => {
-      // await initializeTrelloBoards().then(() => {
-      //   initializeTTPTasks().then(() => cb(null, true));
-      // });
+      await initializeTrelloBoards().then(() => {
+        initializeTTPTasks().then(() => cb(null, true));
+      });
     });
     // initializeQueue.push(async (cb) => {
     //   postAsnaphotOfTrelloActions().start();

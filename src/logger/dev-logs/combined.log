@@ -1921,3 +1921,1070 @@
   level: 'info',
   timestamp: '2023-08-31 12:16:54'
 }
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:WFUiEjrljsIDFOmd@cluster1.oeari.mongodb.net/ttp'
+  },
+  level: 'info',
+  timestamp: '2023-08-31 15:33:10'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:WFUiEjrljsIDFOmd@cluster1.oeari.mongodb.net/ttp'
+  },
+  level: 'info',
+  timestamp: '2023-08-31 15:58:50'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:WFUiEjrljsIDFOmd@cluster1.oeari.mongodb.net/ttp'
+  },
+  level: 'info',
+  timestamp: '2023-08-31 16:34:35'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:WFUiEjrljsIDFOmd@cluster1.oeari.mongodb.net/ttp'
+  },
+  level: 'info',
+  timestamp: '2023-08-31 16:39:35'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:WFUiEjrljsIDFOmd@cluster1.oeari.mongodb.net/ttp'
+  },
+  level: 'info',
+  timestamp: '2023-08-31 19:45:59'
+}
+{
+  message: { monthlyDeleteNotifications: 4 },
+  level: 'info',
+  timestamp: '2023-08-31 19:46:07'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:WFUiEjrljsIDFOmd@cluster1.oeari.mongodb.net/ttp'
+  },
+  level: 'info',
+  timestamp: '2023-08-31 19:49:24'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:WFUiEjrljsIDFOmd@cluster1.oeari.mongodb.net/ttp'
+  },
+  level: 'info',
+  timestamp: '2023-08-31 19:54:37'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:WFUiEjrljsIDFOmd@cluster1.oeari.mongodb.net/ttp'
+  },
+  level: 'info',
+  timestamp: '2023-08-31 19:56:53'
+}
+{
+  message: {
+    _getCardMovementsActionsError: FetchError: invalid json response body at https://api.trello.com/1/cards/64d9cf3d5325753ebb9cfc0b/actions/?filter=updateCard:idList&page=1key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68 reason: Unexpected token i in JSON at position 0
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/node-fetch/lib/index.js:273:32
+        at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+      type: 'invalid-json'
+    }
+  },
+  level: 'error',
+  timestamp: '2023-08-31 19:57:05'
+}
+{
+  message: {
+    _getCardMovementsActionsError: FetchError: invalid json response body at https://api.trello.com/1/cards/64d9c776fa520ed95d23163a/actions/?filter=updateCard:idList&page=1key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68 reason: Unexpected token i in JSON at position 0
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/node-fetch/lib/index.js:273:32
+        at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+      type: 'invalid-json'
+    }
+  },
+  level: 'error',
+  timestamp: '2023-08-31 19:57:05'
+}
+{
+  message: {
+    _getCardMovementsActionsError: FetchError: invalid json response body at https://api.trello.com/1/cards/64da344af85546b6e63e7490/actions/?filter=updateCard:idList&page=1key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68 reason: Unexpected token i in JSON at position 0
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/node-fetch/lib/index.js:273:32
+        at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+      type: 'invalid-json'
+    }
+  },
+  level: 'error',
+  timestamp: '2023-08-31 19:57:05'
+}
+{
+  message: {
+    _getCardMovementsActionsError: FetchError: invalid json response body at https://api.trello.com/1/cards/64da37690aeaefe6e2bd9f5a/actions/?filter=updateCard:idList&page=1key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68 reason: Unexpected token i in JSON at position 0
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/node-fetch/lib/index.js:273:32
+        at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+      type: 'invalid-json'
+    }
+  },
+  level: 'error',
+  timestamp: '2023-08-31 19:57:05'
+}
+{
+  message: {
+    _getCardMovementsActionsError: FetchError: invalid json response body at https://api.trello.com/1/cards/64d9c63865a85bfec4794b0d/actions/?filter=updateCard:idList&page=1key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68 reason: Unexpected token i in JSON at position 0
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/node-fetch/lib/index.js:273:32
+        at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+      type: 'invalid-json'
+    }
+  },
+  level: 'error',
+  timestamp: '2023-08-31 19:57:05'
+}
+{
+  message: {
+    _getCardMovementsActionsError: FetchError: invalid json response body at https://api.trello.com/1/cards/64db224ca868eb6d9e716c8b/actions/?filter=updateCard:idList&page=1key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68 reason: Unexpected token i in JSON at position 0
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/node-fetch/lib/index.js:273:32
+        at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+      type: 'invalid-json'
+    }
+  },
+  level: 'error',
+  timestamp: '2023-08-31 19:57:05'
+}
+{
+  message: {
+    _getCardMovementsActionsError: FetchError: invalid json response body at https://api.trello.com/1/cards/64da35ca24d272e5bfd031a2/actions/?filter=updateCard:idList&page=1key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68 reason: Unexpected token i in JSON at position 0
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/node-fetch/lib/index.js:273:32
+        at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+      type: 'invalid-json'
+    }
+  },
+  level: 'error',
+  timestamp: '2023-08-31 19:57:05'
+}
+{
+  message: {
+    _getCardMovementsActionsError: FetchError: invalid json response body at https://api.trello.com/1/cards/64d9e1e23e2d146b874e61a5/actions/?filter=updateCard:idList&page=1key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68 reason: Unexpected token i in JSON at position 0
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/node-fetch/lib/index.js:273:32
+        at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+      type: 'invalid-json'
+    }
+  },
+  level: 'error',
+  timestamp: '2023-08-31 19:57:05'
+}
+{
+  message: {
+    _getCardMovementsActionsError: FetchError: invalid json response body at https://api.trello.com/1/cards/64da37db7ca6f3f46c3c65ce/actions/?filter=updateCard:idList&page=1key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68 reason: Unexpected token i in JSON at position 0
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/node-fetch/lib/index.js:273:32
+        at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+      type: 'invalid-json'
+    }
+  },
+  level: 'error',
+  timestamp: '2023-08-31 19:57:05'
+}
+{
+  message: {
+    _getCardMovementsActionsError: FetchError: invalid json response body at https://api.trello.com/1/cards/64d9c63870c47f38ea9dc6ca/actions/?filter=updateCard:idList&page=1key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68 reason: Unexpected token i in JSON at position 0
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/node-fetch/lib/index.js:273:32
+        at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+      type: 'invalid-json'
+    }
+  },
+  level: 'error',
+  timestamp: '2023-08-31 19:57:05'
+}
+{
+  message: {
+    _getCardMovementsActionsError: FetchError: invalid json response body at https://api.trello.com/1/cards/64da3849f9d1940b2477420f/actions/?filter=updateCard:idList&page=1key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68 reason: Unexpected token i in JSON at position 0
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/node-fetch/lib/index.js:273:32
+        at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+      type: 'invalid-json'
+    }
+  },
+  level: 'error',
+  timestamp: '2023-08-31 19:57:05'
+}
+{
+  message: {
+    _getCardMovementsActionsError: FetchError: invalid json response body at https://api.trello.com/1/cards/64d9c777744a9930ecca5393/actions/?filter=updateCard:idList&page=1key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68 reason: Unexpected token i in JSON at position 0
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/node-fetch/lib/index.js:273:32
+        at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+      type: 'invalid-json'
+    }
+  },
+  level: 'error',
+  timestamp: '2023-08-31 19:57:05'
+}
+{
+  message: {
+    _getCardMovementsActionsError: FetchError: invalid json response body at https://api.trello.com/1/cards/64d9cf63dae0eadd45c4ca5f/actions/?filter=updateCard:idList&page=1key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68 reason: Unexpected token i in JSON at position 0
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/node-fetch/lib/index.js:273:32
+        at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+      type: 'invalid-json'
+    }
+  },
+  level: 'error',
+  timestamp: '2023-08-31 19:57:05'
+}
+{
+  message: {
+    _getCardMovementsActionsError: FetchError: invalid json response body at https://api.trello.com/1/cards/64da31c8231983fafb4f0491/actions/?filter=updateCard:idList&page=1key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68 reason: Unexpected token i in JSON at position 0
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/node-fetch/lib/index.js:273:32
+        at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+      type: 'invalid-json'
+    }
+  },
+  level: 'error',
+  timestamp: '2023-08-31 19:57:05'
+}
+{
+  message: {
+    _getCardMovementsActionsError: FetchError: invalid json response body at https://api.trello.com/1/cards/64da35513b8117cb6441807c/actions/?filter=updateCard:idList&page=1key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68 reason: Unexpected token i in JSON at position 0
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/node-fetch/lib/index.js:273:32
+        at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+      type: 'invalid-json'
+    }
+  },
+  level: 'error',
+  timestamp: '2023-08-31 19:57:05'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:WFUiEjrljsIDFOmd@cluster1.oeari.mongodb.net/ttp'
+  },
+  level: 'info',
+  timestamp: '2023-08-31 20:01:29'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:WFUiEjrljsIDFOmd@cluster1.oeari.mongodb.net/ttp'
+  },
+  level: 'info',
+  timestamp: '2023-08-31 20:01:54'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:WFUiEjrljsIDFOmd@cluster1.oeari.mongodb.net/ttp'
+  },
+  level: 'info',
+  timestamp: '2023-08-31 20:03:30'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:WFUiEjrljsIDFOmd@cluster1.oeari.mongodb.net/ttp'
+  },
+  level: 'info',
+  timestamp: '2023-08-31 20:04:55'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:WFUiEjrljsIDFOmd@cluster1.oeari.mongodb.net/ttp'
+  },
+  level: 'info',
+  timestamp: '2023-08-31 20:05:55'
+}
+{
+  message: {
+    _getCardMovementsActionsError: TypeError: body used already for: https://api.trello.com/1/cards/64d9cf63dae0eadd45c4ca5f/actions/?filter=updateCard:idList&page=1&key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68
+        at Response.consumeBody (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/node-fetch/lib/index.js:344:30)
+        at Response.json (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/node-fetch/lib/index.js:269:22)
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:454:28)
+        at Generator.next (<anonymous>)
+        at fulfilled (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:5:58)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5)
+  },
+  level: 'error',
+  timestamp: '2023-08-31 20:06:08'
+}
+{
+  message: {
+    _getCardMovementsActionsError: TypeError: body used already for: https://api.trello.com/1/cards/64d9cf3d5325753ebb9cfc0b/actions/?filter=updateCard:idList&page=1&key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68
+        at Response.consumeBody (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/node-fetch/lib/index.js:344:30)
+        at Response.json (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/node-fetch/lib/index.js:269:22)
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:454:28)
+        at Generator.next (<anonymous>)
+        at fulfilled (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:5:58)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5)
+  },
+  level: 'error',
+  timestamp: '2023-08-31 20:06:08'
+}
+{
+  message: {
+    _getCardMovementsActionsError: TypeError: body used already for: https://api.trello.com/1/cards/64d9c776fa520ed95d23163a/actions/?filter=updateCard:idList&page=1&key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68
+        at Response.consumeBody (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/node-fetch/lib/index.js:344:30)
+        at Response.json (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/node-fetch/lib/index.js:269:22)
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:454:28)
+        at Generator.next (<anonymous>)
+        at fulfilled (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:5:58)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5)
+  },
+  level: 'error',
+  timestamp: '2023-08-31 20:06:08'
+}
+{
+  message: {
+    _getCardMovementsActionsError: TypeError: body used already for: https://api.trello.com/1/cards/64d9c777744a9930ecca5393/actions/?filter=updateCard:idList&page=1&key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68
+        at Response.consumeBody (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/node-fetch/lib/index.js:344:30)
+        at Response.json (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/node-fetch/lib/index.js:269:22)
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:454:28)
+        at Generator.next (<anonymous>)
+        at fulfilled (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:5:58)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5)
+  },
+  level: 'error',
+  timestamp: '2023-08-31 20:06:08'
+}
+{
+  message: {
+    _getCardMovementsActionsError: TypeError: body used already for: https://api.trello.com/1/cards/64da344af85546b6e63e7490/actions/?filter=updateCard:idList&page=1&key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68
+        at Response.consumeBody (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/node-fetch/lib/index.js:344:30)
+        at Response.json (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/node-fetch/lib/index.js:269:22)
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:454:28)
+        at Generator.next (<anonymous>)
+        at fulfilled (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:5:58)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5)
+  },
+  level: 'error',
+  timestamp: '2023-08-31 20:06:08'
+}
+{
+  message: {
+    _getCardMovementsActionsError: TypeError: body used already for: https://api.trello.com/1/cards/64d9c63865a85bfec4794b0d/actions/?filter=updateCard:idList&page=1&key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68
+        at Response.consumeBody (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/node-fetch/lib/index.js:344:30)
+        at Response.json (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/node-fetch/lib/index.js:269:22)
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:454:28)
+        at Generator.next (<anonymous>)
+        at fulfilled (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:5:58)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5)
+  },
+  level: 'error',
+  timestamp: '2023-08-31 20:06:08'
+}
+{
+  message: {
+    _getCardMovementsActionsError: TypeError: body used already for: https://api.trello.com/1/cards/64da31c8231983fafb4f0491/actions/?filter=updateCard:idList&page=1&key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68
+        at Response.consumeBody (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/node-fetch/lib/index.js:344:30)
+        at Response.json (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/node-fetch/lib/index.js:269:22)
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:454:28)
+        at Generator.next (<anonymous>)
+        at fulfilled (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:5:58)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5)
+  },
+  level: 'error',
+  timestamp: '2023-08-31 20:06:08'
+}
+{
+  message: {
+    _getCardMovementsActionsError: TypeError: body used already for: https://api.trello.com/1/cards/64da37690aeaefe6e2bd9f5a/actions/?filter=updateCard:idList&page=1&key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68
+        at Response.consumeBody (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/node-fetch/lib/index.js:344:30)
+        at Response.json (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/node-fetch/lib/index.js:269:22)
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:454:28)
+        at Generator.next (<anonymous>)
+        at fulfilled (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:5:58)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5)
+  },
+  level: 'error',
+  timestamp: '2023-08-31 20:06:08'
+}
+{
+  message: {
+    _getCardMovementsActionsError: TypeError: body used already for: https://api.trello.com/1/cards/64da3849f9d1940b2477420f/actions/?filter=updateCard:idList&page=1&key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68
+        at Response.consumeBody (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/node-fetch/lib/index.js:344:30)
+        at Response.json (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/node-fetch/lib/index.js:269:22)
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:454:28)
+        at Generator.next (<anonymous>)
+        at fulfilled (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:5:58)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5)
+  },
+  level: 'error',
+  timestamp: '2023-08-31 20:06:09'
+}
+{
+  message: {
+    _getCardMovementsActionsError: TypeError: body used already for: https://api.trello.com/1/cards/64da35513b8117cb6441807c/actions/?filter=updateCard:idList&page=1&key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68
+        at Response.consumeBody (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/node-fetch/lib/index.js:344:30)
+        at Response.json (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/node-fetch/lib/index.js:269:22)
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:454:28)
+        at Generator.next (<anonymous>)
+        at fulfilled (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:5:58)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5)
+  },
+  level: 'error',
+  timestamp: '2023-08-31 20:06:09'
+}
+{
+  message: {
+    _getCardMovementsActionsError: TypeError: body used already for: https://api.trello.com/1/cards/64da35ca24d272e5bfd031a2/actions/?filter=updateCard:idList&page=1&key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68
+        at Response.consumeBody (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/node-fetch/lib/index.js:344:30)
+        at Response.json (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/node-fetch/lib/index.js:269:22)
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:454:28)
+        at Generator.next (<anonymous>)
+        at fulfilled (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:5:58)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5)
+  },
+  level: 'error',
+  timestamp: '2023-08-31 20:06:09'
+}
+{
+  message: {
+    _getCardMovementsActionsError: TypeError: body used already for: https://api.trello.com/1/cards/64d9c63870c47f38ea9dc6ca/actions/?filter=updateCard:idList&page=1&key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68
+        at Response.consumeBody (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/node-fetch/lib/index.js:344:30)
+        at Response.json (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/node-fetch/lib/index.js:269:22)
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:454:28)
+        at Generator.next (<anonymous>)
+        at fulfilled (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:5:58)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5)
+  },
+  level: 'error',
+  timestamp: '2023-08-31 20:06:09'
+}
+{
+  message: {
+    _getCardMovementsActionsError: TypeError: body used already for: https://api.trello.com/1/cards/64da37db7ca6f3f46c3c65ce/actions/?filter=updateCard:idList&page=1&key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68
+        at Response.consumeBody (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/node-fetch/lib/index.js:344:30)
+        at Response.json (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/node-fetch/lib/index.js:269:22)
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:454:28)
+        at Generator.next (<anonymous>)
+        at fulfilled (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:5:58)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5)
+  },
+  level: 'error',
+  timestamp: '2023-08-31 20:06:09'
+}
+{
+  message: {
+    _getCardMovementsActionsError: TypeError: body used already for: https://api.trello.com/1/cards/64db224ca868eb6d9e716c8b/actions/?filter=updateCard:idList&page=1&key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68
+        at Response.consumeBody (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/node-fetch/lib/index.js:344:30)
+        at Response.json (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/node-fetch/lib/index.js:269:22)
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:454:28)
+        at Generator.next (<anonymous>)
+        at fulfilled (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:5:58)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5)
+  },
+  level: 'error',
+  timestamp: '2023-08-31 20:06:09'
+}
+{
+  message: {
+    _getCardMovementsActionsError: TypeError: body used already for: https://api.trello.com/1/cards/64d9e1e23e2d146b874e61a5/actions/?filter=updateCard:idList&page=1&key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68
+        at Response.consumeBody (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/node-fetch/lib/index.js:344:30)
+        at Response.json (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/node-fetch/lib/index.js:269:22)
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:454:28)
+        at Generator.next (<anonymous>)
+        at fulfilled (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:5:58)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5)
+  },
+  level: 'error',
+  timestamp: '2023-08-31 20:06:09'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:WFUiEjrljsIDFOmd@cluster1.oeari.mongodb.net/ttp'
+  },
+  level: 'info',
+  timestamp: '2023-08-31 20:07:23'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:WFUiEjrljsIDFOmd@cluster1.oeari.mongodb.net/ttp'
+  },
+  level: 'info',
+  timestamp: '2023-08-31 20:08:47'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:WFUiEjrljsIDFOmd@cluster1.oeari.mongodb.net/ttp'
+  },
+  level: 'info',
+  timestamp: '2023-08-31 20:11:42'
+}
+{
+  message: {
+    error: TypeError: Cannot read properties of undefined (reading 'id')
+        at CardAction.validate (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:882:40)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:861:20
+        at Array.map (<anonymous>)
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:860:35)
+        at Generator.next (<anonymous>)
+        at fulfilled (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:5:58)
+        at runMicrotasks (<anonymous>)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5)
+  },
+  level: 'error',
+  timestamp: '2023-08-31 20:11:55'
+}
+{
+  message: {
+    error: TypeError: Cannot destructure property 'movements' of '(intermediate value)' as it is undefined.
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/startup/db/dbConnect.ts:400:15
+        at Generator.next (<anonymous>)
+        at fulfilled (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/startup/db/dbConnect.ts:5:58)
+        at runMicrotasks (<anonymous>)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5)
+  },
+  level: 'error',
+  timestamp: '2023-08-31 20:11:55'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:WFUiEjrljsIDFOmd@cluster1.oeari.mongodb.net/ttp'
+  },
+  level: 'info',
+  timestamp: '2023-08-31 20:13:20'
+}
+{
+  message: {
+    error: TypeError: Cannot read properties of undefined (reading 'name')
+        at CardAction.validate (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:885:64)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:862:20
+        at Array.map (<anonymous>)
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:861:35)
+        at Generator.next (<anonymous>)
+        at fulfilled (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:5:58)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5)
+  },
+  level: 'error',
+  timestamp: '2023-08-31 20:13:34'
+}
+{
+  message: {
+    error: TypeError: Cannot destructure property 'movements' of '(intermediate value)' as it is undefined.
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/startup/db/dbConnect.ts:400:15
+        at Generator.next (<anonymous>)
+        at fulfilled (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/startup/db/dbConnect.ts:5:58)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5)
+  },
+  level: 'error',
+  timestamp: '2023-08-31 20:13:34'
+}
+{
+  message: {
+    error: TypeError: Cannot read properties of undefined (reading 'name')
+        at CardAction.validate (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:885:64)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:862:20
+        at Array.map (<anonymous>)
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:861:35)
+        at Generator.next (<anonymous>)
+        at fulfilled (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:5:58)
+        at runMicrotasks (<anonymous>)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5)
+  },
+  level: 'error',
+  timestamp: '2023-08-31 20:13:34'
+}
+{
+  message: {
+    error: TypeError: Cannot read properties of undefined (reading 'name')
+        at CardAction.validate (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:885:64)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:862:20
+        at Array.map (<anonymous>)
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:861:35)
+        at Generator.next (<anonymous>)
+        at fulfilled (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:5:58)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5)
+  },
+  level: 'error',
+  timestamp: '2023-08-31 20:13:34'
+}
+{
+  message: {
+    error: TypeError: Cannot read properties of undefined (reading 'id')
+        at CardAction.validate (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:883:40)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:862:20
+        at Array.map (<anonymous>)
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:861:35)
+        at Generator.next (<anonymous>)
+        at fulfilled (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:5:58)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5)
+  },
+  level: 'error',
+  timestamp: '2023-08-31 20:13:35'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:WFUiEjrljsIDFOmd@cluster1.oeari.mongodb.net/ttp'
+  },
+  level: 'info',
+  timestamp: '2023-08-31 20:54:06'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:WFUiEjrljsIDFOmd@cluster1.oeari.mongodb.net/ttp'
+  },
+  level: 'info',
+  timestamp: '2023-08-31 20:54:35'
+}
+{
+  message: {
+    error: TypeError: Cannot read properties of undefined (reading 'name')
+        at CardAction.validate (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:912:64)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:875:20
+        at Array.map (<anonymous>)
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:874:35)
+        at Generator.next (<anonymous>)
+        at fulfilled (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:5:58)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5)
+  },
+  level: 'error',
+  timestamp: '2023-08-31 20:54:48'
+}
+{
+  message: {
+    error: TypeError: Cannot destructure property 'movements' of '(intermediate value)' as it is undefined.
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/startup/db/dbConnect.ts:400:15
+        at Generator.next (<anonymous>)
+        at fulfilled (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/startup/db/dbConnect.ts:5:58)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5)
+  },
+  level: 'error',
+  timestamp: '2023-08-31 20:54:48'
+}
+{
+  message: {
+    error: TypeError: Cannot read properties of undefined (reading 'name')
+        at CardAction.validate (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:912:64)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:875:20
+        at Array.map (<anonymous>)
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:874:35)
+        at Generator.next (<anonymous>)
+        at fulfilled (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:5:58)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5)
+  },
+  level: 'error',
+  timestamp: '2023-08-31 20:54:48'
+}
+{
+  message: {
+    error: TypeError: Cannot read properties of undefined (reading 'name')
+        at CardAction.validate (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:912:64)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:875:20
+        at Array.map (<anonymous>)
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:874:35)
+        at Generator.next (<anonymous>)
+        at fulfilled (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:5:58)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5)
+  },
+  level: 'error',
+  timestamp: '2023-08-31 20:54:48'
+}
+{
+  message: {
+    error: TypeError: dueChanges.map is not a function
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:858:33)
+        at Generator.next (<anonymous>)
+        at fulfilled (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:5:58)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5)
+  },
+  level: 'error',
+  timestamp: '2023-08-31 20:54:48'
+}
+{
+  message: {
+    error: TypeError: dueChanges.map is not a function
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:858:33)
+        at Generator.next (<anonymous>)
+        at fulfilled (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:5:58)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5)
+  },
+  level: 'error',
+  timestamp: '2023-08-31 20:54:49'
+}
+{
+  message: {
+    error: TypeError: dueChanges.map is not a function
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:858:33)
+        at Generator.next (<anonymous>)
+        at fulfilled (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:5:58)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5)
+  },
+  level: 'error',
+  timestamp: '2023-08-31 20:54:49'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:WFUiEjrljsIDFOmd@cluster1.oeari.mongodb.net/ttp'
+  },
+  level: 'info',
+  timestamp: '2023-08-31 20:56:05'
+}
+{
+  message: {
+    error: TypeError: Cannot read properties of undefined (reading 'name')
+        at CardAction.validate (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:914:64)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:877:20
+        at Array.map (<anonymous>)
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:876:35)
+        at Generator.next (<anonymous>)
+        at fulfilled (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:5:58)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5)
+  },
+  level: 'error',
+  timestamp: '2023-08-31 20:56:18'
+}
+{
+  message: {
+    error: TypeError: Cannot destructure property 'movements' of '(intermediate value)' as it is undefined.
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/startup/db/dbConnect.ts:400:15
+        at Generator.next (<anonymous>)
+        at fulfilled (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/startup/db/dbConnect.ts:5:58)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5)
+  },
+  level: 'error',
+  timestamp: '2023-08-31 20:56:18'
+}
+{
+  message: {
+    error: TypeError: Cannot read properties of undefined (reading 'name')
+        at CardAction.validate (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:914:64)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:877:20
+        at Array.map (<anonymous>)
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:876:35)
+        at Generator.next (<anonymous>)
+        at fulfilled (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:5:58)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5)
+  },
+  level: 'error',
+  timestamp: '2023-08-31 20:56:18'
+}
+{
+  message: {
+    error: TypeError: Cannot read properties of undefined (reading 'name')
+        at CardAction.validate (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:914:64)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:877:20
+        at Array.map (<anonymous>)
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:876:35)
+        at Generator.next (<anonymous>)
+        at fulfilled (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:5:58)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5)
+  },
+  level: 'error',
+  timestamp: '2023-08-31 20:56:18'
+}
+{
+  message: {
+    error: TypeError: dueChanges.map is not a function
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:860:20)
+        at Generator.next (<anonymous>)
+        at fulfilled (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:5:58)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5)
+  },
+  level: 'error',
+  timestamp: '2023-08-31 20:56:18'
+}
+{
+  message: {
+    error: TypeError: dueChanges.map is not a function
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:860:20)
+        at Generator.next (<anonymous>)
+        at fulfilled (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:5:58)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5)
+  },
+  level: 'error',
+  timestamp: '2023-08-31 20:56:18'
+}
+{
+  message: {
+    error: TypeError: dueChanges.map is not a function
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:860:20)
+        at Generator.next (<anonymous>)
+        at fulfilled (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:5:58)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5)
+  },
+  level: 'error',
+  timestamp: '2023-08-31 20:56:18'
+}
+{
+  message: {
+    error: TypeError: Cannot read properties of undefined (reading 'id')
+        at CardAction.validate (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:912:40)
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:877:20
+        at Array.map (<anonymous>)
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:876:35)
+        at Generator.next (<anonymous>)
+        at fulfilled (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:5:58)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5)
+  },
+  level: 'error',
+  timestamp: '2023-08-31 20:56:18'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:WFUiEjrljsIDFOmd@cluster1.oeari.mongodb.net/ttp'
+  },
+  level: 'info',
+  timestamp: '2023-08-31 20:57:18'
+}
+{
+  message: {
+    error: TypeError: dueChanges.map is not a function
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:860:20)
+        at Generator.next (<anonymous>)
+        at fulfilled (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:5:58)
+        at runMicrotasks (<anonymous>)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5)
+  },
+  level: 'error',
+  timestamp: '2023-08-31 20:57:36'
+}
+{
+  message: {
+    error: TypeError: Cannot destructure property 'movements' of '(intermediate value)' as it is undefined.
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/startup/db/dbConnect.ts:400:15
+        at Generator.next (<anonymous>)
+        at fulfilled (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/startup/db/dbConnect.ts:5:58)
+        at runMicrotasks (<anonymous>)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5)
+  },
+  level: 'error',
+  timestamp: '2023-08-31 20:57:37'
+}
+{
+  message: {
+    error: TypeError: dueChanges.map is not a function
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:860:20)
+        at Generator.next (<anonymous>)
+        at fulfilled (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:5:58)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5)
+  },
+  level: 'error',
+  timestamp: '2023-08-31 20:57:37'
+}
+{
+  message: {
+    error: TypeError: dueChanges.map is not a function
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:860:20)
+        at Generator.next (<anonymous>)
+        at fulfilled (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:5:58)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5)
+  },
+  level: 'error',
+  timestamp: '2023-08-31 20:57:37'
+}
+{
+  message: {
+    error: TypeError: Cannot read properties of undefined (reading 'id')
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:886:47
+        at Array.map (<anonymous>)
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:883:48)
+        at Generator.next (<anonymous>)
+        at fulfilled (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:5:58)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5)
+  },
+  level: 'error',
+  timestamp: '2023-08-31 20:57:37'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:WFUiEjrljsIDFOmd@cluster1.oeari.mongodb.net/ttp'
+  },
+  level: 'info',
+  timestamp: '2023-08-31 20:58:44'
+}
+{
+  message: {
+    error: TypeError: Cannot read properties of undefined (reading 'id')
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:887:47
+        at Array.map (<anonymous>)
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:884:48)
+        at Generator.next (<anonymous>)
+        at fulfilled (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:5:58)
+        at runMicrotasks (<anonymous>)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5)
+  },
+  level: 'error',
+  timestamp: '2023-08-31 20:58:57'
+}
+{
+  message: {
+    error: TypeError: Cannot destructure property 'movements' of '(intermediate value)' as it is undefined.
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/startup/db/dbConnect.ts:400:15
+        at Generator.next (<anonymous>)
+        at fulfilled (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/startup/db/dbConnect.ts:5:58)
+        at runMicrotasks (<anonymous>)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5)
+  },
+  level: 'error',
+  timestamp: '2023-08-31 20:58:57'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:WFUiEjrljsIDFOmd@cluster1.oeari.mongodb.net/ttp'
+  },
+  level: 'info',
+  timestamp: '2023-08-31 21:03:23'
+}
+{
+  message: {
+    error: TypeError: Cannot read properties of undefined (reading 'id')
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:895:47
+        at Array.map (<anonymous>)
+        at Function.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:892:48)
+        at Generator.next (<anonymous>)
+        at fulfilled (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/controllers/trello.ts:5:58)
+        at runMicrotasks (<anonymous>)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5)
+  },
+  level: 'error',
+  timestamp: '2023-08-31 21:03:42'
+}
+{
+  message: {
+    error: TypeError: Cannot destructure property 'movements' of '(intermediate value)' as it is undefined.
+        at /home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/startup/db/dbConnect.ts:400:15
+        at Generator.next (<anonymous>)
+        at fulfilled (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/src/lib/startup/db/dbConnect.ts:5:58)
+        at runMicrotasks (<anonymous>)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5)
+  },
+  level: 'error',
+  timestamp: '2023-08-31 21:03:42'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:WFUiEjrljsIDFOmd@cluster1.oeari.mongodb.net/ttp'
+  },
+  level: 'info',
+  timestamp: '2023-08-31 21:05:46'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:WFUiEjrljsIDFOmd@cluster1.oeari.mongodb.net/ttp'
+  },
+  level: 'info',
+  timestamp: '2023-09-02 09:26:59'
+}
+{
+  message: { monthlyDeleteNotifications: 8 },
+  level: 'info',
+  timestamp: '2023-09-02 09:27:07'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:WFUiEjrljsIDFOmd@cluster1.oeari.mongodb.net/ttp'
+  },
+  level: 'info',
+  timestamp: '2023-09-02 09:27:45'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:WFUiEjrljsIDFOmd@cluster1.oeari.mongodb.net/ttp'
+  },
+  level: 'info',
+  timestamp: '2023-09-02 09:28:11'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:WFUiEjrljsIDFOmd@cluster1.oeari.mongodb.net/ttp'
+  },
+  level: 'info',
+  timestamp: '2023-09-02 09:28:42'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:WFUiEjrljsIDFOmd@cluster1.oeari.mongodb.net/ttp'
+  },
+  level: 'info',
+  timestamp: '2023-09-02 09:31:40'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:WFUiEjrljsIDFOmd@cluster1.oeari.mongodb.net/ttp'
+  },
+  level: 'info',
+  timestamp: '2023-09-02 09:36:09'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:WFUiEjrljsIDFOmd@cluster1.oeari.mongodb.net/ttp'
+  },
+  level: 'info',
+  timestamp: '2023-09-02 09:36:27'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:WFUiEjrljsIDFOmd@cluster1.oeari.mongodb.net/ttp'
+  },
+  level: 'info',
+  timestamp: '2023-09-02 13:58:50'
+}
+{
+  message: { monthlyDeleteNotifications: 4 },
+  level: 'info',
+  timestamp: '2023-09-02 13:58:56'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:WFUiEjrljsIDFOmd@cluster1.oeari.mongodb.net/ttp'
+  },
+  level: 'info',
+  timestamp: '2023-09-02 13:59:41'
+}
+{
+  message: {
+    __createNotificationsDBError: MongoNetworkTimeoutError: connection timed out
+        at connectionFailureError (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/mongoose/node_modules/mongodb/src/cmap/connect.ts:515:14)
+        at TLSSocket.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/mongoose/node_modules/mongodb/src/cmap/connect.ts:415:16)
+        at Object.onceWrapper (node:events:641:28)
+        at TLSSocket.emit (node:events:527:28)
+        at TLSSocket.emit (node:domain:475:12)
+        at TLSSocket.Socket._onTimeout (node:net:516:8)
+        at listOnTimeout (node:internal/timers:559:17)
+        at processTimers (node:internal/timers:502:7) {
+      connectionGeneration: 0,
+      [Symbol(errorLabels)]: Set(0) {}
+    }
+  },
+  level: 'error',
+  timestamp: '2023-09-02 14:00:07'
+}
+{
+  message: {
+    __createNotificationsDBError: MongoNetworkTimeoutError: connection timed out
+        at connectionFailureError (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/mongoose/node_modules/mongodb/src/cmap/connect.ts:515:14)
+        at TLSSocket.<anonymous> (/home/ezat-elzalouy/Desktop/Unicode/TTP/TTP-Back/node_modules/mongoose/node_modules/mongodb/src/cmap/connect.ts:415:16)
+        at Object.onceWrapper (node:events:641:28)
+        at TLSSocket.emit (node:events:527:28)
+        at TLSSocket.emit (node:domain:475:12)
+        at TLSSocket.Socket._onTimeout (node:net:516:8)
+        at listOnTimeout (node:internal/timers:559:17)
+        at processTimers (node:internal/timers:502:7) {
+      connectionGeneration: 0,
+      [Symbol(errorLabels)]: Set(0) {}
+    }
+  },
+  level: 'error',
+  timestamp: '2023-09-02 14:00:07'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:WFUiEjrljsIDFOmd@cluster1.oeari.mongodb.net/ttp'
+  },
+  level: 'info',
+  timestamp: '2023-09-02 14:06:01'
+}
+{
+  message: { monthlyDeleteNotifications: 4 },
+  level: 'info',
+  timestamp: '2023-09-02 14:06:07'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:WFUiEjrljsIDFOmd@cluster1.oeari.mongodb.net/ttp'
+  },
+  level: 'info',
+  timestamp: '2023-09-02 14:27:42'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:WFUiEjrljsIDFOmd@cluster1.oeari.mongodb.net/ttp'
+  },
+  level: 'info',
+  timestamp: '2023-09-02 14:28:24'
+}
+{
+  message: {
+    db: 'mongodb+srv://unicodettp:WFUiEjrljsIDFOmd@cluster1.oeari.mongodb.net/ttp'
+  },
+  level: 'info',
+  timestamp: '2023-09-02 14:33:01'
+}

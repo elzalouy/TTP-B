@@ -235,7 +235,7 @@ export default class TrelloWebhook {
           await TrelloController.getActionsOfCard(
             task.cardId,
             await Department.find({}),
-            new Date(cardDeadline).toLocaleDateString()
+            cardDeadline ? new Date(cardDeadline) : null
           );
         console.log({
           desc: this.actionRequest.action.data.card.desc,
