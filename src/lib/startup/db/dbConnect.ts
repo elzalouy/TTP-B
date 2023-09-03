@@ -440,7 +440,6 @@ export const initializeTTPTasks = async () => {
                 })
               : [],
           cardCreatedAt: new Date(createdAt),
-          createdAt: new Date(createdAt),
         });
         return replacement;
       })
@@ -520,7 +519,6 @@ export const initializeTTPTasks = async () => {
           movements:
             isBoardArchived || isListArchived || card?.closed ? [] : movements,
           cardCreatedAt: new Date(createdAt),
-          createdAt: new Date(createdAt),
         });
         return task;
       }),
@@ -640,7 +638,6 @@ export const initializeTTPTasks = async () => {
               movements: item.movements,
               archivedCard: item.archivedCard,
               cardCreatedAt: item.cardCreatedAt,
-              createdAt: item.createdAt,
             },
           },
         };
