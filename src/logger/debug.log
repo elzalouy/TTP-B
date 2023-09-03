@@ -58,3 +58,5 @@
 {"level":"info","message":{"cardId":"64da3849f9d1940b2477420f","list":"In Progress","listId":"64d9c62c4aeca9afa11b57ba","name":"AlMajed Oud-Ramadan Campaign -Branding - (يارب هون )","type":"existed_in_current_list_status"}}
 {"level":"info","message":{"cardId":"64da3849f9d1940b2477420f","list":"Done","listId":"64d9c62c4d380c156372b4f2","name":"AlMajed Oud-Ramadan Campaign -Branding - (يارب هون )","type":"existed_in_current_list_status"}}
 {"level":"info","message":{"cardId":"64da3849f9d1940b2477420f","list":"Task Board Mobily","listId":"64d9c62d570053e7c2f3f33a","name":"AlMajed Oud-Ramadan Campaign -Branding - (يارب هون )","type":"existed_in_current_list_sideList"}}
+{"level":"warn","message":{"db":"mongodb+srv://unicodettp:WFUiEjrljsIDFOmd@cluster1.oeari.mongodb.net/ttp"}}
+{"level":"warn","message":"Server worked"}
