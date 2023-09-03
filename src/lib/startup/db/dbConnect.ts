@@ -520,6 +520,7 @@ export const initializeTTPTasks = async () => {
             isBoardArchived || isListArchived || card?.closed ? [] : movements,
           cardCreatedAt: new Date(createdAt),
         });
+        logger.debug({ cardCreatedAt: createdAt });
         return task;
       }),
     ]);
