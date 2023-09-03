@@ -452,7 +452,7 @@ class TrelloController {
         }).then(async (res) => {
           return await res.json();
         });
-        actions = [...actions, ...newActions];
+        if (newActions) actions = [...actions, ...newActions];
         if (newActions.length < 50) break;
       }
       return actions;
@@ -700,7 +700,6 @@ class TrelloController {
           response = await res.json();
         })
         .catch((err) => {
-          logger.error({ err });
           return err;
         });
       return response;
@@ -781,7 +780,6 @@ class TrelloController {
         (board) => board.name === Config.get("CreativeBoard")
       );
       let deletedCards = actions?.filter((i) => i.type === "deleteCard");
-      console.log({ deletedCards });
       let newCards: Card[] = await Promise.all(
         deletedCards.map(async (cardAction) => {
           let cardActions = actions.filter(
@@ -800,7 +798,6 @@ class TrelloController {
           });
           await TrelloController.__addWebHook(card.id, "trelloWebhookUrlTask");
           await cardActions.map(async (action) => {
-            console.log({ actionType: action.type });
             if (action.type === "updateCard")
               await TrelloController.__updateCard({
                 cardId: card.id,
@@ -898,8 +895,7 @@ class TrelloController {
           journeyDeadline: cardAction.action.dueChange,
         };
       });
-      console.log({ movements });
-      return { movements, currentTeam };
+      return { movements, currentTeam, createdAt: createAction[0].date };
     } catch (error) {
       logger.error({ error });
     }
@@ -910,8 +906,8 @@ class CardAction {
   action: TrelloAction;
   dueDate: string | number | null;
   constructor(action: TrelloAction, dueDate: number | string) {
+    action.deleteAction = false;
     this.action = action;
-    this.action.deleteAction = false;
     this.dueDate = dueDate;
   }
 
@@ -941,7 +937,9 @@ class CardAction {
           this.action.listType = "sidelist";
           this.action.status = "Tasks Board";
         } else {
-          list = board.lists.find((l) => l.name === listName);
+          list = listName
+            ? board.lists.find((l) => listName.includes(l.name))
+            : null;
           if (list) {
             this.action.data.list.id = list.listId;
             this.action.status = list.name;

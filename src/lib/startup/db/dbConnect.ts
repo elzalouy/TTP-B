@@ -365,7 +365,6 @@ export const initializeTTPTasks = async () => {
     notExistedOnTrello = tasks.filter(
       (item) => !cardsIds.includes(item.cardId)
     );
-
     intersection = tasks.filter((item) => cardsIds.includes(item.cardId));
     // execute the function
     // Existed on TTP & Trello > make it same
@@ -397,7 +396,7 @@ export const initializeTTPTasks = async () => {
             : dep?.sideLists.find(
                 (sideList) => sideList?.listId === card.idList
               );
-        let { movements, currentTeam } =
+        let { movements, currentTeam, createdAt } =
           await TrelloController.getActionsOfCard(
             card.id,
             departments,
@@ -440,6 +439,8 @@ export const initializeTTPTasks = async () => {
                   };
                 })
               : [],
+          cardCreatedAt: new Date(createdAt),
+          createdAt: new Date(createdAt),
         });
         return replacement;
       })
@@ -481,7 +482,7 @@ export const initializeTTPTasks = async () => {
             : dep?.sideLists.find(
                 (sideList) => sideList?.listId === card.idList
               );
-        let { movements, currentTeam } =
+        let { movements, currentTeam, createdAt } =
           await TrelloController.getActionsOfCard(
             card.id,
             departments,
@@ -518,6 +519,8 @@ export const initializeTTPTasks = async () => {
             : [],
           movements:
             isBoardArchived || isListArchived || card?.closed ? [] : movements,
+          cardCreatedAt: new Date(createdAt),
+          createdAt: new Date(createdAt),
         });
         return task;
       }),
@@ -636,6 +639,8 @@ export const initializeTTPTasks = async () => {
               attachedFiles: item.attachedFiles,
               movements: item.movements,
               archivedCard: item.archivedCard,
+              cardCreatedAt: item.cardCreatedAt,
+              createdAt: item.createdAt,
             },
           },
         };
