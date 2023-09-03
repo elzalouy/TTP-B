@@ -452,8 +452,12 @@ class TrelloController {
         }).then(async (res) => {
           return await res.json();
         });
+<<<<<<< HEAD
         if (newActions && newActions.length > 0)
           actions = [...actions, ...newActions];
+=======
+        if (newActions) actions = [...actions, ...newActions];
+>>>>>>> beta-version
         if (newActions.length < 50) break;
       }
       return actions;
@@ -701,7 +705,6 @@ class TrelloController {
           response = await res.json();
         })
         .catch((err) => {
-          logger.error({ err });
           return err;
         });
       return response;
@@ -897,7 +900,11 @@ class TrelloController {
           journeyDeadline: cardAction.action.dueChange,
         };
       });
+<<<<<<< HEAD
       return { movements, currentTeam };
+=======
+      return { movements, currentTeam, createdAt: createAction[0].date };
+>>>>>>> beta-version
     } catch (error) {
       logger.error({ error });
     }
@@ -908,8 +915,8 @@ class CardAction {
   action: TrelloAction;
   dueDate: string | number | null;
   constructor(action: TrelloAction, dueDate: number | string) {
+    action.deleteAction = false;
     this.action = action;
-    this.action.deleteAction = false;
     this.dueDate = dueDate;
   }
 
@@ -961,7 +968,9 @@ class CardAction {
           this.action.listType = "sidelist";
           this.action.status = "Tasks Board";
         } else {
-          list = board.lists.find((l) => l.name === listName);
+          list = listName
+            ? board.lists.find((l) => listName.includes(l.name))
+            : null;
           if (list) {
             logger.info({
               type: "existed_in_archived_list_status",

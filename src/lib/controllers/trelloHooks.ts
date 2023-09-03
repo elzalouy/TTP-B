@@ -149,6 +149,7 @@ export default class TrelloWebhook {
               ? new Date(Date.now())
               : this.task.assignedAt,
           archivedCard: this.actionRequest.action.data.card?.closed ?? false,
+          cardCreatedAt: new Date(this.actionRequest.action.date),
         };
         return await TaskController.createTaskByTrello(this.task);
       }
@@ -231,7 +232,7 @@ export default class TrelloWebhook {
           ? new Date(this.actionRequest.action.data.card.due)
           : task.deadline;
 
-        let { movements, currentTeam } =
+        let { movements, currentTeam, createdAt } =
           await TrelloController.getActionsOfCard(
             task.cardId,
             await Department.find({}),
@@ -262,6 +263,8 @@ export default class TrelloWebhook {
             teamListId: isNewTeam ? listId : task.teamListId,
             archivedCard: this.actionRequest.action.data.card.closed,
             projectId: task.projectId,
+            cardCreatedAt: new Date(createdAt),
+            createdAt: new Date(createdAt),
           };
 
           if (

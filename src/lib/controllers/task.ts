@@ -363,6 +363,7 @@ class TaskController extends TaskDB {
       logger.error({ __updateTasksProjectId: error });
     }
   }
+
   static async getTasksCSV(data: string[]) {
     try {
       let csvData = await Tasks.getTasksAsCSV(data);
