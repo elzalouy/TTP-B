@@ -452,12 +452,7 @@ class TrelloController {
         }).then(async (res) => {
           return await res.json();
         });
-<<<<<<< HEAD
-        if (newActions && newActions.length > 0)
-          actions = [...actions, ...newActions];
-=======
         if (newActions) actions = [...actions, ...newActions];
->>>>>>> beta-version
         if (newActions.length < 50) break;
       }
       return actions;
@@ -900,11 +895,7 @@ class TrelloController {
           journeyDeadline: cardAction.action.dueChange,
         };
       });
-<<<<<<< HEAD
-      return { movements, currentTeam };
-=======
       return { movements, currentTeam, createdAt: createAction[0].date };
->>>>>>> beta-version
     } catch (error) {
       logger.error({ error });
     }
