@@ -26,8 +26,8 @@ import { ITrelloActionsOfSnapshot } from "../types/model/TrelloActionsSnapshots"
 import TrelloSnapshot from "../models/TrelloSnapshots";
 import Tasks from "../models/Task";
 import { ObjectId } from "mongodb";
-import { postAsnaphotOfTrelloActions } from "../backgroundJobs/actions/trello.actions.cron";
 
+// adding comment to merge
 config();
 var FormData = require("form-data");
 
