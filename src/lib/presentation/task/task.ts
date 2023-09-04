@@ -20,7 +20,7 @@ const TaskReq = class TaskReq extends TaskController {
       try {
         const token = req.header("authorization");
         const decoded: any = await jwtVerify(token);
-        console.log({ action: "DELETE_TASKS_FROM_TTP", user: decoded });
+        console.log({ action: "CREATE_TASKS_FROM_TTP", user: decoded });
         let TaskData: TaskData = req.body;
         let isValid = createTaskSchema.validate(TaskData);
         if (isValid.error)
