@@ -164,6 +164,7 @@ export default class TrelloWebhook {
         cardId: this.actionRequest?.action?.data?.card?.id,
       });
       logger.debug({
+        type: "DELETE_CARD_FROM_TRELLO",
         deleteCardId: task.cardId,
         deleteCardName: task.name,
         userName: this.actionRequest.action.memberCreator.fullName,
