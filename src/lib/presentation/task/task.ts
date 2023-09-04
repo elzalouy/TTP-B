@@ -18,6 +18,9 @@ const TaskReq = class TaskReq extends TaskController {
   static async handleCreateTask(req: Request, res: Response) {
     taskRoutesQueue.push(async (cb) => {
       try {
+        const token = req.header("authorization");
+        const decoded: any = await jwtVerify(token);
+        console.log({ action: "DELETE_TASKS_FROM_TTP", user: decoded });
         let TaskData: TaskData = req.body;
         let isValid = createTaskSchema.validate(TaskData);
         if (isValid.error)
@@ -106,6 +109,9 @@ const TaskReq = class TaskReq extends TaskController {
 
   static async handleDeleteTasksByProjectId(req: Request, res: Response) {
     try {
+      const token = req.header("authorization");
+      const decoded: any = await jwtVerify(token);
+      console.log({ action: "DELETE_TASKS_FROM_TTP", user: decoded });
       let id = req.body.id;
       let deleteResult = await super.deleteTasksByProjectId(id);
       if (deleteResult?.deletedCount) return res.status(200).send(deleteResult);
@@ -116,6 +122,9 @@ const TaskReq = class TaskReq extends TaskController {
 
   static async handleDeleteTasks(req: Request, res: Response) {
     try {
+      const token = req.header("authorization");
+      const decoded: any = await jwtVerify(token);
+      console.log({ action: "DELETE_TASKS_FROM_TTP", user: decoded });
       let ids = req.body.ids;
       let deleteResult = await super.deleteTasks(ids);
       if (deleteResult) return res.status(200).send(deleteResult);
@@ -127,6 +136,9 @@ const TaskReq = class TaskReq extends TaskController {
 
   static async handleDeleteTask(req: Request, res: Response) {
     try {
+      const token = req.header("authorization");
+      const decoded: any = await jwtVerify(token);
+      console.log({ action: "DELETE_TASKS_FROM_TTP", user: decoded });
       let id = req.body.id;
       let deleteResult = await super.deleteTask(id);
       if (deleteResult._id) return res.status(200).send(deleteResult);

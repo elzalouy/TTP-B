@@ -163,6 +163,12 @@ export default class TrelloWebhook {
       let task = await TaskController.getOneTaskBy({
         cardId: this.actionRequest?.action?.data?.card?.id,
       });
+      logger.debug({
+        deleteCardId: task.cardId,
+        deleteCardName: task.name,
+        userName: this.actionRequest.action.memberCreator.fullName,
+        userId: this.actionRequest.action.memberCreator.id,
+      });
       if (task) return await TaskController.deleteTaskByTrelloDB(task);
       else return null;
     } catch (error) {

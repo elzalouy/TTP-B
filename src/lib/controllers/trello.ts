@@ -981,6 +981,7 @@ class CardAction {
               listId,
               cardId: this.action.data.card.id,
             });
+            this.action.deleteAction = true;
           }
         }
       }
