@@ -48,17 +48,3 @@ export function initializeSystemTasksJob() {
     true
   );
 }
-
-export function postAsnaphotOfTrelloActions() {
-  return new CronJob(
-    "* 12 * * *",
-    async () => {
-      await TrelloController.__postSnapshotOfActions();
-    },
-    null,
-    true,
-    "Asia/Riyadh",
-    null,
-    true
-  );
-}
