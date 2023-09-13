@@ -13,7 +13,7 @@ import {
   initializeTrelloBoards,
 } from "./db/dbConnect";
 import { taskRoutesQueue } from "../backgroundJobs/routes/tasks.Route.Queue";
-import { postAsnaphotOfTrelloActions } from "../backgroundJobs/actions/trello.actions.cron";
+import { initializeSystemTasksPluginsJob } from "../backgroundJobs/actions/trello.actions.cron";
 
 export default async function (
   io: Server<DefaultEventsMap, DefaultEventsMap, DefaultEventsMap, any>
@@ -35,9 +35,9 @@ export default async function (
         });
       });
     });
-    // initializeQueue.push(async (cb) => {
-    //   postAsnaphotOfTrelloActions().start();
-    // });
+    initializeQueue.push(async (cb) => {
+      initializeSystemTasksPluginsJob();
+    });
   } catch (error) {
     logger.error({ errorOldNotificationsCron: error });
   }

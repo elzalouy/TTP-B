@@ -3,6 +3,7 @@ import { DefaultEventsMap } from "socket.io/dist/typed-events";
 import { CronJob } from "cron";
 import logger from "../../../logger";
 import {
+  initializeCardsPlugins,
   initializeTTPTasks,
   initializeTrelloBoards,
   initializeTrelloMembers,
@@ -40,6 +41,19 @@ export function initializeSystemTasksJob() {
     "0 6 * * *",
     async () => {
       await initializeTTPTasks();
+    },
+    null,
+    true,
+    "Asia/Riyadh",
+    null,
+    true
+  );
+}
+export function initializeSystemTasksPluginsJob() {
+  return new CronJob(
+    "0 6 * * *",
+    async () => {
+      await initializeCardsPlugins();
     },
     null,
     true,
