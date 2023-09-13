@@ -1,0 +1,18 @@
+{"level":"error","message":{"deleteCardHook":{}}}
+{"level":"error","message":{"deleteCardHook":{}}}
+{"level":"error","message":{"error":{"message":"invalid json response body at https://api.trello.com/1/cards/650205e63767384cbfe0d9cc/actions/?filter=createCard&key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68 reason: Unexpected token T in JSON at position 0","type":"invalid-json"}}}
+{"level":"error","message":{"_getCardMovementsActionsError":{"message":"invalid json response body at https://api.trello.com/1/cards/650205e63767384cbfe0d9cc/actions/?filter=updateCard:idList&page=0&key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68 reason: Unexpected token T in JSON at position 0","type":"invalid-json"}}}
+{"level":"error","message":{"_getCardMovementsActionsError":{"message":"invalid json response body at https://api.trello.com/1/cards/650205e63767384cbfe0d9cc/actions/?filter=updateCard:idList&key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68 reason: Unexpected token T in JSON at position 0","type":"invalid-json"}}}
+{"level":"error","message":{"error":{}}}
+{"level":"error","message":{"updateCardHook":{}}}
+{"level":"error","message":{"error":{"message":"invalid json response body at https://api.trello.com/1/cards/650205e63767384cbfe0d9cc/actions/?filter=createCard&key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68 reason: Unexpected token T in JSON at position 0","type":"invalid-json"}}}
+{"level":"error","message":{"_getCardMovementsActionsError":{"message":"invalid json response body at https://api.trello.com/1/cards/650205e63767384cbfe0d9cc/actions/?filter=updateCard:idList&page=0&key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68 reason: Unexpected token T in JSON at position 0","type":"invalid-json"}}}
+{"level":"error","message":{"_getCardMovementsActionsError":{"message":"invalid json response body at https://api.trello.com/1/cards/650205e63767384cbfe0d9cc/actions/?filter=updateCard:idList&key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68 reason: Unexpected token T in JSON at position 0","type":"invalid-json"}}}
+{"level":"error","message":{"error":{}}}
+{"level":"error","message":{"updateCardHook":{}}}
+{"level":"error","message":{"error":{"message":"invalid json response body at https://api.trello.com/1/cards/650207c74aea2fa4b0429a1b/actions/?filter=createCard&key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68 reason: Unexpected token T in JSON at position 0","type":"invalid-json"}}}
+{"level":"error","message":{"_getCardMovementsActionsError":{"message":"invalid json response body at https://api.trello.com/1/cards/650207c74aea2fa4b0429a1b/actions/?filter=updateCard:idList&page=0&key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68 reason: Unexpected token T in JSON at position 0","type":"invalid-json"}}}
+{"level":"error","message":{"_getCardMovementsActionsError":{"message":"invalid json response body at https://api.trello.com/1/cards/650207c74aea2fa4b0429a1b/actions/?filter=updateCard:idList&key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68 reason: Unexpected token T in JSON at position 0","type":"invalid-json"}}}
+{"level":"error","message":{"error":{}}}
+{"level":"error","message":{"updateCardHook":{}}}
+{"level":"error","message":{"deleteCardHook":{}}}

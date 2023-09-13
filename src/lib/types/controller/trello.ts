@@ -284,7 +284,7 @@ export type Card = {
   idMembersVoted: any[];
   idShort: number;
   idAttachmentCover: string;
-  labels: any[];
+  labels: Label[];
   idLabels: any[];
   manualCoverAttachment: boolean;
   pos: number;
@@ -293,6 +293,33 @@ export type Card = {
   isTemplate: boolean;
   cardRole: boolean;
   attachments?: AttachmentResponse[];
+};
+
+export type Label = {
+  id: string;
+  idBoard: string;
+  name: string;
+  color: string;
+  uses: number;
+};
+export type CheckListItem = {
+  id: string;
+  name: string;
+  nameData: { emoji: {} };
+  pos: number;
+  state: string;
+  due: string | null;
+  dueReminder: string | null;
+  idMember: string | null;
+  idChecklist: string;
+};
+export type CheckList = {
+  id: string;
+  name: string;
+  idBoard: string;
+  idCard: string;
+  pos: number;
+  checkItems: CheckListItem[];
 };
 
 export type TrelloAction = {
@@ -304,6 +331,7 @@ export type TrelloAction = {
   dueChange?: string;
   listId?: string;
   data: {
+    text?: string;
     card: {
       closed?: boolean;
       start?: string;

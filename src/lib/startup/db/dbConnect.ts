@@ -9,13 +9,20 @@ import Department from "../../models/Department";
 import DepartmentController from "../../controllers/department";
 import TrelloController from "../../controllers/trello";
 import { IDepartment, IDepartmentState } from "../../types/model/Department";
-import { Board, Card, TrelloAction, List } from "../../types/controller/trello";
+import {
+  Board,
+  Card,
+  TrelloAction,
+  List,
+  CheckList,
+} from "../../types/controller/trello";
 import { ListTypes } from "../../types/model/Department";
 import _, { create } from "lodash";
 import { TaskInfo } from "../../types/model/tasks";
 import Tasks from "../../models/Task";
 import TaskController from "../../controllers/task";
 import { AnyBulkWriteOperation } from "mongodb";
+import TasksPlugins from "../../models/TaskPlugins";
 config();
 
 const db: string = Config.get("mongoDbConnectionString");
@@ -366,7 +373,9 @@ export const initializeTTPTasks = async () => {
       (item) => !cardsIds.includes(item.cardId)
     );
     intersection = tasks.filter((item) => cardsIds.includes(item.cardId));
-    // execute the function
+
+    // processing
+    // Tasks Plugins
     // Existed on TTP & Trello > make it same
     intersection = await Promise.all(
       intersection?.map(async (item: TaskInfo) => {
@@ -525,13 +534,6 @@ export const initializeTTPTasks = async () => {
       }),
     ]);
 
-    /**
-     *   -_-    (Improtant comment)     -_- (((((((((((((((((((())))))))))))))))))))
-     * Not existed on trello should ne stopped till implement the way of getting the movements of trello back to trello
-     *
-     * */
-    // // // not Existed on Trello > create it on Trello
-
     notExistedOnTrello = notExistedOnTrello.filter(
       (i) => i.archivedCard === false
     );
@@ -542,64 +544,8 @@ export const initializeTTPTasks = async () => {
 
     notExistedOnTrello = await Promise.all(
       notExistedOnTrello?.map(async (item) => {
-        let isBoardArchived =
-          boards.find((i) => i.id === item.boardId)?.closed === true
-            ? true
-            : false ?? true;
-        let isListArchived =
-          boards
-            .find((i) => i.id === item.boardId)
-            ?.lists?.find((i) => i.id === item?.listId)?.closed === true
-            ? true
-            : false ?? true;
-        let board =
-          isBoardArchived || isListArchived
-            ? creativeBoard
-            : boards.find((i) => i.id === item.boardId);
-        let list =
-          isBoardArchived || isListArchived
-            ? creativeBoard.lists.find((i) => i.name === item.status)
-            : boards
-                .find((i) => i.id === item.boardId)
-                ?.lists?.find((i) => i.id === item.listId);
         item.archivedCard = true;
         return item;
-        // if (list && board) {
-        //   let card: Card = await TrelloController.__createCard({
-        //     boardId: board.id,
-        //     listId: list.id,
-        //     description: item?.description ? item.description : "",
-        //     deadline: item.deadline,
-        //     start: item?.start,
-        //     name: item.name,
-        //   });
-        //   item._id = item._id;
-        //   item.boardId = board.id ? board.id : creativeBoard.id;
-        //   item.listId = list.id;
-        //   item.movements =
-        //     item?.movements?.length > 0
-        //       ? item.movements
-        //       : [
-        //           {
-        //             movedAt: new Date(Date.now()).toString(),
-        //             status: item?.status,
-        //           },
-        //         ];
-        //   item.name = item.name;
-        //   item.status = item.status;
-        //   item.teamId = item.teamId;
-        //   item.cardId = card.id;
-        //   item.description = item.description;
-        //   item.start = item.start ? item.start : null;
-        //   item.deadline = item.deadline;
-        //   item.trelloShortUrl = card.shortUrl;
-        //   item.attachedFiles = [];
-        //   item.projectId = item.projectId;
-        //   item.categoryId = item.categoryId;
-        //   item.subCategoryId = item.subCategoryId;
-
-        //   return item;
-        // }
       })
     );
     notExistedOnTrello = notExistedOnTrello.filter((i) => i !== null);
@@ -651,6 +597,81 @@ export const initializeTTPTasks = async () => {
     });
   } catch (error) {
     logger.error({ initializeTTPTasksError: error });
+  }
+};
+
+export const initializeCardsPlugins = async () => {
+  try {
+    let departments = await Department.find({});
+    let boardIds = departments.map((department) => department.boardId);
+    let cards = _.flattenDepth(
+      await Promise.all(
+        boardIds.map(async (id) => {
+          let boardCards: Card[] = await TrelloController.__getCardsInBoard(id);
+          return boardCards;
+        })
+      )
+    );
+
+    let tasks = await TaskController.getTasks({ archivedCard: false });
+    let tasksPlugins = await TasksPlugins.find({});
+    if (tasks) {
+      let plugins = await Promise.all(
+        tasks.map(async (item) => {
+          let commentsActions: TrelloAction[] =
+            await TrelloController.getComments(item.cardId);
+          let comments = await Promise.all(
+            commentsActions.map((i) => {
+              return { comment: i.data.text };
+            })
+          );
+          let checkLists: CheckList[] = await TrelloController.getChecklists(
+            item.cardId
+          );
+          let labels = cards.find((i) => i.id === item.cardId).labels;
+          let existed = tasksPlugins.find((i) => i.cardId === item.cardId);
+          if (existed) {
+            existed.taskId = item._id;
+            existed.cardId = item.cardId;
+            existed.name = item.name;
+            existed.checkLists = checkLists;
+            existed.comments = comments;
+            existed.labels = labels;
+            return existed;
+          } else
+            return new TasksPlugins({
+              name: item.name,
+              taskId: item._id.toString(),
+              cardId: item.cardId,
+              checkLists: checkLists,
+              comments: comments,
+              labels: labels,
+            });
+        })
+      );
+      let update = [
+        ...plugins.map((pluginCard) => {
+          return {
+            replaceOne: {
+              filter: { _id: pluginCard._id.toString() },
+              replacement: {
+                name: pluginCard.name,
+                cardId: pluginCard.cardId,
+                taskId: pluginCard.taskId,
+                comments: pluginCard.comments,
+                checkLists: pluginCard.checkLists,
+                labels: pluginCard.labels,
+              },
+              upsert: true,
+            },
+          };
+        }),
+      ];
+      TasksPlugins.bulkWrite(update);
+      return update;
+    }
+  } catch (error) {
+    logger.error({ initializeCardsPluginsError: error });
   }
 };
 

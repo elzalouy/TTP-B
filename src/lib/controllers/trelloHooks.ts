@@ -149,7 +149,9 @@ export default class TrelloWebhook {
               ? new Date(Date.now())
               : this.task.assignedAt,
           archivedCard: this.actionRequest.action.data.card?.closed ?? false,
-          cardCreatedAt: new Date(this.actionRequest.action.date),
+          cardCreatedAt: this.actionRequest.action.date
+            ? new Date(this.actionRequest.action.date)
+            : null,
         };
         return await TaskController.createTaskByTrello(this.task);
       }
@@ -163,7 +165,7 @@ export default class TrelloWebhook {
       let task = await TaskController.getOneTaskBy({
         cardId: this.actionRequest?.action?.data?.card?.id,
       });
-      logger.debug({
+      console.log({
         type: "DELETE_CARD_FROM_TRELLO",
         deleteCardId: task.cardId,
         deleteCardName: task.name,
@@ -230,6 +232,7 @@ export default class TrelloWebhook {
         sideList = (newDep ?? department).sideLists.find(
           (list) => list.listId === listId
         );
+
         listBefore = this.actionRequest.action.data.listBefore?.name ?? "";
         listAfter = this.actionRequest.action.data.listAfter?.name ?? "";
         isNewJourney =
@@ -245,6 +248,7 @@ export default class TrelloWebhook {
             await Department.find({}),
             cardDeadline ? new Date(cardDeadline) : null
           );
+
         if (!isProject) {
           this.task = {
             name: this.actionRequest.action.data.card.name,
@@ -270,8 +274,8 @@ export default class TrelloWebhook {
             teamListId: isNewTeam ? listId : task.teamListId,
             archivedCard: this.actionRequest.action.data.card.closed,
             projectId: task.projectId,
-            cardCreatedAt: new Date(createdAt),
-            createdAt: new Date(createdAt),
+            cardCreatedAt: createdAt ? new Date(createdAt) : null,
+            createdAt: createdAt ? new Date(createdAt) : task.createdAt,
           };
 
           if (

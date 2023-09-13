@@ -162,7 +162,7 @@ class TaskDB {
   static async __deleteTasksWhereDB(data: TaskData) {
     try {
       let tasks = await Tasks.find(data);
-      let result = await Tasks.deleteMany(data);
+      let result = await Tasks.updateMany(data, { archivedCard: true });
       if (result) return tasks;
       throw "Tasks not found";
     } catch (error) {
@@ -181,7 +181,10 @@ class TaskDB {
 
   static async __deleteTasksByProjectId(id: String) {
     try {
-      let deleteResult = await Tasks.deleteMany({ projectId: id });
+      let deleteResult = await Tasks.updateMany(
+        { projectId: id },
+        { archivedCard: true }
+      );
       return deleteResult;
     } catch (error) {
       logger.error({ deleteTasksByProject: error });
@@ -190,7 +193,10 @@ class TaskDB {
 
   static async __deleteTasks(ids: string[]) {
     try {
-      let deleteResult = await Tasks.deleteMany({ _id: { $in: ids } });
+      let deleteResult = await Tasks.updateMany(
+        { _id: { $in: ids } },
+        { archivedCard: true }
+      );
       if (deleteResult) {
         let remaind = await Tasks.find({});
         return remaind;
@@ -202,8 +208,11 @@ class TaskDB {
 
   static async __deleteTask(id: string) {
     try {
-      let task = await Tasks.findByIdAndDelete(id);
-      return task;
+      let task = await Tasks.findByIdAndUpdate(id, { archivedCard: true });
+      return {
+        isOk: task._id ? true : false,
+        message: task._id ? "Task Updates" : "Task not found",
+      };
     } catch (error) {
       logger.error({ deleteTaskDBError: error });
     }
@@ -262,6 +271,7 @@ class TaskDB {
       logger.error({ updateTasksProjectIdError: error });
     }
   }
+
   static async __updateTaskAttachments(
     data: TaskData,
     attachments: AttachmentSchema[]
@@ -288,6 +298,7 @@ class TaskDB {
       logger.error({ createTaskDBError: error });
     }
   }
+
   static async __filterTasksDB(data: {
     projectId: string;
     memberId: string;
@@ -351,7 +362,8 @@ class TaskDB {
       task.movements = data.movements ?? task.movements;
       task.attachedFiles = _.uniqBy(task.attachedFiles, "trelloId");
       task.archivedCard = data.archivedCard ?? false;
-      task.cardCreatedAt = new Date(data.cardCreatedAt);
+      // Checking if the value of cardCreatedAt is not undefined or null
+      if (data.cardCreatedAt) task.cardCreatedAt = new Date(data.cardCreatedAt);
       task.createdAt = data.createdAt;
       let result = await (await task.save()).toObject();
       await io.sockets.emit("update-task", result);
@@ -383,9 +395,12 @@ class TaskDB {
 
   static async __deleteTaskByTrelloDB(data: TaskData) {
     try {
-      let result = await Tasks.findOneAndDelete({
-        cardId: data.cardId,
-      });
+      let result = await Tasks.updateOne(
+        {
+          cardId: data.cardId,
+        },
+        { archivedCard: true }
+      );
       return io?.sockets?.emit("delete-task", result);
     } catch (error) {
       logger.error({ __deleteTaskByTrelloDBError: error });

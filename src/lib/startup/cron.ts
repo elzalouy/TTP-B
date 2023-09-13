@@ -7,7 +7,11 @@ import {
   projectsPassedDate,
 } from "../backgroundJobs/actions/project.actions.cron";
 import { initializeQueue } from "../backgroundJobs/actions/init.actions.queue";
-import { initializeTTPTasks, initializeTrelloBoards } from "./db/dbConnect";
+import {
+  initializeCardsPlugins,
+  initializeTTPTasks,
+  initializeTrelloBoards,
+} from "./db/dbConnect";
 import { taskRoutesQueue } from "../backgroundJobs/routes/tasks.Route.Queue";
 import { postAsnaphotOfTrelloActions } from "../backgroundJobs/actions/trello.actions.cron";
 
@@ -26,7 +30,9 @@ export default async function (
     });
     initializeQueue.push(async (cb) => {
       await initializeTrelloBoards().then(() => {
-        initializeTTPTasks().then(() => cb(null, true));
+        initializeTTPTasks().then(async () => {
+          await initializeCardsPlugins().then(() => cb(null, true));
+        });
       });
     });
     // initializeQueue.push(async (cb) => {

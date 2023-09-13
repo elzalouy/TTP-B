@@ -81,26 +81,6 @@ const BoardReq = class BoardReq extends BoardController {
       return res.status(500).send(customeError("server_error", 500));
     }
   }
-
-  static async postSnapshotOfActionsFromTrello(req: Request, res: Response) {
-    try {
-      let actionsByBoards = await super.__postSnapshotOfActions();
-      return res.send(actionsByBoards);
-    } catch (error) {
-      logger.error({ getBackupCardsFromTrelloError: error });
-    }
-  }
-
-  static async restoreNotExistedOnTrello(req: Request, res: Response) {
-    try {
-      taskRoutesQueue.push(async (cb) => {
-        let { activities } = await super.restoreTrelloCards(req.params.id);
-      });
-      res.send({ process: "Done" });
-    } catch (error) {
-      logger.error({ restoreNotExistedOnTrelloError: error });
-    }
-  }
 };
 
 export default BoardReq;

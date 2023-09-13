@@ -16,33 +16,47 @@ import {
   ListTypes,
 } from "../types/model/Department";
 import TrelloController from "./trello";
-import { Board, Card, TrelloAction } from "../types/controller/trello";
+import {
+  Board,
+  Card,
+  CheckList,
+  CheckListItem,
+  TrelloAction,
+} from "../types/controller/trello";
 import _, { uniqueId } from "lodash";
 import Tasks from "../models/Task";
 import { writeFile } from "fs";
 import { randomUUID } from "crypto";
+import Department from "../models/Department";
+import Config from "config";
+import { TaskPlugin } from "../types/model/TaskPlugins";
+import TasksPlugins from "../models/TaskPlugins";
+import { ObjectId } from "mongodb";
 class TaskController extends TaskDB {
   static async getTasks(data: TaskData) {
     return await TaskController.__getTasks(data);
   }
+
   static async createTask(data: TaskData, files: any) {
-    // TODO update this function with the new implementation
     return await TaskController.__CreateNewTask(data, files);
   }
+
   static async updateTask(data: object, files: any, tokenUser: any) {
-    // TODO update this function with the new implementation
     return await TaskController.__updateTaskData(data, files, tokenUser);
   }
 
   static async filterTasks(data: any) {
     return await TaskController.__filterTasksDB(data);
   }
+
   static async deleteTask(id: string) {
     return await TaskController.__deleteTask(id);
   }
+
   static async deleteTasksByProjectId(id: string) {
     return await TaskController.__deleteTasksByProjectId(id);
   }
+
   static async deleteTasks(ids: string[]) {
     return await TaskController.__deleteTasks(ids);
   }
@@ -50,11 +64,12 @@ class TaskController extends TaskDB {
   static async deleteTasksWhere(data: TaskData) {
     return await TaskController.__deleteTasksWhere(data);
   }
+
   static async downloadAttachment(cardId: string, attachmentId: string) {
     return await TaskController.__downloadAttachment(cardId, attachmentId);
   }
+
   static async createTaskByTrello(data: TaskData) {
-    // TODO update this function with the new implementation
     return await TaskController.__createTaskByTrello(data);
   }
 
@@ -66,7 +81,6 @@ class TaskController extends TaskDB {
     user: any,
     deadline?: string
   ) {
-    // TODO update this function with the new implementation
     return await TaskController.__moveTaskOnTrello(
       cardId,
       listId,
@@ -215,64 +229,6 @@ class TaskController extends TaskDB {
     }
   }
 
-  static async __deleteTasksByProjectId(id: string) {
-    try {
-      let tasks = await super.getTasksDB({
-        projectId: id,
-      });
-      tasks.forEach(async (item) => {
-        if (item.cardId) {
-          await TrelloController.deleteCard(item.cardId);
-          await TrelloController.removeWebhook(item.cardId);
-        }
-      });
-      return await super.deleteTasksByProjectIdDB(id);
-    } catch (error) {
-      logger.error({ DeleteTasksByProjectId: error });
-    }
-  }
-
-  static async __deleteTasksWhere(data: TaskData) {
-    try {
-      // let tasks = await super.getTasksByIdsDB;
-      let deleteResult = await super.deleteTasksWhereDB(data);
-      deleteResult.forEach((item) =>
-        TrelloController.removeWebhook(item.cardId)
-      );
-      if (deleteResult) return deleteResult;
-      else throw "Error hapenned while deleting tasks";
-    } catch (error) {
-      logger.error({ DeleteTasksWhereError: error });
-    }
-  }
-
-  static async __deleteTasks(ids: string[]) {
-    try {
-      let tasks = await super.getTasksByIdsDB(ids);
-      tasks.forEach(async (item) => {
-        TrelloController.deleteCard(item.cardId);
-        TrelloController.removeWebhook(item.cardId);
-      });
-      return await super.deleteTasksDB(ids);
-    } catch (error) {
-      logger.error({ DeleteTasksByProjectId: error });
-    }
-  }
-
-  static async __deleteTask(id: string) {
-    try {
-      let task = await super.getTaskDB(id);
-      if (task) {
-        deleteTaskFromBoardJob(task);
-        await TrelloController.deleteCard(task?.cardId);
-        return await super.deleteTaskDB(id);
-      }
-      throw "Task not existed";
-    } catch (error) {
-      logger.error({ deleteTaskError: error });
-    }
-  }
-
   static async __downloadAttachment(cardId: string, attachmentId: string) {
     try {
       let response = await TrelloController.downloadAttachment(
@@ -283,62 +239,6 @@ class TaskController extends TaskDB {
     } catch (error) {
       logger.error({ downloadAttachmentError: error });
       return { error: "FileError", status: 400 };
-    }
-  }
-  static async __createNotSavedCardsOnBoard(board: IDepartmentState) {
-    try {
-      let cards: Card[] = await TrelloController.__getCardsInBoard(
-        board.boardId
-      );
-      if (cards) {
-        let tasks = await TaskController.getTasks({ boardId: board.boardId });
-        if (tasks) {
-          cards.map(async (item) => {
-            let isTaskFound = tasks.find((task) => task.cardId === item.id);
-            let isList = board.lists.find(
-              (list) => list.listId === item.idList
-            )?.name;
-            let isStatusList =
-              isList && ListTypes.includes(isList) ? true : false;
-            let cardList = isList
-              ? board.lists.find((list) => list.listId === item.idList)
-              : board.teams.find((list) => list.listId === item.idList);
-            let task: TaskData = {
-              boardId: item.idBoard,
-              cardId: item.id,
-              trelloShortUrl: item.shortUrl,
-              name: item.name,
-              description: item.desc ?? "",
-              start: item.start ?? null,
-              deadline: item.due ?? null,
-              listId: isList
-                ? item.idList
-                : board.lists.find((item) => item.name === "In Progress")
-                    .listId,
-              status: isList ?? "In Progress",
-              movements: isTaskFound?.movements ?? [
-                {
-                  status: isList ? isList : "In Progress",
-                  movedAt: new Date(Date.now()).toString(),
-                },
-              ],
-            };
-            if (isTaskFound?._id) {
-              task.teamId = isStatusList ? isTaskFound.teamId : cardList._id;
-              task = await Tasks.findOneAndUpdate({ cardId: item.id }, task);
-            } else {
-              task.teamId = isStatusList ? null : cardList._id;
-              await new Tasks(task).save();
-            }
-            await TrelloController.__addWebHook(
-              task.cardId,
-              "trelloWebhookUrlTask"
-            );
-          });
-        }
-      }
-    } catch (error) {
-      logger.error({ __createNotSavedCardsOnBoardError: error });
     }
   }
 
@@ -381,6 +281,179 @@ class TaskController extends TaskDB {
       }
     } catch (error) {
       logger.error({ _getTasksCsv: error });
+    }
+  }
+
+  // Delete Handlers
+  static async __deleteTasksByProjectId(id: string) {
+    try {
+      let tasks = await super.getTasksDB({
+        projectId: id,
+      });
+      tasks.forEach(async (item) => {
+        if (item.cardId) {
+          await TrelloController.deleteCard(item.cardId);
+          await TrelloController.removeWebhook(item.cardId);
+        }
+      });
+      return await super.deleteTasksByProjectIdDB(id);
+    } catch (error) {
+      logger.error({ DeleteTasksByProjectId: error });
+    }
+  }
+
+  static async __deleteTasksWhere(data: TaskData) {
+    try {
+      let deleteResult = await super.deleteTasksWhereDB(data);
+      deleteResult.forEach((item) =>
+        TrelloController.removeWebhook(item.cardId)
+      );
+      if (deleteResult) return deleteResult;
+      else throw "Error hapenned while deleting tasks";
+    } catch (error) {
+      logger.error({ DeleteTasksWhereError: error });
+    }
+  }
+
+  static async __deleteTasks(ids: string[]) {
+    try {
+      let tasks = await super.getTasksByIdsDB(ids);
+      tasks.forEach(async (item) => {
+        TrelloController.deleteCard(item.cardId);
+        TrelloController.removeWebhook(item.cardId);
+      });
+      let result = await super.deleteTasksDB(ids);
+      return result;
+    } catch (error) {
+      logger.error({ DeleteTasksByProjectId: error });
+    }
+  }
+
+  static async __deleteTask(id: string) {
+    try {
+      let task = await super.getTaskDB(id);
+      if (task) {
+        deleteTaskFromBoardJob(task);
+        await TrelloController.deleteCard(task?.cardId);
+        let result = await super.deleteTaskDB(id);
+        if (result.isOk) return { isOk: true, message: "" };
+        else return { isOk: false, message: "Task not Existed" };
+      } else return { message: "Task not Existed", isOk: false };
+    } catch (error) {
+      logger.error({ deleteTaskError: error });
+    }
+  }
+  static async getDeletedBack() {
+    try {
+      let board = await Department.findOne({
+        name: Config.get("CreativeBoard"),
+      });
+      let tasks = await Tasks.find({
+        archivedCard: true,
+      });
+
+      let newTasksUpdates = await Promise.all(
+        tasks.map(async (task) => {
+          let card: Card = await TrelloController.__createCard({
+            name: task.name,
+            listId: board.lists.find((i) => i.name === task.status).listId,
+            boardId: board.boardId,
+            description: task.description,
+            deadline: task.deadline,
+            start: task.start,
+          });
+          return {
+            _id: task._id,
+            cardId: card.id,
+            listId: board.lists.find((i) => i.name === task.status).listId,
+            boardId: board.boardId,
+            description: task.description,
+            deadline: task.deadline,
+            start: task.start,
+            trelloShortUrl: card.shortUrl,
+            archivedCard: false,
+          };
+        })
+      );
+
+      let plugins = await TasksPlugins.find({});
+
+      let updatePlugins = await Promise.all(
+        newTasksUpdates.map(async (taskUpdate) => {
+          let plugin = plugins.find(
+            (i) => i.taskId === taskUpdate._id.toString()
+          );
+          if (plugin) {
+            plugin.cardId = taskUpdate.cardId;
+            plugin.comments.forEach((comment) =>
+              TrelloController.createComment(taskUpdate.cardId, comment.comment)
+            );
+            await Promise.all(
+              plugin.labels.map(async (label) => {
+                await TrelloController.createLabel(taskUpdate.cardId, label.id);
+                return label;
+              })
+            );
+            plugin.checkLists = await Promise.all(
+              plugin.checkLists.map(async (i) => {
+                let checkListResponse: CheckList =
+                  await TrelloController.createCheckList(
+                    taskUpdate.cardId,
+                    i.name
+                  );
+                checkListResponse.checkItems = await Promise.all(
+                  i.checkItems.map(
+                    async (item) =>
+                      await TrelloController.createCheckListsItems(
+                        checkListResponse.id,
+                        item.name,
+                        item.state === "incomplete" ? false : true,
+                        item.due,
+                        item.dueReminder,
+                        item.idMember
+                      )
+                  )
+                );
+
+                return checkListResponse;
+              })
+            );
+            return {
+              updateOne: {
+                filter: { _id: plugin._id },
+                update: {
+                  cardId: taskUpdate.cardId,
+                  checkLists: plugin.checkLists,
+                },
+              },
+            };
+          } else return null;
+        })
+      );
+      console.log({ newTasksUpdates });
+      updatePlugins.map((i) => console.log(i.updateOne.update));
+      updatePlugins = updatePlugins.filter((i) => i !== null);
+      let update = [
+        ...newTasksUpdates.map((i) => {
+          return {
+            updateOne: {
+              filter: { _id: i._id },
+              update: {
+                cardId: i.cardId,
+                listId: i.listId,
+                boardId: i.boardId,
+                trelloShortUrl: i.trelloShortUrl,
+                archivedCard: i.archivedCard,
+              },
+              upsert: false,
+            },
+          };
+        }),
+      ];
+      await TasksPlugins.bulkWrite(updatePlugins);
+      await Tasks.bulkWrite(update);
+    } catch (error) {
+      logger.error({ getDeletedBackError: error });
     }
   }
 }

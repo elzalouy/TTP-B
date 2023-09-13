@@ -27,7 +27,6 @@ export function projectsDueDate(
         .lt(new Date(today.getTime() + 30 * 24 * 60 * 60 * 1000).getTime())
         .where("startDate")
         .lt(new Date().getTime());
-      console.log({ dueDateProjects });
       if (dueDateProjects && dueDateProjects.length > 0) {
         dueDateProjects.forEach(async (item: ProjectInfo) => {
           await NotificationDB.__createNotification({

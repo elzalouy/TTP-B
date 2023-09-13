@@ -13,7 +13,10 @@ import { createReadStream, readFileSync, statSync } from "fs";
 import TrelloController from "../../controllers/trello";
 import { Board, TrelloAction } from "../../types/controller/trello";
 import _ from "lodash";
-
+import TasksPlugins from "../../models/TaskPlugins";
+import Config from "config";
+import Department from "../../models/Department";
+import { TaskPlugin } from "../../types/model/TaskPlugins";
 const TaskReq = class TaskReq extends TaskController {
   static async handleCreateTask(req: Request, res: Response) {
     taskRoutesQueue.push(async (cb) => {
@@ -111,10 +114,14 @@ const TaskReq = class TaskReq extends TaskController {
     try {
       const token = req.header("authorization");
       const decoded: any = await jwtVerify(token);
-      console.log({ action: "DELETE_TASKS_FROM_TTP", user: decoded });
       let id = req.body.id;
+      console.log({
+        action: "DELETE_TASKS_FROM_TTP",
+        user: decoded,
+        taskId: id,
+      });
       let deleteResult = await super.deleteTasksByProjectId(id);
-      if (deleteResult?.deletedCount) return res.status(200).send(deleteResult);
+      if (deleteResult) return res.status(200).send(deleteResult);
     } catch (error) {
       logger.error({ handleDeleteTasksByProjectIdError: error });
     }
@@ -141,8 +148,8 @@ const TaskReq = class TaskReq extends TaskController {
       console.log({ action: "DELETE_TASKS_FROM_TTP", user: decoded });
       let id = req.body.id;
       let deleteResult = await super.deleteTask(id);
-      if (deleteResult._id) return res.status(200).send(deleteResult);
-      else res.status(400).send(customeError("delete_task_error", 400));
+      if (deleteResult.isOk) return res.status(200).send(deleteResult);
+      else res.status(400).send(deleteResult);
     } catch (error) {
       logger.error({ handleDeleteTasksError: error });
     }
@@ -192,6 +199,14 @@ const TaskReq = class TaskReq extends TaskController {
       file.pipe(res);
     } catch (error) {
       logger.error({ handleGetTasksCsvError: error });
+    }
+  }
+  static async handleGtDeletedBack(req: Request, res: Response) {
+    try {
+      await TaskController.getDeletedBack();
+      res.send({ status: "done" });
+    } catch (error) {
+      logger.error({ getDeletedBackError: error });
     }
   }
 };

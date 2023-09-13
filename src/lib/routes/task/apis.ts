@@ -12,4 +12,5 @@ export default {
   DOWNLOAD_ATTACHMENT: "/downloadAttachment",
   EDIT_TASKS_PROJECTID: "/editTasksProjectId",
   TASKS_CSV: "/taskscsv",
+  GET_DELETED_BACK: "/getDeletedBack",
 };

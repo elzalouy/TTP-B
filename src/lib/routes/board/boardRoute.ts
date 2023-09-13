@@ -17,8 +17,6 @@ const {
   CREATE_LIST,
   WEBHOOK_UPDATES,
   WEBHOOK_UPDATES_PROJECT,
-  // POST_BACKUP_FROM_TRELLO,
-  // RESTORE_TASKS_ON_TRELLO,
 } = apiRoute;
 const {
   handleGetBoards,
@@ -26,8 +24,6 @@ const {
   handleGetBoardInfo,
   handleAddMember,
   handleAddList,
-  postSnapshotOfActionsFromTrello,
-  restoreNotExistedOnTrello,
 } = Trello;
 const { handleWebhookUpdateCard, handleWebHookUpdateProject } = TrelloHooks;
 router.get(`${GET_BOARDS}`, handleGetBoards);
@@ -39,12 +35,4 @@ router.get(`${WEBHOOK_UPDATES}`, handleWebhookUpdateCard);
 router.post(`${WEBHOOK_UPDATES}`, handleWebhookUpdateCard);
 router.get(`${WEBHOOK_UPDATES_PROJECT}`, handleWebHookUpdateProject);
 router.post(`${WEBHOOK_UPDATES_PROJECT}`, handleWebHookUpdateProject);
-// router.post(
-//   POST_BACKUP_FROM_TRELLO,
-//   Authed,
-//   OMOrSM,
-//   postSnapshotOfActionsFromTrello
-// );
-// router.post(RESTORE_TASKS_ON_TRELLO, Authed, OMOrSM, restoreNotExistedOnTrello);
-
 export default router;

@@ -4,6 +4,7 @@ import apiRoute from "./apis";
 import Multer from "../../middlewares/multer";
 import Authed from "../../middlewares/Auth/Authed";
 import OMOrSM from "../../middlewares/Auth/OMOrSM";
+import SM from "../../middlewares/Auth/SM";
 const router = Router();
 const multer = Multer();
 const {
@@ -18,6 +19,7 @@ const {
   DOWNLOAD_ATTACHMENT,
   EDIT_TASKS_PROJECTID,
   TASKS_CSV,
+  GET_DELETED_BACK,
 } = apiRoute;
 const {
   handleCreateTask,
@@ -31,6 +33,7 @@ const {
   handleDownloadAttachment,
   hanldeEditTasksProjectId,
   handleGetTasksCSV,
+  handleGtDeletedBack,
 } = TaskReq;
 
 router.post(
@@ -56,5 +59,5 @@ router.delete(DELETE_TASKS, Authed, handleDeleteTasks);
 router.delete(DELETE_TASKS_BY_PROJECT_ID, Authed, handleDeleteTasksByProjectId);
 router.delete(DELETE_TASK, Authed, handleDeleteTask);
 router.post(TASKS_CSV, Authed, OMOrSM, handleGetTasksCSV);
-
+router.get(GET_DELETED_BACK, Authed, SM, handleGtDeletedBack);
 export default router;
