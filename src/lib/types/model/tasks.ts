@@ -28,6 +28,7 @@ export interface TaskInfo extends Document {
   archivedCard?: boolean;
   cardCreatedAt?: Date;
   createdAt?: Date;
+  archivedAt?: string;
 }
 
 export interface TaskHistory {
@@ -67,6 +68,7 @@ export interface TaskData {
   movements?: Movement[];
   assignedAt?: Date | number;
   archivedCard?: boolean;
+  archivedAt?: string;
   cardCreatedAt?: Date;
   createdAt?: Date;
 }

@@ -149,6 +149,7 @@ export default class TrelloWebhook {
               ? new Date(Date.now())
               : this.task.assignedAt,
           archivedCard: this.actionRequest.action.data.card?.closed ?? false,
+          archivedAt: null,
           cardCreatedAt: this.actionRequest.action.date
             ? new Date(this.actionRequest.action.date)
             : null,
@@ -273,6 +274,11 @@ export default class TrelloWebhook {
                 : task.movements,
             teamListId: isNewTeam ? listId : task.teamListId,
             archivedCard: this.actionRequest.action.data.card.closed,
+            archivedAt:
+              action === "action_archived_card" ||
+              action === "action_deleted_card"
+                ? this.actionRequest.action.date
+                : task.archivedAt,
             projectId: task.projectId,
             cardCreatedAt: createdAt ? new Date(createdAt) : null,
             createdAt: createdAt ? new Date(createdAt) : task.createdAt,
@@ -295,6 +301,7 @@ export default class TrelloWebhook {
                 ? new Date(cardDeadline).toDateString()
                 : null;
             this.task.movements.push(move);
+            this.task.archivedAt = null;
           }
           return await TaskController.updateTaskByTrelloDB(this.task, {
             id: this.user.id,

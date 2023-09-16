@@ -30,13 +30,11 @@ export default async function (
     });
     initializeQueue.push(async (cb) => {
       await initializeTrelloBoards().then(() => {
-        initializeTTPTasks().then(async () => {
-          await initializeCardsPlugins().then(() => cb(null, true));
-        });
+        initializeTTPTasks().then(async () => {});
       });
     });
     initializeQueue.push(async (cb) => {
-      initializeSystemTasksPluginsJob();
+      initializeSystemTasksPluginsJob().start();
     });
   } catch (error) {
     logger.error({ errorOldNotificationsCron: error });

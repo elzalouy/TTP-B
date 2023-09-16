@@ -162,7 +162,10 @@ class TaskDB {
   static async __deleteTasksWhereDB(data: TaskData) {
     try {
       let tasks = await Tasks.find(data);
-      let result = await Tasks.updateMany(data, { archivedCard: true });
+      let result = await Tasks.updateMany(data, {
+        archivedCard: true,
+        archivedAt: new Date(Date.now()).toString(),
+      });
       if (result) return tasks;
       throw "Tasks not found";
     } catch (error) {
@@ -183,7 +186,7 @@ class TaskDB {
     try {
       let deleteResult = await Tasks.updateMany(
         { projectId: id },
-        { archivedCard: true }
+        { archivedCard: true, archivedAt: new Date(Date.now()).toString() }
       );
       return deleteResult;
     } catch (error) {
@@ -195,7 +198,10 @@ class TaskDB {
     try {
       let deleteResult = await Tasks.updateMany(
         { _id: { $in: ids } },
-        { archivedCard: true }
+        {
+          archivedCard: true,
+          archivedAt: new Date(Date.now()).toString(),
+        }
       );
       if (deleteResult) {
         let remaind = await Tasks.find({});
@@ -208,7 +214,10 @@ class TaskDB {
 
   static async __deleteTask(id: string) {
     try {
-      let task = await Tasks.findByIdAndUpdate(id, { archivedCard: true });
+      let task = await Tasks.findByIdAndUpdate(id, {
+        archivedCard: true,
+        archivedAt: new Date(Date.now()).toString(),
+      });
       return {
         isOk: task._id ? true : false,
         message: task._id ? "Task Updates" : "Task not found",
@@ -362,6 +371,7 @@ class TaskDB {
       task.movements = data.movements ?? task.movements;
       task.attachedFiles = _.uniqBy(task.attachedFiles, "trelloId");
       task.archivedCard = data.archivedCard ?? false;
+      task.archivedAt = data.archivedAt ?? task.archivedAt;
       // Checking if the value of cardCreatedAt is not undefined or null
       if (data.cardCreatedAt) task.cardCreatedAt = new Date(data.cardCreatedAt);
       task.createdAt = data.createdAt;
@@ -399,7 +409,10 @@ class TaskDB {
         {
           cardId: data.cardId,
         },
-        { archivedCard: true }
+        {
+          archivedCard: true,
+          archivedAt: new Date(Date.now()).toString(),
+        }
       );
       return io?.sockets?.emit("delete-task", result);
     } catch (error) {

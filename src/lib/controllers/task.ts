@@ -343,14 +343,16 @@ class TaskController extends TaskDB {
       logger.error({ deleteTaskError: error });
     }
   }
-  static async getDeletedBack() {
+  static async getDeletedBack(count: number) {
     try {
       let board = await Department.findOne({
         name: Config.get("CreativeBoard"),
       });
       let tasks = await Tasks.find({
         archivedCard: true,
-      });
+      })
+        .sort({ archivedAt: "desc" })
+        .limit(count);
 
       let newTasksUpdates = await Promise.all(
         tasks.map(async (task) => {

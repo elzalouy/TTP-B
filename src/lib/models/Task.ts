@@ -130,6 +130,7 @@ const TaskSchema = new Schema<TaskInfo, TasksModel>(
     assignedAt: { type: Date, required: false, default: null },
     archivedCard: { type: Boolean, requried: true, default: false },
     cardCreatedAt: { type: Date, required: true, default: null },
+    archivedAt: { type: String },
   },
   {
     timestamps: true,

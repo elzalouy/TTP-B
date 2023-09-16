@@ -435,6 +435,7 @@ export const initializeTTPTasks = async () => {
           deadline: card.due ?? null,
           trelloShortUrl: card.shortUrl ?? "",
           archivedCard: isBoardArchived || isListArchived || card.closed,
+          archivedAt: item.archivedAt ?? null,
           movements:
             isBoardArchived || isListArchived || card.closed ? [] : movements,
           attachedFiles:
@@ -515,6 +516,7 @@ export const initializeTTPTasks = async () => {
           deadline: card?.due ?? null,
           trelloShortUrl: card?.shortUrl,
           archivedCard: isBoardArchived || isListArchived || card.closed,
+          archivedAt: null,
           attachedFiles: card?.attachments?.length
             ? card?.attachments?.map((item) => {
                 return {
@@ -529,7 +531,6 @@ export const initializeTTPTasks = async () => {
             isBoardArchived || isListArchived || card?.closed ? [] : movements,
           cardCreatedAt: new Date(createdAt),
         });
-        logger.debug({ cardCreatedAt: createdAt });
         return task;
       }),
     ]);
@@ -548,6 +549,7 @@ export const initializeTTPTasks = async () => {
         return item;
       })
     );
+
     notExistedOnTrello = notExistedOnTrello.filter((i) => i !== null);
 
     tasks = tasks?.map((item) => {
@@ -584,6 +586,7 @@ export const initializeTTPTasks = async () => {
               attachedFiles: item.attachedFiles,
               movements: item.movements,
               archivedCard: item.archivedCard,
+              archivedAt: item.archivedAt,
               cardCreatedAt: item.cardCreatedAt,
             },
           },
@@ -602,9 +605,10 @@ export const initializeTTPTasks = async () => {
 
 export const initializeCardsPlugins = async () => {
   try {
+    console.log("initialize");
     let departments = await Department.find({});
     let boardIds = departments.map((department) => department.boardId);
-    let cards = _.flattenDepth(
+    let cards = _.flattenDeep(
       await Promise.all(
         boardIds.map(async (id) => {
           let boardCards: Card[] = await TrelloController.__getCardsInBoard(id);

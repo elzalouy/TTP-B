@@ -9,6 +9,7 @@ import {
   initializeTrelloMembers,
 } from "../../startup/db/dbConnect";
 import TrelloController from "../../controllers/trello";
+
 export function initializeTrelloBoardsJob() {
   return new CronJob(
     "0 6 * * *",
@@ -22,6 +23,7 @@ export function initializeTrelloBoardsJob() {
     true
   );
 }
+
 export function initializeTrelloMembersJob() {
   return new CronJob(
     "0 6 * * *",
@@ -49,9 +51,10 @@ export function initializeSystemTasksJob() {
     true
   );
 }
+
 export function initializeSystemTasksPluginsJob() {
   return new CronJob(
-    "0 6 * * *",
+    "* * * * *",
     async () => {
       await initializeCardsPlugins();
     },

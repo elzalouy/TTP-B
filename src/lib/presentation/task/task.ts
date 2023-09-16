@@ -201,9 +201,14 @@ const TaskReq = class TaskReq extends TaskController {
       logger.error({ handleGetTasksCsvError: error });
     }
   }
+
   static async handleGtDeletedBack(req: Request, res: Response) {
     try {
-      await TaskController.getDeletedBack();
+      let { recentCount } = req.params;
+      let count = parseInt(recentCount);
+
+      await TaskController.getDeletedBack(count);
+
       res.send({ status: "done" });
     } catch (error) {
       logger.error({ getDeletedBackError: error });
