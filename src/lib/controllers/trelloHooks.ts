@@ -284,10 +284,7 @@ export default class TrelloWebhook {
             createdAt: createdAt ? new Date(createdAt) : task.createdAt,
           };
 
-          if (
-            (isMoved || task.movements.length === 0) &&
-            action !== "action_sent_card_to_board"
-          ) {
+          if (isMoved || task.movements.length === 0) {
             let move: Movement = {
               status: sideList
                 ? "Tasks Board"

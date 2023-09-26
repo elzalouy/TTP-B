@@ -50,3 +50,18 @@
 {"level":"error","message":{"getCardsInBoardError":{"code":"ETIMEDOUT","errno":"ETIMEDOUT","message":"request to https://api.trello.com/1/boards/64da12448d63ac339101984b/cards/all?key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68 failed, reason: connect ETIMEDOUT 185.166.143.25:443","type":"system"}}}
 {"level":"error","message":{"getCardsInBoardError":{"code":"ETIMEDOUT","errno":"ETIMEDOUT","message":"request to https://api.trello.com/1/boards/64d9c6324a3ecbd0d76902ee/cards/all?key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68 failed, reason: connect ETIMEDOUT 185.166.143.25:443","type":"system"}}}
 {"level":"error","message":{"initializeCardsPluginsError":{}}}
+{"level":"error","message":{"_getCardMovementsActionsError":{}}}
+{"level":"error","message":{"_getCardMovementsActionsError":{}}}
+{"level":"error","message":{"_getCardMovementsActionsError":{}}}
+{"level":"error","message":{"_getCardMovementsActionsError":{}}}
+{"level":"error","message":{"_getCardMovementsActionsError":{}}}
+{"level":"error","message":{"_getCardMovementsActionsError":{}}}
+{"level":"error","message":{"_getCardMovementsActionsError":{}}}
+{"level":"error","message":{"error":{}}}
+{"level":"error","message":{"initializeTTPTasksError":{}}}
+{"level":"error","message":{"error":{}}}
+{"level":"error","message":{"error":{}}}
+{"level":"error","message":{"error":{}}}
+{"level":"error","message":{"error":{}}}
+{"level":"error","message":{"error":{}}}
+{"level":"error","message":{"error":{}}}

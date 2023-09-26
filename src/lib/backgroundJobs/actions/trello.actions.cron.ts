@@ -54,7 +54,7 @@ export function initializeSystemTasksJob() {
 
 export function initializeSystemTasksPluginsJob() {
   return new CronJob(
-    "* * * * *",
+    "0 6 * * *",
     async () => {
       await initializeCardsPlugins();
     },
