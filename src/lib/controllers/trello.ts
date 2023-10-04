@@ -833,7 +833,7 @@ class TrelloController {
       );
       let movements: Movement[] = cardsActions.map((cardAction) => {
         return {
-          movedAt: new Date(cardAction.action.date).toDateString(),
+          movedAt: new Date(cardAction.action.date).toString(),
           listId: cardAction.action.listId,
           status: cardAction.action.status,
           isTeam: cardAction.action.listType === "team",
@@ -888,7 +888,6 @@ class CardAction {
           listId,
           cardId: this.action.data.card.id,
         });
-
         this.action.listType = "team";
         this.action.status = "In Progress";
       } else {

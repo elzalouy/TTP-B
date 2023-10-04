@@ -185,6 +185,8 @@ export default class TrelloWebhook {
       logger.info({
         action: this.actionRequest.action.display.translationKey,
         cardId: this.task.cardId,
+        from: this.actionRequest.action.data.listBefore,
+        after: this.actionRequest.action.data.listAfter,
       });
 
       let action = this.actionRequest.action.display.translationKey;
@@ -300,6 +302,7 @@ export default class TrelloWebhook {
             this.task.movements.push(move);
             this.task.archivedAt = null;
           }
+
           return await TaskController.updateTaskByTrelloDB(this.task, {
             id: this.user.id,
             name: this.user?.name,

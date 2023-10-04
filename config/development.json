@@ -1,7 +1,7 @@
 {
   "name": "TTP development",
-  "trelloWebhookUrlTask": "https://cf77-154-239-200-5.ngrok.io/api/webhookUpdate",
-  "trelloWebhookUrlProject": "https://cf77-154-239-200-5.ngrok.io/api/webhookUpdateProject",
+  "trelloWebhookUrlTask": "https://9209-154-191-70-151.ngrok.io/api/webhookUpdate",
+  "trelloWebhookUrlProject": "https://9209-154-191-70-151.ngrok.io/api/webhookUpdateProject",
   "frontEndUrl": "http://localhost:3000",
   "BoardStatus": [
     "In Progress",
@@ -14,5 +14,5 @@
   ],
   "redis": "redis://localhost:6379",
   "CreativeBoard": "dev / TTP Creative",
-  "trelloOrgId": "trelloOrgId"
+  "trelloOrgId": "ttplocal"
 }

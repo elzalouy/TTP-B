@@ -1,8 +1,4 @@
-
-
-
 @startuml
-
 @startjson board 
 {
   "name":"board name",
@@ -63,44 +59,17 @@
 @endjson
 @enduml
 
-@startuml initializeTrelloBoards
-header InitializeTrelloBoards
+@startuml initializeTTPTasks
+header initialize TTP Tasks
 start  
-:getallBoards;
-:getAllDepartments;
-if (boards is empty?) then (yes)
-  :create Creative Board on Trello; 
-else (no)
-  if (creative Board found ? ?) then (No)
-    :create Creative board on Trello;
-  else (Yes)
-    
-  endif
-repeat :loop on allBoards;
-  :getBoardData;
-  if (department existed?) then (Yes)
-  :update the webhook;
-  else (No)
-    :createDepartment;
-    :createWebhook;
-  endif
-  fork
-    if (is there Cards not saved ?) then (yes)
-    :create not saved cards;
-    :create webhook for each card;
-    else (No)
-    :update each card's webhook;
-    endif
-  fork again
-    if (is there lists not saved?) then (yes)
-      :create not saved lists;
-    else (no)
-    endif
-  end fork
-repeat while (is There are Boards?) is (yes)
-->no;
-endif
-stop
+partition Initialization {
+  :declare {
+    tasks, boards, departments, cards, cardIds, tasksIds,
+    intersection, notExistedOnTrello, notExistedOnTTP
+  };
+  :getBoardsInTrello save to boards;
+
+}
 @enduml
 
 @startuml
