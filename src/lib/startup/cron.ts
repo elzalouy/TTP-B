@@ -33,8 +33,8 @@ export default async function (
     //     initializeTTPTasks().then(async () => {
     //       // initializeSystemTasksPluginsJob().start();
     //     });
-      });
-    });
+    //   });
+    // });
   } catch (error) {
     logger.error({ errorOldNotificationsCron: error });
   }
