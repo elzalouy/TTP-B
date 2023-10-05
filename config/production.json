@@ -13,6 +13,5 @@
     "Tasks Board"
   ],
   "redis": "redis://localhost:6379",
-  "CreativeBoard": "TTP Creative",
-  "trelloOrgId": "ttp beta"
+  "CreativeBoard": "TTP Creative"
 }

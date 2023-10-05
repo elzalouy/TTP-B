@@ -461,7 +461,6 @@ export const initializeTTPTasks = async () => {
     // // not Existed on TTP > create it on TTP
     let newTasks = await Promise.all([
       ...notExistedOnTTP?.map(async (card) => {
-        let task;
         let isBoardArchived =
           boards.find((i) => i.id === card.idBoard)?.closed === true
             ? true
