@@ -28,13 +28,13 @@ export default async function (
     initializeQueue.push(() => {
       projectsPassedDate(io).start();
     });
-    // initializeQueue.push(async (cb) => {
-    //   await initializeTrelloBoards().then(() => {
-    //     initializeTTPTasks().then(async () => {
-    //       // initializeSystemTasksPluginsJob().start();
-    //     });
-    //   });
-    // });
+    initializeQueue.push(async (cb) => {
+      await initializeTrelloBoards().then(() => {
+        initializeTTPTasks().then(async () => {
+          // initializeSystemTasksPluginsJob().start();
+        });
+      });
+    });
   } catch (error) {
     logger.error({ errorOldNotificationsCron: error });
   }
