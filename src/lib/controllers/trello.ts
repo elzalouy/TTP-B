@@ -452,7 +452,9 @@ class TrelloController {
       if (newActions) actions = [...actions, ...newActions];
       return actions;
     } catch (error) {
-      logger.error({ _getCardMovementsActionsError: error });
+      logger.error({
+        _getCardMovementsActionsError: { cardId: cardId, error },
+      });
     }
   }
 
