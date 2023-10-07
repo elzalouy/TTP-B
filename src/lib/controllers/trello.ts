@@ -432,7 +432,7 @@ class TrelloController {
       });
       return await actions.json();
     } catch (error) {
-      logger.error({ error });
+      logger.error({ _getCreationActionOfCardError: { cardId, error } });
     }
   }
 
@@ -841,7 +841,7 @@ class TrelloController {
       });
       return { movements, currentTeam, createdAt: createAction[0].date };
     } catch (error) {
-      logger.error({ error });
+      logger.error({ getActionsOfCardError: error });
     }
   }
 }
