@@ -868,38 +868,19 @@ class CardAction {
       return this;
     }
     let list = board?.lists?.find((l) => l.listId === listId);
+    if (this.action.data.card.id === "64a68e8bfca2a16ae2c6748d")
+      console.log({ card: this.action.data.card, list, board });
     if (list) {
       this.action.listType = "list";
       this.action.status = list.name;
-      logger.info({
-        type: "existed_in_current_list_status",
-        name: this.action.data.card.name,
-        list: listName,
-        listId,
-        cardId: this.action.data.card.id,
-      });
     } else {
       list = board?.teams?.find((t) => t.listId === listId);
       if (list) {
-        logger.info({
-          type: "existed_in_current_list_team",
-          name: this.action.data.card.name,
-          list: listName,
-          listId,
-          cardId: this.action.data.card.id,
-        });
         this.action.listType = "team";
         this.action.status = "In Progress";
       } else {
         list = board.sideLists.find((i) => i.listId === listId);
         if (list) {
-          logger.info({
-            type: "existed_in_current_list_sideList",
-            name: this.action.data.card.name,
-            list: listName,
-            listId,
-            cardId: this.action.data.card.id,
-          });
           this.action.listType = "sidelist";
           this.action.status = "Tasks Board";
         } else {
@@ -907,24 +888,10 @@ class CardAction {
             ? board.lists.find((l) => listName.includes(l.name))
             : null;
           if (list) {
-            logger.info({
-              type: "existed_in_archived_list_status",
-              name: this.action.data.card.name,
-              list: listName,
-              listId,
-              cardId: this.action.data.card.id,
-            });
             this.action.data.list.id = list.listId;
             this.action.status = list.name;
             this.action.listType = "list";
           } else {
-            logger.info({
-              type: "not_existed_in_any_list_and_will_be_delete_this_action",
-              name: this.action.data.card.name,
-              listName: listName,
-              listId,
-              cardId: this.action.data.card.id,
-            });
             this.action.deleteAction = true;
           }
         }
