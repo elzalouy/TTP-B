@@ -438,19 +438,14 @@ class TrelloController {
 
   static async _getCardMovementsActions(cardId: string) {
     try {
-      let page = 0;
-      let actions: TrelloAction[] = [];
       let url = await trelloApi(
         `cards/${cardId}/actions/?filter=updateCard:idList&`
       );
-      let newActions: TrelloAction[] = await fetch(url, {
+      let result = await fetch(url, {
         method: "GET",
         headers: { Accept: "application/json" },
-      }).then(async (res) => {
-        return await res.json();
       });
-      if (newActions) actions = [...actions, ...newActions];
-      return actions;
+      return await result.json();
     } catch (error) {
       logger.error({
         _getCardMovementsActionsError: { cardId: cardId, error },
