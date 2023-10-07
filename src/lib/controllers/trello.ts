@@ -441,7 +441,7 @@ class TrelloController {
       let page = 0;
       let actions: TrelloAction[] = [];
       let url = await trelloApi(
-        `cards/${cardId}/actions/?filter=updateCard:idList&page=${page}&`
+        `cards/${cardId}/actions/?filter=updateCard:idList&`
       );
       let newActions: TrelloAction[] = await fetch(url, {
         method: "GET",
