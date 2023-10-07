@@ -869,7 +869,7 @@ class CardAction {
     }
     let list = board?.lists?.find((l) => l.listId === listId);
     if (this.action.data.card.id === "64a68e8bfca2a16ae2c6748d")
-      console.log({ card: this.action.data.card, list, board });
+      console.log({ card: this.action.data.card, list });
     if (list) {
       this.action.listType = "list";
       this.action.status = list.name;

@@ -405,7 +405,7 @@ export const initializeTTPTasks = async () => {
               );
         let { movements, currentTeam, createdAt } =
           await TrelloController.getActionsOfCard(
-            card.id,
+            item.cardId,
             departments,
             card.due ? new Date(card.due) : null
           );
