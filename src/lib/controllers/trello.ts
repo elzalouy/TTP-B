@@ -440,19 +440,16 @@ class TrelloController {
     try {
       let page = 0;
       let actions: TrelloAction[] = [];
-      for (page; page <= 19; page++) {
-        let url = await trelloApi(
-          `cards/${cardId}/actions/?filter=updateCard:idList&page=${page}&`
-        );
-        let newActions: TrelloAction[] = await fetch(url, {
-          method: "GET",
-          headers: { Accept: "application/json" },
-        }).then(async (res) => {
-          return await res.json();
-        });
-        if (newActions) actions = [...actions, ...newActions];
-        if (newActions.length < 50) break;
-      }
+      let url = await trelloApi(
+        `cards/${cardId}/actions/?filter=updateCard:idList&page=${page}&`
+      );
+      let newActions: TrelloAction[] = await fetch(url, {
+        method: "GET",
+        headers: { Accept: "application/json" },
+      }).then(async (res) => {
+        return await res.json();
+      });
+      if (newActions) actions = [...actions, ...newActions];
       return actions;
     } catch (error) {
       logger.error({ _getCardMovementsActionsError: error });
