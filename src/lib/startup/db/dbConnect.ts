@@ -381,6 +381,7 @@ export const initializeTTPTasks = async () => {
     // Existed on TTP & Trello > make it same
     intersection?.forEach(async (item: TaskInfo, index) => {
       intializeTaskQueue.push(async (cb) => {
+        await delay(1000);
         let card: Card = cards?.find((c) => c.id === item.cardId);
         let isBoardArchived =
           boards.find((i) => i.id === card.idBoard)?.closed === true
@@ -477,6 +478,7 @@ export const initializeTTPTasks = async () => {
     // // not Existed on TTP > create it on TTP
     notExistedOnTTP?.forEach(async (card, index) => {
       intializeTaskQueue.push(async (cb) => {
+        await delay(1000);
         let task: TaskInfo;
         let isBoardArchived =
           boards.find((i) => i.id === card.idBoard)?.closed === true
