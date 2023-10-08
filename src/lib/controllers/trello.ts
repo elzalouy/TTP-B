@@ -821,6 +821,8 @@ class TrelloController {
       cardsActions = cardsActions.map((cardAction) =>
         cardAction.validate(departments)
       );
+      if (cardId === "64a68e8bfca2a16ae2c6748d")
+        logger.error({ cardsActionsAfterValidation: cardsActions });
       /// First create status
       cardsActions = cardsActions.filter(
         (i) => i?.action?.deleteAction === false

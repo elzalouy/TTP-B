@@ -375,7 +375,6 @@ export const initializeTTPTasks = async () => {
       (item) => !cardsIds.includes(item.cardId)
     );
     intersection = tasks.filter((item) => cardsIds.includes(item.cardId));
-    logger.info({ intersection });
     // processing
     // Tasks Plugins
     // Existed on TTP & Trello > make it same
