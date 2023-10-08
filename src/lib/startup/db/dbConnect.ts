@@ -378,7 +378,7 @@ export const initializeTTPTasks = async () => {
     // processing
     // Tasks Plugins
     // Existed on TTP & Trello > make it same
-    intersection?.forEach(async (item: TaskInfo, index) => {
+    await intersection?.forEach(async (item: TaskInfo, index) => {
       let card: Card = cards?.find((c) => c.id === item.cardId);
       let isBoardArchived =
         boards.find((i) => i.id === card.idBoard)?.closed === true
@@ -461,7 +461,7 @@ export const initializeTTPTasks = async () => {
       return index >= 0 ? intersectionResult[index] : item;
     });
     // // not Existed on TTP > create it on TTP
-    notExistedOnTTP?.forEach(async (card, index) => {
+    await notExistedOnTTP?.forEach(async (card, index) => {
       let task: TaskInfo;
       let isBoardArchived =
         boards.find((i) => i.id === card.idBoard)?.closed === true
