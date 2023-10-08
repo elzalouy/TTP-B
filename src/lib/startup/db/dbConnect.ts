@@ -375,7 +375,7 @@ export const initializeTTPTasks = async () => {
       (item) => !cardsIds.includes(item.cardId)
     );
     intersection = tasks.filter((item) => cardsIds.includes(item.cardId));
-
+    logger.info({ intersection });
     // processing
     // Tasks Plugins
     // Existed on TTP & Trello > make it same
@@ -445,9 +445,9 @@ export const initializeTTPTasks = async () => {
             isBoardArchived ||
             isListArchived ||
             card.closed ||
-            !actionsData.movements
+            !actionsData?.movements
               ? []
-              : actionsData.movements,
+              : actionsData?.movements,
           attachedFiles:
             card?.attachments?.length > 0
               ? card?.attachments?.map((item) => {
@@ -459,8 +459,8 @@ export const initializeTTPTasks = async () => {
                   };
                 })
               : [],
-          cardCreatedAt: actionsData.createdAt
-            ? new Date(actionsData.createdAt)
+          cardCreatedAt: actionsData?.createdAt
+            ? new Date(actionsData?.createdAt)
             : null,
         });
         intersectionResult.push(replacement);
@@ -546,11 +546,11 @@ export const initializeTTPTasks = async () => {
             isBoardArchived ||
             isListArchived ||
             card?.closed ||
-            !actionsData.movements
+            !actionsData?.movements
               ? []
-              : actionsData.movements,
-          cardCreatedAt: actionsData.createdAt
-            ? new Date(actionsData?.createdAt)
+              : actionsData?.movements,
+          cardCreatedAt: actionsData?.createdAt
+            ? new Date(actionsData.createdAt)
             : null,
         });
         notExistedOnTTPResult.push(task);
