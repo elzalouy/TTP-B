@@ -22,12 +22,15 @@ export default async function (
     initializeQueue.push(() => {
       removeOldNotifications(io).start();
     });
+
     initializeQueue.push(() => {
       projectsDueDate(io).start();
     });
+
     initializeQueue.push(() => {
       projectsPassedDate(io).start();
     });
+
     initializeQueue.push(async (cb) => {
       await initializeTrelloBoards().then(() => {
         initializeTTPTasks().then(async () => {
