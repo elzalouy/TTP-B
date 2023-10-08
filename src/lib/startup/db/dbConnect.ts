@@ -407,12 +407,11 @@ export const initializeTTPTasks = async () => {
             : dep?.sideLists.find(
                 (sideList) => sideList?.listId === card.idList
               );
-        let { movements, currentTeam, createdAt } =
-          await TrelloController.getActionsOfCard(
-            item.cardId,
-            departments,
-            card.due ? new Date(card.due) : null
-          );
+        let actionsData = await TrelloController.getActionsOfCard(
+          card.id,
+          departments,
+          card.due ? new Date(card.due) : null
+        );
         let replacement = new Tasks({
           _id: item._id,
           name: card.name,
@@ -428,9 +427,13 @@ export const initializeTTPTasks = async () => {
             : team
             ? "In Progress"
             : "",
-          teamId: team?._id ?? currentTeam?._id ?? item.teamId ?? null,
+          teamId:
+            team?._id ?? actionsData?.currentTeam?._id ?? item.teamId ?? null,
           teamListId:
-            team?.listId ?? currentTeam?.listId ?? item.teamListId ?? null,
+            team?.listId ??
+            actionsData?.currentTeam?.listId ??
+            item.teamListId ??
+            null,
           cardId: card.id,
           description: card.desc ?? item.description ?? "",
           start: card.start,
@@ -439,7 +442,12 @@ export const initializeTTPTasks = async () => {
           archivedCard: isBoardArchived || isListArchived || card.closed,
           archivedAt: item.archivedAt ?? null,
           movements:
-            isBoardArchived || isListArchived || card.closed ? [] : movements,
+            isBoardArchived ||
+            isListArchived ||
+            card.closed ||
+            !actionsData.movements
+              ? []
+              : actionsData.movements,
           attachedFiles:
             card?.attachments?.length > 0
               ? card?.attachments?.map((item) => {
@@ -451,7 +459,9 @@ export const initializeTTPTasks = async () => {
                   };
                 })
               : [],
-          cardCreatedAt: new Date(createdAt),
+          cardCreatedAt: actionsData.createdAt
+            ? new Date(actionsData.createdAt)
+            : null,
         });
         intersectionResult.push(replacement);
         logger.info({ intersection: index });
@@ -499,12 +509,11 @@ export const initializeTTPTasks = async () => {
             : dep?.sideLists.find(
                 (sideList) => sideList?.listId === card.idList
               );
-        let { movements, currentTeam, createdAt } =
-          await TrelloController.getActionsOfCard(
-            card.id,
-            departments,
-            card.due ? new Date(card.due) : null
-          );
+        let actionsData = await TrelloController.getActionsOfCard(
+          card.id,
+          departments,
+          card.due ? new Date(card.due) : null
+        );
         task = new Tasks({
           name: card.name,
           boardId: card.idBoard,
@@ -516,8 +525,8 @@ export const initializeTTPTasks = async () => {
             : team
             ? "In Progress"
             : "",
-          teamId: team?._id ?? currentTeam?._id ?? null,
-          teamListId: team?.listId ?? currentTeam?.listId ?? null,
+          teamId: team?._id ?? actionsData?.currentTeam?._id ?? null,
+          teamListId: team?.listId ?? actionsData?.currentTeam?.listId ?? null,
           cardId: card.id,
           description: card?.desc ?? "",
           start: card?.start ?? null,
@@ -536,8 +545,15 @@ export const initializeTTPTasks = async () => {
               })
             : [],
           movements:
-            isBoardArchived || isListArchived || card?.closed ? [] : movements,
-          cardCreatedAt: new Date(createdAt),
+            isBoardArchived ||
+            isListArchived ||
+            card?.closed ||
+            !actionsData.movements
+              ? []
+              : actionsData.movements,
+          cardCreatedAt: actionsData.createdAt
+            ? new Date(actionsData?.createdAt)
+            : null,
         });
         notExistedOnTTPResult.push(task);
         logger.info({ notExistedOnTTP: index });
