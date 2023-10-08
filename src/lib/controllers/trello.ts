@@ -817,13 +817,10 @@ class TrelloController {
             )
         ),
       ];
-
-      cardsActions = cardsActions.map((cardAction) => {
-        let validated = cardAction.validate(departments);
-        if (cardAction.action.data.card.id === "64a68e8bfca2a16ae2c6748d")
-          logger.info({ cardIssue: "64a68e8bfca2a16ae2c6748d", validated });
-        return validated;
-      });
+      if (cardId === "64a68e8bfca2a16ae2c6748d") logger.info({ cardsActions });
+      cardsActions = cardsActions.map((cardAction) =>
+        cardAction.validate(departments)
+      );
       /// First create status
       cardsActions = cardsActions.filter(
         (i) => i?.action?.deleteAction === false
@@ -865,6 +862,8 @@ class CardAction {
       return this;
     }
     let list = board?.lists?.find((l) => l.listId === listId);
+    if (this.action.data.card.id === "64a68e8bfca2a16ae2c6748d")
+      console.log({ card: this.action.data.card, list });
     if (list) {
       this.action.listType = "list";
       this.action.status = list.name;
