@@ -454,7 +454,7 @@ export const initializeTTPTasks = async () => {
           cardCreatedAt: new Date(createdAt),
         });
         intersectionResult.push(replacement);
-        console.log({ intersection: index });
+        logger.info({ intersection: index });
         cb(null, true);
       });
     });
@@ -539,7 +539,7 @@ export const initializeTTPTasks = async () => {
           cardCreatedAt: new Date(createdAt),
         });
         notExistedOnTTPResult.push(task);
-        console.log({ notExistedOnTTP: index });
+        logger.info({ notExistedOnTTP: index });
         cb(null, true);
       });
     });
