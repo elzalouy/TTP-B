@@ -368,7 +368,7 @@ export const initializeTTPTasks = async () => {
         return item;
       })
     );
-    tasksIds = tasks?.map((item) => item.cardId);
+    tasksIds = tasks?.map((item) => item.cardId).filter((i) => i !== null);
     cardsIds = cards?.map((item) => item.id);
     notExistedOnTTP = cards.filter((item) => !tasksIds.includes(item.id));
     notExistedOnTrello = tasks.filter(
@@ -464,11 +464,9 @@ export const initializeTTPTasks = async () => {
             : null,
         });
         intersectionResult.push(replacement);
-        logger.info({ intersection: index });
         cb(null, true);
       });
     });
-    logger.info({ numberOfIntersection: intersectionResult.length });
 
     tasks = tasks?.map((item) => {
       let index = intersectionResult?.findIndex(
@@ -556,12 +554,10 @@ export const initializeTTPTasks = async () => {
             : null,
         });
         notExistedOnTTPResult.push(task);
-        logger.info({ notExistedOnTTP: index });
         cb(null, true);
       });
     });
 
-    console.log({ notExistedOnTTPResult: notExistedOnTTPResult.length });
     tasks = notExistedOnTrello = notExistedOnTrello.filter(
       (i) => i.archivedCard === false
     );
