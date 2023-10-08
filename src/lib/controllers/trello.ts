@@ -789,7 +789,6 @@ class TrelloController {
       let actions: TrelloAction[] =
         await TrelloController._getCardMovementsActions(cardId);
       actions = _.sortBy(actions, "date");
-      console.log({ actions, cardId });
       let dueChanges: TrelloAction[] =
         await TrelloController._getCardDeadlineActions(cardId);
       dueChanges =
