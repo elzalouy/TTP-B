@@ -458,6 +458,7 @@ export const initializeTTPTasks = async () => {
         cb(null, true);
       });
     });
+    logger.info({ numberOfIntersection: intersectionResult.length });
 
     tasks = tasks?.map((item) => {
       let index = intersectionResult?.findIndex(
@@ -544,6 +545,7 @@ export const initializeTTPTasks = async () => {
       });
     });
 
+    console.log({ notExistedOnTTPResult: notExistedOnTTPResult.length });
     tasks = notExistedOnTrello = notExistedOnTrello.filter(
       (i) => i.archivedCard === false
     );

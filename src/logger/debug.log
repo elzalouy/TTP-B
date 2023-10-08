@@ -123,3 +123,34 @@
 {"level":"warn","message":{"db":"mongodb+srv://unicodettp:WFUiEjrljsIDFOmd@cluster1.oeari.mongodb.net/ttp-local"}}
 {"level":"warn","message":"Server worked"}
 {"level":"error","message":{"initializeTrelloBoardsError":{}}}
+{"level":"warn","message":{"db":"mongodb+srv://unicodettp:WFUiEjrljsIDFOmd@cluster1.oeari.mongodb.net/ttp-local"}}
+{"level":"warn","message":"Server worked"}
+{"level":"error","message":{"initializeTrelloBoardsError":{}}}
+{"level":"info","message":{"intersection":0}}
+{"level":"info","message":{"notExistedOnTTP":0}}
+{"level":"info","message":{"notExistedOnTTP":1}}
+{"level":"warn","message":{"db":"mongodb+srv://unicodettp:WFUiEjrljsIDFOmd@cluster1.oeari.mongodb.net/ttp-local"}}
+{"level":"warn","message":"Server worked"}
+{"level":"error","message":{"initializeTrelloBoardsError":{}}}
+{"level":"info","message":{"numberOfIntersection":0}}
+{"level":"warn","message":{"db":"mongodb+srv://unicodettp:WFUiEjrljsIDFOmd@cluster1.oeari.mongodb.net/ttp-local"}}
+{"level":"warn","message":"Server worked"}
+{"level":"error","message":{"initializeTrelloBoardsError":{}}}
+{"level":"info","message":{"numberOfIntersection":0}}
+{"level":"info","message":{"intersection":0}}
+{"level":"info","message":{"notExistedOnTTP":0}}
+{"level":"info","message":{"notExistedOnTTP":1}}
+{"level":"warn","message":{"db":"mongodb+srv://unicodettp:WFUiEjrljsIDFOmd@cluster1.oeari.mongodb.net/ttp-local"}}
+{"level":"warn","message":"Server worked"}
+{"level":"error","message":{"initializeTrelloBoardsError":{}}}
+{"level":"info","message":{"numberOfIntersection":0}}
+{"level":"info","message":{"intersection":0}}
+{"level":"info","message":{"notExistedOnTTP":0}}
+{"level":"info","message":{"notExistedOnTTP":1}}
+{"level":"warn","message":{"db":"mongodb+srv://unicodettp:WFUiEjrljsIDFOmd@cluster1.oeari.mongodb.net/ttp-local"}}
+{"level":"warn","message":"Server worked"}
+{"level":"error","message":{"initializeTrelloBoardsError":{}}}
+{"level":"info","message":{"numberOfIntersection":0}}
+{"level":"info","message":{"intersection":0}}
+{"level":"info","message":{"notExistedOnTTP":0}}
+{"level":"info","message":{"notExistedOnTTP":1}}
