@@ -375,13 +375,12 @@ export const initializeTTPTasks = async () => {
     notExistedOnTTP = cards.filter((item) => !tasksIds.includes(item.id));
     intersection = tasks.filter((item) => cardsIds.includes(item.cardId));
 
-    const actions = await Promise.all(
-      boards.map(async (item) => {
-        let actions = await TrelloController._getActionsOfBoard(item.id);
-        console.log({ board: item.name, actions: actions.length });
-        return actions;
-      })
-    );
+    console.log({ boards });
+    boards.map(async (item) => {
+      let actions = await TrelloController._getActionsOfBoard(item.id);
+      console.log({ board: item.name, actions: actions?.length });
+      return actions;
+    });
     // processing
     // Tasks Plugins
     // Existed on TTP & Trello > make it same

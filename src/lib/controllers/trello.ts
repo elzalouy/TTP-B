@@ -779,12 +779,7 @@ class TrelloController {
 
   static async _getActionsOfBoard(board: string) {
     try {
-      let actions: TrelloAction[] = await TrelloController._fetchActionsOfBoard(
-        0,
-        [],
-        board
-      );
-
+      let actions = await TrelloController._fetchActionsOfBoard(0, [], board);
       return actions;
     } catch (error) {
       logger.error({ _getActionsOfBoardError: error });
@@ -795,19 +790,29 @@ class TrelloController {
     page = 0,
     actions: TrelloAction[] = [],
     board: string
-  ): Promise<any[]> {
-    const perpage = 1000;
-    let url = await trelloApi(
-      `boards/${board}/actions/?filter=createCard,updateCard:due,updateCard:idList&limit=${perpage}&before=${
-        actions[actions.length - 1].id
-      }&`
-    );
-    let result = await fetch(url);
-    let newActions: TrelloAction[] = await result.json();
-    actions.push(...newActions);
-    if (newActions.length === perpage) {
-      return await this._fetchActionsOfBoard(page + 1, actions, board);
-    } else return actions;
+  ) {
+    try {
+      const perpage = 1000;
+      let url = trelloApi(
+        `boards/${board}/actions/?filter=createCard,updateCard:due,updateCard:idList&limit=${perpage}&`
+      );
+      if (actions.length > 0)
+        url = `${url}&before=${actions[actions.length - 1].id}&`;
+      let result = await fetch(url, {
+        method: "GET",
+        headers: {
+          Accept: "*/*",
+          "Content-Type": "application/json",
+        },
+      });
+      let newActions: TrelloAction[] = await result.json();
+      actions.push(...newActions);
+      if (newActions.length === perpage) {
+        await TrelloController._fetchActionsOfBoard(page + 1, actions, board);
+      } else return actions;
+    } catch (error) {
+      logger.error({ _fetchActionsOfBoardError: error });
+    }
   }
 
   static async getActionsOfCard(
