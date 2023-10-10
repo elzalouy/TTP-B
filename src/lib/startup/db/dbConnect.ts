@@ -8,7 +8,11 @@ import Config from "config";
 import Department from "../../models/Department";
 import DepartmentController from "../../controllers/department";
 import TrelloController from "../../controllers/trello";
-import { IDepartment, IDepartmentState } from "../../types/model/Department";
+import {
+  IDepartment,
+  IDepartmentState,
+  ITeam,
+} from "../../types/model/Department";
 import {
   Board,
   Card,
@@ -18,7 +22,7 @@ import {
 } from "../../types/controller/trello";
 import { ListTypes } from "../../types/model/Department";
 import _, { create } from "lodash";
-import { TaskInfo } from "../../types/model/tasks";
+import { Movement, TaskInfo } from "../../types/model/tasks";
 import Tasks from "../../models/Task";
 import TaskController from "../../controllers/task";
 import { AnyBulkWriteOperation } from "mongodb";
@@ -328,17 +332,16 @@ export const initializeTrelloBoards = async () => {
 
 export const initializeTTPTasks = async () => {
   try {
-    let tasks: TaskInfo[],
-      boards: Board[],
+    var newTasks: TaskInfo[] = [],
+      tasks: TaskInfo[];
+    let boards: Board[],
       departments: IDepartment[],
       cards: Card[],
       cardsIds: string[],
       tasksIds: string[],
       intersection: TaskInfo[],
-      intersectionResult: TaskInfo[] = [],
       notExistedOnTrello: TaskInfo[],
-      notExistedOnTTP: Card[],
-      notExistedOnTTPResult: TaskInfo[] = [];
+      notExistedOnTTP: Card[];
 
     // get the data
     boards = await TrelloController.getBoardsInTrello("all");
@@ -378,9 +381,8 @@ export const initializeTTPTasks = async () => {
     // processing
     // Tasks Plugins
     // Existed on TTP & Trello > make it same
-    intersection?.forEach(async (item: TaskInfo, index) => {
-      intializeTaskQueue.push(async (cb) => {
-        await delay(1000);
+    intersection = await Promise.all(
+      intersection.map(async (item: TaskInfo, index) => {
         let card: Card = cards?.find((c) => c.id === item.cardId);
         let isBoardArchived =
           boards.find((i) => i.id === card.idBoard)?.closed === true
@@ -412,6 +414,7 @@ export const initializeTTPTasks = async () => {
           departments,
           card.due ? new Date(card.due) : null
         );
+        await delay(1000);
         let replacement = new Tasks({
           _id: item._id,
           name: card.name,
@@ -463,22 +466,12 @@ export const initializeTTPTasks = async () => {
             ? new Date(actionsData?.createdAt)
             : null,
         });
-        intersectionResult.push(replacement);
-        cb(null, true);
-      });
-    });
-
-    tasks = tasks?.map((item) => {
-      let index = intersectionResult?.findIndex(
-        (task) => task._id === item._id
-      );
-      return index >= 0 ? intersectionResult[index] : item;
-    });
+        return replacement;
+      })
+    );
     // // not Existed on TTP > create it on TTP
-    notExistedOnTTP?.forEach(async (card, index) => {
-      intializeTaskQueue.push(async (cb) => {
-        await delay(1000);
-        let task: TaskInfo;
+    newTasks = await Promise.all(
+      notExistedOnTTP?.map(async (card, index) => {
         let isBoardArchived =
           boards.find((i) => i.id === card.idBoard)?.closed === true
             ? true
@@ -513,7 +506,8 @@ export const initializeTTPTasks = async () => {
           departments,
           card.due ? new Date(card.due) : null
         );
-        task = new Tasks({
+        await delay(1000);
+        let task = new Tasks({
           name: card.name,
           boardId: card.idBoard,
           listId: card.idList,
@@ -554,35 +548,19 @@ export const initializeTTPTasks = async () => {
             ? new Date(actionsData.createdAt)
             : null,
         });
-        notExistedOnTTPResult.push(task);
-        cb(null, true);
-      });
-    });
-
-    tasks = notExistedOnTrello = notExistedOnTrello.filter(
-      (i) => i.archivedCard === false
-    );
-
-    let creativeBoard = boards.find(
-      (board) => board.name === Config.get("CreativeBoard")
-    );
-
-    notExistedOnTrello = await Promise.all(
-      notExistedOnTrello?.map(async (item) => {
-        item.archivedCard = true;
-        return item;
+        return task;
       })
     );
 
-    notExistedOnTrello = notExistedOnTrello.filter((i) => i !== null);
-
     tasks = tasks?.map((item) => {
-      let index = notExistedOnTrello.findIndex((i) => i._id === item._id);
-      return index >= 0 ? notExistedOnTrello[index] : item;
+      if (!cardsIds.includes(item._id)) {
+        item.archivedCard = true;
+      }
+      return item;
     });
 
     let update = [
-      ...notExistedOnTTPResult?.map((item) => {
+      ...newTasks?.map((item) => {
         return {
           insertOne: {
             document: item,
@@ -618,8 +596,10 @@ export const initializeTTPTasks = async () => {
       }),
     ];
     Tasks.bulkWrite(update, {});
-    console.log("update hooks");
-    notExistedOnTTPResult.forEach(async (item) => {
+    newTasks.forEach(async (item) => {
+      TrelloController.__addWebHook(item.cardId, "trelloWebhookUrlTask");
+    });
+    tasks.forEach(async (item) => {
       TrelloController.__addWebHook(item.cardId, "trelloWebhookUrlTask");
     });
   } catch (error) {
