@@ -555,7 +555,7 @@ export const initializeTTPTasks = async () => {
     tasks = tasks?.map((item) => {
       if (!cardsIds.includes(item.cardId)) {
         item.archivedCard = true;
-      } else item.archivedAt = false;
+      } else item.archivedCard = false;
       return item;
     });
 
