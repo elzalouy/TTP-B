@@ -352,6 +352,10 @@ export const initializeTTPTasks = async () => {
         return item;
       })
     );
+    const boardActions: any[] = await TrelloController._getActionsOfBoard(
+      boards[0].id
+    );
+    console.log({ boardActions: boardActions.length });
     departments = await Department.find({});
     tasks = await Tasks.find({});
     cards = _.flattenDeep(

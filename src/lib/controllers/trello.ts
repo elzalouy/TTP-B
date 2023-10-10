@@ -456,7 +456,7 @@ class TrelloController {
   static async _getCardDeadlineActions(cardId: string) {
     try {
       let url = await trelloApi(
-        `cards/${cardId}/actions/?filter=updateCard:idList&`
+        `cards/${cardId}/actions/?filter=updateCard:due&`
       );
       let actions = await fetch(url, {
         method: "GET",
@@ -777,6 +777,30 @@ class TrelloController {
     }
   }
 
+  static async _getActionsOfBoard(board: string) {
+    try {
+      let actions = await TrelloController._fetchActionsOfBoard(0, [], board);
+      console.log({ actions });
+    } catch (error) {
+      logger.error({ _getActionsOfBoardError: error });
+    }
+  }
+  static async _fetchActionsOfBoard(
+    page = 0,
+    actions: any[] = [],
+    board: string
+  ): Promise<any[]> {
+    const perpage = 1000;
+    let url = await trelloApi(
+      `boards/${board}/actions/?filter=createCard,updateCard:due,updateCard:idList&limit=${perpage}&page=${page}&`
+    );
+    let result = await fetch(url);
+    let newActions = await result.json();
+    actions.push(...newActions);
+    if (newActions.length === perpage) {
+      return await this._fetchActionsOfBoard(page + 1, actions, board);
+    } else return actions;
+  }
   static async getActionsOfCard(
     cardId: string,
     departments: IDepartment[],
