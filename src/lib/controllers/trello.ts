@@ -784,7 +784,6 @@ class TrelloController {
         [],
         board
       );
-      console.log({ actions });
       return actions;
     } catch (error) {
       logger.error({ _getActionsOfBoardError: error });
