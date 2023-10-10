@@ -381,176 +381,176 @@ export const initializeTTPTasks = async () => {
     // processing
     // Tasks Plugins
     // Existed on TTP & Trello > make it same
-    intersection = await Promise.all(
-      intersection.map(async (item: TaskInfo, index) => {
-        let card: Card = cards?.find((c) => c.id === item.cardId);
-        let isBoardArchived =
-          boards.find((i) => i.id === card.idBoard)?.closed === true
-            ? true
-            : false ?? true;
-        let isListArchived =
-          boards
-            ?.find((i) => i.id === card.idBoard)
-            ?.lists?.find((l) => l.id === card.idList)?.closed === true
-            ? true
-            : false ?? true;
-        let dep = departments?.find((d) => d.boardId === card?.idBoard);
-        let status =
-          isBoardArchived || isListArchived
-            ? null
-            : dep?.lists?.find((list) => list?.listId === card?.idList);
-        let team =
-          isBoardArchived || isListArchived
-            ? null
-            : dep?.teams?.find((team) => team?.listId === card?.idList);
-        let sideList =
-          isBoardArchived || isListArchived
-            ? null
-            : dep?.sideLists.find(
-                (sideList) => sideList?.listId === card.idList
-              );
-        let actionsData = await TrelloController.getActionsOfCard(
-          card.id,
-          departments,
-          card.due ? new Date(card.due) : null
-        );
-        await delay(1000);
-        let replacement = new Tasks({
-          _id: item._id,
-          name: card.name,
-          categoryId: item.categoryId,
-          subCategoryId: item.subCategoryId,
-          boardId: card.idBoard,
-          projectId: item.projectId,
-          listId: card.idList,
-          status: sideList
-            ? "Tasks Board"
-            : status
-            ? status.name
-            : team
-            ? "In Progress"
-            : "",
-          teamId:
-            team?._id ?? actionsData?.currentTeam?._id ?? item.teamId ?? null,
-          teamListId:
-            team?.listId ??
-            actionsData?.currentTeam?.listId ??
-            item.teamListId ??
-            null,
-          cardId: card.id,
-          description: card.desc ?? item.description ?? "",
-          start: card.start,
-          deadline: card.due ?? null,
-          trelloShortUrl: card.shortUrl ?? "",
-          archivedCard: isBoardArchived || isListArchived || card.closed,
-          archivedAt: item.archivedAt ?? null,
-          movements:
-            isBoardArchived ||
-            isListArchived ||
-            card.closed ||
-            !actionsData?.movements
-              ? []
-              : actionsData?.movements,
-          attachedFiles:
-            card?.attachments?.length > 0
-              ? card?.attachments?.map((item) => {
-                  return {
-                    name: item.fileName,
-                    trelloId: item.id,
-                    mimeType: item.mimeType,
-                    url: item.url,
-                  };
-                })
-              : [],
-          cardCreatedAt: actionsData?.createdAt
-            ? new Date(actionsData?.createdAt)
-            : null,
-        });
-        return replacement;
-      })
-    );
-    // // not Existed on TTP > create it on TTP
-    newTasks = await Promise.all(
-      notExistedOnTTP?.map(async (card, index) => {
-        let isBoardArchived =
-          boards.find((i) => i.id === card.idBoard)?.closed === true
-            ? true
-            : false ?? true;
-        let isListArchived =
-          boards
-            .find((i) => i.id === card.idBoard)
-            ?.lists?.find((l) => l.id === card.idList)?.closed === true
-            ? true
-            : false ?? true;
+    // intersection = await Promise.all(
+    //   intersection.map(async (item: TaskInfo, index) => {
+    //     let card: Card = cards?.find((c) => c.id === item.cardId);
+    //     let isBoardArchived =
+    //       boards.find((i) => i.id === card.idBoard)?.closed === true
+    //         ? true
+    //         : false ?? true;
+    //     let isListArchived =
+    //       boards
+    //         ?.find((i) => i.id === card.idBoard)
+    //         ?.lists?.find((l) => l.id === card.idList)?.closed === true
+    //         ? true
+    //         : false ?? true;
+    //     let dep = departments?.find((d) => d.boardId === card?.idBoard);
+    //     let status =
+    //       isBoardArchived || isListArchived
+    //         ? null
+    //         : dep?.lists?.find((list) => list?.listId === card?.idList);
+    //     let team =
+    //       isBoardArchived || isListArchived
+    //         ? null
+    //         : dep?.teams?.find((team) => team?.listId === card?.idList);
+    //     let sideList =
+    //       isBoardArchived || isListArchived
+    //         ? null
+    //         : dep?.sideLists.find(
+    //             (sideList) => sideList?.listId === card.idList
+    //           );
+    //     let actionsData = await TrelloController.getActionsOfCard(
+    //       card.id,
+    //       departments,
+    //       card.due ? new Date(card.due) : null
+    //     );
+    //     await delay(1000);
+    //     let replacement = new Tasks({
+    //       _id: item._id,
+    //       name: card.name,
+    //       categoryId: item.categoryId,
+    //       subCategoryId: item.subCategoryId,
+    //       boardId: card.idBoard,
+    //       projectId: item.projectId,
+    //       listId: card.idList,
+    //       status: sideList
+    //         ? "Tasks Board"
+    //         : status
+    //         ? status.name
+    //         : team
+    //         ? "In Progress"
+    //         : "",
+    //       teamId:
+    //         team?._id ?? actionsData?.currentTeam?._id ?? item.teamId ?? null,
+    //       teamListId:
+    //         team?.listId ??
+    //         actionsData?.currentTeam?.listId ??
+    //         item.teamListId ??
+    //         null,
+    //       cardId: card.id,
+    //       description: card.desc ?? item.description ?? "",
+    //       start: card.start,
+    //       deadline: card.due ?? null,
+    //       trelloShortUrl: card.shortUrl ?? "",
+    //       archivedCard: isBoardArchived || isListArchived || card.closed,
+    //       archivedAt: item.archivedAt ?? null,
+    //       movements:
+    //         isBoardArchived ||
+    //         isListArchived ||
+    //         card.closed ||
+    //         !actionsData?.movements
+    //           ? []
+    //           : actionsData?.movements,
+    //       attachedFiles:
+    //         card?.attachments?.length > 0
+    //           ? card?.attachments?.map((item) => {
+    //               return {
+    //                 name: item.fileName,
+    //                 trelloId: item.id,
+    //                 mimeType: item.mimeType,
+    //                 url: item.url,
+    //               };
+    //             })
+    //           : [],
+    //       cardCreatedAt: actionsData?.createdAt
+    //         ? new Date(actionsData?.createdAt)
+    //         : null,
+    //     });
+    //     return replacement;
+    //   })
+    // );
+    // // // not Existed on TTP > create it on TTP
+    // newTasks = await Promise.all(
+    //   notExistedOnTTP?.map(async (card, index) => {
+    //     let isBoardArchived =
+    //       boards.find((i) => i.id === card.idBoard)?.closed === true
+    //         ? true
+    //         : false ?? true;
+    //     let isListArchived =
+    //       boards
+    //         .find((i) => i.id === card.idBoard)
+    //         ?.lists?.find((l) => l.id === card.idList)?.closed === true
+    //         ? true
+    //         : false ?? true;
 
-        let dep =
-          isBoardArchived || isListArchived
-            ? null
-            : departments?.find((d) => d.boardId === card.idBoard);
-        let status =
-          isBoardArchived || isListArchived
-            ? null
-            : dep?.lists?.find((list) => list.listId === card.idList);
-        let team =
-          isBoardArchived || isListArchived
-            ? null
-            : dep?.teams?.find((team) => team.listId === card.idList);
-        let sideList =
-          isBoardArchived || isListArchived
-            ? null
-            : dep?.sideLists.find(
-                (sideList) => sideList?.listId === card.idList
-              );
-        let actionsData = await TrelloController.getActionsOfCard(
-          card.id,
-          departments,
-          card.due ? new Date(card.due) : null
-        );
-        await delay(1000);
-        let task = new Tasks({
-          name: card.name,
-          boardId: card.idBoard,
-          listId: card.idList,
-          status: sideList
-            ? "Tasks Board"
-            : status
-            ? status.name
-            : team
-            ? "In Progress"
-            : "",
-          teamId: team?._id ?? actionsData?.currentTeam?._id ?? null,
-          teamListId: team?.listId ?? actionsData?.currentTeam?.listId ?? null,
-          cardId: card.id,
-          description: card?.desc ?? "",
-          start: card?.start ?? null,
-          deadline: card?.due ?? null,
-          trelloShortUrl: card?.shortUrl,
-          archivedCard: isBoardArchived || isListArchived || card.closed,
-          archivedAt: null,
-          attachedFiles: card?.attachments?.length
-            ? card?.attachments?.map((item) => {
-                return {
-                  name: item?.fileName,
-                  trelloId: item?.id,
-                  mimeType: item?.mimeType,
-                  url: item?.url,
-                };
-              })
-            : [],
-          movements:
-            isBoardArchived ||
-            isListArchived ||
-            card?.closed ||
-            !actionsData?.movements
-              ? []
-              : actionsData?.movements,
-          cardCreatedAt: actionsData?.createdAt
-            ? new Date(actionsData.createdAt)
-            : null,
-        });
-        return task;
-      })
-    );
+    //     let dep =
+    //       isBoardArchived || isListArchived
+    //         ? null
+    //         : departments?.find((d) => d.boardId === card.idBoard);
+    //     let status =
+    //       isBoardArchived || isListArchived
+    //         ? null
+    //         : dep?.lists?.find((list) => list.listId === card.idList);
+    //     let team =
+    //       isBoardArchived || isListArchived
+    //         ? null
+    //         : dep?.teams?.find((team) => team.listId === card.idList);
+    //     let sideList =
+    //       isBoardArchived || isListArchived
+    //         ? null
+    //         : dep?.sideLists.find(
+    //             (sideList) => sideList?.listId === card.idList
+    //           );
+    //     let actionsData = await TrelloController.getActionsOfCard(
+    //       card.id,
+    //       departments,
+    //       card.due ? new Date(card.due) : null
+    //     );
+    //     await delay(1000);
+    //     let task = new Tasks({
+    //       name: card.name,
+    //       boardId: card.idBoard,
+    //       listId: card.idList,
+    //       status: sideList
+    //         ? "Tasks Board"
+    //         : status
+    //         ? status.name
+    //         : team
+    //         ? "In Progress"
+    //         : "",
+    //       teamId: team?._id ?? actionsData?.currentTeam?._id ?? null,
+    //       teamListId: team?.listId ?? actionsData?.currentTeam?.listId ?? null,
+    //       cardId: card.id,
+    //       description: card?.desc ?? "",
+    //       start: card?.start ?? null,
+    //       deadline: card?.due ?? null,
+    //       trelloShortUrl: card?.shortUrl,
+    //       archivedCard: isBoardArchived || isListArchived || card.closed,
+    //       archivedAt: null,
+    //       attachedFiles: card?.attachments?.length
+    //         ? card?.attachments?.map((item) => {
+    //             return {
+    //               name: item?.fileName,
+    //               trelloId: item?.id,
+    //               mimeType: item?.mimeType,
+    //               url: item?.url,
+    //             };
+    //           })
+    //         : [],
+    //       movements:
+    //         isBoardArchived ||
+    //         isListArchived ||
+    //         card?.closed ||
+    //         !actionsData?.movements
+    //           ? []
+    //           : actionsData?.movements,
+    //       cardCreatedAt: actionsData?.createdAt
+    //         ? new Date(actionsData.createdAt)
+    //         : null,
+    //     });
+    //     return task;
+    //   })
+    // );
 
     tasks = tasks?.map((item) => {
       if (!cardsIds.includes(item.cardId)) {
