@@ -113,29 +113,6 @@ class TrelloController {
       due ?? undefined
     );
   }
-  static async getBoardsActions(
-    boardId: string,
-    format: "list" | "count",
-    limit?: number,
-    page?: number
-  ) {
-    try {
-      let url = `boards/${boardId}/actions/?format=${format}&`;
-      let apiUrl = trelloApi(url);
-      let result;
-      await fetch(apiUrl, {
-        method: "GET",
-        headers: {
-          Accept: "application/json",
-        },
-      }).then(async (res) => {
-        result = await res.json();
-      });
-      return result;
-    } catch (error) {
-      logger.error({ getBoardsActionsError: error });
-    }
-  }
 
   static async __moveTaskToDiffList(
     cardId: string,
@@ -780,7 +757,6 @@ class TrelloController {
   static async _getActionsOfBoard(board: string) {
     try {
       let actions: any[] = await TrelloController._fetchActionsOfBoard(
-        0,
         [],
         board
       );
@@ -790,19 +766,19 @@ class TrelloController {
     }
   }
   static async _fetchActionsOfBoard(
-    page = 0,
-    actions: any[] = [],
+    actions: TrelloAction[] = [],
     board: string
   ): Promise<any[]> {
-    const perpage = 1000;
     let url = await trelloApi(
-      `boards/${board}/actions/?filter=createCard,updateCard:due,updateCard:idList&limit=${perpage}&page=${page}&`
+      `boards/${board}/actions/?filter=createCard,updateCard:due,updateCard:idList&before=${
+        actions[actions.length - 1].id
+      }&`
     );
     let result = await fetch(url);
-    let newActions = await result.json();
+    let newActions: TrelloAction[] = await result.json();
     actions.push(...newActions);
-    if (newActions.length === perpage) {
-      return await this._fetchActionsOfBoard(page + 1, actions, board);
+    if (newActions.length === 50) {
+      return await this._fetchActionsOfBoard(actions, board);
     } else return actions;
   }
   static async getActionsOfCard(
@@ -886,8 +862,6 @@ class CardAction {
       return this;
     }
     let list = board?.lists?.find((l) => l.listId === listId);
-    if (this.action.data.card.id === "64a68e8bfca2a16ae2c6748d")
-      console.log({ card: this.action.data.card, list });
     if (list) {
       this.action.listType = "list";
       this.action.status = list.name;
