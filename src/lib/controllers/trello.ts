@@ -793,12 +793,14 @@ class TrelloController {
 
   static async _fetchActionsOfBoard(
     page = 0,
-    actions: any[] = [],
+    actions: TrelloAction[] = [],
     board: string
   ): Promise<any[]> {
     const perpage = 1000;
     let url = await trelloApi(
-      `boards/${board}/actions/?filter=createCard,updateCard:due,updateCard:idList&limit=${perpage}&page=${page}&`
+      `boards/${board}/actions/?filter=createCard,updateCard:due,updateCard:idList&limit=${perpage}&before=${
+        actions[actions.length - 1].id
+      }&`
     );
     let result = await fetch(url);
     let newActions: TrelloAction[] = await result.json();
