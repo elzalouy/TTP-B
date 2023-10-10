@@ -599,9 +599,6 @@ export const initializeTTPTasks = async () => {
     newTasks.forEach(async (item) => {
       TrelloController.__addWebHook(item.cardId, "trelloWebhookUrlTask");
     });
-    tasks.forEach(async (item) => {
-      TrelloController.__addWebHook(item.cardId, "trelloWebhookUrlTask");
-    });
   } catch (error) {
     logger.error({ initializeTTPTasksError: error });
   }
