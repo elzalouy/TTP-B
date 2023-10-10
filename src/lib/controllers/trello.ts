@@ -770,10 +770,10 @@ class TrelloController {
     board: string
   ): Promise<any[]> {
     let url = await trelloApi(
-      `boards/${board}/actions/?filter=createCard,updateCard:due,updateCard:idList&before=${
-        actions[actions.length - 1].id
-      }&`
+      `boards/${board}/actions/?filter=createCard,updateCard:due,updateCard:idList&`
     );
+    if (actions.length > 0)
+      url += `${url}before=${actions[actions.length - 1].id}&`;
     let result = await fetch(url);
     let newActions: TrelloAction[] = await result.json();
     actions.push(...newActions);
