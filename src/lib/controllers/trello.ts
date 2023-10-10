@@ -779,8 +779,13 @@ class TrelloController {
 
   static async _getActionsOfBoard(board: string) {
     try {
-      let actions = await TrelloController._fetchActionsOfBoard(0, [], board);
+      let actions: any[] = await TrelloController._fetchActionsOfBoard(
+        0,
+        [],
+        board
+      );
       console.log({ actions });
+      return actions;
     } catch (error) {
       logger.error({ _getActionsOfBoardError: error });
     }
