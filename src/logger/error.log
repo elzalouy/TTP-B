@@ -440,3 +440,20 @@
 {"level":"error","message":{"_fetchActionsOfBoardError":{}}}
 {"level":"error","message":{"initializeTrelloBoardsError":{}}}
 {"level":"error","message":{"initializeTrelloBoardsError":{}}}
+{"level":"error","message":{"initializeTrelloBoardsError":{}}}
+{"level":"error","message":{"initializeTrelloBoardsError":{}}}
+{"level":"error","message":{"initializeTrelloBoardsError":{}}}
+{"level":"error","message":{"initializeTrelloBoardsError":{}}}
+{"level":"error","message":{"initializeTrelloBoardsError":{}}}
+{"level":"error","message":{"initializeTrelloBoardsError":{}}}
+{"level":"error","message":{"initializeTrelloBoardsError":{}}}
+{"level":"error","message":{"_fetchActionsOfBoardError":{"message":"invalid json response body at https://api.trello.com/1/boards/6371f616fe6c5500164c85d0/actions/?filter=createCard,updateCard:due,updateCard:idList&limit=1000&key=e6c4e18a33676de983a17b1552a7caee&token=69983f349355c71c8242ab732bd23fd70d3217e54026336e5e16793f542f044b&format=list&before=63ce4920aa945400c24d4aef reason: Unexpected token T in JSON at position 0","type":"invalid-json"}}}
+{"level":"error","message":{"initializeTrelloBoardsError":{}}}
+{"level":"error","message":{"_fetchActionsOfBoardError":{"message":"invalid json response body at https://api.trello.com/1/boards/6371f616fe6c5500164c85d0/actions/?filter=createCard,updateCard:due,updateCard:idList&limit=1000&key=e6c4e18a33676de983a17b1552a7caee&token=69983f349355c71c8242ab732bd23fd70d3217e54026336e5e16793f542f044b&format=list&before=63ce4920aa945400c24d4aef reason: Unexpected token T in JSON at position 0","type":"invalid-json"}}}
+{"level":"error","message":{"initializeTTPTasksError":{}}}
+{"level":"error","message":{"initializeTrelloBoardsError":{}}}
+{"level":"error","message":{"initializeTrelloBoardsError":{}}}
+{"level":"error","message":{"initializeTrelloBoardsError":{}}}
+{"level":"error","message":{"initializeTrelloBoardsError":{}}}
+{"level":"error","message":{"_fetchActionsOfBoardError":{"code":"EHOSTUNREACH","errno":"EHOSTUNREACH","message":"request to https://api.trello.com/1/boards/6371f616fe6c5500164c85d0/actions/?filter=createCard,updateCard:due,updateCard:idList&limit=1000&key=e6c4e18a33676de983a17b1552a7caee&token=69983f349355c71c8242ab732bd23fd70d3217e54026336e5e16793f542f044b&format=list&before=63ce4920aa945400c24d4aef failed, reason: connect EHOSTUNREACH 104.192.142.10:443","type":"system"}}}
+{"level":"error","message":{"initializeTTPTasksError":{}}}
