@@ -39,18 +39,19 @@ const DepartmentSchema = new Schema<IDepartment>(
             required: [true, "Team name is required with min length 2 chars"],
             minlength: [2, "Team name is required with min length 2 chars"],
           },
-          listId: { type: String, unique: true },
+          listId: { type: String, required: true },
           isDeleted: Boolean,
         },
       ],
       required: true,
       default: [],
+      minlength: 0,
     },
     sideLists: {
       type: [
         {
           name: { type: String, required: true },
-          listId: { type: String, required: true, unique: true },
+          listId: { type: String, required: true },
         },
       ],
       required: true,
@@ -66,7 +67,7 @@ const DepartmentSchema = new Schema<IDepartment>(
               message: `{VALUE} is not one of the list types ["Tasks Board", "In Progress", "Shared", "Review", "Done", "Not Clear","Cancled"]`,
             },
           },
-          listId: { type: String, required: true, unique: true },
+          listId: { type: String, required: true },
         },
       ],
       required: true,
@@ -129,7 +130,7 @@ const sideListSchema = Joi.array()
   .items({
     _id: Joi.object().optional(),
     name: Joi.string().label("list name"),
-    listId: Joi.string().required().allow("").label("list id"),
+    listId: Joi.string().required().allow("").label("side list id"),
   });
 
 const createDepartmentValidationSchema = Joi.object({
@@ -153,7 +154,7 @@ const createDepartmentValidationSchema = Joi.object({
   boardId: Joi.string().label("board id").allow(""),
 }).concat(
   Joi.object({
-    teams: teamsSchema([]),
+    teams: teamsSchema,
     lists: listSchema,
     sideLists: sideListSchema,
   })
@@ -389,6 +390,25 @@ DepartmentSchema.methods.updateTeams = async function (
   }
 };
 
+DepartmentSchema.methods.updateLists = async function (this: IDepartment) {
+  try {
+    return await Promise.all(
+      ListTypes.map(async (type) => {
+        let list = this.lists.find((l) => l.name === type);
+        if (list) return list;
+        else {
+          let result = await TrelloController.addListToBoard(
+            this.boardId,
+            type
+          );
+          return { name: type, listId: result.id };
+        }
+      })
+    );
+  } catch (error) {
+    logger.error({ updateListsError: error });
+  }
+};
 DepartmentSchema.methods.updateSideLists = async function (
   this: IDepartment,
   data: IDepartmentState,

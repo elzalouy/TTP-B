@@ -8,7 +8,11 @@ import Config from "config";
 import Department from "../../models/Department";
 import DepartmentController from "../../controllers/department";
 import TrelloController from "../../controllers/trello";
-import { IDepartment, IDepartmentState } from "../../types/model/Department";
+import {
+  IDepartment,
+  IDepartmentState,
+  ITeam,
+} from "../../types/model/Department";
 import {
   Board,
   Card,
@@ -18,7 +22,7 @@ import {
 } from "../../types/controller/trello";
 import { ListTypes } from "../../types/model/Department";
 import _, { create } from "lodash";
-import { TaskInfo } from "../../types/model/tasks";
+import { Movement, TaskInfo } from "../../types/model/tasks";
 import Tasks from "../../models/Task";
 import TaskController from "../../controllers/task";
 import { AnyBulkWriteOperation } from "mongodb";
@@ -56,6 +60,7 @@ const mongoDB: () => Promise<void> = async () => {
   }
 };
 
+// should be inside the authUser controller
 const initializeAdminUser = async () => {
   // adding superAdmin in db if not exists
   const userInfo: any = await UserDB.findUser({
@@ -75,14 +80,8 @@ const initializeAdminUser = async () => {
     await UserDB.createUser(data);
   }
 };
-export const initializeTrelloMembers = async () => {
-  try {
-    // let members = await TrelloController.__getAllMembers();
-  } catch (error) {
-    logger.error({ error });
-  }
-};
 
+// should be inside the Departments Controller
 export const initializeTrelloBoards = async () => {
   try {
     let allBoards: Board[],
@@ -175,41 +174,38 @@ export const initializeTrelloBoards = async () => {
         let lists: List[] = await TrelloController.__getBoardLists(item.id);
         item.lists = lists;
         listTypes = ListTypes;
-        let teams = lists.filter((item) => !listTypes.includes(item.name));
-        return new Department({
-          boardId: item.id,
+        let department = new Department({
           name: item.name,
           color: "blue",
-          lists: await Promise.all(
-            listTypes?.map(async (listName) => {
-              listExisted = item?.lists?.find((list) => listName === list.name);
-              let listId =
-                listExisted?.id ??
-                (await TrelloController.addListToBoard(item.id, listName))?.id;
+          teams: item.lists
+            .filter((l) => !ListTypes.includes(l.name))
+            .map((item) => {
               return {
-                name: listName,
-                listId: listId,
+                listId: item.id,
+                name: item.name,
+                isDeleted: item.closed,
               };
-            })
-          ),
-          // in case of creating any MAIN list (Main > Tasks Board) ,
-          // and for any reason this list wasn't created by the webhook of trello as a sideList.
-          // In the next initialization time it will be considered as a Team.
-          teams: teams?.map((tem) => {
-            return { name: tem.name, listId: tem.id, isDeleted: tem.closed };
-          }),
+            }),
+          lists: item.lists
+            .filter((l) => ListTypes.includes(l.name))
+            .map((l) => {
+              return {
+                name: l.name,
+                listId: l.id,
+              };
+            }),
+          boardUrl: item.url,
+          boardId: item.id,
         });
+        let result = await department.createDepartmentValidate();
+        if (!result.error) return department;
+        else {
+          let lists = await department.updateLists();
+          department.lists = lists;
+          return department;
+        }
       })
-    )
-      .then((res: IDepartment[]) => {
-        return res;
-      })
-      .catch((err) => {
-        return [];
-      })
-      .finally(() => {
-        return [];
-      });
+    );
 
     // existed on TTP & TRELLO > make it same
     intersection = await Promise.all(
@@ -267,27 +263,12 @@ export const initializeTrelloBoards = async () => {
         );
         return item;
       })
-    )
-      .then((res) => {
-        return res;
-      })
-      .catch((err) => {
-        return [];
-      })
-      .finally(() => {
-        return [];
-      });
+    );
 
     allDepartments = allDepartments?.map((item) => {
       let index = intersection.findIndex((dep) => dep._id === item._id);
       return index >= 0 ? intersection[index] : item;
     });
-
-    let creativeBoard = allDepartments.find(
-      (i) => i.name === Config.get("CreativeBoard")
-    );
-    if (!creativeBoard && !creativeBoard.name)
-      await createTTPCreativeMainBoard();
 
     let update = [
       ...allDepartments?.map((item) => {
@@ -300,9 +281,8 @@ export const initializeTrelloBoards = async () => {
               color: item.color,
               teams: item.teams,
               lists: item.lists,
-              sideLists: item?.sideLists,
+              sideLists: item.sideLists,
             },
-            upsert: true,
           },
         };
       }),
@@ -314,10 +294,13 @@ export const initializeTrelloBoards = async () => {
         };
       }),
     ];
-
-    Department.bulkWrite(update, {}).catch((err) => {
-      console.log({ err: err.writeErrors[0].err });
-    });
+    await Department.bulkWrite(update)
+      .then((res) => {
+        console.log({ bulkUpdateDepartmentsResult: res });
+      })
+      .catch((error) => {
+        console.log({ bulkUpdateDepartmentsError: error });
+      });
     allDepartments.forEach(async (item) =>
       TrelloController.__addWebHook(item.boardId, "trelloWebhookUrlTask")
     );
@@ -614,7 +597,6 @@ export const initializeTTPTasks = async () => {
 
 export const initializeCardsPlugins = async () => {
   try {
-    console.log("initialize");
     let departments = await Department.find({});
     let boardIds = departments.map((department) => department.boardId);
     let cards = _.flattenDeep(

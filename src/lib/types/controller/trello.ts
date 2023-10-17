@@ -250,6 +250,7 @@ export type Board = {
   name: string;
   lists?: List[];
   closed?: boolean;
+  url?: string;
 };
 export type List = {
   id: string;
@@ -326,7 +327,7 @@ export type TrelloAction = {
   id: string;
   idMemberCreator: string;
   deleteAction?: boolean;
-  listType?: "list" | "team" | "sidelist";
+  listType?: "list" | "team" | "sideList";
   status?: string;
   dueChange?: string;
   listId?: string;
@@ -348,6 +349,7 @@ export type TrelloAction = {
       name?: string;
       shortLink?: string;
     };
+    old?: { idList?: string; due?: string };
     listSource?: { id: string };
     list?: { id: string; name: string };
     listAfter?: { id: string; name: string };

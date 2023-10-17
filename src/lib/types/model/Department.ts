@@ -1,5 +1,6 @@
 import { Document } from "mongoose";
 import Joi from "joi";
+import { ObjectId } from "mongodb";
 
 export const ListTypes = [
   "Tasks Board",
@@ -45,6 +46,7 @@ export interface IDepartment extends Document {
     data: IDepartmentState,
     cb?: (doc: IDepartment) => any
   ): IDepartment;
+  updateLists(this: IDepartment, cb?: (doc: IDepartment) => any): IList[];
 }
 
 export interface IDepartmentState {
@@ -62,14 +64,15 @@ export interface IDepartmentState {
   removeSideLists?: string[];
   addSideLists?: string[];
 }
+
 export interface ITeam {
-  _id?: string;
+  _id?: string | ObjectId;
   name: string;
   listId: string;
   isDeleted: boolean;
 }
 export interface IList {
-  _id?: string;
+  _id?: string | ObjectId;
   name: string;
   listId: string;
 }

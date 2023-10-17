@@ -110,9 +110,9 @@ export interface DownloadAttachmentResponse {}
 export interface Movement {
   status: string;
   movedAt: string;
-  journeyDeadline?: string;
+  journeyDeadline?: string | null;
   listId?: string;
-  isTeam?: boolean;
+  listType?: "team" | "list" | "sideList";
 }
 export const statusLists = [
   "In Progress",

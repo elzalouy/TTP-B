@@ -45,8 +45,8 @@ export const movementSchema: Schema<Movement> = new Schema<Movement>({
     type: String,
     required: false,
   },
-  isTeam: {
-    type: Boolean,
+  listType: {
+    type: String,
     required: false,
   },
 });
