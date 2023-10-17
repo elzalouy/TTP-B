@@ -496,9 +496,6 @@ class TaskController extends TaskDB {
           })
         )
       );
-      console.log({
-        card: cards.find((c) => c.id === "652e668663b70ca5a32a6bf0"),
-      });
 
       actions = _.flattenDeep(
         await Promise.all(
@@ -507,6 +504,12 @@ class TaskController extends TaskDB {
           })
         )
       );
+      console.log({
+        card: cards.find((c) => c.id === "652e668663b70ca5a32a6bf0"),
+        actions: actions.filter(
+          (i) => i.data.card.id === "652e668663b70ca5a32a6bf0"
+        ),
+      });
 
       actions = actions.filter(
         (action) => action !== undefined && action !== null
@@ -598,14 +601,6 @@ class TaskController extends TaskDB {
             : [];
         task.cardCreatedAt = new Date(createAction.date);
         if (!fetch) newTasks.push(task);
-        console.log({
-          existed: fetch ? true : false,
-          cardId: card.id,
-          cardName: card.name,
-          movements: movements.length,
-          createActionDate: createAction.date,
-          teamMovement: teamListId,
-        });
         return task;
       });
 
