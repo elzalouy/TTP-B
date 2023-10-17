@@ -509,8 +509,17 @@ class TaskController extends TaskDB {
         let cardActions = actions.filter(
           (action) => action.data.card.id === card.id
         );
-        return { cardId: card.id, actions: cardActions };
+        if (cardActions) return { cardId: card.id, actions: cardActions };
+        else return { cardId: card.id, actions: [] };
       });
+      cardsActions = cardsActions.filter((item) => item.actions.length > 0);
+      cards = cards.filter((card) => {
+        let actions = cardsActions.filter(
+          (action) => action.cardId === card.id
+        );
+        if (actions) return card;
+      });
+
       cards = await Promise.all(
         cards?.map(async (item) => {
           let attachments = await TrelloController.__getCardAttachments(
@@ -617,9 +626,9 @@ class TaskController extends TaskDB {
                 teamId: item.teamId,
                 listId: item.listId,
                 status: item.status,
+                cardId: item.cardId,
                 start: item.start ? item.start : null,
                 deadline: item.deadline,
-                cardId: item.cardId,
                 boardId: item.boardId,
                 description: item?.description ? item.description : "",
                 trelloShortUrl: item.trelloShortUrl,
