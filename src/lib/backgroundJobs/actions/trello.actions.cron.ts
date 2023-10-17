@@ -6,7 +6,6 @@ import {
   initializeCardsPlugins,
   initializeTTPTasks,
   initializeTrelloBoards,
-  initializeTrelloMembers,
 } from "../../startup/db/dbConnect";
 import TrelloController from "../../controllers/trello";
 
@@ -15,20 +14,6 @@ export function initializeTrelloBoardsJob() {
     "0 6 * * *",
     async () => {
       initializeTrelloBoards();
-    },
-    null,
-    true,
-    "Asia/Riyadh",
-    null,
-    true
-  );
-}
-
-export function initializeTrelloMembersJob() {
-  return new CronJob(
-    "0 6 * * *",
-    async () => {
-      await initializeTrelloMembers();
     },
     null,
     true,
