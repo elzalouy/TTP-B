@@ -505,6 +505,9 @@ class TaskController extends TaskDB {
         )
       );
 
+      actions = actions.filter(
+        (action) => action !== undefined && action !== null
+      );
       let createActions = actions
         .filter((i) => i.type === "createCard")
         .map((i) => i.data.card.id);
