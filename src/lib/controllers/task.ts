@@ -496,6 +496,9 @@ class TaskController extends TaskDB {
           })
         )
       );
+      console.log({
+        card: cards.find((c) => c.id === "652e668663b70ca5a32a6bf0"),
+      });
 
       actions = _.flattenDeep(
         await Promise.all(
@@ -511,6 +514,7 @@ class TaskController extends TaskDB {
       let createActions = actions
         .filter((i) => i.type === "createCard")
         .map((i) => i.data.card.id);
+
       actions = actions.filter((a) => createActions.includes(a.data.card.id));
       cards = cards.filter((c) => createActions.includes(c.id));
       cardsActions = cards.map((card) => {
@@ -602,7 +606,6 @@ class TaskController extends TaskDB {
           createActionDate: createAction.date,
           teamMovement: teamListId,
         });
-
         return task;
       });
 
