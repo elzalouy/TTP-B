@@ -504,12 +504,6 @@ class TaskController extends TaskDB {
           })
         )
       );
-      console.log({
-        card: cards.find((c) => c.id === "652e668663b70ca5a32a6bf0"),
-        actions: actions.filter(
-          (i) => i.data.card.id === "652e668663b70ca5a32a6bf0"
-        ),
-      });
 
       actions = actions.filter(
         (action) => action !== undefined && action !== null
