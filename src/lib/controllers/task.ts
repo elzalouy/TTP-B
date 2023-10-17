@@ -496,7 +496,6 @@ class TaskController extends TaskDB {
           })
         )
       );
-      console.log({ cards: cards.length, card: cards[0] });
 
       actions = _.flattenDeep(
         await Promise.all(
@@ -505,8 +504,7 @@ class TaskController extends TaskDB {
           })
         )
       );
-      actions = actions.filter((i) => i !== undefined && i !== null);
-      console.log({ actions, action: actions[0] });
+
       let createActions = actions
         .filter((i) => i.type === "createCard")
         .map((i) => i.data.card.id);
@@ -519,10 +517,6 @@ class TaskController extends TaskDB {
         if (cardActions) return { cardId: card.id, actions: cardActions };
         else return { cardId: card.id, actions: [] };
       });
-      console.log({
-        createActions: createActions.length,
-        cardsActions: cardsActions.length,
-      });
       cardsActions = cardsActions.filter((item) => item.actions.length > 0);
       cards = cards.filter((card) => {
         let actions = cardsActions.filter(
@@ -530,7 +524,7 @@ class TaskController extends TaskDB {
         );
         if (actions) return card;
       });
-      console.log({ cardsAfterFilter: cards.length });
+
       cards = await Promise.all(
         cards?.map(async (item) => {
           let attachments = await TrelloController.__getCardAttachments(
@@ -565,15 +559,6 @@ class TaskController extends TaskDB {
             ? teamMovements[teamMovements.length - 1].listId
             : null;
 
-        console.log({
-          existed: fetch ? true : false,
-          cardId: card.id,
-          cardName: card.name,
-          movements: movements.length,
-          createActionDate: createAction.date,
-          teamMovement: teamListId,
-        });
-
         task.boardId = card.idBoard;
         task.listId = card.idList;
         task.cardId = card.id;
@@ -606,15 +591,16 @@ class TaskController extends TaskDB {
             : [];
         task.cardCreatedAt = new Date(createAction.date);
         if (!fetch) newTasks.push(task);
-        return task;
-      });
+        console.log({
+          existed: fetch ? true : false,
+          cardId: card.id,
+          cardName: card.name,
+          movements: movements.length,
+          createActionDate: createAction.date,
+          teamMovement: teamListId,
+        });
 
-      cardsIds = cards.map((c) => c.id);
-      tasks = tasks?.map((item) => {
-        if (!cardsIds.includes(item.cardId)) {
-          item.archivedCard = true;
-        } else item.archivedCard = false;
-        return item;
+        return task;
       });
 
       let update = [
