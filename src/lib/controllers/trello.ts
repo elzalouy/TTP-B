@@ -773,7 +773,7 @@ class TrelloController {
         `boards/${board}/actions/?filter=createCard,updateCard:due,updateCard:idList&limit=${perpage}&`
       );
       if (actions.length > 0)
-        url = `${url}before=${actions[actions.length - 1].id}&`;
+        url = `${url}&before=${actions[actions.length - 1].id}&`;
       let result = await fetch(url, {
         method: "GET",
         headers: {
