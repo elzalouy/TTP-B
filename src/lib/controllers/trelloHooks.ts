@@ -238,13 +238,6 @@ export default class TrelloWebhook {
           ? new Date(this.actionRequest.action.data.card.due)
           : task.deadline;
 
-        let { movements, currentTeam, createdAt } =
-          await TrelloController.getActionsOfCard(
-            task.cardId,
-            await Department.find({}),
-            cardDeadline ? new Date(cardDeadline) : null
-          );
-
         if (!isProject) {
           this.task = {
             name: this.actionRequest.action.data.card.name,
@@ -256,17 +249,14 @@ export default class TrelloWebhook {
               : task.start ?? null,
             description:
               this.actionRequest.action.data.card.desc ?? task.description,
-            teamId: isNewTeam?._id ?? task.teamId ?? currentTeam?._id,
+            teamId: isNewTeam?._id ?? task.teamId,
             listId: listId,
             status: sideList
               ? "Tasks Board"
               : inProgressList?.name
               ? inProgressList.name
               : status,
-            movements:
-              action === "action_sent_card_to_board"
-                ? movements
-                : task.movements,
+            movements: task.movements,
             teamListId: isNewTeam ? listId : task.teamListId,
             archivedCard: this.actionRequest.action.data.card.closed,
             archivedAt:
@@ -275,8 +265,6 @@ export default class TrelloWebhook {
                 ? this.actionRequest.action.date
                 : task.archivedAt,
             projectId: task.projectId,
-            cardCreatedAt: createdAt ? new Date(createdAt) : null,
-            createdAt: createdAt ? new Date(createdAt) : task.createdAt,
           };
 
           if (isMoved || task.movements.length === 0) {

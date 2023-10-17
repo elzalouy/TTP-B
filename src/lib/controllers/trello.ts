@@ -113,29 +113,6 @@ class TrelloController {
       due ?? undefined
     );
   }
-  static async getBoardsActions(
-    boardId: string,
-    format: "list" | "count",
-    limit?: number,
-    page?: number
-  ) {
-    try {
-      let url = `boards/${boardId}/actions/?format=${format}&`;
-      let apiUrl = trelloApi(url);
-      let result;
-      await fetch(apiUrl, {
-        method: "GET",
-        headers: {
-          Accept: "application/json",
-        },
-      }).then(async (res) => {
-        result = await res.json();
-      });
-      return result;
-    } catch (error) {
-      logger.error({ getBoardsActionsError: error });
-    }
-  }
 
   static async __moveTaskToDiffList(
     cardId: string,
@@ -345,7 +322,7 @@ class TrelloController {
 
   static async __getCardsInBoard(boardId: string) {
     try {
-      let url = trelloApi(`boards/${boardId}/cards/all?`);
+      let url = trelloApi(`boards/${boardId}/cards/open?`);
       let result = await fetch(url, {
         method: "GET",
         headers: {
@@ -562,7 +539,7 @@ class TrelloController {
       let boardsApi = trelloApi(
         `organizations/${Config.get(
           "trelloOrgId"
-        )}/boards/?filter=${filter}&fields=id,name,closed&`
+        )}/boards/?filter=${filter}&fields=id,name,closed,url&`
       );
       let boards = await fetch(boardsApi, {
         method: "GET",
@@ -779,7 +756,7 @@ class TrelloController {
 
   static async _getActionsOfBoard(board: string) {
     try {
-      let actions = await TrelloController._fetchActionsOfBoard(0, [], board);
+      let actions = await TrelloController._fetchActionsOfBoard([], board);
       return actions;
     } catch (error) {
       logger.error({ _getActionsOfBoardError: error });
@@ -787,7 +764,6 @@ class TrelloController {
   }
 
   static async _fetchActionsOfBoard(
-    page = 0,
     actions: TrelloAction[] = [],
     board: string
   ) {
@@ -798,8 +774,7 @@ class TrelloController {
       );
       if (actions.length > 0)
         url = `${url}before=${actions[actions.length - 1].id}&`;
-      let testUrl = `https://api.trello.com/1/boards/6371f616fe6c5500164c85d0/actions/?filter=createCard,updateCard:due,updateCard:idList&limit=1000&key=e6c4e18a33676de983a17b1552a7caee&token=69983f349355c71c8242ab732bd23fd70d3217e54026336e5e16793f542f044b&format=list&before=63ce4920aa945400c24d4aef`;
-      let result = await fetch(testUrl, {
+      let result = await fetch(url, {
         method: "GET",
         headers: {
           Accept: "*/*",
@@ -808,11 +783,12 @@ class TrelloController {
       });
       let newActions: TrelloAction[] = await result.json();
       actions.push(...newActions);
-      console.log({ newActions: newActions.length, actions: actions.length });
-      if (newActions.length === perpage) {
-        await TrelloController._fetchActionsOfBoard(page + 1, actions, board);
+      if (
+        newActions.length === perpage &&
+        new Date(actions[actions.length - 1].date).getFullYear() >= 2023
+      ) {
+        await TrelloController._fetchActionsOfBoard(actions, board);
       } else {
-        actions.push(...newActions);
         return actions;
       }
     } catch (error) {
@@ -848,17 +824,8 @@ class TrelloController {
           : [];
       dueDates = dueDates.sort((a, b) => b - a);
       let cardsActions: CardAction[] = [
-        new CardAction(
-          createAction[0],
-          dueDates[0] ?? due ? new Date(due).toDateString() : null
-        ),
-        ...actions.map(
-          (action, index) =>
-            new CardAction(
-              action,
-              dueDates[index] ?? due ? new Date(due).toDateString() : null
-            )
-        ),
+        new CardAction(createAction[0]),
+        ...actions.map((action, index) => new CardAction(action)),
       ];
       /// First create status
       cardsActions = cardsActions.filter(
@@ -880,17 +847,14 @@ class TrelloController {
   }
 }
 
-class CardAction {
+export class CardAction {
   action: TrelloAction;
-  dueDate: string | number | null;
-  constructor(action: TrelloAction, dueDate: number | string) {
+  constructor(action: TrelloAction) {
     action.deleteAction = false;
     this.action = action;
-    this.dueDate = dueDate;
   }
 
-  validate = (deps: IDepartment[]) => {
-    let board = deps.find((i) => i.boardId === this.action.data.board.id);
+  validate = (board: IDepartment) => {
     let date = this.action.date;
     let listId = this.action.data?.list?.id ?? this.action.data?.listAfter?.id;
     this.action.listId = listId;
@@ -901,8 +865,6 @@ class CardAction {
       return this;
     }
     let list = board?.lists?.find((l) => l.listId === listId);
-    if (this.action.data.card.id === "64a68e8bfca2a16ae2c6748d")
-      console.log({ card: this.action.data.card, list });
     if (list) {
       this.action.listType = "list";
       this.action.status = list.name;
@@ -914,7 +876,7 @@ class CardAction {
       } else {
         list = board.sideLists.find((i) => i.listId === listId);
         if (list) {
-          this.action.listType = "sidelist";
+          this.action.listType = "sideList";
           this.action.status = "Tasks Board";
         } else {
           list = listName
@@ -929,12 +891,6 @@ class CardAction {
           }
         }
       }
-    }
-    if (
-      ["Shared", "Done", "Cancled"].includes(this.action.status) &&
-      this.dueDate
-    ) {
-      this.action.dueChange = new Date(this.dueDate).toDateString();
     }
     return this;
   };

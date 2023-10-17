@@ -665,3 +665,908 @@
 {"level":"error","message":{"initializeTrelloBoardsError":{}}}
 {"level":"error","message":{"_fetchActionsOfBoardError":{"code":"EHOSTUNREACH","errno":"EHOSTUNREACH","message":"request to https://api.trello.com/1/boards/6371f616fe6c5500164c85d0/actions/?filter=createCard,updateCard:due,updateCard:idList&limit=1000&key=e6c4e18a33676de983a17b1552a7caee&token=69983f349355c71c8242ab732bd23fd70d3217e54026336e5e16793f542f044b&format=list&before=63ce4920aa945400c24d4aef failed, reason: connect EHOSTUNREACH 104.192.142.10:443","type":"system"}}}
 {"level":"error","message":{"initializeTTPTasksError":{}}}
+{"level":"warn","message":{"db":"mongodb+srv://unicodettp:WFUiEjrljsIDFOmd@cluster1.oeari.mongodb.net/ttp-local"}}
+{"level":"warn","message":"Server worked"}
+{"level":"error","message":{"initializeTrelloBoardsError":{}}}
+{"level":"warn","message":{"db":"mongodb+srv://unicodettp:WFUiEjrljsIDFOmd@cluster1.oeari.mongodb.net/ttp-local"}}
+{"level":"warn","message":"Server worked"}
+{"level":"error","message":{"initializeTrelloBoardsError":{}}}
+{"level":"warn","message":{"db":"mongodb+srv://unicodettp:WFUiEjrljsIDFOmd@cluster1.oeari.mongodb.net/ttp-local"}}
+{"level":"warn","message":"Server worked"}
+{"level":"error","message":{"initializeTrelloBoardsError":{}}}
+{"level":"warn","message":{"db":"mongodb+srv://unicodettp:WFUiEjrljsIDFOmd@cluster1.oeari.mongodb.net/ttp-local"}}
+{"level":"warn","message":"Server worked"}
+{"level":"error","message":{"initializeTrelloBoardsError":{}}}
+{"level":"warn","message":{"db":"mongodb+srv://unicodettp:WFUiEjrljsIDFOmd@cluster1.oeari.mongodb.net/ttp-local"}}
+{"level":"warn","message":"Server worked"}
+{"level":"error","message":{"initializeTrelloBoardsError":{}}}
+{"level":"warn","message":{"db":"mongodb+srv://unicodettp:WFUiEjrljsIDFOmd@cluster1.oeari.mongodb.net/ttp-local"}}
+{"level":"warn","message":"Server worked"}
+{"level":"error","message":{"initializeTrelloBoardsError":{}}}
+{"level":"warn","message":{"db":"mongodb+srv://unicodettp:WFUiEjrljsIDFOmd@cluster1.oeari.mongodb.net/ttp-local"}}
+{"level":"warn","message":"Server worked"}
+{"level":"error","message":{"initializeTrelloBoardsError":{}}}
+{"level":"warn","message":{"db":"mongodb+srv://unicodettp:WFUiEjrljsIDFOmd@cluster1.oeari.mongodb.net/ttp-local"}}
+{"level":"warn","message":"Server worked"}
+{"level":"error","message":{"initializeTrelloBoardsError":{}}}
+{"level":"warn","message":{"db":"mongodb+srv://unicodettp:WFUiEjrljsIDFOmd@cluster1.oeari.mongodb.net/ttp-local"}}
+{"level":"warn","message":"Server worked"}
+{"level":"error","message":{"initializeTrelloBoardsError":{}}}
+{"level":"warn","message":{"db":"mongodb+srv://unicodettp:WFUiEjrljsIDFOmd@cluster1.oeari.mongodb.net/ttp-local"}}
+{"level":"warn","message":"Server worked"}
+{"level":"error","message":{"initializeTrelloBoardsError":{}}}
+{"level":"error","message":{"_fetchActionsOfBoardError":{}}}
+{"level":"warn","message":{"db":"mongodb+srv://unicodettp:WFUiEjrljsIDFOmd@cluster1.oeari.mongodb.net/ttp-local"}}
+{"level":"warn","message":"Server worked"}
+{"level":"error","message":{"initializeTrelloBoardsError":{}}}
+{"level":"error","message":{"_fetchActionsOfBoardError":{}}}
+{"level":"warn","message":{"db":"mongodb+srv://unicodettp:WFUiEjrljsIDFOmd@cluster1.oeari.mongodb.net/ttp-local"}}
+{"level":"warn","message":"Server worked"}
+{"level":"error","message":{"initializeTrelloBoardsError":{}}}
+{"level":"error","message":{"_fetchActionsOfBoardError":{}}}
+{"level":"warn","message":{"db":"mongodb+srv://unicodettp:WFUiEjrljsIDFOmd@cluster1.oeari.mongodb.net/ttp-local"}}
+{"level":"warn","message":"Server worked"}
+{"level":"warn","message":{"db":"mongodb+srv://unicodettp:WFUiEjrljsIDFOmd@cluster1.oeari.mongodb.net/ttp-local"}}
+{"level":"warn","message":"Server worked"}
+{"level":"error","message":{"initializeTrelloBoardsError":{}}}
+{"level":"warn","message":{"db":"mongodb+srv://unicodettp:WFUiEjrljsIDFOmd@cluster1.oeari.mongodb.net/ttp-local"}}
+{"level":"warn","message":"Server worked"}
+{"level":"error","message":{"initializeTrelloBoardsError":{}}}
+{"level":"warn","message":{"db":"mongodb+srv://unicodettp:WFUiEjrljsIDFOmd@cluster1.oeari.mongodb.net/ttp-local"}}
+{"level":"warn","message":"Server worked"}
+{"level":"error","message":{"initializeTrelloBoardsError":{}}}
+{"level":"warn","message":{"db":"mongodb+srv://unicodettp:WFUiEjrljsIDFOmd@cluster1.oeari.mongodb.net/ttp-local"}}
+{"level":"warn","message":"Server worked"}
+{"level":"error","message":{"initializeTrelloBoardsError":{}}}
+{"level":"warn","message":{"db":"mongodb+srv://unicodettp:WFUiEjrljsIDFOmd@cluster1.oeari.mongodb.net/ttp-local"}}
+{"level":"warn","message":"Server worked"}
+{"level":"warn","message":{"db":"mongodb+srv://unicodettp:WFUiEjrljsIDFOmd@cluster1.oeari.mongodb.net/ttp-local"}}
+{"level":"warn","message":"Server worked"}
+{"level":"error","message":{"initializeTrelloBoardsError":{}}}
+{"level":"warn","message":{"db":"mongodb+srv://unicodettp:WFUiEjrljsIDFOmd@cluster1.oeari.mongodb.net/ttp-local"}}
+{"level":"warn","message":"Server worked"}
+{"level":"error","message":{"initializeTrelloBoardsError":{}}}
+{"level":"warn","message":{"db":"mongodb+srv://unicodettp:WFUiEjrljsIDFOmd@cluster1.oeari.mongodb.net/ttp-local"}}
+{"level":"warn","message":"Server worked"}
+{"level":"error","message":{"initializeTrelloBoardsError":{}}}
+{"level":"warn","message":{"db":"mongodb+srv://unicodettp:WFUiEjrljsIDFOmd@cluster1.oeari.mongodb.net/ttp-local"}}
+{"level":"warn","message":"Server worked"}
+{"level":"error","message":{"initializeTrelloBoardsError":{}}}
+{"level":"warn","message":{"db":"mongodb+srv://unicodettp:WFUiEjrljsIDFOmd@cluster1.oeari.mongodb.net/ttp-local"}}
+{"level":"warn","message":"Server worked"}
+{"level":"error","message":{"initializeTrelloBoardsError":{}}}
+{"level":"warn","message":{"db":"mongodb+srv://unicodettp:WFUiEjrljsIDFOmd@cluster1.oeari.mongodb.net/ttp-local"}}
+{"level":"warn","message":"Server worked"}
+{"level":"error","message":{"initializeTrelloBoardsError":{}}}
+{"level":"warn","message":{"db":"mongodb+srv://unicodettp:WFUiEjrljsIDFOmd@cluster1.oeari.mongodb.net/ttp-local"}}
+{"level":"warn","message":"Server worked"}
+{"level":"error","message":{"initializeTrelloBoardsError":{}}}
+{"level":"warn","message":{"db":"mongodb+srv://unicodettp:WFUiEjrljsIDFOmd@cluster1.oeari.mongodb.net/ttp-local"}}
+{"level":"warn","message":"Server worked"}
+{"level":"error","message":{"initializeTrelloBoardsError":{}}}
+{"level":"warn","message":{"db":"mongodb+srv://unicodettp:WFUiEjrljsIDFOmd@cluster1.oeari.mongodb.net/ttp-local"}}
+{"level":"warn","message":"Server worked"}
+{"level":"error","message":{"initializeTrelloBoardsError":{}}}
+{"level":"error","message":{"_fetchActionsOfBoardError":{"message":"invalid json response body at https://api.trello.com/1/boards/651ebb4fe0a5fe265ff33ec3/actions/?filter=createCard,updateCard:due,updateCard:idList&limit=1000&key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68before=64f48f98664f5dd3f2f64003&before=64f48f98664f5dd3f2f64003& reason: Unexpected token i in JSON at position 0","type":"invalid-json"}}}
+{"level":"warn","message":{"db":"mongodb+srv://unicodettp:WFUiEjrljsIDFOmd@cluster1.oeari.mongodb.net/ttp-local"}}
+{"level":"warn","message":"Server worked"}
+{"level":"error","message":{"initializeTrelloBoardsError":{}}}
+{"level":"error","message":{"_fetchActionsOfBoardError":{"message":"invalid json response body at https://api.trello.com/1/boards/651ebb4fe0a5fe265ff33ec3/actions/?filter=createCard,updateCard:due,updateCard:idList&limit=1000&key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68before=64f48f98664f5dd3f2f64003&before=64f48f98664f5dd3f2f64003& reason: Unexpected token i in JSON at position 0","type":"invalid-json"}}}
+{"level":"warn","message":{"db":"mongodb+srv://unicodettp:WFUiEjrljsIDFOmd@cluster1.oeari.mongodb.net/ttp-local"}}
+{"level":"warn","message":"Server worked"}
+{"level":"error","message":{"initializeTrelloBoardsError":{}}}
+{"level":"error","message":{"_fetchActionsOfBoardError":{"message":"invalid json response body at https://api.trello.com/1/boards/651ebb4fe0a5fe265ff33ec3/actions/?filter=createCard,updateCard:due,updateCard:idList&limit=1000&key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68before=64f48f98664f5dd3f2f64003&before=64f48f98664f5dd3f2f64003& reason: Unexpected token i in JSON at position 0","type":"invalid-json"}}}
+{"level":"warn","message":{"db":"mongodb+srv://unicodettp:WFUiEjrljsIDFOmd@cluster1.oeari.mongodb.net/ttp-local"}}
+{"level":"warn","message":"Server worked"}
+{"level":"error","message":{"initializeTrelloBoardsError":{}}}
+{"level":"error","message":{"_fetchActionsOfBoardError":{"message":"invalid json response body at https://api.trello.com/1/boards/651ebb4fe0a5fe265ff33ec3/actions/?filter=createCard,updateCard:due,updateCard:idList&limit=1000&key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68before=64f48f98664f5dd3f2f64003&before=64f48f98664f5dd3f2f64003& reason: Unexpected token i in JSON at position 0","type":"invalid-json"}}}
+{"level":"warn","message":{"db":"mongodb+srv://unicodettp:WFUiEjrljsIDFOmd@cluster1.oeari.mongodb.net/ttp-local"}}
+{"level":"warn","message":"Server worked"}
+{"level":"error","message":{"initializeTrelloBoardsError":{}}}
+{"level":"error","message":{"_fetchActionsOfBoardError":{"message":"invalid json response body at https://api.trello.com/1/boards/651ebb4fe0a5fe265ff33ec3/actions/?filter=createCard,updateCard:due,updateCard:idList&limit=1000&key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68before=64f48f98664f5dd3f2f64003&before=64f48f98664f5dd3f2f64003& reason: Unexpected token i in JSON at position 0","type":"invalid-json"}}}
+{"level":"warn","message":{"db":"mongodb+srv://unicodettp:WFUiEjrljsIDFOmd@cluster1.oeari.mongodb.net/ttp-local"}}
+{"level":"warn","message":"Server worked"}
+{"level":"error","message":{"initializeTrelloBoardsError":{}}}
+{"level":"warn","message":{"db":"mongodb+srv://unicodettp:WFUiEjrljsIDFOmd@cluster1.oeari.mongodb.net/ttp-local"}}
+{"level":"warn","message":"Server worked"}
+{"level":"error","message":{"initializeTrelloBoardsError":{}}}
+{"level":"error","message":{"_fetchActionsOfBoardError":{}}}
+{"level":"warn","message":{"db":"mongodb+srv://unicodettp:WFUiEjrljsIDFOmd@cluster1.oeari.mongodb.net/ttp-local"}}
+{"level":"warn","message":"Server worked"}
+{"level":"error","message":{"initializeTrelloBoardsError":{}}}
+{"level":"error","message":{"_fetchActionsOfBoardError":{}}}
+{"level":"warn","message":{"db":"mongodb+srv://unicodettp:WFUiEjrljsIDFOmd@cluster1.oeari.mongodb.net/ttp-local"}}
+{"level":"warn","message":"Server worked"}
+{"level":"error","message":{"initializeTrelloBoardsError":{}}}
+{"level":"error","message":{"_fetchActionsOfBoardError":{}}}
+{"level":"warn","message":{"db":"mongodb+srv://unicodettp:WFUiEjrljsIDFOmd@cluster1.oeari.mongodb.net/ttp-local"}}
+{"level":"warn","message":"Server worked"}
+{"level":"error","message":{"initializeTrelloBoardsError":{}}}
+{"level":"error","message":{"_fetchActionsOfBoardError":{}}}
+{"level":"warn","message":{"db":"mongodb+srv://unicodettp:WFUiEjrljsIDFOmd@cluster1.oeari.mongodb.net/ttp-local"}}
+{"level":"warn","message":"Server worked"}
+{"level":"error","message":{"initializeTrelloBoardsError":{}}}
+{"level":"error","message":{"_fetchActionsOfBoardError":{}}}
+{"level":"warn","message":{"db":"mongodb+srv://unicodettp:WFUiEjrljsIDFOmd@cluster1.oeari.mongodb.net/ttp-local"}}
+{"level":"warn","message":"Server worked"}
+{"level":"error","message":{"initializeTrelloBoardsError":{}}}
+{"level":"error","message":{"_fetchActionsOfBoardError":{}}}
+{"level":"warn","message":{"db":"mongodb+srv://unicodettp:WFUiEjrljsIDFOmd@cluster1.oeari.mongodb.net/ttp-local"}}
+{"level":"warn","message":"Server worked"}
+{"level":"error","message":{"initializeTrelloBoardsError":{}}}
+{"level":"error","message":{"_fetchActionsOfBoardError":{}}}
+{"level":"warn","message":{"db":"mongodb+srv://unicodettp:WFUiEjrljsIDFOmd@cluster1.oeari.mongodb.net/ttp-local"}}
+{"level":"warn","message":"Server worked"}
+{"level":"error","message":{"initializeTrelloBoardsError":{}}}
+{"level":"error","message":{"_fetchActionsOfBoardError":{}}}
+{"level":"warn","message":{"db":"mongodb+srv://unicodettp:WFUiEjrljsIDFOmd@cluster1.oeari.mongodb.net/ttp-local"}}
+{"level":"warn","message":"Server worked"}
+{"level":"error","message":{"initializeTrelloBoardsError":{}}}
+{"level":"error","message":{"_fetchActionsOfBoardError":{}}}
+{"level":"warn","message":{"db":"mongodb+srv://unicodettp:WFUiEjrljsIDFOmd@cluster1.oeari.mongodb.net/ttp-local"}}
+{"level":"warn","message":"Server worked"}
+{"level":"warn","message":{"db":"mongodb+srv://unicodettp:WFUiEjrljsIDFOmd@cluster1.oeari.mongodb.net/ttp-local"}}
+{"level":"warn","message":"Server worked"}
+{"level":"error","message":{"initializeTrelloBoardsError":{}}}
+{"level":"warn","message":{"db":"mongodb+srv://unicodettp:WFUiEjrljsIDFOmd@cluster1.oeari.mongodb.net/ttp-local"}}
+{"level":"warn","message":"Server worked"}
+{"level":"error","message":{"initializeTrelloBoardsError":{}}}
+{"level":"warn","message":{"db":"mongodb+srv://unicodettp:WFUiEjrljsIDFOmd@cluster1.oeari.mongodb.net/ttp-local"}}
+{"level":"warn","message":"Server worked"}
+{"level":"error","message":{"initializeTrelloBoardsError":{}}}
+{"level":"warn","message":{"db":"mongodb+srv://unicodettp:WFUiEjrljsIDFOmd@cluster1.oeari.mongodb.net/ttp-local"}}
+{"level":"warn","message":"Server worked"}
+{"level":"error","message":{"initializeTrelloBoardsError":{}}}
+{"level":"warn","message":{"db":"mongodb+srv://unicodettp:WFUiEjrljsIDFOmd@cluster1.oeari.mongodb.net/ttp-local"}}
+{"level":"warn","message":"Server worked"}
+{"level":"error","message":{"initializeTrelloBoardsError":{}}}
+{"level":"warn","message":{"db":"mongodb+srv://unicodettp:WFUiEjrljsIDFOmd@cluster1.oeari.mongodb.net/ttp-local"}}
+{"level":"warn","message":"Server worked"}
+{"level":"error","message":{"initializeTrelloBoardsError":{}}}
+{"level":"warn","message":{"db":"mongodb+srv://unicodettp:WFUiEjrljsIDFOmd@cluster1.oeari.mongodb.net/ttp-local"}}
+{"level":"warn","message":"Server worked"}
+{"level":"error","message":{"initializeTrelloBoardsError":{}}}
+{"level":"warn","message":{"db":"mongodb+srv://unicodettp:WFUiEjrljsIDFOmd@cluster1.oeari.mongodb.net/ttp-local"}}
+{"level":"warn","message":"Server worked"}
+{"level":"error","message":{"initializeTrelloBoardsError":{}}}
+{"level":"warn","message":{"db":"mongodb+srv://unicodettp:WFUiEjrljsIDFOmd@cluster1.oeari.mongodb.net/ttp-local"}}
+{"level":"warn","message":"Server worked"}
+{"level":"error","message":{"initializeTrelloBoardsError":{}}}
+{"level":"warn","message":{"db":"mongodb+srv://unicodettp:WFUiEjrljsIDFOmd@cluster1.oeari.mongodb.net/ttp-local"}}
+{"level":"warn","message":"Server worked"}
+{"level":"error","message":{"initializeTrelloBoardsError":{}}}
+{"level":"warn","message":{"db":"mongodb+srv://unicodettp:WFUiEjrljsIDFOmd@cluster1.oeari.mongodb.net/ttp-local"}}
+{"level":"warn","message":"Server worked"}
+{"level":"error","message":{"initializeTrelloBoardsError":{}}}
+{"level":"warn","message":{"db":"mongodb+srv://unicodettp:WFUiEjrljsIDFOmd@cluster1.oeari.mongodb.net/ttp-local"}}
+{"level":"warn","message":"Server worked"}
+{"level":"error","message":{"initializeTrelloBoardsError":{}}}
+{"level":"warn","message":{"db":"mongodb+srv://unicodettp:WFUiEjrljsIDFOmd@cluster1.oeari.mongodb.net/ttp-local"}}
+{"level":"warn","message":"Server worked"}
+{"level":"error","message":{"initializeTrelloBoardsError":{}}}
+{"level":"warn","message":{"db":"mongodb+srv://unicodettp:WFUiEjrljsIDFOmd@cluster1.oeari.mongodb.net/ttp-local"}}
+{"level":"warn","message":"Server worked"}
+{"level":"error","message":{"initializeTrelloBoardsError":{}}}
+{"level":"warn","message":{"db":"mongodb+srv://unicodettp:WFUiEjrljsIDFOmd@cluster1.oeari.mongodb.net/ttp-local"}}
+{"level":"warn","message":"Server worked"}
+{"level":"warn","message":{"db":"mongodb+srv://unicodettp:WFUiEjrljsIDFOmd@cluster1.oeari.mongodb.net/ttp-local"}}
+{"level":"warn","message":"Server worked"}
+{"level":"warn","message":{"db":"mongodb+srv://unicodettp:WFUiEjrljsIDFOmd@cluster1.oeari.mongodb.net/ttp-local"}}
+{"level":"warn","message":"Server worked"}
+{"level":"error","message":{"initializeTrelloBoardsError":{}}}
+{"level":"warn","message":{"db":"mongodb+srv://unicodettp:WFUiEjrljsIDFOmd@cluster1.oeari.mongodb.net/ttp-local"}}
+{"level":"warn","message":"Server worked"}
+{"level":"error","message":{"initializeTrelloBoardsError":{}}}
+{"level":"warn","message":{"db":"mongodb+srv://unicodettp:WFUiEjrljsIDFOmd@cluster1.oeari.mongodb.net/ttp-local"}}
+{"level":"warn","message":"Server worked"}
+{"level":"error","message":{"initializeTrelloBoardsError":{}}}
+{"level":"warn","message":{"db":"mongodb+srv://unicodettp:WFUiEjrljsIDFOmd@cluster1.oeari.mongodb.net/ttp-local"}}
+{"level":"warn","message":"Server worked"}
+{"level":"error","message":{"initializeTrelloBoardsError":{}}}
+{"level":"error","message":{"initializeTTPTasksError":{}}}
+{"level":"warn","message":{"db":"mongodb+srv://unicodettp:WFUiEjrljsIDFOmd@cluster1.oeari.mongodb.net/ttp-local"}}
+{"level":"warn","message":"Server worked"}
+{"level":"error","message":{"initializeTrelloBoardsError":{}}}
+{"level":"error","message":{"initializeTTPTasksError":{}}}
+{"level":"warn","message":{"db":"mongodb+srv://unicodettp:WFUiEjrljsIDFOmd@cluster1.oeari.mongodb.net/ttp-local"}}
+{"level":"warn","message":"Server worked"}
+{"level":"error","message":{"initializeTrelloBoardsError":{}}}
+{"level":"error","message":{"initializeTTPTasksError":{}}}
+{"level":"warn","message":{"db":"mongodb+srv://unicodettp:WFUiEjrljsIDFOmd@cluster1.oeari.mongodb.net/ttp-local"}}
+{"level":"warn","message":"Server worked"}
+{"level":"error","message":{"initializeTrelloBoardsError":{}}}
+{"level":"warn","message":{"db":"mongodb+srv://unicodettp:WFUiEjrljsIDFOmd@cluster1.oeari.mongodb.net/ttp-local"}}
+{"level":"warn","message":"Server worked"}
+{"level":"error","message":{"initializeTrelloBoardsError":{}}}
+{"level":"warn","message":{"db":"mongodb+srv://unicodettp:WFUiEjrljsIDFOmd@cluster1.oeari.mongodb.net/ttp-local"}}
+{"level":"warn","message":"Server worked"}
+{"level":"error","message":{"initializeTrelloBoardsError":{}}}
+{"level":"warn","message":{"db":"mongodb+srv://unicodettp:WFUiEjrljsIDFOmd@cluster1.oeari.mongodb.net/ttp-local"}}
+{"level":"warn","message":"Server worked"}
+{"level":"warn","message":{"db":"mongodb+srv://unicodettp:WFUiEjrljsIDFOmd@cluster1.oeari.mongodb.net/ttp-local"}}
+{"level":"warn","message":"Server worked"}
+{"level":"error","message":{"initializeTrelloBoardsError":{}}}
+{"level":"warn","message":{"db":"mongodb+srv://unicodettp:WFUiEjrljsIDFOmd@cluster1.oeari.mongodb.net/ttp-local"}}
+{"level":"warn","message":"Server worked"}
+{"level":"error","message":{"initializeTrelloBoardsError":{}}}
+{"level":"warn","message":{"db":"mongodb+srv://unicodettp:WFUiEjrljsIDFOmd@cluster1.oeari.mongodb.net/ttp-local"}}
+{"level":"warn","message":"Server worked"}
+{"level":"error","message":{"initializeTrelloBoardsError":{}}}
+{"level":"warn","message":{"db":"mongodb+srv://unicodettp:WFUiEjrljsIDFOmd@cluster1.oeari.mongodb.net/ttp-local"}}
+{"level":"warn","message":"Server worked"}
+{"level":"error","message":{"initializeTrelloBoardsError":{}}}
+{"level":"warn","message":{"db":"mongodb+srv://unicodettp:WFUiEjrljsIDFOmd@cluster1.oeari.mongodb.net/ttp-local"}}
+{"level":"warn","message":"Server worked"}
+{"level":"error","message":{"initializeTrelloBoardsError":{}}}
+{"level":"warn","message":{"db":"mongodb+srv://unicodettp:WFUiEjrljsIDFOmd@cluster1.oeari.mongodb.net/ttp-local"}}
+{"level":"warn","message":"Server worked"}
+{"level":"error","message":{"initializeTrelloBoardsError":{}}}
+{"level":"warn","message":{"db":"mongodb+srv://unicodettp:WFUiEjrljsIDFOmd@cluster1.oeari.mongodb.net/ttp-local"}}
+{"level":"warn","message":"Server worked"}
+{"level":"error","message":{"initializeTrelloBoardsError":{}}}
+{"level":"warn","message":{"db":"mongodb+srv://unicodettp:WFUiEjrljsIDFOmd@cluster1.oeari.mongodb.net/ttp-local"}}
+{"level":"warn","message":"Server worked"}
+{"level":"error","message":{"initializeTrelloBoardsError":{}}}
+{"level":"warn","message":{"db":"mongodb+srv://unicodettp:WFUiEjrljsIDFOmd@cluster1.oeari.mongodb.net/ttp-local"}}
+{"level":"warn","message":"Server worked"}
+{"level":"error","message":{"initializeTrelloBoardsError":{}}}
+{"level":"warn","message":{"db":"mongodb+srv://unicodettp:WFUiEjrljsIDFOmd@cluster1.oeari.mongodb.net/ttp-local"}}
+{"level":"warn","message":"Server worked"}
+{"level":"error","message":{"initializeTrelloBoardsError":{}}}
+{"level":"warn","message":{"db":"mongodb+srv://unicodettp:WFUiEjrljsIDFOmd@cluster1.oeari.mongodb.net/ttp-local"}}
+{"level":"warn","message":"Server worked"}
+{"level":"error","message":{"initializeTrelloBoardsError":{}}}
+{"level":"warn","message":{"db":"mongodb+srv://unicodettp:WFUiEjrljsIDFOmd@cluster1.oeari.mongodb.net/ttp-local"}}
+{"level":"warn","message":"Server worked"}
+{"level":"error","message":{"initializeTrelloBoardsError":{}}}
+{"level":"warn","message":{"db":"mongodb+srv://unicodettp:WFUiEjrljsIDFOmd@cluster1.oeari.mongodb.net/ttp-local"}}
+{"level":"warn","message":"Server worked"}
+{"level":"error","message":{"initializeTrelloBoardsError":{}}}
+{"level":"warn","message":{"db":"mongodb+srv://unicodettp:WFUiEjrljsIDFOmd@cluster1.oeari.mongodb.net/ttp-local"}}
+{"level":"warn","message":"Server worked"}
+{"level":"error","message":{"initializeTrelloBoardsError":{}}}
+{"level":"warn","message":{"db":"mongodb+srv://unicodettp:WFUiEjrljsIDFOmd@cluster1.oeari.mongodb.net/ttp-local"}}
+{"level":"warn","message":"Server worked"}
+{"level":"warn","message":{"db":"mongodb+srv://unicodettp:WFUiEjrljsIDFOmd@cluster1.oeari.mongodb.net/ttp-local"}}
+{"level":"warn","message":"Server worked"}
+{"level":"error","message":{"initializeTrelloBoardsError":{}}}
+{"level":"warn","message":{"db":"mongodb+srv://unicodettp:WFUiEjrljsIDFOmd@cluster1.oeari.mongodb.net/ttp-local"}}
+{"level":"warn","message":"Server worked"}
+{"level":"error","message":{"initializeTrelloBoardsError":{}}}
+{"level":"error","message":{"_fetchActionsOfBoardError":{"message":"invalid json response body at https://api.trello.com/1/boards/651ebb4e9bd7ed34b1e8e633/actions/?filter=createCard,updateCard:due,updateCard:idList&limit=1000&key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68 reason: Unexpected token T in JSON at position 0","type":"invalid-json"}}}
+{"level":"error","message":{"matchTasksWithTrelloError":{}}}
+{"level":"warn","message":{"db":"mongodb+srv://unicodettp:WFUiEjrljsIDFOmd@cluster1.oeari.mongodb.net/ttp-local"}}
+{"level":"warn","message":"Server worked"}
+{"level":"error","message":{"initializeTrelloBoardsError":{}}}
+{"level":"warn","message":{"db":"mongodb+srv://unicodettp:WFUiEjrljsIDFOmd@cluster1.oeari.mongodb.net/ttp-local"}}
+{"level":"warn","message":"Server worked"}
+{"level":"error","message":{"initializeTrelloBoardsError":{}}}
+{"level":"error","message":{"getCardsInBoardError":{"message":"invalid json response body at https://api.trello.com/1/boards/651ebb4e9bd7ed34b1e8e633/cards/open?key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68 reason: Unexpected token T in JSON at position 0","type":"invalid-json"}}}
+{"level":"error","message":{"matchTasksWithTrello":{}}}
+{"level":"warn","message":{"db":"mongodb+srv://unicodettp:WFUiEjrljsIDFOmd@cluster1.oeari.mongodb.net/ttp-local"}}
+{"level":"warn","message":"Server worked"}
+{"level":"error","message":{"initializeTrelloBoardsError":{}}}
+{"level":"error","message":{"getCardsInBoardError":{"message":"invalid json response body at https://api.trello.com/1/boards/651ebb4e9bd7ed34b1e8e633/cards/open?key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68 reason: Unexpected token T in JSON at position 0","type":"invalid-json"}}}
+{"level":"error","message":{"matchTasksWithTrello":{}}}
+{"level":"warn","message":{"db":"mongodb+srv://unicodettp:WFUiEjrljsIDFOmd@cluster1.oeari.mongodb.net/ttp-local"}}
+{"level":"warn","message":"Server worked"}
+{"level":"error","message":{"initializeTrelloBoardsError":{}}}
+{"level":"error","message":{"getCardsInBoardError":{"message":"invalid json response body at https://api.trello.com/1/boards/651ebb4e9bd7ed34b1e8e633/cards/open?key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68 reason: Unexpected token T in JSON at position 0","type":"invalid-json"}}}
+{"level":"error","message":{"matchTasksWithTrello":{}}}
+{"level":"warn","message":{"db":"mongodb+srv://unicodettp:WFUiEjrljsIDFOmd@cluster1.oeari.mongodb.net/ttp-local"}}
+{"level":"warn","message":"Server worked"}
+{"level":"error","message":{"initializeTrelloBoardsError":{}}}
+{"level":"error","message":{"getCardsInBoardError":{"message":"invalid json response body at https://api.trello.com/1/boards/651ebb4e9bd7ed34b1e8e633/cards/open?key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68 reason: Unexpected token T in JSON at position 0","type":"invalid-json"}}}
+{"level":"error","message":{"matchTasksWithTrello":{}}}
+{"level":"warn","message":{"db":"mongodb+srv://unicodettp:WFUiEjrljsIDFOmd@cluster1.oeari.mongodb.net/ttp-local"}}
+{"level":"warn","message":"Server worked"}
+{"level":"error","message":{"initializeTrelloBoardsError":{}}}
+{"level":"error","message":{"getCardsInBoardError":{"message":"invalid json response body at https://api.trello.com/1/boards/651ebb4e9bd7ed34b1e8e633/cards/open?key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68 reason: Unexpected token T in JSON at position 0","type":"invalid-json"}}}
+{"level":"error","message":{"matchTasksWithTrello":{}}}
+{"level":"warn","message":{"db":"mongodb+srv://unicodettp:WFUiEjrljsIDFOmd@cluster1.oeari.mongodb.net/ttp-local"}}
+{"level":"warn","message":"Server worked"}
+{"level":"error","message":{"initializeTrelloBoardsError":{}}}
+{"level":"error","message":{"getCardsInBoardError":{"message":"invalid json response body at https://api.trello.com/1/boards/651ebb4e9bd7ed34b1e8e633/cards/open?key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68 reason: Unexpected token T in JSON at position 0","type":"invalid-json"}}}
+{"level":"error","message":{"matchTasksWithTrello":{}}}
+{"level":"warn","message":{"db":"mongodb+srv://unicodettp:WFUiEjrljsIDFOmd@cluster1.oeari.mongodb.net/ttp-local"}}
+{"level":"warn","message":"Server worked"}
+{"level":"error","message":{"findUserError":{"connectionGeneration":1}}}
+{"level":"error","message":{"initializeTrelloBoardsError":{}}}
+{"level":"error","message":{"createUserError":{"connectionGeneration":1}}}
+{"level":"error","message":{"getCardsInBoardError":{"message":"invalid json response body at https://api.trello.com/1/boards/651ebb4e9bd7ed34b1e8e633/cards/open?key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68 reason: Unexpected token T in JSON at position 0","type":"invalid-json"}}}
+{"level":"error","message":{"matchTasksWithTrello":{}}}
+{"level":"warn","message":{"db":"mongodb+srv://unicodettp:WFUiEjrljsIDFOmd@cluster1.oeari.mongodb.net/ttp-local"}}
+{"level":"warn","message":"Server worked"}
+{"level":"warn","message":{"db":"mongodb+srv://unicodettp:WFUiEjrljsIDFOmd@cluster1.oeari.mongodb.net/ttp-local"}}
+{"level":"warn","message":"Server worked"}
+{"level":"warn","message":{"db":"mongodb+srv://unicodettp:WFUiEjrljsIDFOmd@cluster1.oeari.mongodb.net/ttp-local"}}
+{"level":"warn","message":"Server worked"}
+{"level":"warn","message":{"db":"mongodb+srv://unicodettp:WFUiEjrljsIDFOmd@cluster1.oeari.mongodb.net/ttp-local"}}
+{"level":"warn","message":"Server worked"}
+{"level":"error","message":{"initializeTrelloBoardsError":{}}}
+{"level":"error","message":{"getCardsInBoardError":{"message":"invalid json response body at https://api.trello.com/1/boards/651ebb4e9bd7ed34b1e8e633/cards/open?key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68 reason: Unexpected token T in JSON at position 0","type":"invalid-json"}}}
+{"level":"error","message":{"matchTasksWithTrello":{}}}
+{"level":"warn","message":{"db":"mongodb+srv://unicodettp:WFUiEjrljsIDFOmd@cluster1.oeari.mongodb.net/ttp-local"}}
+{"level":"warn","message":"Server worked"}
+{"level":"error","message":{"initializeTrelloBoardsError":{}}}
+{"level":"error","message":{"getCardsInBoardError":{"message":"invalid json response body at https://api.trello.com/1/boards/651ebb4e9bd7ed34b1e8e633/cards/open?key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68 reason: Unexpected token T in JSON at position 0","type":"invalid-json"}}}
+{"level":"error","message":{"matchTasksWithTrello":{}}}
+{"level":"warn","message":{"db":"mongodb+srv://unicodettp:WFUiEjrljsIDFOmd@cluster1.oeari.mongodb.net/ttp-local"}}
+{"level":"warn","message":"Server worked"}
+{"level":"error","message":{"initializeTrelloBoardsError":{}}}
+{"level":"error","message":{"getCardsInBoardError":{"message":"invalid json response body at https://api.trello.com/1/boards/651ebb4e9bd7ed34b1e8e633/cards/open?key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68 reason: Unexpected token T in JSON at position 0","type":"invalid-json"}}}
+{"level":"error","message":{"matchTasksWithTrello":{}}}
+{"level":"warn","message":{"db":"mongodb+srv://unicodettp:WFUiEjrljsIDFOmd@cluster1.oeari.mongodb.net/ttp-local"}}
+{"level":"warn","message":"Server worked"}
+{"level":"error","message":{"initializeTrelloBoardsError":{}}}
+{"level":"error","message":{"getCardsInBoardError":{"message":"invalid json response body at https://api.trello.com/1/boards/651ebb4e9bd7ed34b1e8e633/cards/open?key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68 reason: Unexpected token T in JSON at position 0","type":"invalid-json"}}}
+{"level":"error","message":{"matchTasksWithTrello":{}}}
+{"level":"warn","message":{"db":"mongodb+srv://unicodettp:WFUiEjrljsIDFOmd@cluster1.oeari.mongodb.net/ttp-local"}}
+{"level":"warn","message":"Server worked"}
+{"level":"error","message":{"initializeTrelloBoardsError":{}}}
+{"level":"error","message":{"getCardsInBoardError":{"message":"invalid json response body at https://api.trello.com/1/boards/651ebb4e9bd7ed34b1e8e633/cards/open?key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68 reason: Unexpected token T in JSON at position 0","type":"invalid-json"}}}
+{"level":"error","message":{"matchTasksWithTrello":{}}}
+{"level":"warn","message":{"db":"mongodb+srv://unicodettp:WFUiEjrljsIDFOmd@cluster1.oeari.mongodb.net/ttp-local"}}
+{"level":"warn","message":"Server worked"}
+{"level":"error","message":{"initializeTrelloBoardsError":{}}}
+{"level":"error","message":{"getCardsInBoardError":{"message":"invalid json response body at https://api.trello.com/1/boards/651ebb4e9bd7ed34b1e8e633/cards/open?key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68 reason: Unexpected token T in JSON at position 0","type":"invalid-json"}}}
+{"level":"error","message":{"matchTasksWithTrello":{}}}
+{"level":"warn","message":{"db":"mongodb+srv://unicodettp:WFUiEjrljsIDFOmd@cluster1.oeari.mongodb.net/ttp-local"}}
+{"level":"warn","message":"Server worked"}
+{"level":"error","message":{"initializeTrelloBoardsError":{}}}
+{"level":"error","message":{"getCardsInBoardError":{"message":"invalid json response body at https://api.trello.com/1/boards/651ebb4e9bd7ed34b1e8e633/cards/open?key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68 reason: Unexpected token T in JSON at position 0","type":"invalid-json"}}}
+{"level":"error","message":{"matchTasksWithTrello":{}}}
+{"level":"warn","message":{"db":"mongodb+srv://unicodettp:WFUiEjrljsIDFOmd@cluster1.oeari.mongodb.net/ttp-local"}}
+{"level":"warn","message":"Server worked"}
+{"level":"error","message":{"initializeTrelloBoardsError":{}}}
+{"level":"error","message":{"getCardsInBoardError":{"message":"invalid json response body at https://api.trello.com/1/boards/651ebb4e9bd7ed34b1e8e633/cards/open?key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68 reason: Unexpected token T in JSON at position 0","type":"invalid-json"}}}
+{"level":"error","message":{"matchTasksWithTrello":{}}}
+{"level":"warn","message":{"db":"mongodb+srv://unicodettp:WFUiEjrljsIDFOmd@cluster1.oeari.mongodb.net/ttp-local"}}
+{"level":"warn","message":"Server worked"}
+{"level":"error","message":{"initializeTrelloBoardsError":{}}}
+{"level":"error","message":{"getCardsInBoardError":{"message":"invalid json response body at https://api.trello.com/1/boards/651ebb4e9bd7ed34b1e8e633/cards/open?key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68 reason: Unexpected token T in JSON at position 0","type":"invalid-json"}}}
+{"level":"error","message":{"matchTasksWithTrello":{}}}
+{"level":"warn","message":{"db":"mongodb+srv://unicodettp:WFUiEjrljsIDFOmd@cluster1.oeari.mongodb.net/ttp-local"}}
+{"level":"warn","message":"Server worked"}
+{"level":"error","message":{"initializeTrelloBoardsError":{}}}
+{"level":"error","message":{"getCardsInBoardError":{"message":"invalid json response body at https://api.trello.com/1/boards/651ebb4e9bd7ed34b1e8e633/cards/open?key=0d05ca858d1bc7893a91aef2712e7568&token=2d8a9892820b0ddb4d67225b6ab7f4130ccd31fffc6860c3f743e3bf6147af68 reason: Unexpected token T in JSON at position 0","type":"invalid-json"}}}
+{"level":"error","message":{"matchTasksWithTrello":{}}}
+{"level":"warn","message":{"db":"mongodb+srv://unicodettp:WFUiEjrljsIDFOmd@cluster1.oeari.mongodb.net/ttp-local"}}
+{"level":"warn","message":"Server worked"}
+{"level":"error","message":{"initializeTrelloBoardsError":{}}}
+{"level":"error","message":{"matchTasksWithTrello":{}}}
+{"level":"warn","message":{"db":"mongodb+srv://unicodettp:WFUiEjrljsIDFOmd@cluster1.oeari.mongodb.net/ttp-local"}}
+{"level":"warn","message":"Server worked"}
+{"level":"error","message":{"initializeTrelloBoardsError":{}}}
+{"level":"error","message":{"matchTasksWithTrello":{}}}
+{"level":"warn","message":{"db":"mongodb+srv://unicodettp:WFUiEjrljsIDFOmd@cluster1.oeari.mongodb.net/ttp-local"}}
+{"level":"warn","message":"Server worked"}
+{"level":"warn","message":{"db":"mongodb+srv://unicodettp:WFUiEjrljsIDFOmd@cluster1.oeari.mongodb.net/ttp-local"}}
+{"level":"warn","message":"Server worked"}
+{"level":"error","message":{"initializeTrelloBoardsError":{}}}
+{"level":"error","message":{"matchTasksWithTrello":{}}}
+{"level":"warn","message":{"db":"mongodb+srv://unicodettp:WFUiEjrljsIDFOmd@cluster1.oeari.mongodb.net/ttp-local"}}
+{"level":"warn","message":"Server worked"}
+{"level":"error","message":{"initializeTrelloBoardsError":{}}}
+{"level":"error","message":{"matchTasksWithTrello":{}}}
+{"level":"warn","message":{"db":"mongodb+srv://unicodettp:WFUiEjrljsIDFOmd@cluster1.oeari.mongodb.net/ttp-local"}}
+{"level":"warn","message":"Server worked"}
+{"level":"error","message":{"initializeTrelloBoardsError":{}}}
+{"level":"error","message":{"matchTasksWithTrello":{}}}
+{"level":"warn","message":{"db":"mongodb+srv://unicodettp:WFUiEjrljsIDFOmd@cluster1.oeari.mongodb.net/ttp-local"}}
+{"level":"warn","message":"Server worked"}
+{"level":"error","message":{"initializeTrelloBoardsError":{}}}
+{"level":"error","message":{"matchTasksWithTrello":{}}}
+{"level":"warn","message":{"db":"mongodb+srv://unicodettp:WFUiEjrljsIDFOmd@cluster1.oeari.mongodb.net/ttp-local"}}
+{"level":"warn","message":"Server worked"}
+{"level":"error","message":{"initializeTrelloBoardsError":{}}}
+{"level":"error","message":{"matchTasksWithTrello":{}}}
+{"level":"warn","message":{"db":"mongodb+srv://unicodettp:WFUiEjrljsIDFOmd@cluster1.oeari.mongodb.net/ttp-local"}}
+{"level":"warn","message":"Server worked"}
+{"level":"error","message":{"initializeTrelloBoardsError":{}}}
+{"level":"error","message":{"matchTasksWithTrello":{}}}
+{"level":"warn","message":{"db":"mongodb+srv://unicodettp:WFUiEjrljsIDFOmd@cluster1.oeari.mongodb.net/ttp-local"}}
+{"level":"warn","message":"Server worked"}
+{"level":"error","message":{"initializeTrelloBoardsError":{}}}
+{"level":"error","message":{"matchTasksWithTrello":{}}}
+{"level":"warn","message":{"db":"mongodb+srv://unicodettp:WFUiEjrljsIDFOmd@cluster1.oeari.mongodb.net/ttp-local"}}
+{"level":"warn","message":"Server worked"}
+{"level":"error","message":{"initializeTrelloBoardsError":{}}}
+{"level":"error","message":{"matchTasksWithTrello":{}}}
+{"level":"warn","message":{"db":"mongodb+srv://unicodettp:WFUiEjrljsIDFOmd@cluster1.oeari.mongodb.net/ttp-local"}}
+{"level":"warn","message":"Server worked"}
+{"level":"warn","message":{"db":"mongodb+srv://unicodettp:WFUiEjrljsIDFOmd@cluster1.oeari.mongodb.net/ttp-local"}}
+{"level":"warn","message":"Server worked"}
+{"level":"error","message":{"initializeTrelloBoardsError":{}}}
+{"level":"error","message":{"matchTasksWithTrello":{}}}
+{"level":"warn","message":{"db":"mongodb+srv://unicodettp:WFUiEjrljsIDFOmd@cluster1.oeari.mongodb.net/ttp-local"}}
+{"level":"warn","message":"Server worked"}
+{"level":"error","message":{"initializeTrelloBoardsError":{}}}
+{"level":"error","message":{"matchTasksWithTrello":{}}}
+{"level":"warn","message":{"db":"mongodb+srv://unicodettp:WFUiEjrljsIDFOmd@cluster1.oeari.mongodb.net/ttp-local"}}
+{"level":"warn","message":"Server worked"}
+{"level":"error","message":{"initializeTrelloBoardsError":{}}}
+{"level":"warn","message":{"db":"mongodb+srv://unicodettp:WFUiEjrljsIDFOmd@cluster1.oeari.mongodb.net/ttp-local"}}
+{"level":"warn","message":"Server worked"}
+{"level":"error","message":{"initializeTrelloBoardsError":{}}}
+{"level":"error","message":{"matchTasksWithTrello":{}}}
+{"level":"warn","message":{"db":"mongodb+srv://unicodettp:WFUiEjrljsIDFOmd@cluster1.oeari.mongodb.net/ttp-local"}}
+{"level":"warn","message":"Server worked"}
+{"level":"error","message":{"initializeTrelloBoardsError":{}}}
+{"level":"error","message":{"matchTasksWithTrello":{}}}
+{"level":"warn","message":{"db":"mongodb+srv://unicodettp:WFUiEjrljsIDFOmd@cluster1.oeari.mongodb.net/ttp-local"}}
+{"level":"warn","message":"Server worked"}
+{"level":"error","message":{"initializeTrelloBoardsError":{}}}
+{"level":"error","message":{"matchTasksWithTrello":{}}}
+{"level":"warn","message":{"db":"mongodb+srv://unicodettp:WFUiEjrljsIDFOmd@cluster1.oeari.mongodb.net/ttp-local"}}
+{"level":"warn","message":"Server worked"}
+{"level":"error","message":{"initializeTrelloBoardsError":{}}}
+{"level":"error","message":{"matchTasksWithTrello":{}}}
+{"level":"warn","message":{"db":"mongodb+srv://unicodettp:WFUiEjrljsIDFOmd@cluster1.oeari.mongodb.net/ttp-local"}}
+{"level":"warn","message":"Server worked"}
+{"level":"error","message":{"initializeTrelloBoardsError":{}}}
+{"level":"error","message":{"matchTasksWithTrello":{}}}
+{"level":"warn","message":{"db":"mongodb+srv://unicodettp:WFUiEjrljsIDFOmd@cluster1.oeari.mongodb.net/ttp-local"}}
+{"level":"warn","message":{"db":"mongodb+srv://unicodettp:WFUiEjrljsIDFOmd@cluster1.oeari.mongodb.net/ttp-local"}}
+{"level":"warn","message":{"db":"mongodb+srv://unicodettp:WFUiEjrljsIDFOmd@cluster1.oeari.mongodb.net/ttp-local"}}
+{"level":"warn","message":{"db":"mongodb+srv://unicodettp:WFUiEjrljsIDFOmd@cluster1.oeari.mongodb.net/ttp-local"}}
+{"level":"warn","message":{"db":"mongodb+srv://unicodettp:WFUiEjrljsIDFOmd@cluster1.oeari.mongodb.net/ttp-local"}}
+{"level":"warn","message":{"db":"mongodb+srv://unicodettp:WFUiEjrljsIDFOmd@cluster1.oeari.mongodb.net/ttp-local"}}
+{"level":"warn","message":"Server worked"}
+{"level":"error","message":{"initializeTrelloBoardsError":{}}}
+{"level":"error","message":{"matchTasksWithTrello":{}}}
+{"level":"warn","message":{"db":"mongodb+srv://unicodettp:WFUiEjrljsIDFOmd@cluster1.oeari.mongodb.net/ttp-local"}}
+{"level":"warn","message":"Server worked"}
+{"level":"error","message":{"initializeTrelloBoardsError":{}}}
+{"level":"error","message":{"matchTasksWithTrello":{}}}
+{"level":"warn","message":{"db":"mongodb+srv://unicodettp:WFUiEjrljsIDFOmd@cluster1.oeari.mongodb.net/ttp-local"}}
+{"level":"warn","message":"Server worked"}
+{"level":"warn","message":{"db":"mongodb+srv://unicodettp:WFUiEjrljsIDFOmd@cluster1.oeari.mongodb.net/ttp-local"}}
+{"level":"warn","message":"Server worked"}
+{"level":"error","message":{"initializeTrelloBoardsError":{}}}
+{"level":"error","message":{"matchTasksWithTrello":{}}}
+{"level":"warn","message":{"db":"mongodb+srv://unicodettp:WFUiEjrljsIDFOmd@cluster1.oeari.mongodb.net/ttp-local"}}
+{"level":"warn","message":"Server worked"}
+{"level":"error","message":{"initializeTrelloBoardsError":{}}}
+{"level":"error","message":{"matchTasksWithTrello":{}}}
+{"level":"warn","message":{"db":"mongodb+srv://unicodettp:WFUiEjrljsIDFOmd@cluster1.oeari.mongodb.net/ttp-local"}}
+{"level":"warn","message":"Server worked"}
+{"level":"warn","message":{"db":"mongodb+srv://unicodettp:WFUiEjrljsIDFOmd@cluster1.oeari.mongodb.net/ttp-local"}}
+{"level":"warn","message":"Server worked"}
+{"level":"error","message":{"initializeTrelloBoardsError":{}}}
+{"level":"error","message":{"matchTasksWithTrello":{}}}
+{"level":"warn","message":{"db":"mongodb+srv://unicodettp:WFUiEjrljsIDFOmd@cluster1.oeari.mongodb.net/ttp-local"}}
+{"level":"warn","message":"Server worked"}
+{"level":"error","message":{"initializeTrelloBoardsError":{}}}
+{"level":"error","message":{"matchTasksWithTrello":{}}}
+{"level":"warn","message":{"db":"mongodb+srv://unicodettp:WFUiEjrljsIDFOmd@cluster1.oeari.mongodb.net/ttp-local"}}
+{"level":"warn","message":"Server worked"}
+{"level":"error","message":{"initializeTrelloBoardsError":{}}}
+{"level":"error","message":{"matchTasksWithTrello":{}}}
+{"level":"warn","message":{"db":"mongodb+srv://unicodettp:WFUiEjrljsIDFOmd@cluster1.oeari.mongodb.net/ttp-local"}}
+{"level":"warn","message":"Server worked"}
+{"level":"error","message":{"initializeTrelloBoardsError":{}}}
+{"level":"error","message":{"matchTasksWithTrello":{}}}
+{"level":"warn","message":{"db":"mongodb+srv://unicodettp:WFUiEjrljsIDFOmd@cluster1.oeari.mongodb.net/ttp-local"}}
+{"level":"warn","message":"Server worked"}
+{"level":"error","message":{"initializeTrelloBoardsError":{}}}
+{"level":"error","message":{"matchTasksWithTrello":{}}}
+{"level":"warn","message":{"db":"mongodb+srv://unicodettp:WFUiEjrljsIDFOmd@cluster1.oeari.mongodb.net/ttp-local"}}
+{"level":"warn","message":"Server worked"}
+{"level":"error","message":{"initializeTrelloBoardsError":{}}}
+{"level":"error","message":{"matchTasksWithTrello":{}}}
+{"level":"warn","message":{"db":"mongodb+srv://unicodettp:WFUiEjrljsIDFOmd@cluster1.oeari.mongodb.net/ttp-local"}}
+{"level":"warn","message":"Server worked"}
+{"level":"error","message":{"initializeTrelloBoardsError":{}}}
+{"level":"error","message":{"matchTasksWithTrello":{}}}
+{"level":"warn","message":{"db":"mongodb+srv://unicodettp:WFUiEjrljsIDFOmd@cluster1.oeari.mongodb.net/ttp-local"}}
+{"level":"warn","message":"Server worked"}
+{"level":"error","message":{"initializeTrelloBoardsError":{}}}
+{"level":"error","message":{"matchTasksWithTrello":{}}}
+{"level":"warn","message":{"db":"mongodb+srv://unicodettp:WFUiEjrljsIDFOmd@cluster1.oeari.mongodb.net/ttp-local"}}
+{"level":"warn","message":"Server worked"}
+{"level":"error","message":{"initializeTrelloBoardsError":{}}}
+{"level":"error","message":{"matchTasksWithTrello":{}}}
+{"level":"warn","message":{"db":"mongodb+srv://unicodettp:WFUiEjrljsIDFOmd@cluster1.oeari.mongodb.net/ttp-local"}}
+{"level":"warn","message":"Server worked"}
+{"level":"error","message":{"initializeTrelloBoardsError":{}}}
+{"level":"error","message":{"matchTasksWithTrello":{}}}
+{"level":"warn","message":{"db":"mongodb+srv://unicodettp:WFUiEjrljsIDFOmd@cluster1.oeari.mongodb.net/ttp-local"}}
+{"level":"warn","message":"Server worked"}
+{"level":"error","message":{"initializeTrelloBoardsError":{}}}
+{"level":"error","message":{"matchTasksWithTrello":{}}}
+{"level":"warn","message":{"db":"mongodb+srv://unicodettp:WFUiEjrljsIDFOmd@cluster1.oeari.mongodb.net/ttp-local"}}
+{"level":"warn","message":"Server worked"}
+{"level":"error","message":{"initializeTrelloBoardsError":{}}}
+{"level":"error","message":{"matchTasksWithTrello":{}}}
+{"level":"warn","message":{"db":"mongodb+srv://unicodettp:WFUiEjrljsIDFOmd@cluster1.oeari.mongodb.net/ttp-local"}}
+{"level":"warn","message":"Server worked"}
+{"level":"error","message":{"initializeTrelloBoardsError":{}}}
+{"level":"error","message":{"matchTasksWithTrello":{}}}
+{"level":"warn","message":{"db":"mongodb+srv://unicodettp:WFUiEjrljsIDFOmd@cluster1.oeari.mongodb.net/ttp-local"}}
+{"level":"warn","message":"Server worked"}
+{"level":"error","message":{"matchTasksWithTrello":{}}}
+{"level":"warn","message":{"db":"mongodb+srv://unicodettp:WFUiEjrljsIDFOmd@cluster1.oeari.mongodb.net/ttp-local"}}
+{"level":"warn","message":"Server worked"}
+{"level":"error","message":{"matchTasksWithTrello":{}}}
+{"level":"warn","message":{"db":"mongodb+srv://unicodettp:WFUiEjrljsIDFOmd@cluster1.oeari.mongodb.net/ttp-local"}}
+{"level":"warn","message":"Server worked"}
+{"level":"error","message":{"matchTasksWithTrello":{}}}
+{"level":"warn","message":{"db":"mongodb+srv://unicodettp:WFUiEjrljsIDFOmd@cluster1.oeari.mongodb.net/ttp-local"}}
+{"level":"warn","message":"Server worked"}
+{"level":"error","message":{"matchTasksWithTrello":{}}}
+{"level":"warn","message":{"db":"mongodb+srv://unicodettp:WFUiEjrljsIDFOmd@cluster1.oeari.mongodb.net/ttp-local"}}
+{"level":"warn","message":"Server worked"}
+{"level":"warn","message":{"db":"mongodb+srv://unicodettp:WFUiEjrljsIDFOmd@cluster1.oeari.mongodb.net/ttp-local"}}
+{"level":"warn","message":"Server worked"}
+{"level":"error","message":{"matchTasksWithTrello":{}}}
+{"level":"warn","message":{"db":"mongodb+srv://unicodettp:WFUiEjrljsIDFOmd@cluster1.oeari.mongodb.net/ttp-local"}}
+{"level":"warn","message":"Server worked"}
+{"level":"error","message":{"matchTasksWithTrello":{}}}
+{"level":"warn","message":{"db":"mongodb+srv://unicodettp:WFUiEjrljsIDFOmd@cluster1.oeari.mongodb.net/ttp-local"}}
+{"level":"warn","message":"Server worked"}
+{"level":"error","message":{"matchTasksWithTrello":{}}}
+{"level":"warn","message":{"db":"mongodb+srv://unicodettp:WFUiEjrljsIDFOmd@cluster1.oeari.mongodb.net/ttp-local"}}
+{"level":"warn","message":"Server worked"}
+{"level":"error","message":{"matchTasksWithTrello":{}}}
+{"level":"warn","message":{"db":"mongodb+srv://unicodettp:WFUiEjrljsIDFOmd@cluster1.oeari.mongodb.net/ttp-local"}}
+{"level":"warn","message":"Server worked"}
+{"level":"error","message":{"matchTasksWithTrello":{}}}
+{"level":"warn","message":{"db":"mongodb+srv://unicodettp:WFUiEjrljsIDFOmd@cluster1.oeari.mongodb.net/ttp-local"}}
+{"level":"warn","message":"Server worked"}
+{"level":"error","message":{"matchTasksWithTrello":{}}}
+{"level":"warn","message":{"db":"mongodb+srv://unicodettp:WFUiEjrljsIDFOmd@cluster1.oeari.mongodb.net/ttp-local"}}
+{"level":"warn","message":"Server worked"}
+{"level":"error","message":{"matchTasksWithTrello":{}}}
+{"level":"warn","message":{"db":"mongodb+srv://unicodettp:WFUiEjrljsIDFOmd@cluster1.oeari.mongodb.net/ttp-local"}}
+{"level":"warn","message":"Server worked"}
+{"level":"error","message":{"matchTasksWithTrello":{}}}
+{"level":"warn","message":{"db":"mongodb+srv://unicodettp:WFUiEjrljsIDFOmd@cluster1.oeari.mongodb.net/ttp-local"}}
+{"level":"warn","message":"Server worked"}
+{"level":"error","message":{"matchTasksWithTrello":{}}}
+{"level":"warn","message":{"db":"mongodb+srv://unicodettp:WFUiEjrljsIDFOmd@cluster1.oeari.mongodb.net/ttp-local"}}
+{"level":"warn","message":"Server worked"}
+{"level":"error","message":{"matchTasksWithTrello":{}}}
+{"level":"warn","message":{"db":"mongodb+srv://unicodettp:WFUiEjrljsIDFOmd@cluster1.oeari.mongodb.net/ttp-local"}}
+{"level":"warn","message":"Server worked"}
+{"level":"error","message":{"matchTasksWithTrello":{}}}
+{"level":"warn","message":{"db":"mongodb+srv://unicodettp:WFUiEjrljsIDFOmd@cluster1.oeari.mongodb.net/ttp-local"}}
+{"level":"warn","message":"Server worked"}
+{"level":"error","message":{"matchTasksWithTrello":{}}}
+{"level":"warn","message":{"db":"mongodb+srv://unicodettp:WFUiEjrljsIDFOmd@cluster1.oeari.mongodb.net/ttp-local"}}
+{"level":"warn","message":"Server worked"}
+{"level":"error","message":{"matchTasksWithTrello":{}}}
+{"level":"warn","message":{"db":"mongodb+srv://unicodettp:WFUiEjrljsIDFOmd@cluster1.oeari.mongodb.net/ttp-local"}}
+{"level":"warn","message":"Server worked"}
+{"level":"error","message":{"matchTasksWithTrello":{}}}
+{"level":"warn","message":{"db":"mongodb+srv://unicodettp:WFUiEjrljsIDFOmd@cluster1.oeari.mongodb.net/ttp-local"}}
+{"level":"warn","message":"Server worked"}
+{"level":"error","message":{"matchTasksWithTrello":{}}}
+{"level":"warn","message":{"db":"mongodb+srv://unicodettp:WFUiEjrljsIDFOmd@cluster1.oeari.mongodb.net/ttp-local"}}
+{"level":"warn","message":"Server worked"}
+{"level":"warn","message":{"db":"mongodb+srv://unicodettp:WFUiEjrljsIDFOmd@cluster1.oeari.mongodb.net/ttp-local"}}
+{"level":"warn","message":"Server worked"}
+{"level":"error","message":{"matchTasksWithTrello":{}}}
+{"level":"warn","message":{"db":"mongodb+srv://unicodettp:WFUiEjrljsIDFOmd@cluster1.oeari.mongodb.net/ttp-local"}}
+{"level":"warn","message":"Server worked"}
+{"level":"error","message":{"matchTasksWithTrello":{}}}
+{"level":"warn","message":{"db":"mongodb+srv://unicodettp:WFUiEjrljsIDFOmd@cluster1.oeari.mongodb.net/ttp-local"}}
+{"level":"warn","message":"Server worked"}
+{"level":"warn","message":{"db":"mongodb+srv://unicodettp:WFUiEjrljsIDFOmd@cluster1.oeari.mongodb.net/ttp-local"}}
+{"level":"warn","message":"Server worked"}
+{"level":"error","message":{"matchTasksWithTrello":{}}}
+{"level":"warn","message":{"db":"mongodb+srv://unicodettp:WFUiEjrljsIDFOmd@cluster1.oeari.mongodb.net/ttp-local"}}
+{"level":"warn","message":"Server worked"}
+{"level":"error","message":{"initializeTrelloBoardsError":{}}}
+{"level":"error","message":{"matchTasksWithTrello":{}}}
+{"level":"warn","message":{"db":"mongodb+srv://unicodettp:WFUiEjrljsIDFOmd@cluster1.oeari.mongodb.net/ttp-local"}}
+{"level":"warn","message":"Server worked"}
+{"level":"error","message":{"matchTasksWithTrello":{}}}
+{"level":"warn","message":{"db":"mongodb+srv://unicodettp:WFUiEjrljsIDFOmd@cluster1.oeari.mongodb.net/ttp-local"}}
+{"level":"warn","message":"Server worked"}
+{"level":"error","message":{"matchTasksWithTrello":{}}}
+{"level":"warn","message":{"db":"mongodb+srv://unicodettp:WFUiEjrljsIDFOmd@cluster1.oeari.mongodb.net/ttp-local"}}
+{"level":"warn","message":"Server worked"}
+{"level":"error","message":{"matchTasksWithTrello":{}}}
+{"level":"warn","message":{"db":"mongodb+srv://unicodettp:WFUiEjrljsIDFOmd@cluster1.oeari.mongodb.net/ttp-local"}}
+{"level":"warn","message":"Server worked"}
+{"level":"error","message":{"matchTasksWithTrello":{}}}
+{"level":"warn","message":{"db":"mongodb+srv://unicodettp:WFUiEjrljsIDFOmd@cluster1.oeari.mongodb.net/ttp-local"}}
+{"level":"warn","message":"Server worked"}
+{"level":"warn","message":{"db":"mongodb+srv://unicodettp:WFUiEjrljsIDFOmd@cluster1.oeari.mongodb.net/ttp-local"}}
+{"level":"warn","message":"Server worked"}
+{"level":"error","message":{"matchTasksWithTrello":{}}}
+{"level":"warn","message":{"db":"mongodb+srv://unicodettp:WFUiEjrljsIDFOmd@cluster1.oeari.mongodb.net/ttp-local"}}
+{"level":"warn","message":"Server worked"}
+{"level":"error","message":{"matchTasksWithTrello":{}}}
+{"level":"warn","message":{"db":"mongodb+srv://unicodettp:WFUiEjrljsIDFOmd@cluster1.oeari.mongodb.net/ttp-local"}}
+{"level":"warn","message":"Server worked"}
+{"level":"error","message":{"matchTasksWithTrello":{}}}
+{"level":"warn","message":{"db":"mongodb+srv://unicodettp:WFUiEjrljsIDFOmd@cluster1.oeari.mongodb.net/ttp-local"}}
+{"level":"warn","message":"Server worked"}
+{"level":"error","message":{"matchTasksWithTrello":{}}}
+{"level":"warn","message":{"db":"mongodb+srv://unicodettp:WFUiEjrljsIDFOmd@cluster1.oeari.mongodb.net/ttp-local"}}
+{"level":"warn","message":"Server worked"}
+{"level":"error","message":{"matchTasksWithTrello":{}}}
+{"level":"warn","message":{"db":"mongodb+srv://unicodettp:WFUiEjrljsIDFOmd@cluster1.oeari.mongodb.net/ttp-local"}}
+{"level":"warn","message":"Server worked"}
+{"level":"error","message":{"matchTasksWithTrello":{}}}
+{"level":"warn","message":{"db":"mongodb+srv://unicodettp:WFUiEjrljsIDFOmd@cluster1.oeari.mongodb.net/ttp-local"}}
+{"level":"warn","message":"Server worked"}
+{"level":"error","message":{"matchTasksWithTrello":{}}}
+{"level":"warn","message":{"db":"mongodb+srv://unicodettp:WFUiEjrljsIDFOmd@cluster1.oeari.mongodb.net/ttp-local"}}
+{"level":"warn","message":"Server worked"}
+{"level":"error","message":{"matchTasksWithTrello":{}}}
+{"level":"warn","message":{"db":"mongodb+srv://unicodettp:WFUiEjrljsIDFOmd@cluster1.oeari.mongodb.net/ttp-local"}}
+{"level":"warn","message":"Server worked"}
+{"level":"warn","message":{"db":"mongodb+srv://unicodettp:WFUiEjrljsIDFOmd@cluster1.oeari.mongodb.net/ttp-local"}}
+{"level":"warn","message":"Server worked"}
+{"level":"error","message":{"matchTasksWithTrello":{}}}
+{"level":"warn","message":{"db":"mongodb+srv://unicodettp:WFUiEjrljsIDFOmd@cluster1.oeari.mongodb.net/ttp-local"}}
+{"level":"warn","message":"Server worked"}
+{"level":"warn","message":{"db":"mongodb+srv://unicodettp:WFUiEjrljsIDFOmd@cluster1.oeari.mongodb.net/ttp-local"}}
+{"level":"warn","message":"Server worked"}
+{"level":"error","message":{"matchTasksWithTrello":{}}}
+{"level":"warn","message":{"db":"mongodb+srv://unicodettp:WFUiEjrljsIDFOmd@cluster1.oeari.mongodb.net/ttp-local"}}
+{"level":"warn","message":"Server worked"}
+{"level":"error","message":{"matchTasksWithTrello":{}}}
+{"level":"warn","message":{"db":"mongodb+srv://unicodettp:WFUiEjrljsIDFOmd@cluster1.oeari.mongodb.net/ttp-local"}}
+{"level":"warn","message":"Server worked"}
+{"level":"error","message":{"matchTasksWithTrello":{}}}
+{"level":"warn","message":{"db":"mongodb+srv://unicodettp:WFUiEjrljsIDFOmd@cluster1.oeari.mongodb.net/ttp-local"}}
+{"level":"warn","message":"Server worked"}
+{"level":"error","message":{"matchTasksWithTrello":{}}}
+{"level":"warn","message":{"db":"mongodb+srv://unicodettp:WFUiEjrljsIDFOmd@cluster1.oeari.mongodb.net/ttp-local"}}
+{"level":"warn","message":"Server worked"}
+{"level":"error","message":{"matchTasksWithTrello":{}}}
+{"level":"warn","message":{"db":"mongodb+srv://unicodettp:WFUiEjrljsIDFOmd@cluster1.oeari.mongodb.net/ttp-local"}}
+{"level":"warn","message":"Server worked"}
+{"level":"error","message":{"matchTasksWithTrello":{}}}
+{"level":"warn","message":{"db":"mongodb+srv://unicodettp:WFUiEjrljsIDFOmd@cluster1.oeari.mongodb.net/ttp-local"}}
+{"level":"warn","message":"Server worked"}
+{"level":"error","message":{"matchTasksWithTrello":{}}}
+{"level":"warn","message":{"db":"mongodb+srv://unicodettp:WFUiEjrljsIDFOmd@cluster1.oeari.mongodb.net/ttp-local"}}
+{"level":"warn","message":"Server worked"}
+{"level":"error","message":{"matchTasksWithTrello":{}}}
+{"level":"warn","message":{"db":"mongodb+srv://unicodettp:WFUiEjrljsIDFOmd@cluster1.oeari.mongodb.net/ttp-local"}}
+{"level":"warn","message":"Server worked"}
+{"level":"error","message":{"matchTasksWithTrello":{}}}
+{"level":"warn","message":{"db":"mongodb+srv://unicodettp:WFUiEjrljsIDFOmd@cluster1.oeari.mongodb.net/ttp-local"}}
+{"level":"warn","message":"Server worked"}
+{"level":"warn","message":{"db":"mongodb+srv://unicodettp:WFUiEjrljsIDFOmd@cluster1.oeari.mongodb.net/ttp-local"}}
+{"level":"warn","message":"Server worked"}
+{"level":"error","message":{"matchTasksWithTrello":{}}}
+{"level":"warn","message":{"db":"mongodb+srv://unicodettp:WFUiEjrljsIDFOmd@cluster1.oeari.mongodb.net/ttp-local"}}
+{"level":"warn","message":"Server worked"}
+{"level":"error","message":{"matchTasksWithTrello":{}}}
+{"level":"warn","message":{"db":"mongodb+srv://unicodettp:WFUiEjrljsIDFOmd@cluster1.oeari.mongodb.net/ttp-local"}}
+{"level":"warn","message":"Server worked"}
+{"level":"error","message":{"matchTasksWithTrello":{}}}
+{"level":"warn","message":{"db":"mongodb+srv://unicodettp:WFUiEjrljsIDFOmd@cluster1.oeari.mongodb.net/ttp-local"}}
+{"level":"warn","message":"Server worked"}
+{"level":"error","message":{"matchTasksWithTrello":{}}}
+{"level":"warn","message":{"db":"mongodb+srv://unicodettp:WFUiEjrljsIDFOmd@cluster1.oeari.mongodb.net/ttp-local"}}
+{"level":"warn","message":"Server worked"}
+{"level":"error","message":{"matchTasksWithTrello":{}}}
+{"level":"warn","message":{"db":"mongodb+srv://unicodettp:WFUiEjrljsIDFOmd@cluster1.oeari.mongodb.net/ttp-local"}}
+{"level":"warn","message":"Server worked"}
+{"level":"warn","message":{"db":"mongodb+srv://unicodettp:WFUiEjrljsIDFOmd@cluster1.oeari.mongodb.net/ttp-local"}}
+{"level":"warn","message":"Server worked"}
+{"level":"error","message":{"matchTasksWithTrello":{}}}
+{"level":"warn","message":{"db":"mongodb+srv://unicodettp:WFUiEjrljsIDFOmd@cluster1.oeari.mongodb.net/ttp-local"}}
+{"level":"warn","message":"Server worked"}
+{"level":"error","message":{"matchTasksWithTrello":{}}}
+{"level":"warn","message":{"db":"mongodb+srv://unicodettp:WFUiEjrljsIDFOmd@cluster1.oeari.mongodb.net/ttp-local"}}
+{"level":"warn","message":"Server worked"}
+{"level":"error","message":{"matchTasksWithTrello":{}}}
+{"level":"warn","message":{"db":"mongodb+srv://unicodettp:WFUiEjrljsIDFOmd@cluster1.oeari.mongodb.net/ttp-local"}}
+{"level":"warn","message":"Server worked"}
+{"level":"warn","message":{"db":"mongodb+srv://unicodettp:WFUiEjrljsIDFOmd@cluster1.oeari.mongodb.net/ttp-local"}}
+{"level":"warn","message":"Server worked"}
+{"level":"error","message":{"matchTasksWithTrello":{}}}
+{"level":"warn","message":{"db":"mongodb+srv://unicodettp:WFUiEjrljsIDFOmd@cluster1.oeari.mongodb.net/ttp-local"}}
+{"level":"warn","message":"Server worked"}
+{"level":"error","message":{"matchTasksWithTrello":{}}}
+{"level":"warn","message":{"db":"mongodb+srv://unicodettp:WFUiEjrljsIDFOmd@cluster1.oeari.mongodb.net/ttp-local"}}
+{"level":"warn","message":"Server worked"}
+{"level":"error","message":{"matchTasksWithTrello":{}}}
+{"level":"warn","message":{"db":"mongodb+srv://unicodettp:WFUiEjrljsIDFOmd@cluster1.oeari.mongodb.net/ttp-local"}}
+{"level":"warn","message":"Server worked"}
+{"level":"error","message":{"matchTasksWithTrello":{}}}
+{"level":"warn","message":{"db":"mongodb+srv://unicodettp:WFUiEjrljsIDFOmd@cluster1.oeari.mongodb.net/ttp-local"}}
+{"level":"warn","message":"Server worked"}
+{"level":"error","message":{"matchTasksWithTrello":{}}}
+{"level":"warn","message":{"db":"mongodb+srv://unicodettp:WFUiEjrljsIDFOmd@cluster1.oeari.mongodb.net/ttp-local"}}
+{"level":"warn","message":"Server worked"}
+{"level":"error","message":{"matchTasksWithTrello":{}}}
+{"level":"warn","message":{"db":"mongodb+srv://unicodettp:WFUiEjrljsIDFOmd@cluster1.oeari.mongodb.net/ttp-local"}}
+{"level":"warn","message":"Server worked"}
+{"level":"error","message":{"matchTasksWithTrello":{}}}
+{"level":"warn","message":{"db":"mongodb+srv://unicodettp:WFUiEjrljsIDFOmd@cluster1.oeari.mongodb.net/ttp-local"}}
+{"level":"warn","message":"Server worked"}
+{"level":"error","message":{"matchTasksWithTrello":{}}}
+{"level":"warn","message":{"db":"mongodb+srv://unicodettp:WFUiEjrljsIDFOmd@cluster1.oeari.mongodb.net/ttp-local"}}
+{"level":"warn","message":"Server worked"}
+{"level":"error","message":{"matchTasksWithTrello":{}}}
+{"level":"warn","message":{"db":"mongodb+srv://unicodettp:WFUiEjrljsIDFOmd@cluster1.oeari.mongodb.net/ttp-local"}}
+{"level":"warn","message":"Server worked"}
+{"level":"error","message":{"matchTasksWithTrello":{}}}
+{"level":"warn","message":{"db":"mongodb+srv://unicodettp:WFUiEjrljsIDFOmd@cluster1.oeari.mongodb.net/ttp-local"}}
+{"level":"warn","message":"Server worked"}
+{"level":"error","message":{"matchTasksWithTrello":{}}}
+{"level":"warn","message":{"db":"mongodb+srv://unicodettp:WFUiEjrljsIDFOmd@cluster1.oeari.mongodb.net/ttp-local"}}
+{"level":"warn","message":"Server worked"}
+{"level":"error","message":{"matchTasksWithTrello":{}}}
+{"level":"warn","message":{"db":"mongodb+srv://unicodettp:WFUiEjrljsIDFOmd@cluster1.oeari.mongodb.net/ttp-local"}}
+{"level":"warn","message":"Server worked"}
+{"level":"error","message":{"matchTasksWithTrello":{}}}
+{"level":"warn","message":{"db":"mongodb+srv://unicodettp:WFUiEjrljsIDFOmd@cluster1.oeari.mongodb.net/ttp-local"}}
+{"level":"warn","message":"Server worked"}
+{"level":"error","message":{"matchTasksWithTrello":{}}}
+{"level":"warn","message":{"db":"mongodb+srv://unicodettp:WFUiEjrljsIDFOmd@cluster1.oeari.mongodb.net/ttp-local"}}
+{"level":"warn","message":"Server worked"}
+{"level":"error","message":{"matchTasksWithTrello":{}}}
+{"level":"warn","message":{"db":"mongodb+srv://unicodettp:WFUiEjrljsIDFOmd@cluster1.oeari.mongodb.net/ttp-local"}}
+{"level":"warn","message":"Server worked"}
+{"level":"error","message":{"matchTasksWithTrello":{}}}
+{"level":"warn","message":{"db":"mongodb+srv://unicodettp:WFUiEjrljsIDFOmd@cluster1.oeari.mongodb.net/ttp-local"}}
+{"level":"warn","message":"Server worked"}
+{"level":"error","message":{"matchTasksWithTrello":{}}}
+{"level":"warn","message":{"db":"mongodb+srv://unicodettp:WFUiEjrljsIDFOmd@cluster1.oeari.mongodb.net/ttp-local"}}
+{"level":"warn","message":"Server worked"}
+{"level":"error","message":{"matchTasksWithTrello":{}}}
+{"level":"warn","message":{"db":"mongodb+srv://unicodettp:WFUiEjrljsIDFOmd@cluster1.oeari.mongodb.net/ttp-local"}}
+{"level":"warn","message":"Server worked"}
+{"level":"warn","message":{"db":"mongodb+srv://unicodettp:WFUiEjrljsIDFOmd@cluster1.oeari.mongodb.net/ttp-local"}}
+{"level":"warn","message":"Server worked"}
+{"level":"error","message":{"matchTasksWithTrello":{}}}
+{"level":"warn","message":{"db":"mongodb+srv://unicodettp:WFUiEjrljsIDFOmd@cluster1.oeari.mongodb.net/ttp-local"}}
+{"level":"warn","message":"Server worked"}
+{"level":"error","message":{"matchTasksWithTrello":{}}}
+{"level":"warn","message":{"db":"mongodb+srv://unicodettp:WFUiEjrljsIDFOmd@cluster1.oeari.mongodb.net/ttp-local"}}
+{"level":"warn","message":"Server worked"}
+{"level":"error","message":{"matchTasksWithTrello":{}}}
+{"level":"warn","message":{"db":"mongodb+srv://unicodettp:WFUiEjrljsIDFOmd@cluster1.oeari.mongodb.net/ttp-local"}}
+{"level":"warn","message":"Server worked"}
+{"level":"error","message":{"matchTasksWithTrello":{}}}
+{"level":"warn","message":{"db":"mongodb+srv://unicodettp:WFUiEjrljsIDFOmd@cluster1.oeari.mongodb.net/ttp-local"}}
+{"level":"warn","message":"Server worked"}
+{"level":"error","message":{"matchTasksWithTrello":{}}}
+{"level":"warn","message":{"db":"mongodb+srv://unicodettp:WFUiEjrljsIDFOmd@cluster1.oeari.mongodb.net/ttp-local"}}
+{"level":"warn","message":"Server worked"}
+{"level":"error","message":{"matchTasksWithTrello":{}}}
+{"level":"warn","message":{"db":"mongodb+srv://unicodettp:WFUiEjrljsIDFOmd@cluster1.oeari.mongodb.net/ttp-local"}}
+{"level":"warn","message":"Server worked"}
+{"level":"error","message":{"matchTasksWithTrello":{}}}
+{"level":"warn","message":{"db":"mongodb+srv://unicodettp:WFUiEjrljsIDFOmd@cluster1.oeari.mongodb.net/ttp-local"}}
+{"level":"warn","message":"Server worked"}
+{"level":"error","message":{"matchTasksWithTrello":{}}}
+                                                                                                                                                              {"level":"warn","message":{"db":"mongodb+srv://unicodettp:WFUiEjrljsIDFOmd@cluster1.oeari.mongodb.net/ttp-local"}}
+{"level":"warn","message":"Server worked"}
+{"level":"error","message":{"matchTasksWithTrello":{}}}
+{"level":"warn","message":{"db":"mongodb+srv://unicodettp:WFUiEjrljsIDFOmd@cluster1.oeari.mongodb.net/ttp-local"}}
+{"level":"warn","message":"Server worked"}
+{"level":"error","message":{"matchTasksWithTrello":{}}}
+{"level":"warn","message":{"db":"mongodb+srv://unicodettp:WFUiEjrljsIDFOmd@cluster1.oeari.mongodb.net/ttp-local"}}
+{"level":"warn","message":"Server worked"}
+{"level":"error","message":{"matchTasksWithTrello":{}}}
+{"level":"warn","message":{"db":"mongodb+srv://unicodettp:WFUiEjrljsIDFOmd@cluster1.oeari.mongodb.net/ttp-local"}}
+{"level":"warn","message":"Server worked"}
+{"level":"error","message":{"matchTasksWithTrello":{}}}
+{"level":"warn","message":{"db":"mongodb+srv://unicodettp:WFUiEjrljsIDFOmd@cluster1.oeari.mongodb.net/ttp-local"}}
+{"level":"warn","message":"Server worked"}
+{"level":"error","message":{"matchTasksWithTrello":{}}}
+{"level":"warn","message":{"db":"mongodb+srv://unicodettp:WFUiEjrljsIDFOmd@cluster1.oeari.mongodb.net/ttp-local"}}
+{"level":"warn","message":"Server worked"}
+{"level":"error","message":{"matchTasksWithTrello":{}}}
+{"level":"warn","message":{"db":"mongodb+srv://unicodettp:WFUiEjrljsIDFOmd@cluster1.oeari.mongodb.net/ttp-local"}}
+{"level":"warn","message":"Server worked"}
+{"level":"error","message":{"matchTasksWithTrello":{}}}
+{"level":"warn","message":{"db":"mongodb+srv://unicodettp:WFUiEjrljsIDFOmd@cluster1.oeari.mongodb.net/ttp-local"}}
+{"level":"warn","message":"Server worked"}
+{"level":"error","message":{"matchTasksWithTrello":{}}}
+{"level":"warn","message":{"db":"mongodb+srv://unicodettp:WFUiEjrljsIDFOmd@cluster1.oeari.mongodb.net/ttp-local"}}
+{"level":"warn","message":"Server worked"}
+{"level":"error","message":{"matchTasksWithTrello":{}}}
+{"level":"warn","message":{"db":"mongodb+srv://unicodettp:WFUiEjrljsIDFOmd@cluster1.oeari.mongodb.net/ttp-local"}}
+{"level":"warn","message":"Server worked"}
+{"level":"error","message":{"matchTasksWithTrello":{}}}
+{"level":"warn","message":{"db":"mongodb+srv://unicodettp:WFUiEjrljsIDFOmd@cluster1.oeari.mongodb.net/ttp-local"}}
+{"level":"warn","message":"Server worked"}
+{"level":"error","message":{"matchTasksWithTrello":{}}}
+{"level":"warn","message":{"db":"mongodb+srv://unicodettp:WFUiEjrljsIDFOmd@cluster1.oeari.mongodb.net/ttp-local"}}
+{"level":"warn","message":"Server worked"}
+{"level":"error","message":{"matchTasksWithTrello":{}}}
+{"level":"warn","message":{"db":"mongodb+srv://unicodettp:WFUiEjrljsIDFOmd@cluster1.oeari.mongodb.net/ttp-local"}}
+{"level":"warn","message":"Server worked"}
+{"level":"error","message":{"matchTasksWithTrello":{}}}
+{"level":"warn","message":{"db":"mongodb+srv://unicodettp:WFUiEjrljsIDFOmd@cluster1.oeari.mongodb.net/ttp-local"}}
+{"level":"warn","message":"Server worked"}
+{"level":"error","message":{"matchTasksWithTrello":{}}}
+{"level":"warn","message":{"db":"mongodb+srv://unicodettp:WFUiEjrljsIDFOmd@cluster1.oeari.mongodb.net/ttp-local"}}
+{"level":"warn","message":"Server worked"}
+{"level":"error","message":{"matchTasksWithTrello":{}}}
+{"level":"warn","message":{"db":"mongodb+srv://unicodettp:WFUiEjrljsIDFOmd@cluster1.oeari.mongodb.net/ttp-local"}}
+{"level":"warn","message":"Server worked"}
+{"level":"warn","message":{"db":"mongodb+srv://unicodettp:WFUiEjrljsIDFOmd@cluster1.oeari.mongodb.net/ttp-local"}}
+{"level":"warn","message":"Server worked"}
+{"level":"warn","message":{"db":"mongodb+srv://unicodettp:WFUiEjrljsIDFOmd@cluster1.oeari.mongodb.net/ttp-local"}}
+{"level":"warn","message":"Server worked"}
+{"level":"warn","message":{"db":"mongodb+srv://unicodettp:WFUiEjrljsIDFOmd@cluster1.oeari.mongodb.net/ttp-local"}}
+{"level":"warn","message":"Server worked"}
+{"level":"warn","message":{"db":"mongodb+srv://unicodettp:WFUiEjrljsIDFOmd@cluster1.oeari.mongodb.net/ttp-local"}}
+{"level":"warn","message":"Server worked"}
+{"level":"warn","message":{"db":"mongodb+srv://unicodettp:WFUiEjrljsIDFOmd@cluster1.oeari.mongodb.net/ttp-local"}}
+{"level":"warn","message":"Server worked"}
+{"level":"warn","message":{"db":"mongodb+srv://unicodettp:WFUiEjrljsIDFOmd@cluster1.oeari.mongodb.net/ttp-local"}}
+{"level":"warn","message":"Server worked"}
+{"level":"warn","message":{"db":"mongodb+srv://unicodettp:WFUiEjrljsIDFOmd@cluster1.oeari.mongodb.net/ttp-local"}}
+{"level":"warn","message":"Server worked"}
+{"level":"warn","message":{"db":"mongodb+srv://unicodettp:WFUiEjrljsIDFOmd@cluster1.oeari.mongodb.net/ttp-local"}}
+{"level":"warn","message":"Server worked"}
+{"level":"warn","message":{"db":"mongodb+srv://unicodettp:WFUiEjrljsIDFOmd@cluster1.oeari.mongodb.net/ttp-local"}}
+{"level":"warn","message":"Server worked"}
+{"level":"warn","message":{"db":"mongodb+srv://unicodettp:WFUiEjrljsIDFOmd@cluster1.oeari.mongodb.net/ttp-local"}}
+{"level":"warn","message":"Server worked"}
+{"level":"warn","message":{"db":"mongodb+srv://unicodettp:WFUiEjrljsIDFOmd@cluster1.oeari.mongodb.net/ttp-local"}}
+{"level":"warn","message":"Server worked"}
+{"level":"warn","message":{"db":"mongodb+srv://unicodettp:WFUiEjrljsIDFOmd@cluster1.oeari.mongodb.net/ttp-local"}}
+{"level":"warn","message":"Server worked"}
+{"level":"warn","message":{"db":"mongodb+srv://unicodettp:WFUiEjrljsIDFOmd@cluster1.oeari.mongodb.net/ttp-local"}}
+{"level":"warn","message":"Server worked"}
+{"level":"warn","message":{"db":"mongodb+srv://unicodettp:WFUiEjrljsIDFOmd@cluster1.oeari.mongodb.net/ttp-local"}}
+{"level":"warn","message":"Server worked"}
+{"level":"warn","message":{"db":"mongodb+srv://unicodettp:WFUiEjrljsIDFOmd@cluster1.oeari.mongodb.net/ttp-local"}}
+{"level":"warn","message":"Server worked"}
+{"level":"warn","message":{"db":"mongodb+srv://unicodettp:WFUiEjrljsIDFOmd@cluster1.oeari.mongodb.net/ttp-local"}}
+{"level":"warn","message":"Server worked"}
+{"level":"warn","message":{"db":"mongodb+srv://unicodettp:WFUiEjrljsIDFOmd@cluster1.oeari.mongodb.net/ttp-local"}}
+{"level":"warn","message":"Server worked"}
+{"level":"warn","message":{"db":"mongodb+srv://unicodettp:WFUiEjrljsIDFOmd@cluster1.oeari.mongodb.net/ttp-local"}}
+{"level":"warn","message":"Server worked"}
+{"level":"warn","message":{"db":"mongodb+srv://unicodettp:WFUiEjrljsIDFOmd@cluster1.oeari.mongodb.net/ttp-local"}}
+{"level":"warn","message":"Server worked"}
+{"level":"warn","message":{"db":"mongodb+srv://unicodettp:WFUiEjrljsIDFOmd@cluster1.oeari.mongodb.net/ttp-local"}}
+{"level":"warn","message":"Server worked"}
+{"level":"warn","message":{"db":"mongodb+srv://unicodettp:WFUiEjrljsIDFOmd@cluster1.oeari.mongodb.net/ttp-local"}}
+{"level":"warn","message":"Server worked"}
+{"level":"warn","message":{"db":"mongodb+srv://unicodettp:WFUiEjrljsIDFOmd@cluster1.oeari.mongodb.net/ttp-local"}}
+{"level":"warn","message":"Server worked"}
+{"level":"warn","message":{"db":"mongodb+srv://unicodettp:WFUiEjrljsIDFOmd@cluster1.oeari.mongodb.net/ttp-local"}}
+{"level":"warn","message":"Server worked"}
+{"level":"warn","message":{"db":"mongodb+srv://unicodettp:WFUiEjrljsIDFOmd@cluster1.oeari.mongodb.net/ttp-local"}}
+{"level":"warn","message":"Server worked"}
+{"level":"warn","message":{"db":"mongodb+srv://unicodettp:WFUiEjrljsIDFOmd@cluster1.oeari.mongodb.net/ttp-local"}}
+{"level":"warn","message":"Server worked"}
+{"level":"warn","message":{"db":"mongodb+srv://unicodettp:WFUiEjrljsIDFOmd@cluster1.oeari.mongodb.net/ttp-local"}}
+{"level":"warn","message":"Server worked"}
+{"level":"warn","message":{"db":"mongodb+srv://unicodettp:WFUiEjrljsIDFOmd@cluster1.oeari.mongodb.net/ttp-local"}}
+{"level":"warn","message":"Server worked"}
+{"level":"warn","message":{"db":"mongodb+srv://unicodettp:WFUiEjrljsIDFOmd@cluster1.oeari.mongodb.net/ttp-local"}}
+{"level":"warn","message":"Server worked"}
+{"level":"warn","message":{"db":"mongodb+srv://unicodettp:WFUiEjrljsIDFOmd@cluster1.oeari.mongodb.net/ttp-local"}}
+{"level":"warn","message":"Server worked"}
+{"level":"warn","message":{"db":"mongodb+srv://unicodettp:WFUiEjrljsIDFOmd@cluster1.oeari.mongodb.net/ttp-local"}}
+{"level":"warn","message":"Server worked"}
+{"level":"warn","message":{"db":"mongodb+srv://unicodettp:WFUiEjrljsIDFOmd@cluster1.oeari.mongodb.net/ttp-local"}}
+{"level":"warn","message":"Server worked"}
+{"level":"warn","message":{"db":"mongodb+srv://unicodettp:WFUiEjrljsIDFOmd@cluster1.oeari.mongodb.net/ttp-local"}}
+{"level":"warn","message":"Server worked"}
+{"level":"warn","message":{"db":"mongodb+srv://unicodettp:WFUiEjrljsIDFOmd@cluster1.oeari.mongodb.net/ttp-local"}}
+{"level":"warn","message":"Server worked"}
+{"level":"warn","message":{"db":"mongodb+srv://unicodettp:WFUiEjrljsIDFOmd@cluster1.oeari.mongodb.net/ttp-local"}}
+{"level":"warn","message":"Server worked"}
+{"level":"warn","message":{"db":"mongodb+srv://unicodettp:WFUiEjrljsIDFOmd@cluster1.oeari.mongodb.net/ttp-local"}}
+{"level":"warn","message":"Server worked"}
+{"level":"warn","message":{"db":"mongodb+srv://unicodettp:WFUiEjrljsIDFOmd@cluster1.oeari.mongodb.net/ttp-local"}}
+{"level":"warn","message":"Server worked"}
+{"level":"warn","message":{"db":"mongodb+srv://unicodettp:WFUiEjrljsIDFOmd@cluster1.oeari.mongodb.net/ttp-local"}}
+{"level":"warn","message":"Server worked"}
+{"level":"warn","message":{"db":"mongodb+srv://unicodettp:WFUiEjrljsIDFOmd@cluster1.oeari.mongodb.net/ttp-local"}}
+{"level":"warn","message":"Server worked"}
+{"level":"warn","message":{"db":"mongodb+srv://unicodettp:WFUiEjrljsIDFOmd@cluster1.oeari.mongodb.net/ttp-local"}}
+{"level":"warn","message":"Server worked"}
+{"level":"warn","message":{"db":"mongodb+srv://unicodettp:WFUiEjrljsIDFOmd@cluster1.oeari.mongodb.net/ttp-local"}}
+{"level":"warn","message":"Server worked"}
+{"level":"warn","message":{"db":"mongodb+srv://unicodettp:WFUiEjrljsIDFOmd@cluster1.oeari.mongodb.net/ttp-local"}}
+{"level":"warn","message":"Server worked"}

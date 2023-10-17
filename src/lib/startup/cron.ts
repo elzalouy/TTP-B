@@ -7,13 +7,9 @@ import {
   projectsPassedDate,
 } from "../backgroundJobs/actions/project.actions.cron";
 import { initializeQueue } from "../backgroundJobs/actions/init.actions.queue";
-import {
-  initializeCardsPlugins,
-  initializeTTPTasks,
-  initializeTrelloBoards,
-} from "./db/dbConnect";
+import { initializeTrelloBoards } from "./db/dbConnect";
 import { taskRoutesQueue } from "../backgroundJobs/routes/tasks.Route.Queue";
-import { initializeSystemTasksPluginsJob } from "../backgroundJobs/actions/trello.actions.cron";
+import TaskController from "../controllers/task";
 
 export default async function (
   io: Server<DefaultEventsMap, DefaultEventsMap, DefaultEventsMap, any>
@@ -32,10 +28,8 @@ export default async function (
     });
 
     initializeQueue.push(async (cb) => {
-      await initializeTrelloBoards().then(() => {
-        // initializeTTPTasks().then(async () => {
-        //   // initializeSystemTasksPluginsJob().start();
-        // });
+      await initializeTrelloBoards().then(async () => {
+        await TaskController.matchTasksWithTrello();
       });
     });
   } catch (error) {
