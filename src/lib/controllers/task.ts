@@ -496,7 +496,7 @@ class TaskController extends TaskDB {
           })
         )
       );
-      logger.info({ cards: cards.length, card: cards[0] });
+      console.log({ cards: cards.length, card: cards[0] });
 
       actions = _.flattenDeep(
         await Promise.all(
@@ -506,7 +506,7 @@ class TaskController extends TaskDB {
         )
       );
 
-      logger.info({ actions, action: actions[0] });
+      console.log({ actions, action: actions[0] });
       let createActions = actions
         .filter((i) => i.type === "createCard")
         .map((i) => i.data.card.id);
@@ -519,7 +519,7 @@ class TaskController extends TaskDB {
         if (cardActions) return { cardId: card.id, actions: cardActions };
         else return { cardId: card.id, actions: [] };
       });
-      logger.info({
+      console.log({
         createActions: createActions.length,
         cardsActions: cardsActions.length,
       });
@@ -530,7 +530,7 @@ class TaskController extends TaskDB {
         );
         if (actions) return card;
       });
-      logger.info({ cardsAfterFilter: cards.length });
+      console.log({ cardsAfterFilter: cards.length });
       cards = await Promise.all(
         cards?.map(async (item) => {
           let attachments = await TrelloController.__getCardAttachments(
