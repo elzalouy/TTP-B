@@ -496,6 +496,7 @@ class TaskController extends TaskDB {
           })
         )
       );
+      logger.info({ cards: cards.length, card: cards[0] });
 
       actions = _.flattenDeep(
         await Promise.all(
@@ -504,6 +505,8 @@ class TaskController extends TaskDB {
           })
         )
       );
+
+      logger.info({ actions, action: actions[0] });
       let createActions = actions
         .filter((i) => i.type === "createCard")
         .map((i) => i.data.card.id);
@@ -516,6 +519,10 @@ class TaskController extends TaskDB {
         if (cardActions) return { cardId: card.id, actions: cardActions };
         else return { cardId: card.id, actions: [] };
       });
+      logger.info({
+        createActions: createActions.length,
+        cardsActions: cardsActions.length,
+      });
       cardsActions = cardsActions.filter((item) => item.actions.length > 0);
       cards = cards.filter((card) => {
         let actions = cardsActions.filter(
@@ -523,7 +530,7 @@ class TaskController extends TaskDB {
         );
         if (actions) return card;
       });
-
+      logger.info({ cardsAfterFilter: cards.length });
       cards = await Promise.all(
         cards?.map(async (item) => {
           let attachments = await TrelloController.__getCardAttachments(
@@ -652,7 +659,7 @@ class TaskController extends TaskDB {
         TrelloController.__addWebHook(item.cardId, "trelloWebhookUrlTask");
       });
     } catch (error) {
-      logger.error({ matchTasksWithTrello: error });
+      logger.error({ matchTasksWithTrelloError: error });
     }
   }
   static validateCardActions(
