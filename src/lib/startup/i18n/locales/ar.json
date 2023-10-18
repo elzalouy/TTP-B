@@ -56,6 +56,6 @@
 	"delete_notifi_success": "delete_notifi_success",
 	"user_already_exist": "user_already_exist",
 	"user_not_exist": "user_not_exist",
-	"projects_and_tasks_deleted": "projects_and_tasks_deleted",
-	"delete_task_error": "delete_task_error"
+	"delete_task_error": "delete_task_error",
+	"projects_and_tasks_deleted": "projects_and_tasks_deleted"
 }

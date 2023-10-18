@@ -43,9 +43,6 @@ const ProjectController = class ProjectController extends ProjectDB {
   static async __deleteProjectData(id: string) {
     try {
       let project = await super.deleteProjectDB(id);
-      projectQueue.push(() => {
-        if (project.cardId) TrelloController.deleteCard(project.cardId);
-      });
       return project;
     } catch (error) {
       logger.error({ getProjectError: error });

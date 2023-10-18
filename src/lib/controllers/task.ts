@@ -510,7 +510,7 @@ class TaskController extends TaskDB {
       );
       console.log({
         action: actions.find(
-          (i) => i.data.card.id === "64a68e8bfca2a16ae2c6748d"
+          (i) => i.data.card.id === "64a68e39e9b6c8d9736980da"
         ),
       });
       let createActions = actions
