@@ -773,7 +773,7 @@ class TrelloController {
         `boards/${board}/actions/?filter=createCard,updateCard:due,updateCard:idList&limit=${perpage}&`
       );
       if (actions.length > 0)
-        url = `${url}&before=${actions[actions.length - 1].id}&`;
+        url = `${url}&before=${actions[actions.length - 2].id}&`;
       let result = await fetch(url, {
         method: "GET",
         headers: {
@@ -785,7 +785,7 @@ class TrelloController {
       actions.push(...newActions);
       if (
         newActions.length === perpage &&
-        new Date(actions[actions.length - 2].date).getFullYear() >= 2023
+        new Date(actions[actions.length - 1].date).getFullYear() >= 2023
       ) {
         await TrelloController._fetchActionsOfBoard(actions, board);
       } else {
