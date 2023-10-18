@@ -785,7 +785,7 @@ class TrelloController {
       actions.push(...newActions);
       if (
         newActions.length === perpage &&
-        new Date(actions[actions.length - 1].date).getFullYear() >= 2023
+        new Date(actions[actions.length - 2].date).getFullYear() >= 2023
       ) {
         await TrelloController._fetchActionsOfBoard(actions, board);
       } else {
