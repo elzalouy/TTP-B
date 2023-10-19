@@ -497,22 +497,22 @@ class TaskController extends TaskDB {
         )
       );
 
-      actions = _.flattenDeep(
-        await Promise.all(
-          departments.map(async (item) => {
-            return await TrelloController._getActionsOfBoard(item.boardId);
-          })
-        )
-      );
+      // actions = _.flattenDeep(
+      //   await Promise.all(
+      //     departments.map(async (item) => {
+      //       return await TrelloController._getActionsOfBoard(item.boardId);
+      //     })
+      //   )
+      // );
+      actions = await TrelloController._getActionsOfBoard("");
+      console.log({
+        actionsLength: actions.length,
+      });
 
       actions = actions.filter(
         (action) => action !== undefined && action !== null
       );
-      console.log({
-        action: actions.find(
-          (i) => i.data.card.id === "64a68e39e9b6c8d9736980da"
-        ),
-      });
+
       let createActions = actions
         .filter((i) => i.type === "createCard")
         .map((i) => i.data.card.id);
@@ -533,7 +533,11 @@ class TaskController extends TaskDB {
         );
         if (actions) return card;
       });
-
+      console.log({
+        cardActions: actions.filter(
+          (i) => i.data.card.id === "64a68e8bfca2a16ae2c6748d"
+        ),
+      });
       cards = await Promise.all(
         cards?.map(async (item) => {
           let attachments = await TrelloController.__getCardAttachments(
@@ -600,6 +604,8 @@ class TaskController extends TaskDB {
             : [];
         task.cardCreatedAt = new Date(createAction.date);
         if (!fetch) newTasks.push(task);
+        if (task.cardId === "64a68e8bfca2a16ae2c6748d")
+          console.log({ cartMovements: movements });
         return task;
       });
 
@@ -640,6 +646,10 @@ class TaskController extends TaskDB {
         }),
       ];
 
+      console.log({
+        cardTask: tasks.find((i) => i.cardId === "64a68e8bfca2a16ae2c6748d")
+          .movements,
+      });
       Tasks.bulkWrite(update, {});
       newTasks.forEach(async (item) => {
         TrelloController.__addWebHook(item.cardId, "trelloWebhookUrlTask");

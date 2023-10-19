@@ -756,25 +756,23 @@ class TrelloController {
 
   static async _getActionsOfBoard(board: string) {
     try {
-      let actions = await TrelloController._fetchActionsOfBoard([], board);
+      let actions = await TrelloController._fetchActionsOfBoard(board);
       return actions;
     } catch (error) {
       logger.error({ _getActionsOfBoardError: error });
     }
   }
 
-  static async _fetchActionsOfBoard(
-    actions: TrelloAction[] = [],
-    board: string
-  ) {
+  static async _fetchActionsOfBoard(board: string) {
     try {
+      let actions: TrelloAction[] = [];
       const perpage = 1000;
       let url = trelloApi(
         `boards/${board}/actions/?filter=createCard,updateCard:due,updateCard:idList&limit=${perpage}&`
       );
-      if (actions.length > 0)
-        url = `${url}&before=${actions[actions.length - 2].id}&`;
-      let result = await fetch(url, {
+      let testUrl =
+        "https://api.trello.com/1/boards/6371f616fe6c5500164c85d0/actions/?filter=createCard,updateCard:due,updateCard:idList&limit=1000&key=e6c4e18a33676de983a17b1552a7caee&token=69983f349355c71c8242ab732bd23fd70d3217e54026336e5e16793f542f044b";
+      let result = await fetch(testUrl, {
         method: "GET",
         headers: {
           Accept: "*/*",
@@ -783,14 +781,27 @@ class TrelloController {
       });
       let newActions: TrelloAction[] = await result.json();
       actions.push(...newActions);
-      if (
+      while (
         newActions.length === perpage &&
-        new Date(actions[actions.length - 1].date).getFullYear() >= 2023
+        new Date(newActions[newActions.length - 1].date).getFullYear() >=
+          2023 ===
+          true
       ) {
-        await TrelloController._fetchActionsOfBoard(actions, board);
-      } else {
-        return actions;
+        url = trelloApi(
+          `boards/${board}/actions/?filter=createCard,updateCard:due,updateCard:idList&limit=${perpage}&`
+        );
+        url = `${url}&before=${newActions[newActions.length - 1].id}&`;
+        let result = await fetch(url, {
+          method: "GET",
+          headers: {
+            Accept: "*/*",
+            "Content-Type": "application/json",
+          },
+        });
+        newActions = await result.json();
+        actions = [...actions, ...newActions];
       }
+      return actions;
     } catch (error) {
       logger.error({ _fetchActionsOfBoardError: error });
     }
