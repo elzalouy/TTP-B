@@ -770,9 +770,7 @@ class TrelloController {
       let url = trelloApi(
         `boards/${board}/actions/?filter=createCard,updateCard:due,updateCard:idList&limit=${perpage}&`
       );
-      let testUrl =
-        "https://api.trello.com/1/boards/6371f616fe6c5500164c85d0/actions/?filter=createCard,updateCard:due,updateCard:idList&limit=1000&key=e6c4e18a33676de983a17b1552a7caee&token=69983f349355c71c8242ab732bd23fd70d3217e54026336e5e16793f542f044b";
-      let result = await fetch(testUrl, {
+      let result = await fetch(url, {
         method: "GET",
         headers: {
           Accept: "*/*",
