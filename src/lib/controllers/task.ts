@@ -497,14 +497,13 @@ class TaskController extends TaskDB {
         )
       );
 
-      // actions = _.flattenDeep(
-      //   await Promise.all(
-      //     departments.map(async (item) => {
-      //       return await TrelloController._getActionsOfBoard(item.boardId);
-      //     })
-      //   )
-      // );
-      actions = await TrelloController._getActionsOfBoard("");
+      actions = _.flattenDeep(
+        await Promise.all(
+          departments.map(async (item) => {
+            return await TrelloController._getActionsOfBoard(item.boardId);
+          })
+        )
+      );
       console.log({
         actionsLength: actions.length,
       });
