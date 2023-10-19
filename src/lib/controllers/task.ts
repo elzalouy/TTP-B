@@ -504,9 +504,6 @@ class TaskController extends TaskDB {
           })
         )
       );
-      console.log({
-        actionsLength: actions.length,
-      });
 
       actions = actions.filter(
         (action) => action !== undefined && action !== null
@@ -532,11 +529,6 @@ class TaskController extends TaskDB {
         );
         if (actions) return card;
       });
-      console.log({
-        cardActions: actions.filter(
-          (i) => i.data.card.id === "64a68e8bfca2a16ae2c6748d"
-        ),
-      });
       cards = await Promise.all(
         cards?.map(async (item) => {
           let attachments = await TrelloController.__getCardAttachments(
@@ -547,6 +539,7 @@ class TaskController extends TaskDB {
         })
       );
 
+      console.log({ cardsAfterGettingAttachments: cards.length });
       tasks = cards.map((card) => {
         let fetch = tasks.find((t) => t.cardId === card.id);
         let task = fetch ?? new Tasks({});
@@ -603,8 +596,6 @@ class TaskController extends TaskDB {
             : [];
         task.cardCreatedAt = new Date(createAction.date);
         if (!fetch) newTasks.push(task);
-        if (task.cardId === "64a68e8bfca2a16ae2c6748d")
-          console.log({ cartMovements: movements });
         return task;
       });
 
