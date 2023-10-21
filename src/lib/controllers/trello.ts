@@ -897,6 +897,7 @@ export class CardAction {
           });
           list = board.lists.find((l) => l.name === listName);
           if (list) {
+            console.log("deleted list before");
             this.action.listId = list.listId;
             this.action.data.list.id = list.listId;
             this.action.status = list.name;
@@ -907,6 +908,8 @@ export class CardAction {
         }
       }
     }
+    if (this.action.data.card.id === "63b0c46e3cb8f100ddadb64e")
+      console.log({ validate: this.action });
     return this;
   };
 }
