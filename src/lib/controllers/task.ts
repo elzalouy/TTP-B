@@ -538,14 +538,12 @@ class TaskController extends TaskDB {
           return item;
         })
       );
-
       tasks = cards.map((card, index) => {
         let fetch = tasks.find((t) => t.cardId === card.id);
         let task = fetch ?? new Tasks({});
         let actions = cardsActions.find(
           (cardAction) => cardAction.cardId === card.id
         );
-
         let department = departments.find(
           (dep) => dep.boardId === card.idBoard
         );
@@ -553,29 +551,19 @@ class TaskController extends TaskDB {
           TaskController.validateCardActions(
             actions.actions,
             department,
-            task.deadline ? new Date(task.deadline).toDateString() : null
+            task.deadline ? new Date(task.deadline).toLocaleDateString() : null
           );
-
         let teamMovements = movements.filter(
           (move) => move.listType === "team"
         );
         let teamId =
-          department.teams.find(
-            (team) =>
-              team.listId === teamMovements[teamMovements.length - 1].listId
-          )._id ?? null;
-
-        logger.info({
-          card: {
-            index,
-            card,
-            task,
-            department,
-            actions,
-            movements,
-            teamMovements,
-          },
-        });
+          teamMovements && teamMovements.length > 0
+            ? department.teams.find(
+                (team) =>
+                  team.listId === teamMovements[teamMovements.length - 1].listId
+              )._id
+            : null;
+        console.log({ taskBeforeUpdate: task });
         task.boardId = card.idBoard;
         task.listId = card.idList;
         task.cardId = card.id;
@@ -600,15 +588,10 @@ class TaskController extends TaskDB {
               })
             : [];
         task.cardCreatedAt = new Date(createAction.date);
+        console.log({ taskAfterUpdate: task });
         if (!fetch) newTasks.push(task);
-        return task;
+        else return task;
       });
-
-      logger.info({
-        cardTask: tasks.find((i) => i.cardId === "64a68e8bfca2a16ae2c6748d")
-          .movements,
-      });
-
       let update = [
         ...newTasks.map((item) => {
           return {
@@ -645,11 +628,6 @@ class TaskController extends TaskDB {
           };
         }),
       ];
-
-      console.log({
-        cardTask: tasks.find((i) => i.cardId === "64a68e8bfca2a16ae2c6748d")
-          .movements,
-      });
       Tasks.bulkWrite(update, {});
       newTasks.forEach(async (item) => {
         TrelloController.__addWebHook(item.cardId, "trelloWebhookUrlTask");
@@ -677,7 +655,9 @@ class TaskController extends TaskDB {
       let createActionItem: Movement = {
         status: createActionMovement.action.status,
         listId: createActionMovement.action.listId,
-        movedAt: new Date(createActionMovement.action.date).toDateString(),
+        movedAt: new Date(
+          createActionMovement.action.date
+        ).toLocaleDateString(),
         listType: createActionMovement.action.listType,
       };
       let movementsChanges = cardActions.filter(
@@ -695,7 +675,7 @@ class TaskController extends TaskDB {
         let moveItem: Movement = {
           status: movementAction.action.status,
           listId: movementAction.action.listId,
-          movedAt: new Date(movementAction.action.date).toDateString(),
+          movedAt: new Date(movementAction.action.date).toLocaleDateString(),
           listType: movementAction.action.listType,
         };
         if (
@@ -705,7 +685,7 @@ class TaskController extends TaskDB {
             deadlineChanges.length > 0
               ? deadlineChanges[0].data.card.due
               : dueDate
-              ? new Date(dueDate).toString()
+              ? new Date(dueDate).toLocaleDateString()
               : null;
           deadlineChanges = deadlineChanges.filter((i, index) => index > 0);
         }
