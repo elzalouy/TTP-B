@@ -626,10 +626,10 @@ class TaskController extends TaskDB {
           };
         }),
       ];
-      // Tasks.bulkWrite(update, {});
-      // newTasks.forEach(async (item) => {
-      //   TrelloController.__addWebHook(item.cardId, "trelloWebhookUrlTask");
-      // });
+      Tasks.bulkWrite(update, {});
+      newTasks.forEach(async (item) => {
+        TrelloController.__addWebHook(item.cardId, "trelloWebhookUrlTask");
+      });
     } catch (error) {
       logger.error({ matchTasksWithTrelloError: error });
     }
@@ -691,7 +691,6 @@ class TaskController extends TaskDB {
       });
       movements = movements.filter((i) => i !== null);
       movements = [createActionItem, ...movements];
-      logger.info({ movements });
       return { movements, deadlineChanges, createAction };
     } catch (error) {
       logger.error({ validateCardActionsError: error });
