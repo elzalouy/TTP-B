@@ -672,9 +672,10 @@ class TaskController extends TaskDB {
       );
       let movements: Movement[] = movementsChanges.map((move, index) => {
         let movementAction = new CardAction(move);
+        movementAction = movementAction.validate(department);
         if (move.data.card.id === "63b0c46e3cb8f100ddadb64e")
           logger.info({ movementAction });
-        movementAction = movementAction.validate(department);
+        if (movementAction.action.deleteAction === true) return null;
         let moveItem: Movement = {
           status: movementAction.action.status,
           listId: movementAction.action.listId,
@@ -694,6 +695,7 @@ class TaskController extends TaskDB {
         }
         return moveItem;
       });
+      movements = movements.filter((i) => i === null);
       logger.info({ movements });
       movements = [createActionItem, ...movements];
       return { movements, deadlineChanges, createAction };
