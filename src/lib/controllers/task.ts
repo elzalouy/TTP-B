@@ -641,30 +641,25 @@ class TaskController extends TaskDB {
     dueDate?: string | number | null
   ) {
     try {
-      console.log({ cardActions, department, dueDate });
       let createAction = cardActions.find(
         (item) => !item.data.old && !item.data.listBefore && !item.data.card.due
       );
       let createActionMovement = new CardAction(createAction);
       createActionMovement = createActionMovement.validate(department);
       let deadlineChanges = cardActions.filter((item) => item.data.card.due);
-      console.log({ createActionMovement });
       deadlineChanges = deadlineChanges.map((item) => {
         return { ...item, due: new Date(item.date).getTime() };
       });
       _.orderBy(deadlineChanges, "due", "asc");
-      console.log({ deadlineChanges });
       let createActionItem: Movement = {
         status: createActionMovement.action.status,
         listId: createActionMovement.action.listId,
         movedAt: new Date(createActionMovement.action.date).toString(),
         listType: createActionMovement.action.listType,
       };
-      console.log({ createActionItem });
       let movementsChanges = cardActions.filter(
         (item) => item.data.listAfter && item.data.old.idList
       );
-      console.log({ movementsChanges });
       movementsChanges = movementsChanges.map((item) => {
         return { ...item, dateNumber: new Date(item.date).getTime() };
       });
@@ -672,10 +667,10 @@ class TaskController extends TaskDB {
       movementsChanges = movementsChanges.sort(
         (a, b) => new Date(a.date).getTime() - new Date(b.date).getTime()
       );
-      console.log({ sortedMovementsChanges: movementsChanges });
       let movements: Movement[] = movementsChanges.map((move, index) => {
         let movementAction = new CardAction(move);
         movementAction = movementAction.validate(department);
+        console.log({ movementAction });
         let moveItem: Movement = {
           status: movementAction.action.status,
           listId: movementAction.action.listId,
@@ -694,10 +689,8 @@ class TaskController extends TaskDB {
               : null;
           deadlineChanges = deadlineChanges.filter((i, index) => index > 0);
         }
-        console.log({ moveItem });
         return moveItem;
       });
-      console.log({ createActionItem, movements });
       movements = [createActionItem, ...movements];
       return { movements, deadlineChanges, createAction };
     } catch (error) {
