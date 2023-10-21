@@ -539,7 +539,7 @@ class TaskController extends TaskDB {
         })
       );
 
-      tasks = cards.map((card) => {
+      tasks = cards.map((card, index) => {
         let fetch = tasks.find((t) => t.cardId === card.id);
         let task = fetch ?? new Tasks({});
         let actions = cardsActions.find(
@@ -565,7 +565,9 @@ class TaskController extends TaskDB {
               team.listId === teamMovements[teamMovements.length - 1].listId
           )._id ?? null;
 
-        console.log({ teamMovements: teamMovements.length, cardId: card.id });
+        logger.info({
+          card: { index, teamMovements, task, actions, department },
+        });
         task.boardId = card.idBoard;
         task.listId = card.idList;
         task.cardId = card.id;
@@ -659,7 +661,6 @@ class TaskController extends TaskDB {
       );
       let createActionMovement = new CardAction(createAction);
       createActionMovement = createActionMovement.validate(department);
-
       let deadlineChanges = cardActions.filter((item) => item.data.card.due);
       deadlineChanges = deadlineChanges.map((item) => {
         return { ...item, due: new Date(item.date).getTime() };
