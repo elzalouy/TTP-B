@@ -12,7 +12,7 @@ export interface TaskInfo extends Document {
   projectId: ObjectId;
   categoryId: ObjectId;
   subCategoryId: ObjectId;
-  teamId: ObjectId;
+  teamId: ObjectId | string;
   listId: string;
   status?: string;
   start?: Date | number;

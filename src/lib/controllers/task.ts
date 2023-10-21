@@ -515,10 +515,6 @@ class TaskController extends TaskDB {
 
       actions = actions.filter((a) => createActions.includes(a.data.card.id));
       cards = cards.filter((c) => createActions.includes(c.id));
-      logger.info({
-        cards: cards.map((i) => i.id),
-        actions: actions.map((i) => i.data.card.id),
-      });
       cardsActions = cards.map((card) => {
         let cardActions = actions.filter(
           (action) => action.data.card.id === card.id
@@ -563,24 +559,18 @@ class TaskController extends TaskDB {
         let teamMovements = movements.filter(
           (move) => move.listType === "team"
         );
-        let teamListId =
-          teamMovements.length > 0
-            ? teamMovements[teamMovements.length - 1].listId
-            : null;
+        let teamId =
+          department.teams.find(
+            (team) =>
+              team.listId === teamMovements[teamMovements.length - 1].listId
+          )._id ?? null;
 
-        logger.info({ loopCard: card.id });
+        console.log({ teamMovements: teamMovements.length, cardId: card.id });
         task.boardId = card.idBoard;
         task.listId = card.idList;
         task.cardId = card.id;
         task.name = card.name;
-        task.teamId = teamListId
-          ? new ObjectId(
-              department.teams.find((team) => team.listId === teamListId)._id
-            )
-          : task.teamId
-          ? task.teamId
-          : null;
-
+        task.teamId = teamId ?? task.teamId ?? null;
         task.status = movements[movements.length - 1].status;
         task.movements = movements;
         task.archivedCard = card.closed ?? task.archivedCard;
@@ -603,6 +593,7 @@ class TaskController extends TaskDB {
         if (!fetch) newTasks.push(task);
         return task;
       });
+
       logger.info({
         cardTask: tasks.find((i) => i.cardId === "64a68e8bfca2a16ae2c6748d")
           .movements,

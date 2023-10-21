@@ -133,3 +133,32 @@
 {"level":"warn","message":"Server worked"}
 {"level":"info","message":{"actions":["652fbe2ce8c1573320565bcc","652fbe367529623bfbe608f9","652fbe31e7e3374181199958","652fbe2ce8c1573320565bcc"],"cards":["652fbe31e7e3374181199958","652fbe367529623bfbe608f9","652fbe2ce8c1573320565bcc"]}}
 {"level":"error","message":{"matchTasksWithTrelloError":{}}}
+{"level":"warn","message":{"db":"mongodb+srv://unicodettp:WFUiEjrljsIDFOmd@cluster1.oeari.mongodb.net/ttp-local"}}
+{"level":"warn","message":"Server worked"}
+{"level":"info","message":{"actions":["652fbe2ce8c1573320565bcc","652fbe367529623bfbe608f9","652fbe31e7e3374181199958","652fbe2ce8c1573320565bcc"],"cards":["652fbe31e7e3374181199958","652fbe367529623bfbe608f9","652fbe2ce8c1573320565bcc"]}}
+{"level":"info","message":{"loopCard":"652fbe31e7e3374181199958"}}
+{"level":"info","message":{"loopCard":"652fbe367529623bfbe608f9"}}
+{"level":"info","message":{"loopCard":"652fbe2ce8c1573320565bcc"}}
+{"level":"error","message":{"matchTasksWithTrelloError":{}}}
+{"level":"warn","message":{"db":"mongodb+srv://unicodettp:WFUiEjrljsIDFOmd@cluster1.oeari.mongodb.net/ttp-local"}}
+{"level":"warn","message":"Server worked"}
+{"level":"info","message":{"actions":["652fbe2ce8c1573320565bcc","652fbe367529623bfbe608f9","652fbe31e7e3374181199958","652fbe2ce8c1573320565bcc"],"cards":["652fbe31e7e3374181199958","652fbe367529623bfbe608f9","652fbe2ce8c1573320565bcc"]}}
+{"level":"info","message":{"loopCard":"652fbe31e7e3374181199958"}}
+{"level":"info","message":{"loopCard":"652fbe367529623bfbe608f9"}}
+{"level":"info","message":{"loopCard":"652fbe2ce8c1573320565bcc"}}
+{"level":"error","message":{"matchTasksWithTrelloError":{}}}
+{"level":"warn","message":{"db":"mongodb+srv://unicodettp:WFUiEjrljsIDFOmd@cluster1.oeari.mongodb.net/ttp-local"}}
+{"level":"warn","message":"Server worked"}
+{"level":"info","message":{"loopCard":"652fbe31e7e3374181199958"}}
+{"level":"info","message":{"loopCard":"652fbe367529623bfbe608f9"}}
+{"level":"info","message":{"loopCard":"652fbe2ce8c1573320565bcc"}}
+{"level":"error","message":{"matchTasksWithTrelloError":{}}}
+{"level":"warn","message":{"db":"mongodb+srv://unicodettp:WFUiEjrljsIDFOmd@cluster1.oeari.mongodb.net/ttp-local"}}
+{"level":"warn","message":"Server worked"}
+{"level":"error","message":{"matchTasksWithTrelloError":{}}}
+{"level":"warn","message":{"db":"mongodb+srv://unicodettp:WFUiEjrljsIDFOmd@cluster1.oeari.mongodb.net/ttp-local"}}
+{"level":"warn","message":"Server worked"}
+{"level":"error","message":{"matchTasksWithTrelloError":{}}}
+{"level":"warn","message":{"db":"mongodb+srv://unicodettp:WFUiEjrljsIDFOmd@cluster1.oeari.mongodb.net/ttp-local"}}
+{"level":"warn","message":"Server worked"}
+{"level":"error","message":{"matchTasksWithTrelloError":{}}}
