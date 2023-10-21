@@ -669,14 +669,12 @@ class TaskController extends TaskDB {
       let movements: Movement[] = movementsChanges.map((move, index) => {
         let movementAction = new CardAction(move);
         movementAction = movementAction.validate(department);
-        logger.info({ movementAction });
         let moveItem: Movement = {
           status: movementAction.action.status,
           listId: movementAction.action.listId,
           movedAt: new Date(movementAction.action.date).toString(),
           listType: movementAction.action.listType,
         };
-
         if (
           ["Done", "Shared", "Not Clear"].includes(movementAction.action.status)
         ) {
@@ -690,6 +688,7 @@ class TaskController extends TaskDB {
         }
         return moveItem;
       });
+      logger.info({ movements });
       movements = [createActionItem, ...movements];
       return { movements, deadlineChanges, createAction };
     } catch (error) {
