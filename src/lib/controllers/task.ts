@@ -515,6 +515,10 @@ class TaskController extends TaskDB {
 
       actions = actions.filter((a) => createActions.includes(a.data.card.id));
       cards = cards.filter((c) => createActions.includes(c.id));
+      logger.info({
+        cards: cards.map((i) => i.id),
+        actions: actions.map((i) => i.data.card.id),
+      });
       cardsActions = cards.map((card) => {
         let cardActions = actions.filter(
           (action) => action.data.card.id === card.id
@@ -539,13 +543,13 @@ class TaskController extends TaskDB {
         })
       );
 
-      console.log({ cardsAfterGettingAttachments: cards.length });
       tasks = cards.map((card) => {
         let fetch = tasks.find((t) => t.cardId === card.id);
         let task = fetch ?? new Tasks({});
         let actions = cardsActions.find(
           (cardAction) => cardAction.cardId === card.id
         );
+
         let department = departments.find(
           (dep) => dep.boardId === card.idBoard
         );
@@ -564,6 +568,7 @@ class TaskController extends TaskDB {
             ? teamMovements[teamMovements.length - 1].listId
             : null;
 
+        logger.info({ loopCard: card.id });
         task.boardId = card.idBoard;
         task.listId = card.idList;
         task.cardId = card.id;
@@ -597,6 +602,10 @@ class TaskController extends TaskDB {
         task.cardCreatedAt = new Date(createAction.date);
         if (!fetch) newTasks.push(task);
         return task;
+      });
+      logger.info({
+        cardTask: tasks.find((i) => i.cardId === "64a68e8bfca2a16ae2c6748d")
+          .movements,
       });
 
       let update = [
@@ -665,7 +674,6 @@ class TaskController extends TaskDB {
         return { ...item, due: new Date(item.date).getTime() };
       });
       _.orderBy(deadlineChanges, "due", "asc");
-
       let createActionItem: Movement = {
         status: createActionMovement.action.status,
         listId: createActionMovement.action.listId,
