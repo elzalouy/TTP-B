@@ -866,7 +866,6 @@ export class CardAction {
   validate = (board: IDepartment) => {
     let date = this.action.date;
     let listId = this.action.data?.list?.id ?? this.action.data?.listAfter?.id;
-    this.action.listId = listId;
     let listName =
       this.action.data?.list?.name ?? this.action.data?.listAfter?.name;
     if (!board || !date) {
@@ -877,16 +876,19 @@ export class CardAction {
     if (list) {
       this.action.listType = "list";
       this.action.status = list.name;
+      this.action.listId = list.listId;
     } else {
       list = board?.teams?.find((t) => t.listId === listId);
       if (list) {
         this.action.listType = "team";
         this.action.status = "In Progress";
+        this.action.listId = list.listId;
       } else {
         list = board.sideLists.find((i) => i.listId === listId);
         if (list) {
           this.action.listType = "sideList";
           this.action.status = "Tasks Board";
+          this.action.listId = list.listId;
         } else {
           console.log({
             listName,
@@ -895,6 +897,7 @@ export class CardAction {
           });
           list = board.lists.find((l) => l.name === listName);
           if (list) {
+            this.action.listId = list.listId;
             this.action.data.list.id = list.listId;
             this.action.status = list.name;
             this.action.listType = "list";
