@@ -566,7 +566,15 @@ class TaskController extends TaskDB {
           )._id ?? null;
 
         logger.info({
-          card: { index, teamMovements, task, actions, department },
+          card: {
+            index,
+            card,
+            task,
+            department,
+            actions,
+            movements,
+            teamMovements,
+          },
         });
         task.boardId = card.idBoard;
         task.listId = card.idList;
