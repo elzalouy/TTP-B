@@ -877,18 +877,21 @@ export class CardAction {
       this.action.listType = "list";
       this.action.status = list.name;
       this.action.listId = list.listId;
+      return this;
     } else {
       list = board?.teams?.find((t) => t.listId === listId);
       if (list) {
         this.action.listType = "team";
         this.action.status = "In Progress";
         this.action.listId = list.listId;
+        return this;
       } else {
         list = board.sideLists.find((i) => i.listId === listId);
         if (list) {
           this.action.listType = "sideList";
           this.action.status = "Tasks Board";
           this.action.listId = list.listId;
+          return this;
         } else {
           console.log({
             listName,
@@ -902,15 +905,14 @@ export class CardAction {
             this.action.data.list.id = list.listId;
             this.action.status = list.name;
             this.action.listType = "list";
+            return this;
           } else {
             this.action.deleteAction = true;
+            return this;
           }
         }
       }
     }
-    if (this.action.data.card.id === "63b0c46e3cb8f100ddadb64e")
-      console.log({ validate: this.action });
-    return this;
   };
 }
 export default TrelloController;
