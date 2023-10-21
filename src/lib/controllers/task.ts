@@ -696,8 +696,8 @@ class TaskController extends TaskDB {
         return moveItem;
       });
       movements = movements.filter((i) => i !== null);
-      logger.info({ movements });
       movements = [createActionItem, ...movements];
+      logger.info({ movements });
       return { movements, deadlineChanges, createAction };
     } catch (error) {
       logger.error({ validateCardActionsError: error });
