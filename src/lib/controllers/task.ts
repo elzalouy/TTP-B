@@ -640,6 +640,9 @@ class TaskController extends TaskDB {
     dueDate?: string | number | null
   ) {
     try {
+      if (cardActions.length > 0)
+        logger.info({ id: cardActions[0].data.card.id });
+      else logger.info({ actions: [] });
       if (
         cardActions[0] &&
         cardActions[0].data.card.id === "63b0c46e3cb8f100ddadb64e"
