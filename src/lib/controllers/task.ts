@@ -563,7 +563,6 @@ class TaskController extends TaskDB {
                   team.listId === teamMovements[teamMovements.length - 1].listId
               )._id
             : null;
-        console.log({ taskBeforeUpdate: task });
         task.boardId = card.idBoard;
         task.listId = card.idList;
         task.cardId = card.id;
@@ -670,7 +669,7 @@ class TaskController extends TaskDB {
       let movements: Movement[] = movementsChanges.map((move, index) => {
         let movementAction = new CardAction(move);
         movementAction = movementAction.validate(department);
-        console.log({ movementAction });
+        logger.info({ movementAction });
         let moveItem: Movement = {
           status: movementAction.action.status,
           listId: movementAction.action.listId,
