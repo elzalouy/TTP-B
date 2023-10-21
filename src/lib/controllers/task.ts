@@ -201,7 +201,7 @@ class TaskController extends TaskDB {
         data.movements = [
           {
             listId: data.listId,
-            movedAt: new Date(Date.now()).toLocaleDateString(),
+            movedAt: new Date(Date.now()).toString(),
             listType: "list",
             status: data.status,
           },
@@ -551,7 +551,7 @@ class TaskController extends TaskDB {
           TaskController.validateCardActions(
             actions.actions,
             department,
-            task.deadline ? new Date(task.deadline).toLocaleDateString() : null
+            task.deadline ? new Date(task.deadline).toString() : null
           );
         let teamMovements = movements.filter(
           (move) => move.listType === "team"
@@ -657,9 +657,7 @@ class TaskController extends TaskDB {
       let createActionItem: Movement = {
         status: createActionMovement.action.status,
         listId: createActionMovement.action.listId,
-        movedAt: new Date(
-          createActionMovement.action.date
-        ).toLocaleDateString(),
+        movedAt: new Date(createActionMovement.action.date).toString(),
         listType: createActionMovement.action.listType,
       };
       console.log({ createActionItem });
@@ -681,7 +679,7 @@ class TaskController extends TaskDB {
         let moveItem: Movement = {
           status: movementAction.action.status,
           listId: movementAction.action.listId,
-          movedAt: new Date(movementAction.action.date).toLocaleDateString(),
+          movedAt: new Date(movementAction.action.date).toString(),
           listType: movementAction.action.listType,
         };
 
@@ -692,7 +690,7 @@ class TaskController extends TaskDB {
             deadlineChanges.length > 0
               ? deadlineChanges[0].data.card.due
               : dueDate
-              ? new Date(dueDate).toLocaleDateString()
+              ? new Date(dueDate).toString()
               : null;
           deadlineChanges = deadlineChanges.filter((i, index) => index > 0);
         }
