@@ -672,9 +672,9 @@ class TaskController extends TaskDB {
       );
       let movements: Movement[] = movementsChanges.map((move, index) => {
         let movementAction = new CardAction(move);
-        movementAction = movementAction.validate(department);
         if (move.data.card.id === "63b0c46e3cb8f100ddadb64e")
           logger.info({ movementAction });
+        movementAction = movementAction.validate(department);
         let moveItem: Movement = {
           status: movementAction.action.status,
           listId: movementAction.action.listId,
