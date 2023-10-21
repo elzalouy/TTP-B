@@ -641,7 +641,7 @@ class TaskController extends TaskDB {
   ) {
     try {
       logger.info({
-        cardActions: [...cardActions],
+        cardActions: cardActions.map((i) => console.log({ i })),
       });
       logger.info({ department: department.name });
       logger.info({ dueDate });
