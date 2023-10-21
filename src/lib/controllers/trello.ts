@@ -893,19 +893,21 @@ export class CardAction {
           this.action.listId = list.listId;
           return this;
         } else {
-          console.log({
-            listName,
-            listId,
-            list: board.lists.find((i) => i.name === listName),
-          });
           list = board.lists.find((l) => l.name === listName);
           if (list) {
-            console.log("deleted list before");
             this.action.listId = list.listId;
             this.action.status = list.name;
             this.action.listType = "list";
             return this;
           } else {
+            logger.info({
+              deleteActionMovement: {
+                cardId: this.action.data.card.id,
+                listId,
+                listName,
+                boardId: board.boardId,
+              },
+            });
             this.action.deleteAction = true;
             return this;
           }
