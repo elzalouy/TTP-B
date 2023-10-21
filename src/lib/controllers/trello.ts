@@ -902,7 +902,6 @@ export class CardAction {
           if (list) {
             console.log("deleted list before");
             this.action.listId = list.listId;
-            this.action.data.list.id = list.listId;
             this.action.status = list.name;
             this.action.listType = "list";
             return this;
