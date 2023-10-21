@@ -290,3 +290,17 @@
 {"level":"info","message":{"department":"TTP Creative"}}
 {"level":"info","message":{"dueDate":null}}
 {"level":"info","message":{"movements":[{"listId":"651ebb515ae41ab1a338900f","listType":"list","movedAt":"Wed Oct 18 2023 13:15:08 GMT+0200 (Eastern European Standard Time)","status":"In Progress"}]}}
+{"level":"warn","message":{"db":"mongodb+srv://unicodettp:WFUiEjrljsIDFOmd@cluster1.oeari.mongodb.net/ttp-local"}}
+{"level":"warn","message":"Server worked"}
+{"level":"info","message":{"cardActions":[null]}}
+{"level":"info","message":{"department":"TTP Creative"}}
+{"level":"info","message":{"dueDate":null}}
+{"level":"info","message":{"movements":[]}}
+{"level":"info","message":{"cardActions":[null]}}
+{"level":"info","message":{"department":"TTP Creative"}}
+{"level":"info","message":{"dueDate":null}}
+{"level":"info","message":{"movements":[]}}
+{"level":"info","message":{"cardActions":[null,null]}}
+{"level":"info","message":{"department":"TTP Creative"}}
+{"level":"info","message":{"dueDate":null}}
+{"level":"info","message":{"movements":[{"listId":"651ebb515ae41ab1a338900f","listType":"list","movedAt":"Wed Oct 18 2023 13:15:08 GMT+0200 (Eastern European Standard Time)","status":"In Progress"}]}}
