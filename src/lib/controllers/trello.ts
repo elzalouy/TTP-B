@@ -888,9 +888,8 @@ export class CardAction {
           this.action.listType = "sideList";
           this.action.status = "Tasks Board";
         } else {
-          list = listName
-            ? board.lists.find((l) => listName.includes(l.name))
-            : null;
+          console.log({ listName, listId });
+          list = board.lists.find((l) => l.name === listName);
           if (list) {
             this.action.data.list.id = list.listId;
             this.action.status = list.name;
