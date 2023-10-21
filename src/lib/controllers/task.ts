@@ -640,7 +640,11 @@ class TaskController extends TaskDB {
     dueDate?: string | number | null
   ) {
     try {
-      logger.info({ cardActions, department, dueDate });
+      logger.info({
+        cardActions: [...cardActions],
+        department: department,
+        dueDate: dueDate,
+      });
       let createAction = cardActions.find(
         (item) => !item.data.old && !item.data.listBefore && !item.data.card.due
       );
