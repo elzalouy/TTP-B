@@ -643,11 +643,7 @@ class TaskController extends TaskDB {
       if (cardActions.length > 0)
         logger.info({ id: cardActions[0].data.card.id });
       else logger.info({ actions: [] });
-      if (
-        cardActions[0] &&
-        cardActions[0].data.card.id === "63b0c46e3cb8f100ddadb64e"
-      )
-        cardActions.map((action) => logger.info(action));
+
       let createAction = cardActions.find(
         (item) => !item.data.old && !item.data.listBefore && !item.data.card.due
       );
@@ -677,6 +673,8 @@ class TaskController extends TaskDB {
       let movements: Movement[] = movementsChanges.map((move, index) => {
         let movementAction = new CardAction(move);
         movementAction = movementAction.validate(department);
+        if (move.data.card.id === "63b0c46e3cb8f100ddadb64e")
+          logger.info({ movementAction });
         let moveItem: Movement = {
           status: movementAction.action.status,
           listId: movementAction.action.listId,
