@@ -888,7 +888,11 @@ export class CardAction {
           this.action.listType = "sideList";
           this.action.status = "Tasks Board";
         } else {
-          console.log({ listName, listId });
+          console.log({
+            listName,
+            listId,
+            list: board.lists.find((i) => i.name === listName),
+          });
           list = board.lists.find((l) => l.name === listName);
           if (list) {
             this.action.data.list.id = list.listId;
