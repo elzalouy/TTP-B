@@ -596,6 +596,7 @@ class TaskController extends TaskDB {
         if (!fetch) newTasks.push(task);
         else return task;
       });
+
       let update = [
         ...newTasks.map((item) => {
           return {

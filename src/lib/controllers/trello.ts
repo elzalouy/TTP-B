@@ -322,7 +322,7 @@ class TrelloController {
 
   static async __getCardsInBoard(boardId: string) {
     try {
-      let url = trelloApi(`boards/${boardId}/cards/open?`);
+      let url = trelloApi(`boards/${boardId}/cards/all?`);
       let result = await fetch(url, {
         method: "GET",
         headers: {
