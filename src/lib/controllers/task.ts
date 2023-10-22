@@ -512,7 +512,6 @@ class TaskController extends TaskDB {
       let createActions = actions
         .filter((i) => i.type === "createCard")
         .map((i) => i.data.card.id);
-
       actions = actions.filter((a) => createActions.includes(a.data.card.id));
       cards = cards.filter((c) => createActions.includes(c.id));
       cardsActions = cards.map((card) => {
@@ -521,6 +520,13 @@ class TaskController extends TaskDB {
         );
         if (cardActions) return { cardId: card.id, actions: cardActions };
         else return { cardId: card.id, actions: [] };
+      });
+      console.log({
+        taskNeeded: tasks.find((i) => i.cardId === "64da21d0f792da76887fdadf"),
+        actionsNeeded: actions.filter(
+          (i) => i.data.card.id === "64da21d0f792da76887fdadf"
+        ),
+        cardNeeded: cards.find((i) => i.id === "64da21d0f792da76887fdadf"),
       });
       cardsActions = cardsActions.filter((item) => item.actions.length > 0);
       cards = cards.filter((card) => {
