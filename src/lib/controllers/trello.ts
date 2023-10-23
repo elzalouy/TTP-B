@@ -781,10 +781,9 @@ class TrelloController {
       actions.push(...newActions);
       while (
         newActions.length === perpage &&
-        new Date(newActions[newActions.length - 1].date).getFullYear() >=
-          2023 ===
-          true
+        new Date(newActions[newActions.length - 1].date).getFullYear() >= 2023
       ) {
+        console.log({ lastActionDate: newActions[newActions.length] });
         url = trelloApi(
           `boards/${board}/actions/?filter=createCard,updateCard:due,updateCard:idList&limit=${perpage}&`
         );
