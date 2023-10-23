@@ -511,6 +511,10 @@ class TaskController extends TaskDB {
 
       console.log({
         task: tasks.find((i) => i.cardId === "646b423fcd5d42825c0eb9f6"),
+        card: cards.find((i) => i.id === "646b423fcd5d42825c0eb9f6"),
+        actions: actions.find(
+          (i) => i.data.card.id === "646b423fcd5d42825c0eb9f6"
+        ),
       });
       let createActions = actions
         .filter((i) => i.type === "createCard")
