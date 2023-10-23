@@ -509,13 +509,6 @@ class TaskController extends TaskDB {
         (action) => action !== undefined && action !== null
       );
 
-      console.log({
-        task: tasks.find((i) => i.cardId === "646b423fcd5d42825c0eb9f6"),
-        card: cards.find((i) => i.id === "646b423fcd5d42825c0eb9f6"),
-        actions: actions.filter(
-          (i) => i.data.card.id === "646b423fcd5d42825c0eb9f6"
-        ),
-      });
       let createActions = actions
         .filter((i) => i.type === "createCard")
         .map((i) => i.data.card.id);
@@ -534,6 +527,13 @@ class TaskController extends TaskDB {
           (action) => action.cardId === card.id
         );
         if (actions) return card;
+      });
+      console.log({
+        task: tasks.find((i) => i.cardId === "646b423fcd5d42825c0eb9f6"),
+        card: cards.find((i) => i.id === "646b423fcd5d42825c0eb9f6"),
+        actions: cardsActions.find(
+          (item) => item.cardId === "646b423fcd5d42825c0eb9f6"
+        ),
       });
 
       cards = await Promise.all(
