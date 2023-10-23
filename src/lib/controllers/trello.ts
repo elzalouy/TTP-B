@@ -795,7 +795,7 @@ class TrelloController {
           },
         });
         newActions = await result.json();
-        console.log({ lastActionDate: newActions[newActions.length] });
+        console.log({ lastActionDate: newActions[newActions.length - 1].date });
         actions = [...actions, ...newActions];
       }
       return actions;
