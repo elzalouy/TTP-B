@@ -509,6 +509,9 @@ class TaskController extends TaskDB {
         (action) => action !== undefined && action !== null
       );
 
+      console.log({
+        task: tasks.find((i) => i.cardId === "646b423fcd5d42825c0eb9f6"),
+      });
       let createActions = actions
         .filter((i) => i.type === "createCard")
         .map((i) => i.data.card.id);
@@ -521,13 +524,6 @@ class TaskController extends TaskDB {
         if (cardActions) return { cardId: card.id, actions: cardActions };
         else return { cardId: card.id, actions: [] };
       });
-      console.log({
-        taskNeeded: tasks.find((i) => i.cardId === "64da21d0f792da76887fdadf"),
-        actionsNeeded: actions.filter(
-          (i) => i.data.card.id === "64da21d0f792da76887fdadf"
-        ),
-        cardNeeded: cards.find((i) => i.id === "64da21d0f792da76887fdadf"),
-      });
       cardsActions = cardsActions.filter((item) => item.actions.length > 0);
       cards = cards.filter((card) => {
         let actions = cardsActions.filter(
@@ -535,6 +531,7 @@ class TaskController extends TaskDB {
         );
         if (actions) return card;
       });
+
       cards = await Promise.all(
         cards?.map(async (item) => {
           let attachments = await TrelloController.__getCardAttachments(
@@ -544,6 +541,7 @@ class TaskController extends TaskDB {
           return item;
         })
       );
+
       tasks = cards.map((card, index) => {
         let fetch = tasks.find((t) => t.cardId === card.id);
         let task = fetch ?? new Tasks({});
