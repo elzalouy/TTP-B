@@ -474,6 +474,8 @@ class TaskController extends TaskDB {
         tasks: TaskInfo[],
         cards: Card[],
         cardsActions: { cardId: string; actions: TrelloAction[] }[] = [],
+        archivedCards: string[],
+        archivedTasks: TaskInfo[],
         cardsIds: string[],
         actions: TrelloAction[];
 
@@ -497,6 +499,11 @@ class TaskController extends TaskDB {
         )
       );
 
+      archivedCards = cards.filter((i) => i.closed === true).map((i) => i.id);
+      archivedTasks = tasks.filter((task) =>
+        archivedCards.includes(task.cardId)
+      );
+
       actions = _.flattenDeep(
         await Promise.all(
           departments.map(async (item) => {
@@ -514,14 +521,6 @@ class TaskController extends TaskDB {
         .map((i) => i.data.card.id);
       actions = actions.filter((a) => createActions.includes(a.data.card.id));
       cards = cards.filter((c) => createActions.includes(c.id));
-      console.log({
-        filter: "filter by create action",
-        task: tasks.find((i) => i.cardId === "646b423fcd5d42825c0eb9f6"),
-        card: cards.find((i) => i.id === "646b423fcd5d42825c0eb9f6"),
-        actions: cardsActions.find(
-          (item) => item.cardId === "646b423fcd5d42825c0eb9f6"
-        ),
-      });
       cardsActions = cards.map((card) => {
         let cardActions = actions.filter(
           (action) => action.data.card.id === card.id
@@ -601,6 +600,16 @@ class TaskController extends TaskDB {
       });
 
       let update = [
+        ...archivedTasks.map((task) => {
+          return {
+            updateOne: {
+              filter: { _id: task._id },
+              update: {
+                archivedCard: true,
+              },
+            },
+          };
+        }),
         ...newTasks.map((item) => {
           return {
             insertOne: {
@@ -636,6 +645,7 @@ class TaskController extends TaskDB {
           };
         }),
       ];
+
       Tasks.bulkWrite(update, {});
       newTasks.forEach(async (item) => {
         TrelloController.__addWebHook(item.cardId, "trelloWebhookUrlTask");
