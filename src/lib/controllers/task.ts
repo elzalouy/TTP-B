@@ -466,6 +466,7 @@ class TaskController extends TaskDB {
       logger.error({ getDeletedBackError: error });
     }
   }
+
   static async matchTasksWithTrello() {
     try {
       console.log("matching tasks");
@@ -476,7 +477,6 @@ class TaskController extends TaskDB {
         cardsActions: { cardId: string; actions: TrelloAction[] }[] = [],
         archivedCards: string[],
         archivedTasks: TaskInfo[],
-        cardsIds: string[],
         actions: TrelloAction[];
 
       // (1) get departments
@@ -552,6 +552,7 @@ class TaskController extends TaskDB {
         let actions = cardsActions.find(
           (cardAction) => cardAction.cardId === card.id
         );
+
         let department = departments.find(
           (dep) => dep.boardId === card.idBoard
         );
@@ -654,6 +655,7 @@ class TaskController extends TaskDB {
       logger.error({ matchTasksWithTrelloError: error });
     }
   }
+
   static validateCardActions(
     cardActions: TrelloAction[],
     department: IDepartment,
@@ -665,20 +667,25 @@ class TaskController extends TaskDB {
       );
       let createActionMovement = new CardAction(createAction);
       createActionMovement = createActionMovement.validate(department);
+
       let deadlineChanges = cardActions.filter((item) => item.data.card.due);
+
       deadlineChanges = deadlineChanges.map((item) => {
         return { ...item, due: new Date(item.date).getTime() };
       });
-      _.orderBy(deadlineChanges, "due", "asc");
+
+      _.orderBy(deadlineChanges, "due", "desc");
       let createActionItem: Movement = {
         status: createActionMovement.action.status,
         listId: createActionMovement.action.listId,
         movedAt: new Date(createActionMovement.action.date).toString(),
         listType: createActionMovement.action.listType,
       };
+
       let movementsChanges = cardActions.filter(
         (item) => item.data.listAfter && item.data.old.idList
       );
+
       movementsChanges = movementsChanges.map((item) => {
         return { ...item, dateNumber: new Date(item.date).getTime() };
       });
@@ -686,6 +693,7 @@ class TaskController extends TaskDB {
       movementsChanges = movementsChanges.sort(
         (a, b) => new Date(a.date).getTime() - new Date(b.date).getTime()
       );
+
       let movements: Movement[] = movementsChanges.map((move, index) => {
         let movementAction = new CardAction(move);
         movementAction = movementAction.validate(department);
@@ -709,6 +717,7 @@ class TaskController extends TaskDB {
         }
         return moveItem;
       });
+
       movements = movements.filter((i) => i !== null);
       movements = [createActionItem, ...movements];
       return { movements, deadlineChanges, createAction };
