@@ -108,6 +108,7 @@ export interface AttachmentSchema {
 export interface DownloadAttachmentResponse {}
 
 export interface Movement {
+  actionId: string;
   status: string;
   movedAt: string;
   journeyDeadline?: string | null;

@@ -49,6 +49,11 @@ export const movementSchema: Schema<Movement> = new Schema<Movement>({
     type: String,
     required: false,
   },
+  actionId: {
+    type: String,
+    unique: true,
+    required: true,
+  },
 });
 
 const TaskSchema = new Schema<TaskInfo, TasksModel>(

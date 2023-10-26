@@ -35,21 +35,24 @@ export function moveTaskJob(
   deadline?: string
 ) {
   var task;
+
   updateTaskQueue.push(async (cb) => {
     try {
       const result = await TrelloController.moveTaskToDiffList(
         cardId,
-        listId
+        listId,
+        deadline
       ).then(() => {});
       cb(null);
     } catch (error) {
       logger.error({ moveTaskJobError: error });
     }
   });
+
   updateTaskQueue.push(async (cb) => {
     try {
+      task = await TaskDB.getOneTaskBy({ cardId: cardId });
       if (status === "Shared" || status === "Not Clear") {
-        task = await TaskDB.getOneTaskBy({ cardId: cardId });
         await NotificationController.__MoveTaskNotification(task, status, user);
       }
       cb(null);

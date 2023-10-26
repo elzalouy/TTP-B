@@ -107,11 +107,7 @@ class TrelloController {
     listId: string,
     due?: string
   ) {
-    return await TrelloController.__moveTaskToDiffList(
-      cardId,
-      listId,
-      due ?? undefined
-    );
+    return await TrelloController.__moveTaskToDiffList(cardId, listId, due);
   }
 
   static async __moveTaskToDiffList(
@@ -840,6 +836,7 @@ class TrelloController {
       );
       let movements: Movement[] = cardsActions.map((cardAction) => {
         return {
+          actionId: cardAction.action.id,
           movedAt: new Date(cardAction.action.date).toString(),
           listId: cardAction.action.listId,
           status: cardAction.action.status,

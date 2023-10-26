@@ -12,6 +12,7 @@ import ProjectController from "./project";
 import { IDepartment, IList, ITeam } from "../types/model/Department";
 import { LeanDocument } from "mongoose";
 import { ObjectId } from "mongoose";
+import _ from "lodash";
 
 export default class TrelloWebhook {
   actionRequest: webhookUpdateInterface;
@@ -136,6 +137,7 @@ export default class TrelloWebhook {
           listId: listId,
           movements: [
             {
+              actionId: this.actionRequest.action.id,
               status: team
                 ? "In Progress"
                 : isSideList
@@ -154,6 +156,12 @@ export default class TrelloWebhook {
             ? new Date(this.actionRequest.action.date)
             : null,
         };
+        this.task.movements = _.uniqBy(this.task.movements, "actionId");
+        this.task.movements = this.task.movements.sort(
+          (a, b) =>
+            new Date(a.movedAt).getTime() - new Date(b.movedAt).getTime()
+        );
+
         return await TaskController.createTaskByTrello(this.task);
       }
     } catch (error) {
@@ -183,8 +191,7 @@ export default class TrelloWebhook {
   private async updateCard() {
     try {
       let action = this.actionRequest.action.display.translationKey;
-      let isNewJourney: boolean,
-        task: LeanDocument<TaskInfo & { _id: ObjectId }>,
+      let task: LeanDocument<TaskInfo & { _id: ObjectId }>,
         department: IDepartment,
         listId: string,
         isMoved: boolean,
@@ -231,64 +238,64 @@ export default class TrelloWebhook {
 
         listBefore = this.actionRequest.action.data.listBefore?.name ?? "";
         listAfter = this.actionRequest.action.data.listAfter?.name ?? "";
-        isNewJourney =
-          (sideList || status === "Tasks Board") &&
-          ["Done", "Shared", "Cancled"].includes(listBefore);
         cardDeadline = this.actionRequest.action.data.card.due
           ? new Date(this.actionRequest.action.data.card.due)
           : task.deadline;
 
-        if (!isProject) {
-          this.task = {
-            name: this.actionRequest.action.data.card.name,
-            boardId: this.actionRequest.action.data.board.id,
-            cardId: this.actionRequest.action.data.card.id,
-            deadline: isNewJourney ? null : cardDeadline,
-            start: this.actionRequest.action?.data?.card?.start
-              ? new Date(this.actionRequest.action?.data?.card?.start)
-              : task.start ?? null,
-            description:
-              this.actionRequest.action.data.card.desc ?? task.description,
-            teamId: isNewTeam?._id ?? task.teamId,
-            listId: listId,
+        this.task = {
+          name: this.actionRequest.action.data.card.name,
+          boardId: this.actionRequest.action.data.board.id,
+          cardId: this.actionRequest.action.data.card.id,
+          deadline: cardDeadline,
+          start: this.actionRequest.action?.data?.card?.start
+            ? new Date(this.actionRequest.action?.data?.card?.start)
+            : task.start ?? null,
+          description:
+            this.actionRequest.action.data.card.desc ?? task.description,
+          teamId: isNewTeam?._id ?? task.teamId,
+          listId: listId,
+          status: sideList
+            ? "Tasks Board"
+            : inProgressList?.name
+            ? inProgressList.name
+            : status,
+          movements: task.movements,
+          teamListId: isNewTeam ? listId : task.teamListId,
+          archivedCard: this.actionRequest.action.data.card.closed,
+          archivedAt:
+            action === "action_archived_card" ||
+            action === "action_deleted_card"
+              ? this.actionRequest.action.date
+              : task.archivedAt,
+          projectId: task.projectId,
+        };
+        if (this.actionRequest.action.data.card.due)
+          this.task.movements[this.task.movements.length - 1].journeyDeadline =
+            this.actionRequest.action.data.card.due;
+
+        if (isMoved || task.movements.length === 0) {
+          let move: Movement = {
+            actionId: this.actionRequest.action.id,
             status: sideList
               ? "Tasks Board"
               : inProgressList?.name
               ? inProgressList.name
               : status,
-            movements: task.movements,
-            teamListId: isNewTeam ? listId : task.teamListId,
-            archivedCard: this.actionRequest.action.data.card.closed,
-            archivedAt:
-              action === "action_archived_card" ||
-              action === "action_deleted_card"
-                ? this.actionRequest.action.date
-                : task.archivedAt,
-            projectId: task.projectId,
+            movedAt: new Date(Date.now()).toString(),
           };
+          this.task.movements.push(move);
+          this.task.archivedAt = null;
+        }
+        this.task.movements = _.uniqBy(this.task.movements, "actionId");
+        this.task.movements = this.task.movements.sort(
+          (a, b) =>
+            new Date(a.movedAt).getTime() - new Date(b.movedAt).getTime()
+        );
 
-          if (isMoved || task.movements.length === 0) {
-            let move: Movement = {
-              status: sideList
-                ? "Tasks Board"
-                : inProgressList?.name
-                ? inProgressList.name
-                : status,
-              movedAt: new Date(Date.now()).toString(),
-            };
-            if (["Done", "Shared", "Cancled"].includes(listAfter))
-              move.journeyDeadline = cardDeadline
-                ? new Date(cardDeadline).toDateString()
-                : null;
-            this.task.movements.push(move);
-            this.task.archivedAt = null;
-          }
-
-          return await TaskController.updateTaskByTrelloDB(this.task, {
-            id: this.user.id,
-            name: this.user?.name,
-          });
-        } else this.updateProject();
+        return await TaskController.updateTaskByTrelloDB(this.task, {
+          id: this.user.id,
+          name: this.user?.name,
+        });
       } else this.updateProject();
     } catch (error) {
       logger.error({ updateCardHook: error });

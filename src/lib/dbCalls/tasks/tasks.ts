@@ -252,11 +252,6 @@ class TaskDB {
         : task.attachedFiles;
       task.teamId = new ObjectId(data.teamId) ?? task.teamId;
       task.movements = [...task.movements];
-      if (data.status !== task.status)
-        task.movements.push({
-          status: data.status,
-          movedAt: new Date(Date.now()).toString(),
-        });
       delete task._id;
       let update = await Tasks.findByIdAndUpdate(id, task, {
         new: true,
@@ -391,9 +386,6 @@ class TaskDB {
         return task;
       } else {
         let task = new Tasks(data);
-        task.movements = [
-          { status: data.status, movedAt: new Date(Date.now()).toString() },
-        ];
         task = await task.save();
         await io.sockets.emit("create-task", task);
         return await task;

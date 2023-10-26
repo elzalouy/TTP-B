@@ -194,12 +194,15 @@ class TaskController extends TaskDB {
       data.attachedFiles = [];
       let createdCard: { id: string } | any =
         await TrelloController.createCardInList(data);
+      let actions: TrelloAction[] =
+        await TrelloController._getCreationActionOfCard(createdCard.id);
       if (createdCard) {
         data.cardId = createdCard.id;
         data.trelloShortUrl = createdCard.shortUrl;
         data.cardCreatedAt = new Date(Date.now());
         data.movements = [
           {
+            actionId: actions[0].id,
             listId: data.listId,
             movedAt: new Date(Date.now()).toString(),
             listType: "list",
@@ -556,12 +559,11 @@ class TaskController extends TaskDB {
         let department = departments.find(
           (dep) => dep.boardId === card.idBoard
         );
-        let { movements, createAction, deadlineChanges } =
-          TaskController.validateCardActions(
-            actions.actions,
-            department,
-            task.deadline ? new Date(task.deadline).toString() : null
-          );
+        let { movements, createAction } = TaskController.validateCardActions(
+          actions.actions,
+          department,
+          task.deadline ? new Date(task.deadline).toString() : null
+        );
         let teamMovements = movements.filter(
           (move) => move.listType === "team"
         );
@@ -665,62 +667,55 @@ class TaskController extends TaskDB {
       let createAction = cardActions.find(
         (item) => !item.data.old && !item.data.listBefore && !item.data.card.due
       );
+
       let createActionMovement = new CardAction(createAction);
+
       createActionMovement = createActionMovement.validate(department);
-
-      let deadlineChanges = cardActions.filter((item) => item.data.card.due);
-
-      deadlineChanges = deadlineChanges.map((item) => {
-        return { ...item, due: new Date(item.date).getTime() };
-      });
-
-      _.orderBy(deadlineChanges, "due", "desc");
       let createActionItem: Movement = {
+        actionId: createActionMovement.action.id,
         status: createActionMovement.action.status,
         listId: createActionMovement.action.listId,
         movedAt: new Date(createActionMovement.action.date).toString(),
         listType: createActionMovement.action.listType,
       };
 
-      let movementsChanges = cardActions.filter(
-        (item) => item.data.listAfter && item.data.old.idList
+      let sortedMoveOrDueChanges = cardActions.filter(
+        (i) => i.type === "updateCard"
       );
 
-      movementsChanges = movementsChanges.map((item) => {
-        return { ...item, dateNumber: new Date(item.date).getTime() };
-      });
-
-      movementsChanges = movementsChanges.sort(
-        (a, b) => new Date(a.date).getTime() - new Date(b.date).getTime()
-      );
-
-      let movements: Movement[] = movementsChanges.map((move, index) => {
-        let movementAction = new CardAction(move);
-        movementAction = movementAction.validate(department);
-        if (movementAction.action.deleteAction === true) return null;
-        let moveItem: Movement = {
-          status: movementAction.action.status,
-          listId: movementAction.action.listId,
-          movedAt: new Date(movementAction.action.date).toString(),
-          listType: movementAction.action.listType,
-        };
-        if (
-          ["Done", "Shared", "Not Clear"].includes(movementAction.action.status)
-        ) {
-          moveItem.journeyDeadline =
-            deadlineChanges.length > 0
-              ? deadlineChanges[0].data.card.due
-              : dueDate
-              ? new Date(dueDate).toString()
-              : null;
-          deadlineChanges = deadlineChanges.filter((i, index) => index > 0);
+      let due: { index: number; dueDate: string }[] = [];
+      let movements: Movement[] = sortedMoveOrDueChanges.map((move, index) => {
+        if (move.data.card.due) {
+          due.push({
+            index: index > 0 ? index - 1 : 0,
+            dueDate: move.data.card.due,
+          });
+          return null;
+        } else {
+          let movementAction = new CardAction(move);
+          movementAction = movementAction.validate(department);
+          if (movementAction.action.deleteAction === true) return null;
+          let moveItem: Movement = {
+            actionId: movementAction.action.id,
+            status: movementAction.action.status,
+            listId: movementAction.action.listId,
+            movedAt: new Date(movementAction.action.date).toString(),
+            listType: movementAction.action.listType,
+          };
+          return moveItem;
         }
-        return moveItem;
       });
 
       movements = movements.filter((i) => i !== null);
       movements = [createActionItem, ...movements];
-      return { movements, deadlineChanges, createAction };
+      due.forEach((i) => {
+        movements[i.index].journeyDeadline = i.dueDate;
+      });
+      movements = _.uniqBy(movements, "actionId");
+      movements = movements.sort(
+        (a, b) => new Date(a.movedAt).getTime() - new Date(b.movedAt).getTime()
+      );
+      return { movements, createAction };
     } catch (error) {
       logger.error({ validateCardActionsError: error });
     }
