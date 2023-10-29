@@ -108,7 +108,6 @@ const TaskSchema = new Schema<TaskInfo, TasksModel>(
         "Not Clear",
         "Cancled",
         "Review",
-        "Archived",
       ],
     },
     start: {

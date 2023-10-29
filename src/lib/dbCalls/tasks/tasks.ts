@@ -87,7 +87,7 @@ class TaskDB {
                 $match: {
                   marchentID: new mongoose.Types.ObjectId(depId),
                   status: {
-                    $in: ["In Progress", "shared", "not clear", "review"],
+                    $in: ["In Progress", "Shared", "Not Clear", "Review"],
                   },
                 },
               },
