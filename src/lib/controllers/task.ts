@@ -685,6 +685,7 @@ class TaskController extends TaskDB {
 
       let due: { index: number; dueDate: string }[] = [];
       let movements: Movement[] = sortedMoveOrDueChanges.map((move, index) => {
+        console.log({ move });
         if (move.data.card.due) {
           due.push({
             index: index > 0 ? index - 1 : 0,
