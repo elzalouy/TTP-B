@@ -722,7 +722,7 @@ class TaskController extends TaskDB {
       );
       return { movements, createAction };
     } catch (error) {
-      logger.error({ validateCardActionsError: error });
+      logger.error({ validateCardActionsError: error, cardActions });
     }
   }
 }
