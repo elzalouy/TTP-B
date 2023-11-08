@@ -1,4 +1,5 @@
 {
+  "type": "production",
   "name": "TTP Production",
   "trelloWebhookUrlTask": "https://ttp-beta.herokuapp.com/api/webhookUpdate",
   "trelloWebhookUrlProject": "https://ttp-beta.herokuapp.com/api/webhookUpdateProject",

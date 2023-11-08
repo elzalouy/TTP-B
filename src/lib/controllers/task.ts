@@ -486,7 +486,7 @@ class TaskController extends TaskDB {
       // (2) get tasks and actions
       // loop over cards :
       // save same data on DB
-      // save actions of this year cards
+      // save actions of this year for the cards
       // archive all not existed tasks as cards.
 
       departments = await Department.find({});
@@ -514,7 +514,6 @@ class TaskController extends TaskDB {
           })
         )
       );
-
       actions = actions.filter(
         (action) => action !== undefined && action !== null
       );
@@ -552,6 +551,7 @@ class TaskController extends TaskDB {
       tasks = cards.map((card, index) => {
         let fetch = tasks.find((t) => t.cardId === card.id);
         let task = fetch ?? new Tasks({});
+        console.log({ fetch });
         let actions = cardsActions.find(
           (cardAction) => cardAction.cardId === card.id
         );
@@ -653,6 +653,11 @@ class TaskController extends TaskDB {
       newTasks.forEach(async (item) => {
         TrelloController.__addWebHook(item.cardId, "trelloWebhookUrlTask");
       });
+      console.log({ env: process.env.NODE_ENV });
+      if (process.env.NODE_ENV === "development")
+        tasks.forEach(async (item) => {
+          TrelloController.__addWebHook(item.cardId, "trelloWebhookUrlTask");
+        });
     } catch (error) {
       logger.error({ matchTasksWithTrelloError: error });
     }

@@ -7,7 +7,7 @@ import {
   projectsPassedDate,
 } from "../backgroundJobs/actions/project.actions.cron";
 import { initializeQueue } from "../backgroundJobs/actions/init.actions.queue";
-import { initializeTrelloBoards } from "./db/dbConnect";
+import { initializeCardsPlugins, initializeTrelloBoards } from "./db/dbConnect";
 import { taskRoutesQueue } from "../backgroundJobs/routes/tasks.Route.Queue";
 import TaskController from "../controllers/task";
 
@@ -29,7 +29,9 @@ export default async function (
 
     initializeQueue.push(async (cb) => {
       await initializeTrelloBoards().then(async () => {
-        await TaskController.matchTasksWithTrello();
+        await TaskController.matchTasksWithTrello().then(async () => {
+          await initializeCardsPlugins();
+        });
       });
     });
   } catch (error) {

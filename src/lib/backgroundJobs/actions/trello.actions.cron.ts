@@ -4,7 +4,6 @@ import { CronJob } from "cron";
 import logger from "../../../logger";
 import {
   initializeCardsPlugins,
-  initializeTTPTasks,
   initializeTrelloBoards,
 } from "../../startup/db/dbConnect";
 import TrelloController from "../../controllers/trello";
@@ -14,20 +13,6 @@ export function initializeTrelloBoardsJob() {
     "0 6 * * *",
     async () => {
       initializeTrelloBoards();
-    },
-    null,
-    true,
-    "Asia/Riyadh",
-    null,
-    true
-  );
-}
-
-export function initializeSystemTasksJob() {
-  return new CronJob(
-    "0 6 * * *",
-    async () => {
-      await initializeTTPTasks();
     },
     null,
     true,
