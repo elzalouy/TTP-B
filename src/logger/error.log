@@ -221,3 +221,4 @@
 {"level":"error","message":{"matchTasksWithTrelloError":{}}}
 {"level":"error","message":{"initializeCardsPluginsError":{}}}
 {"level":"error","message":{"deleteCardHook":{}}}
+{"level":"error","message":{"deleteCardHook":{}}}
