@@ -438,7 +438,7 @@ class TaskController extends TaskDB {
               );
               return {
                 updateOne: {
-                  filter: { _id: plugin._id },
+                  filter: { _id: plugin._id.toString() },
                   update: {
                     cardId: taskUpdate.cardId,
                     checkLists: plugin.checkLists,
@@ -449,14 +449,13 @@ class TaskController extends TaskDB {
           })
         );
         updatePlugins = updatePlugins.filter((i: any) => i !== null);
-        console.log({ updatePlugins });
         await TasksPlugins.bulkWrite(updatePlugins);
       }
       let update = [
         ...tasks.map((item) => {
           return {
             updateOne: {
-              filter: { _id: item._id },
+              filter: { _id: item._id.toString() },
               update: {
                 name: item.name,
                 projectId: item.projectId,
