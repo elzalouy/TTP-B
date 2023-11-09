@@ -378,6 +378,7 @@ class TaskController extends TaskDB {
             deadline: task.deadline,
             start: task.start,
           });
+          await TrelloController.__addWebHook(card.id, "trelloWebhookUrlTask");
           task.archivedCard = false;
           task.cardId = card.id;
           task.listId = card.idList;
