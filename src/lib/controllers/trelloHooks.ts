@@ -118,7 +118,11 @@ export default class TrelloWebhook {
       });
       let isSideList = dep?.sideLists?.find((item) => item.listId === listId);
       let team = await dep.teams.find((item) => listId === item.listId);
-      if (!task && dep) {
+      if (
+        !task &&
+        dep &&
+        !this.actionRequest.action.data.card.name.includes("(backed)")
+      ) {
         this.task = {
           ...this.task,
           trelloShortUrl: `https://trello.com/c/${this.actionRequest.action.data.card.shortLink}`,

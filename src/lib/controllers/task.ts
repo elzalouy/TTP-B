@@ -358,10 +358,11 @@ class TaskController extends TaskDB {
 
   static async getDeletedBack(count: number) {
     try {
-      let board = await Department.findOne({
+      let board: IDepartment, tasks: TaskInfo[], plugins: TaskPlugin[], update;
+      board = await Department.findOne({
         name: Config.get("CreativeBoard"),
       });
-      let tasks = await Tasks.find({
+      tasks = await Tasks.find({
         archivedCard: true,
       })
         .sort({ archivedAt: "asc" })
@@ -372,13 +373,14 @@ class TaskController extends TaskDB {
         tasks.map(async (task) => {
           let listId = board.lists.find((i) => i.name === task.status).listId;
           let card: Card = await TrelloController.__createCard({
-            name: task.name,
+            name: `${task.name} (backed)`,
             listId: listId,
             boardId: board.boardId,
             description: task.description,
             deadline: task.deadline,
             start: task.start,
           });
+          task.name = `${task.name} (backed)`;
           task.archivedCard = false;
           task.cardId = card.id;
           task.listId = card.idList;
@@ -388,7 +390,7 @@ class TaskController extends TaskDB {
         })
       );
 
-      let plugins = await TasksPlugins.find({});
+      plugins = await TasksPlugins.find({});
       if (plugins && plugins.length > 0) {
         let updatePlugins = await Promise.all(
           tasks.map(async (taskUpdate) => {
@@ -451,7 +453,8 @@ class TaskController extends TaskDB {
         updatePlugins = updatePlugins.filter((i: any) => i !== null);
         await TasksPlugins.bulkWrite(updatePlugins);
       }
-      let update = [
+
+      update = [
         ...tasks.map((item) => {
           console.log({ _id: item._id.toString(), id: item._id });
           return {
@@ -481,9 +484,11 @@ class TaskController extends TaskDB {
           };
         }),
       ];
+
       tasks.forEach((item) => {
         TrelloController.__addWebHook(item.cardId, "trelloWebhookUrlTask");
       });
+
       return await Tasks.bulkWrite(update);
     } catch (error) {
       logger.error({ getDeletedBackError: error });
