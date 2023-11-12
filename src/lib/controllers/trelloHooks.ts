@@ -110,19 +110,9 @@ export default class TrelloWebhook {
         this.actionRequest.action.data?.list?.id ??
         this.actionRequest.action.data?.card?.idList ??
         this.actionRequest.action.data?.listAfter?.id;
-      let nameSplit = this.actionRequest.action.data.card.name.split(" ");
-      let backId = nameSplit[nameSplit.length - 1];
       let task = await TaskController.getOneTaskBy({
         cardId: this.actionRequest?.action?.data?.card?.id,
       });
-      if (backId.includes("ID-")) {
-        let idstr = backId.split("-");
-        let id = idstr[idstr.length - 1];
-        let backedTask = await TaskController.getOneTaskBy({
-          _id: new ObjectId(id),
-        });
-        if (backedTask) return backedTask;
-      }
       let dep = await Department.findOne({
         boardId: this.actionRequest.action.data?.board?.id,
       });
