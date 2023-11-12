@@ -11,7 +11,7 @@ import logger from "../../logger";
 import ProjectController from "./project";
 import { IDepartment, IList, ITeam } from "../types/model/Department";
 import { LeanDocument } from "mongoose";
-import _ from "lodash";
+import _, { split } from "lodash";
 import { ObjectId } from "mongodb";
 
 export default class TrelloWebhook {
@@ -110,6 +110,10 @@ export default class TrelloWebhook {
         this.actionRequest.action.data?.list?.id ??
         this.actionRequest.action.data?.card?.idList ??
         this.actionRequest.action.data?.listAfter?.id;
+      let isBackTask = await TrelloWebhook.checkIfRestoringTask(
+        this.actionRequest
+      );
+      console.log({ isBackTask });
       let task = await TaskController.getOneTaskBy({
         cardId: this.actionRequest?.action?.data?.card?.id,
       });
@@ -118,9 +122,7 @@ export default class TrelloWebhook {
       });
       let isSideList = dep?.sideLists?.find((item) => item.listId === listId);
       let team = await dep.teams.find((item) => listId === item.listId);
-      let isBacked = this.actionRequest.action.data.card.name.includes("ID-");
-      console.log({ isBacked });
-      if (!task && dep && !isBacked) {
+      if (!task && dep && !isBackTask) {
         this.task = {
           ...this.task,
           trelloShortUrl: `https://trello.com/c/${this.actionRequest.action.data.card.shortLink}`,
@@ -345,7 +347,18 @@ export default class TrelloWebhook {
       logger.error({ updateProjectHook: error });
     }
   }
-
+  static async checkIfRestoringTask(action: webhookUpdateInterface) {
+    try {
+      let includesId = action.action.data.card.name.includes("ID-");
+      let names = action.action.data.card.name.split(" ");
+      let id = names[names.length - 1];
+      let task = await TaskController.getOneTaskBy({ _id: new ObjectId(id) });
+      if (task && includesId) return task;
+      else return null;
+    } catch (error) {
+      logger.error({ _checkIfRestoringTaskError: error });
+    }
+  }
   private async deleteProject() {
     try {
       // when deleting from ttp, we must make sure that it is working in async with the trello deletion process.
