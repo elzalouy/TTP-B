@@ -373,7 +373,7 @@ class TaskController extends TaskDB {
         tasks.map(async (task) => {
           let listId = board.lists.find((i) => i.name === task.status).listId;
           let card: Card = await TrelloController.__createCard({
-            name: `${task.name} (backed)`,
+            name: `${task.name} ID-${task._id.toString()}`,
             listId: listId,
             boardId: board.boardId,
             description: task.description,
