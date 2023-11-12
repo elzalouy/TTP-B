@@ -367,6 +367,7 @@ class TaskController extends TaskDB {
         .sort({ archivedAt: "asc" })
         .limit(count);
       if (tasks.length === 0) return { nResult: 0 };
+
       tasks = await Promise.all(
         tasks.map(async (task) => {
           let listId = board.lists.find((i) => i.name === task.status).listId;
@@ -378,7 +379,6 @@ class TaskController extends TaskDB {
             deadline: task.deadline,
             start: task.start,
           });
-          await TrelloController.__addWebHook(card.id, "trelloWebhookUrlTask");
           task.archivedCard = false;
           task.cardId = card.id;
           task.listId = card.idList;
@@ -403,6 +403,7 @@ class TaskController extends TaskDB {
                   comment.comment
                 )
               );
+
               await Promise.all(
                 plugin.labels.map(async (label) => {
                   await TrelloController.createLabel(
@@ -432,7 +433,6 @@ class TaskController extends TaskDB {
                         )
                     )
                   );
-
                   return checkListResponse;
                 })
               );
@@ -481,8 +481,8 @@ class TaskController extends TaskDB {
           };
         }),
       ];
-      console.log({
-        update: update[0].updateOne.update,
+      tasks.forEach((item) => {
+        TrelloController.__addWebHook(item.cardId, "trelloWebhookUrlTask");
       });
       return await Tasks.bulkWrite(update);
     } catch (error) {
