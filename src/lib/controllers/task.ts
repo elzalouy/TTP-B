@@ -365,7 +365,7 @@ class TaskController extends TaskDB {
       tasks = await Tasks.find({
         archivedCard: true,
       })
-        .sort({ archivedAt: "asc" })
+        .sort({ archivedAt: "desc" })
         .limit(count);
       if (tasks.length === 0) return { nResult: 0 };
 
