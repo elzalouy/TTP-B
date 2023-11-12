@@ -118,11 +118,9 @@ export default class TrelloWebhook {
       });
       let isSideList = dep?.sideLists?.find((item) => item.listId === listId);
       let team = await dep.teams.find((item) => listId === item.listId);
-      if (
-        !task &&
-        dep &&
-        !this.actionRequest.action.data.card.name.includes("(backed)")
-      ) {
+      let isBacked = this.actionRequest.action.data.card.name.includes("ID-");
+      console.log({ isBacked });
+      if (!task && dep && !isBacked) {
         this.task = {
           ...this.task,
           trelloShortUrl: `https://trello.com/c/${this.actionRequest.action.data.card.shortLink}`,
@@ -165,7 +163,6 @@ export default class TrelloWebhook {
           (a, b) =>
             new Date(a.movedAt).getTime() - new Date(b.movedAt).getTime()
         );
-
         return await TaskController.createTaskByTrello(this.task);
       }
     } catch (error) {

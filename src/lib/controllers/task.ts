@@ -380,7 +380,7 @@ class TaskController extends TaskDB {
             deadline: task.deadline,
             start: task.start,
           });
-          task.name = `${task.name} (backed)`;
+          task.name = `${task.name} ID-${task._id.toString()}`;
           task.archivedCard = false;
           task.cardId = card.id;
           task.listId = card.idList;
@@ -585,14 +585,17 @@ class TaskController extends TaskDB {
         let department = departments.find(
           (dep) => dep.boardId === card.idBoard
         );
+
         let { movements, createAction } = TaskController.validateCardActions(
           actions.actions,
           department,
           task.deadline ? new Date(task.deadline).toString() : null
         );
+
         let teamMovements = movements.filter(
           (move) => move.listType === "team"
         );
+
         let teamId =
           teamMovements && teamMovements.length > 0
             ? department.teams.find(
@@ -627,6 +630,7 @@ class TaskController extends TaskDB {
         if (!fetch) newTasks.push(task);
         else return task;
       });
+
       let insert = [
         ...newTasks.map((item) => {
           return {
@@ -636,6 +640,7 @@ class TaskController extends TaskDB {
           };
         }),
       ];
+
       let insertResult = await Tasks.bulkWrite(insert);
       let update = [
         ...archivedTasks.map((task) => {
@@ -676,10 +681,13 @@ class TaskController extends TaskDB {
           };
         }),
       ];
+
       await Tasks.bulkWrite(update);
+
       newTasks.forEach(async (item) => {
         TrelloController.__addWebHook(item.cardId, "trelloWebhookUrlTask");
       });
+
       if (process.env.NODE_ENV === "development")
         tasks.forEach(async (item) => {
           TrelloController.__addWebHook(item.cardId, "trelloWebhookUrlTask");
