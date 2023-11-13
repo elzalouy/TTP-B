@@ -10,7 +10,7 @@ import TrelloController from "./trello";
 import logger from "../../logger";
 import ProjectController from "./project";
 import { IDepartment, IList, ITeam } from "../types/model/Department";
-import { LeanDocument } from "mongoose";
+import { LeanDocument, isValidObjectId } from "mongoose";
 import _, { split } from "lodash";
 import { ObjectId } from "mongodb";
 
@@ -354,9 +354,11 @@ export default class TrelloWebhook {
       console.log({ names });
       let idStr = names[names.length - 1].split("-");
       let id = idStr[idStr.length - 1];
-      let task = await TaskController.getOneTaskBy({ _id: new ObjectId(id) });
-      if (task && includesId) return task;
-      else return null;
+      if (isValidObjectId(id)) {
+        let task = await TaskController.getOneTaskBy({ _id: new ObjectId(id) });
+        if (task && includesId) return task;
+        else return null;
+      } else return null;
     } catch (error) {
       logger.error({ _checkIfRestoringTaskError: error });
     }
