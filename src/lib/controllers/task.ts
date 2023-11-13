@@ -587,7 +587,9 @@ class TaskController extends TaskDB {
         );
         let listClosed =
           department.lists.find((i) => i.listId === card.idList) ??
-          department.teams.find((i) => i.listId === card.idList) ??
+          department.teams.find(
+            (i) => i.listId === card.idList && i.isDeleted === false
+          ) ??
           department.sideLists.find((i) => i.listId === card.idList) ??
           null;
         let { movements, createAction } = TaskController.validateCardActions(
