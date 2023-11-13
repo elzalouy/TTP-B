@@ -618,10 +618,12 @@ class TaskController extends TaskDB {
         console.log({
           cardClosed: card.closed,
           taskArchived: task.archivedCard,
-          listClosed: listClosed,
+          listClosed: listClosed === null ? true : false,
         });
         task.archivedCard =
-          card.closed ?? task.archivedCard ?? listClosed ? true : false;
+          card.closed ?? task.archivedCard ?? listClosed === null
+            ? true
+            : false;
         task.trelloShortUrl = card.shortUrl;
         task.description = card.desc;
         task.deadline = card.due ?? task.deadline;
