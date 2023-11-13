@@ -351,7 +351,9 @@ export default class TrelloWebhook {
     try {
       let includesId = action.action.data.card.name.includes("ID-");
       let names = action.action.data.card.name.split(" ");
-      let id = names[names.length - 1];
+      console.log({ names });
+      let idStr = names[names.length - 1].split("-");
+      let id = idStr[idStr.length - 1];
       let task = await TaskController.getOneTaskBy({ _id: new ObjectId(id) });
       if (task && includesId) return task;
       else return null;
