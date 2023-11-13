@@ -646,7 +646,7 @@ class TaskController extends TaskDB {
         } else return task;
       });
       tasks = tasks.filter((i) => i !== null);
-
+      console.log({ tasks });
       let insert = [
         ...newTasks.map((item) => {
           return {
@@ -657,6 +657,7 @@ class TaskController extends TaskDB {
         }),
       ];
       let insertResult = await Tasks.bulkWrite(insert);
+      console.log({ insertResult });
       let update = [
         ...archivedTasks.map((task) => {
           return {
@@ -698,6 +699,7 @@ class TaskController extends TaskDB {
       ];
 
       let result = await Tasks.bulkWrite(update);
+      console.log({ updateResult: result });
       newTasks.forEach(async (item) => {
         TrelloController.__addWebHook(item.cardId, "trelloWebhookUrlTask");
       });
