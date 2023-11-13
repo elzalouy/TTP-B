@@ -585,6 +585,11 @@ class TaskController extends TaskDB {
         let department = departments.find(
           (dep) => dep.boardId === card.idBoard
         );
+        let listClosed =
+          department.lists.find((i) => i.listId === card.idList) ??
+          department.teams.find((i) => i.listId === card.idList) ??
+          department.sideLists.find((i) => i.listId === card.idList) ??
+          null;
         let { movements, createAction } = TaskController.validateCardActions(
           actions.actions,
           department,
@@ -612,7 +617,8 @@ class TaskController extends TaskDB {
           cardClosed: card.closed,
           taskArchived: task.archivedCard,
         });
-        task.archivedCard = card.closed ?? task.archivedCard;
+        task.archivedCard =
+          card.closed ?? task.archivedCard ?? listClosed ? true : false;
         task.trelloShortUrl = card.shortUrl;
         task.description = card.desc;
         task.deadline = card.due ?? task.deadline;
