@@ -541,6 +541,7 @@ class TaskController extends TaskDB {
           })
         )
       );
+
       actions = actions.filter(
         (action) => action !== undefined && action !== null
       );

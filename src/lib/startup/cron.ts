@@ -30,7 +30,7 @@ export default async function (
     initializeQueue.push(async (cb) => {
       await initializeTrelloBoards().then(async () => {
         await TaskController.matchTasksWithTrello().then(async () => {
-          await initializeCardsPlugins();
+          // await initializeCardsPlugins();
         });
       });
     });
