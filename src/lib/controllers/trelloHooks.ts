@@ -202,7 +202,6 @@ export default class TrelloWebhook {
         newDep: IDepartment,
         isNewTeam: ITeam,
         inProgressList: IList,
-        isProject: IList,
         sideList: IList,
         listBefore: string,
         listAfter: string,
@@ -231,9 +230,6 @@ export default class TrelloWebhook {
           null;
         inProgressList = (newDep ?? department).lists.find(
           (item) => isNewTeam?.listId && item.name === "In Progress"
-        );
-        isProject = (newDep ?? department).lists.find(
-          (l) => l.listId === listId && l.name === "projects"
         );
         sideList = (newDep ?? department).sideLists.find(
           (list) => list.listId === listId
