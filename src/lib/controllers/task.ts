@@ -618,6 +618,7 @@ class TaskController extends TaskDB {
         console.log({
           cardClosed: card.closed,
           taskArchived: task.archivedCard,
+          listClosed: listClosed,
         });
         task.archivedCard =
           card.closed ?? task.archivedCard ?? listClosed ? true : false;
