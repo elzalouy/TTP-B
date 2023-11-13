@@ -541,7 +541,6 @@ class TaskController extends TaskDB {
           })
         )
       );
-
       actions = actions.filter(
         (action) => action !== undefined && action !== null
       );
@@ -558,6 +557,7 @@ class TaskController extends TaskDB {
         if (cardActions) return { cardId: card.id, actions: cardActions };
         else return { cardId: card.id, actions: [] };
       });
+
       cardsActions = cardsActions.filter((item) => item.actions.length > 0);
       cards = cards.filter((card) => {
         let actions = cardsActions.filter(
@@ -647,7 +647,7 @@ class TaskController extends TaskDB {
         ...archivedTasks.map((task) => {
           return {
             updateOne: {
-              filter: { _id: task._id },
+              filter: { _id: task._id.toString() },
               update: {
                 archivedCard: true,
               },
@@ -657,7 +657,7 @@ class TaskController extends TaskDB {
         ...tasks?.map((item) => {
           return {
             updateOne: {
-              filter: { _id: item._id },
+              filter: { _id: item._id.toString() },
               update: {
                 name: item.name,
                 projectId: item.projectId,

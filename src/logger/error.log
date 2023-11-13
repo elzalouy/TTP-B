@@ -225,3 +225,4 @@
 {"level":"error","message":{"deleteCardHook":{}}}
 {"level":"error","message":{"matchTasksWithTrelloError":{}}}
 {"level":"error","message":{"_checkIfRestoringTaskError":{}}}
+{"level":"error","message":{"matchTasksWithTrelloError":{}}}
