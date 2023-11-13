@@ -616,7 +616,7 @@ class TaskController extends TaskDB {
         task.status = movements[movements.length - 1].status;
         task.movements = movements;
         task.archivedCard =
-          card.closed && task.archivedCard && listClosed === null
+          card.closed || task.archivedCard || listClosed === null
             ? true
             : false;
         task.trelloShortUrl = card.shortUrl;
