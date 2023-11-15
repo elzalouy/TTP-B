@@ -57,6 +57,10 @@ const ProjectDB = class ProjectDB {
             from: "tasks",
             localField: "_id",
             foreignField: "projectId",
+            let: { archivedCard: "$archivedCard" },
+            pipeline: [
+              { $match: { $expr: { $eq: ["$archivedCard", false] } } },
+            ],
             as: "tasks",
           },
         },
@@ -67,7 +71,14 @@ const ProjectDB = class ProjectDB {
                 input: "$tasks",
                 as: "task",
                 cond: {
-                  $eq: ["$$task.status", "Done"],
+                  $and: [
+                    {
+                      $eq: ["$$task.status", "Done"],
+                    },
+                    {
+                      $eq: ["$$task.archivedCard", false],
+                    },
+                  ],
                 },
               },
             },
@@ -83,13 +94,9 @@ const ProjectDB = class ProjectDB {
             projectDeadline: 1,
             startDate: 1,
             completedDate: 1,
-            projectStatus: 1,
             clientId: 1,
             NoOfTasks: { $size: "$tasks" },
             NoOfFinishedTasks: { $size: "$NoOfFinishedTasks" },
-            cardId: 1,
-            listId: 1,
-            boardId: 1,
             associateProjectManager: 1,
           },
         },
