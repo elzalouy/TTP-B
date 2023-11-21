@@ -869,6 +869,7 @@ export class CardAction {
     }
     let list = board?.lists?.find((l) => l.listId === listId);
     if (list) {
+      logger.info({ type: "list", list });
       this.action.listType = "list";
       this.action.status = list.name;
       this.action.listId = list.listId;
@@ -876,6 +877,7 @@ export class CardAction {
     } else {
       list = board?.teams?.find((t) => t.listId === listId);
       if (list) {
+        logger.info({ type: "team", list });
         this.action.listType = "team";
         this.action.status = "In Progress";
         this.action.listId = list.listId;
@@ -883,6 +885,7 @@ export class CardAction {
       } else {
         list = board.sideLists.find((i) => i.listId === listId);
         if (list) {
+          logger.info({ type: "sideList", list });
           this.action.listType = "sideList";
           this.action.status = "Tasks Board";
           this.action.listId = list.listId;
@@ -890,6 +893,7 @@ export class CardAction {
         } else {
           list = board.lists.find((l) => l.name === listName);
           if (list) {
+            logger.info({ type: "list but changed the listId", list });
             this.action.listId = list.listId;
             this.action.status = list.name;
             this.action.listType = "list";
