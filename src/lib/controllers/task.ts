@@ -650,6 +650,9 @@ class TaskController extends TaskDB {
       ];
 
       Tasks.bulkWrite(update, {});
+      tasks.forEach(async (item) => {
+        TrelloController.__addWebHook(item.cardId, "trelloWebhookUrlTask");
+      });
       newTasks.forEach(async (item) => {
         TrelloController.__addWebHook(item.cardId, "trelloWebhookUrlTask");
       });
