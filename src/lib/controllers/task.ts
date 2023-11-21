@@ -597,6 +597,7 @@ class TaskController extends TaskDB {
           department,
           task.deadline ? new Date(task.deadline).toString() : null
         );
+        logger.info({ movements, createAction });
         let teamMovements = movements.filter(
           (move) => move.listType === "team"
         );
