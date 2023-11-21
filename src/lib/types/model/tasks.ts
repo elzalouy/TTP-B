@@ -45,7 +45,7 @@ export interface TasksStatistics {
 }
 
 export interface TaskData {
-  _id?: string;
+  _id?: string | ObjectId;
   id?: string;
   name?: string;
   projectId?: string | ObjectId;

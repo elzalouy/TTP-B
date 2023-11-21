@@ -65,7 +65,7 @@ const UserDB = class UserDB {
 
   static async __findById(id: string) {
     try {
-      let user: IUser = await User.findById({ _id: id }).lean();
+      let user: IUser = await User.findById(new ObjectId(id)).lean();
       return user;
     } catch (error) {
       logger.error({ findUserById: error });

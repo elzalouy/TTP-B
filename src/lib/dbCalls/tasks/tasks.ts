@@ -54,6 +54,7 @@ class TaskDB {
   ) {
     return await TaskDB.__updateTaskByTrelloDB(data, user);
   }
+
   static async deleteTaskByTrelloDB(data: TaskData) {
     return await TaskDB.__deleteTaskByTrelloDB(data);
   }
@@ -77,6 +78,7 @@ class TaskDB {
       logger.error({ getTaskDBError: error });
     }
   }
+
   static async __getTaskDepartment(depId: string) {
     try {
       let taskCount = await Tasks.aggregate([

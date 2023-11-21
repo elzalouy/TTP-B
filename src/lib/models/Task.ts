@@ -141,6 +141,35 @@ const TaskSchema = new Schema<TaskInfo, TasksModel>(
     strict: false,
   }
 );
+TaskSchema.pre("save", async function (next) {
+  try {
+    const Task = this.constructor; // Get the model
+    // Check if the projectId is provided in the Task and if it has changed
+    if (this.isModified("projectId") && this.projectId) {
+      // Find the associated Project
+      const project = await Project.findById(this.projectId);
+      console.log({ project });
+      if (project) {
+        // Find the oldest task in the project
+        const oldestTask = await Tasks.findOne({ projectId: this.projectId })
+          .sort({ cardCreatedAt: 1 })
+          .limit(1);
+        console.log({ oldestTask });
+        if (!project.startDate) {
+          // Update the Project's start date if there is an oldestTask
+          if (oldestTask) {
+            project.startDate = oldestTask.cardCreatedAt;
+          } else project.startDate = this.start;
+          console.log({ start: project.startDate });
+          await project.save();
+        }
+      }
+    }
+    next();
+  } catch (error: any) {
+    next(error);
+  }
+});
 
 TaskSchema.static("getTasksAsCSV", async function (filterIds: string[]) {
   try {

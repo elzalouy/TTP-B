@@ -10,9 +10,9 @@ import TrelloController from "./trello";
 import logger from "../../logger";
 import ProjectController from "./project";
 import { IDepartment, IList, ITeam } from "../types/model/Department";
-import { LeanDocument } from "mongoose";
-import { ObjectId } from "mongoose";
-import _ from "lodash";
+import { LeanDocument, isValidObjectId } from "mongoose";
+import _, { split } from "lodash";
+import { ObjectId } from "mongodb";
 
 export default class TrelloWebhook {
   actionRequest: webhookUpdateInterface;
@@ -110,6 +110,10 @@ export default class TrelloWebhook {
         this.actionRequest.action.data?.list?.id ??
         this.actionRequest.action.data?.card?.idList ??
         this.actionRequest.action.data?.listAfter?.id;
+      let isBackTask = await TrelloWebhook.checkIfRestoringTask(
+        this.actionRequest
+      );
+      console.log({ isBackTask });
       let task = await TaskController.getOneTaskBy({
         cardId: this.actionRequest?.action?.data?.card?.id,
       });
@@ -118,7 +122,7 @@ export default class TrelloWebhook {
       });
       let isSideList = dep?.sideLists?.find((item) => item.listId === listId);
       let team = await dep.teams.find((item) => listId === item.listId);
-      if (!task && dep) {
+      if (!task && dep && !isBackTask) {
         this.task = {
           ...this.task,
           trelloShortUrl: `https://trello.com/c/${this.actionRequest.action.data.card.shortLink}`,
@@ -161,7 +165,6 @@ export default class TrelloWebhook {
           (a, b) =>
             new Date(a.movedAt).getTime() - new Date(b.movedAt).getTime()
         );
-
         return await TaskController.createTaskByTrello(this.task);
       }
     } catch (error) {
@@ -199,7 +202,6 @@ export default class TrelloWebhook {
         newDep: IDepartment,
         isNewTeam: ITeam,
         inProgressList: IList,
-        isProject: IList,
         sideList: IList,
         listBefore: string,
         listAfter: string,
@@ -228,9 +230,6 @@ export default class TrelloWebhook {
           null;
         inProgressList = (newDep ?? department).lists.find(
           (item) => isNewTeam?.listId && item.name === "In Progress"
-        );
-        isProject = (newDep ?? department).lists.find(
-          (l) => l.listId === listId && l.name === "projects"
         );
         sideList = (newDep ?? department).sideLists.find(
           (list) => list.listId === listId
@@ -344,7 +343,22 @@ export default class TrelloWebhook {
       logger.error({ updateProjectHook: error });
     }
   }
-
+  static async checkIfRestoringTask(action: webhookUpdateInterface) {
+    try {
+      let includesId = action.action.data.card.name.includes("ID-");
+      let names = action.action.data.card.name.split(" ");
+      console.log({ names });
+      let idStr = names[names.length - 1].split("-");
+      let id = idStr[idStr.length - 1];
+      if (isValidObjectId(id)) {
+        let task = await TaskController.getOneTaskBy({ _id: new ObjectId(id) });
+        if (task && includesId) return task;
+        else return null;
+      } else return null;
+    } catch (error) {
+      logger.error({ _checkIfRestoringTaskError: error });
+    }
+  }
   private async deleteProject() {
     try {
       // when deleting from ttp, we must make sure that it is working in async with the trello deletion process.

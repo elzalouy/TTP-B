@@ -358,269 +358,105 @@ class TaskController extends TaskDB {
 
   static async getDeletedBack(count: number) {
     try {
-      let board = await Department.findOne({
+      let board: IDepartment, tasks: TaskInfo[], plugins: TaskPlugin[], update;
+      board = await Department.findOne({
         name: Config.get("CreativeBoard"),
       });
-      let tasks = await Tasks.find({
+      tasks = await Tasks.find({
         archivedCard: true,
       })
         .sort({ archivedAt: "desc" })
         .limit(count);
+      if (tasks.length === 0) return { nResult: 0 };
 
-      let newTasksUpdates = await Promise.all(
+      tasks = await Promise.all(
         tasks.map(async (task) => {
+          let listId = board.lists.find((i) => i.name === task.status).listId;
           let card: Card = await TrelloController.__createCard({
-            name: task.name,
-            listId: board.lists.find((i) => i.name === task.status).listId,
+            name: `${task.name} ID-${task._id.toString()}`,
+            listId: listId,
             boardId: board.boardId,
             description: task.description,
             deadline: task.deadline,
             start: task.start,
           });
-          return {
-            _id: task._id,
-            cardId: card.id,
-            listId: board.lists.find((i) => i.name === task.status).listId,
-            boardId: board.boardId,
-            description: task.description,
-            deadline: task.deadline,
-            start: task.start,
-            trelloShortUrl: card.shortUrl,
-            archivedCard: false,
-          };
+          task.name = `${task.name} ID-${task._id.toString()}`;
+          task.archivedCard = false;
+          task.cardId = card.id;
+          task.listId = card.idList;
+          task.boardId = card.idBoard;
+          task.trelloShortUrl = card.shortUrl;
+          return task;
         })
       );
 
-      let plugins = await TasksPlugins.find({});
+      plugins = await TasksPlugins.find({});
+      if (plugins && plugins.length > 0) {
+        let updatePlugins = await Promise.all(
+          tasks.map(async (taskUpdate) => {
+            let plugin = plugins.find(
+              (i) => i.taskId === taskUpdate._id.toString()
+            );
+            if (plugin) {
+              plugin.cardId = taskUpdate.cardId;
+              plugin.comments.forEach((comment) =>
+                TrelloController.createComment(
+                  taskUpdate.cardId,
+                  comment.comment
+                )
+              );
 
-      let updatePlugins = await Promise.all(
-        newTasksUpdates.map(async (taskUpdate) => {
-          let plugin = plugins.find(
-            (i) => i.taskId === taskUpdate._id.toString()
-          );
-          if (plugin) {
-            plugin.cardId = taskUpdate.cardId;
-            plugin.comments.forEach((comment) =>
-              TrelloController.createComment(taskUpdate.cardId, comment.comment)
-            );
-            await Promise.all(
-              plugin.labels.map(async (label) => {
-                await TrelloController.createLabel(taskUpdate.cardId, label.id);
-                return label;
-              })
-            );
-            plugin.checkLists = await Promise.all(
-              plugin.checkLists.map(async (i) => {
-                let checkListResponse: CheckList =
-                  await TrelloController.createCheckList(
+              await Promise.all(
+                plugin.labels.map(async (label) => {
+                  await TrelloController.createLabel(
                     taskUpdate.cardId,
-                    i.name
+                    label.id
                   );
-                checkListResponse.checkItems = await Promise.all(
-                  i.checkItems.map(
-                    async (item) =>
-                      await TrelloController.createCheckListsItems(
-                        checkListResponse.id,
-                        item.name,
-                        item.state === "incomplete" ? false : true,
-                        item.due,
-                        item.dueReminder,
-                        item.idMember
-                      )
-                  )
-                );
-
-                return checkListResponse;
-              })
-            );
-            return {
-              updateOne: {
-                filter: { _id: plugin._id },
-                update: {
-                  cardId: taskUpdate.cardId,
-                  checkLists: plugin.checkLists,
+                  return label;
+                })
+              );
+              plugin.checkLists = await Promise.all(
+                plugin.checkLists.map(async (i) => {
+                  let checkListResponse: CheckList =
+                    await TrelloController.createCheckList(
+                      taskUpdate.cardId,
+                      i.name
+                    );
+                  checkListResponse.checkItems = await Promise.all(
+                    i.checkItems.map(
+                      async (item) =>
+                        await TrelloController.createCheckListsItems(
+                          checkListResponse.id,
+                          item.name,
+                          item.state === "incomplete" ? false : true,
+                          item.due,
+                          item.dueReminder,
+                          item.idMember
+                        )
+                    )
+                  );
+                  return checkListResponse;
+                })
+              );
+              return {
+                updateOne: {
+                  filter: { _id: plugin._id },
+                  update: {
+                    cardId: taskUpdate.cardId,
+                    checkLists: plugin.checkLists,
+                  },
                 },
-              },
-            };
-          } else return null;
-        })
-      );
-      updatePlugins = updatePlugins.filter((i) => i !== null);
-      let update = [
-        ...newTasksUpdates.map((i) => {
-          return {
-            updateOne: {
-              filter: { _id: i._id },
-              update: {
-                cardId: i.cardId,
-                listId: i.listId,
-                boardId: i.boardId,
-                trelloShortUrl: i.trelloShortUrl,
-                archivedCard: i.archivedCard,
-              },
-              upsert: false,
-            },
-          };
-        }),
-      ];
-      await TasksPlugins.bulkWrite(updatePlugins);
-      await Tasks.bulkWrite(update);
-    } catch (error) {
-      logger.error({ getDeletedBackError: error });
-    }
-  }
-
-  static async matchTasksWithTrello() {
-    try {
-      console.log("matching tasks");
-      let departments: IDepartment[],
-        newTasks: TaskInfo[] = [],
-        tasks: TaskInfo[],
-        cards: Card[],
-        cardsActions: { cardId: string; actions: TrelloAction[] }[] = [],
-        archivedCards: string[],
-        archivedTasks: TaskInfo[],
-        actions: TrelloAction[];
-
-      // (1) get departments
-      // (2) get tasks and actions
-      // loop over cards :
-      // save same data on DB
-      // save actions of this year cards
-      // archive all not existed tasks as cards.
-
-      departments = await Department.find({});
-      tasks = await Tasks.find({});
-      cards = _.flattenDeep(
-        await Promise.all(
-          departments?.map(async (item) => {
-            let boardCards: Card[] = await TrelloController.__getCardsInBoard(
-              item.boardId
-            );
-            return boardCards;
+              };
+            } else return null;
           })
-        )
-      );
-
-      archivedCards = cards.filter((i) => i.closed === true).map((i) => i.id);
-      archivedTasks = tasks.filter((task) =>
-        archivedCards.includes(task.cardId)
-      );
-
-      actions = _.flattenDeep(
-        await Promise.all(
-          departments.map(async (item) => {
-            return await TrelloController._getActionsOfBoard(item.boardId);
-          })
-        )
-      );
-
-      actions = actions.filter(
-        (action) => action !== undefined && action !== null
-      );
-
-      let createActions = actions
-        .filter((i) => i.type === "createCard")
-        .map((i) => i.data.card.id);
-      actions = actions.filter((a) => createActions.includes(a.data.card.id));
-      cards = cards.filter((c) => createActions.includes(c.id));
-      cardsActions = cards.map((card) => {
-        let cardActions = actions.filter(
-          (action) => action.data.card.id === card.id
         );
-        if (cardActions) return { cardId: card.id, actions: cardActions };
-        else return { cardId: card.id, actions: [] };
-      });
-      cardsActions = cardsActions.filter((item) => item.actions.length > 0);
-      cards = cards.filter((card) => {
-        let actions = cardsActions.filter(
-          (action) => action.cardId === card.id
-        );
-        if (actions) return card;
-      });
+        updatePlugins = updatePlugins.filter((i: any) => i !== null);
+        await TasksPlugins.bulkWrite(updatePlugins);
+      }
 
-      cards = await Promise.all(
-        cards?.map(async (item) => {
-          let attachments = await TrelloController.__getCardAttachments(
-            item.id
-          );
-          item.attachments = attachments ?? [];
-          return item;
-        })
-      );
-
-      tasks = cards.map((card, index) => {
-        let fetch = tasks.find((t) => t.cardId === card.id);
-        let task = fetch ?? new Tasks({});
-        let actions = cardsActions.find(
-          (cardAction) => cardAction.cardId === card.id
-        );
-
-        let department = departments.find(
-          (dep) => dep.boardId === card.idBoard
-        );
-        let { movements, createAction } = TaskController.validateCardActions(
-          actions.actions,
-          department,
-          task.deadline ? new Date(task.deadline).toString() : null
-        );
-        let teamMovements = movements.filter(
-          (move) => move.listType === "team"
-        );
-        let teamId =
-          teamMovements && teamMovements.length > 0
-            ? department.teams.find(
-                (team) =>
-                  team.listId === teamMovements[teamMovements.length - 1].listId
-              )._id
-            : null;
-        task.boardId = card.idBoard;
-        task.listId = card.idList;
-        task.cardId = card.id;
-        task.name = card.name;
-        task.teamId = teamId ?? task.teamId ?? null;
-        task.status = movements[movements.length - 1].status;
-        task.movements = movements;
-        task.archivedCard = card.closed ?? task.archivedCard;
-        task.trelloShortUrl = card.shortUrl;
-        task.description = card.desc;
-        task.deadline = card.due ?? task.deadline;
-        task.start = card.start ?? task.start;
-        task.attachedFiles =
-          card?.attachments?.length > 0
-            ? card?.attachments?.map((item) => {
-                return {
-                  name: item.fileName,
-                  trelloId: item.id,
-                  mimeType: item.mimeType,
-                  url: item.url,
-                };
-              })
-            : [];
-        task.cardCreatedAt = new Date(createAction.date);
-        if (!fetch) newTasks.push(task);
-        else return task;
-      });
-
-      let update = [
-        ...archivedTasks.map((task) => {
-          return {
-            updateOne: {
-              filter: { _id: task._id },
-              update: {
-                archivedCard: true,
-              },
-            },
-          };
-        }),
-        ...newTasks.map((item) => {
-          return {
-            insertOne: {
-              document: item,
-            },
-          };
-        }),
-        ...tasks?.map((item) => {
+      update = [
+        ...tasks.map((item) => {
+          console.log({ _id: item._id.toString(), id: item._id });
           return {
             updateOne: {
               filter: { _id: item._id },
@@ -649,11 +485,225 @@ class TaskController extends TaskDB {
         }),
       ];
 
-      Tasks.bulkWrite(update, {});
-      tasks.forEach(async (item) => {
+      tasks.forEach((item) => {
         TrelloController.__addWebHook(item.cardId, "trelloWebhookUrlTask");
       });
+
+      return await Tasks.bulkWrite(update);
+    } catch (error) {
+      logger.error({ getDeletedBackError: error });
+    }
+  }
+
+  static async matchTasksWithTrello() {
+    try {
+      console.log("matching tasks");
+      let departments: IDepartment[],
+        newTasks: TaskInfo[] = [],
+        tasks: TaskInfo[],
+        cards: Card[],
+        cardsIds: string[],
+        cardsActions: { cardId: string; actions: TrelloAction[] }[] = [],
+        archivedCards: string[],
+        archivedTasks: TaskInfo[],
+        actions: TrelloAction[];
+
+      // (1) get departments
+      // (2) get tasks and actions
+      // loop over cards :
+      // save same data on DB
+      // save actions of this year for the cards
+      // archive all not existed tasks as cards.
+
+      departments = await Department.find({});
+      tasks = await Tasks.find({});
+      cards = _.flattenDeep(
+        await Promise.all(
+          departments?.map(async (item) => {
+            let boardCards: Card[] = await TrelloController.__getCardsInBoard(
+              item.boardId
+            );
+            return boardCards;
+          })
+        )
+      );
+      cardsIds = cards.map((i) => i.id);
+      archivedCards = cards.filter((i) => i.closed === true).map((i) => i.id);
+      archivedTasks = tasks.filter(
+        (task) =>
+          archivedCards.includes(task.cardId) || !cardsIds.includes(task.cardId)
+      );
+
+      actions = _.flattenDeep(
+        await Promise.all(
+          departments.map(async (item) => {
+            return await TrelloController._getActionsOfBoard(item.boardId);
+          })
+        )
+      );
+      actions = actions.filter(
+        (action) => action !== undefined && action !== null
+      );
+
+      let createActions = actions
+        .filter((i) => i.type === "createCard")
+        .map((i) => i.data.card.id);
+      actions = actions.filter((a) => createActions.includes(a.data.card.id));
+      cards = cards.filter((c) => createActions.includes(c.id));
+      cardsActions = cards.map((card) => {
+        let cardActions = actions.filter(
+          (action) => action.data.card.id === card.id
+        );
+        if (cardActions) return { cardId: card.id, actions: cardActions };
+        else return { cardId: card.id, actions: [] };
+      });
+
+      cardsActions = cardsActions.filter((item) => item.actions.length > 0);
+      // cards = cards.filter((card) => {
+      //   let actions = cardsActions.filter(
+      //     (action) => action.cardId === card.id
+      //   );
+      //   if (actions) return card;
+      // });
+
+      cards = await Promise.all(
+        cards?.map(async (item) => {
+          let attachments = await TrelloController.__getCardAttachments(
+            item.id
+          );
+          item.attachments = attachments ?? [];
+          return item;
+        })
+      );
+
+      tasks = cards.map((card, index) => {
+        let fetch = tasks.find((t) => t.cardId === card.id);
+        let task = fetch ?? new Tasks({});
+        let actions = cardsActions.find(
+          (cardAction) => cardAction.cardId === card.id
+        );
+        let department = departments.find(
+          (dep) => dep.boardId === card.idBoard
+        );
+        let listClosed =
+          department.lists.find((i) => i.listId === card.idList) ??
+          department.teams.find(
+            (i) => i.listId === card.idList && i.isDeleted === false
+          ) ??
+          department.sideLists.find((i) => i.listId === card.idList) ??
+          null;
+        let { movements, createAction } = TaskController.validateCardActions(
+          actions.actions,
+          department,
+          task.deadline ? new Date(task.deadline).toString() : null
+        );
+        let teamMovements = movements.filter(
+          (move) => move.listType === "team"
+        );
+
+        let teamId =
+          teamMovements && teamMovements.length > 0
+            ? department.teams.find(
+                (team) =>
+                  team.listId === teamMovements[teamMovements.length - 1].listId
+              )._id
+            : null;
+        task.boardId = card.idBoard;
+        task.listId = card.idList;
+        task.cardId = card.id;
+        task.name = card.name;
+        task.teamId = teamId ?? task.teamId ?? null;
+        task.status = movements[movements.length - 1].status;
+        task.movements = movements;
+        task.archivedCard =
+          card.closed || task.archivedCard || listClosed === null
+            ? true
+            : false;
+        task.trelloShortUrl = card.shortUrl;
+        task.description = card.desc;
+        task.deadline = card.due ?? task.deadline;
+        task.start = card.start ?? task.start;
+        task.attachedFiles =
+          card?.attachments?.length > 0
+            ? card?.attachments?.map((item) => {
+                return {
+                  name: item.fileName,
+                  trelloId: item.id,
+                  mimeType: item.mimeType,
+                  url: item.url,
+                };
+              })
+            : [];
+        task.cardCreatedAt = new Date(createAction.date);
+        console.log({
+          cardClosed: card.closed,
+          taskArchived: task.archivedCard,
+          listClosed: listClosed === null ? true : false,
+        });
+        if (!fetch) {
+          newTasks.push(task);
+          return null;
+        } else return task;
+      });
+      tasks = tasks.filter((i) => i !== null);
+      console.log({ tasks });
+      let insert = [
+        ...newTasks.map((item) => {
+          return {
+            insertOne: {
+              document: item,
+            },
+          };
+        }),
+      ];
+      let insertResult = await Tasks.bulkWrite(insert);
+      console.log({ insertResult });
+      let update = [
+        ...archivedTasks.map((task) => {
+          return {
+            updateOne: {
+              filter: { _id: task._id.toString() },
+              update: {
+                archivedCard: true,
+              },
+            },
+          };
+        }),
+        ...tasks?.map((item) => {
+          return {
+            updateOne: {
+              filter: { _id: item._id.toString() },
+              update: {
+                name: item.name,
+                projectId: item.projectId,
+                categoryId: item.categoryId,
+                subCategoryId: item.subCategoryId,
+                teamId: item.teamId,
+                listId: item.listId,
+                status: item.status,
+                cardId: item.cardId,
+                start: item.start ? item.start : null,
+                deadline: item.deadline,
+                boardId: item.boardId,
+                description: item?.description ? item.description : "",
+                trelloShortUrl: item.trelloShortUrl,
+                attachedFiles: item.attachedFiles,
+                movements: item.movements,
+                archivedCard: item.archivedCard,
+                archivedAt: item.archivedAt,
+                cardCreatedAt: item.cardCreatedAt,
+              },
+            },
+          };
+        }),
+      ];
+
+      let result = await Tasks.bulkWrite(update);
+      console.log({ updateResult: result });
       newTasks.forEach(async (item) => {
+        TrelloController.__addWebHook(item.cardId, "trelloWebhookUrlTask");
+      });
+      tasks.forEach(async (item) => {
         TrelloController.__addWebHook(item.cardId, "trelloWebhookUrlTask");
       });
     } catch (error) {
@@ -670,7 +720,6 @@ class TaskController extends TaskDB {
       let createAction = cardActions.find(
         (item) => !item.data.old && !item.data.listBefore && !item.data.card.due
       );
-
       let createActionMovement = new CardAction(createAction);
 
       createActionMovement = createActionMovement.validate(department);
@@ -685,15 +734,15 @@ class TaskController extends TaskDB {
       let sortedMoveOrDueChanges = cardActions.filter(
         (i) => i.type === "updateCard"
       );
-
       let due: { index: number; dueDate: string }[] = [];
-      let movements: Movement[] = sortedMoveOrDueChanges.map((move, index) => {
-        if (move.data.card.due) {
-          due.push({
-            index: index > 0 ? index - 1 : 0,
-            dueDate: move.data.card.due,
-          });
-          return null;
+      let movements: Movement[] = [];
+      sortedMoveOrDueChanges.forEach((move, index) => {
+        if (
+          move.data.card.due &&
+          movements.length > 0 &&
+          movements[movements.length - 1]
+        ) {
+          movements[movements.length - 1].journeyDeadline = move.data.card.due;
         } else {
           let movementAction = new CardAction(move);
           movementAction = movementAction.validate(department);
@@ -705,7 +754,7 @@ class TaskController extends TaskDB {
             movedAt: new Date(movementAction.action.date).toString(),
             listType: movementAction.action.listType,
           };
-          return moveItem;
+          movements.push(moveItem);
         }
       });
 
