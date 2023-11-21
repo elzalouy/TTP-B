@@ -88,6 +88,7 @@ const ProjectDB = class ProjectDB {
           $project: {
             _id: 1,
             name: 1,
+            projectStatus: 1,
             projectManager: 1,
             projectManagerName: 1,
             adminId: 1,
