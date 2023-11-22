@@ -157,6 +157,10 @@ TaskSchema.pre("save", async function (next) {
           // Update the Project's start date if there is an oldestTask
           if (oldestTask) {
             project.startDate = oldestTask.cardCreatedAt;
+            project.projectStatus =
+              project.projectStatus === "Not Started"
+                ? "In Progress"
+                : project.projectStatus;
           } else project.startDate = this.start;
           console.log({ start: project.startDate });
           await project.save();

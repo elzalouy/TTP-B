@@ -11,6 +11,7 @@ import { initializeQueue } from "../backgroundJobs/actions/init.actions.queue";
 import { initializeCardsPlugins, initializeTrelloBoards } from "./db/dbConnect";
 import { taskRoutesQueue } from "../backgroundJobs/routes/tasks.Route.Queue";
 import TaskController from "../controllers/task";
+import ProjectController from "../controllers/project";
 
 export default async function (
   io: Server<DefaultEventsMap, DefaultEventsMap, DefaultEventsMap, any>
@@ -38,7 +39,8 @@ export default async function (
 
     initializeQueue.push(async (cb) => {
       console.log("start");
-      await syncProjectsWithTasksJob().start();
+      // await syncProjectsWithTasksJob().start();
+      await ProjectController.__syncProjectsWithTasks();
       cb(null, true);
     });
   } catch (error) {

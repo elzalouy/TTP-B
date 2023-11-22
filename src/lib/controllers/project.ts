@@ -133,26 +133,39 @@ const ProjectController = class ProjectController extends ProjectDB {
 
   static async __syncProjectsWithTasks() {
     try {
-      console.log("hello");
-      let projects = await super.__getProjects({});
-      console.log(projects);
+      let projects = await Project.find({});
       if (projects) {
         let projectIds = projects.map((i) => i._id.toString());
         let tasks = await TaskController.getTasksDB({
           projectId: { $in: projectIds },
         });
-        console.log({ tasks: tasks.length });
         projects = projects.map((item) => {
           let projectTasks = tasks
             .filter((i) => i.projectId.toString() === item._id.toString())
-            .sort();
-          let finished = projectTasks.filter((i) => i.status === "Done");
-          item.numberOfFinishedTasks = finished.length;
-          item.numberOfTasks = projectTasks.length;
-          item.startDate = projectTasks[0].createdAt;
-          if (projectTasks.length === 0) item.projectStatus === "Not Started";
+            .sort(
+              (a, b) =>
+                new Date(a.cardCreatedAt).getTime() -
+                new Date(b.createdAt).getTime()
+            );
+          if (projectTasks && projectTasks.length > 0) {
+            console.log({ item: item.name, projectTasks: projectTasks.length });
+            let finished = projectTasks.filter((i) => i.status === "Done");
+            item.numberOfFinishedTasks = finished.length;
+            item.numberOfTasks = projectTasks.length;
+            item.startDate = projectTasks[0].createdAt;
+            item.projectStatus =
+              item.projectStatus === "Not Started"
+                ? "In Progress"
+                : item.projectStatus;
+          } else {
+            item.numberOfFinishedTasks = 0;
+            item.numberOfTasks = 0;
+            item.startDate = null;
+            item.projectStatus = "Not Started";
+          }
           return item;
         });
+        console.log({ projects });
         let update = [
           ...projects.map((item) => {
             return {

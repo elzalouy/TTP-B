@@ -100,6 +100,7 @@ export function syncProjectsWithTasksJob() {
   return new CronJob(
     "0 6 * * *",
     async () => {
+      console.log("start sync projects with tasks");
       await ProjectController.__syncProjectsWithTasks();
     },
     null,

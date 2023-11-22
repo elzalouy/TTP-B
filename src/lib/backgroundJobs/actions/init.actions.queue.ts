@@ -3,7 +3,6 @@ import Queue from "queue";
 export const initializeQueue = Queue({
   results: [],
   autostart: true,
-  concurrency: 1,
 });
 export const intializeTaskQueue = Queue({
   results: [],
