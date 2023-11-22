@@ -5,6 +5,7 @@ import { removeOldNotifications } from "../backgroundJobs/actions/notifications.
 import {
   projectsDueDate,
   projectsPassedDate,
+  syncProjectsWithTasksJob,
 } from "../backgroundJobs/actions/project.actions.cron";
 import { initializeQueue } from "../backgroundJobs/actions/init.actions.queue";
 import { initializeCardsPlugins, initializeTrelloBoards } from "./db/dbConnect";
@@ -33,6 +34,12 @@ export default async function (
           // await initializeCardsPlugins();
         });
       });
+    });
+
+    initializeQueue.push(async (cb) => {
+      console.log("start");
+      await syncProjectsWithTasksJob().start();
+      cb(null, true);
     });
   } catch (error) {
     logger.error({ errorOldNotificationsCron: error });

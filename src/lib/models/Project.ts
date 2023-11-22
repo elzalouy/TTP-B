@@ -39,7 +39,7 @@ const ProjectSchema: Schema<ProjectInfo, ProjectModelType> = new Schema<
     },
     projectStatus: {
       type: String,
-      default: "In Progress",
+      default: "Not Started",
       enum: [
         "Not Started",
         "In Progress",

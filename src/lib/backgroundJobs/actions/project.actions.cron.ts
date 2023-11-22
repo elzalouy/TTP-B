@@ -7,6 +7,7 @@ import { socketPMs } from "../../startup/socket";
 import { userSocket } from "../../types/controller/user";
 import { CronJob } from "cron";
 import Project from "../../models/Project";
+import ProjectController from "../../controllers/project";
 
 /**
  * projectsDueDate
@@ -88,6 +89,18 @@ export function projectsPassedDate(
           io.to(ioIds).emit("notification-update");
         });
       }
+    },
+    null,
+    true,
+    "Asia/Riyadh"
+  );
+}
+
+export function syncProjectsWithTasksJob() {
+  return new CronJob(
+    "0 6 * * *",
+    async () => {
+      await ProjectController.__syncProjectsWithTasks();
     },
     null,
     true,

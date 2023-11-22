@@ -148,13 +148,11 @@ TaskSchema.pre("save", async function (next) {
     if (this.isModified("projectId") && this.projectId) {
       // Find the associated Project
       const project = await Project.findById(this.projectId);
-      console.log({ project });
       if (project) {
         // Find the oldest task in the project
         const oldestTask = await Tasks.findOne({ projectId: this.projectId })
           .sort({ cardCreatedAt: 1 })
           .limit(1);
-        console.log({ oldestTask });
         if (!project.startDate) {
           // Update the Project's start date if there is an oldestTask
           if (oldestTask) {

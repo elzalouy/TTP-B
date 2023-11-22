@@ -9,6 +9,8 @@ import { projectQueue } from "../backgroundJobs/actions/project.actions.Queue";
 import DepartmentController from "./department";
 import Department from "../models/Department";
 import TrelloController from "./trello";
+import TaskController from "./task";
+import Project from "../models/Project";
 
 const ProjectController = class ProjectController extends ProjectDB {
   static async createProject(data: ProjectData, user: any) {
@@ -126,6 +128,50 @@ const ProjectController = class ProjectController extends ProjectDB {
       else return null;
     } catch (error) {
       logger.error({ searchPrjectsError: error });
+    }
+  }
+
+  static async __syncProjectsWithTasks() {
+    try {
+      console.log("hello");
+      let projects = await super.__getProjects({});
+      console.log(projects);
+      if (projects) {
+        let projectIds = projects.map((i) => i._id.toString());
+        let tasks = await TaskController.getTasksDB({
+          projectId: { $in: projectIds },
+        });
+        console.log({ tasks: tasks.length });
+        projects = projects.map((item) => {
+          let projectTasks = tasks
+            .filter((i) => i.projectId.toString() === item._id.toString())
+            .sort();
+          let finished = projectTasks.filter((i) => i.status === "Done");
+          item.numberOfFinishedTasks = finished.length;
+          item.numberOfTasks = projectTasks.length;
+          item.startDate = projectTasks[0].createdAt;
+          if (projectTasks.length === 0) item.projectStatus === "Not Started";
+          return item;
+        });
+        let update = [
+          ...projects.map((item) => {
+            return {
+              updateOne: {
+                filter: { _id: item._id.toString() },
+                update: {
+                  numberOfFinishedTasks: item.numberOfFinishedTasks,
+                  numberOfTasks: item.numberOfTasks,
+                  startDate: item.startDate,
+                  projectStatus: item.projectStatus,
+                },
+              },
+            };
+          }),
+        ];
+        return await Project.bulkWrite(update);
+      } else return null;
+    } catch (error) {
+      logger.error(error);
     }
   }
 };

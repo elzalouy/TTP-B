@@ -50,7 +50,7 @@ const ProjectDB = class ProjectDB {
   }
   static async __getProjects(data: object) {
     try {
-      let fetch = await Project.aggregate([
+      let fetch: ProjectInfo[] = await Project.aggregate([
         { $match: { $and: [data] } },
         {
           $lookup: {
@@ -82,6 +82,9 @@ const ProjectDB = class ProjectDB {
                 },
               },
             },
+            firstTaskCreationDate: {
+              $min: "$tasks.createdAt",
+            },
           },
         },
         {
@@ -99,6 +102,7 @@ const ProjectDB = class ProjectDB {
             NoOfTasks: { $size: "$tasks" },
             NoOfFinishedTasks: { $size: "$NoOfFinishedTasks" },
             associateProjectManager: 1,
+            firstTaskCreationDate: 1,
           },
         },
       ]);

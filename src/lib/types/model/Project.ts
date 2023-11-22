@@ -12,7 +12,8 @@ export interface ProjectInfo extends Document {
     | "deliver on time"
     | "late"
     | "deliver before deadline"
-    | "delivered after deadline";
+    | "delivered after deadline"
+    | "Not Started";
   clientId: ObjectId;
   numberOfTasks: number;
   numberOfFinishedTasks: number;

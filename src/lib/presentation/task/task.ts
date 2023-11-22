@@ -208,7 +208,6 @@ const TaskReq = class TaskReq extends TaskController {
       let count = parseInt(recentCount);
 
       let result = await TaskController.getDeletedBack(count);
-      console.log({ result });
       if (result) res.send({ result });
       else res.status(400).send({ status: result });
     } catch (error) {

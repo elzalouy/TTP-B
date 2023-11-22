@@ -517,6 +517,7 @@ class TaskController extends TaskDB {
 
       departments = await Department.find({});
       tasks = await Tasks.find({});
+
       cards = _.flattenDeep(
         await Promise.all(
           departments?.map(async (item) => {
@@ -527,6 +528,7 @@ class TaskController extends TaskDB {
           })
         )
       );
+
       cardsIds = cards.map((i) => i.id);
       archivedCards = cards.filter((i) => i.closed === true).map((i) => i.id);
       archivedTasks = tasks.filter(
@@ -541,6 +543,7 @@ class TaskController extends TaskDB {
           })
         )
       );
+
       actions = actions.filter(
         (action) => action !== undefined && action !== null
       );
@@ -559,13 +562,6 @@ class TaskController extends TaskDB {
       });
 
       cardsActions = cardsActions.filter((item) => item.actions.length > 0);
-      // cards = cards.filter((card) => {
-      //   let actions = cardsActions.filter(
-      //     (action) => action.cardId === card.id
-      //   );
-      //   if (actions) return card;
-      // });
-
       cards = await Promise.all(
         cards?.map(async (item) => {
           let attachments = await TrelloController.__getCardAttachments(
@@ -636,18 +632,13 @@ class TaskController extends TaskDB {
               })
             : [];
         task.cardCreatedAt = new Date(createAction.date);
-        console.log({
-          cardClosed: card.closed,
-          taskArchived: task.archivedCard,
-          listClosed: listClosed === null ? true : false,
-        });
         if (!fetch) {
           newTasks.push(task);
           return null;
         } else return task;
       });
+
       tasks = tasks.filter((i) => i !== null);
-      console.log({ tasks });
       let insert = [
         ...newTasks.map((item) => {
           return {
@@ -658,7 +649,6 @@ class TaskController extends TaskDB {
         }),
       ];
       let insertResult = await Tasks.bulkWrite(insert);
-      console.log({ insertResult });
       let update = [
         ...archivedTasks.map((task) => {
           return {
@@ -700,7 +690,6 @@ class TaskController extends TaskDB {
       ];
 
       let result = await Tasks.bulkWrite(update);
-      console.log({ updateResult: result });
       newTasks.forEach(async (item) => {
         TrelloController.__addWebHook(item.cardId, "trelloWebhookUrlTask");
       });
