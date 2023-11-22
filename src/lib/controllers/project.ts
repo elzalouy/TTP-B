@@ -148,7 +148,6 @@ const ProjectController = class ProjectController extends ProjectDB {
                 new Date(b.createdAt).getTime()
             );
           if (projectTasks && projectTasks.length > 0) {
-            console.log({ item: item.name, projectTasks: projectTasks.length });
             let finished = projectTasks.filter((i) => i.status === "Done");
             item.numberOfFinishedTasks = finished.length;
             item.numberOfTasks = projectTasks.length;
@@ -165,7 +164,6 @@ const ProjectController = class ProjectController extends ProjectDB {
           }
           return item;
         });
-        console.log({ projects });
         let update = [
           ...projects.map((item) => {
             return {
@@ -181,6 +179,7 @@ const ProjectController = class ProjectController extends ProjectDB {
             };
           }),
         ];
+        console.log({ projects });
         return await Project.bulkWrite(update);
       } else return null;
     } catch (error) {

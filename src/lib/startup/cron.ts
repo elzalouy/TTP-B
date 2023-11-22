@@ -30,18 +30,17 @@ export default async function (
     });
 
     initializeQueue.push(async (cb) => {
-      await initializeTrelloBoards().then(async () => {
-        await TaskController.matchTasksWithTrello().then(async () => {
-          // await initializeCardsPlugins();
-        });
-      });
+      console.log("start");
+      await ProjectController.__syncProjectsWithTasks();
+      cb(null, true);
     });
 
     initializeQueue.push(async (cb) => {
-      console.log("start");
-      // await syncProjectsWithTasksJob().start();
-      await ProjectController.__syncProjectsWithTasks();
-      cb(null, true);
+      await initializeTrelloBoards().then(async () => {
+        await TaskController.matchTasksWithTrello().then(async () => {
+          await initializeCardsPlugins();
+        });
+      });
     });
   } catch (error) {
     logger.error({ errorOldNotificationsCron: error });
