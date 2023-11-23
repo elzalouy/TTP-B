@@ -179,7 +179,6 @@ const ProjectController = class ProjectController extends ProjectDB {
             };
           }),
         ];
-        console.log({ projects });
         return await Project.bulkWrite(update);
       } else return null;
     } catch (error) {

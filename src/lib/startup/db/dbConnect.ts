@@ -369,9 +369,9 @@ export const initializeCardsPlugins = async () => {
       let update = [
         ...plugins.map((pluginCard) => {
           return {
-            updateOne: {
+            replaceOne: {
               filter: { _id: pluginCard._id.toString() },
-              update: {
+              replacement: {
                 name: pluginCard.name,
                 cardId: pluginCard.cardId,
                 taskId: pluginCard.taskId,
