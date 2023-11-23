@@ -316,7 +316,7 @@ class TrelloController {
     }
   }
 
-  static async __getCardsInBoard(boardId: string) {
+  static async __getCardsInBoard(boardId: string): Promise<any> {
     try {
       let url = trelloApi(`boards/${boardId}/cards/all?`);
       let result = await fetch(url, {
@@ -612,7 +612,7 @@ class TrelloController {
     else return null;
   }
 
-  static async getComments(cardId: string) {
+  static async getComments(cardId: string): Promise<any> {
     try {
       let url = trelloApi(`cards/${cardId}/actions?filter=commentCard&`);
       let comments = await fetch(url, {
@@ -672,7 +672,7 @@ class TrelloController {
     }
   }
 
-  static async getChecklists(cardId: string) {
+  static async getChecklists(cardId: string): Promise<any> {
     try {
       let url = trelloApi(
         `cards/${cardId}/checklists?checkItems=all&checkItem_fields=true&`

@@ -47,6 +47,7 @@
     "@types/winston": "^2.4.4",
     "aws-sdk": "^2.1109.0",
     "bcrypt": "^5.0.1",
+    "bottleneck": "^2.19.5",
     "compression": "^1.7.4",
     "concurrently": "^6.3.0",
     "config": "^3.3.7",

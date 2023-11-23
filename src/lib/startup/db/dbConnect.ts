@@ -6,13 +6,8 @@ import { UserData } from "../../types/model/User";
 import UserDB from "../../dbCalls/user/user";
 import Config from "config";
 import Department from "../../models/Department";
-import DepartmentController from "../../controllers/department";
 import TrelloController from "../../controllers/trello";
-import {
-  IDepartment,
-  IDepartmentState,
-  ITeam,
-} from "../../types/model/Department";
+import { IDepartmentState } from "../../types/model/Department";
 import {
   Board,
   Card,
@@ -21,16 +16,13 @@ import {
   CheckList,
 } from "../../types/controller/trello";
 import { ListTypes } from "../../types/model/Department";
-import _, { create } from "lodash";
-import { Movement, TaskInfo } from "../../types/model/tasks";
-import Tasks from "../../models/Task";
+import _ from "lodash";
+import Bottleneck from "bottleneck";
 import TaskController from "../../controllers/task";
-import { AnyBulkWriteOperation } from "mongodb";
 import TasksPlugins from "../../models/TaskPlugins";
-import { delay } from "../../services/validation";
-import { intializeTaskQueue } from "../../backgroundJobs/actions/init.actions.queue";
-config();
 
+config();
+const limiter = new Bottleneck({ maxConcurrent: 1, minTime: 1000 });
 const db: string = Config.get("mongoDbConnectionString");
 logger.warn({ db: db });
 interface DBOptions {
@@ -313,17 +305,13 @@ export const initializeCardsPlugins = async () => {
   try {
     let departments = await Department.find({});
     let boardIds = departments.map((department) => department.boardId);
-    const delay = (ms: number) =>
-      new Promise((resolve) => setTimeout(resolve, ms));
 
     let cards = _.flattenDeep(
       await Promise.all(
         boardIds.map(async (id, index) => {
-          if (index != 0) {
-            await delay(1000);
-            console.log({ boardId: id, index });
-          }
-          let boardCards: Card[] = await TrelloController.__getCardsInBoard(id);
+          let boardCards: Card[] = await limiter.schedule(() =>
+            TrelloController.__getCardsInBoard(id)
+          );
           return boardCards;
         })
       )
@@ -335,41 +323,39 @@ export const initializeCardsPlugins = async () => {
     if (tasks) {
       let plugins = await Promise.all(
         tasks.map(async (item, index) => {
-          return Promise.resolve(
-            delay(1000).then(async () => {
-              console.log({ cardIdForPlugins: item.cardId, index });
-              let commentsActions: TrelloAction[] =
-                await TrelloController.getComments(item.cardId);
+          console.log({ itemName: item.name, index });
+          let commentsActions: TrelloAction[] = await limiter.schedule(() =>
+            TrelloController.getComments(item.cardId)
+          );
 
-              let comments = await Promise.all(
-                commentsActions.map((i) => {
-                  return { comment: i.data.text };
-                })
-              );
-              let checkLists: CheckList[] =
-                await TrelloController.getChecklists(item.cardId);
-
-              let labels = cards.find((i) => i.id === item.cardId).labels;
-              let existed = tasksPlugins.find((i) => i.cardId === item.cardId);
-              if (existed) {
-                existed.taskId = item._id;
-                existed.cardId = item.cardId;
-                existed.name = item.name;
-                existed.checkLists = checkLists;
-                existed.comments = comments;
-                existed.labels = labels;
-                return existed;
-              } else
-                return new TasksPlugins({
-                  name: item.name,
-                  taskId: item._id.toString(),
-                  cardId: item.cardId,
-                  checkLists: checkLists,
-                  comments: comments,
-                  labels: labels,
-                });
+          let comments = await Promise.all(
+            commentsActions.map((i) => {
+              return { comment: i.data.text };
             })
           );
+          let checkLists: CheckList[] = await limiter.schedule(() =>
+            TrelloController.getChecklists(item.cardId)
+          );
+
+          let labels = cards.find((i) => i.id === item.cardId).labels;
+          let existed = tasksPlugins.find((i) => i.cardId === item.cardId);
+          if (existed) {
+            existed.taskId = item._id;
+            existed.cardId = item.cardId;
+            existed.name = item.name;
+            existed.checkLists = checkLists;
+            existed.comments = comments;
+            existed.labels = labels;
+            return existed;
+          } else
+            return new TasksPlugins({
+              name: item.name,
+              taskId: item._id.toString(),
+              cardId: item.cardId,
+              checkLists: checkLists,
+              comments: comments,
+              labels: labels,
+            });
         })
       );
       console.log({ plugins: plugins.length });
