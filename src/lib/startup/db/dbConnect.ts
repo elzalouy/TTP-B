@@ -320,7 +320,7 @@ export const initializeCardsPlugins = async () => {
       await Promise.all(
         boardIds.map(async (id, index) => {
           if (index != 0) {
-            delay(1000);
+            delay(1500);
             console.log({ boardId: id, index });
           }
           let boardCards: Card[] = await TrelloController.__getCardsInBoard(id);
@@ -328,13 +328,15 @@ export const initializeCardsPlugins = async () => {
         })
       )
     );
+
     let tasks = await TaskController.getTasks({ archivedCard: false });
     let tasksPlugins = await TasksPlugins.find({});
+
     if (tasks) {
       let plugins = await Promise.all(
         tasks.map(async (item, index) => {
           if (index !== 0) {
-            delay(1000);
+            delay(1500);
             console.log({ cardIdForPlugins: item.cardId, index });
           }
           let commentsActions: TrelloAction[] =
@@ -389,9 +391,9 @@ export const initializeCardsPlugins = async () => {
           };
         }),
       ];
-      TasksPlugins.bulkWrite(update);
-      console.log({ update });
-      return update;
+
+      let result = await TasksPlugins.bulkWrite(update);
+      return result;
     }
   } catch (error) {
     logger.error({ initializeCardsPluginsError: error });
