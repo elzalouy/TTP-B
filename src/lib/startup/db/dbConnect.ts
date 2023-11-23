@@ -335,41 +335,41 @@ export const initializeCardsPlugins = async () => {
     if (tasks) {
       let plugins = await Promise.all(
         tasks.map(async (item, index) => {
-          if (index !== 0) {
-            await delay(1000);
-            console.log({ cardIdForPlugins: item.cardId, index });
-          }
-          let commentsActions: TrelloAction[] =
-            await TrelloController.getComments(item.cardId);
+          return Promise.resolve(
+            delay(1000).then(async () => {
+              console.log({ cardIdForPlugins: item.cardId, index });
+              let commentsActions: TrelloAction[] =
+                await TrelloController.getComments(item.cardId);
 
-          let comments = await Promise.all(
-            commentsActions.map((i) => {
-              return { comment: i.data.text };
+              let comments = await Promise.all(
+                commentsActions.map((i) => {
+                  return { comment: i.data.text };
+                })
+              );
+              let checkLists: CheckList[] =
+                await TrelloController.getChecklists(item.cardId);
+
+              let labels = cards.find((i) => i.id === item.cardId).labels;
+              let existed = tasksPlugins.find((i) => i.cardId === item.cardId);
+              if (existed) {
+                existed.taskId = item._id;
+                existed.cardId = item.cardId;
+                existed.name = item.name;
+                existed.checkLists = checkLists;
+                existed.comments = comments;
+                existed.labels = labels;
+                return existed;
+              } else
+                return new TasksPlugins({
+                  name: item.name,
+                  taskId: item._id.toString(),
+                  cardId: item.cardId,
+                  checkLists: checkLists,
+                  comments: comments,
+                  labels: labels,
+                });
             })
           );
-          let checkLists: CheckList[] = await TrelloController.getChecklists(
-            item.cardId
-          );
-
-          let labels = cards.find((i) => i.id === item.cardId).labels;
-          let existed = tasksPlugins.find((i) => i.cardId === item.cardId);
-          if (existed) {
-            existed.taskId = item._id;
-            existed.cardId = item.cardId;
-            existed.name = item.name;
-            existed.checkLists = checkLists;
-            existed.comments = comments;
-            existed.labels = labels;
-            return existed;
-          } else
-            return new TasksPlugins({
-              name: item.name,
-              taskId: item._id.toString(),
-              cardId: item.cardId,
-              checkLists: checkLists,
-              comments: comments,
-              labels: labels,
-            });
         })
       );
       console.log({ plugins: plugins.length });
