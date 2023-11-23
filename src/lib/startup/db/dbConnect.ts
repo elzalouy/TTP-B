@@ -320,7 +320,7 @@ export const initializeCardsPlugins = async () => {
       await Promise.all(
         boardIds.map(async (id, index) => {
           if (index != 0) {
-            delay(1500);
+            delay(2000);
             console.log({ boardId: id, index });
           }
           let boardCards: Card[] = await TrelloController.__getCardsInBoard(id);
@@ -336,7 +336,7 @@ export const initializeCardsPlugins = async () => {
       let plugins = await Promise.all(
         tasks.map(async (item, index) => {
           if (index !== 0) {
-            delay(1500);
+            delay(2000);
             console.log({ cardIdForPlugins: item.cardId, index });
           }
           let commentsActions: TrelloAction[] =
