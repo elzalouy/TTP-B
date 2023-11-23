@@ -323,7 +323,6 @@ export const initializeCardsPlugins = async () => {
     if (tasks) {
       let plugins = await Promise.all(
         tasks.map(async (item, index) => {
-          console.log({ itemName: item.name, index });
           let commentsActions: TrelloAction[] = await limiter.schedule(() =>
             TrelloController.getComments(item.cardId)
           );
@@ -338,6 +337,13 @@ export const initializeCardsPlugins = async () => {
           );
 
           let labels = cards.find((i) => i.id === item.cardId).labels;
+          console.log({
+            itemName: item.name,
+            index,
+            labels: labels.length,
+            checkLists: checkLists.length,
+            comments: comments.length,
+          });
           let existed = tasksPlugins.find((i) => i.cardId === item.cardId);
           if (existed) {
             existed.taskId = item._id;
