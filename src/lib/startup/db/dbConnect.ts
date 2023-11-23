@@ -313,20 +313,30 @@ export const initializeCardsPlugins = async () => {
   try {
     let departments = await Department.find({});
     let boardIds = departments.map((department) => department.boardId);
+    const delay = (ms: number) =>
+      new Promise((resolve) => setTimeout(resolve, ms));
+
     let cards = _.flattenDeep(
       await Promise.all(
-        boardIds.map(async (id) => {
+        boardIds.map(async (id, index) => {
+          if (index != 0) {
+            delay(1000);
+            console.log({ boardId: id, index });
+          }
           let boardCards: Card[] = await TrelloController.__getCardsInBoard(id);
           return boardCards;
         })
       )
     );
-
     let tasks = await TaskController.getTasks({ archivedCard: false });
     let tasksPlugins = await TasksPlugins.find({});
     if (tasks) {
       let plugins = await Promise.all(
-        tasks.map(async (item) => {
+        tasks.map(async (item, index) => {
+          if (index !== 0) {
+            delay(1000);
+            console.log({ cardIdForPlugins: item.cardId, index });
+          }
           let commentsActions: TrelloAction[] =
             await TrelloController.getComments(item.cardId);
 
