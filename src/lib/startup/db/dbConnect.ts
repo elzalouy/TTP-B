@@ -372,7 +372,7 @@ export const initializeCardsPlugins = async () => {
             });
         })
       );
-      console.log({ plugins });
+      console.log({ plugins: plugins.length });
 
       let update = [
         ...plugins.map((pluginCard) => {
