@@ -380,6 +380,7 @@ export const initializeCardsPlugins = async () => {
         }),
       ];
       TasksPlugins.bulkWrite(update);
+      console.log({ update });
       return update;
     }
   } catch (error) {
