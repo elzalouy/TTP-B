@@ -372,13 +372,14 @@ export const initializeCardsPlugins = async () => {
             });
         })
       );
+      console.log({ plugins });
 
       let update = [
         ...plugins.map((pluginCard) => {
           return {
-            replaceOne: {
+            updateOne: {
               filter: { _id: pluginCard._id.toString() },
-              replacement: {
+              update: {
                 name: pluginCard.name,
                 cardId: pluginCard.cardId,
                 taskId: pluginCard.taskId,
