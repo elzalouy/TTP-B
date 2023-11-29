@@ -133,6 +133,7 @@ const ProjectController = class ProjectController extends ProjectDB {
 
   static async __syncProjectsWithTasks() {
     try {
+      // get all projects
       let projects = await Project.find({});
       if (projects) {
         let projectIds = projects.map((i) => i._id.toString());
@@ -145,13 +146,13 @@ const ProjectController = class ProjectController extends ProjectDB {
             .sort(
               (a, b) =>
                 new Date(a.cardCreatedAt).getTime() -
-                new Date(b.createdAt).getTime()
+                new Date(b.cardCreatedAt).getTime()
             );
           if (projectTasks && projectTasks.length > 0) {
             let finished = projectTasks.filter((i) => i.status === "Done");
             item.numberOfFinishedTasks = finished.length;
             item.numberOfTasks = projectTasks.length;
-            item.startDate = projectTasks[0].createdAt;
+            item.startDate = projectTasks[0].cardCreatedAt;
             item.projectStatus =
               item.projectStatus === "Not Started"
                 ? "In Progress"

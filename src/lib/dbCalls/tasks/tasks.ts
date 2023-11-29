@@ -7,6 +7,7 @@ import mongoose from "mongoose";
 import { taskNotFoundError } from "../../types/controller/Tasks";
 import { ObjectId } from "mongodb";
 import { io } from "../../../index";
+import ProjectController from "../../controllers/project";
 class TaskDB {
   static async createTaskDB(data: TaskData) {
     return await TaskDB.__createTask(data);
@@ -268,11 +269,31 @@ class TaskDB {
 
   static async __updateTasksProjectId(projectId: string, ids: string[]) {
     try {
-      let updateResult = await Tasks.updateMany(
-        { _id: { $in: ids } },
-        { projectId: projectId }
-      );
-      return updateResult;
+      let project = await ProjectController.__getProject({
+        _id: new ObjectId(projectId),
+      });
+      if (project) {
+        let projectTasks = await Tasks.find({ projectId: projectId });
+        if (Tasks.length > 0) {
+          project.numberOfTasks = projectTasks.length;
+          project.numberOfFinishedTasks = projectTasks.filter(
+            (i) => i.status === "Done"
+          ).length;
+          project.projectStatus =
+            project.projectStatus === "Not Started"
+              ? "In Progress"
+              : project.projectStatus;
+          project = await project.save();
+          io.sockets.emit("update-projects", project);
+        }
+        let updateResult = await Tasks.updateMany(
+          { _id: { $in: ids } },
+          { projectId: projectId }
+        );
+        return updateResult;
+      } else {
+        return null;
+      }
     } catch (error) {
       logger.error({ updateTasksProjectIdError: error });
     }

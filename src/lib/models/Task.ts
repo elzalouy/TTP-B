@@ -141,6 +141,7 @@ const TaskSchema = new Schema<TaskInfo, TasksModel>(
     strict: false,
   }
 );
+
 TaskSchema.pre("save", async function (next) {
   try {
     const Task = this.constructor; // Get the model

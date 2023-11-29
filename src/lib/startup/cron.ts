@@ -8,8 +8,7 @@ import {
   syncProjectsWithTasksJob,
 } from "../backgroundJobs/actions/project.actions.cron";
 import { initializeQueue } from "../backgroundJobs/actions/init.actions.queue";
-import { initializeCardsPlugins, initializeTrelloBoards } from "./db/dbConnect";
-import { taskRoutesQueue } from "../backgroundJobs/routes/tasks.Route.Queue";
+import { initializeTrelloBoards } from "./db/dbConnect";
 import TaskController from "../controllers/task";
 import ProjectController from "../controllers/project";
 
@@ -30,17 +29,14 @@ export default async function (
     });
 
     initializeQueue.push(async (cb) => {
-      console.log("start");
+      console.log("start syncing projects with tasks");
       await ProjectController.__syncProjectsWithTasks();
       cb(null, true);
     });
 
     initializeQueue.push(async (cb) => {
       await initializeTrelloBoards().then(async () => {
-        await TaskController.matchTasksWithTrello().then(async () => {
-          let result = await initializeCardsPlugins();
-          logger.info({ initializeCardsPluginsResult: result });
-        });
+        await TaskController.matchTasksWithTrello().then(async () => {});
       });
     });
   } catch (error) {

@@ -181,8 +181,12 @@ const TaskReq = class TaskReq extends TaskController {
         let response = await super.__editTasksProjectId(ids, projectId);
         if (response.modifiedCount) return res.send(response);
         return res
-          .status(400)
-          .send({ message: "something wrong happened", error: response });
+          .status(200)
+          .send({
+            message:
+              "Project not existed or something wrong hapenned while assigning the tasks",
+            error: response,
+          });
       }
     } catch (error) {
       logger.error({ handleEditTasksProjectIdError: error });
