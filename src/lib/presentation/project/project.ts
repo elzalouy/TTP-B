@@ -8,6 +8,7 @@ import Client from "../../controllers/client";
 import mongoose from "mongoose";
 import TaskController from "../../controllers/task";
 import { jwtVerify } from "../../services/auth";
+import { io } from "../../..";
 
 const ProjectReq = class ProjectReq extends ProjectController {
   static async handleCreateProject(req: Request, res: Response) {
@@ -75,6 +76,7 @@ const ProjectReq = class ProjectReq extends ProjectController {
       }
       let project = await super.deleteProject(projectId);
       if (project) {
+        io.sockets.emit("delete-project", project);
         await Client.updateClientProcedure(project.clientId);
         return res
           .status(200)
