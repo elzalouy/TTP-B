@@ -39,8 +39,8 @@ export interface TaskHistory {
 
 export interface TasksStatistics {
   id?: ObjectId;
-  numberOfTasks: number | null;
-  numberOfFinishedTasks: number | null;
+  NoOfTasks: number | null;
+  NoOfFinishedTasks: number | null;
   progress: number | null;
 }
 

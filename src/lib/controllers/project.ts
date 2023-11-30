@@ -136,7 +136,6 @@ const ProjectController = class ProjectController extends ProjectDB {
     try {
       // get all projects
       let projects = await Project.find({});
-      console.log({ projects });
       if (projects) {
         // get only the tasks assigned to projects and also not archived.
         let tasks = await TaskController.getTasksDB({
@@ -153,23 +152,19 @@ const ProjectController = class ProjectController extends ProjectDB {
                 new Date(b.cardCreatedAt).getTime()
             );
 
-          if (item._id.toString() === "639855720357dc2e90a2b384")
-            logger.info({
-              id: "639855720357dc2e90a2b384",
-              projectTasks: projectTasks,
-            });
           if (projectTasks && projectTasks.length > 0) {
             let finished = projectTasks.filter((i) => i.status === "Done");
-            item.numberOfFinishedTasks = finished.length;
-            item.numberOfTasks = projectTasks.length;
-            item.startDate = projectTasks[0].cardCreatedAt;
+            item.NoOfFinishedTasks = finished.length;
+            item.NoOfTasks = projectTasks.length;
+            item.startDate =
+              projectTasks[0].cardCreatedAt ?? projectTasks[0].createdAt;
             item.projectStatus =
               item.projectStatus === "Not Started"
                 ? "In Progress"
                 : item.projectStatus;
           } else {
-            item.numberOfFinishedTasks = 0;
-            item.numberOfTasks = 0;
+            item.NoOfFinishedTasks = 0;
+            item.NoOfTasks = 0;
             item.startDate = null;
             item.projectStatus = "Not Started";
           }
@@ -182,8 +177,8 @@ const ProjectController = class ProjectController extends ProjectDB {
               updateOne: {
                 filter: { _id: item._id.toString() },
                 update: {
-                  numberOfFinishedTasks: item.numberOfFinishedTasks,
-                  numberOfTasks: item.numberOfTasks,
+                  NoOfFinishedTasks: item.NoOfFinishedTasks,
+                  NoOfTasks: item.NoOfTasks,
                   startDate: item.startDate,
                   projectStatus: item.projectStatus,
                 },

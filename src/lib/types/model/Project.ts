@@ -15,8 +15,8 @@ export interface ProjectInfo extends Document {
     | "delivered after deadline"
     | "Not Started";
   clientId: ObjectId;
-  numberOfTasks: number;
-  numberOfFinishedTasks: number;
+  NoOfTasks: number;
+  NoOfFinishedTasks: number;
   adminId: ObjectId;
   projectManagerName: string;
   listId: string;
@@ -39,8 +39,8 @@ export interface ProjectData {
     | "deliver defore deadline"
     | "delivered after deadline";
   clientId?: string;
-  numberOfTasks?: number;
-  numberOfFinishedTasks?: number;
+  NoOfTasks?: number;
+  NoOfFinishedTasks?: number;
   projectManagerName?: string;
   adminName?: string;
   adminId?: ObjectId;

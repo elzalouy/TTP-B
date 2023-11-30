@@ -144,7 +144,6 @@ const TaskSchema = new Schema<TaskInfo, TasksModel>(
 
 TaskSchema.pre("save", async function (next) {
   try {
-    const Task = this.constructor; // Get the model
     // Check if the projectId is provided in the Task and if it has changed
     if (this.isModified("projectId") && this.projectId) {
       // Find the associated Project

@@ -273,16 +273,23 @@ class TaskDB {
         _id: new ObjectId(projectId),
       });
       if (project) {
-        let projectTasks = await Tasks.find({ projectId: projectId });
+        let projectTasks = (await Tasks.find({ projectId: projectId })).sort(
+          (a, b) =>
+            new Date(a.cardCreatedAt).getTime() -
+            new Date(b.cardCreatedAt).getTime()
+        );
         if (Tasks.length > 0) {
-          project.numberOfTasks = projectTasks.length;
-          project.numberOfFinishedTasks = projectTasks.filter(
+          project.startDate =
+            projectTasks[0].cardCreatedAt ?? projectTasks[0].createdAt;
+          project.NoOfTasks = projectTasks.length;
+          project.NoOfFinishedTasks = projectTasks.filter(
             (i) => i.status === "Done"
           ).length;
           project.projectStatus =
             project.projectStatus === "Not Started"
               ? "In Progress"
               : project.projectStatus;
+
           project = await project.save();
           io.sockets.emit("update-projects", project);
         }
