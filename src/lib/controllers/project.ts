@@ -142,6 +142,12 @@ const ProjectController = class ProjectController extends ProjectDB {
           projectId: { $in: projectIds },
         });
         logger.info({ tasks: tasks.length });
+        logger.info({
+          id: "639855720357dc2e90a2b384",
+          projectTasks: projectTasks.filter(
+            (i) => i.projectId.toString() === "639855720357dc2e90a2b384"
+          ),
+        });
         projects = projects.map((item) => {
           let projectTasks = tasks
             .filter((i) => i.projectId.toString() === item._id.toString())
@@ -150,13 +156,6 @@ const ProjectController = class ProjectController extends ProjectDB {
                 new Date(a.cardCreatedAt).getTime() -
                 new Date(b.cardCreatedAt).getTime()
             );
-
-          logger.info({
-            id: "639855720357dc2e90a2b384",
-            projectTasks: projectTasks.filter(
-              (i) => i.projectId.toString() === "639855720357dc2e90a2b384"
-            ),
-          });
 
           if (projectTasks && projectTasks.length > 0) {
             let finished = projectTasks.filter((i) => i.status === "Done");
