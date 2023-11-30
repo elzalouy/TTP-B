@@ -136,18 +136,14 @@ const ProjectController = class ProjectController extends ProjectDB {
     try {
       // get all projects
       let projects = await Project.find({});
+      console.log({ projects });
       if (projects) {
-        let projectIds = projects.map((i) => i._id.toString());
+        // get only the tasks assigned to projects and also not archived.
         let tasks = await TaskController.getTasksDB({
-          projectId: { $in: projectIds },
+          projectId: { $ne: null },
+          archivedCard: false,
         });
-        logger.info({ tasks: tasks.length });
-        logger.info({
-          id: "639855720357dc2e90a2b384",
-          projectTasks: tasks.filter(
-            (i) => i.projectId.toString() === "639855720357dc2e90a2b384"
-          ),
-        });
+
         projects = projects.map((item) => {
           let projectTasks = tasks
             .filter((i) => i.projectId.toString() === item._id.toString())
@@ -157,6 +153,11 @@ const ProjectController = class ProjectController extends ProjectDB {
                 new Date(b.cardCreatedAt).getTime()
             );
 
+          if (item._id.toString() === "639855720357dc2e90a2b384")
+            logger.info({
+              id: "639855720357dc2e90a2b384",
+              projectTasks: projectTasks,
+            });
           if (projectTasks && projectTasks.length > 0) {
             let finished = projectTasks.filter((i) => i.status === "Done");
             item.numberOfFinishedTasks = finished.length;
@@ -174,6 +175,7 @@ const ProjectController = class ProjectController extends ProjectDB {
           }
           return item;
         });
+
         let update = [
           ...projects.map((item) => {
             return {
