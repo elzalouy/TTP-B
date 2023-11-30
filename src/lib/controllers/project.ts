@@ -144,7 +144,7 @@ const ProjectController = class ProjectController extends ProjectDB {
         logger.info({ tasks: tasks.length });
         logger.info({
           id: "639855720357dc2e90a2b384",
-          projectTasks: projectTasks.filter(
+          projectTasks: tasks.filter(
             (i) => i.projectId.toString() === "639855720357dc2e90a2b384"
           ),
         });
