@@ -141,6 +141,7 @@ const ProjectController = class ProjectController extends ProjectDB {
         let tasks = await TaskController.getTasksDB({
           projectId: { $in: projectIds },
         });
+        logger.info({ tasks: tasks.length });
         projects = projects.map((item) => {
           let projectTasks = tasks
             .filter((i) => i.projectId.toString() === item._id.toString())
