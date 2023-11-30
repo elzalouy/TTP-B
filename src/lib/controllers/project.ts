@@ -11,6 +11,7 @@ import Department from "../models/Department";
 import TrelloController from "./trello";
 import TaskController from "./task";
 import Project from "../models/Project";
+import { ObjectId } from "mongodb";
 
 const ProjectController = class ProjectController extends ProjectDB {
   static async createProject(data: ProjectData, user: any) {
@@ -135,7 +136,6 @@ const ProjectController = class ProjectController extends ProjectDB {
     try {
       // get all projects
       let projects = await Project.find({});
-      console.log({ startedSyncingTasksWithProjects: projects });
       if (projects) {
         let projectIds = projects.map((i) => i._id.toString());
         let tasks = await TaskController.getTasksDB({
@@ -149,6 +149,11 @@ const ProjectController = class ProjectController extends ProjectDB {
                 new Date(a.cardCreatedAt).getTime() -
                 new Date(b.cardCreatedAt).getTime()
             );
+          logger.info({
+            projectTasks: projectTasks.filter(
+              (i) => i.projectId.toString() === "639855720357dc2e90a2b384"
+            ),
+          });
           if (projectTasks && projectTasks.length > 0) {
             let finished = projectTasks.filter((i) => i.status === "Done");
             item.numberOfFinishedTasks = finished.length;
