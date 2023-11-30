@@ -286,6 +286,7 @@ export const initializeTrelloBoards = async () => {
         };
       }),
     ];
+
     await Department.bulkWrite(update)
       .then((res) => {
         console.log({ bulkUpdateDepartmentsResult: res });

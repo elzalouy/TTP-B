@@ -135,6 +135,7 @@ const ProjectController = class ProjectController extends ProjectDB {
     try {
       // get all projects
       let projects = await Project.find({});
+      console.log({ startedSyncingTasksWithProjects: projects });
       if (projects) {
         let projectIds = projects.map((i) => i._id.toString());
         let tasks = await TaskController.getTasksDB({
