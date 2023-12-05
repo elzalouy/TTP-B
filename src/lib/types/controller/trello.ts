@@ -328,6 +328,7 @@ export type TrelloAction = {
   idMemberCreator: string;
   deleteAction?: boolean;
   listType?: "list" | "team" | "sideList";
+  listName?: string;
   status?: string;
   dueChange?: string;
   listId?: string;

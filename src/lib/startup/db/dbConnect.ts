@@ -304,6 +304,7 @@ export const initializeTrelloBoards = async () => {
 
 export const initializeCardsPlugins = async () => {
   try {
+    console.log("started initializing cards plugins");
     let departments = await Department.find({});
     let boardIds = departments.map((department) => department.boardId);
 

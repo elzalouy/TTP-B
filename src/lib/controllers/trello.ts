@@ -842,6 +842,11 @@ class TrelloController {
           status: cardAction.action.status,
           isTeam: cardAction.action.listType === "team",
           journeyDeadline: cardAction.action.dueChange,
+          listName:
+            cardAction.action.data.listAfter.name ??
+            cardAction.action.data.list.name ??
+            "",
+          listType: cardAction.action.listType,
         };
       });
       return { movements, currentTeam, createdAt: createAction[0].date };
@@ -854,52 +859,65 @@ class TrelloController {
 export class CardAction {
   action: TrelloAction;
   constructor(action: TrelloAction) {
-    action.deleteAction = false;
     this.action = action;
+    this.action.deleteAction = false;
   }
 
   validate = (board: IDepartment) => {
+    // get the date of action
     let date = this.action.date;
+
+    // list id and name
     let listId = this.action.data?.list?.id ?? this.action.data?.listAfter?.id;
     let listName =
       this.action.data?.list?.name ?? this.action.data?.listAfter?.name;
+
+    // if board or date are nullable, delete the action
     if (!board || !date) {
       this.action.deleteAction = true;
       return this;
     }
+
+    // get the list from the current board
     let list = board?.lists?.find((l) => l.listId === listId);
+
+    // if existed as status, change the status, listType, listName, and listId. Then return the object.
     if (list) {
-      logger.info({ type: "list", list });
       this.action.listType = "list";
       this.action.status = list.name;
       this.action.listId = list.listId;
+      this.action.listName = list.name;
       return this;
     } else {
+      // if list existed as team, change the object fields and return it.
       list = board?.teams?.find((t) => t.listId === listId);
       if (list) {
-        logger.info({ type: "team", list });
         this.action.listType = "team";
         this.action.status = "In Progress";
         this.action.listId = list.listId;
+        this.action.listName = list.name;
         return this;
       } else {
+        // if list existed as main list, change the object fields and return it.
         list = board.sideLists.find((i) => i.listId === listId);
         if (list) {
-          logger.info({ type: "sideList", list });
           this.action.listType = "sideList";
           this.action.status = "Tasks Board";
           this.action.listId = list.listId;
+          this.action.listName = list.name;
           return this;
         } else {
+          // if list existed as list by name, change the object fields and return it.
           list = board.lists.find((l) => l.name === listName);
           if (list) {
-            logger.info({ type: "list but changed the listId", list });
             this.action.listId = list.listId;
             this.action.status = list.name;
             this.action.listType = "list";
+            this.action.listName = list.name;
             return this;
           } else {
-            logger.info({
+            // if not, delete the action
+            console.log({
               deleteActionMovement: {
                 cardId: this.action.data.card.id,
                 listId,

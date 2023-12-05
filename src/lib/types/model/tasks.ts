@@ -114,6 +114,7 @@ export interface Movement {
   journeyDeadline?: string | null;
   listId?: string;
   listType?: "team" | "list" | "sideList";
+  listName?: string;
 }
 export const statusLists = [
   "In Progress",

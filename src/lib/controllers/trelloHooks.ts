@@ -205,6 +205,7 @@ export default class TrelloWebhook {
         sideList: IList,
         listBefore: string,
         listAfter: string,
+        listName: string,
         cardDeadline: Date | number;
       task = await TaskController.getOneTaskBy({
         cardId: this.actionRequest?.action?.data?.card?.id,
@@ -217,6 +218,10 @@ export default class TrelloWebhook {
           this.actionRequest.action.data?.list?.id ??
           this.actionRequest.action.data?.card?.idList ??
           this.actionRequest.action.data?.listAfter?.id;
+        listName =
+          this.actionRequest.action.data?.list?.name ??
+          this.actionRequest.action.data?.listAfter?.name;
+
         isMoved = listId !== task.listId;
         status =
           this.actionRequest.action.data?.list?.name ??
@@ -281,6 +286,9 @@ export default class TrelloWebhook {
               ? inProgressList.name
               : status,
             movedAt: new Date(Date.now()).toString(),
+            listType: isNewTeam ? "team" : sideList ? "sideList" : "list",
+            listId: listId,
+            listName,
           };
           this.task.movements.push(move);
           this.task.archivedAt = null;

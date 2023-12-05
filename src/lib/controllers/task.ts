@@ -515,9 +515,11 @@ class TaskController extends TaskDB {
       // save actions of this year for the cards
       // archive all not existed tasks as cards.
 
+      // getting data
       departments = await Department.find({});
       tasks = await Tasks.find({});
 
+      // getting cards
       cards = _.flattenDeep(
         await Promise.all(
           departments?.map(async (item) => {
@@ -529,13 +531,19 @@ class TaskController extends TaskDB {
         )
       );
 
+      // cards ids
       cardsIds = cards.map((i) => i.id);
+
+      // archived cards are the cards with and attribute 'closed' and equals true.
       archivedCards = cards.filter((i) => i.closed === true).map((i) => i.id);
+
+      // archived tasks are all the previous archived cards or even not existed in the cards.
       archivedTasks = tasks.filter(
         (task) =>
           archivedCards.includes(task.cardId) || !cardsIds.includes(task.cardId)
       );
 
+      // All actions of the boards.
       actions = _.flattenDeep(
         await Promise.all(
           departments.map(async (item) => {
@@ -544,15 +552,23 @@ class TaskController extends TaskDB {
         )
       );
 
+      // all actions filtered from nullable values
       actions = actions.filter(
         (action) => action !== undefined && action !== null
       );
 
+      // extract the create actions, specifically the card id.
       let createActions = actions
         .filter((i) => i.type === "createCard")
         .map((i) => i.data.card.id);
+
+      // let only the actions for the selected cards ids which have a create action.
       actions = actions.filter((a) => createActions.includes(a.data.card.id));
+
+      // Also filter the cards by the create actions. so we will have only the cards which have a create action.
       cards = cards.filter((c) => createActions.includes(c.id));
+
+      // Build the new Array of card id, and its actions.
       cardsActions = cards.map((card) => {
         let cardActions = actions.filter(
           (action) => action.data.card.id === card.id
@@ -561,7 +577,10 @@ class TaskController extends TaskDB {
         else return { cardId: card.id, actions: [] };
       });
 
+      // remove all object with an empty array of actions.
       cardsActions = cardsActions.filter((item) => item.actions.length > 0);
+
+      // insert the attachments of each card.
       cards = await Promise.all(
         cards?.map(async (item) => {
           let attachments = await TrelloController.__getCardAttachments(
@@ -572,32 +591,38 @@ class TaskController extends TaskDB {
         })
       );
 
+      // update the tasks based on its cards
+      // 1. fetch the task if existed, and if not create a new one
+      // 2. get the task actions, the department, and the archive value if true or false
+      // 3. validate the actions, and extract the movements.
+      // 4. get the teams movements, based on the movements array.
+      // 5. update the card data
       tasks = cards.map((card, index) => {
         let fetch = tasks.find((t) => t.cardId === card.id);
         let task = fetch ?? new Tasks({});
+
         let actions = cardsActions.find(
           (cardAction) => cardAction.cardId === card.id
         );
         let department = departments.find(
           (dep) => dep.boardId === card.idBoard
         );
-        let listClosed =
+        let cardList =
           department.lists.find((i) => i.listId === card.idList) ??
           department.teams.find(
             (i) => i.listId === card.idList && i.isDeleted === false
           ) ??
           department.sideLists.find((i) => i.listId === card.idList) ??
           null;
+
         let { movements, createAction } = TaskController.validateCardActions(
           actions.actions,
           department,
           task.deadline ? new Date(task.deadline).toString() : null
         );
-        logger.info({ movements, createAction });
         let teamMovements = movements.filter(
           (move) => move.listType === "team"
         );
-
         let teamId =
           teamMovements && teamMovements.length > 0
             ? department.teams.find(
@@ -613,9 +638,7 @@ class TaskController extends TaskDB {
         task.status = movements[movements.length - 1].status;
         task.movements = movements;
         task.archivedCard =
-          card.closed || task.archivedCard || listClosed === null
-            ? true
-            : false;
+          card.closed || task.archivedCard || cardList === null ? true : false;
         task.trelloShortUrl = card.shortUrl;
         task.description = card.desc;
         task.deadline = card.due ?? task.deadline;
@@ -637,8 +660,9 @@ class TaskController extends TaskDB {
           return null;
         } else return task;
       });
-
       tasks = tasks.filter((i) => i !== null);
+      newTasks = newTasks.filter((i) => i != null);
+      console.log({ tasks: tasks.length, newTasks: newTasks });
       let insert = [
         ...newTasks.map((item) => {
           return {
@@ -648,18 +672,19 @@ class TaskController extends TaskDB {
           };
         }),
       ];
-      let insertResult = await Tasks.bulkWrite(insert);
-      let update = [
-        ...archivedTasks.map((task) => {
-          return {
-            updateOne: {
-              filter: { _id: task._id.toString() },
-              update: {
-                archivedCard: true,
-              },
+      let archive = archivedTasks.map((task) => {
+        return {
+          updateOne: {
+            filter: { _id: task._id.toString() },
+            update: {
+              archivedCard: true,
             },
-          };
-        }),
+          },
+        };
+      });
+      let update = [
+        ...insert,
+        ...archive,
         ...tasks?.map((item) => {
           return {
             updateOne: {
@@ -690,6 +715,7 @@ class TaskController extends TaskDB {
       ];
 
       let result = await Tasks.bulkWrite(update);
+      console.log({ result });
       newTasks.forEach(async (item) => {
         TrelloController.__addWebHook(item.cardId, "trelloWebhookUrlTask");
       });
@@ -707,11 +733,14 @@ class TaskController extends TaskDB {
     dueDate?: string | number | null
   ) {
     try {
-      let createAction = cardActions.find(
-        (item) => !item.data.old && !item.data.listBefore && !item.data.card.due
-      );
+      let movements: Movement[] = [];
+      // get the create action
+      let createAction = cardActions.find((item) => item.type === "createCard");
+
+      // build a new CardAction for the create action
       let createActionMovement = new CardAction(createAction);
 
+      // validate the create action movement
       createActionMovement = createActionMovement.validate(department);
       let createActionItem: Movement = {
         actionId: createActionMovement.action.id,
@@ -719,13 +748,15 @@ class TaskController extends TaskDB {
         listId: createActionMovement.action.listId,
         movedAt: new Date(createActionMovement.action.date).toString(),
         listType: createActionMovement.action.listType,
+        listName: createActionMovement.action.listName,
       };
 
+      // extract all 'updateCard' actions
       let sortedMoveOrDueChanges = cardActions.filter(
         (i) => i.type === "updateCard"
       );
       let due: { index: number; dueDate: string }[] = [];
-      let movements: Movement[] = [];
+
       sortedMoveOrDueChanges.forEach((move, index) => {
         if (
           move.data.card.due &&
@@ -743,16 +774,13 @@ class TaskController extends TaskDB {
             listId: movementAction.action.listId,
             movedAt: new Date(movementAction.action.date).toString(),
             listType: movementAction.action.listType,
+            listName: movementAction.action.listName,
           };
           movements.push(moveItem);
         }
       });
-
       movements = movements.filter((i) => i !== null);
       movements = [createActionItem, ...movements];
-      due.forEach((i) => {
-        movements[i.index].journeyDeadline = i.dueDate;
-      });
       movements = _.uniqBy(movements, "actionId");
       movements = movements.sort(
         (a, b) => new Date(a.movedAt).getTime() - new Date(b.movedAt).getTime()
