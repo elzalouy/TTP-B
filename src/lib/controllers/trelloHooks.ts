@@ -351,6 +351,7 @@ export default class TrelloWebhook {
       logger.error({ updateProjectHook: error });
     }
   }
+
   static async checkIfRestoringTask(action: webhookUpdateInterface) {
     try {
       let includesId = action.action.data.card.name.includes("ID-");
@@ -367,6 +368,7 @@ export default class TrelloWebhook {
       logger.error({ _checkIfRestoringTaskError: error });
     }
   }
+
   private async deleteProject() {
     try {
       // when deleting from ttp, we must make sure that it is working in async with the trello deletion process.

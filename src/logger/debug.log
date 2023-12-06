@@ -289,3 +289,12 @@
 {"level":"warn","message":{"db":"mongodb+srv://unicodettp:WFUiEjrljsIDFOmd@cluster1.oeari.mongodb.net/ttp-local"}}
 {"level":"warn","message":"Server worked"}
 {"level":"info","message":{"initializeCardsPluginsResult":{"insertedIds":[],"nInserted":0,"nMatched":16,"nModified":16,"nRemoved":0,"nUpserted":0,"ok":1,"opTime":{"t":528,"ts":{"$timestamp":"7309084965335990288"}},"upserted":[],"writeConcernErrors":[],"writeErrors":[]}}}
+{"level":"warn","message":{"db":"mongodb+srv://unicodettp:WFUiEjrljsIDFOmd@cluster1.oeari.mongodb.net/ttp-local"}}
+{"level":"warn","message":"Server worked"}
+{"level":"warn","message":{"db":"mongodb+srv://unicodettp:WFUiEjrljsIDFOmd@cluster1.oeari.mongodb.net/ttp-local"}}
+{"level":"warn","message":"Server worked"}
+{"level":"info","message":{"initializeCardsPluginsResult":{"insertedIds":[],"nInserted":0,"nMatched":16,"nModified":16,"nRemoved":0,"nUpserted":0,"ok":1,"opTime":{"t":528,"ts":{"$timestamp":"7309358743731306512"}},"upserted":[],"writeConcernErrors":[],"writeErrors":[]}}}
+{"level":"warn","message":{"db":"mongodb+srv://unicodettp:WFUiEjrljsIDFOmd@cluster1.oeari.mongodb.net/ttp-local"}}
+{"level":"warn","message":"Server worked"}
+{"level":"info","message":{"initializeCardsPluginsResult":{"insertedIds":[],"nInserted":0,"nMatched":16,"nModified":16,"nRemoved":0,"nUpserted":0,"ok":1,"opTime":{"t":528,"ts":{"$timestamp":"7309401942512369680"}},"upserted":[],"writeConcernErrors":[],"writeErrors":[]}}}
+{"level":"info","message":{"initializeCardsPluginsResult":{"insertedIds":[],"nInserted":0,"nMatched":16,"nModified":16,"nRemoved":0,"nUpserted":0,"ok":1,"opTime":{"t":528,"ts":{"$timestamp":"7309403986916802576"}},"upserted":[],"writeConcernErrors":[],"writeErrors":[]}}}

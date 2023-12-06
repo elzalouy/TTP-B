@@ -57,7 +57,7 @@ export const movementSchema: Schema<Movement> = new Schema<Movement>({
   },
   listName: {
     type: String,
-    required: true,
+    required: false,
     default: "",
   },
 });
