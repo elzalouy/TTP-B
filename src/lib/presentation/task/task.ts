@@ -175,19 +175,21 @@ const TaskReq = class TaskReq extends TaskController {
 
   static async hanldeEditTasksProjectId(req: Request, res: Response) {
     try {
-      let ids: string[] = req.body.ids,
-        projectId = req.body.projectId;
+      let ids: string[] = req.body.ids;
+      let projectId = req.body.projectId;
+      console.log({ ids, projectId });
       if (ids && projectId) {
         let response = await super.__editTasksProjectId(ids, projectId);
         if (response.modifiedCount) return res.send(response);
-        return res
-          .status(200)
-          .send({
-            message:
-              "Project not existed or something wrong hapenned while assigning the tasks",
-            error: response,
-          });
-      }
+        return res.status(200).send({
+          message:
+            "Project not existed or something wrong hapenned while assigning the tasks",
+          error: response,
+        });
+      } else
+        res
+          .status(400)
+          .send({ message: "Please send both the project id, and tasks ids" });
     } catch (error) {
       logger.error({ handleEditTasksProjectIdError: error });
     }

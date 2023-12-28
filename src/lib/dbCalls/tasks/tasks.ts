@@ -275,10 +275,9 @@ class TaskDB {
       if (project) {
         let projectTasks = (await Tasks.find({ projectId: projectId })).sort(
           (a, b) =>
-            new Date(a.cardCreatedAt).getTime() -
-            new Date(b.cardCreatedAt).getTime()
+            new Date(a.createdAt).getTime() - new Date(b.createdAt).getTime()
         );
-        if (Tasks.length > 0) {
+        if (projectTasks.length > 0) {
           project.startDate =
             projectTasks[0].cardCreatedAt ?? projectTasks[0].createdAt;
           project.NoOfTasks = projectTasks.length;
